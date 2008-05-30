@@ -17,7 +17,7 @@ type SectionNo = Int
 outputContents :: IO ()
 outputContents = do
   h <- openFile "index.html" WriteMode
-  c <- getChapList
+  c <- mapM getChapter [1..21]
   hSetBuffering h NoBuffering
   hPutStr h $ showContents c
   hClose h
@@ -28,12 +28,9 @@ showContents = prettyHtml . template . ordList . map showChapter
 showChapter :: Chapter -> Html
 showChapter (c,title,[])    = ahref ("c"++show c++"/s.html") title
 showChapter (c,title,sects) = title +++ ordList sections where
-    sections = map (showSection c) sectList
-    sectList = zip [1..] sects
-
-showSection :: ChapterNo -> (SectionNo,String) -> Html
-showSection c (n,title) = ahref url title where
-    url = ("c"++show c++"/s"++show n++".html")
+    sections = map (showSection c) $ zip [1..] sects
+    showSection c (n,title) = ahref url title where
+        url = "c" ++ show c ++ "/s" ++ show n ++ ".html"
 
 ahref :: HTML a => String -> a -> Html
 ahref url = (tag "a" ! [href url] <<)
@@ -43,9 +40,6 @@ template c = header << thetitle << title
              +++
              body << ((h1 << title) +++ c)
     where title = "The Lojban Reference Grammar"
-
-getChapList :: IO Contents
-getChapList = mapM getChapter [1..21]
 
 getChapter :: ChapterNo -> IO Chapter
 getChapter c = do
@@ -64,9 +58,6 @@ secFilenames = sanitize . getNames . show where
                | otherwise            = compare a b
     strip = filter $ not . all (=='.')
 
-getTitle :: String -> String -> Maybe [String]
-getTitle r = matchRegex (mkRegex r) . stripNewline
-
 getChapTitle :: String -> String
 getChapTitle = head . fromJust . getTitle "<h2>.*<br[ ]*/>(.*)</h2>"
 
@@ -76,5 +67,5 @@ getSection = liftM getSecTitle . readFile
 getSecTitle :: String -> Maybe String
 getSecTitle = maybe Nothing (Just . head) . getTitle "<h3>.*[0-9]+\\. ([^<]+).*?</h3>"
 
-stripNewline :: String -> String
-stripNewline = filter (/='\n')
+getTitle :: String -> String -> Maybe [String]
+getTitle r = matchRegex (mkRegex r) . filter (/='\n')
