@@ -7,69 +7,74 @@ import Control.Monad
 import Data.List
 import Text.XHtml.Strict
 import IO
+import Data.Function
 
-type Chapter = (String,[String])
-type Contents = [Chapter]
+type Chapter   = (ChapterNo,String,[String])
+type Contents  = [Chapter]
 type ChapterNo = Int
 type SectionNo = Int
 
 outputContents :: IO ()
 outputContents = do
   h <- openFile "index.html" WriteMode
-  c <- getContents'
+  c <- getChapList
   hSetBuffering h NoBuffering
   hPutStr h $ showContents c
   hClose h
 
 showContents :: Contents -> String
-showContents = showHtml . template . ordList . map showChapter . zip [1..] where
-    showChapter (c,(title,[]))       = (""+++hotlink url (primHtml title))
-        where url = "c" ++ show c ++ "/s.html"
-    showChapter (c,(title,sections)) = title +++ ordList (map (link c) $ zip [1..] sections)
-    link c (s,title) = hotlink url (primHtml title)
-        where url = "c" ++ show c ++ "/s" ++ show s ++ ".html"
+showContents = prettyHtml . template . ordList . map showChapter
 
-template a = (header << (thetitle << title'))
-              +++
-             (body << ((h1 << title') +++ a))
-    where title' = "The Lojban Reference Grammar"
+showChapter :: Chapter -> Html
+showChapter (c,title,[])    = ahref ("c"++show c++"/s.html") title
+showChapter (c,title,sects) = title +++ ordList sections where
+    sections = map (showSection c) sectList
+    sectList = zip [1..] sects
 
-getContents' :: IO Contents
-getContents' = mapM getChapter [1..21]
+showSection :: ChapterNo -> (SectionNo,String) -> Html
+showSection c (n,title) = ahref url title where
+    url = ("c"++show c++"/s"++show n++".html")
+
+ahref :: HTML a => String -> a -> Html
+ahref url = (tag "a" ! [href url] <<)
+
+template :: HTML a => a -> Html
+template c = header << thetitle << title
+             +++
+             body << ((h1 << title) +++ c)
+    where title = "The Lojban Reference Grammar"
+
+getChapList :: IO Contents
+getChapList = mapM getChapter [1..21]
 
 getChapter :: ChapterNo -> IO Chapter
 getChapter c = do
   f <- readFile chFilename
   secNames <- secFilenames c
-  case secNames of
-    []    -> return (getChapTitle f, [])
-    names -> do titles <- mapM (getSection c) $ map (ch++) names
-                return (getChapTitle f, catMaybes titles)
-    where chFilename = ch ++ "s.html"
-          ch = "c" ++ show c ++ "/"
+  titles <- mapM (getSection . (ch++)) secNames
+  return (c,getChapTitle f, catMaybes titles)
+  where chFilename = ch ++ "s.html"
+        ch = "c" ++ show c ++ "/"
 
 secFilenames :: ChapterNo -> IO [String]
 secFilenames = sanitize . getNames . show where
     getNames = getDirectoryContents . ("./c" ++)
-    sanitize = liftM $ sortBy f . strip
-    f a b | length a < length b = LT
-          | length a > length b = GT
-          | otherwise = compare a b
+    sanitize = liftM $ sortBy sorter . strip
+    sorter a b | length a /= length b = on compare length a b
+               | otherwise            = compare a b
     strip = filter $ not . all (=='.')
 
-getChapTitle :: String -> String
-getChapTitle = head . fromJust . match . stripNewline where
-    match = matchRegex regex
-    regex = mkRegex "<h2>.*<br[ ]*/>(.*)</h2>"
+getTitle :: String -> String -> Maybe [String]
+getTitle r = matchRegex (mkRegex r) . stripNewline
 
-getSection :: ChapterNo -> FilePath -> IO (Maybe String)
-getSection c secFilename = do
-  f <- readFile secFilename
-  return $ getSecTitle f
+getChapTitle :: String -> String
+getChapTitle = head . fromJust . getTitle "<h2>.*<br[ ]*/>(.*)</h2>"
+
+getSection :: FilePath -> IO (Maybe String)
+getSection = liftM getSecTitle . readFile
 
 getSecTitle :: String -> Maybe String
-getSecTitle f = maybe Nothing (Just . head) match  where
-    match = matchRegex regex (stripNewline f)
-    regex = mkRegex "<h3>.*[0-9]+\\. ([^<]+).*?</h3>"
+getSecTitle = maybe Nothing (Just . head) . getTitle "<h3>.*[0-9]+\\. ([^<]+).*?</h3>"
 
+stripNewline :: String -> String
 stripNewline = filter (/='\n')
