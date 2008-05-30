@@ -23,7 +23,7 @@ outputContents = do
   hClose h
 
 showContents :: Contents -> String
-showContents = prettyHtml . template . ordList . map showChapter
+showContents = showHtml . template . ordList . map showChapter
 
 showChapter :: Chapter -> Html
 showChapter (c,title,[])    = ahref ("c"++show c++"/s.html") title
