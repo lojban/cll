@@ -9,7 +9,7 @@ import Text.XHtml.Strict
 import IO
 import Data.Function
 
-type Chapter   = (ChapterNo,String,[String])
+type Chapter   = (ChapterNo,String,[String],[FilePath])
 type Contents  = [Chapter]
 type ChapterNo = Int
 type SectionNo = Int
@@ -17,17 +17,45 @@ type SectionNo = Int
 outputContents :: IO ()
 outputContents = do
   h <- openFile "index.html" WriteMode
-  c <- mapM getChapter [1..21]
+  c <- grabContents
   hSetBuffering h NoBuffering
   hPutStr h $ showContents c
   hClose h
+
+grabContents :: IO Contents
+grabContents = mapM getChapter [1..21]
+
+format :: Contents -> IO ()
+format = foldM_ write Nothing . tails . drop 200 . contFlatten where
+    write p []             = return $ Nothing
+    write p (c@(ch,_,_):n) = do 
+      putStrLn $ prettyHtmlFragment $ 
+               showPrevious p +++ showCurChap ch +++ showNext n
+      return $ Just c
+
+showCurChap :: String -> Html
+showCurChap = (h2 <<)
+
+showPrevious :: Maybe (String,String,FilePath) -> Html
+showPrevious Nothing = noHtml
+showPrevious (Just (_,title,url)) = p << (ahref url "Previous" +++ title)
+
+showNext :: [(String,String,FilePath)] -> Html
+showNext ((_,title,url):_) = p << (ahref url "Next" +++ title)
+showNext _                 = noHtml
+
+contFlatten :: Contents -> [(String,String,FilePath)]
+contFlatten = concatMap flatten where
+    flatten (_,t,_,[f]) = [(t,t,f)]
+    flatten (_,t,ss,fs)  = map addTitle $ zip ss (tail fs)
+        where addTitle (s,f) = (t,s,f)
 
 showContents :: Contents -> String
 showContents = showHtml . template . ordList . map showChapter
 
 showChapter :: Chapter -> Html
-showChapter (c,title,[])    = ahref ("c"++show c++"/s.html") title
-showChapter (c,title,sects) = title +++ ordList sections where
+showChapter (c,title,[],_)    = ahref ("c"++show c++"/s.html") title
+showChapter (c,title,sects,_) = title +++ ordList sections where
     sections = map (showSection c) $ zip [1..] sects
 
 showSection :: ChapterNo -> (SectionNo,String) -> Html
@@ -40,15 +68,15 @@ ahref url = (tag "a" ! [href url] <<)
 template :: HTML a => a -> Html
 template c = header << thetitle << title
              +++
-             body << ((h1 << title) +++ c)
+             body << (h1 << title +++ c)
     where title = "The Lojban Reference Grammar"
 
 getChapter :: ChapterNo -> IO Chapter
 getChapter c = do
   f <- readFile chFilename
-  secNames <- secFilenames c
-  titles <- mapM (getSection . (ch++)) secNames
-  return (c,getChapTitle f, catMaybes titles)
+  secNames <- liftM (map (ch++)) $ secFilenames c
+  titles <- mapM getSection secNames
+  return (c,getChapTitle f, catMaybes titles,secNames)
   where chFilename = ch ++ "s.html"
         ch = "c" ++ show c ++ "/"
 
