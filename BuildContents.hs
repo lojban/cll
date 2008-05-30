@@ -29,8 +29,10 @@ showChapter :: Chapter -> Html
 showChapter (c,title,[])    = ahref ("c"++show c++"/s.html") title
 showChapter (c,title,sects) = title +++ ordList sections where
     sections = map (showSection c) $ zip [1..] sects
-    showSection c (n,title) = ahref url title where
-        url = "c" ++ show c ++ "/s" ++ show n ++ ".html"
+
+showSection :: ChapterNo -> (SectionNo,String) -> Html
+showSection c (n,title) = ahref url title where
+    url = "c" ++ show c ++ "/s" ++ show n ++ ".html"
 
 ahref :: HTML a => String -> a -> Html
 ahref url = (tag "a" ! [href url] <<)
