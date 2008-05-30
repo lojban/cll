@@ -1,0 +1,100 @@
+    <h3><a id="s15" name="s15">15. Tenses in subordinate bridi</h3>
+
+    <p>English has a set of rules, formally known as ``sequence of
+    tense rules'', for determining what tense should be used in a
+    subordinate clause, depending on the tense used in the main
+    sentence. Here are some examples:</p>
+<pre>
+<a id="e15d1"
+name="e15d1">15.1)</a>    John says that George is going to the market.
+
+<a id="e15d2"
+name="e15d2">15.2)</a> John says that George went to the market.
+
+<a id="e15d3"
+name="e15d3">15.3)</a> John said that George went to the market.
+
+<a id="e15d4"
+name="e15d4">15.4)</a> John said that George had gone to the market.
+</pre>
+
+    <p>In <a href="#e15d1">Example 15.1</a> and <a
+    href="#e15d2">Example 15.2</a>, the tense of the main sentence
+    is the present: ``says''. If George goes when John speaks, we
+    get the present tense ``is going'' (``goes'' would be
+    unidiomatic); if George goes before John speaks, we get the
+    past tense ``went''. But if the tense of the main sentence is
+    the past, with ``said'', then the tense required in the
+    subordinate clause is different. If George goes when John
+    speaks, we get the past tense ``went''; if George goes before
+    John speaks, we get the past-perfect tense ``had gone''.</p>
+
+    <p>The rule of English, therefore, is that both the tense of
+    the main sentence and the tense of the subordinate clause are
+    understood relative to the speaker (not John, but the person
+    who speaks <a href="#e15d1">Examples 15.1</a> through <a
+    href="#e15d4">15.4</a>).</p>
+
+    <p>Lojban, like Russian and Esperanto, uses a different
+    convention. A tense in a subordinate bridi is understood to be
+    relative to the tense already set in the main bridi. Thus <a
+    href="#e15d1">Examples 15.1</a> through <a
+    href="#e15d4">15.4</a> can be expressed in Lojban respectively
+    thus:</p>
+
+    <p></p>
+<pre>
+<a id="e15d5"
+name="e15d5">15.5)</a>    la djan. ca cusku le se du'u
+        la djordj. ca klama le zarci
+    John [present] says the statement-that
+        George [present] goes-to the market.
+
+<a id="e15d6" name="e15d6">15.6)</a> la djan. ca cusku le se du'u
+        la djordj. pu klama le zarci
+    John [present] says the statement-that
+        George [past] goes-to the market.
+
+<a id="e15d7" name="e15d7">15.7)</a> la djan. pu cusku le se du'u
+        la djordj. ca klama le zarci
+    John [past] says the statement-that
+        George [present] goes-to the market.
+
+<a id="e15d8" name="e15d8">15.8)</a> la djan. pu cusku le se du'u
+        la djordj. pu klama le zarci
+    John [past] says the statement-that
+        George [past] goes-to the market.
+</pre>
+
+    <p>Probably the most counterintuitive of the Lojban examples is
+    <a href="#e15d7">Example 15.7</a>. The ``ca'' looks quite odd,
+    as if George were going to the market right now, rather than
+    back when John spoke. But this ``ca'' is really a ``ca'' with
+    respect to a reference point specified by the outer ``pu''.
+    This behavior is the same as the additive behavior of multiple
+    tenses in the same bridi, as explained in <a
+    href="s13.html">Section 13</a>.</p>
+
+    <p>There is a special cmavo ``nau'' (of selma'o CUhE) which can
+    be used to override these rules and get to the speaker's
+    current reference point. (Yes, it sounds like English ``now''.)
+    It is not grammatical to combine ``nau'' with any other cmavo
+    in a tense, except by way of a logical or non-logical
+    connection (see <a href="s20.html">Section 20</a>). Here is a
+    convoluted sentence with several nested bridi which uses
+    ``nau'' at the lowest level:</p>
+<pre>
+<a id="e15d9"
+name="e15d9">15.9)</a>    la djan. pu cusku le se du'u
+        la .alis pu cusku le se du'u
+            la djordj. pu cusku le se du'u
+                la maris. nau klama le zarci
+    John [past] says the statement-that
+        Alice [past] says the statement-that
+            George [past] says the statement that
+                Mary [now] goes-to the market.
+    John said that Alice had said that George had earlier
+        said that Mary is now going to the market.
+</pre>
+    The use of ``nau'' does not affect sticky tenses. 
+

@@ -1,0 +1,123 @@
+    <h3><a id="s1" name="s1">1. Introductory</h3>
+
+    <p>Morphology is the part of grammar that deals with the form
+    of words. Lojban's morphology is fairly simple compared to that
+    of many languages, because Lojban words don't change form
+    depending on how they are used. English has only a small number
+    of such changes compared to languages like Russian, but we do
+    have changes like ``boys'' as the plural of ``boy'', or
+    ``walked'' as the past-tense form of ``walk''. To make plurals
+    or past tenses in Lojban, you add separate words to the
+    sentence that express the number of boys, or the time when the
+    walking was going on.</p>
+
+    <p>However, Lojban does have what is called ``derivational
+    morphology'': the capability of building new words from old
+    words. In addition, the form of words tells us something about
+    their grammatical uses, and sometimes about the means by which
+    they entered the language. Lojban has very orderly rules for
+    the formation of words of various types, both the words that
+    already exist and new words yet to be created by speakers and
+    writers.</p>
+
+    <p>A stream of Lojban sounds can be uniquely broken up into its
+    component words according to specific rules. These so-called
+    ``morphology rules'' are summarized in this chapter. (However,
+    a detailed algorithm for breaking sounds into words has not yet
+    been fully debugged, and so is not presented in this book.)
+    First, here are some conventions used to talk about groups of
+    Lojban letters, including vowels and consonants.</p>
+
+    <p></p>
+
+    <dl>
+      <dt>1)</dt>
+
+      <dd>V represents any single Lojban vowel except ``y''; that
+      is, it represents ``a'', ``e'', ``i'', ``o'', or ``u''.</dd>
+    </dl>
+
+    <dl>
+      <dt>2)</dt>
+
+      <dd>VV represents either a diphthong, one of the
+      following:</dd>
+
+      <dt></dt>
+
+      <dd>ai ei oi au</dd>
+
+      <dt></dt>
+
+      <dd>or a two-syllable vowel pair with an apostrophe
+      separating the vowels, one of the following:</dd>
+
+      <dt></dt>
+
+      <dd>a'a a'e a'i a'o a'u e'a e'e e'i e'o e'u i'a i'e i'i i'o
+      i'u o'a o'e o'i o'o o'u u'a u'e u'i u'o u'u</dd>
+    </dl>
+
+    <dl>
+      <dt>3)</dt>
+
+      <dd>C represents a single Lojban consonant, not including the
+      apostrophe, one of ``b'', ``c'', ``d'', ``f'', ``g'', ``j'',
+      ``k'', ``l'', ``m'', ``n'', ``p'', ``r'', ``s'', ``t'',
+      ``v'', ``x'', or ``z''. Syllabic ``l'', ``m'', ``n'', and
+      ``r'' always count as consonants for the purposes of this
+      chapter.</dd>
+    </dl>
+
+    <dl>
+      <dt>4)</dt>
+
+      <dd>CC represents two adjacent consonants of type C which
+      constitute one of the 48 permissible initial consonant
+      pairs:</dd>
+
+      <dt></dt>
+
+      <dd>bl br cf ck cl cm cn cp cr ct dj dr dz fl fr gl gr jb jd
+      jg jm jv kl kr ml mr pl pr sf sk sl sm sn sp sr st tc tr ts
+      vl vr xl xr zb zd zg zm zv</dd>
+    </dl>
+
+    <dl>
+      <dt>5)</dt>
+
+      <dd>C/C represents two adjacent consonants which constitute
+      one of the permissible consonant pairs (not necessarily a
+      permissible initial consonant pair). The permissible
+      consonant pairs are explained in <a href="../c3/s1.html">Chapter
+      3</a>. In brief, any consonant pair is permissible unless it
+      contains: two identical letters, both a voiced (excluding
+      ``r'', ``l'', ``m'', ``n'') and and an unvoiced consonant, or
+      is one of certain specified forbidden pairs.</dd>
+    </dl>
+
+    <dl>
+      <dt>6)</dt>
+
+      <dd>C/CC represents a consonant triple. The first two
+      consonants must constitute a permissible consonant pair; the
+      last two consonants must constitute a permissible initial
+      consonant pair.</dd>
+    </dl>
+    Lojban has three basic word classes --- parts of speech --- in
+    contrast to the eight that are traditional in English. These
+    three classes are called cmavo, brivla, and cmene. Each of
+    these classes has uniquely identifying properties --- an
+    arrangement of letters that allows the word to be uniquely and
+    unambiguously recognized as a separate word in a string of
+    Lojban, upon either reading or hearing, and as belonging to a
+    specific word-class. 
+
+    <p>They are also functionally different: cmavo are the
+    structure words, corresponding to English words like ``and'',
+    ``if'', ``the'' and ``to''; brivla are the content words,
+    corresponding to English words like ``come'', ``red'',
+    ``doctor'', and ``freely''; cmene are proper names,
+    corresponding to English ``James'', ``Afghanistan'', and ``Pope
+    John Paul II''.</p>
+

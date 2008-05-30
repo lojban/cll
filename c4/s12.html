@@ -1,0 +1,85 @@
+    <h3><a id="s12" name="s12">12. The lujvo scoring algorithm</h3>
+
+    <p>This algorithm was devised by Bob and Nora LeChevalier in
+    1989. It is not the only possible algorithm, but it usually
+    gives a choice that people find preferable. The algorithm may
+    be changed in the future. The lowest-scoring variant will
+    usually be the dictionary form of the lujvo. (In previous
+    versions, it was the highest-scoring variant.)</p>
+
+    <dl>
+      <dt>1)</dt>
+
+      <dd>Count the total number of letters, including hyphens and
+      apostrophes; call it ``L''.</dd>
+
+      <dt>2)</dt>
+
+      <dd>Count the number of apostrophes; call it ``A''.</dd>
+
+      <dt>3)</dt>
+
+      <dd>Count the number of ``y''-, ``r''-, and ``n''-hyphens;
+      call it ``H''.</dd>
+
+      <dt>4)</dt>
+
+      <dd>For each rafsi, find the value in the following table.
+      Sum this value over all rafsi; call it ``R'':</dd>
+
+      <dt></dt>
+
+      <dd>CVC/CV (final) (-sarji) 1 CVC/C (-sarj-) 2 CCVCV (final)
+      (-zbasu) 3 CCVC (-zbas-) 4 CVC (-nun-) 5 CVV with an
+      apostrophe (-ta'u-) 6 CCV (-zba-) 7 CVV with no apostrophe
+      (-sai-) 8</dd>
+
+      <dt>5)</dt>
+
+      <dd>Count the number of vowels, not including ``y''; call it
+      ``V''.</dd>
+    </dl>
+
+    <p>The score is then:</p>
+
+    <dl>
+      <dt></dt>
+
+      <dd>(1000 * L) - (500 * A) + (100 * H) - (10 * R) - V</dd>
+    </dl>
+    In case of ties, there is no preference. This should be rare.
+    Note that the algorithm essentially encodes a hierarchy of
+    priorities: short words are preferred (counting apostrophes as
+    half a letter), then words with fewer hyphens, words with more
+    pleasing rafsi (this judgment is subjective), and finally words
+    with more vowels are chosen. Each decision principle is applied
+    in turn if the ones before it have failed to choose; it is
+    possible that a lower-ranked principle might dominate a
+    higher-ranked one if it is ten times better than the
+    alternative. 
+
+    <p>Here are some lujvo with their scores (not necessarily the
+    lowest scoring forms for these lujvo, nor even necessarily
+    sensible lujvo):</p>
+<pre>
+<a id="e12d1" name="e12d1">12.1)</a>    zbasai
+    zba + sai
+    (1000 * 6) - (500 * 0)
+        + (100 * 0) - (10 * 15) - 3 = 5847
+
+<a id="e12d2" name="e12d2">12.2)</a> nunynau
+    nun + y + nau
+    32500 - (1000 * 7) + (500 * 0)
+        - (100 * 1) + (10 * 13) + 3 = 6967
+
+<a id="e12d3" name="e12d3">12.3)</a> sairzbata'u
+    sai + r + zba + ta'u
+    32500 - (1000 * 11) + (500 * 1)
+        - (100 * 1) + (10 * 21) + 5 = 10385
+
+<a id="e12d4" name="e12d4">12.4)</a> zbazbasysarji
+    zba + zbas + y + sarji  
+    32500 - (1000 * 13) + (500 * 0)
+        - (100 * 1) + (10 * 12) + 4 = 12976
+</pre>
+

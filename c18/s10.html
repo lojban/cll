@@ -1,0 +1,134 @@
+    <h3><a id="s10" name="s10">10. Non-decimal and compound bases</h3>
+
+    <p>The following cmavo are discussed in this section:</p>
+<pre>
+   ju'u    VUhU    to the base
+    dau PA  hex digit A = 10
+    fei PA  hex digit B = 11
+    gai PA  hex digit C = 12
+    jau PA  hex digit D = 13
+    rei PA  hex digit E = 14
+    vai PA  hex digit F = 15
+    pi'e    PA  compound base point
+</pre>
+    In normal contexts, Lojban assumes that all numbers are
+    expressed in the decimal (base 10) system. However, other bases
+    are possible, and may be appropriate in particular
+    circumstances. 
+
+    <p>To specify a number in a particular base, the VUhU operator
+    ``ju'u'' is suitable:</p>
+<pre>
+<a id="e10d1"
+name="e10d1">10.1)</a>    li pa no pa no ju'u re du li pa no
+    the-number 1010 base 2 equals the-number 10
+</pre>
+    Here, the final ``pa no'' is assumed to be base 10, as usual;
+    so is the base specification. (The base may also be changed
+    permanently by a metalinguistic specification; no standard way
+    of doing so has as yet been worked out.) 
+
+    <p>Lojban has digits for representing bases up to 16, because
+    16 is a base often used in computer applications. In English,
+    it is customary to use the letters A-F as the base 16 digits
+    equivalent to the numbers ten through fifteen. In Lojban, this
+    ambiguity is avoided:</p>
+
+    <p></p>
+<pre>
+<a id="e10d2"
+name="e10d2">10.2)</a>    li daufeigai ju'u paxa du li rezevobi
+    the-number ABC base 16 equals the-number 2748
+
+<a id="e10d3"
+name="e10d3">10.3)</a> li jaureivai ju'u paxa du li cimuxaze
+    the-number DEF base 16 equals the-number 3567
+</pre>
+    Note the pattern in the cmavo: the diphthongs ``au'', ``ei'',
+    ``ai'' are used twice in the same order. The digits for A to D
+    use consonants different from those used in the decimal digit
+    cmavo; E and F unfortunately overlap 2 and 4 --- there was
+    simply not enough available cmavo space to make a full
+    differentiation possible. The cmavo are also in alphabetical
+    order. 
+
+    <p>The base point ``pi'' is used in non-decimal bases just as
+    in base 10:</p>
+
+    <p></p>
+<pre>
+<a id="e10d4"
+name="e10d4">10.4)</a>    li vai pi bi ju'u paxa du li pamu pi mu
+    the-number F.8 base 16 equals the-number 15.5
+</pre>
+    Since ``ju'u'' is an operator of selma'o VUhU, it is
+    grammatical to use any operand as the left argument.
+    Semantically, however, it is undefined to use anything but a
+    numeral string on the left. The reason to make ``ju'u'' an
+    operator is to allow reference to a base which is not a
+    constant. 
+
+    <p>There are some numerical values that require a ``base'' that
+    varies from digit to digit. For example, times represented in
+    hours, minutes, and seconds have, in effect, three ``digits'':
+    the first is base 24, the second and third are base 60. To
+    express such numbers, the compound base separator ``pi'e'' is
+    used:</p>
+<pre>
+<a id="e10d5" name="e10d5">10.5)</a>    ci pi'e rere pi'e vono
+    3:22:40
+</pre>
+    Each digit sequence separated by instances of ``pi'e'' is
+    expressed in decimal notation, but the number as a whole is not
+    decimal and can only be added and subtracted by special rules: 
+<pre>
+<a id="e10d6"
+name="e10d6">10.6)</a>    li ci pi'e rere pi'e vono su'i pi'e ci pi'e cici
+        du li ci pi'e rexa pi'e paci
+    the-number 3:22:40 plus :3:33 equals the-number 3:26:13
+    3:22:40 + 0:3:33 = 3:26:13
+</pre>
+
+    <p>Of course, only context tells you that the first part of the
+    numbers in <a href="#e10d5">Example 10.5</a> and <a
+    href="#e10d6">Example 10.6</a> is hours, the second minutes,
+    and the third seconds.</p>
+
+    <p>The same mechanism using ``pi'e'' can be used to express
+    numbers which have a base larger than 16. For example, base-20
+    Mayan mathematics might use digits from ``no'' to ``paso'',
+    each separated by ``pi'e'':</p>
+<pre>
+<a id="e10d7"
+name="e10d7">10.7)</a>    li pa pi'e re pi'e ci ju'u reno du li vovoci
+    the-number 1;2;3 base 20 equals the-number 443
+</pre>
+    Carefully note the difference between: 
+<pre>
+<a id="e10d8" name="e10d8">10.8)</a>    pano ju'u reno
+    the-digit-10 base 20
+</pre>
+    which is equal to ten, and: 
+<pre>
+<a id="e10d9" name="e10d9">10.9)</a>    pa pi'e no ju'u reno
+    1;0 base 20
+</pre>
+    which is equal to twenty. 
+
+    <p>Both ``pi'' and ``pi'e'' can be used to express large-base
+    decimal fractions:</p>
+<pre>
+<a id="e10d10"
+name="e10d10">10.10)</a>  li pa pi'e vo pi ze ju'u reno du li re vo pi ci mu
+    the-number 1;4.7 base 20 equals the-number 24.35
+</pre>
+    ``pi'e'' is also used where the base of each digit is vague, as
+    in the numbering of the examples in this chapter: 
+
+    <p></p>
+<pre>
+<a id="e10d11" name="e10d11">10.11)</a>  dei jufra panopi'epapamoi
+    This-utterance is-a-sentence-type-of 10;11th-thing.
+    This is Sentence 10.11.
+</pre>
+
