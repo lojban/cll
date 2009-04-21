@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>
+               The Shape Of Words To Come: Lojban Morphology - The Lojban Reference Grammar
+      </title>
+      <link rel="stylesheet" type="text/css" href="../../cll.css" />
+      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+   </head>
+   <body>
+      <table class="nav" width="100%">
+         <tr>
+            <td width="15%" valign="top">
+               <a href="../../4/12/">
+                  Previous
+               </a>
+               <br />
+               <em>
+                  The lujvo scoring algorithm
+               </em>
+            </td>
+            <td align="center">
+               <strong>
+                        The Shape Of Words To Come: Lojban Morphology
+               </strong>
+               <br />
+               <a href="../../">
+                  <em>
+                     <small>
+                        The Lojban Reference Grammar
+                     </small>
+                  </em>
+               </a>
+            </td>
+            <td width="15%" valign="top">
+               <a href="../../4/14/">
+                  Next
+               </a>
+               <br />
+               <em>
+                  The gismu creation algorithm
+               </em>
+            </td>
+         </tr>
+      </table>
+      <hr />
+          <h3><a id="13" name="13">13. lujvo-making examples</h3>
+
+    <p>This section contains examples of making and scoring lujvo.
+    First, we will start with the tanru ``gerku zdani'' (``dog
+    house'') and construct a lujvo meaning ``doghouse'', that is, a
+    house where a dog lives. We will use a brute-force application
+    of the algorithm in <a href=../12/>Section 12</a>, using every
+    possible rafsi.</p>
+
+    <p>The rafsi for ``gerku'' are:</p>
+
+    <dl>
+      <dt></dt>
+
+      <dd>-ger-, -ge'u-, -gerk-, -gerku</dd>
+    </dl>
+
+    <p>The rafsi for ``zdani'' are:</p>
+
+    <dl>
+      <dt></dt>
+
+      <dd>-zda-, -zdan-, -zdani.</dd>
+    </dl>
+
+    <p>Step 1 of the algorithm directs us to use ``-ger-'',
+    ``-ge'u-'' and ``-gerk-'' as possible rafsi for ``gerku''; Step
+    2 directs us to use ``-zda-'' and ``-zdani'' as possible rafsi
+    for ``zdani''. The six possible forms of the lujvo are
+    then:</p>
+
+    <dl>
+      <dt></dt>
+
+      <dd>ger-zda ger-zdani ge'u-zda ge'u-zdani gerk-zda
+      gerk-zdani</dd>
+    </dl>
+
+    <p>We must then insert appropriate hyphens in each case. The
+    first two forms need no hyphenation: ``ge'' cannot fall off the
+    front, because the following word would begin with ``rz'',
+    which is not a permissible initial consonant pair. So the lujvo
+    forms are ``gerzda'' and ``gerzdani''.</p>
+
+    <p>The third form, ``ge'u-zda'', needs no hyphen, because even
+    though the first rafsi is CVV, the second one is CCV, so there
+    is a consonant cluster in the first five letters. So
+    ``ge'uzda'' is this form of the lujvo.</p>
+
+    <p>The fourth form, ``ge'u-zdani'', however, requires an
+    ``r''-hyphen; otherwise, the ``ge'u-'' part would fall off as a
+    cmavo. So this form of the lujvo is ``ge'urzdani''.</p>
+
+    <p>The last two forms require ``y''-hyphens, as all 4-letter
+    rafsi do, and so are ``gerkyzda'' and ``gerkyzdani''
+    respectively.</p>
+
+    <p>The scoring algorithm is heavily weighted in favor of short
+    lujvo, so we might expect that ``gerzda'' would win. Its L
+    score is 6, its A score is 0, its H score is 0, its R score is
+    12, and its V score is 3, for a final score of 5878. The other
+    forms have scores of 7917, 6367, 9506, 8008, and 10047
+    respectively. Consequently, this lujvo would probably appear in
+    the dictionary in the form ``gerzda''.</p>
+
+    <p>For the next example, we will use the tanru ``bloti klesi''
+    (``boat class'') presumably referring to the category (rowboat,
+    motorboat, cruise liner) into which a boat falls. We will omit
+    the long rafsi from the process, since lujvo containing long
+    rafsi are almost never preferred by the scoring algorithm when
+    there are short rafsi available.</p>
+
+    <p>The rafsi for ``bloti'' are ``-lot-'', ``-blo-'', and
+    ``-lo'i-''; for ``klesi'' they are ``-kle-'' and ``-lei-''.
+    Both these gismu are among the handful which have both CVV-form
+    and CCV-form rafsi, so there is an unusual number of
+    possibilities available for a two-part tanru:</p>
+<pre>
+   lotkle      blokle      lo'ikle
+    lotlei      blolei      lo'irlei
+</pre>
+
+    <p>Only ``lo'irlei'' requires hyphenation (to avoid confusion
+    with the cmavo sequence ``lo'i lei''). All six forms are valid
+    versions of the lujvo, as are the six further forms using long
+    rafsi; however, the scoring algorithm produces the following
+    results:</p>
+<pre>
+   lotkle 5878 blokle 5858 lo'ikle 6367
+    lotlei 5867 blolei 5847 lo'irlei 7456
+</pre>
+
+    <p>So the form ``blolei'' is preferred, but only by a tiny
+    margin over ``blokle''; the next two forms are only slightly
+    worse; ``lo'ikle'' suffers because of its apostrophe, and
+    ``lo'irlei'' because of having both apostrophe and hyphen.</p>
+
+    <p>Our third example will result in forming both a lujvo and a
+    name from the tanru ``logji bangu girzu'', or
+    ``logical-language group'' in English. (``The Logical Language
+    Group'' is the name of the publisher of this book and the
+    organization for the promotion of Lojban.) The available rafsi
+    are ``-loj-'' and ``-logj-''; ``-ban-'', ``-bau-'', and
+    ``-bang-''; and ``-gri-'' and ``-girzu'', and (for name
+    purposes only) ``-gir-'' and ``-girz-''. The resulting 12 lujvo
+    possibilities are:</p>
+<pre>
+   loj-ban-gri loj-bau-gri loj-bang-gri
+    logj-ban-gri    logj-bau-gri    logj-bang-gri
+    loj-ban-girzu   loj-bau-girzu   loj-bang-girzu
+    logj-ban-girzu  logj-bau-girzu  logj-bang-girzu
+</pre>
+    and the 12 name possibilities are: 
+<pre>
+   loj-ban-gir.    loj-bau-gir.    loj-bang-gir.
+    logj-ban-gir.   logj-bau-gir.   logj-bang-gir.
+    loj-ban-girz.   loj-bau-girz.   loj-bang-girz.
+    logj-ban-girz.  logj-bau-girz.  logj-bang-girz.
+</pre>
+
+    <p>After hyphenation, we have:</p>
+<pre>
+   lojbangri   lojbaugri   lojbangygri
+    logjybangri logjybaugri logjybangygri
+    lojbangirzu lojbaugirzu lojbangygirzu
+    logjybangirzu   logjybaugirzu   logjybangygirzu
+
+    lojbangir.  lojbaugir.  lojbangygir.
+    logjybangir.    logjybaugir.    logjybangygir.
+    lojbangirz. lojbaugirz. lojbangygirz.
+    logjybangirz.   logjybaugirz.   logjybangygirz.
+</pre>
+
+    <p>The only fully reduced lujvo forms are ``lojbangri'' and
+    ``lojbaugri'', of which the latter has a slightly lower score:
+    8827 versus 8796, respectively. However, for the name of the
+    organization, we chose to make sure the name of the language
+    was embedded in it, and to use the clearer long-form rafsi for
+    ``girzu'', producing ``lojbangirz.''</p>
+
+    <p>Finally, here is a four-part lujvo with a cmavo in it, based
+    on the tanru ``nakni ke cinse ctuca'' or ``male (sexual
+    teacher)''. The ``ke'' cmavo ensures the interpretation
+    ``teacher of sexuality who is male'', rather than ``teacher of
+    male sexuality''. Here are the possible forms of the lujvo,
+    both before and after hyphenation:</p>
+<pre>
+   nak-kem-cin-ctu     nakykemcinctu
+    nak-kem-cin-ctuca   nakykemcinctuca
+    nak-kem-cins-ctu    nakykemcinsyctu
+    nak-kem-cins-ctuca  nakykemcinsyctuca
+    nakn-kem-cin-ctu    naknykemcinctu
+    nakn-kem-cin-ctuca  naknykemcinctuca
+    nakn-kem-cins-ctu   naknykemcinsyctu
+    nakn-kem-cins-ctuca naknykemcinsyctuca
+</pre>
+
+    <p>Of these forms, ``nakykemcinctu'' is the shortest and is
+    preferred by the scoring algorithm. On the whole, however, it
+    might be better to just make a lujvo for ``cinse ctuca'' (which
+    would be ``cinctu'') since the sex of the teacher is rarely
+    important. If there was a reason to specify ``male'', then the
+    simpler tanru ``nakni cinctu'' (``male sexual-teacher'') would
+    be appropriate. This tanru is actually shorter than the
+    four-part lujvo, since the ``ke'' required for grouping need
+    not be expressed.</p>
+
+
+      <hr />
+      <table class="nav" width="100%">
+         <tr>
+            <td width="15%" valign="top">
+               <a href="../../4/12/">
+                  Previous
+               </a>
+               <br />
+               <em>
+                  The lujvo scoring algorithm
+               </em>
+            </td>
+            <td align="center">
+               <strong>
+                        The Shape Of Words To Come: Lojban Morphology
+               </strong>
+               <br />
+               <a href="../../">
+                  <em>
+                     <small>
+                        The Lojban Reference Grammar
+                     </small>
+                  </em>
+               </a>
+            </td>
+            <td width="15%" valign="top">
+               <a href="../../4/14/">
+                  Next
+               </a>
+               <br />
+               <em>
+                  The gismu creation algorithm
+               </em>
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>
