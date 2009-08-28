@@ -52,104 +52,104 @@
     sa  SA  erase phrase
     su  SU  erase discourse
 </pre>
-    The cmavo ``si'' (of selma'o SI) is a metalinguistic operator
+    The cmavo “si” (of selma'o SI) is a metalinguistic operator
     that erases the preceding word, as if it had never been spoken:
     
 <pre>
 <a id="1" name="1">13.1)</a>    ti gerku si mlatu
     This is-a-dog, er, is-a-cat.
 </pre>
-    means the same thing as ``ti mlatu''. Multiple ``si'' cmavo in
+    means the same thing as “ti mlatu”. Multiple “si” cmavo in
     succession erase the appropriate number of words: 
 <pre>
 <a id="13-2"
 name="13-2">13.2)</a>    ta blanu zdani si si xekri zdani
     That is-a-blue house, er, er, is-a-black house.
 </pre>
-    In order to erase the word ``zo'', it is necessary to use three
-    ``si'' cmavo in a row: 
+    In order to erase the word “zo”, it is necessary to use three
+    “si” cmavo in a row: 
 <pre>
 <a id="13-3"
 name="13-3">13.3)</a>    zo .bab. se cmene zo si si si la bab.
-    The-word ``Bob'' is-the-name-of the word ``si'', er, er, Bob.
+    The-word “Bob” is-the-name-of the word “si”, er, er, Bob.
 </pre>
 
-    <p>The first use of ``si'' does not erase anything, but
-    completes the ``zo'' quotation. Two more ``si'' cmavo are then
-    necessary to erase the first ``si'' and the ``zo''.</p>
+    <p>The first use of “si” does not erase anything, but
+    completes the “zo” quotation. Two more “si” cmavo are then
+    necessary to erase the first “si” and the “zo”.</p>
 
-    <p>Incorrect names can likewise cause trouble with ``si'':</p>
+    <p>Incorrect names can likewise cause trouble with “si”:</p>
 
     <p></p>
 <pre>
 <a id="4" name="4">13.4)</a>    mi tavla fo la .esperanto
         si si .esperanton.
-    I talk in-language that-named ``and'' ``speranto'',
+    I talk in-language that-named “and” “speranto”,
         er, er, Esperanto.
 </pre>
 
-    <p>The Lojbanized spelling ``.esperanto'' breaks up, as a
+    <p>The Lojbanized spelling “.esperanto” breaks up, as a
     consequence of the Lojban morphology rules (see <a
     href="../../4/1/">Chapter 4</a>) into two Lojban words, the
-    cmavo ``.e'' and the undefined fu'ivla ``speranto''. Therefore,
-    two ``si'' cmavo are needed to erase them. Of course, ``.e
-    speranto'' is not grammatical after ``la'', but recognition of
-    ``si'' is done before grammatical analysis.</p>
+    cmavo “.e” and the undefined fu'ivla “speranto”. Therefore,
+    two “si” cmavo are needed to erase them. Of course, “.e
+    speranto” is not grammatical after “la”, but recognition of
+    “si” is done before grammatical analysis.</p>
 
-    <p>Even more messy is the result of an incorrect ``zoi'':</p>
+    <p>Even more messy is the result of an incorrect “zoi”:</p>
 <pre>
 <a id="5" name="5">13.5)</a>    mi cusku zoi fy. gy. .fy.
         si si si si zo .djan
-    I express [foreign] [quote] ``sy'' [unquote],
-        er, er, er, er, ``John''.
+    I express [foreign] [quote] “sy” [unquote],
+        er, er, er, er, “John”.
 </pre>
 
-    <p>In <a href="../13/#5">Example 13.5</a>, the first ``fy'' is
+    <p>In <a href="../13/#5">Example 13.5</a>, the first “fy” is
     taken to be the delimiting word. The next word must be
-    different from the delimiting word, and ``gy.'', the Lojban
-    name for the letter ``g'', was chosen arbitrarily. Then the
-    delimiting word must be repeated. For purposes of ``si''
+    different from the delimiting word, and “gy.”, the Lojban
+    name for the letter “g”, was chosen arbitrarily. Then the
+    delimiting word must be repeated. For purposes of “si”
     erasure, the entire quoted text is taken to be a word, so four
-    words have been uttered, and four more ``si'' cmavo are needed
-    to erase them altogether. Similarly, a stray ``lo'u'' quotation
-    mark must be erased with ``fy. le'u si si si'', by completing
-    the quotation and then erasing it all with three ``si''
+    words have been uttered, and four more “si” cmavo are needed
+    to erase them altogether. Similarly, a stray “lo'u” quotation
+    mark must be erased with “fy. le'u si si si”, by completing
+    the quotation and then erasing it all with three “si”
     cmavo.</p>
 
-    <p>What if less than the entire ``zo'' or ``zoi'' construct is
-    erased? The result is something which has a loose ``zo'' or
-    ``zoi'' in it, without its expected sequels, and which is
+    <p>What if less than the entire “zo” or “zoi” construct is
+    erased? The result is something which has a loose “zo” or
+    “zoi” in it, without its expected sequels, and which is
     incurably ungrammatical. Thus, to erase just the word quoted by
-    ``zo'', it turns out to be necessary to erase the ``zo'' as
+    “zo”, it turns out to be necessary to erase the “zo” as
     well:</p>
 <pre>
 <a id="6" name="6">13.6)</a>    mi se cmene zo .djan.
         si si zo .djordj.
-    I am-named-by the-word ``John'',
-        er, er, the-word ``George''.
+    I am-named-by the-word “John”,
+        er, er, the-word “George”.
 </pre>
 
-    <p>The parser will reject ``zo .djan. si .djordj.'', because in
-    that context ``djordj.'' is a name (of selma'o CMENE) rather
+    <p>The parser will reject “zo .djan. si .djordj.”, because in
+    that context “djordj.” is a name (of selma'o CMENE) rather
     than a quoted word.</p>
 
-    <p>Note: The current machine parser does not implement ``si''
+    <p>Note: The current machine parser does not implement “si”
     erasure.</p>
 
     <p>As the above examples plainly show, precise erasures with
-    ``si'' can be extremely hard to get right. Therefore, the cmavo
-    ``sa'' (of selma'o SA) is provided for erasing more than one
-    word. The cmavo following ``sa'' should be the starting marker
-    of some grammatical construct. The effect of the ``sa'' is to
+    “si” can be extremely hard to get right. Therefore, the cmavo
+    “sa” (of selma'o SA) is provided for erasing more than one
+    word. The cmavo following “sa” should be the starting marker
+    of some grammatical construct. The effect of the “sa” is to
     erase back to and including the last starting marker of the
     same kind. For example:</p>
 <pre>
 <a id="13-7"
 name="13-7">13.7)</a>    mi viska le sa .i mi cusku zo .djan.
-    I see the  ...  I say the-word ``John''.
+    I see the  ...  I say the-word “John”.
 </pre>
 
-    <p>Since the word following ``sa'' is ``.i'', the sentence
+    <p>Since the word following “sa” is “.i”, the sentence
     separator, its effect is to erase the preceding sentence. So <a
     href="../13/#7">Example 13.7</a> is equivalent to:</p>
 <pre>
@@ -164,31 +164,31 @@ name="13-9">13.9)</a>    mi viska le blanu zdan. sa le xekri zdani
     I see the blue hou ...  the black house.
 </pre>
 
-    <p>In <a href="../13/#9">Example 13.9</a>, ``le blanu zdan.'' is
+    <p>In <a href="../13/#9">Example 13.9</a>, “le blanu zdan.” is
     ungrammatical, but clearly reflects the speaker's original
-    intention to say ``le blanu zdani''. However, the ``zdani'' was
+    intention to say “le blanu zdani”. However, the “zdani” was
     cut off before the end and changed into a name. The entire
-    ungrammatical ``le'' construct is erased and replaced by ``le
-    xekri zdani''.</p>
+    ungrammatical “le” construct is erased and replaced by “le
+    xekri zdani”.</p>
 
-    <p>Note: The current machine parser does not implement ``sa''
-    erasure. Getting ``sa'' right is even more difficult (for a
-    computer) than getting ``si'' right, as the behavior of ``si''
+    <p>Note: The current machine parser does not implement “sa”
+    erasure. Getting “sa” right is even more difficult (for a
+    computer) than getting “si” right, as the behavior of “si”
     is defined in terms of words rather than in terms of
     grammatical constructs (possibly incorrect ones) and words are
-    conceptually simpler entities. On the other hand, ``sa'' is
+    conceptually simpler entities. On the other hand, “sa” is
     generally easier for human beings, because the rules for using
     it correctly are less finicky.</p>
 
-    <p>The cmavo ``su'' (of selma'o SU) is yet another
+    <p>The cmavo “su” (of selma'o SU) is yet another
     metalinguistic operator that erases the entire text. However,
-    if the text involves multiple speakers, then ``su'' will only
+    if the text involves multiple speakers, then “su” will only
     erase the remarks made by the one who said it, unless that
-    speaker has said nothing. Therefore ``susu'' is needed to
+    speaker has said nothing. Therefore “susu” is needed to
     eradicate a whole discussion in conversation.</p>
 
     <p>Note: The current machine parser does not implement either
-    ``su'' or ``susu'' erasure.</p>
+    “su” or “susu” erasure.</p>
 
     <p></p>
 

@@ -48,9 +48,9 @@
 
     <p>The following cmavo are discussed in this section:</p>
 <pre>
-   .abu    BY  letter ``a''
-    by  BY  letter ``b''
-    cy  BY  letter ``c''
+   .abu    BY  letter “a”
+    by  BY  letter “b”
+    cy  BY  letter “c”
     fe'a    VUhU    nth root of (default square root)
     lo'o    LOhO    terminator for LI
 </pre>
@@ -65,7 +65,7 @@
     accident. 
 
     <p>In addition, A+BO and A+KE constructs are allowed for
-    grouping logically connected operands, and ``ke ... ke'e'' is
+    grouping logically connected operands, and “ke ... ke'e” is
     allowed for grouping logically connected operators, although
     there are no analogues of tanru among the operators.</p>
 
@@ -90,10 +90,10 @@ name="17-2">17.2)</a>    vei ga ci gi vo ve'o prenu cu klama le zarci
     Note that the mekso here are being used as quantifiers. Lojban
     requires that any mekso other than a simple number be enclosed
     in parentheses when used as a quantifier. This rule prevents
-    ambiguities that do not exist when using ``li''. 
+    ambiguities that do not exist when using “li”. 
 
-    <p>By the way, ``li'' has an elidable terminator, ``lo'o'',
-    which is needed when a ``li'' sumti is followed by a logical
+    <p>By the way, “li” has an elidable terminator, “lo'o”,
+    which is needed when a “li” sumti is followed by a logical
     connective that could seem to be within the mekso. For
     example:</p>
 <pre>
@@ -103,8 +103,8 @@ name="17-2">17.2)</a>    vei ga ci gi vo ve'o prenu cu klama le zarci
         the-number four or else a non-known number.
 </pre>
 
-    <p>Omitting the ``lo'o'' would cause the parser to assume that
-    another operand followed the ``.onai'' and reject ``lo'' as an
+    <p>Omitting the “lo'o” would cause the parser to assume that
+    another operand followed the “.onai” and reject “lo” as an
     invalid operand.</p>
 
     <p>Simple examples of logical connection between operators are
@@ -139,14 +139,14 @@ name="17-6">17.6)</a>    go li .abu bi'epi'i vei xy. te'a re ve'o
         vei by. bi'ete'a re vu'u
         vo bi'epi'i .abu bi'epi'i cy. ve'o [ku'e] ve'o
         fe'i re bi'epi'i .abu
-    if-and-only-if the-number ``a''-times-( ``x'' power two )
-        plus ``b''-times-``x'' plus ``c''
+    if-and-only-if the-number “a”-times-( “x” power two )
+        plus “b”-times-“x” plus “c”
         equals the-number zero
     then the-number x equals the-number [ the-negation-of( b )
         plus or minus the-root-of
-        ( ``b''-power-2 minus
-        four-times-``a''-times-``c'' ) ]
-        divided-by two-times-``a''.
+        ( “b”-power-2 minus
+        four-times-“a”-times-“c” ) ]
+        divided-by two-times-“a”.
     Iff ax<sup>2</sup>  + bx + c = 0,
         then x =-b &plusmn; <span class="c3">&Ouml;</span>
 <!--sqrt-->(b<sup>2</sup>  - 4ac)
@@ -156,18 +156,18 @@ name="17-6">17.6)</a>    go li .abu bi'epi'i vei xy. te'a re ve'o
     Note the mixture of styles in <a href="../17/#6">Example
     17.6</a>: the negation of b and the square root are represented
     by forethought and most of the operator precedence by prefixed
-    ``bi'e'', but explicit parentheses had to be added to group the
+    “bi'e”, but explicit parentheses had to be added to group the
     numerator properly. In addition, the square root parentheses
-    cannot be removed here in favor of simple ``fe'a'' and ``ku'e''
+    cannot be removed here in favor of simple “fe'a” and “ku'e”
     bracketing, because infix operators are present in the operand.
     Getting <a href="../17/#6">Example 17.6</a> to parse perfectly
     using the current parser took several tries: a more relaxed
-    style would dispense with most of the ``bi'e'' cmavo and just
+    style would dispense with most of the “bi'e” cmavo and just
     let the standard precedence rules be understood. 
 
     <p>Non-logical connection with JOI and BIhI is also permitted
     between operands and between operators. One use for this
-    construct is to connect operands with ``bi'o'' to create
+    construct is to connect operands with “bi'o” to create
     intervals:</p>
 <pre>
 <a id="7" name="7">17.7)</a>    li no ga'o bi'o ke'i pa
@@ -177,7 +177,7 @@ name="17-6">17.6)</a>    go li .abu bi'epi'i vei xy. te'a re ve'o
         but not including one
 </pre>
     Intervals defined by a midpoint and range rather than beginning
-    and end points can be expressed by ``mi'i'': 
+    and end points can be expressed by “mi'i”: 
 
     <p></p>
 <pre>
@@ -185,7 +185,7 @@ name="17-6">17.6)</a>    go li .abu bi'epi'i vei xy. te'a re ve'o
     the-number 0.5 plus-or-minus 0.5
 </pre>
     which expresses the same interval as <a href="../17/#7">Example
-    17.7</a>. Note that the ``ga'o'' and ``ke'i'' still refer to
+    17.7</a>. Note that the “ga'o” and “ke'i” still refer to
     the endpoints, although these are now implied rather than
     expressed. Another way of expressing the same thing: 
 <pre>
@@ -199,14 +199,14 @@ name="17-9">17.9)</a>    li pimu su'i ni'upimu bi'o ma'upimu
     connection of operands has higher precedence than any mekso
     operator. 
 
-    <p>You can also combine two operands with ``ce'o'', the
+    <p>You can also combine two operands with “ce'o”, the
     sequence connective of selma'o JOI, to make a compound
     subscript:</p>
 
 <pre>
 <a id="17-10"
 name="17-10">17.10)</a>  xy. xi vei by. ce'o dy. [ve'o]
-    ``x'' sub ( ``b'' sequence ``d'' )
+    “x” sub ( “b” sequence “d” )
     x<sub>b,d}
 </sub>
 </pre>
