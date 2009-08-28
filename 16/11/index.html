@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <title>
+               “Who Did You Pass On The Road? Nobody”: Lojban And      Logic - The Lojban Reference Grammar
+      </title>
+      <link rel="stylesheet" type="text/css" href="../../cll.css" />
+      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+   </head>
+   <body>
+      <table class="nav" width="100%">
+         <tr>
+            <td width="15%" valign="top">
+               <a href="../../16/10/">
+                  Previous
+               </a>
+               <br />
+               <em>
+                  bridi negation and logical connectives
+               </em>
+            </td>
+            <td align="center">
+               <strong>
+                        “Who Did You Pass On The Road? Nobody”: Lojban And      Logic
+               </strong>
+               <br />
+               <a href="../../">
+                  <em>
+                     <small>
+                        The Lojban Reference Grammar
+                     </small>
+                  </em>
+               </a>
+            </td>
+            <td width="15%" valign="top">
+               <a href="../../16/12/">
+                  Next
+               </a>
+               <br />
+               <em>
+                  Logical Connectives and DeMorgan's Law
+               </em>
+            </td>
+         </tr>
+      </table>
+      <hr />
+          <h3>11. Using “naku” outside a prenex</h3>
+
+    <p>Let us consider the English sentence</p>
+
+    <p></p>
+<pre>
+<a id="11-1"
+name="11-1">11.1)</a>    Some children do not go to school.
+</pre>
+
+    <p>We cannot express this directly with “na”; the apparently
+    obvious translation</p>
+<pre>
+<a id="2" name="2">11.2)</a>    su'oda poi verba
+        na klama su'ode poi ckule
+    At-least-one X which-are child(ren)
+        [false] go-to at-least-one Y which-are school(s).
+</pre>
+    which converts to the external negation: 
+<pre>
+<a id="3" name="3">11.3)</a>    naku zo'u su'oda poi verba
+        cu klama su'ode poi ckule
+    It is false that some which are children
+        go-to some which are schools.
+    All children don't go to some school
+        (not just some children).
+</pre>
+    Lojban provides a negation form which more closely emulates
+    natural language negation. This involves putting “naku”
+    before the selbri, instead of a “na”. “naku” is clearly a
+    contradictory negation, given its parallel with prenex bridi
+    negation. Using “naku”, <a href="../11/#1">Example 11.1</a> can
+    be expressed as: 
+<pre>
+<a id="4" name="4">11.4)</a>    su'oda poi verba naku klama
+        su'ode poi ckule
+    Some which-are children don't go-to
+        some which-are schools.
+    Some children don't go to a school.
+</pre>
+    Although it is not technically a sumti, “naku” can be used in
+    most of the places where a sumti may appear. We'll see what
+    this means in a moment. 
+
+    <p>When you use “naku” within a bridi, you are explicitly
+    creating a negation boundary. As explained in <a
+    href=../9/>Section 9</a>, when a prenex negation boundary
+    expressed by “naku” moves past a quantifier, the quantifier
+    has to be inverted. The same is true for “naku” in the bridi
+    proper. We can move “naku” to any place in the sentence where
+    a sumti can go, inverting any quantifiers that the negation
+    boundary crosses. Thus, the following are equivalent to <a
+    href="../11/#4">Example 11.4</a> (no good English translations
+    exist):</p>
+<pre>
+<a id="11-5"
+name="11-5">11.5)</a>    su'oda poi verba cu klama rode poi ckule naku
+    For some children, for every school,
+        they don't go to it.
+
+<a id="11-6"
+name="11-6">11.6)</a> su'oda poi verba cu klama naku su'ode poi ckule
+    Some children don't go to (some) school(s).
+
+<a id="11-7"
+name="11-7">11.7)</a> naku roda poi verba cu klama su'ode poi ckule
+    It is false that all children go to some school(s).
+</pre>
+
+    <p>In <a href="../11/#5">Example 11.5</a>, we moved the negation
+    boundary rightward across the quantifier of “de”, forcing us
+    to invert it. In <a href="../11/#7">Example 11.7</a> we moved the
+    negation boundary across the quantifier of “da”, forcing us
+    to invert it instead. <a href="../11/#6">Example 11.6</a> merely
+    switched the selbri and the negation boundary, with no effect
+    on the quantifiers.</p>
+
+    <p>The same rules apply if you rearrange the sentence so that
+    the quantifier crosses an otherwise fixed negation. You can't
+    just convert the selbri of <a href="../11/#4">Example 11.4</a>
+    and rearrange the sumti to produce</p>
+<pre>
+<a id="11-8"
+name="11-8">11.8)</a>    su'ode poi ckule ku'o naku se klama roda poi verba
+    Some schools aren't gone-to-by every child.
+</pre>
+    or rather, <a href="../11/#8">Example 11.8</a> means something
+    completely different from <a href="../11/#4">Example 11.4</a>.
+    Conversion with “se” under “naku” negation is not
+    symmetric; not all sumti are treated identically, and some
+    sumti are not invariant under conversion. These complications
+    would make Lojban much harder to learn (just as their
+    corresponding natural language constructs are difficult to
+    learn). Thus, internal negation with “naku” is considered an
+    advanced technique, used to achieve stylistic compatibility
+    with natural languages. 
+
+    <p>It isn't always easy to see which quantifiers have to be
+    inverted in a sentence. <a href="../11/#4">Example 11.4</a> is
+    identical in meaning to:</p>
+<pre>
+<a id="11-9"
+name="11-9">11.9)</a>    su'o verba naku klama su'o ckule
+    Some children don't go-to some school.
+</pre>
+    but in <a href="../11/#9">Example 11.9</a>, the bound variables
+    “da” and “de” have been hidden. 
+
+    <p>It is trivial to export an internal bridi negation expressed
+    with “na” to the prenex, as we saw in <a href=../9/>Section
+    9</a>; you just move it to the left end of the prenex. In
+    comparison, it is non-trivial to export a “naku” to the
+    prenex because of the quantifiers. The rules for exporting
+    “naku” require that you export all of the quantified
+    variables (implicit or explicit) along with “naku”, and you
+    must export them from left to right, in the same order that
+    they appear in the sentence. Thus <a href="../11/#4">Example
+    11.4</a> goes into prenex form as:</p>
+<pre>
+<a id="10" name="10">11.10)</a>  su'oda poi verba ku'o naku
+        su'ode poi ckule zo'u
+            da klama de
+    For some X which is a child, it is not the case that
+        there is a Y which is a school such that:
+            X goes to Y.
+</pre>
+
+    <p>We can now move the “naku” to the left end of the prenex,
+    getting a contradictory negation that can be expressed with
+    “na”:</p>
+<pre>
+<a id="11" name="11">11.11)</a>  naku roda poi verba
+        su'ode poi ckule zo'u
+            da klama de
+    It is not the case that for all X's which are children,
+        there is a Y which is a school such that:
+            X goes to Y.
+</pre>
+    from which we can restore the quantified variables to the
+    sentence, giving: 
+<pre>
+<a id="11-12"
+name="11-12">11.12)</a>  naku zo'u roda poi verba cu klama su'ode poi ckule
+    It is not the case that all children go to some school.
+</pre>
+    or more briefly 
+<pre>
+<a id="11-13"
+name="11-13">11.13)</a>  ro verba cu na klama su'o ckule
+    All children [false] go-to some school(s).
+</pre>
+    As noted in <a href=../5/>Section 5</a>, a sentence with two
+    different quantified variables, such as <a
+    href="../11/#13">Example 11.13</a>, cannot always be converted
+    with “se” without first exporting the quantified variables.
+    When the variables have been exported, the sentence proper can
+    be converted, but the quantifier order in the prenex must
+    remain unchanged: 
+<pre>
+<a id="14" name="14">11.14)</a>  roda poi verba
+        su'ode poi ckule zo'u
+            de na se klama da
+    It is not the case that for all X's which are children,
+        there is a Y which is a school such that:
+            Y is gone to by X.
+</pre>
+    While you can't freely convert with “se” when you have two
+    quantified variables in a sentence, you can still freely move
+    sumti to either side of the selbri, as long as the order isn't
+    changed. If you use “na” negation in such a sentence, nothing
+    special need be done. If you use “naku” negation, then
+    quantified variables that cross the negation boundary must be
+    inverted. 
+
+    <p>Clearly, if all of Lojban negation was built on “naku”
+    negation instead of “na” negation, logical manipulation in
+    Lojban would be as difficult as in natural languages. In <a
+    href=../12/>Section 12</a>, for example, we'll discuss
+    DeMorgan's Law, which must be used whenever a sumti with a
+    logical connection is moved across a negation boundary.</p>
+
+    <p>Since “naku” has the grammar of a sumti, it can be placed
+    almost anywhere a sumti can go, including “be” and “bei”
+    clauses; it isn't clear what these mean, and we recommend
+    avoiding such constructs.</p>
+
+    <p>You can put multiple “naku”s in a sentence, each forming a
+    separate negation boundary. Two adjacent “naku”s in a bridi
+    are a double negative and cancel out:</p>
+<pre>
+<a id="11-16"
+name="11-16">11.16)</a>  mi naku naku le zarci cu klama
+</pre>
+
+    <p>Other expressions using two “naku”s may or may not cancel
+    out. If there is no quantified variable between them, then the
+    “naku”s cancel.</p>
+
+    <p>Negation with internal “naku” is clumsy and non-intuitive
+    for logical manipulations, but then, so are the natural
+    language features it is emulating.</p>
+
+
+      <hr />
+      <table class="nav" width="100%">
+         <tr>
+            <td width="15%" valign="top">
+               <a href="../../16/10/">
+                  Previous
+               </a>
+               <br />
+               <em>
+                  bridi negation and logical connectives
+               </em>
+            </td>
+            <td align="center">
+               <strong>
+                        “Who Did You Pass On The Road? Nobody”: Lojban And      Logic
+               </strong>
+               <br />
+               <a href="../../">
+                  <em>
+                     <small>
+                        The Lojban Reference Grammar
+                     </small>
+                  </em>
+               </a>
+            </td>
+            <td width="15%" valign="top">
+               <a href="../../16/12/">
+                  Next
+               </a>
+               <br />
+               <em>
+                  Logical Connectives and DeMorgan's Law
+               </em>
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <title>
+               The Shape Of Words To Come: Lojban Morphology - The Lojban Reference Grammar
+      </title>
+      <link rel="stylesheet" type="text/css" href="../../cll.css" />
+      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+   </head>
+   <body>
+      <table class="nav" width="100%">
+         <tr>
+            <td width="15%" valign="top">
+               <a href="../../4/11/">
+                  Previous
+               </a>
+               <br />
+               <em>
+                  The lujvo-making algorithm
+               </em>
+            </td>
+            <td align="center">
+               <strong>
+                        The Shape Of Words To Come: Lojban Morphology
+               </strong>
+               <br />
+               <a href="../../">
+                  <em>
+                     <small>
+                        The Lojban Reference Grammar
+                     </small>
+                  </em>
+               </a>
+            </td>
+            <td width="15%" valign="top">
+               <a href="../../4/13/">
+                  Next
+               </a>
+               <br />
+               <em>
+                  lujvo-making examples
+               </em>
+            </td>
+         </tr>
+      </table>
+      <hr />
+          <h3>12. The lujvo scoring algorithm</h3>
+
+    <p>This algorithm was devised by Bob and Nora LeChevalier in
+    1989. It is not the only possible algorithm, but it usually
+    gives a choice that people find preferable. The algorithm may
+    be changed in the future. The lowest-scoring variant will
+    usually be the dictionary form of the lujvo. (In previous
+    versions, it was the highest-scoring variant.)</p>
+
+    <dl>
+      <dt>1)</dt>
+
+      <dd>Count the total number of letters, including hyphens and
+      apostrophes; call it “L”.</dd>
+
+      <dt>2)</dt>
+
+      <dd>Count the number of apostrophes; call it “A”.</dd>
+
+      <dt>3)</dt>
+
+      <dd>Count the number of “y”-, “r”-, and “n”-hyphens;
+      call it “H”.</dd>
+
+      <dt>4)</dt>
+
+      <dd>For each rafsi, find the value in the following table.
+      Sum this value over all rafsi; call it “R”:</dd>
+
+      <dt></dt>
+
+      <dd>CVC/CV (final) (-sarji) 1 CVC/C (-sarj-) 2 CCVCV (final)
+      (-zbasu) 3 CCVC (-zbas-) 4 CVC (-nun-) 5 CVV with an
+      apostrophe (-ta'u-) 6 CCV (-zba-) 7 CVV with no apostrophe
+      (-sai-) 8</dd>
+
+      <dt>5)</dt>
+
+      <dd>Count the number of vowels, not including “y”; call it
+      “V”.</dd>
+    </dl>
+
+    <p>The score is then:</p>
+
+    <dl>
+      <dt></dt>
+
+      <dd>(1000 * L) - (500 * A) + (100 * H) - (10 * R) - V</dd>
+    </dl>
+    In case of ties, there is no preference. This should be rare.
+    Note that the algorithm essentially encodes a hierarchy of
+    priorities: short words are preferred (counting apostrophes as
+    half a letter), then words with fewer hyphens, words with more
+    pleasing rafsi (this judgment is subjective), and finally words
+    with more vowels are chosen. Each decision principle is applied
+    in turn if the ones before it have failed to choose; it is
+    possible that a lower-ranked principle might dominate a
+    higher-ranked one if it is ten times better than the
+    alternative. 
+
+    <p>Here are some lujvo with their scores (not necessarily the
+    lowest scoring forms for these lujvo, nor even necessarily
+    sensible lujvo):</p>
+<pre>
+<a id="1" name="1">12.1)</a>    zbasai
+    zba + sai
+    (1000 * 6) - (500 * 0)
+        + (100 * 0) - (10 * 15) - 3 = 5847
+
+<a id="2" name="2">12.2)</a> nunynau
+    nun + y + nau
+    32500 - (1000 * 7) + (500 * 0)
+        - (100 * 1) + (10 * 13) + 3 = 6967
+
+<a id="3" name="3">12.3)</a> sairzbata'u
+    sai + r + zba + ta'u
+    32500 - (1000 * 11) + (500 * 1)
+        - (100 * 1) + (10 * 21) + 5 = 10385
+
+<a id="4" name="4">12.4)</a> zbazbasysarji
+    zba + zbas + y + sarji  
+    32500 - (1000 * 13) + (500 * 0)
+        - (100 * 1) + (10 * 12) + 4 = 12976
+</pre>
+
+
+      <hr />
+      <table class="nav" width="100%">
+         <tr>
+            <td width="15%" valign="top">
+               <a href="../../4/11/">
+                  Previous
+               </a>
+               <br />
+               <em>
+                  The lujvo-making algorithm
+               </em>
+            </td>
+            <td align="center">
+               <strong>
+                        The Shape Of Words To Come: Lojban Morphology
+               </strong>
+               <br />
+               <a href="../../">
+                  <em>
+                     <small>
+                        The Lojban Reference Grammar
+                     </small>
+                  </em>
+               </a>
+            </td>
+            <td width="15%" valign="top">
+               <a href="../../4/13/">
+                  Next
+               </a>
+               <br />
+               <em>
+                  lujvo-making examples
+               </em>
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

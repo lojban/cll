@@ -1,0 +1,2753 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <title>
+               Formal Grammars - The Lojban Reference Grammar
+      </title>
+      <link rel="stylesheet" type="text/css" href="../../cll.css" />
+      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+   </head>
+   <body>
+      <table class="nav" width="100%">
+         <tr>
+            <td width="15%" valign="top">
+               <a href="../../20/">
+                  Previous
+               </a>
+               <br />
+               <em>
+                   A Catalogue of selma'o
+               </em>
+            </td>
+            <td align="center">
+               <strong>
+                        Formal Grammars
+               </strong>
+               <br />
+               <a href="../../">
+                  <em>
+                     <small>
+                        The Lojban Reference Grammar
+                     </small>
+                  </em>
+               </a>
+            </td>
+            <td width="15%" valign="top">
+               <a href="../../21/2/">
+                  Next
+               </a>
+               <br />
+               <em>
+                  EBNF Grammar of Lojban
+               </em>
+            </td>
+         </tr>
+      </table>
+      <hr />
+      <h2>Chapter 21<br />
+      Formal Grammars</h2>
+
+          <h3>1. YACC Grammar of Lojban</h3>
+
+    <div class="c2">
+      /* LOJBAN MACHINE GRAMMAR, 3RD BASELINE AS OF 10 JANUARY
+      1997<br />
+       WHICH IS ORIGINAL BASELINE 20 JULY 1990 INCORPORATING JC'S
+      TECH FIXES 1-28<br />
+       THIS DRAFT ALSO INCORPORATES CHANGE PROPOSALS 1-47 DATED 29
+      DECEMBER 1996<br />
+      <br />
+       THIS DOCUMENT IS EXPLICITLY DEDICATED TO THE PUBLIC
+      DOMAIN<br />
+       BY ITS AUTHOR, THE LOGICAL LANGUAGE GROUP INC.<br />
+       CONTACT THAT ORGANIZATION AT 2904 BEAU LANE, FAIRFAX VA
+      22031 USA<br />
+       U.S. PHONE: 703-385-0273<br />
+       INTL PHONE: +1 703 385-0273<br />
+    </div>
+    <br />
+    <br />
+     grammar.300 */ 
+
+    <p>/* The Lojban machine parsing algorithm is a multi-step
+    process. The YACC machine grammar presented here is an amalgam
+    of those steps, concatenated so as to allow YACC to verify the
+    syntactic ambiguity of the grammar. YACC is used to generate a
+    parser for a portion of the grammar, which is LALR1 (the type
+    of grammar that YACC is designed to identify and process
+    successfully), but most of the rest of the grammar must be
+    parsed using some language-coded processing.</p>
+
+    <h4>Step 1 - Lexing</h4>
+
+    <p>From phonemes, stress, and pause, it is possible to resolve
+    Lojban unambiguously into a stream of words. Any machine
+    processing of speech will have to have some way to deal with
+    'non-Lojban' failures of fluent speech, of course. The resolved
+    words can be expressed as a text file, using Lojban's phonetic
+    spelling rules.</p>
+
+    <p>The following steps, assume that there is the possibility of
+    non-Lojban text within the Lojban text (delimited
+    appropriately). Such non-Lojban text may not be reducible from
+    speech phonetically. However, step 2 allows the filtering of a
+    phonetically transcribed text stream, to recognize such
+    portions of non-Lojban text where properly delimited, without
+    interference with the parsing algorithm.</p>
+
+    <h4>Step 2 - Filtering</h4>
+
+    <p>From start to end, performing the following filtering and
+    lexing tasks using the given order of precedence in case of
+    conflict:</p>
+
+    <p>a. If the Lojban word “zoi” (selma'o ZOI) is identified,
+    take the following Lojban word (which should be end delimited
+    with a pause for separation from the following non-Lojban text)
+    as an opening delimiter. Treat all text following that
+    delimiter, until that delimiter recurs *after a pause*, as
+    grammatically a single token (labelled '<a
+    href="#y699">anything_699</a>' in this grammar). There is no
+    need for processing within this text except as necessary to
+    find the closing delimiter.</p>
+
+    <p>b. If the Lojban word “zo” (selma'o ZO) is identified,
+    treat the following Lojban word as a token labelled '<a
+    href="#y698">any_word_698</a>', instead of lexing it by its
+    normal grammatical function.</p>
+
+    <p>c. If the Lojban word “lo'u” (selma'o LOhU) is identified,
+    search for the closing delimiter “le'u” (selma'o LEhU),
+    ignoring any such closing delimiters absorbed by the previous
+    two steps. The text between the delimiters should be treated as
+    the single token '<a href="#y697">any_words_697</a>'.</p>
+
+    <p>d. Categorize all remaining words into their Lojban selma'o
+    category, including the various delimiters mentioned in the
+    previous steps. In all steps after step 2, only the selma'o
+    token type is significant for each word.</p>
+
+    <p>e. If the word “si” (selma'o SI) is identified, erase it
+    and the previous word (or token, if the previous text has been
+    condensed into a single token by one of the above rules).</p>
+
+    <p>f. If the word “sa” (selma'o SA) is identified, erase it
+    and all preceding text as far back as necessary to make what
+    follows attach to what precedes. (This rule is hard to
+    formalize and may receive further definition later.)</p>
+
+    <p>g. If the word 'su' (selma'o SU) is identified, erase it and
+    all preceding text back to and including the first preceding
+    token word which is in one of the selma'o: NIhO, LU, TUhE, and
+    TO. However, if speaker identification is available, a SU shall
+    only erase to the beginning of a speaker's discourse, unless it
+    occurs at the beginning of a speaker's discourse. (Thus, if the
+    speaker has said something, two “su”'s are required to erase
+    the entire conversation.</p>
+
+    <h4>Step 3 - Termination</h4>
+
+    <p>If the text contains a FAhO, treat that as the end-of-text
+    and ignore everything that follows it.</p>
+
+    <h4>Step 4 - Absorption of Grammar-Free Tokens</h4>
+
+    <p>In a new pass, perform the following absorptions (absorption
+    means that the token is removed from the grammar for processing
+    in following steps, and optionally reinserted, grouped with the
+    absorbing token after parsing is completed).</p>
+
+    <p>a. Token sequences of the form any - (ZEI - any) ..., where
+    there may be any number of ZEIs, are merged into a single token
+    of selma'o BRIVLA.</p>
+
+    <p>b. Absorb all selma'o BAhE tokens into the following token.
+    If they occur at the end of text, leave them alone (they are
+    errors).</p>
+
+    <p>c. Absorb all selma'o BU tokens into the previous token.
+    Relabel the previous token as selma'o BY.</p>
+
+    <p>d. If selma'o NAI occurs immediately following any of tokens
+    UI or CAI, absorb the NAI into the previous token.</p>
+
+    <p>e. Absorb all members of selma'o DAhO, FUhO, FUhE, UI, Y,
+    and CAI into the previous token. All of these null grammar
+    tokens are permitted following any word of the grammar, without
+    interfering with that word's grammatical function, or causing
+    any effect on the grammatical interpretation of any other token
+    in the text. Indicators at the beginning of text are explicitly
+    handled by the grammar.</p>
+
+    <h4>Step 5 - Insertion of Lexer Lexemes</h4>
+
+    <p>Lojban is not in itself LALR1. There are words whose
+    grammatical function is determined by following tokens. As a
+    result, parsing of the YACC grammar must take place in two
+    steps. In the first step, certain strings of tokens with
+    defined grammars are identified, and either</p>
+
+    <p>a. are replaced by a single specified 'lexer token' for step
+    6, or</p>
+
+    <p>b. the lexer token is inserted in front of the token string
+    to identify it uniquely.</p>
+
+    <p>The YACC grammar included herein is written to make YACC
+    generation of a step 6 parser easy regardless of whether a. or
+    b. is used. The strings of tokens to be labelled with lexer
+    tokens are found in rule terminals labelled with numbers
+    between 900 and 1099. These rules are defined with the lexer
+    tokens inserted, with the result that it can be verified that
+    the language is LALR1 under option b. after steps 1 through 4
+    have been performed. Alternatively, if option a. is to be used,
+    these rules are commented out, and the rule terminals labelled
+    from 800 to 900 refer to the lexer tokens *without* the strings
+    of defining tokens. Two sets of lexer tokens are defined in the
+    token set so as to be compatible with either option.</p>
+
+    <p>In this step, the strings must be labelled with the
+    appropriate lexer tokens. Order of inserting lexer tokens *IS*
+    significant, since some shorter strings that would be marked
+    with a lexer token may be found inside longer strings. If the
+    tokens are inserted before or in place of the shorter strings,
+    the longer strings cannot be identified.</p>
+
+    <p>If option a. is chosen, the following order of insertion
+    works correctly (it is not the only possible order): A, C, D,
+    B, U, E, H, I, J, K, M ,N, G, O, V, W, F, P, R, T, S, Y, L, Q.
+    This ensures that the longest rules will be processed first; a
+    PA+MAI will not be seen as a PA with a dangling MAI at the end,
+    for example.</p>
+
+    <h4>Step 6 - YACC Parsing</h4>
+
+    <p>YACC should now be able to parse the Lojban text in
+    accordance with the rule terminals labelled from 1 to 899 under
+    option 5a, or 1 to 1099 under option 5b. Comment out the rules
+    beyond 900 if option 5a is used, and comment out the 700-series
+    of lexer-tokens, while restoring the series of lexer tokens
+    numbered from 900 up.</p>
+
+    <p>*/</p>
+<pre>
+%token <a id="y501"
+name="y501">A_501</a>            /*        eks; basic afterthought logical connectives */
+%token <a id="y502"
+name="y502">BAI_502</a>          /*        modal operators */
+%token <a id="y503"
+name="y503">BAhE_503</a>         /*        next word intensifier */
+%token <a id="y504"
+name="y504">BE_504</a>           /*        sumti link to attach sumti to a selbri */
+%token <a id="y505"
+name="y505">BEI_505</a>          /*        multiple sumti separator between BE, BEI */
+%token <a id="y506"
+name="y506">BEhO_506</a>         /*        terminates BE/BEI specified descriptors */
+%token <a id="y507"
+name="y507">BIhI_507</a>         /*        interval component of JOI */
+%token <a id="y508"
+name="y508">BO_508</a>           /*        joins two units with shortest scope */
+%token <a id="y509"
+name="y509">BRIVLA_509</a>       /*        any brivla */
+%token <a id="y511"
+name="y511">BU_511</a>           /*        turns any word into a BY lerfu word */
+%token <a id="y513"
+name="y513">BY_513</a>           /*        individual lerfu words */
+%token <a id="y514"
+name="y514">CAhA_514</a>         /*        specifies actuality/potentiality of tense */
+%token <a id="y515"
+name="y515">CAI_515</a>          /*        afterthought intensity marker */
+%token <a id="y516"
+name="y516">CEI_516</a>          /*        pro-bridi assignment operator */
+%token <a id="y517"
+name="y517">CEhE_517</a>         /*        afterthought term list connective */
+%token <a id="y518"
+name="y518">CMENE_518</a>        /*        names; require consonant end, then pause no
+                                   LA or DOI selma'o embedded, pause before if
+                                   vowel initial and preceded by a vowel */
+%token <a id="y519"
+name="y519">CO_519</a>           /*        tanru inversion  */
+%token <a id="y520"
+name="y520">COI_520</a>          /*        vocative marker permitted inside names; must
+                                   always be followed by pause or DOI */
+%token <a id="y521"
+name="y521">CU_521</a>           /*        separator between head sumti and selbri */
+%token <a id="y522"
+name="y522">CUhE_522</a>         /*        tense/modal question */
+%token <a id="y524"
+name="y524">DAhO_524</a>         /*        cancel anaphora/cataphora assignments */
+%token <a id="y525"
+name="y525">DOI_525</a>          /*        vocative marker */
+%token <a id="y526"
+name="y526">DOhU_526</a>         /*        terminator for DOI-marked vocatives */
+%token <a id="y527"
+name="y527">FA_527</a>           /*        modifier head generic case tag */
+%token <a id="y528"
+name="y528">FAhA_528</a>         /*        superdirections in space */
+%token <a id="y529"
+name="y529">FAhO_529</a>         /*        normally elided 'done pause' to indicate end
+                                   of utterance string */
+%token <a id="y530"
+name="y530">FEhE_530</a>         /*        space interval mod flag */
+%token <a id="y531"
+name="y531">FEhU_531</a>         /*        ends bridi to modal conversion */
+%token <a id="y532"
+name="y532">FIhO_532</a>         /*        marks bridi to modal conversion */
+%token <a id="y533"
+name="y533">FOI_533</a>          /*        end compound lerfu */
+%token <a id="y535"
+name="y535">FUhE_535</a>         /*        open long scope for indicator */
+%token <a id="y536"
+name="y536">FUhO_536</a>         /*        close long scope for indicator */
+%token <a id="y537"
+name="y537">GA_537</a>           /*        geks; forethought logical connectives */
+%token <a id="y538"
+name="y538">GEhU_538</a>         /*        marker ending GOI relative clauses */
+%token <a id="y539"
+name="y539">GI_539</a>           /*        forethought medial marker */
+%token <a id="y541"
+name="y541">GIhA_541</a>         /*        logical connectives for bridi-tails */
+%token <a id="y542"
+name="y542">GOI_542</a>          /*        attaches a sumti modifier to a sumti */
+%token <a id="y543"
+name="y543">GOhA_543</a>         /*        pro-bridi */
+%token <a id="y544"
+name="y544">GUhA_544</a>         /*        GEK for tanru units, corresponds to JEKs */
+%token <a id="y545"
+name="y545">I_545</a>            /*        sentence link */
+%token <a id="y546"
+name="y546">JA_546</a>           /*        jeks; logical connectives within tanru */
+%token <a id="y547"
+name="y547">JAI_547</a>          /*        modal conversion flag */
+%token <a id="y548"
+name="y548">JOI_548</a>          /*        non-logical connectives */
+%token <a id="y550"
+name="y550">KEhE_550</a>         /*        right terminator for KE groups */
+%token <a id="y551"
+name="y551">KE_551</a>           /*        left long scope marker */
+%token <a id="y552"
+name="y552">KEI_552</a>          /*        right terminator, NU abstractions */
+%token <a id="y554"
+name="y554">KI_554</a>           /*        multiple utterance scope for tenses */
+%token <a id="y555"
+name="y555">KOhA_555</a>         /*        sumti anaphora */
+%token <a id="y556"
+name="y556">KU_556</a>           /*        right terminator for descriptions, etc. */
+%token <a id="y557"
+name="y557">KUhO_557</a>         /*        right terminator, NOI relative clauses */
+%token <a id="y558"
+name="y558">LA_558</a>           /*        name descriptors */
+%token <a id="y559"
+name="y559">LAU_559</a>          /*        lerfu prefixes */
+%token <a id="y561"
+name="y561">LAhE_561</a>         /*        sumti qualifiers */
+%token <a id="y562"
+name="y562">LE_562</a>           /*        sumti descriptors */
+%token <a id="y565"
+name="y565">LEhU_565</a>         /*        possibly ungrammatical text right quote */
+%token <a id="y566"
+name="y566">LI_566</a>           /*        convert number to sumti */
+%token <a id="y567"
+name="y567">LIhU_567</a>         /*        grammatical text right quote */
+%token <a id="y568"
+name="y568">LOhO_568</a>         /*        elidable terminator for LI */
+%token <a id="y569"
+name="y569">LOhU_569</a>         /*        possibly ungrammatical text left quote */
+%token <a id="y571"
+name="y571">LU_571</a>           /*        grammatical text left quote */
+%token <a id="y573"
+name="y573">LUhU_573</a>         /*        LAhE close delimiter */
+%token <a id="y574"
+name="y574">ME_574</a>           /*        converts a sumti into a tanru_unit */
+%token <a id="y575"
+name="y575">MEhU_575</a>         /*        terminator for ME */
+%token <a id="y577"
+name="y577">MOhI_577</a>         /*        motion tense marker */
+%token <a id="y578"
+name="y578">NA_578</a>           /*        bridi negation  */
+%token <a id="y581"
+name="y581">NAI_581</a>          /*        attached to words to negate them */
+%token <a id="y583"
+name="y583">NAhE_583</a>         /*        scalar negation  */
+%token <a id="y584"
+name="y584">NIhO_584</a>         /*        new paragraph; change of subject */
+%token <a id="y585"
+name="y585">NOI_585</a>          /*        attaches a subordinate clause to a sumti */
+%token <a id="y586"
+name="y586">NU_586</a>           /*        abstraction  */
+%token <a id="y587"
+name="y587">NUhI_587</a>         /*        marks the start of a termset */
+%token <a id="y588"
+name="y588">NUhU_588</a>         /*        marks the middle and end of a termset */
+%token <a id="y591"
+name="y591">PEhE_591</a>         /*        afterthought termset connective prefix */
+%token <a id="y592"
+name="y592">PU_592</a>           /*        directions in time */
+%token <a id="y593"
+name="y593">RAhO_593</a>         /*        flag for modified interpretation of GOhI */
+%token <a id="y594"
+name="y594">ROI_594</a>          /*        converts number to extensional tense */
+%token <a id="y595"
+name="y595">SA_595</a>           /*        metalinguistic eraser to the beginning of
+                                   the current utterance */
+%token <a id="y596"
+name="y596">SE_596</a>           /*        conversions */
+%token <a id="y597"
+name="y597">SEI_597</a>          /*        metalinguistic bridi insert marker */
+%token <a id="y598"
+name="y598">SEhU_598</a>         /*        metalinguistic bridi end marker */
+%token <a id="y601"
+name="y601">SI_601</a>           /*        metalinguistic single word eraser */
+%token <a id="y602"
+name="y602">SOI_602</a>          /*        reciprocal sumti marker */
+%token <a id="y603"
+name="y603">SU_603</a>           /*        metalinguistic eraser of the entire text */
+%token <a id="y604"
+name="y604">TAhE_604</a>         /*        tense interval properties */
+%token <a id="y605"
+name="y605">TEI_605</a>          /*        start compound lerfu */
+%token <a id="y606"
+name="y606">TO_606</a>           /*        left discursive parenthesis */
+%token <a id="y607"
+name="y607">TOI_607</a>          /*        right discursive parenthesis */
+%token <a id="y610"
+name="y610">TUhE_610</a>         /*        multiple utterance scope mark */
+%token <a id="y611"
+name="y611">TUhU_611</a>         /*        multiple utterance end scope mark */
+%token <a id="y612"
+name="y612">UI_612</a>           /*        attitudinals, observationals, discursives */
+%token <a id="y613"
+name="y613">VA_613</a>           /*        distance in space-time */
+%token <a id="y614"
+name="y614">VAU_614</a>          /*        end simple bridi or bridi-tail */
+%token <a id="y615"
+name="y615">VEhA_615</a>         /*        space-time interval size */
+%token <a id="y616"
+name="y616">VIhA_616</a>         /*        space-time dimensionality marker */
+%token <a id="y617"
+name="y617">VUhO_617</a>         /*        glue between logically connected sumti
+                                    and relative clauses */
+%token <a id="y618"
+name="y618">XI_618</a>           /*        subscripting operator */
+%token <a id="y619"
+name="y619">Y_619</a>            /*        hesitation */
+%token <a id="y621"
+name="y621">ZAhO_621</a>         /*        event properties - inchoative, etc. */
+%token <a id="y622"
+name="y622">ZEhA_622</a>         /*        time interval size tense */
+%token <a id="y623"
+name="y623">ZEI_623</a>          /*        lujvo glue */
+%token <a id="y624"
+name="y624">ZI_624</a>           /*        time distance tense */
+%token <a id="y625"
+name="y625">ZIhE_625</a>         /*        conjoins relative clauses */
+%token <a id="y626"
+name="y626">ZO_626</a>           /*        single word metalinguistic quote marker */
+%token <a id="y627"
+name="y627">ZOI_627</a>          /*        delimited quote marker */
+%token <a id="y628"
+name="y628">ZOhU_628</a>         /*        prenex terminator (not elidable) */
+
+%token <a id="y650"
+name="y650">BIhE_650</a>         /*        prefix for high-priority MEX operator */
+%token <a id="y651"
+name="y651">BOI_651</a>          /*        number or lerfu-string terminator */
+%token <a id="y655"
+name="y655">FUhA_655</a>         /*        reverse Polish flag */
+%token <a id="y656"
+name="y656">GAhO_656</a>         /*        open/closed interval markers for BIhI */
+%token <a id="y657"
+name="y657">JOhI_657</a>         /*        flags an array operand */
+%token <a id="y658"
+name="y658">KUhE_658</a>         /*        MEX forethought delimiter */
+%token <a id="y661"
+name="y661">MAI_661</a>          /*        change numbers to utterance ordinals */
+%token <a id="y662"
+name="y662">MAhO_662</a>         /*        change MEX expressions to MEX operators */
+%token <a id="y663"
+name="y663">MOI_663</a>          /*        change number to selbri */
+%token <a id="y664"
+name="y664">MOhE_664</a>         /*        change sumti to operand, inverse of LI */
+%token <a id="y665"
+name="y665">NAhU_665</a>         /*        change a selbri into an operator */
+%token <a id="y666"
+name="y666">NIhE_666</a>         /*        change selbri to operand; inverse of MOI */
+%token <a id="y667"
+name="y667">NUhA_667</a>         /*        change operator to selbri; inverse of MOhE */
+%token <a id="y672"
+name="y672">PA_672</a>           /*        numbers and numeric punctuation */
+%token <a id="y673"
+name="y673">PEhO_673</a>         /*        forethought (Polish) flag */
+%token <a id="y675"
+name="y675">TEhU_675</a>         /*        closing gap for MEX constructs */
+%token <a id="y677"
+name="y677">VEI_677</a>          /*        left MEX bracket */
+%token <a id="y678"
+name="y678">VEhO_678</a>         /*        right MEX bracket */
+%token <a id="y679"
+name="y679">VUhU_679</a>         /*        MEX operator */
+
+%token any_words_697    /*        a string of lexable Lojban words */
+%token any_word_698     /*        any single lexable Lojban words */
+%token anything_699     /*        a possibly unlexable phoneme string */
+
+
+/* The following tokens are the actual lexer tokens.  The _900 series
+tokens are duplicates that allow limited testing of lexer rules in the
+context of the total grammar.  They are used in the actual parser, where
+the 900 series rules are found in the lexer.  */
+
+%token lexer_<a id="y701"
+name="y701">A_701</a>      /*        flags a MAI utterance ordinal */
+%token lexer_<a id="y702"
+name="y702">B_702</a>      /*        flags an EK unless EK_BO, EK_KE */
+%token lexer_<a id="y703"
+name="y703">C_703</a>      /*        flags an EK_BO */
+%token lexer_<a id="y704"
+name="y704">D_704</a>      /*        flags an EK_KE */
+%token lexer_<a id="y705"
+name="y705">E_705</a>      /*        flags a JEK */
+%token lexer_<a id="y706"
+name="y706">F_706</a>      /*        flags a JOIK */
+%token lexer_<a id="y707"
+name="y707">G_707</a>      /*        flags a GEK */
+%token lexer_<a id="y708"
+name="y708">H_708</a>      /*        flags a GUhEK */
+%token lexer_<a id="y709"
+name="y709">I_709</a>      /*        flags a NAhE_BO */
+%token lexer_<a id="y710"
+name="y710">J_710</a>      /*        flags a NA_KU */
+%token lexer_<a id="y711"
+name="y711">K_711</a>      /*        flags an I_BO (option. JOIK/JEK lexer tags)*/
+%token lexer_<a id="y712"
+name="y712">L_712</a>      /*        flags a PA, unless MAI (then lexer A) */
+%token lexer_<a id="y713"
+name="y713">M_713</a>      /*        flags a GIhEK_BO */
+%token lexer_<a id="y714"
+name="y714">N_714</a>      /*        flags a GIhEK_KE */
+%token lexer_<a id="y715"
+name="y715">O_715</a>      /*        flags a modal operator BAI or compound */
+%token lexer_<a id="y716"
+name="y716">P_716</a>      /*        flags a GIK */
+%token lexer_<a id="y717"
+name="y717">Q_717</a>      /*        flags a lerfu_string unless MAI (then lexer_A)*/
+%token lexer_<a id="y718"
+name="y718">R_718</a>      /*        flags a GIhEK, not BO or KE */
+%token lexer_<a id="y719"
+name="y719">S_719</a>      /*        flags simple I */
+%token lexer_<a id="y720"
+name="y720">T_720</a>      /*        flags I_JEK */
+%token lexer_<a id="y721"
+name="y721">U_721</a>      /*        flags a JEK_BO */
+%token lexer_<a id="y722"
+name="y722">V_722</a>      /*        flags a JOIK_BO */
+%token lexer_<a id="y723"
+name="y723">W_723</a>      /*        flags a JOIK_KE */
+/* %token lexer_<a id="y724" name="y724">X_724</a>   /* null */
+%token lexer_<a id="y725"
+name="y725">Y_725</a>      /*        flags a PA_MOI */
+
+
+/*%token lexer_A_905    /*        :  lexer_A_701  utt_ordinal_root_906 */
+/*%token lexer_B_910    /*        :  lexer_B_702  EK_root_911 */
+/*%token lexer_C_915    /*        :  lexer_C_703  EK_root_911  BO_508 */
+/*%token lexer_D_916    /*        :  lexer_D_704  EK_root_911  KE_551 */
+/*%token lexer_E_925    /*        :  lexer_E_705  JEK_root_926 */
+/*%token lexer_F_930    /*        :  lexer_F_706  JOIK_root_931 */
+/*%token lexer_G_935    /*        :  lexer_G_707  GA_537 */
+/*%token lexer_H_940    /*        :  lexer_H_708  GUhA_544 */
+/*%token lexer_I_945    /*        :  lexer_I_709  NAhE_583  BO_508 */
+/*%token lexer_J_950    /*        :  lexer_J_710  NA_578  KU_556 */
+/*%token lexer_K_955    /*        :  lexer_K_711  I_432  BO_508 */
+/*%token lexer_L_960    /*        :  lexer_L_712  number_root_961 */
+/*%token lexer_M_965    /*        :  lexer_M_713  GIhEK_root_991  BO_508 */
+/*%token lexer_N_966    /*        :  lexer_N_714  GIhEK_root_991  KE_551 */
+/*%token lexer_O_970    /*        :  lexer_O_715  simple_tense_modal_972 */
+/*%token lexer_P_980    /*        :  lexer_P_716  GIK_root_981 */
+/*%token lexer_Q_985    /*        :  lexer_Q_717  lerfu_string_root_986 */
+/*%token lexer_R_990    /*        :  lexer_R_718  GIhEK_root_991 */
+/*%token lexer_S_995    /*        :  lexer_S_719  I_545 */
+/*%token  lexer_T_1000  /*        :  lexer_T_720  I_545  simple_JOIK_JEK_957 */
+/*%token lexer_U_1005   /*        :  lexer_U_721  JEK_root_926  BO_508 */
+/*%token lexer_V_1010   /*        :  lexer_V_722  JOIK_root_931  BO_508 */
+/*%token lexer_W_1015   /*        :  lexer_W_723  JOIK_root_931  KE_551 */
+/*%token lexer_X_1020   /* null */
+/*%token lexer_Y_1025   /*        :  lexer_Y_725  number_root_961  MOI_663 */
+
+
+%start <a href="#y0">text_0</a>
+
+%%
+
+<a id="y0" name="y0">text_0</a>                  :  <a
+href="#y1">text_A_1</a>
+                        |  <a href="#y411">indicators_411</a>  <a
+href="#y1">text_A_1</a>
+                        |  <a href="#y32">free_modifier_32</a>  <a
+href="#y1">text_A_1</a>
+                        |  <a href="#y404">cmene_404</a>  <a
+href="#y1">text_A_1</a>
+                        |  <a href="#y411">indicators_411</a>  <a
+href="#y32">free_modifier_32</a>  <a href="#y1">text_A_1</a>
+                        |  <a href="#y581">NAI_581</a>  <a
+href="#y0">text_0</a>
+                        ;
+
+<a id="y1" name="y1">text_A_1</a>                :  <a
+href="#y422">JOIK_JEK_422</a>  <a href="#y2">text_B_2</a>
+                        /* incomplete JOIK_JEK  without preceding I */
+                        /* compare note on <a
+href="#y10">paragraph_10</a> */
+                        |  <a href="#y2">text_B_2</a>
+                        ;
+
+<a id="y2" name="y2">text_B_2</a>                :  <a
+href="#y819">I_819</a>  <a href="#y2">text_B_2</a>
+                        |  <a href="#y820">I_JEK_820</a>  <a
+href="#y2">text_B_2</a>
+                        |  <a href="#y811">I_BO_811</a>  <a
+href="#y2">text_B_2</a>
+                        |  <a href="#y410">para_mark_410</a>  <a
+href="#y3">text_C_3</a>
+                        |  <a href="#y3">text_C_3</a>
+                        ;
+
+<a id="y3" name="y3">text_C_3</a>                :  <a
+href="#y4">paragraphs_4</a>
+   /* Only indicators which follow certain selma'o:
+    cmene, <a href="#y607">TOI_607</a>, <a
+href="#y571">LU_571</a>, and the lexer_K and lexer_S I_roots and compounds,
+    and at the start of text(_0), will survive the lexer; all other valid ones
+    will be absorbed.  The only strings for which indicators generate a
+    potential ambiguity are those which contain NAI.  An indicator cannot be
+    inserted in between a token and its negating NAI, else you can't tell
+    whether it is the indicator or the original token being negated. */
+                        |  /* empty */
+  /* An empty text is legal; formerly this was handled by the explicit
+   appearance of <a
+href="#y529">FAhO_529</a>, but this is now absorbed by the preparser. */
+                        ;
+
+
+<a id="y4" name="y4">paragraphs_4</a>            :  <a
+href="#y10">paragraph_10</a>
+                        |  <a href="#y10">paragraph_10</a>  <a
+href="#y410">para_mark_410</a>  <a href="#y4">paragraphs_4</a>
+                        ;
+
+<a id="y10" name="y10">paragraph_10</a>            :  <a
+href="#y11">statement_11</a>
+                        |  <a href="#y20">fragment_20</a>
+                        |  <a href="#y10">paragraph_10</a>  <a
+href="#y819">I_819</a>  <a href="#y11">statement_11</a>
+                        |  <a href="#y10">paragraph_10</a>  <a
+href="#y819">I_819</a>  <a href="#y20">fragment_20</a>
+                        |  <a href="#y10">paragraph_10</a>  <a
+href="#y819">I_819</a>
+                        /* this last fixes an erroneous start to a sentence,
+                           and permits incomplete JOIK_JEK after I, as well
+                           in answer to questions on those connectives  */
+                        ;
+
+<a id="y11" name="y11">statement_11</a>            :  <a
+href="#y12">statement_A_12</a>
+                        |  <a href="#y30">prenex_30</a>  <a
+href="#y11">statement_11</a>
+                        ;
+
+<a id="y12" name="y12">statement_A_12</a>          :  <a
+href="#y13">statement_B_13</a>
+                        |  <a href="#y12">statement_A_12</a>  <a
+href="#y820">I_JEK_820</a>  <a href="#y13">statement_B_13</a>
+                        |  <a href="#y12">statement_A_12</a>  <a
+href="#y820">I_JEK_820</a> 
+                        ;
+
+<a id="y13" name="y13">statement_B_13</a>          :  <a
+href="#y14">statement_C_14</a>
+                        |  <a href="#y14">statement_C_14</a>  <a
+href="#y811">I_BO_811</a>  <a href="#y13">statement_B_13</a>
+                        |  <a href="#y14">statement_C_14</a>  <a
+href="#y811">I_BO_811</a> 
+                        ;
+
+<a id="y14" name="y14">statement_C_14</a>          :  <a
+href="#y40">sentence_40</a>
+                        |  <a href="#y447">TUhE_447</a>  <a
+href="#y2">text_B_2</a>  <a href="#y454">TUhU_gap_454</a>
+                        |  <a href="#y491">tag_491</a>  <a
+href="#y447">TUhE_447</a>  <a href="#y2">text_B_2</a>  <a
+href="#y454">TUhU_gap_454</a>
+                        ;
+
+
+<a id="y20" name="y20">fragment_20</a>             :  <a
+href="#y802">EK_802</a>
+                        |  <a href="#y445">NA_445</a>
+                        |  <a href="#y818">GIhEK_818</a>
+                        |  <a href="#y300">quantifier_300</a>
+                        |  <a href="#y80">terms_80</a>  <a
+href="#y456">VAU_gap_456</a>        /* answer to ma */
+                        /* <a
+href="#y490">mod_head_490</a> requires both <a
+href="#y450">gap_450</a> and <a href="#y456">VAU_gap_456</a>
+                           but needs no extra rule to accomplish this */
+                        |  <a href="#y121">relative_clauses_121</a>
+                        |  <a href="#y161">links_161</a>
+                        |  <a href="#y160">linkargs_160</a>
+                        |  <a href="#y30">prenex_30</a>
+                        ;
+
+
+<a id="y30" name="y30">prenex_30</a>               :  <a
+href="#y80">terms_80</a>  <a href="#y492">ZOhU_492</a>
+                        ;
+
+<a id="y32" name="y32">free_modifier_32</a>        :  <a
+href="#y33">free_modifier_A_33</a>
+                        |  <a
+href="#y33">free_modifier_A_33</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y33" name="y33">free_modifier_A_33</a>      :  <a
+href="#y35">vocative_35</a>
+                        |  <a href="#y36">parenthetical_36</a>
+                        |  <a href="#y34">discursive_bridi_34</a>
+                        |  <a href="#y486">subscript_486</a>
+                        |  <a
+href="#y801">utterance_ordinal_801</a>
+                        ;
+
+<a id="y34" name="y34">discursive_bridi_34</a>     :  <a
+href="#y440">SEI_440</a>  <a href="#y130">selbri_130</a>  <a
+href="#y459">SEhU_gap_459</a>
+                        |  <a href="#y498">SOI_498</a>  <a
+href="#y90">sumti_90</a>  <a href="#y459">SEhU_gap_459</a>
+                        |  <a href="#y498">SOI_498</a>  <a
+href="#y90">sumti_90</a>  <a href="#y90">sumti_90</a>  <a
+href="#y459">SEhU_gap_459</a>
+                        |  <a href="#y440">SEI_440</a>  <a
+href="#y80">terms_80</a>  <a href="#y451">front_gap_451</a>
+                                  <a
+href="#y130">selbri_130</a>  <a href="#y459">SEhU_gap_459</a>
+                        |  <a href="#y440">SEI_440</a>  <a
+href="#y80">terms_80</a>  <a href="#y130">selbri_130</a>  <a
+href="#y459">SEhU_gap_459</a>
+                        ;
+
+<a id="y35" name="y35">vocative_35</a>             :  <a
+href="#y415">DOI_415</a>  <a href="#y130">selbri_130</a>  <a
+href="#y457">DOhU_gap_457</a>
+                        |  <a href="#y415">DOI_415</a>  <a
+href="#y130">selbri_130</a>
+                                  <a
+href="#y121">relative_clauses_121</a>  <a
+href="#y457">DOhU_gap_457</a>
+                        |  <a href="#y415">DOI_415</a>  <a
+href="#y121">relative_clauses_121</a>
+                                  <a
+href="#y130">selbri_130</a>  <a href="#y457">DOhU_gap_457</a>
+                        |  <a href="#y415">DOI_415</a>  <a
+href="#y121">relative_clauses_121</a>
+                                  <a
+href="#y130">selbri_130</a>  <a
+href="#y121">relative_clauses_121</a>  <a
+href="#y457">DOhU_gap_457</a>
+                        |  <a href="#y415">DOI_415</a>  <a
+href="#y404">cmene_404</a>  <a href="#y457">DOhU_gap_457</a>
+                        |  <a href="#y415">DOI_415</a>  <a
+href="#y404">cmene_404</a>
+                                  <a
+href="#y121">relative_clauses_121</a>  <a
+href="#y457">DOhU_gap_457</a>
+                        |  <a href="#y415">DOI_415</a>  <a
+href="#y121">relative_clauses_121</a>  <a
+href="#y404">cmene_404</a>
+                                 <a href="#y457">DOhU_gap_457</a>
+                        |  <a href="#y415">DOI_415</a>  <a
+href="#y121">relative_clauses_121</a>  <a
+href="#y404">cmene_404</a>
+                                  <a
+href="#y121">relative_clauses_121</a>  <a
+href="#y457">DOhU_gap_457</a>
+                        |  <a href="#y415">DOI_415</a>  <a
+href="#y90">sumti_90</a>  <a href="#y457">DOhU_gap_457</a>
+                        |  <a href="#y415">DOI_415</a>  <a
+href="#y457">DOhU_gap_457</a>
+                        ;
+
+<a id="y36" name="y36">parenthetical_36</a>        :  <a
+href="#y606">TO_606</a>  <a href="#y0">text_0</a>  <a
+href="#y468">TOI_gap_468</a>
+                        ;
+
+
+<a id="y40" name="y40">sentence_40</a>             :  <a
+href="#y50">bridi_tail_50</a>  /* bare observative or mo answer */
+                        |  <a href="#y80">terms_80</a>  <a
+href="#y451">front_gap_451</a>  <a href="#y50">bridi_tail_50</a>
+                        |  <a href="#y80">terms_80</a>  <a
+href="#y50">bridi_tail_50</a>
+                        ;
+
+<a id="y41" name="y41">subsentence_41</a>          :  <a
+href="#y40">sentence_40</a>
+                        |  <a href="#y30">prenex_30</a>  <a
+href="#y41">subsentence_41</a>
+                        ;
+
+
+<a id="y50" name="y50">bridi_tail_50</a>           :  <a
+href="#y51">bridi_tail_A_51</a>
+                        |  <a href="#y51">bridi_tail_A_51</a>  <a
+href="#y814">GIhEK_KE_814</a>  <a href="#y50">bridi_tail_50</a>
+                                  <a
+href="#y466">KEhE_gap_466</a>  <a href="#y71">tail_terms_71</a>
+                        ;
+
+<a id="y51" name="y51">bridi_tail_A_51</a>         :  <a
+href="#y52">bridi_tail_B_52</a>
+                        |  <a href="#y51">bridi_tail_A_51</a>  <a
+href="#y818">GIhEK_818</a>  <a href="#y52">bridi_tail_B_52</a>
+                           <a href="#y71">tail_terms_71</a>
+                        ;
+
+<a id="y52" name="y52">bridi_tail_B_52</a>         :  <a
+href="#y53">bridi_tail_C_53</a>
+                        |  <a href="#y53">bridi_tail_C_53</a>  <a
+href="#y813">GIhEK_BO_813</a>  <a href="#y52">bridi_tail_B_52</a>
+                           <a href="#y71">tail_terms_71</a>
+                        ;
+
+<a id="y53" name="y53">bridi_tail_C_53</a>         :  <a
+href="#y54">gek_sentence_54</a>
+                        |  <a href="#y130">selbri_130</a>  <a
+href="#y71">tail_terms_71</a>
+                        ;
+
+<a id="y54" name="y54">gek_sentence_54</a>         :  <a
+href="#y807">GEK_807</a>  <a href="#y41">subsentence_41</a>
+                                <a href="#y816">GIK_816</a>  <a
+href="#y41">subsentence_41</a>  <a href="#y71">tail_terms_71</a>
+                        |  <a href="#y491">tag_491</a>  <a
+href="#y493">KE_493</a>  <a href="#y54">gek_sentence_54</a>  <a
+href="#y466">KEhE_gap_466</a>
+                        |  <a href="#y445">NA_445</a>  <a
+href="#y54">gek_sentence_54</a>
+                        ;
+
+<a id="y71" name="y71">tail_terms_71</a>           :  <a
+href="#y80">terms_80</a>  <a href="#y456">VAU_gap_456</a>
+                        |  <a href="#y456">VAU_gap_456</a>
+                        ;
+
+
+<a id="y80" name="y80">terms_80</a>                :  <a
+href="#y81">terms_A_81</a>
+                        |  <a href="#y80">terms_80</a>  <a
+href="#y81">terms_A_81</a>
+                        ;
+
+<a id="y81" name="y81">terms_A_81</a>              :  <a
+href="#y82">terms_B_82</a>
+                        |  <a href="#y81">terms_A_81</a>  <a
+href="#y494">PEhE_494</a>  <a href="#y422">JOIK_JEK_422</a>  <a
+href="#y82">terms_B_82</a>
+                        ;
+
+<a id="y82" name="y82">terms_B_82</a>              :  <a
+href="#y83">term_83</a>
+                        |  <a href="#y82">terms_B_82</a>  <a
+href="#y495">CEhE_495</a>  <a href="#y83">term_83</a>
+                        ;
+
+<a id="y83" name="y83">term_83</a>                 :  <a
+href="#y90">sumti_90</a>
+                        |  <a href="#y84">modifier_84</a>
+                        |  <a href="#y85">term_set_85</a>
+                        |  <a href="#y810">NA_KU_810</a>
+                        ;
+
+<a id="y84" name="y84">modifier_84</a>             :  <a
+href="#y490">mod_head_490</a>  <a href="#y450">gap_450</a>
+                        |  <a href="#y490">mod_head_490</a>  <a
+href="#y90">sumti_90</a>
+                        ;
+
+<a id="y85" name="y85">term_set_85</a>             :  <a
+href="#y496">NUhI_496</a>  <a href="#y80">terms_80</a>  <a
+href="#y460">NUhU_gap_460</a>
+                        |  <a href="#y496">NUhI_496</a>  <a
+href="#y807">GEK_807</a>  <a href="#y80">terms_80</a>  <a
+href="#y460">NUhU_gap_460</a>
+                                <a href="#y816">GIK_816</a>  <a
+href="#y80">terms_80</a>  <a href="#y460">NUhU_gap_460</a>
+                        ;
+
+
+<a id="y90" name="y90">sumti_90</a>                :  <a
+href="#y91">sumti_A_91</a>
+                        |  <a href="#y91">sumti_A_91</a>  <a
+href="#y497">VUhO_497</a>  <a href="#y121">relative_clauses_121</a>
+                        ;
+
+<a id="y91" name="y91">sumti_A_91</a>              :  <a
+href="#y92">sumti_B_92</a>
+                        |  <a href="#y92">sumti_B_92</a>  <a
+href="#y804">EK_KE_804</a>  <a href="#y90">sumti_90</a>  <a
+href="#y466">KEhE_gap_466</a>
+                        |  <a href="#y92">sumti_B_92</a>  <a
+href="#y823">JOIK_KE_823</a>  <a href="#y90">sumti_90</a>  <a
+href="#y466">KEhE_gap_466</a>
+                        ;
+
+<a id="y92" name="y92">sumti_B_92</a>              :  <a
+href="#y93">sumti_C_93</a>
+                        |  <a href="#y92">sumti_B_92</a>  <a
+href="#y421">JOIK_EK_421</a>  <a href="#y93">sumti_C_93</a>  
+                        ;
+
+<a id="y93" name="y93">sumti_C_93</a>              :  <a
+href="#y94">sumti_D_94</a>
+                        |  <a href="#y94">sumti_D_94</a>  <a
+href="#y803">EK_BO_803</a>  <a href="#y93">sumti_C_93</a>
+                        |  <a href="#y94">sumti_D_94</a>  <a
+href="#y822">JOIK_BO_822</a>  <a href="#y93">sumti_C_93</a>
+                        ;
+
+<a id="y94" name="y94">sumti_D_94</a>              :  <a
+href="#y95">sumti_E_95</a>
+                        |  <a href="#y807">GEK_807</a>  <a
+href="#y90">sumti_90</a>  <a href="#y816">GIK_816</a>  <a
+href="#y94">sumti_D_94</a>
+                        ;
+
+<a id="y95" name="y95">sumti_E_95</a>              :  <a
+href="#y96">sumti_F_96</a>
+                        |  <a href="#y96">sumti_F_96</a>  <a
+href="#y121">relative_clauses_121</a>
+                           /* indefinite sumti */
+                        |  <a href="#y300">quantifier_300</a>  <a
+href="#y130">selbri_130</a>  <a href="#y450">gap_450</a>
+                        |  <a href="#y300">quantifier_300</a>  <a
+href="#y130">selbri_130</a>
+                                <a href="#y450">gap_450</a>  <a
+href="#y121">relative_clauses_121</a>
+                        ;
+
+<a id="y96" name="y96">sumti_F_96</a>              :  <a
+href="#y97">sumti_G_97</a>
+                           /* outer-quantified sumti */
+                        |  <a href="#y300">quantifier_300</a>  <a
+href="#y97">sumti_G_97</a>
+                        ;
+
+<a id="y97" name="y97">sumti_G_97</a>              :  <a
+href="#y483">qualifier_483</a>  <a href="#y90">sumti_90</a>  <a
+href="#y463">LUhU_gap_463</a>
+                        |  <a href="#y483">qualifier_483</a>  <a
+href="#y121">relative_clauses_121</a>
+                                <a href="#y90">sumti_90</a>  <a
+href="#y463">LUhU_gap_463</a>
+                           /*sumti grouping, set/mass/individual conversion */
+                           /*also sumti scalar negation */
+                        |  <a href="#y400">anaphora_400</a>
+                        |  <a href="#y499">LA_499</a>  <a
+href="#y404">cmene_404</a>
+                        |  <a href="#y499">LA_499</a>  <a
+href="#y121">relative_clauses_121</a>  <a
+href="#y404">cmene_404</a>
+                        |  <a href="#y489">LI_489</a>  <a
+href="#y310">MEX_310</a>  <a href="#y472">LOhO_gap_472</a>
+                        |  <a href="#y110">description_110</a>
+                        |  <a href="#y432">quote_arg_432</a>
+                        ;
+
+
+
+<a id="y110" name="y110">description_110</a>         :  <a
+href="#y499">LA_499</a>  <a href="#y111">sumti_tail_111</a>  <a
+href="#y450">gap_450</a>
+                        |  <a href="#y488">LE_488</a>  <a
+href="#y111">sumti_tail_111</a>  <a href="#y450">gap_450</a>
+                        ;
+
+<a id="y111" name="y111">sumti_tail_111</a>          :  <a
+href="#y112">sumti_tail_A_112</a>
+                           /* inner-quantified sumti relative clause */
+                        |  <a
+href="#y121">relative_clauses_121</a>  <a
+href="#y112">sumti_tail_A_112</a>
+                           /* pseudo-possessive
+                              (an abbreviated inner restriction);
+                              note that sumti cannot be quantified */
+                        |  <a href="#y97">sumti_G_97</a>  <a
+href="#y112">sumti_tail_A_112</a>
+                           /* pseudo-possessive with outer restriction */
+                        |  <a href="#y97">sumti_G_97</a>  <a
+href="#y121">relative_clauses_121</a>  <a
+href="#y112">sumti_tail_A_112</a>
+                        ;
+
+<a id="y112" name="y112">sumti_tail_A_112</a>        :  <a
+href="#y130">selbri_130</a>
+                        |  <a href="#y130">selbri_130</a>  <a
+href="#y121">relative_clauses_121</a>
+                           /* explicit inner quantifier */
+                        |  <a href="#y300">quantifier_300</a>  <a
+href="#y130">selbri_130</a>
+                           /* quantifier both internal to a description,
+                              and external to a sumti thereby made specific */
+                        |  <a href="#y300">quantifier_300</a>  <a
+href="#y130">selbri_130</a>  <a
+href="#y121">relative_clauses_121</a>
+                        |  <a href="#y300">quantifier_300</a>  <a
+href="#y90">sumti_90</a>
+                        ;
+
+<a id="y121" name="y121">relative_clauses_121</a>    :  <a
+href="#y122">relative_clause_122</a>
+                        |  <a
+href="#y121">relative_clauses_121</a>  <a
+href="#y487">ZIhE_487</a>  <a href="#y122">relative_clause_122</a>
+                        ;
+
+<a id="y122" name="y122">relative_clause_122</a>     :  <a
+href="#y485">GOI_485</a>  <a href="#y83">term_83</a>  <a
+href="#y464">GEhU_gap_464</a>
+                        |  <a href="#y484">NOI_484</a>  <a
+href="#y41">subsentence_41</a>  <a href="#y469">KUhO_gap_469</a>
+                        ;
+
+
+<a id="y130" name="y130">selbri_130</a>              :  <a
+href="#y491">tag_491</a>  <a href="#y131">selbri_A_131</a>
+                        |  <a href="#y131">selbri_A_131</a>
+                        ;
+
+<a id="y131" name="y131">selbri_A_131</a>            :  <a
+href="#y132">selbri_B_132</a>
+                        |  <a href="#y445">NA_445</a>  <a
+href="#y130">selbri_130</a>
+                        ;
+
+<a id="y132" name="y132">selbri_B_132</a>            :  <a
+href="#y133">selbri_C_133</a>
+                        |  <a href="#y133">selbri_C_133</a>  <a
+href="#y443">CO_443</a>  <a href="#y132">selbri_B_132</a>
+                        ;
+
+<a id="y133" name="y133">selbri_C_133</a>            :  <a
+href="#y134">selbri_D_134</a>
+                        |  <a href="#y133">selbri_C_133</a>  <a
+href="#y134">selbri_D_134</a>
+                        ;
+
+<a id="y134" name="y134">selbri_D_134</a>            :  <a
+href="#y135">selbri_E_135</a>
+                        |  <a href="#y134">selbri_D_134</a>  <a
+href="#y422">JOIK_JEK_422</a>  <a href="#y135">selbri_E_135</a>
+                        |  <a href="#y134">selbri_D_134</a>  <a
+href="#y823">JOIK_KE_823</a>  <a href="#y133">selbri_C_133</a>
+                                <a href="#y466">KEhE_gap_466</a>
+                        ;
+
+<a id="y135" name="y135">selbri_E_135</a>            :  <a
+href="#y136">selbri_F_136</a>
+                        |  <a href="#y136">selbri_F_136</a>  <a
+href="#y821">JEK_BO_821</a>  <a href="#y135">selbri_E_135</a>
+                        |  <a href="#y136">selbri_F_136</a>  <a
+href="#y822">JOIK_BO_822</a>  <a href="#y135">selbri_E_135</a>
+                        ;
+
+<a id="y136" name="y136">selbri_F_136</a>            :  <a
+href="#y150">tanru_unit_150</a>
+                        |  <a href="#y150">tanru_unit_150</a>  <a
+href="#y479">BO_479</a>  <a href="#y136">selbri_F_136</a>
+                        |  <a href="#y137">GUhEK_selbri_137</a>
+                        |  <a href="#y482">NAhE_482</a>  <a
+href="#y137">GUhEK_selbri_137</a>
+                        ;
+
+<a id="y137" name="y137">GUhEK_selbri_137</a>        :  <a
+href="#y808">GUhEK_808</a>  <a href="#y130">selbri_130</a>  <a
+href="#y816">GIK_816</a>  <a href="#y136">selbri_F_136</a>
+                        ;
+
+
+<a id="y150" name="y150">tanru_unit_150</a>          :  <a
+href="#y151">tanru_unit_A_151</a>
+                        |  <a href="#y150">tanru_unit_150</a>  <a
+href="#y444">CEI_444</a>  <a href="#y151">tanru_unit_A_151</a>
+                        ;
+
+
+<a id="y151" name="y151">tanru_unit_A_151</a>        :  <a
+href="#y152">tanru_unit_B_152</a>
+                        |  <a href="#y152">tanru_unit_B_152</a>  <a
+href="#y160">linkargs_160</a>
+                        ;
+
+<a id="y152" name="y152">tanru_unit_B_152</a>        :  <a
+href="#y407">bridi_valsi_407</a>
+                        |  <a href="#y493">KE_493</a>  <a
+href="#y133">selbri_C_133</a>  <a href="#y466">KEhE_gap_466</a>
+                        |  <a href="#y480">SE_480</a>  <a
+href="#y152">tanru_unit_B_152</a>
+                        |  <a href="#y478">JAI_478</a>  <a
+href="#y491">tag_491</a>  <a href="#y152">tanru_unit_B_152</a>
+                        |  <a href="#y478">JAI_478</a>  <a
+href="#y152">tanru_unit_B_152</a>
+                        |  <a href="#y477">ME_477</a>  <a
+href="#y90">sumti_90</a>  <a href="#y465">MEhU_gap_465</a>
+                        |  <a href="#y477">ME_477</a>  <a
+href="#y90">sumti_90</a>  <a href="#y465">MEhU_gap_465</a>  <a
+href="#y476">MOI_476</a>
+                        |  <a href="#y475">NUhA_475</a>  <a
+href="#y374">MEX_operator_374</a>
+                        |  <a href="#y482">NAhE_482</a>  <a
+href="#y152">tanru_unit_B_152</a>
+                        |  <a href="#y425">NU_425</a>  <a
+href="#y41">subsentence_41</a>  <a href="#y453">KEI_gap_453</a>
+                        ;
+
+
+<a id="y160" name="y160">linkargs_160</a>            :  <a
+href="#y446">BE_446</a>  <a href="#y83">term_83</a>  <a
+href="#y467">BEhO_gap_467</a>
+                        |  <a href="#y446">BE_446</a>  <a
+href="#y83">term_83</a>  <a href="#y161">links_161</a>  <a
+href="#y467">BEhO_gap_467</a>
+                        ;
+
+<a id="y161" name="y161">links_161</a>               :  <a
+href="#y442">BEI_442</a>  <a href="#y83">term_83</a>
+                        |  <a href="#y442">BEI_442</a>  <a
+href="#y83">term_83</a>  <a href="#y161">links_161</a>
+                        ;
+
+
+/*  Main entry point for MEX; everything but a number must be in parens.   */
+
+<a id="y300" name="y300">quantifier_300</a>          :  <a
+href="#y812">number_812</a>  <a href="#y461">BOI_gap_461</a>
+                        |  <a href="#y470">left_bracket_470</a>  <a
+href="#y310">MEX_310</a>  <a href="#y471">right_bracket_gap_471</a>
+                        ;
+
+
+
+/*  Entry point for MEX used after LI; no parens needed, but LI now has an
+    elidable terminator. (This allows us to express the difference between
+    “the expression a + b” and “the expression (a + b)”_)   */
+
+/*  This rule supports left-grouping infix expressions and reverse Polish
+    expressions. To handle infix monadic, use a null operand; to handle
+    infix with more than two operands (whatever that means) use an extra
+    operator or an array operand.   */
+
+<a id="y310" name="y310">MEX_310</a>                 :  <a
+href="#y311">MEX_A_311</a>
+                        |  <a href="#y310">MEX_310</a>  <a
+href="#y370">operator_370</a>  <a href="#y311">MEX_A_311</a>
+                        |  <a href="#y441">FUhA_441</a>  <a
+href="#y330">rp_expression_330</a>
+                        ;
+
+/*  Support for right-grouping (short scope) infix expressions with BIhE.  */
+
+<a id="y311" name="y311">MEX_A_311</a>               :  <a
+href="#y312">MEX_B_312</a>
+                        |  <a href="#y312">MEX_B_312</a>  <a
+href="#y439">BIhE_439</a>  <a href="#y370">operator_370</a>  <a
+href="#y311">MEX_A_311</a>
+                        ;
+
+/*  Support for forethought (Polish) expressions. These begin with a
+    forethought flag, then the operator and then the argument(s).  */
+
+<a id="y312" name="y312">MEX_B_312</a>               :  <a
+href="#y381">operand_381</a>
+                        |  <a href="#y370">operator_370</a>  <a
+href="#y313">MEX_C_313</a>  <a href="#y452">MEX_gap_452</a>
+                        |  <a href="#y438">PEhO_438</a>  <a
+href="#y370">operator_370</a>  <a href="#y313">MEX_C_313</a>  <a
+href="#y452">MEX_gap_452</a>
+                        ;
+
+<a id="y313" name="y313">MEX_C_313</a>               :  <a
+href="#y312">MEX_B_312</a>
+                        |  <a href="#y313">MEX_C_313</a>  <a
+href="#y312">MEX_B_312</a>
+                        ;
+
+
+/*  Reverse Polish expressions always have exactly two operands.
+    To handle one operand, use a null operand;
+    to handle more than two operands, use a null operator.  */
+
+<a id="y330" name="y330">rp_expression_330</a>       :  <a
+href="#y332">rp_operand_332</a>  <a
+href="#y332">rp_operand_332</a>  <a href="#y370">operator_370</a>
+                        ;
+
+
+<a id="y332" name="y332">rp_operand_332</a>          :  <a
+href="#y381">operand_381</a>
+                        |  <a href="#y330">rp_expression_330</a>
+                        ;
+
+
+/*  Operators may be joined by logical connectives. */
+
+<a id="y370" name="y370">operator_370</a>            :  <a
+href="#y371">operator_A_371</a>
+                        |  <a href="#y370">operator_370</a>  <a
+href="#y422">JOIK_JEK_422</a>  <a href="#y371">operator_A_371</a>
+                        |  <a href="#y370">operator_370</a>  <a
+href="#y823">JOIK_KE_823</a>  <a href="#y370">operator_370</a>
+                                <a href="#y466">KEhE_gap_466</a>
+                        ;
+
+<a id="y371" name="y371">operator_A_371</a>          :  <a
+href="#y372">operator_B_372</a>
+                        |  <a href="#y808">GUhEK_808</a>  <a
+href="#y371">operator_A_371</a>  <a href="#y816">GIK_816</a>  <a
+href="#y372">operator_B_372</a>
+                        |  <a href="#y372">operator_B_372</a>  <a
+href="#y822">JOIK_BO_822</a>  <a href="#y371">operator_A_371</a>
+                        |  <a href="#y372">operator_B_372</a>  <a
+href="#y821">JEK_BO_821</a>  <a href="#y371">operator_A_371</a>
+                        ;
+
+<a id="y372" name="y372">operator_B_372</a>          :  <a
+href="#y374">MEX_operator_374</a>
+                        |  <a href="#y493">KE_493</a>  <a
+href="#y370">operator_370</a>  <a href="#y466">KEhE_gap_466</a>
+                        ;
+
+<a id="y374" name="y374">MEX_operator_374</a>        :  <a
+href="#y679">VUhU_679</a>
+                        |  <a href="#y679">VUhU_679</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  <a href="#y480">SE_480</a>  <a
+href="#y374">MEX_operator_374</a>
+   /* changes argument order */
+                        |  <a href="#y482">NAhE_482</a>  <a
+href="#y374">MEX_operator_374</a>
+   /* scalar negation */
+                        |  <a href="#y430">MAhO_430</a>  <a
+href="#y310">MEX_310</a>  <a href="#y473">TEhU_gap_473</a>
+                        |  <a href="#y429">NAhU_429</a>  <a
+href="#y130">selbri_130</a>  <a href="#y473">TEhU_gap_473</a>
+                        ;
+
+
+<a id="y381" name="y381">operand_381</a>             :  <a
+href="#y382">operand_A_382</a>
+                        |  <a href="#y382">operand_A_382</a>  <a
+href="#y804">EK_KE_804</a>  <a href="#y381">operand_381</a>  <a
+href="#y466">KEhE_gap_466</a>
+                        |  <a href="#y382">operand_A_382</a>  <a
+href="#y823">JOIK_KE_823</a>  <a href="#y381">operand_381</a>  <a
+href="#y466">KEhE_gap_466</a>
+                        ;
+
+<a id="y382" name="y382">operand_A_382</a>           :  <a
+href="#y383">operand_B_383</a>
+                        |  <a href="#y382">operand_A_382</a>  <a
+href="#y421">JOIK_EK_421</a>  <a href="#y383">operand_B_383</a>
+                        ;
+
+<a id="y383" name="y383">operand_B_383</a>           :  <a
+href="#y385">operand_C_385</a>
+                        |  <a href="#y385">operand_C_385</a>  <a
+href="#y803">EK_BO_803</a>  <a href="#y383">operand_B_383</a>
+                        |  <a href="#y385">operand_C_385</a>  <a
+href="#y822">JOIK_BO_822</a>  <a href="#y383">operand_B_383</a>
+                        ;
+
+<a id="y385" name="y385">operand_C_385</a>           :  <a
+href="#y300">quantifier_300</a>
+                        |  <a href="#y817">lerfu_string_817</a>  <a
+href="#y461">BOI_gap_461</a>
+   /* lerfu string as operand - classic math variable */
+                        |  <a href="#y428">NIhE_428</a>  <a
+href="#y130">selbri_130</a>  <a href="#y473">TEhU_gap_473</a>
+   /* quantifies a bridi - inverse of -MOI */
+                        |  <a href="#y427">MOhE_427</a>  <a
+href="#y90">sumti_90</a>  <a href="#y473">TEhU_gap_473</a>
+   /* quantifies a sumti - inverse of LI */
+                        |  <a href="#y431">JOhI_431</a>  <a
+href="#y313">MEX_C_313</a>  <a href="#y473">TEhU_gap_473</a>
+                        |  <a href="#y807">GEK_807</a>  <a
+href="#y381">operand_381</a>  <a href="#y816">GIK_816</a>  <a
+href="#y385">operand_C_385</a>
+                        |  <a href="#y483">qualifier_483</a>  <a
+href="#y381">operand_381</a>  <a href="#y463">LUhU_gap_463</a>
+                        ;
+
+
+/* _400 series constructs are mostly specific strings, some of which may
+   also be used by the lexer; the lexer should not use any reference to
+   terminals numbered less than _400, as they have grammars composed on
+   non-deterministic strings of selma'o.  Some above _400 also are this
+   way, so care should be taken; this is especially true for those that
+   reference <a href="#y32">free_modifier_32</a>.  */
+
+
+<a id="y400" name="y400">anaphora_400</a>            :  <a
+href="#y555">KOhA_555</a>
+                        |  <a href="#y555">KOhA_555</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  <a href="#y817">lerfu_string_817</a>  <a
+href="#y461">BOI_gap_461</a>
+                        ;
+
+
+<a id="y404" name="y404">cmene_404</a>               :  <a
+href="#y405">cmene_A_405</a>
+                        |  <a href="#y405">cmene_A_405</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y405" name="y405">cmene_A_405</a>             :  <a
+href="#y518">CMENE_518</a>  /* pause */
+                        |  <a href="#y405">cmene_A_405</a>  <a
+href="#y518">CMENE_518</a>  /* pause*/
+/* multiple CMENE are identified morphologically (by the lexer) -- separated by
+   consonant &amp; pause */
+                        ;
+
+
+<a id="y407" name="y407">bridi_valsi_407</a>         :  <a
+href="#y408">bridi_valsi_A_408</a>
+                        |  <a
+href="#y408">bridi_valsi_A_408</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y408" name="y408">bridi_valsi_A_408</a>       :  <a
+href="#y509">BRIVLA_509</a>
+                        |  <a href="#y824">PA_MOI_824</a>
+                        |  <a href="#y543">GOhA_543</a>
+                        |  <a href="#y543">GOhA_543</a>  <a
+href="#y593">RAhO_593</a>
+                        ;
+
+<a id="y410" name="y410">para_mark_410</a>           :  <a
+href="#y584">NIhO_584</a>
+                        |  <a href="#y584">NIhO_584</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  <a href="#y584">NIhO_584</a>  <a
+href="#y410">para_mark_410</a>
+                        ;
+
+
+<a id="y411" name="y411">indicators_411</a>          :  <a
+href="#y412">indicators_A_412</a>
+                        |  <a href="#y535">FUhE_535</a>  <a
+href="#y412">indicators_A_412</a>
+                        ;
+
+<a id="y412" name="y412">indicators_A_412</a>        :  <a
+href="#y413">indicator_413</a>
+                        |  <a href="#y412">indicators_A_412</a>  <a
+href="#y413">indicator_413</a>
+                        ;
+
+<a id="y413" name="y413">indicator_413</a>           :  <a
+href="#y612">UI_612</a>
+                        |  <a href="#y515">CAI_515</a>
+                        |  <a href="#y612">UI_612</a>  <a
+href="#y581">NAI_581</a>
+                        |  <a href="#y515">CAI_515</a>  <a
+href="#y581">NAI_581</a>
+                        |  <a href="#y619">Y_619</a>
+                        |  <a href="#y524">DAhO_524</a>
+                        |  <a href="#y536">FUhO_536</a>
+                        ;
+
+<a id="y415" name="y415">DOI_415</a>                 :  <a
+href="#y525">DOI_525</a>
+                        |  <a href="#y416">COI_416</a>
+                        |  <a href="#y416">COI_416</a>  <a
+href="#y525">DOI_525</a>
+                        ;
+
+<a id="y416" name="y416">COI_416</a>                 :  <a
+href="#y417">COI_A_417</a>
+                        |  <a href="#y416">COI_416</a>  <a
+href="#y417">COI_A_417</a>
+                        ;
+
+<a id="y417" name="y417">COI_A_417</a>               :  <a
+href="#y520">COI_520</a>
+                        |  <a href="#y520">COI_520</a>  <a
+href="#y581">NAI_581</a>
+                        ;
+
+
+<a id="y421" name="y421">JOIK_EK_421</a>             :  <a
+href="#y802">EK_802</a>
+                        |  <a href="#y806">JOIK_806</a>
+                        |  <a href="#y806">JOIK_806</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y422" name="y422">JOIK_JEK_422</a>            :  <a
+href="#y806">JOIK_806</a>
+                        |  <a href="#y806">JOIK_806</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  <a href="#y805">JEK_805</a>
+                        |  <a href="#y805">JEK_805</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+
+<a id="y424" name="y424">XI_424</a>                  :  <a
+href="#y618">XI_618</a>
+                        |  <a href="#y618">XI_618</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y425" name="y425">NU_425</a>                  :  <a
+href="#y426">NU_A_426</a>
+                        |  <a href="#y425">NU_425</a>  <a
+href="#y422">JOIK_JEK_422</a>  <a href="#y426">NU_A_426</a>
+                        ;
+
+<a id="y426" name="y426">NU_A_426</a>                :  <a
+href="#y586">NU_586</a>
+                        |  <a href="#y586">NU_586</a>  <a
+href="#y581">NAI_581</a>
+                        |  <a href="#y586">NU_586</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  <a href="#y586">NU_586</a>  <a
+href="#y581">NAI_581</a>  <a href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y427" name="y427">MOhE_427</a>                :  <a
+href="#y664">MOhE_664</a>
+                        |  <a href="#y664">MOhE_664</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y428" name="y428">NIhE_428</a>                :  <a
+href="#y666">NIhE_666</a>
+                        |  <a href="#y666">NIhE_666</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y429" name="y429">NAhU_429</a>                :  <a
+href="#y665">NAhU_665</a>
+                        |  <a href="#y665">NAhU_665</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y430" name="y430">MAhO_430</a>                :  <a
+href="#y662">MAhO_662</a>
+                        |  <a href="#y662">MAhO_662</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y431" name="y431">JOhI_431</a>                :  <a
+href="#y657">JOhI_657</a>
+                        |  <a href="#y657">JOhI_657</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y432" name="y432">quote_arg_432</a>           :  <a
+href="#y433">quote_arg_A_433</a>
+                        |  <a href="#y433">quote_arg_A_433</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y433" name="y433">quote_arg_A_433</a>         :  <a
+href="#y434">ZOI_quote_434</a>
+                        |  <a href="#y435">ZO_quote_435</a>
+                        |  <a href="#y436">LOhU_quote_436</a>
+                        |  <a href="#y571">LU_571</a>  <a
+href="#y0">text_0</a>  <a href="#y448">LIhU_gap_448</a>
+                        ;
+
+/* The quoted material in the following three terminals must be identified by
+   the lexer, but no additional lexer processing is needed. */
+
+<a id="y434" name="y434">ZOI_quote_434</a>           :  <a
+href="#y627">ZOI_627</a>  <a href="#y698">any_word_698</a>
+                                  /*pause*/  <a
+href="#y699">anything_699</a>  /*pause*/  <a
+href="#y698">any_word_698</a>
+                        ;
+
+/* 'pause' is morphemic, represented by '.' The lexer assembles <a
+href="#y699">anything_699</a> */
+
+<a id="y435" name="y435">ZO_quote_435</a>            :  <a
+href="#y626">ZO_626</a>  <a href="#y698">any_word_698</a>
+                        ;
+
+/* 'word' may not be a compound; but it can be any valid Lojban selma'o value,
+   including ZO, ZOI, SI, SA, SU. The preparser will not lex the word per its
+   normal selma'o. */
+
+<a id="y436" name="y436">LOhU_quote_436</a>          :  <a
+href="#y569">LOhU_569</a>  <a href="#y697">any_words_697</a>  <a
+href="#y565">LEhU_565</a>
+                        ;
+
+/* 'words' may be any Lojban words, with no claim of grammaticality; the
+   preparser will not lex the individual words per their normal selma'o;
+   used to quote ungrammatical Lojban, equivalent to the * or ? writing
+   convention for such text.  */
+
+/* The preparser needs one bit of sophistication for this rule.  A
+   quoted string should be able to contain other quoted strings - this is
+   only a problem for a LOhU quote itself, since the LEhU clossing this
+   quote would otherwise close the outer quotes, which is incorrect.  For
+   this purpose, we will cheat on the use of ZO in such a quote (since this
+   is ungrammatical text, it is a sign ignored by the parser).  Use ZO to
+   mark any nested quotation LOhU.  The preparser then will absorb it by
+   the ZO rule, before testing for LOhU.  This is obviously not the
+   standard usage for ZO, which would otherwise cause the result to be a
+   sumti.  But, since the result will be part of an unparsed string anyway,
+   it doesn't matter.  */
+
+/* It may be seen that any of the ZO/ZOI/LOhU trio of quotation markers
+   may contain the powerful metalinguistic erasers.  Since these quotations
+   are not parsed internally, these operators are ignored within the quote.
+   To erase a ZO, then, two SI's are needed after giving a quoted word of
+   any type.  ZOI takes four SI's, with the ENTIRE BODY OF THE QUOTE
+   treated as a single 'word' since it is one selma'o.  Thus one for the
+   quote body, two for the single word delimiters, and one for the ZOI.  In
+   LOhU, the entire body is treated as a single word, so three SI's can
+   erase it.  */
+
+/* All rule terminator names with 'gap' in them are potentially
+   elidable, where such elision does not cause an ambiguity.  This is
+   implemented through use of the YACC 'error' token, which effectively
+   recovers from an elision.  */
+
+<a id="y437" name="y437">FIhO_437</a>                :  <a
+href="#y532">FIhO_532</a>
+                        |  <a href="#y532">FIhO_532</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y438" name="y438">PEhO_438</a>                :  <a
+href="#y673">PEhO_673</a>
+                        |  <a href="#y673">PEhO_673</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y439" name="y439">BIhE_439</a>                :  <a
+href="#y650">BIhE_650</a>
+                        |  <a href="#y650">BIhE_650</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y440" name="y440">SEI_440</a>                 :  <a
+href="#y597">SEI_597</a>
+                        |  <a href="#y597">SEI_597</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y441" name="y441">FUhA_441</a>                :  <a
+href="#y655">FUhA_655</a>
+                        |  <a href="#y655">FUhA_655</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y442" name="y442">BEI_442</a>                 :  <a
+href="#y505">BEI_505</a>
+                        |  <a href="#y505">BEI_505</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y443" name="y443">CO_443</a>                  :  <a
+href="#y519">CO_519</a>
+                        |  <a href="#y519">CO_519</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y444" name="y444">CEI_444</a>                 :  <a
+href="#y516">CEI_516</a>
+                        |  <a href="#y516">CEI_516</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y445" name="y445">NA_445</a>                  :  <a
+href="#y578">NA_578</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y446" name="y446">BE_446</a>                  :  <a
+href="#y504">BE_504</a>
+                        |  <a href="#y504">BE_504</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y447" name="y447">TUhE_447</a>                :  <a
+href="#y610">TUhE_610</a>
+                        |  <a href="#y610">TUhE_610</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+
+<a id="y448" name="y448">LIhU_gap_448</a>            :  <a
+href="#y567">LIhU_567</a>
+                        |  error
+                        ;
+
+
+<a id="y450" name="y450">gap_450</a>                 :  <a
+href="#y556">KU_556</a>
+                        |  <a href="#y556">KU_556</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+<a id="y451" name="y451">front_gap_451</a>           :  <a
+href="#y521">CU_521</a>
+                        |  <a href="#y521">CU_521</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y452" name="y452">MEX_gap_452</a>             :  <a
+href="#y658">KUhE_658</a>
+                        |  <a href="#y658">KUhE_658</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+<a id="y453" name="y453">KEI_gap_453</a>             :  <a
+href="#y552">KEI_552</a>
+                        |  <a href="#y552">KEI_552</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+<a id="y454" name="y454">TUhU_gap_454</a>            :  <a
+href="#y611">TUhU_611</a>
+                        |  <a href="#y611">TUhU_611</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+<a id="y456" name="y456">VAU_gap_456</a>             :  <a
+href="#y614">VAU_614</a>
+                        |  <a href="#y614">VAU_614</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+/* redundant to attach a free modifier on the following */
+
+<a id="y457" name="y457">DOhU_gap_457</a>            :  <a
+href="#y526">DOhU_526</a>
+                        |  error
+                        ;
+
+<a id="y458" name="y458">FEhU_gap_458</a>            :  <a
+href="#y531">FEhU_531</a>
+                        |  <a href="#y531">FEhU_531</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+<a id="y459" name="y459">SEhU_gap_459</a>            :  <a
+href="#y598">SEhU_598</a>
+                        |  error
+/* a free modifier on a discursive should be somewhere within the discursive.
+   See <a href="#y440">SEI_440</a> */
+                        ;
+
+<a id="y460" name="y460">NUhU_gap_460</a>            :  <a
+href="#y588">NUhU_588</a>
+                        |  <a href="#y588">NUhU_588</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+
+<a id="y461" name="y461">BOI_gap_461</a>             :  <a
+href="#y651">BOI_651</a>
+                        |  <a href="#y651">BOI_651</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+<a id="y462" name="y462">sub_gap_462</a>             :  <a
+href="#y651">BOI_651</a>
+                        |  error
+                        ;
+
+
+<a id="y463" name="y463">LUhU_gap_463</a>            :  <a
+href="#y573">LUhU_573</a>
+                        |  <a href="#y573">LUhU_573</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+
+<a id="y464" name="y464">GEhU_gap_464</a>            :  <a
+href="#y538">GEhU_538</a>
+                        |  <a href="#y538">GEhU_538</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+
+<a id="y465" name="y465">MEhU_gap_465</a>            :  <a
+href="#y575">MEhU_575</a>
+                        |  <a href="#y575">MEhU_575</a>   <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+
+<a id="y466" name="y466">KEhE_gap_466</a>            :  <a
+href="#y550">KEhE_550</a>
+                        |  <a href="#y550">KEhE_550</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+
+<a id="y467" name="y467">BEhO_gap_467</a>            :  <a
+href="#y506">BEhO_506</a>
+                        |  <a href="#y506">BEhO_506</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+
+<a id="y468" name="y468">TOI_gap_468</a>             :  <a
+href="#y607">TOI_607</a>
+                        |  error
+                        ;
+
+
+<a id="y469" name="y469">KUhO_gap_469</a>            :  <a
+href="#y557">KUhO_557</a>
+                        |  <a href="#y557">KUhO_557</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+
+<a id="y470" name="y470">left_bracket_470</a>        :  <a
+href="#y677">VEI_677</a>
+                        |  <a href="#y677">VEI_677</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y471" name="y471">right_bracket_gap_471</a>   :  <a
+href="#y678">VEhO_678</a>
+                        |  <a href="#y678">VEhO_678</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+<a id="y472" name="y472">LOhO_gap_472</a>            :  <a
+href="#y568">LOhO_568</a>
+                        |  <a href="#y568">LOhO_568</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+<a id="y473" name="y473">TEhU_gap_473</a>            :  <a
+href="#y675">TEhU_675</a>
+                        |  <a href="#y675">TEhU_675</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  error
+                        ;
+
+<a id="y474" name="y474">right_br_no_free_474</a>    :  <a
+href="#y678">VEhO_678</a>
+                        |  error
+                        ;
+
+
+
+<a id="y475" name="y475">NUhA_475</a>                :  <a
+href="#y667">NUhA_667</a>
+                        |  <a href="#y667">NUhA_667</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y476" name="y476">MOI_476</a>                 :  <a
+href="#y663">MOI_663</a>
+                        |  <a href="#y663">MOI_663</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y477" name="y477">ME_477</a>                  :  <a
+href="#y574">ME_574</a>
+                        |  <a href="#y574">ME_574</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y478" name="y478">JAI_478</a>                 :  <a
+href="#y547">JAI_547</a>
+                        |  <a href="#y547">JAI_547</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y479" name="y479">BO_479</a>                  :  <a
+href="#y508">BO_508</a>
+                        |  <a href="#y508">BO_508</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y480" name="y480">SE_480</a>                  :  <a
+href="#y596">SE_596</a>
+                        |  <a href="#y596">SE_596</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+
+<a id="y481" name="y481">FA_481</a>                  :  <a
+href="#y527">FA_527</a>
+                        |  <a href="#y527">FA_527</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y482" name="y482">NAhE_482</a>                :  <a
+href="#y583">NAhE_583</a>
+                        |  <a href="#y583">NAhE_583</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y483" name="y483">qualifier_483</a>           :  <a
+href="#y561">LAhE_561</a>
+                        |  <a href="#y561">LAhE_561</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  <a href="#y809">NAhE_BO_809</a>
+                        ;
+
+<a id="y484" name="y484">NOI_484</a>                 :  <a
+href="#y585">NOI_585</a>
+                        |  <a href="#y585">NOI_585</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y485" name="y485">GOI_485</a>                 :  <a
+href="#y542">GOI_542</a>
+                        |  <a href="#y542">GOI_542</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y486" name="y486">subscript_486</a>           :  <a
+href="#y424">XI_424</a>  <a href="#y812">number_812</a>  <a
+href="#y462">sub_gap_462</a>
+                        |  <a href="#y424">XI_424</a>  <a
+href="#y470">left_bracket_470</a>  <a href="#y310">MEX_310</a>
+                                <a
+href="#y474">right_br_no_free_474</a>
+                        |  <a href="#y424">XI_424</a>  <a
+href="#y817">lerfu_string_817</a>  <a href="#y462">sub_gap_462</a>
+                        ;
+
+<a id="y487" name="y487">ZIhE_487</a>                :  <a
+href="#y625">ZIhE_625</a>
+                        |  <a href="#y625">ZIhE_625</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y488" name="y488">LE_488</a>                  :  <a
+href="#y562">LE_562</a>
+                        |  <a href="#y562">LE_562</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y489" name="y489">LI_489</a>                  :  <a
+href="#y566">LI_566</a>
+                        |  <a href="#y566">LI_566</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y490" name="y490">mod_head_490</a>            :  <a
+href="#y491">tag_491</a>
+                        |  <a href="#y481">FA_481</a>
+                        ;
+
+
+<a id="y491" name="y491">tag_491</a>                 :  <a
+href="#y815">tense_modal_815</a>
+                        |  <a href="#y491">tag_491</a>  <a
+href="#y422">JOIK_JEK_422</a>  <a href="#y815">tense_modal_815</a>
+                        ;
+
+<a id="y492" name="y492">ZOhU_492</a>                :  <a
+href="#y628">ZOhU_628</a>
+                        |  <a href="#y628">ZOhU_628</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y493" name="y493">KE_493</a>                  :  <a
+href="#y551">KE_551</a>
+                        |  <a href="#y551">KE_551</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y494" name="y494">PEhE_494</a>                :  <a
+href="#y591">PEhE_591</a>
+                        |  <a href="#y591">PEhE_591</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y495" name="y495">CEhE_495</a>                :  <a
+href="#y517">CEhE_517</a>
+                        |  <a href="#y517">CEhE_517</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y496" name="y496">NUhI_496</a>                :  <a
+href="#y587">NUhI_587</a>
+                        |  <a href="#y587">NUhI_587</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y497" name="y497">VUhO_497</a>                :  <a
+href="#y617">VUhO_617</a>
+                        |  <a href="#y617">VUhO_617</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y498" name="y498">SOI_498</a>                 :  <a
+href="#y602">SOI_602</a>
+                        |  <a href="#y602">SOI_602</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y499" name="y499">LA_499</a>                  :  <a
+href="#y558">LA_558</a>
+                        |  <a href="#y558">LA_558</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+
+<a id="y801" name="y801">utterance_ordinal_801</a>   :  <a
+href="#y905">lexer_A_905</a>
+                        ;
+
+<a id="y802" name="y802">EK_802</a>                  :  <a
+href="#y910">lexer_B_910</a>
+                        |  <a href="#y910">lexer_B_910</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y803" name="y803">EK_BO_803</a>               :  <a
+href="#y915">lexer_C_915</a>
+                        |  <a href="#y915">lexer_C_915</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y804" name="y804">EK_KE_804</a>               :  <a
+href="#y916">lexer_D_916</a>
+                        |  <a href="#y916">lexer_D_916</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y805" name="y805">JEK_805</a>                 :  <a
+href="#y925">lexer_E_925</a>
+                        ;
+
+<a id="y806" name="y806">JOIK_806</a>                :  <a
+href="#y930">lexer_F_930</a>
+                        ;
+
+<a id="y807" name="y807">GEK_807</a>                 :  <a
+href="#y935">lexer_G_935</a>
+                        |  <a href="#y935">lexer_G_935</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y808" name="y808">GUhEK_808</a>               :  <a
+href="#y940">lexer_H_940</a>
+                        |  <a href="#y940">lexer_H_940</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y809" name="y809">NAhE_BO_809</a>             :  <a
+href="#y945">lexer_I_945</a>
+                        |  <a href="#y945">lexer_I_945</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y810" name="y810">NA_KU_810</a>               :  <a
+href="#y950">lexer_J_950</a>
+                        |  <a href="#y950">lexer_J_950</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y811" name="y811">I_BO_811</a>                :  <a
+href="#y955">lexer_K_955</a>
+                        |  <a href="#y955">lexer_K_955</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y812" name="y812">number_812</a>              :  <a
+href="#y960">lexer_L_960</a>
+                        ;
+
+<a id="y813" name="y813">GIhEK_BO_813</a>            :  <a
+href="#y965">lexer_M_965</a>
+                        |  <a href="#y965">lexer_M_965</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y814" name="y814">GIhEK_KE_814</a>            :  <a
+href="#y966">lexer_N_966</a>
+                        |  <a href="#y966">lexer_N_966</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y815" name="y815">tense_modal_815</a>         :  <a
+href="#y970">lexer_O_970</a>
+                        |  <a href="#y970">lexer_O_970</a>  <a
+href="#y32">free_modifier_32</a>
+                        |  <a href="#y437">FIhO_437</a>  <a
+href="#y130">selbri_130</a>  <a href="#y458">FEhU_gap_458</a>
+                        ;
+
+<a id="y816" name="y816">GIK_816</a>                 :  <a
+href="#y980">lexer_P_980</a>
+                        |  <a href="#y980">lexer_P_980</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+
+<a id="y817" name="y817">lerfu_string_817</a>        :  <a
+href="#y985">lexer_Q_985</a>
+                        ;
+
+<a id="y818" name="y818">GIhEK_818</a>               :  <a
+href="#y990">lexer_R_990</a>
+                        |  <a href="#y990">lexer_R_990</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y819" name="y819">I_819</a>                   :  <a
+href="#y995">lexer_S_995</a>
+                        |  <a href="#y995">lexer_S_995</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y820" name="y820">I_JEK_820</a>               :  <a
+href="#y1000">lexer_T_1000</a>
+                        |  <a href="#y1000">lexer_T_1000</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y821" name="y821">JEK_BO_821</a>              :  <a
+href="#y1005">lexer_U_1005</a>
+                        |  <a href="#y1005">lexer_U_1005</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y822" name="y822">JOIK_BO_822</a>             :  <a
+href="#y1010">lexer_V_1010</a>
+                        |  <a href="#y1010">lexer_V_1010</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y823" name="y823">JOIK_KE_823</a>             :  <a
+href="#y1015">lexer_W_1015</a>
+                        |  <a href="#y1015">lexer_W_1015</a>  <a
+href="#y32">free_modifier_32</a>
+                        ;
+
+<a id="y824" name="y824">PA_MOI_824</a>              :  <a
+href="#y1025">lexer_Y_1025</a>
+                        ;
+
+
+/* The following rules are used only in lexer processing.  They have been
+   tested for ambiguity at various levels in the YACC grammar, but are in
+   the recursive descent lexer in the current parser.  The lexer inserts
+   the lexer tokens before the processed strings, but leaves the original
+   tokens.  */
+
+<a id="y905" name="y905">lexer_A_905</a>             :  <a
+href="#y701">lexer_A_701</a>  <a
+href="#y906">utt_ordinal_root_906</a>
+                        ;
+
+<a id="y906" name="y906">utt_ordinal_root_906</a>    :  <a
+href="#y986">lerfu_string_root_986</a>  <a href="#y661">MAI_661</a>
+                        |  <a href="#y961">number_root_961</a>  <a
+href="#y661">MAI_661</a>
+                        ;
+
+
+<a id="y910" name="y910">lexer_B_910</a>             :  <a
+href="#y702">lexer_B_702</a>  <a href="#y911">EK_root_911</a>
+                        ;
+
+<a id="y911" name="y911">EK_root_911</a>             :  <a
+href="#y501">A_501</a>
+                        |  <a href="#y596">SE_596</a>  <a
+href="#y501">A_501</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y501">A_501</a>
+                        |  <a href="#y501">A_501</a>  <a
+href="#y581">NAI_581</a>
+                        |  <a href="#y596">SE_596</a>  <a
+href="#y501">A_501</a>  <a href="#y581">NAI_581</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y501">A_501</a>  <a href="#y581">NAI_581</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y596">SE_596</a>  <a href="#y501">A_501</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y596">SE_596</a>  <a href="#y501">A_501</a>  <a
+href="#y581">NAI_581</a>
+                        ;
+
+
+<a id="y915" name="y915">lexer_C_915</a>             :  <a
+href="#y703">lexer_C_703</a>  <a href="#y911">EK_root_911</a>  <a
+href="#y508">BO_508</a>
+                        |  <a href="#y703">lexer_C_703</a>  <a
+href="#y911">EK_root_911</a>  <a
+href="#y971">simple_tag_971</a>  <a href="#y508">BO_508</a>
+                        ;
+
+
+<a id="y916" name="y916">lexer_D_916</a>             :  <a
+href="#y704">lexer_D_704</a>  <a href="#y911">EK_root_911</a>  <a
+href="#y551">KE_551</a>
+                        |  <a href="#y704">lexer_D_704</a>  <a
+href="#y911">EK_root_911</a>  <a
+href="#y971">simple_tag_971</a>  <a href="#y551">KE_551</a>
+                        ;
+
+
+<a id="y925" name="y925">lexer_E_925</a>             :  <a
+href="#y705">lexer_E_705</a>  <a href="#y926">JEK_root_926</a>
+                        ;
+
+<a id="y926" name="y926">JEK_root_926</a>            :  <a
+href="#y546">JA_546</a>
+                        |  <a href="#y546">JA_546</a>  <a
+href="#y581">NAI_581</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y546">JA_546</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y546">JA_546</a>  <a href="#y581">NAI_581</a>
+                        |  <a href="#y596">SE_596</a>  <a
+href="#y546">JA_546</a>
+                        |  <a href="#y596">SE_596</a>  <a
+href="#y546">JA_546</a>  <a href="#y581">NAI_581</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y596">SE_596</a>  <a href="#y546">JA_546</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y596">SE_596</a>  <a href="#y546">JA_546</a>  <a
+href="#y581">NAI_581</a>
+                        ;
+
+
+<a id="y930" name="y930">lexer_F_930</a>             :  <a
+href="#y706">lexer_F_706</a>  <a href="#y931">JOIK_root_931</a>
+                        ;
+
+<a id="y931" name="y931">JOIK_root_931</a>           :  <a
+href="#y548">JOI_548</a>
+                        |  <a href="#y548">JOI_548</a>  <a
+href="#y581">NAI_581</a>
+                        |  <a href="#y596">SE_596</a>  <a
+href="#y548">JOI_548</a>
+                        |  <a href="#y596">SE_596</a>  <a
+href="#y548">JOI_548</a>  <a href="#y581">NAI_581</a>
+                        |  <a href="#y932">interval_932</a>
+                        |  <a href="#y656">GAhO_656</a>  <a
+href="#y932">interval_932</a>  <a href="#y656">GAhO_656</a>
+                        ;
+
+<a id="y932" name="y932">interval_932</a>            :  <a
+href="#y507">BIhI_507</a>
+                        |  <a href="#y507">BIhI_507</a>  <a
+href="#y581">NAI_581</a>
+                        |  <a href="#y596">SE_596</a>  <a
+href="#y507">BIhI_507</a>
+                        |  <a href="#y596">SE_596</a>  <a
+href="#y507">BIhI_507</a>  <a href="#y581">NAI_581</a>
+                        ;
+
+
+
+
+<a id="y935" name="y935">lexer_G_935</a>             :  <a
+href="#y707">lexer_G_707</a>  <a href="#y537">GA_537</a>
+                        |  <a href="#y707">lexer_G_707</a>  <a
+href="#y596">SE_596</a>  <a href="#y537">GA_537</a>
+                        |  <a href="#y707">lexer_G_707</a>  <a
+href="#y537">GA_537</a>  <a href="#y581">NAI_581</a>
+                        |  <a href="#y707">lexer_G_707</a>  <a
+href="#y596">SE_596</a>  <a href="#y537">GA_537</a>  <a
+href="#y581">NAI_581</a>
+                        |  <a href="#y707">lexer_G_707</a>  <a
+href="#y971">simple_tag_971</a>  <a href="#y981">GIK_root_981</a>
+                        |  <a href="#y707">lexer_G_707</a>  <a
+href="#y931">JOIK_root_931</a>  <a href="#y539">GI_539</a>
+                        ;
+
+
+<a id="y940" name="y940">lexer_H_940</a>             :  <a
+href="#y708">lexer_H_708</a>  <a href="#y544">GUhA_544</a>
+                        |  <a href="#y708">lexer_H_708</a>  <a
+href="#y596">SE_596</a>  <a href="#y544">GUhA_544</a>
+                        |  <a href="#y708">lexer_H_708</a>  <a
+href="#y544">GUhA_544</a>  <a href="#y581">NAI_581</a>
+                        |  <a href="#y708">lexer_H_708</a>  <a
+href="#y596">SE_596</a>  <a href="#y544">GUhA_544</a>  <a
+href="#y581">NAI_581</a>
+                        ;
+
+
+<a id="y945" name="y945">lexer_I_945</a>             :  <a
+href="#y709">lexer_I_709</a>  <a href="#y583">NAhE_583</a>  <a
+href="#y508">BO_508</a>
+                        ;
+
+
+<a id="y950" name="y950">lexer_J_950</a>             :  <a
+href="#y710">lexer_J_710</a>  <a href="#y578">NA_578</a>  <a
+href="#y556">KU_556</a>
+                        ;
+
+
+<a id="y955" name="y955">lexer_K_955</a>             :  <a
+href="#y711">lexer_K_711</a>  <a href="#y956">I_root_956</a>  <a
+href="#y508">BO_508</a>
+                        |  <a href="#y711">lexer_K_711</a>  <a
+href="#y956">I_root_956</a>  <a href="#y971">simple_tag_971</a>  <a
+href="#y508">BO_508</a>
+                        ;
+
+<a id="y956" name="y956">I_root_956</a>              :  <a
+href="#y545">I_545</a>
+                        |  <a href="#y545">I_545</a>  <a
+href="#y957">simple_JOIK_JEK_957</a>
+                        ;
+
+
+<a id="y957" name="y957">simple_JOIK_JEK_957</a>     :  <a
+href="#y806">JOIK_806</a>
+                        |  <a href="#y805">JEK_805</a>
+                        ;
+                        /* no freemod in this version; cf. <a
+href="#y422">JOIK_JEK_422</a> */
+                        /* this reference to a version of JOIK and JEK
+                           which already have the lexer tokens attached
+                           prevents shift/reduce errors.  The problem is
+                           resolved in a hard-coded parser implementation
+                           which builds lexer_K, before lexer_S, before
+                           lexer_E and lexer_F. */
+
+
+
+<a id="y960" name="y960">lexer_L_960</a>             :  <a
+href="#y712">lexer_L_712</a>  <a href="#y961">number_root_961</a>
+                        ;
+
+
+<a id="y961" name="y961">number_root_961</a>         :  <a
+href="#y672">PA_672</a>
+                        |  <a href="#y961">number_root_961</a>  <a
+href="#y672">PA_672</a>
+                        |  <a href="#y961">number_root_961</a>  <a
+href="#y987">lerfu_word_987</a>
+                        ;
+
+<a id="y965" name="y965">lexer_M_965</a>             :  <a
+href="#y713">lexer_M_713</a>  <a
+href="#y991">GIhEK_root_991</a>  <a href="#y508">BO_508</a>
+                        |  <a href="#y713">lexer_M_713</a>  <a
+href="#y991">GIhEK_root_991</a>  <a
+href="#y971">simple_tag_971</a>  <a href="#y508">BO_508</a>
+                        ;
+
+
+<a id="y966" name="y966">lexer_N_966</a>             :  <a
+href="#y714">lexer_N_714</a>  <a
+href="#y991">GIhEK_root_991</a>  <a href="#y551">KE_551</a>
+                        |  <a href="#y714">lexer_N_714</a>  <a
+href="#y991">GIhEK_root_991</a>  <a
+href="#y971">simple_tag_971</a>  <a href="#y551">KE_551</a>
+                        ;
+
+
+<a id="y970" name="y970">lexer_O_970</a>             :  <a
+href="#y715">lexer_O_715</a>  <a
+href="#y972">simple_tense_modal_972</a>
+                        ;
+/* the following rule is a lexer version of non-terminal _815 for compounding
+   PU/modals; it disallows the lexer picking out FIhO clauses, which would
+   require it to have knowledge of the main parser grammar */
+
+<a id="y971" name="y971">simple_tag_971</a>          :  <a
+href="#y972">simple_tense_modal_972</a>
+                        |  <a href="#y971">simple_tag_971</a>  <a
+href="#y957">simple_JOIK_JEK_957</a>
+                                <a
+href="#y972">simple_tense_modal_972</a>
+                        ;
+
+
+<a id="y972" name="y972">simple_tense_modal_972</a>  :  <a
+href="#y973">simple_tense_modal_A_973</a>
+                        |  <a href="#y583">NAhE_583</a>  <a
+href="#y973">simple_tense_modal_A_973</a>
+                        |  <a href="#y554">KI_554</a>
+                        |  <a href="#y522">CUhE_522</a>
+                        ;
+
+<a id="y973" name="y973">simple_tense_modal_A_973</a>:  <a
+href="#y974">modal_974</a>
+                        |  <a href="#y974">modal_974</a>  <a
+href="#y554">KI_554</a>
+                        |  <a href="#y977">tense_A_977</a>
+                        ;
+
+<a id="y974" name="y974">modal_974</a>               :  <a
+href="#y975">modal_A_975</a>
+                        |  <a href="#y975">modal_A_975</a>  <a
+href="#y581">NAI_581</a>
+                        ;
+
+<a id="y975" name="y975">modal_A_975</a>             :  <a
+href="#y502">BAI_502</a>
+                        |  <a href="#y596">SE_596</a>  <a
+href="#y502">BAI_502</a>
+                        ;
+
+<a id="y977" name="y977">tense_A_977</a>             :  <a
+href="#y978">tense_B_978</a>
+                        |  <a href="#y978">tense_B_978</a>  <a
+href="#y554">KI_554</a>
+                        ;
+
+<a id="y978" name="y978">tense_B_978</a>             :  <a
+href="#y979">tense_C_979</a>
+                        |  <a href="#y514">CAhA_514</a>
+                        |  <a href="#y979">tense_C_979</a>  <a
+href="#y514">CAhA_514</a>
+                        ;
+/* specifies actuality/potentiality of the bridi */
+
+/* puca'a = actually was */
+/* baca'a = actually will be */
+/* bapu'i = can and will have */
+/* banu'o = can, but won't have yet */
+/* canu'ojebapu'i = can, hasn't yet, but will */
+
+<a id="y979" name="y979">tense_C_979</a>             :  <a
+href="#y1030">time_1030</a>
+   /* time-only */
+   /* space defaults to time-space reference space */
+
+                        |  <a href="#y1040">space_1040</a>
+   /* can include time if specified with VIhA */
+   /* otherwise time defaults to the time-space reference time */
+
+                        |  <a href="#y1030">time_1030</a>  <a
+href="#y1040">space_1040</a>
+   /* time and space - If <a
+href="#y1040">space_1040</a> is marked with
+   VIhA for space-time the tense may be self-contradictory */
+   /* interval prop before space_time is for time distribution */
+                        |  <a href="#y1040">space_1040</a>  <a
+href="#y1030">time_1030</a>
+                        ;
+
+<a id="y980" name="y980">lexer_P_980</a>             :  <a
+href="#y716">lexer_P_716</a>  <a href="#y981">GIK_root_981</a>
+                        ;
+
+<a id="y981" name="y981">GIK_root_981</a>            :  <a
+href="#y539">GI_539</a>
+                        |  <a href="#y539">GI_539</a>  <a
+href="#y581">NAI_581</a>
+                        ;
+
+<a id="y985" name="y985">lexer_Q_985</a>             :  <a
+href="#y717">lexer_Q_717</a>  <a
+href="#y986">lerfu_string_root_986</a>
+                        ;
+
+<a id="y986" name="y986">lerfu_string_root_986</a>   :  <a
+href="#y987">lerfu_word_987</a>
+                        |  <a
+href="#y986">lerfu_string_root_986</a>  <a
+href="#y987">lerfu_word_987</a>
+                        |  <a
+href="#y986">lerfu_string_root_986</a>  <a href="#y672">PA_672</a>
+                        ;
+
+<a id="y987" name="y987">lerfu_word_987</a>          :  <a
+href="#y513">BY_513</a>
+                        |  <a href="#y559">LAU_559</a>  <a
+href="#y987">lerfu_word_987</a>
+                        |  <a href="#y605">TEI_605</a>  <a
+href="#y986">lerfu_string_root_986</a>  <a href="#y533">FOI_533</a>
+                        ;
+
+
+<a id="y990" name="y990">lexer_R_990</a>             :  <a
+href="#y718">lexer_R_718</a>  <a href="#y991">GIhEK_root_991</a>
+                        ;
+
+
+<a id="y991" name="y991">GIhEK_root_991</a>          :  <a
+href="#y541">GIhA_541</a>
+                        |  <a href="#y596">SE_596</a>  <a
+href="#y541">GIhA_541</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y541">GIhA_541</a>
+                        |  <a href="#y541">GIhA_541</a>  <a
+href="#y581">NAI_581</a>
+                        |  <a href="#y596">SE_596</a>  <a
+href="#y541">GIhA_541</a>  <a href="#y581">NAI_581</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y541">GIhA_541</a>  <a href="#y581">NAI_581</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y596">SE_596</a>  <a href="#y541">GIhA_541</a>
+                        |  <a href="#y578">NA_578</a>  <a
+href="#y596">SE_596</a>  <a href="#y541">GIhA_541</a>  <a
+href="#y581">NAI_581</a>
+                        ;
+
+
+<a id="y995" name="y995">lexer_S_995</a>             :  <a
+href="#y719">lexer_S_719</a>  <a href="#y545">I_545</a>
+                        ;
+
+<a id="y1000" name="y1000">lexer_T_1000</a>            :  <a
+href="#y720">lexer_T_720</a>  <a href="#y545">I_545</a>  <a
+href="#y957">simple_JOIK_JEK_957</a>
+                        ;
+
+
+<a id="y1005" name="y1005">lexer_U_1005</a>            :  <a
+href="#y721">lexer_U_721</a>  <a href="#y926">JEK_root_926</a>  <a
+href="#y508">BO_508</a>
+                        |  <a href="#y721">lexer_U_721</a>  <a
+href="#y926">JEK_root_926</a>  <a
+href="#y971">simple_tag_971</a>  <a href="#y508">BO_508</a>
+                        ;
+
+<a id="y1010" name="y1010">lexer_V_1010</a>            :  <a
+href="#y722">lexer_V_722</a>  <a href="#y931">JOIK_root_931</a>  <a
+href="#y508">BO_508</a>
+                        |  <a href="#y722">lexer_V_722</a>  <a
+href="#y931">JOIK_root_931</a>  <a
+href="#y971">simple_tag_971</a>  <a href="#y508">BO_508</a>
+                        ;
+
+<a id="y1015" name="y1015">lexer_W_1015</a>            :  <a
+href="#y723">lexer_W_723</a>  <a href="#y931">JOIK_root_931</a>  <a
+href="#y551">KE_551</a>
+                        |  <a href="#y723">lexer_W_723</a>  <a
+href="#y931">JOIK_root_931</a>  <a
+href="#y971">simple_tag_971</a>  <a href="#y551">KE_551</a>
+                        ;
+
+<a id="y1025" name="y1025">lexer_Y_1025</a>            :  <a
+href="#y725">lexer_Y_725</a>  <a
+href="#y961">number_root_961</a>  <a href="#y663">MOI_663</a>
+                        |  <a href="#y725">lexer_Y_725</a>  <a
+href="#y986">lerfu_string_root_986</a>  <a href="#y663">MOI_663</a>
+                        ;
+
+
+
+<a id="y1030" name="y1030">time_1030</a>               :  <a
+href="#y624">ZI_624</a>
+                        |  <a href="#y624">ZI_624</a>  <a
+href="#y1031">time_A_1031</a>
+                        |  <a href="#y1031">time_A_1031</a>
+                        ;
+
+<a id="y1031" name="y1031">time_A_1031</a>             :  <a
+href="#y1032">time_B_1032</a>
+                        |  <a href="#y1034">time_interval_1034</a>
+                        |  <a href="#y1032">time_B_1032</a>  <a
+href="#y1034">time_interval_1034</a>
+                        ;
+
+<a id="y1032" name="y1032">time_B_1032</a>             :  <a
+href="#y1033">time_offset_1033</a>
+                        |  <a href="#y1032">time_B_1032</a>  <a
+href="#y1033">time_offset_1033</a>
+                        ;
+
+
+<a id="y1033" name="y1033">time_offset_1033</a>        :  <a
+href="#y1035">time_direction_1035</a>
+                        |  <a
+href="#y1035">time_direction_1035</a>  <a href="#y624">ZI_624</a>
+                        ;
+
+
+<a id="y1034" name="y1034">time_interval_1034</a>      :  <a
+href="#y622">ZEhA_622</a>
+                        |  <a href="#y622">ZEhA_622</a>  <a
+href="#y1035">time_direction_1035</a>
+                        |  <a href="#y1036">time_int_props_1036</a>
+                        |  <a href="#y622">ZEhA_622</a>  <a
+href="#y1036">time_int_props_1036</a>
+                        |  <a href="#y622">ZEhA_622</a>  <a
+href="#y1035">time_direction_1035</a>  <a
+href="#y1036">time_int_props_1036</a>
+                        ;
+
+<a id="y1035" name="y1035">time_direction_1035</a>     :  <a
+href="#y592">PU_592</a>
+                        |  <a href="#y592">PU_592</a>  <a
+href="#y581">NAI_581</a>
+                        ;
+
+<a id="y1036" name="y1036">time_int_props_1036</a>     :  <a
+href="#y1051">interval_property_1051</a>
+                        |  <a
+href="#y1036">time_int_props_1036</a>  <a
+href="#y1051">interval_property_1051</a>
+                        ;
+
+
+<a id="y1040" name="y1040">space_1040</a>              :  <a
+href="#y1042">space_A_1042</a>
+                        |  <a href="#y1041">space_motion_1041</a>
+                        |  <a href="#y1042">space_A_1042</a>  <a
+href="#y1041">space_motion_1041</a>
+                        ;
+
+
+<a id="y1041" name="y1041">space_motion_1041</a>       :  <a
+href="#y577">MOhI_577</a>  <a href="#y1045">space_offset_1045</a>
+                        ;
+
+<a id="y1042" name="y1042">space_A_1042</a>            :  <a
+href="#y613">VA_613</a>
+                        |  <a href="#y613">VA_613</a>  <a
+href="#y1043">space_B_1043</a>
+                        |  <a href="#y1043">space_B_1043</a>
+                        ;
+
+<a id="y1043" name="y1043">space_B_1043</a>            :  <a
+href="#y1044">space_C_1044</a>
+                        |  <a href="#y1046">space_intval_1046</a>
+                        |  <a href="#y1044">space_C_1044</a>  <a
+href="#y1046">space_intval_1046</a>
+                        ;
+
+<a id="y1044" name="y1044">space_C_1044</a>            :  <a
+href="#y1045">space_offset_1045</a>
+                        |  <a href="#y1044">space_C_1044</a>  <a
+href="#y1045">space_offset_1045</a>
+                        ;
+
+
+<a id="y1045" name="y1045">space_offset_1045</a>       :  <a
+href="#y1048">space_direction_1048</a>
+                        |  <a
+href="#y1048">space_direction_1048</a>  <a href="#y613">VA_613</a>
+                        ;
+
+
+<a id="y1046" name="y1046">space_intval_1046</a>       :  <a
+href="#y1047">space_intval_A_1047</a>
+                        |  <a
+href="#y1047">space_intval_A_1047</a>  <a
+href="#y1048">space_direction_1048</a>
+                        |  <a
+href="#y1049">space_int_props_1049</a>
+                        |  <a
+href="#y1047">space_intval_A_1047</a>  <a
+href="#y1049">space_int_props_1049</a>
+                        |  <a
+href="#y1047">space_intval_A_1047</a>  <a
+href="#y1048">space_direction_1048</a>
+                                  <a
+href="#y1049">space_int_props_1049</a>
+                        ;
+
+
+<a id="y1047" name="y1047">space_intval_A_1047</a>     :  <a
+href="#y615">VEhA_615</a>
+                        |  <a href="#y616">VIhA_616</a>
+                        |  <a href="#y615">VEhA_615</a>  <a
+href="#y616">VIhA_616</a>
+                        ;
+
+<a id="y1048" name="y1048">space_direction_1048</a>    :  <a
+href="#y528">FAhA_528</a>
+                        |  <a href="#y528">FAhA_528</a>  <a
+href="#y581">NAI_581</a>
+                        ;
+
+<a id="y1049" name="y1049">space_int_props_1049</a>    :  <a
+href="#y1050">space_int_props_A_1050</a>
+                        |  <a
+href="#y1049">space_int_props_1049</a>  <a
+href="#y1050">space_int_props_A_1050</a>
+                        ;
+
+<a id="y1050" name="y1050">space_int_props_A_1050</a>  : <a
+href="#y530">FEhE_530</a>  <a
+href="#y1051">interval_property_1051</a>
+                        ;
+
+/* This terminal gives an interval size in space-time (VEhA), and possibly a
+   dimensionality of the interval.  The dimensionality may also be used
+   with the interval size left unspecified.  When this terminal is used for the
+   spacetime origin, then barring any overriding VIhA, a VIhA here defines
+   the dimensionality of the space-time being discussed.                 */
+
+
+
+
+<a id="y1051" name="y1051">interval_property_1051</a>  :  <a
+href="#y961">number_root_961</a>  <a href="#y594">ROI_594</a>
+                        |  <a href="#y961">number_root_961</a>  <a
+href="#y594">ROI_594</a>  <a href="#y581">NAI_581</a>
+                        |  <a href="#y604">TAhE_604</a>
+                        |  <a href="#y604">TAhE_604</a>  <a
+href="#y581">NAI_581</a>
+                        |  <a href="#y621">ZAhO_621</a>
+                        |  <a href="#y621">ZAhO_621</a>  <a
+href="#y581">NAI_581</a>
+                        ;
+
+/* extensional/intensional interval parameters */
+/* These may be appended to any defined interval, or may stand in place of
+   either time or space tenses.  If no other tense is present, this terminal
+   stands for the time-space interval parameter with an unspecified interval.*/
+
+   /* roroi = always and everywhere */
+   /* roroiku'avi = always here (ku'a = intersection) */
+   /* puroroi = always in the past
+   /* paroi = once upon a time (somewhere) */
+   /* paroiku'avi = once upon a time here */
+
+
+/* The following are “Lexer-only rules”, covered by steps 1-4 described
+   at the beginning.  The grammar of these constructs is nonexistent,
+   except possibly in cases where they interact with each other.  Even
+   there, however, the effects are semantic rather than grammatical.  Where
+   it is believed possible that conflicts could exist, the grammar of these
+   constructs has been put in the above grammar, even though the
+   lexer/Preparser will actually prevent these from being passed thru to
+   the parse routine.  (Otherwise we have to put unacceptably fancy code in
+   the PreParser to determine just when these can be passed thru, and when
+   they can't.)  Constructs in this category include quotes and indicators
+   as defined above.  (The above grammar handles utterance scope
+   (free_modifier) and clause scope (gap) applications of the latter,
+   however, and indicators should be allowed to be absorbed into almost any
+   word without changing its grammar.
+
+   <a href="#y601">SI_601</a>, <a href="#y595">SA_595</a>, and <a
+href="#y603">SU_603</a> are metalinguistic erasers.
+
+<a id="y1100" name="y1100">token_1100</a>              :  <a
+href="#y698">any_word_698</a>
+                        |  <a href="#y503">BAhE_503</a>  <a
+href="#y698">any_word_698</a>
+                        |  <a href="#y699">anything_699</a>
+                        |  <a href="#y698">any_word_698</a>  <a
+href="#y511">BU_511</a>
+                        |  <a href="#y698">any_word_698</a>  <a
+href="#y524">DAhO_524</a>
+                        |  <a href="#y698">any_word_698</a>  <a
+href="#y536">FUhO_536</a>
+                        |  <a href="#y698">any_word_698</a>  <a
+href="#y535">FUhE_535</a>
+                        |  <a href="#y698">any_word_698</a>  <a
+href="#y612">UI_612</a>
+                        |  <a href="#y698">any_word_698</a>  <a
+href="#y612">UI_612</a>  <a href="#y581">NAI_581</a>
+                        |  <a href="#y698">any_word_698</a>  <a
+href="#y619">Y_619</a>
+                        |  <a href="#y698">any_word_698</a>  <a
+href="#y515">CAI_515</a>
+                        |  <a href="#y698">any_word_698</a>  <a
+href="#y515">CAI_515</a>  <a href="#y581">NAI_581</a>
+                        |  <a href="#y612">UI_612</a>  <a
+href="#y581">NAI_581</a>
+                        |  <a href="#y515">CAI_515</a>  <a
+href="#y581">NAI_581</a>
+                        ;
+
+<a id="y1101" name="y1101">null_1101</a>               :  <a
+href="#y698">any_word_698</a>  <a href="#y601">SI_601</a>
+                        |  possibly_unlexable_word  (PAUSE)  <a
+href="#y601">SI_601</a>
+                        |  <a href="#y20">utterance_20</a>  <a
+href="#y595">SA_595</a>
+                        |  possibly unlexable string  (PAUSE)  <a
+href="#y595">SA_595</a>
+                           erases back to the last individual token
+                           I or NIhO or start of text, ignoring the
+                           insides of ZOI, ZO, and LOhU/LEhU quotes.
+                           Start of text is defined for SU below.
+                        |  <a href="#y3">text_C_3</a>  <a
+href="#y603">SU_603</a>
+                        |  possibly unparsable text  (PAUSE)  <a
+href="#y603">SU_603</a>
+                           erases back to start of text which is the
+                           beginning of a speaker's statement,
+                           a parenthesis (TO/TOI), a LU/LIhU quote,
+                           or a TUhE/TUhU utterance string.
+                        ;
+
+
+*/
+%%
+</pre>
+
+
+      <hr />
+      <table class="nav" width="100%">
+         <tr>
+            <td width="15%" valign="top">
+               <a href="../../20/">
+                  Previous
+               </a>
+               <br />
+               <em>
+                   A Catalogue of selma'o
+               </em>
+            </td>
+            <td align="center">
+               <strong>
+                        Formal Grammars
+               </strong>
+               <br />
+               <a href="../../">
+                  <em>
+                     <small>
+                        The Lojban Reference Grammar
+                     </small>
+                  </em>
+               </a>
+            </td>
+            <td width="15%" valign="top">
+               <a href="../../21/2/">
+                  Next
+               </a>
+               <br />
+               <em>
+                  EBNF Grammar of Lojban
+               </em>
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>
