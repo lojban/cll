@@ -49,7 +49,7 @@
 
     <p>The following cmavo is discussed in this section:</p>
 <pre>
-   fu’a    FUhA    reverse Polish flag
+   fu'a    FUhA    reverse Polish flag
 </pre>
     So far, the Lojban notational conventions have mapped fairly
     familiar kinds of mathematical discourse. The use of
@@ -66,34 +66,34 @@
     name for forethought mekso of the kind explained in <a
     href=../6/>Section 6</a>.) The number of operands per operator
     is always fixed. No parentheses are required or permitted. In
-    Lojban, RP notation is always explicitly marked by a “fu’a”
+    Lojban, RP notation is always explicitly marked by a “fu'a”
     at the beginning of the expression; there is no terminator.
     Here is a simple example:</p>
 <pre>
-<a id="1" name="1">16.1)</a>    li fu’a reboi ci su’i
+<a id="1" name="1">16.1)</a>    li fu'a reboi ci su'i
         du li mu
     the-number (RP!) two, three, plus
         equals the-number five.
 </pre>
 
     <p>The operands are “re” and “ci”; the operator is
-    “su’i”.</p>
+    “su'i”.</p>
 
     <p>Here is a more complex example:</p>
 <pre>
-<a id="2" name="2">16.2)</a>    li fu’a reboi ci pi’i
-        voboi mu pi’i su’i
+<a id="2" name="2">16.2)</a>    li fu'a reboi ci pi'i
+        voboi mu pi'i su'i
         du li rexa
     the-number (RP!) (two, three, times),
         (four, five, times), plus
         equals the-number two-six
 </pre>
 
-    <p>Here the operands of the first “pi’i” are “re” and
-    “ci”; the operands of the second “pi’i” are “vo” and
+    <p>Here the operands of the first “pi'i” are “re” and
+    “ci”; the operands of the second “pi'i” are “vo” and
     “mu” (with “boi” inserted where needed), and the operands
-    of the “su’i” are “reboi ci pi’i”, or 6, and “voboi mu
-    pi’i”, or 20. As you can see, it is easy to get lost in the
+    of the “su'i” are “reboi ci pi'i”, or 6, and “voboi mu
+    pi'i”, or 20. As you can see, it is easy to get lost in the
     world of reverse Polish notation; on the other hand, it is
     especially easy for a mechanical listener (who has a deep
     mental stack and doesn’t get lost) to comprehend.</p>
@@ -105,25 +105,25 @@
 
     <p>In Lojban, RP operators are always parsed with exactly two
     operands. What about operators which require only one operand,
-    or more than two operands? The null operand “tu’o” and the
-    null operator “ge’a” provide a simple solution. A one-operand
-    operator like “va’a” always appears in a reverse Polish
-    context as “tu’o va’a”. The “tu’o” provides the second
+    or more than two operands? The null operand “tu'o” and the
+    null operator “ge'a” provide a simple solution. A one-operand
+    operator like “va'a” always appears in a reverse Polish
+    context as “tu'o va'a”. The “tu'o” provides the second
     operand, which is semantically ignored but grammatically
     necessary. Likewise, the three-operand version of “gei”
-    appears in reverse Polish as “ge’a gei”, where the “ge’a”
+    appears in reverse Polish as “ge'a gei”, where the “ge'a”
     effectively merges the 2nd and 3rd operands into a single
     operand. Here are some examples:</p>
 <pre>
-<a id="3" name="3">16.3)</a>    li fu’a ciboi muboi vu’u
-        du li fu’a reboi tu’o va’a
+<a id="3" name="3">16.3)</a>    li fu'a ciboi muboi vu'u
+        du li fu'a reboi tu'o va'a
     The-number (RP!) (three, five, minus)
         equals the-number (RP!) two, null, negative-of.
     3 - 5 = -2
 
-<a id="4" name="4">16.4)</a> li cinoki’oki’o du
-        li fu’a biboi
-        ciboi panoboi ge’a gei
+<a id="4" name="4">16.4)</a> li cinoki'oki'o du
+        li fu'a biboi
+        ciboi panoboi ge'a gei
     the-number 30-comma-comma equals
         the-number (RP!) 8,
         (3, 10, null-op), exponential-notation

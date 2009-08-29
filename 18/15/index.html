@@ -49,37 +49,37 @@
 
     <p>The following cmavo are discussed in this section:</p>
 <pre>
-   jo’i    JOhI    start vector
-    te’u    TEhU    end vector
-    pi’a    VUhU    matrix row combiner
-    sa’i    VUhU    matrix column combiner
+   jo'i    JOhI    start vector
+    te'u    TEhU    end vector
+    pi'a    VUhU    matrix row combiner
+    sa'i    VUhU    matrix column combiner
 </pre>
     A mathematical vector is a list of numbers, and a mathematical
     matrix is a table of numbers. Lojban considers matrices to be
     built up out of vectors, which are in turn built up out of
     operands. 
 
-    <p>“jo’i”, the only cmavo of selma’o JOhI, is the vector
+    <p>“jo'i”, the only cmavo of selma'o JOhI, is the vector
     indicator: it has a syntax reminiscent of a forethought
     operator, but has very high precedence. The components must be
     simple operands rather than full expressions (unless
     parenthesized). A vector can have any number of components;
-    “te’u” is the elidable terminator. An example:</p>
+    “te'u” is the elidable terminator. An example:</p>
 <pre>
 <a id="15-1"
-name="15-1">15.1)</a>    li jo’i paboi reboi te’u su’i jo’i ciboi voboi
-        du li jo’i voboi xaboi
+name="15-1">15.1)</a>    li jo'i paboi reboi te'u su'i jo'i ciboi voboi
+        du li jo'i voboi xaboi
     the-number array( one, two ) plus array( three, four)
         equals the-number array( four, six)
     (1,2) + (3,4) = (4,6)
 </pre>
-    Vectors can be combined into matrices using either “pi’a”,
-    the matrix row operator, or “sa’i”, the matrix column
+    Vectors can be combined into matrices using either “pi'a”,
+    the matrix row operator, or “sa'i”, the matrix column
     operator. The first combines vectors representing rows of the
     matrix, and the second combines vectors representing columns of
     the matrix. Both of them allow any number of arguments:
     additional arguments are tacked on with the null operator
-    “ge’a”. 
+    “ge'a”. 
 
     <p>Therefore, the “magic square” matrix</p>
 
@@ -91,16 +91,16 @@ name="15-1">15.1)</a>    li jo’i paboi reboi te’u su’i jo’i ciboi voboi
     can be represented either as: 
 <pre>
 <a id="15-2"
-name="15-2">15.2)</a>    jo’i biboi paboi xa pi’a jo’i ciboi muboi ze
-        ge’a jo’i voboi soboi re
+name="15-2">15.2)</a>    jo'i biboi paboi xa pi'a jo'i ciboi muboi ze
+        ge'a jo'i voboi soboi re
     the-vector (8 1 6) matrix-row the-vector (3 5 7)
         , the-vector (4 9 2)
 </pre>
     or as 
 <pre>
 <a id="15-3"
-name="15-3">15.3)</a>    jo’i biboi ciboi vo sa’i jo’i paboi muboi so
-        ge’a jo’i xaboi zeboi re
+name="15-3">15.3)</a>    jo'i biboi ciboi vo sa'i jo'i paboi muboi so
+        ge'a jo'i xaboi zeboi re
     the-vector (8 3 4) matrix-column the-vector (1 5 9)
         , the-vector (6 7 2)
 </pre>
@@ -110,12 +110,12 @@ name="15-3">15.3)</a>    jo’i biboi ciboi vo sa’i jo’i paboi muboi so
     operators in order to avoid incorrect groupings. There are no
     VUhU operators for the matrix operators of inner or outer
     products, but appropriate operators can be created using a
-    suitable symbolic lerfu word or string prefixed by “ma’o”. 
+    suitable symbolic lerfu word or string prefixed by “ma'o”. 
 
     <p>Matrices of more than two dimensions can be built up using
-    either “pi’a” or “sa’i” with an appropriate subscript
+    either “pi'a” or “sa'i” with an appropriate subscript
     numbering the dimension. When subscripted, there is no
-    difference between “pi’a” and “sa’i”.</p>
+    difference between “pi'a” and “sa'i”.</p>
 
 
       <hr />

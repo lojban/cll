@@ -17,7 +17,7 @@
                </a>
                <br />
                <em>
-                   A Catalogue of selma’o
+                   A Catalogue of selma'o
                </em>
             </td>
             <td align="center">
@@ -102,7 +102,7 @@
     lexing tasks using the given order of precedence in case of
     conflict:</p>
 
-    <p>a. If the Lojban word “zoi” (selma’o ZOI) is identified,
+    <p>a. If the Lojban word “zoi” (selma'o ZOI) is identified,
     take the following Lojban word (which should be end delimited
     with a pause for separation from the following non-Lojban text)
     as an opening delimiter. Treat all text following that
@@ -112,34 +112,34 @@
     need for processing within this text except as necessary to
     find the closing delimiter.</p>
 
-    <p>b. If the Lojban word “zo” (selma’o ZO) is identified,
+    <p>b. If the Lojban word “zo” (selma'o ZO) is identified,
     treat the following Lojban word as a token labelled ’<a
     href="#y698">any_word_698</a>’, instead of lexing it by its
     normal grammatical function.</p>
 
-    <p>c. If the Lojban word “lo’u” (selma’o LOhU) is identified,
-    search for the closing delimiter “le’u” (selma’o LEhU),
+    <p>c. If the Lojban word “lo'u” (selma'o LOhU) is identified,
+    search for the closing delimiter “le'u” (selma'o LEhU),
     ignoring any such closing delimiters absorbed by the previous
     two steps. The text between the delimiters should be treated as
     the single token ’<a href="#y697">any_words_697</a>’.</p>
 
-    <p>d. Categorize all remaining words into their Lojban selma’o
+    <p>d. Categorize all remaining words into their Lojban selma'o
     category, including the various delimiters mentioned in the
-    previous steps. In all steps after step 2, only the selma’o
+    previous steps. In all steps after step 2, only the selma'o
     token type is significant for each word.</p>
 
-    <p>e. If the word “si” (selma’o SI) is identified, erase it
+    <p>e. If the word “si” (selma'o SI) is identified, erase it
     and the previous word (or token, if the previous text has been
     condensed into a single token by one of the above rules).</p>
 
-    <p>f. If the word “sa” (selma’o SA) is identified, erase it
+    <p>f. If the word “sa” (selma'o SA) is identified, erase it
     and all preceding text as far back as necessary to make what
     follows attach to what precedes. (This rule is hard to
     formalize and may receive further definition later.)</p>
 
-    <p>g. If the word ’su’ (selma’o SU) is identified, erase it and
+    <p>g. If the word ’su’ (selma'o SU) is identified, erase it and
     all preceding text back to and including the first preceding
-    token word which is in one of the selma’o: NIhO, LU, TUhE, and
+    token word which is in one of the selma'o: NIhO, LU, TUhE, and
     TO. However, if speaker identification is available, a SU shall
     only erase to the beginning of a speaker’s discourse, unless it
     occurs at the beginning of a speaker’s discourse. (Thus, if the
@@ -160,19 +160,19 @@
 
     <p>a. Token sequences of the form any - (ZEI - any) ..., where
     there may be any number of ZEIs, are merged into a single token
-    of selma’o BRIVLA.</p>
+    of selma'o BRIVLA.</p>
 
-    <p>b. Absorb all selma’o BAhE tokens into the following token.
+    <p>b. Absorb all selma'o BAhE tokens into the following token.
     If they occur at the end of text, leave them alone (they are
     errors).</p>
 
-    <p>c. Absorb all selma’o BU tokens into the previous token.
-    Relabel the previous token as selma’o BY.</p>
+    <p>c. Absorb all selma'o BU tokens into the previous token.
+    Relabel the previous token as selma'o BY.</p>
 
-    <p>d. If selma’o NAI occurs immediately following any of tokens
+    <p>d. If selma'o NAI occurs immediately following any of tokens
     UI or CAI, absorb the NAI into the previous token.</p>
 
-    <p>e. Absorb all members of selma’o DAhO, FUhO, FUhE, UI, Y,
+    <p>e. Absorb all members of selma'o DAhO, FUhO, FUhE, UI, Y,
     and CAI into the previous token. All of these null grammar
     tokens are permitted following any word of the grammar, without
     interfering with that word’s grammatical function, or causing
@@ -264,7 +264,7 @@ name="y516">CEI_516</a>          /*        pro-bridi assignment operator */
 name="y517">CEhE_517</a>         /*        afterthought term list connective */
 %token <a id="y518"
 name="y518">CMENE_518</a>        /*        names; require consonant end, then pause no
-                                   LA or DOI selma’o embedded, pause before if
+                                   LA or DOI selma'o embedded, pause before if
                                    vowel initial and preceded by a vowel */
 %token <a id="y519"
 name="y519">CO_519</a>           /*        tanru inversion  */
@@ -615,7 +615,7 @@ href="#y3">text_C_3</a>
 
 <a id="y3" name="y3">text_C_3</a>                :  <a
 href="#y4">paragraphs_4</a>
-   /* Only indicators which follow certain selma’o:
+   /* Only indicators which follow certain selma'o:
     cmene, <a href="#y607">TOI_607</a>, <a
 href="#y571">LU_571</a>, and the lexer_K and lexer_S I_roots and compounds,
     and at the start of text(_0), will survive the lexer; all other valid ones
@@ -1293,7 +1293,7 @@ href="#y381">operand_381</a>  <a href="#y463">LUhU_gap_463</a>
 /* _400 series constructs are mostly specific strings, some of which may
    also be used by the lexer; the lexer should not use any reference to
    terminals numbered less than _400, as they have grammars composed on
-   non-deterministic strings of selma’o.  Some above _400 also are this
+   non-deterministic strings of selma'o.  Some above _400 also are this
    way, so care should be taken; this is especially true for those that
    reference <a href="#y32">free_modifier_32</a>.  */
 
@@ -1490,9 +1490,9 @@ href="#y699">anything_699</a> */
 href="#y626">ZO_626</a>  <a href="#y698">any_word_698</a>
                         ;
 
-/* ’word’ may not be a compound; but it can be any valid Lojban selma’o value,
+/* ’word’ may not be a compound; but it can be any valid Lojban selma'o value,
    including ZO, ZOI, SI, SA, SU. The preparser will not lex the word per its
-   normal selma’o. */
+   normal selma'o. */
 
 <a id="y436" name="y436">LOhU_quote_436</a>          :  <a
 href="#y569">LOhU_569</a>  <a href="#y697">any_words_697</a>  <a
@@ -1500,7 +1500,7 @@ href="#y565">LEhU_565</a>
                         ;
 
 /* ’words’ may be any Lojban words, with no claim of grammaticality; the
-   preparser will not lex the individual words per their normal selma’o;
+   preparser will not lex the individual words per their normal selma'o;
    used to quote ungrammatical Lojban, equivalent to the * or ? writing
    convention for such text.  */
 
@@ -1521,7 +1521,7 @@ href="#y565">LEhU_565</a>
    are not parsed internally, these operators are ignored within the quote.
    To erase a ZO, then, two SI’s are needed after giving a quoted word of
    any type.  ZOI takes four SI’s, with the ENTIRE BODY OF THE QUOTE
-   treated as a single ’word’ since it is one selma’o.  Thus one for the
+   treated as a single ’word’ since it is one selma'o.  Thus one for the
    quote body, two for the single word delimiters, and one for the ZOI.  In
    LOhU, the entire body is treated as a single word, so three SI’s can
    erase it.  */
@@ -2342,11 +2342,11 @@ href="#y514">CAhA_514</a>
                         ;
 /* specifies actuality/potentiality of the bridi */
 
-/* puca’a = actually was */
-/* baca’a = actually will be */
-/* bapu’i = can and will have */
-/* banu’o = can, but won’t have yet */
-/* canu’ojebapu’i = can, hasn’t yet, but will */
+/* puca'a = actually was */
+/* baca'a = actually will be */
+/* bapu'i = can and will have */
+/* banu'o = can, but won’t have yet */
+/* canu'ojebapu'i = can, hasn’t yet, but will */
 
 <a id="y979" name="y979">tense_C_979</a>             :  <a
 href="#y1030">time_1030</a>
@@ -2632,10 +2632,10 @@ href="#y581">NAI_581</a>
    stands for the time-space interval parameter with an unspecified interval.*/
 
    /* roroi = always and everywhere */
-   /* roroiku’avi = always here (ku’a = intersection) */
+   /* roroiku'avi = always here (ku'a = intersection) */
    /* puroroi = always in the past
    /* paroi = once upon a time (somewhere) */
-   /* paroiku’avi = once upon a time here */
+   /* paroiku'avi = once upon a time here */
 
 
 /* The following are “Lexer-only rules”, covered by steps 1-4 described
@@ -2722,7 +2722,7 @@ href="#y603">SU_603</a>
                </a>
                <br />
                <em>
-                   A Catalogue of selma’o
+                   A Catalogue of selma'o
                </em>
             </td>
             <td align="center">
