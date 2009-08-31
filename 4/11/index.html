@@ -59,81 +59,74 @@
 
     <dl>
       <dt>1)</dt>
-
       <dd>Choose a 3-letter or 4-letter rafsi for each of the gismu
       and cmavo in the tanru except the last.</dd>
 
       <dt>2)</dt>
-
       <dd>Choose a 3-letter (CVV-form or CCV-form) or 5-letter
       rafsi for the final gismu in the tanru.</dd>
 
       <dt>3)</dt>
-
       <dd>Join the resulting string of rafsi, initially without
       hyphens.</dd>
-    </dl>
 
-    <dl>
       <dt>4)</dt>
-
       <dd>Add hyphen letters where necessary. It is illegal to add
       a hyphen at a place that is not required by this algorithm.
       Right-to-left tests are recommended, for reasons discussed
-      below.</dd>
+      below.
 
-      <dt>4a)</dt>
+        <dl>
+          <dt>4a)</dt>
+          <dd>If there are more than two words in the tanru, put an
+          “r”-hyphen (or an “n”-hyphen) after the first rafsi if it
+          is CVV-form. If there are exactly two words, then put an
+          “r”-hyphen (or an “n”-hyphen) between the two rafsi if
+          the first rafsi is CVV-form, unless the second rafsi is
+          CCV-form (for example, “saicli” requires no hyphen). Use an
+          “r”-hyphen unless the letter after the hyphen is “r”, in
+          which case use an “n”-hyphen. Never use an “n”-hyphen
+          unless it is required.</dd>
 
-      <dd>If there are more than two words in the tanru, put an
-      “r”-hyphen (or an “n”-hyphen) after the first rafsi if it
-      is CVV-form. If there are exactly two words, then put an
-      “r”-hyphen (or an “n”-hyphen) between the two rafsi if
-      the first rafsi is CVV-form, unless the second rafsi is
-      CCV-form (for example, “saicli” requires no hyphen). Use an
-      “r”-hyphen unless the letter after the hyphen is “r”, in
-      which case use an “n”-hyphen. Never use an “n”-hyphen
-      unless it is required.</dd>
+          <dt>4b)</dt>
+          <dd>Put a “y”-hyphen between the consonants of any
+          impermissible consonant pair. This will always appear between
+          rafsi.</dd>
 
-      <dt>4b)</dt>
+          <dt>4c)</dt>
+          <dd>Put a “y”-hyphen after any 4-letter rafsi form.</dd>
+        </dl>
+    </dd>
 
-      <dd>Put a “y”-hyphen between the consonants of any
-      impermissible consonant pair. This will always appear between
-      rafsi.</dd>
-
-      <dt>4c)</dt>
-
-      <dd>Put a “y”-hyphen after any 4-letter rafsi form.</dd>
-    </dl>
-
-    <dl>
       <dt>5)</dt>
-
       <dd>Test all forms with one or more initial CVC-form rafsi
-      --- with the pattern “CVC ... CVC + X” --- for “tosmabru
+      &mdash; with the pattern “CVC ... CVC + X” &mdash; for “tosmabru
       failure”. X must either be a CVCCV long rafsi that happens
       to have a permissible initial pair as the consonant cluster,
       or is something which has caused a “y”-hyphen to be
       installed between the previous CVC and itself by one of the
-      above rules. The test is as follows:</dd>
+      above rules.</dd>
+      <dd>The test is as follows:
 
-      <dt>5a)</dt>
+        <dl>
+          <dt>5a)</dt>
+          <dd>
+          Examine all the C/C consonant pairs up to the first "y"-hyphen,
+          or up to the end of the word in case there are no "y"-hyphens.</dd>
 
-      <dd>Examine all the C/C consonant pairs that join the CVC
-      rafsi, and also the pair between the last CVC and the X
-      portion, ignoring any “y”-hyphen before the X. These
-      consonant pairs are called “joints”.</dd>
+          <dd>These consonant pairs are called “joints”.</dd>
 
-      <dt>5b)</dt>
+          <dt>5b)</dt>
+          <dd>If all of those joints are permissible initials, then the
+          trial word will break up into a cmavo and a shorter brivla.
+          If not, the word will not break up, and no further hyphens
+          are needed.</dd>
 
-      <dd>If all of those joints are permissible initials, then the
-      trial word will break up into a cmavo and a shorter brivla.
-      If not, the word will not break up, and no further hyphens
-      are needed.</dd>
-
-      <dt>5c)</dt>
-
-      <dd>Install a “y”-hyphen at the first such joint.</dd>
-    </dl>
+          <dt>5c)</dt>
+          <dd>Install a “y”-hyphen at the first such joint.</dd>
+        </dl>
+      </dd>
+    <dl>
 
     <p>Note that the “tosmabru test” implies that the algorithm
     will be more efficient if rafsi junctures are tested for
