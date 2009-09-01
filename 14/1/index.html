@@ -60,19 +60,18 @@
     combine two sentences to create a new sentence. The truth
     functions have the special characteristic that the truth value
     (that is, the truth or falsehood) of the results depends only
-    on the truth value of the component sentences. For example,</p>
+    on the truth value of the component sentences. For example,
 
-    <p></p>
 <pre>
-<a id="1"
-name="1">1.1)</a>  John is a man or James is a woman.
+<a id="1" name="1">1.1)</a>   John is a man or James is a woman.
 </pre>
+
     is true if “John is a man” is true, or if “James is a
     woman” is true. If we know whether John is a man, and we know
     whether James is a woman, we know whether “John is a man or
     James is a woman” is true, provided we know the meaning of
     “or”. Here “John is a man” and “James is a woman” are the
-    component sentences. 
+    component sentences.</p>
 
     <p>We will use the phrase “negating a sentence” to mean
     changing its truth value. An English sentence may always be
@@ -105,7 +104,7 @@ name="1">1.1)</a>  John is a man or James is a woman.
     every possible value of the component sentences. Here is a
     truth table for “or”:</p>
 <pre>
-   first       second      result
+    first       second      result
     -------     -------     ------
     True        True        True
     True        False       True
@@ -125,22 +124,17 @@ name="1">1.1)</a>  John is a man or James is a woman.
     “James is not a woman” is true). Then the truth table tells
     us that</p>
 
-    <dl>
-      <dt></dt>
+<pre>
+       “John is a man, or James is not a woman”             (true,  true)   is true;
+       “John is a man, or James is a woman”                 (true,  false)  is true;
+       “John is not a man, or James is not a woman”         (false, true)   is true;
+       “John is not a man, or James is a woman”             (false, false)  is false.
+</pre>
 
-      <dd>“John is a man, or James is not a woman” (true, true)
-      is true; “John is a man, or James is a woman” (true, false)
-      is true; “John is not a man, or James is not a woman”
-      (false, true) is true; “John is not a man, or James is a
-      woman” (false, false) is false.</dd>
-    </dl>
-
-    <p>
     Note that the kind of “or” used
     in this example can also be expressed (in formal English) with
     “and/or”. There is a different truth table for the kind of
-    “or” that means “either ... or ... but not both”. 
-    </p>
+    “or” that means “either ... or ... but not both”.</p>
 
     <p>To save space, we will write truth tables in a shorter
     format henceforth. Let the letters T and F stand for True and
@@ -152,11 +146,10 @@ name="1">1.1)</a>  John is a man or James is a woman.
     the “or” truth function. Here are the 16 possible truth
     functions, with an English version of what it means to assert
     that each function is, in fact, true (“first” refers to the
-    first sentence, and “second” to the second sentence):</p>
+    first sentence, and “second” to the second sentence):
 
-    <p></p>
 <pre>
-   TTTT    (always true)
+    TTTT    (always true)
     TTTF    first is true and/or second is true.
     TTFT    first is true if second is true.
     TTFF    first is true whether or not second is true.
@@ -175,7 +168,7 @@ name="1">1.1)</a>  John is a man or James is a woman.
     FFFF    (always false)
 </pre>
 
-    <p>Skeptics may work out the detailed truth tables for
+    Skeptics may work out the detailed truth tables for
     themselves.</p>
 
 
