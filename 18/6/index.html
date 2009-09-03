@@ -39,7 +39,8 @@
       <hr />
           <h3>6. Forethought operators (Polish notation, functions)</h3>
 
-    <p>The following cmavo are discussed in this section:</p>
+    <p>The following cmavo are discussed in this section:
+
 <pre>
      boi     BOI     numeral/lerfu string terminator
      va'a    VUhU    negation/additive inverse
@@ -51,50 +52,49 @@
      ma'o    MAhO    convert operand to operator
      fy.     BY      letter “f”
 </pre>
-    The infix form explained so far is reasonable for many
+</p>
+
+    <p>The infix form explained so far is reasonable for many
     purposes, but it is limited and rigid. It works smoothly only
     where all operators have exactly two operands, and where
     precedences can either be assumed from context or are limited
-    to just two levels, with some help from parentheses. 
+    to just two levels, with some help from parentheses.</p>
 
     <p>But there are many operators which do not have two operands,
     or which have a variable number of operands. The preferred form
     of expression in such cases is the use of “forethought
     operators”, also known as Polish notation. In this style of
     writing mathematics, the operator comes first and the operands
-    afterwards:</p>
+    afterwards:
 
-    <p></p>
 <pre>
-<a id="1"
-name="1">6.1)</a>  li su'i paboi reboi ci[boi] du li xa
-    the-number the-sum-of one two three equals the-number six
-    sum(1,2,3) = 6
+<a id="1" name="1">6.1)</a>   li su'i paboi reboi ci[boi] du li xa
+       the-number the-sum-of one two three equals the-number six
+       sum(1,2,3) = 6
 </pre>
+
     Note that the normally elidable number terminator “boi” is
     required after “pa” and “re” because otherwise the reading
     would be “pareci” = 123. It is not required after “ci” but
     is inserted here in brackets for the sake of symmetry. The only
     time “boi” is required is, as in <a href="../6/#1">Example
     6.1</a>, when there are two consecutive numbers or lerfu
-    strings. 
+    strings.</p>
 
     <p>Forethought mekso can use any number of operands, in <a
     href="../6/#1">Example 6.1</a> three. How do we know how many
     operands there are in ambiguous circumstances? The usual Lojban
     solution is employed: an elidable terminator, namely “ku'e”.
-    Here is an example:</p>
+    Here is an example:
 
-    <p></p>
 <pre>
-<a id="2"
-name="2">6.2)</a>  li py. su'i va'a ny. ku'e su'i zy du li xy.
-    the-number “p” plus negative-of( “n” ) plus “z”
-        equals the-number “x”
-    p + -n + z = x
+<a id="2" name="2">6.2)</a>   li py. su'i va'a ny. ku'e su'i zy du li xy.
+       the-number “p” plus negative-of( “n” ) plus “z” equals the-number “x”
+       p + -n + z = x
 </pre>
+
     where we know that “va'a” is a forethought operator because
-    there is no operand preceding it. 
+    there is no operand preceding it.</p>
 
     <p>“va'a” is the numerical negation operator, of selma'o
     VUhU. In contrast, j “vu'u” is not used for numerical
@@ -112,14 +112,14 @@ name="2">6.2)</a>  li py. su'i va'a ny. ku'e su'i zy du li xy.
 
     <p>Forethought mekso is also useful for matching standard
     functional notation. How do we represent “z = f(x)”? The
-    answer is:</p>
+    answer is:
 
-    <p></p>
 <pre>
-<a id="3" name="3">6.3)</a>  li zy du li ma'o fy.boi xy.
-    the-number z equals the-number the-operator f x
-    z = f(x)
+<a id="3" name="3">6.3)</a>   li zy du li ma'o fy.boi xy.
+       the-number z equals the-number the-operator f x
+       z = f(x)
 </pre>
+
     Again, no parentheses are used. The construct “ma'o fy.boi”
     is the equivalent of an operator, and appears in forethought
     here (although it could also be used as a regular infix
@@ -133,27 +133,28 @@ name="2">6.2)</a>  li py. su'i va'a ny. ku'e su'i zy du li xy.
     otherwise the “xy.” would look like part of the operator
     name. (The use of “ma'o” can be generalized from lerfu
     strings to any mekso operand: see <a href=../21/>Section
-    21</a>.) 
+    21</a>.)</p>
 
     <p>When using forethought mekso, the optional marker “pe'o”
     may be placed in front of the operator. This usage can help
     avoid confusion by providing clearly marked “pe'o” and
     “ku'e” pairs to delimit the operand list. <a
     href="../6/#1">Examples 6.1</a> to <a href="../6/#3">6.3</a>,
-    respectively, with explicit “pe'o” and “ku'e”:</p>
+    respectively, with explicit “pe'o” and “ku'e”:
+
 <pre>
-<a id="4"
-name="4">6.4)</a>  li pe'o su'i paboi reboi ciboi ku'e du li xa
-<a id="5"
-name="5">6.5)</a>   li py. su'i pe'o va'a ny. ku'e su'i zy du li xy.
-<a id="6"
-name="6">6.6)</a>   li zy du li pe'o ma'o fy.boi xy. ku'e
+<a id="4" name="4">6.4)</a>   li pe'o su'i paboi reboi ciboi ku'e du li xa
+
+<a id="5" name="5">6.5)</a>   li py. su'i pe'o va'a ny. ku'e su'i zy du li xy.
+
+<a id="6" name="6">6.6)</a>   li zy du li pe'o ma'o fy.boi xy. ku'e
 </pre>
+
     Note: When using forethought mekso, be sure that the operands
     really are operands: they cannot contain regular infix
     expressions unless parenthesized with “vei” and “ve'o”. An
     earlier version of the complex <a href="../17/#6">Example
-    17.6</a> came to grief because I forgot this rule. 
+    17.6</a> came to grief because I forgot this rule.</p>
 
 
       <hr />

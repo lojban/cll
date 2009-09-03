@@ -39,7 +39,7 @@
       <hr />
           <h3>17. Logical and non-logical connectives within mekso</h3>
 
-    <p>The following cmavo are discussed in this section:</p>
+    <p>The following cmavo are discussed in this section:
 <pre>
      .abu    BY      letter “a”
       by     BY      letter “b”
@@ -47,7 +47,9 @@
       fe'a   VUhU    nth root of (default square root)
       lo'o   LOhO    terminator for LI
 </pre>
-    As befits a logical language, Lojban has extensive provision
+</p>
+
+    <p>As befits a logical language, Lojban has extensive provision
     for logical connectives within both operators and operands.
     Full details on logical and non-logical connectives are
     provided in <a href="../../14/1/">Chapter 14</a>. Operands are
@@ -55,7 +57,7 @@
     with selma'o GA, just like sumti. Operators are connected in
     afterthought with selma'o JA and in forethought with selma'o
     GUhA, just like tanru components. This parallelism is no
-    accident. 
+    accident.</p>
 
     <p>In addition, A+BO and A+KE constructs are allowed for
     grouping logically connected operands, and “ke ... ke'e” is
@@ -65,87 +67,89 @@
     <p>Despite the large number of rules required to support this
     feature, it is of relatively minor importance in the mekso
     scheme of things. <a href="../17/#1">Example 17.1</a> exhibits
-    afterthought logical connection between operands:</p>
+    afterthought logical connection between operands:
 
-    <p></p>
 <pre>
-<a id="17-1"
-name="17-1">17.1)</a>    vei ci .a vo ve'o prenu cu klama le zarci
-    ( three or four ) people go-to the market.
+<a id="1" name="1">17.1)</a>  vei ci .a vo ve'o prenu cu klama le zarci
+       ( three or four ) people go-to the market.
 </pre>
+
     <a href="../17/#2">Example 17.2</a> is equivalent in meaning, but
     uses forethought connection: 
+
 <pre>
-<a id="17-2"
-name="17-2">17.2)</a>    vei ga ci gi vo ve'o prenu cu klama le zarci
-    ( either 3 or 4 ) people go-to the market.
+<a id="2" name="2">17.2)</a>  vei ga ci gi vo ve'o prenu cu klama le zarci
+       ( either 3 or 4 ) people go-to the market.
 </pre>
+
     Note that the mekso here are being used as quantifiers. Lojban
     requires that any mekso other than a simple number be enclosed
     in parentheses when used as a quantifier. This rule prevents
-    ambiguities that do not exist when using “li”. 
+    ambiguities that do not exist when using “li”.</p>
 
     <p>By the way, “li” has an elidable terminator, “lo'o”,
     which is needed when a “li” sumti is followed by a logical
     connective that could seem to be within the mekso. For
-    example:</p>
+    example:
+
 <pre>
-<a id="3" name="3">17.3)</a>    li re su'i re du
-        li vo lo'o .onai lo nalseldjuno namcu
-    the-number two plus two equals
-        the-number four or else a non-known number.
+<a id="3" name="3">17.3)</a>  li re su'i re du
+            li vo lo'o .onai lo nalseldjuno namcu
+       the-number two plus two equals
+            the-number four or else a non-known number.
 </pre>
 
-    <p>Omitting the “lo'o” would cause the parser to assume that
+    Omitting the “lo'o” would cause the parser to assume that
     another operand followed the “.onai” and reject “lo” as an
     invalid operand.</p>
 
     <p>Simple examples of logical connection between operators are
-    hard to come by. A contrived example is:</p>
+    hard to come by. A contrived example is:
+
 <pre>
-<a id="17-4"
-name="17-4">17.4)</a>    li re su'i je pi'i re du li vo
-    the-number two plus and times two equals the-number four.
-    2 + 2 = 4 and 2 &times; 2 = 4.
+<a id="4" name="4">17.4)</a>  li re su'i je pi'i re du li vo
+        the-number two plus and times two equals the-number four.
+        2 + 2 = 4 and 2 &times; 2 = 4.
 </pre>
 
     <p>The forethought-connection form of <a href="../17/#4">Example
-    17.4</a> is:</p>
+    17.4</a> is:
+
 <pre>
-<a id="5" name="5">17.5)</a>    li re ge su'i gi pi'i re
-        du li vo
-    the-number two both plus and times two
-        equals the-number four.
-    Both 2 + 2 = 4 and 2 &times; 2 = 4.
+<a id="5" name="5">17.5)</a>  li re ge su'i gi pi'i re
+            du li vo
+       the-number two both plus and times two
+            equals the-number four.
+       Both 2 + 2 = 4 and 2 &times; 2 = 4.
 </pre>
+</p>
 
     <p>Here is a classic example of operand logical connection:</p>
 
-    <p></p>
 <pre>
-<a id="17-6"
-name="17-6">17.6)</a>    go li .abu bi'epi'i vei xy. te'a re ve'o
-        su'i by. bi'epi'i xy. su'i cy.
-        du li no
-    gi li xy. du li vei va'a by. ku'e
-        su'i ja vu'u fe'a
-        vei by. bi'ete'a re vu'u
-        vo bi'epi'i .abu bi'epi'i cy. ve'o [ku'e] ve'o
-        fe'i re bi'epi'i .abu
-    if-and-only-if the-number “a”-times-( “x” power two )
-        plus “b”-times-“x” plus “c”
-        equals the-number zero
-    then the-number x equals the-number [ the-negation-of( b )
-        plus or minus the-root-of
-        ( “b”-power-2 minus
-        four-times-“a”-times-“c” ) ]
-        divided-by two-times-“a”.
-    Iff ax<sup>2</sup>  + bx + c = 0,
-        then x =-b &plusmn; <span class="c3">&Ouml;</span>
-<!--sqrt-->(b<sup>2</sup>  - 4ac)
+<a id="6" name="6">17.6)</a>  go li .abu bi'epi'i vei xy. te'a re ve'o
+            su'i by. bi'epi'i xy. su'i cy.
+            du li no
+       gi li xy. du li vei va'a by. ku'e
+            su'i ja vu'u fe'a
+            vei by. bi'ete'a re vu'u
+            vo bi'epi'i .abu bi'epi'i cy. ve'o [ku'e] ve'o
+            fe'i re bi'epi'i .abu
+       if-and-only-if the-number “a”-times-( “x” power two )
+            plus “b”-times-“x” plus “c”
+            equals the-number zero
+       then the-number x equals the-number [ the-negation-of( b )
+            plus or minus the-root-of
+            ( “b”-power-2 minus
+            four-times-“a”-times-“c” ) ]
+            divided-by two-times-“a”.
+       Iff ax<sup>2</sup>  + bx + c = 0,
+            then x =-b &plusmn; <span class="c3">&Ouml;</span>
+            <!--sqrt-->(b<sup>2</sup>  - 4ac)
             -----------------------
                 2a
 </pre>
+
     Note the mixture of styles in <a href="../17/#6">Example
     17.6</a>: the negation of b and the square root are represented
     by forethought and most of the operator precedence by prefixed
@@ -156,54 +160,55 @@ name="17-6">17.6)</a>    go li .abu bi'epi'i vei xy. te'a re ve'o
     Getting <a href="../17/#6">Example 17.6</a> to parse perfectly
     using the current parser took several tries: a more relaxed
     style would dispense with most of the “bi'e” cmavo and just
-    let the standard precedence rules be understood. 
+    let the standard precedence rules be understood.</p>
 
     <p>Non-logical connection with JOI and BIhI is also permitted
     between operands and between operators. One use for this
     construct is to connect operands with “bi'o” to create
-    intervals:</p>
+    intervals:
+
 <pre>
-<a id="7" name="7">17.7)</a>    li no ga'o bi'o ke'i pa
-    the-number zero (inclusive) from-to (exclusive) one
-    [0,1)
-    the numbers from zero to one, including zero
-        but not including one
+<a id="7" name="7">17.7)</a>  li no ga'o bi'o ke'i pa
+       the-number zero (inclusive) from-to (exclusive) one
+       [0,1)
+       the numbers from zero to one, including zero
+            but not including one
 </pre>
+
     Intervals defined by a midpoint and range rather than beginning
     and end points can be expressed by “mi'i”: 
 
-    <p></p>
 <pre>
-<a id="8" name="8">17.8)</a>    li pimu ga'o mi'i ke'i pimu
-    the-number 0.5 plus-or-minus 0.5
+<a id="8" name="8">17.8)</a>  li pimu ga'o mi'i ke'i pimu
+       the-number 0.5 plus-or-minus 0.5
 </pre>
+
     which expresses the same interval as <a href="../17/#7">Example
     17.7</a>. Note that the “ga'o” and “ke'i” still refer to
     the endpoints, although these are now implied rather than
     expressed. Another way of expressing the same thing: 
+
 <pre>
-<a id="17-9"
-name="17-9">17.9)</a>    li pimu su'i ni'upimu bi'o ma'upimu
-    the-number 0.5 plus [-0.5 from-to +0.5]
+<a id="9" name="9">17.9)</a>  li pimu su'i ni'upimu bi'o ma'upimu
+       the-number 0.5 plus [-0.5 from-to +0.5]
 </pre>
+
     Here we have the sum of a number and an interval, which
     produces another interval centered on the number. As <a
     href="../17/#9">Example 17.9</a> shows, non-logical (or logical)
     connection of operands has higher precedence than any mekso
-    operator. 
+    operator.</p>
 
     <p>You can also combine two operands with “ce'o”, the
     sequence connective of selma'o JOI, to make a compound
-    subscript:</p>
+    subscript:
 
 <pre>
-<a id="17-10"
-name="17-10">17.10)</a>  xy. xi vei by. ce'o dy. [ve'o]
+<a id="10" name="10">17.10)</a> xy. xi vei by. ce'o dy. [ve'o]
     “x” sub ( “b” sequence “d” )
-    x<sub>b,d}
-</sub>
+    x<sub>b,d</sub>
 </pre>
-
+</p>
 
       <hr />
       <div class="nav">
