@@ -39,8 +39,8 @@
       <hr />
           <h3>9. Negation boundaries</h3>
 
-    <p>This section, as well as <a href=../10/>Section 10</a>
-    through <a href=../12/>Section 12</a>, are in effect a
+    <p>This section, as well as <a href="../10/">Section 10</a>
+    through <a href="../12/">Section 12</a>, are in effect a
     continuation of <a href="../../15/1/">Chapter 15</a>,
     introducing features of Lojban negation that require an
     understanding of prenexes and variables. In the examples below,
@@ -52,7 +52,7 @@
     at the beginning of the selbri:
 
 <pre>
-<a id="1" name="1">9.1)</a>   mi na klama le zarci
+<a id="e1">9.1)</a>   mi na klama le zarci
        I [false] go-to the store.
        It is false that I go to the store.
        I don’t go to the store.
@@ -67,17 +67,17 @@
     context. (Outside of a prenex, “naku” is also grammatically
     treated as a single entity --- the equivalent of a sumti ---
     but does not have this exact meaning; we’ll discuss these other
-    situations in <a href=../11/>Section 11</a>.)</p>
+    situations in <a href="../11/">Section 11</a>.)</p>
 
     <p>To represent a bridi negation using a prenex, remove the
     “na” from before the selbri and place “naku” at the left
     end of the prenex. This form is called “external bridi
     negation”, as opposed to “internal bridi negation” using
-    “na”. The prenex version of <a href="../9/#1">Example 9.1</a>
+    “na”. The prenex version of <a href="../9/#e1">Example 9.1</a>
     is
 
 <pre>
-<a id="2" name="2">9.2)</a>   naku zo'u la djan. klama
+<a id="e2">9.2)</a>   naku zo'u la djan. klama
        It is not the case that: John comes.
        It is false that: John comes.
 </pre>
@@ -86,7 +86,7 @@
     well. Compare 
 
 <pre>
-<a id="3" name="3">9.3)</a>   naku de zo'u de zutse
+<a id="e3">9.3)</a>   naku de zo'u de zutse
        It is not the case that: for some Y, Y sits.
        It is false that: for at least one Y, Y sits.
        It is false that something sits.
@@ -96,7 +96,7 @@
     with 
 
 <pre>
-<a id="4" name="4">9.4)</a>   su'ode naku zo'u de zutse
+<a id="e4">9.4)</a>   su'ode naku zo'u de zutse
        For at least one Y, it is false that: Y sits.
        There is something that doesn’t sit.
 </pre>
@@ -106,7 +106,7 @@
     without a negation, we can have:
 
 <pre>
-<a id="5" name="5">9.5)</a>   roda su'ode zo'u da prami de
+<a id="e5">9.5)</a>   roda su'ode zo'u da prami de
        For every X, there is a Y, such that X loves Y.
        Everybody loves at least one thing (each, not necessarily the same thing).
 </pre>
@@ -114,7 +114,7 @@
     or: 
 
 <pre>
-<a id="6" name="6">9.6)</a>   su'ode roda zo'u da prami de
+<a id="e6">9.6)</a>   su'ode roda zo'u da prami de
        There is a Y, such that for each X, X loves Y.
        There is at least one particular thing that is loved by everybody.
 </pre>
@@ -123,7 +123,7 @@
     where the negation term is at the beginning of the prenex:
 
 <pre>
-<a id="7" name="7">9.7)</a>   naku roda su'ode zo'u
+<a id="e7">9.7)</a>   naku roda su'ode zo'u
             da prami de
        It is false that: for every X, there is a Y, such that:
             X loves Y.
@@ -131,10 +131,10 @@
        (At least) someone doesn’t love anything.
 </pre>
 
-    the negation of <a href="../9/#5">Example 9.5</a>, and 
+    the negation of <a href="../9/#e5">Example 9.5</a>, and 
 
 <pre>
-<a id="8" name="8">9.8)</a>   naku su'ode roda zo'u
+<a id="e8">9.8)</a>   naku su'ode roda zo'u
             da prami de
        It is false that: there is a Y such that for each X,
             X loves Y.
@@ -143,18 +143,18 @@
        There isn’t any one thing that everybody loves.
 </pre>
 
-    the negation of <a href="../9/#6">Example 9.6</a>.</p>
+    the negation of <a href="../9/#e6">Example 9.6</a>.</p>
 
     <p>The rules of formal logic require that, to move a negation
     boundary within a prenex, you must “invert any quantifier”
     that the negation boundary passes across. Inverting a
     quantifier means that any “ro” (all) is changed to “su'o”
-    (at least one) and vice versa. Thus, <a href="../9/#7">Example
-    9.7</a> and <a href="../9/#8">Example 9.8</a> can be restated as,
+    (at least one) and vice versa. Thus, <a href="../9/#e7">Example
+    9.7</a> and <a href="../9/#e8">Example 9.8</a> can be restated as,
     respectively:
 
 <pre>
-<a id="9" name="9">9.9)</a>   su'oda naku su'ode zo'u
+<a id="e9">9.9)</a>   su'oda naku su'ode zo'u
             da prami de
        For some X, it is false that: there is a Y such that:
             X loves Y.
@@ -164,7 +164,7 @@
     and: 
 
 <pre>
-<a id="10" name="10">9.10)</a>  rode naku roda zo'u da prami de
+<a id="e10">9.10)</a>  rode naku roda zo'u da prami de
        For every Y, it is false that: for every X, X loves Y.
        For each thing, it is not true that everybody loves it.
 </pre>
@@ -172,7 +172,7 @@
     Another movement of the negation boundary produces:
 
 <pre>
-<a id="11" name="11">9.11)</a>  su'oda rode naku zo'u
+<a id="e11">9.11)</a>  su'oda rode naku zo'u
             da prami de
        There is an X such that, for every Y,
             it is false that X loves Y.
@@ -182,21 +182,21 @@
 and
 
 <pre>
-<a id="12" name="12">9.12)</a>  rode su'oda naku zo'u da prami de
+<a id="e12">9.12)</a>  rode su'oda naku zo'u da prami de
        For every Y, there is an X, such that it is false that: X loves Y.
        For each thing there is someone who doesn’t love it.
 </pre>
 
     Investigation will show that, indeed, each transformation
-    preserves the meanings of <a href="../9/#7">Example 9.7</a> and
-    <a href="../9/#8">Example 9.8</a>.</p>
+    preserves the meanings of <a href="../9/#e7">Example 9.7</a> and
+    <a href="../9/#e8">Example 9.8</a>.</p>
 
     <p>The quantifier “no” (meaning “zero of”) also involves a
     negation boundary. To transform a bridi containing a variable
     quantified with “no”, we must first expand it. Consider
 
 <pre>
-<a id="13" name="13">9.13)</a>  noda rode zo'u da prami de
+<a id="e13">9.13)</a>  noda rode zo'u da prami de
        There is no X, for every Y, such that X loves Y.
        Nobody loves everything.
 </pre>
@@ -204,14 +204,14 @@ and
     which is negated by: 
 
 <pre>
-<a id="14" name="14">9.14)</a>  naku noda rode zo'u
+<a id="e14">9.14)</a>  naku noda rode zo'u
             da prami de
        It is false that: there is no X that, for every Y,
             X loves Y.
        It is false that there is nobody who loves everything.
 </pre>
 
-    We can simplify <a href="../9/#14">Example 9.14</a> by
+    We can simplify <a href="../9/#e14">Example 9.14</a> by
     transforming the prenex. To move the negation phrase within the
     prenex, we must first expand the “no” quantifier. Thus “for
     no x” means the same thing as “it is false for some x”, and
@@ -219,7 +219,7 @@ and
     su'oda”. Making this substitution, we get: 
 
 <pre>
-<a id="15" name="15">9.15)</a>  naku naku su'oda rode zo'u
+<a id="e15">9.15)</a>  naku naku su'oda rode zo'u
             da prami de
        It is false that it is false that: for an X, for every Y:
             X loves Y.
@@ -229,13 +229,13 @@ and
     dropped, so this means the same as:
 
 <pre>
-<a id="16" name="16">9.16)</a>  su'oda rode zo'u da prami de
+<a id="e16">9.16)</a>  su'oda rode zo'u da prami de
        There is an X such that, for every Y, X loves Y.
        At least one person loves everything.
 </pre>
 
     which is clearly the desired contradiction of <a
-    href="../9/#13">Example 9.13</a>.</p>
+    href="../9/#e13">Example 9.13</a>.</p>
 
     <p>The interactions between quantifiers and negation mean that
     you cannot eliminate double negatives that are not adjacent.

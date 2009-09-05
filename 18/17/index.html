@@ -66,19 +66,19 @@
 
     <p>Despite the large number of rules required to support this
     feature, it is of relatively minor importance in the mekso
-    scheme of things. <a href="../17/#1">Example 17.1</a> exhibits
+    scheme of things. <a href="../17/#e1">Example 17.1</a> exhibits
     afterthought logical connection between operands:
 
 <pre>
-<a id="1" name="1">17.1)</a>  vei ci .a vo ve'o prenu cu klama le zarci
+<a id="e1">17.1)</a>  vei ci .a vo ve'o prenu cu klama le zarci
        ( three or four ) people go-to the market.
 </pre>
 
-    <a href="../17/#2">Example 17.2</a> is equivalent in meaning, but
+    <a href="../17/#e2">Example 17.2</a> is equivalent in meaning, but
     uses forethought connection: 
 
 <pre>
-<a id="2" name="2">17.2)</a>  vei ga ci gi vo ve'o prenu cu klama le zarci
+<a id="e2">17.2)</a>  vei ga ci gi vo ve'o prenu cu klama le zarci
        ( either 3 or 4 ) people go-to the market.
 </pre>
 
@@ -93,7 +93,7 @@
     example:
 
 <pre>
-<a id="3" name="3">17.3)</a>  li re su'i re du
+<a id="e3">17.3)</a>  li re su'i re du
             li vo lo'o .onai lo nalseldjuno namcu
        the-number two plus two equals
             the-number four or else a non-known number.
@@ -107,16 +107,16 @@
     hard to come by. A contrived example is:
 
 <pre>
-<a id="4" name="4">17.4)</a>  li re su'i je pi'i re du li vo
+<a id="e4">17.4)</a>  li re su'i je pi'i re du li vo
         the-number two plus and times two equals the-number four.
         2 + 2 = 4 and 2 &times; 2 = 4.
 </pre>
 
-    <p>The forethought-connection form of <a href="../17/#4">Example
+    <p>The forethought-connection form of <a href="../17/#e4">Example
     17.4</a> is:
 
 <pre>
-<a id="5" name="5">17.5)</a>  li re ge su'i gi pi'i re
+<a id="e5">17.5)</a>  li re ge su'i gi pi'i re
             du li vo
        the-number two both plus and times two
             equals the-number four.
@@ -127,7 +127,7 @@
     <p>Here is a classic example of operand logical connection:</p>
 
 <pre>
-<a id="6" name="6">17.6)</a>  go li .abu bi'epi'i vei xy. te'a re ve'o
+<a id="e6">17.6)</a>  go li .abu bi'epi'i vei xy. te'a re ve'o
             su'i by. bi'epi'i xy. su'i cy.
             du li no
        gi li xy. du li vei va'a by. ku'e
@@ -144,20 +144,18 @@
             four-times-“a”-times-“c” ) ]
             divided-by two-times-“a”.
        Iff ax<sup>2</sup>  + bx + c = 0,
-            then x =-b &plusmn; <span class="c3">&Ouml;</span>
-            <!--sqrt-->(b<sup>2</sup>  - 4ac)
-            -----------------------
-                2a
+            then x = <span style="border-bottom:thin solid black">-b &plusmn; <span class="c3">&radic;</span><!--sqrt-->(b<sup>2</sup>  - 4ac)</span>
+                         2a
 </pre>
 
-    Note the mixture of styles in <a href="../17/#6">Example
+    Note the mixture of styles in <a href="../17/#e6">Example
     17.6</a>: the negation of b and the square root are represented
     by forethought and most of the operator precedence by prefixed
     “bi'e”, but explicit parentheses had to be added to group the
     numerator properly. In addition, the square root parentheses
     cannot be removed here in favor of simple “fe'a” and “ku'e”
     bracketing, because infix operators are present in the operand.
-    Getting <a href="../17/#6">Example 17.6</a> to parse perfectly
+    Getting <a href="../17/#e6">Example 17.6</a> to parse perfectly
     using the current parser took several tries: a more relaxed
     style would dispense with most of the “bi'e” cmavo and just
     let the standard precedence rules be understood.</p>
@@ -168,7 +166,7 @@
     intervals:
 
 <pre>
-<a id="7" name="7">17.7)</a>  li no ga'o bi'o ke'i pa
+<a id="e7">17.7)</a>  li no ga'o bi'o ke'i pa
        the-number zero (inclusive) from-to (exclusive) one
        [0,1)
        the numbers from zero to one, including zero
@@ -179,23 +177,23 @@
     and end points can be expressed by “mi'i”: 
 
 <pre>
-<a id="8" name="8">17.8)</a>  li pimu ga'o mi'i ke'i pimu
+<a id="e8">17.8)</a>  li pimu ga'o mi'i ke'i pimu
        the-number 0.5 plus-or-minus 0.5
 </pre>
 
-    which expresses the same interval as <a href="../17/#7">Example
+    which expresses the same interval as <a href="../17/#e7">Example
     17.7</a>. Note that the “ga'o” and “ke'i” still refer to
     the endpoints, although these are now implied rather than
     expressed. Another way of expressing the same thing: 
 
 <pre>
-<a id="9" name="9">17.9)</a>  li pimu su'i ni'upimu bi'o ma'upimu
+<a id="e9">17.9)</a>  li pimu su'i ni'upimu bi'o ma'upimu
        the-number 0.5 plus [-0.5 from-to +0.5]
 </pre>
 
     Here we have the sum of a number and an interval, which
     produces another interval centered on the number. As <a
-    href="../17/#9">Example 17.9</a> shows, non-logical (or logical)
+    href="../17/#e9">Example 17.9</a> shows, non-logical (or logical)
     connection of operands has higher precedence than any mekso
     operator.</p>
 
@@ -204,7 +202,7 @@
     subscript:
 
 <pre>
-<a id="10" name="10">17.10)</a> xy. xi vei by. ce'o dy. [ve'o]
+<a id="e10">17.10)</a> xy. xi vei by. ce'o dy. [ve'o]
     “x” sub ( “b” sequence “d” )
     x<sub>b,d</sub>
 </pre>
