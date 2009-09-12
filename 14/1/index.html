@@ -93,15 +93,16 @@
     table is a graphical device for specifying a truth function,
     making it clear what the value of the truth function is for
     every possible value of the component sentences. Here is a
-    truth table for “or”:</p>
-<pre>
-    first       second      result
-    -------     -------     ------
-    True        True        True
-    True        False       True
-    False       True        True
-    False       False       False
-</pre>
+    truth table for “or”:
+
+<table class="or">
+<tr> <th>first</th> <th>second</th> <th>third</th></tr>
+<tr><td>True</td><td>True</td><td>True</td></tr>
+<tr><td>True</td><td>False</td><td>True</td></tr>
+<tr><td>False</td><td>True</td><td>True</td></tr>
+<tr><td>False</td><td>False</td><td>False</td></tr>
+</table>
+</p>
 
     <p>This table means that if the first sentence stated is true,
     and the second sentence stated is true, then the result of the
@@ -116,9 +117,9 @@
     us that
 
 <pre>
-       “John is a man, or James is not a woman”             (true,  true)   is true;
-       “John is a man, or James is a woman”                 (true,  false)  is true;
-       “John is not a man, or James is not a woman”         (false, true)   is true;
+       “John is a man, or James is not a woman”             (true   true )  is true;
+       “John is a man, or James is a woman”                 (true , false)  is true;
+       “John is not a man, or James is not a woman”         (false, true )  is true;
        “John is not a man, or James is a woman”             (false, false)  is false.
 </pre>
 

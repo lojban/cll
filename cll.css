@@ -13,6 +13,8 @@ body { }
 
 .c3 { font-family: serif; }
 
+.tru { font-family: cursive;}
+
 pre {
   background-color:#f2f2f2;
   font-family: monospace;
@@ -30,7 +32,15 @@ table.phonetics { text-align: left; }
 .phonetics th { padding-left: 20px; }
 .phonetics td { padding-left: 20px; }
 
+table.conn, table.or {
+  text-align:left;
+  margin-left: 3em;
+}
+.or th, .conn th { text-decoration:underline;}
+.or td, .conn td,th { padding-left:2em; }
+
 p { text-indent: 1em; }
+li {padding-bottom:0.5em;}
 
 div.nav-prev { float:left; }
 div.nav-title { margin-left:auto;  margin-right:auto; width:33%; text-align:center; }
