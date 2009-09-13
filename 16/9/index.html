@@ -57,15 +57,16 @@
        It is false that I go to the store.
        I don’t go to the store.
 </pre>
+</p>
 
-    The other form of bridi negation is expressed by using the
+    <p>The other form of bridi negation is expressed by using the
     compound cmavo “naku” in the prenex, which is identified and
     compounded by the lexer before looking at the sentence grammar.
     In Lojban grammar, “naku” is then treated like a sumti. In a
     prenex, “naku” means precisely the same thing as the
     logician’s “it is not the case that” in a similar English
     context. (Outside of a prenex, “naku” is also grammatically
-    treated as a single entity --- the equivalent of a sumti ---
+    treated as a single entity &mdash; the equivalent of a sumti &mdash;
     but does not have this exact meaning; we’ll discuss these other
     situations in <a href="../11/">Section 11</a>.)</p>
 
@@ -81,8 +82,9 @@
        It is not the case that: John comes.
        It is false that: John comes.
 </pre>
+</p>
 
-    However, “naku” can appear at other points in the prenex as
+    <p>However, “naku” can appear at other points in the prenex as
     well. Compare
 
 <pre>
@@ -100,8 +102,9 @@
        For at least one Y, it is false that: Y sits.
        There is something that doesn’t sit.
 </pre>
+</p>
 
-    The relative position of negation and quantification terms
+    <p>The relative position of negation and quantification terms
     within a prenex has a drastic effect on meaning. Starting
     without a negation, we can have:
 
@@ -118,15 +121,14 @@
        There is a Y, such that for each X, X loves Y.
        There is at least one particular thing that is loved by everybody.
 </pre>
+</p>
 
-    The simplest form of bridi negation to interpret is one
+    <p>The simplest form of bridi negation to interpret is one
     where the negation term is at the beginning of the prenex:
 
 <pre>
-<a id="e7">9.7)</a>   naku roda su'ode zo'u
-            da prami de
-       It is false that: for every X, there is a Y, such that:
-            X loves Y.
+<a id="e7">9.7)</a>   naku roda su'ode zo'u da prami de
+       It is false that: for every X, there is a Y, such that: X loves Y.
        It is false that: everybody loves at least one thing.
        (At least) someone doesn’t love anything.
 </pre>
@@ -134,12 +136,9 @@
     the negation of <a href="../9/#e5">Example 9.5</a>, and
 
 <pre>
-<a id="e8">9.8)</a>   naku su'ode roda zo'u
-            da prami de
-       It is false that: there is a Y such that for each X,
-            X loves Y.
-       It is false that: there is at least one thing that is
-            loved by everybody.
+<a id="e8">9.8)</a>   naku su'ode roda zo'u da prami de
+       It is false that: there is a Y such that for each X, X loves Y.
+       It is false that: there is at least one thing that is loved by everybody.
        There isn’t any one thing that everybody loves.
 </pre>
 
@@ -154,10 +153,8 @@
     respectively:
 
 <pre>
-<a id="e9">9.9)</a>   su'oda naku su'ode zo'u
-            da prami de
-       For some X, it is false that: there is a Y such that:
-            X loves Y.
+<a id="e9">9.9)</a>   su'oda naku su'ode zo'u da prami de
+       For some X, it is false that: there is a Y such that: X loves Y.
        There is somebody who doesn’t love anything.
 </pre>
 
@@ -172,13 +169,11 @@
     Another movement of the negation boundary produces:
 
 <pre>
-<a id="e11">9.11)</a>  su'oda rode naku zo'u
-            da prami de
-       There is an X such that, for every Y,
-            it is false that X loves Y.
-       There is someone who, for each thing,
-            doesn’t love that thing.
+<a id="e11">9.11)</a>  su'oda rode naku zo'u da prami de
+       There is an X such that, for every Y, it is false that X loves Y.
+       There is someone who, for each thing, doesn’t love that thing.
 </pre>
+
 and
 
 <pre>
@@ -204,14 +199,13 @@ and
     which is negated by:
 
 <pre>
-<a id="e14">9.14)</a>  naku noda rode zo'u
-            da prami de
-       It is false that: there is no X that, for every Y,
-            X loves Y.
+<a id="e14">9.14)</a>  naku noda rode zo'u da prami de
+       It is false that: there is no X that, for every Y, X loves Y.
        It is false that there is nobody who loves everything.
 </pre>
+</p>
 
-    We can simplify <a href="../9/#e14">Example 9.14</a> by
+    <p>We can simplify <a href="../9/#e14">Example 9.14</a> by
     transforming the prenex. To move the negation phrase within the
     prenex, we must first expand the “no” quantifier. Thus “for
     no x” means the same thing as “it is false for some x”, and
@@ -219,10 +213,8 @@ and
     su'oda”. Making this substitution, we get:
 
 <pre>
-<a id="e15">9.15)</a>  naku naku su'oda rode zo'u
-            da prami de
-       It is false that it is false that: for an X, for every Y:
-            X loves Y.
+<a id="e15">9.15)</a>  naku naku su'oda rode zo'u da prami de
+       It is false that it is false that: for an X, for every Y: X loves Y.
 </pre>
 
     Adjacent double negation boundaries in the prenex can be

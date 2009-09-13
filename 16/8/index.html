@@ -69,10 +69,8 @@
     of <a href="../8/#e1">Example 8.1</a>:
 
 <pre>
-<a id="e3">8.3)</a>   ro da zo'u ganai da klama le zarci
-            gi cadzu le foldi
-       For-every X: if X is-a-goer-to the store
-            then X is-a-walker-on the field.
+<a id="e3">8.3)</a>   ro da zo'u ganai da klama le zarci gi cadzu le foldi
+       For-every X: if X is-a-goer-to the store then X is-a-walker-on the field.
 </pre>
 
     Although <a href="../8/#e3">Example 8.3</a> is a universal claim
@@ -94,20 +92,16 @@
     require only one box. But the naive translation
 
 <pre>
-<a id="e5">8.5)</a>   mi nitcu da poi tanxe
-            gi'e bramau ti
-       I need some-X which is-a-box
-            and is-bigger-than this-one
+<a id="e5">8.5)</a>   mi nitcu da poi tanxe gi'e bramau ti
+       I need some-X which is-a-box and is-bigger-than this-one
 </pre>
 
     does not work either, because it asserts that there really is
     such a box, as the prenex paraphrase demonstrates:
 
 <pre>
-<a id="e6">8.6)</a>   da poi tanxe
-            gi'e bramau ti zo'u mi nitcu da
-       There-is-an-X which is-a-box
-            and is-bigger-than this : I need X.
+<a id="e6">8.6)</a>   da poi tanxe gi'e bramau ti zo'u mi nitcu da
+       There-is-an-X which is-a-box and is-bigger-than this : I need X.
 </pre>
 
     What to do? Well, the x2 place of “nitcu” can be filled
@@ -115,10 +109,8 @@
     href="../8/#e5">Example 8.5</a> can also be paraphrased as:
 
 <pre>
-<a id="e7">8.7)</a>   mi nitcu lo nu mi ponse
-            lo tanxe poi bramau ti
-       I need an event-of I possess
-            some box(es) which-are bigger-than this-one.
+<a id="e7">8.7)</a>   mi nitcu lo nu mi ponse lo tanxe poi bramau ti
+       I need an event-of I possess some box(es) which-are bigger-than this-one.
 </pre>
 
     Rewritten using variables, <a href="../8/#e7">Example 8.7</a>
@@ -126,14 +118,13 @@
 
 <pre>
 <a id="e8">8.8)</a>   mi nitcu lo nu da zo'u
-            da se ponse mi gi'e tanxe
-                gi'e bramau ti
-       I need an event-of there-being an-X such-that
-            X is-possessed-by me and is-a-box
-                and is-bigger-than this-thing.
+            da se ponse mi gi'e tanxe gi'e bramau ti
+       I need an event-of there-being an-X such-that :
+            X is-possessed-by me and is-a-box and is-bigger-than this-thing.
 </pre>
+</p>
 
-    So we see that a prenex can be attached to a bridi that is
+    <p>So we see that a prenex can be attached to a bridi that is
     within a sentence. By default, a variable always behaves as if
     it is bound in the prenex which (notionally) is attached to the
     smallest enclosing bridi, and its scope does not extend beyond
@@ -141,11 +132,9 @@
     prenex explicitly:
 
 <pre>
-<a id="e9">8.9)</a>   da poi tanxe
-            gi'e bramau ti zo'u
+<a id="e9">8.9)</a>   da poi tanxe gi'e bramau ti zo'u
             mi nitcu le nu mi ponse da
-       There-is-an-X which is-a-box
-            and is-bigger-than this-one such-that
+       There-is-an-X which is-a-box and is-bigger-than this-one such-that :
             I need the event-of my possessing X.
 </pre>
 
