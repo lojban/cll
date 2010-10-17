@@ -1,146 +1,77 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               lojbau mekso: Mathematical Expressions in Lojban - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../18/13/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Subscripts
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../18/15/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Vectors and matrices
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     lojbau mekso: Mathematical Expressions in Lojban
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-          <h3>14. Infix operators revisited</h3>
-
-    <p>The following cmavo are discussed in this section:
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>lojbau mekso: Mathematical Expressions in Lojban - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../18/13/">Previous</a></div>
+<div class="nav-section-name">Subscripts</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../18/15/">Next</a></div>
+<div class="nav-section-name">Vectors and matrices</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">lojbau mekso: Mathematical Expressions in Lojban</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h3>14. Infix operators revisited</h3>
+<p>The following cmavo are discussed in this section:</p>
 <pre>
      tu'o    PA      null operand
      ge'a    VUhU    null operator
      gei     VUhU    exponential notation
 </pre>
-</p>
-
-    <p>The infix operators presented so far have always had exactly
-    two operands, and for more or fewer operands forethought
-    notation has been required. However, it is possible to use an
-    operator in infix style even though it has more or fewer than
-    two operands, through the use of a pair of tricks: the null
-    operand “tu'o” and the null operator “ge'a”. The first is
-    suitable when there are too few operands, the second when there
-    are too many. For example, suppose we wanted to express the
-    numerical negation operator “va'a” in infix form. We would
-    use:
-
+<p>The infix operators presented so far have always had exactly two operands, and for more or fewer operands forethought notation has been required. However, it is possible to use an operator in infix style even though it has more or fewer than two operands, through the use of a pair of tricks: the null operand “tu'o” and the null operator “ge'a”. The first is suitable when there are too few operands, the second when there are too many. For example, suppose we wanted to express the numerical negation operator “va'a” in infix form. We would use:</p>
 <pre>
-<a id="e1">14.1)</a>  li tu'o va'a ny. du li no vu'u ny.
+<a id="e1" name="e1">14.1)</a>  li tu'o va'a ny. du li no vu'u ny.
        The-number (null) additive-inverse n equals the-number zero minus n.
        -n = 0 − n
 </pre>
-
-    The “tu'o” fulfills the grammatical requirement for a left
-    operand for the infix use of “va'a”, even though semantically
-    none is needed or wanted.</p>
-
-    <p>Finding a suitable example of “ge'a” requires exhibiting a
-    ternary operator, and ternary operators are not common. The
-    operator “gei”, however, has both a binary and a ternary use.
-    As a binary operator, it provides a terse representation of
-    scientific (also called “exponential”) notation. The first
-    operand of “gei” is the exponent, and the second operand is
-    the mantissa or fraction:
-
+The “tu'o” fulfills the grammatical requirement for a left operand for the infix use of “va'a”, even though semantically none is needed or wanted.
+<p>Finding a suitable example of “ge'a” requires exhibiting a ternary operator, and ternary operators are not common. The operator “gei”, however, has both a binary and a ternary use. As a binary operator, it provides a terse representation of scientific (also called “exponential”) notation. The first operand of “gei” is the exponent, and the second operand is the mantissa or fraction:</p>
 <pre>
-<a id="e2">14.2)</a>  li cinonoki'oki'o du
+<a id="e2" name="e2">14.2)</a>  li cinonoki'oki'o du
             li bi gei ci
        The-number three-zero-zero-comma-comma equals
             the-number eight scientific three.
-       300,000,000 = 3 &times; 10<sup>8</sup>
+       300,000,000 = 3 × 10<sup>8</sup>
 </pre>
-
-    Why are the arguments to “gei” in reverse order from the
-    conventional symbolic notation? So that “gei” can be used in
-    forethought to allow easy specification of a large (or small)
-    imprecise number:
-
+Why are the arguments to “gei” in reverse order from the conventional symbolic notation? So that “gei” can be used in forethought to allow easy specification of a large (or small) imprecise number:
 <pre>
-<a id="e3">14.3)</a>  gei reno
+<a id="e3" name="e3">14.3)</a>  gei reno
        (scientific) two-zero
        10<sup>20</sup>
 </pre>
-
-    Note, however, that although 10 is far and away the most common
-    exponent base, it is not the only possible one. The third
-    operand of “gei”, therefore, is the base, with 10 as the
-    default value. Most computers internally store so-called
-    “floating-point” numbers using 2 as the exponent base. (This
-    has nothing to do with the fact that computers also represent
-    all integers in base 2; the IBM 360 series used an exponent
-    base of 16 for floating point, although each component of the
-    number was expressed in base 2.) Here is a computer
-    floating-point number with a value of 40:
-
+Note, however, that although 10 is far and away the most common exponent base, it is not the only possible one. The third operand of “gei”, therefore, is the base, with 10 as the default value. Most computers internally store so-called “floating-point” numbers using 2 as the exponent base. (This has nothing to do with the fact that computers also represent all integers in base 2; the IBM 360 series used an exponent base of 16 for floating point, although each component of the number was expressed in base 2.) Here is a computer floating-point number with a value of 40:
 <pre>
-<a id="e4">14.4)</a>  papano bi'eju'u re gei pipanopano bi'eju'u re ge'a re
+<a id="e4" name="e4">14.4)</a>  papano bi'eju'u re gei pipanopano bi'eju'u re ge'a re
        (one-one-zero base 2) scientific (point-one-zero-one-zero base 2) with-base 2
-       .1010<!--<sub>2</sub>--> &times; 2<sup>110<sub>2</sub></sup>
+       .1010<!--<sub>2</sub>--> × 2<sup>110<sub>2</sub></sup>
 </pre>
-</p>
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../18/13/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Subscripts
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../18/15/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Vectors and matrices
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     lojbau mekso: Mathematical Expressions in Lojban
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../18/13/">Previous</a></div>
+<div class="nav-section-name">Subscripts</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../18/15/">Next</a></div>
+<div class="nav-section-name">Vectors and matrices</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">lojbau mekso: Mathematical Expressions in Lojban</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

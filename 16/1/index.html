@@ -1,165 +1,74 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               “Who Did You Pass On The Road? Nobody”: Lojban And Logic - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../15/11/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Summary &mdash; Are All Possible Questions About Negation Now Answered?
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../16/2/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Existential claims, prenexes, and variables
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     “Who Did You Pass On The Road? Nobody”: Lojban And Logic
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-
-      <h2>Chapter 16<br /> “Who Did You Pass On The Road? Nobody”: Lojban And Logic</h2>
-
-          <h3>1. What’s wrong with this picture?</h3>
-
-    <p>The following brief dialogue is from <a
-    href="../../7/1/">Chapter 7</a> of <cite>Through The Looking
-    Glass</cite> by Lewis Carroll.
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>“Who Did You Pass On The Road? Nobody”: Lojban And Logic - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../15/11/">Previous</a></div>
+<div class="nav-section-name">Summary — Are All Possible Questions About Negation Now Answered?</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../16/2/">Next</a></div>
+<div class="nav-section-name">Existential claims, prenexes, and variables</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h2>Chapter 16<br />
+“Who Did You Pass On The Road? Nobody”: Lojban And Logic</h2>
+<h3>1. What’s wrong with this picture?</h3>
+<p>The following brief dialogue is from <a href="../../7/1/">Chapter 7</a> of <cite>Through The Looking Glass</cite> by Lewis Carroll.</p>
 <pre>
-<a id="e1">1.1)</a>   “Who did you pass on the road?” the King went on,
+<a id="e1" name="e1">1.1)</a>   “Who did you pass on the road?” the King went on,
        holding out his hand to the Messenger for some more hay.
 
-<a id="e2">1.2)</a>   “Nobody,” said the Messenger.
+<a id="e2" name="e2">1.2)</a>   “Nobody,” said the Messenger.
 
-<a id="e3">1.3)</a>   “Quite right,” said the King:  “this young lady saw him too.
+<a id="e3" name="e3">1.3)</a>   “Quite right,” said the King:  “this young lady saw him too.
        So of course Nobody walks slower than you.”
 
-<a id="e4">1.4)</a>   “I do my best,” the Messenger said in a sulky tone.
+<a id="e4" name="e4">1.4)</a>   “I do my best,” the Messenger said in a sulky tone.
        “I’m sure nobody walks much faster than I do!”
 
-<a id="e5">1.5)</a>   “He can’t do that,” said the King,
+<a id="e5" name="e5">1.5)</a>   “He can’t do that,” said the King,
        “or else he’d have been here first.”
 </pre>
-</p>
-    <p>This nonsensical conversation results because the King
-    insists on treating the word “nobody” as a name, a name of
-    somebody. However, the essential nature of the English word
-    “nobody” is that it doesn’t refer to somebody; or to put the
-    matter another way, there isn’t anybody to which it refers.</p>
-
-    <p>The central point of contradiction in the dialogue arises in
-    <a href="../1/#e3">Example 1.3</a>, when the King says “...
-    Nobody walks slower than you”. This claim would be plausible
-    if “Nobody” were really a name, since the Messenger could
-    only pass someone who does walk more slowly than he. But the
-    Messenger interprets the word “nobody” in the ordinary
-    English way, and says (in <a href="../1/#e4">Example 1.4</a>)
-    “... nobody walks much faster than I do” (i.e., I walk
-    faster, or as fast as, almost everyone), which the King then
-    again misunderstands. Both the King and the Messenger are
-    correct according to their respective understandings of the
-    ambiguous word “nobody/Nobody”.</p>
-
-    <p>There are Lojban words or phrases corresponding to the
-    problematic English words “somebody”, “nobody”,
-    “anybody”, “everybody” (and their counterparts
-    “some/no/any/everyone” and “some/no/any/everything”), but
-    they obey rules which can often be surprising to
-    English-speakers. The dialogue above simply cannot be
-    translated into Lojban without distortion: the name “Nobody”
-    would have to be represented by a Lojban name, which would
-    spoil the perfection of the wordplay. As a matter of fact, this
-    is the desired result: a logical language should not allow two
-    conversationalists to affirm “Nobody walks slower than the
-    Messenger” and “Nobody walks faster than the Messenger” and
-    both be telling the truth. (Unless, of course, nobody but the
-    Messenger walks at all, or everyone walks at exactly the same
-    speed.)</p>
-
-    <p>This chapter will explore the Lojban mechanisms that allow
-    the correct and consistent construction of sentences like those
-    in the dialogue. There are no new grammatical constructs
-    explained in this chapter; instead, it discusses the way in
-    which existing facilities that allow Lojban-speakers to resolve
-    problems like the above, using the concepts of modern logic.
-    However, we will not approach the matter from the viewpoint of
-    logicians, although readers who know something of logic will
-    discover familiar notions in Lojban guise.</p>
-
-    <p>Although Lojban is called a logical language, not every
-    feature of it is “logical”. In particular, the use of “le”
-    is incompatible with logical reasoning based on the description
-    selbri, because that selbri may not truthfully apply: you
-    cannot conclude from my statement that
-
+<p>This nonsensical conversation results because the King insists on treating the word “nobody” as a name, a name of somebody. However, the essential nature of the English word “nobody” is that it doesn’t refer to somebody; or to put the matter another way, there isn’t anybody to which it refers.</p>
+<p>The central point of contradiction in the dialogue arises in <a href="../1/#e3">Example 1.3</a>, when the King says “... Nobody walks slower than you”. This claim would be plausible if “Nobody” were really a name, since the Messenger could only pass someone who does walk more slowly than he. But the Messenger interprets the word “nobody” in the ordinary English way, and says (in <a href="../1/#e4">Example 1.4</a>) “... nobody walks much faster than I do” (i.e., I walk faster, or as fast as, almost everyone), which the King then again misunderstands. Both the King and the Messenger are correct according to their respective understandings of the ambiguous word “nobody/Nobody”.</p>
+<p>There are Lojban words or phrases corresponding to the problematic English words “somebody”, “nobody”, “anybody”, “everybody” (and their counterparts “some/no/any/everyone” and “some/no/any/everything”), but they obey rules which can often be surprising to English-speakers. The dialogue above simply cannot be translated into Lojban without distortion: the name “Nobody” would have to be represented by a Lojban name, which would spoil the perfection of the wordplay. As a matter of fact, this is the desired result: a logical language should not allow two conversationalists to affirm “Nobody walks slower than the Messenger” and “Nobody walks faster than the Messenger” and both be telling the truth. (Unless, of course, nobody but the Messenger walks at all, or everyone walks at exactly the same speed.)</p>
+<p>This chapter will explore the Lojban mechanisms that allow the correct and consistent construction of sentences like those in the dialogue. There are no new grammatical constructs explained in this chapter; instead, it discusses the way in which existing facilities that allow Lojban-speakers to resolve problems like the above, using the concepts of modern logic. However, we will not approach the matter from the viewpoint of logicians, although readers who know something of logic will discover familiar notions in Lojban guise.</p>
+<p>Although Lojban is called a logical language, not every feature of it is “logical”. In particular, the use of “le” is incompatible with logical reasoning based on the description selbri, because that selbri may not truthfully apply: you cannot conclude from my statement that</p>
 <pre>
-<a id="e6">1.6)</a>   mi viska le nanmu
+<a id="e6" name="e6">1.6)</a>   mi viska le nanmu
        I see the-one-I-refer-to-as-the man.
        I see the man/men.
 </pre>
-
-    that there really is a man; the only thing you can conclude is
-    that there is one thing (or more) that I choose to refer to as
-    a man. You cannot even tell which man is meant for sure without
-    asking me (although communication is served if you already know
-    from the context).</p>
-
-    <p>In addition, the use of attitudinals (see <a
-    href="../../13/1/">Chapter 13</a>) often reduces or removes the
-    ability to make deductions about the bridi to which those
-    attitudinals are applied. From the fact that I hope George will
-    win the election, you can conclude nothing about George’s
-    actual victory or defeat.</p>
-
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../15/11/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Summary &mdash; Are All Possible Questions About Negation Now Answered?
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../16/2/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Existential claims, prenexes, and variables
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     “Who Did You Pass On The Road? Nobody”: Lojban And Logic
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+that there really is a man; the only thing you can conclude is that there is one thing (or more) that I choose to refer to as a man. You cannot even tell which man is meant for sure without asking me (although communication is served if you already know from the context).
+<p>In addition, the use of attitudinals (see <a href="../../13/1/">Chapter 13</a>) often reduces or removes the ability to make deductions about the bridi to which those attitudinals are applied. From the fact that I hope George will win the election, you can conclude nothing about George’s actual victory or defeat.</p>
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../15/11/">Previous</a></div>
+<div class="nav-section-name">Summary — Are All Possible Questions About Negation Now Answered?</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../16/2/">Next</a></div>
+<div class="nav-section-name">Existential claims, prenexes, and variables</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

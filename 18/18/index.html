@@ -1,140 +1,79 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               lojbau mekso: Mathematical Expressions in Lojban - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../18/17/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Logical and non-logical connectives within mekso
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../18/19/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Other uses of mekso
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     lojbau mekso: Mathematical Expressions in Lojban
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-          <h3>18. Using Lojban resources within mekso</h3>
-
-    <p>The following cmavo are discussed in this section:
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>lojbau mekso: Mathematical Expressions in Lojban - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../18/17/">Previous</a></div>
+<div class="nav-section-name">Logical and non-logical connectives within mekso</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../18/19/">Next</a></div>
+<div class="nav-section-name">Other uses of mekso</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">lojbau mekso: Mathematical Expressions in Lojban</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h3>18. Using Lojban resources within mekso</h3>
+<p>The following cmavo are discussed in this section:</p>
 <pre>
      na'u    NAhU    selbri to operator
      ni'e    NIhE    selbri to operand
      mo'e    MOhE    sumti to operand
      te'u    TEhU    terminator for all three
 </pre>
-</p>
-
-    <p>One of the mekso design goals requires the ability to make
-    use of Lojban’s vocabulary resources within mekso to extend the
-    built-in cmavo for operands and operators. There are three
-    relevant constructs: all three share the elidable terminator
-    “te'u” (which is also used to terminate vectors marked with
-    “jo'i”)</p>
-
-    <p>The cmavo “na'u” makes a selbri into an operator. In
-    general, the first place of the selbri specifies the result of
-    the operator, and the other unfilled places specify the
-    operands:
-
+<p>One of the mekso design goals requires the ability to make use of Lojban’s vocabulary resources within mekso to extend the built-in cmavo for operands and operators. There are three relevant constructs: all three share the elidable terminator “te'u” (which is also used to terminate vectors marked with “jo'i”)</p>
+<p>The cmavo “na'u” makes a selbri into an operator. In general, the first place of the selbri specifies the result of the operator, and the other unfilled places specify the operands:</p>
 <pre>
-<a id="e1">18.1)</a>  li na'u tanjo te'u vei pai fe'i re [ve'o] du li ci'i
-       The-number the-operator tangent ( <span class="c3">&pi;</span> / 2 ) = the-number infinity.
-       tan(<span class="c3">&pi;</span>/2) = <span class="c3">&infin;</span>
+<a id="e1" name="e1">18.1)</a>  li na'u tanjo te'u vei pai fe'i re [ve'o] du li ci'i
+       The-number the-operator tangent ( <span class="c3">π</span> / 2 ) = the-number infinity.
+       tan(<span class="c3">π</span>/2) = <span class="c3">∞</span>
 </pre>
-
-    “tanjo” is the gismu for “x1 is the tangent of x2”,
-    and the “na'u” here makes it into an operator which is then
-    used in forethought</p>
-
-    <p>The cmavo “ni'e” makes a selbri into an operand. The
-    x1 place of the selbri generally represents a number, and
-    therefore is often a “ni” abstraction, since “ni”
-    abstractions represent numbers. The “ni'e” makes that number
-    available as a mekso operand. A common application is to make
-    equations relating pure dimensions:
-
+“tanjo” is the gismu for “x1 is the tangent of x2”, and the “na'u” here makes it into an operator which is then used in forethought
+<p>The cmavo “ni'e” makes a selbri into an operand. The x1 place of the selbri generally represents a number, and therefore is often a “ni” abstraction, since “ni” abstractions represent numbers. The “ni'e” makes that number available as a mekso operand. A common application is to make equations relating pure dimensions:</p>
 <pre>
-<a id="e2">18.2)</a>  li ni'e ni clani [te'u] pi'i ni'e ni ganra [te'u] pi'i
+<a id="e2" name="e2">18.2)</a>  li ni'e ni clani [te'u] pi'i ni'e ni ganra [te'u] pi'i
             ni'e ni condi te'u du li ni'e ni canlu
        The-number quantity-of length times quantity-of width times
             quantity-of depth equals the-number quantity-of volume.
-       Length &times; Width &times; Depth = Volume
+       Length × Width × Depth = Volume
 </pre>
-
-    The cmavo “mo'e” operates similarly to “ni'e”, but
-    makes a sumti (rather than a selbri) into an operand. This
-    construction is useful in stating equations involving
-    dimensioned numbers:
-
+The cmavo “mo'e” operates similarly to “ni'e”, but makes a sumti (rather than a selbri) into an operand. This construction is useful in stating equations involving dimensioned numbers:
 <pre>
-<a id="e3">18.3)</a>  li mo'e re ratcu su'i mo'e re ractu du li mo'e vo danlu
+<a id="e3" name="e3">18.3)</a>  li mo'e re ratcu su'i mo'e re ractu du li mo'e vo danlu
        The-number two rats plus two rabbits equals the-number four animals.
        2 rats + 2 rabbits = 4 animals.
 </pre>
-
-    Another use is in constructing Lojbanic versions of
-    so-called “folk quantifiers”, such as “a pride of
-    lions”:
-
+Another use is in constructing Lojbanic versions of so-called “folk quantifiers”, such as “a pride of lions”:
 <pre>
-<a id="e4">18.4)</a>  mi viska vei mo'e lo'e lanzu ve'o cinfo
+<a id="e4" name="e4">18.4)</a>  mi viska vei mo'e lo'e lanzu ve'o cinfo
        I see ( the-typical family )-number-of lions.
        I see a pride of lions.
 </pre>
-</p>
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../18/17/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Logical and non-logical connectives within mekso
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../18/19/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Other uses of mekso
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     lojbau mekso: Mathematical Expressions in Lojban
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../18/17/">Previous</a></div>
+<div class="nav-section-name">Logical and non-logical connectives within mekso</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../18/19/">Next</a></div>
+<div class="nav-section-name">Other uses of mekso</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">lojbau mekso: Mathematical Expressions in Lojban</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

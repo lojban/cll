@@ -1,193 +1,93 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               “Who Did You Pass On The Road? Nobody”: Lojban And Logic - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../16/1/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               What’s wrong with this picture?
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../16/3/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Universal claims
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     “Who Did You Pass On The Road? Nobody”: Lojban And Logic
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-          <h3>2. Existential claims, prenexes, and variables</h3>
-
-    <p>Let us consider, to begin with, a sentence that is not in
-    the dialogue:
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>“Who Did You Pass On The Road? Nobody”: Lojban And Logic - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../16/1/">Previous</a></div>
+<div class="nav-section-name">What’s wrong with this picture?</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../16/3/">Next</a></div>
+<div class="nav-section-name">Universal claims</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h3>2. Existential claims, prenexes, and variables</h3>
+<p>Let us consider, to begin with, a sentence that is not in the dialogue:</p>
 <pre>
-<a id="e1">2.1)</a>   Something sees me.
+<a id="e1" name="e1">2.1)</a>   Something sees me.
 </pre>
-
-    There are two plausible Lojban translations of <a
-    href="../2/#e1">Example 2.1</a>. The simpler one is:
-
+There are two plausible Lojban translations of <a href="../2/#e1">Example 2.1</a>. The simpler one is:
 <pre>
-<a id="e2">2.2)</a>   [zo'e] viska mi
+<a id="e2" name="e2">2.2)</a>   [zo'e] viska mi
        Something-unspecified sees me.
 </pre>
-
-    The cmavo “zo'e” indicates that a sumti has been omitted
-    (indeed, even “zo'e” itself can be omitted in this case, as
-    explained in <a href="../../7/1/">Chapter 7</a>) and the
-    listener must fill in the correct value from context. In other
-    words, <a href="../2/#e2">Example 2.2</a> means “‘You-know-what’
-    sees me.”</p>
-
-    <p>However, <a href="../2/#e1">Example 2.1</a> is just as likely
-    to assert simply that there is someone who sees me, in which
-    case a correct translation is:
-
+The cmavo “zo'e” indicates that a sumti has been omitted (indeed, even “zo'e” itself can be omitted in this case, as explained in <a href="../../7/1/">Chapter 7</a>) and the listener must fill in the correct value from context. In other words, <a href="../2/#e2">Example 2.2</a> means “‘You-know-what’ sees me.”
+<p>However, <a href="../2/#e1">Example 2.1</a> is just as likely to assert simply that there is someone who sees me, in which case a correct translation is:</p>
 <pre>
-<a id="e3">2.3)</a>   da zo'u da viska mi
+<a id="e3" name="e3">2.3)</a>   da zo'u da viska mi
        There-is-an-X such-that X sees me.
 </pre>
-
-    <a href="../2/#e3">Example 2.3</a> does not presuppose that the
-    listener knows who sees the speaker, but simply tells the
-    listener that there is someone who sees the speaker. Statements
-    of this kind are called “existential claims”. (Formally, the
-    one doing the seeing is not restricted to being a person; it
-    could be an animal or &mdash; in principle &mdash; an inanimate object.
-    We will see in <a href="../4/">Section 4</a> how to represent
-    such restrictions.)</p>
-
-    <p><a href="../2/#e3">Example 2.3</a> has a two-part structure:
-    there is the part “da zo'u”, called the prenex, and the part
-    “da viska mi”, the main bridi. Almost any Lojban bridi can be
-    preceded by a prenex, which syntactically is any number of
-    sumti followed by the cmavo “zo'u” (of selma'o ZOhU). For the
-    moment, the sumti will consist of one or more of the cmavo
-    “da”, “de”, and “di” (of selma'o KOhA), glossed in the
-    literal translations as “X”, “Y”, and “Z” respectively.
-    By analogy to the terminology of symbolic logic, these cmavo
-    are called “variables”.</p>
-
-    <p>Here is an example of a prenex with two variables:
-
+<a href="../2/#e3">Example 2.3</a> does not presuppose that the listener knows who sees the speaker, but simply tells the listener that there is someone who sees the speaker. Statements of this kind are called “existential claims”. (Formally, the one doing the seeing is not restricted to being a person; it could be an animal or — in principle — an inanimate object. We will see in <a href="../4/">Section 4</a> how to represent such restrictions.)
+<p><a href="../2/#e3">Example 2.3</a> has a two-part structure: there is the part “da zo'u”, called the prenex, and the part “da viska mi”, the main bridi. Almost any Lojban bridi can be preceded by a prenex, which syntactically is any number of sumti followed by the cmavo “zo'u” (of selma'o ZOhU). For the moment, the sumti will consist of one or more of the cmavo “da”, “de”, and “di” (of selma'o KOhA), glossed in the literal translations as “X”, “Y”, and “Z” respectively. By analogy to the terminology of symbolic logic, these cmavo are called “variables”.</p>
+<p>Here is an example of a prenex with two variables:</p>
 <pre>
-<a id="e4">2.4)</a>   da de zo'u da prami de
+<a id="e4" name="e4">2.4)</a>   da de zo'u da prami de
        There-is-an-X there-is-a-Y such that X loves Y.
        Somebody loves somebody.
 </pre>
-
-    In <a href="../2/#e4">Example 2.4</a>, the literal interpretation
-    of the two variables “da” and “de” as “there-is-an-X” and
-    “there-is-a-Y” tells us that there are two things which stand
-    in the relationship that one loves the other. It might be the
-    case that the supposed two things are really just a single
-    thing that loves itself; nothing in the Lojban version of <a
-    href="../2/#e4">Example 2.4</a> rules out that interpretation,
-    which is why the colloquial translation does not say “Somebody
-    loves somebody else.” The things referred to by different
-    variables may be different or the same. (We use “somebody”
-    here rather than “something” for naturalness; lovers and
-    beloveds are usually persons, though the Lojban does not say
-    so.)</p>
-
-    <p>It is perfectly all right for the variables to appear more
-    than once in the main bridi:
-
+In <a href="../2/#e4">Example 2.4</a>, the literal interpretation of the two variables “da” and “de” as “there-is-an-X” and “there-is-a-Y” tells us that there are two things which stand in the relationship that one loves the other. It might be the case that the supposed two things are really just a single thing that loves itself; nothing in the Lojban version of <a href="../2/#e4">Example 2.4</a> rules out that interpretation, which is why the colloquial translation does not say “Somebody loves somebody else.” The things referred to by different variables may be different or the same. (We use “somebody” here rather than “something” for naturalness; lovers and beloveds are usually persons, though the Lojban does not say so.)
+<p>It is perfectly all right for the variables to appear more than once in the main bridi:</p>
 <pre>
-<a id="e5">2.5)</a>   da zo'u da prami da
+<a id="e5" name="e5">2.5)</a>   da zo'u da prami da
        There-is-an-X such that X loves X
        Somebody loves himself/herself.
 </pre>
-
-    What <a href="../2/#e5">Example 2.5</a> claims is fundamentally
-    different from what <a href="../2/#e4">Example 2.4</a> claims,
-    because “da prami da” is not structurally the same as “da
-    prami de”. However,
-
+What <a href="../2/#e5">Example 2.5</a> claims is fundamentally different from what <a href="../2/#e4">Example 2.4</a> claims, because “da prami da” is not structurally the same as “da prami de”. However,
 <pre>
-<a id="e6">2.6)</a>   de zo'u de prami de
+<a id="e6" name="e6">2.6)</a>   de zo'u de prami de
        There-is-a-Y such that Y loves Y
 </pre>
-
-    means exactly the same thing as <a href="../2/#e5">Example
-    2.5</a>; it does not matter which variable is used as long as
-    they are used consistently.</p>
-
-    <p>It is not necessary for a variable to be a sumti of the main
-    bridi directly:
-
+means exactly the same thing as <a href="../2/#e5">Example 2.5</a>; it does not matter which variable is used as long as they are used consistently.
+<p>It is not necessary for a variable to be a sumti of the main bridi directly:</p>
 <pre>
-<a id="e7">2.7)</a>   da zo'u le da gerku cu viska mi
+<a id="e7" name="e7">2.7)</a>   da zo'u le da gerku cu viska mi
        There-is-an-X such-that the of-X dog sees me
        Somebody’s dog sees me
 </pre>
-
-    is perfectly correct even though the “da” is used only in a
-    possessive construction. (Possessives are explained in <a
-    href="../../8/1/">Chapter 8</a>.)</p>
-
-    <p>It is very peculiar, however, even if technically
-    grammatical, for the variable not to appear in the main bridi
-    at all:
-
+is perfectly correct even though the “da” is used only in a possessive construction. (Possessives are explained in <a href="../../8/1/">Chapter 8</a>.)
+<p>It is very peculiar, however, even if technically grammatical, for the variable not to appear in the main bridi at all:</p>
 <pre>
-<a id="e8">2.8)</a>   da zo'u la ralf. gerku
+<a id="e8" name="e8">2.8)</a>   da zo'u la ralf. gerku
        There is something such that Ralph is a dog.
 </pre>
-
-    has a variable bound in a prenex whose relevance to the claim
-    of the following bridi is completely unspecified.</p>
-
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../16/1/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               What’s wrong with this picture?
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../16/3/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Universal claims
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     “Who Did You Pass On The Road? Nobody”: Lojban And Logic
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+has a variable bound in a prenex whose relevance to the claim of the following bridi is completely unspecified.
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../16/1/">Previous</a></div>
+<div class="nav-section-name">What’s wrong with this picture?</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../16/3/">Next</a></div>
+<div class="nav-section-name">Universal claims</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

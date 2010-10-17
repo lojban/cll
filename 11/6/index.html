@@ -1,127 +1,70 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../11/5/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Amount abstractions
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../11/7/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Predication/sentence abstraction
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-          <h3>6. Truth-value abstraction: “jei”</h3>
-
-    <p>The “blueness of the picture” discussed in <a
-    href="../5/">Section 5</a> refers to the measurable amount of
-    blue pigment (or other source of blueness), not to the degree
-    of truth of the claim that blueness is present. That
-    abstraction is expressed in Lojban using “jei”, which is
-    closely related semantically to “ni”. In the simplest cases,
-    “le jei” produces not a number but a truth value:
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../11/5/">Previous</a></div>
+<div class="nav-section-name">Amount abstractions</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../11/7/">Next</a></div>
+<div class="nav-section-name">Predication/sentence abstraction</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h3>6. Truth-value abstraction: “jei”</h3>
+<p>The “blueness of the picture” discussed in <a href="../5/">Section 5</a> refers to the measurable amount of blue pigment (or other source of blueness), not to the degree of truth of the claim that blueness is present. That abstraction is expressed in Lojban using “jei”, which is closely related semantically to “ni”. In the simplest cases, “le jei” produces not a number but a truth value:</p>
 <pre>
-<a id="e1">6.1)</a>   le jei li re su'i re du li vo [kei]
+<a id="e1" name="e1">6.1)</a>   le jei li re su'i re du li vo [kei]
        the truth-value-of the-number 2 + 2 = the-number 4
        the truth of 2 + 2 being 4
 </pre>
-
-    is equivalent to “truth”, and
-
+is equivalent to “truth”, and
 <pre>
-<a id="e2">6.2)</a>   le jei li re su'i re du li mu [kei]
+<a id="e2" name="e2">6.2)</a>   le jei li re su'i re du li mu [kei]
        the truth-value-of the-number 2 + 2 = the-number 5
        the truth of 2 + 2 being 5
 </pre>
-
-    is equivalent to “falsehood”.</p>
-
-    <p>However, not everything in life (or even in Lojban) is
-    simply true or false. There are shades of gray even in truth
-    value, and “jei” is Lojban’s mechanism for indicating the
-    shade of grey intended:
-
+is equivalent to “falsehood”.
+<p>However, not everything in life (or even in Lojban) is simply true or false. There are shades of gray even in truth value, and “jei” is Lojban’s mechanism for indicating the shade of grey intended:</p>
 <pre>
-<a id="e3">6.3)</a>   mi ba jdice le jei
+<a id="e3" name="e3">6.3)</a>   mi ba jdice le jei
              la djordj. cu zekri gasnu [kei]
        I [future] decide the truth-value of
              (George being-a-(crime doer)).
        I will decide whether George is a criminal.
 </pre>
-
-    <a href="../6/#e3">Example 6.3</a> does not imply that George is,
-    or is not, definitely a criminal. Depending on the legal system
-    I am using, I may make some intermediate decision. As a result,
-    “jei” requires an x2 place analogous to that of “ni”:
-
+<a href="../6/#e3">Example 6.3</a> does not imply that George is, or is not, definitely a criminal. Depending on the legal system I am using, I may make some intermediate decision. As a result, “jei” requires an x2 place analogous to that of “ni”:
 <pre>
        jei: x1 is the truth value of (the bridi) under epistemology x2
 </pre>
-</p>
-
-    <p>Abstractions using “jei” are the mechanism for fuzzy logic in
-    Lojban; the “jei” abstraction refers to a number between 0
-    and 1 inclusive (as distinct from “ni” abstractions, which
-    are often on open-ended scales). The detailed conventions for
-    using “jei” in fuzzy-logic contexts have not yet been
-    established.</p>
-
-
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../11/5/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Amount abstractions
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../11/7/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Predication/sentence abstraction
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     Events, Qualities, Quantities, And Other Vague Words: On      Lojban Abstraction
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+<p>Abstractions using “jei” are the mechanism for fuzzy logic in Lojban; the “jei” abstraction refers to a number between 0 and 1 inclusive (as distinct from “ni” abstractions, which are often on open-ended scales). The detailed conventions for using “jei” in fuzzy-logic contexts have not yet been established.</p>
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../11/5/">Previous</a></div>
+<div class="nav-section-name">Amount abstractions</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../11/7/">Next</a></div>
+<div class="nav-section-name">Predication/sentence abstraction</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

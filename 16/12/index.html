@@ -1,231 +1,112 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               “Who Did You Pass On The Road? Nobody”: Lojban And      Logic - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../16/11/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Using “naku” outside a prenex
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../16/13/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               selbri variables
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     “Who Did You Pass On The Road? Nobody”: Lojban And Logic
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-          <h3>12. Logical Connectives and DeMorgan’s Law</h3>
-
-    <p>DeMorgan’s Law states that when a logical connective between
-    terms falls within a negation, then expanding the negation
-    requires a change in the connective. Thus (where “p” and
-    “q” stand for terms or sentences) “not (p or q)” is
-    identical to “not p and not q”, and “not (p and q)” is
-    identical to “not p or not q”. The corresponding changes for
-    the other two basic Lojban connectives are: “not (p equivalent
-    to q)” is identical to “not p exclusive-or not q”, and “not
-    (p whether-or-not q)” is identical to both “not p
-    whether-or-not q” and “not p whether-or-not not q”. In any
-    Lojban sentence having one of the basic connectives, you can
-    substitute in either direction from these identities. (These
-    basic connectives are explained in <a
-    href="../../14/1/">Chapter 14</a>.)</p>
-
-    <p>The effects of DeMorgan’s Law on the logical connectives
-    made by modifying the basic connectives with “nai”, “na”
-    and “se” can be derived directly from these rules; modify the
-    basic connective for DeMorgan’s Law by substituting from the
-    above identities, and then, apply each “nai”, “na” and
-    “se” modifier of the original connectives. Cancel any double
-    negatives that result.</p>
-
-    <p>When do we apply DeMorgan’s Law? Whenever we wish to
-    “distribute” a negation over a logical connective; and, for
-    internal “naku” negation, whenever a logical connective moves
-    in to, or out of, the scope of a negation &mdash; when it crosses a
-    negation boundary.</p>
-
-    <p>Let us apply DeMorgan’s Law to some sample sentences. These
-    sentences make use of forethought logical connectives, which
-    are explained in <a href="../../14/1/">Chapter 14</a>. It
-    suffices to know that “ga” and “gi”, used before each of a
-    pair of sumti or bridi, mean “either” and “or”
-    respectively, and that “ge” and “gi” used similarly mean
-    “both” and “and”. Furthermore, “ga”, “ge”, and “gi”
-    can all be suffixed with “nai” to negate the bridi or sumti
-    that follows.</p>
-
-    <p>We have defined “na” and “naku zo'u” as, respectively,
-    internal and external bridi negation. These forms being
-    identical, the negation boundary always remains at the left end
-    of the prenex. Thus, exporting or importing negation between
-    external and internal bridi negation forms never requires
-    DeMorgan’s Law to be applied. <a href="../12/#e1">Example 12.1</a>
-    and <a href="../12/#e2">Example 12.2</a> are exactly
-    equivalent:
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>“Who Did You Pass On The Road? Nobody”: Lojban And Logic - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../16/11/">Previous</a></div>
+<div class="nav-section-name">Using “naku” outside a prenex</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../16/13/">Next</a></div>
+<div class="nav-section-name">selbri variables</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h3>12. Logical Connectives and DeMorgan’s Law</h3>
+<p>DeMorgan’s Law states that when a logical connective between terms falls within a negation, then expanding the negation requires a change in the connective. Thus (where “p” and “q” stand for terms or sentences) “not (p or q)” is identical to “not p and not q”, and “not (p and q)” is identical to “not p or not q”. The corresponding changes for the other two basic Lojban connectives are: “not (p equivalent to q)” is identical to “not p exclusive-or not q”, and “not (p whether-or-not q)” is identical to both “not p whether-or-not q” and “not p whether-or-not not q”. In any Lojban sentence having one of the basic connectives, you can substitute in either direction from these identities. (These basic connectives are explained in <a href="../../14/1/">Chapter 14</a>.)</p>
+<p>The effects of DeMorgan’s Law on the logical connectives made by modifying the basic connectives with “nai”, “na” and “se” can be derived directly from these rules; modify the basic connective for DeMorgan’s Law by substituting from the above identities, and then, apply each “nai”, “na” and “se” modifier of the original connectives. Cancel any double negatives that result.</p>
+<p>When do we apply DeMorgan’s Law? Whenever we wish to “distribute” a negation over a logical connective; and, for internal “naku” negation, whenever a logical connective moves in to, or out of, the scope of a negation — when it crosses a negation boundary.</p>
+<p>Let us apply DeMorgan’s Law to some sample sentences. These sentences make use of forethought logical connectives, which are explained in <a href="../../14/1/">Chapter 14</a>. It suffices to know that “ga” and “gi”, used before each of a pair of sumti or bridi, mean “either” and “or” respectively, and that “ge” and “gi” used similarly mean “both” and “and”. Furthermore, “ga”, “ge”, and “gi” can all be suffixed with “nai” to negate the bridi or sumti that follows.</p>
+<p>We have defined “na” and “naku zo'u” as, respectively, internal and external bridi negation. These forms being identical, the negation boundary always remains at the left end of the prenex. Thus, exporting or importing negation between external and internal bridi negation forms never requires DeMorgan’s Law to be applied. <a href="../12/#e1">Example 12.1</a> and <a href="../12/#e2">Example 12.2</a> are exactly equivalent:</p>
 <pre>
-<a id="e1">12.1)</a>  la djan. na klama ga la paris. gi la rom.
+<a id="e1" name="e1">12.1)</a>  la djan. na klama ga la paris. gi la rom.
        John [false] goes-to either Paris or Rome.
 
-<a id="e2">12.2)</a>  naku zo'u la djan. klama ga la paris. gi la rom.
+<a id="e2" name="e2">12.2)</a>  naku zo'u la djan. klama ga la paris. gi la rom.
        It-is-false that: John goes-to either Paris or Rome.
 </pre>
-</p>
-
-    <p>It is not an acceptable logical manipulation to move a negator
-    from the bridi level to one or more sumti. However, <a
-    href="../12/#e1">Example 12.1</a> and related examples are not
-    sumti negations, but rather expand to form two logically
-    connected sentences. In such a situation, DeMorgan’s Law must
-    be applied. For instance, <a href="../12/#e2">Example 12.2</a>
-    expands to:
-
+<p>It is not an acceptable logical manipulation to move a negator from the bridi level to one or more sumti. However, <a href="../12/#e1">Example 12.1</a> and related examples are not sumti negations, but rather expand to form two logically connected sentences. In such a situation, DeMorgan’s Law must be applied. For instance, <a href="../12/#e2">Example 12.2</a> expands to:</p>
 <pre>
-<a id="e3">12.3)</a>  ge la djan. la paris. na klama
+<a id="e3" name="e3">12.3)</a>  ge la djan. la paris. na klama
             gi la djan. la rom. na klama
        [It is true that] both John, to-Paris, [false] goes,
             and John, to-Rome, [false] goes.
 </pre>
-
-    The “ga” and “gi”, meaning “either-or”, have become
-    “ge” and “gi”, meaning “both-and”, as a consequence of
-    moving the negators into the individual bridi.</p>
-
-    <p>Here is another example of DeMorgan’s Law in action,
-    involving bridi-tail logical connection (explained in <a
-    href="../../14/1/">Chapter 14</a>):
-
+The “ga” and “gi”, meaning “either-or”, have become “ge” and “gi”, meaning “both-and”, as a consequence of moving the negators into the individual bridi.
+<p>Here is another example of DeMorgan’s Law in action, involving bridi-tail logical connection (explained in <a href="../../14/1/">Chapter 14</a>):</p>
 <pre>
-<a id="e4">12.4)</a>  la djein. le zarci na ge dzukla gi bajrykla
+<a id="e4" name="e4">12.4)</a>  la djein. le zarci na ge dzukla gi bajrykla
        Jane to-the market [false] both walks and runs.
 
-<a id="e5">12.5)</a>  la djein. le zarci ganai dzukla ginai bajrykla
+<a id="e5" name="e5">12.5)</a>  la djein. le zarci ganai dzukla ginai bajrykla
        Jane to-the market either [false] walks or [false] runs.
        Jane to-the market if walks then ([false] runs).
 </pre>
-
-    (Placing “le zarci” before the selbri makes sure that it is
-    properly associated with both parts of the logical connection.
-    Otherwise, it is easy to erroneously leave it off one of the
-    two sentences.)</p>
-
-    <p>It is wise, before freely doing transformations such as the
-    one from <a href="../12/#e4">Example 12.4</a> to <a
-    href="../12/#e5">Example 12.5</a>, that you become familiar with
-    expanding logical connectives to separate sentences,
-    transforming the sentences, and then recondensing. Thus, you
-    would prove the transformation correct by the following steps.
-    By moving its “na” to the beginning of the prenex as a
-    “naku”, <a href="../12/#e4">Example 12.4</a> becomes:
-
+(Placing “le zarci” before the selbri makes sure that it is properly associated with both parts of the logical connection. Otherwise, it is easy to erroneously leave it off one of the two sentences.)
+<p>It is wise, before freely doing transformations such as the one from <a href="../12/#e4">Example 12.4</a> to <a href="../12/#e5">Example 12.5</a>, that you become familiar with expanding logical connectives to separate sentences, transforming the sentences, and then recondensing. Thus, you would prove the transformation correct by the following steps. By moving its “na” to the beginning of the prenex as a “naku”, <a href="../12/#e4">Example 12.4</a> becomes:</p>
 <pre>
-<a id="e6">12.6)</a>  naku zo'u la djein. le zarci ge dzukla gi bajrykla
+<a id="e6" name="e6">12.6)</a>  naku zo'u la djein. le zarci ge dzukla gi bajrykla
        It is false that : Jane to-the market (both walks and runs).
 </pre>
-
-    And by dividing the bridi with logically connected selbri
-    into two bridi,
-
+And by dividing the bridi with logically connected selbri into two bridi,
 <pre>
-<a id="e7">12.7)</a>  naku zo'u ge la djein. le zarci cu dzukla
+<a id="e7" name="e7">12.7)</a>  naku zo'u ge la djein. le zarci cu dzukla
             gi la djein. le zarci cu bajrykla
        It-is-false-that: both (Jane to-the market walks)
             and (Jane to-the market runs).
 </pre>
-
-    is the result.</p>
-
-    <p>At this expanded level, we apply DeMorgan’s Law to
-    distribute the negation in the prenex across both sentences, to
-    get
-
+is the result.
+<p>At this expanded level, we apply DeMorgan’s Law to distribute the negation in the prenex across both sentences, to get</p>
 <pre>
-<a id="e8">12.8)</a>  ga la djein. le zarci cu na dzukla
+<a id="e8" name="e8">12.8)</a>  ga la djein. le zarci cu na dzukla
             gi la djein. le zarci cu na bajrykla
        Either Jane to-the market [false] walks,
             or Jane to-the market [false] runs.
 </pre>
-
-    which is the same as
-
+which is the same as
 <pre>
-<a id="e9">12.9)</a>  ganai la djein. le zarci cu dzukla
+<a id="e9" name="e9">12.9)</a>  ganai la djein. le zarci cu dzukla
             ginai la djein. le zarci cu bajrykla
        If Jane to-the market walks,
             then Jane to-the market [false] runs.
        If Jane walks to the market, then she doesn’t run.
 </pre>
-
-    which then condenses down to <a href="../12/#e5">Example 12.5</a>.</p>
-
-    <p>DeMorgan’s Law must also be applied to internal “naku”
-    negations:
-
+which then condenses down to <a href="../12/#e5">Example 12.5</a>.
+<p>DeMorgan’s Law must also be applied to internal “naku” negations:</p>
 <pre>
-<a id="e10">12.10)</a> ga la paris. gi la rom. naku se klama la djan.
+<a id="e10" name="e10">12.10)</a> ga la paris. gi la rom. naku se klama la djan.
        (Either Paris or Rome) is-not gone-to-by John.
 
-<a id="e11">12.11)</a> la djan. naku klama ge la paris. gi la rom.
+<a id="e11" name="e11">12.11)</a> la djan. naku klama ge la paris. gi la rom.
        John doesn’t go-to both Paris and Rome.
 </pre>
-
-    That <a href="../12/#e10">Example 12.10</a> and <a
-    href="../12/#e11">Example 12.11</a> mean the same should become
-    evident by studying the English. It is a good exercise to work
-    through the Lojban and prove that they are the same.</p>
-
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../16/11/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Using “naku” outside a prenex
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../16/13/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               selbri variables
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     “Who Did You Pass On The Road? Nobody”: Lojban And      Logic
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+That <a href="../12/#e10">Example 12.10</a> and <a href="../12/#e11">Example 12.11</a> mean the same should become evident by studying the English. It is a good exercise to work through the Lojban and prove that they are the same.
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../16/11/">Previous</a></div>
+<div class="nav-section-name">Using “naku” outside a prenex</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../16/13/">Next</a></div>
+<div class="nav-section-name">selbri variables</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

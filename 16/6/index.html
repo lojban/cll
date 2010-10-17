@@ -1,175 +1,90 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               “Who Did You Pass On The Road? Nobody”: Lojban And      Logic - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../16/5/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Dropping the prenex
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../16/7/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Grouping of quantifiers
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     “Who Did You Pass On The Road? Nobody”: Lojban And Logic
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-          <h3>6. Variables with generalized quantifiers</h3>
-
-    <p>So far, we have seen variables with either nothing in front,
-    or with the cmavo “ro” in front. Now “ro” is a Lojban
-    number, and means “all”; thus “ro prenu” means “all
-    persons”, just as “re prenu” means “two persons”. In fact,
-    unadorned “da” is also taken to have an implicit number in
-    front of it, namely “su'o”, which means “at least one”. Why
-    is this? Consider <a href="../2/#e3">Example 2.3</a> again, this
-    time with an explicit “su'o”:
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>“Who Did You Pass On The Road? Nobody”: Lojban And Logic - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../16/5/">Previous</a></div>
+<div class="nav-section-name">Dropping the prenex</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../16/7/">Next</a></div>
+<div class="nav-section-name">Grouping of quantifiers</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h3>6. Variables with generalized quantifiers</h3>
+<p>So far, we have seen variables with either nothing in front, or with the cmavo “ro” in front. Now “ro” is a Lojban number, and means “all”; thus “ro prenu” means “all persons”, just as “re prenu” means “two persons”. In fact, unadorned “da” is also taken to have an implicit number in front of it, namely “su'o”, which means “at least one”. Why is this? Consider <a href="../2/#e3">Example 2.3</a> again, this time with an explicit “su'o”:</p>
 <pre>
-<a id="e1">6.1)</a>   su'o da zo'u da viska mi
+<a id="e1" name="e1">6.1)</a>   su'o da zo'u da viska mi
        For-at-least-one X : X sees me.
        Something sees me.
 </pre>
-
-    From this version of <a href="../2/#e3">Example 2.3</a>, we
-    understand the speaker’s claim to be that of all the things
-    that there are, at least one of them sees him or her. The
-    corresponding universal claim, <a href="../3/#e2">Example 3.2</a>,
-    says that of all the things that exist, every one of them can
-    see the speaker.</p>
-
-    <p>Any other number can be used instead of “ro” or “su'o”
-    to precede a variable. Then we get claims like:
-
+From this version of <a href="../2/#e3">Example 2.3</a>, we understand the speaker’s claim to be that of all the things that there are, at least one of them sees him or her. The corresponding universal claim, <a href="../3/#e2">Example 3.2</a>, says that of all the things that exist, every one of them can see the speaker.
+<p>Any other number can be used instead of “ro” or “su'o” to precede a variable. Then we get claims like:</p>
 <pre>
-<a id="e2">6.2)</a>   re da zo'u da viska mi
+<a id="e2" name="e2">6.2)</a>   re da zo'u da viska mi
        For-two-Xes : X sees me.
        Two things see me.
 </pre>
-
-    This means that exactly two things, no more or less, saw the
-    speaker on the relevant occasion. In English, we might take
-    “Two things see me” to mean that at least two things see the
-    speaker, but there might be more; in Lojban, though, that claim
-    would have to be made as:
-
+This means that exactly two things, no more or less, saw the speaker on the relevant occasion. In English, we might take “Two things see me” to mean that at least two things see the speaker, but there might be more; in Lojban, though, that claim would have to be made as:
 <pre>
-<a id="e3">6.3)</a>   su'ore da zo'u da viska mi
+<a id="e3" name="e3">6.3)</a>   su'ore da zo'u da viska mi
        For-at-least-two Xes : X sees me.
 </pre>
-
-    which would be false if nothing, or only one thing, saw the
-    speaker, but not otherwise. We note the “su'o” here meaning
-    “at least”; “su'o” by itself is short for “su'opa” where
-    “pa” means “one”, as is explained in <a
-    href="../../18/1/">Chapter 18</a>.</p>
-
-    <p>The prenex may be removed from <a href="../6/#e2">Examples
-    6.2</a> and <a href="../6/#e3">6.3</a> as from the others, leading
-    to:
-
+which would be false if nothing, or only one thing, saw the speaker, but not otherwise. We note the “su'o” here meaning “at least”; “su'o” by itself is short for “su'opa” where “pa” means “one”, as is explained in <a href="../../18/1/">Chapter 18</a>.
+<p>The prenex may be removed from <a href="../6/#e2">Examples 6.2</a> and <a href="../6/#e3">6.3</a> as from the others, leading to:</p>
 <pre>
-<a id="e4">6.4)</a>   re da viska mi
+<a id="e4" name="e4">6.4)</a>   re da viska mi
        Two Xes see me.
 </pre>
-
-    and
-
+and
 <pre>
-<a id="e5">6.5)</a>   su'ore da viska mi
+<a id="e5" name="e5">6.5)</a>   su'ore da viska mi
        At-least-two Xes see me.
 </pre>
-
-    respectively, subject to the rules prescribed in <a
-    href="../5/">Section 5</a>.</p>
-
-    <p>Now we can explain the constructions “ro prenu” for “all
-    persons” and “re prenu” for “two persons” which were
-    casually mentioned at the beginning of this Section. In fact,
-    “ro prenu”, a so-called “indefinite description”, is
-    shorthand for “ro DA poi prenu”, where “DA” represents a
-    fictitious variable that hasn’t been used yet and will not be
-    used in future. (Even if all three of “da”, “de”, and
-    “di” have been used up, it does not matter, for there are
-    ways of getting more variables, discussed in <a
-    href="../14/">Section 14</a>.) So in fact
-
+respectively, subject to the rules prescribed in <a href="../5/">Section 5</a>.
+<p>Now we can explain the constructions “ro prenu” for “all persons” and “re prenu” for “two persons” which were casually mentioned at the beginning of this Section. In fact, “ro prenu”, a so-called “indefinite description”, is shorthand for “ro DA poi prenu”, where “DA” represents a fictitious variable that hasn’t been used yet and will not be used in future. (Even if all three of “da”, “de”, and “di” have been used up, it does not matter, for there are ways of getting more variables, discussed in <a href="../14/">Section 14</a>.) So in fact</p>
 <pre>
-<a id="e6">6.6)</a>   re prenu cu viska mi
+<a id="e6" name="e6">6.6)</a>   re prenu cu viska mi
        Two persons see me.
 </pre>
-
-    is short for
-
+is short for
 <pre>
-<a id="e7">6.7)</a>   re da poi prenu cu viska mi
+<a id="e7" name="e7">6.7)</a>   re da poi prenu cu viska mi
        Two Xes which are-persons see me.
 </pre>
-
-    which in turn is short for:
-
+which in turn is short for:
 <pre>
-<a id="e8">6.8)</a>   re da poi prenu zo'u da viska mi
+<a id="e8" name="e8">6.8)</a>   re da poi prenu zo'u da viska mi
        For-two Xes which are-persons : X sees me.
 </pre>
-</p>
-
-    <p>Note that when we move more than one variable to the prenex
-    (along with its attached relative clause), we must make sure
-    that the variables are in the same order in the prenex as in
-    the bridi proper.</p>
-
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../16/5/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Dropping the prenex
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../16/7/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Grouping of quantifiers
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     “Who Did You Pass On The Road? Nobody”: Lojban And      Logic
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+<p>Note that when we move more than one variable to the prenex (along with its attached relative clause), we must make sure that the variables are in the same order in the prenex as in the bridi proper.</p>
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../16/5/">Previous</a></div>
+<div class="nav-section-name">Dropping the prenex</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../16/7/">Next</a></div>
+<div class="nav-section-name">Grouping of quantifiers</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

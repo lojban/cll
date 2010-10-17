@@ -1,797 +1,424 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  <meta name="generator" content=
-  "HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
-
-  <title>The Lojban Reference Grammar</title>
-  <link rel="stylesheet" type="text/css" href="cll.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+<title>The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="cll.css" />
 </head>
-
 <body>
-  <h1>The Lojban Reference Grammar</h1>
-
-  <div id="copynote">This version corresponds to the printed first edition of
-  <div><b>The Complete Lojban Language</b>
-  by John Woldemar Cowan<br>
-  ISBN 0-9660283-0-9<br>
-  <a href="1/8/">Copyright &copy; 1997 by The Logical Language Group, Inc. All Rights Reserved.</a><br>
-  with <a target="new" href="http://www.lojban.org/tiki/CLL%2C+aka+Reference+Grammar%2C+Errata">Errata</a>.
-  A complete list of changes from the online draft version can be found
-  <a target="new" href="http://github.com/dag/cll">here</a>.</div>
-  Please <a target="new" href="http://www.lojban.org/tiki/Donations">support the LLG</a> and
-  <a target="new" href="http://www.lojban.org/tiki/The+Complete+Lojban+Language"> buy the printed version!</a></div>
-
+<h1>The Lojban Reference Grammar</h1>
+<div id="copynote">This version corresponds to the printed first edition of
+<div><b>The Complete Lojban Language</b> by John Woldemar Cowan<br />
+ISBN 0-9660283-0-9<br />
+<a href="1/8/">Copyright © 1997 by The Logical Language Group, Inc. All Rights Reserved.</a><br />
+with <a target="new" href="http://www.lojban.org/tiki/CLL%2C+aka+Reference+Grammar%2C+Errata">Errata</a>. A complete list of changes from the online draft version can be found <a target="new" href="http://github.com/dag/cll">here</a>.</div>
+Please <a target="new" href="http://www.lojban.org/tiki/Donations">support the LLG</a> and <a target="new" href="http://www.lojban.org/tiki/The+Complete+Lojban+Language">buy the printed version!</a></div>
 <div id="toc">
-
-  <ol>
-    <li class="chapter" name="Chapter1">
-      <a class="chtitle" href="1/1/">Lojban As We Mangle It In Lojbanistan: About This Book</a>
-
-      <ol>
-        <li><a href="1/1/">What is Lojban?</a></li>
-
-        <li><a href="1/2/">What is this book?</a></li>
-
-        <li><a href="1/3/">What are the typographical conventions of this book?</a></li>
-
-        <li><a href="1/4/">Disclaimers</a></li>
-
-        <li><a href="1/5/">Acknowledgements and Credits</a></li>
-
-        <li><a href="1/6/">Informal Bibliography</a></li>
-
-        <li><a href="1/7/">Captions to Pictures</a></li>
-
-        <li><a href="1/8/">Boring Legalities</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter2">
-      <a class="chtitle" href="2/1/">A Quick Tour of Lojban Grammar, With Diagrams</a>
-
-      <ol>
-        <li><a href="2/1/">The concept of the bridi</a></li>
-
-        <li><a href="2/2/">Pronunciation</a></li>
-
-        <li><a href="2/3/">Words that can act as sumti</a></li>
-
-        <li><a href="2/4/">Some words used to indicate selbri relations</a></li>
-
-        <li><a href="2/5/">Some simple Lojban bridi</a></li>
-
-        <li><a href="2/6/">Variant bridi structure</a></li>
-
-        <li><a href="2/7/">Varying the order of sumti</a></li>
-
-        <li><a href="2/8/">The basic structure of longer utterances</a></li>
-
-        <li><a href="2/9/">tanru</a></li>
-
-        <li><a href="2/10/">Description sumti</a></li>
-
-        <li><a href="2/11/">Examples of brivla</a></li>
-
-        <li><a href="2/12/">The sumti “di'u” and “la'e di'u”</a></li>
-
-        <li><a href="2/13/">Possession</a></li>
-
-        <li><a href="2/14/">Vocatives and commands</a></li>
-
-        <li><a href="2/15/">Questions</a></li>
-
-        <li><a href="2/16/">Indicators</a></li>
-
-        <li><a href="2/17/">Tenses</a></li>
-
-        <li><a href="2/18/">Lojban grammatical terms</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter3">
-      <a class="chtitle" href="3/1/">The Hills Are Alive With The Sounds Of Lojban</a>
-
-      <ol>
-        <li><a href="3/1/">Orthography</a></li>
-
-        <li><a href="3/2/">Basic Phonetics</a></li>
-
-        <li><a href="3/3/">The Special Lojban Characters</a></li>
-
-        <li><a href="3/4/">Diphthongs and Syllabic Consonants</a></li>
-
-        <li><a href="3/5/">Vowel Pairs</a></li>
-
-        <li><a href="3/6/">Consonant Clusters</a></li>
-
-        <li><a href="3/7/">Initial Consonant Pairs</a></li>
-
-        <li><a href="3/8/">Buffering Of Consonant Clusters</a></li>
-
-        <li><a href="3/9/">Syllabication And Stress</a></li>
-
-        <li><a href="3/10/">IPA For English Speakers</a></li>
-
-        <li><a href="3/11/">English Analogues For Lojban Diphthongs</a></li>
-
-        <li><a href="3/12/">Oddball Orthographies</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter4">
-      <a class="chtitle" href="4/1/">The Shape Of Words To Come: Lojban Morphology</a>
-
-      <ol>
-        <li><a href="4/1/">Introductory</a></li>
-
-        <li><a href="4/2/">cmavo</a></li>
-
-        <li><a href="4/3/">brivla</a></li>
-
-        <li><a href="4/4/">gismu</a></li>
-
-        <li><a href="4/5/">lujvo</a></li>
-
-        <li><a href="4/6/">rafsi</a></li>
-
-        <li><a href="4/7/">fu'ivla</a></li>
-
-        <li><a href="4/8/">cmene</a></li>
-
-        <li><a href="4/9/">Rules for inserting pauses</a></li>
-
-        <li><a href="4/10/">Considerations for making lujvo</a></li>
-
-        <li><a href="4/11/">The lujvo-making algorithm</a></li>
-
-        <li><a href="4/12/">The lujvo scoring algorithm</a></li>
-
-        <li><a href="4/13/">lujvo-making examples</a></li>
-
-        <li><a href="4/14/">The gismu creation algorithm</a></li>
-
-        <li><a href="4/15/">Cultural and other non-algorithmic gismu</a></li>
-
-        <li><a href="4/16/">rafsi fu'ivla: a proposal</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter5">
-      <a class="chtitle" href="5/1/">“Pretty Little Girls’ School”: The Structure Of Lojban selbri</a>
-
-      <ol>
-        <li><a href="5/1/">Lojban content words: brivla</a></li>
-
-        <li><a href="5/2/">Simple tanru</a></li>
-
-        <li><a href="5/3/">Three-part tanru grouping with “bo”</a></li>
-
-        <li><a href="5/4/">Complex tanru grouping</a></li>
-
-        <li><a href="5/5/">Complex tanru with “ke” and “ke'e”</a></li>
-
-        <li><a href="5/6/">Logical connection within tanru</a></li>
-
-        <li><a href="5/7/">Linked sumti: “be&ndash;bei&ndash;be'o”</a></li>
-
-        <li><a href="5/8/">Inversion of tanru: “co”</a></li>
-
-        <li><a href="5/9/">Other kinds of simple selbri</a></li>
-
-        <li><a href="5/10/">selbri based on sumti: “me”</a></li>
-
-        <li><a href="5/11/">Conversion of simple selbri</a></li>
-
-        <li><a href="5/12/">Scalar negation of selbri</a></li>
-
-        <li><a href="5/13/">Tenses and bridi negation</a></li>
-
-        <li><a href="5/14/">Some types of asymmetrical tanru</a></li>
-
-        <li><a href="5/15/">Some types of symmetrical tanru</a></li>
-
-        <li><a href="5/16/">“Pretty little girls’ school”: forty ways to say it</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter6">
-      <a class="chtitle" href="6/1/">To Speak Of Many Things: The Lojban sumti</a>
-
-      <ol>
-        <li><a href="6/1/">The five kinds of simple sumti</a></li>
-
-        <li><a href="6/2/">The three basic description types</a></li>
-
-        <li><a href="6/3/">Individuals and masses</a></li>
-
-        <li><a href="6/4/">Masses and sets</a></li>
-
-        <li><a href="6/5/">Descriptors for typical objects</a></li>
-
-        <li><a href="6/6/">Quantified sumti</a></li>
-
-        <li><a href="6/7/">Quantified descriptions</a></li>
-
-        <li><a href="6/8/">Indefinite descriptions</a></li>
-
-        <li><a href="6/9/">sumti-based descriptions</a></li>
-
-        <li><a href="6/10/">sumti qualifiers</a></li>
-
-        <li><a href="6/11/">The syntax of vocative phrases</a></li>
-
-        <li><a href="6/12/">Lojban names</a></li>
-
-        <li><a href="6/13/">Pro-sumti summary</a></li>
-
-        <li><a href="6/14/">Quotation summary</a></li>
-
-        <li><a href="6/15/">Number summary</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter7">
-      <a class="chtitle" href="7/1/">Brevity Is The Soul Of Language: Pro-sumti And Pro-bridi</a>
-
-      <ol>
-        <li><a href="7/1/">What are pro-sumti and pro-bridi? What are they for?</a></li>
-
-        <li><a href="7/2/">Personal pro-sumti: the mi-series</a></li>
-
-        <li><a href="7/3/">Demonstrative pro-sumti: the ti-series</a></li>
-
-        <li><a href="7/4/">Utterance pro-sumti: the di'u-series</a></li>
-
-        <li><a href="7/5/">Assignable pro-sumti and pro-bridi: the ko'a-series and the broda-series</a></li>
-
-        <li><a href="7/6/">Anaphoric pro-sumti and pro-bridi: the ri-series and the go'i-series</a></li>
-
-        <li><a href="7/7/">Indefinite pro-sumti and pro-bridi: the zo'e-series and the co'e-series</a></li>
-
-        <li><a href="7/8/">Reflexive and reciprocal pro-sumti: the vo'a-series</a></li>
-
-        <li><a href="7/9/">sumti and bridi questions: “ma” and “mo”</a></li>
-
-        <li><a href="7/10/">Relativized pro-sumti: “ke'a”</a></li>
-
-        <li><a href="7/11/">Abstraction focus pro-sumti: “ce'u”</a></li>
-
-        <li><a href="7/12/">Bound variable pro-sumti and pro-bridi: the da-series and the bu'a-series</a></li>
-
-        <li><a href="7/13/">Pro-sumti and pro-bridi cancelling</a></li>
-
-        <li><a href="7/14/">The identity predicate: du</a></li>
-
-        <li><a href="7/15/">lujvo based on pro-sumti</a></li>
-
-        <li><a href="7/16/">KOhA cmavo by series</a></li>
-
-        <li><a href="7/17/">GOhA and other pro-bridi by series</a></li>
-
-        <li><a href="7/18/">Other cmavo discussed in this chapter</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter8">
-      <a class="chtitle" href="8/1/">Relative Clauses, Which Make sumti Even More Complicated</a>
-
-      <ol>
-        <li><a href="8/1/">What are you pointing at?</a></li>
-
-        <li><a href="8/2/">Incidental relative clauses</a></li>
-
-        <li><a href="8/3/">Relative phrases</a></li>
-
-        <li><a href="8/4/">Multiple relative clauses: “zi'e”</a></li>
-
-        <li><a href="8/5/">Non-veridical relative clauses: “voi”</a></li>
-
-        <li><a href="8/6/">Relative clauses and descriptors</a></li>
-
-        <li><a href="8/7/">Possessive sumti</a></li>
-
-        <li><a href="8/8/">Relative clauses and complex sumti: “vu'o”</a></li>
-
-        <li><a href="8/9/">Relative clauses in vocative phrases</a></li>
-
-        <li><a href="8/10/">Relative clauses within relative clauses</a></li>
-
-        <li><a href="8/11/">Index of relative clause cmavo</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter9">
-      <a class="chtitle" href="9/1/">To Boston Via The Road Go I, With An Excursion Into The Land Of Modals</a>
-
-      <ol>
-        <li><a href="9/1/">Introductory</a></li>
-
-        <li><a href="9/2/">Standard bridi form: “cu”</a></li>
-
-        <li><a href="9/3/">Tagging places: FA</a></li>
-
-        <li><a href="9/4/">Conversion: SE</a></li>
-
-        <li><a href="9/5/">Modal places: FIhO, FEhU</a></li>
-
-        <li><a href="9/6/">Modal tags: BAI</a></li>
-
-        <li><a href="9/7/">Modal sentence connection: the causals</a></li>
-
-        <li><a href="9/8/">Other modal connections</a></li>
-
-        <li><a href="9/9/">Modal selbri</a></li>
-
-        <li><a href="9/10/">Modal relative phrases; Comparison</a></li>
-
-        <li><a href="9/11/">Mixed modal connection</a></li>
-
-        <li><a href="9/12/">Modal conversion: JAI</a></li>
-
-        <li><a href="9/13/">Modal negation</a></li>
-
-        <li><a href="9/14/">Sticky modals</a></li>
-
-        <li><a href="9/15/">Logical and non-logical connection of modals</a></li>
-
-        <li><a href="9/16/">CV’V cmavo of selma'o BAI with irregular forms</a></li>
-
-        <li><a href="9/17/">Complete table of BAI cmavo with rough English equivalents</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter10">
-      <a class="chtitle" href="10/1/">Imaginary Journeys: The Lojban Space/Time Tense System</a>
-
-      <ol>
-        <li><a href="10/1/">Introductory</a></li>
-
-        <li><a href="10/2/">Spatial tenses: FAhA and VA</a></li>
-
-        <li><a href="10/3/">Compound spatial tenses</a></li>
-
-        <li><a href="10/4/">Temporal tenses: PU and ZI</a></li>
-
-        <li><a href="10/5/">Interval sizes: VEhA and ZEhA</a></li>
-
-        <li><a href="10/6/">Vague intervals and non-specific tenses</a></li>
-
-        <li><a href="10/7/">Dimensionality: VIhA</a></li>
-
-        <li><a href="10/8/">Movement in space: MOhI</a></li>
-
-        <li><a href="10/9/">Interval properties: TAhE and “roi”</a></li>
-
-        <li><a href="10/10/">Event contours: ZAhO and “re'u”</a></li>
-
-        <li><a href="10/11/">Space interval modifiers: FEhE</a></li>
-
-        <li><a href="10/12/">Tenses as sumti tcita</a></li>
-
-        <li><a href="10/13/">Sticky and multiple tenses: KI</a></li>
-
-        <li><a href="10/14/">Story time</a></li>
-
-        <li><a href="10/15/">Tenses in subordinate bridi</a></li>
-
-        <li><a href="10/16/">Tense relations between sentences</a></li>
-
-        <li><a href="10/17/">Tensed logical connectives</a></li>
-
-        <li><a href="10/18/">Tense negation</a></li>
-
-        <li><a href="10/19/">Actuality, potentiality, capability: CAhA</a></li>
-
-        <li><a href="10/20/">Logical and non-logical connections between tenses</a></li>
-
-        <li><a href="10/21/">Sub-events</a></li>
-
-        <li><a href="10/22/">Conversion of sumti tcita: JAI</a></li>
-
-        <li><a href="10/23/">Tenses versus modals</a></li>
-
-        <li><a href="10/24/">Tense questions: “cu'e”</a></li>
-
-        <li><a href="10/25/">Explicit magnitudes</a></li>
-
-        <li><a href="10/26/">Finally (an exercise for the much-tried reader)</a></li>
-
-        <li><a href="10/27/">Summary of tense selma'o</a></li>
-
-        <li><a href="10/28/">List of spatial directions and direction-like relations</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter11">
-      <a class="chtitle" href="11/1/">Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction</a>
-
-      <ol>
-        <li><a href="11/1/">The syntax of abstraction</a></li>
-
-        <li><a href="11/2/">Event abstraction</a></li>
-
-        <li><a href="11/3/">Types of event abstractions</a></li>
-
-        <li><a href="11/4/">Property abstractions</a></li>
-
-        <li><a href="11/5/">Amount abstractions</a></li>
-
-        <li><a href="11/6/">Truth-value abstraction: “jei”</a></li>
-
-        <li><a href="11/7/">Predication/sentence abstraction</a></li>
-
-        <li><a href="11/8/">Indirect questions</a></li>
-
-        <li><a href="11/9/">Minor abstraction types</a></li>
-
-        <li><a href="11/10/">Lojban sumti raising</a></li>
-
-        <li><a href="11/11/">Event-type abstractors and event contour tenses</a></li>
-
-        <li><a href="11/12/">Abstractor connection</a></li>
-
-        <li><a href="11/13/">Table of abstractors</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter12">
-      <a class="chtitle" href="12/1/">Dog House And White House: Determining lujvo Place Structures</a>
-
-      <ol>
-        <li><a href="12/1/">Why have lujvo?</a></li>
-
-        <li><a href="12/2/">The meaning of tanru: a necessary detour</a></li>
-
-        <li><a href="12/3/">The meaning of lujvo</a></li>
-
-        <li><a href="12/4/">Selecting places</a></li>
-
-        <li><a href="12/5/">Symmetrical and asymmetrical lujvo</a></li>
-
-        <li><a href="12/6/">Dependent places</a></li>
-
-        <li><a href="12/7/">Ordering lujvo places.</a></li>
-
-        <li><a href="12/8/">lujvo with more than two parts.</a></li>
-
-        <li><a href="12/9/">Eliding SE rafsi from seltau</a></li>
-
-        <li><a href="12/10/">Eliding SE rafsi from tertau</a></li>
-
-        <li><a href="12/11/">Eliding KE and KEhE rafsi from lujvo</a></li>
-
-        <li><a href="12/12/">Abstract lujvo</a></li>
-
-        <li><a href="12/13/">Implicit-abstraction lujvo</a></li>
-
-        <li><a href="12/14/">Anomalous lujvo</a></li>
-
-        <li><a href="12/15/">Comparatives and superlatives</a></li>
-
-        <li><a href="12/16/">Notes on gismu place structures</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter13">
-      <a class="chtitle" href="13/1/">Oooh! Arrgh! Ugh! Yecch!  Attitudinal and Emotional Indicators</a>
-
-      <ol>
-        <li><a href="13/1/">What are attitudinal indicators?</a></li>
-
-        <li><a href="13/2/">Pure emotion indicators</a></li>
-
-        <li><a href="13/3/">Propositional attitude indicators</a></li>
-
-        <li><a href="13/4/">Attitudes as scales</a></li>
-
-        <li><a href="13/5/">The space of emotions</a></li>
-
-        <li><a href="13/6/">Emotional categories</a></li>
-
-        <li><a href="13/7/">Attitudinal modifiers</a></li>
-
-        <li><a href="13/8/">Compound indicators</a></li>
-
-        <li><a href="13/9/">The uses of indicators</a></li>
-
-        <li><a href="13/10/">Attitude questions; empathy; attitude contours</a></li>
-
-        <li><a href="13/11/">Evidentials</a></li>
-
-        <li><a href="13/12/">Discursives</a></li>
-
-        <li><a href="13/13/">Miscellaneous indicators</a></li>
-
-        <li><a href="13/14/">Vocative scales</a></li>
-
-        <li><a href="13/15/">A sample dialogue</a></li>
-
-        <li><a href="13/16/">Tentative conclusion</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter14">
-      <a class="chtitle" href="14/1/">If Wishes Were Horses: The Lojban Connective System</a>
-
-      <ol>
-        <li><a href="14/1/">Logical connection and truth tables</a></li>
-
-        <li><a href="14/2/">The Four basic vowels</a></li>
-
-        <li><a href="14/3/">The six types of logical connectives</a></li>
-
-        <li><a href="14/4/">Logical connection of bridi</a></li>
-
-        <li><a href="14/5/">Forethought bridi connection</a></li>
-
-        <li><a href="14/6/">sumti connection</a></li>
-
-        <li><a href="14/7/">More than two propositions</a></li>
-
-        <li><a href="14/8/">Grouping of afterthought connectives</a></li>
-
-        <li><a href="14/9/">Compound bridi</a></li>
-
-        <li><a href="14/10/">Multiple compound bridi</a></li>
-
-        <li><a href="14/11/">Termset logical connection</a></li>
-
-        <li><a href="14/12/">Logical connection within tanru</a></li>
-
-        <li><a href="14/13/">Truth questions and connective questions</a></li>
-
-        <li><a href="14/14/">Non-logical connectives</a></li>
-
-        <li><a href="14/15/">More about non-logical connectives</a></li>
-
-        <li><a href="14/16/">Interval connectives and forethought non-logical connection</a></li>
-
-        <li><a href="14/17/">Logical and non-logical connectives within mekso</a></li>
-
-        <li><a href="14/18/">Tenses, modals, and logical connection</a></li>
-
-        <li><a href="14/19/">Abstractor connection and connection within abstractions</a></li>
-
-        <li><a href="14/20/">Constructs and appropriate connectives</a></li>
-
-        <li><a href="14/21/">Truth functions and corresponding logical connectives</a></li>
-
-        <li><a href="14/22/">Rules for making logical and non-logical connectives</a></li>
-
-        <li><a href="14/23/">Locations of other tables</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter15">
-      <a class="chtitle" href="15/1/">“No” Problems: On Lojban Negation</a>
-
-      <ol>
-        <li><a href="15/1/">Introductory</a></li>
-
-        <li><a href="15/2/">bridi negation</a></li>
-
-        <li><a href="15/3/">Scalar Negation</a></li>
-
-        <li><a href="15/4/">selbri and tanru negation</a></li>
-
-        <li><a href="15/5/">Expressing scales in selbri negation</a></li>
-
-        <li><a href="15/6/">sumti negation</a></li>
-
-        <li><a href="15/7/">Negation of minor grammatical constructs</a></li>
-
-        <li><a href="15/8/">Truth questions</a></li>
-
-        <li><a href="15/9/">Affirmations</a></li>
-
-        <li><a href="15/10/">Metalinguistic negation forms</a></li>
-
-        <li><a href="15/11/">Summary &mdash; Are All Possible Questions About Negation Now Answered?</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter16">
-      <a class="chtitle" href="16/1/">“Who Did You Pass On The Road?  Nobody”: Lojban And Logic</a>
-
-      <ol>
-        <li><a href="16/1/">What’s wrong with this picture?</a></li>
-
-        <li><a href="16/2/">Existential claims, prenexes, and variables</a></li>
-
-        <li><a href="16/3/">Universal claims</a></li>
-
-        <li><a href="16/4/">Restricted claims: “da poi”</a></li>
-
-        <li><a href="16/5/">Dropping the prenex</a></li>
-
-        <li><a href="16/6/">Variables with generalized quantifiers</a></li>
-
-        <li><a href="16/7/">Grouping of quantifiers</a></li>
-
-        <li><a href="16/8/">The problem of “any”</a></li>
-
-        <li><a href="16/9/">Negation boundaries</a></li>
-
-        <li><a href="16/10/">bridi negation and logical connectives</a></li>
-
-        <li><a href="16/11/">Using “naku” outside a prenex</a></li>
-
-        <li><a href="16/12/">Logical Connectives and DeMorgan’s Law</a></li>
-
-        <li><a href="16/13/">selbri variables</a></li>
-
-        <li><a href="16/14/">A few notes on variables</a></li>
-
-        <li><a href="16/15/">Conclusion</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter17">
-      <a class="chtitle" href="17/1/">As Easy As A-B-C? The Lojban Letteral System And Its Uses</a>
-
-      <ol>
-        <li><a href="17/1/">What’s a letteral, anyway?</a></li>
-
-        <li><a href="17/2/">A to Z in Lojban, plus one</a></li>
-
-        <li><a href="17/3/">Upper and lower cases</a></li>
-
-        <li><a href="17/4/">The universal “bu”</a></li>
-
-        <li><a href="17/5/">Alien alphabets</a></li>
-
-        <li><a href="17/6/">Accent marks and compound lerfu words</a></li>
-
-        <li><a href="17/7/">Punctuation marks</a></li>
-
-        <li><a href="17/8/">What about Chinese characters?</a></li>
-
-        <li><a href="17/9/">lerfu words as pro-sumti</a></li>
-
-        <li><a href="17/10/">References to lerfu</a></li>
-
-        <li><a href="17/11/">Mathematical uses of lerfu strings</a></li>
-
-        <li><a href="17/12/">Acronyms</a></li>
-
-        <li><a href="17/13/">Computerized character codes</a></li>
-
-        <li><a href="17/14/">List of all auxiliary lerfu-word cmavo</a></li>
-
-        <li><a href="17/15/">Proposed lerfu words &mdash; introduction</a></li>
-
-        <li><a href="17/16/">Proposed lerfu words for the Greek alphabet</a></li>
-
-        <li><a href="17/17/">Proposed lerfu words for the Cyrillic alphabet</a></li>
-
-        <li><a href="17/18/">Proposed lerfu words for the Hebrew alphabet</a></li>
-
-        <li><a href="17/19/">Proposed lerfu words for some accent marks and multiple letters</a></li>
-
-        <li><a href="17/20/">Proposed lerfu words for radio communication</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter18">
-      <a class="chtitle" href="18/1/">lojbau mekso: Mathematical Expressions in Lojban</a>
-
-      <ol>
-        <li><a href="18/1/">Introductory</a></li>
-
-        <li><a href="18/2/">Lojban numbers</a></li>
-
-        <li><a href="18/3/">Signs and numerical punctuation</a></li>
-
-        <li><a href="18/4/">Special numbers</a></li>
-
-        <li><a href="18/5/">Simple infix expressions and equations</a></li>
-
-        <li><a href="18/6/">Forethought operators (Polish notation, functions)</a></li>
-
-        <li><a href="18/7/">Other useful selbri for mekso bridi</a></li>
-
-        <li><a href="18/8/">Indefinite numbers</a></li>
-
-        <li><a href="18/9/">Approximation and inexact numbers</a></li>
-
-        <li><a href="18/10/">Non-decimal and compound bases</a></li>
-
-        <li><a href="18/11/">Special mekso selbri</a></li>
-
-        <li><a href="18/12/">Number questions</a></li>
-
-        <li><a href="18/13/">Subscripts</a></li>
-
-        <li><a href="18/14/">Infix operators revisited</a></li>
-
-        <li><a href="18/15/">Vectors and matrices</a></li>
-
-        <li><a href="18/16/">Reverse Polish notation</a></li>
-
-        <li><a href="18/17/">Logical and non-logical connectives within mekso</a></li>
-
-        <li><a href="18/18/">Using Lojban resources within mekso</a></li>
-
-        <li><a href="18/19/">Other uses of mekso</a></li>
-
-        <li><a href="18/20/">Explicit operator precedence</a></li>
-
-        <li><a href="18/21/">Miscellany</a></li>
-
-        <li><a href="18/22/">Four score and seven: a mekso problem</a></li>
-
-        <li><a href="18/23/">mekso selma'o summary</a></li>
-
-        <li><a href="18/24/">Complete table of VUhU cmavo, with operand structures</a></li>
-
-        <li><a href="18/25/">Complete table of PA cmavo: digits, punctuation, and other numbers.</a></li>
-
-        <li><a href="18/26/">Table of MOI cmavo, with associated rafsi and place structures</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter19">
-      <a class="chtitle" href="19/1/">Putting It All Together: Notes on the Structure of Lojban Texts</a>
-
-      <ol>
-        <li><a href="19/1/">Introductory</a></li>
-
-        <li><a href="19/2/">Sentences: I</a></li>
-
-        <li><a href="19/3/">Paragraphs: NIhO</a></li>
-
-        <li><a href="19/4/">Topic-comment sentences: ZOhU</a></li>
-
-        <li><a href="19/5/">Questions and answers</a></li>
-
-        <li><a href="19/6/">Subscripts: XI</a></li>
-
-        <li><a href="19/7/">Utterance ordinals: MAI</a></li>
-
-        <li><a href="19/8/">Attitude scope markers: FUhE/FUhO</a></li>
-
-        <li><a href="19/9/">Quotations: LU, LIhU, LOhU, LEhU</a></li>
-
-        <li><a href="19/10/">More on quotations: ZO, ZOI</a></li>
-
-        <li><a href="19/11/">Contrastive emphasis: BAhE</a></li>
-
-        <li><a href="19/12/">Parenthesis and metalinguistic commentary: TO, TOI, SEI</a></li>
-
-        <li><a href="19/13/">Erasure: SI, SA, SU</a></li>
-
-        <li><a href="19/14/">Hesitation: Y</a></li>
-
-        <li><a href="19/15/">No more to say: FAhO</a></li>
-
-        <li><a href="19/16/">List of cmavo interactions</a></li>
-
-        <li><a href="19/17/">List of Elidable Terminators</a></li>
-      </ol>
-    </li>
-
-    <li class="chapter" name="Chapter20">
-      <a class="chtitle" href="20/">A Catalogue of selma'o</a>
-    </li>
-
-    <li class="chapter" name="Chapter21">
-      <a class="chtitle" href="21/1/">Formal Grammars</a>
-
-      <ol>
-        <li><a href="21/1/">YACC Grammar of Lojban</a></li>
-
-        <li><a href="21/2/">EBNF Grammar of Lojban</a></li>
-
-        <li><a href="21/3/">EBNF Cross-Reference</a></li>
-      </ol>
-    </li>
-  </ol>
-
+<ol>
+<li class="chapter" name="Chapter1"><a class="chtitle" href="1/1/">Lojban As We Mangle It In Lojbanistan: About This Book</a>
+<ol>
+<li><a href="1/1/">What is Lojban?</a></li>
+<li><a href="1/2/">What is this book?</a></li>
+<li><a href="1/3/">What are the typographical conventions of this book?</a></li>
+<li><a href="1/4/">Disclaimers</a></li>
+<li><a href="1/5/">Acknowledgements and Credits</a></li>
+<li><a href="1/6/">Informal Bibliography</a></li>
+<li><a href="1/7/">Captions to Pictures</a></li>
+<li><a href="1/8/">Boring Legalities</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter2"><a class="chtitle" href="2/1/">A Quick Tour of Lojban Grammar, With Diagrams</a>
+<ol>
+<li><a href="2/1/">The concept of the bridi</a></li>
+<li><a href="2/2/">Pronunciation</a></li>
+<li><a href="2/3/">Words that can act as sumti</a></li>
+<li><a href="2/4/">Some words used to indicate selbri relations</a></li>
+<li><a href="2/5/">Some simple Lojban bridi</a></li>
+<li><a href="2/6/">Variant bridi structure</a></li>
+<li><a href="2/7/">Varying the order of sumti</a></li>
+<li><a href="2/8/">The basic structure of longer utterances</a></li>
+<li><a href="2/9/">tanru</a></li>
+<li><a href="2/10/">Description sumti</a></li>
+<li><a href="2/11/">Examples of brivla</a></li>
+<li><a href="2/12/">The sumti “di'u” and “la'e di'u”</a></li>
+<li><a href="2/13/">Possession</a></li>
+<li><a href="2/14/">Vocatives and commands</a></li>
+<li><a href="2/15/">Questions</a></li>
+<li><a href="2/16/">Indicators</a></li>
+<li><a href="2/17/">Tenses</a></li>
+<li><a href="2/18/">Lojban grammatical terms</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter3"><a class="chtitle" href="3/1/">The Hills Are Alive With The Sounds Of Lojban</a>
+<ol>
+<li><a href="3/1/">Orthography</a></li>
+<li><a href="3/2/">Basic Phonetics</a></li>
+<li><a href="3/3/">The Special Lojban Characters</a></li>
+<li><a href="3/4/">Diphthongs and Syllabic Consonants</a></li>
+<li><a href="3/5/">Vowel Pairs</a></li>
+<li><a href="3/6/">Consonant Clusters</a></li>
+<li><a href="3/7/">Initial Consonant Pairs</a></li>
+<li><a href="3/8/">Buffering Of Consonant Clusters</a></li>
+<li><a href="3/9/">Syllabication And Stress</a></li>
+<li><a href="3/10/">IPA For English Speakers</a></li>
+<li><a href="3/11/">English Analogues For Lojban Diphthongs</a></li>
+<li><a href="3/12/">Oddball Orthographies</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter4"><a class="chtitle" href="4/1/">The Shape Of Words To Come: Lojban Morphology</a>
+<ol>
+<li><a href="4/1/">Introductory</a></li>
+<li><a href="4/2/">cmavo</a></li>
+<li><a href="4/3/">brivla</a></li>
+<li><a href="4/4/">gismu</a></li>
+<li><a href="4/5/">lujvo</a></li>
+<li><a href="4/6/">rafsi</a></li>
+<li><a href="4/7/">fu'ivla</a></li>
+<li><a href="4/8/">cmene</a></li>
+<li><a href="4/9/">Rules for inserting pauses</a></li>
+<li><a href="4/10/">Considerations for making lujvo</a></li>
+<li><a href="4/11/">The lujvo-making algorithm</a></li>
+<li><a href="4/12/">The lujvo scoring algorithm</a></li>
+<li><a href="4/13/">lujvo-making examples</a></li>
+<li><a href="4/14/">The gismu creation algorithm</a></li>
+<li><a href="4/15/">Cultural and other non-algorithmic gismu</a></li>
+<li><a href="4/16/">rafsi fu'ivla: a proposal</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter5"><a class="chtitle" href="5/1/">“Pretty Little Girls’ School”: The Structure Of Lojban selbri</a>
+<ol>
+<li><a href="5/1/">Lojban content words: brivla</a></li>
+<li><a href="5/2/">Simple tanru</a></li>
+<li><a href="5/3/">Three-part tanru grouping with “bo”</a></li>
+<li><a href="5/4/">Complex tanru grouping</a></li>
+<li><a href="5/5/">Complex tanru with “ke” and “ke'e”</a></li>
+<li><a href="5/6/">Logical connection within tanru</a></li>
+<li><a href="5/7/">Linked sumti: “be–bei–be'o”</a></li>
+<li><a href="5/8/">Inversion of tanru: “co”</a></li>
+<li><a href="5/9/">Other kinds of simple selbri</a></li>
+<li><a href="5/10/">selbri based on sumti: “me”</a></li>
+<li><a href="5/11/">Conversion of simple selbri</a></li>
+<li><a href="5/12/">Scalar negation of selbri</a></li>
+<li><a href="5/13/">Tenses and bridi negation</a></li>
+<li><a href="5/14/">Some types of asymmetrical tanru</a></li>
+<li><a href="5/15/">Some types of symmetrical tanru</a></li>
+<li><a href="5/16/">“Pretty little girls’ school”: forty ways to say it</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter6"><a class="chtitle" href="6/1/">To Speak Of Many Things: The Lojban sumti</a>
+<ol>
+<li><a href="6/1/">The five kinds of simple sumti</a></li>
+<li><a href="6/2/">The three basic description types</a></li>
+<li><a href="6/3/">Individuals and masses</a></li>
+<li><a href="6/4/">Masses and sets</a></li>
+<li><a href="6/5/">Descriptors for typical objects</a></li>
+<li><a href="6/6/">Quantified sumti</a></li>
+<li><a href="6/7/">Quantified descriptions</a></li>
+<li><a href="6/8/">Indefinite descriptions</a></li>
+<li><a href="6/9/">sumti-based descriptions</a></li>
+<li><a href="6/10/">sumti qualifiers</a></li>
+<li><a href="6/11/">The syntax of vocative phrases</a></li>
+<li><a href="6/12/">Lojban names</a></li>
+<li><a href="6/13/">Pro-sumti summary</a></li>
+<li><a href="6/14/">Quotation summary</a></li>
+<li><a href="6/15/">Number summary</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter7"><a class="chtitle" href="7/1/">Brevity Is The Soul Of Language: Pro-sumti And Pro-bridi</a>
+<ol>
+<li><a href="7/1/">What are pro-sumti and pro-bridi? What are they for?</a></li>
+<li><a href="7/2/">Personal pro-sumti: the mi-series</a></li>
+<li><a href="7/3/">Demonstrative pro-sumti: the ti-series</a></li>
+<li><a href="7/4/">Utterance pro-sumti: the di'u-series</a></li>
+<li><a href="7/5/">Assignable pro-sumti and pro-bridi: the ko'a-series and the broda-series</a></li>
+<li><a href="7/6/">Anaphoric pro-sumti and pro-bridi: the ri-series and the go'i-series</a></li>
+<li><a href="7/7/">Indefinite pro-sumti and pro-bridi: the zo'e-series and the co'e-series</a></li>
+<li><a href="7/8/">Reflexive and reciprocal pro-sumti: the vo'a-series</a></li>
+<li><a href="7/9/">sumti and bridi questions: “ma” and “mo”</a></li>
+<li><a href="7/10/">Relativized pro-sumti: “ke'a”</a></li>
+<li><a href="7/11/">Abstraction focus pro-sumti: “ce'u”</a></li>
+<li><a href="7/12/">Bound variable pro-sumti and pro-bridi: the da-series and the bu'a-series</a></li>
+<li><a href="7/13/">Pro-sumti and pro-bridi cancelling</a></li>
+<li><a href="7/14/">The identity predicate: du</a></li>
+<li><a href="7/15/">lujvo based on pro-sumti</a></li>
+<li><a href="7/16/">KOhA cmavo by series</a></li>
+<li><a href="7/17/">GOhA and other pro-bridi by series</a></li>
+<li><a href="7/18/">Other cmavo discussed in this chapter</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter8"><a class="chtitle" href="8/1/">Relative Clauses, Which Make sumti Even More Complicated</a>
+<ol>
+<li><a href="8/1/">What are you pointing at?</a></li>
+<li><a href="8/2/">Incidental relative clauses</a></li>
+<li><a href="8/3/">Relative phrases</a></li>
+<li><a href="8/4/">Multiple relative clauses: “zi'e”</a></li>
+<li><a href="8/5/">Non-veridical relative clauses: “voi”</a></li>
+<li><a href="8/6/">Relative clauses and descriptors</a></li>
+<li><a href="8/7/">Possessive sumti</a></li>
+<li><a href="8/8/">Relative clauses and complex sumti: “vu'o”</a></li>
+<li><a href="8/9/">Relative clauses in vocative phrases</a></li>
+<li><a href="8/10/">Relative clauses within relative clauses</a></li>
+<li><a href="8/11/">Index of relative clause cmavo</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter9"><a class="chtitle" href="9/1/">To Boston Via The Road Go I, With An Excursion Into The Land Of Modals</a>
+<ol>
+<li><a href="9/1/">Introductory</a></li>
+<li><a href="9/2/">Standard bridi form: “cu”</a></li>
+<li><a href="9/3/">Tagging places: FA</a></li>
+<li><a href="9/4/">Conversion: SE</a></li>
+<li><a href="9/5/">Modal places: FIhO, FEhU</a></li>
+<li><a href="9/6/">Modal tags: BAI</a></li>
+<li><a href="9/7/">Modal sentence connection: the causals</a></li>
+<li><a href="9/8/">Other modal connections</a></li>
+<li><a href="9/9/">Modal selbri</a></li>
+<li><a href="9/10/">Modal relative phrases; Comparison</a></li>
+<li><a href="9/11/">Mixed modal connection</a></li>
+<li><a href="9/12/">Modal conversion: JAI</a></li>
+<li><a href="9/13/">Modal negation</a></li>
+<li><a href="9/14/">Sticky modals</a></li>
+<li><a href="9/15/">Logical and non-logical connection of modals</a></li>
+<li><a href="9/16/">CV’V cmavo of selma'o BAI with irregular forms</a></li>
+<li><a href="9/17/">Complete table of BAI cmavo with rough English equivalents</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter10"><a class="chtitle" href="10/1/">Imaginary Journeys: The Lojban Space/Time Tense System</a>
+<ol>
+<li><a href="10/1/">Introductory</a></li>
+<li><a href="10/2/">Spatial tenses: FAhA and VA</a></li>
+<li><a href="10/3/">Compound spatial tenses</a></li>
+<li><a href="10/4/">Temporal tenses: PU and ZI</a></li>
+<li><a href="10/5/">Interval sizes: VEhA and ZEhA</a></li>
+<li><a href="10/6/">Vague intervals and non-specific tenses</a></li>
+<li><a href="10/7/">Dimensionality: VIhA</a></li>
+<li><a href="10/8/">Movement in space: MOhI</a></li>
+<li><a href="10/9/">Interval properties: TAhE and “roi”</a></li>
+<li><a href="10/10/">Event contours: ZAhO and “re'u”</a></li>
+<li><a href="10/11/">Space interval modifiers: FEhE</a></li>
+<li><a href="10/12/">Tenses as sumti tcita</a></li>
+<li><a href="10/13/">Sticky and multiple tenses: KI</a></li>
+<li><a href="10/14/">Story time</a></li>
+<li><a href="10/15/">Tenses in subordinate bridi</a></li>
+<li><a href="10/16/">Tense relations between sentences</a></li>
+<li><a href="10/17/">Tensed logical connectives</a></li>
+<li><a href="10/18/">Tense negation</a></li>
+<li><a href="10/19/">Actuality, potentiality, capability: CAhA</a></li>
+<li><a href="10/20/">Logical and non-logical connections between tenses</a></li>
+<li><a href="10/21/">Sub-events</a></li>
+<li><a href="10/22/">Conversion of sumti tcita: JAI</a></li>
+<li><a href="10/23/">Tenses versus modals</a></li>
+<li><a href="10/24/">Tense questions: “cu'e”</a></li>
+<li><a href="10/25/">Explicit magnitudes</a></li>
+<li><a href="10/26/">Finally (an exercise for the much-tried reader)</a></li>
+<li><a href="10/27/">Summary of tense selma'o</a></li>
+<li><a href="10/28/">List of spatial directions and direction-like relations</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter11"><a class="chtitle" href="11/1/">Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction</a>
+<ol>
+<li><a href="11/1/">The syntax of abstraction</a></li>
+<li><a href="11/2/">Event abstraction</a></li>
+<li><a href="11/3/">Types of event abstractions</a></li>
+<li><a href="11/4/">Property abstractions</a></li>
+<li><a href="11/5/">Amount abstractions</a></li>
+<li><a href="11/6/">Truth-value abstraction: “jei”</a></li>
+<li><a href="11/7/">Predication/sentence abstraction</a></li>
+<li><a href="11/8/">Indirect questions</a></li>
+<li><a href="11/9/">Minor abstraction types</a></li>
+<li><a href="11/10/">Lojban sumti raising</a></li>
+<li><a href="11/11/">Event-type abstractors and event contour tenses</a></li>
+<li><a href="11/12/">Abstractor connection</a></li>
+<li><a href="11/13/">Table of abstractors</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter12"><a class="chtitle" href="12/1/">Dog House And White House: Determining lujvo Place Structures</a>
+<ol>
+<li><a href="12/1/">Why have lujvo?</a></li>
+<li><a href="12/2/">The meaning of tanru: a necessary detour</a></li>
+<li><a href="12/3/">The meaning of lujvo</a></li>
+<li><a href="12/4/">Selecting places</a></li>
+<li><a href="12/5/">Symmetrical and asymmetrical lujvo</a></li>
+<li><a href="12/6/">Dependent places</a></li>
+<li><a href="12/7/">Ordering lujvo places.</a></li>
+<li><a href="12/8/">lujvo with more than two parts.</a></li>
+<li><a href="12/9/">Eliding SE rafsi from seltau</a></li>
+<li><a href="12/10/">Eliding SE rafsi from tertau</a></li>
+<li><a href="12/11/">Eliding KE and KEhE rafsi from lujvo</a></li>
+<li><a href="12/12/">Abstract lujvo</a></li>
+<li><a href="12/13/">Implicit-abstraction lujvo</a></li>
+<li><a href="12/14/">Anomalous lujvo</a></li>
+<li><a href="12/15/">Comparatives and superlatives</a></li>
+<li><a href="12/16/">Notes on gismu place structures</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter13"><a class="chtitle" href="13/1/">Oooh! Arrgh! Ugh! Yecch! Attitudinal and Emotional Indicators</a>
+<ol>
+<li><a href="13/1/">What are attitudinal indicators?</a></li>
+<li><a href="13/2/">Pure emotion indicators</a></li>
+<li><a href="13/3/">Propositional attitude indicators</a></li>
+<li><a href="13/4/">Attitudes as scales</a></li>
+<li><a href="13/5/">The space of emotions</a></li>
+<li><a href="13/6/">Emotional categories</a></li>
+<li><a href="13/7/">Attitudinal modifiers</a></li>
+<li><a href="13/8/">Compound indicators</a></li>
+<li><a href="13/9/">The uses of indicators</a></li>
+<li><a href="13/10/">Attitude questions; empathy; attitude contours</a></li>
+<li><a href="13/11/">Evidentials</a></li>
+<li><a href="13/12/">Discursives</a></li>
+<li><a href="13/13/">Miscellaneous indicators</a></li>
+<li><a href="13/14/">Vocative scales</a></li>
+<li><a href="13/15/">A sample dialogue</a></li>
+<li><a href="13/16/">Tentative conclusion</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter14"><a class="chtitle" href="14/1/">If Wishes Were Horses: The Lojban Connective System</a>
+<ol>
+<li><a href="14/1/">Logical connection and truth tables</a></li>
+<li><a href="14/2/">The Four basic vowels</a></li>
+<li><a href="14/3/">The six types of logical connectives</a></li>
+<li><a href="14/4/">Logical connection of bridi</a></li>
+<li><a href="14/5/">Forethought bridi connection</a></li>
+<li><a href="14/6/">sumti connection</a></li>
+<li><a href="14/7/">More than two propositions</a></li>
+<li><a href="14/8/">Grouping of afterthought connectives</a></li>
+<li><a href="14/9/">Compound bridi</a></li>
+<li><a href="14/10/">Multiple compound bridi</a></li>
+<li><a href="14/11/">Termset logical connection</a></li>
+<li><a href="14/12/">Logical connection within tanru</a></li>
+<li><a href="14/13/">Truth questions and connective questions</a></li>
+<li><a href="14/14/">Non-logical connectives</a></li>
+<li><a href="14/15/">More about non-logical connectives</a></li>
+<li><a href="14/16/">Interval connectives and forethought non-logical connection</a></li>
+<li><a href="14/17/">Logical and non-logical connectives within mekso</a></li>
+<li><a href="14/18/">Tenses, modals, and logical connection</a></li>
+<li><a href="14/19/">Abstractor connection and connection within abstractions</a></li>
+<li><a href="14/20/">Constructs and appropriate connectives</a></li>
+<li><a href="14/21/">Truth functions and corresponding logical connectives</a></li>
+<li><a href="14/22/">Rules for making logical and non-logical connectives</a></li>
+<li><a href="14/23/">Locations of other tables</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter15"><a class="chtitle" href="15/1/">“No” Problems: On Lojban Negation</a>
+<ol>
+<li><a href="15/1/">Introductory</a></li>
+<li><a href="15/2/">bridi negation</a></li>
+<li><a href="15/3/">Scalar Negation</a></li>
+<li><a href="15/4/">selbri and tanru negation</a></li>
+<li><a href="15/5/">Expressing scales in selbri negation</a></li>
+<li><a href="15/6/">sumti negation</a></li>
+<li><a href="15/7/">Negation of minor grammatical constructs</a></li>
+<li><a href="15/8/">Truth questions</a></li>
+<li><a href="15/9/">Affirmations</a></li>
+<li><a href="15/10/">Metalinguistic negation forms</a></li>
+<li><a href="15/11/">Summary — Are All Possible Questions About Negation Now Answered?</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter16"><a class="chtitle" href="16/1/">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</a>
+<ol>
+<li><a href="16/1/">What’s wrong with this picture?</a></li>
+<li><a href="16/2/">Existential claims, prenexes, and variables</a></li>
+<li><a href="16/3/">Universal claims</a></li>
+<li><a href="16/4/">Restricted claims: “da poi”</a></li>
+<li><a href="16/5/">Dropping the prenex</a></li>
+<li><a href="16/6/">Variables with generalized quantifiers</a></li>
+<li><a href="16/7/">Grouping of quantifiers</a></li>
+<li><a href="16/8/">The problem of “any”</a></li>
+<li><a href="16/9/">Negation boundaries</a></li>
+<li><a href="16/10/">bridi negation and logical connectives</a></li>
+<li><a href="16/11/">Using “naku” outside a prenex</a></li>
+<li><a href="16/12/">Logical Connectives and DeMorgan’s Law</a></li>
+<li><a href="16/13/">selbri variables</a></li>
+<li><a href="16/14/">A few notes on variables</a></li>
+<li><a href="16/15/">Conclusion</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter17"><a class="chtitle" href="17/1/">As Easy As A-B-C? The Lojban Letteral System And Its Uses</a>
+<ol>
+<li><a href="17/1/">What’s a letteral, anyway?</a></li>
+<li><a href="17/2/">A to Z in Lojban, plus one</a></li>
+<li><a href="17/3/">Upper and lower cases</a></li>
+<li><a href="17/4/">The universal “bu”</a></li>
+<li><a href="17/5/">Alien alphabets</a></li>
+<li><a href="17/6/">Accent marks and compound lerfu words</a></li>
+<li><a href="17/7/">Punctuation marks</a></li>
+<li><a href="17/8/">What about Chinese characters?</a></li>
+<li><a href="17/9/">lerfu words as pro-sumti</a></li>
+<li><a href="17/10/">References to lerfu</a></li>
+<li><a href="17/11/">Mathematical uses of lerfu strings</a></li>
+<li><a href="17/12/">Acronyms</a></li>
+<li><a href="17/13/">Computerized character codes</a></li>
+<li><a href="17/14/">List of all auxiliary lerfu-word cmavo</a></li>
+<li><a href="17/15/">Proposed lerfu words — introduction</a></li>
+<li><a href="17/16/">Proposed lerfu words for the Greek alphabet</a></li>
+<li><a href="17/17/">Proposed lerfu words for the Cyrillic alphabet</a></li>
+<li><a href="17/18/">Proposed lerfu words for the Hebrew alphabet</a></li>
+<li><a href="17/19/">Proposed lerfu words for some accent marks and multiple letters</a></li>
+<li><a href="17/20/">Proposed lerfu words for radio communication</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter18"><a class="chtitle" href="18/1/">lojbau mekso: Mathematical Expressions in Lojban</a>
+<ol>
+<li><a href="18/1/">Introductory</a></li>
+<li><a href="18/2/">Lojban numbers</a></li>
+<li><a href="18/3/">Signs and numerical punctuation</a></li>
+<li><a href="18/4/">Special numbers</a></li>
+<li><a href="18/5/">Simple infix expressions and equations</a></li>
+<li><a href="18/6/">Forethought operators (Polish notation, functions)</a></li>
+<li><a href="18/7/">Other useful selbri for mekso bridi</a></li>
+<li><a href="18/8/">Indefinite numbers</a></li>
+<li><a href="18/9/">Approximation and inexact numbers</a></li>
+<li><a href="18/10/">Non-decimal and compound bases</a></li>
+<li><a href="18/11/">Special mekso selbri</a></li>
+<li><a href="18/12/">Number questions</a></li>
+<li><a href="18/13/">Subscripts</a></li>
+<li><a href="18/14/">Infix operators revisited</a></li>
+<li><a href="18/15/">Vectors and matrices</a></li>
+<li><a href="18/16/">Reverse Polish notation</a></li>
+<li><a href="18/17/">Logical and non-logical connectives within mekso</a></li>
+<li><a href="18/18/">Using Lojban resources within mekso</a></li>
+<li><a href="18/19/">Other uses of mekso</a></li>
+<li><a href="18/20/">Explicit operator precedence</a></li>
+<li><a href="18/21/">Miscellany</a></li>
+<li><a href="18/22/">Four score and seven: a mekso problem</a></li>
+<li><a href="18/23/">mekso selma'o summary</a></li>
+<li><a href="18/24/">Complete table of VUhU cmavo, with operand structures</a></li>
+<li><a href="18/25/">Complete table of PA cmavo: digits, punctuation, and other numbers.</a></li>
+<li><a href="18/26/">Table of MOI cmavo, with associated rafsi and place structures</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter19"><a class="chtitle" href="19/1/">Putting It All Together: Notes on the Structure of Lojban Texts</a>
+<ol>
+<li><a href="19/1/">Introductory</a></li>
+<li><a href="19/2/">Sentences: I</a></li>
+<li><a href="19/3/">Paragraphs: NIhO</a></li>
+<li><a href="19/4/">Topic-comment sentences: ZOhU</a></li>
+<li><a href="19/5/">Questions and answers</a></li>
+<li><a href="19/6/">Subscripts: XI</a></li>
+<li><a href="19/7/">Utterance ordinals: MAI</a></li>
+<li><a href="19/8/">Attitude scope markers: FUhE/FUhO</a></li>
+<li><a href="19/9/">Quotations: LU, LIhU, LOhU, LEhU</a></li>
+<li><a href="19/10/">More on quotations: ZO, ZOI</a></li>
+<li><a href="19/11/">Contrastive emphasis: BAhE</a></li>
+<li><a href="19/12/">Parenthesis and metalinguistic commentary: TO, TOI, SEI</a></li>
+<li><a href="19/13/">Erasure: SI, SA, SU</a></li>
+<li><a href="19/14/">Hesitation: Y</a></li>
+<li><a href="19/15/">No more to say: FAhO</a></li>
+<li><a href="19/16/">List of cmavo interactions</a></li>
+<li><a href="19/17/">List of Elidable Terminators</a></li>
+</ol>
+</li>
+<li class="chapter" name="Chapter20"><a class="chtitle" href="20/">A Catalogue of selma'o</a></li>
+<li class="chapter" name="Chapter21"><a class="chtitle" href="21/1/">Formal Grammars</a>
+<ol>
+<li><a href="21/1/">YACC Grammar of Lojban</a></li>
+<li><a href="21/2/">EBNF Grammar of Lojban</a></li>
+<li><a href="21/3/">EBNF Cross-Reference</a></li>
+</ol>
+</li>
+</ol>
 </div>
-
 </body>
 </html>

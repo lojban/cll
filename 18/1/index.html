@@ -1,137 +1,61 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               lojbau mekso: Mathematical Expressions in Lojban - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../17/20/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Proposed lerfu words for radio communication
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../18/2/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Lojban numbers
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     lojbau mekso: Mathematical Expressions in Lojban
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-
-      <h2>Chapter 18<br /> lojbau mekso: Mathematical Expressions in Lojban</h2>
-
-          <h3>1. Introductory</h3>
-
-    <p>lojbau mekso (“Lojbanic mathematical-expression”) is the part
-    of the Lojban language that is tailored for expressing
-    statements of a mathematical character, or for adding numerical
-    information to non-mathematical statements. Its formal design
-    goals include:
-
-    <ol>
-
-      <li>representing all the different forms of expression used
-      by mathematicians in their normal modes of writing, so that a
-      reader can unambiguously read off mathematical text as
-      written with minimal effort and expect a listener to
-      understand it;</li>
-
-      <li>providing a vocabulary of commonly used mathematical
-      terms which can readily be expanded to include newly coined
-      words using the full resources of Lojban;</li>
-
-      <li>permitting the formulation, both in writing and in
-      speech, of unambiguous mathematical text;</li>
-
-      <li>encompassing all forms of quantified expression found in
-      natural languages, as well as encouraging greater precision
-      in ordinary language situations than natural languages
-      allow.</li>
-    </ol>
-</p>
-
-    <p>Goal 1 requires that mekso not be constrained to a single
-    notation such as Polish notation or reverse Polish notation,
-    but make provision for all forms, with the most commonly used
-    forms the most easily used.</p>
-
-    <p>Goal 2 requires the provision of several conversion
-    mechanisms, so that the boundary between mekso and full Lojban
-    can be crossed from either side at many points.</p>
-
-    <p>Goal 3 is the most subtle. Written mathematical expression
-    is culturally unambiguous, in the sense that mathematicians in
-    all parts of the world understand the same written texts to
-    have the same meanings. However, international mathematical
-    notation does not prescribe unique forms. For example, the
-    expression
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>lojbau mekso: Mathematical Expressions in Lojban - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../17/20/">Previous</a></div>
+<div class="nav-section-name">Proposed lerfu words for radio communication</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../18/2/">Next</a></div>
+<div class="nav-section-name">Lojban numbers</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">lojbau mekso: Mathematical Expressions in Lojban</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h2>Chapter 18<br />
+lojbau mekso: Mathematical Expressions in Lojban</h2>
+<h3>1. Introductory</h3>
+<p>lojbau mekso (“Lojbanic mathematical-expression”) is the part of the Lojban language that is tailored for expressing statements of a mathematical character, or for adding numerical information to non-mathematical statements. Its formal design goals include:</p>
+<ol>
+<li>representing all the different forms of expression used by mathematicians in their normal modes of writing, so that a reader can unambiguously read off mathematical text as written with minimal effort and expect a listener to understand it;</li>
+<li>providing a vocabulary of commonly used mathematical terms which can readily be expanded to include newly coined words using the full resources of Lojban;</li>
+<li>permitting the formulation, both in writing and in speech, of unambiguous mathematical text;</li>
+<li>encompassing all forms of quantified expression found in natural languages, as well as encouraging greater precision in ordinary language situations than natural languages allow.</li>
+</ol>
+<p>Goal 1 requires that mekso not be constrained to a single notation such as Polish notation or reverse Polish notation, but make provision for all forms, with the most commonly used forms the most easily used.</p>
+<p>Goal 2 requires the provision of several conversion mechanisms, so that the boundary between mekso and full Lojban can be crossed from either side at many points.</p>
+<p>Goal 3 is the most subtle. Written mathematical expression is culturally unambiguous, in the sense that mathematicians in all parts of the world understand the same written texts to have the same meanings. However, international mathematical notation does not prescribe unique forms. For example, the expression</p>
 <pre>
-<a id="e1">1.1)</a>   3x + 2y
+<a id="e1" name="e1">1.1)</a>   3x + 2y
 </pre>
-
-    contains omitted multiplication operators, but there are other
-    possible interpretations for the strings “3x” and “2y” than
-    as mathematical multiplication. Therefore, the Lojban verbal
-    (spoken and written) form of <a href="../1/#e1">Example 1.1</a>
-    must not omit the multiplication operators.</p>
-
-    <p>The remainder of this chapter explains (in as much detail as
-    is currently possible) the mekso system. This chapter is by
-    intention complete as regards mekso components, but only
-    suggestive about uses of those components &mdash; as of now, there
-    has been no really comprehensive use made of mekso facilities,
-    and many matters must await the test of usage to be fully
-    clarified.</p>
-
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../17/20/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Proposed lerfu words for radio communication
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../18/2/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Lojban numbers
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     lojbau mekso: Mathematical Expressions in Lojban
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+contains omitted multiplication operators, but there are other possible interpretations for the strings “3x” and “2y” than as mathematical multiplication. Therefore, the Lojban verbal (spoken and written) form of <a href="../1/#e1">Example 1.1</a> must not omit the multiplication operators.
+<p>The remainder of this chapter explains (in as much detail as is currently possible) the mekso system. This chapter is by intention complete as regards mekso components, but only suggestive about uses of those components — as of now, there has been no really comprehensive use made of mekso facilities, and many matters must await the test of usage to be fully clarified.</p>
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../17/20/">Previous</a></div>
+<div class="nav-section-name">Proposed lerfu words for radio communication</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../18/2/">Next</a></div>
+<div class="nav-section-name">Lojban numbers</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">lojbau mekso: Mathematical Expressions in Lojban</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

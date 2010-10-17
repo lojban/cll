@@ -1,193 +1,94 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               “Who Did You Pass On The Road? Nobody”: Lojban And      Logic - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../16/4/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Restricted claims: “da poi”
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../16/6/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Variables with generalized quantifiers
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     “Who Did You Pass On The Road? Nobody”: Lojban And Logic
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-          <h3>5. Dropping the prenex</h3>
-
-    <p>It isn’t really necessary for every Lojban bridi involving
-    variables to have a prenex on the front. In fact, none of the
-    examples we’ve seen so far required prenexes at all! The rule
-    for dropping the prenex is simple: if the variables appear in
-    the same order within the bridi as they did in the prenex, then
-    the prenex is superfluous. However, any “ro” or “poi”
-    appearing in the prenex must be transferred to the first
-    occurrence of the variable in the main part of the bridi. Thus,
-    <a href="../2/#e3">Example 2.3</a> becomes just:
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>“Who Did You Pass On The Road? Nobody”: Lojban And Logic - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../16/4/">Previous</a></div>
+<div class="nav-section-name">Restricted claims: “da poi”</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../16/6/">Next</a></div>
+<div class="nav-section-name">Variables with generalized quantifiers</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h3>5. Dropping the prenex</h3>
+<p>It isn’t really necessary for every Lojban bridi involving variables to have a prenex on the front. In fact, none of the examples we’ve seen so far required prenexes at all! The rule for dropping the prenex is simple: if the variables appear in the same order within the bridi as they did in the prenex, then the prenex is superfluous. However, any “ro” or “poi” appearing in the prenex must be transferred to the first occurrence of the variable in the main part of the bridi. Thus, <a href="../2/#e3">Example 2.3</a> becomes just:</p>
 <pre>
-<a id="e1">5.1)</a>   da viska mi
+<a id="e1" name="e1">5.1)</a>   da viska mi
        There-is-an-X-which sees me.
        Something sees me.
 </pre>
-
-    and <a href="../4/#e4">Example 4.4</a> becomes:
-
+and <a href="../4/#e4">Example 4.4</a> becomes:
 <pre>
-<a id="e2">5.2)</a>   ro da poi gerku cu vasxu
+<a id="e2" name="e2">5.2)</a>   ro da poi gerku cu vasxu
        For-every X which is-a-dog, it-breathes.
        Every dog breathes.
 </pre>
-</p>
-
-    <p>You might well suppose, then, that the purpose of the prenex is
-    to allow the variables in it to appear in a different order
-    than the bridi order, and that would be correct. Consider
-
+<p>You might well suppose, then, that the purpose of the prenex is to allow the variables in it to appear in a different order than the bridi order, and that would be correct. Consider</p>
 <pre>
-<a id="e3">5.3)</a>   ro da poi prenu ku'o de poi gerku ku'o zo'u de batci da
+<a id="e3" name="e3">5.3)</a>   ro da poi prenu ku'o de poi gerku ku'o zo'u de batci da
        For-every X which is-a-person, there-is-a-Y which is-a-dog: Y bites X.
 </pre>
-
-    The prenex of <a href="../5/#e3">Example 5.3</a> is like that
-    of <a href="../3/#e4">Example 3.4</a> (but with relative clauses):
-    it notes that the following bridi is true of every person with
-    respect to some dog, not necessarily the same dog for each. But
-    in the main bridi part, the “de” appears before the “da”.
-    Therefore, the true translation is
-
+The prenex of <a href="../5/#e3">Example 5.3</a> is like that of <a href="../3/#e4">Example 3.4</a> (but with relative clauses): it notes that the following bridi is true of every person with respect to some dog, not necessarily the same dog for each. But in the main bridi part, the “de” appears before the “da”. Therefore, the true translation is
 <pre>
-<a id="e4">5.4)</a>   Every person is bitten by some dog (or other).
+<a id="e4" name="e4">5.4)</a>   Every person is bitten by some dog (or other).
 </pre>
-</p>
-
-    <p>If we tried to omit the prenex and move the “ro” and the
-    relative clauses into the main bridi, we would get:
-
+<p>If we tried to omit the prenex and move the “ro” and the relative clauses into the main bridi, we would get:</p>
 <pre>
-<a id="e5">5.5)</a>   de poi gerku cu batci ro da poi prenu
+<a id="e5" name="e5">5.5)</a>   de poi gerku cu batci ro da poi prenu
        There-is-a-Y which is-a-dog which-bites every X which is-a-person
        Some dog bites everyone.
 </pre>
-
-    which has the structure of <a href="../3/#e5">Example 3.5</a>: it
-    says that there is a dog (call him Fido) who bites, has bitten,
-    or will bite every person that has ever existed! We can safely
-    rule out Fido’s existence, and say that <a href="../5/#e5">Example
-    5.5</a> is false, while agreeing to <a href="../5/#e3">Example
-    5.3</a>.</p>
-
-    <p>Even so, <a href="../5/#e3">Example 5.3</a> is most probably
-    false, since some people never experience dogbite. Examples
-    like 5.3 and 4.4 (might there be some dogs which never have
-    breathed, because they died as embryos?) indicate the danger in
-    Lojban of universal claims even when restricted. In English we
-    are prone to say that “Everyone says” or that “Everybody
-    does” or that “Everything is” when in fact there are obvious
-    counterexamples which we are ignoring for the sake of making a
-    rhetorical point. Such statements are plain falsehoods in
-    Lojban, unless saved by a context (such as tense) which
-    implicitly restricts them.</p>
-
-    <p>How can we express <a href="../5/#e3">Example 5.3</a> in Lojban
-    without a prenex? Since it is the order in which variables
-    appear that matters, we can say:
-
+which has the structure of <a href="../3/#e5">Example 3.5</a>: it says that there is a dog (call him Fido) who bites, has bitten, or will bite every person that has ever existed! We can safely rule out Fido’s existence, and say that <a href="../5/#e5">Example 5.5</a> is false, while agreeing to <a href="../5/#e3">Example 5.3</a>.
+<p>Even so, <a href="../5/#e3">Example 5.3</a> is most probably false, since some people never experience dogbite. Examples like 5.3 and 4.4 (might there be some dogs which never have breathed, because they died as embryos?) indicate the danger in Lojban of universal claims even when restricted. In English we are prone to say that “Everyone says” or that “Everybody does” or that “Everything is” when in fact there are obvious counterexamples which we are ignoring for the sake of making a rhetorical point. Such statements are plain falsehoods in Lojban, unless saved by a context (such as tense) which implicitly restricts them.</p>
+<p>How can we express <a href="../5/#e3">Example 5.3</a> in Lojban without a prenex? Since it is the order in which variables appear that matters, we can say:</p>
 <pre>
-<a id="e6">5.6)</a>   ro da poi prenu cu se batci de poi gerku
+<a id="e6" name="e6">5.6)</a>   ro da poi prenu cu se batci de poi gerku
        Every-X which is-a-person is-bitten-by some-Y which is-a-dog.
 </pre>
-
-    using the conversion operator “se” (explained in <a
-    href="../../5/1/">Chapter 5</a>) to change the selbri “batci”
-    (“bites”) into “se batci” (“is bitten by”). The
-    translation given in <a href="../5/#e4">Example 5.4</a> uses the
-    corresponding strategy in English, since English does not have
-    prenexes (except in strained “logician’s English”). This
-    implies that a sentence with both a universal and an
-    existential variable can’t be freely converted with “se”; one
-    must be careful to preserve the order of the variables.</p>
-
-    <p>If a variable occurs more than once, then any “ro” or
-    “poi” decorations are moved only to the first occurrence of
-    the variable when the prenex is dropped. For example,
-
+using the conversion operator “se” (explained in <a href="../../5/1/">Chapter 5</a>) to change the selbri “batci” (“bites”) into “se batci” (“is bitten by”). The translation given in <a href="../5/#e4">Example 5.4</a> uses the corresponding strategy in English, since English does not have prenexes (except in strained “logician’s English”). This implies that a sentence with both a universal and an existential variable can’t be freely converted with “se”; one must be careful to preserve the order of the variables.
+<p>If a variable occurs more than once, then any “ro” or “poi” decorations are moved only to the first occurrence of the variable when the prenex is dropped. For example,</p>
 <pre>
-<a id="e7">5.7)</a>   di poi prenu zo'u
+<a id="e7" name="e7">5.7)</a>   di poi prenu zo'u
             ti xarci di di
        There-is-a-Z which is-a-person :
             this-thing is-a-weapon for-use-against-Z by-Z
        This is a weapon for someone to use against
             himself/herself.
 </pre>
-
-    (in which “di” is used rather than “da” just for variety)
-    loses its prenex as follows:
-
+(in which “di” is used rather than “da” just for variety) loses its prenex as follows:
 <pre>
-<a id="e8">5.8)</a>   ti xarci di poi prenu ku'o di
+<a id="e8" name="e8">5.8)</a>   ti xarci di poi prenu ku'o di
        This-thing is-a-weapon-for-use-against some-Z which is-a-person by-Z.
 </pre>
-</p>
-
-    <p>As the examples in this section show, dropping the prenex makes
-    for terseness of expression often even greater than that of
-    English (Lojban is meant to be an unambiguous language, not
-    necessarily a terse or verbose one), provided the rules are
-    observed.</p>
-
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../16/4/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Restricted claims: “da poi”
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../16/6/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Variables with generalized quantifiers
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     “Who Did You Pass On The Road? Nobody”: Lojban And      Logic
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+<p>As the examples in this section show, dropping the prenex makes for terseness of expression often even greater than that of English (Lojban is meant to be an unambiguous language, not necessarily a terse or verbose one), provided the rules are observed.</p>
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../16/4/">Previous</a></div>
+<div class="nav-section-name">Restricted claims: “da poi”</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../16/6/">Next</a></div>
+<div class="nav-section-name">Variables with generalized quantifiers</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

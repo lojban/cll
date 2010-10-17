@@ -1,107 +1,50 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               The Shape Of Words To Come: Lojban Morphology - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../4/13/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               lujvo-making examples
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../4/15/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Cultural and other non-algorithmic gismu
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     The Shape Of Words To Come: Lojban Morphology
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-          <h3>14. The gismu creation algorithm</h3>
-
-    <p>The gismu were created through the following process:
-
-    <dl>
-      <dt>1)</dt>
-      <dd>At least one word was found in each of the six source
-      languages (Chinese, English, Hindi, Spanish, Russian, Arabic)
-      corresponding to the proposed gismu. This word was rendered
-      into Lojban phonetics rather liberally: consonant clusters
-      consisting of a stop and the corresponding fricative were
-      simplified to just the fricative (“tc” became “c”, “dj”
-      became “j”) and non-Lojban vowels were mapped onto Lojban
-      ones. Furthermore, morphological endings were dropped. The
-      same mapping rules were applied to all six languages for the
-      sake of consistency.</dd>
-
-      <dt>2)</dt>
-      <dd>All possible gismu forms were matched against the six
-      source-language forms. The matches were scored as
-      follows:
-
-      <dl>
-        <dt>2a)</dt>
-        <dd>If three or more letters were the same in the proposed
-        gismu and the source-language word, and appeared in the same
-        order, the score was equal to the number of letters that were
-        the same. Intervening letters, if any, did not matter.</dd>
-
-        <dt>2b)</dt>
-        <dd>If exactly two letters were the same in the proposed
-        gismu and the source-language word, and either the two
-        letters were consecutive in both words, or were separated by
-        a single letter in both words, the score was 2. Letters in
-        reversed order got no score.</dd>
-
-        <dt>2c)</dt>
-        <dd>Otherwise, the score was 0.</dd>
-      </dl>
-      </dd>
-
-      <dt>3)</dt>
-      <dd>The scores were divided by the length of the
-      source-language word in its Lojbanized form, and then
-      multiplied by a weighting value specific to each language,
-      reflecting the proportional number of first-language and
-      second-language speakers of the language. (Second-language
-      speakers were reckoned at half their actual numbers.) The
-      weights were chosen to sum to 1.00. The sum of the weighted
-      scores was the total score for the proposed gismu form.</dd>
-
-      <dt>4)</dt>
-      <dd>Any gismu forms that conflicted with existing gismu were
-      removed. Obviously, being identical with an existing gismu
-      constitutes a conflict. In addition, a proposed gismu that
-      was identical to an existing gismu except for the final vowel
-      was considered a conflict, since two such gismu would have
-      identical 4-letter rafsi.</dd>
-
-      <dd>More subtly: If the proposed gismu was identical to an
-      existing gismu except for a single consonant, and the
-      consonant was “too similar” based on the following table,
-      then the proposed gismu was rejected.
-
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The Shape Of Words To Come: Lojban Morphology - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../4/13/">Previous</a></div>
+<div class="nav-section-name">lujvo-making examples</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../4/15/">Next</a></div>
+<div class="nav-section-name">Cultural and other non-algorithmic gismu</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">The Shape Of Words To Come: Lojban Morphology</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h3>14. The gismu creation algorithm</h3>
+<p>The gismu were created through the following process:</p>
+<dl>
+<dt>1)</dt>
+<dd>At least one word was found in each of the six source languages (Chinese, English, Hindi, Spanish, Russian, Arabic) corresponding to the proposed gismu. This word was rendered into Lojban phonetics rather liberally: consonant clusters consisting of a stop and the corresponding fricative were simplified to just the fricative (“tc” became “c”, “dj” became “j”) and non-Lojban vowels were mapped onto Lojban ones. Furthermore, morphological endings were dropped. The same mapping rules were applied to all six languages for the sake of consistency.</dd>
+<dt>2)</dt>
+<dd>All possible gismu forms were matched against the six source-language forms. The matches were scored as follows:
+<dl>
+<dt>2a)</dt>
+<dd>If three or more letters were the same in the proposed gismu and the source-language word, and appeared in the same order, the score was equal to the number of letters that were the same. Intervening letters, if any, did not matter.</dd>
+<dt>2b)</dt>
+<dd>If exactly two letters were the same in the proposed gismu and the source-language word, and either the two letters were consecutive in both words, or were separated by a single letter in both words, the score was 2. Letters in reversed order got no score.</dd>
+<dt>2c)</dt>
+<dd>Otherwise, the score was 0.</dd>
+</dl>
+</dd>
+<dt>3)</dt>
+<dd>The scores were divided by the length of the source-language word in its Lojbanized form, and then multiplied by a weighting value specific to each language, reflecting the proportional number of first-language and second-language speakers of the language. (Second-language speakers were reckoned at half their actual numbers.) The weights were chosen to sum to 1.00. The sum of the weighted scores was the total score for the proposed gismu form.</dd>
+<dt>4)</dt>
+<dd>Any gismu forms that conflicted with existing gismu were removed. Obviously, being identical with an existing gismu constitutes a conflict. In addition, a proposed gismu that was identical to an existing gismu except for the final vowel was considered a conflict, since two such gismu would have identical 4-letter rafsi.</dd>
+<dd>More subtly: If the proposed gismu was identical to an existing gismu except for a single consonant, and the consonant was “too similar” based on the following table, then the proposed gismu was rejected.
 <pre>
       proposed gismu         existing gismu
 
@@ -123,20 +66,10 @@
             x                       g, k
             z                       j, s
 </pre>
-
-    See <a href="../4/">Section 4</a> for an example.</dd>
-
-      <dt>5)</dt>
-      <dd>The gismu form with the highest score usually became the
-      actual gismu. Sometimes a lower-scoring form was used to
-      provide a better rafsi. A few gismu were changed in error as
-      a result of transcription blunders (for example, the gismu
-      “gismu” should have been “gicmu”, but it’s too late to
-      fix it now).</dd>
-
-      <dd>The language weights used to make most of the gismu were as
-      follows:
-
+See <a href="../4/">Section 4</a> for an example.</dd>
+<dt>5)</dt>
+<dd>The gismu form with the highest score usually became the actual gismu. Sometimes a lower-scoring form was used to provide a better rafsi. A few gismu were changed in error as a result of transcription blunders (for example, the gismu “gismu” should have been “gicmu”, but it’s too late to fix it now).</dd>
+<dd>The language weights used to make most of the gismu were as follows:
 <pre>
     Chinese     0.36
     English     0.21
@@ -145,10 +78,7 @@
     Russian     0.09
     Arabic      0.07
 </pre>
-
-    reflecting 1985 number-of-speakers data. A few gismu were made
-    much later using updated weights:
-
+reflecting 1985 number-of-speakers data. A few gismu were made much later using updated weights:
 <pre>
     Chinese     0.347
     Hindi       0.196
@@ -157,47 +87,23 @@
     Russian     0.089
     Arabic      0.085
 </pre>
-
-    (English and Hindi switched places due to demographic changes.)
-    </dl>
-
-    </p>
-
-
-    <p>Note that the stressed vowel of the gismu was considered
-    sufficiently distinctive that two or more gismu may differ only
-    in this vowel; as an extreme example, “bradi”, “bredi”,
-    “bridi”, and “brodi” (but fortunately not “brudi”) are
-    all existing gismu.</p>
-
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../4/13/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               lujvo-making examples
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../4/15/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Cultural and other non-algorithmic gismu
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     The Shape Of Words To Come: Lojban Morphology
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+(English and Hindi switched places due to demographic changes.)</dd>
+</dl>
+<p>Note that the stressed vowel of the gismu was considered sufficiently distinctive that two or more gismu may differ only in this vowel; as an extreme example, “bradi”, “bredi”, “bridi”, and “brodi” (but fortunately not “brudi”) are all existing gismu.</p>
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../4/13/">Previous</a></div>
+<div class="nav-section-name">lujvo-making examples</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../4/15/">Next</a></div>
+<div class="nav-section-name">Cultural and other non-algorithmic gismu</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">The Shape Of Words To Come: Lojban Morphology</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

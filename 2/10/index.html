@@ -1,160 +1,83 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-          A Quick Tour of Lojban Grammar, With Diagrams - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../2/9/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               tanru
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../2/11/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Examples of brivla
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                A Quick Tour of Lojban Grammar, With Diagrams
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-        <h3>10. Description sumti</h3>
-
-  <p>Often we wish to talk about things other than the speaker, the
-  listener and things we can point to. Let’s say I want to talk
-  about a talker other than “mi”. What I want to talk about would
-  naturally fit into the first place of “tavla”. Lojban, it turns
-  out, has an operator that pulls this first place out of a selbri
-  and converts it to a sumti called a “description sumti”. The
-  description sumti “le tavla ku” means “the talker”, and may
-  be used wherever any sumti may be used.</p>
-
-  <p>For example,
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>A Quick Tour of Lojban Grammar, With Diagrams - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../2/9/">Previous</a></div>
+<div class="nav-section-name">tanru</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../2/11/">Next</a></div>
+<div class="nav-section-name">Examples of brivla</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">A Quick Tour of Lojban Grammar, With Diagrams</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h3>10. Description sumti</h3>
+<p>Often we wish to talk about things other than the speaker, the listener and things we can point to. Let’s say I want to talk about a talker other than “mi”. What I want to talk about would naturally fit into the first place of “tavla”. Lojban, it turns out, has an operator that pulls this first place out of a selbri and converts it to a sumti called a “description sumti”. The description sumti “le tavla ku” means “the talker”, and may be used wherever any sumti may be used.</p>
+<p>For example,</p>
 <pre>
-<a id="e1">10.1)</a>  <span class="sumti">mi</span> <span class="selbri">tavla</span> <span class="sumti">do</span> <span class="sumti">le tavla ku</span>
+<a id="e1" name="e1">10.1)</a>  <span class="sumti">mi</span> <span class="selbri">tavla</span> <span class="sumti">do</span> <span class="sumti">le tavla ku</span>
 </pre>
-
-  means the same as
-
+means the same as
 <pre>
-<a id="e2">10.2)</a>  I talk to you about the talker
+<a id="e2" name="e2">10.2)</a>  I talk to you about the talker
 </pre>
-
-  where “the talker” is presumably someone other than me, though
-  not necessarily.</p>
-
-  <p>Similarly “le sutra tavla ku” is “the fast talker”, and
-  “le sutra te tavla ku” is “the fast subject of talk” or “the
-  subject of fast talk”. Which of these related meanings is
-  understood will depend on the context in which the expression is
-  used. The most plausible interpretation within the context will
-  generally be assumed by a listener to be the intended one.</p>
-
-  <p>In many cases the word “ku” may be omitted. In particular,
-  it is never necessary in a description at the end of a sentence,
-  so:
-
+where “the talker” is presumably someone other than me, though not necessarily.
+<p>Similarly “le sutra tavla ku” is “the fast talker”, and “le sutra te tavla ku” is “the fast subject of talk” or “the subject of fast talk”. Which of these related meanings is understood will depend on the context in which the expression is used. The most plausible interpretation within the context will generally be assumed by a listener to be the intended one.</p>
+<p>In many cases the word “ku” may be omitted. In particular, it is never necessary in a description at the end of a sentence, so:</p>
 <pre>
-<a id="e3">10.3)</a>  <span class="sumti">mi</span> <span class="selbri">tavla</span>   <span class="sumti">do</span>  <span class="sumti">le tavla</span>
+<a id="e3" name="e3">10.3)</a>  <span class="sumti">mi</span> <span class="selbri">tavla</span>   <span class="sumti">do</span>  <span class="sumti">le tavla</span>
        I  talk-to you about-the talker
 </pre>
-
-  means exactly the same thing as <a href="../10/#e1">Example 10.1</a>.</p>
-
-  <p>There is a problem when we want to say “The fast one is
-  talking.” The “obvious” translation “le sutra tavla” turns
-  out to mean “the fast talker”, and has no selbri at all. To
-  solve this problem we can use the word “cu”, which so far has
-  always been optional, in front of the selbri.</p>
-
-  <p>The word “cu” has no meaning, and exists only to mark the
-  beginning of the selbri within the bridi, separating it from a
-  previous sumti. It comes before any other part of the selbri,
-  including other cmavo like “se” or “te”. Thus:
-
+means exactly the same thing as <a href="../10/#e1">Example 10.1</a>.
+<p>There is a problem when we want to say “The fast one is talking.” The “obvious” translation “le sutra tavla” turns out to mean “the fast talker”, and has no selbri at all. To solve this problem we can use the word “cu”, which so far has always been optional, in front of the selbri.</p>
+<p>The word “cu” has no meaning, and exists only to mark the beginning of the selbri within the bridi, separating it from a previous sumti. It comes before any other part of the selbri, including other cmavo like “se” or “te”. Thus:</p>
 <pre>
-<a id="e4">10.4)</a>  <span class="sumti">le sutra tavla</span>
+<a id="e4" name="e4">10.4)</a>  <span class="sumti">le sutra tavla</span>
        The fast talker
 
-<a id="e5">10.5)</a>  <span class="sumti">le sutra</span> cu <span class="selbri">tavla</span>
+<a id="e5" name="e5">10.5)</a>  <span class="sumti">le sutra</span> cu <span class="selbri">tavla</span>
        The fast one is talking.
 
-<a id="e6">10.6)</a>  <span class="sumti">le sutra se tavla</span>
+<a id="e6" name="e6">10.6)</a>  <span class="sumti">le sutra se tavla</span>
        The fast talked-to one
 
-<a id="e7">10.7)</a>  <span class="sumti">le sutra</span> cu <span class="selbri">se tavla</span>
+<a id="e7" name="e7">10.7)</a>  <span class="sumti">le sutra</span> cu <span class="selbri">se tavla</span>
        The fast one is talked to.
 </pre>
-</p>
-
-  <p>Consider the following more complex example, with two description
-  sumti.
-
+<p>Consider the following more complex example, with two description sumti.</p>
 <pre>
-<a id="e8">10.8)</a>  <span class="sumti">mi</span> [cu] <span class="selbri">tavla</span>   <span class="sumti">le vecnu [ku]</span> <span class="sumti">le blari'o [ku]</span>
+<a id="e8" name="e8">10.8)</a>  <span class="sumti">mi</span> [cu] <span class="selbri">tavla</span>   <span class="sumti">le vecnu [ku]</span> <span class="sumti">le blari'o [ku]</span>
        I       talk-to the seller    about the blue-green-thing.
 </pre>
-</p>
-
-  <p>The sumti “le vecnu” contains the selbri “vecnu”, which
-  has the “seller” in the x1 place, and uses it in this sentence
-  to describe a particular “seller” that the speaker has in mind
-  (one that he or she probably expects the listener will also know
-  about). Similarly, the speaker has a particular blue-green thing
-  in mind, which is described using “le” to mark “blari'o”, a
-  selbri whose first sumti is something blue-green.</p>
-
-  <p>It is safe to omit both occurrences of “ku” in
-  <a href="../10/#e8">Example 10.8</a>, and it is also safe to omit the “cu”.</p>
-
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../2/9/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               tanru
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../2/11/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               Examples of brivla
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                A Quick Tour of Lojban Grammar, With Diagrams
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+<p>The sumti “le vecnu” contains the selbri “vecnu”, which has the “seller” in the x1 place, and uses it in this sentence to describe a particular “seller” that the speaker has in mind (one that he or she probably expects the listener will also know about). Similarly, the speaker has a particular blue-green thing in mind, which is described using “le” to mark “blari'o”, a selbri whose first sumti is something blue-green.</p>
+<p>It is safe to omit both occurrences of “ku” in <a href="../10/#e8">Example 10.8</a>, and it is also safe to omit the “cu”.</p>
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../2/9/">Previous</a></div>
+<div class="nav-section-name">tanru</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../2/11/">Next</a></div>
+<div class="nav-section-name">Examples of brivla</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">A Quick Tour of Lojban Grammar, With Diagrams</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

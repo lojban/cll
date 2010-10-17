@@ -1,1162 +1,468 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               Formal Grammars - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../21/2/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               EBNF Grammar of Lojban
-            </div>
-         </div>
-         <div class="nav-next">
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-               Formal Grammars
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-       </div>
-
-      <hr />
-          <h3>3. EBNF Cross-Reference</h3>
-
-    <dl>
-      <dt>A</dt>
-
-      <dd><a href="../2/#b802">ek</a><sub>802</sub></dd>
-
-      <dt>BAI</dt>
-
-      <dd><a href="../2/#b972">simple-tense-modal</a><sub>972</sub></dd>
-
-      <dt>BAhE</dt>
-
-      <dd><a href="../2/#b1100">word</a><sub>1100</sub></dd>
-
-      <dt>BE</dt>
-
-      <dd><a href="../2/#b160">linkargs</a><sub>160</sub></dd>
-
-      <dt>BEI</dt>
-
-      <dd><a href="../2/#b161">links</a><sub>161</sub></dd>
-
-      <dt>BEhO</dt>
-
-      <dd><a href="../2/#b160">linkargs</a><sub>160</sub></dd>
-
-      <dt>BIhE</dt>
-
-      <dd><a href="../2/#b311">mex-1</a><sub>311</sub></dd>
-
-      <dt>BIhI</dt>
-
-      <dd><a href="../2/#b932">interval</a><sub>932</sub></dd>
-
-      <dt>BO</dt>
-
-      <dd><a href="../2/#b52">bridi-tail-2</a><sub>52</sub>, <a
-      href="../2/#b383">operand-2</a><sub>383</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub>, <a
-      href="../2/#b371">operator-1</a><sub>371</sub>, <a
-      href="../2/#b135">selbri-5</a><sub>135</sub>, <a
-      href="../2/#b136">selbri-6</a><sub>136</sub>, <a
-      href="../2/#b13">statement-2</a><sub>13</sub>, <a
-      href="../2/#b93">sumti-3</a><sub>93</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub>, <a
-      href="../2/#b2">text-1</a><sub>2</sub></dd>
-
-      <dt>BOI</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub>, <a
-      href="../2/#b300">quantifier</a><sub>300</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>BRIVLA</dt>
-
-      <dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>BU</dt>
-
-      <dd><a href="../2/#b987">lerfu-word</a><sub>987</sub></dd>
-
-      <dt>BY</dt>
-
-      <dd><a href="../2/#b987">lerfu-word</a><sub>987</sub></dd>
-
-      <dt>CAI</dt>
-
-      <dd><a href="../2/#b413">indicator</a><sub>413</sub></dd>
-
-      <dt>CAhA</dt>
-
-      <dd><a href="../2/#b972">simple-tense-modal</a><sub>972</sub></dd>
-
-      <dt>CEI</dt>
-
-      <dd><a href="../2/#b150">tanru-unit</a><sub>150</sub></dd>
-
-      <dt>CEhE</dt>
-
-      <dd><a href="../2/#b82">terms-2</a><sub>82</sub></dd>
-
-      <dt>CMENE</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub>, <a
-      href="../2/#b0">text</a><sub>0</sub></dd>
-
-      <dt>CO</dt>
-
-      <dd><a href="../2/#b132">selbri-2</a><sub>132</sub></dd>
-
-      <dt>COI</dt>
-
-      <dd><a href="../2/#b415">vocative</a><sub>415</sub></dd>
-
-      <dt>CU</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b40">sentence</a><sub>40</sub></dd>
-
-      <dt>CUhE</dt>
-
-      <dd><a href="../2/#b972">simple-tense-modal</a><sub>972</sub></dd>
-
-      <dt>DAhO</dt>
-
-      <dd><a href="../2/#b413">indicator</a><sub>413</sub></dd>
-
-      <dt>DOI</dt>
-
-      <dd><a href="../2/#b415">vocative</a><sub>415</sub></dd>
-
-      <dt>DOhU</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub></dd>
-
-      <dt>FA</dt>
-
-      <dd><a href="../2/#b83">term</a><sub>83</sub></dd>
-
-      <dt>FAhA</dt>
-
-      <dd><a href="../2/#b1046">space-interval</a><sub>1046</sub>, <a
-      href="../2/#b1045">space-offset</a><sub>1045</sub></dd>
-
-      <dt>FEhE</dt>
-
-      <dd><a href="../2/#b1049">space-int-props</a><sub>1049</sub></dd>
-
-      <dt>FEhU</dt>
-
-      <dd><a href="../2/#b815">tense-modal</a><sub>815</sub></dd>
-
-      <dt>FIhO</dt>
-
-      <dd><a href="../2/#b815">tense-modal</a><sub>815</sub></dd>
-
-      <dt>FOI</dt>
-
-      <dd><a href="../2/#b987">lerfu-word</a><sub>987</sub></dd>
-
-      <dt>FUhA</dt>
-
-      <dd><a href="../2/#b310">mex</a><sub>310</sub></dd>
-
-      <dt>FUhE</dt>
-
-      <dd><a href="../2/#b411">indicators</a><sub>411</sub></dd>
-
-      <dt>FUhO</dt>
-
-      <dd><a href="../2/#b413">indicator</a><sub>413</sub></dd>
-
-      <dt>GA</dt>
-
-      <dd><a href="../2/#b807">gek</a><sub>807</sub></dd>
-
-      <dt>GAhO</dt>
-
-      <dd><a href="../2/#b806">joik</a><sub>806</sub></dd>
-
-      <dt>GEhU</dt>
-
-      <dd><a href="../2/#b122">relative-clause</a><sub>122</sub></dd>
-
-      <dt>GI</dt>
-
-      <dd><a href="../2/#b807">gek</a><sub>807</sub>, <a
-      href="../2/#b816">gik</a><sub>816</sub></dd>
-
-      <dt>GIhA</dt>
-
-      <dd><a href="../2/#b818">gihek</a><sub>818</sub></dd>
-
-      <dt>GOI</dt>
-
-      <dd><a href="../2/#b122">relative-clause</a><sub>122</sub></dd>
-
-      <dt>GOhA</dt>
-
-      <dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>GUhA</dt>
-
-      <dd><a href="../2/#b808">guhek</a><sub>808</sub></dd>
-
-      <dt>I</dt>
-
-      <dd><a href="../2/#b10">paragraph</a><sub>10</sub>, <a
-      href="../2/#b12">statement-1</a><sub>12</sub>, <a
-      href="../2/#b13">statement-2</a><sub>13</sub>, <a
-      href="../2/#b2">text-1</a><sub>2</sub></dd>
-
-      <dt>JA</dt>
-
-      <dd><a href="../2/#b805">jek</a><sub>805</sub></dd>
-
-      <dt>JAI</dt>
-
-      <dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>JOI</dt>
-
-      <dd><a href="../2/#b806">joik</a><sub>806</sub></dd>
-
-      <dt>JOhI</dt>
-
-      <dd><a href="../2/#b385">operand-3</a><sub>385</sub></dd>
-
-      <dt>KE</dt>
-
-      <dd><a href="../2/#b50">bridi-tail</a><sub>50</sub>, <a
-      href="../2/#b54">gek-sentence</a><sub>54</sub>, <a
-      href="../2/#b381">operand</a><sub>381</sub>, <a
-      href="../2/#b372">operator-2</a><sub>372</sub>, <a
-      href="../2/#b370">operator</a><sub>370</sub>, <a
-      href="../2/#b134">selbri-4</a><sub>134</sub>, <a
-      href="../2/#b91">sumti-1</a><sub>91</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>KEI</dt>
-
-      <dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>KEhE</dt>
-
-      <dd><a href="../2/#b50">bridi-tail</a><sub>50</sub>, <a
-      href="../2/#b54">gek-sentence</a><sub>54</sub>, <a
-      href="../2/#b381">operand</a><sub>381</sub>, <a
-      href="../2/#b372">operator-2</a><sub>372</sub>, <a
-      href="../2/#b370">operator</a><sub>370</sub>, <a
-      href="../2/#b134">selbri-4</a><sub>134</sub>, <a
-      href="../2/#b91">sumti-1</a><sub>91</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>KI</dt>
-
-      <dd><a href="../2/#b972">simple-tense-modal</a><sub>972</sub></dd>
-
-      <dt>KOhA</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>KU</dt>
-
-      <dd><a href="../2/#b95">sumti-5</a><sub>95</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub>, <a
-      href="../2/#b83">term</a><sub>83</sub></dd>
-
-      <dt>KUhE</dt>
-
-      <dd><a href="../2/#b312">mex-2</a><sub>312</sub></dd>
-
-      <dt>KUhO</dt>
-
-      <dd><a href="../2/#b122">relative-clause</a><sub>122</sub></dd>
-
-      <dt>LA</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>LAU</dt>
-
-      <dd><a href="../2/#b987">lerfu-word</a><sub>987</sub></dd>
-
-      <dt>LAhE</dt>
-
-      <dd><a href="../2/#b385">operand-3</a><sub>385</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>LE</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>LEhU</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>LI</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>LIhU</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>LOhO</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>LOhU</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>LU</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>LUhU</dt>
-
-      <dd><a href="../2/#b385">operand-3</a><sub>385</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>MAI</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub></dd>
-
-      <dt>MAhO</dt>
-
-      <dd><a href="../2/#b374">mex-operator</a><sub>374</sub></dd>
-
-      <dt>ME</dt>
-
-      <dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>MEhU</dt>
-
-      <dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>MOI</dt>
-
-      <dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>MOhE</dt>
-
-      <dd><a href="../2/#b385">operand-3</a><sub>385</sub></dd>
-
-      <dt>MOhI</dt>
-
-      <dd><a href="../2/#b1040">space</a><sub>1040</sub></dd>
-
-      <dt>NA</dt>
-
-      <dd><a href="../2/#b802">ek</a><sub>802</sub>, <a
-      href="../2/#b20">fragment</a><sub>20</sub>, <a
-      href="../2/#b54">gek-sentence</a><sub>54</sub>, <a
-      href="../2/#b818">gihek</a><sub>818</sub>, <a
-      href="../2/#b805">jek</a><sub>805</sub>, <a
-      href="../2/#b131">selbri-1</a><sub>131</sub>, <a
-      href="../2/#b83">term</a><sub>83</sub></dd>
-
-      <dt>NAI</dt>
-
-      <dd><a href="../2/#b802">ek</a><sub>802</sub>, <a
-      href="../2/#b807">gek</a><sub>807</sub>, <a
-      href="../2/#b818">gihek</a><sub>818</sub>, <a
-      href="../2/#b816">gik</a><sub>816</sub>, <a
-      href="../2/#b808">guhek</a><sub>808</sub>, <a
-      href="../2/#b413">indicator</a><sub>413</sub>, <a
-      href="../2/#b1051">interval-property</a><sub>1051</sub>, <a
-      href="../2/#b932">interval</a><sub>932</sub>, <a
-      href="../2/#b805">jek</a><sub>805</sub>, <a
-      href="../2/#b806">joik</a><sub>806</sub>, <a
-      href="../2/#b972">simple-tense-modal</a><sub>972</sub>, <a
-      href="../2/#b1046">space-interval</a><sub>1046</sub>, <a
-      href="../2/#b1045">space-offset</a><sub>1045</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub>, <a
-      href="../2/#b0">text</a><sub>0</sub>, <a
-      href="../2/#b1033">time-offset</a><sub>1033</sub>, <a
-      href="../2/#b1030">time</a><sub>1030</sub>, <a
-      href="../2/#b415">vocative</a><sub>415</sub></dd>
-
-      <dt>NAhE</dt>
-
-      <dd><a href="../2/#b374">mex-operator</a><sub>374</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub>, <a
-      href="../2/#b136">selbri-6</a><sub>136</sub>, <a
-      href="../2/#b972">simple-tense-modal</a><sub>972</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>NAhU</dt>
-
-      <dd><a href="../2/#b374">mex-operator</a><sub>374</sub></dd>
-
-      <dt>NIhE</dt>
-
-      <dd><a href="../2/#b385">operand-3</a><sub>385</sub></dd>
-
-      <dt>NIhO</dt>
-
-      <dd><a href="../2/#b4">paragraphs</a><sub>4</sub>, <a
-      href="../2/#b2">text-1</a><sub>2</sub></dd>
-
-      <dt>NOI</dt>
-
-      <dd><a href="../2/#b122">relative-clause</a><sub>122</sub></dd>
-
-      <dt>NU</dt>
-
-      <dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>NUhA</dt>
-
-      <dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>NUhI</dt>
-
-      <dd><a href="../2/#b85">termset</a><sub>85</sub></dd>
-
-      <dt>NUhU</dt>
-
-      <dd><a href="../2/#b85">termset</a><sub>85</sub></dd>
-
-      <dt>PA</dt>
-
-      <dd><a href="../2/#b817">lerfu-string</a><sub>817</sub>, <a
-      href="../2/#b812">number</a><sub>812</sub></dd>
-
-      <dt>PEhE</dt>
-
-      <dd><a href="../2/#b81">terms-1</a><sub>81</sub></dd>
-
-      <dt>PEhO</dt>
-
-      <dd><a href="../2/#b312">mex-2</a><sub>312</sub></dd>
-
-      <dt>PU</dt>
-
-      <dd><a href="../2/#b1033">time-offset</a><sub>1033</sub>, <a
-      href="../2/#b1030">time</a><sub>1030</sub></dd>
-
-      <dt>RAhO</dt>
-
-      <dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>ROI</dt>
-
-      <dd><a
-      href="../2/#b1051">interval-property</a><sub>1051</sub></dd>
-
-      <dt>SA</dt>
-
-      <dd><a href="../2/#b1101">null</a><sub>1101</sub></dd>
-
-      <dt>SE</dt>
-
-      <dd><a href="../2/#b802">ek</a><sub>802</sub>, <a
-      href="../2/#b807">gek</a><sub>807</sub>, <a
-      href="../2/#b818">gihek</a><sub>818</sub>, <a
-      href="../2/#b808">guhek</a><sub>808</sub>, <a
-      href="../2/#b932">interval</a><sub>932</sub>, <a
-      href="../2/#b805">jek</a><sub>805</sub>, <a
-      href="../2/#b806">joik</a><sub>806</sub>, <a
-      href="../2/#b374">mex-operator</a><sub>374</sub>, <a
-      href="../2/#b972">simple-tense-modal</a><sub>972</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>SEI</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub></dd>
-
-      <dt>SEhU</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub></dd>
-
-      <dt>SI</dt>
-
-      <dd><a href="../2/#b1101">null</a><sub>1101</sub></dd>
-
-      <dt>SOI</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub></dd>
-
-      <dt>SU</dt>
-
-      <dd><a href="../2/#b1101">null</a><sub>1101</sub></dd>
-
-      <dt>TAhE</dt>
-
-      <dd><a
-      href="../2/#b1051">interval-property</a><sub>1051</sub></dd>
-
-      <dt>TEI</dt>
-
-      <dd><a href="../2/#b987">lerfu-word</a><sub>987</sub></dd>
-
-      <dt>TEhU</dt>
-
-      <dd><a href="../2/#b374">mex-operator</a><sub>374</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub></dd>
-
-      <dt>TO</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub></dd>
-
-      <dt>TOI</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub></dd>
-
-      <dt>TUhE</dt>
-
-      <dd><a href="../2/#b14">statement-3</a><sub>14</sub></dd>
-
-      <dt>TUhU</dt>
-
-      <dd><a href="../2/#b14">statement-3</a><sub>14</sub></dd>
-
-      <dt>UI</dt>
-
-      <dd><a href="../2/#b413">indicator</a><sub>413</sub></dd>
-
-      <dt>VA</dt>
-
-      <dd><a href="../2/#b1045">space-offset</a><sub>1045</sub>, <a
-      href="../2/#b1040">space</a><sub>1040</sub></dd>
-
-      <dt>VAU</dt>
-
-      <dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a
-      href="../2/#b71">tail-terms</a><sub>71</sub></dd>
-
-      <dt>VEI</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b300">quantifier</a><sub>300</sub></dd>
-
-      <dt>VEhA</dt>
-
-      <dd><a href="../2/#b1046">space-interval</a><sub>1046</sub></dd>
-
-      <dt>VEhO</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b300">quantifier</a><sub>300</sub></dd>
-
-      <dt>VIhA</dt>
-
-      <dd><a href="../2/#b1046">space-interval</a><sub>1046</sub></dd>
-
-      <dt>VUhO</dt>
-
-      <dd><a href="../2/#b90">sumti</a><sub>90</sub></dd>
-
-      <dt>VUhU</dt>
-
-      <dd><a href="../2/#b374">mex-operator</a><sub>374</sub></dd>
-
-      <dt>XI</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub></dd>
-
-      <dt>Y</dt>
-
-      <dd><a href="../2/#b413">indicator</a><sub>413</sub></dd>
-
-      <dt>ZAhO</dt>
-
-      <dd><a
-      href="../2/#b1051">interval-property</a><sub>1051</sub></dd>
-
-      <dt>ZEI</dt>
-
-      <dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>ZEhA</dt>
-
-      <dd><a href="../2/#b1030">time</a><sub>1030</sub></dd>
-
-      <dt>ZI</dt>
-
-      <dd><a href="../2/#b1033">time-offset</a><sub>1033</sub>, <a
-      href="../2/#b1030">time</a><sub>1030</sub></dd>
-
-      <dt>ZIhE</dt>
-
-      <dd><a href="../2/#b121">relative-clauses</a><sub>121</sub></dd>
-
-      <dt>ZO</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>ZOI</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>ZOhU</dt>
-
-      <dd><a href="../2/#b30">prenex</a><sub>30</sub></dd>
-
-      <dt>any-word</dt>
-
-      <dd><a href="../2/#b987">lerfu-word</a><sub>987</sub>, <a
-      href="../2/#b1101">null</a><sub>1101</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub>, <a
-      href="../2/#b1100">word</a><sub>1100</sub></dd>
-
-      <dt>anything</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>bridi-tail</dt>
-
-      <dd><a href="../2/#b50">bridi-tail</a><sub>50</sub>, <a
-      href="../2/#b40">sentence</a><sub>40</sub></dd>
-
-      <dt>bridi-tail-1</dt>
-
-      <dd><a href="../2/#b50">bridi-tail</a><sub>50</sub></dd>
-
-      <dt>bridi-tail-2</dt>
-
-      <dd><a href="../2/#b51">bridi-tail-1</a><sub>51</sub>, <a
-      href="../2/#b52">bridi-tail-2</a><sub>52</sub></dd>
-
-      <dt>bridi-tail-3</dt>
-
-      <dd><a href="../2/#b52">bridi-tail-2</a><sub>52</sub></dd>
-
-      <dt>ek</dt>
-
-      <dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a
-      href="../2/#b421">joik-ek</a><sub>421</sub>, <a
-      href="../2/#b383">operand-2</a><sub>383</sub>, <a
-      href="../2/#b381">operand</a><sub>381</sub>, <a
-      href="../2/#b91">sumti-1</a><sub>91</sub>, <a
-      href="../2/#b93">sumti-3</a><sub>93</sub></dd>
-
-      <dt>fragment</dt>
-
-      <dd><a href="../2/#b10">paragraph</a><sub>10</sub></dd>
-
-      <dt>free</dt>
-
-      <dd><a href="../2/#b0">text</a><sub>0</sub></dd>
-
-      <dt>gek</dt>
-
-      <dd><a href="../2/#b54">gek-sentence</a><sub>54</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub>, <a
-      href="../2/#b94">sumti-4</a><sub>94</sub>, <a
-      href="../2/#b85">termset</a><sub>85</sub></dd>
-
-      <dt>gek-sentence</dt>
-
-      <dd><a href="../2/#b53">bridi-tail-3</a><sub>53</sub>, <a
-      href="../2/#b54">gek-sentence</a><sub>54</sub></dd>
-
-      <dt>gihek</dt>
-
-      <dd><a href="../2/#b51">bridi-tail-1</a><sub>51</sub>, <a
-      href="../2/#b52">bridi-tail-2</a><sub>52</sub>, <a
-      href="../2/#b50">bridi-tail</a><sub>50</sub>, <a
-      href="../2/#b20">fragment</a><sub>20</sub></dd>
-
-      <dt>gik</dt>
-
-      <dd><a href="../2/#b54">gek-sentence</a><sub>54</sub>, <a
-      href="../2/#b807">gek</a><sub>807</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub>, <a
-      href="../2/#b371">operator-1</a><sub>371</sub>, <a
-      href="../2/#b136">selbri-6</a><sub>136</sub>, <a
-      href="../2/#b94">sumti-4</a><sub>94</sub>, <a
-      href="../2/#b85">termset</a><sub>85</sub></dd>
-
-      <dt>guhek</dt>
-
-      <dd><a href="../2/#b371">operator-1</a><sub>371</sub>, <a
-      href="../2/#b136">selbri-6</a><sub>136</sub></dd>
-
-      <dt>indicator</dt>
-
-      <dd><a href="../2/#b411">indicators</a><sub>411</sub></dd>
-
-      <dt>indicators</dt>
-
-      <dd><a href="../2/#b0">text</a><sub>0</sub>, <a
-      href="../2/#b1100">word</a><sub>1100</sub></dd>
-
-      <dt>interval</dt>
-
-      <dd><a href="../2/#b806">joik</a><sub>806</sub></dd>
-
-      <dt>interval-property</dt>
-
-      <dd><a href="../2/#b1049">space-int-props</a><sub>1049</sub>, <a
-      href="../2/#b1030">time</a><sub>1030</sub></dd>
-
-      <dt>jek</dt>
-
-      <dd><a href="../2/#b422">joik-jek</a><sub>422</sub>, <a
-      href="../2/#b371">operator-1</a><sub>371</sub>, <a
-      href="../2/#b135">selbri-5</a><sub>135</sub>, <a
-      href="../2/#b971">stag</a><sub>971</sub>, <a
-      href="../2/#b13">statement-2</a><sub>13</sub>, <a
-      href="../2/#b2">text-1</a><sub>2</sub></dd>
-
-      <dt>joik</dt>
-
-      <dd><a href="../2/#b807">gek</a><sub>807</sub>, <a
-      href="../2/#b421">joik-ek</a><sub>421</sub>, <a
-      href="../2/#b422">joik-jek</a><sub>422</sub>, <a
-      href="../2/#b383">operand-2</a><sub>383</sub>, <a
-      href="../2/#b381">operand</a><sub>381</sub>, <a
-      href="../2/#b371">operator-1</a><sub>371</sub>, <a
-      href="../2/#b370">operator</a><sub>370</sub>, <a
-      href="../2/#b134">selbri-4</a><sub>134</sub>, <a
-      href="../2/#b135">selbri-5</a><sub>135</sub>, <a
-      href="../2/#b971">stag</a><sub>971</sub>, <a
-      href="../2/#b13">statement-2</a><sub>13</sub>, <a
-      href="../2/#b91">sumti-1</a><sub>91</sub>, <a
-      href="../2/#b93">sumti-3</a><sub>93</sub>, <a
-      href="../2/#b2">text-1</a><sub>2</sub></dd>
-
-      <dt>joik-ek</dt>
-
-      <dd><a href="../2/#b382">operand-1</a><sub>382</sub>, <a
-      href="../2/#b92">sumti-2</a><sub>92</sub></dd>
-
-      <dt>joik-jek</dt>
-
-      <dd><a href="../2/#b370">operator</a><sub>370</sub>, <a
-      href="../2/#b134">selbri-4</a><sub>134</sub>, <a
-      href="../2/#b12">statement-1</a><sub>12</sub>, <a
-      href="../2/#b491">tag</a><sub>491</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub>, <a
-      href="../2/#b81">terms-1</a><sub>81</sub>, <a
-      href="../2/#b0">text</a><sub>0</sub></dd>
-
-      <dt>lerfu-string</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b987">lerfu-word</a><sub>987</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>lerfu-word</dt>
-
-      <dd><a href="../2/#b817">lerfu-string</a><sub>817</sub>, <a
-      href="../2/#b987">lerfu-word</a><sub>987</sub>, <a
-      href="../2/#b812">number</a><sub>812</sub></dd>
-
-      <dt>linkargs</dt>
-
-      <dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a
-      href="../2/#b151">tanru-unit-1</a><sub>151</sub></dd>
-
-      <dt>links</dt>
-
-      <dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a
-      href="../2/#b160">linkargs</a><sub>160</sub>, <a
-      href="../2/#b161">links</a><sub>161</sub></dd>
-
-      <dt>mex</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b374">mex-operator</a><sub>374</sub>, <a
-      href="../2/#b300">quantifier</a><sub>300</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>mex-1</dt>
-
-      <dd><a href="../2/#b311">mex-1</a><sub>311</sub>, <a
-      href="../2/#b310">mex</a><sub>310</sub></dd>
-
-      <dt>mex-2</dt>
-
-      <dd><a href="../2/#b311">mex-1</a><sub>311</sub>, <a
-      href="../2/#b312">mex-2</a><sub>312</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub></dd>
-
-      <dt>mex-operator</dt>
-
-      <dd><a href="../2/#b374">mex-operator</a><sub>374</sub>, <a
-      href="../2/#b372">operator-2</a><sub>372</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>number</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b1051">interval-property</a><sub>1051</sub>, <a
-      href="../2/#b300">quantifier</a><sub>300</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>operand</dt>
-
-      <dd><a href="../2/#b312">mex-2</a><sub>312</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub>, <a
-      href="../2/#b381">operand</a><sub>381</sub>, <a
-      href="../2/#b332">rp-operand</a><sub>332</sub></dd>
-
-      <dt>operand-1</dt>
-
-      <dd><a href="../2/#b381">operand</a><sub>381</sub></dd>
-
-      <dt>operand-2</dt>
-
-      <dd><a href="../2/#b382">operand-1</a><sub>382</sub>, <a
-      href="../2/#b383">operand-2</a><sub>383</sub></dd>
-
-      <dt>operand-3</dt>
-
-      <dd><a href="../2/#b383">operand-2</a><sub>383</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub></dd>
-
-      <dt>operator</dt>
-
-      <dd><a href="../2/#b311">mex-1</a><sub>311</sub>, <a
-      href="../2/#b312">mex-2</a><sub>312</sub>, <a
-      href="../2/#b310">mex</a><sub>310</sub>, <a
-      href="../2/#b372">operator-2</a><sub>372</sub>, <a
-      href="../2/#b370">operator</a><sub>370</sub>, <a
-      href="../2/#b330">rp-expression</a><sub>330</sub></dd>
-
-      <dt>operator-1</dt>
-
-      <dd><a href="../2/#b371">operator-1</a><sub>371</sub>, <a
-      href="../2/#b370">operator</a><sub>370</sub></dd>
-
-      <dt>operator-2</dt>
-
-      <dd><a href="../2/#b371">operator-1</a><sub>371</sub></dd>
-
-      <dt>paragraph</dt>
-
-      <dd><a href="../2/#b4">paragraphs</a><sub>4</sub></dd>
-
-      <dt>paragraphs</dt>
-
-      <dd><a href="../2/#b4">paragraphs</a><sub>4</sub>, <a
-      href="../2/#b2">text-1</a><sub>2</sub></dd>
-
-      <dt>prenex</dt>
-
-      <dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a
-      href="../2/#b11">statement</a><sub>11</sub>, <a
-      href="../2/#b41">subsentence</a><sub>41</sub></dd>
-
-      <dt>quantifier</dt>
-
-      <dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub>, <a
-      href="../2/#b95">sumti-5</a><sub>95</sub>, <a
-      href="../2/#b112">sumti-tail-1</a><sub>112</sub></dd>
-
-      <dt>relative-clause</dt>
-
-      <dd><a href="../2/#b121">relative-clauses</a><sub>121</sub></dd>
-
-      <dt>relative-clauses</dt>
-
-      <dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a
-      href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b95">sumti-5</a><sub>95</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub>, <a
-      href="../2/#b112">sumti-tail-1</a><sub>112</sub>, <a
-      href="../2/#b111">sumti-tail</a><sub>111</sub>, <a
-      href="../2/#b90">sumti</a><sub>90</sub></dd>
-
-      <dt>rp-expression</dt>
-
-      <dd><a href="../2/#b310">mex</a><sub>310</sub>, <a
-      href="../2/#b332">rp-operand</a><sub>332</sub></dd>
-
-      <dt>rp-operand</dt>
-
-      <dd><a href="../2/#b330">rp-expression</a><sub>330</sub></dd>
-
-      <dt>selbri</dt>
-
-      <dd><a href="../2/#b53">bridi-tail-3</a><sub>53</sub>, <a
-      href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b374">mex-operator</a><sub>374</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub>, <a
-      href="../2/#b131">selbri-1</a><sub>131</sub>, <a
-      href="../2/#b136">selbri-6</a><sub>136</sub>, <a
-      href="../2/#b95">sumti-5</a><sub>95</sub>, <a
-      href="../2/#b112">sumti-tail-1</a><sub>112</sub>, <a
-      href="../2/#b815">tense-modal</a><sub>815</sub></dd>
-
-      <dt>selbri-1</dt>
-
-      <dd><a href="../2/#b130">selbri</a><sub>130</sub></dd>
-
-      <dt>selbri-2</dt>
-
-      <dd><a href="../2/#b131">selbri-1</a><sub>131</sub>, <a
-      href="../2/#b132">selbri-2</a><sub>132</sub></dd>
-
-      <dt>selbri-3</dt>
-
-      <dd><a href="../2/#b132">selbri-2</a><sub>132</sub>, <a
-      href="../2/#b134">selbri-4</a><sub>134</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>selbri-4</dt>
-
-      <dd><a href="../2/#b133">selbri-3</a><sub>133</sub></dd>
-
-      <dt>selbri-5</dt>
-
-      <dd><a href="../2/#b134">selbri-4</a><sub>134</sub>, <a
-      href="../2/#b135">selbri-5</a><sub>135</sub></dd>
-
-      <dt>selbri-6</dt>
-
-      <dd><a href="../2/#b135">selbri-5</a><sub>135</sub>, <a
-      href="../2/#b136">selbri-6</a><sub>136</sub></dd>
-
-      <dt>sentence</dt>
-
-      <dd><a href="../2/#b14">statement-3</a><sub>14</sub>, <a
-      href="../2/#b41">subsentence</a><sub>41</sub></dd>
-
-      <dt>simple-tense-modal</dt>
-
-      <dd><a href="../2/#b971">stag</a><sub>971</sub>, <a
-      href="../2/#b815">tense-modal</a><sub>815</sub></dd>
-
-      <dt>space</dt>
-
-      <dd><a href="../2/#b972">simple-tense-modal</a><sub>972</sub></dd>
-
-      <dt>space-int-props</dt>
-
-      <dd><a href="../2/#b1046">space-interval</a><sub>1046</sub></dd>
-
-      <dt>space-interval</dt>
-
-      <dd><a href="../2/#b1040">space</a><sub>1040</sub></dd>
-
-      <dt>space-offset</dt>
-
-      <dd><a href="../2/#b1040">space</a><sub>1040</sub></dd>
-
-      <dt>stag</dt>
-
-      <dd><a href="../2/#b52">bridi-tail-2</a><sub>52</sub>, <a
-      href="../2/#b50">bridi-tail</a><sub>50</sub>, <a
-      href="../2/#b807">gek</a><sub>807</sub>, <a
-      href="../2/#b383">operand-2</a><sub>383</sub>, <a
-      href="../2/#b381">operand</a><sub>381</sub>, <a
-      href="../2/#b371">operator-1</a><sub>371</sub>, <a
-      href="../2/#b370">operator</a><sub>370</sub>, <a
-      href="../2/#b134">selbri-4</a><sub>134</sub>, <a
-      href="../2/#b135">selbri-5</a><sub>135</sub>, <a
-      href="../2/#b13">statement-2</a><sub>13</sub>, <a
-      href="../2/#b91">sumti-1</a><sub>91</sub>, <a
-      href="../2/#b93">sumti-3</a><sub>93</sub>, <a
-      href="../2/#b2">text-1</a><sub>2</sub></dd>
-
-      <dt>statement</dt>
-
-      <dd><a href="../2/#b10">paragraph</a><sub>10</sub>, <a
-      href="../2/#b11">statement</a><sub>11</sub></dd>
-
-      <dt>statement-1</dt>
-
-      <dd><a href="../2/#b11">statement</a><sub>11</sub></dd>
-
-      <dt>statement-2</dt>
-
-      <dd><a href="../2/#b12">statement-1</a><sub>12</sub>, <a
-      href="../2/#b13">statement-2</a><sub>13</sub></dd>
-
-      <dt>statement-3</dt>
-
-      <dd><a href="../2/#b13">statement-2</a><sub>13</sub></dd>
-
-      <dt>subsentence</dt>
-
-      <dd><a href="../2/#b54">gek-sentence</a><sub>54</sub>, <a
-      href="../2/#b122">relative-clause</a><sub>122</sub>, <a
-      href="../2/#b41">subsentence</a><sub>41</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>sumti</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b385">operand-3</a><sub>385</sub>, <a
-      href="../2/#b91">sumti-1</a><sub>91</sub>, <a
-      href="../2/#b94">sumti-4</a><sub>94</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub>, <a
-      href="../2/#b112">sumti-tail-1</a><sub>112</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub>, <a
-      href="../2/#b83">term</a><sub>83</sub></dd>
-
-      <dt>sumti-1</dt>
-
-      <dd><a href="../2/#b90">sumti</a><sub>90</sub></dd>
-
-      <dt>sumti-2</dt>
-
-      <dd><a href="../2/#b91">sumti-1</a><sub>91</sub></dd>
-
-      <dt>sumti-3</dt>
-
-      <dd><a href="../2/#b92">sumti-2</a><sub>92</sub>, <a
-      href="../2/#b93">sumti-3</a><sub>93</sub></dd>
-
-      <dt>sumti-4</dt>
-
-      <dd><a href="../2/#b93">sumti-3</a><sub>93</sub>, <a
-      href="../2/#b94">sumti-4</a><sub>94</sub></dd>
-
-      <dt>sumti-5</dt>
-
-      <dd><a href="../2/#b94">sumti-4</a><sub>94</sub></dd>
-
-      <dt>sumti-6</dt>
-
-      <dd><a href="../2/#b95">sumti-5</a><sub>95</sub>, <a
-      href="../2/#b111">sumti-tail</a><sub>111</sub></dd>
-
-      <dt>sumti-tail</dt>
-
-      <dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>sumti-tail-1</dt>
-
-      <dd><a href="../2/#b111">sumti-tail</a><sub>111</sub></dd>
-
-      <dt>tag</dt>
-
-      <dd><a href="../2/#b54">gek-sentence</a><sub>54</sub>, <a
-      href="../2/#b130">selbri</a><sub>130</sub>, <a
-      href="../2/#b14">statement-3</a><sub>14</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub>, <a
-      href="../2/#b83">term</a><sub>83</sub></dd>
-
-      <dt>tail-terms</dt>
-
-      <dd><a href="../2/#b51">bridi-tail-1</a><sub>51</sub>, <a
-      href="../2/#b52">bridi-tail-2</a><sub>52</sub>, <a
-      href="../2/#b53">bridi-tail-3</a><sub>53</sub>, <a
-      href="../2/#b50">bridi-tail</a><sub>50</sub>, <a
-      href="../2/#b54">gek-sentence</a><sub>54</sub></dd>
-
-      <dt>tanru-unit</dt>
-
-      <dd><a href="../2/#b136">selbri-6</a><sub>136</sub></dd>
-
-      <dt>tanru-unit-1</dt>
-
-      <dd><a href="../2/#b150">tanru-unit</a><sub>150</sub></dd>
-
-      <dt>tanru-unit-2</dt>
-
-      <dd><a href="../2/#b151">tanru-unit-1</a><sub>151</sub>, <a
-      href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
-
-      <dt>tense-modal</dt>
-
-      <dd><a href="../2/#b491">tag</a><sub>491</sub></dd>
-
-      <dt>term</dt>
-
-      <dd><a href="../2/#b160">linkargs</a><sub>160</sub>, <a
-      href="../2/#b161">links</a><sub>161</sub>, <a
-      href="../2/#b122">relative-clause</a><sub>122</sub>, <a
-      href="../2/#b82">terms-2</a><sub>82</sub></dd>
-
-      <dt>terms</dt>
-
-      <dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a
-      href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b30">prenex</a><sub>30</sub>, <a
-      href="../2/#b40">sentence</a><sub>40</sub>, <a
-      href="../2/#b71">tail-terms</a><sub>71</sub>, <a
-      href="../2/#b85">termset</a><sub>85</sub></dd>
-
-      <dt>terms-1</dt>
-
-      <dd><a href="../2/#b80">terms</a><sub>80</sub></dd>
-
-      <dt>terms-2</dt>
-
-      <dd><a href="../2/#b81">terms-1</a><sub>81</sub></dd>
-
-      <dt>termset</dt>
-
-      <dd><a href="../2/#b83">term</a><sub>83</sub></dd>
-
-      <dt>text</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub>, <a
-      href="../2/#b1101">null</a><sub>1101</sub>, <a
-      href="../2/#b97">sumti-6</a><sub>97</sub></dd>
-
-      <dt>text-1</dt>
-
-      <dd><a href="../2/#b14">statement-3</a><sub>14</sub>, <a
-      href="../2/#b0">text</a><sub>0</sub></dd>
-
-      <dt>time</dt>
-
-      <dd><a href="../2/#b972">simple-tense-modal</a><sub>972</sub></dd>
-
-      <dt>time-offset</dt>
-
-      <dd><a href="../2/#b1030">time</a><sub>1030</sub></dd>
-
-      <dt>utterance</dt>
-
-      <dd><a href="../2/#b1101">null</a><sub>1101</sub></dd>
-
-      <dt>vocative</dt>
-
-      <dd><a href="../2/#b32">free</a><sub>32</sub></dd>
-    </dl>
-
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../21/2/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               EBNF Grammar of Lojban
-            </div>
-         </div>
-         <div class="nav-next">
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-               Formal Grammars
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-       </div>
-   </body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Formal Grammars - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../21/2/">Previous</a></div>
+<div class="nav-section-name">EBNF Grammar of Lojban</div>
+</div>
+<div class="nav-next"></div>
+<div class="nav-title">
+<div class="nav-title-title">Formal Grammars</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h3>3. EBNF Cross-Reference</h3>
+<dl>
+<dt>A</dt>
+<dd><a href="../2/#b802">ek</a><sub>802</sub></dd>
+<dt>BAI</dt>
+<dd><a href="../2/#b972">simple-tense-modal</a><sub>972</sub></dd>
+<dt>BAhE</dt>
+<dd><a href="../2/#b1100">word</a><sub>1100</sub></dd>
+<dt>BE</dt>
+<dd><a href="../2/#b160">linkargs</a><sub>160</sub></dd>
+<dt>BEI</dt>
+<dd><a href="../2/#b161">links</a><sub>161</sub></dd>
+<dt>BEhO</dt>
+<dd><a href="../2/#b160">linkargs</a><sub>160</sub></dd>
+<dt>BIhE</dt>
+<dd><a href="../2/#b311">mex-1</a><sub>311</sub></dd>
+<dt>BIhI</dt>
+<dd><a href="../2/#b932">interval</a><sub>932</sub></dd>
+<dt>BO</dt>
+<dd><a href="../2/#b52">bridi-tail-2</a><sub>52</sub>, <a href="../2/#b383">operand-2</a><sub>383</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub>, <a href="../2/#b371">operator-1</a><sub>371</sub>, <a href="../2/#b135">selbri-5</a><sub>135</sub>, <a href="../2/#b136">selbri-6</a><sub>136</sub>, <a href="../2/#b13">statement-2</a><sub>13</sub>, <a href="../2/#b93">sumti-3</a><sub>93</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub>, <a href="../2/#b2">text-1</a><sub>2</sub></dd>
+<dt>BOI</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub>, <a href="../2/#b300">quantifier</a><sub>300</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>BRIVLA</dt>
+<dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>BU</dt>
+<dd><a href="../2/#b987">lerfu-word</a><sub>987</sub></dd>
+<dt>BY</dt>
+<dd><a href="../2/#b987">lerfu-word</a><sub>987</sub></dd>
+<dt>CAI</dt>
+<dd><a href="../2/#b413">indicator</a><sub>413</sub></dd>
+<dt>CAhA</dt>
+<dd><a href="../2/#b972">simple-tense-modal</a><sub>972</sub></dd>
+<dt>CEI</dt>
+<dd><a href="../2/#b150">tanru-unit</a><sub>150</sub></dd>
+<dt>CEhE</dt>
+<dd><a href="../2/#b82">terms-2</a><sub>82</sub></dd>
+<dt>CMENE</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub>, <a href="../2/#b0">text</a><sub>0</sub></dd>
+<dt>CO</dt>
+<dd><a href="../2/#b132">selbri-2</a><sub>132</sub></dd>
+<dt>COI</dt>
+<dd><a href="../2/#b415">vocative</a><sub>415</sub></dd>
+<dt>CU</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b40">sentence</a><sub>40</sub></dd>
+<dt>CUhE</dt>
+<dd><a href="../2/#b972">simple-tense-modal</a><sub>972</sub></dd>
+<dt>DAhO</dt>
+<dd><a href="../2/#b413">indicator</a><sub>413</sub></dd>
+<dt>DOI</dt>
+<dd><a href="../2/#b415">vocative</a><sub>415</sub></dd>
+<dt>DOhU</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub></dd>
+<dt>FA</dt>
+<dd><a href="../2/#b83">term</a><sub>83</sub></dd>
+<dt>FAhA</dt>
+<dd><a href="../2/#b1046">space-interval</a><sub>1046</sub>, <a href="../2/#b1045">space-offset</a><sub>1045</sub></dd>
+<dt>FEhE</dt>
+<dd><a href="../2/#b1049">space-int-props</a><sub>1049</sub></dd>
+<dt>FEhU</dt>
+<dd><a href="../2/#b815">tense-modal</a><sub>815</sub></dd>
+<dt>FIhO</dt>
+<dd><a href="../2/#b815">tense-modal</a><sub>815</sub></dd>
+<dt>FOI</dt>
+<dd><a href="../2/#b987">lerfu-word</a><sub>987</sub></dd>
+<dt>FUhA</dt>
+<dd><a href="../2/#b310">mex</a><sub>310</sub></dd>
+<dt>FUhE</dt>
+<dd><a href="../2/#b411">indicators</a><sub>411</sub></dd>
+<dt>FUhO</dt>
+<dd><a href="../2/#b413">indicator</a><sub>413</sub></dd>
+<dt>GA</dt>
+<dd><a href="../2/#b807">gek</a><sub>807</sub></dd>
+<dt>GAhO</dt>
+<dd><a href="../2/#b806">joik</a><sub>806</sub></dd>
+<dt>GEhU</dt>
+<dd><a href="../2/#b122">relative-clause</a><sub>122</sub></dd>
+<dt>GI</dt>
+<dd><a href="../2/#b807">gek</a><sub>807</sub>, <a href="../2/#b816">gik</a><sub>816</sub></dd>
+<dt>GIhA</dt>
+<dd><a href="../2/#b818">gihek</a><sub>818</sub></dd>
+<dt>GOI</dt>
+<dd><a href="../2/#b122">relative-clause</a><sub>122</sub></dd>
+<dt>GOhA</dt>
+<dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>GUhA</dt>
+<dd><a href="../2/#b808">guhek</a><sub>808</sub></dd>
+<dt>I</dt>
+<dd><a href="../2/#b10">paragraph</a><sub>10</sub>, <a href="../2/#b12">statement-1</a><sub>12</sub>, <a href="../2/#b13">statement-2</a><sub>13</sub>, <a href="../2/#b2">text-1</a><sub>2</sub></dd>
+<dt>JA</dt>
+<dd><a href="../2/#b805">jek</a><sub>805</sub></dd>
+<dt>JAI</dt>
+<dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>JOI</dt>
+<dd><a href="../2/#b806">joik</a><sub>806</sub></dd>
+<dt>JOhI</dt>
+<dd><a href="../2/#b385">operand-3</a><sub>385</sub></dd>
+<dt>KE</dt>
+<dd><a href="../2/#b50">bridi-tail</a><sub>50</sub>, <a href="../2/#b54">gek-sentence</a><sub>54</sub>, <a href="../2/#b381">operand</a><sub>381</sub>, <a href="../2/#b372">operator-2</a><sub>372</sub>, <a href="../2/#b370">operator</a><sub>370</sub>, <a href="../2/#b134">selbri-4</a><sub>134</sub>, <a href="../2/#b91">sumti-1</a><sub>91</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>KEI</dt>
+<dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>KEhE</dt>
+<dd><a href="../2/#b50">bridi-tail</a><sub>50</sub>, <a href="../2/#b54">gek-sentence</a><sub>54</sub>, <a href="../2/#b381">operand</a><sub>381</sub>, <a href="../2/#b372">operator-2</a><sub>372</sub>, <a href="../2/#b370">operator</a><sub>370</sub>, <a href="../2/#b134">selbri-4</a><sub>134</sub>, <a href="../2/#b91">sumti-1</a><sub>91</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>KI</dt>
+<dd><a href="../2/#b972">simple-tense-modal</a><sub>972</sub></dd>
+<dt>KOhA</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>KU</dt>
+<dd><a href="../2/#b95">sumti-5</a><sub>95</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub>, <a href="../2/#b83">term</a><sub>83</sub></dd>
+<dt>KUhE</dt>
+<dd><a href="../2/#b312">mex-2</a><sub>312</sub></dd>
+<dt>KUhO</dt>
+<dd><a href="../2/#b122">relative-clause</a><sub>122</sub></dd>
+<dt>LA</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>LAU</dt>
+<dd><a href="../2/#b987">lerfu-word</a><sub>987</sub></dd>
+<dt>LAhE</dt>
+<dd><a href="../2/#b385">operand-3</a><sub>385</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>LE</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>LEhU</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>LI</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>LIhU</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>LOhO</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>LOhU</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>LU</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>LUhU</dt>
+<dd><a href="../2/#b385">operand-3</a><sub>385</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>MAI</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub></dd>
+<dt>MAhO</dt>
+<dd><a href="../2/#b374">mex-operator</a><sub>374</sub></dd>
+<dt>ME</dt>
+<dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>MEhU</dt>
+<dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>MOI</dt>
+<dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>MOhE</dt>
+<dd><a href="../2/#b385">operand-3</a><sub>385</sub></dd>
+<dt>MOhI</dt>
+<dd><a href="../2/#b1040">space</a><sub>1040</sub></dd>
+<dt>NA</dt>
+<dd><a href="../2/#b802">ek</a><sub>802</sub>, <a href="../2/#b20">fragment</a><sub>20</sub>, <a href="../2/#b54">gek-sentence</a><sub>54</sub>, <a href="../2/#b818">gihek</a><sub>818</sub>, <a href="../2/#b805">jek</a><sub>805</sub>, <a href="../2/#b131">selbri-1</a><sub>131</sub>, <a href="../2/#b83">term</a><sub>83</sub></dd>
+<dt>NAI</dt>
+<dd><a href="../2/#b802">ek</a><sub>802</sub>, <a href="../2/#b807">gek</a><sub>807</sub>, <a href="../2/#b818">gihek</a><sub>818</sub>, <a href="../2/#b816">gik</a><sub>816</sub>, <a href="../2/#b808">guhek</a><sub>808</sub>, <a href="../2/#b413">indicator</a><sub>413</sub>, <a href="../2/#b1051">interval-property</a><sub>1051</sub>, <a href="../2/#b932">interval</a><sub>932</sub>, <a href="../2/#b805">jek</a><sub>805</sub>, <a href="../2/#b806">joik</a><sub>806</sub>, <a href="../2/#b972">simple-tense-modal</a><sub>972</sub>, <a href="../2/#b1046">space-interval</a><sub>1046</sub>, <a href="../2/#b1045">space-offset</a><sub>1045</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub>, <a href="../2/#b0">text</a><sub>0</sub>, <a href="../2/#b1033">time-offset</a><sub>1033</sub>, <a href="../2/#b1030">time</a><sub>1030</sub>, <a href="../2/#b415">vocative</a><sub>415</sub></dd>
+<dt>NAhE</dt>
+<dd><a href="../2/#b374">mex-operator</a><sub>374</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub>, <a href="../2/#b136">selbri-6</a><sub>136</sub>, <a href="../2/#b972">simple-tense-modal</a><sub>972</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>NAhU</dt>
+<dd><a href="../2/#b374">mex-operator</a><sub>374</sub></dd>
+<dt>NIhE</dt>
+<dd><a href="../2/#b385">operand-3</a><sub>385</sub></dd>
+<dt>NIhO</dt>
+<dd><a href="../2/#b4">paragraphs</a><sub>4</sub>, <a href="../2/#b2">text-1</a><sub>2</sub></dd>
+<dt>NOI</dt>
+<dd><a href="../2/#b122">relative-clause</a><sub>122</sub></dd>
+<dt>NU</dt>
+<dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>NUhA</dt>
+<dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>NUhI</dt>
+<dd><a href="../2/#b85">termset</a><sub>85</sub></dd>
+<dt>NUhU</dt>
+<dd><a href="../2/#b85">termset</a><sub>85</sub></dd>
+<dt>PA</dt>
+<dd><a href="../2/#b817">lerfu-string</a><sub>817</sub>, <a href="../2/#b812">number</a><sub>812</sub></dd>
+<dt>PEhE</dt>
+<dd><a href="../2/#b81">terms-1</a><sub>81</sub></dd>
+<dt>PEhO</dt>
+<dd><a href="../2/#b312">mex-2</a><sub>312</sub></dd>
+<dt>PU</dt>
+<dd><a href="../2/#b1033">time-offset</a><sub>1033</sub>, <a href="../2/#b1030">time</a><sub>1030</sub></dd>
+<dt>RAhO</dt>
+<dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>ROI</dt>
+<dd><a href="../2/#b1051">interval-property</a><sub>1051</sub></dd>
+<dt>SA</dt>
+<dd><a href="../2/#b1101">null</a><sub>1101</sub></dd>
+<dt>SE</dt>
+<dd><a href="../2/#b802">ek</a><sub>802</sub>, <a href="../2/#b807">gek</a><sub>807</sub>, <a href="../2/#b818">gihek</a><sub>818</sub>, <a href="../2/#b808">guhek</a><sub>808</sub>, <a href="../2/#b932">interval</a><sub>932</sub>, <a href="../2/#b805">jek</a><sub>805</sub>, <a href="../2/#b806">joik</a><sub>806</sub>, <a href="../2/#b374">mex-operator</a><sub>374</sub>, <a href="../2/#b972">simple-tense-modal</a><sub>972</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>SEI</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub></dd>
+<dt>SEhU</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub></dd>
+<dt>SI</dt>
+<dd><a href="../2/#b1101">null</a><sub>1101</sub></dd>
+<dt>SOI</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub></dd>
+<dt>SU</dt>
+<dd><a href="../2/#b1101">null</a><sub>1101</sub></dd>
+<dt>TAhE</dt>
+<dd><a href="../2/#b1051">interval-property</a><sub>1051</sub></dd>
+<dt>TEI</dt>
+<dd><a href="../2/#b987">lerfu-word</a><sub>987</sub></dd>
+<dt>TEhU</dt>
+<dd><a href="../2/#b374">mex-operator</a><sub>374</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub></dd>
+<dt>TO</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub></dd>
+<dt>TOI</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub></dd>
+<dt>TUhE</dt>
+<dd><a href="../2/#b14">statement-3</a><sub>14</sub></dd>
+<dt>TUhU</dt>
+<dd><a href="../2/#b14">statement-3</a><sub>14</sub></dd>
+<dt>UI</dt>
+<dd><a href="../2/#b413">indicator</a><sub>413</sub></dd>
+<dt>VA</dt>
+<dd><a href="../2/#b1045">space-offset</a><sub>1045</sub>, <a href="../2/#b1040">space</a><sub>1040</sub></dd>
+<dt>VAU</dt>
+<dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a href="../2/#b71">tail-terms</a><sub>71</sub></dd>
+<dt>VEI</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b300">quantifier</a><sub>300</sub></dd>
+<dt>VEhA</dt>
+<dd><a href="../2/#b1046">space-interval</a><sub>1046</sub></dd>
+<dt>VEhO</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b300">quantifier</a><sub>300</sub></dd>
+<dt>VIhA</dt>
+<dd><a href="../2/#b1046">space-interval</a><sub>1046</sub></dd>
+<dt>VUhO</dt>
+<dd><a href="../2/#b90">sumti</a><sub>90</sub></dd>
+<dt>VUhU</dt>
+<dd><a href="../2/#b374">mex-operator</a><sub>374</sub></dd>
+<dt>XI</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub></dd>
+<dt>Y</dt>
+<dd><a href="../2/#b413">indicator</a><sub>413</sub></dd>
+<dt>ZAhO</dt>
+<dd><a href="../2/#b1051">interval-property</a><sub>1051</sub></dd>
+<dt>ZEI</dt>
+<dd><a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>ZEhA</dt>
+<dd><a href="../2/#b1030">time</a><sub>1030</sub></dd>
+<dt>ZI</dt>
+<dd><a href="../2/#b1033">time-offset</a><sub>1033</sub>, <a href="../2/#b1030">time</a><sub>1030</sub></dd>
+<dt>ZIhE</dt>
+<dd><a href="../2/#b121">relative-clauses</a><sub>121</sub></dd>
+<dt>ZO</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>ZOI</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>ZOhU</dt>
+<dd><a href="../2/#b30">prenex</a><sub>30</sub></dd>
+<dt>any-word</dt>
+<dd><a href="../2/#b987">lerfu-word</a><sub>987</sub>, <a href="../2/#b1101">null</a><sub>1101</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub>, <a href="../2/#b1100">word</a><sub>1100</sub></dd>
+<dt>anything</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>bridi-tail</dt>
+<dd><a href="../2/#b50">bridi-tail</a><sub>50</sub>, <a href="../2/#b40">sentence</a><sub>40</sub></dd>
+<dt>bridi-tail-1</dt>
+<dd><a href="../2/#b50">bridi-tail</a><sub>50</sub></dd>
+<dt>bridi-tail-2</dt>
+<dd><a href="../2/#b51">bridi-tail-1</a><sub>51</sub>, <a href="../2/#b52">bridi-tail-2</a><sub>52</sub></dd>
+<dt>bridi-tail-3</dt>
+<dd><a href="../2/#b52">bridi-tail-2</a><sub>52</sub></dd>
+<dt>ek</dt>
+<dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a href="../2/#b421">joik-ek</a><sub>421</sub>, <a href="../2/#b383">operand-2</a><sub>383</sub>, <a href="../2/#b381">operand</a><sub>381</sub>, <a href="../2/#b91">sumti-1</a><sub>91</sub>, <a href="../2/#b93">sumti-3</a><sub>93</sub></dd>
+<dt>fragment</dt>
+<dd><a href="../2/#b10">paragraph</a><sub>10</sub></dd>
+<dt>free</dt>
+<dd><a href="../2/#b0">text</a><sub>0</sub></dd>
+<dt>gek</dt>
+<dd><a href="../2/#b54">gek-sentence</a><sub>54</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub>, <a href="../2/#b94">sumti-4</a><sub>94</sub>, <a href="../2/#b85">termset</a><sub>85</sub></dd>
+<dt>gek-sentence</dt>
+<dd><a href="../2/#b53">bridi-tail-3</a><sub>53</sub>, <a href="../2/#b54">gek-sentence</a><sub>54</sub></dd>
+<dt>gihek</dt>
+<dd><a href="../2/#b51">bridi-tail-1</a><sub>51</sub>, <a href="../2/#b52">bridi-tail-2</a><sub>52</sub>, <a href="../2/#b50">bridi-tail</a><sub>50</sub>, <a href="../2/#b20">fragment</a><sub>20</sub></dd>
+<dt>gik</dt>
+<dd><a href="../2/#b54">gek-sentence</a><sub>54</sub>, <a href="../2/#b807">gek</a><sub>807</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub>, <a href="../2/#b371">operator-1</a><sub>371</sub>, <a href="../2/#b136">selbri-6</a><sub>136</sub>, <a href="../2/#b94">sumti-4</a><sub>94</sub>, <a href="../2/#b85">termset</a><sub>85</sub></dd>
+<dt>guhek</dt>
+<dd><a href="../2/#b371">operator-1</a><sub>371</sub>, <a href="../2/#b136">selbri-6</a><sub>136</sub></dd>
+<dt>indicator</dt>
+<dd><a href="../2/#b411">indicators</a><sub>411</sub></dd>
+<dt>indicators</dt>
+<dd><a href="../2/#b0">text</a><sub>0</sub>, <a href="../2/#b1100">word</a><sub>1100</sub></dd>
+<dt>interval</dt>
+<dd><a href="../2/#b806">joik</a><sub>806</sub></dd>
+<dt>interval-property</dt>
+<dd><a href="../2/#b1049">space-int-props</a><sub>1049</sub>, <a href="../2/#b1030">time</a><sub>1030</sub></dd>
+<dt>jek</dt>
+<dd><a href="../2/#b422">joik-jek</a><sub>422</sub>, <a href="../2/#b371">operator-1</a><sub>371</sub>, <a href="../2/#b135">selbri-5</a><sub>135</sub>, <a href="../2/#b971">stag</a><sub>971</sub>, <a href="../2/#b13">statement-2</a><sub>13</sub>, <a href="../2/#b2">text-1</a><sub>2</sub></dd>
+<dt>joik</dt>
+<dd><a href="../2/#b807">gek</a><sub>807</sub>, <a href="../2/#b421">joik-ek</a><sub>421</sub>, <a href="../2/#b422">joik-jek</a><sub>422</sub>, <a href="../2/#b383">operand-2</a><sub>383</sub>, <a href="../2/#b381">operand</a><sub>381</sub>, <a href="../2/#b371">operator-1</a><sub>371</sub>, <a href="../2/#b370">operator</a><sub>370</sub>, <a href="../2/#b134">selbri-4</a><sub>134</sub>, <a href="../2/#b135">selbri-5</a><sub>135</sub>, <a href="../2/#b971">stag</a><sub>971</sub>, <a href="../2/#b13">statement-2</a><sub>13</sub>, <a href="../2/#b91">sumti-1</a><sub>91</sub>, <a href="../2/#b93">sumti-3</a><sub>93</sub>, <a href="../2/#b2">text-1</a><sub>2</sub></dd>
+<dt>joik-ek</dt>
+<dd><a href="../2/#b382">operand-1</a><sub>382</sub>, <a href="../2/#b92">sumti-2</a><sub>92</sub></dd>
+<dt>joik-jek</dt>
+<dd><a href="../2/#b370">operator</a><sub>370</sub>, <a href="../2/#b134">selbri-4</a><sub>134</sub>, <a href="../2/#b12">statement-1</a><sub>12</sub>, <a href="../2/#b491">tag</a><sub>491</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub>, <a href="../2/#b81">terms-1</a><sub>81</sub>, <a href="../2/#b0">text</a><sub>0</sub></dd>
+<dt>lerfu-string</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b987">lerfu-word</a><sub>987</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>lerfu-word</dt>
+<dd><a href="../2/#b817">lerfu-string</a><sub>817</sub>, <a href="../2/#b987">lerfu-word</a><sub>987</sub>, <a href="../2/#b812">number</a><sub>812</sub></dd>
+<dt>linkargs</dt>
+<dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a href="../2/#b151">tanru-unit-1</a><sub>151</sub></dd>
+<dt>links</dt>
+<dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a href="../2/#b160">linkargs</a><sub>160</sub>, <a href="../2/#b161">links</a><sub>161</sub></dd>
+<dt>mex</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b374">mex-operator</a><sub>374</sub>, <a href="../2/#b300">quantifier</a><sub>300</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>mex-1</dt>
+<dd><a href="../2/#b311">mex-1</a><sub>311</sub>, <a href="../2/#b310">mex</a><sub>310</sub></dd>
+<dt>mex-2</dt>
+<dd><a href="../2/#b311">mex-1</a><sub>311</sub>, <a href="../2/#b312">mex-2</a><sub>312</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub></dd>
+<dt>mex-operator</dt>
+<dd><a href="../2/#b374">mex-operator</a><sub>374</sub>, <a href="../2/#b372">operator-2</a><sub>372</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>number</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b1051">interval-property</a><sub>1051</sub>, <a href="../2/#b300">quantifier</a><sub>300</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>operand</dt>
+<dd><a href="../2/#b312">mex-2</a><sub>312</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub>, <a href="../2/#b381">operand</a><sub>381</sub>, <a href="../2/#b332">rp-operand</a><sub>332</sub></dd>
+<dt>operand-1</dt>
+<dd><a href="../2/#b381">operand</a><sub>381</sub></dd>
+<dt>operand-2</dt>
+<dd><a href="../2/#b382">operand-1</a><sub>382</sub>, <a href="../2/#b383">operand-2</a><sub>383</sub></dd>
+<dt>operand-3</dt>
+<dd><a href="../2/#b383">operand-2</a><sub>383</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub></dd>
+<dt>operator</dt>
+<dd><a href="../2/#b311">mex-1</a><sub>311</sub>, <a href="../2/#b312">mex-2</a><sub>312</sub>, <a href="../2/#b310">mex</a><sub>310</sub>, <a href="../2/#b372">operator-2</a><sub>372</sub>, <a href="../2/#b370">operator</a><sub>370</sub>, <a href="../2/#b330">rp-expression</a><sub>330</sub></dd>
+<dt>operator-1</dt>
+<dd><a href="../2/#b371">operator-1</a><sub>371</sub>, <a href="../2/#b370">operator</a><sub>370</sub></dd>
+<dt>operator-2</dt>
+<dd><a href="../2/#b371">operator-1</a><sub>371</sub></dd>
+<dt>paragraph</dt>
+<dd><a href="../2/#b4">paragraphs</a><sub>4</sub></dd>
+<dt>paragraphs</dt>
+<dd><a href="../2/#b4">paragraphs</a><sub>4</sub>, <a href="../2/#b2">text-1</a><sub>2</sub></dd>
+<dt>prenex</dt>
+<dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a href="../2/#b11">statement</a><sub>11</sub>, <a href="../2/#b41">subsentence</a><sub>41</sub></dd>
+<dt>quantifier</dt>
+<dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub>, <a href="../2/#b95">sumti-5</a><sub>95</sub>, <a href="../2/#b112">sumti-tail-1</a><sub>112</sub></dd>
+<dt>relative-clause</dt>
+<dd><a href="../2/#b121">relative-clauses</a><sub>121</sub></dd>
+<dt>relative-clauses</dt>
+<dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b95">sumti-5</a><sub>95</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub>, <a href="../2/#b112">sumti-tail-1</a><sub>112</sub>, <a href="../2/#b111">sumti-tail</a><sub>111</sub>, <a href="../2/#b90">sumti</a><sub>90</sub></dd>
+<dt>rp-expression</dt>
+<dd><a href="../2/#b310">mex</a><sub>310</sub>, <a href="../2/#b332">rp-operand</a><sub>332</sub></dd>
+<dt>rp-operand</dt>
+<dd><a href="../2/#b330">rp-expression</a><sub>330</sub></dd>
+<dt>selbri</dt>
+<dd><a href="../2/#b53">bridi-tail-3</a><sub>53</sub>, <a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b374">mex-operator</a><sub>374</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub>, <a href="../2/#b131">selbri-1</a><sub>131</sub>, <a href="../2/#b136">selbri-6</a><sub>136</sub>, <a href="../2/#b95">sumti-5</a><sub>95</sub>, <a href="../2/#b112">sumti-tail-1</a><sub>112</sub>, <a href="../2/#b815">tense-modal</a><sub>815</sub></dd>
+<dt>selbri-1</dt>
+<dd><a href="../2/#b130">selbri</a><sub>130</sub></dd>
+<dt>selbri-2</dt>
+<dd><a href="../2/#b131">selbri-1</a><sub>131</sub>, <a href="../2/#b132">selbri-2</a><sub>132</sub></dd>
+<dt>selbri-3</dt>
+<dd><a href="../2/#b132">selbri-2</a><sub>132</sub>, <a href="../2/#b134">selbri-4</a><sub>134</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>selbri-4</dt>
+<dd><a href="../2/#b133">selbri-3</a><sub>133</sub></dd>
+<dt>selbri-5</dt>
+<dd><a href="../2/#b134">selbri-4</a><sub>134</sub>, <a href="../2/#b135">selbri-5</a><sub>135</sub></dd>
+<dt>selbri-6</dt>
+<dd><a href="../2/#b135">selbri-5</a><sub>135</sub>, <a href="../2/#b136">selbri-6</a><sub>136</sub></dd>
+<dt>sentence</dt>
+<dd><a href="../2/#b14">statement-3</a><sub>14</sub>, <a href="../2/#b41">subsentence</a><sub>41</sub></dd>
+<dt>simple-tense-modal</dt>
+<dd><a href="../2/#b971">stag</a><sub>971</sub>, <a href="../2/#b815">tense-modal</a><sub>815</sub></dd>
+<dt>space</dt>
+<dd><a href="../2/#b972">simple-tense-modal</a><sub>972</sub></dd>
+<dt>space-int-props</dt>
+<dd><a href="../2/#b1046">space-interval</a><sub>1046</sub></dd>
+<dt>space-interval</dt>
+<dd><a href="../2/#b1040">space</a><sub>1040</sub></dd>
+<dt>space-offset</dt>
+<dd><a href="../2/#b1040">space</a><sub>1040</sub></dd>
+<dt>stag</dt>
+<dd><a href="../2/#b52">bridi-tail-2</a><sub>52</sub>, <a href="../2/#b50">bridi-tail</a><sub>50</sub>, <a href="../2/#b807">gek</a><sub>807</sub>, <a href="../2/#b383">operand-2</a><sub>383</sub>, <a href="../2/#b381">operand</a><sub>381</sub>, <a href="../2/#b371">operator-1</a><sub>371</sub>, <a href="../2/#b370">operator</a><sub>370</sub>, <a href="../2/#b134">selbri-4</a><sub>134</sub>, <a href="../2/#b135">selbri-5</a><sub>135</sub>, <a href="../2/#b13">statement-2</a><sub>13</sub>, <a href="../2/#b91">sumti-1</a><sub>91</sub>, <a href="../2/#b93">sumti-3</a><sub>93</sub>, <a href="../2/#b2">text-1</a><sub>2</sub></dd>
+<dt>statement</dt>
+<dd><a href="../2/#b10">paragraph</a><sub>10</sub>, <a href="../2/#b11">statement</a><sub>11</sub></dd>
+<dt>statement-1</dt>
+<dd><a href="../2/#b11">statement</a><sub>11</sub></dd>
+<dt>statement-2</dt>
+<dd><a href="../2/#b12">statement-1</a><sub>12</sub>, <a href="../2/#b13">statement-2</a><sub>13</sub></dd>
+<dt>statement-3</dt>
+<dd><a href="../2/#b13">statement-2</a><sub>13</sub></dd>
+<dt>subsentence</dt>
+<dd><a href="../2/#b54">gek-sentence</a><sub>54</sub>, <a href="../2/#b122">relative-clause</a><sub>122</sub>, <a href="../2/#b41">subsentence</a><sub>41</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>sumti</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b385">operand-3</a><sub>385</sub>, <a href="../2/#b91">sumti-1</a><sub>91</sub>, <a href="../2/#b94">sumti-4</a><sub>94</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub>, <a href="../2/#b112">sumti-tail-1</a><sub>112</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub>, <a href="../2/#b83">term</a><sub>83</sub></dd>
+<dt>sumti-1</dt>
+<dd><a href="../2/#b90">sumti</a><sub>90</sub></dd>
+<dt>sumti-2</dt>
+<dd><a href="../2/#b91">sumti-1</a><sub>91</sub></dd>
+<dt>sumti-3</dt>
+<dd><a href="../2/#b92">sumti-2</a><sub>92</sub>, <a href="../2/#b93">sumti-3</a><sub>93</sub></dd>
+<dt>sumti-4</dt>
+<dd><a href="../2/#b93">sumti-3</a><sub>93</sub>, <a href="../2/#b94">sumti-4</a><sub>94</sub></dd>
+<dt>sumti-5</dt>
+<dd><a href="../2/#b94">sumti-4</a><sub>94</sub></dd>
+<dt>sumti-6</dt>
+<dd><a href="../2/#b95">sumti-5</a><sub>95</sub>, <a href="../2/#b111">sumti-tail</a><sub>111</sub></dd>
+<dt>sumti-tail</dt>
+<dd><a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>sumti-tail-1</dt>
+<dd><a href="../2/#b111">sumti-tail</a><sub>111</sub></dd>
+<dt>tag</dt>
+<dd><a href="../2/#b54">gek-sentence</a><sub>54</sub>, <a href="../2/#b130">selbri</a><sub>130</sub>, <a href="../2/#b14">statement-3</a><sub>14</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub>, <a href="../2/#b83">term</a><sub>83</sub></dd>
+<dt>tail-terms</dt>
+<dd><a href="../2/#b51">bridi-tail-1</a><sub>51</sub>, <a href="../2/#b52">bridi-tail-2</a><sub>52</sub>, <a href="../2/#b53">bridi-tail-3</a><sub>53</sub>, <a href="../2/#b50">bridi-tail</a><sub>50</sub>, <a href="../2/#b54">gek-sentence</a><sub>54</sub></dd>
+<dt>tanru-unit</dt>
+<dd><a href="../2/#b136">selbri-6</a><sub>136</sub></dd>
+<dt>tanru-unit-1</dt>
+<dd><a href="../2/#b150">tanru-unit</a><sub>150</sub></dd>
+<dt>tanru-unit-2</dt>
+<dd><a href="../2/#b151">tanru-unit-1</a><sub>151</sub>, <a href="../2/#b152">tanru-unit-2</a><sub>152</sub></dd>
+<dt>tense-modal</dt>
+<dd><a href="../2/#b491">tag</a><sub>491</sub></dd>
+<dt>term</dt>
+<dd><a href="../2/#b160">linkargs</a><sub>160</sub>, <a href="../2/#b161">links</a><sub>161</sub>, <a href="../2/#b122">relative-clause</a><sub>122</sub>, <a href="../2/#b82">terms-2</a><sub>82</sub></dd>
+<dt>terms</dt>
+<dd><a href="../2/#b20">fragment</a><sub>20</sub>, <a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b30">prenex</a><sub>30</sub>, <a href="../2/#b40">sentence</a><sub>40</sub>, <a href="../2/#b71">tail-terms</a><sub>71</sub>, <a href="../2/#b85">termset</a><sub>85</sub></dd>
+<dt>terms-1</dt>
+<dd><a href="../2/#b80">terms</a><sub>80</sub></dd>
+<dt>terms-2</dt>
+<dd><a href="../2/#b81">terms-1</a><sub>81</sub></dd>
+<dt>termset</dt>
+<dd><a href="../2/#b83">term</a><sub>83</sub></dd>
+<dt>text</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub>, <a href="../2/#b1101">null</a><sub>1101</sub>, <a href="../2/#b97">sumti-6</a><sub>97</sub></dd>
+<dt>text-1</dt>
+<dd><a href="../2/#b14">statement-3</a><sub>14</sub>, <a href="../2/#b0">text</a><sub>0</sub></dd>
+<dt>time</dt>
+<dd><a href="../2/#b972">simple-tense-modal</a><sub>972</sub></dd>
+<dt>time-offset</dt>
+<dd><a href="../2/#b1030">time</a><sub>1030</sub></dd>
+<dt>utterance</dt>
+<dd><a href="../2/#b1101">null</a><sub>1101</sub></dd>
+<dt>vocative</dt>
+<dd><a href="../2/#b32">free</a><sub>32</sub></dd>
+</dl>
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../21/2/">Previous</a></div>
+<div class="nav-section-name">EBNF Grammar of Lojban</div>
+</div>
+<div class="nav-next"></div>
+<div class="nav-title">
+<div class="nav-title-title">Formal Grammars</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

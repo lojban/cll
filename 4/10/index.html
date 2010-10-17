@@ -1,171 +1,56 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               The Shape Of Words To Come: Lojban Morphology - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../4/9/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Rules for inserting pauses
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../4/11/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               The lujvo-making algorithm
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     The Shape Of Words To Come: Lojban Morphology
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-          <h3>10. Considerations for making lujvo</h3>
-
-    <p>Given a tanru which expresses an idea to be used frequently,
-    it can be turned into a lujvo by following the lujvo-making
-    algorithm which is given in <a href="../11/">Section 11</a>.</p>
-
-    <p>In building a lujvo, the first step is to replace each gismu
-    with a rafsi that uniquely represents that gismu. These rafsi
-    are then attached together by fixed rules that allow the
-    resulting compound to be recognized as a single word and to be
-    analyzed in only one way.</p>
-
-    <p>There are three other complications; only one is
-    serious.</p>
-
-    <p>The first is that there is usually more than one rafsi that
-    can be used for each gismu. The one to be used is simply
-    whichever one sounds or looks best to the speaker or writer.
-    There are usually many valid combinations of possible rafsi.
-    They all are equally valid, and all of them mean exactly the
-    same thing. (The scoring algorithm given in <a
-    href="../12/">Section 12</a> is used to choose the standard form
-    of the lujvo &mdash; the version which would be entered into a
-    dictionary.)</p>
-
-    <p>The second complication is the serious one. Remember that a
-    tanru is ambiguous &mdash; it has several possible meanings. A
-    lujvo, or at least one that would be put into the dictionary,
-    has just a single meaning. Like a gismu, a lujvo is a predicate
-    which encompasses one area of the semantic universe, with one
-    set of places. Hopefully the meaning chosen is the most useful
-    of the possible semantic spaces. A possible source of
-    linguistic drift in Lojban is that as Lojbanic society evolves,
-    the concept that seems the most useful one may change.</p>
-
-    <p>You must also be aware of the possibility of some prior
-    meaning of a new lujvo, especially if you are writing for
-    posterity. If a lujvo is invented which involves the same tanru
-    as one that is in the dictionary, and is assigned a different
-    meaning (or even just a different place structure), linguistic
-    drift results. This isn’t necessarily bad. Every natural
-    language does it. But in communication, when you use a meaning
-    different from the dictionary definition, someone else may use
-    the dictionary and therefore misunderstand you. You can use the
-    cmavo “za'e” (explained in <a href="../../19/1/">Chapter
-    19</a>) before a newly coined lujvo to indicate that it may
-    have a non-dictionary meaning.</p>
-
-    <p>The essential nature of human communication is that if the
-    listener understands, then all is well. Let this be the
-    ultimate guideline for choosing meanings and place structures
-    for invented lujvo.</p>
-
-    <p>The third complication is also simple, but tends to scare
-    new Lojbanists with its implications. It is based on Zipf’s
-    Law, which says that the length of words is inversely
-    proportional to their usage. The shortest words are those which
-    are used more; the longest ones are used less. Conversely,
-    commonly used concepts will be tend to be abbreviated. In
-    English, we have abbreviations and acronyms and jargon, all of
-    which represent complex ideas that are used often by small
-    groups of people, so they shortened them to convey more
-    information more rapidly.</p>
-
-    <p>Therefore, given a complicated tanru with grouping markers,
-    abstraction markers, and other cmavo in it to make it
-    syntactically unambiguous, the psychological basis of Zipf’s
-    Law may compel the lujvo-maker to drop some of the cmavo to
-    make a shorter (technically incorrect) tanru, and then use that
-    tanru to make the lujvo.</p>
-
-    <p>This doesn’t lead to ambiguity, as it might seem to. A given
-    lujvo still has exactly one meaning and place structure. It is
-    just that more than one tanru is competing for the same lujvo.
-    But more than one meaning for the tanru was already competing
-    for the “right” to define the meaning of the lujvo. Someone
-    has to use judgment in deciding which one meaning is to be
-    chosen over the others.</p>
-
-    <p>If the lujvo made by a shorter form of tanru is in use, or
-    is likely to be useful for another meaning, the decider then
-    retains one or more of the cmavo, preferably ones that set this
-    meaning apart from the shorter form meaning that is used or
-    anticipated. As a rule, therefore, the shorter lujvo will be
-    used for a more general concept, possibly even instead of a
-    more frequent word. If both words are needed, the simpler one
-    should be shorter. It is easier to add a cmavo to clarify the
-    meaning of the more complex term than it is to find a good
-    alternate tanru for the simpler term.</p>
-
-    <p>And of course, we have to consider the listener. On hearing
-    an unknown word, the listener will decompose it and get a tanru
-    that makes no sense or the wrong sense for the context. If the
-    listener realizes that the grouping operators may have been
-    dropped out, he or she may try alternate groupings, or try
-    inserting an abstraction operator if that seems plausible. (The
-    grouping of tanru is explained in <a href="../../5/1/">Chapter
-    5</a>; abstraction is explained in <a
-    href="../../11/1/">Chapter 11</a>.) Plausibility is the key to
-    learning new ideas and to evaluating unfamiliar lujvo.</p>
-
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../4/9/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Rules for inserting pauses
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../4/11/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               The lujvo-making algorithm
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     The Shape Of Words To Come: Lojban Morphology
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The Shape Of Words To Come: Lojban Morphology - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../4/9/">Previous</a></div>
+<div class="nav-section-name">Rules for inserting pauses</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../4/11/">Next</a></div>
+<div class="nav-section-name">The lujvo-making algorithm</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">The Shape Of Words To Come: Lojban Morphology</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h3>10. Considerations for making lujvo</h3>
+<p>Given a tanru which expresses an idea to be used frequently, it can be turned into a lujvo by following the lujvo-making algorithm which is given in <a href="../11/">Section 11</a>.</p>
+<p>In building a lujvo, the first step is to replace each gismu with a rafsi that uniquely represents that gismu. These rafsi are then attached together by fixed rules that allow the resulting compound to be recognized as a single word and to be analyzed in only one way.</p>
+<p>There are three other complications; only one is serious.</p>
+<p>The first is that there is usually more than one rafsi that can be used for each gismu. The one to be used is simply whichever one sounds or looks best to the speaker or writer. There are usually many valid combinations of possible rafsi. They all are equally valid, and all of them mean exactly the same thing. (The scoring algorithm given in <a href="../12/">Section 12</a> is used to choose the standard form of the lujvo — the version which would be entered into a dictionary.)</p>
+<p>The second complication is the serious one. Remember that a tanru is ambiguous — it has several possible meanings. A lujvo, or at least one that would be put into the dictionary, has just a single meaning. Like a gismu, a lujvo is a predicate which encompasses one area of the semantic universe, with one set of places. Hopefully the meaning chosen is the most useful of the possible semantic spaces. A possible source of linguistic drift in Lojban is that as Lojbanic society evolves, the concept that seems the most useful one may change.</p>
+<p>You must also be aware of the possibility of some prior meaning of a new lujvo, especially if you are writing for posterity. If a lujvo is invented which involves the same tanru as one that is in the dictionary, and is assigned a different meaning (or even just a different place structure), linguistic drift results. This isn’t necessarily bad. Every natural language does it. But in communication, when you use a meaning different from the dictionary definition, someone else may use the dictionary and therefore misunderstand you. You can use the cmavo “za'e” (explained in <a href="../../19/1/">Chapter 19</a>) before a newly coined lujvo to indicate that it may have a non-dictionary meaning.</p>
+<p>The essential nature of human communication is that if the listener understands, then all is well. Let this be the ultimate guideline for choosing meanings and place structures for invented lujvo.</p>
+<p>The third complication is also simple, but tends to scare new Lojbanists with its implications. It is based on Zipf’s Law, which says that the length of words is inversely proportional to their usage. The shortest words are those which are used more; the longest ones are used less. Conversely, commonly used concepts will be tend to be abbreviated. In English, we have abbreviations and acronyms and jargon, all of which represent complex ideas that are used often by small groups of people, so they shortened them to convey more information more rapidly.</p>
+<p>Therefore, given a complicated tanru with grouping markers, abstraction markers, and other cmavo in it to make it syntactically unambiguous, the psychological basis of Zipf’s Law may compel the lujvo-maker to drop some of the cmavo to make a shorter (technically incorrect) tanru, and then use that tanru to make the lujvo.</p>
+<p>This doesn’t lead to ambiguity, as it might seem to. A given lujvo still has exactly one meaning and place structure. It is just that more than one tanru is competing for the same lujvo. But more than one meaning for the tanru was already competing for the “right” to define the meaning of the lujvo. Someone has to use judgment in deciding which one meaning is to be chosen over the others.</p>
+<p>If the lujvo made by a shorter form of tanru is in use, or is likely to be useful for another meaning, the decider then retains one or more of the cmavo, preferably ones that set this meaning apart from the shorter form meaning that is used or anticipated. As a rule, therefore, the shorter lujvo will be used for a more general concept, possibly even instead of a more frequent word. If both words are needed, the simpler one should be shorter. It is easier to add a cmavo to clarify the meaning of the more complex term than it is to find a good alternate tanru for the simpler term.</p>
+<p>And of course, we have to consider the listener. On hearing an unknown word, the listener will decompose it and get a tanru that makes no sense or the wrong sense for the context. If the listener realizes that the grouping operators may have been dropped out, he or she may try alternate groupings, or try inserting an abstraction operator if that seems plausible. (The grouping of tanru is explained in <a href="../../5/1/">Chapter 5</a>; abstraction is explained in <a href="../../11/1/">Chapter 11</a>.) Plausibility is the key to learning new ideas and to evaluating unfamiliar lujvo.</p>
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../4/9/">Previous</a></div>
+<div class="nav-section-name">Rules for inserting pauses</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../4/11/">Next</a></div>
+<div class="nav-section-name">The lujvo-making algorithm</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">The Shape Of Words To Come: Lojban Morphology</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>

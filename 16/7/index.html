@@ -1,163 +1,79 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <title>
-               “Who Did You Pass On The Road? Nobody”: Lojban And      Logic - The Lojban Reference Grammar
-      </title>
-      <link rel="stylesheet" type="text/css" href="../../cll.css" />
-      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-   </head>
-   <body>
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../16/6/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Variables with generalized quantifiers
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../16/8/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               The problem of “any”
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     “Who Did You Pass On The Road? Nobody”: Lojban And Logic
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-      <hr />
-          <h3>7. Grouping of quantifiers</h3>
-
-    <p>Let us consider a sentence containing two quantifier
-    expressions neither of which is “ro” or “su'o” (remembering
-    that “su'o” is implicit where no explicit quantifier is
-    given):
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>“Who Did You Pass On The Road? Nobody”: Lojban And Logic - The Lojban Reference Grammar</title>
+<link rel="stylesheet" type="text/css" href="../../cll.css" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+</head>
+<body>
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../16/6/">Previous</a></div>
+<div class="nav-section-name">Variables with generalized quantifiers</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../16/8/">Next</a></div>
+<div class="nav-section-name">The problem of “any”</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+<hr />
+<h3>7. Grouping of quantifiers</h3>
+<p>Let us consider a sentence containing two quantifier expressions neither of which is “ro” or “su'o” (remembering that “su'o” is implicit where no explicit quantifier is given):</p>
 <pre>
-<a id="e1">7.1)</a>   ci gerku cu batci re nanmu
+<a id="e1" name="e1">7.1)</a>   ci gerku cu batci re nanmu
        Three dogs bite two men.
 </pre>
-
-    The question raised by <a href="../7/#e1">Example 7.1</a> is, does
-    each of the dogs bite the same two men, or is it possible that
-    there are two different men per dog, for six men altogether? If
-    the former interpretation is taken, the number of men involved
-    is fixed at two; but if the latter, then the speaker has to be
-    taken as saying that there might be any number of men between
-    two and six inclusive. Let us transform <a href="../7/#e1">Example
-    7.1</a> step by step as we did with <a href="../6/#e6">Example
-    6.6</a>:
-
+The question raised by <a href="../7/#e1">Example 7.1</a> is, does each of the dogs bite the same two men, or is it possible that there are two different men per dog, for six men altogether? If the former interpretation is taken, the number of men involved is fixed at two; but if the latter, then the speaker has to be taken as saying that there might be any number of men between two and six inclusive. Let us transform <a href="../7/#e1">Example 7.1</a> step by step as we did with <a href="../6/#e6">Example 6.6</a>:
 <pre>
-<a id="e2">7.2)</a>   ci da poi gerku cu batci re de poi nanmu
+<a id="e2" name="e2">7.2)</a>   ci da poi gerku cu batci re de poi nanmu
        Three Xes which are-dogs bite two Ys which are-men.
 </pre>
-
-    (Note that we need separate variables “da” and “de”,
-    because of the rule that says each indefinite description gets
-    a variable never used before or since.)
-
+(Note that we need separate variables “da” and “de”, because of the rule that says each indefinite description gets a variable never used before or since.)
 <pre>
-<a id="e3">7.3)</a>   ci da poi gerku ku'o re de poi nanmu zo'u da batci de
+<a id="e3" name="e3">7.3)</a>   ci da poi gerku ku'o re de poi nanmu zo'u da batci de
        For-three Xes which are-dogs, for-two Ys which are-men : X bites Y.
 </pre>
-
-    Here we see that indeed each of the dogs is said to bite two
-    men, and it might be different men each time; a total of six
-    biting events altogether.</p>
-
-    <p>How then are we to express the other interpretation, in
-    which just two men are involved? We cannot just reverse the
-    order of variables in the prenex to
-
+Here we see that indeed each of the dogs is said to bite two men, and it might be different men each time; a total of six biting events altogether.
+<p>How then are we to express the other interpretation, in which just two men are involved? We cannot just reverse the order of variables in the prenex to</p>
 <pre>
-<a id="e4">7.4)</a>   re de poi nanmu ku'o ci da poi gerku zo'u da batci de
+<a id="e4" name="e4">7.4)</a>   re de poi nanmu ku'o ci da poi gerku zo'u da batci de
        For-two Ys which are-men, for-three Xes which are-dogs, X bites Y
 </pre>
-
-    for although we have now limited the number of men to exactly
-    two, we end up with an indeterminate number of dogs, from three
-    to six. The distinction is called a “scope distinction”: in
-    <a href="../7/#e2">Example 7.2</a>, “ci gerku” is said to have
-    wider scope than “re nanmu”, and therefore precedes it in the
-    prenex. In <a href="../7/#e4">Example 7.4</a> the reverse is true.</p>
-
-    <p>The solution is to use a termset, which is a group of terms
-    either joined by “ce'e” (of selma'o CEhE) between each term,
-    or else surrounded by “nu'i” (of selma'o NUhI) on the front
-    and “nu'u” (of selma'o NUhU) on the rear. Terms (which are
-    either sumti or sumti prefixed by tense or modal tags) that are
-    grouped into a termset are understood to have equal scope:
-
+for although we have now limited the number of men to exactly two, we end up with an indeterminate number of dogs, from three to six. The distinction is called a “scope distinction”: in <a href="../7/#e2">Example 7.2</a>, “ci gerku” is said to have wider scope than “re nanmu”, and therefore precedes it in the prenex. In <a href="../7/#e4">Example 7.4</a> the reverse is true.
+<p>The solution is to use a termset, which is a group of terms either joined by “ce'e” (of selma'o CEhE) between each term, or else surrounded by “nu'i” (of selma'o NUhI) on the front and “nu'u” (of selma'o NUhU) on the rear. Terms (which are either sumti or sumti prefixed by tense or modal tags) that are grouped into a termset are understood to have equal scope:</p>
 <pre>
-<a id="e5">7.5)</a>   ci gerku ce'e re nanmu cu batci
+<a id="e5" name="e5">7.5)</a>   ci gerku ce'e re nanmu cu batci
        nu'i ci gerku re nanmu [nu'u] cu batci
        Three dogs [plus] two men, bite.
 </pre>
-
-    which picks out two groups, one of three dogs and the other of
-    two men, and says that every one of the dogs bites each of the
-    men. The second Lojban version uses forethought; note that
-    “nu'u” is an elidable terminator, and in this case can be
-    freely elided.</p>
-
-    <p>What about descriptors, like “ci lo gerku”, “le nanmu”
-    or “re le ci mlatu”? They too can be grouped in termsets, but
-    usually need not be, except for the “lo” case which functions
-    like the case without a descriptor. Unless an actual quantifier
-    precedes it, “le nanmu” means “ro le nanmu”, as is
-    explained in <a href="../../6/1/">Chapter 6</a>. Two sumti with
-    “ro” quantifiers are independent of order, so:
-
+which picks out two groups, one of three dogs and the other of two men, and says that every one of the dogs bites each of the men. The second Lojban version uses forethought; note that “nu'u” is an elidable terminator, and in this case can be freely elided.
+<p>What about descriptors, like “ci lo gerku”, “le nanmu” or “re le ci mlatu”? They too can be grouped in termsets, but usually need not be, except for the “lo” case which functions like the case without a descriptor. Unless an actual quantifier precedes it, “le nanmu” means “ro le nanmu”, as is explained in <a href="../../6/1/">Chapter 6</a>. Two sumti with “ro” quantifiers are independent of order, so:</p>
 <pre>
-<a id="e6">7.6)</a>   [ro] le ci gerku cu batci [ro] le re nanmu
+<a id="e6" name="e6">7.6)</a>   [ro] le ci gerku cu batci [ro] le re nanmu
        [All of] the three dogs bite [all of] the two men.
 </pre>
-
-    means that each of the dogs specified bites each of the men
-    specified, for six acts of biting altogether. However, if there
-    is an explicit quantifier before “le” other than “ro”, the
-    problems of this section reappear.</p>
-
-
-      <hr />
-      <div class="nav">
-         <div class="nav-prev">
-            <div class="nav-section-link-prev">
-               <a href="../../16/6/">Previous</a>
-            </div>
-            <div class="nav-section-name">
-               Variables with generalized quantifiers
-            </div>
-         </div>
-         <div class="nav-next">
-            <div class="nav-section-link-next">
-               <a href="../../16/8/">Next</a>
-            </div>
-            <div class="nav-section-name">
-               The problem of “any”
-            </div>
-         </div>
-         <div class="nav-title">
-            <div class="nav-title-title">
-                     “Who Did You Pass On The Road? Nobody”: Lojban And      Logic
-            </div>
-            <div class="nav-title-link">
-               <a href="../../">The Lojban Reference Grammar</a>
-            </div>
-         </div>
-      </div>
-
-   </body>
+means that each of the dogs specified bites each of the men specified, for six acts of biting altogether. However, if there is an explicit quantifier before “le” other than “ro”, the problems of this section reappear.
+<hr />
+<div class="nav">
+<div class="nav-prev">
+<div class="nav-section-link-prev"><a href="../../16/6/">Previous</a></div>
+<div class="nav-section-name">Variables with generalized quantifiers</div>
+</div>
+<div class="nav-next">
+<div class="nav-section-link-next"><a href="../../16/8/">Next</a></div>
+<div class="nav-section-name">The problem of “any”</div>
+</div>
+<div class="nav-title">
+<div class="nav-title-title">“Who Did You Pass On The Road? Nobody”: Lojban And Logic</div>
+<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
+</div>
+</div>
+</body>
 </html>
