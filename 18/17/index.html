@@ -81,7 +81,8 @@ Here is a classic example of operand logical connection:
             the-root-of ( “b”-power-2 minus four-times-“a”-times-“c” ) ]
             divided-by two-times-“a”.
        Iff ax<sup>2</sup>  + bx + c = 0,
-            then x = <span style="border-bottom:thin solid black">-b ± <span class="c3">√</span><!--sqrt-->(b<sup>2</sup>  − 4ac)</span>
+            then x = -b ± <span class="c3">√</span><!--sqrt-->(b<sup>2</sup>  − 4ac)
+            <!-- fraction bar -->
                          2a
 </pre>
 Note the mixture of styles in <a href="../17/#e6">Example 17.6</a>: the negation of b and the square root are represented by forethought and most of the operator precedence by prefixed “bi'e”, but explicit parentheses had to be added to group the numerator properly. In addition, the square root parentheses cannot be removed here in favor of simple “fe'a” and “ku'e” bracketing, because infix operators are present in the operand. Getting <a href="../17/#e6">Example 17.6</a> to parse perfectly using the current parser took several tries: a more relaxed style would dispense with most of the “bi'e” cmavo and just let the standard precedence rules be understood.

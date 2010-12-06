@@ -1,0 +1,544 @@
+<chapter xml:id="cll_chapter8">
+  <title>Chapter 8
+Relative Clauses, Which Make sumti Even More Complicated</title>
+
+
+<section xml:id="cll_chapter8-section1">
+  <title>1. What are you pointing at?</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     poi     NOI                 restrictive relative clause introducer
+     ke'a    GOhA                relative pro-sumti
+     ku'o    KUhO                relative clause terminator
+</programlisting>
+  <para>Let us think about the problem of communicating what it is that we are pointing at when we are pointing at something. In Lojban, we can refer to what we are pointing at by using the pro-sumti “ti” if it is nearby, or “ta” if it is somewhat further away, or “tu” if it is distant. (Pro-sumti are explained in full in <xref linkend="cll_chapter7"/>.)</para>
+  <para>However, even with the assistance of a pointing finger, or pointing lips, or whatever may be appropriate in the local culture, it is often hard for a listener to tell just what is being pointed at. Suppose one is pointing at a person (in particular, in the direction of his or her face), and says:</para>
+  <programlisting><anchor xml:id="c8e1d1"/><anchor xml:id="cll_chapter8-section1-example1"/>1.1)   ti cu barda
+       This-one is-big.
+</programlisting>
+  <para>What is the referent of “ti”? Is it the person? Or perhaps it is the person’s nose? Or even (for “ti” can be plural as well as singular, and mean “these ones” as well as “this one”) the pores on the person’s nose?</para>
+  <para>To help solve this problem, Lojban uses a construction called a “relative clause”. Relative clauses are usually attached to the end of sumti, but there are other places where they can go as well, as explained later in this chapter. A relative clause begins with a word of selma'o NOI, and ends with the elidable terminator “ku'o” (of selma'o KUhO). As you might suppose, “noi” is a cmavo of selma'o NOI; however, first we will discuss the cmavo “poi”, which also belongs to selma'o NOI.</para>
+  <para>In between the “poi” and the “ku'o” appears a full bridi, with the same syntax as any other bridi. Anywhere within the bridi of a relative clause, the pro-sumti “ke'a” (of selma'o KOhA) may be used, and it stands for the sumti to which the relative clause is attached (called the “relativized sumti”). Here are some examples before we go any further:</para>
+  <programlisting><anchor xml:id="c8e1d2"/><anchor xml:id="cll_chapter8-section1-example2"/>1.2)   ti poi ke'a prenu ku'o cu barda
+       This-thing such-that-(IT is-a-person) is-large.
+       This thing which is a person is big.
+       This person is big.
+
+<anchor xml:id="c8e1d3"/><anchor xml:id="cll_chapter8-section1-example3"/>1.3)   ti poi ke'a nazbi ku'o cu barda
+       This-thing such-that-(IT is-a-nose) is-large.
+       This thing which is a nose is big.
+       This nose is big.
+
+<anchor xml:id="c8e1d4"/><anchor xml:id="cll_chapter8-section1-example4"/>1.4)   ti poi ke'a nazbi kapkevna ku'o cu barda
+       This-thing such-that-(IT is-a-nose-type-of skin-hole) is-big.
+       These things which are nose-pores are big.
+       These nose-pores are big.
+</programlisting>
+  <para>In the literal translations throughout this chapter, the word “IT”, capitalized, is used to represent the cmavo “ke'a”. In each case, it serves to represent the sumti (in <xref linkend="cll_chapter8-section1-example2"/> through <xref linkend="cll_chapter8-section1-example4"/>, the cmavo “ti”) to which the relative clause is attached.</para>
+  <para>Of course, there is no reason why “ke'a” needs to appear in the x1 place of a relative clause bridi; it can appear in any place, or indeed even in a sub-bridi within the relative clause bridi. Here are two more examples:</para>
+  <programlisting><anchor xml:id="c8e1d5"/><anchor xml:id="cll_chapter8-section1-example5"/>1.5)   tu poi le mlatu pu lacpu ke'a ku'o cu ratcu
+       That-distant-thing such-that (the cat [past] drags IT) is-a-rat.
+       That thing which the cat dragged is a rat.
+       What the cat dragged is a rat.
+
+<anchor xml:id="c8e1d6"/><anchor xml:id="cll_chapter8-section1-example6"/>1.6)   ta poi mi djica le nu mi ponse ke'a [kei] ku'o cu bloti
+       That-thing such-that( I desire the event-of( I own IT ) ) is-a-boat.
+       That thing that I want to own is a boat.
+</programlisting>
+  <para>In <xref linkend="cll_chapter8-section1-example6"/>, “ke'a” appears in an abstraction clause (abstractions are explained in <xref linkend="cll_chapter11"/>) within a relative clause.</para>
+  <para>Like any sumti, “ke'a” can be omitted. The usual presumption in that case is that it then falls into the x1 place:</para>
+  <programlisting><anchor xml:id="c8e1d7"/><anchor xml:id="cll_chapter8-section1-example7"/>1.7)   ti poi nazbi cu barda
+       This-thing which is-a-nose is-big.
+</programlisting>
+  <para>almost certainly means the same thing as <xref linkend="cll_chapter8-section1-example3"/>. However, “ke'a” can be omitted if it is clear to the listener that it belongs in some place other than x1:</para>
+  <programlisting><anchor xml:id="c8e1d8"/><anchor xml:id="cll_chapter8-section1-example8"/>1.8)   tu poi le mlatu pu lacpu cu ratcu
+       That-distant-thing which the cat [past] drags is-a-rat
+</programlisting>
+  <para>is equivalent to <xref linkend="cll_chapter8-section1-example4"/>.</para>
+  <para>As stated before, “ku'o” is an elidable terminator, and in fact it is almost always elidable. Throughout the rest of this chapter, “ku'o” will not be written in any of the examples unless it is absolutely required: thus, <xref linkend="cll_chapter8-section1-example2"/> can be written:</para>
+  <programlisting><anchor xml:id="c8e1d9"/><anchor xml:id="cll_chapter8-section1-example9"/>1.9)   ti poi prenu cu barda
+       That which is-a-person is-big.
+       That person is big.
+</programlisting>
+  <para>without any change in meaning. Note that “poi” is translated “which” rather than “such-that” when “ke'a” has been omitted from the x1 place of the relative clause bridi. The word “which” is used in English to introduce English relative clauses: other words that can be used are “who” and “that”, as in:</para>
+  <programlisting><anchor xml:id="c8e1d10"/><anchor xml:id="cll_chapter8-section1-example10"/>1.10)  I saw a man who was going to the store.
+</programlisting>
+  <para>and</para>
+  <programlisting><anchor xml:id="c8e1d11"/><anchor xml:id="cll_chapter8-section1-example11"/>1.11)  The building that the school was located in is large.
+</programlisting>
+  <para>In <xref linkend="cll_chapter8-section1-example10"/> the relative clause is “who was going to the store”, and in <xref linkend="cll_chapter8-section1-example11"/> it is “that the school was located in”. Sometimes “who”, “which”, and “that” are used in literal translations in this chapter in order to make them read more smoothly.</para>
+</section>
+
+<section xml:id="cll_chapter8-section2">
+  <title>2. Incidental relative clauses</title>
+  <para>The following cmavo is discussed in this section:</para>
+  <programlisting>
+     noi     NOI                 incidental relative clause introducer
+</programlisting>
+  <para>There are two basic kinds of relative clauses: restrictive relative clauses introduced by “poi”, and incidental (sometimes called simply “non-restrictive”) relative clauses introduced by “noi”. The difference between restrictive and incidental relative clauses is that restrictive clauses provide information that is essential to identifying the referent of the sumti to which they are attached, whereas incidental relative clauses provide additional information which is helpful to the listener but is not essential for identifying the referent of the sumti. All of the examples in <xref linkend="cll_chapter8-section1"/> are restrictive relative clauses: the information in the relative clause is essential to identification. (The title of this chapter, though, uses an incidental relative clause.)</para>
+  <para>Consider the following examples:</para>
+  <programlisting><anchor xml:id="c8e2d1"/><anchor xml:id="cll_chapter8-section2-example1"/>2.1)   le gerku poi blanu cu barda
+       The dog which is-blue is-large.
+       The dog which is blue is large.
+
+<anchor xml:id="c8e2d2"/><anchor xml:id="cll_chapter8-section2-example2"/>2.2)   le gerku noi blanu cu barda
+       The dog incidentally-which is-blue is-large.
+       The dog, which is blue, is large.
+</programlisting>
+  <para>In <xref linkend="cll_chapter8-section2-example1"/>, the information conveyed by “poi blanu” is essential to identifying the dog in question: it restricts the possible referents from dogs in general to dogs that are blue. This is why “poi” relative clauses are called restrictive. In <xref linkend="cll_chapter8-section2-example2"/>, on the other hand, the dog which is referred to has presumably already been identified clearly, and the relative clause “noi blanu” just provides additional information about it. (If in fact the dog hasn’t been identified clearly, then the relative clause does not help identify it further.)</para>
+  <para>In English, the distinction between restrictive and incidental relative clauses is expressed in writing by surrounding incidental, but not restrictive, clauses with commas. These commas are functioning as parentheses, because incidental relative clauses are essentially parenthetical. This distinction in punctuation is represented in speech by a difference in tone of voice. In addition, English restrictive relative clauses can be introduced by “that” as well as “which” and “who”, whereas incidental relative clauses cannot begin with “that”. Lojban, however, always uses the cmavo “poi” and “noi” rather than punctuation or intonation to make the distinction.</para>
+  <para>Here are more examples of incidental relative clauses:</para>
+  <programlisting><anchor xml:id="c8e2d3"/><anchor xml:id="cll_chapter8-section2-example3"/>2.3)   mi noi jdice cu zvati
+       I who-incidentally am-a-judge am-at [some-place].
+       I, a judge, am present.
+</programlisting>
+  <para>In this example, “mi” is already sufficiently restricted, and the additional information that I am a judge is being provided solely for the listener’s edification.</para>
+  <programlisting><anchor xml:id="c8e2d4"/><anchor xml:id="cll_chapter8-section2-example4"/>2.4)   xu do viska le mi karce noi blabi
+       [True?] You see my car incidentally-which is-white.
+       Do you see my car, which is white?
+</programlisting>
+  <para>In <xref linkend="cll_chapter8-section2-example4"/>, the speaker is presumed to have only one car, and is providing incidental information that it is white. (Alternatively, he or she might have more than one car, since “le karce” can be plural, in which case the incidental information is that each of them is white.) Contrast <xref linkend="cll_chapter8-section2-example5"/> with a restrictive relative clause:</para>
+  <programlisting><anchor xml:id="c8e2d5"/><anchor xml:id="cll_chapter8-section2-example5"/>2.5)   xu do viska le mi karce poi blabi
+       [True?] You see my car which is-white.
+       Do you see my car that is white?
+       Do you see my white car?
+</programlisting>
+  <para>Here the speaker probably has several cars, and is restricting the referent of the sumti “le mi karce” (and thereby the listener’s attention) to the white one only. <xref linkend="cll_chapter8-section2-example5"/> means much the same as <xref linkend="cll_chapter8-section2-example6"/>, which does not use a relative clause:</para>
+  <programlisting><anchor xml:id="c8e2d6"/><anchor xml:id="cll_chapter8-section2-example6"/>2.6)   xu do viska le mi blabi karce
+       [True?] You see my white car.
+       Do you see my car, the white one?
+</programlisting>
+  <para>So a restrictive relative clause attached to a description can often mean the same as a description involving a tanru. However, “blabi karce”, like all tanru, is somewhat vague: in principle, it might refer to a car which carries white things, or even express some more complicated concept involving whiteness and car-ness; the restrictive relative clause of <xref linkend="cll_chapter8-section2-example5"/> can only refer to a car which is white, not to any more complex or extended concept.</para>
+</section>
+
+<section xml:id="cll_chapter8-section3">
+  <title>3. Relative phrases</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     pe      GOI                 restrictive association
+     po      GOI                 restrictive possession
+     po'e    GOI                 restrictive intrinsic possession
+     po'u    GOI                 restrictive identification
+     ne      GOI                 incidental association
+     no'u    GOI                 incidental identification
+
+     ge'u    GEhU                relative phrase terminator
+</programlisting>
+  <para>There are types of relative clauses (those which have a certain selbri) which are frequently wanted in Lojban, and can be expressed using a shortcut called a relative phrase. Relative phrases are introduced by cmavo of selma'o GOI, and consist of a GOI cmavo followed by a single sumti.</para>
+  <para>Here is an example of “pe”, plus an equivalent sentence using a relative clause:</para>
+  <programlisting><anchor xml:id="c8e3d1"/><anchor xml:id="cll_chapter8-section3-example1"/>3.1)   le stizu pe mi cu blanu
+       The chair associated-with me is-blue.
+       My chair is blue.
+
+<anchor xml:id="c8e3d2"/><anchor xml:id="cll_chapter8-section3-example2"/>3.2)   le stizu poi ke'a srana mi cu blanu
+       The chair such-that( IT is-associated-with me) is-blue.
+</programlisting>
+  <para>In <xref linkend="cll_chapter8-section3-example1"/> and <xref linkend="cll_chapter8-section3-example2"/>, the link between the chair and the speaker is of the loosest kind.</para>
+  <para>Here is an example of “po”:</para>
+  <programlisting><anchor xml:id="c8e3d3"/><anchor xml:id="cll_chapter8-section3-example3"/>3.3)   le stizu po mi cu xunre
+       The chair specific-to me is red.
+
+<anchor xml:id="c8e3d4"/><anchor xml:id="cll_chapter8-section3-example4"/>3.4)   le stizu poi ke'a se steci srana mi cu xunre
+       The chair such-that (IT is-specifically associated-with me) is-red.
+</programlisting>
+  <para><xref linkend="cll_chapter8-section3-example3"/> and <xref linkend="cll_chapter8-section3-example4"/> contrast with <xref linkend="cll_chapter8-section3-example1"/> and <xref linkend="cll_chapter8-section3-example2"/>: the chair is more permanently connected with the speaker. A plausible (though not the only possible) contrast between <xref linkend="cll_chapter8-section3-example1"/> and <xref linkend="cll_chapter8-section3-example3"/> is that “pe mi” would be appropriate for a chair the speaker is currently sitting on (whether or not the speaker owned that chair), and “po mi” for a chair owned by the speaker (whether or not he or she was currently occupying it).</para>
+  <para>As a result, the relationship expressed between two sumti by “po” is usually called “possession”, although it does not necessarily imply ownership, legal or otherwise. The central concept is that of specificity (“steci” in Lojban).</para>
+  <para>Here is an example of “po'e”, as well as another example of “po”:</para>
+  <programlisting><anchor xml:id="c8e3d5"/><anchor xml:id="cll_chapter8-section3-example5"/>3.5)   le birka po'e mi cu spofu
+       The arm intrinsically-possessed-by me is-broken
+
+<anchor xml:id="c8e3d6"/><anchor xml:id="cll_chapter8-section3-example6"/>3.6)   le birka poi jinzi ke se steci srana mi cu spofu
+       The arm which is-intrinsically (specifically associated-with) me is-broken.
+
+<anchor xml:id="c8e3d7"/><anchor xml:id="cll_chapter8-section3-example7"/>3.7)   le botpi po mi cu spofu
+       The bottle specific-to me is-broken
+</programlisting>
+  <para><xref linkend="cll_chapter8-section3-example5"/> and <xref linkend="cll_chapter8-section3-example6"/> on the one hand, and <xref linkend="cll_chapter8-section3-example7"/> on the other, illustrate the contrast between two types of possession called “intrinsic” and “extrinsic”, or sometimes “inalienable” and “alienable”, respectively. Something is intrinsically (or inalienably) possessed by someone if the possession is part of the possessor, and cannot be changed without changing the possessor. In the case of <xref linkend="cll_chapter8-section3-example5"/>, people are usually taken to intrinsically possess their arms: even if an arm is cut off, it remains the arm of that person. (If the arm is transplanted to another person, however, it becomes intrinsically possessed by the new user, though, so intrinsic possession is a matter of degree.)</para>
+  <para>By contrast, the bottle of <xref linkend="cll_chapter8-section3-example7"/> can be given away, or thrown away, or lost, or stolen, so it is possessed extrinsically (alienably). The exact line between intrinsic and extrinsic possession is culturally dependent. The U.S. Declaration of Independence speaks of the “inalienable rights” of men, but just what those rights are, and even whether the concept makes sense at all, varies from culture to culture.</para>
+  <para>Note that <xref linkend="cll_chapter8-section3-example5"/> can also be expressed without a relative clause:</para>
+  <programlisting><anchor xml:id="c8e3d8"/><anchor xml:id="cll_chapter8-section3-example8"/>3.8)   le birka be mi cu spofu
+       The arm of-body me is broken
+</programlisting>
+  <para>reflecting the fact that the gismu “birka” has an x2 place representing the body to which the arm belongs. Many, but not all, cases of intrinsic possession can be thus covered without using “po'e” by placing the possessor into the appropriate place of the description selbri.</para>
+  <para>Here is an example of “po'u”:</para>
+  <programlisting><anchor xml:id="c8e3d9"/><anchor xml:id="cll_chapter8-section3-example9"/>3.9)   le gerku po'u le mi pendo cu cinba mi
+       The dog which-is my friend kisses me.
+
+<anchor xml:id="c8e3d10"/><anchor xml:id="cll_chapter8-section3-example10"/>3.10)  le gerku poi du le mi pendo cu cinba mi
+       The dog which = my friend kisses me.
+</programlisting>
+  <para>The cmavo “po'u” does not represent possession at all, but rather identity. (Note that it means “poi du” and its form was chosen to suggest the relationship.)</para>
+  <para>In <xref linkend="cll_chapter8-section3-example9"/>, the use of “po'u” tells us that “le gerku” and “le mi pendo” represent the same thing. Consider the contrast between <xref linkend="cll_chapter8-section3-example9"/> and:</para>
+  <programlisting><anchor xml:id="c8e3d11"/><anchor xml:id="cll_chapter8-section3-example11"/>3.11)  le mi pendo po'u le gerku cu cinba mi
+       My friend which-is the dog kisses me.
+</programlisting>
+  <para>The facts of the case are the same, but the listener’s knowledge about the situation may not be. In <xref linkend="cll_chapter8-section3-example9"/>, the listener is presumed not to understand which dog is meant by “le gerku”, so the speaker adds a relative phrase clarifying that it is the particular dog which is the speaker’s friend.</para>
+  <para><xref linkend="cll_chapter8-section3-example11"/>, however, assumes that the listener does not know which of the speaker’s friends is referred to, and specifies that it is the friend that is the dog (which dog is taken to be obvious). Here is another example of the same contrast:</para>
+  <programlisting><anchor xml:id="c8e3d12"/><anchor xml:id="cll_chapter8-section3-example12"/>3.12)  le tcadu po'u la nu,iork
+       The city of New York [not another city]
+
+<anchor xml:id="c8e3d13"/><anchor xml:id="cll_chapter8-section3-example13"/>3.13)  la nu,iork po'u le tcadu
+       New York the city (not the state or some other New York)
+</programlisting>
+  <para>The principle that the possessor and the possessed may change places applies to all the GOI cmavo, and allows for the possibility of odd effects:</para>
+  <programlisting><anchor xml:id="c8e3d14"/><anchor xml:id="cll_chapter8-section3-example14"/>3.14)  le kabri pe le mi pendo cu cmalu
+       The cup associated-with my friend is small.
+       My friend’s cup is small
+
+<anchor xml:id="c8e3d15"/><anchor xml:id="cll_chapter8-section3-example15"/>3.15)  le mi pendo pe le kabri cu cmalu
+       My friend associated-with the cup is small.
+       My friend, the one with the cup, is small.
+</programlisting>
+  <para><xref linkend="cll_chapter8-section3-example14"/> is useful in a context which is about my friend, and states that his or her cup is small, whereas <xref linkend="cll_chapter8-section3-example15"/> is useful in a context that is primarily about a certain cup, and makes a claim about “my friend of the cup”, as opposed to some other friend of mine. Here the cup appears to “possess” the person! English can’t even express this relationship with a possessive — “the cup’s friend of mine” looks like nonsense — but Lojban has no trouble doing so.</para>
+  <para>Finally, the cmavo “ne” and “no'u” stand to “pe” and “po'u”, respectively, as “noi” does to “poi” — they provide incidental information:</para>
+  <programlisting><anchor xml:id="c8e3d16"/><anchor xml:id="cll_chapter8-section3-example16"/>3.16)  le blabi gerku ne mi cu batci do
+       The white dog, incidentally-associated-with me, bites you.
+       The white dog, which is mine, bites you.
+</programlisting>
+  <para>In <xref linkend="cll_chapter8-section3-example16"/>, the white dog is already fully identified (after all, presumably the listener knows which dog bit him or her!). The fact that it is yours is merely incidental to the main bridi claim.</para>
+  <para>Distinguishing between “po'u” and “no'u” can be a little tricky. Consider a room with several men in it, one of whom is named Jim. If you don’t know their names, I might say:</para>
+  <programlisting><anchor xml:id="c8e3d17"/><anchor xml:id="cll_chapter8-section3-example17"/>3.17)  le nanmu no'u la djim. cu terpemci
+       The man, incidentally-who-is Jim, is-a-poet.
+       The man, Jim, is a poet.
+</programlisting>
+  <para>Here I am saying that one of the men is a poet, and incidentally telling you that he is Jim. But if you do know the names, then</para>
+  <programlisting><anchor xml:id="c8e3d18"/><anchor xml:id="cll_chapter8-section3-example18"/>3.18)  le nanmu po'u la djim. cu terpemci
+       The man who-is Jim is-a-poet.
+       The man Jim is a poet.
+</programlisting>
+  <para>is appropriate. Now I am using the fact that the man I am speaking of is Jim in order to pick out which man I mean.</para>
+  <para>It is worth mentioning that English sometimes over-specifies possession from the Lojban point of view (and the point of view of many other languages, including ones closely related to English). The idiomatic English sentence</para>
+  <programlisting><anchor xml:id="c8e3d19"/><anchor xml:id="cll_chapter8-section3-example19"/>3.19)  The man put his hands in his pockets.
+</programlisting>
+  <para>seems strange to a French- or German-speaking person: whose pockets would he put his hands into? and even odder, whose hands would he put into his pockets? In Lojban, the sentence</para>
+  <programlisting><anchor xml:id="c8e3d20"/><anchor xml:id="cll_chapter8-section3-example20"/>3.20)  le nanmu cu punji le xance le daski
+       The man puts the hand at-locus-the pocket.
+</programlisting>
+  <para>is very natural. Of course, if the man is in fact putting his hands into another’s pockets, or another’s hands into his pockets, the fact can be specified.</para>
+  <para>Finally, the elidable terminator for GOI cmavo is “ge'u” of selma'o GEhU; it is almost never required. However, if a logical connective immediately follows a sumti modified by a relative phrase, then an explicit “ge'u” is needed to allow the connective to affect the relativized sumti rather than the sumti of the relative phrase. (What about the cmavo after which selma'o GOI is named? It is discussed in <xref linkend="cll_chapter7"/>, as it is not semantically akin to the other kinds of relative phrases, although the syntax is the same.)</para>
+</section>
+
+<section xml:id="cll_chapter8-section4">
+  <title>4. Multiple relative clauses: “zi'e”</title>
+  <programlisting>
+     zi'e    ZIhE                relative clause joiner
+</programlisting>
+  <para>Sometimes it is necessary or useful to attach more than one relative clause to a sumti. This is made possible in Lojban by the cmavo “zi'e” (of selma'o ZIhE), which is used to join one or more relative clauses together into a single unit, thus making them apply to the same sumti. For example:</para>
+  <programlisting><anchor xml:id="c8e4d1"/><anchor xml:id="cll_chapter8-section4-example1"/>4.1)   le gerku poi blabi zi'e poi batci le nanmu cu klama
+       The dog which is white and which bites the man goes.
+</programlisting>
+  <para>The most usual translation of “zi'e” in English is “and”, but “zi'e” is not really a logical connective: unlike most of the true logical connectives (which are explained in <xref linkend="cll_chapter14"/>), it cannot be converted into a logical connection between sentences.</para>
+  <para>It is perfectly correct to use “zi'e” to connect relative clauses of different kinds:</para>
+  <programlisting><anchor xml:id="c8e4d2"/><anchor xml:id="cll_chapter8-section4-example2"/>4.2)   le gerku poi blabi zi'e noi le mi pendo cu ponse ke'a cu klama
+       The dog that-is (white) and incidentally-such-that (my friend owns IT) goes.
+       The dog that is white, which my friend owns, is going.
+</programlisting>
+  <para>In <xref linkend="cll_chapter8-section4-example2"/>, the restrictive clause “poi blabi” specifies which dog is referred to, but the incidental clause “noi le mi pendo cu ponse” is mere incidental information: the listener is supposed to already have identified the dog from the “poi blabi”. Of course, the meaning (though not necessarily the emphasis) is the same if the incidental clause appears first.</para>
+  <para>It is also possible to connect relative phrases with “zi'e”, or a relative phrase with a relative clause:</para>
+  <programlisting><anchor xml:id="c8e4d3"/><anchor xml:id="cll_chapter8-section4-example3"/>4.3)   le botpi po mi zi'e poi blanu cu spofu
+       The bottle specific-to me and which-is blue is-broken.
+       My blue bottle is broken.
+</programlisting>
+  <para>Note that if the colloquial translation of <xref linkend="cll_chapter8-section4-example3"/> were “My bottle, which is blue, is broken”, then “noi” rather than “poi” would have been correct in the Lojban version, since that version of the English implies that you do not need to know the bottle is blue. As written, <xref linkend="cll_chapter8-section4-example3"/> suggests that I probably have more than one bottle, and the one in question needs to be picked out as the blue one.</para>
+  <programlisting><anchor xml:id="c8e4d4"/><anchor xml:id="cll_chapter8-section4-example4"/>4.4)   mi ba zutse le stizu pe mi zi'e po do
+            zi'e poi xunre
+       I [future] sit-in the chair associated-with me and specific-to you
+            and which-is red.
+       I will sit in my chair (really yours), the red one.
+</programlisting>
+  <para><xref linkend="cll_chapter8-section4-example4"/> illustrates that more than two relative phrases or clauses can be connected with “zi'e”. It almost defies colloquial translation because of the very un-English contrast between “pe mi”, implying that the chair is temporarily connected with me, and “po do”, implying that the chair has a more permanent association with you. (Perhaps I am a guest in your house, in which case the chair would naturally be your property.)</para>
+  <para>Here is another example, mixing a relative phrase and two relative clauses, a restrictive one and a non-restrictive one:</para>
+  <programlisting><anchor xml:id="c8e4d5"/><anchor xml:id="cll_chapter8-section4-example5"/>4.5)   mi ba citka le dembi pe mi
+            zi'e poi cpana le mi palta
+            zi'e noi do dunda ke'a mi
+       I [future] eat the beans associated-with me
+            and which are-upon my plate
+            and which-incidentally you gave IT to-me.
+       I’ll eat my beans that are on my plate, the ones you gave me.
+</programlisting>
+</section>
+
+<section xml:id="cll_chapter8-section5">
+  <title>5. Non-veridical relative clauses: “voi”</title>
+  <programlisting>
+     voi     NOI                 non-veridical relative clause introducer
+</programlisting>
+  <para>There is another member of selma'o NOI which serves to introduce a third kind of relative clause: “voi”. Relative clauses introduced by “voi” are restrictive, like those introduced by “poi”. However, there is a fundamental difference between “poi” and “voi” relative clauses. A “poi” relative clause is said to be veridical, in the same sense that a description using “lo” or “loi” is: it is essential to the interpretation that the bridi actually be true. For example:</para>
+  <programlisting><anchor xml:id="c8e5d1"/><anchor xml:id="cll_chapter8-section5-example1"/>5.1)   le gerku poi blabi cu klama
+       The dog which is-white goes.
+</programlisting>
+  <para>it must actually be true that the dog is white, or the sentence constitutes a miscommunication. If there is a white dog and a brown dog, and the speaker uses “le gerku poi blabi” to refer to the brown dog, then the listener will not understand correctly. However,</para>
+  <programlisting><anchor xml:id="c8e5d2"/><anchor xml:id="cll_chapter8-section5-example2"/>5.2)   le gerku voi blabi cu klama
+       The dog which-I-describe-as white goes.
+</programlisting>
+  <para>puts the listener on notice that the dog in question may not actually meet objective standards (whatever they are) for being white: only the speaker can say exactly what is meant by the term. In this way, “voi” is like “le”; the speaker’s intention determines the meaning.</para>
+  <para>As a result, the following two sentences</para>
+  <programlisting><anchor xml:id="c8e5d3"/><anchor xml:id="cll_chapter8-section5-example3"/>5.3)   le nanmu cu ninmu
+       That-which-I-describe-as a-man is-a-woman.
+       The “guy” is actually a gal.
+
+<anchor xml:id="c8e5d4"/><anchor xml:id="cll_chapter8-section5-example4"/>5.4)   ti voi nanmu cu ninmu
+       This-thing which-I-describe-as a-man is-a-woman.
+</programlisting>
+  <para>mean essentially the same thing (except that <xref linkend="cll_chapter8-section5-example4"/> involves pointing thanks to the use of “ti”, whereas <xref linkend="cll_chapter8-section5-example3"/> doesn’t), and neither one is self-contradictory: it is perfectly all right to describe something as a man (although perhaps confusing to the listener) even if it actually is a woman.</para>
+</section>
+
+<section xml:id="cll_chapter8-section6">
+  <title>6. Relative clauses and descriptors</title>
+  <para>So far, this chapter has described the various kinds of relative clauses (including relative phrases). The list is now complete, and the rest of the chapter will be concerned with the syntax of sumti that include relative clauses. So far, all relative clauses have appeared directly after the sumti to which they are attached. This is the most common position (and originally the only one), but a variety of other placements are also possible which produce a variety of semantic effects.</para>
+  <para>There are actually three places where a relative clause can be attached to a description sumti: after the descriptor (“le”, “lo”, or whatever), after the embedded selbri but before the elidable terminator (which is “ku”), and after the “ku”. The relative clauses attached to descriptors that we have seen have occupied the second position. Thus <xref linkend="cll_chapter8-section5-example1"/>, if written out with all elidable terminators, would appear as:</para>
+  <programlisting><anchor xml:id="c8e6d1"/><anchor xml:id="cll_chapter8-section6-example1"/>6.1)   le gerku poi blabi ku'o ku cu klama vau
+       The (dog which (is-white) ) goes.
+       The dog which is white is going.
+</programlisting>
+  <para>Here “ku'o” is the terminator paired with “poi” and “ku” with “le”, and “vau” is the terminator of the whole bridi.</para>
+  <para>When a simple descriptor using “le”, like “le gerku”, has a relative clause attached, it is purely a matter of style and emphasis where the relative clause should go. Therefore, the following examples are all equivalent in meaning to <xref linkend="cll_chapter8-section6-example1"/>:</para>
+  <programlisting><anchor xml:id="c8e6d2"/><anchor xml:id="cll_chapter8-section6-example2"/>6.2)   le poi blabi ku'o gerku cu klama
+       The such-that (it-is-white) dog goes.
+
+<anchor xml:id="c8e6d3"/><anchor xml:id="cll_chapter8-section6-example3"/>6.3)   le gerku ku poi blabi cu klama
+       The (dog) which is-white goes.
+</programlisting>
+  <para><xref linkend="cll_chapter8-section6-example1"/> will seem most natural to speakers of languages like English, which always puts relative clauses after the noun phrases they are attached to; <xref linkend="cll_chapter8-section6-example2"/>, on the other hand, may seem more natural to Finnish or Chinese speakers, who put the relative clause first. Note that in <xref linkend="cll_chapter8-section6-example2"/>, the elidable terminator “ku'o” must appear, or the selbri of the relative clause (“blabi”) will merge with the selbri of the description (“gerku”), resulting in an ungrammatical sentence. The purpose of the form appearing in <xref linkend="cll_chapter8-section6-example3"/> will be apparent shortly.</para>
+  <para>As is explained in detail in <xref linkend="cll_chapter6"/>, two different numbers (known as the “inner quantifier” and the “outer quantifier”) can be attached to a description. The inner quantifier specifies how many things the descriptor refers to: it appears between the descriptor and the description selbri. The outer quantifier appears before the descriptor, and specifies how many of the things referred to by the descriptor are involved in this particular bridi. In the following example,</para>
+  <programlisting><anchor xml:id="c8e6d4"/><anchor xml:id="cll_chapter8-section6-example4"/>6.4)   re le mu prenu cu klama le zarci
+       Two-of the five persons go to-the market.
+       Two of the five people [that I have in mind] are going to the market.
+</programlisting>
+  <para>“mu” is the inner quantifier and “re” is the outer quantifier. Now what is meant by attaching a relative clause to the sumti “re le mu prenu”? Suppose the relative clause is “poi ninmu” (meaning “who are women”). Now the three possible attachment points discussed previously take on significance.</para>
+  <programlisting><anchor xml:id="c8e6d5"/><anchor xml:id="cll_chapter8-section6-example5"/>6.5)   re le poi ninmu ku'o mu prenu cu klama le zarci
+       Two of the such-that([they] are-women) five persons go to-the market.
+       Two women out of the five persons go to the market.
+
+<anchor xml:id="c8e6d6"/><anchor xml:id="cll_chapter8-section6-example6"/>6.6)   re le mu prenu poi ninmu [ku] cu klama le zarci
+       Two of the (five persons which are-women) go to-the market.
+       Two of the five women go to the market.
+
+<anchor xml:id="c8e6d7"/><anchor xml:id="cll_chapter8-section6-example7"/>6.7)   re le mu prenu ku poi ninmu cu klama le zarci
+       (Two of the five persons) which are-women go to-the market.
+       Two women out of the five persons go to the market.
+</programlisting>
+  <para>As the parentheses show, <xref linkend="cll_chapter8-section6-example6"/> means that all five of the persons are women, whereas <xref linkend="cll_chapter8-section6-example7"/> means that the two who are going to the market are women. How do we remember which is which? If the relative clause comes after the explicit “ku”, as in <xref linkend="cll_chapter8-section6-example7"/>, then the sumti as a whole is qualified by the relative clause. If there is no “ku”, or if the relative clause comes before an explicit “ku”, then the relative clause is understood to apply to everything which the underlying selbri applies to.</para>
+  <para>What about <xref linkend="cll_chapter8-section6-example5"/>? By convention, it means the same as <xref linkend="cll_chapter8-section6-example7"/>, and it requires no “ku”, but it does typically require a “ku'o” instead. Note that the relative clause comes before the inner quantifier.</para>
+  <para>When “le” is the descriptor being used, and the sumti has no explicit outer quantifier, then the outer quantifier is understood to be “ro” (meaning “all”), as is explained in <xref linkend="cll_chapter6"/>. Thus “le gerku” is taken to mean “all of the things I refer to as dogs”, possibly all one of them. In that case, there is no difference between a relative clause after the “ku” or before it. However, if the descriptor is “lo”, the difference is quite important:</para>
+  <programlisting><anchor xml:id="c8e6d8"/><anchor xml:id="cll_chapter8-section6-example8"/>6.8)   lo prenu ku noi blabi cu klama le zarci
+       (Some persons) incidentally-which are-white go to-the market.
+       Some people, who are white, go to the market.
+
+<anchor xml:id="c8e6d9"/><anchor xml:id="cll_chapter8-section6-example9"/>6.9)   lo prenu noi blabi [ku] cu klama le zarci
+       Some (persons incidentally-which are-white) go to-the market.
+       Some of the people, who by the way are white, go to the market.
+</programlisting>
+  <para>Both <xref linkend="cll_chapter8-section6-example8"/> and <xref linkend="cll_chapter8-section6-example9"/> tell us that one or more persons are going to the market. However, they make very different incidental claims. Now, what does “lo prenu noi blabi” mean? Well, the default inner quantifier is “ro” (meaning “all”), and the default outer quantifier is “su'o” (meaning “at least one”). Therefore, we must first take all persons, then choose at least one of them. That one or more people will be going.</para>
+  <para>In <xref linkend="cll_chapter8-section6-example8"/>, the relative clause described the sumti once the outer quantifier was applied: one or more people, who are white, are going. But in <xref linkend="cll_chapter8-section6-example9"/>, the relative clause actually describes the sumti before the outer quantification is applied, so that it ends up meaning “First take all persons — by the way, they’re all white”. But not all people are white, so the incidental claim being made here is false.</para>
+  <para>The safe strategy, therefore, is to always use “ku” when attaching a “noi” relative clause to a “lo” descriptor. Otherwise we may end up claiming far too much.</para>
+  <para>When the descriptor is “la”, indicating that what follows is a selbri used for naming, then the positioning of relative clauses has a different significance. A relative clause inside the “ku”, whether before or after the selbri, is reckoned part of the name; a relative clause outside the “ku” is not. Therefore,</para>
+  <programlisting><anchor xml:id="c8e6d10"/><anchor xml:id="cll_chapter8-section6-example10"/>6.10)  mi viska la nanmu poi terpa le ke'a xirma [ku]
+       I see that-named (“man which fears the of-IT horse”).
+       I see Man Afraid Of His Horse.
+</programlisting>
+  <para>says that the speaker sees a person with a particular name, who does not necessarily fear any horses, whereas</para>
+  <programlisting><anchor xml:id="c8e6d11"/><anchor xml:id="cll_chapter8-section6-example11"/>6.11)  mi viska la nanmu ku poi terpa le ke'a xirma.
+       I see that-named( “Man” ) which fears the of-IT horse.
+       I see the person named “Man” who is afraid of his horse.
+</programlisting>
+  <para>refers to one (or more) of those named “Man”, namely the one(s) who are afraid of their horses.</para>
+  <para>Finally, so-called indefinite sumti like “re karce”, which means almost the same as “re lo karce” (which in turn means the same as “re lo ro karce”), can have relative clauses attached; these are taken to be of the outside-the-“ku” variety. Here is an example:</para>
+  <programlisting><anchor xml:id="c8e6d12"/><anchor xml:id="cll_chapter8-section6-example12"/>6.12)  mi ponse re karce [ku] poi xekri
+       I possess two cars which-are black.
+</programlisting>
+  <para>The restrictive relative clause only affects the two cars being affected by the main bridi, not all cars that exist. It is ungrammatical to try to place a relative clause within an indefinite sumti (that is, before an explicitly expressed terminating “ku”.) Use an explicit “lo” instead.</para>
+</section>
+
+<section xml:id="cll_chapter8-section7">
+  <title>7. Possessive sumti</title>
+  <para>In <xref linkend="cll_chapter8-section2-example4"/> through <xref linkend="cll_chapter8-section2-example6"/>, the sumti “le mi karce” appears, glossed as “my car”. Although it might not seem so, this sumti actually contains a relative phrase. When a sumti appears between a descriptor and its description selbri, it is actually a “pe” relative phrase. So</para>
+  <programlisting><anchor xml:id="c8e7d1"/><anchor xml:id="cll_chapter8-section7-example1"/>7.1)   le mi karce cu xunre
+       My car is-red.
+</programlisting>
+  <para>and</para>
+  <programlisting><anchor xml:id="c8e7d2"/><anchor xml:id="cll_chapter8-section7-example2"/>7.2)   le pe mi karce cu xunre
+       The (associated-with me) car is-red.
+</programlisting>
+  <para>mean exactly the same thing. Furthermore, since there are no special considerations of quantifiers here,</para>
+  <programlisting><anchor xml:id="c8e7d3"/><anchor xml:id="cll_chapter8-section7-example3"/>7.3)   le karce pe mi cu xunre
+       The car associated-with me is-red.
+</programlisting>
+  <para>means the same thing as well. A sumti like the one in <xref linkend="cll_chapter8-section7-example1"/> is called a “possessive sumti”. Of course, it does not really indicate possession in the sense of ownership, but like “pe” relative phrases, indicates only weak association; you can say “le mi karce” even if you’ve only borrowed it for the night. (In English, “my car” usually means “le karce po mi”, but we do not have the same sense of possession in “my seat on the bus”; Lojban simply makes the weaker sense the standard one.) The inner sumti, “mi” in <xref linkend="cll_chapter8-section7-example1"/>, is correspondingly called the “possessor sumti”.</para>
+  <para>Historically, possessive sumti existed before any other kind of relative phrase or clause, and were retained when the machinery of relative phrases and clauses as detailed in this chapter so far was slowly built up. When preposed relative clauses of the <xref linkend="cll_chapter8-section7-example2"/> type were devised, possessive sumti were most easily viewed as a special case of them.</para>
+  <para>Although any sumti, however complex, can appear in a full-fledged relative phrase, only simple sumti can appear as possessor sumti, without a “pe”. Roughly speaking, the legal possessor sumti are: pro-sumti, quotations, names and descriptions, and numbers. In addition, the possessor sumti may not be preceded by a quantifier, as such a form would be interpreted as the unusual “descriptor + quantifier + sumti” type of description. All these sumti forms are explained in full in <xref linkend="cll_chapter6"/>.</para>
+  <para>Here is an example of a description used in a possessive sumti:</para>
+  <programlisting><anchor xml:id="c8e7d4"/><anchor xml:id="cll_chapter8-section7-example4"/>7.4)   le le nanmu ku karce cu blanu
+       The (associated-with-the man) car is blue.
+       The man’s car is blue.
+</programlisting>
+  <para>Note the explicit “ku” at the end of the possessor sumti, which prevents the selbri of the possessor sumti from merging with the selbri of the main description sumti. Because of the need for this “ku”, the most common kind of possessor sumti are pro-sumti, especially personal pro-sumti, which require no elidable terminator. Descriptions are more likely to be attached with relative phrases.</para>
+  <para>And here is a number used as a possessor sumti:</para>
+  <programlisting><anchor xml:id="c8e7d5"/><anchor xml:id="cll_chapter8-section7-example5"/>7.5)   le li mu jdice se bende
+       The of-the-number-five judging team-member
+       Juror number 5
+</programlisting>
+  <para>which is not quite the same as “the fifth juror”; it simply indicates a weak association between the particular juror and the number 5.</para>
+  <para>A possessive sumti may also have regular relative clauses attached to it. This would need no comment if it were not for the following special rule: a relative clause immediately following the possessor sumti is understood to affect the possessor sumti, not the possessive. For example:</para>
+  <programlisting><anchor xml:id="c8e7d6"/><anchor xml:id="cll_chapter8-section7-example6"/>7.6)   le mi noi sipna vau karce cu na klama
+       The of-me incidentally-which-(is-sleeping) car isn’t going.
+</programlisting>
+  <para>means that my car isn’t going; the incidental claim of “noi sipna” applies to me, not my car, however. If I wanted to say that the car is sleeping (whatever that might mean) I would need:</para>
+  <programlisting><anchor xml:id="c8e7d7"/><anchor xml:id="cll_chapter8-section7-example7"/>7.7)   le mi karce poi sipna cu na klama
+    The of-me car which sleeps isn’t going.
+</programlisting>
+  <para>Note that <xref linkend="cll_chapter8-section7-example6"/> uses “vau” rather than “ku'o” at the end of the relative clause: this terminator ends every simple bridi and is almost always elidable; in this case, though, it is a syllable shorter than the equally valid alternative, “ku'o”.</para>
+</section>
+
+<section xml:id="cll_chapter8-section8">
+  <title>8. Relative clauses and complex sumti: “vu'o”</title>
+  <para>The following cmavo is discussed in this section:</para>
+  <programlisting>
+     vu'o    VUhO                relative clause attacher
+</programlisting>
+  <para>Normally, relative clauses attach only to simple sumti or parts of sumti: pro-sumti, names and descriptions, pure numbers, and quotations. An example of a relative clause attached to a pure number is:</para>
+  <programlisting><anchor xml:id="c8e8d1"/><anchor xml:id="cll_chapter8-section8-example1"/>8.1)   li pai noi na'e frinu namcu
+       The-number pi, incidentally-which is-a-non- fraction number
+       The irrational number pi
+</programlisting>
+  <para>And here is an incidental relative clause attached to a quotation:</para>
+  <programlisting><anchor xml:id="c8e8d2"/><anchor xml:id="cll_chapter8-section8-example2"/>8.2)   lu mi klama le zarci li'u
+            noi mi cusku ke'a cu jufra
+       [quote] I go to-the market [unquote]
+            incidentally-which-(I express IT) is-a-sentence.
+       “I’m going to the market”, which I’d said, is a sentence.
+</programlisting>
+  <para>which may serve to identify the author of the quotation or some other relevant, but subsidiary, fact about it. All such relative clauses appear only after the simple sumti, never before it.</para>
+  <para>In addition, sumti with attached sumti qualifiers of selma'o LAhE or NAhE+BO (which are explained in detail in <xref linkend="cll_chapter6"/>) can have a relative clause appearing after the qualifier and before the qualified sumti, as in:</para>
+  <programlisting><anchor xml:id="c8e8d3"/><anchor xml:id="cll_chapter8-section8-example3"/>8.3)   la'e poi tolcitno vau lu le xunre cmaxirma li'u
+            cu zvati le vu kumfa
+       A-referent-of (which is-old) [quote] The Red Small-horse [unquote]
+            is-at the [far distance] room.
+       An old “The Red Pony” is in the far room.
+</programlisting>
+  <para><xref linkend="cll_chapter8-section8-example3"/> is a bit complex, and may need some picking apart. The quotation “lu le xunre cmaxirma li'u” means the string of words “The Red Pony”. If the “la'e” at the beginning of the sentence were omitted, <xref linkend="cll_chapter8-section8-example3"/> would claim that a certain string of words is in a room distant from the speaker. But obviously a string of words can’t be in a room! The effect of the “la'e” is to modify the sumti so that it refers not to the words themselves, but to the referent of those words, a novel by John Steinbeck (presumably in Lojban translation). The particular copy of “The Red Pony” is identified by the restrictive relative clause. <xref linkend="cll_chapter8-section8-example3"/> means exactly the same as:</para>
+  <programlisting><anchor xml:id="c8e8d4"/><anchor xml:id="cll_chapter8-section8-example4"/>8.4)   la'e lu le xunre cmaxirma li'u lu'u
+            poi to'ercitno cu zvati le vu kumfa
+       A-referent-of ([quote] The Red Small-horse [unquote])
+            which is-old is-at the [far distance] room.
+</programlisting>
+  <para>and the two sentences can be considered stylistic variants. Note the required “lu'u” terminator, which prevents the relative clause from attaching to the quotation itself: we do not wish to refer to an old quotation!</para>
+  <para>Sometimes, however, it is important to make a relative clause apply to the whole of a more complex sumti, one which involves logical or non-logical connection (explained in <xref linkend="cll_chapter14"/>). For example,</para>
+  <programlisting><anchor xml:id="c8e8d5"/><anchor xml:id="cll_chapter8-section8-example5"/>8.5)   la frank. .e la djordj. noi nanmu cu klama le zdani
+       Frank and George incidentally-who is-a-man go to-the house.
+       Frank and George, who is a man, go to the house.
+</programlisting>
+  <para>The incidental claim in <xref linkend="cll_chapter8-section8-example5"/> is not that Frank and George are men, but only that George is a man, because the incidental relative clause attaches only to “la djordj”, the immediately preceding simple sumti.</para>
+  <para>To make a relative clause attach to both parts of the logically connected sumti in <xref linkend="cll_chapter8-section8-example5"/>, a new cmavo is needed, “vu'o” (of selma'o VUhO). It is placed between the sumti and the relative clause, and extends the sphere of influence of that relative clause to the entire preceding sumti, including however many logical or non-logical connectives there may be.</para>
+  <programlisting><anchor xml:id="c8e8d6"/><anchor xml:id="cll_chapter8-section8-example6"/>8.6)   la frank. .e la djordj. vu'o noi nanmu cu klama le zdani
+       Frank and George incidentally-who are-men go to-the house.
+       Frank and George, who are men, go to the house.
+</programlisting>
+  <para>The presence of “vu'o” here means that the relative clause “noi nanmu” extends to the entire logically connected sumti “la frank. .e la djordj.”; in other words, both Frank and George are claimed to be men, as the colloquial translation shows.</para>
+  <para>English is able to resolve the distinction correctly in the case of <xref linkend="cll_chapter8-section8-example5"/> and <xref linkend="cll_chapter8-section8-example6"/> by making use of number: “who is” rather than “who are”. Lojban doesn’t distinguish between singular and plural verbs: “nanmu” can mean “is a man” or “are men”, so another means is required. Furthermore, Lojban’s mechanism works correctly in general: if “nanmu” (meaning “is-a-man”) were replaced with “pu bajra” (“ran”), English would have to make the distinction some other way:</para>
+  <programlisting><anchor xml:id="c8e8d7"/><anchor xml:id="cll_chapter8-section8-example7"/>8.7)   la frank. .e la djordj. noi pu bajra cu klama le zdani
+       Frank and (George who [past] runs) go to-the house.
+       Frank and George, who ran, go to the house.
+
+<anchor xml:id="c8e8d8"/><anchor xml:id="cll_chapter8-section8-example8"/>8.8)   la frank. .e la djordj. vu'o noi pu bajra cu klama le zdani
+       (Frank and George) who [past] run go to-the house.
+       Frank and George, who ran, go to the house.
+</programlisting>
+  <para>In spoken English, tone of voice would serve; in written English, one or both sentences would need rewriting.</para>
+</section>
+
+<section xml:id="cll_chapter8-section9">
+  <title>9. Relative clauses in vocative phrases</title>
+  <para>Vocative phrases are explained in more detail in <xref linkend="cll_chapter6"/>. Briefly, they are a method of indicating who a sentence or discourse is addressed to: of identifying the intended listener. They take three general forms, all beginning with cmavo from selma'o COI or DOI (called “vocative words”; there can be one or many), followed by either a name, a selbri, or a sumti. Here are three examples:</para>
+  <programlisting><anchor xml:id="c8e9d1"/><anchor xml:id="cll_chapter8-section9-example1"/>9.1)   coi. frank.
+       Hello, Frank.
+
+<anchor xml:id="c8e9d2"/><anchor xml:id="cll_chapter8-section9-example2"/>9.2)   co'o xirma
+       Goodbye, horse.
+
+<anchor xml:id="c8e9d3"/><anchor xml:id="cll_chapter8-section9-example3"/>9.3)   fi'i la frank. .e la djordj.
+       Welcome, Frank and George!
+</programlisting>
+  <para>Note that <xref linkend="cll_chapter8-section9-example2"/> says farewell to something which doesn’t really have to be a horse, something that the speaker simply thinks of as being a horse, or even might be something (a person, for example) who is named “Horse”. In a sense, <xref linkend="cll_chapter8-section9-example2"/> is ambiguous between “co'o le xirma” and “co'o la xirma”, a relatively safe semantic ambiguity, since names are ambiguous in general: saying “George” doesn’t distinguish between the possible Georges.</para>
+  <para>Similarly, <xref linkend="cll_chapter8-section9-example1"/> can be thought of as an abbreviation of:</para>
+  <programlisting><anchor xml:id="c8e9d4"/><anchor xml:id="cll_chapter8-section9-example4"/>9.4)   coi la frank.
+       Hello, the-one-named “Frank”.
+</programlisting>
+  <para>Syntactically, vocative phrases are a kind of free modifier, and can appear in many places in Lojban text, generally at the beginning or end of some complete construct; or, as in <xref linkend="cll_chapter8-section9-example1"/> to <xref linkend="cll_chapter8-section9-example3"/>, as sentences by themselves.</para>
+  <para>As can be seen, the form of vocative phrases is similar to that of sumti, and as you might expect, vocative phrases allow relative clauses in various places. In vocative phrases which are simple names (after the vocative words), any relative clauses must come just after the names:</para>
+  <programlisting><anchor xml:id="c8e9d5"/><anchor xml:id="cll_chapter8-section9-example5"/>9.5)   coi. frank. poi xunre se bende
+       Hello, Frank who is-a-red team-member
+       Hello, Frank from the Red Team!
+</programlisting>
+  <para>The restrictive relative clause in <xref linkend="cll_chapter8-section9-example5"/> suggests that there is some other Frank (perhaps on the Green Team) from whom this Frank, the one the speaker is greeting, must be distinguished.</para>
+  <para>A vocative phrase containing a selbri can have relative clauses either before or after the selbri; both forms have the same meaning. Here are some examples:</para>
+  <programlisting><anchor xml:id="c8e9d6"/><anchor xml:id="cll_chapter8-section9-example6"/>9.6)   co'o poi mi zvati ke'a ku'o xirma
+       Goodbye, such-that-(I am-at IT) horse
+       Goodbye, horse where I am!
+
+<anchor xml:id="c8e9d7"/><anchor xml:id="cll_chapter8-section9-example7"/>9.7)   co'o xirma poi mi zvati
+       Goodbye, horse such-that-(I am-at-it).
+</programlisting>
+  <para><xref linkend="cll_chapter8-section9-example6"/> and <xref linkend="cll_chapter8-section9-example7"/> mean the same thing. In fact, relative clauses can appear in both places.</para>
+</section>
+
+<section xml:id="cll_chapter8-section10">
+  <title>10. Relative clauses within relative clauses</title>
+  <para>For the most part, these are straightforward and uncomplicated: a sumti that is part of a relative clause bridi may itself be modified by a relative clause:</para>
+  <programlisting><anchor xml:id="c8e10d1"/><anchor xml:id="cll_chapter8-section10-example1"/>10.1)  le prenu poi zvati le kumfa poi blanu cu masno
+       The person who is-in the room which is-blue is-slow.
+</programlisting>
+  <para>However, an ambiguity can exist if “ke'a” is used in a relative clause within a relative clause: does it refer to the outermost sumti, or to the sumti within the outer relative clause to which the inner relative clause is attached? The latter. To refer to the former, use a subscript on “ke'a”:</para>
+  <programlisting><anchor xml:id="c8e10d2"/><anchor xml:id="cll_chapter8-section10-example2"/>10.2)  le prenu poi zvati le kumfa poi ke'axire zbasu ke'a cu masno
+       The person who is-in the room which IT-sub-2 built IT is-slow.
+       The person who is in the room which he built is slow.
+</programlisting>
+  <para>Here, the meaning of “IT-sub-2” is that sumti attached to the second relative clause, counting from the innermost, is used. Therefore, “ke'axipa” (IT-sub-1) means the same as plain “ke'a”.</para>
+  <para>Alternatively, you can use a prenex (explained in full in <xref linkend="cll_chapter16"/>), which is syntactically a series of sumti followed by the special cmavo “zo'u”, prefixed to the relative clause bridi:</para>
+  <programlisting><anchor xml:id="c8e10d3"/><anchor xml:id="cll_chapter8-section10-example3"/>10.3)  le prenu poi ke'a goi ko'a zo'u ko'a zvati le kumfa
+            poi ke'a goi ko'e zo'u ko'a zbasu ke'a cu masno
+       The man who (IT = it1 : it1 is-in the room
+            which  (IT = it2 : it1 built it2) is-slow.
+</programlisting>
+  <para><xref linkend="cll_chapter8-section10-example3"/> is more verbose than <xref linkend="cll_chapter8-section10-example2"/>, but may be clearer, since it explicitly spells out the two “ke'a” cmavo, each on its own level, and assigns them to the assignable cmavo “ko'a” and “ko'e” (explained in Chapter <xref linkend="cll_chapter6"/>).</para>
+</section>
+
+<section xml:id="cll_chapter8-section11">
+  <title>11. Index of relative clause cmavo</title>
+  <para>Relative clause introducers (selma'o NOI):</para>
+  <programlisting>
+     noi     incidental clauses
+     poi     restrictive clauses
+     voi     restrictive clauses (non-veridical)
+</programlisting>
+  <para>Relative phrase introducers (selma'o GOI):</para>
+  <programlisting>
+     goi     pro-sumti assignment
+     pe      restrictive association
+     ne      incidental association
+     po      extrinsic (alienable) possession
+     po'e    intrinsic (inalienable) possession
+     po'u    restrictive identification
+     no'u    incidental identification
+</programlisting>
+  <para>Relativizing pro-sumti (selma'o KOhA):</para>
+  <programlisting>
+     ke'a    pro-sumti for relativized sumti
+</programlisting>
+  <para>Relative clause joiner (selma'o ZIhE):</para>
+  <programlisting>
+     zi'e    joins relative clauses applying to a single sumti
+</programlisting>
+  <para>Relative clause associator (selma'o VUhO):</para>
+  <programlisting>
+     vu'o    causes relative clauses to apply to all of a complex sumti
+</programlisting>
+  <para>Elidable terminators (each its own selma'o):</para>
+  <programlisting>
+     ku'o    relative clause elidable terminator
+     ge'u    relative phrase elidable terminator
+</programlisting>
+</section>
+
+
+</chapter>

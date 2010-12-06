@@ -1,0 +1,779 @@
+<chapter xml:id="cll_chapter6">
+  <title>Chapter 6
+To Speak Of Many Things: The Lojban sumti</title>
+
+
+<section xml:id="cll_chapter6-section1">
+  <title>1. The five kinds of simple sumti</title>
+  <para>If you understand anything about Lojban, you know what a sumti is by now, right? An argument, one of those things that fills the places of simple Lojban sentences like:</para>
+  <programlisting><anchor xml:id="c6e1d1"/><anchor xml:id="cll_chapter6-section1-example1"/>1.1)   mi klama le zarci
+       I go-to the market
+</programlisting>
+  <para>In <xref linkend="cll_chapter6-section1-example1"/>, “mi” and “le zarci” are the sumti. It is easy to see that these two sumti are not of the same kind: “mi” is a pro-sumti (the Lojban analogue of a pronoun) referring to the speaker, whereas “le zarci” is a description which refers to something described as being a market.</para>
+  <para>There are five kinds of simple sumti provided by Lojban:</para>
+  <variablelist>
+    <varlistentry>
+      <term>1)</term>
+      <listitem>
+        <para>descriptions like “le zarci”, which usually begin with a descriptor (called a “gadri” in Lojban) such as “le”;</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>2)</term>
+      <listitem>
+        <para>pro-sumti, such as “mi”;</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>3)</term>
+      <listitem>
+        <para>names, such as “la lojban.”, which usually begin with “la”;</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>4)</term>
+      <listitem>
+        <para>quotations, which begin with “lu”, “le'u”, “zo”, or “zoi”;</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>5)</term>
+      <listitem>
+        <para>pure numbers, which usually begin with “li”.</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  <para>Here are a few examples of each kind of sumti:</para>
+  <programlisting><anchor xml:id="c6e1d2"/><anchor xml:id="cll_chapter6-section1-example2"/>1.2)   e'osai ko sarji la lojban.
+       Please support Lojban!
+</programlisting>
+  <para><xref linkend="cll_chapter6-section1-example2"/> exhibits “ko”, a pro-sumti; and “la lojban.”, a name.</para>
+  <programlisting><anchor xml:id="c6e1d3"/><anchor xml:id="cll_chapter6-section1-example3"/>1.3)   mi cusku lu e'osai li'u le tcidu
+       I express “Please!” to-the reader.
+</programlisting>
+  <para><xref linkend="cll_chapter6-section1-example3"/> exhibits “mi”, a pro-sumti; “lu e'osai li'u”, a quotation; and “le tcidu”, a description.</para>
+  <programlisting><anchor xml:id="c6e1d4"/><anchor xml:id="cll_chapter6-section1-example4"/>1.4)   ti mitre li ci
+       This measures-in-meters the-number three.
+       This is three meters long.
+</programlisting>
+  <para><xref linkend="cll_chapter6-section1-example4"/> exhibits “ti”, a pro-sumti; and “li ci”, a number.</para>
+  <para>Most of this chapter is about descriptions, as they have the most complicated syntax and usage. Some attention is also given to names, which are closely interwoven with descriptions. Pro-sumti, numbers, and quotations are described in more detail in <xref linkend="cll_chapter7"/>, <xref linkend="cll_chapter18"/>, and <xref linkend="cll_chapter19"/> respectively, so this chapter only gives summaries of their forms and uses. See <xref linkend="cll_chapter6-section13"/> through <xref linkend="cll_chapter6-section15"/> for these summaries.</para>
+</section>
+
+<section xml:id="cll_chapter6-section2">
+  <title>2. The three basic description types</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     le      LE                  the, the one(s) described as
+     lo      LE                  some, some of those which really are
+     la      LA                  the one(s) named
+     ku      KU                  elidable terminator for LE, LA
+</programlisting>
+  <para>The syntax of descriptions is fairly complex, and not all of it can be explained within the confines of this chapter: relative clauses, in particular, are discussed in <xref linkend="cll_chapter8"/>. However, most descriptions have just two components: a descriptor belonging to selma'o LE or LA, and a selbri. (The difference between selma'o LE and selma'o LA is not important until <xref linkend="cll_chapter6-section12"/>.) Furthermore, the selbri is often just a single brivla. Here is an elementary example:</para>
+  <programlisting><anchor xml:id="c6e2d1"/><anchor xml:id="cll_chapter6-section2-example1"/>2.1)   le zarci
+       one-or-more-specific-things-each-of-which-I-describe-as being-a-market
+       the market
+</programlisting>
+  <para>The long gloss for “le” is of course far too long to use most of the time, and in fact “le” is quite close in meaning to English “the”. It has particular implications, however, which “the” does not have.</para>
+  <para>The general purpose of all descriptors is to create a sumti which might occur in the x1 place of the selbri belonging to the description. Thus “le zarci” conveys something which might be found in the x1 place of “zarci”, namely a market.</para>
+  <para>The specific purpose of “le” is twofold. First, it indicates that the speaker has one or more specific markets in mind (whether or not the listener knows which ones they are). Second, it also indicates that the speaker is merely describing the things he or she has in mind as markets, without being committed to the truth of that description.</para>
+  <programlisting><anchor xml:id="c6e2d2"/><anchor xml:id="cll_chapter6-section2-example2"/>2.2)   le zarci cu barda
+       One-or-more-specific-things-which-I-describe as “markets” is/are-big.
+       The market is big.
+       The markets are big.
+</programlisting>
+  <para>Note that English-speakers must state whether a reference to markets is to just one (“the market”) or to more than one (“the markets”). Lojban requires no such forced choice, so both colloquial translations of <xref linkend="cll_chapter6-section2-example2"/> are valid. Only the context can specify which is meant. (This rule does not mean that Lojban has no way of specifying the number of markets in such a case: that mechanism is explained in <xref linkend="cll_chapter6-section7"/>.)</para>
+  <para>Now consider the following strange-looking example:</para>
+  <programlisting><anchor xml:id="c6e2d3"/><anchor xml:id="cll_chapter6-section2-example3"/>2.3)   le nanmu cu ninmu
+       One-or-more-specific-things-which-I-describe as “men” are women.
+       The man is a woman.
+       The men are women.
+</programlisting>
+  <para><xref linkend="cll_chapter6-section2-example3"/> is not self-contradictory in Lojban, because “le nanmu” merely means something or other which, for my present purposes, I choose to describe as a man, whether or not it really is a man. A plausible instance would be: someone we had assumed to be a man at a distance turned out to be actually a woman on closer observation. <xref linkend="cll_chapter6-section2-example3"/> is what I would say to point out my observation to you.</para>
+  <para>In all descriptions with “le”, the listener is presumed to either know what I have in mind or else not to be concerned at present (perhaps I will give more identifying details later). In particular, I might be pointing at the supposed man or men: <xref linkend="cll_chapter6-section2-example3"/> would then be perfectly intelligible, since “le nanmu” merely clarifies that I am pointing at the supposed man, not at a landscape, or a nose, which happens to lie in the same direction.</para>
+  <para>The second descriptor dealt with in this section is “lo”. Unlike “le”, “lo” is nonspecific:</para>
+  <programlisting><anchor xml:id="c6e2d4"/><anchor xml:id="cll_chapter6-section2-example4"/>2.4)   lo zarci
+       one-or-more-of-all-the-things-which-really are-markets
+       a market
+       some markets
+</programlisting>
+  <para>Again, there are two colloquial English translations. The effect of using “lo” in <xref linkend="cll_chapter6-section2-example4"/> is to refer generally to one or more markets, without being specific about which. Unlike “le zarci”, “lo zarci” must refer to something which actually is a market (that is, which can appear in the x1 place of a truthful bridi whose selbri is “zarci”). Thus</para>
+  <programlisting><anchor xml:id="c6e2d5"/><anchor xml:id="cll_chapter6-section2-example5"/>2.5)   lo nanmu cu ninmu
+       Some man is a woman.
+       Some men are women.
+</programlisting>
+  <para>must be false in Lojban, given that there are no objects in the real world which are both men and women. Pointing at some specific men or women would not make <xref linkend="cll_chapter6-section2-example5"/> true, because those specific individuals are no more both-men-and-women than any others. In general, “lo” refers to whatever individuals meet its description.</para>
+  <para>The last descriptor of this section is “la”, which indicates that the selbri which follows it has been dissociated from its normal meaning and is being used as a name. Like “le” descriptions, “la” descriptions are implicitly restricted to those I have in mind. (Do not confuse this use of “la” with its use before regular Lojbanized names, which is discussed in <xref linkend="cll_chapter6-section12"/>.) For example:</para>
+  <programlisting><anchor xml:id="c6e2d6"/><anchor xml:id="cll_chapter6-section2-example6"/>2.6)   la cribe pu finti le lisri
+       The-one-named “bear” [past] creates the story.
+       Bear wrote the story.
+</programlisting>
+  <para>In <xref linkend="cll_chapter6-section2-example6"/>, “la cribe” refers to someone whose naming predicate is “cribe”, i.e. “Bear”. In English, most names don’t mean anything, or at least not anything obvious. The name “Frank” coincides with the English word “frank”, meaning “honest”, and so one way of translating “Frank ate some cheese” into Lojban would be:</para>
+  <programlisting><anchor xml:id="c6e2d7"/><anchor xml:id="cll_chapter6-section2-example7"/>2.7)   la stace pu citka lo cirla
+       The-one-called “Honest/Frank” [past] eats some cheese.
+</programlisting>
+  <para>English-speakers typically would not do this, as we tend to be more attached to the sound of our names than their meaning, even if the meaning (etymological or current) is known. Speakers of other languages may feel differently. (In point of fact, “Frank” originally meant “the free one” rather than “the honest one”.)</para>
+  <para>It is important to note the differences between <xref linkend="cll_chapter6-section2-example6"/> and the following:</para>
+  <programlisting><anchor xml:id="c6e2d8"/><anchor xml:id="cll_chapter6-section2-example8"/>2.8)   le cribe pu finti le lisri
+       One-or-more-specific-things-which-I-describe-as a-bear [past] creates the story.
+       The bear(s) wrote the story.
+</programlisting>
+  <programlisting><anchor xml:id="c6e2d9"/><anchor xml:id="cll_chapter6-section2-example9"/>2.9)   lo cribe pu finti le lisri
+       One-or-more-of-the-things-which-really are-bears [past] creates the story.
+       A bear wrote the story.
+       Some bears wrote the story.
+</programlisting>
+  <para><xref linkend="cll_chapter6-section2-example8"/> is about a specific bear or bearlike thing(s), or thing(s) which the speaker (perhaps whimsically or metaphorically) describes as a bear (or more than one); <xref linkend="cll_chapter6-section2-example9"/> is about one or more of the really existing, objectively defined bears. In either case, though, each of them must have contributed to the writing of the story, if more than one bear (or “bear”) is meant.</para>
+  <para>(The notion of a “really existing, objectively defined bear” raises certain difficulties. Is a panda bear a “real bear”? How about a teddy bear? In general, the answer is “yes”. Lojban gismu are defined as broadly as possible, allowing tanru and lujvo to narrow down the definition. There probably are no necessary and sufficient conditions for defining what is and what is not a bear that can be pinned down with complete precision: the real world is fuzzy. In borderline cases, “le” may communicate better than “lo”.)</para>
+  <para>So while <xref linkend="cll_chapter6-section2-example6"/> could easily be true (there is a real writer named “Greg Bear”), and <xref linkend="cll_chapter6-section2-example8"/> could be true if the speaker is sufficiently peculiar in what he or she describes as a bear, <xref linkend="cll_chapter6-section2-example9"/> is certainly false.</para>
+  <para>Similarly, compare the following two examples, which are analogous to <xref linkend="cll_chapter6-section2-example8"/> and <xref linkend="cll_chapter6-section2-example9"/> respectively:</para>
+  <programlisting><anchor xml:id="c6e2d10"/><anchor xml:id="cll_chapter6-section2-example10"/>2.10)  le remna pu finti le lisri
+       The human being(s) wrote the story.
+
+<anchor xml:id="c6e2d11"/><anchor xml:id="cll_chapter6-section2-example11"/>2.11)  lo remna pu finti le lisri
+       A human being wrote the story.
+       Some human beings wrote the story.
+</programlisting>
+  <para><xref linkend="cll_chapter6-section2-example10"/> says who the author of the story is: one or more particular human beings that the speaker has in mind. If the topic of conversation is the story, then <xref linkend="cll_chapter6-section2-example10"/> identifies the author as someone who can be pointed out or who has been previously mentioned; whereas if the topic is a person, then “le remna” is in effect a shorthand reference to that person. <xref linkend="cll_chapter6-section2-example11"/> merely says that the author is human.</para>
+  <para>The elidable terminator for all descriptions is “ku”. It can almost always be omitted with no danger of ambiguity. The main exceptions are in certain uses of relative clauses, which are discussed in <xref linkend="cll_chapter8"/>, and in the case of a description immediately preceding the selbri. In this latter case, using an explicit “cu” before the selbri makes the “ku” unnecessary. There are also a few other uses of “ku”: in the compound negator “naku” (discussed in <xref linkend="cll_chapter15"/>) and to terminate place-structure, tense, and modal tags that do not have associated sumti (discussed in <xref linkend="cll_chapter9"/> and <xref linkend="cll_chapter10"/>).</para>
+</section>
+
+<section xml:id="cll_chapter6-section3">
+  <title>3. Individuals and masses</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     lei     LE                  the mass I describe as
+     loi     LE                  part of the mass of those which really are
+     lai     LA                  the mass of those named
+</programlisting>
+  <para>All Lojban sumti are classified by whether they refer to one of three types of objects, known as “individuals”, “masses”, and “sets”. The term “individual” is misleading when used to refer to more than one object, but no less-confusing term has as yet been found. All the descriptions in <xref linkend="cll_chapter6-section1"/> and <xref linkend="cll_chapter6-section2"/> refer to individuals, whether one or more than one. Consider the following example:</para>
+  <programlisting><anchor xml:id="c6e3d1"/><anchor xml:id="cll_chapter6-section3-example1"/>3.1)   le prenu cu bevri le pipno
+       One-or-more-of-those-I-describe-as persons carry the piano.
+       The person(s) carry the piano.
+</programlisting>
+  <para>(Of course the second “le” should really get the same translation as the first, but I am putting the focus of this discussion on the first “le”, the one preceding “prenu”. I will assume that there is only one piano under discussion.)</para>
+  <para>Suppose the context of <xref linkend="cll_chapter6-section3-example1"/> is such that you can determine that I am talking about three persons. What am I claiming? I am claiming that each of the three persons carried the piano. This claim can be true if the persons carried the piano one at a time, or in turns, or in a variety of other ways. But in order for <xref linkend="cll_chapter6-section3-example1"/> to be true, I must be willing to assert that person 1 carried the piano, and that person 2 carried the piano, and that person 3 carried the piano.</para>
+  <para>But suppose I am not willing to claim that. For in fact pianos are heavy, and very few persons can carry a piano all by themselves. The most likely factual situation is that person 1 carried one end of the piano, and person 2 the other end, while person 3 either held up the middle or else supervised the whole operation without actually lifting anything. The correct way of expressing such a situation in Lojban is:</para>
+  <programlisting><anchor xml:id="c6e3d2"/><anchor xml:id="cll_chapter6-section3-example2"/>3.2)   lei prenu cu bevri le pipno
+       The-mass-of-one-or-more-of-those-I-describe-as persons carry the piano.
+</programlisting>
+  <para>Here the same three persons are treated not as individuals, but as a so-called “mass entity”, or just “mass”. A mass has the properties of each individual which composes it, and may have other properties of its own as well. This can lead to apparent contradictions. Thus suppose in the piano-moving example above that person 1 has fair skin, whereas person 2 has dark skin. Then it is correct to say that the person-mass has both fair skin and dark skin. Using the mass descriptor “lei” signals that ordinary logical reasoning is not applicable: contradictions can be maintained, and all sorts of other peculiarities may exist. However, we can safely say that a mass inherits only the component properties that are relevant to it; it would be ludicrous to say that a mass of two persons is of molecular dimensions, simply because some of the parts (namely, the molecules) of the persons are that small.</para>
+  <para>The descriptors “loi” and “lai” are analogous to “lo” and “la” respectively, but refer to masses either by property (“loi”) or by name (“lai”). A classic example of “loi” use is:</para>
+  <programlisting><anchor xml:id="c6e3d3"/><anchor xml:id="cll_chapter6-section3-example3"/>3.3)   loi cinfo cu xabju le fi'ortu'a
+       Part-of-the-mass-of-those-which-really are-lions dwell in-the African-land.
+       The lion dwells in Africa.
+       Lions dwell in Africa.
+</programlisting>
+  <para>The difference between “lei” and “loi” is that “lei cinfo” refers to a mass of specific individuals which the speaker calls lions, whereas “loi cinfo” refers to some part of the mass of all those individuals which actually are lions. The restriction to “some part of the mass” allows statements like <xref linkend="cll_chapter6-section3-example3"/> to be true even though some lions do not dwell in Africa — they live in various zoos around the world. On the other hand, <xref linkend="cll_chapter6-section3-example3"/> doesn’t actually say that most lions live in Africa: equally true is</para>
+  <programlisting><anchor xml:id="c6e3d4"/><anchor xml:id="cll_chapter6-section3-example4"/>3.4)   loi glipre
+               cu xabju le fi'ortu'a
+       Part-of-the-mass-of-those-which-really are-English-persons
+               dwell in-the African-land.
+       The English dwell in Africa.
+</programlisting>
+  <para>since there is at least one English person living there. <xref linkend="cll_chapter6-section4"/> explains another method of saying what is usually meant by “The lion lives in Africa” which does imply that living in Africa is normal, not exceptional, for lions.</para>
+  <para>Note that the Lojban mass articles are sometimes translated by English plurals (the most usual case), sometimes by English singulars (when the singular is used to express typicalness or abstraction), and sometimes by singulars with no article:</para>
+  <programlisting><anchor xml:id="c6e3d5"/><anchor xml:id="cll_chapter6-section3-example5"/>3.5)   loi matne cu ranti
+       Part-of-the-mass-of-that-which-really is-a-quantity-of-butter is-soft.
+       Butter is soft.
+</programlisting>
+  <para>Of course, some butter is hard (for example, if it is frozen butter), so the “part-of” implication of “loi” becomes once again useful. The reason this mechanism works is that the English words like “butter”, which are seen as already describing masses, are translated in Lojban by non-mass forms. The place structure of “matne” is “x1 is a quantity of butter from source x2”, so the single English word “butter” is translated as something like “a part of the mass formed from all the quantities of butter that exist”. (Note that the operation of forming a mass entity does not imply, in Lojban, that the components of the mass are necessarily close to one another or even related in any way other than conceptually. Masses are formed by the speaker’s intention to form a mass, and can in principle contain anything.)</para>
+  <para>The mass name descriptor “lai” is used in circumstances where we wish to talk about a mass of things identified by a name which is common to all of them. It is not used to identify a mass by a single name peculiar to it. Thus the mass version of <xref linkend="cll_chapter6-section2-example5"/>,</para>
+  <programlisting><anchor xml:id="c6e3d6"/><anchor xml:id="cll_chapter6-section3-example6"/>3.6)   lai cribe pu finti le vi cukta
+       The-mass-of-those-named “bear” [past] creates the nearby book.
+       The Bears wrote this book.
+</programlisting>
+  <para>in a context where “la cribe” would be understood as plural, would mean that either Tom Bear or Fred Bear (to make up some names) might have written the book, or that Tom and Fred might have written it as collaborators. Using “la” instead of “lai” in <xref linkend="cll_chapter6-section3-example6"/> would give the implication that each of Tom and Fred, considered individually, had written it.</para>
+</section>
+
+<section xml:id="cll_chapter6-section4">
+  <title>4. Masses and sets</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     le'i    LE                  the set described as
+     lo'i    LE                  the set of those which really are
+     la'i    LA                  the set of those named
+</programlisting>
+  <para>Having said so much about masses, let us turn to sets. Sets are easier to understand than masses, but are more rarely used. Like a mass, a set is an abstract object formed from a number of individuals; however, the properties of a set are not derived from any of the properties of the individuals that compose it.</para>
+  <para>Sets have properties like cardinality (how many elements in the set), membership (the relationship between a set and its elements), and set inclusion (the relationship between two sets, one of which — the superset – contains all the elements of the other — the subset). The set descriptors “le'i”, “lo'i” and “la'i” correspond exactly to the mass descriptors “lei”, “loi”, and “lai” except that normally we talk of the whole of a set, not just part of it. Here are some examples contrasting “lo”, “loi”, and “lo'i”:</para>
+  <programlisting><anchor xml:id="c6e4d1"/><anchor xml:id="cll_chapter6-section4-example1"/>4.1)   lo ratcu cu bunre
+       One-or-more-of-those-which-really-are rats are-brown.
+       Some rats are brown.
+
+<anchor xml:id="c6e4d2"/><anchor xml:id="cll_chapter6-section4-example2"/>4.2)   loi ratcu cu cmalu
+       Part-of-the-mass-of-those-which-really-are rats are-small.
+       Rats are small.
+
+<anchor xml:id="c6e4d3"/><anchor xml:id="cll_chapter6-section4-example3"/>4.3)   lo'i ratcu cu barda
+       The-set-of rats is-large.
+       There are a lot of rats.
+</programlisting>
+  <para>The mass of rats is small because at least one rat is small; the mass of rats is also large; the set of rats, though, is unquestionably large — it has billions of members. The mass of rats is also brown, since some of its components are; but it would be incorrect to call the set of rats brown — brown-ness is not the sort of property that sets possess.</para>
+  <para>Lojban speakers should generally think twice before employing the set descriptors. However, certain predicates have places that require set sumti to fill them. For example, the place structure of “fadni” is:</para>
+  <programlisting>
+      x1 is ordinary/common/typical/usual in property x2 among the members of set x3
+</programlisting>
+  <para>Why is it necessary for the x3 place of “fadni” to be a set? Because it makes no sense for an individual to be typical of another individual: an individual is typical of a group. In order to make sure that the bridi containing “fadni” is about an entire group, its x3 place must be filled with a set:</para>
+  <programlisting><anchor xml:id="c6e4d4"/><anchor xml:id="cll_chapter6-section4-example4"/>4.4)   mi fadni zo'e lo'i lobypli
+       I am-ordinary among the-set-of Lojban-users.
+       I am a typical Lojban user.
+</programlisting>
+  <para>Note that the x2 place has been omitted; I am not specifying in exactly which way I am typical — whether in language knowledge, or age, or interests, or something else. If “lo'i” were changed to “lo” in <xref linkend="cll_chapter6-section4-example4"/>, the meaning would be something like “I am typical of some Lojban user”, which is nonsense.</para>
+</section>
+
+<section xml:id="cll_chapter6-section5">
+  <title>5. Descriptors for typical objects</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     lo'e    LE                  the typical
+     le'e    LE                  the stereotypical
+</programlisting>
+  <para>As promised in <xref linkend="cll_chapter6-section3"/>, Lojban has a method for discriminating between “the lion” who lives in Africa and “the Englishman” who, generally speaking, doesn’t live in Africa even though some Englishmen do. The descriptor “lo'e” means “the typical”, as in</para>
+  <programlisting><anchor xml:id="c6e5d1"/><anchor xml:id="cll_chapter6-section5-example1"/>5.1)   lo'e cinfo cu xabju le fi'ortu'a
+       The-typical lion dwells-in the African-land.
+       The lion dwells in Africa.
+</programlisting>
+  <para>What is this “typical lion”? Surely it is not any particular lion, because no lion has all of the “typical” characteristics, and (worse yet) some characteristics that all real lions have can’t be viewed as typical. For example, all real lions are either male or female, but it would be bizarre to suppose that the typical lion is either one. So the typical lion has no particular sex, but does have a color (golden brown), a residence (Africa), a diet (game), and so on. Likewise we can say that</para>
+  <programlisting><anchor xml:id="c6e5d2"/><anchor xml:id="cll_chapter6-section5-example2"/>5.2)   lo'e glipre cu xabju le fi'ortu'a na.e
+               le gligugde
+       The-typical English-person dwells-in the African-land (Not!) and
+               the English-country.
+       The typical English person dwells not in Africa but in England.
+</programlisting>
+  <para>The relationship between “lo'e cinfo” and “lo'i cinfo” may be explained thus: the typical lion is an imaginary lion-abstraction which best exemplifies the set of lions. There is a similar relationship between “le'e” and “le'i”:</para>
+  <programlisting><anchor xml:id="c6e5d3"/><anchor xml:id="cll_chapter6-section5-example3"/>5.3)   le'e xelso merko cu gusta ponse
+       The-stereotypical Greek-type-of American is-a-restaurant-type-of owner.
+       Lots of Greek-Americans own restaurants.
+</programlisting>
+  <para>Here we are concerned not with the actual set of Greek-Americans, but with the set of those the speaker has in mind, which is typified by one (real or imaginary) who owns a restaurant. The word “stereotypical” is often derogatory in English, but “le'e” need not be derogatory in Lojban: it simply suggests that the example is typical in the speaker’s imagination rather than in some objectively agreed-upon way. Of course, different speakers may disagree about what the features of “the typical lion” are (some would include having a short intestine, whereas others would know nothing of lions’ intestines), so the distinction between “lo'e cinfo” and “le'e cinfo” may be very fine.</para>
+  <para>Furthermore,</para>
+  <programlisting><anchor xml:id="c6e5d4"/><anchor xml:id="cll_chapter6-section5-example4"/>5.4)   le'e skina cu se finti ne'i la xali,uyd.
+       The-stereotypical movie is-invented in Hollywood.
+</programlisting>
+  <para>is probably true to an American, but might be false (not the stereotype) to someone living in India or Russia.</para>
+  <para>Note that there is no naming equivalent of “lo'e” and “le'e”, because there is no need, as a rule, for a “typical George” or a “typical Smith”. People or things who share a common name do not, in general, have any other common attributes worth mentioning.</para>
+</section>
+
+<section xml:id="cll_chapter6-section6">
+  <title>6. Quantified sumti</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     ro      PA                  all of/each of
+     su'o    PA                  at least (one of)
+</programlisting>
+  <para>Quantifiers tell us how many: in the case of quantifiers with sumti, how many things we are talking about. In Lojban, quantifiers are expressed by numbers and mathematical expressions: a large topic discussed in some detail in <xref linkend="cll_chapter18"/>. For the purposes of this chapter, a simplified treatment will suffice. Our examples will employ either the simple Lojban numbers “pa”, “re”, “ci”, “vo”, and “mu”, meaning “one”, “two”, “three”, “four”, “five” respectively, or else one of four special quantifiers, two of which are discussed in this section and listed above. These four quantifiers are important because every Lojban sumti has either one or two of them implicitly present in it — which one or two depends on the particular kind of sumti. There is more explanation of implicit quantifiers later in this section. (The other two quantifiers, “piro” and “pisu'o”, are explained in <xref linkend="cll_chapter6-section7"/>.)</para>
+  <para>Every Lojban sumti may optionally be preceded by an explicit quantifier. The purpose of this quantifier is to specify how many of the things referred to by the sumti are being talked about. Here are some simple examples contrasting sumti with and without explicit quantifiers:</para>
+  <programlisting><anchor xml:id="c6e6d1"/><anchor xml:id="cll_chapter6-section6-example1"/>6.1)   do cadzu le bisli
+       You walk-on the ice.
+
+<anchor xml:id="c6e6d2"/><anchor xml:id="cll_chapter6-section6-example2"/>6.2)   re do cadzu le bisli
+       Two-of you walk-on the ice.
+</programlisting>
+  <para>The difference between <xref linkend="cll_chapter6-section6-example1"/> and <xref linkend="cll_chapter6-section6-example2"/> is the presence of the explicit quantifier “re” in the latter example. Although “re” by itself means “two”, when used as a quantifier it means “two-of”. Out of the group of listeners (the number of which isn’t stated), two (we are not told which ones) are asserted to be “walkers on the ice”. Implicitly, the others (if any) are not walkers on the ice. In Lojban, you cannot say “I own three shoes” if in fact you own four shoes. Numbers need never be specified, but if they are specified they must be correct.</para>
+  <para>(This rule does not mean that there is no way to specify a number which is vague. The sentence</para>
+  <programlisting><anchor xml:id="c6e6d3"/><anchor xml:id="cll_chapter6-section6-example3"/>6.3)   mi ponse su'o ci cutci
+       I possess at-least three shoes.
+</programlisting>
+  <para>is true if you own three shoes, or four, or indeed any larger number. More details on vague numbers appear in the discussion of mathematical expressions in <xref linkend="cll_chapter18"/>.)</para>
+  <para>Now consider <xref linkend="cll_chapter6-section6-example1"/> again. How many of the listeners are claimed to walk on the ice? The answer turns out to be: all of them, however many that is. So <xref linkend="cll_chapter6-section6-example1"/> and <xref linkend="cll_chapter6-section6-example4"/>:</para>
+  <programlisting><anchor xml:id="c6e6d4"/><anchor xml:id="cll_chapter6-section6-example4"/>6.4)   ro do cadzu le bisli
+       All-of you walk-on the ice.
+</programlisting>
+  <para>turn out to mean exactly the same thing. This is a safe strategy, because if one of my listeners doesn’t turn out to be walking on the ice, I can safely claim that I didn’t intend that person to be a listener! And in fact, all of the personal pro-sumti such as “mi” and “mi'o” and “ko” obey the same rule. We say that personal pro-sumti have a so-called “implicit quantifier” of “ro” (all). This just means that if no quantifier is given explicitly, the meaning is the same as if the implicit quantifier had been used.</para>
+  <para>Not all sumti have “ro” as the implicit quantifier, however. Consider the quotation in:</para>
+  <programlisting><anchor xml:id="c6e6d5"/><anchor xml:id="cll_chapter6-section6-example5"/>6.5)   mi cusku lu do cadzu le bisli li'u
+       I express [quote] you walk-on the ice [unquote].
+       I say, “You walk on the ice.”
+</programlisting>
+  <para>What is the implicit quantifier of the quotation “lu do cadzu le bisli li'u”? Surely not “ro”. If “ro” were supplied explicitly, thus:</para>
+  <programlisting><anchor xml:id="c6e6d6"/><anchor xml:id="cll_chapter6-section6-example6"/>6.6)   mi cusku ro lu do cadzu le bisli li'u
+       I express all-of [quote] you walk-on the ice [unquote].
+</programlisting>
+  <para>the meaning would be something like “I say every occurrence of the sentence ’You walk on the ice’”. Of course I don’t say every occurrence of it, only some occurrences. One might suppose that <xref linkend="cll_chapter6-section6-example5"/> means that I express exactly one occurrence, but it is more Lojbanic to leave the number unspecified, as with other sumti. We can say definitely, however, that I say it at least once.</para>
+  <para>The Lojban cmavo meaning “at least” is “su'o”, and if no ordinary number follows, “su'o” means “at least once”. (See <xref linkend="cll_chapter6-section6-example3"/> for the use of “su'o” with an ordinary number). Therefore, the explicitly quantified version of <xref linkend="cll_chapter6-section6-example5"/> is</para>
+  <programlisting><anchor xml:id="c6e6d7"/><anchor xml:id="cll_chapter6-section6-example7"/>6.7)   mi cusku su'o lu do cadzu le bisli li'u
+       I express at-least-one-of [quote] you walk-on the ice [unquote].
+       I say one or more instances of “You walk on the ice”.
+       I say “You walk on the ice”.
+</programlisting>
+  <para>If an explicit ordinary number such as “re” were to appear, it would have to convey an exact expression, so</para>
+  <programlisting><anchor xml:id="c6e6d8"/><anchor xml:id="cll_chapter6-section6-example8"/>6.8)   mi cusku re lu do cadzu le bisli li'u
+       I express two-of [quote] you walk-on the ice [unquote].
+</programlisting>
+  <para>means that I say the sentence exactly twice, neither more nor less.</para>
+</section>
+
+<section xml:id="cll_chapter6-section7">
+  <title>7. Quantified descriptions</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     piro    PA                  the whole of
+     pisu'o  PA                  a part of
+</programlisting>
+  <para>Like other sumti, descriptions can be quantified. When a quantifier appears before a description, it has the same meaning as one appearing before a non-description sumti: it specifies how many things, of all those referred to by the description, are being talked about in this particular bridi. Suppose that context tells us that “le gerku” refers to three dogs. Then we can say that exactly two of them are white as follows:</para>
+  <programlisting><anchor xml:id="c6e7d1"/><anchor xml:id="cll_chapter6-section7-example1"/>7.1)   re le gerku cu blabi
+       Two-of the dogs are-white.
+       Two of the dogs are white.
+</programlisting>
+  <para>When discussing descriptions, this ordinary quantifier is called an “outer quantifier”, since it appears outside the description. But there is another possible location for a quantifier: between the descriptor and the selbri. This quantifier is called an “inner quantifier”, and its meaning is quite different: it tells the listener how many objects the description selbri characterizes.</para>
+  <para>For example, the context of <xref linkend="cll_chapter6-section7-example1"/> supposedly told us that “le gerku” referred to some three specific dogs. This assumption can be made certain with the use of an explicit inner quantifier:</para>
+  <programlisting><anchor xml:id="c6e7d2"/><anchor xml:id="cll_chapter6-section7-example2"/>7.2)   re le ci gerku cu blabi
+       Two-of the three dogs are-white.
+       Two of the three dogs are white.
+</programlisting>
+  <para>(As explained in the discussion of <xref linkend="cll_chapter6-section6-example3"/>, simple numbers like those in <xref linkend="cll_chapter6-section7-example2"/> must be exact: it therefore follows that the third dog cannot be white.)</para>
+  <para>You may also specify an explicit inner quantifier and leave the outer quantifier implicit:</para>
+  <programlisting><anchor xml:id="c6e7d3"/><anchor xml:id="cll_chapter6-section7-example3"/>7.3)   le ci gerku cu blabi
+       The three dogs are-white.
+       The three dogs are white.
+</programlisting>
+  <para>There are rules for each of the 11 descriptors specifying what the implicit values for the inner and outer quantifiers are. They are meant to provide sensible default values when context is absent, not necessarily to prescribe hard and fast rules. The following table lists the implicit values:</para>
+  <variablelist>
+    <varlistentry>
+      <term>le:</term>
+      <listitem>
+        <para>ro le su'o</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>lo:</term>
+      <listitem>
+        <para>su'o lo ro</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>la:</term>
+      <listitem>
+        <para>ro la su'o</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>lei:</term>
+      <listitem>
+        <para>pisu'o lei su'o</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>loi:</term>
+      <listitem>
+        <para>pisu'o loi ro</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>lai:</term>
+      <listitem>
+        <para>pisu'o lai su'o</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>le'i:</term>
+      <listitem>
+        <para>piro le'i su'o</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>lo'i:</term>
+      <listitem>
+        <para>piro lo'i ro</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>la'i:</term>
+      <listitem>
+        <para>piro la'i su'o</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>le'e:</term>
+      <listitem>
+        <para>ro le'e su'o</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>lo'e:</term>
+      <listitem>
+        <para>su'o lo'e ro</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  <para>When examined for the first time, this table looks dreadfully arbitrary. In fact, there are quite a few regularities in it. First of all, the la-series (that is, the descriptors “la”, “lai”, and “la'i”) and the le-series (that is, the descriptors “le”, “lei”, “le'i”, and “le'e”) always have corresponding implicit quantifiers, so we may subsume the la-series under the le-series for the rest of this discussion: “le-series cmavo” will refer to both the le-series proper and to the la-series.</para>
+  <para>The rule for the inner quantifier is very simple: the lo-series cmavo (namely, “lo”, “loi”, “lo'i”, and “lo'e”) all have an implicit inner quantifier of “ro”, whereas the le-series cmavo all have an implicit inner quantifier of “su'o”.</para>
+  <para>Why? Because lo-series descriptors always refer to all of the things which really fit into the x1 place of the selbri. They are not restricted by the speaker’s intention. Descriptors of the le-series, however, are so restricted, and therefore talk about some number, definite or indefinite, of objects the speaker has in mind — but never less than one.</para>
+  <para>Understanding the implicit outer quantifier requires rules of greater subtlety. In the case of mass and set descriptors, a single rule suffices for each: reference to a mass is implicitly a reference to some part of the mass; reference to a set is implicitly a reference to the whole set. Masses and sets are inherently singular objects: it makes no sense to talk about two distinct masses with the same components, or two distinct sets with the same members. Therefore, the largest possible outer quantifier for either a set description or a mass description is “piro”, the whole of it.</para>
+  <para>(Pedantically, it is possible that the mass of water molecules composing an ice cube might be thought of as different from the same mass of water molecules in liquid form, in which case we might talk about “re lei djacu”, two masses of the water-bits I have in mind.)</para>
+  <para>Why “pi-”? It is the Lojban cmavo for the decimal point. Just as “pimu” means “.5”, and when used as a quantifier specifies a portion consisting of five tenths of a thing, “piro” means a portion consisting of the all-ness – the entirety — of a thing. Similarly, “pisu'o” specifies a portion consisting of at least one part of a thing, i.e. some of it.</para>
+  <para>Smaller quantifiers are possible for sets, and refer to subsets. Thus “pimu le'i nanmu” is a subset of the set of men I have in mind; we don’t know precisely which elements make up this subset, but it must have half the size of the full set. This is the best way to say “half of the men”; saying “pimu le nanmu” would give us a half-portion of one of them instead! Of course, the result of “pimu le'i nanmu” is still a set; if you need to refer to the individuals of the subset, you must say so (see “lu'a” in <xref linkend="cll_chapter6-section10"/>).</para>
+  <para>The case of outer quantifiers for individual descriptors (including “le”, “lo”, “la”, and the typical descriptors “le'e” and “lo'e”) is special. When we refer to specific individuals with “le”, we mean to refer to all of those we have in mind, so “ro” is appropriate as the implicit quantifier, just as it is appropriate for “do”. Reference to non-specific individuals with “lo”, however, is typically to only some of the objects which can be correctly described, and so “su'o” is the appropriate implicit quantifier, just as for quotations.</para>
+  <para>From the English-speaking point of view, the difference in structure between the following example using “le”:</para>
+  <programlisting><anchor xml:id="c6e7d4"/><anchor xml:id="cll_chapter6-section7-example4"/>7.4)   [ro] le ci gerku cu blabi
+       [All-of] those-described-as three dogs are-white.
+       The three dogs are white.
+</programlisting>
+  <para>and the corresponding form with “lo”:</para>
+  <programlisting><anchor xml:id="c6e7d5"/><anchor xml:id="cll_chapter6-section7-example5"/>7.5)   ci lo [ro] gerku cu blabi
+       Three-of those-which-are [all] dogs are-white.
+       Three dogs are white.
+</programlisting>
+  <para>looks very peculiar. Why is the number “ci” found as an inner quantifier in <xref linkend="cll_chapter6-section7-example4"/> and as an outer quantifier in <xref linkend="cll_chapter6-section7-example5"/>? The number of dogs is the same in either case. The answer is that the “ci” in <xref linkend="cll_chapter6-section7-example4"/> is part of the specification: it tells us the actual number of dogs in the group that the speaker has in mind. In <xref linkend="cll_chapter6-section7-example5"/>, however, the dogs referred to by “... lo gerku” are all the dogs that exist: the outer quantifier then restricts the number to three; which three, we cannot tell. The implicit quantifiers are chosen to avoid claiming too much or too little: in the case of “le”, the implicit outer quantifier “ro” says that each of the dogs in the restricted group is white; in the case of “lo”, the implicit inner quantifier simply says that three dogs, chosen from the group of all the dogs there are, are white.</para>
+  <para>Using exact numbers as inner quantifiers in lo-series descriptions is dangerous, because you are stating that exactly that many things exist which really fit the description. So examples like</para>
+  <programlisting><anchor xml:id="c6e7d6"/><anchor xml:id="cll_chapter6-section7-example6"/>7.6)   [so'o] lo ci gerku cu blabi
+       [some-of] those-which-really-are three dogs are-white
+</programlisting>
+  <para>are semantically anomalous; <xref linkend="cll_chapter6-section7-example6"/> claims that some dog (or dogs) is white, but also that there are just three dogs in the universe!</para>
+  <para>Nevertheless, inner quantifiers are permitted on “lo” descriptors for consistency’s sake, and may occasionally be useful.</para>
+  <para>Note that the inner quantifier of “le”, even when exact, need not be truthful: “le ci nanmu” means “what I describe as three men”, not “three of what I describe as men”. This follows from the rule that what is described by a “le” description represents the speaker’s viewpoint rather than the objective way things are.</para>
+</section>
+
+<section xml:id="cll_chapter6-section8">
+  <title>8. Indefinite descriptions</title>
+  <para>By a quirk of Lojban syntax, it is possible to omit the descriptor “lo”, but never any other descriptor, from a description like that of <xref linkend="cll_chapter6-section7-example5"/>; namely, one which has an explicit outer quantifier but no explicit inner quantifier. The following example:</para>
+  <programlisting><anchor xml:id="c6e8d1"/><anchor xml:id="cll_chapter6-section8-example1"/>8.1)   ci gerku [ku] cu blabi
+       Three dogs are white.
+</programlisting>
+  <para>is equivalent in meaning to <xref linkend="cll_chapter6-section7-example5"/>. Even though the descriptor is not present, the elidable terminator “ku” may still be used. The name “indefinite description” for this syntactic form is historically based: of course, it is no more and no less indefinite than its counterpart with an explicit “lo”. Indefinite descriptions were introduced into the language in order to imitate the syntax of English and other natural languages.</para>
+  <para>Indefinite descriptions must fit this mold exactly: there is no way to make one which does not have an explicit outer quantifier (thus “*gerku cu blabi” is ungrammatical), or which has an explicit inner quantifier (thus “*reboi ci gerku cu blabi” is also ungrammatical — “re ci gerku cu blabi” is fine, but means “23 dogs are white”).</para>
+  <para>Note: <xref linkend="cll_chapter6-section6-example3"/> also contains an indefinite description, namely “su'o ci cutci”; another version of that example using an explicit “lo” would be:</para>
+  <programlisting><anchor xml:id="c6e8d2"/><anchor xml:id="cll_chapter6-section8-example2"/>8.2)   mi ponse su'o ci lo cutci
+       I possess at-least three things-which-really-are shoes
+       I own three (or more) shoes.
+</programlisting>
+</section>
+
+<section xml:id="cll_chapter6-section9">
+  <title>9. sumti-based descriptions</title>
+  <para>As stated in <xref linkend="cll_chapter6-section2"/>, most descriptions consist of just a descriptor and a selbri. (In this chapter, the selbri have always been single gismu, but of course any selbri, however complex, can be employed in a description. The syntax and semantics of selbri are explained in <xref linkend="cll_chapter5"/>.) In the intervening sections, inner and outer quantifiers have been added to the syntax. Now it is time to discuss a description of a radically different kind: the sumti-based description.</para>
+  <para>A sumti-based description has a sumti where the selbri would normally be, and the inner quantifier is required — it cannot be implicit. An outer quantifier is permitted but not required.</para>
+  <para>A full theory of sumti-based descriptions has yet to be worked out. One common case, however, is well understood. Compare the following:</para>
+  <programlisting><anchor xml:id="c6e9d1"/><anchor xml:id="cll_chapter6-section9-example1"/>9.1)   re do cu nanmu
+       Two-of you are-men.
+
+<anchor xml:id="c6e9d2"/><anchor xml:id="cll_chapter6-section9-example2"/>9.2)   le re do cu nanmu
+       The two-of you are men.
+</programlisting>
+  <para><xref linkend="cll_chapter6-section9-example1"/> simply specifies that of the group of listeners, size unknown, two are men. <xref linkend="cll_chapter6-section9-example2"/>, which has the sumti-based description “le re do”, says that of the two listeners, all (the implicit outer quantifier “ro”) are men. So in effect the inner quantifier “re” gives the number of individuals which the inner sumti “do” refers to.</para>
+  <para>Here is another group of examples:</para>
+  <programlisting><anchor xml:id="c6e9d3"/><anchor xml:id="cll_chapter6-section9-example3"/>9.3)   re le ci cribe cu bunre
+       Two-of the three bears are-brown.
+
+<anchor xml:id="c6e9d4"/><anchor xml:id="cll_chapter6-section9-example4"/>9.4)   le re le ci cribe cu bunre
+       The two-of the three bears are-brown.
+
+<anchor xml:id="c6e9d5"/><anchor xml:id="cll_chapter6-section9-example5"/>9.5)   pa le re le ci cribe cu bunre
+       One-of the two-of the three bears are-brown.
+</programlisting>
+  <para>In each case, “le ci cribe” restricts the bears (or alleged bears) being talked of to some group of three which the speaker has in mind. <xref linkend="cll_chapter6-section9-example3"/> says that two of them (which two is not stated) are brown. <xref linkend="cll_chapter6-section9-example4"/> says that a specific pair of them are brown. <xref linkend="cll_chapter6-section9-example5"/> says that of a specific pair chosen from the original three, one or the other of that pair is brown.</para>
+</section>
+
+<section xml:id="cll_chapter6-section10">
+  <title>10. sumti qualifiers</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     la'e    LAhE                something referred to by
+     lu'e    LAhE                a reference to
+     tu'a    LAhE                an abstraction involving
+     lu'a    LAhE                an individual/member/component of
+     lu'i    LAhE                a set formed from
+     lu'o    LAhE                a mass formed from
+     vu'i    LAhE                a sequence formed from
+
+     na'ebo  NAhE+BO             something other than
+     to'ebo  NAhE+BO             the opposite of
+     no'ebo  NAhE+BO             the neutral form of
+     je'abo  NAhE+BO             that which indeed is
+
+     lu'u    LUhU                elidable terminator for LAhE and NAhE+BO
+</programlisting>
+  <para>Well, that’s quite a list of cmavo. What are they all about?</para>
+  <para>The above cmavo and compound cmavo are called the “sumti qualifiers”. All of them are either single cmavo of selma'o LAhE, or else compound cmavo involving a scalar negation cmavo of selma'o NAhE immediately followed by “bo” of selma'o BO. Syntactically, you can prefix a sumti qualifier to any sumti and produce another simple sumti. (You may need to add the elidable terminator “lu'u” to show where the qualified sumti ends.)</para>
+  <para>Semantically, sumti qualifiers represent short forms of certain common special cases. Suppose you want to say “I see ’The Red Pony’”, where “The Red Pony” is the title of a book. How about:</para>
+  <programlisting><anchor xml:id="c6e10d1"/><anchor xml:id="cll_chapter6-section10-example1"/>10.1)  mi viska lu le xunre cmaxirma li'u
+       I see [quote] the red small-horse [unquote].
+</programlisting>
+  <para>But <xref linkend="cll_chapter6-section10-example1"/> doesn’t work: it says that you see a piece of text “The Red Pony”. That might be all right if you were looking at the cover of the book, where the words “The Red Pony” are presumably written. (More precisely, where the words “le xunre cmaxirma” are written – but we may suppose the book has been translated into Lojban.)</para>
+  <para>What you really want to say is:</para>
+  <programlisting><anchor xml:id="c6e10d2"/><anchor xml:id="cll_chapter6-section10-example2"/>10.2)  mi viska le selsinxa be lu le xunre cmaxirma li'u
+       I see the thing-represented-by [quote] the red small-horse [unquote].
+</programlisting>
+  <para>The x2 place of “selsinxa” (the x1 place of “sinxa”) is a sign or symbol, and the x1 place of “selsinxa” (the x2 place of “sinxa”) is the thing represented by the sign. <xref linkend="cll_chapter6-section10-example2"/> allows us to use a symbol (namely the title of a book) to represent the thing it is a symbol of (namely the book itself).</para>
+  <para>This operation turns out to be needed often enough that it’s useful to be able to say:</para>
+  <programlisting><anchor xml:id="c6e10d3"/><anchor xml:id="cll_chapter6-section10-example3"/>10.3)  mi viska la'e lu le xunre cmaxirma li'u [lu'u]
+       I see the-referent-of [quote] the red small-horse [unquote].
+</programlisting>
+  <para>So when “la'e” is prefixed to a sumti referring to a symbol, it produces a sumti referring to the referent of that symbol. (In computer jargon, “la'e” dereferences a pointer.)</para>
+  <para>By introducing a sumti qualifier, we correct a false sentence (<xref linkend="cll_chapter6-section10-example1"/>), which too closely resembles its literal English equivalent, into a true sentence (<xref linkend="cll_chapter6-section10-example3"/>), without having to change it overmuch; in particular, the structure remains the same. Most of the uses of sumti qualifiers are of this general kind.</para>
+  <para>The sumti qualifier “lu'e” provides the converse operation: it can be prefixed to a sumti referring to some thing to produce a sumti referring to a sign or symbol for the thing. For example,</para>
+  <programlisting><anchor xml:id="c6e10d4"/><anchor xml:id="cll_chapter6-section10-example4"/>10.4)  mi pu cusku lu'e le vi cukta
+       I [past] express a-symbol-for the nearby book.
+       I said the title of this book.
+</programlisting>
+  <para>The equivalent form not using a sumti qualifier would be:</para>
+  <programlisting><anchor xml:id="c6e10d5"/><anchor xml:id="cll_chapter6-section10-example5"/>10.5)  mi pu cusku le sinxa be le vi cukta
+       I [past] express the symbol-for the nearby book.
+</programlisting>
+  <para>which is equivalent to <xref linkend="cll_chapter6-section10-example4"/>, but longer.</para>
+  <para>The other sumti qualifiers follow the same rules. The cmavo “tu'a” is used in forming abstractions, and is explained more fully in <xref linkend="cll_chapter11"/>. The triplet “lu'a”, “lu'i”, and “lu'o” convert between individuals, sets, and masses; “vu'i” belongs to this group as well, but creates a sequence, which is similar to a set but has a definite order. (The set of John and Charles is the same as the set of Charles and John, but the sequences are different.) Here are some examples:</para>
+  <programlisting><anchor xml:id="c6e10d6"/><anchor xml:id="cll_chapter6-section10-example6"/>10.6)  mi troci tu'a le vorme
+       I try some-abstraction-about the door.
+       I try (to open) the door.
+</programlisting>
+  <para><xref linkend="cll_chapter6-section10-example6"/> might mean that I try to do something else involving the door; the form is deliberately vague.</para>
+  <para>Most of the following examples make use of the cmavo “ri”, belonging to selma'o KOhA. This cmavo means “the thing last mentioned”; it is equivalent to repeating the immediately previous sumti (but in its original context). It is explained in more detail in <xref linkend="cll_chapter7"/>.</para>
+  <programlisting><anchor xml:id="c6e10d7"/><anchor xml:id="cll_chapter6-section10-example7"/>10.7)  lo'i ratcu cu barda .iku'i lu'a ri cmalu
+       The-set-of rats is-large.  But some-members-of it-last-mentioned is-small.
+       The set of rats is large, but some of its members are small.
+
+<anchor xml:id="c6e10d8"/><anchor xml:id="cll_chapter6-section10-example8"/>10.8)  lo ratcu cu cmalu .iku'i lu'i ri barda
+       Some rats are-small.  But the-set-of them-last-mentioned is-large.
+       Some rats are small, but the set of rats is large.
+
+<anchor xml:id="c6e10d9"/><anchor xml:id="cll_chapter6-section10-example9"/>10.9)  mi ce do girzu
+           .i lu'o ri gunma
+           .i vu'i ri porsi
+       I in-a-set-with you are-a-set.
+           The-mass-of it-last-mentioned is-a-mass.
+           The-sequence-of it-last-mentioned is-a-sequence
+       The set of you and me is a set.
+           The mass of you and me is a mass.
+           The sequence of you and me is a sequence.
+</programlisting>
+  <para>(Yes, I know these examples are a bit silly. This set was introduced for completeness, and practical examples are as yet hard to come by.)</para>
+  <para>Finally, the four sumti qualifiers formed from a cmavo of NAhE and “bo” are all concerned with negation, which is discussed in detail in <xref linkend="cll_chapter15"/>. Here are a few examples of negation sumti qualifiers:</para>
+  <programlisting><anchor xml:id="c6e10d10"/><anchor xml:id="cll_chapter6-section10-example10"/>10.10) mi viska na'ebo le gerku
+       I see something-other-than the dog.
+</programlisting>
+  <para>This compound, “na'ebo”, is the most common of the four negation sumti qualifiers. The others usually only make sense in the context of repeating, with modifications, something already referred to:</para>
+  <programlisting><anchor xml:id="c6e10d11"/><anchor xml:id="cll_chapter6-section10-example11"/>10.11) mi nelci loi glare cidja
+              .ije do nelci to'ebo ri
+              .ije la djein. nelci no'ebo ra
+       I like part-of-the-mass-of hot-type-of food.
+              And you like the-opposite-of the-last-mentioned.
+              And Jane likes the-neutral-value-of something-mentioned.
+       I like hot food, and you like cold food, and Jane likes lukewarm food.
+</programlisting>
+  <para>(In <xref linkend="cll_chapter6-section10-example11"/>, the sumti “ra” refers to some previously mentioned sumti other than that referred to by “ri”. We cannot use “ri” here, because it would signify “la djein.”, that being the most recent sumti available to “ri”. See more detailed explanations in <xref linkend="cll_chapter7"/>.)</para>
+</section>
+
+<section xml:id="cll_chapter6-section11">
+  <title>11. The syntax of vocative phrases</title>
+  <para>Vocative phrases are not sumti, but are explained in this chapter because their syntax is very similar to that of sumti. Grammatically, a vocative phrase is one of the so-called “free modifiers” of Lojban, along with subscripts, parentheses, and various other constructs explained in <xref linkend="cll_chapter19"/>. They can be placed after many, but not all, constructions of the grammar: in general, after any elidable terminator (which, however, must not then be elided!), at the beginnings and ends of sentences, and in many other places.</para>
+  <para>The purpose of a vocative phrase is to indicate who is being addressed, or to indicate to that person that he or she ought to be listening. A vocative phrase begins with a cmavo of selma'o COI or DOI, all of which are explained in more detail in <xref linkend="cll_chapter13"/>. Sometimes that is all there is to the phrase:</para>
+  <programlisting><anchor xml:id="c6e11d1"/><anchor xml:id="cll_chapter6-section11-example1"/>11.1)  coi
+       [greetings]
+       Hello.
+
+<anchor xml:id="c6e11d2"/><anchor xml:id="cll_chapter6-section11-example2"/>11.2)  je'e
+       [acknowledgement]
+       Uh-huh.
+       Roger!
+</programlisting>
+  <para>In these cases, the person being addressed is obvious from the context. However, a vocative word (more precisely, one or more cmavo of COI, possibly followed by “doi”, or else just “doi” by itself) can be followed by one of several kinds of phrases, all of which are intended to indicate the addressee. The most common case is a name:</para>
+  <programlisting><anchor xml:id="c6e11d3"/><anchor xml:id="cll_chapter6-section11-example3"/>11.3)  coi. djan.
+       Hello, John.
+</programlisting>
+  <para>A pause is required (for morphological reasons) between a member of COI and a name. You can use “doi” instead of a pause:</para>
+  <programlisting><anchor xml:id="c6e11d4"/><anchor xml:id="cll_chapter6-section11-example4"/>11.4)  coi doi djan.
+       Hello, John.
+</programlisting>
+  <para>means exactly the same thing and does not require a pause. Using “doi” by itself is like just saying someone’s name to attract his or her attention:</para>
+  <programlisting><anchor xml:id="c6e11d5"/><anchor xml:id="cll_chapter6-section11-example5"/>11.5)  doi djan.
+       John!
+</programlisting>
+  <para>In place of a name, a description may appear, lacking its descriptor, which is understood to be “le”:</para>
+  <programlisting><anchor xml:id="c6e11d6"/><anchor xml:id="cll_chapter6-section11-example6"/>11.6)  coi xunre pastu nixli
+       Hello, (red-type-of dress)-type-of girl.
+       Hello, girl with the red dress!
+</programlisting>
+  <para>The listener need not really be a “xunre pastu nixli”, as long as she understands herself correctly from the description. (Actually, only a bare selbri can appear; explicit quantifiers are forbidden in this form of vocative, so the implicit quantifiers “su'o le ro” are in effect.)</para>
+  <para>Finally, a complete sumti may be used, the most general case.</para>
+  <programlisting><anchor xml:id="c6e11d7"/><anchor xml:id="cll_chapter6-section11-example7"/>11.7)  co'o la bab. .e la noras.
+       Goodbye, Bob and Nora.
+</programlisting>
+  <para><xref linkend="cll_chapter6-section11-example6"/> is thus the same as:</para>
+  <programlisting><anchor xml:id="c6e11d8"/><anchor xml:id="cll_chapter6-section11-example8"/>11.8)  coi le xunre pastu nixli
+       Hello, the-one-described-as red-dress girl!
+</programlisting>
+  <para>and <xref linkend="cll_chapter6-section11-example5"/> is the same as:</para>
+  <programlisting><anchor xml:id="c6e11d9"/><anchor xml:id="cll_chapter6-section11-example9"/>11.9)  doi la djan.
+       The-one-named John!
+</programlisting>
+  <para>Finally, the elidable terminator for vocative phrases is “do'u” (of selma'o DOhU), which is rarely needed except when a simple vocative word is being placed somewhere within a bridi. It may also be required when a vocative is placed between a sumti and its relative clause, or when there are a sequence of so-called “free modifiers” (vocatives, subscripts, utterance ordinals — see <xref linkend="cll_chapter18"/> — metalinguistic comments — see <xref linkend="cll_chapter19"/> — or reciprocals — see <xref linkend="cll_chapter19"/>) which must be properly separated.</para>
+  <para>The meaning of a vocative phrase that is within a sentence is not affected by its position in the sentence: thus <xref linkend="cll_chapter6-section11-example9"/> and <xref linkend="cll_chapter6-section11-example10"/> mean the same thing:</para>
+  <programlisting><anchor xml:id="c6e11d10"/><anchor xml:id="cll_chapter6-section11-example10"/>11.10) doi djan. ko klama mi
+       John, come to me!
+
+<anchor xml:id="c6e11d11"/><anchor xml:id="cll_chapter6-section11-example11"/>11.11) ko klama mi doi djan.
+       Come to me, John!
+</programlisting>
+  <para>As usual for this chapter, the full syntax of vocative phrases has not been explained: relative clauses, discussed in <xref linkend="cll_chapter8"/>, make for more possibilities.</para>
+</section>
+
+<section xml:id="cll_chapter6-section12">
+  <title>12. Lojban names</title>
+  <para>Names have been used freely as sumti throughout this chapter without too much explanation. The time for the explanation has now come.</para>
+  <para>First of all, there are two different kinds of things usually called “names” when talking about Lojban. The naming predicates of <xref linkend="cll_chapter6-section2"/> are just ordinary predicates which are being used in a special sense. In addition, though, there is a class of Lojban words which are used only to name things: these can be recognized by the fact that they end in a consonant followed by a pause. Some examples:</para>
+  <programlisting><anchor xml:id="c6e12d1"/><anchor xml:id="cll_chapter6-section12-example1"/>12.1)  djan.      meris.      djein.       .alis.
+       John.      Mary.       Jane.        Alice.
+</programlisting>
+  <para>(Note that “.alis.” begins as well as ends with a pause, because all Lojban words beginning with a vowel must be preceded by a pause. See <xref linkend="cll_chapter4"/> for more information.)</para>
+  <para>Names of this kind have two basic uses in Lojban: when used in a vocative phrase (see <xref linkend="cll_chapter6-section11"/>) they indicate who the listener is or should be. When used with a descriptor of selma'o LA, namely “la”, “lai”, or “la'i”, they form sumti which refer to the persons or things known by the name.</para>
+  <programlisting><anchor xml:id="c6e12d2"/><anchor xml:id="cll_chapter6-section12-example2"/>12.2)  la djonz. klama le zarci
+       Jones goes to-the store.
+       The Joneses go to-the store.
+
+<anchor xml:id="c6e12d3"/><anchor xml:id="cll_chapter6-section12-example3"/>12.3)  lai djonz. klama le zarci
+       The-mass-of Joneses go to-the store.
+       The Joneses go to the store.
+</programlisting>
+  <para>In <xref linkend="cll_chapter6-section12-example2"/>, the significance is that all the persons (perhaps only one) I mean to refer to by the name “djonz.” are going to the store. In <xref linkend="cll_chapter6-section12-example3"/>, the Joneses are massified, and only some part of them needs to be going. Of course, by “djonz.” I can mean whomever I want: that person need not use the name “djonz.” at all.</para>
+  <para>The sumti in <xref linkend="cll_chapter6-section12-example2"/> and <xref linkend="cll_chapter6-section12-example3"/> operate exactly like the similar uses of “la” and “lai” in <xref linkend="cll_chapter6-section2-example6"/> and <xref linkend="cll_chapter6-section3-example6"/> respectively. The only difference is that these descriptors are followed by Lojban name-words. And in fact, the only difference between descriptors of selma'o LA (these three) and of selma'o LE (all the other descriptors) is that the former can be followed by name-words, whereas the latter cannot.</para>
+  <para>There are certain limitations on the form of name-words in Lojban. In particular, they cannot contain the letter-sequences (or sound-sequences) “la”, “lai”, or “doi” unless a consonant immediately precedes within the name. Reciprocally, every name not preceded by “la”, “lai”, “la'i”, or “doi” must be preceded by a pause instead:</para>
+  <programlisting><anchor xml:id="c6e12d4"/><anchor xml:id="cll_chapter6-section12-example4"/>12.4)  coi .djan.
+       Hello, John.
+
+<anchor xml:id="c6e12d5"/><anchor xml:id="cll_chapter6-section12-example5"/>12.5)  zo .djan. cmene mi
+       The-word “John” is-the-name-of me.
+       My name is John.
+</programlisting>
+  <para>In <xref linkend="cll_chapter6-section12-example4"/> and <xref linkend="cll_chapter6-section12-example5"/>, “.djan.” appears with a pause before it as well as after it, because the preceding word is not one of the four special cases. These rules force names to always be separable from the general word-stream.</para>
+  <para>Unless some other rule prevents it (such as the rule that “zo” is always followed by a single word, which is quoted), multiple names may appear wherever one name is permitted, each with its terminating pause:</para>
+  <programlisting><anchor xml:id="c6e12d6"/><anchor xml:id="cll_chapter6-section12-example6"/>12.6)  doi djan. pol. djonz. le bloti cu klama fi la niuport. niuz.
+       John Paul Jones, the boat comes (to somewhere) from Newport News.
+</programlisting>
+  <para>A name may not contain any consonant combination that is illegal in Lojban words generally: the “impermissible consonant clusters” of Lojban morphology (explained in <xref linkend="cll_chapter3"/>). Thus “djeimz.” is not a valid version of “James” (because “mz” is invalid): “djeimyz” will suffice. Similarly, “la” may be replaced by “ly”, “lai” by “ly'i”, “doi” by “do'i” or “dai”. Here are a few examples:</para>
+  <programlisting>
+     English name              invalid Lojban name   valid Lojban names
+
+       Doyle                     *doi,l                do'il or dai,l
+       Lyra                      *lairas               ly'iras
+       Lottie                    *latis                LYtis. or lotis.
+
+     (American pronunciation)
+</programlisting>
+  <para>Names may be borrowed from other languages or created arbitrarily. Another common practice is to use one or more rafsi, arranged to end with a consonant, to form a name: thus the rafsi “loj-” for “logji” (logical) and “ban-” for “bangu” (language) unite to form the name of this language:</para>
+  <programlisting><anchor xml:id="c6e12d7"/><anchor xml:id="cll_chapter6-section12-example7"/>12.7)  lojban.
+       Lojban
+</programlisting>
+  <para>When borrowing names from another language which end in a vowel, or when turning a Lojban brivla (all of which end in vowels) into a name, the vowel may be removed or an arbitrary consonant added. It is common (but not required) to use the consonants “s” or “n” when borrowing vowel-final names from English; speakers of other languages may wish to use other consonant endings.</para>
+  <para>The implicit quantifier for name sumti of the form “la” followed by a name is “su'o”, just as for “la” followed by a selbri.</para>
+</section>
+
+<section xml:id="cll_chapter6-section13">
+  <title>13. Pro-sumti summary</title>
+  <para>The Lojban pro-sumti are the cmavo of selma'o KOhA. They fall into several classes: personal, definable, quantificational, reflexive, back-counting, indefinite, demonstrative, metalinguistic, relative, question. More details are given in <xref linkend="cll_chapter7"/>; this section mostly duplicates information found there, but adds material on the implicit quantifier of each pro-sumti.</para>
+  <para>The following examples illustrate each of the classes. Unless otherwise noted below, the implicit quantification for pro-sumti is “ro” (all). In the case of pro-sumti which refer to other sumti, the “ro” signifies “all of those referred to by the other sumti”: thus it is possible to restrict, but not to extend, the quantification of the other sumti.</para>
+  <para>Personal pro-sumti (“mi”, “do”, “mi'o”, “mi'a”, “ma'a”, “do'o”, “ko”) refer to the speaker or the listener or both, with or without third parties:</para>
+  <programlisting><anchor xml:id="c6e13d1"/><anchor xml:id="cll_chapter6-section13-example1"/>13.1)  mi prami do
+       I love you.
+</programlisting>
+  <para>The personal pro-sumti may be interpreted in context as either representing individuals or masses, so the implicit quantifier may be “pisu'o” rather than “ro”: in particular, “mi'o”, “mi'a”, “ma'a”, and “do'o” specifically represent mass combinations of the individuals (you and I, I and others, you and I and others, you and others) that make them up.</para>
+  <para>Definable pro-sumti (“ko'a”, “ko'e”, “ko'i”, “ko'o”, “ko'u”, “fo'a”, “fo'e”, “fo'i”, “fo'o”, “fo'u”) refer to whatever the speaker has explicitly made them refer to. This reference is accomplished with “goi” (of selma'o GOI), which means “defined-as”.</para>
+  <programlisting><anchor xml:id="c6e13d2"/><anchor xml:id="cll_chapter6-section13-example2"/>13.2)  le cribe goi ko'a cu xekri .i ko'a citka le smacu
+       The bear defined-as it-1 is-black. It-1 eats the mouse.
+</programlisting>
+  <para>Quantificational pro-sumti (“da”, “de”, “di”) are used as variables in bridi involving predicate logic:</para>
+  <programlisting><anchor xml:id="c6e13d3"/><anchor xml:id="cll_chapter6-section13-example3"/>13.3)  ro da poi prenu cu prami pa de poi finpe
+       All somethings-1 which-are persons love one something-2 which-is a-fish.
+       All persons love a fish (each his/her own).
+</programlisting>
+  <para>(This is not the same as “All persons love a certain fish”; the difference between the two is one of quantifier order.) The implicit quantification rules for quantificational pro-sumti are particular to them, and are discussed in detail in <xref linkend="cll_chapter16"/>. Roughly speaking, the quantifier is “su'o” (at least one) when the pro-sumti is first used, and “ro” (all) thereafter.</para>
+  <para>Reflexive pro-sumti (“vo'a”, “vo'e”, “vo'i”, “vo'o”, “vo'u”) refer to the same referents as sumti filling other places in the same bridi, with the effect that the same thing is referred to twice:</para>
+  <programlisting><anchor xml:id="c6e13d4"/><anchor xml:id="cll_chapter6-section13-example4"/>13.4)  le cribe cu batci vo'a
+       The bear bites what-is-in-the-x1-place.
+       The bear bites itself.
+</programlisting>
+  <para>Back-counting pro-sumti (“ri”, “ra”, “ru”) refer to the referents of previous sumti counted backwards from the pro-sumti:</para>
+  <programlisting><anchor xml:id="c6e13d5"/><anchor xml:id="cll_chapter6-section13-example5"/>13.5)  mi klama la frankfurt. ri
+       I go to-Frankfurt from-the-referent-of-the-last-sumti
+       I go from Frankfurt to Frankfurt (by some unstated route).
+</programlisting>
+  <para>Indefinite pro-sumti (“zo'e”, “zu'i”, “zi'o”) refer to something which is unspecified:</para>
+  <programlisting><anchor xml:id="c6e13d6"/><anchor xml:id="cll_chapter6-section13-example6"/>13.6)  mi klama la frankfurt. zo'e zo'e zo'e
+       I go to-Frankfurt from-unspecified via-unspecified by-means-unspecified.
+</programlisting>
+  <para>The implicit quantifier for indefinite pro-sumti is, well, indefinite. It might be “ro” (all) or “su'o” (at least one) or conceivably even “no” (none), though “no” would require a very odd context indeed.</para>
+  <para>Demonstrative pro-sumti (“ti”, “ta”, “tu”) refer to things pointed at by the speaker, or when pointing is not possible, to things near or far from the speaker:</para>
+  <programlisting><anchor xml:id="c6e13d7"/><anchor xml:id="cll_chapter6-section13-example7"/>13.7)  ko muvgau
+              ti ta tu
+       You [imperative] move
+              this-thing from-that-nearby-place to-that-further-away-place.
+       Move this from there to over there!
+</programlisting>
+  <para>Metalinguistic pro-sumti (“di'u”, “de'u”, “da'u”, “di'e”, “de'e”, “da'e”, “dei”, “do'i”) refer to spoken or written utterances, either preceding, following, or the same as the current utterance.</para>
+  <programlisting><anchor xml:id="c6e13d8"/><anchor xml:id="cll_chapter6-section13-example8"/>13.8)  li re su'i re du li vo
+             .i la'e di'u jetnu
+       The-number two plus two equals the-number four.
+             The-referent-of the-previous-utterance is-true.
+</programlisting>
+  <para>The implicit quantifier for metalinguistic pro-sumti is “su'o” (at least one), because they are considered analogous to “lo” descriptions: they refer to things which really are previous, current, or following utterances.</para>
+  <para>The relative pro-sumti (“ke'a”) is used within relative clauses (see <xref linkend="cll_chapter8"/> for a discussion of relative clauses) to refer to whatever sumti the relative clause is attached to.</para>
+  <programlisting><anchor xml:id="c6e13d9"/><anchor xml:id="cll_chapter6-section13-example9"/>13.9)  mi viska le mlatu ku poi zo'e zbasu ke'a
+              loi slasi
+       I see the cat(s) such-that something-unspecified makes it/them (the cats)
+              from-a-mass-of plastic.
+       I see the cat(s) made of plastic.
+</programlisting>
+  <para>The question pro-sumti (“ma”) is used to ask questions which request the listener to supply a sumti which will make the question into a truth:</para>
+  <programlisting><anchor xml:id="c6e13d10"/><anchor xml:id="cll_chapter6-section13-example10"/>13.10) do klama ma
+       You go to-what-sumti?
+       Where are you going?
+</programlisting>
+  <para>The implicit quantifier for the question pro-sumti is “su'o” (at least one), because the listener is only being asked to supply a single answer, not all correct answers.</para>
+  <para>In addition, sequences of lerfu words (of selma'o BY and related selma'o) can also be used as definable pro-sumti.</para>
+</section>
+
+<section xml:id="cll_chapter6-section14">
+  <title>14. Quotation summary</title>
+  <para>There are four kinds of quotation in Lojban: text quotation, words quotation, single-word quotation, non-Lojban quotation. More information is provided in <xref linkend="cll_chapter19"/>.</para>
+  <para>Text quotations are preceded by “lu” and followed by “li'u”, and are an essential part of the surrounding text: they must be grammatical Lojban texts.</para>
+  <programlisting><anchor xml:id="c6e14d1"/><anchor xml:id="cll_chapter6-section14-example1"/>14.1)  mi cusku lu mi'e djan. li'u
+       I say the-text [quote] I-am John [unquote].
+       I say “I’m John”.
+</programlisting>
+  <para>Words quotations are quotations of one or more Lojban words. The words need not mean anything, but they must be morphologically valid so that the end of the quotation can be discerned.</para>
+  <programlisting><anchor xml:id="c6e14d2"/><anchor xml:id="cll_chapter6-section14-example2"/>14.2)  mi cusku lo'u li mi le'u
+       I say the-words [quote] “li mi” [unquote].
+       I say “li mi”.
+</programlisting>
+  <para>Note that the translation of <xref linkend="cll_chapter6-section14-example2"/> does not translate the Lojban words, because they are not presumed to have any meaning (in fact, they are ungrammatical).</para>
+  <para>Single-word quotation quotes a single Lojban word. Compound cmavo are not allowed.</para>
+  <programlisting><anchor xml:id="c6e14d3"/><anchor xml:id="cll_chapter6-section14-example3"/>14.3)  mi cusku zo .ai
+       I say the-word “.ai”.
+</programlisting>
+  <para>Non-Lojban quotation can quote anything, Lojban or not, even non-speech such as drum talk, whistle words, music, or belching. A Lojban word which does not appear within the quotation is used before and after it to set it off from the surrounding Lojban text.</para>
+  <programlisting><anchor xml:id="c6e14d4"/><anchor xml:id="cll_chapter6-section14-example4"/>14.4)  mi cusku zoi kuot. I’m John .kuot
+       I say “I’m John”.
+</programlisting>
+  <para>The implicit quantifier for all types of quotation is “su'o” (at least one), because quotations are analogous to “lo” descriptions: they refer to things which actually are words or sequences of words.</para>
+</section>
+
+<section xml:id="cll_chapter6-section15">
+  <title>15. Number summary</title>
+  <para>The sumti which refer to numbers consist of the cmavo “li” (of selma'o LI) followed by an arbitrary Lojban mekso, or mathematical expression. This can be anything from a simple number up to the most complicated combination of numbers, variables, operators, and so on. Much more information on numbers is given in <xref linkend="cll_chapter18"/>. Here are a few examples of increasing complexity:</para>
+  <programlisting><anchor xml:id="c6e15d1"/><anchor xml:id="cll_chapter6-section15-example1"/>15.1)  li vo
+       the-number four
+       4
+
+<anchor xml:id="c6e15d2"/><anchor xml:id="cll_chapter6-section15-example2"/>15.2)  li re su'i re
+       the-number two plus two
+       2 + 2
+
+<anchor xml:id="c6e15d3"/><anchor xml:id="cll_chapter6-section15-example3"/>15.3)  li .abu bopi'i xy. bote'a re su'i by. bopi'i xy. su'i cy.
+       the-number a times x to-power 2 plus b times x plus c
+       ax<superscript>2</superscript>  + bx + c
+</programlisting>
+  <para>An alternative to “li” is “me'o”, also of selma'o LI. Number expressions beginning with “me'o” refer to the actual expression, rather than its value. Thus <xref linkend="cll_chapter6-section15-example1"/> and <xref linkend="cll_chapter6-section15-example2"/> above have the same meaning, the number four, whereas</para>
+  <programlisting><anchor xml:id="c6e15d4"/><anchor xml:id="cll_chapter6-section15-example4"/>15.4)  me'o vo
+       the-expression four
+       “4”
+</programlisting>
+  <para>and</para>
+  <programlisting><anchor xml:id="c6e15d5"/><anchor xml:id="cll_chapter6-section15-example5"/>15.5)  me'o re su'i re
+       the-expression two plus two
+       “2+2”
+</programlisting>
+  <para>refer to different pieces of text.</para>
+  <para>The implicit quantifier for numbers and mathematical expressions is “su'o”, because these sumti are analogous to “lo” descriptions: they refer to things which actually are numbers or pieces of text. In the case of numbers (with “li”), this is a distinction without a difference, as there is only one number which is 4; but there are many texts “4”, as many as there are documents in which that numeral appears.</para>
+</section>
+
+
+</chapter>

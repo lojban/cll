@@ -28,7 +28,7 @@
 Formal Grammars</h2>
 <p>The following two listings constitute the formal grammar of Lojban. The first version is written in the YACC language, which is used to describe parsers, and has been used to create a parser for Lojban texts. This parser is available from the Logical Language Group. The second listing is in Extended Backus-Naur Form (EBNF) and represents the same grammar in a more human-readable form. (In case of discrepancies, the YACC version is official.) There is a cross-reference listing for each format that shows, for each selma'o and rule, which rules refer to it.</p>
 <h3>1. YACC Grammar of Lojban</h3>
-<div class="c2">/* /*Lojban Machine Grammar, Final Baseline The Lojban Machine Grammardocument is explicitly dedicated to the public domain by its author,The Logical Language Group, Inc.</div>
+<p>/* /*Lojban Machine Grammar, Final Baseline The Lojban Machine Grammardocument is explicitly dedicated to the public domain by its author,The Logical Language Group, Inc.</p>
 <br />
 <br />
 grammar.300 */
@@ -197,9 +197,9 @@ grammar.300 */
 %token <a id="y678" name="y678">VEhO_678</a>         /* right MEX bracket */
 %token <a id="y679" name="y679">VUhU_679</a>         /* MEX operator */
 
-%token any_words_697    /* a string of lexable Lojban words */
-%token any_word_698     /* any single lexable Lojban words */
-%token anything_699     /* a possibly unlexable phoneme string */
+%token <a id="y697" name="y697">any_words_697</a>    /* a string of lexable Lojban words */
+%token <a id="y698" name="y698">any_word_698</a>     /* any single lexable Lojban words */
+%token <a id="y699" name="y699">anything_699</a>     /* a possibly unlexable phoneme string */
 
 
 /* The following tokens are the actual lexer tokens.  The _900 series

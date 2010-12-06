@@ -1,0 +1,1331 @@
+<chapter xml:id="cll_chapter5">
+  <title>Chapter 5
+“Pretty Little Girls’ School”: The Structure Of Lojban selbri</title>
+
+
+<section xml:id="cll_chapter5-section1">
+  <title>1. Lojban content words: brivla</title>
+  <para>At the center, logically and often physically, of every Lojban bridi is one or more words which constitute the selbri. A bridi expresses a relationship between things: the selbri specifies which relationship is referred to. The difference between:</para>
+  <programlisting><anchor xml:id="c5e1d1"/><anchor xml:id="cll_chapter5-section1-example1"/>1.1)   do mamta mi
+       You are-a-mother-of me.
+       You are my mother.
+</programlisting>
+  <para>and</para>
+  <programlisting><anchor xml:id="c5e1d2"/><anchor xml:id="cll_chapter5-section1-example2"/>1.2)   do patfu mi
+       You are-a-father-of me.
+       You are my father.
+</programlisting>
+  <para>lies in the different selbri.</para>
+  <para>The simplest kind of selbri is a single Lojban content word: a brivla. There are three different varieties of brivla: those which are built into the language (the gismu), those which are derived from combinations of the gismu (the lujvo), and those which are taken (usually in a modified form) from other languages (the fu'ivla). In addition, there are a few cmavo that can act like brivla; these are mentioned in <xref linkend="cll_chapter5-section9"/>, and discussed in full in <xref linkend="cll_chapter7"/>.</para>
+  <para>For the purposes of this chapter, however, all brivla are alike. For example,</para>
+  <programlisting><anchor xml:id="c5e1d3"/><anchor xml:id="cll_chapter5-section1-example3"/>1.3)   ta bloti
+       That is-a-boat.
+       That is a boat.
+
+<anchor xml:id="c5e1d4"/><anchor xml:id="cll_chapter5-section1-example4"/>1.4)   ta brablo
+       That is-a-large-boat.
+       That is a ship.
+
+<anchor xml:id="c5e1d5"/><anchor xml:id="cll_chapter5-section1-example5"/>1.5)   ta blotrskunri
+       That is-a-(boat)-schooner.
+       That is a schooner.
+</programlisting>
+  <para>illustrate the three types of brivla (gismu, lujvo, and fu'ivla respectively), but in each case the selbri is composed of a single word whose meaning can be learned independent of its origins.</para>
+  <para>The remainder of this chapter will mostly use gismu as example brivla, because they are short. However, it is important to keep in mind that wherever a gismu appears, it could be replaced by any other kind of brivla.</para>
+</section>
+
+<section xml:id="cll_chapter5-section2">
+  <title>2. Simple tanru</title>
+  <para>Beyond the single brivla, a selbri may consist of two brivla placed together. When a selbri is built in this way from more than one brivla, it is called a tanru, a word with no single English equivalent. The nearest analogue to tanru in English are combinations of two nouns such as “lemon tree”. There is no way to tell just by looking at the phrase “lemon tree” exactly what it refers to, even if you know the meanings of “lemon” and “tree” by themselves. As English-speakers, we must simply know that it refers to “a tree which bears lemons as fruits”. A person who didn’t know English very well might think of it as analogous to “brown tree” and wonder, “What kind of tree is lemon-colored?”</para>
+  <para>In Lojban, tanru are also used for the same purposes as English adjective-noun combinations like “big boy” and adverb-verb combinations like “quickly run”. This is a consequence of Lojban not having any such categories as “noun”, “verb”, “adjective”, or “adverb”. English words belonging to any of these categories are translated by simple brivla in Lojban. Here are some examples of tanru:</para>
+  <programlisting><anchor xml:id="c5e2d1"/><anchor xml:id="cll_chapter5-section2-example1"/>2.1)   tu pelnimre tricu
+       That-yonder is-a-(lemon tree).
+       That is a lemon tree.
+
+<anchor xml:id="c5e2d2"/><anchor xml:id="cll_chapter5-section2-example2"/>2.2)   la djan. barda nanla
+       John is-a-big boy.
+       John is a big boy.
+
+<anchor xml:id="c5e2d3"/><anchor xml:id="cll_chapter5-section2-example3"/>2.3)   mi sutra bajra
+       I quick run.
+       I quickly run/I run quickly.
+</programlisting>
+  <para>Note that “pelnimre” is a lujvo for “lemon”; it is derived from the gismu “pelxu”, yellow, and “nimre”, citrus. Note also that “sutra” can mean “fast/quick” or “quickly” depending on its use:</para>
+  <programlisting><anchor xml:id="c5e2d4"/><anchor xml:id="cll_chapter5-section2-example4"/>2.4)   mi sutra
+       I am-fast/quick.
+</programlisting>
+  <para>shows “sutra” used to translate an adjective, whereas in <xref linkend="cll_chapter5-section2-example3"/> it is translating an adverb. (Another correct translation of <xref linkend="cll_chapter5-section2-example3"/>, however, would be “I am a quick runner”.)</para>
+  <para>There are special Lojban terms for the two components of a tanru, derived from the place structure of the word “tanru”. The first component is called the “seltau”, and the second component is called the “tertau”.</para>
+  <para>The most important rule for use in interpreting tanru is that the tertau carries the primary meaning. A “pelnimre tricu” is primarily a tree, and only secondarily is it connected with lemons in some way. For this reason, an alternative translation of <xref linkend="cll_chapter5-section2-example1"/> would be:</para>
+  <programlisting><anchor xml:id="c5e2d5"/><anchor xml:id="cll_chapter5-section2-example5"/>2.5)   That is a lemon type of tree.
+</programlisting>
+  <para>This “type of” relationship between the components of a tanru is fundamental to the tanru concept.</para>
+  <para>We may also say that the seltau modifies the meaning of the tertau:</para>
+  <programlisting><anchor xml:id="c5e2d6"/><anchor xml:id="cll_chapter5-section2-example6"/>2.6)   That is a tree which is lemon-ish (in the way appropriate to trees)
+</programlisting>
+  <para>would be another possible translation of <xref linkend="cll_chapter5-section2-example1"/>. In the same way, a more explicit translation of <xref linkend="cll_chapter5-section2-example2"/> might be:</para>
+  <programlisting><anchor xml:id="c5e2d7"/><anchor xml:id="cll_chapter5-section2-example7"/>2.7)   John is a boy who is big in the way that boys are big.
+</programlisting>
+  <para>This “way that boys are big” would be quite different from the way in which elephants are big; big-for-a-boy is small-for-an-elephant.</para>
+  <para>All tanru are ambiguous semantically. Possible translations of:</para>
+  <programlisting><anchor xml:id="c5e2d8"/><anchor xml:id="cll_chapter5-section2-example8"/>2.8)   ta klama jubme
+       That is-a-goer type-of-table.
+</programlisting>
+  <para>include:</para>
+  <programlisting>
+    That is a table which goes (a wheeled table, perhaps).
+    That is a table owned by one who goes.
+    That is a table used by those who go (a sports doctor’s table?).
+    That is a table when it goes (otherwise it is a chair?).
+</programlisting>
+  <para>In each case the object referred to is a “goer type of table”, but the ambiguous “type of” relationship can mean one of many things. A speaker who uses tanru (and pragmatically all speakers must) takes the risk of being misunderstood. Using tanru is convenient because they are short and expressive; the circumlocution required to squeeze out all ambiguity can require too much effort.</para>
+  <para>No general theory covering the meaning of all possible tanru exists; probably no such theory can exist. However, some regularities obviously do exist:</para>
+  <programlisting><anchor xml:id="c5e2d9"/><anchor xml:id="cll_chapter5-section2-example9"/>2.9)   do barda prenu
+       You are-a-large person.
+
+<anchor xml:id="c5e2d10"/><anchor xml:id="cll_chapter5-section2-example10"/>2.10)  do cmalu prenu
+       You are-a-small person.
+</programlisting>
+  <para>are parallel tanru, in the sense that the relationship between “barda” and “prenu” is the same as that between “cmalu” and “prenu”. <xref linkend="cll_chapter5-section14"/> and <xref linkend="cll_chapter5-section15"/> contain a partial listing of some types of tanru, with examples.</para>
+</section>
+
+<section xml:id="cll_chapter5-section3">
+  <title>3. Three-part tanru grouping with “bo”</title>
+  <para>The following cmavo is discussed in this section:</para>
+  <programlisting>
+     bo      BO                  closest scope grouping
+</programlisting>
+  <para>Consider the English sentence:</para>
+  <programlisting><anchor xml:id="c5e3d1"/><anchor xml:id="cll_chapter5-section3-example1"/>3.1)   That’s a little girls’ school.
+</programlisting>
+  <para>What does it mean? Two possible readings are:</para>
+  <programlisting><anchor xml:id="c5e3d2"/><anchor xml:id="cll_chapter5-section3-example2"/>3.2)   That’s a little school for girls.
+
+<anchor xml:id="c5e3d3"/><anchor xml:id="cll_chapter5-section3-example3"/>3.3)   That’s a school for little girls.
+</programlisting>
+  <para>This ambiguity is quite different from the simple tanru ambiguity described in <xref linkend="cll_chapter5-section2"/>. We understand that “girls’ school” means “a school where girls are the students”, and not “a school where girls are the teachers” or “a school which is a girl” (!). Likewise, we understand that “little girl” means “girl who is small”. This is an ambiguity of grouping. Is “girls’ school” to be taken as a unit, with “little” specifying the type of girls’ school? Or is “little girl” to be taken as a unit, specifying the type of school? In English speech, different tones of voice, or exaggerated speech rhythm showing the grouping, are used to make the distinction; English writing usually leaves it unrepresented.</para>
+  <para>Lojban makes no use of tones of voice for any purpose; explicit words are used to do the work. The cmavo “bo” (which belongs to selma'o BO) may be placed between the two brivla which are most closely associated. Therefore, a Lojban translation of <xref linkend="cll_chapter5-section3-example2"/> would be:</para>
+  <programlisting><anchor xml:id="c5e3d4"/><anchor xml:id="cll_chapter5-section3-example4"/>3.4)   ta cmalu nixli bo ckule
+       That is-a-small girl – school.
+</programlisting>
+  <para><xref linkend="cll_chapter5-section3-example3"/> might be translated:</para>
+  <programlisting><anchor xml:id="c5e3d5"/><anchor xml:id="cll_chapter5-section3-example5"/>3.5)   ta cmalu bo nixli ckule
+       That is-a-small – girl school.
+</programlisting>
+  <para>The “bo” is represented in the literal translation by a hyphen because in written English a hyphen is sometimes used for the same purpose: “a big dog-catcher” would be quite different from a “big-dog catcher” (presumably someone who catches only big dogs).</para>
+  <para>Analysis of <xref linkend="cll_chapter5-section3-example4"/> and <xref linkend="cll_chapter5-section3-example5"/> reveals a tanru nested within a tanru. In <xref linkend="cll_chapter5-section3-example4"/>, the main tanru has a seltau of “cmalu” and a tertau of “nixli bo ckule”; the tertau is itself a tanru with “nixli” as the seltau and “ckule” as the tertau. In <xref linkend="cll_chapter5-section3-example5"/>, on the other hand, the seltau is “cmalu bo nixli” (itself a tanru), whereas the tertau is “ckule”. This structure of tanru nested within tanru forms the basis for all the more complex types of selbri that will be explained below.</para>
+  <para>What about <xref linkend="cll_chapter5-section3-example6"/>? What does it mean?</para>
+  <programlisting><anchor xml:id="c5e3d6"/><anchor xml:id="cll_chapter5-section3-example6"/>3.6)   ta cmalu nixli ckule
+       That is-a-small girl school.
+</programlisting>
+  <para>The rules of Lojban do not leave this sentence ambiguous, as the rules of English do with <xref linkend="cll_chapter5-section3-example1"/>. The choice made by the language designers is to say that <xref linkend="cll_chapter5-section3-example6"/> means the same as <xref linkend="cll_chapter5-section3-example5"/>. This is true no matter what three brivla are used: the leftmost two are always grouped together. This rule is called the “left-grouping rule”. Left-grouping in seemingly ambiguous structures is quite common — though not universal — in other contexts in Lojban.</para>
+  <para>Another way to express the English meaning of <xref linkend="cll_chapter5-section3-example4"/> and <xref linkend="cll_chapter5-section3-example5"/>, using parentheses to mark grouping, is:</para>
+  <programlisting><anchor xml:id="c5e3d7"/><anchor xml:id="cll_chapter5-section3-example7"/>3.7)   ta cmalu nixli bo ckule
+       That is-a-small type-of (girl type-of school).
+
+<anchor xml:id="c5e3d8"/><anchor xml:id="cll_chapter5-section3-example8"/>3.8)   ta cmalu bo nixli ckule
+       That is-a-(small type-of girl) type-of school.
+</programlisting>
+  <para>Because “type-of” is implicit in the Lojban tanru form, it has no Lojban equivalent.</para>
+  <para>Note: It is perfectly legal, though pointless, to insert “bo” into a simple tanru:</para>
+  <programlisting><anchor xml:id="c5e3d9"/><anchor xml:id="cll_chapter5-section3-example9"/>3.9)   ta klama bo jubme
+       That is-a goer–table.
+</programlisting>
+  <para>is a legal Lojban bridi that means exactly the same thing as <xref linkend="cll_chapter5-section2-example8"/>, and is ambiguous in exactly the same ways. The cmavo “bo” serves only to resolve grouping ambiguity: it says nothing about the more basic ambiguity present in all tanru.</para>
+</section>
+
+<section xml:id="cll_chapter5-section4">
+  <title>4. Complex tanru grouping</title>
+  <para>If one element of a tanru can be another tanru, why not both elements?</para>
+  <programlisting><anchor xml:id="c5e4d1"/><anchor xml:id="cll_chapter5-section4-example1"/>4.1)   do mutce bo barda gerku bo kavbu
+       You are-a-(very type-of large) (dog type-of capturer).
+       You are a very large dog-catcher.
+</programlisting>
+  <para>In <xref linkend="cll_chapter5-section4-example1"/>, the selbri is a tanru with seltau “mutce bo barda” and tertau “gerku bo kavbu”. It is worth emphasizing once again that this tanru has the same fundamental ambiguity as all other Lojban tanru: the sense in which the “dog type-of capturer” is said to be “very type-of large” is not precisely specified. Presumably it is his body which is large, but theoretically it could be one of his other properties.</para>
+  <para>We will now justify the title of this chapter by exploring the ramifications of the phrase “pretty little girls’ school”, an expansion of the tanru used in <xref linkend="cll_chapter5-section3"/> to four brivla. (Although this example has been used in the Loglan Project almost since the beginning — it first appeared in Quine’s book <citation>Word and Object</citation> (1960) — it is actually a mediocre example because of the ambiguity of English “pretty”; it can mean “beautiful”, the sense intended here, or it can mean “very”. Lojban “melbi” is not subject to this ambiguity: it means only “beautiful”.)</para>
+  <para>Here are four ways to group this phrase:</para>
+  <programlisting><anchor xml:id="c5e4d2"/><anchor xml:id="cll_chapter5-section4-example2"/>4.2)   ta melbi cmalu nixli ckule
+       That is-a-((pretty type-of little) type-of girl) type-of school.
+       That is a school for girls who are beautifully small.
+
+<anchor xml:id="c5e4d3"/><anchor xml:id="cll_chapter5-section4-example3"/>4.3)   ta melbi cmalu nixli bo ckule
+       That is-a-(pretty type-of little) (girl type-of school).
+       That is a girls’ school which is beautifully small.
+
+<anchor xml:id="c5e4d4"/><anchor xml:id="cll_chapter5-section4-example4"/>4.4)   ta melbi cmalu bo nixli ckule
+       That is-a-(pretty type-of (little type-of girl)) type-of school.
+       That is a school for small girls who are beautiful.
+
+<anchor xml:id="c5e4d5"/><anchor xml:id="cll_chapter5-section4-example5"/>4.5)   ta melbi cmalu bo nixli bo ckule
+       That is-a-pretty type-of (little type-of (girl type-of school)).
+       That is a small school for girls which is beautiful.
+</programlisting>
+  <para><xref linkend="cll_chapter5-section4-example5"/> uses a construction which has not been seen before: “cmalu bo nixli bo ckule”, with two consecutive uses of “bo” between brivla. The rule for multiple “bo” constructions is the opposite of the rule when no “bo” is present at all: the last two are grouped together. Not surprisingly, this is called the “right-grouping rule”, and it is associated with every use of “bo” in the language. Therefore,</para>
+  <programlisting><anchor xml:id="c5e4d6"/><anchor xml:id="cll_chapter5-section4-example6"/>4.6)   ta cmalu bo nixli bo ckule
+       That is-a-little type-of (girl type-of school).
+</programlisting>
+  <para>means the same as <xref linkend="cll_chapter5-section3-example4"/>, not <xref linkend="cll_chapter5-section3-example5"/>. This rule may seem peculiar at first, but one of its consequences is that “bo” is never necessary between the first two elements of any of the complex tanru presented so far: all of <xref linkend="cll_chapter5-section4-example2"/> through <xref linkend="cll_chapter5-section4-example5"/> could have “bo” inserted between “melbi” and “cmalu” with no change in meaning.</para>
+</section>
+
+<section xml:id="cll_chapter5-section5">
+  <title>5. Complex tanru with “ke” and “ke'e”</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     ke      KE                  start grouping
+     ke'e    KEhE                end grouping
+</programlisting>
+  <para>There is, in fact, a fifth grouping of “pretty little girls’ school” that cannot be expressed with the resources explained so far. To handle it, we must introduce the grouping parentheses cmavo, “ke” and “ke'e” (belonging to selma'o KE and KEhE respectively). Any portion of a selbri sandwiched between these two cmavo is taken to be a single tanru component, independently of what is adjacent to it. Thus, <xref linkend="cll_chapter5-section4-example2"/> can be rewritten in any of the following ways:</para>
+  <programlisting><anchor xml:id="c5e5d1"/><anchor xml:id="cll_chapter5-section5-example1"/>5.1)   ta ke melbi cmalu ke'e nixli ckule
+       That is-a-( pretty little ) girl school.
+
+<anchor xml:id="c5e5d2"/><anchor xml:id="cll_chapter5-section5-example2"/>5.2)   ta ke ke melbi cmalu ke'e nixli ke'e ckule
+       That is-a-( ( pretty little ) girl ) school.
+
+<anchor xml:id="c5e5d3"/><anchor xml:id="cll_chapter5-section5-example3"/>5.3)   ta ke ke ke melbi cmalu ke'e nixli ke'e ckule ke'e
+       That is-a-( ( ( pretty little ) girl ) school ).
+</programlisting>
+  <para>Even more versions could be created simply by placing any number of “ke” cmavo at the beginning of the selbri, and a like number of “ke'e” cmavo at its end. Obviously, all of these are a waste of breath once the left-grouping rule has been grasped. However, the following is equivalent to <xref linkend="cll_chapter5-section4-example4"/> and may be easier to understand:</para>
+  <programlisting><anchor xml:id="c5e5d4"/><anchor xml:id="cll_chapter5-section5-example4"/>5.4)   ta melbi ke cmalu nixli ke'e ckule
+       That is-a-( pretty type-of ( little type-of girl ) ) type-of school.
+</programlisting>
+  <para>Likewise, a “ke” and “ke'e” version of <xref linkend="cll_chapter5-section4-example3"/> would be:</para>
+  <programlisting><anchor xml:id="c5e5d5"/><anchor xml:id="cll_chapter5-section5-example5"/>5.5)   ta melbi cmalu ke nixli ckule [ke'e]
+       That is-a-(pretty type-of little) ( girl type-of school ).
+</programlisting>
+  <para>The final “ke'e” is given in square brackets here to indicate that it can be elided. It is always possible to elide “ke'e” at the end of the selbri, making <xref linkend="cll_chapter5-section5-example5"/> as terse as <xref linkend="cll_chapter5-section4-example3"/>.</para>
+  <para>Now how about that fifth grouping? It is</para>
+  <programlisting><anchor xml:id="c5e5d6"/><anchor xml:id="cll_chapter5-section5-example6"/>5.6)   ta melbi ke cmalu nixli ckule [ke'e]
+       That is-a-pretty type-of ( ( little type-of girl ) type-of school ).
+       That is a beautiful school for small girls.
+</programlisting>
+  <para><xref linkend="cll_chapter5-section5-example6"/> is distinctly different in meaning from any of Examples 4.2 through 4.5. Note that within the “ke ... ke'e” parentheses, the left-grouping rule is applied to “cmalu nixli ckule”.</para>
+  <para>It is perfectly all right to mix “bo” and “ke ... ke'e” in a single selbri. For instance, <xref linkend="cll_chapter5-section4-example5"/>, which in pure “ke ... ke'e” form is</para>
+  <programlisting><anchor xml:id="c5e5d7"/><anchor xml:id="cll_chapter5-section5-example7"/>5.7)   ta melbi ke cmalu ke nixli ckule [ke'e] [ke'e]
+       That is-a-pretty type-of ( little type-of ( girl type-of school ) ).
+</programlisting>
+  <para>can equivalently be expressed as:</para>
+  <programlisting><anchor xml:id="c5e5d8"/><anchor xml:id="cll_chapter5-section5-example8"/>5.8)   ta melbi ke cmalu nixli bo ckule [ke'e]
+       That is-a-pretty type-of ( little type-of ( girl type-of school ) ).
+</programlisting>
+  <para>and in many other different forms as well.</para>
+</section>
+
+<section xml:id="cll_chapter5-section6">
+  <title>6. Logical connection within tanru</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     je      JA                  tanru logical “and”
+     ja      JA                  tanru logical “or”
+     joi     JOI                 mixed mass “and”
+     gu'e    GUhA                tanru forethought logical “and”
+     gi      GI                  forethought connection separator
+</programlisting>
+  <para>Consider the English phrase “big red dog”. How shall this be rendered as a Lojban tanru? The naive attempt:</para>
+  <programlisting><anchor xml:id="c5e6d1"/><anchor xml:id="cll_chapter5-section6-example1"/>6.1)   barda xunre gerku
+       (big type-of red) type-of dog
+</programlisting>
+  <para>will not do, as it means a dog whose redness is big, in whatever way redness might be described as “big”. Nor is</para>
+  <programlisting><anchor xml:id="c5e6d2"/><anchor xml:id="cll_chapter5-section6-example2"/>6.2)   barda xunre bo gerku
+       big type-of (red type-of dog)
+</programlisting>
+  <para>much better. After all, the straightforward understanding of the English phrase is that the dog is big as compared with other dogs, not merely as compared with other red dogs. In fact, the bigness and redness are independent properties of the dog, and only obscure rules of English adjective ordering prevent us from saying “red big dog”.</para>
+  <para>The Lojban approach to this problem is to introduce the cmavo “je”, which is one of the many equivalents of English “and”. A big red dog is one that is both big and red, and we can say:</para>
+  <programlisting><anchor xml:id="c5e6d3"/><anchor xml:id="cll_chapter5-section6-example3"/>6.3)   barda je xunre gerku
+       (big and red) type-of dog
+</programlisting>
+  <para>Of course,</para>
+  <programlisting><anchor xml:id="c5e6d4"/><anchor xml:id="cll_chapter5-section6-example4"/>6.4)   xunre je barda gerku
+       (red and big) type-of dog
+</programlisting>
+  <para>is equally satisfactory and means the same thing. As these examples indicate, joining two brivla with “je” makes them a unit for tanru purposes. However, explicit grouping with “bo” or “ke ... ke'e” associates brivla more closely than “je” does:</para>
+  <programlisting><anchor xml:id="c5e6d5"/><anchor xml:id="cll_chapter5-section6-example5"/>6.5)   barda je pelxu bo xunre gerku
+       barda je ke pelxu xunre ke'e gerku
+       (big and (yellow type-of red)) dog
+       big yellowish-red dog
+</programlisting>
+  <para>With no grouping indicators, we get:</para>
+  <programlisting><anchor xml:id="c5e6d6"/><anchor xml:id="cll_chapter5-section6-example6"/>6.6)   barda je pelxu xunre gerku
+       ((big and yellow) type-of red) type-of dog
+       biggish- and yellowish-red dog
+</programlisting>
+  <para>which again raises the question of <xref linkend="cll_chapter5-section6-example1"/>: what does “biggish-red” mean?</para>
+  <para>Unlike “bo” and “ke ... ke'e”, “je” is useful as well as merely legal within simple tanru. It may be used to partly resolve the ambiguity of simple tanru:</para>
+  <programlisting><anchor xml:id="c5e6d7"/><anchor xml:id="cll_chapter5-section6-example7"/>6.7)   ta blanu je zdani
+       that is-blue and is-a-house
+</programlisting>
+  <para>definitely refers to something which is both blue and is a house, and not to any of the other possible interpretations of simple “blanu zdani”. Furthermore, “blanu zdani” refers to something which is blue in the way that houses are blue; “blanu je zdani” has no such implication — the blueness of a “blanu je zdani” is independent of its houseness.</para>
+  <para>With the addition of “je”, many more versions of “pretty little girls’ school” are made possible: see <xref linkend="cll_chapter5-section16"/> for a complete list.</para>
+  <para>A subtle point in the semantics of tanru like <xref linkend="cll_chapter5-section6-example3"/> needs special elucidation. There are at least two possible interpretations of:</para>
+  <programlisting><anchor xml:id="c5e6d8"/><anchor xml:id="cll_chapter5-section6-example8"/>6.8)   ta melbi je nixli ckule
+       That is-a-(beautiful and girl) type-of school.
+</programlisting>
+  <para>It can be understood as:</para>
+  <programlisting><anchor xml:id="c5e6d9"/><anchor xml:id="cll_chapter5-section6-example9"/>6.9)   That is a girls’ school and a beautiful school.
+</programlisting>
+  <para>or as:</para>
+  <programlisting><anchor xml:id="c5e6d10"/><anchor xml:id="cll_chapter5-section6-example10"/>6.10)  That is a school for things which are both girls and beautiful.
+</programlisting>
+  <para>The interpretation specified by <xref linkend="cll_chapter5-section6-example9"/> treats the tanru as a sort of abbreviation for:</para>
+  <programlisting><anchor xml:id="c5e6d11"/><anchor xml:id="cll_chapter5-section6-example11"/>6.11)  ta ke melbi ckule ke'e je ke nixli ckule [ke'e]
+       That is-a-( beautiful type-of school ) and ( girl type-of school )
+</programlisting>
+  <para>whereas the interpretation specified by <xref linkend="cll_chapter5-section6-example10"/> does not. This is a kind of semantic ambiguity for which Lojban does not compel a firm resolution. The way in which the school is said to be of type “beautiful and girl” may entail that it is separately a beautiful school and a girls’ school; but the alternative interpretation, that the members of the school are beautiful and girls, is also possible. Still another interpretation is:</para>
+  <programlisting><anchor xml:id="c5e6d12"/><anchor xml:id="cll_chapter5-section6-example12"/>6.12)  That is a school for beautiful things and also for girls.
+</programlisting>
+  <para>so while the logical connectives help to resolve the meaning of tanru, they by no means compel a single meaning in and of themselves.</para>
+  <para>In general, logical connectives within tanru cannot undergo the formal manipulations that are possible with the related logical connectives that exist outside tanru; see <xref linkend="cll_chapter14"/> for further details.</para>
+  <para>The logical connective “je” is only one of the fourteen logical connectives that Lojban provides. Here are a few examples of some of the others:</para>
+  <programlisting><anchor xml:id="c5e6d13"/><anchor xml:id="cll_chapter5-section6-example13"/>6.13)  le bajra cu jinga ja te jinga
+       the runner(s) is/are winner(s) or loser(s).
+
+<anchor xml:id="c5e6d14"/><anchor xml:id="cll_chapter5-section6-example14"/>6.14)  blanu naja lenku skapi
+       (blue only-if cold) skin
+       skin which is blue only if it is cold
+
+<anchor xml:id="c5e6d15"/><anchor xml:id="cll_chapter5-section6-example15"/>6.15)  xamgu jo cortu nuntavla
+       (good if-and-only-if short) speech
+       speech which is good if (and only if) it is short
+
+<anchor xml:id="c5e6d16"/><anchor xml:id="cll_chapter5-section6-example16"/>6.16)  vajni ju pluka nuntavla
+       (important whether-or-not pleasing) event-of-talking
+       speech which is important, whether or not it is pleasing
+</programlisting>
+  <para>In <xref linkend="cll_chapter5-section6-example13"/>, “ja” is grammatically equivalent to “je” but means “or” (more precisely, “and/or”). Likewise, “naja” means “only if” in <xref linkend="cll_chapter5-section6-example14"/>, “jo” means “if and only if” in <xref linkend="cll_chapter5-section6-example15"/>, and “ju” means “whether or not” in <xref linkend="cll_chapter5-section6-example16"/>.</para>
+  <para>Now consider the following example:</para>
+  <programlisting><anchor xml:id="c5e6d17"/><anchor xml:id="cll_chapter5-section6-example17"/>6.17)  ricfu je blanu jabo crino
+       rich and (blue or green)
+</programlisting>
+  <para>which illustrates a new grammatical feature: the use of both “ja” and “bo” between tanru components. The two cmavo combine to form a compound whose meaning is that of “ja” but which groups more closely; “jabo” is to “ja” as plain “bo” is to no cmavo at all. However, both “ja” and “jabo” group less closely than “bo” does:</para>
+  <programlisting><anchor xml:id="c5e6d18"/><anchor xml:id="cll_chapter5-section6-example18"/>6.18)  ricfu je blanu jabo crino bo blanu
+       rich and (blue or green – blue)
+       rich and (blue or greenish-blue)
+</programlisting>
+  <para>An alternative form of <xref linkend="cll_chapter5-section6-example17"/> is:</para>
+  <programlisting><anchor xml:id="c5e6d19"/><anchor xml:id="cll_chapter5-section6-example19"/>6.19)  ricfu je ke blanu ja crino [ke'e]
+       rich and (blue or green)
+</programlisting>
+  <para>In addition to the logical connectives, there are also a variety of non-logical connectives, grammatically equivalent to the logical ones. The only one with a well-understood meaning in tanru contexts is “joi”, which is the kind of “and” that denotes a mixture:</para>
+  <programlisting><anchor xml:id="c5e6d20"/><anchor xml:id="cll_chapter5-section6-example20"/>6.20)  ti blanu joi xunre bolci
+       This is-a-(blue and red) ball.
+</programlisting>
+  <para>The ball described is neither solely red nor solely blue, but probably striped or in some other way exhibiting a combination of the two colors. <xref linkend="cll_chapter5-section6-example20"/> is distinct from:</para>
+  <programlisting><anchor xml:id="c5e6d21"/><anchor xml:id="cll_chapter5-section6-example21"/>6.21)  ti blanu xunre bolci
+       This is a bluish-red ball
+</programlisting>
+  <para>which would be a ball whose color is some sort of purple tending toward red, since “xunre” is the more important of the two components. On the other hand,</para>
+  <programlisting><anchor xml:id="c5e6d22"/><anchor xml:id="cll_chapter5-section6-example22"/>6.22)  ti blanu je xunre bolci
+       This is a (blue and red) ball
+</programlisting>
+  <para>is probably self-contradictory, seeming to claim that the ball is independently both blue and red at the same time, although some sensible interpretation may exist.</para>
+  <para>Finally, just as English “and” has the variant form “both ... and”, so “je” between tanru components has the variant form “gu'e ... gi”, where “gu'e” is placed before the components and “gi” between them:</para>
+  <programlisting><anchor xml:id="c5e6d23"/><anchor xml:id="cll_chapter5-section6-example23"/>6.23)  gu'e barda gi xunre gerku
+       (both big and red) type-of dog
+</programlisting>
+  <para>is equivalent in meaning to <xref linkend="cll_chapter5-section6-example3"/>. For each logical connective related to “je”, there is a corresponding connective related to “gu'e ... gi” in a systematic way.</para>
+  <para>The portion of a “gu'e ... gi” construction before the “gi” is a full selbri, and may use any of the selbri resources including “je” logical connections. After the “gi”, logical connections are taken to be wider in scope than the “gu'e ... gi”, which has in effect the same scope as “bo”:</para>
+  <programlisting><anchor xml:id="c5e6d24"/><anchor xml:id="cll_chapter5-section6-example24"/>6.24)  gu'e barda je xunre gi gerku ja mlatu
+       (both (big and red) and dog) or cat
+       something which is either big, red, and a dog, or else a cat
+</programlisting>
+  <para>leaves “mlatu” outside the “gu'e ... gi” construction. The scope of the “gi” arm extends only to a single brivla or to two or more brivla connected with “bo” or “ke ... ke'e”.</para>
+</section>
+
+<section xml:id="cll_chapter5-section7">
+  <title>7. Linked sumti: “be–bei–be'o”</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     be      BE                  linked sumti marker
+     bei     BEI                 linked sumti separator
+     be'o    BEhO                linked sumti terminator
+</programlisting>
+  <para>The question of the place structures of selbri has been glossed over so far. This chapter does not attempt to treat place structure issues in detail; they are discussed in <xref linkend="cll_chapter9"/>. One grammatical structure related to places belongs here, however. In simple sentences such as <xref linkend="cll_chapter5-section1-example1"/>, the place structure of the selbri is simply the defined place structure of the gismu “mamta”. What about more complex selbri?</para>
+  <para>For tanru, the place structure rule is simple: the place structure of a tanru is always the place structure of its tertau. Thus, the place structure of “blanu zdani” is that of “zdani”: the x1 place is a house or nest, and the x2 place is its occupants.</para>
+  <para>What about the places of “blanu”? Is there any way to get them into the act? In fact, “blanu” has only one place, and this is merged, as it were, with the x1 place of “zdani”. It is whatever is in the x1 place that is being characterized as blue-for-a-house. But if we replace “blanu” with “xamgu”, we get:</para>
+  <programlisting><anchor xml:id="c5e7d1"/><anchor xml:id="cll_chapter5-section7-example1"/>7.1)   ti xamgu zdani
+       This is-a-good house.
+       This is a good (for someone, by some standard) house.
+</programlisting>
+  <para>Since “xamgu” has three places (x1, the good thing; x2, the person for whom it is good; and x3, the standard of goodness), <xref linkend="cll_chapter5-section7-example1"/> necessarily omits information about the last two: there is no room for them. Room can be made, however!</para>
+  <programlisting><anchor xml:id="c5e7d2"/><anchor xml:id="cll_chapter5-section7-example2"/>7.2)   ti xamgu be do bei mi [be'o] zdani
+       This is-a-good (for you by-standard me) house.
+       This is a house that is good for you by my standards.
+</programlisting>
+  <para>Here, the gismu “xamgu” has been followed by the cmavo “be” (of selma'o BE), which signals that one or more sumti follows. These sumti are not part of the overall bridi place structure, but fill the places of the brivla they are attached to, starting with x2. If there is more than one sumti, they are separated by the cmavo “bei” (of selma'o BEI), and the list of sumti is terminated by the elidable terminator “be'o” (of selma'o BEhO).</para>
+  <para>Grammatically, a brivla with sumti linked to it in this fashion plays the same role in tanru as a simple brivla. To illustrate, here is a fully fleshed-out version of <xref linkend="cll_chapter5-section3-example4"/>, with all places filled in:</para>
+  <programlisting><anchor xml:id="c5e7d3"/><anchor xml:id="cll_chapter5-section7-example3"/>7.3)   ti cmalu be le ka canlu
+                       bei lo'e ckule be'o
+             nixli be li mu bei lo merko be'o bo
+                       ckule la bryklyn. loi pemci
+                                le mela nu,IORK. prenu
+                                le jecta
+
+       This is a small (in-dimension the property-of volume
+                       by-standard the-typical school)
+             (girl (of-years the-number five by-standard some American-thing)
+                       school) in-Brooklyn with-subject poems
+                                for-audience New-York persons
+                                with-operator the state.
+
+       This is a school, small in volume compared to the typical school, pertaining
+       to five-year-old girls (by American standards), in Brooklyn, teaching poetry
+       to the New York community and operated by the state.
+</programlisting>
+  <para>Here the three places of “cmalu”, the three of “nixli”, and the four of “ckule” are fully specified. Since the places of “ckule” are the places of the bridi as a whole, it was not necessary to link the sumti which follow “ckule”. It would have been legal to do so, however:</para>
+  <programlisting><anchor xml:id="c5e7d4"/><anchor xml:id="cll_chapter5-section7-example4"/>7.4)   mi klama be le zarci bei le zdani [be'o]
+       I go (to-the market from-the house).
+</programlisting>
+  <para>means the same as</para>
+  <programlisting><anchor xml:id="c5e7d5"/><anchor xml:id="cll_chapter5-section7-example5"/>7.5)   mi klama le zarci le zdani
+       I go to-the market from-the house.
+</programlisting>
+  <para>No matter how complex a tanru gets, the last brivla always dictates the place structure: the place structure of</para>
+  <programlisting><anchor xml:id="c5e7d6"/><anchor xml:id="cll_chapter5-section7-example6"/>7.6)   melbi je cmalu nixli bo ckule
+       a (pretty and little) (girl school)
+       a school for girls which is both beautiful and small
+</programlisting>
+  <para>is simply that of “ckule”. (The sole exception to this rule is discussed in <xref linkend="cll_chapter5-section8"/>.)</para>
+  <para>It is possible to precede linked sumti by the place structure ordering tags “fe”, “fi”, “fo”, and “fu” (of selma'o FA, discussed further in <xref linkend="cll_chapter9"/>), which serve to explicitly specify the x2, x3, x4, and x5 places respectively. Normally, the place following the “be” is the x2 place and the other places follow in order. If it seems convenient to change the order, however, it can be accomplished as follows:</para>
+  <programlisting><anchor xml:id="c5e7d7"/><anchor xml:id="cll_chapter5-section7-example7"/>7.7)   ti xamgu be fi mi bei fe do [be'o] zdani
+       This is-a-good ( by-standard me for you ) house.
+</programlisting>
+  <para>which is equivalent in meaning to <xref linkend="cll_chapter5-section7-example2"/>. Note that the order of “be”, “bei”, and “be'o” does not change; only the inserted “fi” tells us that “mi” is the x3 place (and correspondingly, the inserted “fe” tells us that “do” is the x2 place). Changing the order of sumti is often done to match the order of another language, or for emphasis or rhythm.</para>
+  <para>Of course, using FA cmavo makes it easy to specify one place while omitting a previous place:</para>
+  <programlisting><anchor xml:id="c5e7d8"/><anchor xml:id="cll_chapter5-section7-example8"/>7.8)   ti xamgu be fi mi [be'o] zdani
+       This is-a-good (by-standard me) house.
+       This is a good house by my standards.
+</programlisting>
+  <para>Similarly, sumti labeled by modal or tense tags can be inserted into strings of linked sumti just as they can into bridi:</para>
+  <programlisting><anchor xml:id="c5e7d9"/><anchor xml:id="cll_chapter5-section7-example9"/>7.9)   ta blanu be ga'a mi [be'o] zdani
+       That is-a-blue (to-observer me) house.
+       That is a blue, as I see it, house.
+</programlisting>
+  <para>The meaning of <xref linkend="cll_chapter5-section7-example9"/> is slightly different from:</para>
+  <programlisting><anchor xml:id="c5e7d10"/><anchor xml:id="cll_chapter5-section7-example10"/>7.10)  ta blanu zdani ga'a mi
+       That is-a-blue house to-observer me.
+       That is a blue house, as I see it.
+</programlisting>
+  <para>See discussions in <xref linkend="cll_chapter9"/> of modals and in <xref linkend="cll_chapter10"/> of tenses for more explanations.</para>
+  <para>The terminator “be'o” is almost always elidable: however, if the selbri belongs to a description, then a relative clause following it will attach to the last linked sumti unless “be'o” is used, in which case it will attach to the outer description:</para>
+  <programlisting><anchor xml:id="c5e7d11"/><anchor xml:id="cll_chapter5-section7-example11"/>7.11)  le xamgu be do noi barda cu zdani
+       The good-thing for you (who are-large) is-a-house.
+
+<anchor xml:id="c5e7d12"/><anchor xml:id="cll_chapter5-section7-example12"/>7.12)  le xamgu be do be'o noi barda cu zdani
+       The (good-thing for you) (which is-large) is-a-house
+</programlisting>
+  <para>(Relative clauses are explained in <xref linkend="cll_chapter8"/>.)</para>
+  <para>In other cases, however, “be'o” cannot be elided if “ku” has also been elided:</para>
+  <programlisting><anchor xml:id="c5e7d13"/><anchor xml:id="cll_chapter5-section7-example13"/>7.13)  le xamgu be le ctuca [ku] be'o zdani
+       the good (for the teacher) house
+</programlisting>
+  <para>requires either “ku” or “be'o”, and since there is only one occurrence of “be”, the “be'o” must match it, whereas it may be confusing which occurrence of “le” the “ku” terminates (in fact the second one is correct).</para>
+</section>
+
+<section xml:id="cll_chapter5-section8">
+  <title>8. Inversion of tanru: “co”</title>
+  <para>The following cmavo is discussed in this section:</para>
+  <programlisting>
+     co      CO                  tanru inversion marker
+</programlisting>
+  <para>The standard order of Lojban tanru, whereby the modifier precedes what it modifies, is very natural to English-speakers: we talk of “blue houses”, not of “houses blue”. In other languages, however, such matters are differently arranged, and Lojban supports this reverse order (tertau before seltau) by inserting the particle “co”. <xref linkend="cll_chapter5-section8-example1"/> and <xref linkend="cll_chapter5-section8-example2"/> mean exactly the same thing:</para>
+  <programlisting><anchor xml:id="c5e8d1"/><anchor xml:id="cll_chapter5-section8-example1"/>8.1)   ta blanu zdani
+       That is-a-blue type-of-house.
+       That is a blue house.
+
+<anchor xml:id="c5e8d2"/><anchor xml:id="cll_chapter5-section8-example2"/>8.2)   ta zdani co blanu
+       That is-a-house of-type blue.
+       That is a blue house.
+</programlisting>
+  <para>This change is called “tanru inversion”. In tanru inversion, the element before “co” (“zdani” in <xref linkend="cll_chapter5-section8-example2"/>) is the tertau, and the element following “co” (“blanu”) in <xref linkend="cll_chapter5-section8-example2"/>) is the seltau.</para>
+  <para>The meaning, and more specifically, the place structure, of a tanru is not affected by inversion: the place structure of “zdani co blanu” is still that of “zdani”. However, the existence of inversion in a selbri has a very special effect on any sumti which follow that selbri. Instead of being interpreted as filling places of the selbri, they actually fill the places (starting with x2) of the seltau. In <xref linkend="cll_chapter5-section7"/>, we saw how to fill interior places with “be ... bei ... be'o”, and in fact <xref linkend="cll_chapter5-section8-example3"/> and <xref linkend="cll_chapter5-section8-example4"/> have the same meaning:</para>
+  <programlisting><anchor xml:id="c5e8d3"/><anchor xml:id="cll_chapter5-section8-example3"/>8.3)   mi klama be le zarci bei le zdani be'o troci
+       I am-a-(goer to the market from the house) type-of trier.
+       I try to go to the market from the house.
+
+<anchor xml:id="c5e8d4"/><anchor xml:id="cll_chapter5-section8-example4"/>8.4)   mi troci co klama le zarci le zdani
+       I am-a-trier of-type (goer to-the market from-the house).
+       I try to go to the market from the house.
+</programlisting>
+  <para><xref linkend="cll_chapter5-section8-example4"/> is a less deeply nested construction, requiring fewer cmavo. As a result it is probably easier to understand.</para>
+  <para>Note that in Lojban “trying to go” is expressed using “troci” as the tertau. The reason is that “trying to go” is a “going type of trying”, not a “trying type of going”. The trying is more fundamental than the going — if the trying fails, we may not have a going at all.</para>
+  <para>Any sumti which precede a selbri with an inverted tanru fill the places of the selbri (i.e., the places of the tertau) in the ordinary way. In <xref linkend="cll_chapter5-section8-example4"/>, “mi” fills the x1 place of “troci co klama”, which is the x1 place of “troci”. The other places of the selbri remain unfilled. The trailing sumti “le zarci” and “le zdani” do not occupy selbri places, despite appearances.</para>
+  <para>As a result, the regular mechanisms (involving selma'o VOhA and GOhI, explained in <xref linkend="cll_chapter7"/>) for referring to individual sumti of a bridi cannot refer to any of the trailing places of <xref linkend="cll_chapter5-section8-example4"/>, because they are not really “sumti of the bridi” at all.</para>
+  <para>When inverting a more complex tanru, it is possible to invert it only at the most general modifier-modified pair. The only possible inversion of <xref linkend="cll_chapter5-section3-example4"/>, for instance, is:</para>
+  <programlisting><anchor xml:id="c5e8d5"/><anchor xml:id="cll_chapter5-section8-example5"/>8.5)   ta nixli [bo] ckule co cmalu
+       That (is-a-girl type-of school) of-type little.
+       That’s a girls’ school which is small.
+</programlisting>
+  <para>Note that the “bo” of <xref linkend="cll_chapter5-section3-example4"/> is optional in <xref linkend="cll_chapter5-section8-example5"/>, because “co” groups more loosely than any other cmavo used in tanru, including none at all. Not even “ke ... ke'e” parentheses can encompass a “co”:</para>
+  <programlisting><anchor xml:id="c5e8d6"/><anchor xml:id="cll_chapter5-section8-example6"/>8.6)   ta cmalu ke nixli ckule [ke'e] co melbi
+       That is-a-(little type-of (girl type-of school)) of-type pretty.
+       That’s a small school for girls which is beautiful.
+</programlisting>
+  <para>In <xref linkend="cll_chapter5-section8-example6"/>, the “ke'e” is automatically inserted before the “co” rather than at its usual place at the end of the selbri. As a result, there is a simple and mechanical rule for removing “co” from any selbri: change “A co B” to “ke B ke'e A”. (At the same time, any sumti following the selbri must be transformed into “be ... bei ... be'o” form and attached following B.) Therefore,</para>
+  <programlisting><anchor xml:id="c5e8d7"/><anchor xml:id="cll_chapter5-section8-example7"/>8.7)   ckule co melbi nixli
+       school of-type pretty girl
+       school for beautiful girls
+</programlisting>
+  <para>means the same as:</para>
+  <programlisting><anchor xml:id="c5e8d8"/><anchor xml:id="cll_chapter5-section8-example8"/>8.8)   ke melbi nixli ke'e ckule
+       (pretty girl) school
+</programlisting>
+  <para>Multiple “co” cmavo can appear within a selbri, indicating multiple inversions: a right-grouping rule is employed, as for “bo”. The above rule can be applied to interpret such selbri, but all “co” cmavo must be removed simultaneously:</para>
+  <programlisting><anchor xml:id="c5e8d9"/><anchor xml:id="cll_chapter5-section8-example9"/>8.9)   ckule co nixli co cmalu
+       school of-type (girl of-type little)
+</programlisting>
+  <para>becomes formally</para>
+  <programlisting><anchor xml:id="c5e8d10"/><anchor xml:id="cll_chapter5-section8-example10"/>8.10)  ke ke cmalu ke'e nixli ke'e ckule
+       ( (little) girl ) school
+</programlisting>
+  <para>which by the left-grouping rule is simply</para>
+  <programlisting><anchor xml:id="c5e8d11"/><anchor xml:id="cll_chapter5-section8-example11"/>8.11)  cmalu nixli ckule
+       little girl school
+       school for little girls
+</programlisting>
+  <para>As stated above, the selbri places, other than the first, of</para>
+  <programlisting><anchor xml:id="c5e8d12"/><anchor xml:id="cll_chapter5-section8-example12"/>8.12)  mi klama co sutra
+       I am-a-goer of-type quick
+       I go quickly
+</programlisting>
+  <para>cannot be filled by placing sumti after the selbri, because any sumti in that position fill the places of “sutra”, the seltau. However, the tertau places (which means in effect the selbri places) can be filled with “be”:</para>
+  <programlisting><anchor xml:id="c5e8d13"/><anchor xml:id="cll_chapter5-section8-example13"/>8.13)  mi klama be le zarci be'o co sutra
+       I am-a-goer (to the store) of-type quick.
+       I go to the store quickly.
+</programlisting>
+</section>
+
+<section xml:id="cll_chapter5-section9">
+  <title>9. Other kinds of simple selbri</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     go'i    GOhA                repeats the previous bridi
+     du      GOhA                equality
+     nu'a    NUhA                math operator to selbri
+     moi     MOI                 changes number to ordinal selbri
+     mei     MOI                 changes number to cardinal selbri
+     nu      NU                  event abstraction
+     kei     KEI                 terminator for NU
+</programlisting>
+  <para>So far we have only discussed brivla and tanru built up from brivla as possible selbri. In fact, there are a few other constructions in Lojban which are grammatically equivalent to brivla: they can be used either directly as selbri, or as components in tanru. Some of these types of simple selbri are discussed at length in <xref linkend="cll_chapter7"/>, <xref linkend="cll_chapter11"/>, and <xref linkend="cll_chapter18"/>; but for completeness these types are mentioned here with a brief explanation and an example of their use in selbri.</para>
+  <para>The cmavo of selma'o GOhA (with one exception) serve as pro-bridi, providing a reference to the content of other bridi; none of them has a fixed meaning. The most commonly used member of GOhA is probably “go'i”, which amounts to a repetition of the previous bridi, or part of it. If I say:</para>
+  <programlisting><anchor xml:id="c5e9d1"/><anchor xml:id="cll_chapter5-section9-example1"/>9.1)   la djan. klama le zarci
+       John goes-to the market.
+</programlisting>
+  <para>you may retort:</para>
+  <programlisting><anchor xml:id="c5e9d2"/><anchor xml:id="cll_chapter5-section9-example2"/>9.2)   la djan. go'i troci
+       John [repeat last] are-a-tryer
+       John tries to.
+</programlisting>
+  <para><xref linkend="cll_chapter5-section9-example2"/> is short for:</para>
+  <programlisting><anchor xml:id="c5e9d3"/><anchor xml:id="cll_chapter5-section9-example3"/>9.3)   la djan. klama be le zarci be'o troci
+       John is-a-goer (to the market) type-of trier.
+</programlisting>
+  <para>because the whole bridi of <xref linkend="cll_chapter5-section9-example1"/> has been packaged up into the single word “go'i” and inserted into <xref linkend="cll_chapter5-section9-example2"/>.</para>
+  <para>The exceptional member of GOhA is “du”, which represents the relation of identity. Its place structure is:</para>
+  <programlisting>
+             x1 is identical with x2, x3, ...
+</programlisting>
+  <para>for as many places as are given. More information on selma'o GOhA is available in <xref linkend="cll_chapter7"/>.</para>
+  <para>Lojban mathematical expressions (mekso) can be incorporated into selbri in two different ways. Mathematical operators such as “su'i”, meaning “plus”, can be transformed into selbri by prefixing them with “nu'a” (of selma'o NUhA). The resulting place structure is:</para>
+  <programlisting>
+             x1 is the result of applying (the operator) to arguments x2, x3, etc.
+</programlisting>
+  <para>for as many arguments as are required. (The result goes in the x1 place because the number of following places may be indefinite.) For example:</para>
+  <programlisting><anchor xml:id="c5e9d4"/><anchor xml:id="cll_chapter5-section9-example4"/>9.4)   li vo nu'a su'i li re li re
+       The-number 4 is-the-sum-of the-number 2 and-the-number 2.
+</programlisting>
+  <para>A possible tanru example might be:</para>
+  <programlisting><anchor xml:id="c5e9d5"/><anchor xml:id="cll_chapter5-section9-example5"/>9.5)   mi jimpe tu'a loi nu'a su'i nabmi
+       I understand something-about the-mass-of is-the-sum-of problems.
+       I understand addition problems.
+</programlisting>
+  <para>More usefully, it is possible to combine a mathematical expression with a cmavo of selma'o MOI to create one of various numerical selbri. Details are available in <xref linkend="cll_chapter18"/>. Here are a few tanru:</para>
+  <programlisting><anchor xml:id="c5e9d6"/><anchor xml:id="cll_chapter5-section9-example6"/>9.6)   la prim. palvr. pamoi cusku
+       Preem Palver is-the-1-th speaker.
+       Preem Palver is the first speaker.
+
+<anchor xml:id="c5e9d7"/><anchor xml:id="cll_chapter5-section9-example7"/>9.7)   la an,iis. joi la .asun. bruna remei
+       Anyi massed-with Asun are-a-brother type-of-twosome.
+       Anyi and Asun are two brothers.
+</programlisting>
+  <para>Finally, an important type of simple selbri which is not a brivla is the abstraction. Grammatically, abstractions are simple: a cmavo of selma'o NU, followed by a bridi, followed by the elidable terminator “kei” of selma'o KEI. Semantically, abstractions are an extremely subtle and powerful feature of Lojban whose full ramifications are documented in <xref linkend="cll_chapter11"/>. A few examples:</para>
+  <programlisting><anchor xml:id="c5e9d8"/><anchor xml:id="cll_chapter5-section9-example8"/>9.8)   ti nu zdile kei kumfa
+       This is-an-event-of amusement room.
+       This is an amusement room.
+</programlisting>
+  <para><xref linkend="cll_chapter5-section9-example8"/> is quite distinct in meaning from:</para>
+  <programlisting><anchor xml:id="c5e9d9"/><anchor xml:id="cll_chapter5-section9-example9"/>9.9)   ti zdile kumfa
+       This is-an-amuser room.
+</programlisting>
+  <para>which suggests the meaning “a room that amuses someone”.</para>
+</section>
+
+<section xml:id="cll_chapter5-section10">
+  <title>10. selbri based on sumti: “me”</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     me      ME                  changes sumti to simple selbri
+     me'u    MEhU                terminator for “me”
+</programlisting>
+  <para>A sumti can be made into a simple selbri by preceding it with “me” (of selma'o ME) and following it with the elidable terminator “me'u” (of selma'o MEhU). This makes a selbri with the place structure</para>
+  <programlisting>
+             x1 is one of the referents of “[the sumti]”
+</programlisting>
+  <para>which is true of the thing, or things, that are the referents of the sumti, and not of anything else. For example, consider the sumti</para>
+  <programlisting><anchor xml:id="c5e10d1"/><anchor xml:id="cll_chapter5-section10-example1"/>10.1)  le ci nolraitru
+       the three noblest-governors
+       the three kings
+</programlisting>
+  <para>If these are understood to be the Three Kings of Christian tradition, who arrive every year on January 6, then we may say:</para>
+  <programlisting><anchor xml:id="c5e10d2"/><anchor xml:id="cll_chapter5-section10-example2"/>10.2)  la BALtazar. cu me le ci nolraitru
+       Balthazar is one-of-the-referents-of “the three kings”.
+       Balthazar is one of the three kings.
+</programlisting>
+  <para>and likewise</para>
+  <programlisting><anchor xml:id="c5e10d3"/><anchor xml:id="cll_chapter5-section10-example3"/>10.3)  la kaspar. cu me le ci nolraitru
+       Caspar is one of the three kings.
+</programlisting>
+  <para>and</para>
+  <programlisting><anchor xml:id="c5e10d4"/><anchor xml:id="cll_chapter5-section10-example4"/>10.4)  la melxi,or. cu me le ci nolraitru
+       Melchior is one of the three kings.
+</programlisting>
+  <para>If the sumti refers to a single object, then the effect of “me” is much like that of “du”:</para>
+  <programlisting><anchor xml:id="c5e10d5"/><anchor xml:id="cll_chapter5-section10-example5"/>10.5)  do du la djan.
+       You are-identical-with the-one-called “John”.
+       You are John.
+</programlisting>
+  <para>means the same as</para>
+  <programlisting><anchor xml:id="c5e10d6"/><anchor xml:id="cll_chapter5-section10-example6"/>10.6)  do me la djan.
+       You are-the-referent-of “the-one-called ‘John’”.
+       You are John.
+</programlisting>
+  <para>It is common to use “me” selbri, especially those based on name sumti using “la”, as seltau. For example:</para>
+  <programlisting><anchor xml:id="c5e10d7"/><anchor xml:id="cll_chapter5-section10-example7"/>10.7)  ta me lai kraislr. [me'u] karce
+       That (is-a-referent of “the-mass-called ‘Chrysler’”) car.
+       That is a Chrysler car.
+</programlisting>
+  <para>The elidable terminator “me'u” can usually be omitted. It is absolutely required only if the “me” selbri is being used in an indefinite description (a type of sumti explained in <xref linkend="cll_chapter6"/>), and if the indefinite description is followed by a relative clause (explained in <xref linkend="cll_chapter8"/>) or a sumti logical connective (explained in <xref linkend="cll_chapter14"/>). Without a “me'u”, the relative clause or logical connective would appear to belong to the sumti embedded in the “me” expression. Here is a contrasting pair of sentences:</para>
+  <programlisting><anchor xml:id="c5e10d8"/><anchor xml:id="cll_chapter5-section10-example8"/>10.8)  re me le ci nolraitru .e la djan. [me'u] cu blabi
+       Two of the group “the three kings and John” are white.
+
+<anchor xml:id="c5e10d9"/><anchor xml:id="cll_chapter5-section10-example9"/>10.9)  re me le ci nolraitru me'u .e la djan. cu blabi
+       Two of the three kings, and John, are white.
+</programlisting>
+  <para>In <xref linkend="cll_chapter5-section10-example8"/> the “me” selbri covers the three kings plus John, and the indefinite description picks out two of them that are said to be white: we cannot say which two. In <xref linkend="cll_chapter5-section10-example9"/>, though, the “me” selbri covers only the three kings: two of them are said to be white, and so is John.</para>
+  <para>Finally, here is another example requiring “me'u”:</para>
+  <programlisting><anchor xml:id="c5e10d10"/><anchor xml:id="cll_chapter5-section10-example10"/>10.10) ta me la'e le se cusku be do me'u cukta
+       That is-a-(what-you-said) type of book.
+       That is the kind of book you were talking about.
+</programlisting>
+  <para>There are other sentences where either “me'u” or some other elidable terminator must be expressed:</para>
+  <programlisting><anchor xml:id="c5e10d11"/><anchor xml:id="cll_chapter5-section10-example11"/>10.11) le me le ci nolraitru [ku] me'u nunsalci
+       the (the three kings) type-of-event-of-celebrating
+       the Three Kings celebration
+</programlisting>
+  <para>requires either “ku” or “me'u” to be explicit, and (as with “be'o” in <xref linkend="cll_chapter5-section7"/>) the “me'u” leaves no doubt which cmavo it is paired with.</para>
+</section>
+
+<section xml:id="cll_chapter5-section11">
+  <title>11. Conversion of simple selbri</title>
+  <para>Conversion is the process of changing a selbri so that its places appear in a different order. This is not the same as labeling the sumti with the cmavo of FA, as mentioned in <xref linkend="cll_chapter5-section7"/>, and then rearranging the order in which the sumti are spoken or written. Conversion transforms the selbri into a distinct, though closely related, selbri with renumbered places.</para>
+  <para>In Lojban, conversion is accomplished by placing a cmavo of selma'o SE before the selbri:</para>
+  <programlisting><anchor xml:id="c5e11d1"/><anchor xml:id="cll_chapter5-section11-example1"/>11.1)  mi prami do
+       I love you.
+</programlisting>
+  <para>is equivalent in meaning to:</para>
+  <programlisting><anchor xml:id="c5e11d2"/><anchor xml:id="cll_chapter5-section11-example2"/>11.2)  do se prami mi
+       You [swap x1 and x2] love me.
+       You are loved by me.
+</programlisting>
+  <para>Conversion is fully explained in <xref linkend="cll_chapter9"/>. For the purposes of this chapter, the important point about conversion is that it applies only to the following simple selbri. When trying to convert a tanru, therefore, it is necessary to be careful! Consider <xref linkend="cll_chapter5-section11-example3"/>:</para>
+  <programlisting><anchor xml:id="c5e11d3"/><anchor xml:id="cll_chapter5-section11-example3"/>11.3)  la .alis. cu cadzu klama le zarci
+       Alice is-a-walker type-of goer to-the market.
+       Alice walkingly goes to the market.
+       Alice walks to the market.
+</programlisting>
+  <para>To convert this sentence so that “le zarci” is in the x1 place, one correct way is:</para>
+  <programlisting><anchor xml:id="c5e11d4"/><anchor xml:id="cll_chapter5-section11-example4"/>11.4)  le zarci cu se ke cadzu klama [ke'e] la .alis.
+       The market is-a-[swap x1/x2] (walker type-of goer) Alice.
+       The market is-walkingly gone-to by-Alice.
+</programlisting>
+  <para>The “ke ... ke'e” brackets cause the entire tanru to be converted by the “se”, which would otherwise convert only “cadzu”, leading to:</para>
+  <programlisting><anchor xml:id="c5e11d5"/><anchor xml:id="cll_chapter5-section11-example5"/>11.5)  le zarci cu se cadzu klama la .alis.
+       The market (is-a-[swap x1/x2] walker) type-of goer to Alice.
+       The market is-a-walking-surface type-of goer to Alice.
+</programlisting>
+  <para>whatever that might mean. An alternative approach, since the place structure of “cadzu klama” is that of “klama” alone, is to convert only the latter:</para>
+  <programlisting><anchor xml:id="c5e11d6"/><anchor xml:id="cll_chapter5-section11-example6"/>11.6)  le zarci cu cadzu se klama la .alis.
+       The market walkingly is-gone-to by-Alice.
+</programlisting>
+  <para>But the tanru in <xref linkend="cll_chapter5-section11-example6"/> may or may not have the same meaning as that in <xref linkend="cll_chapter5-section11-example3"/>; in particular, because “cadzu” is not converted, there is a suggestion that although Alice is the goer, the market is the walker. With a different sumti as x1, this seemingly odd interpretation might make considerable sense:</para>
+  <programlisting><anchor xml:id="c5e11d7"/><anchor xml:id="cll_chapter5-section11-example7"/>11.7)  la djan. cu cadzu se klama la .alis
+       John walkingly is-gone-to by Alice
+</programlisting>
+  <para>suggests that Alice is going to John, who is a moving target.</para>
+  <para>There is an alternative type of conversion, using the cmavo “jai” of selma'o JAI optionally followed by a modal or tense construction. Grammatically, such a combination behaves exactly like conversion using SE. More details can be found in <xref linkend="cll_chapter9"/>.</para>
+</section>
+
+<section xml:id="cll_chapter5-section12">
+  <title>12. Scalar negation of selbri</title>
+  <para>Negation is too large and complex a topic to explain fully in this chapter; see <xref linkend="cll_chapter15"/>. In brief, there are two main types of negation in Lojban. This section is concerned with so-called “scalar negation”, which is used to state that a true relation between the sumti is something other than what the selbri specifies. Scalar negation is expressed by cmavo of selma'o NAhE:</para>
+  <programlisting><anchor xml:id="c5e12d1"/><anchor xml:id="cll_chapter5-section12-example1"/>12.1)  la .alis. cu na'e ke cadzu klama [ke'e] le zarci
+       Alice non- (walkingly goes) to-the market.
+       Alice other-than (walkingly goes) to-the market.
+       Alice doesn’t walk to the market.
+</programlisting>
+  <para>meaning that Alice’s relationship to the market is something other than that of walking there. But if the “ke” were omitted, the result would be:</para>
+  <programlisting><anchor xml:id="c5e12d2"/><anchor xml:id="cll_chapter5-section12-example2"/>12.2)  la .alis. cu na'e cadzu klama le zarci
+       Alice non- walkingly goes to-the market.
+       Alice doesn’t walk to the market.
+</programlisting>
+  <para>meaning that Alice does go there in some way (“klama” is not negated), but by a means other than that of walking. <xref linkend="cll_chapter5-section12-example1"/> negates both “cadzu” and “klama”, suggesting that Alice’s relation to the market is something different from walkingly-going; it might be walking without going, or going without walking, or neither.</para>
+  <para>Of course, any of the simple selbri types explained in <xref linkend="cll_chapter5-section9"/> may be used in place of brivla in any of these examples:</para>
+  <programlisting><anchor xml:id="c5e12d3"/><anchor xml:id="cll_chapter5-section12-example3"/>12.3)  la djonz. cu na'e pamoi cusku
+       Jones is non-1st speaker
+       Jones is not the first speaker.
+</programlisting>
+  <para>Since only “pamoi” is negated, an appropriate inference is that he is some other kind of speaker.</para>
+  <para>Here is an assortment of more complex examples showing the interaction of scalar negation with “bo” grouping, “ke” and “ke'e” grouping, logical connection, and sumti linked with “be” and “bei”:</para>
+  <programlisting><anchor xml:id="c5e12d4"/><anchor xml:id="cll_chapter5-section12-example4"/>12.4)  mi na'e sutra cadzu be fi le birka be'o klama le zarci
+       I ( (non-quickly) ( walking using the arms) ) go-to the market.
+       I go to the market, walking using my arms other than quickly.
+</programlisting>
+  <para>In <xref linkend="cll_chapter5-section12-example4"/>, “na'e” negates only “sutra”. Contrast <xref linkend="cll_chapter5-section12-example5"/>:</para>
+  <programlisting><anchor xml:id="c5e12d5"/><anchor xml:id="cll_chapter5-section12-example5"/>12.5)  mi na'e ke sutra cadzu be fi le birka [be'o] ke'e klama le zarci
+       I non- ( quickly (walking using the arms) ) go-to the market.
+       I go to the market, other than by walking quickly on my arms.
+</programlisting>
+  <para>Now consider <xref linkend="cll_chapter5-section12-example6"/> and <xref linkend="cll_chapter5-section12-example7"/>, which are equivalent in meaning, but use “ke” grouping and “bo” grouping respectively:</para>
+  <programlisting><anchor xml:id="c5e12d6"/><anchor xml:id="cll_chapter5-section12-example6"/>12.6)  mi sutra cadzu be fi le birka be'o je masno klama le zarci
+       I (quickly – (walking using the arms) and slowly) go-to the market.
+       I go to the market, both quickly walking using my arms and slowly.
+
+<anchor xml:id="c5e12d7"/><anchor xml:id="cll_chapter5-section12-example7"/>12.7)  mi ke sutra cadzu be fi le birka [be'o] ke'e je masno klama le zarci
+       I ( (quickly (walking using the arms) ) and slowly) go-to the market.
+       I go to the market, both quickly walking using my arms and slowly.
+</programlisting>
+  <para>However, if we place a “na'e” at the beginning of the selbri in both <xref linkend="cll_chapter5-section12-example6"/> and <xref linkend="cll_chapter5-section12-example7"/>, we get different results:</para>
+  <programlisting><anchor xml:id="c5e12d8"/><anchor xml:id="cll_chapter5-section12-example8"/>12.8)  mi na'e sutra cadzu be fi le birka be'o je masno klama le zarci
+       I ( (non- quickly) – (walking using the arms) and slowly) go-to the market.
+       I go to the market, both walking using my arms other than quickly, and also slowly.
+
+<anchor xml:id="c5e12d9"/><anchor xml:id="cll_chapter5-section12-example9"/>12.9)  mi na'e ke sutra cadzu be fi le birka [be'o] ke'e je masno klama le zarci
+       I (non-(quickly (walking using the arms) ) and slowly) go-to the market.
+       I go to the market, both other than quickly walking using my arms, and also slowly.
+</programlisting>
+  <para>The difference arises because the “na'e” in <xref linkend="cll_chapter5-section12-example9"/> negates the whole construction from “ke” to “ke'e”, whereas in <xref linkend="cll_chapter5-section12-example8"/> it negates “sutra” alone.</para>
+  <para>Beware of omitting terminators in these complex examples! If the explicit “ke'e” is left out in <xref linkend="cll_chapter5-section12-example9"/>, it is transformed into:</para>
+  <programlisting><anchor xml:id="c5e12d10"/><anchor xml:id="cll_chapter5-section12-example10"/>12.10) mi na'e ke sutra cadzu be fi le birka be'o je masno klama [ke'e] le zarci
+       I non-(quickly ( (walking using the arms) ) and slowly) go-to) the market.
+       I do something other than quickly both going to the market walking
+             using my arms and slowly going to the market.
+</programlisting>
+  <para>And if both “ke'e” and “be'o” are omitted, the results are even sillier:</para>
+  <programlisting><anchor xml:id="c5e12d11"/><anchor xml:id="cll_chapter5-section12-example11"/>12.11) mi na'e ke sutra cadzu be fi le birka je masno klama [be'o] [ke'e] le zarci
+       I non-(quickly walk on my (arm-type and slow) goers) on the market.
+       I do something other than quickly walking using the goers, both arm-type
+              and slow, relative-to the market.
+</programlisting>
+  <para>In <xref linkend="cll_chapter5-section12-example11"/>, everything after “be” is a linked sumti, so the place structure is that of “cadzu”, whose x2 place is the surface walked upon. It is less than clear what an “arm-type goer” might be. Furthermore, since the x3 place has been occupied by the linked sumti, the “le zarci” following the selbri falls into the nonexistent x4 place of “cadzu”. As a result, the whole example, though grammatical, is complete nonsense. (The bracketed Lojban words appear where a fluent Lojbanist would understand them to be implied.)</para>
+  <para>Finally, it is also possible to place “na'e” before a “gu'e ... gi” logically connected tanru construction. The meaning of this usage has not yet been firmly established.</para>
+</section>
+
+<section xml:id="cll_chapter5-section13">
+  <title>13. Tenses and bridi negation</title>
+  <para>A bridi can have cmavo associated with it which specify the time, place, or mode of action. For example, in</para>
+  <programlisting><anchor xml:id="c5e13d1"/><anchor xml:id="cll_chapter5-section13-example1"/>13.1)  mi pu klama le zarci
+       I [past] go to-the market.
+       I went to the market.
+</programlisting>
+  <para>the cmavo “pu” specifies that the action of the speaker going to the market takes place in the past. Tenses are explained in full detail in <xref linkend="cll_chapter10"/>. Tense is semantically a property of the entire bridi; however, the usual syntax for tenses attaches them at the front of the selbri, as in <xref linkend="cll_chapter5-section13-example1"/>. There are alternative ways of expressing tense information as well. Modals, which are explained in <xref linkend="cll_chapter9"/>, behave in the same way as tenses.</para>
+  <para>Similarly, a bridi may have the particle “na” (of selma'o NA) attached to the beginning of the selbri to negate the bridi. A negated bridi expresses what is false without saying anything about what is true. Do not confuse this usage with the scalar negation of <xref linkend="cll_chapter5-section12"/>. For example:</para>
+  <programlisting><anchor xml:id="c5e13d2"/><anchor xml:id="cll_chapter5-section13-example2"/>13.2)  la djonz. na pamoi cusku
+       Jones (Not!) is-the-first speaker
+       It is not true that Jones is the first speaker.
+       Jones isn’t the first speaker.
+</programlisting>
+  <para>Jones may be the second speaker, or not a speaker at all; <xref linkend="cll_chapter5-section13-example2"/> doesn’t say. There are other ways of expressing bridi negation as well; the topic is explained fully in <xref linkend="cll_chapter15"/>.</para>
+  <para>Various combinations of tense and bridi negation cmavo are permitted. If both are expressed, either order is permissible with no change in meaning:</para>
+  <programlisting><anchor xml:id="c5e13d3"/><anchor xml:id="cll_chapter5-section13-example3"/>13.3)  mi na pu klama le zarci
+       mi pu na klama le zarci
+       It is false that I went to the market.
+       I didn’t go to the market.
+</programlisting>
+  <para>It is also possible to have more than one “na”, in which case pairs of “na” cmavo cancel out:</para>
+  <programlisting><anchor xml:id="c5e13d4"/><anchor xml:id="cll_chapter5-section13-example4"/>13.4)  mi na na klama le zarci
+       It is false that it is false that I go to the market.
+       I go to the market.
+</programlisting>
+  <para>It is even possible, though somewhat pointless, to have multiple “na” cmavo and tense cmavo mixed together, subject to the limitation that two adjacent tense cmavo will be understood as a compound tense, and must fit the grammar of tenses as explained in <xref linkend="cll_chapter10"/>.</para>
+  <programlisting><anchor xml:id="c5e13d5"/><anchor xml:id="cll_chapter5-section13-example5"/>13.5)  mi na pu na ca klama le zarci
+       I [not] [past] [not] [present] go to-the market
+       It is not the case that in the past it was not the case that in the present I
+               went to the market.
+       I didn’t not go to the market.
+       I went to the market.
+</programlisting>
+  <para>Tense, modal, and negation cmavo can appear only at the beginning of the selbri. They cannot be embedded within it.</para>
+</section>
+
+<section xml:id="cll_chapter5-section14">
+  <title>14. Some types of asymmetrical tanru</title>
+  <para>This section and <xref linkend="cll_chapter5-section15"/> contain some example tanru classified into groups based on the type of relationship between the modifying seltau and the modified tertau. All the examples are paralleled by compounds actually observed in various natural languages. In the tables which follow, each group is preceded by a brief explanation of the relationship. The tables themselves contain a tanru, a literal gloss, an indication of the languages which exhibit a compound analogous to this tanru, and (for those tanru with no English parallel) a translation.</para>
+  <para>Here are the 3-letter abbreviations used for the various languages (it is presumed to be obvious whether a compound is found in English or not, so English is not explicitly noted):</para>
+  <programlisting>
+      Aba = Abazin                 Kaz = Kazakh
+      Chi = Chinese                Kor = Korean
+      Ewe = Ewe                    Mon = Mongolian
+      Fin = Finnish                Qab = Qabardian
+      Geo = Georgian               Que = Quechua
+      Gua = Guarani                Rus = Russian
+      Hop = Hopi                   Skt = Sanskrit
+      Hun = Hungarian              Swe = Swedish
+      Imb = Imbabura Quechua       Tur = Turkish
+      Kar = Karaitic               Udm = Udmurt
+</programlisting>
+  <para>Any lujvo or fu'ivla used in a group are glossed at the end of that group.</para>
+  <para>The tanru discussed in this section are asymmetrical tanru; that is, ones in which the order of the terms is fundamental to the meaning of the tanru. For example, “junla dadysli”, or “clock pendulum”, is the kind of pendulum used in a clock, whereas “dadysli junla”, or “pendulum clock”, is the kind of clock that employs a pendulum. Most tanru are asymmetrical in this sense. Symmetrical tanru are discussed in <xref linkend="cll_chapter5-section15"/>.</para>
+  <para>The tertau represents an action, and the seltau then represents the object of that action:</para>
+  <programlisting>
+      pinsi nunkilbra              pencil sharpener (Hun)
+      zgike nunctu                 music instruction (Hun)
+      mirli nunkalte               deer hunting (Hun)
+      finpe nunkalte               fish hunting (Tur,Kor,Udm,Aba = fishing)
+      smacu terkavbu               mousetrap (Tur,Kor,Hun,Udm,Aba)
+      zdani turni                  house ruler (Kar = host)
+      zerle'a nunte'a              thief fear (Skt = fear of thieves)
+      cevni zekri                  god crime (Skt = offense against the gods)
+
+          nunkilbra = sharpness-apparatus
+          nunctu = event-of-teaching
+          nunkalte = event-of-hunting
+          terkavbu = trap
+          zerle'a = crime-taker
+          nunte'a = event-of-fearing
+</programlisting>
+  <para>The tertau represents a set, and the seltau the type of the elements contained in that set:</para>
+  <programlisting>
+      zdani lijgri                 house row
+      selci lamgri                 cell block
+      karda mulgri                 card pack (Swe)
+      rokci derxi                  stone heap (Swe)
+      tadni girzu                  student group (Hun)
+      remna girzu                  human-being group (Qab = group of people)
+      cpumi'i lijgri               tractor column (Qab)
+      cevni jenmi                  god army (Skt)
+      cevni prenu                  god folk (Skt)
+
+          lijgri = line-group
+          lamgri = adjacent-group
+          mulgri = complete-group
+          cpumi'i = pull-machine
+</programlisting>
+  <para>Conversely: the tertau is an element, and the seltau represents a set in which that element is contained. Implicitly, the meaning of the tertau is restricted from its usual general meaning to the specific meaning appropriate for elements in the given set. Note the opposition between “zdani linji” in the previous group, and “linji zdani” in this one, which shows why this kind of tanru is called “asymmetrical”.</para>
+  <programlisting>
+      carvi dirgo                  raindrop (Tur,Kor,Hun,Udm,Aba)
+      linji zdani                  row house
+</programlisting>
+  <para>The seltau specifies an object and the tertau a component or detail of that object; the tanru as a whole refers to the detail, specifying that it is a detail of that whole and not some other.</para>
+  <programlisting>
+      junla dadysli                clock pendulum (Hun)
+      purdi vorme                  garden door (Qab)
+      purdi bitmu                  garden wall (Que)
+      moklu skapi                  mouth skin (Imb = lips)
+      nazbi kevna                  nose hole (Imb = nostril)
+      karce xislu                  automobile wheel (Chi)
+      jipci pimlu                  chicken feather (Chi)
+      vinji rebla                  airplane tail (Chi)
+
+          dadysli = hang-oscillator
+</programlisting>
+  <para>Conversely: the seltau specifies a characteristic or important detail of the object described by the tertau; objects described by the tanru as a whole are differentiated from other similar objects by this detail.</para>
+  <programlisting>
+      pixra cukta                  picture book
+      kerfa silka                  hair silk (Kar = velvet)
+      plise tapla                  apple cake (Tur)
+      dadysli junla                pendulum clock (Hun)
+
+          dadysli = hang-oscillator
+</programlisting>
+  <para>The tertau specifies a general class of object (a genus), and the seltau specifies a sub-class of that class (a species):</para>
+  <programlisting>
+      ckunu tricu                  pine tree (Hun,Tur,Hop)
+</programlisting>
+  <para>The tertau specifies an object of possession, and the seltau may specify the possessor (the possession may be intrinsic or otherwise). In English, these compounds have an explicit possessive element in them: “lion’s mane”, “child’s foot”, “noble’s cow”.</para>
+  <programlisting>
+      cinfo kerfa                  lion mane (Kor,Tur,Hun,Udm,Qab)
+      verba jamfu                  child foot (Swe)
+      nixli tuple                  girl leg (Swe)
+      cinfo jamfu                  lion foot (Que)
+      danlu skapi                  animal skin (Ewe)
+      ralju zdani                  chief house (Ewe)
+      jmive munje                  living world (Skt)
+      nobli bakni                  noble cow (Skt)
+      nolraitru ralju              king chief (Skt = emperor)
+
+          nolraitru = nobly-superlative-ruler
+</programlisting>
+  <para>The tertau specifies a habitat, and the seltau specifies the inhabitant:</para>
+  <programlisting>
+      lanzu tumla                  family land
+</programlisting>
+  <para>The tertau specifies a causative agent, and the seltau specifies the effect of that cause:</para>
+  <programlisting>
+      kalselvi'i gapci             tear gas (Hun)
+      terbi'a jurme                disease germ (Tur)
+      fenki litki                  crazy liquid (Hop = whisky)
+      pinca litki                  urine liquid (Hop = beer)
+
+          kalselvi'i = eye-excreted-thing
+          terbi'a = disease
+</programlisting>
+  <para>Conversely: the tertau specifies an effect, and the seltau specifies its cause.</para>
+  <programlisting>
+      djacu barna                  water mark (Chi)
+</programlisting>
+  <para>The tertau specifies an instrument, and the seltau specifies the purpose of that instrument:</para>
+  <programlisting>
+      taxfu dadgreku               garment rack (Chi)
+      tergu'i ti'otci              lamp shade (Chi)
+      xirma zdani                  horse house (Chi = stall)
+      nuzba tanbo                  news board (Chi = bulletin board)
+
+      dadgreku = hang-frame
+      tergu'i = source of illumination
+      ti'otci = shadow-tool
+</programlisting>
+  <para>More vaguely: the tertau specifies an instrument, and the seltau specifies the object of the purpose for which that instrument is used:</para>
+  <programlisting>
+      cpina rokci                  pepper stone (Que = stone for grinding pepper)
+      jamfu djacu                  foot water (Skt = water for washing the feet)
+      grana mudri                  post wood (Skt = wood for making a post)
+      moklu djacu                  mouth water (Hun = water for washing the mouth)
+      lanme gerku                  sheep dog (dog for working sheep)
+</programlisting>
+  <para>The tertau specifies a product from some source, and the seltau specifies the source of the product:</para>
+  <programlisting>
+      moklu djacu                  mouth water (Aba,Qab = saliva)
+      ractu mapku                  rabbit hat (Rus)
+      jipci sovda                  chicken egg (Chi)
+      sikcurnu silka               silkworm silk (Chi)
+      mlatu kalci                  cat feces (Chi)
+      bifce lakse                  bee wax (Chi = beeswax)
+      cribe rectu                  bear meat (Tur,Kor,Hun,Udm,Aba)
+      solxrula grasu               sunflower oil (Tur,Kor,Hun,Udm,Aba)
+      bifce jisra                  bee juice (Hop = honey)
+      tatru litki                  breast liquid (Hop = milk)
+      kanla djacu                  eye water (Kor = tear)
+
+          sikcurnu = silk-worm
+          solxrula = solar-flower
+</programlisting>
+  <para>Conversely: the tertau specifies the source of a product, and the seltau specifies the product:</para>
+  <programlisting>
+      silna jinto                  salt well (Chi)
+      kolme terkakpa               coal mine (Chi)
+      ctile jinto                  oil well (Chi)
+
+          terkakpa = source of digging
+</programlisting>
+  <para>The tertau specifies an object, and the seltau specifies the material from which the object is made. This case is especially interesting, because the referent of the tertau may normally be made from just one kind of material, which is then overridden in the tanru.</para>
+  <programlisting>
+      rokci cinfo                  stone lion
+      snime nanmu                  snow man (Hun)
+      kliti cipni                  clay bird
+      blaci kanla                  glass eye (Hun)
+      blaci kanla                  glass eye (Que = spectacles)
+      solji sicni                  gold coin (Tur)
+      solji junla                  gold watch (Tur,Kor,Hun)
+      solji djine                  gold ring (Udm,Aba,Que)
+      rokci zdani                  stone house (Imb)
+      mudri zdani                  wood house (Ewe = wooden house)
+      rokci bitmu                  stone wall (Ewe)
+      solji carce                  gold chariot (Skt)
+      mudri xarci                  wood weapon (Skt = wooden weapon)
+      cmaro'i dargu                pebble road (Chi)
+      sudysrasu cutci              straw shoe (Chi)
+
+          cmaro'i = small-rock
+          sudysrasu = dry-grass
+</programlisting>
+  <para>Note: the two senses of “blaci kanla” can be discriminated as:</para>
+  <programlisting>
+      blaci kanla bo tarmi         glass (eye shape) = glass eye
+      blaci kanla bo sidju         glass (eye helper) = spectacles
+</programlisting>
+  <para>The tertau specifies a typical object used to measure a quantity and the seltau specifies something measured. The tanru as a whole refers to a given quantity of the thing being measured. English does not have compounds of this form, as a rule.</para>
+  <programlisting>
+      tumla spisa                  land piece (Tur = piece of land)
+      tcati kabri                  tea cup (Kor,Aba = cup of tea)
+      nanba spisa                  bread piece (Kor = piece of bread)
+      bukpu spisa                  cloth piece (Udm,Aba = piece of cloth)
+      djacu calkyguzme             water calabash (Ewe = calabash of water)
+
+          calkyguzme = shell-fruit, calabash
+</programlisting>
+  <para>The tertau specifies an object with certain implicit properties, and the seltau overrides one of those implicit properties:</para>
+  <programlisting>
+      kensa bloti                  spaceship
+      bakni verba                  cattle child (Ewe = calf)
+</programlisting>
+  <para>The seltau specifies a whole, and the tertau specifies a part which normally is associated with a different whole. The tanru then refers to a part of the seltau which stands in the same relationship to the whole seltau as the tertau stands to its typical whole.</para>
+  <programlisting>
+      kosta degji                  coat finger (Hun = coat sleeve)
+      denci genja                  tooth root (Imb)
+      tricu stedu                  tree head (Imb = treetop)
+</programlisting>
+  <para>The tertau specifies the producer of a certain product, and the seltau specifies the product. In this way, the tanru as a whole distinguishes its referents from other referents of the tertau which do not produce the product.</para>
+  <programlisting>
+      silka curnu                  silkworm (Tur,Hun,Aba)
+</programlisting>
+  <para>The tertau specifies an object, and the seltau specifies another object which has a characteristic property. The tanru as a whole refers to those referents of the tertau which possess the property.</para>
+  <programlisting>
+    sonci manti                    soldier ant
+    ninmu bakni                    woman cattle (Imb = cow)
+    mamta degji                    mother finger (Imb = thumb)
+    cifnu degji                    baby finger (Imb = pinky)
+    pacraistu zdani                hell house (Skt)
+    fagri dapma                    fire curse (Skt = curse destructive as fire)
+
+        pacraistu = evil-superlative-site
+</programlisting>
+  <para>As a particular case (when the property is that of resemblance): the seltau specifies an object which the referent of the tanru resembles.</para>
+  <programlisting>
+      grutrceraso jbama            cherry bomb
+      solji kerfa                  gold hair (Hun = golden hair)
+      kanla djacu                  eye water (Kar = spring)
+      bakni rokci                  bull stone (Mon = boulder)
+
+          grutrceraso = fu'ivla for “cherry” based on Linnean name
+</programlisting>
+  <para>The seltau specifies a place, and the tertau an object characteristically located in or at that place.</para>
+  <programlisting>
+      ckana boxfo                  bed sheet (Chi)
+      mrostu mojysu'a              tomb monument (Chi = tombstone)
+      jubme tergusni               table lamp (Chi)
+      foldi smacu                  field mouse (Chi)
+      briju ci'ajbu                office desk (Chi)
+      rirxe xirma                  river horse (Chi = hippopotamus)
+      xamsi gerku                  sea dog (Chi = seal)
+      cagyce'u zdani               village house (Skt)
+
+          mrostu = dead-site
+          mojysu'a = remember-structure
+          ci'ajbu = write-table
+          cagyce'u = farm-community
+</programlisting>
+  <para>Specifically: the tertau is a place where the seltau is sold or made available to the public.</para>
+  <programlisting>
+      cidja barja                  food bar (Chi = restaurant)
+      cukta barja                  book bar (Chi = library)
+</programlisting>
+  <para>The seltau specifies the locus of application of the tertau.</para>
+  <programlisting>
+      kanla velmikce               eye medicine (Chi)
+      jgalu grasu                  nail oil (Chi = nail polish)
+      denci pesxu                  tooth paste (Chi)
+
+          velmikce = treatment used by doctor
+</programlisting>
+  <para>The tertau specifies an implement used in the activity denoted by the seltau.</para>
+  <programlisting>
+      me la pinpan. bolci Ping-Pong ball (Chi)
+</programlisting>
+  <para>The tertau specifies a protective device against the undesirable features of the referent of the seltau.</para>
+  <programlisting>
+      carvi mapku                  rain cap (Chi)
+      carvi taxfu                  rain garment (Chi = raincoat)
+      vindu firgai                 poison mask (Chi = gas mask)
+
+          firgai = face-cover
+</programlisting>
+  <para>The tertau specifies a container characteristically used to hold the referent of the seltau.</para>
+  <programlisting>
+      cukta vasru                  book vessel (Chi = satchel)
+      vanju kabri                  wine cup (Chi)
+      spatrkoka lanka              coca basket (Que)
+      rismi dakli                  rice bag (Ewe,Chi)
+      tcati kabri                  tea cup (Chi)
+      ladru botpi                  milk bottle (Chi)
+      rismi patxu                  rice pot (Chi)
+      festi lante                  trash can (Chi)
+      bifce zdani                  bee house (Kor = beehive)
+      cladakyxa'i zdani            sword house (Kor = sheath)
+      manti zdani                  ant nest (Gua = anthill)
+
+          spatrkoka = fu'ivla for “coca”
+          cladakyxa'i = (long-knife)-weapon
+</programlisting>
+  <para>The seltau specifies the characteristic time of the event specified by the tertau.</para>
+  <programlisting>
+      vensa djedi                  spring day (Chi)
+      crisa citsi                  summer season (Chi)
+      cerni bumru                  morning fog (Chi)
+      critu lunra                  autumn moon (Chi)
+      dunra nicte                  winter night (Chi)
+      nicte ckule                  night school (Chi)
+</programlisting>
+  <para>The seltau specifies a source of energy for the referent of the tertau.</para>
+  <programlisting>
+      dikca tergusni               electric lamp (Chi)
+      ratni nejni                  atom energy (Chi)
+      brife molki                  windmill (Tur,Kor,Hun,Udm,Aba)
+
+          tergusni = illumination-source
+</programlisting>
+  <para>Finally, some tanru which don’t fall into any of the above categories.</para>
+  <programlisting>
+      ladru denci                  milk tooth (Tur,Hun,Udm,Qab)
+      kanla denci                  eye tooth
+</programlisting>
+  <para>It is clear that “tooth” is being specified, and that “milk” and “eye” act as modifiers. However, the relationship between “ladru” and “denci” is something like “tooth which one has when one is drinking milk from one’s mother”, a relationship certainly present nowhere except in this particular concept. As for “kanla denci”, the relationship is not only not present on the surface, it is hardly possible to formulate it at all.</para>
+</section>
+
+<section xml:id="cll_chapter5-section15">
+  <title>15. Some types of symmetrical tanru</title>
+  <para>This section deals with symmetrical tanru, where order is not important. Many of these tanru can be expressed with a logical or non-logical connective between the components.</para>
+  <para>The tanru may refer to things which are correctly specified by both tanru components. Some of these instances may also be seen as asymmetrical tanru where the seltau specifies a material. The connective “je” is appropriate:</para>
+  <programlisting>
+      cipnrstrigi pacru'i          owl demon (Skt)
+      nolraitru prije              royal sage (Skt)
+      remna nakni                  human-being male (Qab = man)
+      remna fetsi                  human-being female (Qab = woman)
+      sonci tolvri                 soldier coward (Que)
+      panzi nanmu                  offspring man (Ewe = son)
+      panzi ninmu                  offspring woman (Ewe = daughter)
+      solji sicni                  gold coin (Tur)
+      solji junla                  gold watch (Tur,Kor,Hun)
+      solji djine                  gold ring (Udm,Aba,Que)
+      rokci zdani                  stone house (Imb)
+      mudri zdani                  wooden house (Ewe)
+      rokci bitmu                  stone wall (Ewe)
+      solji carce                  gold chariot (Skt)
+      mudri xarci                  wooden weapon (Skt)
+      zdani tcadu                  home town (Chi)
+
+          cipnrstrigi = fu'ivla for “owl” based on Linnean name
+          pacru'i = evil-spirit
+          tolvri = opposite-of-brave
+</programlisting>
+  <para>The tanru may refer to all things which are specified by either of the tanru components. The connective “ja” is appropriate:</para>
+  <programlisting>
+      nunji'a nunterji'a           victory defeat (Skt = victory or defeat)
+      donri nicte                  day night (Skt = day and night)
+      lunra tarci                  moon stars (Skt = moon and stars)
+      patfu mamta                  father mother (Imb,Kaz,Chi = parents)
+      tuple birka                  leg arm (Kaz = extremity)
+      nuncti nunpinxe              eating drinking (Udm = cuisine)
+      bersa tixnu                  son daughter (Chi = children)
+
+          nunji'a = event-of-winning
+          nunterji'a = event-of-losing
+          nuncti = event-of-eating
+          nunpinxe = event-of-drinking
+</programlisting>
+  <para>Alternatively, the tanru may refer to things which are specified by either of the tanru components or by some more inclusive class of things which the components typify:</para>
+  <programlisting>
+      curnu jalra                  worm beetle (Mon = insect)
+      jalra curnu                  beetle worm (Mon = insect)
+      kabri palta                  cup plate (Kaz = crockery)
+      jipci gunse                  hen goose (Qab = housefowl)
+      xrula tricu                  flower tree (Chi = vegetation)
+</programlisting>
+  <para>The tanru components specify crucial or typical parts of the referent of the tanru as a whole:</para>
+  <programlisting>
+      tumla vacri                  land air (Fin = world)
+      moklu stedu                  mouth head (Aba = face)
+      sudysrasu cunmi              hay millet (Qab = agriculture)
+      gugde ciste                  state system (Mon = politics)
+      prenu so'imei                people multitude (Mon = masses)
+      djacu dertu                  water earth (Chi = climate)
+
+          sudysrasu = dry-grass
+          so'imei = manysome
+</programlisting>
+</section>
+
+<section xml:id="cll_chapter5-section16">
+  <title>16. “Pretty little girls’ school”: forty ways to say it</title>
+  <para>The following examples show every possible grouping arrangement of “melbi cmalu nixli ckule” using “bo” or “ke ... ke'e” for grouping and “je” or “jebo” for logical connection. Most of these are definitely not plausible interpretations of the English phrase “pretty little girls’ school”, especially those which describe something which is both a girl and a school.</para>
+  <para>Examples 4.2, 4.3, 4.4, 4.5, and 5.6 are repeated here as Examples 16.1, 16.9, 16.17, 16.25, and 16.33 respectively. The seven examples following each of these share the same grouping pattern, but differ in the presence or absence of “je” at each possible site. Some of the examples have more than one Lojban version. In that case, they differ only in grouping mechanism, and are always equivalent in meaning.</para>
+  <para>The logical connective “je” is associative: that is, “A and (B and C)” is the same as “(A and B) and C”. Therefore, some of the examples have the same meaning as others. In particular, 16.8, 16.16, 16.24, 16.32, and 16.40 all have the same meaning because all four brivla are logically connected and the grouping is simply irrelevant. Other equivalent forms are noted in the examples themselves. However, if “je” were replaced by “naja” or “jo” or most of the other logical connectives, the meanings would become distinct.</para>
+  <para>It must be emphasized that, because of the ambiguity of all tanru, the English translations are by no means definitive — they represent only one possible interpretation of the corresponding Lojban sentence.</para>
+  <programlisting><anchor xml:id="c5e16d1"/><anchor xml:id="cll_chapter5-section16-example1"/>16.1)  melbi cmalu nixli ckule
+       ((pretty type-of little) type-of girl) type-of school
+       school for girls who are beautifully small
+
+<anchor xml:id="c5e16d2"/><anchor xml:id="cll_chapter5-section16-example2"/>16.2)  melbi je cmalu nixli ckule
+       ((pretty and little) type-of girl) type-of school
+       school for girls who are beautiful and small
+
+<anchor xml:id="c5e16d3"/><anchor xml:id="cll_chapter5-section16-example3"/>16.3)  melbi bo cmalu je nixli ckule
+       ((pretty type-of little) and girl) type-of school
+       school for girls and for beautifully small things
+
+<anchor xml:id="c5e16d4"/><anchor xml:id="cll_chapter5-section16-example4"/>16.4)  ke melbi cmalu nixli ke'e je ckule
+       ((pretty type-of little) type-of girl) and school
+       thing which is a school and a beautifully small girl
+
+<anchor xml:id="c5e16d5"/><anchor xml:id="cll_chapter5-section16-example5"/>16.5)  melbi je cmalu je nixli ckule
+       ((pretty and little) and girl) type-of school
+       school for things which are beautiful, small, and girls
+       Note: same as 16.21
+
+<anchor xml:id="c5e16d6"/><anchor xml:id="cll_chapter5-section16-example6"/>16.6)  melbi bo cmalu je nixli je ckule
+       ((pretty type-of little) and girl) and school
+       thing which is beautifully small, a school, and a girl
+       Note: same as 16.14
+
+<anchor xml:id="c5e16d7"/><anchor xml:id="cll_chapter5-section16-example7"/>16.7)  ke melbi je cmalu nixli ke'e je ckule
+       ((pretty and little) type-of girl) and school
+       thing which is a school and a girl who is both beautiful and small
+
+<anchor xml:id="c5e16d8"/><anchor xml:id="cll_chapter5-section16-example8"/>16.8)  melbi je cmalu je nixli je ckule
+       ((pretty and little) and girl) and school
+       thing which is beautiful, small, a girl, and a school
+
+<anchor xml:id="c5e16d9"/><anchor xml:id="cll_chapter5-section16-example9"/>16.9)  melbi cmalu nixli bo ckule
+       (pretty type-of little) type-of (girl type-of school)
+       girls’ school which is beautifully small
+
+<anchor xml:id="c5e16d10"/><anchor xml:id="cll_chapter5-section16-example10"/>16.10) melbi je cmalu nixli bo ckule
+       (pretty and little) type-of (girl type-of school)
+       girls’ school which is beautiful and small
+
+<anchor xml:id="c5e16d11"/><anchor xml:id="cll_chapter5-section16-example11"/>16.11) melbi cmalu nixli je ckule
+       (pretty type-of little) type-of (girl and school)
+       something which is a girl and a school which is beautifully small
+
+<anchor xml:id="c5e16d12"/><anchor xml:id="cll_chapter5-section16-example12"/>16.12) melbi bo cmalu je nixli bo ckule
+       (pretty type-of little) and (girl type-of school)
+       something which is beautifully small and a girls’ school
+
+<anchor xml:id="c5e16d13"/><anchor xml:id="cll_chapter5-section16-example13"/>16.13) melbi je cmalu nixli je ckule
+       (pretty and little) type-of (girl and school)
+       a pretty and little type of thing which is both a girl and a school
+
+<anchor xml:id="c5e16d14"/><anchor xml:id="cll_chapter5-section16-example14"/>16.14) melbi bo cmalu je nixli jebo ckule
+       (pretty type-of little) and (girl and school)
+       thing which is beautifully small, a school, and a girl
+       Note: same as 16.6
+
+<anchor xml:id="c5e16d15"/><anchor xml:id="cll_chapter5-section16-example15"/>16.15) melbi jebo cmalu je nixli bo ckule
+       (pretty and little) and (girl type-of school)
+       thing which is beautiful and small and a girl’s school
+       Note: same as 16.30
+
+<anchor xml:id="c5e16d16"/><anchor xml:id="cll_chapter5-section16-example16"/>16.16) melbi jebo cmalu je nixli jebo ckule
+       (pretty and little) and (girl and school)
+       thing which is beautiful, small, a girl, and a school
+
+<anchor xml:id="c5e16d17"/><anchor xml:id="cll_chapter5-section16-example17"/>16.17) melbi cmalu bo nixli ckule
+       (pretty type-of (little type-of girl)) type-of school
+       school for beautiful girls who are small
+
+<anchor xml:id="c5e16d18"/><anchor xml:id="cll_chapter5-section16-example18"/>16.18) melbi cmalu je nixli ckule
+       (pretty type-of (little and girl)) type-of school
+       school for beautiful things which are small and are girls
+
+<anchor xml:id="c5e16d19"/><anchor xml:id="cll_chapter5-section16-example19"/>16.19) melbi je cmalu bo nixli ckule
+       (pretty and (little type-of girl)) type-of school
+       school for things which are beautiful and are small girls
+
+<anchor xml:id="c5e16d20"/><anchor xml:id="cll_chapter5-section16-example20"/>16.20) ke melbi cmalu bo nixli ke'e je ckule
+       melbi bo cmalu bo nixli je ckule
+       (pretty type-of (little type-of girl)) and school
+       thing which is a school and a small girl who is beautiful
+
+<anchor xml:id="c5e16d21"/><anchor xml:id="cll_chapter5-section16-example21"/>16.21) melbi je cmalu jebo nixli ckule
+       (pretty and (little and girl)) type-of school
+       school for things which are beautiful, small, and girls
+       Note: same as 16.5
+
+<anchor xml:id="c5e16d22"/><anchor xml:id="cll_chapter5-section16-example22"/>16.22) melbi je cmalu bo nixli je ckule
+       (pretty and (little type-of girl)) and school
+       thing which is beautiful, a small girl, and a school
+       Note: same as 16.38
+
+<anchor xml:id="c5e16d23"/><anchor xml:id="cll_chapter5-section16-example23"/>16.23) ke melbi cmalu je nixli ke'e je ckule
+       (pretty type-of (little and girl)) and school
+       thing which is beautifully small, a beautiful girl, and a school
+
+<anchor xml:id="c5e16d24"/><anchor xml:id="cll_chapter5-section16-example24"/>16.24) melbi je cmalu jebo nixli je ckule
+       (pretty and (little and girl)) and school
+       thing which is beautiful, small, a girl, and a school
+
+<anchor xml:id="c5e16d25"/><anchor xml:id="cll_chapter5-section16-example25"/>16.25) melbi cmalu bo nixli bo ckule
+       melbi ke cmalu ke nixli ckule [ke'e] [ke'e]
+       pretty type-of (little type-of (girl type-of school))
+       small school for girls which is beautiful
+
+<anchor xml:id="c5e16d26"/><anchor xml:id="cll_chapter5-section16-example26"/>16.26) melbi ke cmalu nixli je ckule [ke'e]
+       pretty type-of (little type-of (girl and school))
+       small thing, both a girl and a school, which is beautiful
+
+<anchor xml:id="c5e16d27"/><anchor xml:id="cll_chapter5-section16-example27"/>16.27) melbi cmalu je nixli bo ckule
+       pretty type-of (little and (girl type-of school))
+       thing which is beautifully small and a girls’ school that is beautiful
+
+<anchor xml:id="c5e16d28"/><anchor xml:id="cll_chapter5-section16-example28"/>16.28) melbi je cmalu bo nixli bo ckule
+       melbi je ke cmalu nixli bo ckule [ke'e]
+       melbi je ke cmalu ke nixli ckule [ke'e] [ke'e]
+       pretty and (little type-of (girl type-of school))
+       thing which is beautiful and a small type of girls’ school
+
+<anchor xml:id="c5e16d29"/><anchor xml:id="cll_chapter5-section16-example29"/>16.29) melbi cmalu je nixli jebo ckule
+       melbi cmalu je ke nixli je ckule [ke'e]
+       pretty type-of (little and (girl and school))
+       thing which is beautifully small, a beautiful girl, and a beautiful school
+       Note: same as 16.37
+
+<anchor xml:id="c5e16d30"/><anchor xml:id="cll_chapter5-section16-example30"/>16.30) melbi je cmalu jebo nixli bo ckule
+       melbi je ke cmalu je nixli bo ckule [ke'e]
+       pretty and (little and (girl type-of school))
+       thing which is beautiful, small and a girls’ school
+       Note: same as 16.15
+
+<anchor xml:id="c5e16d31"/><anchor xml:id="cll_chapter5-section16-example31"/>16.31) melbi je ke cmalu nixli je ckule [ke'e]
+       pretty and (little type-of (girl and school))
+       beautiful thing which is a small girl and a small school
+
+<anchor xml:id="c5e16d32"/><anchor xml:id="cll_chapter5-section16-example32"/>16.32) melbi jebo cmalu jebo nixli jebo ckule
+       pretty and (little and (girl and school))
+       thing which is beautiful, small, a girl, and a school
+
+<anchor xml:id="c5e16d33"/><anchor xml:id="cll_chapter5-section16-example33"/>16.33) melbi ke cmalu nixli ckule [ke'e]
+       pretty type-of ((little type-of girl) type-of school)
+       beautiful school for small girls
+
+<anchor xml:id="c5e16d34"/><anchor xml:id="cll_chapter5-section16-example34"/>16.34) melbi ke cmalu je nixli ckule [ke'e]
+       pretty type-of ((little and girl) type-of school
+       beautiful school for things which are small and are girls
+
+<anchor xml:id="c5e16d35"/><anchor xml:id="cll_chapter5-section16-example35"/>16.35) melbi ke cmalu bo nixli je ckule [ke'e]
+       pretty type-of ((little type-of girl) and school)
+       beautiful thing which is a small girl and a school
+
+<anchor xml:id="c5e16d36"/><anchor xml:id="cll_chapter5-section16-example36"/>16.36) melbi je ke cmalu nixli ckule [ke'e]
+       pretty and ((little type-of girl) type-of school)
+       thing which is beautiful and a school for small girls
+
+<anchor xml:id="c5e16d37"/><anchor xml:id="cll_chapter5-section16-example37"/>16.37) melbi cmalu je nixli je ckule
+       pretty type-of ((little and girl) and school)
+       thing which is beautifully small, a beautiful girl, and a beautiful school
+       Note: same as 16.29
+
+<anchor xml:id="c5e16d38"/><anchor xml:id="cll_chapter5-section16-example38"/>16.38) melbi je ke cmalu bo nixli je ckule [ke'e]
+       pretty and ((little type-of girl) and school)
+       thing which is beautiful, a small girl and a school
+       Note: same as 16.22
+
+<anchor xml:id="c5e16d39"/><anchor xml:id="cll_chapter5-section16-example39"/>16.39) melbi je ke cmalu je nixli ckule [ke'e]
+       pretty and ((little and girl) type-of school)
+       thing which is beautiful and is a small school and a girls’ school
+
+<anchor xml:id="c5e16d40"/><anchor xml:id="cll_chapter5-section16-example40"/>16.40) melbi je ke cmalu je nixli je ckule [ke'e]
+       pretty and ((little and girl) and school)
+       thing which is beautiful, small, a girl, and a school
+</programlisting>
+</section>
+
+
+</chapter>

@@ -1,0 +1,1224 @@
+<chapter xml:id="cll_chapter18">
+  <title>Chapter 18
+lojbau mekso: Mathematical Expressions in Lojban</title>
+
+
+<section xml:id="cll_chapter18-section1">
+  <title>1. Introductory</title>
+  <para>lojbau mekso (“Lojbanic mathematical-expression”) is the part of the Lojban language that is tailored for expressing statements of a mathematical character, or for adding numerical information to non-mathematical statements. Its formal design goals include:</para>
+  <orderedlist>
+    <listitem>
+      <para>representing all the different forms of expression used by mathematicians in their normal modes of writing, so that a reader can unambiguously read off mathematical text as written with minimal effort and expect a listener to understand it;</para>
+    </listitem>
+    <listitem>
+      <para>providing a vocabulary of commonly used mathematical terms which can readily be expanded to include newly coined words using the full resources of Lojban;</para>
+    </listitem>
+    <listitem>
+      <para>permitting the formulation, both in writing and in speech, of unambiguous mathematical text;</para>
+    </listitem>
+    <listitem>
+      <para>encompassing all forms of quantified expression found in natural languages, as well as encouraging greater precision in ordinary language situations than natural languages allow.</para>
+    </listitem>
+  </orderedlist>
+  <para>Goal 1 requires that mekso not be constrained to a single notation such as Polish notation or reverse Polish notation, but make provision for all forms, with the most commonly used forms the most easily used.</para>
+  <para>Goal 2 requires the provision of several conversion mechanisms, so that the boundary between mekso and full Lojban can be crossed from either side at many points.</para>
+  <para>Goal 3 is the most subtle. Written mathematical expression is culturally unambiguous, in the sense that mathematicians in all parts of the world understand the same written texts to have the same meanings. However, international mathematical notation does not prescribe unique forms. For example, the expression</para>
+  <programlisting><anchor xml:id="c18e1d1"/><anchor xml:id="cll_chapter18-section1-example1"/>1.1)   3x + 2y
+</programlisting>
+  <para>contains omitted multiplication operators, but there are other possible interpretations for the strings “3x” and “2y” than as mathematical multiplication. Therefore, the Lojban verbal (spoken and written) form of <xref linkend="cll_chapter18-section1-example1"/> must not omit the multiplication operators.</para>
+  <para>The remainder of this chapter explains (in as much detail as is currently possible) the mekso system. This chapter is by intention complete as regards mekso components, but only suggestive about uses of those components — as of now, there has been no really comprehensive use made of mekso facilities, and many matters must await the test of usage to be fully clarified.</para>
+</section>
+
+<section xml:id="cll_chapter18-section2">
+  <title>2. Lojban numbers</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     pa      PA                  1
+     re      PA                  2
+     ci      PA                  3
+     vo      PA                  4
+     mu      PA                  5
+     xa      PA                  6
+     ze      PA                  7
+     bi      PA                  8
+     so      PA                  9
+     no      PA                  0
+</programlisting>
+  <para>The simplest kind of mekso are numbers, which are cmavo or compound cmavo. There are cmavo for each of the 10 decimal digits, and numbers greater than 9 are made by stringing together the cmavo. Some examples:</para>
+  <programlisting><anchor xml:id="c18e2d1"/><anchor xml:id="cll_chapter18-section2-example1"/>2.1)   pa re ci
+       one two three
+       123
+       one hundred and twenty three
+
+<anchor xml:id="c18e2d2"/><anchor xml:id="cll_chapter18-section2-example2"/>2.2)   pa no
+       one zero
+       10
+       ten
+
+<anchor xml:id="c18e2d3"/><anchor xml:id="cll_chapter18-section2-example3"/>2.3)   pa re ci vo mu xa ze bi so no
+       one two three four five six seven eight nine zero
+       1234567890
+       one billion, two hundred and thirty-four million, five hundred and sixty-seven thousand, eight hundred and ninety.
+</programlisting>
+  <para>Therefore, there are no separate cmavo for “ten”, “hundred”, etc.</para>
+  <para>There is a pattern to the digit cmavo (except for “no”, 0) which is worth explaining. The cmavo from 1 to 5 end in the vowels “a”, “e”, “i”, “o”, “u” respectively; and the cmavo from 6 to 9 likewise end in the vowels “a”, “e”, “i”, and “o” respectively. None of the digit cmavo begin with the same consonant, to make them easy to tell apart in noisy environments.</para>
+</section>
+
+<section xml:id="cll_chapter18-section3">
+  <title>3. Signs and numerical punctuation</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     ma'u    PA  positive sign
+     ni'u    PA  negative sign
+     pi      PA  decimal point
+     fi'u    PA  fraction slash
+     ra'e    PA  repeating decimal
+     ce'i    PA  percent sign
+     ki'o    PA  comma between digits
+</programlisting>
+  <para>A number can be given an explicit sign by the use of “ma'u” and “ni'u”, which are the positive and negative signs as distinct from the addition, subtraction, and negation operators. For example:</para>
+  <programlisting><anchor xml:id="c18e3d1"/><anchor xml:id="cll_chapter18-section3-example1"/>3.1)   ni'u pa
+       negative-sign 1
+       -1
+</programlisting>
+  <para>Grammatically, the signs are part of the number to which they are attached. It is also possible to use “ma'u” and “ni'u” by themselves as numbers; the meaning of these numbers is explained in <xref linkend="cll_chapter18-section8"/>.</para>
+  <para>Various numerical punctuation marks are likewise expressed by cmavo, as illustrated in the following examples:</para>
+  <programlisting><anchor xml:id="c18e3d2"/><anchor xml:id="cll_chapter18-section3-example2"/>3.2)   ci pi pa vo pa mu
+       three point one four one five
+       3.1415
+</programlisting>
+  <para>(In some cultures, a comma is used instead of a period in the symbolic version of <xref linkend="cll_chapter18-section3-example2"/>; “pi” is still the Lojban representation for the decimal point.)</para>
+  <programlisting><anchor xml:id="c18e3d3"/><anchor xml:id="cll_chapter18-section3-example3"/>3.3)   re fi'u ze
+       two fraction seven
+       2/7
+</programlisting>
+  <para><xref linkend="cll_chapter18-section3-example3"/> is the name of the number two-sevenths; it is not the same as “the result of 2 divided by 7” in Lojban, although numerically these two are equal. If the denominator of the fraction is present but the numerator is not, the numerator is taken to be 1, thus expressing the reciprocal of the following number:</para>
+  <programlisting><anchor xml:id="c18e3d4"/><anchor xml:id="cll_chapter18-section3-example4"/>3.4)   fi'u ze
+       fraction seven
+       1/7
+
+<anchor xml:id="c18e3d5"/><anchor xml:id="cll_chapter18-section3-example5"/>3.5)   pi ci mu ra'e pa vo re bi mu ze
+       point three five repeating one four two eight five seven
+       .35142857142857...
+</programlisting>
+  <para>Note that the “ra'e” marks unambiguously where the repeating portion “142857” begins.</para>
+  <programlisting><anchor xml:id="c18e3d6"/><anchor xml:id="cll_chapter18-section3-example6"/>3.6)   ci mu ce'i
+       three five percent
+       35%
+
+<anchor xml:id="c18e3d7"/><anchor xml:id="cll_chapter18-section3-example7"/>3.7)   pa ki'o re ci vo ki'o mu xa ze
+       one comma two three four comma five six seven
+       1,234,567
+</programlisting>
+  <para>(In some cultures, spaces are used in the symbolic representation of <xref linkend="cll_chapter18-section3-example7"/>; “ki'o” is still the Lojban representation.)</para>
+  <para>It is also possible to have less than three digits between successive “ki'o”s, in which case zeros are assumed to have been elided:</para>
+  <programlisting><anchor xml:id="c18e3d8"/><anchor xml:id="cll_chapter18-section3-example8"/>3.8)   pa ki'o re ci ki'o vo
+       one comma two three comma four
+       1,023,004
+</programlisting>
+  <para>In the same way, “ki'o” can be used after “pi” to divide fractions into groups of three:</para>
+  <programlisting><anchor xml:id="c18e3d9"/><anchor xml:id="cll_chapter18-section3-example9"/>3.9)   pi ki'o re re
+       point comma two two
+       .022
+
+<anchor xml:id="c18e3d10"/><anchor xml:id="cll_chapter18-section3-example10"/>3.10)  pi pa ki'o pa re ki'o pa
+       point one comma one two comma one
+       .001012001
+</programlisting>
+</section>
+
+<section xml:id="cll_chapter18-section4">
+  <title>4. Special numbers</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     ci'i    PA  infinity
+     ka'o    PA  imaginary i, sqrt(-1)
+     pai     PA  <phrase role="IPA">π</phrase>, pi (approx 3.14159...)
+     te'o    PA  exponential e (approx 2.71828...)
+     fi'u    PA  golden ratio, <phrase role="IPA">Φ</phrase>, phi, (1 + sqrt(5))/2 (approx. 1.61803...)
+</programlisting>
+  <para>The last cmavo is the same as the fraction sign cmavo: a fraction sign with neither numerator nor denominator represents the golden ratio.</para>
+  <para>Numbers can have any of these digit, punctuation, and special-number cmavo of Sections 2, 3, and 4 in any combination:</para>
+  <programlisting><anchor xml:id="c18e4d1"/><anchor xml:id="cll_chapter18-section4-example1"/>4.1)   ma'u ci'i
+       +<phrase role="IPA">∞</phrase><anchor xml:id="c18e4d2"/><anchor xml:id="cll_chapter18-section4-example2"/>4.2)   ci ka'o re
+       3i2 (a complex number equivalent to “3 + 2i”)
+</programlisting>
+  <para>Note that “ka'o” is both a special number (meaning “i”) and a number punctuation mark (separating the real and the imaginary parts of a complex number).</para>
+  <programlisting><anchor xml:id="c18e4d3"/><anchor xml:id="cll_chapter18-section4-example3"/>4.3)   ci'i no
+       infinity zero
+       <phrase role="IPA">ℵ</phrase><subscript>0</subscript> (a transfinite cardinal)
+</programlisting>
+  <para>The special numbers “pai” and “te'o” are mathematically important, which is why they are given their own cmavo:</para>
+  <programlisting><anchor xml:id="c18e4d4"/><anchor xml:id="cll_chapter18-section4-example4"/>4.4)   pai
+       pi, <phrase role="IPA">π</phrase><anchor xml:id="c18e4d5"/><anchor xml:id="cll_chapter18-section4-example5"/>4.5)   te'o
+       e
+</programlisting>
+  <para>However, many combinations are as yet undefined:</para>
+  <programlisting><anchor xml:id="c18e4d6"/><anchor xml:id="cll_chapter18-section4-example6"/>4.6)   pa pi re pi ci
+       1.2.3
+
+<anchor xml:id="c18e4d7"/><anchor xml:id="cll_chapter18-section4-example7"/>4.7)   pa ni'u re
+       1 negative-sign 2
+</programlisting>
+  <para><xref linkend="cll_chapter18-section4-example7"/> is not “1 minus 2”, which is represented by a different cmavo sequence altogether. It is a single number which has not been assigned a meaning. There are many such numbers which have no well-defined meaning; they may be used for experimental purposes or for future expansion of the Lojban number system.</para>
+  <para>It is possible, of course, that some of these “oddities” do have a meaningful use in some restricted area of mathematics. A mathematician appropriating these structures for specialized use needs to consider whether some other branch of mathematics would use the structure differently.</para>
+  <para>More information on numbers may be found in <xref linkend="cll_chapter18-section8"/> to <xref linkend="cll_chapter18-section12"/>.</para>
+</section>
+
+<section xml:id="cll_chapter18-section5">
+  <title>5. Simple infix expressions and equations</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     du      GOhA    equals
+     su'i    VUhU    plus
+     vu'u    VUhU    minus
+     pi'i    VUhU    times
+     te'a    VUhU    raised to the power
+     ny.     BY      letter “n”
+     vei     VEI     left parenthesis
+     ve'o    VEhO    right parenthesis
+</programlisting>
+  <para>Let us begin at the beginning: one plus one equals two. In Lojban, that sentence translates to:</para>
+  <programlisting><anchor xml:id="c18e5d1"/><anchor xml:id="cll_chapter18-section5-example1"/>5.1)   li pa su'i pa du li re
+       The-number one plus one equals the-number two.
+       1 + 1 = 2
+</programlisting>
+  <para><xref linkend="cll_chapter18-section5-example1"/>, a mekso sentence, is a regular Lojban bridi that exploits mekso features. “du” is the predicate meaning “x1 is mathematically equal to x2”. It is a cmavo for conciseness, but it has the same grammatical uses as any brivla. Outside mathematical contexts, “du” means “x1 is identical with x2” or “x1 is the same object as x2”.</para>
+  <para>The cmavo “li” is the number article. It is required whenever a sentence talks about numbers as numbers, as opposed to using numbers to quantify things. For example:</para>
+  <programlisting><anchor xml:id="c18e5d2"/><anchor xml:id="cll_chapter18-section5-example2"/>5.2)   le ci prenu
+       the three persons
+</programlisting>
+  <para>requires no “li” article, because the “ci” is being used to specify the number of “prenu”. However, the sentence</para>
+  <programlisting><anchor xml:id="c18e5d3"/><anchor xml:id="cll_chapter18-section5-example3"/>5.3)   levi sfani cu grake li ci
+       This fly masses-in-grams the-number three.
+       This fly has a mass of 3 grams.
+</programlisting>
+  <para>requires “li” because “ci” is being used as a sumti. Note that this is the way in which measurements are stated in Lojban: all the predicates for units of length, mass, temperature, and so on have the measured object as the first place and a number as the second place. Using “li” for “le” in <xref linkend="cll_chapter18-section5-example2"/> would produce</para>
+  <programlisting><anchor xml:id="c18e5d4"/><anchor xml:id="cll_chapter18-section5-example4"/>5.4)   li ci prenu
+       The-number 3 is-a-person.
+</programlisting>
+  <para>which is grammatical but nonsensical: numbers are not persons.</para>
+  <para>The cmavo “su'i” belongs to selma'o VUhU, which is composed of mathematical operators, and means “addition”. As mentioned before, it is distinct from “ma'u” which means the positive sign as an indication of a positive number:</para>
+  <programlisting><anchor xml:id="c18e5d5"/><anchor xml:id="cll_chapter18-section5-example5"/>5.5)   li ma'u pa su'i ni'u pa du li no
+       The-number positive-sign one plus negative-sign one equals the-number zero.
+       +1 + -1 = 0
+</programlisting>
+  <para>Of course, it is legal to have complex mekso on both sides of “du”:</para>
+  <programlisting><anchor xml:id="c18e5d6"/><anchor xml:id="cll_chapter18-section5-example6"/>5.6)   li mu su'i pa du li ci su'i ci
+       The-number five plus one equals the-number three plus three.
+       5 + 1 = 3 + 3
+</programlisting>
+  <para>Why don’t we say “li mu su'i li pa” rather than just “li mu su'i pa”? The answer is that VUhU operators connect mekso operands (numbers, in <xref linkend="cll_chapter18-section5-example6"/>), not general sumti. “li” is used to make the entire mekso into a sumti, which then plays the roles applicable to other sumti: in <xref linkend="cll_chapter18-section5-example6"/>, filling the places of a bridi</para>
+  <para>By default, Lojban mathematics is like simple calculator mathematics: there is no notion of “operator precedence”. Consider the following example, where “pi'i” means “times”, the multiplication operator:</para>
+  <programlisting><anchor xml:id="c18e5d7"/><anchor xml:id="cll_chapter18-section5-example7"/>5.7)   li ci su'i vo pi'i mu du li reci
+       The-number three plus four times five equals the-number two-three.
+       3 + 4 × 5 = 23
+</programlisting>
+  <para>Is the Lojban version of <xref linkend="cll_chapter18-section5-example7"/> true? No! “3 + 4 × 5” is indeed 23, because the usual conventions of mathematics state that multiplication takes precedence over addition; that is, the multiplication “4 × 5” is done first, giving 20, and only then the addition “3 + 20”. But VUhU operators by default are done left to right, like other Lojban grouping, and so a truthful bridi would be:</para>
+  <programlisting><anchor xml:id="c18e5d8"/><anchor xml:id="cll_chapter18-section5-example8"/>5.8)   li ci su'i vo pi'i mu du li cimu
+       The-number three plus four times five equals the-number three-five.
+       3 + 4 × 5 = 35
+</programlisting>
+  <para>Here we calculate 3 + 4 first, giving 7, and then calculate 7 × 5 second, leading to the result 35. While possessing the advantage of simplicity, this result violates the design goal of matching the standards of mathematics. What can be done?</para>
+  <para>There are three solutions, all of which will probably be used to some degree. The first solution is to ignore the problem. People will say “li ci su'i vo pi'i mu” and mean 23 by it, because the notion that multiplication takes precedence over addition is too deeply ingrained to be eradicated by Lojban parsing, which totally ignores semantics. This convention essentially allows semantics to dominate syntax in this one area.</para>
+  <para>(Why not hard-wire the precedences into the grammar, as is done in computer programming languages? Essentially because there are too many operators, known and unknown, with levels of precedence that vary according to usage. The programming language ’C’ has 13 levels of precedence, and its list of operators is not even extensible. For Lojban this approach is just not practical. In addition, hard-wired precedence could not be overridden in mathematical systems such as spreadsheets where the conventions are different.)</para>
+  <para>The second solution is to use explicit means to specify the precedence of operators. This approach is fully general, but clumsy, and will be explained in <xref linkend="cll_chapter18-section20"/>.</para>
+  <para>The third solution is simple but not very general. When an operator is prefixed with the cmavo “bi'e” (of selma'o BIhE), it becomes automatically of higher precedence than other operators not so prefixed. Thus,</para>
+  <programlisting><anchor xml:id="c18e5d9"/><anchor xml:id="cll_chapter18-section5-example9"/>5.9)   li ci su'i vo bi'e pi'i mu du li reci
+       The-number three plus four-times-five equals the-number two-three.
+       3 + 4 × 5 = 23
+</programlisting>
+  <para>is a truthful Lojban bridi. If more than one operator has a “bi'e” prefix, grouping is from the right; multiple “bi'e” prefixes on a single operator are not allowed.</para>
+  <para>In addition, of course, Lojban has the mathematical parentheses “vei” and “ve'o”, which can be used just like their written equivalents “(” and “)” to group expressions in any way desired:</para>
+  <programlisting><anchor xml:id="c18e5d10"/><anchor xml:id="cll_chapter18-section5-example10"/>5.10)  li vei ny. su'i pa ve'o pi'i vei ny. su'i pa [ve'o] du
+            li ny. [bi'e] te'a re su'i re bi'e pi'i ny. su'i pa
+       The-number (“n” plus one) times (“n” plus one)
+            equals the-number n-power-two plus two-times-“n” plus 1.
+       (n + 1)(n + 1) = n<superscript>2</superscript> + 2n + 1
+</programlisting>
+  <para>There are several new usages in <xref linkend="cll_chapter18-section5-example10"/>: “te'a” means “raised to the power”, and we also see the use of the lerfu word “ny”, representing the letter “n”. In mekso, letters stand for just what they do in ordinary mathematics: variables. The parser will accept a string of lerfu words (called a “lerfu string”) as the equivalent of a single lerfu word, in agreement with computer-science conventions; “abc” is a single variable, not the equivalent of “a × b × c”. (Of course, a local convention could state that the value of a variable like “abc”, with a multi-lerfu name, was equal to the values of the variables “a”, “b”, and “c” multiplied together.)</para>
+  <para>The explicit operator “pi'i” is required in the Lojban verbal form whereas multiplication is implicit in the symbolic form. Note that “ve'o” (the right parenthesis) is an elidable terminator: the first use of it in <xref linkend="cll_chapter18-section5-example10"/> is required, but the second use (marked by square brackets) could be elided. Additionally, the first “bi'e” (also marked by square brackets) is not necessary to get the proper grouping, but it is included here for symmetry with the other one.</para>
+</section>
+
+<section xml:id="cll_chapter18-section6">
+  <title>6. Forethought operators (Polish notation, functions)</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     boi     BOI     numeral/lerfu string terminator
+     va'a    VUhU    negation/additive inverse
+     pe'o    PEhO    forethought flag
+     ku'e    KUhE    forethought terminator
+     py.     BY      letter “p”
+     xy.     BY      letter “x”
+     zy.     BY      letter “z”
+     ma'o    MAhO    convert operand to operator
+     fy.     BY      letter “f”
+</programlisting>
+  <para>The infix form explained so far is reasonable for many purposes, but it is limited and rigid. It works smoothly only where all operators have exactly two operands, and where precedences can either be assumed from context or are limited to just two levels, with some help from parentheses.</para>
+  <para>But there are many operators which do not have two operands, or which have a variable number of operands. The preferred form of expression in such cases is the use of “forethought operators”, also known as Polish notation. In this style of writing mathematics, the operator comes first and the operands afterwards:</para>
+  <programlisting><anchor xml:id="c18e6d1"/><anchor xml:id="cll_chapter18-section6-example1"/>6.1)   li su'i paboi reboi ci[boi] du li xa
+       The-number the-sum-of one two three equals the-number six.
+       sum(1,2,3) = 6
+</programlisting>
+  <para>Note that the normally elidable number terminator “boi” is required after “pa” and “re” because otherwise the reading would be “pareci” = 123. It is not required after “ci” but is inserted here in brackets for the sake of symmetry. The only time “boi” is required is, as in <xref linkend="cll_chapter18-section6-example1"/>, when there are two consecutive numbers or lerfu strings.</para>
+  <para>Forethought mekso can use any number of operands, in <xref linkend="cll_chapter18-section6-example1"/>, three. How do we know how many operands there are in ambiguous circumstances? The usual Lojban solution is employed: an elidable terminator, namely “ku'e”. Here is an example:</para>
+  <programlisting><anchor xml:id="c18e6d2"/><anchor xml:id="cll_chapter18-section6-example2"/>6.2)   li py. su'i va'a ny. ku'e su'i zy du li xy.
+       The-number “p” plus negative-of(“n”) plus “z” equals the-number “x”.
+       p + -n + z = x
+</programlisting>
+  <para>where we know that “va'a” is a forethought operator because there is no operand preceding it.</para>
+  <para>“va'a” is the numerical negation operator, of selma'o VUhU. In contrast, “vu'u” is not used for numerical negation, but only for subtraction, as it always has two or more operands. Do not confuse “va'a” and “vu'u”, which are operators, with “ni'u”, which is part of a number.</para>
+  <para>In <xref linkend="cll_chapter18-section6-example2"/>, the operator “va'a” and the terminator “ku'e” serve in effect as parentheses. (The regular parentheses “vei” and “ve'o” are NOT used for this purpose.) If the “ku'e” were omitted, the “su'i zy” would be swallowed up by the “va'a” forethought operator, which would then appear to have two operands, “ny” and “su'i zy.”, where the latter is also a forethought expression.</para>
+  <para>Forethought mekso is also useful for matching standard functional notation. How do we represent “z = f(x)”? The answer is:</para>
+  <programlisting><anchor xml:id="c18e6d3"/><anchor xml:id="cll_chapter18-section6-example3"/>6.3)   li zy du li ma'o fy.boi xy.
+       The-number z equals the-number the-operator f x.
+       z = f(x)
+</programlisting>
+  <para>Again, no parentheses are used. The construct “ma'o fy.boi” is the equivalent of an operator, and appears in forethought here (although it could also be used as a regular infix operator). In mathematics, letters sometimes mean functions and sometimes mean variables, with only the context to tell which. Lojban chooses to accept the variable interpretation as the default, and uses the special flag “ma'o” to mark a lerfu string as an operator. The cmavo “xy.” and “zy.” are variables, but “fy.” is an operator (a function) because “ma'o” marks it as such. The “boi” is required because otherwise the “xy.” would look like part of the operator name. (The use of “ma'o” can be generalized from lerfu strings to any mekso operand: see <xref linkend="cll_chapter18-section21"/>.)</para>
+  <para>When using forethought mekso, the optional marker “pe'o” may be placed in front of the operator. This usage can help avoid confusion by providing clearly marked “pe'o” and “ku'e” pairs to delimit the operand list. <xref linkend="cll_chapter18-section6-example1"/> to <xref linkend="cll_chapter18-section6-example3"/>, respectively, with explicit “pe'o” and “ku'e”:</para>
+  <programlisting><anchor xml:id="c18e6d4"/><anchor xml:id="cll_chapter18-section6-example4"/>6.4)   li pe'o su'i paboi reboi ciboi ku'e du li xa
+
+<anchor xml:id="c18e6d5"/><anchor xml:id="cll_chapter18-section6-example5"/>6.5)   li py. su'i pe'o va'a ny. ku'e su'i zy du li xy.
+
+<anchor xml:id="c18e6d6"/><anchor xml:id="cll_chapter18-section6-example6"/>6.6)   li zy du li pe'o ma'o fy.boi xy. ku'e
+</programlisting>
+  <para>Note: When using forethought mekso, be sure that the operands really are operands: they cannot contain regular infix expressions unless parenthesized with “vei” and “ve'o”. An earlier version of the complex <xref linkend="cll_chapter18-section17-example6"/> came to grief because I forgot this rule.</para>
+</section>
+
+<section xml:id="cll_chapter18-section7">
+  <title>7. Other useful selbri for mekso bridi</title>
+  <para>So far our examples have been isolated mekso (it is legal to have a bare mekso as a sentence in Lojban) and equation bridi involving “du”. What about inequalities such as “x &lt; 5”? The answer is to use a bridi with an appropriate selbri, thus:</para>
+  <programlisting><anchor xml:id="c18e7d1"/><anchor xml:id="cll_chapter18-section7-example1"/>7.1)   li xy. mleca li mu
+       The-number x is-less-than the-number 5.
+</programlisting>
+  <para>Here is a partial list of selbri useful in mathematical bridi:</para>
+  <programlisting>
+     du          x1 is identical to x2, x3, x4, ...
+     dunli       x1 is equal/congruent to x2 in/on property/quality/dimension/quantity x3
+     mleca       x1 is less than x2
+     zmadu       x1 is greater than x2
+     dubjavme'a  x1 is less than or equal to x2         [du ja mleca, equal or less]
+     dubjavmau   x1 is greater than or equal to x2      [du ja zmadu, equal or greater]
+     tamdu'i     x1 is similar to x2                    [tarmi dunli, shape-equal]
+     turdu'i     x1 is isomorphic to x2                 [stura dunli, structure-equal]
+     cmima       x1 is a member of set x2
+     gripau      x1 is a subset of set x2               [girzu pagbu, set-part]
+     na'ujbi     x1 is approximately equal to x2        [namcu jibni, number-near]
+     terci'e     x1 is a component with function x2 of system x3
+</programlisting>
+  <para>Note the difference between “dunli” and “du”; “dunli” has a third place that specifies the kind of equality that is meant. “du” refers to actual identity, and can have any number of places:</para>
+  <programlisting><anchor xml:id="c18e7d2"/><anchor xml:id="cll_chapter18-section7-example2"/>7.2)   py. du xy.boi zy.
+       “p” is-identical-to “x” “z”
+       p = x = z
+</programlisting>
+  <para>Lojban bridi can have only one predicate, so the “du” is not repeated.</para>
+  <para>Any of these selbri may usefully be prefixed with “na”, the contradictory negation cmavo, to indicate that the relation is false:</para>
+  <programlisting><anchor xml:id="c18e7d3"/><anchor xml:id="cll_chapter18-section7-example3"/>7.3)   li re su'i re na du li mu
+       the-number 2 + 2 is-not equal-to the-number 5.
+       2 + 2 ≠ 5
+</programlisting>
+  <para>As usual in Lojban, negated bridi say what is false, and do not say anything about what might be true.</para>
+</section>
+
+<section xml:id="cll_chapter18-section8">
+  <title>8. Indefinite numbers</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     ro      PA      all
+     so'a    PA      almost all
+     so'e    PA      most
+     so'i    PA      many
+     so'o    PA      several
+     so'u    PA      a few
+     no'o    PA      the typical number of
+     da'a    PA      all but (one) of
+
+     piro    PA+PA   the whole of/all of
+     piso'a  PA+PA   almost the whole of
+     piso'e  PA+PA   most of
+     piso'i  PA+PA   much of
+     piso'o  PA+PA   a small part of
+     piso'u  PA+PA   a tiny part of
+     pino'o  PA+PA   the typical portion of
+
+     rau     PA      enough
+     du'e    PA      too many
+     mo'a    PA      too few
+
+     pirau   PA+PA   enough of
+     pidu'e  PA+PA   too much of
+     pimo'a  PA+PA   too little of
+</programlisting>
+  <para>Not all the cmavo of PA represent numbers in the usual mathematical sense. For example, the cmavo “ro” means “all” or “each”. This number does not have a definite value in the abstract: “li ro” is undefined. But when used to count or quantify something, the parallel between “ro” and “pa” is clearer:</para>
+  <programlisting><anchor xml:id="c18e8d1"/><anchor xml:id="cll_chapter18-section8-example1"/>8.1)   mi catlu pa prenu
+       I look-at one person
+
+<anchor xml:id="c18e8d2"/><anchor xml:id="cll_chapter18-section8-example2"/>8.2)   mi catlu ro prenu
+       I look-at all persons
+</programlisting>
+  <para><xref linkend="cll_chapter18-section8-example1"/> might be true, whereas <xref linkend="cll_chapter18-section8-example2"/> is almost certainly false.</para>
+  <para>The cmavo “so'a”, “so'e”, “so'i”, “so'o”, and “so'u” represent a set of indefinite numbers less than “ro”. As you go down an alphabetical list, the magnitude decreases:</para>
+  <programlisting><anchor xml:id="c18e8d3"/><anchor xml:id="cll_chapter18-section8-example3"/>8.3)   mi catlu so'a prenu
+       I look-at almost-all persons
+
+<anchor xml:id="c18e8d4"/><anchor xml:id="cll_chapter18-section8-example4"/>8.4)   mi catlu so'e prenu
+       I look-at most persons
+
+<anchor xml:id="c18e8d5"/><anchor xml:id="cll_chapter18-section8-example5"/>8.5)   mi catlu so'i prenu
+       I look-at many persons
+
+<anchor xml:id="c18e8d6"/><anchor xml:id="cll_chapter18-section8-example6"/>8.6)   mi catlu so'o prenu
+       I look-at several persons
+
+<anchor xml:id="c18e8d7"/><anchor xml:id="cll_chapter18-section8-example7"/>8.7)   mi catlu so'u prenu
+       I look-at a-few persons
+</programlisting>
+  <para>The English equivalents are only rough: the cmavo provide space for up to five indefinite numbers between “ro” and “no”, with a built-in ordering. In particular, “so'e” does not mean “most” in the sense of “a majority” or “more than half”.</para>
+  <para>Each of these numbers, plus “ro”, may be prefixed with “pi” (the decimal point) in order to make a fractional form which represents part of a whole rather than some elements of a totality. “piro” therefore means “the whole of”:</para>
+  <programlisting><anchor xml:id="c18e8d8"/><anchor xml:id="cll_chapter18-section8-example8"/>8.8)   mi citka piro lei nanba
+       I eat the-whole-of the-mass-of bread
+</programlisting>
+  <para>Similarly, “piso'a” means “almost the whole of”; and so on down to “piso'u”, “a tiny part of”. These numbers are particularly appropriate with masses, which are usually measured rather than counted, as <xref linkend="cll_chapter18-section8-example8"/> shows.</para>
+  <para>In addition to these cmavo, there is “no'o”, meaning “the typical value”, and “pino'o”, meaning “the typical portion”: Sometimes “no'o” can be translated “the average value”, but the average in question is not, in general, a mathematical mean, median, or mode; these would be more appropriately represented by operators.</para>
+  <programlisting><anchor xml:id="c18e8d9"/><anchor xml:id="cll_chapter18-section8-example9"/>8.9)   mi catlu no'o prenu
+       I look-at a-typical-number-of persons
+
+<anchor xml:id="c18e8d10"/><anchor xml:id="cll_chapter18-section8-example10"/>8.10)  mi citka pino'o lei nanba
+       I eat a-typical-amount-of the-mass-of bread.
+</programlisting>
+  <para>“da'a” is a related cmavo meaning “all but”:</para>
+  <programlisting><anchor xml:id="c18e8d11"/><anchor xml:id="cll_chapter18-section8-example11"/>8.11)  mi catlu da'a re prenu
+       I look-at all-but two persons
+
+<anchor xml:id="c18e8d12"/><anchor xml:id="cll_chapter18-section8-example12"/>8.12)  mi catlu da'a so'u prenu
+       I look-at all-but a-few persons
+</programlisting>
+  <para><xref linkend="cll_chapter18-section8-example12"/> is similar in meaning to <xref linkend="cll_chapter18-section8-example3"/>.</para>
+  <para>If no number follows “da'a”, then “pa” is assumed; “da'a” by itself means “all but one”, or in ordinal contexts “all but the last”:</para>
+  <programlisting><anchor xml:id="c18e8d13"/><anchor xml:id="cll_chapter18-section8-example13"/>8.13)  ro ratcu ka'e citka da'a ratcu
+       All rats can eat all-but-one rats.
+       All rats can eat all other rats.
+</programlisting>
+  <para>(The use of “da'a” means that <xref linkend="cll_chapter18-section8-example13"/> does not require that all rats can eat themselves, but does allow it. Each rat has one rat it cannot eat, but that one might be some rat other than itself. Context often dictates that “itself” is, indeed, the “other” rat.)</para>
+  <para>As mentioned in <xref linkend="cll_chapter18-section3"/>, “ma'u” and “ni'u” are also legal numbers, and they mean “some positive number” and “some negative number” respectively.</para>
+  <programlisting><anchor xml:id="c18e8d14"/><anchor xml:id="cll_chapter18-section8-example14"/>8.14)  li ci vu'u re du li ma'u
+       the-number 3 − 2 = some-positive-number
+
+<anchor xml:id="c18e8d15"/><anchor xml:id="cll_chapter18-section8-example15"/>8.15)  li ci vu'u vo du li ni'u
+       the-number 3 − 4 = some-negative-number
+
+<anchor xml:id="c18e8d16"/><anchor xml:id="cll_chapter18-section8-example16"/>8.16)  mi ponse ma'u rupnu
+       I possess a-positive-number-of currency-units.
+</programlisting>
+  <para>All of the numbers discussed so far are objective, even if indefinite. If there are exactly six superpowers (“rairgugde”, “superlative-states”) in the world, then “ro rairgugde” means the same as “xa rairgugde”. It is often useful, however, to express subjective indefinite values. The cmavo “rau” (enough), “du'e” (too many), and “mo'a” (too few) are then appropriate:</para>
+  <programlisting><anchor xml:id="c18e8d17"/><anchor xml:id="cll_chapter18-section8-example17"/>8.17)  mi ponse rau rupnu
+       I possess enough currency-units.
+</programlisting>
+  <para>Like the “so'a”-series, “rau”, “du'e”, and “mo'a” can be preceded by “pi”; for example, “pirau” means “a sufficient part of.”</para>
+  <para>Another possibility is that of combining definite and indefinite numbers into a single number. This usage implies that the two kinds of numbers have the same value in the given context:</para>
+  <programlisting><anchor xml:id="c18e8d18"/><anchor xml:id="cll_chapter18-section8-example18"/>8.18)  mi viska le rore gerku
+       I saw the all-of/two dogs.
+       I saw both dogs.
+
+<anchor xml:id="c18e8d19"/><anchor xml:id="cll_chapter18-section8-example19"/>8.19)  mi speni so'ici prenu
+       I am-married-to many/three persons.
+       I am married to three persons (which is “many” in the circumstances).
+</programlisting>
+  <para><xref linkend="cll_chapter18-section8-example19"/> assumes a mostly monogamous culture by stating that three is “many”.</para>
+</section>
+
+<section xml:id="cll_chapter18-section9">
+  <title>9. Approximation and inexact numbers</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     ji'i    PA  approximately
+     su'e    PA  at most
+     su'o    PA  at least
+     me'i    PA  less than
+     za'u    PA  more than
+</programlisting>
+  <para>The cmavo “ji'i” (of selma'o PA) is used in several ways to indicate approximate or rounded numbers. If it appears at the beginning of a number, the whole number is approximate:</para>
+  <programlisting><anchor xml:id="c18e9d1"/><anchor xml:id="cll_chapter18-section9-example1"/>9.1)   ji'i vo no
+       approximation four zero
+       approximately 40
+</programlisting>
+  <para>If “ji'i” appears in the middle of a number, all the digits following it are approximate:</para>
+  <programlisting><anchor xml:id="c18e9d2"/><anchor xml:id="cll_chapter18-section9-example2"/>9.2)   vo no ji'i mu no
+       four zero approximation five zero
+       roughly 4050 (where the “four thousand” is exact, but the “fifty” is approximate)
+</programlisting>
+  <para>If “ji'i” appears at the end of a number, it indicates that the number has been rounded. In addition, it can then be followed by a sign cmavo (“ma'u” or “ni'u”), which indicate truncation towards positive or negative infinity respectively.</para>
+  <programlisting><anchor xml:id="c18e9d3"/><anchor xml:id="cll_chapter18-section9-example3"/>9.3)   re pi ze re ji'i
+       two point seven two approximation
+       2.72 (rounded)
+
+<anchor xml:id="c18e9d4"/><anchor xml:id="cll_chapter18-section9-example4"/>9.4)   re pi ze re ji'i ma'u
+       two point seven two approximation positive-sign
+       2.72 (rounded up)
+
+<anchor xml:id="c18e9d5"/><anchor xml:id="cll_chapter18-section9-example5"/>9.5)   re pi ze pa ji'i ni'u
+       two point seven one approximation negative-sign
+       2.71 (rounded down)
+</programlisting>
+  <para><xref linkend="cll_chapter18-section9-example3"/> through <xref linkend="cll_chapter18-section9-example5"/> are all approximations to “te'o” (exponential e). “ji'i” can also appear by itself, in which case it means “approximately the typical value in this context”.</para>
+  <para>The four cmavo “su'e”, “su'o”, “me'i”, and “za'u”, also of selma'o PA, express inexact numbers with upper or lower bounds:</para>
+  <programlisting><anchor xml:id="c18e9d6"/><anchor xml:id="cll_chapter18-section9-example6"/>9.6)   mi catlu su'e re prenu
+       I look-at at-most two persons
+
+<anchor xml:id="c18e9d7"/><anchor xml:id="cll_chapter18-section9-example7"/>9.7)   mi catlu su'o re prenu
+       I look-at at-least two persons
+
+<anchor xml:id="c18e9d8"/><anchor xml:id="cll_chapter18-section9-example8"/>9.8)   mi catlu me'i re prenu
+       I look-at less-than two persons
+
+<anchor xml:id="c18e9d9"/><anchor xml:id="cll_chapter18-section9-example9"/>9.9)   mi catlu za'u re prenu
+       I look-at more-than two persons
+</programlisting>
+  <para>Each of these is a subtly different claim: <xref linkend="cll_chapter18-section9-example7"/> is true of two or any greater number, whereas <xref linkend="cll_chapter18-section9-example9"/> requires three persons or more. Likewise, <xref linkend="cll_chapter18-section9-example6"/> refers to zero, one, or two; <xref linkend="cll_chapter18-section9-example8"/> to zero or one. (Of course, when the context allows numbers other than non-negative integers, “me'i re” can be any number less than 2, and likewise with the other cases.) The exact quantifier, “exactly 2, neither more nor less” is just “re”. Note that “su'ore” is the exact Lojban equivalent of English plurals.</para>
+  <para>If no number follows one of these cmavo, “pa” is understood: therefore,</para>
+  <programlisting><anchor xml:id="c18e9d10"/><anchor xml:id="cll_chapter18-section9-example10"/>9.10)  mi catlu su'o prenu
+       I look-at at-least [one] person
+</programlisting>
+  <para>is a meaningful claim.</para>
+  <para>Like the numbers in <xref linkend="cll_chapter18-section8"/>, all of these cmavo may be preceded by “pi” to make the corresponding quantifiers for part of a whole. For example, “pisu'o” means “at least some part of”. The quantifiers “ro”, “su'o”, “piro”, and “pisu'o” are particularly important in Lojban, as they are implicitly used in the descriptions introduced by the cmavo of selma'o LA and LE, as explained in <xref linkend="cll_chapter6"/>. Descriptions in general are outside the scope of this chapter.</para>
+</section>
+
+<section xml:id="cll_chapter18-section10">
+  <title>10. Non-decimal and compound bases</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+    ju'u     VUhU    to the base
+
+    dau      PA      hex digit A = 10
+    fei      PA      hex digit B = 11
+    gai      PA      hex digit C = 12
+    jau      PA      hex digit D = 13
+    rei      PA      hex digit E = 14
+    vai      PA      hex digit F = 15
+    pi'e     PA      compound base point
+</programlisting>
+  <para>In normal contexts, Lojban assumes that all numbers are expressed in the decimal (base 10) system. However, other bases are possible, and may be appropriate in particular circumstances.</para>
+  <para>To specify a number in a particular base, the VUhU operator “ju'u” is suitable:</para>
+  <programlisting><anchor xml:id="c18e10d1"/><anchor xml:id="cll_chapter18-section10-example1"/>10.1)  li pa no pa no ju'u re du li pa no
+       The-number 1010 base 2 equals the-number 10.
+</programlisting>
+  <para>Here, the final “pa no” is assumed to be base 10, as usual; so is the base specification. (The base may also be changed permanently by a metalinguistic specification; no standard way of doing so has as yet been worked out.)</para>
+  <para>Lojban has digits for representing bases up to 16, because 16 is a base often used in computer applications. In English, it is customary to use the letters A-F as the base 16 digits equivalent to the numbers ten through fifteen. In Lojban, this ambiguity is avoided:</para>
+  <programlisting><anchor xml:id="c18e10d2"/><anchor xml:id="cll_chapter18-section10-example2"/>10.2)  li daufeigai ju'u paxa du li rezevobi
+       The-number ABC base 16 equals the-number 2748.
+
+<anchor xml:id="c18e10d3"/><anchor xml:id="cll_chapter18-section10-example3"/>10.3)  li jaureivai ju'u paxa du li cimuxaze
+       The-number DEF base 16 equals the-number 3567.
+</programlisting>
+  <para>Note the pattern in the cmavo: the diphthongs “au”, “ei”, “ai” are used twice in the same order. The digits for A to D use consonants different from those used in the decimal digit cmavo; E and F unfortunately overlap 2 and 4 — there was simply not enough available cmavo space to make a full differentiation possible. The cmavo are also in alphabetical order.</para>
+  <para>The base point “pi” is used in non-decimal bases just as in base 10:</para>
+  <programlisting><anchor xml:id="c18e10d4"/><anchor xml:id="cll_chapter18-section10-example4"/>10.4)  li vai pi bi ju'u paxa du li pamu pi mu
+       The-number F.8 base 16 equals the-number 15.5.
+</programlisting>
+  <para>Since “ju'u” is an operator of selma'o VUhU, it is grammatical to use any operand as the left argument. Semantically, however, it is undefined to use anything but a numeral string on the left. The reason for making “ju'u” an operator is to allow reference to a base which is not a constant.</para>
+  <para>There are some numerical values that require a “base” that varies from digit to digit. For example, times represented in hours, minutes, and seconds have, in effect, three “digits”: the first is base 24, the second and third are base 60. To express such numbers, the compound base separator “pi'e” is used:</para>
+  <programlisting><anchor xml:id="c18e10d5"/><anchor xml:id="cll_chapter18-section10-example5"/>10.5)  ci pi'e rere pi'e vono
+       3:22:40
+</programlisting>
+  <para>Each digit sequence separated by instances of “pi'e” is expressed in decimal notation, but the number as a whole is not decimal and can only be added and subtracted by special rules:</para>
+  <programlisting><anchor xml:id="c18e10d6"/><anchor xml:id="cll_chapter18-section10-example6"/>10.6)  li ci pi'e rere pi'e vono su'i pi'e ci pi'e cici du li ci pi'e rexa pi'e paci
+       The-number 3:22:40 plus :3:33 equals the-number 3:26:13.
+       3:22:40 + 0:3:33 = 3:26:13
+</programlisting>
+  <para>Of course, only context tells you that the first part of the numbers in <xref linkend="cll_chapter18-section10-example5"/> and <xref linkend="cll_chapter18-section10-example6"/> is hours, the second minutes, and the third seconds.</para>
+  <para>The same mechanism using “pi'e” can be used to express numbers which have a base larger than 16. For example, base-20 Mayan mathematics might use digits from “no” to “paso”, each separated by “pi'e”:</para>
+  <programlisting><anchor xml:id="c18e10d7"/><anchor xml:id="cll_chapter18-section10-example7"/>10.7)  li pa pi'e re pi'e ci ju'u reno du li vovoci
+       the-number 1;2;3 base 20 equals the-number 443
+</programlisting>
+  <para>Carefully note the difference between:</para>
+  <programlisting><anchor xml:id="c18e10d8"/><anchor xml:id="cll_chapter18-section10-example8"/>10.8)  pano ju'u reno
+       the-digit-10 base 20
+</programlisting>
+  <para>which is equal to ten, and:</para>
+  <programlisting><anchor xml:id="c18e10d9"/><anchor xml:id="cll_chapter18-section10-example9"/>10.9)  pa pi'e no ju'u reno
+       1;0 base 20
+</programlisting>
+  <para>which is equal to twenty.</para>
+  <para>Both “pi” and “pi'e” can be used to express large-base fractions:</para>
+  <programlisting><anchor xml:id="c18e10d10"/><anchor xml:id="cll_chapter18-section10-example10"/>10.10) li pa pi'e vo pi ze ju'u reno du li re vo pi ci mu
+       The-number 1;4.7 base 20 equals the-number 24.35.
+</programlisting>
+  <para>“pi'e” is also used where the base of each digit is vague, as in the numbering of the examples in this chapter:</para>
+  <programlisting><anchor xml:id="c18e10d11"/><anchor xml:id="cll_chapter18-section10-example11"/>10.11) dei jufra panopi'epapamoi
+       This-utterance is-a-sentence-type-of 10;11th-thing.
+       This is Sentence 10.11.
+</programlisting>
+</section>
+
+<section xml:id="cll_chapter18-section11">
+  <title>11. Special mekso selbri</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     mei     MOI     cardinal selbri
+     moi     MOI     ordinal selbri
+     si'e    MOI     portion selbri
+     cu'o    MOI     probability selbri
+     va'e    MOI     scale selbri
+
+     me      ME      make sumti into selbri
+
+     me'u    MEhU    terminator for ME
+</programlisting>
+  <para>Lojban possesses a special category of selbri which are based on mekso. The simplest kind of such selbri are made by suffixing a member of selma'o MOI to a number. There are five members of MOI, each of which serves to create number-based selbri with specific place structures.</para>
+  <para>The cmavo “mei” creates cardinal selbri. The basic place structure is:</para>
+  <programlisting>
+       x1 is a mass formed from the set x2 of n members, one or more of which is/are x3
+</programlisting>
+  <para>A cardinal selbri interrelates a set with a given number of members, the mass formed from that set, and the individuals which make the set up. The mass argument is placed first as a matter of convenience, not logical necessity.</para>
+  <para>Some examples:</para>
+  <programlisting><anchor xml:id="c18e11d1"/><anchor xml:id="cll_chapter18-section11-example1"/>11.1)  lei mi ratcu cu cimei
+       Those-I-describe-as-the-mass-of my rats are-a-threesome.
+       My rats are three.
+       I have three rats.
+</programlisting>
+  <para>Here, the mass of my rats is said to have three components; that is, I have three rats.</para>
+  <para>Another example, with one element this time:</para>
+  <programlisting><anchor xml:id="c18e11d2"/><anchor xml:id="cll_chapter18-section11-example2"/>11.2)  mi poi pamei cu cusku dei
+       I who am-an-individual express this-sentence.
+</programlisting>
+  <para>In <xref linkend="cll_chapter18-section11-example2"/>, “mi” refers to a mass, “the mass consisting of me”. Personal pronouns are vague between masses, sets, and individuals.</para>
+  <para>However, when the number expressed before “-mei” is an objective indefinite number of the kind explained in <xref linkend="cll_chapter18-section8"/>, a slightly different place structure is required:</para>
+  <programlisting>
+       x1 is a mass formed from a set x2 of n members, one or more of which is/are x3,
+            measured relative to the set x4.
+</programlisting>
+  <para>An example:</para>
+  <programlisting><anchor xml:id="c18e11d3"/><anchor xml:id="cll_chapter18-section11-example3"/>11.3)  lei ratcu poi zvati le panka cu so'umei fo lo'i ratcu
+       The-mass-of rats which are-in the park are a-fewsome with-respect-to the-set-of rats.
+       The rats in the park are a small number of all the rats there are.
+</programlisting>
+  <para>In <xref linkend="cll_chapter18-section11-example3"/>, the x2 and x3 places are vacant, and the x4 place is filled by “lo'i ratcu”, which (because no quantifiers are explicitly given) means “the whole of the set of all those things which are rats”, or simply “the set of all rats.”</para>
+  <programlisting><anchor xml:id="c18e11d4"/><anchor xml:id="cll_chapter18-section11-example4"/>11.4)  le'i ratcu poi zvati le panka cu se so'imei
+       The-set-of rats which-are in the park is-a manysome.
+       There are many rats in the park.
+</programlisting>
+  <para>In <xref linkend="cll_chapter18-section11-example4"/>, the conversion cmavo “se” swaps the x1 and the x2 places, so that the new x1 is the set. The x4 set is unspecified, so the implication is that the rats are “many” with respect to some unspecified comparison set.</para>
+  <para>More explanations about the interrelationship of sets, masses, and individuals can be found in <xref linkend="cll_chapter6"/>.</para>
+  <para>The cmavo “moi” creates ordinal selbri. The place structure is:</para>
+  <programlisting>
+       x1 is the (n)th member of set x2 when ordered by rule x3
+</programlisting>
+  <para>Some examples:</para>
+  <programlisting><anchor xml:id="c18e11d5"/><anchor xml:id="cll_chapter18-section11-example5"/>11.5)  ti pamoi le'i mi ratcu
+       This-one is the first-of the rats associated-with me.
+       This is my first rat.
+
+<anchor xml:id="c18e11d6"/><anchor xml:id="cll_chapter18-section11-example6"/>11.6)  ta romoi le'i mi ratcu
+       That is-the-allth-of the rats associated-with me.
+       That is my last rat.
+
+<anchor xml:id="c18e11d7"/><anchor xml:id="cll_chapter18-section11-example7"/>11.7)  mi raumoi le velskina porsi
+       I am-enough-th-in the movie-audience sequence
+       I am enough-th in the movie line.
+</programlisting>
+  <para><xref linkend="cll_chapter18-section11-example7"/> means, in the appropriate context, that my position in line is sufficiently far to the front that I will get a seat for the movie.</para>
+  <para>The cmavo “si'e” creates portion selbri. The place structure is:</para>
+  <programlisting>
+       x1 is an (n)th portion of mass x2
+</programlisting>
+  <para>Some examples:</para>
+  <programlisting><anchor xml:id="c18e11d8"/><anchor xml:id="cll_chapter18-section11-example8"/>11.8)  levi sanmi cu fi'ucisi'e lei mi djedi cidja
+       This-here meal is-a-slash-three-portion-of my day-food.
+       This meal is one-third of my daily food.
+</programlisting>
+  <para>The cmavo “cu'o” creates probability selbri. The place structure is:</para>
+  <programlisting>
+       event x1 has probability (n) of occurring under conditions x2
+</programlisting>
+  <para>The number must be between 0 and 1 inclusive. For example:</para>
+  <programlisting><anchor xml:id="c18e11d9"/><anchor xml:id="cll_chapter18-section11-example9"/>11.9)  le nu lo sicni cu sedja'o cu pimucu'o
+       The event of a coin being a head-displayer has probability .5.
+</programlisting>
+  <para>The cmavo “va'e” creates a scale selbri. The place structure is:</para>
+  <programlisting>
+       x1 is at scale position (n) on the scale x2
+</programlisting>
+  <para>If the scale is granular rather than continuous, a form like “cifi'uxa” (3/6) may be used; in this case, 3/6 is not the same as 1/2, because the third position on a scale of six positions is not the same as the first position on a scale of two positions. Here is an example:</para>
+  <programlisting><anchor xml:id="c18e11d10"/><anchor xml:id="cll_chapter18-section11-example10"/>11.10) le vi rozgu cu sofi'upanova'e xunre
+       This rose is 9/10-scale red.
+       This rose is 9 out of 10 on the scale of redness.
+       This rose is very red.
+</programlisting>
+  <para>When the quantifier preceding any MOI cmavo includes the subjective numbers “rau”, “du'e”, or “mo'a” (enough, too many, too few) then an additional place is added for “by standard”. For example:</para>
+  <programlisting><anchor xml:id="c18e11d11"/><anchor xml:id="cll_chapter18-section11-example11"/>11.11) lei ratcu poi zvati le panka cu du'emei fo mi
+       The-mass-of rats which-are in the park are too-many by-standard me.
+       There are too many rats in the park for me.
+</programlisting>
+  <para>The extra place (which for “-mei” is the x4 place labeled by “fo”) is provided rather than using a BAI tag such as “ma'i” because a specification of the standard for judgment is essential to the meaning of subjective words like “enough”.</para>
+  <para>This place is not normally explicit when using one of the subjective numbers directly as a number. Therefore, “du'e ratcu” means “too many rats” without specifying any standard.</para>
+  <para>It is also grammatical to substitute a lerfu string for a number:</para>
+  <programlisting><anchor xml:id="c18e11d12"/><anchor xml:id="cll_chapter18-section11-example12"/>11.12) ta ny.moi le'i mi ratcu
+       That is-nth-of the-set-of my rats.
+       That is my nth rat.
+</programlisting>
+  <para>More complex mekso cannot be placed directly in front of MOI, due to the resulting grammatical ambiguities. Instead, a somewhat artificial form of expression is required.</para>
+  <para>The cmavo “me” (of selma'o ME) has the function of making a sumti into a selbri. A whole “me” construction can have a member of MOI added to the end to create a complex mekso selbri:</para>
+  <programlisting><anchor xml:id="c18e11d13"/><anchor xml:id="cll_chapter18-section11-example13"/>11.13) ta me li ny. su'i pa me'u moi le'i mi ratcu
+       That is the-number n plus one-th-of the-set-of my rats.
+       That is my (n+1)-th rat.
+</programlisting>
+  <para>Here the mekso “ny. su'i pa” is made into a sumti (with “li”) and then changed into a mekso selbri with “me” and “me'u moi”. The elidable terminator “me'u” is required here in order to keep the “pa” and the “moi” separate; otherwise, the parser will combine them into the compound “pamoi” and reject the sentence as ungrammatical.</para>
+  <para>It is perfectly possible to use non-numerical sumti after “me” and before a member of MOI, producing strange results indeed:</para>
+  <programlisting><anchor xml:id="c18e11d14"/><anchor xml:id="cll_chapter18-section11-example14"/>11.14) le nu mi nolraitru
+            cu me le'e snime bolci be vi la xel. cu'o
+       The event-of me being-a-nobly-superlative-ruler
+            has-the-stereotypical snow type-of-ball at Hell probability.
+       I have a snowball’s chance in Hell of being king.
+</programlisting>
+  <para>Note: the elidable terminator “boi” is not used between a number and a member of MOI. As a result, the “me'u” in <xref linkend="cll_chapter18-section11-example13"/> could also be replaced by a “boi”, which would serve the same function of preventing the “pa” and “moi” from joining into a compound.</para>
+</section>
+
+<section xml:id="cll_chapter18-section12">
+  <title>12. Number questions</title>
+  <para>The following cmavo is discussed in this section:</para>
+  <programlisting>
+      xo      PA      number question
+</programlisting>
+  <para>The cmavo “xo”, a member of selma'o PA, is used to ask questions whose answers are numbers. Like most Lojban question words, it fills the blank where the answer should go. (See <xref linkend="cll_chapter19"/> for more on Lojban questions.)</para>
+  <programlisting><anchor xml:id="c18e12d1"/><anchor xml:id="cll_chapter18-section12-example1"/>12.1)  li re su'i re du li xo
+       The-number 2 plus 2 equals the-number what?
+       What is 2 + 2?
+
+<anchor xml:id="c18e12d2"/><anchor xml:id="cll_chapter18-section12-example2"/>12.2)  le xomoi prenu cu darxi do
+       The what-number-th person hit you?
+       Which person [as in a police lineup] hit you?
+</programlisting>
+  <para>“xo” can also be combined with other digits to ask questions whose answers are already partly specified. This ability could be very useful in writing tests of elementary arithmetical knowledge:</para>
+  <programlisting><anchor xml:id="c18e12d3"/><anchor xml:id="cll_chapter18-section12-example3"/>12.3)  li remu pi'i xa du li paxono
+       The-number 25 times 6 equals the-number 1?0
+</programlisting>
+  <para>to which the correct reply would be “mu”, or 5. The ability to utter bare numbers as grammatical Lojban sentences is primarily intended for giving answers to “xo” questions. (Another use, obviously, is for counting off physical objects one by one.)</para>
+</section>
+
+<section xml:id="cll_chapter18-section13">
+  <title>13. Subscripts</title>
+  <para>The following cmavo is discussed in this section:</para>
+  <programlisting>
+     xi      XI      subscript
+</programlisting>
+  <para>Subscripting is a general Lojban feature, not used only in mekso; there are many things that can logically be subscripted, and grammatically a subscript is a free modifier, usable almost anywhere. In particular, of course, mekso variables (lerfu strings) can be subscripted:</para>
+  <programlisting><anchor xml:id="c18e13d1"/><anchor xml:id="cll_chapter18-section13-example1"/>13.1)  li xy.boixici du li xy.boixipa su'i xy.boixire
+       The-number x-sub-3 equals the-number x-sub-1 plus x-sub-2.
+       x<subscript>3</subscript>  = x<subscript>1</subscript>  + x<subscript>2</subscript></programlisting>
+  <para>Subscripts always begin with the flag “xi” (of selma'o XI). “xi” may be followed by a number, a lerfu string, or a general mekso expression in parentheses:</para>
+  <programlisting><anchor xml:id="c18e13d2"/><anchor xml:id="cll_chapter18-section13-example2"/>13.2)  xy.boixino
+       x<subscript>0</subscript><anchor xml:id="c18e13d3"/><anchor xml:id="cll_chapter18-section13-example3"/>13.3)  xy.boixiny.
+       x<subscript>n</subscript><anchor xml:id="c18e13d4"/><anchor xml:id="cll_chapter18-section13-example4"/>13.4)  xy.boixi vei ny. su'i pa [ve'o]
+       x<subscript>n+1</subscript></programlisting>
+  <para>Note that subscripts attached directly to lerfu words (variables) generally need a “boi” terminating the variable. Free modifiers, of which subscripts are one variety, generally require the explicit presence of an otherwise elidable terminator.</para>
+  <para>There is no standard way of handling superscripts (other than those used as exponents) or for subscripts or superscripts that come before the main expression. If necessary, further cmavo could be assigned to selma'o XI for these purposes.</para>
+  <para>The elidable terminator for a subscript is that for a general number or lerfu string, namely “boi”. By convention, a subscript following another subscript is taken to be a sub-subscript:</para>
+  <programlisting><anchor xml:id="c18e13d5"/><anchor xml:id="cll_chapter18-section13-example5"/>13.5)  xy.boi xi by.boi xi vo
+       x<subscript>b<subscript>4</subscript></subscript></programlisting>
+  <para>See <xref linkend="cll_chapter18-section17-example10"/> for the standard method of specifying multiple subscripts on a single object.</para>
+  <para>More information on the uses of subscripts may be found in <xref linkend="cll_chapter19"/>.</para>
+</section>
+
+<section xml:id="cll_chapter18-section14">
+  <title>14. Infix operators revisited</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     tu'o    PA      null operand
+     ge'a    VUhU    null operator
+     gei     VUhU    exponential notation
+</programlisting>
+  <para>The infix operators presented so far have always had exactly two operands, and for more or fewer operands forethought notation has been required. However, it is possible to use an operator in infix style even though it has more or fewer than two operands, through the use of a pair of tricks: the null operand “tu'o” and the null operator “ge'a”. The first is suitable when there are too few operands, the second when there are too many. For example, suppose we wanted to express the numerical negation operator “va'a” in infix form. We would use:</para>
+  <programlisting><anchor xml:id="c18e14d1"/><anchor xml:id="cll_chapter18-section14-example1"/>14.1)  li tu'o va'a ny. du li no vu'u ny.
+       The-number (null) additive-inverse n equals the-number zero minus n.
+       -n = 0 − n
+</programlisting>
+  <para>The “tu'o” fulfills the grammatical requirement for a left operand for the infix use of “va'a”, even though semantically none is needed or wanted.</para>
+  <para>Finding a suitable example of “ge'a” requires exhibiting a ternary operator, and ternary operators are not common. The operator “gei”, however, has both a binary and a ternary use. As a binary operator, it provides a terse representation of scientific (also called “exponential”) notation. The first operand of “gei” is the exponent, and the second operand is the mantissa or fraction:</para>
+  <programlisting><anchor xml:id="c18e14d2"/><anchor xml:id="cll_chapter18-section14-example2"/>14.2)  li cinonoki'oki'o du
+            li bi gei ci
+       The-number three-zero-zero-comma-comma equals
+            the-number eight scientific three.
+       300,000,000 = 3 × 10<superscript>8</superscript></programlisting>
+  <para>Why are the arguments to “gei” in reverse order from the conventional symbolic notation? So that “gei” can be used in forethought to allow easy specification of a large (or small) imprecise number:</para>
+  <programlisting><anchor xml:id="c18e14d3"/><anchor xml:id="cll_chapter18-section14-example3"/>14.3)  gei reno
+       (scientific) two-zero
+       10<superscript>20</superscript></programlisting>
+  <para>Note, however, that although 10 is far and away the most common exponent base, it is not the only possible one. The third operand of “gei”, therefore, is the base, with 10 as the default value. Most computers internally store so-called “floating-point” numbers using 2 as the exponent base. (This has nothing to do with the fact that computers also represent all integers in base 2; the IBM 360 series used an exponent base of 16 for floating point, although each component of the number was expressed in base 2.) Here is a computer floating-point number with a value of 40:</para>
+  <programlisting><anchor xml:id="c18e14d4"/><anchor xml:id="cll_chapter18-section14-example4"/>14.4)  papano bi'eju'u re gei pipanopano bi'eju'u re ge'a re
+       (one-one-zero base 2) scientific (point-one-zero-one-zero base 2) with-base 2
+       .1010<subscript>2</subscript> × 2<superscript>110<subscript>2</subscript></superscript></programlisting>
+</section>
+
+<section xml:id="cll_chapter18-section15">
+  <title>15. Vectors and matrices</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     jo'i    JOhI    start vector
+     te'u    TEhU    end vector
+     pi'a    VUhU    matrix row combiner
+     sa'i    VUhU    matrix column combiner
+</programlisting>
+  <para>A mathematical vector is a list of numbers, and a mathematical matrix is a table of numbers. Lojban considers matrices to be built up out of vectors, which are in turn built up out of operands.</para>
+  <para>“jo'i”, the only cmavo of selma'o JOhI, is the vector indicator: it has a syntax reminiscent of a forethought operator, but has very high precedence. The components must be simple operands rather than full expressions (unless parenthesized). A vector can have any number of components; “te'u” is the elidable terminator. An example:</para>
+  <programlisting><anchor xml:id="c18e15d1"/><anchor xml:id="cll_chapter18-section15-example1"/>15.1)  li jo'i paboi reboi te'u su'i jo'i ciboi voboi du
+            li jo'i voboi xaboi
+       The-number array (one, two) plus array (three, four) equals
+            the-number array (four, six).
+       (1,2) + (3,4) = (4,6)
+</programlisting>
+  <para>Vectors can be combined into matrices using either “pi'a”, the matrix row operator, or “sa'i”, the matrix column operator. The first combines vectors representing rows of the matrix, and the second combines vectors representing columns of the matrix. Both of them allow any number of arguments: additional arguments are tacked on with the null operator “ge'a”.</para>
+  <para>Therefore, the “magic square” matrix</para>
+  <programlisting>
+       8 1 6
+       3 5 7
+       4 9 2
+</programlisting>
+  <para>can be represented either as:</para>
+  <programlisting><anchor xml:id="c18e15d2"/><anchor xml:id="cll_chapter18-section15-example2"/>15.2)  jo'i biboi paboi xa pi'a jo'i ciboi muboi ze ge'a jo'i voboi soboi re
+       the-vector (8 1 6) matrix-row the-vector (3 5 7), the-vector (4 9 2)
+</programlisting>
+  <para>or as</para>
+  <programlisting><anchor xml:id="c18e15d3"/><anchor xml:id="cll_chapter18-section15-example3"/>15.3)  jo'i biboi ciboi vo sa'i jo'i paboi muboi so ge'a jo'i xaboi zeboi re
+       the-vector (8 3 4) matrix-column the-vector (1 5 9), the-vector (6 7 2)
+</programlisting>
+  <para>The regular mekso operators can be applied to vectors and to matrices, since grammatically both of these are expressions. It is usually necessary to parenthesize matrices when used with operators in order to avoid incorrect groupings. There are no VUhU operators for the matrix operators of inner or outer products, but appropriate operators can be created using a suitable symbolic lerfu word or string prefixed by “ma'o”.</para>
+  <para>Matrices of more than two dimensions can be built up using either “pi'a” or “sa'i” with an appropriate subscript numbering the dimension. When subscripted, there is no difference between “pi'a” and “sa'i”.</para>
+</section>
+
+<section xml:id="cll_chapter18-section16">
+  <title>16. Reverse Polish notation</title>
+  <para>The following cmavo is discussed in this section:</para>
+  <programlisting>
+     fu'a    FUhA    reverse Polish flag
+</programlisting>
+  <para>So far, the Lojban notational conventions have mapped fairly familiar kinds of mathematical discourse. The use of forethought operators may have seemed odd when applied to “+”, but when applied to “f” they appear as the usual functional notation. Now comes a sharp break. Reverse Polish (RP) notation represents something completely different; even mathematicians don’t use it much. (The only common uses of RP, in fact, are in some kinds of calculators and in the implementation of some programming languages.)</para>
+  <para>In RP notation, the operator follows the operands. (Polish notation, where the operator precedes its operands, is another name for forethought mekso of the kind explained in <xref linkend="cll_chapter18-section6"/>.) The number of operands per operator is always fixed. No parentheses are required or permitted. In Lojban, RP notation is always explicitly marked by a “fu'a” at the beginning of the expression; there is no terminator. Here is a simple example:</para>
+  <programlisting><anchor xml:id="c18e16d1"/><anchor xml:id="cll_chapter18-section16-example1"/>16.1)  li fu'a reboi ci su'i du li mu
+       the-number (RP!) two, three, plus equals the-number five.
+</programlisting>
+  <para>The operands are “re” and “ci”; the operator is “su'i”.</para>
+  <para>Here is a more complex example:</para>
+  <programlisting><anchor xml:id="c18e16d2"/><anchor xml:id="cll_chapter18-section16-example2"/>16.2)  li fu'a reboi ci pi'i voboi mu pi'i su'i du li rexa
+       the-number (RP!) (two, three, times), (four, five, times), plus equals the-number two-six
+</programlisting>
+  <para>Here the operands of the first “pi'i” are “re” and “ci”; the operands of the second “pi'i” are “vo” and “mu” (with “boi” inserted where needed), and the operands of the “su'i” are “reboi ci pi'i”, or 6, and “voboi mu pi'i”, or 20. As you can see, it is easy to get lost in the world of reverse Polish notation; on the other hand, it is especially easy for a mechanical listener (who has a deep mental stack and doesn’t get lost) to comprehend.</para>
+  <para>The operands of an RP operator can be any legal mekso operand, including parenthesized mekso that can contain any valid syntax, whether more RP or something more conventional.</para>
+  <para>In Lojban, RP operators are always parsed with exactly two operands. What about operators which require only one operand, or more than two operands? The null operand “tu'o” and the null operator “ge'a” provide a simple solution. A one-operand operator like “va'a” always appears in a reverse Polish context as “tu'o va'a”. The “tu'o” provides the second operand, which is semantically ignored but grammatically necessary. Likewise, the three-operand version of “gei” appears in reverse Polish as “ge'a gei”, where the “ge'a” effectively merges the 2nd and 3rd operands into a single operand. Here are some examples:</para>
+  <programlisting><anchor xml:id="c18e16d3"/><anchor xml:id="cll_chapter18-section16-example3"/>16.3)  li fu'a ciboi muboi vu'u du
+            li fu'a reboi tu'o va'a
+       The-number (RP!) (three, five, minus) equals
+            the-number (RP!) two, null, negative-of.
+       3 − 5 = -2
+
+<anchor xml:id="c18e16d4"/><anchor xml:id="cll_chapter18-section16-example4"/>16.4)  li cinoki'oki'o du
+            li fu'a biboi ciboi panoboi ge'a gei
+       The-number 30-comma-comma equals
+            the-number (RP!) 8, (3, 10, null-op), exponential-notation.
+       30,000,000 = 3 × 10<superscript>8</superscript></programlisting>
+</section>
+
+<section xml:id="cll_chapter18-section17">
+  <title>17. Logical and non-logical connectives within mekso</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     .abu    BY      letter “a”
+      by     BY      letter “b”
+      cy     BY      letter “c”
+      fe'a   VUhU    nth root of (default square root)
+      lo'o   LOhO    terminator for LI
+</programlisting>
+  <para>As befits a logical language, Lojban has extensive provision for logical connectives within both operators and operands. Full details on logical and non-logical connectives are provided in <xref linkend="cll_chapter14"/>. Operands are connected in afterthought with selma'o A and in forethought with selma'o GA, just like sumti. Operators are connected in afterthought with selma'o JA and in forethought with selma'o GUhA, just like tanru components. This parallelism is no accident.</para>
+  <para>In addition, A+BO and A+KE constructs are allowed for grouping logically connected operands, and “ke ... ke'e” is allowed for grouping logically connected operators, although there are no analogues of tanru among the operators.</para>
+  <para>Despite the large number of rules required to support this feature, it is of relatively minor importance in the mekso scheme of things. <xref linkend="cll_chapter18-section17-example1"/> exhibits afterthought logical connection between operands:</para>
+  <programlisting><anchor xml:id="c18e17d1"/><anchor xml:id="cll_chapter18-section17-example1"/>17.1)  vei ci .a vo ve'o prenu cu klama le zarci
+       ( Three or four ) people go-to the market.
+</programlisting>
+  <para><xref linkend="cll_chapter18-section17-example2"/> is equivalent in meaning, but uses forethought connection:</para>
+  <programlisting><anchor xml:id="c18e17d2"/><anchor xml:id="cll_chapter18-section17-example2"/>17.2)  vei ga ci gi vo ve'o prenu cu klama le zarci
+       ( Either 3 or 4 ) people go-to the market.
+</programlisting>
+  <para>Note that the mekso here are being used as quantifiers. Lojban requires that any mekso other than a simple number be enclosed in parentheses when used as a quantifier. This rule prevents ambiguities that do not exist when using “li”.</para>
+  <para>By the way, “li” has an elidable terminator, “lo'o”, which is needed when a “li” sumti is followed by a logical connective that could seem to be within the mekso. For example:</para>
+  <programlisting><anchor xml:id="c18e17d3"/><anchor xml:id="cll_chapter18-section17-example3"/>17.3)  li re su'i re du
+            li vo lo'o .onai lo nalseldjuno namcu
+       The-number two plus two equals
+            the-number four or else a non-known number.
+</programlisting>
+  <para>Omitting the “lo'o” would cause the parser to assume that another operand followed the “.onai” and reject “lo” as an invalid operand.</para>
+  <para>Simple examples of logical connection between operators are hard to come by. A contrived example is:</para>
+  <programlisting><anchor xml:id="c18e17d4"/><anchor xml:id="cll_chapter18-section17-example4"/>17.4)  li re su'i je pi'i re du li vo
+        The-number two plus and times two equals the-number four.
+        2 + 2 = 4 and 2 × 2 = 4.
+</programlisting>
+  <para>The forethought-connection form of <xref linkend="cll_chapter18-section17-example4"/> is:</para>
+  <programlisting><anchor xml:id="c18e17d5"/><anchor xml:id="cll_chapter18-section17-example5"/>17.5)  li re ge su'i gi pi'i re
+            du li vo
+       the-number two both plus and times two
+            equals the-number four.
+       Both 2 + 2 = 4 and 2 × 2 = 4.
+</programlisting>
+  <para>Here is a classic example of operand logical connection:</para>
+  <programlisting><anchor xml:id="c18e17d6"/><anchor xml:id="cll_chapter18-section17-example6"/>17.6)  go li .abu bi'epi'i vei xy. te'a re ve'o su'i by. bi'epi'i xy.
+            su'i cy.  du li no
+       gi li xy. du li vei va'a by. ku'e su'i ja vu'u
+            fe'a vei by. bi'ete'a re vu'u vo bi'epi'i .abu bi'epi'i cy. ve'o [ku'e] ve'o
+            fe'i re bi'epi'i .abu
+       If-and-only-if the-number “a”-times-( “x” power two ) plus “b”-times-“x”
+            plus “c” equals the-number zero
+       then the-number x equals the-number [ the-negation-of( b ) plus or minus
+            the-root-of ( “b”-power-2 minus four-times-“a”-times-“c” ) ]
+            divided-by two-times-“a”.
+       Iff ax<superscript>2</superscript>  + bx + c = 0,
+            then x = -b ± <phrase role="IPA">√</phrase><!--sqrt-->(b<superscript>2</superscript>  − 4ac)
+            <!-- fraction bar -->
+                         2a
+</programlisting>
+  <para>Note the mixture of styles in <xref linkend="cll_chapter18-section17-example6"/>: the negation of b and the square root are represented by forethought and most of the operator precedence by prefixed “bi'e”, but explicit parentheses had to be added to group the numerator properly. In addition, the square root parentheses cannot be removed here in favor of simple “fe'a” and “ku'e” bracketing, because infix operators are present in the operand. Getting <xref linkend="cll_chapter18-section17-example6"/> to parse perfectly using the current parser took several tries: a more relaxed style would dispense with most of the “bi'e” cmavo and just let the standard precedence rules be understood.</para>
+  <para>Non-logical connection with JOI and BIhI is also permitted between operands and between operators. One use for this construct is to connect operands with “bi'o” to create intervals:</para>
+  <programlisting><anchor xml:id="c18e17d7"/><anchor xml:id="cll_chapter18-section17-example7"/>17.7)  li no ga'o bi'o ke'i pa
+       the-number zero (inclusive) from-to (exclusive) one
+       [0,1)
+       the numbers from zero to one, including zero but not including one
+</programlisting>
+  <para>Intervals defined by a midpoint and range rather than beginning and end points can be expressed by “mi'i”:</para>
+  <programlisting><anchor xml:id="c18e17d8"/><anchor xml:id="cll_chapter18-section17-example8"/>17.8)  li pimu ga'o mi'i ke'i pimu
+       the-number 0.5 ± 0.5
+</programlisting>
+  <para>which expresses the same interval as <xref linkend="cll_chapter18-section17-example7"/>. Note that the “ga'o” and “ke'i” still refer to the endpoints, although these are now implied rather than expressed. Another way of expressing the same thing:</para>
+  <programlisting><anchor xml:id="c18e17d9"/><anchor xml:id="cll_chapter18-section17-example9"/>17.9)  li pimu su'i ni'upimu bi'o ma'upimu
+       the-number 0.5 plus [-0.5 from-to +0.5]
+</programlisting>
+  <para>Here we have the sum of a number and an interval, which produces another interval centered on the number. As <xref linkend="cll_chapter18-section17-example9"/> shows, non-logical (or logical) connection of operands has higher precedence than any mekso operator.</para>
+  <para>You can also combine two operands with “ce'o”, the sequence connective of selma'o JOI, to make a compound subscript:</para>
+  <programlisting><anchor xml:id="c18e17d10"/><anchor xml:id="cll_chapter18-section17-example10"/>17.10) xy. xi vei by. ce'o dy. [ve'o]
+    “x” sub (“b” sequence “d”)
+    x<subscript>b,d</subscript></programlisting>
+</section>
+
+<section xml:id="cll_chapter18-section18">
+  <title>18. Using Lojban resources within mekso</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     na'u    NAhU    selbri to operator
+     ni'e    NIhE    selbri to operand
+     mo'e    MOhE    sumti to operand
+     te'u    TEhU    terminator for all three
+</programlisting>
+  <para>One of the mekso design goals requires the ability to make use of Lojban’s vocabulary resources within mekso to extend the built-in cmavo for operands and operators. There are three relevant constructs: all three share the elidable terminator “te'u” (which is also used to terminate vectors marked with “jo'i”)</para>
+  <para>The cmavo “na'u” makes a selbri into an operator. In general, the first place of the selbri specifies the result of the operator, and the other unfilled places specify the operands:</para>
+  <programlisting><anchor xml:id="c18e18d1"/><anchor xml:id="cll_chapter18-section18-example1"/>18.1)  li na'u tanjo te'u vei pai fe'i re [ve'o] du li ci'i
+       The-number the-operator tangent ( <phrase role="IPA">π</phrase> / 2 ) = the-number infinity.
+       tan(<phrase role="IPA">π</phrase>/2) = <phrase role="IPA">∞</phrase></programlisting>
+  <para>“tanjo” is the gismu for “x1 is the tangent of x2”, and the “na'u” here makes it into an operator which is then used in forethought</para>
+  <para>The cmavo “ni'e” makes a selbri into an operand. The x1 place of the selbri generally represents a number, and therefore is often a “ni” abstraction, since “ni” abstractions represent numbers. The “ni'e” makes that number available as a mekso operand. A common application is to make equations relating pure dimensions:</para>
+  <programlisting><anchor xml:id="c18e18d2"/><anchor xml:id="cll_chapter18-section18-example2"/>18.2)  li ni'e ni clani [te'u] pi'i ni'e ni ganra [te'u] pi'i
+            ni'e ni condi te'u du li ni'e ni canlu
+       The-number quantity-of length times quantity-of width times
+            quantity-of depth equals the-number quantity-of volume.
+       Length × Width × Depth = Volume
+</programlisting>
+  <para>The cmavo “mo'e” operates similarly to “ni'e”, but makes a sumti (rather than a selbri) into an operand. This construction is useful in stating equations involving dimensioned numbers:</para>
+  <programlisting><anchor xml:id="c18e18d3"/><anchor xml:id="cll_chapter18-section18-example3"/>18.3)  li mo'e re ratcu su'i mo'e re ractu du li mo'e vo danlu
+       The-number two rats plus two rabbits equals the-number four animals.
+       2 rats + 2 rabbits = 4 animals.
+</programlisting>
+  <para>Another use is in constructing Lojbanic versions of so-called “folk quantifiers”, such as “a pride of lions”:</para>
+  <programlisting><anchor xml:id="c18e18d4"/><anchor xml:id="cll_chapter18-section18-example4"/>18.4)  mi viska vei mo'e lo'e lanzu ve'o cinfo
+       I see ( the-typical family )-number-of lions.
+       I see a pride of lions.
+</programlisting>
+</section>
+
+<section xml:id="cll_chapter18-section19">
+  <title>19. Other uses of mekso</title>
+  <para>The following cmavo are discussed in this section:</para>
+  <programlisting>
+     me'o    LI      the mekso
+     nu'a    NUhA    operator to selbri
+     mai     MAI     utterance ordinal
+     mo'o    MAI     higher order utterance ordinal
+     roi     ROI     quantified tense
+</programlisting>
+  <para>So far we have seen mekso used as sumti (with “li”), as quantifiers (often parenthesized), and in MOI and ME-MOI selbri. There are a few other minor uses of mekso within Lojban.</para>
+  <para>The cmavo “me'o” has the same grammatical use as “li” but slightly different semantics. “li” means “the number which is the value of the mekso ...”, whereas “me'o” just means “the mekso ...” So it is true that:</para>
+  <programlisting><anchor xml:id="c18e19d1"/><anchor xml:id="cll_chapter18-section19-example1"/>19.1)  li re su'i re du li vo
+       The-number two plus two equals the-number four.
+       2 + 2 = 4
+</programlisting>
+  <para>but false that:</para>
+  <programlisting><anchor xml:id="c18e19d2"/><anchor xml:id="cll_chapter18-section19-example2"/>19.2)  me'o re su'i re du me'o vo
+       The-mekso two plus two equals the-mekso four.
+       “2 + 2” = “4”
+</programlisting>
+  <para>since the expressions “2 + 2” and “4” are not the same. The relationship between “li” and “me'o” is related to that between “la djan.”, the person named John, and “zo .djan.”, the name “John”</para>
+  <para>The cmavo “nu'a” is the inverse of “na'u”, and allows a mekso operator to be used as a normal selbri, with the place structure:</para>
+  <programlisting>
+       x1 is the result of applying (operator) to x2, x3, ...
+</programlisting>
+  <para>for as many places as may be required. For example:</para>
+  <programlisting><anchor xml:id="c18e19d3"/><anchor xml:id="cll_chapter18-section19-example3"/>19.3)  li ni'umu cu nu'a va'a li ma'umu
+       The-number -5 is-the-negation-of the-number +5.
+</programlisting>
+  <para>uses “nu'a” to make the operator “va'a” into a two-place bridi</para>
+  <para>Used together, “nu'a” and “na'u” make it possible to ask questions about mekso operators, even though there is no specific cmavo for an operator question, nor is it grammatical to utter an operator in isolation. Consider <xref linkend="cll_chapter18-section19-example4"/>, to which <xref linkend="cll_chapter18-section19-example5"/> is one correct answer:</para>
+  <programlisting><anchor xml:id="c18e19d4"/><anchor xml:id="cll_chapter18-section19-example4"/>19.4)  li re na'u mo re du li vo
+       The-number two what-operator? two equals the-number four.
+       2 ? 2 = 4
+
+<anchor xml:id="c18e19d5"/><anchor xml:id="cll_chapter18-section19-example5"/>19.5)  nu'a su'i
+       plus
+</programlisting>
+  <para>In <xref linkend="cll_chapter18-section19-example4"/>, “na'u mo” is an operator question, because “mo” is the selbri question cmavo and “na'u” makes the selbri into an operator. <xref linkend="cll_chapter18-section19-example5"/> makes the true answer “su'i” into a selbri (which is a legal utterance) with the inverse cmavo “nu'a”. Mechanically speaking, inserting <xref linkend="cll_chapter18-section19-example5"/> into <xref linkend="cll_chapter18-section19-example4"/> produces:</para>
+  <programlisting><anchor xml:id="c18e19d6"/><anchor xml:id="cll_chapter18-section19-example6"/>19.6)  li re na'u nu'a su'i re du li vo
+       The-number two (the-operator the-selbri plus) two equals the-number four.
+</programlisting>
+  <para>where the “na'u nu'a” cancels out, leaving a truthful bridi</para>
+  <para>Numerical free modifiers, corresponding to English “firstly”, “secondly”, and so on, can be created by suffixing a member of selma'o MAI to a digit string or a lerfu string. (Digit strings are compound cmavo beginning with a cmavo of selma'o PA, and containing only cmavo of PA or BY; lerfu strings begin with a cmavo of selma'o BY, and likewise contain only PA or BY cmavo.) Here are some examples:</para>
+  <programlisting><anchor xml:id="c18e19d7"/><anchor xml:id="cll_chapter18-section19-example7"/>19.7)  pamai
+       firstly
+
+<anchor xml:id="c18e19d8"/><anchor xml:id="cll_chapter18-section19-example8"/>19.8)  remai
+       secondly
+
+<anchor xml:id="c18e19d9"/><anchor xml:id="cll_chapter18-section19-example9"/>19.9)  romai
+       all-ly
+       lastly
+
+<anchor xml:id="c18e19d10"/><anchor xml:id="cll_chapter18-section19-example10"/>19.10) ny.mai
+       nth-ly
+
+<anchor xml:id="c18e19d11"/><anchor xml:id="cll_chapter18-section19-example11"/>19.11) pasomo'o
+       nineteenthly (higher order)
+</programlisting>
+  <para>The difference between “mai” and “mo'o” is that “mo'o” enumerates larger subdivisions of a text. Each “mo'o” subdivision can then be divided into pieces and internally numbered with “mai”. If this chapter were translated into Lojban, each section would be numbered with “mo'o”. (See <xref linkend="cll_chapter19"/> for more on these words.)</para>
+  <para>A numerical tense can be created by suffixing a digit string with “roi”. This usage generates tenses corresponding to English “once”, “twice”, and so on. This topic belongs to a detailed discussion of Lojban tenses, and is explained further in <xref linkend="cll_chapter10"/>.</para>
+  <para>Note: the elidable terminator “boi” is not used between a number and a member of MAI or ROI.</para>
+</section>
+
+<section xml:id="cll_chapter18-section20">
+  <title>20. Explicit operator precedence</title>
+  <para>As mentioned earlier, Lojban does provide a way for the precedences of operators to be explicitly declared, although current parsers do not understand these declarations.</para>
+  <para>The declaration is made in the form of a metalinguistic comment using “ti'o”, a member of selma'o SEI. “sei”, the other member of SEI, is used to insert metalinguistic comments on a bridi which give information about the discourse which the bridi comprises. The format of a “ti'o” declaration has not been formally established, but presumably would take the form of mentioning a mekso operator and then giving it either an absolute numerical precedence on some pre-established scale, or else specifying relative precedences between new operators and existing operators.</para>
+  <para>In future, we hope to create an improved machine parser that can understand declarations of the precedences of simple operators belonging to selma'o VUhU. Originally, all operators would have the same precedence. Declarations would have the effect of raising the specified cmavo of VUhU to higher precedence levels. Complex operators formed with “na'u”, “ni'e”, or “ma'o” would remain at the standard low precedence; declarations with respect to them are for future implementation efforts. It is probable that such a parser would have a set of “commonly assumed precedences” built into it (selectable by a special “ti'o” declaration) that would match mathematical intuition: times higher than plus, and so on.</para>
+</section>
+
+<section xml:id="cll_chapter18-section21">
+  <title>21. Miscellany</title>
+  <para>A few other points:</para>
+  <para>“se” can be used to convert an operator as if it were a selbri, so that its arguments are exchanged. For example:</para>
+  <programlisting><anchor xml:id="c18e21d1"/><anchor xml:id="cll_chapter18-section21-example1"/>21.1)  li ci se vu'u vo du li pa
+       The-number three (inverse) minus four equals the-number one.
+       3 subtracted from 4 equals 1.
+</programlisting>
+  <para>The other converters of selma'o SE can also be used on operators with more than two operands, and they can be compounded to create (probably unintelligible) operators as needed.</para>
+  <para>Members of selma'o NAhE are also legal on an operator to produce a scalar negation of it. The implication is that some other operator would apply to make the bridi true:</para>
+  <programlisting><anchor xml:id="c18e21d2"/><anchor xml:id="cll_chapter18-section21-example2"/>21.2)  li ci na'e su'i vo du li pare
+       The-number 3 non-plus 4 equals the-number 12.
+
+<anchor xml:id="c18e21d3"/><anchor xml:id="cll_chapter18-section21-example3"/>21.3)  li ci to'e vu'u re du li mu
+       The-number 3 opposite-of-minus 2 equals the-number 5.
+</programlisting>
+  <para>The sense in which “plus” is the opposite of “minus” is not a mathematical but rather a linguistic one; negated operators are defined only loosely.</para>
+  <para>“la'e” and “lu'e” can be used on operands with the usual semantics to get the referent of or a symbol for an operand. Likewise, a member of selma'o NAhE followed by “bo” serves to scalar-negate an operand, implying that some other operand would make the bridi true:</para>
+  <programlisting><anchor xml:id="c18e21d4"/><anchor xml:id="cll_chapter18-section21-example4"/>21.4)  li re su'i re du li na'ebo mu
+       The-number 2 plus 2 equals the-number non-5.
+       2 + 2 = something other than 5.
+</programlisting>
+  <para>The digits 0-9 have rafsi, and therefore can be used in making lujvo. Additionally, all the rafsi have CVC form and can stand alone or together as names:</para>
+  <programlisting><anchor xml:id="c18e21d5"/><anchor xml:id="cll_chapter18-section21-example5"/>21.5)  la zel. poi gunta la tebes. pu nanmu
+       Those-named “Seven” who attack that-named “Thebes” [past] are-men.
+       The Seven Against Thebes were men.
+</programlisting>
+  <para>Of course, there is no guarantee that the name “zel.” is connected with the number rafsi: an alternative which cannot be misconstrued is:</para>
+  <programlisting><anchor xml:id="c18e21d6"/><anchor xml:id="cll_chapter18-section21-example6"/>21.6)  la zemei poi gunta la tebes. pu nanmu
+       Those-named-the Sevensome who attack Thebes [past] are-men.
+</programlisting>
+  <para>Certain other members of PA also have assigned rafsi: “so'a”, “so'e”, “so'i”, “so'o”, “so'u”, “da'a”, “ro”, “su'e”, “su'o”, “pi”, and “ce'i”. Furthermore, although the cmavo “fi'u” does not have a rafsi as such, it is closely related to the gismu “frinu”, meaning “fraction”; therefore, in a context of numeric rafsi, you can use any of the rafsi for “frinu” to indicate a fraction slash.</para>
+  <para>A similar convention is used for the cmavo “cu'o” of selma'o MOI, which is closely related to “cunso” (probability); use a rafsi for “cunso” in order to create lujvo based on “cu'o”. The cmavo “mei” and “moi” of MOI have their own rafsi, two each in fact: “mem”/“mei” and “mom”/“moi” respectively.</para>
+  <para>The grammar of mekso as described so far imposes a rigid distinction between operators and operands. Some flavors of mathematics (lambda calculus, algebra of functions) blur this distinction, and Lojban must have a method of doing the same. An operator can be changed into an operand with “ni'enu'a”, which transforms the operator into a matching selbri and then the selbri into an operand.</para>
+  <para>To change an operand into an operator, we use the cmavo “ma'o”, already introduced as a means of changing a lerfu string such as “fy.” into an operator. In fact, “ma'o” can be followed by any mekso operand, using the elidable terminator “te'u” if necessary.</para>
+  <para>There is a potential semantic ambiguity in “ma'o fy. [te'u]” if “fy.” is already in use as a variable: it comes to mean “the function whose value is always ‘f’”. However, mathematicians do not normally use the same lerfu words or strings as both functions and variables, so this case should not arise in practice.</para>
+</section>
+
+<section xml:id="cll_chapter18-section22">
+  <title>22. Four score and seven: a mekso problem</title>
+  <para>Abraham Lincoln’s Gettysburg Address begins with the words “Four score and seven years ago”. This section exhibits several different ways of saying the number “four score and seven”. (A “score”, for those not familiar with the term, is 20; it is analogous to a “dozen” for 12.) The trivial way:</para>
+  <programlisting><anchor xml:id="c18e22d1"/><anchor xml:id="cll_chapter18-section22-example1"/>22.1)  li bize
+       eight seven
+       87
+</programlisting>
+  <para><xref linkend="cll_chapter18-section22-example1"/> is mathematically correct, but sacrifices the spirit of the English words, which are intended to be complex and formal.</para>
+  <programlisting><anchor xml:id="c18e22d2"/><anchor xml:id="cll_chapter18-section22-example2"/>22.2)  li vo pi'i reno su'i ze
+       four times twenty plus seven
+       4 × 20 + 7
+</programlisting>
+  <para><xref linkend="cll_chapter18-section22-example2"/> is also mathematically correct, but still misses something. “Score” is not a word for 20 in the same way that “ten” is a word for 10: it contains the implication of 20 objects. The original may be taken as short for “Four score years and seven years ago”. Thinking of a score as a twentysome rather than as 20 leads to:</para>
+  <programlisting><anchor xml:id="c18e22d3"/><anchor xml:id="cll_chapter18-section22-example3"/>22.3)  li mo'e voboi renomei te'u su'i ze
+       the-number-of four twentysomes plus seven
+</programlisting>
+  <para>In <xref linkend="cll_chapter18-section22-example3"/>, “voboi renomei” is a sumti signifying four things each of which are groups of twenty; the “mo'e” and “te'u” then make this sumti into a number in order to allow it to be the operand of “su'i”.</para>
+  <para>Another approach is to think of “score” as setting a representation base. There are remnants of base-20 arithmetic in some languages, notably French, in which 87 is “quatre-vingt-sept”, literally “four-twenties-seven”. (This fact makes the Gettysburg Address hard to translate into French!) If “score” is the representation base, then we have:</para>
+  <programlisting><anchor xml:id="c18e22d4"/><anchor xml:id="cll_chapter18-section22-example4"/>22.4)  li vo pi'e ze ju'u reno
+       four ; seven base 20
+       47<subscript>20</subscript></programlisting>
+  <para>Overall, <xref linkend="cll_chapter18-section22-example3"/> probably captures the flavor of the English best. <xref linkend="cll_chapter18-section22-example1"/> and <xref linkend="cll_chapter18-section22-example2"/> are too simple, and <xref linkend="cll_chapter18-section22-example4"/> is too tricky. Nevertheless, all four examples are good Lojban. Pedagogically, these examples illustrate the richness of lojbau mekso: anything that can be said at all, can probably be said in more than one way.</para>
+</section>
+
+<section xml:id="cll_chapter18-section23">
+  <title>23. mekso selma'o summary</title>
+  <para>Except as noted, each selma'o has only one cmavo.</para>
+  <programlisting>
+     BOI     elidable terminator for numerals and lerfu strings
+     BY      lerfu for variables and functions (see <xref linkend="cll_chapter17"/>)
+     FUhA    reverse-Polish flag
+     GOhA    includes “du” (mathematical equality) and other non-mekso cmavo
+     JOhI    array flag
+     KUhE    elidable terminator for forethought mekso
+     LI      mekso articles (li and me'o)
+     MAhO    make operand into operator
+     MOI     creates mekso selbri (moi, mei, si'e, and cu'o, see <xref linkend="cll_chapter18-section11"/>)
+     MOhE    make sumti into operand
+     NAhU    make selbri into operator
+     NIhE    make selbri into operand
+     NUhA    make operator into selbri
+     PA      numbers (see <xref linkend="cll_chapter18-section25"/>)
+     PEhO    optional forethought mekso marker
+     TEhU    elidable terminator for NAhU, NIhE, MOhE, MAhO, and JOhI
+     VEI     left parenthesis
+     VEhO    right parenthesis
+     VUhU    operators (see <xref linkend="cll_chapter18-section24"/>)
+     XI      subscript flag
+</programlisting>
+</section>
+
+<section xml:id="cll_chapter18-section24">
+  <title>24. Complete table of VUhU cmavo, with operand structures</title>
+  <para>The operand structures specify what various operands (labeled a, b, c, ...) mean. The implied context is forethought, since only forethought operators can have a variable number of operands; however, the same rules apply to infix and RP uses of VUhU.</para>
+  <programlisting>
+    su'i    plus                                  (((a + b) + c) + ...)
+    pi'i    times                                 (((a × b) × c) × ...)
+    vu'u    minus                                 (((a − b) − c) − ...)
+    fe'i    divided by                            (((a / b) / c) / ...)
+    ju'u    number base                           numeral string “a” interpreted in the base b
+    pa'i    ratio                                 the ratio of a to b, a:b
+    fa'i    reciprocal of/multiplicative inverse  1 / <emphasis>a</emphasis>
+    gei     scientific notation                   b × (c [default 10] to the <emphasis>a</emphasis> power)
+    ge'a    null operator                         (no operands)
+    de'o    logarithm                             log <emphasis>a</emphasis> to base <emphasis>b</emphasis> (default 10 or <emphasis>e</emphasis> as appropriate)
+    te'a    to the power/exponential              <emphasis>a</emphasis> to the <emphasis>b</emphasis> power
+    fe'a    nth root of/inverse power             b<superscript>th</superscript> root of a (default square root: b = 2)
+    cu'a    absolute value/norm                   | a |
+    ne'o    factorial                             a!
+    pi'a    matrix row vector combiner            (all operands are row vectors)
+    sa'i    matrix column vector combiner         (all operands are column vectors)
+    ri'o    integral                              integral of a with respect to b over range c
+    sa'o    derivative                            derivative of a with respect to b of degree c (default 1)
+    fu'u    non-specific operator                 (variable)
+    si'i    sigma (Σ) summation                   summation of a using variable b over range c
+    va'a    negation of/additive inverse          -a
+    re'a    matrix transpose/dual                 a<superscript>*</superscript></programlisting>
+</section>
+
+<section xml:id="cll_chapter18-section25">
+  <title>25. Complete table of PA cmavo: digits, punctuation, and other numbers.</title>
+  <itemizedlist>
+    <listitem>
+      <para>Decimal digits:
+<programlisting>
+              no,  pa,  re,  ci,  vo,  mu,  xa,  ze,  bi,  so
+              0,   1,   2,   3,   4,   5,   6,   7,   8,   9
+       rafsi: non, pav, rel, cib, von, mum, xav, zel, biv, soz
+</programlisting></para>
+    </listitem>
+    <listitem>
+      <para>Hexadecimal digits:
+<programlisting>
+       dau,  fei,  gai,  jau,  rei,  vai
+       A/10, B/11, C/12, D/13, E/14, F/15
+</programlisting></para>
+    </listitem>
+    <listitem>
+      <para>Special numbers:
+<programlisting>
+       pai,    ka'o,           te'o,             ci'i
+       <phrase role="IPA">π</phrase>,      imaginary i,    exponential e,    infinity (<phrase role="IPA">∞</phrase>)
+</programlisting></para>
+    </listitem>
+    <listitem>
+      <para>Number punctuation:
+<programlisting>
+       pi,                 ce'i,          fi'u
+       decimal point,      percentage,    fraction (not division)
+rafsi: piz,                cez,           fi'u (from frinu; see <xref linkend="cll_chapter18-section20"/>)
+
+       pi'e,               ma'u,                     ni'u
+       mixed-base point,   plus sign (not addition), minus sign (not subtraction)
+
+       ki'o,               ra'e
+       thousands comma,    repeating-decimal indicator
+
+       ji'i,               ka'o
+       approximation sign, complex number separator
+</programlisting></para>
+    </listitem>
+    <listitem>
+      <para>Indefinite numbers:
+<programlisting>
+       ro,        so'a,          so'e,           so'i,    so'o,       so'u,     da'a
+       all,       almost all,    most,           many,    several,    few,      all but
+rafsi: rol,       soj,           sor or so'i,    sos,     sot,        daz
+
+       su'e,      su'o
+       at most,   at least
+rafsi: su'e,      su'o
+
+       me'i,      za'u
+       less than, more than
+
+       no'o
+       the typical number
+</programlisting></para>
+    </listitem>
+    <listitem>
+      <para>Subjective numbers:
+<programlisting>
+       rau,       du'e,        mo'a
+       enough,    too many,    too few
+</programlisting></para>
+    </listitem>
+    <listitem>
+      <para>Miscellaneous:
+<programlisting>
+       xo,                 tu'o
+       number question,    null operand
+</programlisting></para>
+    </listitem>
+  </itemizedlist>
+</section>
+
+<section xml:id="cll_chapter18-section26">
+  <title>26. Table of MOI cmavo, with associated rafsi and place structures</title>
+  <programlisting>
+    mei     x1 is a mass formed from a set x2 of n members, one or more of
+            which is/are x3, [measured relative to the set x4/by standard x4]
+    rafsi:  mem, mei
+
+    moi     x1 is the (n)th member of set x2 when ordered by rule x3
+            [by standard x4]
+    rafsi:  mom, moi
+
+    si'e    x1 is an (n)th portion of mass x2 [by standard x3]
+    rafsi:  none
+
+    cu'o    event x1 has probability (n) of occurring under conditions x2
+            [by standard x3]
+    rafsi:  cu'o (borrowed from cunso; see <xref linkend="cll_chapter18-section20"/>)
+
+    va'e    x1 is at scale position (n) on the scale x2
+            [by standard x3]
+    rafsi:  none
+</programlisting>
+</section>
+
+
+</chapter>

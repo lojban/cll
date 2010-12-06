@@ -1,0 +1,1156 @@
+<chapter xml:id="cll_chapter4">
+  <title>Chapter 4
+The Shape Of Words To Come: Lojban Morphology</title>
+
+
+<section xml:id="cll_chapter4-section1">
+  <title>1. Introductory</title>
+  <para>Morphology is the part of grammar that deals with the form of words. Lojban’s morphology is fairly simple compared to that of many languages, because Lojban words don’t change form depending on how they are used. English has only a small number of such changes compared to languages like Russian, but it does have changes like “boys” as the plural of “boy”, or “walked” as the past-tense form of “walk”. To make plurals or past tenses in Lojban, you add separate words to the sentence that express the number of boys, or the time when the walking was going on.</para>
+  <para>However, Lojban does have what is called “derivational morphology”: the capability of building new words from old words. In addition, the form of words tells us something about their grammatical uses, and sometimes about the means by which they entered the language. Lojban has very orderly rules for the formation of words of various types, both the words that already exist and new words yet to be created by speakers and writers.</para>
+  <para>A stream of Lojban sounds can be uniquely broken up into its component words according to specific rules. These so-called “morphology rules” are summarized in this chapter. (However, a detailed algorithm for breaking sounds into words has not yet been fully debugged, and so is not presented in this book.) First, here are some conventions used to talk about groups of Lojban letters, including vowels and consonants.</para>
+  <variablelist>
+    <varlistentry>
+      <term>1)</term>
+      <listitem>
+        <para>V represents any single Lojban vowel except “y”; that is, it represents “a”, “e”, “i”, “o”, or “u”.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>2)</term>
+      <listitem>
+        <para>
+VV represents either a diphthong, one of the following:
+<programlisting>
+      ai ei oi au
+</programlisting>or a two-syllable vowel pair with an apostrophe separating the vowels, one of the following:
+<programlisting>
+      a'a    a'e    a'i    a'o    a'u
+      e'a    e'e    e'i    e'o    e'u
+      i'a    i'e    i'i    i'o    i'u
+      o'a    o'e    o'i    o'o    o'u
+      u'a    u'e    u'i    u'o    u'u
+</programlisting></para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>3)</term>
+      <listitem>
+        <para>C represents a single Lojban consonant, not including the apostrophe, one of “b”, “c”, “d”, “f”, “g”, “j”, “k”, “l”, “m”, “n”, “p”, “r”, “s”, “t”, “v”, “x”, or “z”. Syllabic “l”, “m”, “n”, and “r” always count as consonants for the purposes of this chapter.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>4)</term>
+      <listitem>
+        <para>
+CC represents two adjacent consonants of type C which constitute one of the 48 permissible initial consonant pairs:
+<programlisting>
+      bl br
+      cf ck cl cm cn cp cr ct
+      dj dr dz
+      fl fr
+      gl gr
+      jb jd jg jm jv
+      kl kr
+      ml mr
+      pl pr
+      sf sk sl sm sn sp sr st
+      tc tr ts
+      vl vr
+      xl xr
+      zb zd zg zm zv
+</programlisting></para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>5)</term>
+      <listitem>
+        <para>C/C represents two adjacent consonants which constitute one of the permissible consonant pairs (not necessarily a permissible initial consonant pair). The permissible consonant pairs are explained in <xref linkend="cll_chapter3"/>. In brief, any consonant pair is permissible unless it: contains two identical letters, contains both a voiced (excluding “r”, “l”, “m”, “n”) and an unvoiced consonant, or is one of certain specified forbidden pairs.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>6)</term>
+      <listitem>
+        <para>C/CC represents a consonant triple. The first two consonants must constitute a permissible consonant pair; the last two consonants must constitute a permissible initial consonant pair.</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  <para>Lojban has three basic word classes — parts of speech — in contrast to the eight that are traditional in English. These three classes are called cmavo, brivla, and cmene. Each of these classes has uniquely identifying properties — an arrangement of letters that allows the word to be uniquely and unambiguously recognized as a separate word in a string of Lojban, upon either reading or hearing, and as belonging to a specific word-class.</para>
+  <para>They are also functionally different: cmavo are the structure words, corresponding to English words like “and”, “if”, “the” and “to”; brivla are the content words, corresponding to English words like “come”, “red”, “doctor”, and “freely”; cmene are proper names, corresponding to English “James”, “Afghanistan”, and “Pope John Paul II”.</para>
+</section>
+
+<section xml:id="cll_chapter4-section2">
+  <title>2. cmavo</title>
+  <para>The first group of Lojban words discussed in this chapter are the cmavo. They are the structure words that hold the Lojban language together. They often have no semantic meaning in themselves, though they may affect the semantics of brivla to which they are attached. The cmavo include the equivalent of English articles, conjunctions, prepositions, numbers, and punctuation marks. There are over a hundred subcategories of cmavo, known as “selma'o”, each having a specifically defined grammatical usage. The various selma'o are discussed throughout <xref linkend="cll_chapter5"/> to <xref linkend="cll_chapter19"/> and summarized in <xref linkend="cll_chapter20"/>.</para>
+  <para>Standard cmavo occur in four forms defined by their word structure. Here are some examples of the various forms:</para>
+  <programlisting>
+    V-form      .a      .e     .i      .o     .u
+    CV-form     ba      ce     di      fo     gu
+    VV-form     .au     .ei    .ia     .o'u   .u'e
+    CVV-form    ki'a    pei    mi'o    coi    cu'u
+</programlisting>
+  <para>In addition, there is the cmavo “.y.” (remember that “y” is not a V), which must have pauses before and after it.</para>
+  <para>A simple cmavo thus has the property of having only one or two vowels, or of having a single consonant followed by one or two vowels. Words consisting of three or more vowels in a row, or a single consonant followed by three or more vowels, are also of cmavo form, but are reserved for experimental use: a few examples are “ku'a'e”, “sau'e”, and “bai'ai”. All CVV cmavo beginning with the letter “x” are also reserved for experimental use. In general, though, the form of a cmavo tells you little or nothing about its grammatical use.</para>
+  <para>“Experimental use” means that the language designers will not assign any standard meaning or usage to these words, and words and usages coined by Lojban speakers will not appear in official dictionaries for the indefinite future. Experimental-use words provide an escape hatch for adding grammatical mechanisms (as opposed to semantic concepts) the need for which was not foreseen.</para>
+  <para>The cmavo of VV-form include not only the diphthongs and vowel pairs listed in <xref linkend="cll_chapter4-section1"/>, but also the following ten additional diphthongs:</para>
+  <programlisting>
+            .ia    .ie    .ii    .io    .iu
+            .ua    .ue    .ui    .uo    .uu
+</programlisting>
+  <para>In addition, cmavo can have the form “Cy”, a consonant followed by the letter “y”. These cmavo represent letters of the Lojban alphabet, and are discussed in detail in <xref linkend="cll_chapter17"/>.</para>
+  <para>Compound cmavo are sequences of cmavo attached together to form a single written word. A compound cmavo is always identical in meaning and in grammatical use to the separated sequence of simple cmavo from which it is composed. These words are written in compound form merely to save visual space, and to ease the reader’s burden in identifying when the component cmavo are acting together.</para>
+  <para>Compound cmavo, while not visually short like their components, can be readily identified by two characteristics:</para>
+  <variablelist>
+    <varlistentry>
+      <term>1)</term>
+      <listitem>
+        <para>They have no consonant pairs or clusters, and</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>2)</term>
+      <listitem>
+        <para>They end in a vowel.</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  <para>For example:</para>
+  <programlisting><anchor xml:id="c4e2d1"/><anchor xml:id="cll_chapter4-section2-example1"/>2.1)   .iseci'i
+       .i se ci'i
+
+<anchor xml:id="c4e2d2"/><anchor xml:id="cll_chapter4-section2-example2"/>2.2)   punaijecanai
+       pu nai je ca nai
+
+<anchor xml:id="c4e2d3"/><anchor xml:id="cll_chapter4-section2-example3"/>2.3)   ki'e.u'e
+       ki'e .u'e
+</programlisting>
+  <para>The cmavo “.u'e” begins with a vowel, and like all words beginning with a vowel, requires a pause (represented by “.”) before it. This pause cannot be omitted simply because the cmavo is incorporated into a compound cmavo. On the other hand,</para>
+  <programlisting><anchor xml:id="c4e2d4"/><anchor xml:id="cll_chapter4-section2-example4"/>2.4)   ki'e'u'e
+</programlisting>
+  <para>is a single cmavo reserved for experimental purposes: it has four vowels.</para>
+  <programlisting><anchor xml:id="c4e2d5"/><anchor xml:id="cll_chapter4-section2-example5"/>2.5)   cy.ibu.abu
+       cy. .ibu .abu
+</programlisting>
+  <para>Again the pauses are required (see <xref linkend="cll_chapter4-section9"/>); the pause after “cy.” merges with the pause before “.ibu”.</para>
+  <para>There is no particular stress required in cmavo or their compounds. Some conventions do exist that are not mandatory. For two-syllable cmavo, for example, stress is typically placed on the first vowel; an example is</para>
+  <programlisting><anchor xml:id="c4e2d6"/><anchor xml:id="cll_chapter4-section2-example6"/>2.6)   .e'o ko ko kurji
+       .E'o ko ko KURji
+</programlisting>
+  <para>This convention results in a consistent rhythm to the language, since brivla are required to have penultimate stress; some find this esthetically pleasing.</para>
+  <para>If the final syllable of one word is stressed, and the first syllable of the next word is stressed, you must insert a pause or glottal stop between the two stressed syllables. Thus</para>
+  <programlisting><anchor xml:id="c4e2d7"/><anchor xml:id="cll_chapter4-section2-example7"/>2.7)   le re nanmu
+</programlisting>
+  <para>can be optionally pronounced</para>
+  <programlisting><anchor xml:id="c4e2d8"/><anchor xml:id="cll_chapter4-section2-example8"/>2.8)   le RE. NANmu
+</programlisting>
+  <para>since there are no rules forcing stress on either of the first two words; the stress on “re”, though, demands that a pause separate “re” from the following syllable “nan” to ensure that the stress on “nan” is properly heard as a stressed syllable. The alternative pronunciation</para>
+  <programlisting><anchor xml:id="c4e2d9"/><anchor xml:id="cll_chapter4-section2-example9"/>2.9)   LE re NANmu
+</programlisting>
+  <para>is also valid; this would apply secondary stress (used for purposes of emphasis, contrast or sentence rhythm) to “le”, comparable in rhythmical effect to the English phrase “THE two men”. In <xref linkend="cll_chapter4-section2-example8"/>, the secondary stress on “re” would be similar to that in the English phrase “the TWO men”.</para>
+  <para>Both cmavo may also be left unstressed, thus:</para>
+  <programlisting><anchor xml:id="c4e2d10"/><anchor xml:id="cll_chapter4-section2-example10"/>2.10)  le re NANmu
+</programlisting>
+  <para>This would probably be the most common usage.</para>
+</section>
+
+<section xml:id="cll_chapter4-section3">
+  <title>3. brivla</title>
+  <para>Predicate words, called “brivla”, are at the core of Lojban. They carry most of the semantic information in the language. They serve as the equivalent of English nouns, verbs, adjectives, and adverbs, all in a single part of speech.</para>
+  <para>Every brivla belongs to one of three major subtypes. These subtypes are defined by the form, or morphology, of the word — all words of a particular structure can be assigned by sight or sound to a particular type (cmavo, brivla, or cmene) and subtype. Knowing the type and subtype then gives you, the reader or listener, significant clues to the meaning and the origin of the word, even if you have never heard the word before.</para>
+  <para>The same principle allows you, when speaking or writing, to invent new brivla for new concepts “on the fly”; yet it offers people that you are trying to communicate with a good chance to figure out your meaning. In this way, Lojban has a flexible vocabulary which can be expanded indefinitely.</para>
+  <para>All brivla have the following properties:</para>
+  <orderedlist>
+    <listitem>
+      <para>always end in a vowel;</para>
+    </listitem>
+    <listitem>
+      <para>always contain a consonant pair in the first five letters, where “y” and apostrophe are not counted as letters for this purpose. (See <xref linkend="cll_chapter4-section6"/>.)</para>
+    </listitem>
+    <listitem>
+      <para>always are stressed on the next-to-the-last (penultimate) syllable; this implies that they have two or more syllables.</para>
+    </listitem>
+  </orderedlist>
+  <para>The presence of a consonant pair distinguishes brivla from cmavo and their compounds. The final vowel distinguishes brivla from cmene, which always end in a consonant. Thus “da'amei” must be a compound cmavo because it lacks a consonant pair; “lojban.” must be a name because it lacks a final vowel.</para>
+  <para>Thus, “bisycla” has the consonant pair “sc” in the first five non-“y” letters even though the “sc” actually appears in the form of “syc”. Similarly, the word “ro'inre'o” contains “nr” in the first five letters because the apostrophes are not counted for this purpose.</para>
+  <para>The three subtypes of brivla are:</para>
+  <orderedlist>
+    <listitem>
+      <para>gismu, the Lojban primitive roots from which all other brivla are built;</para>
+    </listitem>
+    <listitem>
+      <para>lujvo, the compounds of two or more gismu; and</para>
+    </listitem>
+    <listitem>
+      <para>fu'ivla (literally “copy-word”), the specialized words that are not Lojban primitives or natural compounds, and are therefore borrowed from other languages.</para>
+    </listitem>
+  </orderedlist>
+</section>
+
+<section xml:id="cll_chapter4-section4">
+  <title>4. gismu</title>
+  <para>The gismu, or Lojban root words, are those brivla representing concepts most basic to the language. The gismu were chosen for various reasons: some represent concepts that are very familiar and basic; some represent concepts that are frequently used in other languages; some were added because they would be helpful in constructing more complex words; some because they represent fundamental Lojban concepts (like “cmavo” and “gismu” themselves).</para>
+  <para>The gismu do not represent any sort of systematic partitioning of semantic space. Some gismu may be superfluous, or appear for historical reasons: the gismu list was being collected for almost 35 years and was only weeded out once. Instead, the intention is that the gismu blanket semantic space: they make it possible to talk about the entire range of human concerns.</para>
+  <para>There are about 1350 gismu. In learning Lojban, you need only to learn most of these gismu and their combining forms (known as “rafsi”) as well as perhaps 200 major cmavo, and you will be able to communicate effectively in the language. This may sound like a lot, but it is a small number compared to the vocabulary needed for similar communications in other languages.</para>
+  <para>All gismu have very strong form restrictions. Using the conventions defined in <xref linkend="cll_chapter4-section1"/>, all gismu are of the forms CVC/CV or CCVCV. They must meet the rules for all brivla given in <xref linkend="cll_chapter4-section3"/>; furthermore, they:</para>
+  <orderedlist>
+    <listitem>
+      <para>always have five letters;</para>
+    </listitem>
+    <listitem>
+      <para>always start with a consonant and end with a single vowel;</para>
+    </listitem>
+    <listitem>
+      <para>always contain exactly one consonant pair, which is a permissible initial pair (CC) if it’s at the beginning of the gismu, but otherwise only has to be a permissible pair (C/C);</para>
+    </listitem>
+    <listitem>
+      <para>are always stressed on the first syllable (since that is penultimate).</para>
+    </listitem>
+  </orderedlist>
+  <para>The five letter length distinguishes gismu from lujvo and fu'ivla. In addition, no gismu contains “'”.</para>
+  <para>With the exception of five special brivla variables, “broda”, “brode”, “brodi”, “brodo”, and “brodu”, no two gismu differ only in the final vowel. Furthermore, the set of gismu was specifically designed to reduce the likelihood that two similar sounding gismu could be confused. For example, because “gismu” is in the set of gismu, “kismu”, “xismu”, “gicmu”, “gizmu”, and “gisnu” cannot be.</para>
+  <para>Almost all Lojban gismu are constructed from pieces of words drawn from other languages, specifically Chinese, English, Hindi, Spanish, Russian, and Arabic, the six most widely spoken natural languages. For a given concept, words in the six languages that represent that concept were written in Lojban phonetics. Then a gismu was selected to maximize the recognizability of the Lojban word for speakers of the six languages by weighting the inclusion of the sounds drawn from each language by the number of speakers of that language. See <xref linkend="cll_chapter4-section14"/> for a full explanation of the algorithm.</para>
+  <para>Here are a few examples of gismu, with rough English equivalents (not definitions):</para>
+  <programlisting><anchor xml:id="c4e4d1"/><anchor xml:id="cll_chapter4-section4-example1"/>3.1)   creka
+       shirt
+
+<anchor xml:id="c4e4d2"/><anchor xml:id="cll_chapter4-section4-example2"/>3.2)   lijda
+       religion
+
+<anchor xml:id="c4e4d3"/><anchor xml:id="cll_chapter4-section4-example3"/>3.3)   blanu
+       blue
+
+<anchor xml:id="c4e4d4"/><anchor xml:id="cll_chapter4-section4-example4"/>3.4)   mamta
+       mother
+
+<anchor xml:id="c4e4d5"/><anchor xml:id="cll_chapter4-section4-example5"/>3.5)   cukta
+       book
+
+<anchor xml:id="c4e4d6"/><anchor xml:id="cll_chapter4-section4-example6"/>3.6)   patfu
+       father
+
+<anchor xml:id="c4e4d7"/><anchor xml:id="cll_chapter4-section4-example7"/>3.7)   nanmu
+       man
+
+<anchor xml:id="c4e4d8"/><anchor xml:id="cll_chapter4-section4-example8"/>3.8)   ninmu
+       woman
+</programlisting>
+  <para>A small number of gismu were formed differently; see <xref linkend="cll_chapter4-section15"/> for a list.</para>
+</section>
+
+<section xml:id="cll_chapter4-section5">
+  <title>5. lujvo</title>
+  <para>When specifying a concept that is not found among the gismu (or, more specifically, when the relevant gismu seems too general in meaning), a Lojbanist generally attempts to express the concept as a tanru. Lojban tanru are an elaboration of the concept of “metaphor” used in English. In Lojban, any brivla can be used to modify another brivla. The first of the pair modifies the second. This modification is usually restrictive — the modifying brivla reduces the broader sense of the modified brivla to form a more narrow, concrete, or specific concept. Modifying brivla may thus be seen as acting like English adverbs or adjectives. For example,</para>
+  <programlisting><anchor xml:id="c4e5d1"/><anchor xml:id="cll_chapter4-section5-example1"/>5.1)   skami pilno
+</programlisting>
+  <para>is the tanru which expresses the concept of “computer user”.</para>
+  <para>The simplest Lojban tanru are pairings of two concepts or ideas. Such tanru take two simpler ideas that can be represented by gismu and combine them into a single more complex idea. Two-part tanru may then be recombined in pairs with other tanru, or with individual gismu, to form more complex or more specific ideas, and so on.</para>
+  <para>The meaning of a tanru is usually at least partly ambiguous: “skami pilno” could refer to a computer that is a user, or to a user of computers. There are a variety of ways that the modifier component can be related to the modified component. It is also possible to use cmavo within tanru to provide variations (or to prevent ambiguities) of meaning.</para>
+  <para>Making tanru is essentially a poetic or creative act, not a science. While the syntax expressing the grouping relationships within tanru is unambiguous, tanru are still semantically ambiguous, since the rules defining the relationships between the gismu are flexible. The process of devising a new tanru is dealt with in detail in <xref linkend="cll_chapter5"/>.</para>
+  <para>To express a simple tanru, simply say the component gismu together. Thus the binary metaphor “big boat” becomes the tanru</para>
+  <programlisting><anchor xml:id="c4e5d2"/><anchor xml:id="cll_chapter4-section5-example2"/>5.2)   barda bloti
+</programlisting>
+  <para>representing roughly the same concept as the English word “ship”.</para>
+  <para>The binary metaphor “father mother” can refer to a paternal grandmother (“a father-ly type of mother”), while “mother father” can refer to a maternal grandfather (“a mother-ly type of father”). In Lojban, these become the tanru</para>
+  <programlisting><anchor xml:id="c4e5d3"/><anchor xml:id="cll_chapter4-section5-example3"/>5.3)   patfu mamta
+</programlisting>
+  <para>and</para>
+  <programlisting><anchor xml:id="c4e5d4"/><anchor xml:id="cll_chapter4-section5-example4"/>5.4)   mamta patfu
+</programlisting>
+  <para>respectively.</para>
+  <para>The possibility of semantic ambiguity can easily be seen in the last case. To interpret <xref linkend="cll_chapter4-section5-example4"/>, the listener must determine what type of motherliness pertains to the father being referred to. In an appropriate context, “mamta patfu” could mean not “grandfather” but simply “father with some motherly attributes”, depending on the culture. If absolute clarity is required, there are ways to expand upon and explain the exact interrelationship between the components; but such detail is usually not needed.</para>
+  <para>When a concept expressed in a tanru proves useful, or is frequently expressed, it is desirable to choose one of the possible meanings of the tanru and assign it to a new brivla. For <xref linkend="cll_chapter4-section5-example1"/>, we would probably choose “user of computers”, and form the new word</para>
+  <programlisting><anchor xml:id="c4e5d5"/><anchor xml:id="cll_chapter4-section5-example5"/>5.5)   sampli
+</programlisting>
+  <para>Such a brivla, built from the rafsi which represent its component words, is called a “lujvo”. Another example, corresponding to the tanru of <xref linkend="cll_chapter4-section5-example2"/>, would be:</para>
+  <programlisting><anchor xml:id="c4e5d6"/><anchor xml:id="cll_chapter4-section5-example6"/>5.6)   bralo'i
+       big-boat
+       ship
+</programlisting>
+  <para>The lujvo representing a given tanru is built from units representing the component gismu. These units are called “rafsi” in Lojban. Each rafsi represents only one gismu. The rafsi are attached together in the order of the words in the tanru, occasionally inserting so-called “hyphen” letters to ensure that the pieces stick together as a single word and cannot accidentally be broken apart into cmavo, gismu, or other word forms. As a result, each lujvo can be readily and accurately recognized, allowing a listener to pick out the word from a string of spoken Lojban, and if necessary, unambiguously decompose the word to a unique source tanru, thus providing a strong clue to its meaning.</para>
+  <para>The lujvo that can be built from the tanru “mamta patfu” in <xref linkend="cll_chapter4-section5-example4"/> is</para>
+  <programlisting><anchor xml:id="c4e5d7"/><anchor xml:id="cll_chapter4-section5-example7"/>5.7)   mampa'u
+</programlisting>
+  <para>which refers specifically to the concept “maternal grandfather”. The two gismu that constitute the tanru are represented in “mampa'u” by the rafsi “mam-” and “-pa'u”, respectively; these two rafsi are then concatenated together to form “mampa'u”.</para>
+  <para>Like gismu, lujvo have only one meaning. When a lujvo is formally entered into a dictionary of the language, a specific definition will be assigned based on one particular interrelationship between the terms. (See <xref linkend="cll_chapter12"/> for how this has been done.) Unlike gismu, lujvo may have more than one form. This is because there is no difference in meaning between the various rafsi for a gismu when they are used to build a lujvo. A long rafsi may be used, especially in noisy environments, in place of a short rafsi; the result is considered the same lujvo, even though the word is spelled and pronounced differently. Thus the word “brivla”, built from the tanru “bridi valsi”, is the same lujvo as “brivalsi”, “bridyvla”, and “bridyvalsi”, each of which uses a different combination of rafsi.</para>
+  <para>When assembling rafsi together into lujvo, the rules for valid brivla must be followed: a consonant cluster must occur in the first five letters (excluding “y” and “'”), and the lujvo must end in a vowel.</para>
+  <para>A “y” (which is ignored in determining stress or consonant clusters) is inserted in the middle of the consonant cluster to glue the word together when the resulting cluster is either not permissible or the word is likely to break up. There are specific rules describing these conditions, detailed in <xref linkend="cll_chapter4-section6"/>.</para>
+  <para>An “r” (in some cases, an “n”) is inserted when a CVV-form rafsi attaches to the beginning of a lujvo in such a way that there is no consonant cluster. For example, in the lujvo</para>
+  <programlisting><anchor xml:id="c4e5d8"/><anchor xml:id="cll_chapter4-section5-example8"/>5.8)   soirsai
+       sonci sanmi
+       soldier meal
+       field rations
+</programlisting>
+  <para>the rafsi “soi-” and “-sai” are joined, with the additional “r” making up the “rs” consonant pair needed to make the word a brivla. Without the “r”, the word would break up into “soi sai”, two cmavo. The pair of cmavo have no relation to their rafsi lookalikes; they will either be ungrammatical (as in this case), or will express a different meaning from what was intended.</para>
+  <para>Learning rafsi and the rules for assembling them into lujvo is clearly seen to be necessary for fully using the potential Lojban vocabulary.</para>
+  <para>Most important, it is possible to invent new lujvo while you speak or write in order to represent a new or unfamiliar concept, one for which you do not know any existing Lojban word. As long as you follow the rules for building these compounds, there is a good chance that you will be understood without explanation.</para>
+</section>
+
+<section xml:id="cll_chapter4-section6">
+  <title>6. rafsi</title>
+  <para>Every gismu has from two to five rafsi, each of a different form, but each such rafsi represents only one gismu. It is valid to use any of the rafsi forms in building lujvo — whichever the reader or listener will most easily understand, or whichever is most pleasing — subject to the rules of lujvo making. There is a scoring algorithm which is intended to determine which of the possible and legal lujvo forms will be the standard dictionary form (see <xref linkend="cll_chapter4-section12"/>).</para>
+  <para>Each gismu always has at least two rafsi forms; one is the gismu itself (used only at the end of a lujvo), and one is the gismu without its final vowel (used only at the beginning or middle of a lujvo). These forms are represented as CVC/CV or CCVCV (called “the 5-letter rafsi”), and CVC/C or CCVC (called “the 4-letter rafsi”) respectively. The dashes in these rafsi form representations show where other rafsi may be attached to form a valid lujvo. When lujvo are formed only from 4-letter and 5-letter rafsi, known collectively as “long rafsi”, they are called “unreduced lujvo”.</para>
+  <para>Some examples of unreduced lujvo forms are:</para>
+  <programlisting><anchor xml:id="c4e6d1"/><anchor xml:id="cll_chapter4-section6-example1"/>6.1)   mamtypatfu
+       from “mamta patfu”
+       “mother father” or “maternal grandfather”
+
+<anchor xml:id="c4e6d2"/><anchor xml:id="cll_chapter4-section6-example2"/>6.2)   lerfyliste
+       from “lerfu liste”
+       “letter list” or a “list of letters”
+       (letters of the alphabet)
+
+<anchor xml:id="c4e6d3"/><anchor xml:id="cll_chapter4-section6-example3"/>6.3)   nancyprali
+       from “nanca prali”
+       “year profit” or “annual profit”
+
+<anchor xml:id="c4e6d4"/><anchor xml:id="cll_chapter4-section6-example4"/>6.4)   prunyplipe
+       from “pruni plipe”
+       “elastic (springy) leap” or “spring” (the verb)
+
+<anchor xml:id="c4e6d5"/><anchor xml:id="cll_chapter4-section6-example5"/>6.5)   vancysanmi
+       from “vanci sanmi”
+       “evening meal” or “supper”
+</programlisting>
+  <para>In addition to these two forms, each gismu may have up to three additional short rafsi, three letters long. All short rafsi have one of the forms CVC, CCV, or CVV. The total number of rafsi forms that are assigned to a gismu depends on how useful the gismu is, or is presumed to be, in making lujvo, when compared to other gismu that could be assigned the rafsi.</para>
+  <para>For example, “zmadu” (“more than”) has the two short rafsi “zma” and “mau” (in addition to its unreduced rafsi “zmad” and “zmadu”), because a vast number of lujvo have been created based on “zmadu”, corresponding in general to English comparative adjectives ending in “-er” such as “whiter” (Lojban “labmau”). On the other hand, “bakri” (“chalk”) has no short rafsi and few lujvo.</para>
+  <para>There are at most one CVC-form, one CCV-form, and one CVV-form rafsi per gismu. In fact, only a tiny handful of gismu have both a CCV-form and a CVV-form rafsi assigned, and still fewer have all three forms of short rafsi. However, gismu with both a CVC-form and another short rafsi are fairly common, partly because more possible CVC-form rafsi exist. Yet CVC-form rafsi, even though they are fairly easy to remember, cannot be used at the end of a lujvo (because lujvo must end in vowels), so justifying the assignment of an additional short rafsi to many gismu.</para>
+  <para>The intention was to use the available “rafsi space” — the set of all possible short rafsi forms — in the most efficient way possible; the goal is to make the most-used lujvo as short as possible (thus maximizing the use of short rafsi), while keeping the rafsi very recognizable to anyone who knows the source gismu. For this reason, the letters in a rafsi have always been chosen from among the five letters of the corresponding gismu. As a result, there are a limited set of short rafsi available for assignment to each gismu. At most seven possible short rafsi are available for consideration (of which at most three can be used, as explained above).</para>
+  <para>Here are the only short rafsi forms that can possibly exist for gismu of the form CVC/CV, like “sakli”. The digits in the second column represent the gismu letters used to form the rafsi.</para>
+  <programlisting>
+    CVC     123     -sak-
+    CVC     124     -sal-
+    CVV     12’5    -sa'i-
+    CVV     125     -sai-
+    CCV     345     -kli-
+    CCV     132     -ska-
+</programlisting>
+  <para>(The only actual short rafsi for “sakli” is “-sal-”.)</para>
+  <para>For gismu of the form CCVCV, like “blaci”, the only short rafsi forms that can exist are:</para>
+  <programlisting>
+    CVC     134     -bac-
+    CVC     234     -lac
+    CVV     13’5    -ba'i-
+    CVV     135     -bai-
+    CVV     23’5    -la'i-
+    CVV     235     -lai-
+    CCV     123     -bla-
+</programlisting>
+  <para>(In fact, “blaci” has none of these short rafsi; they are all assigned to other gismu. Lojban speakers are not free to reassign any of the rafsi; the tables shown here are to help understand how the rafsi were chosen in the first place.)</para>
+  <para>There are a few restrictions: a CVV-form rafsi without an apostrophe cannot exist unless the vowels make up one of the four diphthongs “ai”, “ei”, “oi”, or “au”; and a CCV-form rafsi is possible only if the two consonants form a permissible initial consonant pair (see <xref linkend="cll_chapter4-section1"/>). Thus “mamta”, which has the same form as “salci”, can only have “mam”, “mat”, and “ma'a” as possible rafsi: in fact, only “mam” is assigned to it.</para>
+  <para>Some cmavo also have associated rafsi, usually CVC-form. For example, the ten common numerical digits, which are all CV form cmavo, each have a CVC-form rafsi formed by adding a consonant to the cmavo. Most cmavo that have rafsi are ones used in composing tanru (for a complete list, see <xref linkend="cll_chapter12"/>).</para>
+  <para>The term for a lujvo made up solely of short rafsi is “fully reduced lujvo”. Here are some examples of fully reduced lujvo:</para>
+  <programlisting><anchor xml:id="c4e6d6"/><anchor xml:id="cll_chapter4-section6-example6"/>6.6)   cumfri
+       from “cumki lifri”
+       “possible experience”
+
+<anchor xml:id="c4e6d7"/><anchor xml:id="cll_chapter4-section6-example7"/>6.7)   klezba
+       from “klesi zbasu”
+       “category make”
+
+<anchor xml:id="c4e6d8"/><anchor xml:id="cll_chapter4-section6-example8"/>6.8)   kixta'a
+       from “krixa tavla”
+       “cry-out talk”
+
+<anchor xml:id="c4e6d9"/><anchor xml:id="cll_chapter4-section6-example9"/>6.9)   sniju'o
+       from “sinxa djuno”
+       “sign know”
+</programlisting>
+  <para>In addition, some of the unreduced forms in the previous example may be fully reduced to:</para>
+  <programlisting><anchor xml:id="c4e6d10"/><anchor xml:id="cll_chapter4-section6-example10"/>6.10)  mampa'u
+       from “mamta patfu”
+       “mother father” or “maternal grandfather”
+
+<anchor xml:id="c4e6d11"/><anchor xml:id="cll_chapter4-section6-example11"/>6.11)  lerste
+       from “lerfu liste”
+       “letter list” or a “list of letters”
+</programlisting>
+  <para>As noted above, CVC-form rafsi cannot appear as the final rafsi in a lujvo, because all lujvo must end with one or two vowels. As a brivla, a lujvo must also contain a consonant cluster within the first five letters — this ensures that they cannot be mistaken for compound cmavo. Of course, all lujvo have at least six letters since they have two or more rafsi, each at least three letters long; hence they cannot be confused with gismu.</para>
+  <para>When attaching two rafsi together, it may be necessary to insert a hyphen letter. In Lojban, the term “hyphen” always refers to a letter, either the vowel “y” or one of the consonants “r” and “n”. (The letter “l” can also be a hyphen, but is not used as one in lujvo.)</para>
+  <para>The “y”-hyphen is used after a CVC-form rafsi when joining it with the following rafsi could result in an impermissible consonant pair, or when the resulting lujvo could fall apart into two or more words (either cmavo or gismu).</para>
+  <para>Thus, the tanru “pante tavla” (“protest talk”) cannot produce the lujvo “patta'a”, because “tt” is not a permissible consonant pair; the lujvo must be “patyta'a”. Similarly, the tanru “mudri siclu” (“wooden whistle”) cannot form the lujvo “mudsiclu”; instead, “mudysiclu” must be used. (Remember that “y” is not counted in determining whether the first five letters of a brivla contain a consonant cluster: this is why.)</para>
+  <para>The “y”-hyphen is also used to attach a 4-letter rafsi, formed by dropping the final vowel of a gismu, to the following rafsi. (This procedure was shown, but not explained, in <xref linkend="cll_chapter4-section6-example1"/> to <xref linkend="cll_chapter4-section6-example5"/>.)</para>
+  <para>The lujvo forms “zunlyjamfu”, “zunlyjma”, “zuljamfu”, and “zuljma” are all legitimate and equivalent forms made from the tanru “zunle jamfu” (“left foot”). Of these, “zuljma” is the preferred one since it is the shortest; it thus is likely to be the form listed in a Lojban dictionary.</para>
+  <para>The “r”-hyphen and its close relative, the “n”-hyphen, are used in lujvo only after CVV-form rafsi. A hyphen is always required in a two-part lujvo of the form CVV-CVV, since otherwise there would be no consonant cluster.</para>
+  <para>An “r-”hyphen or “n”-hyphen is also required after the CVV-form rafsi of any lujvo of the form CVV-CVC/CV or CVV-CCVCV since it would otherwise fall apart into a CVV-form cmavo and a gismu. In any lujvo with more than two parts, a CVV-form rafsi in the initial position must always be followed by a hyphen. If the hyphen were to be omitted, the supposed lujvo could be broken into smaller words without the hyphen: because the CVV-form rafsi would be interpreted as a cmavo, and the remainder of the word as a valid lujvo that is one rafsi shorter.</para>
+  <para>An “n”-hyphen is only used in place of an “r”-hyphen when the following rafsi begins with “r”. For example, the tanru “rokci renro” (“rock throw”) cannot be expressed as “ro'ire'o” (which breaks up into two cmavo), nor can it be “ro'irre'o” (which has an impermissible double consonant); the “n”-hyphen is required, and the correct form of the hyphenated lujvo is “ro'inre'o”. The same lujvo could also be expressed without hyphenation as “rokre'o”.</para>
+  <para>There is also a different way of building lujvo, or rather phrases which are grammatically and semantically equivalent to lujvo. You can make a phrase containing any desired words, joining each pair of them with the special cmavo “zei”. Thus,</para>
+  <programlisting><anchor xml:id="c4e6d12"/><anchor xml:id="cll_chapter4-section6-example12"/>6.12)  bridi zei valsi
+</programlisting>
+  <para>is the exact equivalent of “brivla” (but not necessarily the same as the underlying tanru “bridi valsi”, which could have other meanings.) Using “zei” is the only way to get a cmavo lacking a rafsi, a cmene, or a fu'ivla into a lujvo:</para>
+  <programlisting><anchor xml:id="c4e6d13"/><anchor xml:id="cll_chapter4-section6-example13"/>6.13)  xy. zei kantu
+       X ray
+
+<anchor xml:id="c4e6d14"/><anchor xml:id="cll_chapter4-section6-example14"/>6.14)  kulnr,farsi zei lolgai
+       Farsi floor-cover
+       Persian rug
+
+<anchor xml:id="c4e6d15"/><anchor xml:id="cll_chapter4-section6-example15"/>6.15)  na'e zei .a zei na'e zei by. livgyterbilma
+       non-A, non-B liver-disease
+       non-A, non-B hepatitis
+
+<anchor xml:id="c4e6d16"/><anchor xml:id="cll_chapter4-section6-example16"/>6.16)  .cerman. zei jamkarce
+       Sherman war-car
+       Sherman tank
+</programlisting>
+  <para><xref linkend="cll_chapter4-section6-example15"/> is particularly noteworthy because the phrase that would be produced by removing the “zei”s from it doesn’t end with a brivla, and in fact is not even grammatical. As written, the example is a tanru with two components, but by adding a “zei” between “by.” and “livgyterbilma” to produce</para>
+  <programlisting><anchor xml:id="c4e6d17"/><anchor xml:id="cll_chapter4-section6-example17"/>6.17)  na'e zei .a zei na'e zei by. zei livgyterbilma
+       non-A-non-B-hepatitis
+</programlisting>
+  <para>the whole phrase would become a single lujvo. The longer lujvo of <xref linkend="cll_chapter4-section6-example17"/> may be preferable, because its place structure can be built from that of “bilma”, whereas the place structure of a lujvo without a brivla must be constructed ad hoc.</para>
+  <para>Note that rafsi may not be used in “zei” phrases, because they are not words. CVV rafsi look like words (specifically cmavo) but there can be no confusion between the two uses of the same letters, because cmavo appear only as separate words or in compound cmavo (which are really just a notation for writing separate but closely related words as if they were one); rafsi appear only as parts of lujvo.</para>
+</section>
+
+<section xml:id="cll_chapter4-section7">
+  <title>7. fu'ivla</title>
+  <para>The use of tanru or lujvo is not always appropriate for very concrete or specific terms (e.g. “brie” or “cobra”), or for jargon words specialized to a narrow field (e.g. “quark”, “integral”, or “iambic pentameter”). These words are in effect names for concepts, and the names were invented by speakers of another language. The vast majority of words referring to plants, animals, foods, and scientific terminology cannot be easily expressed as tanru. They thus must be borrowed (actually “copied”) into Lojban from the original language.</para>
+  <para>There are four stages of borrowing in Lojban, as words become more and more modified (but shorter and easier to use). Stage 1 is the use of a foreign name quoted with the cmavo “la'o” (explained in full in <xref linkend="cll_chapter19"/>):</para>
+  <programlisting><anchor xml:id="c4e7d1"/><anchor xml:id="cll_chapter4-section7-example1"/>7.1)   me la'o ly. spaghetti .ly.
+</programlisting>
+  <para>is a predicate with the place structure “x1 is a quantity of spaghetti”.</para>
+  <para>Stage 2 involves changing the foreign name to a Lojbanized name, as explained in <xref linkend="cll_chapter4-section8"/>:</para>
+  <programlisting><anchor xml:id="c4e7d2"/><anchor xml:id="cll_chapter4-section7-example2"/>7.2)   me la spagetis.
+</programlisting>
+  <para>One of these expedients is often quite sufficient when you need a word quickly in conversation. (This can make it easier to get by when you do not yet have full command of the Lojban vocabulary, provided you are talking to someone who will recognize the borrowing.)</para>
+  <para>Where a little more universality is desired, the word to be borrowed must be Lojbanized into one of several permitted forms. A rafsi is then usually attached to the beginning of the Lojbanized form, using a hyphen to ensure that the resulting word doesn’t fall apart.</para>
+  <para>The rafsi categorizes or limits the meaning of the fu'ivla; otherwise a word having several different jargon meanings in other languages would require the word-inventor to choose which meaning should be assigned to the fu'ivla, since fu'ivla (like other brivla) are not permitted to have more than one definition. Such a Stage 3 borrowing is the most common kind of fu'ivla.</para>
+  <para>Finally, Stage 4 fu'ivla do not have any rafsi classifier, and are used where a fu'ivla has become so common or so important that it must be made as short as possible. (See <xref linkend="cll_chapter4-section16"/> for a proposal concerning Stage 4 fu'ivla.)</para>
+  <para>The form of a fu'ivla reliably distinguishes it from both the gismu and the cmavo. Like cultural gismu, fu'ivla are generally based on a word from a single non-Lojban language. The word is “borrowed” (actually “copied”, hence the Lojban tanru “fukpi valsi”) from the other language and Lojbanized — the phonemes are converted to their closest Lojban equivalent and modifications are made as necessary to make the word a legitimate Lojban fu'ivla-form word. All fu'ivla:</para>
+  <orderedlist>
+    <listitem>
+      <para>must contain a consonant cluster in the first five letters of the word; if this consonant cluster is at the beginning, it must either be a permissible initial consonant pair, or a longer cluster such that each pair of adjacent consonants in the cluster is a permissible initial consonant pair: “spraile” is acceptable, but not “ktraile” or “trkaile”;</para>
+    </listitem>
+    <listitem>
+      <para>must end in one or more vowels;</para>
+    </listitem>
+    <listitem>
+      <para>must not be gismu or lujvo, or any combination of cmavo, gismu, and lujvo; furthermore, a fu'ivla with a CV cmavo joined to the front of it must not have the form of a lujvo (the so-called “slinku'i test”, not discussed further in this book);</para>
+    </listitem>
+    <listitem>
+      <para>cannot contain “y”, although they may contain syllabic pronunciations of Lojban consonants;</para>
+    </listitem>
+    <listitem>
+      <para>like other brivla, are stressed on the penultimate syllable.</para>
+    </listitem>
+  </orderedlist>
+  <para>Note that consonant triples or larger clusters that are not at the beginning of a fu'ivla can be quite flexible, as long as all consonant pairs are permissible. There is no need to restrict fu'ivla clusters to permissible initial pairs except at the beginning.</para>
+  <para>This is a fairly liberal definition and allows quite a lot of possibilities within “fu'ivla space”. Stage 3 fu'ivla can be made easily on the fly, as lujvo can, because the procedure for forming them always guarantees a word that cannot violate any of the rules. Stage 4 fu'ivla require running tests that are not simple to characterize or perform, and should be made only after deliberation and by someone knowledgeable about all the considerations that apply.</para>
+  <para>Here is a simple and reliable procedure for making a non-Lojban word into a valid Stage 3 fu'ivla:</para>
+  <orderedlist>
+    <listitem>
+      <para>Eliminate all double consonants and silent letters.</para>
+    </listitem>
+    <listitem>
+      <para>Convert all sounds to their closest Lojban equivalents. Lojban “y”, however, may not be used in any fu'ivla.</para>
+    </listitem>
+    <listitem>
+      <para>If the last letter is not a vowel, modify the ending so that the word ends in a vowel, either by removing a final consonant or by adding a suggestively chosen final vowel.</para>
+    </listitem>
+    <listitem>
+      <para>If the first letter is not a consonant, modify the beginning so that the word begins with a consonant, either by removing an initial vowel or adding a suggestively chosen initial consonant.</para>
+    </listitem>
+    <listitem>
+      <para>Prefix the result of steps 1-5 with a 4-letter rafsi that categorizes the fu'ivla into a “topic area”. It is only safe to use a 4-letter rafsi; short rafsi sometimes produce invalid fu'ivla. Hyphenate the rafsi to the rest of the fu'ivla with an “r”-hyphen; if that would produce a double “r”, use an “n”-hyphen instead; if the rafsi ends in “r” and the rest of the fu'ivla begins with “n” (or vice versa), or if the rafsi ends in "r" and the rest of the fu'ivla begins with "tc", "ts", "dj", or "dz" (using "n" would result in a phonotactically impermissible cluster), use an “l”-hyphen. (This is the only use of “l”-hyphen in Lojban.)</para>
+      <para>Alternatively, if a CVC-form short rafsi is available it can be used instead of the long rafsi.</para>
+    </listitem>
+    <listitem>
+      <para>Remember that the stress necessarily appears on the penultimate (next-to-the-last) syllable.</para>
+    </listitem>
+  </orderedlist>
+  <para>In this section, the hyphen is set off with commas in the examples, but these commas are not required in writing, and the hyphen need not be pronounced as a separate syllable.</para>
+  <para>Here are a few examples:</para>
+  <programlisting><anchor xml:id="c4e7d3"/><anchor xml:id="cll_chapter4-section7-example3"/>7.3)   spaghetti (from English or Italian)
+       spageti (Lojbanize)
+       cidj,r,spageti (prefix long rafsi)
+       dja,r,spageti (prefix short rafsi)
+</programlisting>
+  <para>where “cidj-” is the 4-letter rafsi for “cidja”, the Lojban gismu for “food”, thus categorizing “cidjrspageti” as a kind of food. The form with the short rafsi happens to work, but such good fortune cannot be relied on: in any event, it means the same thing.</para>
+  <programlisting><anchor xml:id="c4e7d4"/><anchor xml:id="cll_chapter4-section7-example4"/>7.4)   Acer (the scientific name of maple trees)
+       acer (Lojbanize)
+       xaceru (add initial consonant and final vowel)
+       tric,r,xaceru (prefix rafsi)
+       ric,r,xaceru (prefix short rafsi)
+</programlisting>
+  <para>where “tric-” and “ric-” are rafsi for “tricu”, the gismu for “tree”. Note that by the same principles, “maple sugar” could get the fu'ivla “saktrxaceru”, or could be represented by the tanru “tricrxaceru sakta”. Technically, “ricrxaceru” and “tricrxaceru” are distinct fu'ivla, but they would surely be given the same meanings if both happened to be in use.</para>
+  <programlisting><anchor xml:id="c4e7d5"/><anchor xml:id="cll_chapter4-section7-example5"/>7.5)   brie (from French)
+       bri (Lojbanize)
+       cirl,r,bri (prefix rafsi)
+</programlisting>
+  <para>where “cirl-” represents “cirla” (“cheese”).</para>
+  <programlisting><anchor xml:id="c4e7d6"/><anchor xml:id="cll_chapter4-section7-example6"/>7.6)   cobra
+       kobra (Lojbanize)
+       sinc,r,kobra (prefix rafsi)
+</programlisting>
+  <para>where “sinc-” represents “since” (“snake”).</para>
+  <programlisting><anchor xml:id="c4e7d7"/><anchor xml:id="cll_chapter4-section7-example7"/>7.7)   quark
+       kuark (Lojbanize)
+       kuarka (add final vowel)
+       sask,r,kuarka (prefix rafsi)
+</programlisting>
+  <para>where “sask-” represents “saske” (“science”). Note the extra vowel “a” added to the end of the word, and the diphthong “ua”, which never appears in gismu or lujvo, but may appear in fu'ivla.</para>
+  <programlisting><!--
+        FIXME:  THIS EXAMPLE IS NEW.  As such, special care is
+        needed when we're doing teh whole numbered-to-named
+        redirects/conversions.
+        --><anchor xml:id="c4e7d8"/><anchor xml:id="cll_chapter4-section7-example8"/>7.8)   자모 (from Korean)
+       djamo (Lojbanize)
+       lerf,r,djamo (prefix rafsi)
+       ler,l,djamo (prefix rafsi)
+</programlisting>
+  <para>where “ler-” represents “lerfu” (“letter”). Note the l-hyphen in "lerldjamo", since "lerndjamo" contains the forbidden cluster "ndj".</para>
+  <para>The use of the prefix helps distinguish among the many possible meanings of the borrowed word, depending on the field. As it happens, “spageti” and “kuarka” are valid Stage 4 fu'ivla, but “xaceru” looks like a compound cmavo, and “kobra” like a gismu.</para>
+  <para>For another example, “integral” has a specific meaning to a mathematician. But the Lojban fu'ivla “integrale”, which is a valid Stage 4 fu'ivla, does not convey that mathematical sense to a non-mathematical listener, even one with an English-speaking background; its source — the English word “integral” — has various other specialized meanings in other fields.</para>
+  <para>Left uncontrolled, “integrale” almost certainly would eventually come to mean the same collection of loosely related concepts that English associates with “integral”, with only the context to indicate (possibly) that the mathematical term is meant.</para>
+  <para>The prefix method would render the mathematical concept as “cmacrntegrale”, if the “i” of “integrale” is removed, or something like “cmacrnintegrale”, if a new consonant is added to the beginning; “cmac-” is the rafsi for “cmaci” (“mathematics”). The architectural sense of “integral” might be conveyed with “djinrnintegrale” or “tarmrnintegrale”, where “dinju” and “tarmi” mean “building” and “form” respectively.</para>
+  <para>Here are some fu'ivla representing cultures and related things, shown with more than one rafsi prefix:</para>
+  <programlisting><anchor xml:id="c4e7d9"/><anchor xml:id="cll_chapter4-section7-example9"/>7.9)   bang,r,blgaria
+       Bulgarian (in language)
+
+<anchor xml:id="c4e7d10"/><anchor xml:id="cll_chapter4-section7-example10"/>7.10)   kuln,r,blgaria
+       Bulgarian (in culture)
+
+<anchor xml:id="c4e7d11"/><anchor xml:id="cll_chapter4-section7-example11"/>7.11)  gugd,r,blgaria
+       Bulgaria (the country)
+
+<anchor xml:id="c4e7d12"/><anchor xml:id="cll_chapter4-section7-example12"/>7.12)  bang,r,kore,a
+       Korean (the language)
+
+<anchor xml:id="c4e7d13"/><anchor xml:id="cll_chapter4-section7-example13"/>7.13)  kuln,r,kore,a
+       Korean (the culture)
+</programlisting>
+  <para>Note the commas in <xref linkend="cll_chapter4-section7-example12"/> and <xref linkend="cll_chapter4-section7-example13"/>, used because “ea” is not a valid diphthong in Lojban. Arguably, some form of the native name “Chosen” should have been used instead of the internationally known “Korea”; this is a recurring problem in all borrowings. In general, it is better to use the native name unless using it will severely impede understanding: “Navajo” is far more widely known than “Dine’e”.</para>
+</section>
+
+<section xml:id="cll_chapter4-section8">
+  <title>8. cmene</title>
+  <para>Lojbanized names, called “cmene”, are very much like their counterparts in other languages. They are labels applied to things (or people) to stand for them in descriptions or in direct address. They may convey meaning in themselves, but do not necessarily do so.</para>
+  <para>Because names are often highly personal and individual, Lojban attempts to allow native language names to be used with a minimum of modification. The requirement that the Lojban speech stream be unambiguously analyzable, however, means that most names must be modified somewhat when they are Lojbanized. Here are a few examples of English names and possible Lojban equivalents:</para>
+  <programlisting><anchor xml:id="c4e8d1"/><anchor xml:id="cll_chapter4-section8-example1"/>8.1)   djim.
+       Jim
+
+<anchor xml:id="c4e8d2"/><anchor xml:id="cll_chapter4-section8-example2"/>8.2)   djein.
+       Jane
+
+<anchor xml:id="c4e8d3"/><anchor xml:id="cll_chapter4-section8-example3"/>8.3)   .arnold.
+       Arnold
+
+<anchor xml:id="c4e8d4"/><anchor xml:id="cll_chapter4-section8-example4"/>8.4)   pit.
+       Pete
+
+<anchor xml:id="c4e8d5"/><anchor xml:id="cll_chapter4-section8-example5"/>8.5)   katrinas.
+       Katrina
+
+<anchor xml:id="c4e8d6"/><anchor xml:id="cll_chapter4-section8-example6"/>8.6)   kat,r,in.
+       Catherine
+</programlisting>
+  <para>(Note that syllabic “r” is skipped in determining the stressed syllable, so <xref linkend="cll_chapter4-section8-example6"/> is stressed on the “ka”.)</para>
+  <programlisting><anchor xml:id="c4e8d7"/><anchor xml:id="cll_chapter4-section8-example7"/>8.7)   katis.
+       Cathy
+
+<anchor xml:id="c4e8d8"/><anchor xml:id="cll_chapter4-section8-example8"/>8.8)   keit.
+       Kate
+</programlisting>
+  <para>Names may have almost any form, but always end in a consonant, and are followed by a pause. They are penultimately stressed, unless unusual stress is marked with capitalization. A name may have multiple parts, each ending with a consonant and pause, or the parts may be combined into a single word with no pause. For example,</para>
+  <programlisting><anchor xml:id="c4e8d9"/><anchor xml:id="cll_chapter4-section8-example9"/>8.9)   djan.  djonz.
+</programlisting>
+  <para>and</para>
+  <programlisting><anchor xml:id="c4e8d10"/><anchor xml:id="cll_chapter4-section8-example10"/>8.10)  djandjonz.
+</programlisting>
+  <para>are both valid Lojbanizations of “John Jones”.</para>
+  <para>The final arbiter of the correct form of a name is the person doing the naming, although most cultures grant people the right to determine how they want their own name to be spelled and pronounced. The English name “Mary” can thus be Lojbanized as “meris.”, “maris.”, “meiris.”, “merix.”, or even “marys.”. The last alternative is not pronounced much like its English equivalent, but may be desirable to someone who values spelling over pronunciation. The final consonant need not be an “s”; there must, however, be some Lojban consonant at the end.</para>
+  <para>Names are not permitted to have the sequences “la”, “lai”, or “doi” embedded in them, unless the sequence is immediately preceded by a consonant. These minor restrictions are due to the fact that all Lojban cmene embedded in a speech stream will be preceded by one of these words or by a pause. With one of these words embedded, the cmene might break up into valid Lojban words followed by a shorter cmene. However, break-up cannot happen after a consonant, because that would imply that the word before the “la”, or whatever, ended in a consonant without pause, which is impossible.</para>
+  <para>For example, the invalid name “laplas.” would look like the Lojban words “la plas.”, and “ilanas.” would be misunderstood as “.i la nas.”. However, “NEderlants.” cannot be misheard as “NEder lants.”, because “NEder” with no following pause is not a possible Lojban word.</para>
+  <para>There are close alternatives to these forbidden sequences that can be used in Lojbanizing names, such as “ly”, “lei”, and “dai” or “do'i”, that do not cause these problems.</para>
+  <para>Lojban cmene are identifiable as word forms by the following characteristics:</para>
+  <orderedlist>
+    <listitem>
+      <para>They must end in one or more consonants. There are no rules about how many consonants may appear in a cluster in cmene, provided that each consonant pair (whether standing by itself, or as part of a larger cluster) is a permissible pair.</para>
+    </listitem>
+    <listitem>
+      <para>They may contain the letter y as a normal, non-hyphenating vowel. They are the only kind of Lojban word that may contain the two diphthongs “iy” and “uy”.</para>
+    </listitem>
+    <listitem>
+      <para>They are always followed in speech by a pause after the final consonant, written as “.”.</para>
+    </listitem>
+    <listitem>
+      <para>They may be stressed on any syllable; if this syllable is not the penultimate one, it must be capitalized when writing. Neither names nor words that begin sentences are capitalized in Lojban, so this is the only use of capital letters.</para>
+    </listitem>
+  </orderedlist>
+  <para>Names meeting these criteria may be invented, Lojbanized from names in other languages, or formed by appending a consonant onto a cmavo, a gismu, a fu'ivla or a lujvo. Some cmene built from Lojban words are:</para>
+  <programlisting><anchor xml:id="c4e8d11"/><anchor xml:id="cll_chapter4-section8-example11"/>8.11)  pav.
+       the One
+       from the cmavo “pa”, with rafsi “pav”, meaning “one”
+
+<anchor xml:id="c4e8d12"/><anchor xml:id="cll_chapter4-section8-example12"/>8.12)  sol.
+       the Sun
+       from the gismu “solri”, meaning “solar”, or actually “pertaining to the Sun”
+
+<anchor xml:id="c4e8d13"/><anchor xml:id="cll_chapter4-section8-example13"/>8.13)  ralj.
+       Chief (as a title)
+       from the gismu “ralju”, meaning “principal”.
+
+<anchor xml:id="c4e8d14"/><anchor xml:id="cll_chapter4-section8-example14"/>8.14)  nol.
+       Lord/Lady
+       from the gismu “nobli”, with rafsi “nol”, meaning “noble”.
+</programlisting>
+  <para>To Lojbanize a name from the various natural languages, apply the following rules:</para>
+  <orderedlist>
+    <listitem>
+      <para>Eliminate double consonants and silent letters.</para>
+    </listitem>
+    <listitem>
+      <para>Add a final “s” or “n” (or some other consonant that sounds good) if the name ends in a vowel.</para>
+    </listitem>
+    <listitem>
+      <para>Convert all sounds to their closest Lojban equivalents.</para>
+    </listitem>
+    <listitem>
+      <para>If possible and acceptable, shift the stress to the penultimate (next-to-the-last) syllable. Use commas and capitalization in written Lojban when it is necessary to preserve non-standard syllabication or stress. Do not capitalize names otherwise.</para>
+    </listitem>
+    <listitem>
+      <para>If the name contains an impermissible consonant pair, insert a vowel between the consonants: “y” is recommended.</para>
+    </listitem>
+    <listitem>
+      <para>No cmene may have the syllables “la”, “lai”, or “doi” in them, unless immediately preceded by a consonant. If these combinations are present, they must be converted to something else. Possible substitutions include “ly”, “ly'i”, and “dai” or “do'i”, respectively.</para>
+    </listitem>
+  </orderedlist>
+  <para>There are some additional rules for Lojbanizing the scientific names (technically known as “Linnaean binomials” after their inventor) which are internationally applied to each species of animal or plant. Where precision is essential, these names need not be Lojbanized, but can be directly inserted into Lojban text using the cmavo “la'o”, explained in <xref linkend="cll_chapter19"/>. Using this cmavo makes the already lengthy Latinized names at least four syllables longer, however, and leaves the pronunciation in doubt. The following suggestions, though incomplete, will assist in converting Linnaean binomals to valid Lojban names. They can also help to create fu'ivla based on Linnaean binomials or other words of the international scientific vocabulary. The term “back vowel” in the following list refers to any of the letters “a”, “o”, or “u”; the term “front vowel” correspondingly refers to any of the letters “e”, “i”, or “y”.</para>
+  <orderedlist>
+    <listitem>
+      <para>Change double consonants other than “cc” to single consonants.</para>
+    </listitem>
+    <listitem>
+      <para>Change “cc” before a front vowel to “kc”, but otherwise to “k”.</para>
+    </listitem>
+    <listitem>
+      <para>Change “c” before a back vowel and final “c” to “k”.</para>
+    </listitem>
+    <listitem>
+      <para>Change “ng” before a consonant (other than “h”) and final “ng” to “n”.</para>
+    </listitem>
+    <listitem>
+      <para>Change “x” to “z” initially, but otherwise to “ks”.</para>
+    </listitem>
+    <listitem>
+      <para>Change “pn” to “n” initially.</para>
+    </listitem>
+    <listitem>
+      <para>Change final “ie” and “ii” to “i”.</para>
+    </listitem>
+    <listitem>
+      <para>Make the following idiosyncratic substitutions:
+<programlisting>
+      aa     a
+      ae     e
+      ch     k
+      ee     i
+      eigh   ei
+      ew     u
+      igh    ai
+      oo     u
+      ou     u
+      ow     au
+      ph     f
+      q      k
+      sc     sk
+      w      u
+      y      i
+</programlisting>However, the diphthong substitutions should not be done if the two vowels are in two different syllables.
+</para>
+    </listitem>
+    <listitem>
+      <para>Change “h” between two vowels to “'”, but otherwise remove it completely. If preservation of the “h” seems essential, change it to “x” instead.</para>
+    </listitem>
+    <listitem>
+      <para>Place “'” between any remaining vowel pairs that do not form Lojban diphthongs.</para>
+    </listitem>
+  </orderedlist>
+  <para>Some further examples of Lojbanized names are:</para>
+  <programlisting>
+    English “Mary”             meris.
+                 or            meiris.
+    English “Smith”            smit.
+    English “Jones”            djonz.
+    English “John”             djan. or jan. (American)
+                 or            djon. or jon. (British)
+    English “Alice”            .alis.
+    English “Elise”            .eLIS.
+    English “Johnson”          djansn.
+    English “William”          .uiliam.
+                 or            .uil,iam.
+    English “Brown”            braun.
+    English “Charles”          tcarlz.
+    French “Charles”           carl.
+    French “De Gaulle”         dyGOL.
+    German “Heinrich”          xainrix.
+    Spanish “Joaquin”          xuaKIN.
+    Russian “Svetlana”         sfietlanys.
+    Russian “Khrushchev”       xrucTCOF.
+    Hindi “Krishna”            kricnas.
+    Polish “Lech Walesa”       lex. va,uensas.
+    Spanish “Don Quixote”      don. kicotes.
+      or modern Spanish:       don. kixotes.
+      or Mexican dialect:      don. ki'otes.
+    Chinese “Mao Zedong”       maudzydyn.
+    Japanese “Fujiko”          fudjikos.
+                or             fujikos.
+</programlisting>
+</section>
+
+<section xml:id="cll_chapter4-section9">
+  <title>9. Rules for inserting pauses</title>
+  <para>Summarized in one place, here are the rules for inserting pauses between Lojban words:</para>
+  <orderedlist>
+    <listitem>
+      <para>Any two words may have a pause between them; it is always illegal to pause in the middle of a word, because that breaks up the word into two words.</para>
+    </listitem>
+    <listitem>
+      <para>Every word ending in a consonant must be followed by a pause. Necessarily, all such words are cmene.</para>
+    </listitem>
+    <listitem>
+      <para>Every word beginning with a vowel must be preceded by a pause. Such words are either cmavo, fu'ivla, or cmene; all gismu and lujvo begin with consonants.</para>
+    </listitem>
+    <listitem>
+      <para>Every cmene must be preceded by a pause, unless the immediately preceding word is one of the cmavo “la”, “lai”, “la'i”, or “doi” (which is why those strings are forbidden in cmene). However, the situation triggering this rule rarely occurs.</para>
+    </listitem>
+    <listitem>
+      <para>If the last syllable of a word bears the stress, and a brivla follows, the two must be separated by a pause, to prevent confusion with the primary stress of the brivla. In this case, the first word must be either a cmavo or a cmene with unusual stress (which already ends with a pause, of course).</para>
+    </listitem>
+    <listitem>
+      <para>A cmavo of the form “Cy” must be followed by a pause unless another “Cy”-form cmavo follows.</para>
+    </listitem>
+    <listitem>
+      <para>When non-Lojban text is embedded in Lojban, it must be preceded and followed by pauses. (How to embed non-Lojban text is explained in <xref linkend="cll_chapter19"/>.)</para>
+    </listitem>
+  </orderedlist>
+</section>
+
+<section xml:id="cll_chapter4-section10">
+  <title>10. Considerations for making lujvo</title>
+  <para>Given a tanru which expresses an idea to be used frequently, it can be turned into a lujvo by following the lujvo-making algorithm which is given in <xref linkend="cll_chapter4-section11"/>.</para>
+  <para>In building a lujvo, the first step is to replace each gismu with a rafsi that uniquely represents that gismu. These rafsi are then attached together by fixed rules that allow the resulting compound to be recognized as a single word and to be analyzed in only one way.</para>
+  <para>There are three other complications; only one is serious.</para>
+  <para>The first is that there is usually more than one rafsi that can be used for each gismu. The one to be used is simply whichever one sounds or looks best to the speaker or writer. There are usually many valid combinations of possible rafsi. They all are equally valid, and all of them mean exactly the same thing. (The scoring algorithm given in <xref linkend="cll_chapter4-section12"/> is used to choose the standard form of the lujvo — the version which would be entered into a dictionary.)</para>
+  <para>The second complication is the serious one. Remember that a tanru is ambiguous — it has several possible meanings. A lujvo, or at least one that would be put into the dictionary, has just a single meaning. Like a gismu, a lujvo is a predicate which encompasses one area of the semantic universe, with one set of places. Hopefully the meaning chosen is the most useful of the possible semantic spaces. A possible source of linguistic drift in Lojban is that as Lojbanic society evolves, the concept that seems the most useful one may change.</para>
+  <para>You must also be aware of the possibility of some prior meaning of a new lujvo, especially if you are writing for posterity. If a lujvo is invented which involves the same tanru as one that is in the dictionary, and is assigned a different meaning (or even just a different place structure), linguistic drift results. This isn’t necessarily bad. Every natural language does it. But in communication, when you use a meaning different from the dictionary definition, someone else may use the dictionary and therefore misunderstand you. You can use the cmavo “za'e” (explained in <xref linkend="cll_chapter19"/>) before a newly coined lujvo to indicate that it may have a non-dictionary meaning.</para>
+  <para>The essential nature of human communication is that if the listener understands, then all is well. Let this be the ultimate guideline for choosing meanings and place structures for invented lujvo.</para>
+  <para>The third complication is also simple, but tends to scare new Lojbanists with its implications. It is based on Zipf’s Law, which says that the length of words is inversely proportional to their usage. The shortest words are those which are used more; the longest ones are used less. Conversely, commonly used concepts will be tend to be abbreviated. In English, we have abbreviations and acronyms and jargon, all of which represent complex ideas that are used often by small groups of people, so they shortened them to convey more information more rapidly.</para>
+  <para>Therefore, given a complicated tanru with grouping markers, abstraction markers, and other cmavo in it to make it syntactically unambiguous, the psychological basis of Zipf’s Law may compel the lujvo-maker to drop some of the cmavo to make a shorter (technically incorrect) tanru, and then use that tanru to make the lujvo.</para>
+  <para>This doesn’t lead to ambiguity, as it might seem to. A given lujvo still has exactly one meaning and place structure. It is just that more than one tanru is competing for the same lujvo. But more than one meaning for the tanru was already competing for the “right” to define the meaning of the lujvo. Someone has to use judgment in deciding which one meaning is to be chosen over the others.</para>
+  <para>If the lujvo made by a shorter form of tanru is in use, or is likely to be useful for another meaning, the decider then retains one or more of the cmavo, preferably ones that set this meaning apart from the shorter form meaning that is used or anticipated. As a rule, therefore, the shorter lujvo will be used for a more general concept, possibly even instead of a more frequent word. If both words are needed, the simpler one should be shorter. It is easier to add a cmavo to clarify the meaning of the more complex term than it is to find a good alternate tanru for the simpler term.</para>
+  <para>And of course, we have to consider the listener. On hearing an unknown word, the listener will decompose it and get a tanru that makes no sense or the wrong sense for the context. If the listener realizes that the grouping operators may have been dropped out, he or she may try alternate groupings, or try inserting an abstraction operator if that seems plausible. (The grouping of tanru is explained in <xref linkend="cll_chapter5"/>; abstraction is explained in <xref linkend="cll_chapter11"/>.) Plausibility is the key to learning new ideas and to evaluating unfamiliar lujvo.</para>
+</section>
+
+<section xml:id="cll_chapter4-section11">
+  <title>11. The lujvo-making algorithm</title>
+  <para>The following is the current algorithm for generating Lojban lujvo given a known tanru and a complete list of gismu and their assigned rafsi. The algorithm was designed by Bob LeChevalier and Dr. James Cooke Brown for computer program implementation. It was modified in 1989 with the assistance of Nora LeChevalier, who detected a flaw in the original “tosmabru test”.</para>
+  <para>Given a tanru that is to be made into a lujvo:</para>
+  <variablelist>
+    <varlistentry>
+      <term>1)</term>
+      <listitem>
+        <para>Choose a 3-letter or 4-letter rafsi for each of the gismu and cmavo in the tanru except the last.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>2)</term>
+      <listitem>
+        <para>Choose a 3-letter (CVV-form or CCV-form) or 5-letter rafsi for the final gismu in the tanru.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>3)</term>
+      <listitem>
+        <para>Join the resulting string of rafsi, initially without hyphens.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>4)</term>
+      <listitem>
+        <para>
+Add hyphen letters where necessary. It is illegal to add a hyphen at a place that is not required by this algorithm. Right-to-left tests are recommended, for reasons discussed below.
+
+<variablelist><varlistentry><term>4a)</term><listitem><para>If there are more than two words in the tanru, put an “r”-hyphen (or an “n”-hyphen) after the first rafsi if it is CVV-form. If there are exactly two words, then put an “r”-hyphen (or an “n”-hyphen) between the two rafsi if the first rafsi is CVV-form, unless the second rafsi is CCV-form (for example, “saicli” requires no hyphen). Use an “r”-hyphen unless the letter after the hyphen is “r”, in which case use an “n”-hyphen. Never use an “n”-hyphen unless it is required.</para></listitem></varlistentry><varlistentry><term>4b)</term><listitem><para>Put a “y”-hyphen between the consonants of any impermissible consonant pair. This will always appear between rafsi.</para></listitem></varlistentry><varlistentry><term>4c)</term><listitem><para>Put a “y”-hyphen after any 4-letter rafsi form.</para></listitem></varlistentry></variablelist></para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>5)</term>
+      <listitem>
+        <para>Test all forms with one or more initial CVC-form rafsi — with the pattern “CVC ... CVC + X” — for “tosmabru failure”. X must either be a CVCCV long rafsi that happens to have a permissible initial pair as the consonant cluster, or is something which has caused a “y”-hyphen to be installed between the previous CVC and itself by one of the above rules.</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  <para>Note that the “tosmabru test” implies that the algorithm will be more efficient if rafsi junctures are tested for required hyphens from right to left, instead of from left to right; when the test is required, it cannot be completed until hyphenation to the right has been determined.</para>
+</section>
+
+<section xml:id="cll_chapter4-section12">
+  <title>12. The lujvo scoring algorithm</title>
+  <para>This algorithm was devised by Bob and Nora LeChevalier in 1989. It is not the only possible algorithm, but it usually gives a choice that people find preferable. The algorithm may be changed in the future. The lowest-scoring variant will usually be the dictionary form of the lujvo. (In previous versions, it was the highest-scoring variant.)</para>
+  <variablelist>
+    <varlistentry>
+      <term>1)</term>
+      <listitem>
+        <para>Count the total number of letters, including hyphens and apostrophes; call it “L”.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>2)</term>
+      <listitem>
+        <para>Count the number of apostrophes; call it “A”.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>3)</term>
+      <listitem>
+        <para>Count the number of “y”-, “r”-, and “n”-hyphens; call it “H”.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>4)</term>
+      <listitem>
+        <para>
+For each rafsi, find the value in the following table. Sum this value over all rafsi; call it “R”:
+<programlisting>
+      CVC/CV (final)               (-sarji)    1
+      CVC/C                        (-sarj-)    2
+      CCVCV (final)                (-zbasu)    3
+      CCVC                         (-zbas-)    4
+      CVC                          (-nun-)     5
+      CVV with an apostrophe       (-ta'u-)    6
+      CCV                          (-zba-)     7
+      CVV with no apostrophe       (-sai-)     8
+      
+</programlisting></para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>5)</term>
+      <listitem>
+        <para>Count the number of vowels, not including “y”; call it “V”.</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  <para>The score is then:</para>
+  <programlisting>
+      (1000 * L) - (500 * A) + (100 * H) - (10 * R) - V
+</programlisting>
+  <para>In case of ties, there is no preference. This should be rare. Note that the algorithm essentially encodes a hierarchy of priorities: short words are preferred (counting apostrophes as half a letter), then words with fewer hyphens, words with more pleasing rafsi (this judgment is subjective), and finally words with more vowels are chosen. Each decision principle is applied in turn if the ones before it have failed to choose; it is possible that a lower-ranked principle might dominate a higher-ranked one if it is ten times better than the alternative.</para>
+  <para>Here are some lujvo with their scores (not necessarily the lowest scoring forms for these lujvo, nor even necessarily sensible lujvo):</para>
+  <programlisting><anchor xml:id="c4e12d1"/><anchor xml:id="cll_chapter4-section12-example1"/>12.1)  zbasai
+       zba + sai
+       (1000 * 6) - (500 * 0) + (100 * 0) - (10 * 15) - 3
+       = 5847
+
+<anchor xml:id="c4e12d2"/><anchor xml:id="cll_chapter4-section12-example2"/>12.2)  nunynau
+       nun + y + nau
+       (1000 * 7) - (500 * 0) + (100 * 1) - (10 * 13) - 3
+       = 6967
+
+<anchor xml:id="c4e12d3"/><anchor xml:id="cll_chapter4-section12-example3"/>12.3)  sairzbata'u
+       sai + r + zba + ta'u
+       (1000 * 11) - (500 * 1) + (100 * 1) - (10 * 21) - 5
+       = 10385
+
+<anchor xml:id="c4e12d4"/><anchor xml:id="cll_chapter4-section12-example4"/>12.4)  zbazbasysarji
+       zba + zbas + y + sarji
+       (1000 * 13) - (500 * 0) + (100 * 1) - (10 * 12) - 4
+       = 12976
+</programlisting>
+</section>
+
+<section xml:id="cll_chapter4-section13">
+  <title>13. lujvo-making examples</title>
+  <para>This section contains examples of making and scoring lujvo. First, we will start with the tanru “gerku zdani” (“dog house”) and construct a lujvo meaning “doghouse”, that is, a house where a dog lives. We will use a brute-force application of the algorithm in <xref linkend="cll_chapter4-section12"/>, using every possible rafsi.</para>
+  <para>The rafsi for “gerku” are:</para>
+  <programlisting>
+          -ger-, -ge'u-, -gerk-, -gerku
+</programlisting>
+  <para>The rafsi for “zdani” are:</para>
+  <programlisting>
+          -zda-, -zdan-, -zdani.
+</programlisting>
+  <para>Step 1 of the algorithm directs us to use “-ger-”, “-ge'u-” and “-gerk-” as possible rafsi for “gerku”; Step 2 directs us to use “-zda-” and “-zdani” as possible rafsi for “zdani”. The six possible forms of the lujvo are then:</para>
+  <programlisting>
+          ger-zda
+          ger-zdani
+          ge'u-zda
+          ge'u-zdani
+          gerk-zda
+          gerk-zdani
+</programlisting>
+  <para>We must then insert appropriate hyphens in each case. The first two forms need no hyphenation: “ge” cannot fall off the front, because the following word would begin with “rz”, which is not a permissible initial consonant pair. So the lujvo forms are “gerzda” and “gerzdani”.</para>
+  <para>The third form, “ge'u-zda”, needs no hyphen, because even though the first rafsi is CVV, the second one is CCV, so there is a consonant cluster in the first five letters. So “ge'uzda” is this form of the lujvo.</para>
+  <para>The fourth form, “ge'u-zdani”, however, requires an “r”-hyphen; otherwise, the “ge'u-” part would fall off as a cmavo. So this form of the lujvo is “ge'urzdani”.</para>
+  <para>The last two forms require “y”-hyphens, as all 4-letter rafsi do, and so are “gerkyzda” and “gerkyzdani” respectively.</para>
+  <para>The scoring algorithm is heavily weighted in favor of short lujvo, so we might expect that “gerzda” would win. Its L score is 6, its A score is 0, its H score is 0, its R score is 12, and its V score is 3, for a final score of 5878. The other forms have scores of 7917, 6367, 9506, 8008, and 10047 respectively. Consequently, this lujvo would probably appear in the dictionary in the form “gerzda”.</para>
+  <para>For the next example, we will use the tanru “bloti klesi” (“boat class”) presumably referring to the category (rowboat, motorboat, cruise liner) into which a boat falls. We will omit the long rafsi from the process, since lujvo containing long rafsi are almost never preferred by the scoring algorithm when there are short rafsi available.</para>
+  <para>The rafsi for “bloti” are “-lot-”, “-blo-”, and “-lo'i-”; for “klesi” they are “-kle-” and “-lei-”. Both these gismu are among the handful which have both CVV-form and CCV-form rafsi, so there is an unusual number of possibilities available for a two-part tanru:</para>
+  <programlisting>
+          lotkle      blokle      lo'ikle
+          lotlei      blolei      lo'irlei
+</programlisting>
+  <para>Only “lo'irlei” requires hyphenation (to avoid confusion with the cmavo sequence “lo'i lei”). All six forms are valid versions of the lujvo, as are the six further forms using long rafsi; however, the scoring algorithm produces the following results:</para>
+  <programlisting>
+          lotkle  5878      blokle  5858      lo'ikle  6367
+          lotlei  5867      blolei  5847      lo'irlei 7456
+</programlisting>
+  <para>So the form “blolei” is preferred, but only by a tiny margin over “blokle”; "lotlei" and "lotkle" are only slightly worse; “lo'ikle” suffers because of its apostrophe, and “lo'irlei” because of having both apostrophe and hyphen.</para>
+  <para>Our third example will result in forming both a lujvo and a name from the tanru “logji bangu girzu”, or “logical-language group” in English. (“The Logical Language Group” is the name of the publisher of this book and the organization for the promotion of Lojban.)</para>
+  <para>The available rafsi are “-loj-” and “-logj-”; “-ban-”, “-bau-”, and “-bang-”; and “-gri-” and “-girzu”, and (for name purposes only) “-gir-” and “-girz-”. The resulting 12 lujvo possibilities are:</para>
+  <programlisting>
+          loj-ban-gri      loj-bau-gri      loj-bang-gri
+          logj-ban-gri     logj-bau-gri     logj-bang-gri
+          loj-ban-girzu    loj-bau-girzu    loj-bang-girzu
+          logj-ban-girzu   logj-bau-girzu   logj-bang-girzu
+</programlisting>
+  <para>and the 12 name possibilities are:</para>
+  <programlisting>
+          loj-ban-gir.     loj-bau-gir.     loj-bang-gir.
+          logj-ban-gir.    logj-bau-gir.    logj-bang-gir.
+          loj-ban-girz.    loj-bau-girz.    loj-bang-girz.
+          logj-ban-girz.   logj-bau-girz.   logj-bang-girz.
+</programlisting>
+  <para>After hyphenation, we have:</para>
+  <programlisting>
+          lojbangri        lojbaugri        lojbangygri
+          logjybangri      logjybaugri      logjybangygri
+          lojbangirzu      lojbaugirzu      lojbangygirzu
+          logjybangirzu    logjybaugirzu    logjybangygirzu
+
+          lojbangir.       lojbaugir.       lojbangygir.
+          logjybangir.     logjybaugir.     logjybangygir.
+          lojbangirz.      lojbaugirz.      lojbangygirz.
+          logjybangirz.    logjybaugirz.    logjybangygirz.
+</programlisting>
+  <para>The only fully reduced lujvo forms are “lojbangri” and “lojbaugri”, of which the latter has a slightly lower score: 8827 versus 8796, respectively. However, for the name of the organization, we chose to make sure the name of the language was embedded in it, and to use the clearer long-form rafsi for “girzu”, producing “lojbangirz.”</para>
+  <para>Finally, here is a four-part lujvo with a cmavo in it, based on the tanru “nakni ke cinse ctuca” or “male (sexual teacher)”. The “ke” cmavo ensures the interpretation “teacher of sexuality who is male”, rather than “teacher of male sexuality”. Here are the possible forms of the lujvo, both before and after hyphenation:</para>
+  <programlisting>
+          nak-kem-cin-ctu          nakykemcinctu
+          nak-kem-cin-ctuca        nakykemcinctuca
+          nak-kem-cins-ctu         nakykemcinsyctu
+          nak-kem-cins-ctuca       nakykemcinsyctuca
+          nakn-kem-cin-ctu         naknykemcinctu
+          nakn-kem-cin-ctuca       naknykemcinctuca
+          nakn-kem-cins-ctu        naknykemcinsyctu
+          nakn-kem-cins-ctuca      naknykemcinsyctuca
+</programlisting>
+  <para>Of these forms, “nakykemcinctu” is the shortest and is preferred by the scoring algorithm. On the whole, however, it might be better to just make a lujvo for “cinse ctuca” (which would be “cinctu”) since the sex of the teacher is rarely important. If there was a reason to specify “male”, then the simpler tanru “nakni cinctu” (“male sexual-teacher”) would be appropriate. This tanru is actually shorter than the four-part lujvo, since the “ke” required for grouping need not be expressed.</para>
+</section>
+
+<section xml:id="cll_chapter4-section14">
+  <title>14. The gismu creation algorithm</title>
+  <para>The gismu were created through the following process:</para>
+  <variablelist>
+    <varlistentry>
+      <term>1)</term>
+      <listitem>
+        <para>At least one word was found in each of the six source languages (Chinese, English, Hindi, Spanish, Russian, Arabic) corresponding to the proposed gismu. This word was rendered into Lojban phonetics rather liberally: consonant clusters consisting of a stop and the corresponding fricative were simplified to just the fricative (“tc” became “c”, “dj” became “j”) and non-Lojban vowels were mapped onto Lojban ones. Furthermore, morphological endings were dropped. The same mapping rules were applied to all six languages for the sake of consistency.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>2)</term>
+      <listitem>
+        <para>
+All possible gismu forms were matched against the six source-language forms. The matches were scored as follows:
+
+<variablelist><varlistentry><term>2a)</term><listitem><para>If three or more letters were the same in the proposed gismu and the source-language word, and appeared in the same order, the score was equal to the number of letters that were the same. Intervening letters, if any, did not matter.</para></listitem></varlistentry><varlistentry><term>2b)</term><listitem><para>If exactly two letters were the same in the proposed gismu and the source-language word, and either the two letters were consecutive in both words, or were separated by a single letter in both words, the score was 2. Letters in reversed order got no score.</para></listitem></varlistentry><varlistentry><term>2c)</term><listitem><para>Otherwise, the score was 0.</para></listitem></varlistentry></variablelist></para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>3)</term>
+      <listitem>
+        <para>The scores were divided by the length of the source-language word in its Lojbanized form, and then multiplied by a weighting value specific to each language, reflecting the proportional number of first-language and second-language speakers of the language. (Second-language speakers were reckoned at half their actual numbers.) The weights were chosen to sum to 1.00. The sum of the weighted scores was the total score for the proposed gismu form.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>4)</term>
+      <listitem>
+        <para>Any gismu forms that conflicted with existing gismu were removed. Obviously, being identical with an existing gismu constitutes a conflict. In addition, a proposed gismu that was identical to an existing gismu except for the final vowel was considered a conflict, since two such gismu would have identical 4-letter rafsi.</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>5)</term>
+      <listitem>
+        <para>The gismu form with the highest score usually became the actual gismu. Sometimes a lower-scoring form was used to provide a better rafsi. A few gismu were changed in error as a result of transcription blunders (for example, the gismu “gismu” should have been “gicmu”, but it’s too late to fix it now).</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  <para>Note that the stressed vowel of the gismu was considered sufficiently distinctive that two or more gismu may differ only in this vowel; as an extreme example, “bradi”, “bredi”, “bridi”, and “brodi” (but fortunately not “brudi”) are all existing gismu.</para>
+</section>
+
+<section xml:id="cll_chapter4-section15">
+  <title>15. Cultural and other non-algorithmic gismu</title>
+  <para>The following gismu were not made by the gismu creation algorithm. They are, in effect, coined words similar to fu'ivla. They are exceptions to the otherwise mandatory gismu creation algorithm where there was sufficient justification for such exceptions. Except for the small metric prefixes and the assignable predicates beginning with “brod-”, they all end in the letter “o”, which is otherwise a rare letter in Lojban gismu.</para>
+  <para>The following gismu represent concepts that are sufficiently unique to Lojban that they were either coined from combining forms of other gismu, or else made up out of whole cloth. These gismu are thus conceptually similar to lujvo even though they are only five letters long; however, unlike lujvo, they have rafsi assigned to them for use in building more complex lujvo. Assigning gismu to these concepts helps to keep the resulting lujvo reasonably short.</para>
+  <programlisting>
+    broda       1st assignable predicate
+    brode       2nd assignable predicate
+    brodi       3rd assignable predicate
+    brodo       4th assignable predicate
+    brodu       5th assignable predicate
+    cmavo       structure word (from “cmalu valsi”)
+    lojbo       Lojbanic (from “logji bangu”)
+    lujvo       compound word (from “pluja valsi”)
+    mekso       Mathematical EXpression
+</programlisting>
+  <para>It is important to understand that even though “cmavo”, “lojbo”, and “lujvo” were made up from parts of other gismu, they are now full-fledged gismu used in exactly the same way as all other gismu, both in grammar and in word formation.</para>
+  <para>The following three groups of gismu represent concepts drawn from the international language of science and mathematics. They are used for concepts that are represented in most languages by a root which is recognized internationally.</para>
+  <para>Small metric prefixes (values less than 1):</para>
+  <programlisting>
+    decti       .1/deci
+    centi       .01/centi
+    milti       .001/milli
+    mikri       1E-6/micro
+    nanvi       1E-9/nano
+    picti       1E-12/pico
+    femti       1E-15/femto
+    xatsi       1E-18/atto
+    zepti       1E-21/zepto
+    gocti       1E-24/yocto
+</programlisting>
+  <para>Large metric prefixes (values greater than 1):</para>
+  <programlisting>
+    dekto       10/deka
+    xecto       100/hecto
+    kilto       1000/kilo
+    megdo       1E6/mega
+    gigdo       1E9/giga
+    terto       1E12/tera
+    petso       1E15/peta
+    xexso       1E18/exa
+    zetro       1E21/zetta
+    gotro       1E24/yotta
+</programlisting>
+  <para>Other scientific or mathematical terms:</para>
+  <programlisting>
+    delno       candela
+    kelvo       kelvin
+    molro       mole
+    radno       radian
+    sinso       sine
+    stero       steradian
+    tanjo       tangent
+    xampo       ampere
+</programlisting>
+  <para>The gismu “sinso” and “tanjo” were only made non-algorithmically because they were identical (having been borrowed from a common source) in all the dictionaries that had translations. The other terms in this group are units in the international metric system; some metric units, however, were made by the ordinary process (usually because they are different in Chinese).</para>
+  <para>Finally, there are the cultural gismu, which are also borrowed, but by modifying a word from one particular language, instead of using the multi-lingual gismu creation algorithm. Cultural gismu are used for words that have local importance to a particular culture; other cultures or languages may have no word for the concept at all, or may borrow the word from its home culture, just as Lojban does. In such a case, the gismu algorithm, which uses weighted averages, doesn’t accurately represent the frequency of usage of the individual concept. Cultural gismu are not even required to be based on the six major languages.</para>
+  <para>The six Lojban source languages:</para>
+  <programlisting>
+    jungo       Chinese (from “Zhong<superscript>1</superscript>guo<superscript>2</superscript>”)
+    glico       English
+    xindo       Hindi
+    spano       Spanish
+    rusko       Russian
+    xrabo       Arabic
+</programlisting>
+  <para>Seven other widely spoken languages that were on the list of candidates for gismu-making, but weren’t used:</para>
+  <programlisting>
+    bengo       Bengali
+    porto       Portuguese
+    baxso       Bahasa Melayu/Bahasa Indonesia
+    ponjo       Japanese (from “Nippon”)
+    dotco       German (from “Deutsch”)
+    fraso       French (from “Français”)
+    xurdo       Urdu
+</programlisting>
+  <para>(Urdu and Hindi began as the same language with different writing systems, but have now become somewhat different, principally in borrowed vocabulary. Urdu-speakers were counted along with Hindi-speakers when weights were assigned for gismu-making purposes.)</para>
+  <para>Countries with a large number of speakers of any of the above languages (where the meaning of “large” is dependent on the specific language):</para>
+  <programlisting>
+         English:
+
+    merko       American
+    brito       British
+    skoto       Scottish
+    sralo       Australian
+    kadno       Canadian
+
+         Spanish:
+
+    gento       Argentinian
+    mexno       Mexican
+
+         Russian:
+
+    softo       Soviet/USSR
+    vukro       Ukrainian
+
+         Arabic:
+
+    filso       Palestinian
+    jerxo       Algerian
+    jordo       Jordanian
+    libjo       Libyan
+    lubno       Lebanese
+    misro       Egyptian (from “Mizraim”)
+    morko       Moroccan
+    rakso       Iraqi
+    sadjo       Saudi
+    sirxo       Syrian
+
+         Bahasa Melayu/Bahasa Indonesia:
+
+    bindo       Indonesian
+    meljo       Malaysian
+
+         Portuguese:
+
+    brazo       Brazilian
+
+         Urdu:
+
+    kisto       Pakistani
+    
+</programlisting>
+  <para>The continents (and oceanic regions) of the Earth:</para>
+  <programlisting>
+    bemro       North American (from “berti merko”)
+    dzipo       Antarctican (from “cadzu cipni”)
+    ketco       South American (from “Quechua”)
+    friko       African
+    polno       Polynesian/Oceanic
+    ropno       European
+    xazdo       Asiatic
+</programlisting>
+  <para>A few smaller but historically important cultures:</para>
+  <programlisting>
+    latmo       Latin/Roman
+    srito       Sanskrit
+    xebro       Hebrew/Israeli/Jewish
+    xelso       Greek (from “Hellas”)
+</programlisting>
+  <para>Major world religions:</para>
+  <programlisting>
+    budjo       Buddhist
+    dadjo       Taoist
+    muslo       Islamic/Moslem
+    xriso       Christian
+</programlisting>
+  <para>A few terms that cover multiple groups of the above:</para>
+  <programlisting>
+    jegvo       Jehovist (Judeo-Christian-Moslem)
+    semto       Semitic
+    slovo       Slavic
+    xispo       Hispanic (New World Spanish)
+</programlisting>
+</section>
+
+<section xml:id="cll_chapter4-section16">
+  <title>16. rafsi fu'ivla: a proposal</title>
+  <para>The list of cultures represented by gismu, given in <xref linkend="cll_chapter4-section15"/>, is unavoidably controversial. Much time has been spent debating whether this or that culture “deserves a gismu” or “must languish in fu'ivla space”. To help defuse this argument, a last-minute proposal was made when this book was already substantially complete. I have added it here with experimental status: it is not yet a standard part of Lojban, since all its implications have not been tested in open debate, and it affects a part of the language (lujvo-making) that has long been stable, but is known to be fragile in the face of small changes. (Many attempts were made to add general mechanisms for making lujvo that contained fu'ivla, but all failed on obvious or obscure counterexamples; finally the general “zei” mechanism was devised instead.)</para>
+  <para>The first part of the proposal is uncontroversial and involves no change to the language mechanisms. All valid Type 4 fu'ivla of the form CCVVCV would be reserved for cultural brivla analogous to those described in <xref linkend="cll_chapter4-section15"/>. For example,</para>
+  <programlisting><anchor xml:id="c4e16d1"/><anchor xml:id="cll_chapter4-section16-example1"/>16.1)  tci'ile
+       Chilean
+</programlisting>
+  <para>is of the appropriate form, and passes all tests required of a Stage 4 fu'ivla. No two fu'ivla of this form would be allowed to coexist if they differed only in the final vowel; this rule was applied to gismu, but does not apply to other fu'ivla or to lujvo.</para>
+  <para>The second, and fully experimental, part of the proposal is to allow rafsi to be formed from these cultural fu'ivla by removing the final vowel and treating the result as a 4-letter rafsi (although it would contain five letters, not four). These rafsi could then be used on a par with all other rafsi in forming lujvo. The tanru</para>
+  <programlisting><anchor xml:id="c4e16d2"/><anchor xml:id="cll_chapter4-section16-example2"/>16.2)  tci'ile ke canre tutra
+       Chilean type-of (sand territory)
+       Chilean desert
+</programlisting>
+  <para>could be represented by the lujvo</para>
+  <programlisting><anchor xml:id="c4e16d3"/><anchor xml:id="cll_chapter4-section16-example3"/>16.3)  tci'ilykemcantutra
+</programlisting>
+  <para>which is an illegal word in standard Lojban, but a valid lujvo under this proposal. There would be no short rafsi or 5-letter rafsi assigned to any fu'ivla, so no fu'ivla could appear as the last element of a lujvo.</para>
+  <para>The cultural fu'ivla introduced under this proposal are called “rafsi fu'ivla”, since they are distinguished from other Type 4 fu'ivla by the property of having rafsi. If this proposal is workable and introduces no problems into Lojban morphology, it might become standard for all Type 4 fu'ivla, including those made for plants, animals, foodstuffs, and other things.</para>
+</section>
+
+
+</chapter>

@@ -1,0 +1,16 @@
+
+This directory is used to turn the old HTML many-files stuff into
+dockbook/xml.  It's not ever intended to be re-run once it's all
+working properly; the scripts and stuff are still here in case
+something is found that's easier to fix in the HTML and propogate
+through.
+
+Anyways, that's why these instructions on how to build everything
+aren't in a makefile or something:
+
+  superglom.sh
+
+  merge.sh
+
+  xmlto -o html/ html cll.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
+

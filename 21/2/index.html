@@ -28,7 +28,7 @@
 Lojban Machine Grammar, EBNF Version, Final Baseline
 <p>This EBNF document is explicitly dedicated to the public domain by its author, The Logical Language Group, Inc. Contact that organization at: 2904 Beau Lane, Fairfax VA 22031 USA 703-385-0273 (intl: +1 703 385 0273)</p>
 <p>Explanation of notation: All rules have the form:</p>
-<div class="c2">name<sub>number</sub> = bnf-expression</div>
+<p>name<sub>number</sub> = bnf-expression</p>
 <br />
 <br />
 which means that the grammatical construct “name” is defined by “bnf-expression”. The number cross-references this grammar with the rule numbers in the YACC grammar. The names are the same as those in the YACC grammar, except that subrules are labeled with A, B, C, ... in the YACC grammar and with 1, 2, 3, ... in this grammar. In addition, rule 971 is “simple_tag” in the YACC grammar but “stag” in this grammar, because of its frequent appearance.
@@ -45,8 +45,7 @@ which means that the grammatical construct “name” is defined by “bnf-expre
 <li>// encloses an elidable terminator, which may be omitted (without change of meaning) if no grammatical ambiguity results.</li>
 </ol>
 <dl>
-<dd><a id="b0" name="b0"></a><a href="#y0"></a></dd>
-<dt>text<sub>0</sub> =</dt>
+<dt><a id="b0" name="b0"></a><a href="#y0"></a>text<sub>0</sub> =</dt>
 <dd>[NAI ...] [CMENE ... # | (indicators &amp; free ...)] [joik-jek] text-1 <a id="b2" name="b2"></a><a href="#y2"></a></dd>
 <dt>text-1<sub>2</sub> =</dt>
 <dd>[(I [jek | joik] [[stag] BO] #) ... | NIhO ... #] [paragraphs] <a id="b4" name="b4"></a><a href="#y4"></a></dd>
@@ -314,8 +313,7 @@ which means that the grammatical construct “name” is defined by “bnf-expre
 </dl>
 <p>The following rules are non-formal:</p>
 <dl>
-<dd><a id="b1100" name="b1100"></a><a href="#y1100"></a></dd>
-<dt>word<sub>1100</sub> =</dt>
+<dt><a id="b1100" name="b1100"></a><a href="#y1100"></a> word<sub>1100</sub> =</dt>
 <dd>[BAhE] any-word [indicators]</dd>
 <dt>any-word =</dt>
 <dd>“any single word (no compound cmavo)”</dd>
