@@ -1,654 +1,1834 @@
 <chapter xml:id="cll_chapter16">
-  <title>Chapter 16
-“Who Did You Pass On The Road? Nobody”: Lojban And Logic</title>
-
-
-<section xml:id="cll_chapter16-section1">
-  <title>1. What’s wrong with this picture?</title>
-  <para>The following brief dialogue is from <xref linkend="cll_chapter7"/> of <citation>Through The Looking Glass</citation> by Lewis Carroll.</para>
-  <programlisting><anchor xml:id="c16e1d1"/><anchor xml:id="cll_chapter16-section1-example1"/>1.1)   “Who did you pass on the road?” the King went on,
-       holding out his hand to the Messenger for some more hay.
-
-<anchor xml:id="c16e1d2"/><anchor xml:id="cll_chapter16-section1-example2"/>1.2)   “Nobody,” said the Messenger.
-
-<anchor xml:id="c16e1d3"/><anchor xml:id="cll_chapter16-section1-example3"/>1.3)   “Quite right,” said the King:  “this young lady saw him too.
-       So of course Nobody walks slower than you.”
-
-<anchor xml:id="c16e1d4"/><anchor xml:id="cll_chapter16-section1-example4"/>1.4)   “I do my best,” the Messenger said in a sulky tone.
-       “I’m sure nobody walks much faster than I do!”
-
-<anchor xml:id="c16e1d5"/><anchor xml:id="cll_chapter16-section1-example5"/>1.5)   “He can’t do that,” said the King,
-       “or else he’d have been here first.”
-</programlisting>
-  <para>This nonsensical conversation results because the King insists on treating the word “nobody” as a name, a name of somebody. However, the essential nature of the English word “nobody” is that it doesn’t refer to somebody; or to put the matter another way, there isn’t anybody to which it refers.</para>
-  <para>The central point of contradiction in the dialogue arises in <xref linkend="cll_chapter16-section1-example3"/>, when the King says “... Nobody walks slower than you”. This claim would be plausible if “Nobody” were really a name, since the Messenger could only pass someone who does walk more slowly than he. But the Messenger interprets the word “nobody” in the ordinary English way, and says (in <xref linkend="cll_chapter16-section1-example4"/>) “... nobody walks much faster than I do” (i.e., I walk faster, or as fast as, almost everyone), which the King then again misunderstands. Both the King and the Messenger are correct according to their respective understandings of the ambiguous word “nobody/Nobody”.</para>
-  <para>There are Lojban words or phrases corresponding to the problematic English words “somebody”, “nobody”, “anybody”, “everybody” (and their counterparts “some/no/any/everyone” and “some/no/any/everything”), but they obey rules which can often be surprising to English-speakers. The dialogue above simply cannot be translated into Lojban without distortion: the name “Nobody” would have to be represented by a Lojban name, which would spoil the perfection of the wordplay. As a matter of fact, this is the desired result: a logical language should not allow two conversationalists to affirm “Nobody walks slower than the Messenger” and “Nobody walks faster than the Messenger” and both be telling the truth. (Unless, of course, nobody but the Messenger walks at all, or everyone walks at exactly the same speed.)</para>
-  <para>This chapter will explore the Lojban mechanisms that allow the correct and consistent construction of sentences like those in the dialogue. There are no new grammatical constructs explained in this chapter; instead, it discusses the way in which existing facilities that allow Lojban-speakers to resolve problems like the above, using the concepts of modern logic. However, we will not approach the matter from the viewpoint of logicians, although readers who know something of logic will discover familiar notions in Lojban guise.</para>
-  <para>Although Lojban is called a logical language, not every feature of it is “logical”. In particular, the use of “le” is incompatible with logical reasoning based on the description selbri, because that selbri may not truthfully apply: you cannot conclude from my statement that</para>
-  <programlisting><anchor xml:id="c16e1d6"/><anchor xml:id="cll_chapter16-section1-example6"/>1.6)   mi viska le nanmu
-       I see the-one-I-refer-to-as-the man.
-       I see the man/men.
-</programlisting>
-  <para>that there really is a man; the only thing you can conclude is that there is one thing (or more) that I choose to refer to as a man. You cannot even tell which man is meant for sure without asking me (although communication is served if you already know from the context).</para>
-  <para>In addition, the use of attitudinals (see <xref linkend="cll_chapter13"/>) often reduces or removes the ability to make deductions about the bridi to which those attitudinals are applied. From the fact that I hope George will win the election, you can conclude nothing about George’s actual victory or defeat.</para>
-</section>
-
-<section xml:id="cll_chapter16-section2">
-  <title>2. Existential claims, prenexes, and variables</title>
-  <para>Let us consider, to begin with, a sentence that is not in the dialogue:</para>
-  <programlisting><anchor xml:id="c16e2d1"/><anchor xml:id="cll_chapter16-section2-example1"/>2.1)   Something sees me.
-</programlisting>
-  <para>There are two plausible Lojban translations of <xref linkend="cll_chapter16-section2-example1"/>. The simpler one is:</para>
-  <programlisting><anchor xml:id="c16e2d2"/><anchor xml:id="cll_chapter16-section2-example2"/>2.2)   [zo'e] viska mi
-       Something-unspecified sees me.
-</programlisting>
-  <para>The cmavo “zo'e” indicates that a sumti has been omitted (indeed, even “zo'e” itself can be omitted in this case, as explained in <xref linkend="cll_chapter7"/>) and the listener must fill in the correct value from context. In other words, <xref linkend="cll_chapter16-section2-example2"/> means “‘You-know-what’ sees me.”</para>
-  <para>However, <xref linkend="cll_chapter16-section2-example1"/> is just as likely to assert simply that there is someone who sees me, in which case a correct translation is:</para>
-  <programlisting><anchor xml:id="c16e2d3"/><anchor xml:id="cll_chapter16-section2-example3"/>2.3)   da zo'u da viska mi
-       There-is-an-X such-that X sees me.
-</programlisting>
-  <para><xref linkend="cll_chapter16-section2-example3"/> does not presuppose that the listener knows who sees the speaker, but simply tells the listener that there is someone who sees the speaker. Statements of this kind are called “existential claims”. (Formally, the one doing the seeing is not restricted to being a person; it could be an animal or — in principle — an inanimate object. We will see in <xref linkend="cll_chapter16-section4"/> how to represent such restrictions.)</para>
-  <para><xref linkend="cll_chapter16-section2-example3"/> has a two-part structure: there is the part “da zo'u”, called the prenex, and the part “da viska mi”, the main bridi. Almost any Lojban bridi can be preceded by a prenex, which syntactically is any number of sumti followed by the cmavo “zo'u” (of selma'o ZOhU). For the moment, the sumti will consist of one or more of the cmavo “da”, “de”, and “di” (of selma'o KOhA), glossed in the literal translations as “X”, “Y”, and “Z” respectively. By analogy to the terminology of symbolic logic, these cmavo are called “variables”.</para>
-  <para>Here is an example of a prenex with two variables:</para>
-  <programlisting><anchor xml:id="c16e2d4"/><anchor xml:id="cll_chapter16-section2-example4"/>2.4)   da de zo'u da prami de
-       There-is-an-X there-is-a-Y such that X loves Y.
-       Somebody loves somebody.
-</programlisting>
-  <para>In <xref linkend="cll_chapter16-section2-example4"/>, the literal interpretation of the two variables “da” and “de” as “there-is-an-X” and “there-is-a-Y” tells us that there are two things which stand in the relationship that one loves the other. It might be the case that the supposed two things are really just a single thing that loves itself; nothing in the Lojban version of <xref linkend="cll_chapter16-section2-example4"/> rules out that interpretation, which is why the colloquial translation does not say “Somebody loves somebody else.” The things referred to by different variables may be different or the same. (We use “somebody” here rather than “something” for naturalness; lovers and beloveds are usually persons, though the Lojban does not say so.)</para>
-  <para>It is perfectly all right for the variables to appear more than once in the main bridi:</para>
-  <programlisting><anchor xml:id="c16e2d5"/><anchor xml:id="cll_chapter16-section2-example5"/>2.5)   da zo'u da prami da
-       There-is-an-X such that X loves X
-       Somebody loves himself/herself.
-</programlisting>
-  <para>What <xref linkend="cll_chapter16-section2-example5"/> claims is fundamentally different from what <xref linkend="cll_chapter16-section2-example4"/> claims, because “da prami da” is not structurally the same as “da prami de”. However,</para>
-  <programlisting><anchor xml:id="c16e2d6"/><anchor xml:id="cll_chapter16-section2-example6"/>2.6)   de zo'u de prami de
-       There-is-a-Y such that Y loves Y
-</programlisting>
-  <para>means exactly the same thing as <xref linkend="cll_chapter16-section2-example5"/>; it does not matter which variable is used as long as they are used consistently.</para>
-  <para>It is not necessary for a variable to be a sumti of the main bridi directly:</para>
-  <programlisting><anchor xml:id="c16e2d7"/><anchor xml:id="cll_chapter16-section2-example7"/>2.7)   da zo'u le da gerku cu viska mi
-       There-is-an-X such-that the of-X dog sees me
-       Somebody’s dog sees me
-</programlisting>
-  <para>is perfectly correct even though the “da” is used only in a possessive construction. (Possessives are explained in <xref linkend="cll_chapter8"/>.)</para>
-  <para>It is very peculiar, however, even if technically grammatical, for the variable not to appear in the main bridi at all:</para>
-  <programlisting><anchor xml:id="c16e2d8"/><anchor xml:id="cll_chapter16-section2-example8"/>2.8)   da zo'u la ralf. gerku
-       There is something such that Ralph is a dog.
-</programlisting>
-  <para>has a variable bound in a prenex whose relevance to the claim of the following bridi is completely unspecified.</para>
-</section>
-
-<section xml:id="cll_chapter16-section3">
-  <title>3. Universal claims</title>
-  <para>What happens if we substitute “everything” for “something” in <xref linkend="cll_chapter16-section2-example1"/>? We get:</para>
-  <programlisting><anchor xml:id="c16e3d1"/><anchor xml:id="cll_chapter16-section3-example1"/>3.1)   Everything sees me.
-</programlisting>
-  <para>Of course, this example is false, because there are many things which do not see the speaker. It is not easy to find simple truthful examples of so-called universal claims (those which are about everything), so bear with us for a while. (Indeed, some Lojbanists tend to avoid universal claims even in other languages, since they are so rarely true in Lojban.)</para>
-  <para>The Lojban translation of <xref linkend="cll_chapter16-section3-example1"/> is</para>
-  <programlisting><anchor xml:id="c16e3d2"/><anchor xml:id="cll_chapter16-section3-example2"/>3.2)   ro da zo'u da viska mi
-       For-every X : X sees me.
-</programlisting>
-  <para>When the variable cmavo “da” is preceded by “ro”, the combination means “For every X” rather than “There is an X”. Superficially, these English formulations look totally unrelated: <xref linkend="cll_chapter16-section6"/> will bring them within a common viewpoint. For the moment, accept the use of “ro da” for “everything” on faith.</para>
-  <para>Here is a universal claim with two variables:</para>
-  <programlisting><anchor xml:id="c16e3d3"/><anchor xml:id="cll_chapter16-section3-example3"/>3.3)   ro da ro de zo'u da prami de
-       For-every X, for-every Y : X loves Y.
-       Everything loves everything.
-</programlisting>
-  <para>Again, X and Y can represent the same thing, so <xref linkend="cll_chapter16-section3-example3"/> does not mean “Everything loves everything else.” Furthermore, because the claim is universal, it is about every thing, not merely every person, so we cannot use “everyone” or “everybody” in the translation.</para>
-  <para>Note that “ro” appears before both “da” and “de”. If “ro” is omitted before either variable, we get a mixed claim, partly existential like those of <xref linkend="cll_chapter16-section2"/>, partly universal.</para>
-  <programlisting><anchor xml:id="c16e3d4"/><anchor xml:id="cll_chapter16-section3-example4"/>3.4)   ro da de zo'u da viska de
-       For-every X, there-is-a-Y : X sees Y.
-       Everything sees something.
-
-<anchor xml:id="c16e3d5"/><anchor xml:id="cll_chapter16-section3-example5"/>3.5)   da ro de zo'u da viska de
-       There-is-an-X such-that-for-every-Y : X sees Y.
-       Something sees everything.
-</programlisting>
-  <para><xref linkend="cll_chapter16-section3-example4"/> and <xref linkend="cll_chapter16-section3-example5"/> mean completely different things. <xref linkend="cll_chapter16-section3-example4"/> says that for everything, there is something which it sees, not necessarily the same thing seen for every seer. <xref linkend="cll_chapter16-section3-example5"/>, on the other hand, says that there is a particular thing which can see everything that there is (including itself). Both of these are fairly silly, but they are different kinds of silliness.</para>
-  <para>There are various possible translations of universal claims in English: sometimes we use “anybody/anything” rather than “everybody/everything”. Often it makes no difference which of these is used: when it does make a difference, it is a rather subtle one which is explained in <xref linkend="cll_chapter16-section8"/>.</para>
-</section>
-
-<section xml:id="cll_chapter16-section4">
-  <title>4. Restricted claims: “da poi”</title>
-  <para>The universal claims of <xref linkend="cll_chapter16-section3"/> are not only false but absurd: there is really very little to be said that is both true and non-trivial about every object whatsoever. Furthermore, we have been glossing over the distinction between “everything” and “everybody” and the other pairs ending in “-thing” and “-body”. It is time to bring up the most useful feature of Lojban variables: the ability to restrict their ranges.</para>
-  <para>In Lojban, a variable “da”, “de”, or “di” may be followed by a “poi” relative clause in order to restrict the range of things that the variable describes. Relative clauses are described in detail in <xref linkend="cll_chapter8"/>, but the kind we will need at present consist of “poi” followed by a bridi (often just a selbri) terminated with “ku'o” or “vau” (which can usually be elided). Consider the difference between</para>
-  <programlisting><anchor xml:id="c16e4d1"/><anchor xml:id="cll_chapter16-section4-example1"/>4.1)   da zo'u da viska la djim.
-       There-is-an-X : X sees Jim.
-       Something sees Jim.
-</programlisting>
-  <para>and</para>
-  <programlisting><anchor xml:id="c16e4d2"/><anchor xml:id="cll_chapter16-section4-example2"/>4.2)   da poi prenu zo'u da viska la djim.
-       There-is-an-X which is-a-person : X sees Jim.
-       Someone sees Jim.
-</programlisting>
-  <para>In <xref linkend="cll_chapter16-section4-example1"/>, the variable “da” can refer to any object whatever; there are no restrictions on it. In <xref linkend="cll_chapter16-section4-example2"/>, “da” is restricted by the “poi prenu” relative clause to persons only, and so “da poi prenu” translates as “someone.” (The difference between “someone” and “somebody” is a matter of English style, with no real counterpart in Lojban.) If <xref linkend="cll_chapter16-section4-example2"/> is true, then <xref linkend="cll_chapter16-section4-example1"/> must be true, but not necessarily vice versa.</para>
-  <para>Universal claims benefit even more from the existence of relative clauses. Consider</para>
-  <programlisting><anchor xml:id="c16e4d3"/><anchor xml:id="cll_chapter16-section4-example3"/>4.3)   ro da zo'u da vasxu
-       For-every X : X breathes
-       Everything breathes
-</programlisting>
-  <para>and</para>
-  <programlisting><anchor xml:id="c16e4d4"/><anchor xml:id="cll_chapter16-section4-example4"/>4.4)   ro da poi gerku zo'u da vasxu
-       For-every X which is-a-dog : X breathes.
-       Every dog breathes.
-       Each dog breathes.
-       All dogs breathe.
-</programlisting>
-  <para><xref linkend="cll_chapter16-section4-example3"/> is a silly falsehood, but <xref linkend="cll_chapter16-section4-example4"/> is an important truth (at least if applied in a timeless or potential sense: see <xref linkend="cll_chapter10"/>). Note the various colloquial translations “every dog”, “each dog”, and “all dogs”. They all come to the same thing in Lojban, since what is true of every dog is true of all dogs. “All dogs” is treated as an English plural and the others as singular, but Lojban makes no distinction.</para>
-  <para>If we make an existential claim about dogs rather than a universal one, we get:</para>
-  <programlisting><anchor xml:id="c16e4d5"/><anchor xml:id="cll_chapter16-section4-example5"/>4.5)   da poi gerku zo'u da vasxu
-       There-is-an-X which is-a-dog : X breathes.
-       Some dog breathes.
-</programlisting>
-</section>
-
-<section xml:id="cll_chapter16-section5">
-  <title>5. Dropping the prenex</title>
-  <para>It isn’t really necessary for every Lojban bridi involving variables to have a prenex on the front. In fact, none of the examples we’ve seen so far required prenexes at all! The rule for dropping the prenex is simple: if the variables appear in the same order within the bridi as they did in the prenex, then the prenex is superfluous. However, any “ro” or “poi” appearing in the prenex must be transferred to the first occurrence of the variable in the main part of the bridi. Thus, <xref linkend="cll_chapter16-section2-example3"/> becomes just:</para>
-  <programlisting><anchor xml:id="c16e5d1"/><anchor xml:id="cll_chapter16-section5-example1"/>5.1)   da viska mi
-       There-is-an-X-which sees me.
-       Something sees me.
-</programlisting>
-  <para>and <xref linkend="cll_chapter16-section4-example4"/> becomes:</para>
-  <programlisting><anchor xml:id="c16e5d2"/><anchor xml:id="cll_chapter16-section5-example2"/>5.2)   ro da poi gerku cu vasxu
-       For-every X which is-a-dog, it-breathes.
-       Every dog breathes.
-</programlisting>
-  <para>You might well suppose, then, that the purpose of the prenex is to allow the variables in it to appear in a different order than the bridi order, and that would be correct. Consider</para>
-  <programlisting><anchor xml:id="c16e5d3"/><anchor xml:id="cll_chapter16-section5-example3"/>5.3)   ro da poi prenu ku'o de poi gerku ku'o zo'u de batci da
-       For-every X which is-a-person, there-is-a-Y which is-a-dog: Y bites X.
-</programlisting>
-  <para>The prenex of <xref linkend="cll_chapter16-section5-example3"/> is like that of <xref linkend="cll_chapter16-section3-example4"/> (but with relative clauses): it notes that the following bridi is true of every person with respect to some dog, not necessarily the same dog for each. But in the main bridi part, the “de” appears before the “da”. Therefore, the true translation is</para>
-  <programlisting><anchor xml:id="c16e5d4"/><anchor xml:id="cll_chapter16-section5-example4"/>5.4)   Every person is bitten by some dog (or other).
-</programlisting>
-  <para>If we tried to omit the prenex and move the “ro” and the relative clauses into the main bridi, we would get:</para>
-  <programlisting><anchor xml:id="c16e5d5"/><anchor xml:id="cll_chapter16-section5-example5"/>5.5)   de poi gerku cu batci ro da poi prenu
-       There-is-a-Y which is-a-dog which-bites every X which is-a-person
-       Some dog bites everyone.
-</programlisting>
-  <para>which has the structure of <xref linkend="cll_chapter16-section3-example5"/>: it says that there is a dog (call him Fido) who bites, has bitten, or will bite every person that has ever existed! We can safely rule out Fido’s existence, and say that <xref linkend="cll_chapter16-section5-example5"/> is false, while agreeing to <xref linkend="cll_chapter16-section5-example3"/>.</para>
-  <para>Even so, <xref linkend="cll_chapter16-section5-example3"/> is most probably false, since some people never experience dogbite. Examples like 5.3 and 4.4 (might there be some dogs which never have breathed, because they died as embryos?) indicate the danger in Lojban of universal claims even when restricted. In English we are prone to say that “Everyone says” or that “Everybody does” or that “Everything is” when in fact there are obvious counterexamples which we are ignoring for the sake of making a rhetorical point. Such statements are plain falsehoods in Lojban, unless saved by a context (such as tense) which implicitly restricts them.</para>
-  <para>How can we express <xref linkend="cll_chapter16-section5-example3"/> in Lojban without a prenex? Since it is the order in which variables appear that matters, we can say:</para>
-  <programlisting><anchor xml:id="c16e5d6"/><anchor xml:id="cll_chapter16-section5-example6"/>5.6)   ro da poi prenu cu se batci de poi gerku
-       Every-X which is-a-person is-bitten-by some-Y which is-a-dog.
-</programlisting>
-  <para>using the conversion operator “se” (explained in <xref linkend="cll_chapter5"/>) to change the selbri “batci” (“bites”) into “se batci” (“is bitten by”). The translation given in <xref linkend="cll_chapter16-section5-example4"/> uses the corresponding strategy in English, since English does not have prenexes (except in strained “logician’s English”). This implies that a sentence with both a universal and an existential variable can’t be freely converted with “se”; one must be careful to preserve the order of the variables.</para>
-  <para>If a variable occurs more than once, then any “ro” or “poi” decorations are moved only to the first occurrence of the variable when the prenex is dropped. For example,</para>
-  <programlisting><anchor xml:id="c16e5d7"/><anchor xml:id="cll_chapter16-section5-example7"/>5.7)   di poi prenu zo'u
-            ti xarci di di
-       There-is-a-Z which is-a-person :
-            this-thing is-a-weapon for-use-against-Z by-Z
-       This is a weapon for someone to use against
-            himself/herself.
-</programlisting>
-  <para>(in which “di” is used rather than “da” just for variety) loses its prenex as follows:</para>
-  <programlisting><anchor xml:id="c16e5d8"/><anchor xml:id="cll_chapter16-section5-example8"/>5.8)   ti xarci di poi prenu ku'o di
-       This-thing is-a-weapon-for-use-against some-Z which is-a-person by-Z.
-</programlisting>
-  <para>As the examples in this section show, dropping the prenex makes for terseness of expression often even greater than that of English (Lojban is meant to be an unambiguous language, not necessarily a terse or verbose one), provided the rules are observed.</para>
-</section>
-
-<section xml:id="cll_chapter16-section6">
-  <title>6. Variables with generalized quantifiers</title>
-  <para>So far, we have seen variables with either nothing in front, or with the cmavo “ro” in front. Now “ro” is a Lojban number, and means “all”; thus “ro prenu” means “all persons”, just as “re prenu” means “two persons”. In fact, unadorned “da” is also taken to have an implicit number in front of it, namely “su'o”, which means “at least one”. Why is this? Consider <xref linkend="cll_chapter16-section2-example3"/> again, this time with an explicit “su'o”:</para>
-  <programlisting><anchor xml:id="c16e6d1"/><anchor xml:id="cll_chapter16-section6-example1"/>6.1)   su'o da zo'u da viska mi
-       For-at-least-one X : X sees me.
-       Something sees me.
-</programlisting>
-  <para>From this version of <xref linkend="cll_chapter16-section2-example3"/>, we understand the speaker’s claim to be that of all the things that there are, at least one of them sees him or her. The corresponding universal claim, <xref linkend="cll_chapter16-section3-example2"/>, says that of all the things that exist, every one of them can see the speaker.</para>
-  <para>Any other number can be used instead of “ro” or “su'o” to precede a variable. Then we get claims like:</para>
-  <programlisting><anchor xml:id="c16e6d2"/><anchor xml:id="cll_chapter16-section6-example2"/>6.2)   re da zo'u da viska mi
-       For-two-Xes : X sees me.
-       Two things see me.
-</programlisting>
-  <para>This means that exactly two things, no more or less, saw the speaker on the relevant occasion. In English, we might take “Two things see me” to mean that at least two things see the speaker, but there might be more; in Lojban, though, that claim would have to be made as:</para>
-  <programlisting><anchor xml:id="c16e6d3"/><anchor xml:id="cll_chapter16-section6-example3"/>6.3)   su'ore da zo'u da viska mi
-       For-at-least-two Xes : X sees me.
-</programlisting>
-  <para>which would be false if nothing, or only one thing, saw the speaker, but not otherwise. We note the “su'o” here meaning “at least”; “su'o” by itself is short for “su'opa” where “pa” means “one”, as is explained in <xref linkend="cll_chapter18"/>.</para>
-  <para>The prenex may be removed from <xref linkend="cll_chapter16-section6-example2"/> and <xref linkend="cll_chapter16-section6-example3"/> as from the others, leading to:</para>
-  <programlisting><anchor xml:id="c16e6d4"/><anchor xml:id="cll_chapter16-section6-example4"/>6.4)   re da viska mi
-       Two Xes see me.
-</programlisting>
-  <para>and</para>
-  <programlisting><anchor xml:id="c16e6d5"/><anchor xml:id="cll_chapter16-section6-example5"/>6.5)   su'ore da viska mi
-       At-least-two Xes see me.
-</programlisting>
-  <para>respectively, subject to the rules prescribed in <xref linkend="cll_chapter16-section5"/>.</para>
-  <para>Now we can explain the constructions “ro prenu” for “all persons” and “re prenu” for “two persons” which were casually mentioned at the beginning of this Section. In fact, “ro prenu”, a so-called “indefinite description”, is shorthand for “ro DA poi prenu”, where “DA” represents a fictitious variable that hasn’t been used yet and will not be used in future. (Even if all three of “da”, “de”, and “di” have been used up, it does not matter, for there are ways of getting more variables, discussed in <xref linkend="cll_chapter16-section14"/>.) So in fact</para>
-  <programlisting><anchor xml:id="c16e6d6"/><anchor xml:id="cll_chapter16-section6-example6"/>6.6)   re prenu cu viska mi
-       Two persons see me.
-</programlisting>
-  <para>is short for</para>
-  <programlisting><anchor xml:id="c16e6d7"/><anchor xml:id="cll_chapter16-section6-example7"/>6.7)   re da poi prenu cu viska mi
-       Two Xes which are-persons see me.
-</programlisting>
-  <para>which in turn is short for:</para>
-  <programlisting><anchor xml:id="c16e6d8"/><anchor xml:id="cll_chapter16-section6-example8"/>6.8)   re da poi prenu zo'u da viska mi
-       For-two Xes which are-persons : X sees me.
-</programlisting>
-  <para>Note that when we move more than one variable to the prenex (along with its attached relative clause), we must make sure that the variables are in the same order in the prenex as in the bridi proper.</para>
-</section>
-
-<section xml:id="cll_chapter16-section7">
-  <title>7. Grouping of quantifiers</title>
-  <para>Let us consider a sentence containing two quantifier expressions neither of which is “ro” or “su'o” (remembering that “su'o” is implicit where no explicit quantifier is given):</para>
-  <programlisting><anchor xml:id="c16e7d1"/><anchor xml:id="cll_chapter16-section7-example1"/>7.1)   ci gerku cu batci re nanmu
-       Three dogs bite two men.
-</programlisting>
-  <para>The question raised by <xref linkend="cll_chapter16-section7-example1"/> is, does each of the dogs bite the same two men, or is it possible that there are two different men per dog, for six men altogether? If the former interpretation is taken, the number of men involved is fixed at two; but if the latter, then the speaker has to be taken as saying that there might be any number of men between two and six inclusive. Let us transform <xref linkend="cll_chapter16-section7-example1"/> step by step as we did with <xref linkend="cll_chapter16-section6-example6"/>:</para>
-  <programlisting><anchor xml:id="c16e7d2"/><anchor xml:id="cll_chapter16-section7-example2"/>7.2)   ci da poi gerku cu batci re de poi nanmu
-       Three Xes which are-dogs bite two Ys which are-men.
-</programlisting>
-  <para>(Note that we need separate variables “da” and “de”, because of the rule that says each indefinite description gets a variable never used before or since.)</para>
-  <programlisting><anchor xml:id="c16e7d3"/><anchor xml:id="cll_chapter16-section7-example3"/>7.3)   ci da poi gerku ku'o re de poi nanmu zo'u da batci de
-       For-three Xes which are-dogs, for-two Ys which are-men : X bites Y.
-</programlisting>
-  <para>Here we see that indeed each of the dogs is said to bite two men, and it might be different men each time; a total of six biting events altogether.</para>
-  <para>How then are we to express the other interpretation, in which just two men are involved? We cannot just reverse the order of variables in the prenex to</para>
-  <programlisting><anchor xml:id="c16e7d4"/><anchor xml:id="cll_chapter16-section7-example4"/>7.4)   re de poi nanmu ku'o ci da poi gerku zo'u da batci de
-       For-two Ys which are-men, for-three Xes which are-dogs, X bites Y
-</programlisting>
-  <para>for although we have now limited the number of men to exactly two, we end up with an indeterminate number of dogs, from three to six. The distinction is called a “scope distinction”: in <xref linkend="cll_chapter16-section7-example2"/>, “ci gerku” is said to have wider scope than “re nanmu”, and therefore precedes it in the prenex. In <xref linkend="cll_chapter16-section7-example4"/> the reverse is true.</para>
-  <para>The solution is to use a termset, which is a group of terms either joined by “ce'e” (of selma'o CEhE) between each term, or else surrounded by “nu'i” (of selma'o NUhI) on the front and “nu'u” (of selma'o NUhU) on the rear. Terms (which are either sumti or sumti prefixed by tense or modal tags) that are grouped into a termset are understood to have equal scope:</para>
-  <programlisting><anchor xml:id="c16e7d5"/><anchor xml:id="cll_chapter16-section7-example5"/>7.5)   ci gerku ce'e re nanmu cu batci
-       nu'i ci gerku re nanmu [nu'u] cu batci
-       Three dogs [plus] two men, bite.
-</programlisting>
-  <para>which picks out two groups, one of three dogs and the other of two men, and says that every one of the dogs bites each of the men. The second Lojban version uses forethought; note that “nu'u” is an elidable terminator, and in this case can be freely elided.</para>
-  <para>What about descriptors, like “ci lo gerku”, “le nanmu” or “re le ci mlatu”? They too can be grouped in termsets, but usually need not be, except for the “lo” case which functions like the case without a descriptor. Unless an actual quantifier precedes it, “le nanmu” means “ro le nanmu”, as is explained in <xref linkend="cll_chapter6"/>. Two sumti with “ro” quantifiers are independent of order, so:</para>
-  <programlisting><anchor xml:id="c16e7d6"/><anchor xml:id="cll_chapter16-section7-example6"/>7.6)   [ro] le ci gerku cu batci [ro] le re nanmu
-       [All of] the three dogs bite [all of] the two men.
-</programlisting>
-  <para>means that each of the dogs specified bites each of the men specified, for six acts of biting altogether. However, if there is an explicit quantifier before “le” other than “ro”, the problems of this section reappear.</para>
-</section>
-
-<section xml:id="cll_chapter16-section8">
-  <title>8. The problem of “any”</title>
-  <para>Consider the English sentence</para>
-  <programlisting><anchor xml:id="c16e8d1"/><anchor xml:id="cll_chapter16-section8-example1"/>8.1)   Anyone who goes to the store, walks across the field.
-</programlisting>
-  <para>Using the facilities already discussed, a plausible translation might be</para>
-  <programlisting><anchor xml:id="c16e8d2"/><anchor xml:id="cll_chapter16-section8-example2"/>8.2)   ro da poi klama le zarci cu cadzu le foldi
-       All X such-that-it goes-to the store walks-on the field.
-       Everyone who goes to the store walks across the field.
-</programlisting>
-  <para>But there is a subtle difference between <xref linkend="cll_chapter16-section8-example1"/> and <xref linkend="cll_chapter16-section8-example2"/>. <xref linkend="cll_chapter16-section8-example2"/> tells us that, in fact, there are people who go to the store, and that they walk across the field. A sumti of the type “ro da poi klama” requires that there are things which “klama”: Lojban universal claims always imply the corresponding existential claims as well. <xref linkend="cll_chapter16-section8-example1"/>, on the other hand, does not require that there are any people who go to the store: it simply states, conditionally, that if there is anyone who goes to the store, he or she walks across the field as well. This conditional form mirrors the true Lojban translation of <xref linkend="cll_chapter16-section8-example1"/>:</para>
-  <programlisting><anchor xml:id="c16e8d3"/><anchor xml:id="cll_chapter16-section8-example3"/>8.3)   ro da zo'u ganai da klama le zarci gi cadzu le foldi
-       For-every X: if X is-a-goer-to the store then X is-a-walker-on the field.
-</programlisting>
-  <para>Although <xref linkend="cll_chapter16-section8-example3"/> is a universal claim as well, its universality only implies that there are objects of some sort or another in the universe of discourse. Because the claim is conditional, nothing is implied about the existence of goers-to-the-store or of walkers-on-the-field, merely that any entity which is one is also the other.</para>
-  <para>There is another use of “any” in English that is not universal but existential. Consider</para>
-  <programlisting><anchor xml:id="c16e8d4"/><anchor xml:id="cll_chapter16-section8-example4"/>8.4)   I need any box that is bigger than this one.
-</programlisting>
-  <para><xref linkend="cll_chapter16-section8-example4"/> does not at all mean that I need every box bigger than this one, for indeed I do not; I require only one box. But the naive translation</para>
-  <programlisting><anchor xml:id="c16e8d5"/><anchor xml:id="cll_chapter16-section8-example5"/>8.5)   mi nitcu da poi tanxe gi'e bramau ti
-       I need some-X which is-a-box and is-bigger-than this-one
-</programlisting>
-  <para>does not work either, because it asserts that there really is such a box, as the prenex paraphrase demonstrates:</para>
-  <programlisting><anchor xml:id="c16e8d6"/><anchor xml:id="cll_chapter16-section8-example6"/>8.6)   da poi tanxe gi'e bramau ti zo'u mi nitcu da
-       There-is-an-X which is-a-box and is-bigger-than this : I need X.
-</programlisting>
-  <para>What to do? Well, the x2 place of “nitcu” can be filled with an event as well as an object, and in fact <xref linkend="cll_chapter16-section8-example5"/> can also be paraphrased as:</para>
-  <programlisting><anchor xml:id="c16e8d7"/><anchor xml:id="cll_chapter16-section8-example7"/>8.7)   mi nitcu lo nu mi ponse lo tanxe poi bramau ti
-       I need an event-of I possess some box(es) which-are bigger-than this-one.
-</programlisting>
-  <para>Rewritten using variables, <xref linkend="cll_chapter16-section8-example7"/> becomes</para>
-  <programlisting><anchor xml:id="c16e8d8"/><anchor xml:id="cll_chapter16-section8-example8"/>8.8)   mi nitcu lo nu da zo'u
-            da se ponse mi gi'e tanxe gi'e bramau ti
-       I need an event-of there-being an-X such-that :
-            X is-possessed-by me and is-a-box and is-bigger-than this-thing.
-</programlisting>
-  <para>So we see that a prenex can be attached to a bridi that is within a sentence. By default, a variable always behaves as if it is bound in the prenex which (notionally) is attached to the smallest enclosing bridi, and its scope does not extend beyond that bridi. However, the variable may be placed in an outer prenex explicitly:</para>
-  <programlisting><anchor xml:id="c16e8d9"/><anchor xml:id="cll_chapter16-section8-example9"/>8.9)   da poi tanxe gi'e bramau ti zo'u
-            mi nitcu le nu mi ponse da
-       There-is-an-X which is-a-box and is-bigger-than this-one such-that :
-            I need the event-of my possessing X.
-</programlisting>
-  <para>But what are the implications of <xref linkend="cll_chapter16-section8-example7"/> and <xref linkend="cll_chapter16-section8-example9"/>? The main difference is that in <xref linkend="cll_chapter16-section8-example9"/>, the “da” is said to exist in the real world of the outer bridi; but in <xref linkend="cll_chapter16-section8-example7"/>, the existence is only within the inner bridi, which is a mere event that need not necessarily come to pass. So <xref linkend="cll_chapter16-section8-example9"/> means</para>
-  <programlisting><anchor xml:id="c16e8d10"/><anchor xml:id="cll_chapter16-section8-example10"/>8.10)  There’s a box, bigger than this one, that I need
-</programlisting>
-  <para>which is what <xref linkend="cll_chapter16-section8-example6"/> says, whereas <xref linkend="cll_chapter16-section8-example7"/> turns out to be an effective translation of our original <xref linkend="cll_chapter16-section8-example1"/>. So uses of “any” that aren’t universal end up being reflected by variables bound in the prenex of a subordinate bridi.</para>
-</section>
-
-<section xml:id="cll_chapter16-section9">
-  <title>9. Negation boundaries</title>
-  <para>This section, as well as <xref linkend="cll_chapter16-section10"/> through <xref linkend="cll_chapter16-section12"/>, are in effect a continuation of <xref linkend="cll_chapter15"/>, introducing features of Lojban negation that require an understanding of prenexes and variables. In the examples below, “there is a Y” and the like must be understood as “there is at least one Y, possibly more”.</para>
-  <para>As explained in <xref linkend="cll_chapter15"/>, the negation of a bridi is usually accomplished by inserting “na” at the beginning of the selbri:</para>
-  <programlisting><anchor xml:id="c16e9d1"/><anchor xml:id="cll_chapter16-section9-example1"/>9.1)   mi na klama le zarci
-       I [false] go-to the store.
-       It is false that I go to the store.
-       I don’t go to the store.
-</programlisting>
-  <para>The other form of bridi negation is expressed by using the compound cmavo “naku” in the prenex, which is identified and compounded by the lexer before looking at the sentence grammar. In Lojban grammar, “naku” is then treated like a sumti. In a prenex, “naku” means precisely the same thing as the logician’s “it is not the case that” in a similar English context. (Outside of a prenex, “naku” is also grammatically treated as a single entity — the equivalent of a sumti — but does not have this exact meaning; we’ll discuss these other situations in <xref linkend="cll_chapter16-section11"/>.)</para>
-  <para>To represent a bridi negation using a prenex, remove the “na” from before the selbri and place “naku” at the left end of the prenex. This form is called “external bridi negation”, as opposed to “internal bridi negation” using “na”. The prenex version of <xref linkend="cll_chapter16-section9-example1"/> is</para>
-  <programlisting><anchor xml:id="c16e9d2"/><anchor xml:id="cll_chapter16-section9-example2"/>9.2)   naku zo'u la djan. klama
-       It is not the case that: John comes.
-       It is false that: John comes.
-</programlisting>
-  <para>However, “naku” can appear at other points in the prenex as well. Compare</para>
-  <programlisting><anchor xml:id="c16e9d3"/><anchor xml:id="cll_chapter16-section9-example3"/>9.3)   naku de zo'u de zutse
-       It is not the case that: for some Y, Y sits.
-       It is false that: for at least one Y, Y sits.
-       It is false that something sits.
-       Nothing sits.
-</programlisting>
-  <para>with</para>
-  <programlisting><anchor xml:id="c16e9d4"/><anchor xml:id="cll_chapter16-section9-example4"/>9.4)   su'ode naku zo'u de zutse
-       For at least one Y, it is false that: Y sits.
-       There is something that doesn’t sit.
-</programlisting>
-  <para>The relative position of negation and quantification terms within a prenex has a drastic effect on meaning. Starting without a negation, we can have:</para>
-  <programlisting><anchor xml:id="c16e9d5"/><anchor xml:id="cll_chapter16-section9-example5"/>9.5)   roda su'ode zo'u da prami de
-       For every X, there is a Y, such that X loves Y.
-       Everybody loves at least one thing (each, not necessarily the same thing).
-</programlisting>
-  <para>or:</para>
-  <programlisting><anchor xml:id="c16e9d6"/><anchor xml:id="cll_chapter16-section9-example6"/>9.6)   su'ode roda zo'u da prami de
-       There is a Y, such that for each X, X loves Y.
-       There is at least one particular thing that is loved by everybody.
-</programlisting>
-  <para>The simplest form of bridi negation to interpret is one where the negation term is at the beginning of the prenex:</para>
-  <programlisting><anchor xml:id="c16e9d7"/><anchor xml:id="cll_chapter16-section9-example7"/>9.7)   naku roda su'ode zo'u da prami de
-       It is false that: for every X, there is a Y, such that: X loves Y.
-       It is false that: everybody loves at least one thing.
-       (At least) someone doesn’t love anything.
-</programlisting>
-  <para>the negation of <xref linkend="cll_chapter16-section9-example5"/>, and</para>
-  <programlisting><anchor xml:id="c16e9d8"/><anchor xml:id="cll_chapter16-section9-example8"/>9.8)   naku su'ode roda zo'u da prami de
-       It is false that: there is a Y such that for each X, X loves Y.
-       It is false that: there is at least one thing that is loved by everybody.
-       There isn’t any one thing that everybody loves.
-</programlisting>
-  <para>the negation of <xref linkend="cll_chapter16-section9-example6"/>.</para>
-  <para>The rules of formal logic require that, to move a negation boundary within a prenex, you must “invert any quantifier” that the negation boundary passes across. Inverting a quantifier means that any “ro” (all) is changed to “su'o” (at least one) and vice versa. Thus, <xref linkend="cll_chapter16-section9-example7"/> and <xref linkend="cll_chapter16-section9-example8"/> can be restated as, respectively:</para>
-  <programlisting><anchor xml:id="c16e9d9"/><anchor xml:id="cll_chapter16-section9-example9"/>9.9)   su'oda naku su'ode zo'u da prami de
-       For some X, it is false that: there is a Y such that: X loves Y.
-       There is somebody who doesn’t love anything.
-</programlisting>
-  <para>and:</para>
-  <programlisting><anchor xml:id="c16e9d10"/><anchor xml:id="cll_chapter16-section9-example10"/>9.10)  rode naku roda zo'u da prami de
-       For every Y, it is false that: for every X, X loves Y.
-       For each thing, it is not true that everybody loves it.
-</programlisting>
-  <para>Another movement of the negation boundary produces:</para>
-  <programlisting><anchor xml:id="c16e9d11"/><anchor xml:id="cll_chapter16-section9-example11"/>9.11)  su'oda rode naku zo'u da prami de
-       There is an X such that, for every Y, it is false that X loves Y.
-       There is someone who, for each thing, doesn’t love that thing.
-</programlisting>
-  <para>and</para>
-  <programlisting><anchor xml:id="c16e9d12"/><anchor xml:id="cll_chapter16-section9-example12"/>9.12)  rode su'oda naku zo'u da prami de
-       For every Y, there is an X, such that it is false that: X loves Y.
-       For each thing there is someone who doesn’t love it.
-</programlisting>
-  <para>Investigation will show that, indeed, each transformation preserves the meanings of <xref linkend="cll_chapter16-section9-example7"/> and <xref linkend="cll_chapter16-section9-example8"/>.</para>
-  <para>The quantifier “no” (meaning “zero of”) also involves a negation boundary. To transform a bridi containing a variable quantified with “no”, we must first expand it. Consider</para>
-  <programlisting><anchor xml:id="c16e9d13"/><anchor xml:id="cll_chapter16-section9-example13"/>9.13)  noda rode zo'u da prami de
-       There is no X, for every Y, such that X loves Y.
-       Nobody loves everything.
-</programlisting>
-  <para>which is negated by:</para>
-  <programlisting><anchor xml:id="c16e9d14"/><anchor xml:id="cll_chapter16-section9-example14"/>9.14)  naku noda rode zo'u da prami de
-       It is false that: there is no X that, for every Y, X loves Y.
-       It is false that there is nobody who loves everything.
-</programlisting>
-  <para>We can simplify <xref linkend="cll_chapter16-section9-example14"/> by transforming the prenex. To move the negation phrase within the prenex, we must first expand the “no” quantifier. Thus “for no x” means the same thing as “it is false for some x”, and the corresponding Lojban “noda” can be replaced by “naku su'oda”. Making this substitution, we get:</para>
-  <programlisting><anchor xml:id="c16e9d15"/><anchor xml:id="cll_chapter16-section9-example15"/>9.15)  naku naku su'oda rode zo'u da prami de
-       It is false that it is false that: for an X, for every Y: X loves Y.
-</programlisting>
-  <para>Adjacent pairs of negation boundaries in the prenex can be dropped, so this means the same as:</para>
-  <programlisting><anchor xml:id="c16e9d16"/><anchor xml:id="cll_chapter16-section9-example16"/>9.16)  su'oda rode zo'u da prami de
-       There is an X such that, for every Y, X loves Y.
-       At least one person loves everything.
-</programlisting>
-  <para>which is clearly the desired contradiction of <xref linkend="cll_chapter16-section9-example13"/>.</para>
-  <para>The interactions between quantifiers and negation mean that you cannot eliminate double negatives that are not adjacent. You must first move the negation phrases so that they are adjacent, inverting any quantifiers they cross, and then the double negative can be eliminated.</para>
-</section>
-
-<section xml:id="cll_chapter16-section10">
-  <title>10. bridi negation and logical connectives</title>
-  <para>A complete discussion of logical connectives appears in <xref linkend="cll_chapter14"/>. What is said here is intentionally quite incomplete and makes several oversimplifications.</para>
-  <para>A logical connective is a cmavo or compound cmavo. In this chapter, we will make use of the logical connectives “and” and “or” (where “or” really means “and/or”, “either or both”). The following simplified recipes explain how to make some logical connectives:</para>
-  <itemizedlist>
-    <listitem>
-      <para>To logically connect two Lojban sumti with “and”, put them both in the bridi and separate them with the cmavo “.e”.</para>
-    </listitem>
-    <listitem>
-      <para>To logically connect two Lojban bridi with “and”, replace the regular separator cmavo “.i” with the compound cmavo “.ije”.</para>
-    </listitem>
-    <listitem>
-      <para>To logically connect two Lojban sumti with “or”, put them both in the bridi and separate them with the cmavo “.a”.</para>
-    </listitem>
-    <listitem>
-      <para>To logically connect two Lojban bridi with “or”, replace the regular separator cmavo “.i” with the compound cmavo “.ija”.</para>
-    </listitem>
-  </itemizedlist>
-  <para>More complex logical connectives also exist; in particular, one may place “na” before “.e” or “.a”, or between “.i” and “je” or “ja”; likewise, one may place “nai” at the end of a connective. Both “na” and “nai” have negative effects on the sumti or bridi being connected. Specifically, “na” negates the first or left-hand sumti or bridi, and “nai” negates the second or right-hand one.</para>
-  <para>Whenever a logical connective occurs in a sentence, that sentence can be expanded into two sentences by repeating the common terms and joining the sentences by a logical connective beginning with “.i”. Thus the following sentence:</para>
-  <programlisting><anchor xml:id="c16e10d1"/><anchor xml:id="cll_chapter16-section10-example1"/>10.1)  mi .e do klama ti
-       I and you come here.
-</programlisting>
-  <para>can be expanded to:</para>
-  <programlisting><anchor xml:id="c16e10d2"/><anchor xml:id="cll_chapter16-section10-example2"/>10.2)  mi klama ti .ije do klama ti
-       I come here, and, you come here.
-</programlisting>
-  <para>The same type of expansion can be performed for any logical connective, with any valid combination of “na” or “nai” attached. No change in meaning occurs under such a transformation.</para>
-  <para>Clearly, if we know what negation means in the expanded sentence forms, then we know what it means in all of the other forms. But what does negation mean between sentences?</para>
-  <para>The mystery is easily solved. A negation in a logical expression is identical to the corresponding bridi negation, with the negator placed at the beginning of the prenex. Thus:</para>
-  <programlisting><anchor xml:id="c16e10d3"/><anchor xml:id="cll_chapter16-section10-example3"/>10.3)  mi .enai do prami roda
-       I, and not you, love everything.
-</programlisting>
-  <para>expands to:</para>
-  <programlisting><anchor xml:id="c16e10d4"/><anchor xml:id="cll_chapter16-section10-example4"/>10.4)  mi prami roda .ijenai do prami roda
-       I love everything, and-not, you love everything.
-</programlisting>
-  <para>and then into prenex form as:</para>
-  <programlisting><anchor xml:id="c16e10d5"/><anchor xml:id="cll_chapter16-section10-example5"/>10.5)  roda zo'u mi prami da .ije naku zo'u do prami da
-       For each thing: I love it, and it is false that you love (the same) it.
-</programlisting>
-  <para>By the rules of predicate logic, the “ro” quantifier on “da” has scope over both sentences. That is, once you’ve picked a value for “da” for the first sentence, it stays the same for both sentences. (The “da” continues with the same fixed value until a new paragraph or a new prenex resets the meaning.)</para>
-  <para>Thus the following example has the indicated translation:</para>
-  <programlisting><anchor xml:id="c16e10d6"/><anchor xml:id="cll_chapter16-section10-example6"/>10.6)  su'oda zo'u mi prami da
-            .ije naku zo'u do prami da
-       For at least one thing: I love that thing.
-            And it is false that: you love that (same) thing.
-       There is something that I love that you don’t.
-</programlisting>
-  <para>If you remember only two rules for prenex manipulation of negations, you won’t go wrong:</para>
-  <itemizedlist>
-    <listitem>
-      <para>Within a prenex, whenever you move “naku” past a bound variable (da, de, di, etc.), you must invert the quantifier.</para>
-    </listitem>
-    <listitem>
-      <para>A “na” before the selbri is always transformed into a “naku” at the left-hand end of the prenex, and vice versa.</para>
-    </listitem>
-  </itemizedlist>
-</section>
-
-<section xml:id="cll_chapter16-section11">
-  <title>11. Using “naku” outside a prenex</title>
-  <para>Let us consider the English sentence</para>
-  <programlisting><anchor xml:id="c16e11d1"/><anchor xml:id="cll_chapter16-section11-example1"/>11.1)  Some children do not go to school.
-</programlisting>
-  <para>We cannot express this directly with “na”; the apparently obvious translation</para>
-  <programlisting><anchor xml:id="c16e11d2"/><anchor xml:id="cll_chapter16-section11-example2"/>11.2)  su'oda poi verba
-            na klama su'ode poi ckule
-       At-least-one X which-are child(ren) [false] go-to
-            at-least-one Y which-are school(s).
-</programlisting>
-  <para>when converted to the external negation form produces:</para>
-  <programlisting><anchor xml:id="c16e11d3"/><anchor xml:id="cll_chapter16-section11-example3"/>11.3)  naku zo'u su'oda poi verba cu klama su'ode poi ckule
-       It is false that some which are children go-to some which are schools.
-       All children don’t go to some school (not just some children).
-</programlisting>
-  <para>Lojban provides a negation form which more closely emulates natural language negation. This involves putting “naku” before the selbri, instead of a “na”. “naku” is clearly a contradictory negation, given its parallel with prenex bridi negation. Using “naku”, <xref linkend="cll_chapter16-section11-example1"/> can be expressed as:</para>
-  <programlisting><anchor xml:id="c16e11d4"/><anchor xml:id="cll_chapter16-section11-example4"/>11.4)  su'oda poi verba naku klama su'ode poi ckule
-       Some which-are children don’t go-to some which-are schools.
-       Some children don’t go to a school.
-</programlisting>
-  <para>Although it is not technically a sumti, “naku” can be used in most of the places where a sumti may appear. We’ll see what this means in a moment.</para>
-  <para>When you use “naku” within a bridi, you are explicitly creating a negation boundary. As explained in <xref linkend="cll_chapter16-section9"/>, when a prenex negation boundary expressed by “naku” moves past a quantifier, the quantifier has to be inverted. The same is true for “naku” in the bridi proper. We can move “naku” to any place in the sentence where a sumti can go, inverting any quantifiers that the negation boundary crosses. Thus, the following are equivalent to <xref linkend="cll_chapter16-section11-example4"/> (no good English translations exist):</para>
-  <programlisting><anchor xml:id="c16e11d5"/><anchor xml:id="cll_chapter16-section11-example5"/>11.5)  su'oda poi verba cu klama rode poi ckule naku
-       For some children, for every school, they don’t go to it.
-
-<anchor xml:id="c16e11d6"/><anchor xml:id="cll_chapter16-section11-example6"/>11.6)  su'oda poi verba cu klama naku su'ode poi ckule
-       Some children don’t go to (some) school(s).
-
-<anchor xml:id="c16e11d7"/><anchor xml:id="cll_chapter16-section11-example7"/>11.7)  naku roda poi verba cu klama su'ode poi ckule
-       It is false that all children go to some school(s).
-</programlisting>
-  <para>In <xref linkend="cll_chapter16-section11-example5"/>, we moved the negation boundary rightward across the quantifier of “de”, forcing us to invert it. In <xref linkend="cll_chapter16-section11-example7"/> we moved the negation boundary across the quantifier of “da”, forcing us to invert it instead. <xref linkend="cll_chapter16-section11-example6"/> merely switched the selbri and the negation boundary, with no effect on the quantifiers.</para>
-  <para>The same rules apply if you rearrange the sentence so that the quantifier crosses an otherwise fixed negation. You can’t just convert the selbri of <xref linkend="cll_chapter16-section11-example4"/> and rearrange the sumti to produce</para>
-  <programlisting><anchor xml:id="c16e11d8"/><anchor xml:id="cll_chapter16-section11-example8"/>11.8)  su'ode poi ckule ku'o naku se klama roda poi verba
-       Some schools aren’t gone-to-by every child.
-</programlisting>
-  <para>or rather, <xref linkend="cll_chapter16-section11-example8"/> means something completely different from <xref linkend="cll_chapter16-section11-example4"/>. Conversion with “se” under “naku” negation is not symmetric; not all sumti are treated identically, and some sumti are not invariant under conversion. Thus, internal negation with “naku” is considered an advanced technique, used to achieve stylistic compatibility with natural languages.</para>
-  <para>It isn’t always easy to see which quantifiers have to be inverted in a sentence. <xref linkend="cll_chapter16-section11-example4"/> is identical in meaning to:</para>
-  <programlisting><anchor xml:id="c16e11d9"/><anchor xml:id="cll_chapter16-section11-example9"/>11.9)  su'o verba naku klama su'o ckule
-       Some children don’t go-to some school.
-</programlisting>
-  <para>but in <xref linkend="cll_chapter16-section11-example9"/>, the bound variables “da” and “de” have been hidden.</para>
-  <para>It is trivial to export an internal bridi negation expressed with “na” to the prenex, as we saw in <xref linkend="cll_chapter16-section9"/>; you just move it to the left end of the prenex. In comparison, it is non-trivial to export a “naku” to the prenex because of the quantifiers. The rules for exporting “naku” require that you export all of the quantified variables (implicit or explicit) along with “naku”, and you must export them from left to right, in the same order that they appear in the sentence. Thus <xref linkend="cll_chapter16-section11-example4"/> goes into prenex form as:</para>
-  <programlisting><anchor xml:id="c16e11d10"/><anchor xml:id="cll_chapter16-section11-example10"/>11.10) su'oda poi verba ku'o naku
-            su'ode poi ckule zo'u da klama de
-       For some X which is a child, it is not the case that
-            there is a Y which is a school such that: X goes to Y.
-</programlisting>
-  <para>We can now move the “naku” to the left end of the prenex, getting a contradictory negation that can be expressed with “na”:</para>
-  <programlisting><anchor xml:id="c16e11d11"/><anchor xml:id="cll_chapter16-section11-example11"/>11.11) naku roda poi verba
-            su'ode poi ckule zo'u da klama de
-       It is not the case that for all X’s which are children,
-            there is a Y which is a school such that: X goes to Y.
-</programlisting>
-  <para>from which we can restore the quantified variables to the sentence, giving:</para>
-  <programlisting><anchor xml:id="c16e11d12"/><anchor xml:id="cll_chapter16-section11-example12"/>11.12) naku zo'u roda poi verba cu klama su'ode poi ckule
-       It is not the case that all children go to some school.
-</programlisting>
-  <para>or more briefly</para>
-  <programlisting><anchor xml:id="c16e11d13"/><anchor xml:id="cll_chapter16-section11-example13"/>11.13) ro verba cu na klama su'o ckule
-       All children [false] go-to some school(s).
-</programlisting>
-  <para>As noted in <xref linkend="cll_chapter16-section5"/>, a sentence with two different quantified variables, such as <xref linkend="cll_chapter16-section11-example13"/>, cannot always be converted with “se” without first exporting the quantified variables. When the variables have been exported, the sentence proper can be converted, but the quantifier order in the prenex must remain unchanged:</para>
-  <programlisting><anchor xml:id="c16e11d14"/><anchor xml:id="cll_chapter16-section11-example14"/>11.14) roda poi verba
-            su'ode poi ckule zo'u de na se klama da
-       It is not the case that for all X’s which are children,
-            there is a Y which is a school such that: Y is gone to by X.
-</programlisting>
-  <para>While you can’t freely convert with “se” when you have two quantified variables in a sentence, you can still freely move sumti to either side of the selbri, as long as the order isn’t changed. If you use “na” negation in such a sentence, nothing special need be done. If you use “naku” negation, then quantified variables that cross the negation boundary must be inverted.</para>
-  <para>Clearly, if all of Lojban negation was built on “naku” negation instead of “na” negation, logical manipulation in Lojban would be as difficult as in natural languages. In <xref linkend="cll_chapter16-section12"/>, for example, we’ll discuss DeMorgan’s Law, which must be used whenever a sumti with a logical connection is moved across a negation boundary.</para>
-  <para>Since “naku” has the grammar of a sumti, it can be placed almost anywhere a sumti can go, including “be” and “bei” clauses; it isn’t clear what these mean, and we recommend avoiding such constructs.</para>
-  <para>You can put multiple “naku”s in a sentence, each forming a separate negation boundary. Two adjacent “naku”s in a bridi are a double negative and cancel out:</para>
-  <programlisting><anchor xml:id="c16e11d15"/><anchor xml:id="cll_chapter16-section11-example15"/>11.15) mi naku naku le zarci cu klama
-</programlisting>
-  <para>Other expressions using two “naku”s may or may not cancel out. If there is no quantified variable between them, then the “naku”s cancel.</para>
-  <para>Negation with internal “naku” is clumsy and non-intuitive for logical manipulations, but then, so are the natural language features it is emulating.</para>
-</section>
-
-<section xml:id="cll_chapter16-section12">
-  <title>12. Logical Connectives and DeMorgan’s Law</title>
-  <para>DeMorgan’s Law states that when a logical connective between terms falls within a negation, then expanding the negation requires a change in the connective. Thus (where “p” and “q” stand for terms or sentences) “not (p or q)” is identical to “not p and not q”, and “not (p and q)” is identical to “not p or not q”. The corresponding changes for the other two basic Lojban connectives are: “not (p equivalent to q)” is identical to “not p exclusive-or not q”, and “not (p whether-or-not q)” is identical to both “not p whether-or-not q” and “not p whether-or-not not q”. In any Lojban sentence having one of the basic connectives, you can substitute in either direction from these identities. (These basic connectives are explained in <xref linkend="cll_chapter14"/>.)</para>
-  <para>The effects of DeMorgan’s Law on the logical connectives made by modifying the basic connectives with “nai”, “na” and “se” can be derived directly from these rules; modify the basic connective for DeMorgan’s Law by substituting from the above identities, and then, apply each “nai”, “na” and “se” modifier of the original connectives. Cancel any double negatives that result.</para>
-  <para>When do we apply DeMorgan’s Law? Whenever we wish to “distribute” a negation over a logical connective; and, for internal “naku” negation, whenever a logical connective moves in to, or out of, the scope of a negation — when it crosses a negation boundary.</para>
-  <para>Let us apply DeMorgan’s Law to some sample sentences. These sentences make use of forethought logical connectives, which are explained in <xref linkend="cll_chapter14"/>. It suffices to know that “ga” and “gi”, used before each of a pair of sumti or bridi, mean “either” and “or” respectively, and that “ge” and “gi” used similarly mean “both” and “and”. Furthermore, “ga”, “ge”, and “gi” can all be suffixed with “nai” to negate the bridi or sumti that follows.</para>
-  <para>We have defined “na” and “naku zo'u” as, respectively, internal and external bridi negation. These forms being identical, the negation boundary always remains at the left end of the prenex. Thus, exporting or importing negation between external and internal bridi negation forms never requires DeMorgan’s Law to be applied. <xref linkend="cll_chapter16-section12-example1"/> and <xref linkend="cll_chapter16-section12-example2"/> are exactly equivalent:</para>
-  <programlisting><anchor xml:id="c16e12d1"/><anchor xml:id="cll_chapter16-section12-example1"/>12.1)  la djan. na klama ga la paris. gi la rom.
-       John [false] goes-to either Paris or Rome.
-
-<anchor xml:id="c16e12d2"/><anchor xml:id="cll_chapter16-section12-example2"/>12.2)  naku zo'u la djan. klama ga la paris. gi la rom.
-       It-is-false that: John goes-to either Paris or Rome.
-</programlisting>
-  <para>It is not an acceptable logical manipulation to move a negator from the bridi level to one or more sumti. However, <xref linkend="cll_chapter16-section12-example1"/> and related examples are not sumti negations, but rather expand to form two logically connected sentences. In such a situation, DeMorgan’s Law must be applied. For instance, <xref linkend="cll_chapter16-section12-example2"/> expands to:</para>
-  <programlisting><anchor xml:id="c16e12d3"/><anchor xml:id="cll_chapter16-section12-example3"/>12.3)  ge la djan. la paris. na klama
-            gi la djan. la rom. na klama
-       [It is true that] both John, to-Paris, [false] goes,
-            and John, to-Rome, [false] goes.
-</programlisting>
-  <para>The “ga” and “gi”, meaning “either-or”, have become “ge” and “gi”, meaning “both-and”, as a consequence of moving the negators into the individual bridi.</para>
-  <para>Here is another example of DeMorgan’s Law in action, involving bridi-tail logical connection (explained in <xref linkend="cll_chapter14"/>):</para>
-  <programlisting><anchor xml:id="c16e12d4"/><anchor xml:id="cll_chapter16-section12-example4"/>12.4)  la djein. le zarci na ge dzukla gi bajrykla
-       Jane to-the market [false] both walks and runs.
-
-<anchor xml:id="c16e12d5"/><anchor xml:id="cll_chapter16-section12-example5"/>12.5)  la djein. le zarci ganai dzukla ginai bajrykla
-       Jane to-the market either [false] walks or [false] runs.
-       Jane to-the market if walks then ([false] runs).
-</programlisting>
-  <para>(Placing “le zarci” before the selbri makes sure that it is properly associated with both parts of the logical connection. Otherwise, it is easy to erroneously leave it off one of the two sentences.)</para>
-  <para>It is wise, before freely doing transformations such as the one from <xref linkend="cll_chapter16-section12-example4"/> to <xref linkend="cll_chapter16-section12-example5"/>, that you become familiar with expanding logical connectives to separate sentences, transforming the sentences, and then recondensing. Thus, you would prove the transformation correct by the following steps. By moving its “na” to the beginning of the prenex as a “naku”, <xref linkend="cll_chapter16-section12-example4"/> becomes:</para>
-  <programlisting><anchor xml:id="c16e12d6"/><anchor xml:id="cll_chapter16-section12-example6"/>12.6)  naku zo'u la djein. le zarci ge dzukla gi bajrykla
-       It is false that : Jane to-the market (both walks and runs).
-</programlisting>
-  <para>And by dividing the bridi with logically connected selbri into two bridi,</para>
-  <programlisting><anchor xml:id="c16e12d7"/><anchor xml:id="cll_chapter16-section12-example7"/>12.7)  naku zo'u ge la djein. le zarci cu dzukla
-            gi la djein. le zarci cu bajrykla
-       It-is-false-that: both (Jane to-the market walks)
-            and (Jane to-the market runs).
-</programlisting>
-  <para>is the result.</para>
-  <para>At this expanded level, we apply DeMorgan’s Law to distribute the negation in the prenex across both sentences, to get</para>
-  <programlisting><anchor xml:id="c16e12d8"/><anchor xml:id="cll_chapter16-section12-example8"/>12.8)  ga la djein. le zarci na dzukla
-            gi la djein. le zarci na bajrykla
-       Either Jane to-the market [false] walks,
-            or Jane to-the market [false] runs.
-</programlisting>
-  <para>which is the same as</para>
-  <programlisting><anchor xml:id="c16e12d9"/><anchor xml:id="cll_chapter16-section12-example9"/>12.9)  ganai la djein. le zarci cu dzukla
-            ginai la djein. le zarci cu bajrykla
-       If Jane to-the market walks,
-            then Jane to-the market [false] runs.
-       If Jane walks to the market, then she doesn’t run.
-</programlisting>
-  <para>which then condenses down to <xref linkend="cll_chapter16-section12-example5"/>.</para>
-  <para>DeMorgan’s Law must also be applied to internal “naku” negations:</para>
-  <programlisting><anchor xml:id="c16e12d10"/><anchor xml:id="cll_chapter16-section12-example10"/>12.10) ga la paris. gi la rom. naku se klama la djan.
-       (Either Paris or Rome) is-not gone-to-by John.
-
-<anchor xml:id="c16e12d11"/><anchor xml:id="cll_chapter16-section12-example11"/>12.11) la djan. naku klama ge la paris. gi la rom.
-       John doesn’t go-to both Paris and Rome.
-</programlisting>
-  <para>That <xref linkend="cll_chapter16-section12-example10"/> and <xref linkend="cll_chapter16-section12-example11"/> mean the same should become evident by studying the English. It is a good exercise to work through the Lojban and prove that they are the same.</para>
-</section>
-
-<section xml:id="cll_chapter16-section13">
-  <title>13. selbri variables</title>
-  <para>In addition to the variables “da”, “de”, and “di” that we have seen so far, which function as sumti and belong to selma'o KOhA, there are three corresponding variables “bu'a”, “bu'e”, and “bu'i” which function as selbri and belong to selma'o GOhA. These new variables allow existential or universal claims which are about the relationships between objects rather than the objects themselves. We will start with the usual silly examples; the literal translation will represent “bu'a”, “bu'e” and “bu'i” with F, G, and H respectively.</para>
-  <programlisting><anchor xml:id="c16e13d1"/><anchor xml:id="cll_chapter16-section13-example1"/>13.1)  su'o bu'a zo'u la djim. bu'a la djan.
-       For-at-least-one relationship-F : Jim stands-in-relationship-F to-John.
-       There’s some relationship between Jim and John.
-</programlisting>
-  <para>The translations of <xref linkend="cll_chapter16-section13-example1"/> show how unidiomatic selbri variables are in English; Lojban sentences like <xref linkend="cll_chapter16-section13-example1"/> need to be totally reworded in English. Furthermore, when a selbri variable appears in the prenex, it is necessary to precede it with a quantifier such as “su'o”; it is ungrammatical to just say “bu'a zo'u”. This rule is necessary because only sumti can appear in the prenex, and “su'o bu'a” is technically a sumti — in fact, it is an indefinite description like “re nanmu”, since “bu'a” is grammatically equivalent to a brivla like “nanmu”. However, indefinite descriptions involving the bu'a-series cannot be imported from the prenex.</para>
-  <para>When the prenex is omitted, the preceding number has to be omitted too:</para>
-  <programlisting><anchor xml:id="c16e13d2"/><anchor xml:id="cll_chapter16-section13-example2"/>13.2)  la djim. bu'a la djan.
-       Jim stands-in-at-least-one-relationship to-John.
-</programlisting>
-  <para>As a result, if the number before the variable is anything but “su'o”, the prenex is required:</para>
-  <programlisting><anchor xml:id="c16e13d3"/><anchor xml:id="cll_chapter16-section13-example3"/>13.3)  ro bu'a zo'u la djim. bu'a la djan.
-       For-every relationship-F : Jim stands-in-relationship-F to-John.
-       Every relationship exists between Jim and John.
-</programlisting>
-  <para><xref linkend="cll_chapter16-section13-example1"/> and <xref linkend="cll_chapter16-section13-example2"/> are almost certainly true: Jim and John might be brothers, or might live in the same city, or at least have the property of being jointly human. <xref linkend="cll_chapter16-section13-example3"/> is palpably false, however; if Jim and John were related by every possible relationship, then they would have to be both brothers and father-and-son, which is impossible.</para>
-</section>
-
-<section xml:id="cll_chapter16-section14">
-  <title>14. A few notes on variables</title>
-  <para>A variable may have a quantifier placed in front of it even though it has already been quantified explicitly or implicitly by a previous appearance, as in:</para>
-  <programlisting><anchor xml:id="c16e14d1"/><anchor xml:id="cll_chapter16-section14-example1"/>14.1)  ci da poi mlatu cu blabi .ije re da cu barda
-       Three Xs which-are cats are white, and two Xs are big.
-</programlisting>
-  <para>What does <xref linkend="cll_chapter16-section14-example1"/> mean? The appearance of “ci da” quantifies “da” as referring to three things, which are restricted by the relative clause to be cats. When “re da” appears later, it refers to two of those three things — there is no saying which ones. Further uses of “da” alone, if there were any, would refer once more to the three cats, so the requantification of “da” is purely local.</para>
-  <para>In general, the scope of a prenex that precedes a sentence extends to following sentences that are joined by ijeks (explained in <xref linkend="cll_chapter14"/>) such as the “.ije” in <xref linkend="cll_chapter16-section14-example1"/>. Theoretically, a bare “.i” terminates the scope of the prenex. Informally, however, variables may persist for a while even after an “.i”, as if it were an “.ije”. Prenexes that precede embedded bridi such as relative clauses and abstractions extend only to the end of the clause, as explained in <xref linkend="cll_chapter16-section8"/>. A prenex preceding “tu'e ... tu'u” long-scope brackets persists until the “tu'u”, which may be many sentences or even paragraphs later.</para>
-  <para>If the variables “da”, “de”, and “di” (or the selbri variables “bu'a”, “bu'e”, and “bu'i”) are insufficient in number for handling a particular problem, the Lojban approach is to add a subscript to any of them. Each possible different combination of a subscript and a variable cmavo counts as a distinct variable in Lojban. Subscripts are explained in full in <xref linkend="cll_chapter19"/>, but in general consist of the cmavo “xi” (of selma'o XI) followed by a number, one or more lerfu words forming a single string, or a general mathematical expression enclosed in parentheses.</para>
-  <para>A quantifier can be prefixed to a variable that has already been bound either in a prenex or earlier in the bridi, thus:</para>
-  <programlisting><anchor xml:id="c16e14d2"/><anchor xml:id="cll_chapter16-section14-example2"/>14.2)  ci da poi prenu cu se ralju pa da
-       Three Xs which are-persons are-led-by one-of X
-       Three people are led by one of them.
-</programlisting>
-  <para>The “pa da” in <xref linkend="cll_chapter16-section14-example2"/> does not specify the number of things to which “da” refers, as the preceding “ci da” does. Instead, it selects one of them for use in this sumti only. The number of referents of “da” remains three, but a single one (there is no way of knowing which one) is selected to be the leader.</para>
-</section>
-
-<section xml:id="cll_chapter16-section15">
-  <title>15. Conclusion</title>
-  <para>This chapter is incomplete. There are many more aspects of logic that I neither fully understand nor feel competent to explain, neither in abstract nor in their Lojban realization. Lojban was designed to be a language that makes predicate logic speakable, and achieving that goal completely will need to wait for someone who understands both logic and Lojban better than I do. I can only hope to have pointed out the areas that are well-understood (and by implication, those that are not).</para>
-</section>
-
-
+  <title>Chapter 16 
+  <quote>Who Did You Pass On The Road? Nobody</quote>: Lojban And Logic</title>
+  <section xml:id="cll_chapter16-section1">
+    <title>1. What's wrong with this picture?</title>
+    <para>The following brief dialogue is from 
+    <xref linkend="cll_chapter7" />of 
+    <citation>Through The Looking Glass</citation>by Lewis Carroll.</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-KB90">
+      <title>
+        <anchor xml:id="c16e1d1" />
+        <anchor xml:id="cll_chapter16-section1-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>
+        <quote>Who did you pass on the road?</quote>the King went on, holding out his hand to the Messenger for some more hay.</jbo>
+      </interlinear-gloss>
+    </example>
+    <example role="interlinear-gloss-example" xml:id="random-id-1UVT">
+      <title>
+        <anchor xml:id="c16e1d2" />
+        <anchor xml:id="cll_chapter16-section1-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>
+        <quote>Nobody,</quote>said the Messenger.</jbo>
+      </interlinear-gloss>
+    </example>
+    <example role="interlinear-gloss-example" xml:id="random-id-x9fC">
+      <title>
+        <anchor xml:id="c16e1d3" />
+        <anchor xml:id="cll_chapter16-section1-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>
+        <quote>Quite right,</quote>said the King: 
+        <quote>this young lady saw him too. So of course Nobody walks slower than you.</quote></jbo>
+      </interlinear-gloss>
+    </example>
+    <example role="interlinear-gloss-example" xml:id="random-id-105i">
+      <title>
+        <anchor xml:id="c16e1d4" />
+        <anchor xml:id="cll_chapter16-section1-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>
+        <quote>I do my best,</quote>the Messenger said in a sulky tone. 
+        <quote>I'm sure nobody walks much faster than I do!</quote></jbo>
+      </interlinear-gloss>
+    </example>
+    <example role="interlinear-gloss-example" xml:id="random-id-ANLu">
+      <title>
+        <anchor xml:id="c16e1d5" />
+        <anchor xml:id="cll_chapter16-section1-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>
+        <quote>He can't do that,</quote>said the King, 
+        <quote>or else he'd have been here first.</quote></jbo>
+      </interlinear-gloss>
+    </example>
+    <para>This nonsensical conversation results because the King insists on treating the word 
+    <quote>nobody</quote>as a name, a name of somebody. However, the essential nature of the English word 
+    <quote>nobody</quote>is that it doesn't refer to somebody; or to put the matter another way, there isn't anybody to which it refers.</para>
+    <para>The central point of contradiction in the dialogue arises in 
+    <xref linkend="cll_chapter16-section1-example3" />, when the King says 
+    <quote>... Nobody walks slower than you</quote>. This claim would be plausible if 
+    <quote>Nobody</quote>were really a name, since the Messenger could only pass someone who does walk more slowly than he. But the Messenger interprets the word 
+    <quote>nobody</quote>in the ordinary English way, and says (in 
+    <xref linkend="cll_chapter16-section1-example4" />) 
+    <quote>... nobody walks much faster than I do</quote>(i.e., I walk faster, or as fast as, almost everyone), which the King then again misunderstands. Both the King and the Messenger are correct according to their respective understandings of the ambiguous word 
+    <quote>nobody/Nobody</quote>.</para>
+    <para>There are Lojban words or phrases corresponding to the problematic English words 
+    <quote>somebody</quote>, 
+    <quote>nobody</quote>, 
+    <quote>anybody</quote>, 
+    <quote>everybody</quote>(and their counterparts 
+    <quote>some/no/any/everyone</quote>and 
+    <quote>some/no/any/everything</quote>), but they obey rules which can often be surprising to English-speakers. The dialogue above simply cannot be translated into Lojban without distortion: the name 
+    <quote>Nobody</quote>would have to be represented by a Lojban name, which would spoil the perfection of the wordplay. As a matter of fact, this is the desired result: a logical language should not allow two conversationalists to affirm 
+    <quote>Nobody walks slower than the Messenger</quote>and 
+    <quote>Nobody walks faster than the Messenger</quote>and both be telling the truth. (Unless, of course, nobody but the Messenger walks at all, or everyone walks at exactly the same speed.)</para>
+    <para>This chapter will explore the Lojban mechanisms that allow the correct and consistent construction of sentences like those in the dialogue. There are no new grammatical constructs explained in this chapter; instead, it discusses the way in which existing facilities that allow Lojban-speakers to resolve problems like the above, using the concepts of modern logic. However, we will not approach the matter from the viewpoint of logicians, although readers who know something of logic will discover familiar notions in Lojban guise.</para>
+    <para>Although Lojban is called a logical language, not every feature of it is 
+    <quote>logical</quote>. In particular, the use of 
+    <quote>le</quote>is incompatible with logical reasoning based on the description selbri, because that selbri may not truthfully apply: you cannot conclude from my statement that</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-4J5Y">
+      <title>
+        <anchor xml:id="c16e1d6" />
+        <anchor xml:id="cll_chapter16-section1-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi viska le nanmu</jbo>
+        <gloss>I see the-one-I-refer-to-as-the man.</gloss>
+        <en>I see the man/men.</en>
+      </interlinear-gloss>
+    </example>
+    <para>that there really is a man; the only thing you can conclude is that there is one thing (or more) that I choose to refer to as a man. You cannot even tell which man is meant for sure without asking me (although communication is served if you already know from the context).</para>
+    <para>In addition, the use of attitudinals (see 
+    <xref linkend="cll_chapter13" />) often reduces or removes the ability to make deductions about the bridi to which those attitudinals are applied. From the fact that I hope George will win the election, you can conclude nothing about George's actual victory or defeat.</para>
+  </section>
+  <section xml:id="cll_chapter16-section2">
+    <title>2. Existential claims, prenexes, and variables</title>
+    <para>Let us consider, to begin with, a sentence that is not in the dialogue:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Mxj3">
+      <title>
+        <anchor xml:id="c16e2d1" />
+        <anchor xml:id="cll_chapter16-section2-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>Something sees me.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>There are two plausible Lojban translations of 
+    <xref linkend="cll_chapter16-section2-example1" />. The simpler one is:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-b9pV">
+      <title>
+        <anchor xml:id="c16e2d2" />
+        <anchor xml:id="cll_chapter16-section2-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>[zo'e] viska mi</jbo>
+        <en>Something-unspecified sees me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The cmavo 
+    <quote>zo'e</quote>indicates that a sumti has been omitted (indeed, even 
+    <quote>zo'e</quote>itself can be omitted in this case, as explained in 
+    <xref linkend="cll_chapter7" />) and the listener must fill in the correct value from context. In other words, 
+    <xref linkend="cll_chapter16-section2-example2" />means 
+    <quote>‘You-know-what' sees me.</quote></para>
+    <para>However, 
+    <xref linkend="cll_chapter16-section2-example1" />is just as likely to assert simply that there is someone who sees me, in which case a correct translation is:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-jjLd">
+      <title>
+        <anchor xml:id="c16e2d3" />
+        <anchor xml:id="cll_chapter16-section2-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>da zo'u da viska mi</jbo>
+        <en>There-is-an-X such-that X sees me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter16-section2-example3" />does not presuppose that the listener knows who sees the speaker, but simply tells the listener that there is someone who sees the speaker. Statements of this kind are called 
+    <quote>existential claims</quote>. (Formally, the one doing the seeing is not restricted to being a person; it could be an animal or - in principle - an inanimate object. We will see in 
+    <xref linkend="cll_chapter16-section4" />how to represent such restrictions.)</para>
+    <para>
+    <xref linkend="cll_chapter16-section2-example3" />has a two-part structure: there is the part 
+    <quote>da zo'u</quote>, called the prenex, and the part 
+    <quote>da viska mi</quote>, the main bridi. Almost any Lojban bridi can be preceded by a prenex, which syntactically is any number of sumti followed by the cmavo 
+    <quote>zo'u</quote>(of selma'o ZOhU). For the moment, the sumti will consist of one or more of the cmavo 
+    <quote>da</quote>, 
+    <quote>de</quote>, and 
+    <quote>di</quote>(of selma'o KOhA), glossed in the literal translations as 
+    <quote>X</quote>, 
+    <quote>Y</quote>, and 
+    <quote>Z</quote>respectively. By analogy to the terminology of symbolic logic, these cmavo are called 
+    <quote>variables</quote>.</para>
+    <para>Here is an example of a prenex with two variables:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-t4qI">
+      <title>
+        <anchor xml:id="c16e2d4" />
+        <anchor xml:id="cll_chapter16-section2-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>da de zo'u da prami de</jbo>
+        <gloss>There-is-an-X there-is-a-Y such that X loves Y.</gloss>
+        <en>Somebody loves somebody.</en>
+      </interlinear-gloss>
+    </example>
+    <para>In 
+    <xref linkend="cll_chapter16-section2-example4" />, the literal interpretation of the two variables 
+    <quote>da</quote>and 
+    <quote>de</quote>as 
+    <quote>there-is-an-X</quote>and 
+    <quote>there-is-a-Y</quote>tells us that there are two things which stand in the relationship that one loves the other. It might be the case that the supposed two things are really just a single thing that loves itself; nothing in the Lojban version of 
+    <xref linkend="cll_chapter16-section2-example4" />rules out that interpretation, which is why the colloquial translation does not say 
+    <quote>Somebody loves somebody else.</quote>The things referred to by different variables may be different or the same. (We use 
+    <quote>somebody</quote>here rather than 
+    <quote>something</quote>for naturalness; lovers and beloveds are usually persons, though the Lojban does not say so.)</para>
+    <para>It is perfectly all right for the variables to appear more than once in the main bridi:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-wBYE">
+      <title>
+        <anchor xml:id="c16e2d5" />
+        <anchor xml:id="cll_chapter16-section2-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>da zo'u da prami da</jbo>
+        <gloss>There-is-an-X such that X loves X</gloss>
+        <en>Somebody loves himself/herself.</en>
+      </interlinear-gloss>
+    </example>
+    <para>What 
+    <xref linkend="cll_chapter16-section2-example5" />claims is fundamentally different from what 
+    <xref linkend="cll_chapter16-section2-example4" />claims, because 
+    <quote>da prami da</quote>is not structurally the same as 
+    <quote>da prami de</quote>. However,</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-3QV5">
+      <title>
+        <anchor xml:id="c16e2d6" />
+        <anchor xml:id="cll_chapter16-section2-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>de zo'u de prami de</jbo>
+        <en>There-is-a-Y such that Y loves Y</en>
+      </interlinear-gloss>
+    </example>
+    <para>means exactly the same thing as 
+    <xref linkend="cll_chapter16-section2-example5" />; it does not matter which variable is used as long as they are used consistently.</para>
+    <para>It is not necessary for a variable to be a sumti of the main bridi directly:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-ArXX">
+      <title>
+        <anchor xml:id="c16e2d7" />
+        <anchor xml:id="cll_chapter16-section2-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>da zo'u le da gerku cu viska mi</jbo>
+        <gloss>There-is-an-X such-that the of-X dog sees me</gloss>
+        <en>Somebody's dog sees me</en>
+      </interlinear-gloss>
+    </example>
+    <para>is perfectly correct even though the 
+    <quote>da</quote>is used only in a possessive construction. (Possessives are explained in 
+    <xref linkend="cll_chapter8" />.)</para>
+    <para>It is very peculiar, however, even if technically grammatical, for the variable not to appear in the main bridi at all:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-mE4m">
+      <title>
+        <anchor xml:id="c16e2d8" />
+        <anchor xml:id="cll_chapter16-section2-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>da zo'u la ralf. gerku</jbo>
+        <en>There is something such that Ralph is a dog.</en>
+      </interlinear-gloss>
+    </example>
+    <para>has a variable bound in a prenex whose relevance to the claim of the following bridi is completely unspecified.</para>
+  </section>
+  <section xml:id="cll_chapter16-section3">
+    <title>3. Universal claims</title>
+    <para>What happens if we substitute 
+    <quote>everything</quote>for 
+    <quote>something</quote>in 
+    <xref linkend="cll_chapter16-section2-example1" />? We get:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-UwYG">
+      <title>
+        <anchor xml:id="c16e3d1" />
+        <anchor xml:id="cll_chapter16-section3-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>Everything sees me.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>Of course, this example is false, because there are many things which do not see the speaker. It is not easy to find simple truthful examples of so-called universal claims (those which are about everything), so bear with us for a while. (Indeed, some Lojbanists tend to avoid universal claims even in other languages, since they are so rarely true in Lojban.)</para>
+    <para>The Lojban translation of 
+    <xref linkend="cll_chapter16-section3-example1" />is</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-nraD">
+      <title>
+        <anchor xml:id="c16e3d2" />
+        <anchor xml:id="cll_chapter16-section3-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ro da zo'u da viska mi</jbo>
+        <en>For-every X : X sees me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>When the variable cmavo 
+    <quote>da</quote>is preceded by 
+    <quote>ro</quote>, the combination means 
+    <quote>For every X</quote>rather than 
+    <quote>There is an X</quote>. Superficially, these English formulations look totally unrelated: 
+    <xref linkend="cll_chapter16-section6" />will bring them within a common viewpoint. For the moment, accept the use of 
+    <quote>ro da</quote>for 
+    <quote>everything</quote>on faith.</para>
+    <para>Here is a universal claim with two variables:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-jSrU">
+      <title>
+        <anchor xml:id="c16e3d3" />
+        <anchor xml:id="cll_chapter16-section3-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ro da ro de zo'u da prami de</jbo>
+        <gloss>For-every X, for-every Y : X loves Y.</gloss>
+        <en>Everything loves everything.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Again, X and Y can represent the same thing, so 
+    <xref linkend="cll_chapter16-section3-example3" />does not mean 
+    <quote>Everything loves everything else.</quote>Furthermore, because the claim is universal, it is about every thing, not merely every person, so we cannot use 
+    <quote>everyone</quote>or 
+    <quote>everybody</quote>in the translation.</para>
+    <para>Note that 
+    <quote>ro</quote>appears before both 
+    <quote>da</quote>and 
+    <quote>de</quote>. If 
+    <quote>ro</quote>is omitted before either variable, we get a mixed claim, partly existential like those of 
+    <xref linkend="cll_chapter16-section2" />, partly universal.</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-VLPI">
+      <title>
+        <anchor xml:id="c16e3d4" />
+        <anchor xml:id="cll_chapter16-section3-example4" />
+        <anchor xml:id="c16e3d5" />
+        <anchor xml:id="cll_chapter16-section3-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ro da de zo'u da viska de</jbo>
+        <gloss>For-every X, there-is-a-Y : X sees Y.</gloss>
+        <en>Everything sees something.</en>
+        <jbo>da ro de zo'u da viska de</jbo>
+        <gloss>There-is-an-X such-that-for-every-Y : X sees Y.</gloss>
+        <en>Something sees everything.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter16-section3-example4" />and 
+    <xref linkend="cll_chapter16-section3-example5" />mean completely different things. 
+    <xref linkend="cll_chapter16-section3-example4" />says that for everything, there is something which it sees, not necessarily the same thing seen for every seer. 
+    <xref linkend="cll_chapter16-section3-example5" />, on the other hand, says that there is a particular thing which can see everything that there is (including itself). Both of these are fairly silly, but they are different kinds of silliness.</para>
+    <para>There are various possible translations of universal claims in English: sometimes we use 
+    <quote>anybody/anything</quote>rather than 
+    <quote>everybody/everything</quote>. Often it makes no difference which of these is used: when it does make a difference, it is a rather subtle one which is explained in 
+    <xref linkend="cll_chapter16-section8" />.</para>
+  </section>
+  <section xml:id="cll_chapter16-section4">
+    <title>4. Restricted claims: 
+    <quote>da poi</quote></title>
+    <para>The universal claims of 
+    <xref linkend="cll_chapter16-section3" />are not only false but absurd: there is really very little to be said that is both true and non-trivial about every object whatsoever. Furthermore, we have been glossing over the distinction between 
+    <quote>everything</quote>and 
+    <quote>everybody</quote>and the other pairs ending in 
+    <quote>-thing</quote>and 
+    <quote>-body</quote>. It is time to bring up the most useful feature of Lojban variables: the ability to restrict their ranges.</para>
+    <para>In Lojban, a variable 
+    <quote>da</quote>, 
+    <quote>de</quote>, or 
+    <quote>di</quote>may be followed by a 
+    <quote>poi</quote>relative clause in order to restrict the range of things that the variable describes. Relative clauses are described in detail in 
+    <xref linkend="cll_chapter8" />, but the kind we will need at present consist of 
+    <quote>poi</quote>followed by a bridi (often just a selbri) terminated with 
+    <quote>ku'o</quote>or 
+    <quote>vau</quote>(which can usually be elided). Consider the difference between</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-NPX7">
+      <title>
+        <anchor xml:id="c16e4d1" />
+        <anchor xml:id="cll_chapter16-section4-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>da zo'u da viska la djim.</jbo>
+        <gloss>There-is-an-X : X sees Jim.</gloss>
+        <en>Something sees Jim.</en>
+      </interlinear-gloss>
+    </example>
+    <para>and</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-I8AF">
+      <title>
+        <anchor xml:id="c16e4d2" />
+        <anchor xml:id="cll_chapter16-section4-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>da poi prenu zo'u da viska la djim.</jbo>
+        <gloss>There-is-an-X which is-a-person : X sees Jim.</gloss>
+        <en>Someone sees Jim.</en>
+      </interlinear-gloss>
+    </example>
+    <para>In 
+    <xref linkend="cll_chapter16-section4-example1" />, the variable 
+    <quote>da</quote>can refer to any object whatever; there are no restrictions on it. In 
+    <xref linkend="cll_chapter16-section4-example2" />, 
+    <quote>da</quote>is restricted by the 
+    <quote>poi prenu</quote>relative clause to persons only, and so 
+    <quote>da poi prenu</quote>translates as 
+    <quote>someone.</quote>(The difference between 
+    <quote>someone</quote>and 
+    <quote>somebody</quote>is a matter of English style, with no real counterpart in Lojban.) If 
+    <xref linkend="cll_chapter16-section4-example2" />is true, then 
+    <xref linkend="cll_chapter16-section4-example1" />must be true, but not necessarily vice versa.</para>
+    <para>Universal claims benefit even more from the existence of relative clauses. Consider</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-DFen">
+      <title>
+        <anchor xml:id="c16e4d3" />
+        <anchor xml:id="cll_chapter16-section4-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ro da zo'u da vasxu</jbo>
+        <gloss>For-every X : X breathes</gloss>
+        <en>Everything breathes</en>
+      </interlinear-gloss>
+    </example>
+    <para>and</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-njh0">
+      <title>
+        <anchor xml:id="c16e4d4" />
+        <anchor xml:id="cll_chapter16-section4-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ro da poi gerku zo'u da vasxu</jbo>
+        <gloss>For-every X which is-a-dog : X breathes.</gloss>
+        <gloss>Every dog breathes.</gloss>
+        <gloss>Each dog breathes.</gloss>
+        <en>All dogs breathe.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter16-section4-example3" />is a silly falsehood, but 
+    <xref linkend="cll_chapter16-section4-example4" />is an important truth (at least if applied in a timeless or potential sense: see 
+    <xref linkend="cll_chapter10" />). Note the various colloquial translations 
+    <quote>every dog</quote>, 
+    <quote>each dog</quote>, and 
+    <quote>all dogs</quote>. They all come to the same thing in Lojban, since what is true of every dog is true of all dogs. 
+    <quote>All dogs</quote>is treated as an English plural and the others as singular, but Lojban makes no distinction.</para>
+    <para>If we make an existential claim about dogs rather than a universal one, we get:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-4BTd">
+      <title>
+        <anchor xml:id="c16e4d5" />
+        <anchor xml:id="cll_chapter16-section4-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>da poi gerku zo'u da vasxu</jbo>
+        <gloss>There-is-an-X which is-a-dog : X breathes.</gloss>
+        <en>Some dog breathes.</en>
+      </interlinear-gloss>
+    </example>
+  </section>
+  <section xml:id="cll_chapter16-section5">
+    <title>5. Dropping the prenex</title>
+    <para>It isn't really necessary for every Lojban bridi involving variables to have a prenex on the front. In fact, none of the examples we've seen so far required prenexes at all! The rule for dropping the prenex is simple: if the variables appear in the same order within the bridi as they did in the prenex, then the prenex is superfluous. However, any 
+    <quote>ro</quote>or 
+    <quote>poi</quote>appearing in the prenex must be transferred to the first occurrence of the variable in the main part of the bridi. Thus, 
+    <xref linkend="cll_chapter16-section2-example3" />becomes just:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-9zAo">
+      <title>
+        <anchor xml:id="c16e5d1" />
+        <anchor xml:id="cll_chapter16-section5-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>da viska mi</jbo>
+        <gloss>There-is-an-X-which sees me.</gloss>
+        <en>Something sees me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>and 
+    <xref linkend="cll_chapter16-section4-example4" />becomes:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-na9C">
+      <title>
+        <anchor xml:id="c16e5d2" />
+        <anchor xml:id="cll_chapter16-section5-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ro da poi gerku cu vasxu</jbo>
+        <gloss>For-every X which is-a-dog, it-breathes.</gloss>
+        <en>Every dog breathes.</en>
+      </interlinear-gloss>
+    </example>
+    <para>You might well suppose, then, that the purpose of the prenex is to allow the variables in it to appear in a different order than the bridi order, and that would be correct. Consider</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Cfnb">
+      <title>
+        <anchor xml:id="c16e5d3" />
+        <anchor xml:id="cll_chapter16-section5-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ro da poi prenu ku'o de poi gerku ku'o zo'u de batci da</jbo>
+        <en>For-every X which is-a-person, there-is-a-Y which is-a-dog: Y bites X.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The prenex of 
+    <xref linkend="cll_chapter16-section5-example3" />is like that of 
+    <xref linkend="cll_chapter16-section3-example4" />(but with relative clauses): it notes that the following bridi is true of every person with respect to some dog, not necessarily the same dog for each. But in the main bridi part, the 
+    <quote>de</quote>appears before the 
+    <quote>da</quote>. Therefore, the true translation is</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-KLAr">
+      <title>
+        <anchor xml:id="c16e5d4" />
+        <anchor xml:id="cll_chapter16-section5-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>Every person is bitten by some dog (or other).</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>If we tried to omit the prenex and move the 
+    <quote>ro</quote>and the relative clauses into the main bridi, we would get:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-c9bq">
+      <title>
+        <anchor xml:id="c16e5d5" />
+        <anchor xml:id="cll_chapter16-section5-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>de poi gerku cu batci ro da poi prenu</jbo>
+        <gloss>There-is-a-Y which is-a-dog which-bites every X which is-a-person</gloss>
+        <en>Some dog bites everyone.</en>
+      </interlinear-gloss>
+    </example>
+    <para>which has the structure of 
+    <xref linkend="cll_chapter16-section3-example5" />: it says that there is a dog (call him Fido) who bites, has bitten, or will bite every person that has ever existed! We can safely rule out Fido's existence, and say that 
+    <xref linkend="cll_chapter16-section5-example5" />is false, while agreeing to 
+    <xref linkend="cll_chapter16-section5-example3" />.</para>
+    <para>Even so, 
+    <xref linkend="cll_chapter16-section5-example3" />is most probably false, since some people never experience dogbite. Examples like 5.3 and 4.4 (might there be some dogs which never have breathed, because they died as embryos?) indicate the danger in Lojban of universal claims even when restricted. In English we are prone to say that 
+    <quote>Everyone says</quote>or that 
+    <quote>Everybody does</quote>or that 
+    <quote>Everything is</quote>when in fact there are obvious counterexamples which we are ignoring for the sake of making a rhetorical point. Such statements are plain falsehoods in Lojban, unless saved by a context (such as tense) which implicitly restricts them.</para>
+    <para>How can we express 
+    <xref linkend="cll_chapter16-section5-example3" />in Lojban without a prenex? Since it is the order in which variables appear that matters, we can say:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-y90e">
+      <title>
+        <anchor xml:id="c16e5d6" />
+        <anchor xml:id="cll_chapter16-section5-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ro da poi prenu cu se batci de poi gerku</jbo>
+        <en>Every-X which is-a-person is-bitten-by some-Y which is-a-dog.</en>
+      </interlinear-gloss>
+    </example>
+    <para>using the conversion operator 
+    <quote>se</quote>(explained in 
+    <xref linkend="cll_chapter5" />) to change the selbri 
+    <quote>batci</quote>(
+    <quote>bites</quote>) into 
+    <quote>se batci</quote>(
+    <quote>is bitten by</quote>). The translation given in 
+    <xref linkend="cll_chapter16-section5-example4" />uses the corresponding strategy in English, since English does not have prenexes (except in strained 
+    <quote>logician's English</quote>). This implies that a sentence with both a universal and an existential variable can't be freely converted with 
+    <quote>se</quote>; one must be careful to preserve the order of the variables.</para>
+    <para>If a variable occurs more than once, then any 
+    <quote>ro</quote>or 
+    <quote>poi</quote>decorations are moved only to the first occurrence of the variable when the prenex is dropped. For example,</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-4nqt">
+      <title>
+        <anchor xml:id="c16e5d7" />
+        <anchor xml:id="cll_chapter16-section5-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>di poi prenu zo'u ti xarci di di</jbo>
+        <gloss>There-is-a-Z which is-a-person : this-thing is-a-weapon for-use-against-Z by-Z</gloss>
+        <en>This is a weapon for someone to use against himself/herself.</en>
+      </interlinear-gloss>
+    </example>
+    <para>(in which 
+    <quote>di</quote>is used rather than 
+    <quote>da</quote>just for variety) loses its prenex as follows:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-CseH">
+      <title>
+        <anchor xml:id="c16e5d8" />
+        <anchor xml:id="cll_chapter16-section5-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ti xarci di poi prenu ku'o di</jbo>
+        <en>This-thing is-a-weapon-for-use-against some-Z which is-a-person by-Z.</en>
+      </interlinear-gloss>
+    </example>
+    <para>As the examples in this section show, dropping the prenex makes for terseness of expression often even greater than that of English (Lojban is meant to be an unambiguous language, not necessarily a terse or verbose one), provided the rules are observed.</para>
+  </section>
+  <section xml:id="cll_chapter16-section6">
+    <title>6. Variables with generalized quantifiers</title>
+    <para>So far, we have seen variables with either nothing in front, or with the cmavo 
+    <quote>ro</quote>in front. Now 
+    <quote>ro</quote>is a Lojban number, and means 
+    <quote>all</quote>; thus 
+    <quote>ro prenu</quote>means 
+    <quote>all persons</quote>, just as 
+    <quote>re prenu</quote>means 
+    <quote>two persons</quote>. In fact, unadorned 
+    <quote>da</quote>is also taken to have an implicit number in front of it, namely 
+    <quote>su'o</quote>, which means 
+    <quote>at least one</quote>. Why is this? Consider 
+    <xref linkend="cll_chapter16-section2-example3" />again, this time with an explicit 
+    <quote>su'o</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-TI8K">
+      <title>
+        <anchor xml:id="c16e6d1" />
+        <anchor xml:id="cll_chapter16-section6-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'o da zo'u da viska mi</jbo>
+        <gloss>For-at-least-one X : X sees me.</gloss>
+        <en>Something sees me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>From this version of 
+    <xref linkend="cll_chapter16-section2-example3" />, we understand the speaker's claim to be that of all the things that there are, at least one of them sees him or her. The corresponding universal claim, 
+    <xref linkend="cll_chapter16-section3-example2" />, says that of all the things that exist, every one of them can see the speaker.</para>
+    <para>Any other number can be used instead of 
+    <quote>ro</quote>or 
+    <quote>su'o</quote>to precede a variable. Then we get claims like:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-3C69">
+      <title>
+        <anchor xml:id="c16e6d2" />
+        <anchor xml:id="cll_chapter16-section6-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>re da zo'u da viska mi</jbo>
+        <gloss>For-two-Xes : X sees me.</gloss>
+        <en>Two things see me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>This means that exactly two things, no more or less, saw the speaker on the relevant occasion. In English, we might take 
+    <quote>Two things see me</quote>to mean that at least two things see the speaker, but there might be more; in Lojban, though, that claim would have to be made as:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-mSzo">
+      <title>
+        <anchor xml:id="c16e6d3" />
+        <anchor xml:id="cll_chapter16-section6-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'ore da zo'u da viska mi</jbo>
+        <en>For-at-least-two Xes : X sees me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>which would be false if nothing, or only one thing, saw the speaker, but not otherwise. We note the 
+    <quote>su'o</quote>here meaning 
+    <quote>at least</quote>; 
+    <quote>su'o</quote>by itself is short for 
+    <quote>su'opa</quote>where 
+    <quote>pa</quote>means 
+    <quote>one</quote>, as is explained in 
+    <xref linkend="cll_chapter18" />.</para>
+    <para>The prenex may be removed from 
+    <xref linkend="cll_chapter16-section6-example2" />and 
+    <xref linkend="cll_chapter16-section6-example3" />as from the others, leading to:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-2r5v">
+      <title>
+        <anchor xml:id="c16e6d4" />
+        <anchor xml:id="cll_chapter16-section6-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>re da viska mi</jbo>
+        <en>Two Xes see me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>and</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-GWoD">
+      <title>
+        <anchor xml:id="c16e6d5" />
+        <anchor xml:id="cll_chapter16-section6-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'ore da viska mi</jbo>
+        <en>At-least-two Xes see me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>respectively, subject to the rules prescribed in 
+    <xref linkend="cll_chapter16-section5" />.</para>
+    <para>Now we can explain the constructions 
+    <quote>ro prenu</quote>for 
+    <quote>all persons</quote>and 
+    <quote>re prenu</quote>for 
+    <quote>two persons</quote>which were casually mentioned at the beginning of this Section. In fact, 
+    <quote>ro prenu</quote>, a so-called 
+    <quote>indefinite description</quote>, is shorthand for 
+    <quote>ro DA poi prenu</quote>, where 
+    <quote>DA</quote>represents a fictitious variable that hasn't been used yet and will not be used in future. (Even if all three of 
+    <quote>da</quote>, 
+    <quote>de</quote>, and 
+    <quote>di</quote>have been used up, it does not matter, for there are ways of getting more variables, discussed in 
+    <xref linkend="cll_chapter16-section14" />.) So in fact</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Kr4S">
+      <title>
+        <anchor xml:id="c16e6d6" />
+        <anchor xml:id="cll_chapter16-section6-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>re prenu cu viska mi</jbo>
+        <en>Two persons see me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>is short for</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-E6wI">
+      <title>
+        <anchor xml:id="c16e6d7" />
+        <anchor xml:id="cll_chapter16-section6-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>re da poi prenu cu viska mi</jbo>
+        <en>Two Xes which are-persons see me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>which in turn is short for:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-u1sb">
+      <title>
+        <anchor xml:id="c16e6d8" />
+        <anchor xml:id="cll_chapter16-section6-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>re da poi prenu zo'u da viska mi</jbo>
+        <en>For-two Xes which are-persons : X sees me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Note that when we move more than one variable to the prenex (along with its attached relative clause), we must make sure that the variables are in the same order in the prenex as in the bridi proper.</para>
+  </section>
+  <section xml:id="cll_chapter16-section7">
+    <title>7. Grouping of quantifiers</title>
+    <para>Let us consider a sentence containing two quantifier expressions neither of which is 
+    <quote>ro</quote>or 
+    <quote>su'o</quote>(remembering that 
+    <quote>su'o</quote>is implicit where no explicit quantifier is given):</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Uovr">
+      <title>
+        <anchor xml:id="c16e7d1" />
+        <anchor xml:id="cll_chapter16-section7-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ci gerku cu batci re nanmu</jbo>
+        <en>Three dogs bite two men.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The question raised by 
+    <xref linkend="cll_chapter16-section7-example1" />is, does each of the dogs bite the same two men, or is it possible that there are two different men per dog, for six men altogether? If the former interpretation is taken, the number of men involved is fixed at two; but if the latter, then the speaker has to be taken as saying that there might be any number of men between two and six inclusive. Let us transform 
+    <xref linkend="cll_chapter16-section7-example1" />step by step as we did with 
+    <xref linkend="cll_chapter16-section6-example6" />:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-neNT">
+      <title>
+        <anchor xml:id="c16e7d2" />
+        <anchor xml:id="cll_chapter16-section7-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ci da poi gerku cu batci re de poi nanmu</jbo>
+        <en>Three Xes which are-dogs bite two Ys which are-men.</en>
+      </interlinear-gloss>
+    </example>
+    <para>(Note that we need separate variables 
+    <quote>da</quote>and 
+    <quote>de</quote>, because of the rule that says each indefinite description gets a variable never used before or since.)</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Iuj2">
+      <title>
+        <anchor xml:id="c16e7d3" />
+        <anchor xml:id="cll_chapter16-section7-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ci da poi gerku ku'o re de poi nanmu zo'u da batci de</jbo>
+        <en>For-three Xes which are-dogs, for-two Ys which are-men : X bites Y.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Here we see that indeed each of the dogs is said to bite two men, and it might be different men each time; a total of six biting events altogether.</para>
+    <para>How then are we to express the other interpretation, in which just two men are involved? We cannot just reverse the order of variables in the prenex to</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-4Qxe">
+      <title>
+        <anchor xml:id="c16e7d4" />
+        <anchor xml:id="cll_chapter16-section7-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>re de poi nanmu ku'o ci da poi gerku zo'u da batci de</jbo>
+        <en>For-two Ys which are-men, for-three Xes which are-dogs, X bites Y</en>
+      </interlinear-gloss>
+    </example>
+    <para>for although we have now limited the number of men to exactly two, we end up with an indeterminate number of dogs, from three to six. The distinction is called a 
+    <quote>scope distinction</quote>: in 
+    <xref linkend="cll_chapter16-section7-example2" />, 
+    <quote>ci gerku</quote>is said to have wider scope than 
+    <quote>re nanmu</quote>, and therefore precedes it in the prenex. In 
+    <xref linkend="cll_chapter16-section7-example4" />the reverse is true.</para>
+    <para>The solution is to use a termset, which is a group of terms either joined by 
+    <quote>ce'e</quote>(of selma'o CEhE) between each term, or else surrounded by 
+    <quote>nu'i</quote>(of selma'o NUhI) on the front and 
+    <quote>nu'u</quote>(of selma'o NUhU) on the rear. Terms (which are either sumti or sumti prefixed by tense or modal tags) that are grouped into a termset are understood to have equal scope:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-JbVH">
+      <title>
+        <anchor xml:id="c16e7d5" />
+        <anchor xml:id="cll_chapter16-section7-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ci gerku ce'e re nanmu cu batci</jbo>
+        <gloss>nu'i ci gerku re nanmu [nu'u] cu batci</gloss>
+        <en>Three dogs [plus] two men, bite.</en>
+      </interlinear-gloss>
+    </example>
+    <para>which picks out two groups, one of three dogs and the other of two men, and says that every one of the dogs bites each of the men. The second Lojban version uses forethought; note that 
+    <quote>nu'u</quote>is an elidable terminator, and in this case can be freely elided.</para>
+    <para>What about descriptors, like 
+    <quote>ci lo gerku</quote>, 
+    <quote>le nanmu</quote>or 
+    <quote>re le ci mlatu</quote>? They too can be grouped in termsets, but usually need not be, except for the 
+    <quote>lo</quote>case which functions like the case without a descriptor. Unless an actual quantifier precedes it, 
+    <quote>le nanmu</quote>means 
+    <quote>ro le nanmu</quote>, as is explained in 
+    <xref linkend="cll_chapter6" />. Two sumti with 
+    <quote>ro</quote>quantifiers are independent of order, so:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-MADY">
+      <title>
+        <anchor xml:id="c16e7d6" />
+        <anchor xml:id="cll_chapter16-section7-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>[ro] le ci gerku cu batci [ro] le re nanmu</jbo>
+        <en>[All of] the three dogs bite [all of] the two men.</en>
+      </interlinear-gloss>
+    </example>
+    <para>means that each of the dogs specified bites each of the men specified, for six acts of biting altogether. However, if there is an explicit quantifier before 
+    <quote>le</quote>other than 
+    <quote>ro</quote>, the problems of this section reappear.</para>
+  </section>
+  <section xml:id="cll_chapter16-section8">
+    <title>8. The problem of 
+    <quote>any</quote></title>
+    <para>Consider the English sentence</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-R4mX">
+      <title>
+        <anchor xml:id="c16e8d1" />
+        <anchor xml:id="cll_chapter16-section8-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>Anyone who goes to the store, walks across the field.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>Using the facilities already discussed, a plausible translation might be</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-7Kn8">
+      <title>
+        <anchor xml:id="c16e8d2" />
+        <anchor xml:id="cll_chapter16-section8-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ro da poi klama le zarci cu cadzu le foldi</jbo>
+        <gloss>All X such-that-it goes-to the store walks-on the field.</gloss>
+        <en>Everyone who goes to the store walks across the field.</en>
+      </interlinear-gloss>
+    </example>
+    <para>But there is a subtle difference between 
+    <xref linkend="cll_chapter16-section8-example1" />and 
+    <xref linkend="cll_chapter16-section8-example2" />. 
+    <xref linkend="cll_chapter16-section8-example2" />tells us that, in fact, there are people who go to the store, and that they walk across the field. A sumti of the type 
+    <quote>ro da poi klama</quote>requires that there are things which 
+    <quote>klama</quote>: Lojban universal claims always imply the corresponding existential claims as well. 
+    <xref linkend="cll_chapter16-section8-example1" />, on the other hand, does not require that there are any people who go to the store: it simply states, conditionally, that if there is anyone who goes to the store, he or she walks across the field as well. This conditional form mirrors the true Lojban translation of 
+    <xref linkend="cll_chapter16-section8-example1" />:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-BwU7">
+      <title>
+        <anchor xml:id="c16e8d3" />
+        <anchor xml:id="cll_chapter16-section8-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ro da zo'u ganai da klama le zarci gi cadzu le foldi</jbo>
+        <en>For-every X: if X is-a-goer-to the store then X is-a-walker-on the field.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Although 
+    <xref linkend="cll_chapter16-section8-example3" />is a universal claim as well, its universality only implies that there are objects of some sort or another in the universe of discourse. Because the claim is conditional, nothing is implied about the existence of goers-to-the-store or of walkers-on-the-field, merely that any entity which is one is also the other.</para>
+    <para>There is another use of 
+    <quote>any</quote>in English that is not universal but existential. Consider</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-7Eu9">
+      <title>
+        <anchor xml:id="c16e8d4" />
+        <anchor xml:id="cll_chapter16-section8-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>I need any box that is bigger than this one.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter16-section8-example4" />does not at all mean that I need every box bigger than this one, for indeed I do not; I require only one box. But the naive translation</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-KHya">
+      <title>
+        <anchor xml:id="c16e8d5" />
+        <anchor xml:id="cll_chapter16-section8-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi nitcu da poi tanxe gi'e bramau ti</jbo>
+        <en>I need some-X which is-a-box and is-bigger-than this-one</en>
+      </interlinear-gloss>
+    </example>
+    <para>does not work either, because it asserts that there really is such a box, as the prenex paraphrase demonstrates:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-fAo5">
+      <title>
+        <anchor xml:id="c16e8d6" />
+        <anchor xml:id="cll_chapter16-section8-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>da poi tanxe gi'e bramau ti zo'u mi nitcu da</jbo>
+        <en>There-is-an-X which is-a-box and is-bigger-than this : I need X.</en>
+      </interlinear-gloss>
+    </example>
+    <para>What to do? Well, the x2 place of 
+    <quote>nitcu</quote>can be filled with an event as well as an object, and in fact 
+    <xref linkend="cll_chapter16-section8-example5" />can also be paraphrased as:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-e7ta">
+      <title>
+        <anchor xml:id="c16e8d7" />
+        <anchor xml:id="cll_chapter16-section8-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi nitcu lo nu mi ponse lo tanxe poi bramau ti</jbo>
+        <en>I need an event-of I possess some box(es) which-are bigger-than this-one.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Rewritten using variables, 
+    <xref linkend="cll_chapter16-section8-example7" />becomes</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-4Pz8">
+      <title>
+        <anchor xml:id="c16e8d8" />
+        <anchor xml:id="cll_chapter16-section8-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi nitcu lo nu da zo'u</jbo>
+        <gloss>da se ponse mi gi'e tanxe gi'e bramau ti</gloss>
+        <gloss>I need an event-of there-being an-X such-that :</gloss>
+        <en>X is-possessed-by me and is-a-box and is-bigger-than this-thing.</en>
+      </interlinear-gloss>
+    </example>
+    <para>So we see that a prenex can be attached to a bridi that is within a sentence. By default, a variable always behaves as if it is bound in the prenex which (notionally) is attached to the smallest enclosing bridi, and its scope does not extend beyond that bridi. However, the variable may be placed in an outer prenex explicitly:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-7KKM">
+      <title>
+        <anchor xml:id="c16e8d9" />
+        <anchor xml:id="cll_chapter16-section8-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>da poi tanxe gi'e bramau ti zo'u</jbo>
+        <gloss>mi nitcu le nu mi ponse da</gloss>
+        <gloss>There-is-an-X which is-a-box and is-bigger-than this-one such-that :</gloss>
+        <en>I need the event-of my possessing X.</en>
+      </interlinear-gloss>
+    </example>
+    <para>But what are the implications of 
+    <xref linkend="cll_chapter16-section8-example7" />and 
+    <xref linkend="cll_chapter16-section8-example9" />? The main difference is that in 
+    <xref linkend="cll_chapter16-section8-example9" />, the 
+    <quote>da</quote>is said to exist in the real world of the outer bridi; but in 
+    <xref linkend="cll_chapter16-section8-example7" />, the existence is only within the inner bridi, which is a mere event that need not necessarily come to pass. So 
+    <xref linkend="cll_chapter16-section8-example9" />means</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-xC32">
+      <title>
+        <anchor xml:id="c16e8d10" />
+        <anchor xml:id="cll_chapter16-section8-example10" />
+      </title>
+      <interlinear-gloss>
+        <jbo>There's a box, bigger than this one, that I need</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>which is what 
+    <xref linkend="cll_chapter16-section8-example6" />says, whereas 
+    <xref linkend="cll_chapter16-section8-example7" />turns out to be an effective translation of our original 
+    <xref linkend="cll_chapter16-section8-example1" />. So uses of 
+    <quote>any</quote>that aren't universal end up being reflected by variables bound in the prenex of a subordinate bridi.</para>
+  </section>
+  <section xml:id="cll_chapter16-section9">
+    <title>9. Negation boundaries</title>
+    <para>This section, as well as 
+    <xref linkend="cll_chapter16-section10" />through 
+    <xref linkend="cll_chapter16-section12" />, are in effect a continuation of 
+    <xref linkend="cll_chapter15" />, introducing features of Lojban negation that require an understanding of prenexes and variables. In the examples below, 
+    <quote>there is a Y</quote>and the like must be understood as 
+    <quote>there is at least one Y, possibly more</quote>.</para>
+    <para>As explained in 
+    <xref linkend="cll_chapter15" />, the negation of a bridi is usually accomplished by inserting 
+    <quote>na</quote>at the beginning of the selbri:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-hBRH">
+      <title>
+        <anchor xml:id="c16e9d1" />
+        <anchor xml:id="cll_chapter16-section9-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi na klama le zarci</jbo>
+        <gloss>I [false] go-to the store.</gloss>
+        <gloss>It is false that I go to the store.</gloss>
+        <en>I don't go to the store.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The other form of bridi negation is expressed by using the compound cmavo 
+    <quote>naku</quote>in the prenex, which is identified and compounded by the lexer before looking at the sentence grammar. In Lojban grammar, 
+    <quote>naku</quote>is then treated like a sumti. In a prenex, 
+    <quote>naku</quote>means precisely the same thing as the logician's 
+    <quote>it is not the case that</quote>in a similar English context. (Outside of a prenex, 
+    <quote>naku</quote>is also grammatically treated as a single entity - the equivalent of a sumti - but does not have this exact meaning; we'll discuss these other situations in 
+    <xref linkend="cll_chapter16-section11" />.)</para>
+    <para>To represent a bridi negation using a prenex, remove the 
+    <quote>na</quote>from before the selbri and place 
+    <quote>naku</quote>at the left end of the prenex. This form is called 
+    <quote>external bridi negation</quote>, as opposed to 
+    <quote>internal bridi negation</quote>using 
+    <quote>na</quote>. The prenex version of 
+    <xref linkend="cll_chapter16-section9-example1" />is</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-IH8J">
+      <title>
+        <anchor xml:id="c16e9d2" />
+        <anchor xml:id="cll_chapter16-section9-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>naku zo'u la djan. klama</jbo>
+        <gloss>It is not the case that: John comes.</gloss>
+        <en>It is false that: John comes.</en>
+      </interlinear-gloss>
+    </example>
+    <para>However, 
+    <quote>naku</quote>can appear at other points in the prenex as well. Compare</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-cy6j">
+      <title>
+        <anchor xml:id="c16e9d3" />
+        <anchor xml:id="cll_chapter16-section9-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>naku de zo'u de zutse</jbo>
+        <gloss>It is not the case that: for some Y, Y sits.</gloss>
+        <gloss>It is false that: for at least one Y, Y sits.</gloss>
+        <gloss>It is false that something sits.</gloss>
+        <en>Nothing sits.</en>
+      </interlinear-gloss>
+    </example>
+    <para>with</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-2Fw3">
+      <title>
+        <anchor xml:id="c16e9d4" />
+        <anchor xml:id="cll_chapter16-section9-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'ode naku zo'u de zutse</jbo>
+        <gloss>For at least one Y, it is false that: Y sits.</gloss>
+        <en>There is something that doesn't sit.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The relative position of negation and quantification terms within a prenex has a drastic effect on meaning. Starting without a negation, we can have:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-21Y5">
+      <title>
+        <anchor xml:id="c16e9d5" />
+        <anchor xml:id="cll_chapter16-section9-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>roda su'ode zo'u da prami de</jbo>
+        <gloss>For every X, there is a Y, such that X loves Y.</gloss>
+        <en>Everybody loves at least one thing (each, not necessarily the same thing).</en>
+      </interlinear-gloss>
+    </example>
+    <para>or:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Tj99">
+      <title>
+        <anchor xml:id="c16e9d6" />
+        <anchor xml:id="cll_chapter16-section9-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'ode roda zo'u da prami de</jbo>
+        <gloss>There is a Y, such that for each X, X loves Y.</gloss>
+        <en>There is at least one particular thing that is loved by everybody.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The simplest form of bridi negation to interpret is one where the negation term is at the beginning of the prenex:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-1LqV">
+      <title>
+        <anchor xml:id="c16e9d7" />
+        <anchor xml:id="cll_chapter16-section9-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>naku roda su'ode zo'u da prami de</jbo>
+        <gloss>It is false that: for every X, there is a Y, such that: X loves Y.</gloss>
+        <gloss>It is false that: everybody loves at least one thing.</gloss>
+        <en>(At least) someone doesn't love anything.</en>
+      </interlinear-gloss>
+    </example>
+    <para>the negation of 
+    <xref linkend="cll_chapter16-section9-example5" />, and</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-u1jY">
+      <title>
+        <anchor xml:id="c16e9d8" />
+        <anchor xml:id="cll_chapter16-section9-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>naku su'ode roda zo'u da prami de</jbo>
+        <gloss>It is false that: there is a Y such that for each X, X loves Y.</gloss>
+        <gloss>It is false that: there is at least one thing that is loved by everybody.</gloss>
+        <en>There isn't any one thing that everybody loves.</en>
+      </interlinear-gloss>
+    </example>
+    <para>the negation of 
+    <xref linkend="cll_chapter16-section9-example6" />.</para>
+    <para>The rules of formal logic require that, to move a negation boundary within a prenex, you must 
+    <quote>invert any quantifier</quote>that the negation boundary passes across. Inverting a quantifier means that any 
+    <quote>ro</quote>(all) is changed to 
+    <quote>su'o</quote>(at least one) and vice versa. Thus, 
+    <xref linkend="cll_chapter16-section9-example7" />and 
+    <xref linkend="cll_chapter16-section9-example8" />can be restated as, respectively:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-cJLQ">
+      <title>
+        <anchor xml:id="c16e9d9" />
+        <anchor xml:id="cll_chapter16-section9-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'oda naku su'ode zo'u da prami de</jbo>
+        <gloss>For some X, it is false that: there is a Y such that: X loves Y.</gloss>
+        <en>There is somebody who doesn't love anything.</en>
+      </interlinear-gloss>
+    </example>
+    <para>and:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-hBXT">
+      <title>
+        <anchor xml:id="c16e9d10" />
+        <anchor xml:id="cll_chapter16-section9-example10" />
+      </title>
+      <interlinear-gloss>
+        <jbo>rode naku roda zo'u da prami de</jbo>
+        <gloss>For every Y, it is false that: for every X, X loves Y.</gloss>
+        <en>For each thing, it is not true that everybody loves it.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Another movement of the negation boundary produces:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-w6XF">
+      <title>
+        <anchor xml:id="c16e9d11" />
+        <anchor xml:id="cll_chapter16-section9-example11" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'oda rode naku zo'u da prami de</jbo>
+        <gloss>There is an X such that, for every Y, it is false that X loves Y.</gloss>
+        <en>There is someone who, for each thing, doesn't love that thing.</en>
+      </interlinear-gloss>
+    </example>
+    <para>and</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-JY08">
+      <title>
+        <anchor xml:id="c16e9d12" />
+        <anchor xml:id="cll_chapter16-section9-example12" />
+      </title>
+      <interlinear-gloss>
+        <jbo>rode su'oda naku zo'u da prami de</jbo>
+        <gloss>For every Y, there is an X, such that it is false that: X loves Y.</gloss>
+        <en>For each thing there is someone who doesn't love it.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Investigation will show that, indeed, each transformation preserves the meanings of 
+    <xref linkend="cll_chapter16-section9-example7" />and 
+    <xref linkend="cll_chapter16-section9-example8" />.</para>
+    <para>The quantifier 
+    <quote>no</quote>(meaning 
+    <quote>zero of</quote>) also involves a negation boundary. To transform a bridi containing a variable quantified with 
+    <quote>no</quote>, we must first expand it. Consider</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-qCph">
+      <title>
+        <anchor xml:id="c16e9d13" />
+        <anchor xml:id="cll_chapter16-section9-example13" />
+      </title>
+      <interlinear-gloss>
+        <jbo>noda rode zo'u da prami de</jbo>
+        <gloss>There is no X, for every Y, such that X loves Y.</gloss>
+        <en>Nobody loves everything.</en>
+      </interlinear-gloss>
+    </example>
+    <para>which is negated by:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-fpeW">
+      <title>
+        <anchor xml:id="c16e9d14" />
+        <anchor xml:id="cll_chapter16-section9-example14" />
+      </title>
+      <interlinear-gloss>
+        <jbo>naku noda rode zo'u da prami de</jbo>
+        <gloss>It is false that: there is no X that, for every Y, X loves Y.</gloss>
+        <en>It is false that there is nobody who loves everything.</en>
+      </interlinear-gloss>
+    </example>
+    <para>We can simplify 
+    <xref linkend="cll_chapter16-section9-example14" />by transforming the prenex. To move the negation phrase within the prenex, we must first expand the 
+    <quote>no</quote>quantifier. Thus 
+    <quote>for no x</quote>means the same thing as 
+    <quote>it is false for some x</quote>, and the corresponding Lojban 
+    <quote>noda</quote>can be replaced by 
+    <quote>naku su'oda</quote>. Making this substitution, we get:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-xTie">
+      <title>
+        <anchor xml:id="c16e9d15" />
+        <anchor xml:id="cll_chapter16-section9-example15" />
+      </title>
+      <interlinear-gloss>
+        <jbo>naku naku su'oda rode zo'u da prami de</jbo>
+        <en>It is false that it is false that: for an X, for every Y: X loves Y.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Adjacent pairs of negation boundaries in the prenex can be dropped, so this means the same as:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-y7NU">
+      <title>
+        <anchor xml:id="c16e9d16" />
+        <anchor xml:id="cll_chapter16-section9-example16" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'oda rode zo'u da prami de</jbo>
+        <gloss>There is an X such that, for every Y, X loves Y.</gloss>
+        <en>At least one person loves everything.</en>
+      </interlinear-gloss>
+    </example>
+    <para>which is clearly the desired contradiction of 
+    <xref linkend="cll_chapter16-section9-example13" />.</para>
+    <para>The interactions between quantifiers and negation mean that you cannot eliminate double negatives that are not adjacent. You must first move the negation phrases so that they are adjacent, inverting any quantifiers they cross, and then the double negative can be eliminated.</para>
+  </section>
+  <section xml:id="cll_chapter16-section10">
+    <title>10. bridi negation and logical connectives</title>
+    <para>A complete discussion of logical connectives appears in 
+    <xref linkend="cll_chapter14" />. What is said here is intentionally quite incomplete and makes several oversimplifications.</para>
+    <para>A logical connective is a cmavo or compound cmavo. In this chapter, we will make use of the logical connectives 
+    <quote>and</quote>and 
+    <quote>or</quote>(where 
+    <quote>or</quote>really means 
+    <quote>and/or</quote>, 
+    <quote>either or both</quote>). The following simplified recipes explain how to make some logical connectives:</para>
+    <itemizedlist>
+      <listitem>
+        <para>To logically connect two Lojban sumti with 
+        <quote>and</quote>, put them both in the bridi and separate them with the cmavo 
+        <quote>.e</quote>.</para>
+      </listitem>
+      <listitem>
+        <para>To logically connect two Lojban bridi with 
+        <quote>and</quote>, replace the regular separator cmavo 
+        <quote>.i</quote>with the compound cmavo 
+        <quote>.ije</quote>.</para>
+      </listitem>
+      <listitem>
+        <para>To logically connect two Lojban sumti with 
+        <quote>or</quote>, put them both in the bridi and separate them with the cmavo 
+        <quote>.a</quote>.</para>
+      </listitem>
+      <listitem>
+        <para>To logically connect two Lojban bridi with 
+        <quote>or</quote>, replace the regular separator cmavo 
+        <quote>.i</quote>with the compound cmavo 
+        <quote>.ija</quote>.</para>
+      </listitem>
+    </itemizedlist>
+    <para>More complex logical connectives also exist; in particular, one may place 
+    <quote>na</quote>before 
+    <quote>.e</quote>or 
+    <quote>.a</quote>, or between 
+    <quote>.i</quote>and 
+    <quote>je</quote>or 
+    <quote>ja</quote>; likewise, one may place 
+    <quote>nai</quote>at the end of a connective. Both 
+    <quote>na</quote>and 
+    <quote>nai</quote>have negative effects on the sumti or bridi being connected. Specifically, 
+    <quote>na</quote>negates the first or left-hand sumti or bridi, and 
+    <quote>nai</quote>negates the second or right-hand one.</para>
+    <para>Whenever a logical connective occurs in a sentence, that sentence can be expanded into two sentences by repeating the common terms and joining the sentences by a logical connective beginning with 
+    <quote>.i</quote>. Thus the following sentence:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-jmDS">
+      <title>
+        <anchor xml:id="c16e10d1" />
+        <anchor xml:id="cll_chapter16-section10-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi .e do klama ti</jbo>
+        <en>I and you come here.</en>
+      </interlinear-gloss>
+    </example>
+    <para>can be expanded to:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-KTQH">
+      <title>
+        <anchor xml:id="c16e10d2" />
+        <anchor xml:id="cll_chapter16-section10-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi klama ti .ije do klama ti</jbo>
+        <en>I come here, and, you come here.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The same type of expansion can be performed for any logical connective, with any valid combination of 
+    <quote>na</quote>or 
+    <quote>nai</quote>attached. No change in meaning occurs under such a transformation.</para>
+    <para>Clearly, if we know what negation means in the expanded sentence forms, then we know what it means in all of the other forms. But what does negation mean between sentences?</para>
+    <para>The mystery is easily solved. A negation in a logical expression is identical to the corresponding bridi negation, with the negator placed at the beginning of the prenex. Thus:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-pLiB">
+      <title>
+        <anchor xml:id="c16e10d3" />
+        <anchor xml:id="cll_chapter16-section10-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi .enai do prami roda</jbo>
+        <en>I, and not you, love everything.</en>
+      </interlinear-gloss>
+    </example>
+    <para>expands to:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-h6Wz">
+      <title>
+        <anchor xml:id="c16e10d4" />
+        <anchor xml:id="cll_chapter16-section10-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi prami roda .ijenai do prami roda</jbo>
+        <en>I love everything, and-not, you love everything.</en>
+      </interlinear-gloss>
+    </example>
+    <para>and then into prenex form as:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-JxDJ">
+      <title>
+        <anchor xml:id="c16e10d5" />
+        <anchor xml:id="cll_chapter16-section10-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>roda zo'u mi prami da .ije naku zo'u do prami da</jbo>
+        <en>For each thing: I love it, and it is false that you love (the same) it.</en>
+      </interlinear-gloss>
+    </example>
+    <para>By the rules of predicate logic, the 
+    <quote>ro</quote>quantifier on 
+    <quote>da</quote>has scope over both sentences. That is, once you've picked a value for 
+    <quote>da</quote>for the first sentence, it stays the same for both sentences. (The 
+    <quote>da</quote>continues with the same fixed value until a new paragraph or a new prenex resets the meaning.)</para>
+    <para>Thus the following example has the indicated translation:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-yCA1">
+      <title>
+        <anchor xml:id="c16e10d6" />
+        <anchor xml:id="cll_chapter16-section10-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'oda zo'u mi prami da .ije naku zo'u do prami da</jbo>
+        <gloss>For at least one thing: I love that thing. And it is false that: you love that (same) thing.</gloss>
+        <en>There is something that I love that you don't.</en>
+      </interlinear-gloss>
+    </example>
+    <para>If you remember only two rules for prenex manipulation of negations, you won't go wrong:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Within a prenex, whenever you move 
+        <quote>naku</quote>past a bound variable (da, de, di, etc.), you must invert the quantifier.</para>
+      </listitem>
+      <listitem>
+        <para>A 
+        <quote>na</quote>before the selbri is always transformed into a 
+        <quote>naku</quote>at the left-hand end of the prenex, and vice versa.</para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="cll_chapter16-section11">
+    <title>11. Using 
+    <quote>naku</quote>outside a prenex</title>
+    <para>Let us consider the English sentence</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-hp0j">
+      <title>
+        <anchor xml:id="c16e11d1" />
+        <anchor xml:id="cll_chapter16-section11-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>Some children do not go to school.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>We cannot express this directly with 
+    <quote>na</quote>; the apparently obvious translation</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-6mHh">
+      <title>
+        <anchor xml:id="c16e11d2" />
+        <anchor xml:id="cll_chapter16-section11-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'oda poi verba na klama su'ode poi ckule</jbo>
+        <en>At-least-one X which-are child(ren) [false] go-to at-least-one Y which-are school(s).</en>
+      </interlinear-gloss>
+    </example>
+    <para>when converted to the external negation form produces:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-nGTc">
+      <title>
+        <anchor xml:id="c16e11d3" />
+        <anchor xml:id="cll_chapter16-section11-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>naku zo'u su'oda poi verba cu klama su'ode poi ckule</jbo>
+        <gloss>It is false that some which are children go-to some which are schools.</gloss>
+        <en>All children don't go to some school (not just some children).</en>
+      </interlinear-gloss>
+    </example>
+    <para>Lojban provides a negation form which more closely emulates natural language negation. This involves putting 
+    <quote>naku</quote>before the selbri, instead of a 
+    <quote>na</quote>. 
+    <quote>naku</quote>is clearly a contradictory negation, given its parallel with prenex bridi negation. Using 
+    <quote>naku</quote>, 
+    <xref linkend="cll_chapter16-section11-example1" />can be expressed as:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-nvtf">
+      <title>
+        <anchor xml:id="c16e11d4" />
+        <anchor xml:id="cll_chapter16-section11-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'oda poi verba naku klama su'ode poi ckule</jbo>
+        <gloss>Some which-are children don't go-to some which-are schools.</gloss>
+        <en>Some children don't go to a school.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Although it is not technically a sumti, 
+    <quote>naku</quote>can be used in most of the places where a sumti may appear. We'll see what this means in a moment.</para>
+    <para>When you use 
+    <quote>naku</quote>within a bridi, you are explicitly creating a negation boundary. As explained in 
+    <xref linkend="cll_chapter16-section9" />, when a prenex negation boundary expressed by 
+    <quote>naku</quote>moves past a quantifier, the quantifier has to be inverted. The same is true for 
+    <quote>naku</quote>in the bridi proper. We can move 
+    <quote>naku</quote>to any place in the sentence where a sumti can go, inverting any quantifiers that the negation boundary crosses. Thus, the following are equivalent to 
+    <xref linkend="cll_chapter16-section11-example4" />(no good English translations exist):</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Dqwh">
+      <title>
+        <anchor xml:id="c16e11d5" />
+        <anchor xml:id="cll_chapter16-section11-example5" />
+        <anchor xml:id="c16e11d6" />
+        <anchor xml:id="cll_chapter16-section11-example6" />
+        <anchor xml:id="c16e11d7" />
+        <anchor xml:id="cll_chapter16-section11-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'oda poi verba cu klama rode poi ckule naku</jbo>
+        <en>For some children, for every school, they don't go to it.</en>
+        <jbo>su'oda poi verba cu klama naku su'ode poi ckule</jbo>
+        <en>Some children don't go to (some) school(s).</en>
+        <jbo>naku roda poi verba cu klama su'ode poi ckule</jbo>
+        <en>It is false that all children go to some school(s).</en>
+      </interlinear-gloss>
+    </example>
+    <para>In 
+    <xref linkend="cll_chapter16-section11-example5" />, we moved the negation boundary rightward across the quantifier of 
+    <quote>de</quote>, forcing us to invert it. In 
+    <xref linkend="cll_chapter16-section11-example7" />we moved the negation boundary across the quantifier of 
+    <quote>da</quote>, forcing us to invert it instead. 
+    <xref linkend="cll_chapter16-section11-example6" />merely switched the selbri and the negation boundary, with no effect on the quantifiers.</para>
+    <para>The same rules apply if you rearrange the sentence so that the quantifier crosses an otherwise fixed negation. You can't just convert the selbri of 
+    <xref linkend="cll_chapter16-section11-example4" />and rearrange the sumti to produce</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-rHwu">
+      <title>
+        <anchor xml:id="c16e11d8" />
+        <anchor xml:id="cll_chapter16-section11-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'ode poi ckule ku'o naku se klama roda poi verba</jbo>
+        <en>Some schools aren't gone-to-by every child.</en>
+      </interlinear-gloss>
+    </example>
+    <para>or rather, 
+    <xref linkend="cll_chapter16-section11-example8" />means something completely different from 
+    <xref linkend="cll_chapter16-section11-example4" />. Conversion with 
+    <quote>se</quote>under 
+    <quote>naku</quote>negation is not symmetric; not all sumti are treated identically, and some sumti are not invariant under conversion. Thus, internal negation with 
+    <quote>naku</quote>is considered an advanced technique, used to achieve stylistic compatibility with natural languages.</para>
+    <para>It isn't always easy to see which quantifiers have to be inverted in a sentence. 
+    <xref linkend="cll_chapter16-section11-example4" />is identical in meaning to:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-S6y4">
+      <title>
+        <anchor xml:id="c16e11d9" />
+        <anchor xml:id="cll_chapter16-section11-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'o verba naku klama su'o ckule</jbo>
+        <en>Some children don't go-to some school.</en>
+      </interlinear-gloss>
+    </example>
+    <para>but in 
+    <xref linkend="cll_chapter16-section11-example9" />, the bound variables 
+    <quote>da</quote>and 
+    <quote>de</quote>have been hidden.</para>
+    <para>It is trivial to export an internal bridi negation expressed with 
+    <quote>na</quote>to the prenex, as we saw in 
+    <xref linkend="cll_chapter16-section9" />; you just move it to the left end of the prenex. In comparison, it is non-trivial to export a 
+    <quote>naku</quote>to the prenex because of the quantifiers. The rules for exporting 
+    <quote>naku</quote>require that you export all of the quantified variables (implicit or explicit) along with 
+    <quote>naku</quote>, and you must export them from left to right, in the same order that they appear in the sentence. Thus 
+    <xref linkend="cll_chapter16-section11-example4" />goes into prenex form as:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-3f22">
+      <title>
+        <anchor xml:id="c16e11d10" />
+        <anchor xml:id="cll_chapter16-section11-example10" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'oda poi verba ku'o naku</jbo>
+        <gloss>su'ode poi ckule zo'u da klama de</gloss>
+        <gloss>For some X which is a child, it is not the case that</gloss>
+        <en>there is a Y which is a school such that: X goes to Y.</en>
+      </interlinear-gloss>
+    </example>
+    <para>We can now move the 
+    <quote>naku</quote>to the left end of the prenex, getting a contradictory negation that can be expressed with 
+    <quote>na</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-gPvc">
+      <title>
+        <anchor xml:id="c16e11d11" />
+        <anchor xml:id="cll_chapter16-section11-example11" />
+      </title>
+      <interlinear-gloss>
+        <jbo>naku roda poi verba</jbo>
+        <gloss>su'ode poi ckule zo'u da klama de</gloss>
+        <gloss>It is not the case that for all X's which are children,</gloss>
+        <en>there is a Y which is a school such that: X goes to Y.</en>
+      </interlinear-gloss>
+    </example>
+    <para>from which we can restore the quantified variables to the sentence, giving:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Awc0">
+      <title>
+        <anchor xml:id="c16e11d12" />
+        <anchor xml:id="cll_chapter16-section11-example12" />
+      </title>
+      <interlinear-gloss>
+        <jbo>naku zo'u roda poi verba cu klama su'ode poi ckule</jbo>
+        <en>It is not the case that all children go to some school.</en>
+      </interlinear-gloss>
+    </example>
+    <para>or more briefly</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-msIC">
+      <title>
+        <anchor xml:id="c16e11d13" />
+        <anchor xml:id="cll_chapter16-section11-example13" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ro verba cu na klama su'o ckule</jbo>
+        <en>All children [false] go-to some school(s).</en>
+      </interlinear-gloss>
+    </example>
+    <para>As noted in 
+    <xref linkend="cll_chapter16-section5" />, a sentence with two different quantified variables, such as 
+    <xref linkend="cll_chapter16-section11-example13" />, cannot always be converted with 
+    <quote>se</quote>without first exporting the quantified variables. When the variables have been exported, the sentence proper can be converted, but the quantifier order in the prenex must remain unchanged:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-d8h3">
+      <title>
+        <anchor xml:id="c16e11d14" />
+        <anchor xml:id="cll_chapter16-section11-example14" />
+      </title>
+      <interlinear-gloss>
+        <jbo>roda poi verba</jbo>
+        <gloss>su'ode poi ckule zo'u de na se klama da</gloss>
+        <gloss>It is not the case that for all X's which are children,</gloss>
+        <en>there is a Y which is a school such that: Y is gone to by X.</en>
+      </interlinear-gloss>
+    </example>
+    <para>While you can't freely convert with 
+    <quote>se</quote>when you have two quantified variables in a sentence, you can still freely move sumti to either side of the selbri, as long as the order isn't changed. If you use 
+    <quote>na</quote>negation in such a sentence, nothing special need be done. If you use 
+    <quote>naku</quote>negation, then quantified variables that cross the negation boundary must be inverted.</para>
+    <para>Clearly, if all of Lojban negation was built on 
+    <quote>naku</quote>negation instead of 
+    <quote>na</quote>negation, logical manipulation in Lojban would be as difficult as in natural languages. In 
+    <xref linkend="cll_chapter16-section12" />, for example, we'll discuss DeMorgan's Law, which must be used whenever a sumti with a logical connection is moved across a negation boundary.</para>
+    <para>Since 
+    <quote>naku</quote>has the grammar of a sumti, it can be placed almost anywhere a sumti can go, including 
+    <quote>be</quote>and 
+    <quote>bei</quote>clauses; it isn't clear what these mean, and we recommend avoiding such constructs.</para>
+    <para>You can put multiple 
+    <quote>naku</quote>s in a sentence, each forming a separate negation boundary. Two adjacent 
+    <quote>naku</quote>s in a bridi are a double negative and cancel out:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-u784">
+      <title>
+        <anchor xml:id="c16e11d15" />
+        <anchor xml:id="cll_chapter16-section11-example15" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi naku naku le zarci cu klama</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>Other expressions using two 
+    <quote>naku</quote>s may or may not cancel out. If there is no quantified variable between them, then the 
+    <quote>naku</quote>s cancel.</para>
+    <para>Negation with internal 
+    <quote>naku</quote>is clumsy and non-intuitive for logical manipulations, but then, so are the natural language features it is emulating.</para>
+  </section>
+  <section xml:id="cll_chapter16-section12">
+    <title>12. Logical Connectives and DeMorgan's Law</title>
+    <para>DeMorgan's Law states that when a logical connective between terms falls within a negation, then expanding the negation requires a change in the connective. Thus (where 
+    <quote>p</quote>and 
+    <quote>q</quote>stand for terms or sentences) 
+    <quote>not (p or q)</quote>is identical to 
+    <quote>not p and not q</quote>, and 
+    <quote>not (p and q)</quote>is identical to 
+    <quote>not p or not q</quote>. The corresponding changes for the other two basic Lojban connectives are: 
+    <quote>not (p equivalent to q)</quote>is identical to 
+    <quote>not p exclusive-or not q</quote>, and 
+    <quote>not (p whether-or-not q)</quote>is identical to both 
+    <quote>not p whether-or-not q</quote>and 
+    <quote>not p whether-or-not not q</quote>. In any Lojban sentence having one of the basic connectives, you can substitute in either direction from these identities. (These basic connectives are explained in 
+    <xref linkend="cll_chapter14" />.)</para>
+    <para>The effects of DeMorgan's Law on the logical connectives made by modifying the basic connectives with 
+    <quote>nai</quote>, 
+    <quote>na</quote>and 
+    <quote>se</quote>can be derived directly from these rules; modify the basic connective for DeMorgan's Law by substituting from the above identities, and then, apply each 
+    <quote>nai</quote>, 
+    <quote>na</quote>and 
+    <quote>se</quote>modifier of the original connectives. Cancel any double negatives that result.</para>
+    <para>When do we apply DeMorgan's Law? Whenever we wish to 
+    <quote>distribute</quote>a negation over a logical connective; and, for internal 
+    <quote>naku</quote>negation, whenever a logical connective moves in to, or out of, the scope of a negation - when it crosses a negation boundary.</para>
+    <para>Let us apply DeMorgan's Law to some sample sentences. These sentences make use of forethought logical connectives, which are explained in 
+    <xref linkend="cll_chapter14" />. It suffices to know that 
+    <quote>ga</quote>and 
+    <quote>gi</quote>, used before each of a pair of sumti or bridi, mean 
+    <quote>either</quote>and 
+    <quote>or</quote>respectively, and that 
+    <quote>ge</quote>and 
+    <quote>gi</quote>used similarly mean 
+    <quote>both</quote>and 
+    <quote>and</quote>. Furthermore, 
+    <quote>ga</quote>, 
+    <quote>ge</quote>, and 
+    <quote>gi</quote>can all be suffixed with 
+    <quote>nai</quote>to negate the bridi or sumti that follows.</para>
+    <para>We have defined 
+    <quote>na</quote>and 
+    <quote>naku zo'u</quote>as, respectively, internal and external bridi negation. These forms being identical, the negation boundary always remains at the left end of the prenex. Thus, exporting or importing negation between external and internal bridi negation forms never requires DeMorgan's Law to be applied. 
+    <xref linkend="cll_chapter16-section12-example1" />and 
+    <xref linkend="cll_chapter16-section12-example2" />are exactly equivalent:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Erjj">
+      <title>
+        <anchor xml:id="c16e12d1" />
+        <anchor xml:id="cll_chapter16-section12-example1" />
+        <anchor xml:id="c16e12d2" />
+        <anchor xml:id="cll_chapter16-section12-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan. na klama ga la paris. gi la rom.</jbo>
+        <en>John [false] goes-to either Paris or Rome.</en>
+        <jbo>naku zo'u la djan. klama ga la paris. gi la rom.</jbo>
+        <en>It-is-false that: John goes-to either Paris or Rome.</en>
+      </interlinear-gloss>
+    </example>
+    <para>It is not an acceptable logical manipulation to move a negator from the bridi level to one or more sumti. However, 
+    <xref linkend="cll_chapter16-section12-example1" />and related examples are not sumti negations, but rather expand to form two logically connected sentences. In such a situation, DeMorgan's Law must be applied. For instance, 
+    <xref linkend="cll_chapter16-section12-example2" />expands to:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-KMct">
+      <title>
+        <anchor xml:id="c16e12d3" />
+        <anchor xml:id="cll_chapter16-section12-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ge la djan. la paris. na klama</jbo>
+        <gloss>gi la djan. la rom. na klama</gloss>
+        <gloss>[It is true that] both John, to-Paris, [false] goes,</gloss>
+        <en>and John, to-Rome, [false] goes.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The 
+    <quote>ga</quote>and 
+    <quote>gi</quote>, meaning 
+    <quote>either-or</quote>, have become 
+    <quote>ge</quote>and 
+    <quote>gi</quote>, meaning 
+    <quote>both-and</quote>, as a consequence of moving the negators into the individual bridi.</para>
+    <para>Here is another example of DeMorgan's Law in action, involving bridi-tail logical connection (explained in 
+    <xref linkend="cll_chapter14" />):</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-NgLH">
+      <title>
+        <anchor xml:id="c16e12d4" />
+        <anchor xml:id="cll_chapter16-section12-example4" />
+        <anchor xml:id="c16e12d5" />
+        <anchor xml:id="cll_chapter16-section12-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djein. le zarci na ge dzukla gi bajrykla</jbo>
+        <en>Jane to-the market [false] both walks and runs.</en>
+        <jbo>la djein. le zarci ganai dzukla ginai bajrykla</jbo>
+        <gloss>Jane to-the market either [false] walks or [false] runs.</gloss>
+        <en>Jane to-the market if walks then ([false] runs).</en>
+      </interlinear-gloss>
+    </example>
+    <para>(Placing 
+    <quote>le zarci</quote>before the selbri makes sure that it is properly associated with both parts of the logical connection. Otherwise, it is easy to erroneously leave it off one of the two sentences.)</para>
+    <para>It is wise, before freely doing transformations such as the one from 
+    <xref linkend="cll_chapter16-section12-example4" />to 
+    <xref linkend="cll_chapter16-section12-example5" />, that you become familiar with expanding logical connectives to separate sentences, transforming the sentences, and then recondensing. Thus, you would prove the transformation correct by the following steps. By moving its 
+    <quote>na</quote>to the beginning of the prenex as a 
+    <quote>naku</quote>, 
+    <xref linkend="cll_chapter16-section12-example4" />becomes:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-g5PI">
+      <title>
+        <anchor xml:id="c16e12d6" />
+        <anchor xml:id="cll_chapter16-section12-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>naku zo'u la djein. le zarci ge dzukla gi bajrykla</jbo>
+        <en>It is false that : Jane to-the market (both walks and runs).</en>
+      </interlinear-gloss>
+    </example>
+    <para>And by dividing the bridi with logically connected selbri into two bridi,</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-axCE">
+      <title>
+        <anchor xml:id="c16e12d7" />
+        <anchor xml:id="cll_chapter16-section12-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>naku zo'u ge la djein. le zarci cu dzukla</jbo>
+        <gloss>gi la djein. le zarci cu bajrykla</gloss>
+        <gloss>It-is-false-that: both (Jane to-the market walks)</gloss>
+        <en>and (Jane to-the market runs).</en>
+      </interlinear-gloss>
+    </example>
+    <para>is the result.</para>
+    <para>At this expanded level, we apply DeMorgan's Law to distribute the negation in the prenex across both sentences, to get</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-bsu7">
+      <title>
+        <anchor xml:id="c16e12d8" />
+        <anchor xml:id="cll_chapter16-section12-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ga la djein. le zarci na dzukla</jbo>
+        <gloss>gi la djein. le zarci na bajrykla</gloss>
+        <gloss>Either Jane to-the market [false] walks,</gloss>
+        <en>or Jane to-the market [false] runs.</en>
+      </interlinear-gloss>
+    </example>
+    <para>which is the same as</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-jYWu">
+      <title>
+        <anchor xml:id="c16e12d9" />
+        <anchor xml:id="cll_chapter16-section12-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ganai la djein. le zarci cu dzukla</jbo>
+        <gloss>ginai la djein. le zarci cu bajrykla</gloss>
+        <gloss>If Jane to-the market walks,</gloss>
+        <gloss>then Jane to-the market [false] runs.</gloss>
+        <en>If Jane walks to the market, then she doesn't run.</en>
+      </interlinear-gloss>
+    </example>
+    <para>which then condenses down to 
+    <xref linkend="cll_chapter16-section12-example5" />.</para>
+    <para>DeMorgan's Law must also be applied to internal 
+    <quote>naku</quote>negations:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-1Yhy">
+      <title>
+        <anchor xml:id="c16e12d10" />
+        <anchor xml:id="cll_chapter16-section12-example10" />
+        <anchor xml:id="c16e12d11" />
+        <anchor xml:id="cll_chapter16-section12-example11" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ga la paris. gi la rom. naku se klama la djan.</jbo>
+        <en>(Either Paris or Rome) is-not gone-to-by John.</en>
+        <jbo>la djan. naku klama ge la paris. gi la rom.</jbo>
+        <en>John doesn't go-to both Paris and Rome.</en>
+      </interlinear-gloss>
+    </example>
+    <para>That 
+    <xref linkend="cll_chapter16-section12-example10" />and 
+    <xref linkend="cll_chapter16-section12-example11" />mean the same should become evident by studying the English. It is a good exercise to work through the Lojban and prove that they are the same.</para>
+  </section>
+  <section xml:id="cll_chapter16-section13">
+    <title>13. selbri variables</title>
+    <para>In addition to the variables 
+    <quote>da</quote>, 
+    <quote>de</quote>, and 
+    <quote>di</quote>that we have seen so far, which function as sumti and belong to selma'o KOhA, there are three corresponding variables 
+    <quote>bu'a</quote>, 
+    <quote>bu'e</quote>, and 
+    <quote>bu'i</quote>which function as selbri and belong to selma'o GOhA. These new variables allow existential or universal claims which are about the relationships between objects rather than the objects themselves. We will start with the usual silly examples; the literal translation will represent 
+    <quote>bu'a</quote>, 
+    <quote>bu'e</quote>and 
+    <quote>bu'i</quote>with F, G, and H respectively.</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-gEWB">
+      <title>
+        <anchor xml:id="c16e13d1" />
+        <anchor xml:id="cll_chapter16-section13-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>su'o bu'a zo'u la djim. bu'a la djan.</jbo>
+        <gloss>For-at-least-one relationship-F : Jim stands-in-relationship-F to-John.</gloss>
+        <en>There's some relationship between Jim and John.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The translations of 
+    <xref linkend="cll_chapter16-section13-example1" />show how unidiomatic selbri variables are in English; Lojban sentences like 
+    <xref linkend="cll_chapter16-section13-example1" />need to be totally reworded in English. Furthermore, when a selbri variable appears in the prenex, it is necessary to precede it with a quantifier such as 
+    <quote>su'o</quote>; it is ungrammatical to just say 
+    <quote>bu'a zo'u</quote>. This rule is necessary because only sumti can appear in the prenex, and 
+    <quote>su'o bu'a</quote>is technically a sumti - in fact, it is an indefinite description like 
+    <quote>re nanmu</quote>, since 
+    <quote>bu'a</quote>is grammatically equivalent to a brivla like 
+    <quote>nanmu</quote>. However, indefinite descriptions involving the bu'a-series cannot be imported from the prenex.</para>
+    <para>When the prenex is omitted, the preceding number has to be omitted too:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-XxgT">
+      <title>
+        <anchor xml:id="c16e13d2" />
+        <anchor xml:id="cll_chapter16-section13-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djim. bu'a la djan.</jbo>
+        <en>Jim stands-in-at-least-one-relationship to-John.</en>
+      </interlinear-gloss>
+    </example>
+    <para>As a result, if the number before the variable is anything but 
+    <quote>su'o</quote>, the prenex is required:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-L068">
+      <title>
+        <anchor xml:id="c16e13d3" />
+        <anchor xml:id="cll_chapter16-section13-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ro bu'a zo'u la djim. bu'a la djan.</jbo>
+        <gloss>For-every relationship-F : Jim stands-in-relationship-F to-John.</gloss>
+        <en>Every relationship exists between Jim and John.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter16-section13-example1" />and 
+    <xref linkend="cll_chapter16-section13-example2" />are almost certainly true: Jim and John might be brothers, or might live in the same city, or at least have the property of being jointly human. 
+    <xref linkend="cll_chapter16-section13-example3" />is palpably false, however; if Jim and John were related by every possible relationship, then they would have to be both brothers and father-and-son, which is impossible.</para>
+  </section>
+  <section xml:id="cll_chapter16-section14">
+    <title>14. A few notes on variables</title>
+    <para>A variable may have a quantifier placed in front of it even though it has already been quantified explicitly or implicitly by a previous appearance, as in:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-x0FP">
+      <title>
+        <anchor xml:id="c16e14d1" />
+        <anchor xml:id="cll_chapter16-section14-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ci da poi mlatu cu blabi .ije re da cu barda</jbo>
+        <en>Three Xs which-are cats are white, and two Xs are big.</en>
+      </interlinear-gloss>
+    </example>
+    <para>What does 
+    <xref linkend="cll_chapter16-section14-example1" />mean? The appearance of 
+    <quote>ci da</quote>quantifies 
+    <quote>da</quote>as referring to three things, which are restricted by the relative clause to be cats. When 
+    <quote>re da</quote>appears later, it refers to two of those three things - there is no saying which ones. Further uses of 
+    <quote>da</quote>alone, if there were any, would refer once more to the three cats, so the requantification of 
+    <quote>da</quote>is purely local.</para>
+    <para>In general, the scope of a prenex that precedes a sentence extends to following sentences that are joined by ijeks (explained in 
+    <xref linkend="cll_chapter14" />) such as the 
+    <quote>.ije</quote>in 
+    <xref linkend="cll_chapter16-section14-example1" />. Theoretically, a bare 
+    <quote>.i</quote>terminates the scope of the prenex. Informally, however, variables may persist for a while even after an 
+    <quote>.i</quote>, as if it were an 
+    <quote>.ije</quote>. Prenexes that precede embedded bridi such as relative clauses and abstractions extend only to the end of the clause, as explained in 
+    <xref linkend="cll_chapter16-section8" />. A prenex preceding 
+    <quote>tu'e ... tu'u</quote>long-scope brackets persists until the 
+    <quote>tu'u</quote>, which may be many sentences or even paragraphs later.</para>
+    <para>If the variables 
+    <quote>da</quote>, 
+    <quote>de</quote>, and 
+    <quote>di</quote>(or the selbri variables 
+    <quote>bu'a</quote>, 
+    <quote>bu'e</quote>, and 
+    <quote>bu'i</quote>) are insufficient in number for handling a particular problem, the Lojban approach is to add a subscript to any of them. Each possible different combination of a subscript and a variable cmavo counts as a distinct variable in Lojban. Subscripts are explained in full in 
+    <xref linkend="cll_chapter19" />, but in general consist of the cmavo 
+    <quote>xi</quote>(of selma'o XI) followed by a number, one or more lerfu words forming a single string, or a general mathematical expression enclosed in parentheses.</para>
+    <para>A quantifier can be prefixed to a variable that has already been bound either in a prenex or earlier in the bridi, thus:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-6gyb">
+      <title>
+        <anchor xml:id="c16e14d2" />
+        <anchor xml:id="cll_chapter16-section14-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ci da poi prenu cu se ralju pa da</jbo>
+        <gloss>Three Xs which are-persons are-led-by one-of X</gloss>
+        <en>Three people are led by one of them.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The 
+    <quote>pa da</quote>in 
+    <xref linkend="cll_chapter16-section14-example2" />does not specify the number of things to which 
+    <quote>da</quote>refers, as the preceding 
+    <quote>ci da</quote>does. Instead, it selects one of them for use in this sumti only. The number of referents of 
+    <quote>da</quote>remains three, but a single one (there is no way of knowing which one) is selected to be the leader.</para>
+  </section>
+  <section xml:id="cll_chapter16-section15">
+    <title>15. Conclusion</title>
+    <para>This chapter is incomplete. There are many more aspects of logic that I neither fully understand nor feel competent to explain, neither in abstract nor in their Lojban realization. Lojban was designed to be a language that makes predicate logic speakable, and achieving that goal completely will need to wait for someone who understands both logic and Lojban better than I do. I can only hope to have pointed out the areas that are well-understood (and by implication, those that are not).</para>
+  </section>
 </chapter>

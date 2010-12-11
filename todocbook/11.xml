@@ -1,594 +1,1333 @@
 <chapter xml:id="cll_chapter11">
-  <title>Chapter 11
-Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction</title>
-
-
-<section xml:id="cll_chapter11-section1">
-  <title>1. The syntax of abstraction</title>
-  <para>The purpose of the feature of Lojban known as “abstraction” is to provide a means for taking whole bridi and packaging them up, as it were, into simple selbri. Syntactically, abstractions are very simple and uniform; semantically, they are rich and complex, with few features in common between one variety of abstraction and another. We will begin by discussing syntax without regard to semantics; as a result, the notion of abstraction may seem unmotivated at first. Bear with this difficulty until <xref linkend="cll_chapter11-section2"/>.</para>
-  <para>An abstraction selbri is formed by taking a full bridi and preceding it by any cmavo of selma'o NU. There are twelve such cmavo; they are known as “abstractors”. The bridi is closed by the elidable terminator “kei”, of selma'o KEI. Thus, to change the bridi</para>
-  <programlisting><anchor xml:id="c11e1d1"/><anchor xml:id="cll_chapter11-section1-example1"/>1.1)   mi klama le zarci
-       I go-to the store
-</programlisting>
-  <para>into an abstraction using “nu”, one of the members of selma'o NU, we change it into</para>
-  <programlisting><anchor xml:id="c11e1d2"/><anchor xml:id="cll_chapter11-section1-example2"/>1.2)   nu mi klama le zarci [kei]
-       an-event-of my going-to the store
-</programlisting>
-  <para>The bridi may be a simple selbri, or it may have associated sumti, as here. It is important to beware of eliding “kei” improperly, as many of the common uses of abstraction selbri involve following them with words that would appear to be part of the abstraction if “kei” had been elided.</para>
-  <para>(Technically, “kei” is never necessary, because the elidable terminator “vau” that closes every bridi can substitute for it; however, “kei” is specific to abstractions, and using it is almost always clearer.)</para>
-  <para>The grammatical uses of an abstraction selbri are exactly the same as those of a simple brivla. In particular, abstraction selbri may be used as observatives, as in <xref linkend="cll_chapter11-section1-example2"/>, or used in tanru:</para>
-  <programlisting><anchor xml:id="c11e1d3"/><anchor xml:id="cll_chapter11-section1-example3"/>1.3)   la djan. cu nu sonci kei djica
-       John is-an-(event-of being-a-soldier) type-of desirer.
-       John wants to be a soldier.
-</programlisting>
-  <para>Abstraction selbri may also be used in descriptions, preceded by “le” (or any other member of selma'o LE):</para>
-  <programlisting><anchor xml:id="c11e1d4"/><anchor xml:id="cll_chapter11-section1-example4"/>1.4)   la djan. cu djica le nu sonci [kei]
-       John desires the event-of being-a-soldier.
-</programlisting>
-  <para>We will most often use descriptions containing abstraction either at the end of a bridi, or just before the main selbri with its “cu”; in either of these circumstances, “kei” can normally be elided.</para>
-  <para>The place structure of an abstraction selbri depends on the particular abstractor, and will be explained individually in the following sections.</para>
-  <para>Note: In glosses of bridi within abstractions, the grammatical form used in the English changes. Thus, in the gloss of <xref linkend="cll_chapter11-section1-example2"/> we see “my going-to the store” rather than “I go-to the store”; likewise, in the glosses of <xref linkend="cll_chapter11-section1-example3"/> and <xref linkend="cll_chapter11-section1-example4"/> we see “being-a-soldier” rather than “is-a-soldier”. This procedure reflects the desire for more understandable glosses, and does not indicate any change in the Lojban form. A bridi is a bridi, and undergoes no change when it is used as part of an abstraction selbri.</para>
-</section>
-
-<section xml:id="cll_chapter11-section2">
-  <title>2. Event abstraction</title>
-  <para>The following cmavo is discussed in this section:</para>
-  <programlisting>
+  <title>Chapter 11 Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction</title>
+  <section xml:id="cll_chapter11-section1">
+    <title>1. The syntax of abstraction</title>
+    <para>The purpose of the feature of Lojban known as 
+    <quote>abstraction</quote>is to provide a means for taking whole bridi and packaging them up, as it were, into simple selbri. Syntactically, abstractions are very simple and uniform; semantically, they are rich and complex, with few features in common between one variety of abstraction and another. We will begin by discussing syntax without regard to semantics; as a result, the notion of abstraction may seem unmotivated at first. Bear with this difficulty until 
+    <xref linkend="cll_chapter11-section2" />.</para>
+    <para>An abstraction selbri is formed by taking a full bridi and preceding it by any cmavo of selma'o NU. There are twelve such cmavo; they are known as 
+    <quote>abstractors</quote>. The bridi is closed by the elidable terminator 
+    <quote>kei</quote>, of selma'o KEI. Thus, to change the bridi</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-6EI1">
+      <title>
+        <anchor xml:id="c11e1d1" />
+        <anchor xml:id="cll_chapter11-section1-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi klama le zarci</jbo>
+        <en>I go-to the store</en>
+      </interlinear-gloss>
+    </example>
+    <para>into an abstraction using 
+    <quote>nu</quote>, one of the members of selma'o NU, we change it into</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Via0">
+      <title>
+        <anchor xml:id="c11e1d2" />
+        <anchor xml:id="cll_chapter11-section1-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>nu mi klama le zarci [kei]</jbo>
+        <en>an-event-of my going-to the store</en>
+      </interlinear-gloss>
+    </example>
+    <para>The bridi may be a simple selbri, or it may have associated sumti, as here. It is important to beware of eliding 
+    <quote>kei</quote>improperly, as many of the common uses of abstraction selbri involve following them with words that would appear to be part of the abstraction if 
+    <quote>kei</quote>had been elided.</para>
+    <para>(Technically, 
+    <quote>kei</quote>is never necessary, because the elidable terminator 
+    <quote>vau</quote>that closes every bridi can substitute for it; however, 
+    <quote>kei</quote>is specific to abstractions, and using it is almost always clearer.)</para>
+    <para>The grammatical uses of an abstraction selbri are exactly the same as those of a simple brivla. In particular, abstraction selbri may be used as observatives, as in 
+    <xref linkend="cll_chapter11-section1-example2" />, or used in tanru:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-0Ff4">
+      <title>
+        <anchor xml:id="c11e1d3" />
+        <anchor xml:id="cll_chapter11-section1-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan. cu nu sonci kei djica</jbo>
+        <gloss>John is-an-(event-of being-a-soldier) type-of desirer.</gloss>
+        <en>John wants to be a soldier.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Abstraction selbri may also be used in descriptions, preceded by 
+    <quote>le</quote>(or any other member of selma'o LE):</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-sQ33">
+      <title>
+        <anchor xml:id="c11e1d4" />
+        <anchor xml:id="cll_chapter11-section1-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan. cu djica le nu sonci [kei]</jbo>
+        <en>John desires the event-of being-a-soldier.</en>
+      </interlinear-gloss>
+    </example>
+    <para>We will most often use descriptions containing abstraction either at the end of a bridi, or just before the main selbri with its 
+    <quote>cu</quote>; in either of these circumstances, 
+    <quote>kei</quote>can normally be elided.</para>
+    <para>The place structure of an abstraction selbri depends on the particular abstractor, and will be explained individually in the following sections.</para>
+    <para>Note: In glosses of bridi within abstractions, the grammatical form used in the English changes. Thus, in the gloss of 
+    <xref linkend="cll_chapter11-section1-example2" />we see 
+    <quote>my going-to the store</quote>rather than 
+    <quote>I go-to the store</quote>; likewise, in the glosses of 
+    <xref linkend="cll_chapter11-section1-example3" />and 
+    <xref linkend="cll_chapter11-section1-example4" />we see 
+    <quote>being-a-soldier</quote>rather than 
+    <quote>is-a-soldier</quote>. This procedure reflects the desire for more understandable glosses, and does not indicate any change in the Lojban form. A bridi is a bridi, and undergoes no change when it is used as part of an abstraction selbri.</para>
+  </section>
+  <section xml:id="cll_chapter11-section2">
+    <title>2. Event abstraction</title>
+    <para>The following cmavo is discussed in this section:</para>
+    <programlisting xml:space="preserve">
      nu      NU                  event abstractor
 </programlisting>
-  <para>The examples in <xref linkend="cll_chapter11-section1"/> made use of “nu” as the abstractor, and it is certainly the most common abstractor in Lojban text. Its purpose is to capture the event or state of the bridi considered as a whole. Do not confuse the “le” description built on a “nu” abstraction with ordinary descriptions based on “le” alone. The following sumti are quite distinct:</para>
-  <programlisting><anchor xml:id="c11e2d1"/><anchor xml:id="cll_chapter11-section2-example1"/>2.1)   le klama
-       the comer, that which comes
-
-<anchor xml:id="c11e2d2"/><anchor xml:id="cll_chapter11-section2-example2"/>2.2)   le se klama
-       the destination
-
-<anchor xml:id="c11e2d3"/><anchor xml:id="cll_chapter11-section2-example3"/>2.3)   le te klama
-       the origin
-
-<anchor xml:id="c11e2d4"/><anchor xml:id="cll_chapter11-section2-example4"/>2.4)   le ve klama
-       the route
-
-<anchor xml:id="c11e2d5"/><anchor xml:id="cll_chapter11-section2-example5"/>2.5)   le xe klama
-       the means of transportation
-
-<anchor xml:id="c11e2d6"/><anchor xml:id="cll_chapter11-section2-example6"/>2.6)   le nu klama
-       the event of someone coming to somewhere from somewhere by some route using some means
-</programlisting>
-  <para><xref linkend="cll_chapter11-section2-example1"/> through <xref linkend="cll_chapter11-section2-example5"/> are descriptions that isolate the five individual sumti places of the selbri “klama”. <xref linkend="cll_chapter11-section2-example6"/> describes something associated with the bridi as a whole: the event of it.</para>
-  <para>In Lojban, the term “event” is divorced from its ordinary English sense of something that happens over a short period of time. The description:</para>
-  <programlisting><anchor xml:id="c11e2d7"/><anchor xml:id="cll_chapter11-section2-example7"/>2.7)   le nu mi vasxu
-       the event-of my breathing
-</programlisting>
-  <para>is an event which lasts for the whole of my life (under normal circumstances). On the other hand,</para>
-  <programlisting><anchor xml:id="c11e2d8"/><anchor xml:id="cll_chapter11-section2-example8"/>2.8)   le nu la djan. cinba la djein.
-       the event-of John kissing Jane
-</programlisting>
-  <para>is relatively brief by comparison (again, under normal circumstances).</para>
-  <para>We can see from <xref linkend="cll_chapter11-section2-example6"/> through <xref linkend="cll_chapter11-section2-example8"/> that ellipsis of sumti is valid in the bridi of abstraction selbri, just as in the main bridi of a sentence. Any sumti may be ellipsized if the listener will be able to figure out from context what the proper value of it is, or else to recognize that the proper value is unimportant. It is extremely common for “nu” abstractions in descriptions to have the x1 place ellipsized:</para>
-  <programlisting><anchor xml:id="c11e2d9"/><anchor xml:id="cll_chapter11-section2-example9"/>2.9)   mi nelci le nu limna
-       I like the event-of swimming.
-       I like swimming.
-</programlisting>
-  <para>is elliptical, and most probably means:</para>
-  <programlisting><anchor xml:id="c11e2d10"/><anchor xml:id="cll_chapter11-section2-example10"/>2.10)  mi nelci le nu mi limna
-       I like the event-of I swim.
-</programlisting>
-  <para>In the proper context, of course, <xref linkend="cll_chapter11-section2-example9"/> could refer to the event of somebody else swimming. Its English equivalent, “I like swimming”, can’t be interpreted as “I like Frank’s swimming”; this is a fundamental distinction between English and Lojban. In Lojban, an omitted sumti can mean whatever the context indicates that it should mean.</para>
-  <para>Note that the lack of an explicit NU cmavo in a sumti can sometimes hide an implicit abstraction. In the context of <xref linkend="cll_chapter11-section2-example10"/>, the appearance of “le se nelci” (“that which is liked”) is in effect an abstraction:</para>
-  <programlisting><anchor xml:id="c11e2d11"/><anchor xml:id="cll_chapter11-section2-example11"/>2.11)  le se nelci cu cafne
-       The liked-thing is-frequent.
-       The thing which I like happens often.
-</programlisting>
-  <para>which in this context means</para>
-  <programlisting>
+    <para>The examples in 
+    <xref linkend="cll_chapter11-section1" />made use of 
+    <quote>nu</quote>as the abstractor, and it is certainly the most common abstractor in Lojban text. Its purpose is to capture the event or state of the bridi considered as a whole. Do not confuse the 
+    <quote>le</quote>description built on a 
+    <quote>nu</quote>abstraction with ordinary descriptions based on 
+    <quote>le</quote>alone. The following sumti are quite distinct:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-TPFz">
+      <title>
+        <anchor xml:id="c11e2d1" />
+        <anchor xml:id="cll_chapter11-section2-example1" />
+        <anchor xml:id="c11e2d2" />
+        <anchor xml:id="cll_chapter11-section2-example2" />
+        <anchor xml:id="c11e2d3" />
+        <anchor xml:id="cll_chapter11-section2-example3" />
+        <anchor xml:id="c11e2d4" />
+        <anchor xml:id="cll_chapter11-section2-example4" />
+        <anchor xml:id="c11e2d5" />
+        <anchor xml:id="cll_chapter11-section2-example5" />
+        <anchor xml:id="c11e2d6" />
+        <anchor xml:id="cll_chapter11-section2-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le klama</jbo>
+        <en>the comer, that which comes</en>
+        <jbo>le se klama</jbo>
+        <en>the destination</en>
+        <jbo>le te klama</jbo>
+        <en>the origin</en>
+        <jbo>le ve klama</jbo>
+        <en>the route</en>
+        <jbo>le xe klama</jbo>
+        <en>the means of transportation</en>
+        <jbo>le nu klama</jbo>
+        <en>the event of someone coming to somewhere from somewhere by some route using some means</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter11-section2-example1" />through 
+    <xref linkend="cll_chapter11-section2-example5" />are descriptions that isolate the five individual sumti places of the selbri 
+    <quote>klama</quote>. 
+    <xref linkend="cll_chapter11-section2-example6" />describes something associated with the bridi as a whole: the event of it.</para>
+    <para>In Lojban, the term 
+    <quote>event</quote>is divorced from its ordinary English sense of something that happens over a short period of time. The description:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-mxAt">
+      <title>
+        <anchor xml:id="c11e2d7" />
+        <anchor xml:id="cll_chapter11-section2-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le nu mi vasxu</jbo>
+        <en>the event-of my breathing</en>
+      </interlinear-gloss>
+    </example>
+    <para>is an event which lasts for the whole of my life (under normal circumstances). On the other hand,</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-BPcI">
+      <title>
+        <anchor xml:id="c11e2d8" />
+        <anchor xml:id="cll_chapter11-section2-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le nu la djan. cinba la djein.</jbo>
+        <en>the event-of John kissing Jane</en>
+      </interlinear-gloss>
+    </example>
+    <para>is relatively brief by comparison (again, under normal circumstances).</para>
+    <para>We can see from 
+    <xref linkend="cll_chapter11-section2-example6" />through 
+    <xref linkend="cll_chapter11-section2-example8" />that ellipsis of sumti is valid in the bridi of abstraction selbri, just as in the main bridi of a sentence. Any sumti may be ellipsized if the listener will be able to figure out from context what the proper value of it is, or else to recognize that the proper value is unimportant. It is extremely common for 
+    <quote>nu</quote>abstractions in descriptions to have the x1 place ellipsized:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-FRoP">
+      <title>
+        <anchor xml:id="c11e2d9" />
+        <anchor xml:id="cll_chapter11-section2-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi nelci le nu limna</jbo>
+        <gloss>I like the event-of swimming.</gloss>
+        <en>I like swimming.</en>
+      </interlinear-gloss>
+    </example>
+    <para>is elliptical, and most probably means:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Ys8w">
+      <title>
+        <anchor xml:id="c11e2d10" />
+        <anchor xml:id="cll_chapter11-section2-example10" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi nelci le nu mi limna</jbo>
+        <en>I like the event-of I swim.</en>
+      </interlinear-gloss>
+    </example>
+    <para>In the proper context, of course, 
+    <xref linkend="cll_chapter11-section2-example9" />could refer to the event of somebody else swimming. Its English equivalent, 
+    <quote>I like swimming</quote>, can't be interpreted as 
+    <quote>I like Frank's swimming</quote>; this is a fundamental distinction between English and Lojban. In Lojban, an omitted sumti can mean whatever the context indicates that it should mean.</para>
+    <para>Note that the lack of an explicit NU cmavo in a sumti can sometimes hide an implicit abstraction. In the context of 
+    <xref linkend="cll_chapter11-section2-example10" />, the appearance of 
+    <quote>le se nelci</quote>(
+    <quote>that which is liked</quote>) is in effect an abstraction:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-sMsx">
+      <title>
+        <anchor xml:id="c11e2d11" />
+        <anchor xml:id="cll_chapter11-section2-example11" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le se nelci cu cafne</jbo>
+        <gloss>The liked-thing is-frequent.</gloss>
+        <en>The thing which I like happens often.</en>
+      </interlinear-gloss>
+    </example>
+    <para>which in this context means</para>
+    <programlisting xml:space="preserve">
        My swimming happens often.
 </programlisting>
-  <para>Event descriptions with “le nu” are commonly used to fill the “under conditions...” places, among others, of gismu and lujvo place structures:</para>
-  <programlisting><anchor xml:id="c11e2d12"/><anchor xml:id="cll_chapter11-section2-example12"/>2.12)  la lojban. cu frili mi
-             le nu mi tadni [kei]
-       Lojban is-easy for-me
-             under-conditions-the event-of I study
-       Lojban is easy for me when I study.
-</programlisting>
-  <para>(The “when” of the English would also be appropriate for a construction involving a Lojban tense, but the Lojban sentence says more than that the studying is concurrent with the ease.)</para>
-  <para>The place structure of a “nu” abstraction selbri is simply:</para>
-  <programlisting>
+    <para>Event descriptions with 
+    <quote>le nu</quote>are commonly used to fill the 
+    <quote>under conditions...</quote>places, among others, of gismu and lujvo place structures:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Ia6f">
+      <title>
+        <anchor xml:id="c11e2d12" />
+        <anchor xml:id="cll_chapter11-section2-example12" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la lojban. cu frili mi</jbo>
+        <gloss>le nu mi tadni [kei]</gloss>
+        <gloss>Lojban is-easy for-me</gloss>
+        <gloss>under-conditions-the event-of I study</gloss>
+        <en>Lojban is easy for me when I study.</en>
+      </interlinear-gloss>
+    </example>
+    <para>(The 
+    <quote>when</quote>of the English would also be appropriate for a construction involving a Lojban tense, but the Lojban sentence says more than that the studying is concurrent with the ease.)</para>
+    <para>The place structure of a 
+    <quote>nu</quote>abstraction selbri is simply:</para>
+    <programlisting xml:space="preserve">
       x1 is an event of (the bridi)
 </programlisting>
-</section>
-
-<section xml:id="cll_chapter11-section3">
-  <title>3. Types of event abstractions</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+  </section>
+  <section xml:id="cll_chapter11-section3">
+    <title>3. Types of event abstractions</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      mu'e    NU                  point-event abstractor
      pu'u    NU                  process abstractor
      zu'o    NU                  activity abstractor
      za'i    NU                  state abstractor
 </programlisting>
-  <para>Event abstractions with “nu” suffice to express all kinds of events, whether long, short, unique, repetitive, or whatever. Lojban also has more finely discriminating machinery for talking about events, however. There are four other abstractors of selma'o NU for talking about four specific types of events, or four ways of looking at the same event.</para>
-  <para>An event considered as a point in time is called a “point-event”, or sometimes an “achievement”. (This latter word should be divorced, in this context, from all connotations of success or triumph.) A point-event can be extended in duration, but it is still a point-event if it is thought of as unitary, having no internal structure. The abstractor “mu'e” means “point-event-of”:</para>
-  <programlisting><anchor xml:id="c11e3d1"/><anchor xml:id="cll_chapter11-section3-example1"/>3.1)   le mu'e la djan. catra la djim. cu zekri
-       The point-event-of (John kills Jim) is-a-crime.
-       John’s killing Jim (considered as a point in time) is a crime.
+    <para>Event abstractions with 
+    <quote>nu</quote>suffice to express all kinds of events, whether long, short, unique, repetitive, or whatever. Lojban also has more finely discriminating machinery for talking about events, however. There are four other abstractors of selma'o NU for talking about four specific types of events, or four ways of looking at the same event.</para>
+    <para>An event considered as a point in time is called a 
+    <quote>point-event</quote>, or sometimes an 
+    <quote>achievement</quote>. (This latter word should be divorced, in this context, from all connotations of success or triumph.) A point-event can be extended in duration, but it is still a point-event if it is thought of as unitary, having no internal structure. The abstractor 
+    <quote>mu'e</quote>means 
+    <quote>point-event-of</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-nFR1">
+      <title>
+        <anchor xml:id="c11e3d1" />
+        <anchor xml:id="cll_chapter11-section3-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le mu'e la djan. catra la djim. cu zekri</jbo>
+        <gloss>The point-event-of (John kills Jim) is-a-crime.</gloss>
+        <en>John's killing Jim (considered as a point in time) is a crime.</en>
+      </interlinear-gloss>
+    </example>
+    <para>An event considered as extended in time, and structured with a beginning, a middle containing one or more stages, and an end, is called a 
+    <quote>process</quote>. The abstractor 
+    <quote>pu'u</quote>means 
+    <quote>process-of</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-WaxD">
+      <title>
+        <anchor xml:id="c11e3d2" />
+        <anchor xml:id="cll_chapter11-section3-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ca'o le pu'u le latmo balje'a</jbo>
+        <gloss>cu porpi kei</gloss>
+        <gloss>so'i je'atru cu selcatra</gloss>
+        <gloss>[continuitive] the process-of( the Latin great-state breaking-up )</gloss>
+        <gloss>many state-rulers were-killed</gloss>
+        <gloss>During the fall of the Roman Empire,</gloss>
+        <en>many Emperors were killed.</en>
+      </interlinear-gloss>
+    </example>
+    <para>An event considered as extended in time and cyclic or repetitive is called an 
+    <quote>activity</quote>. The abstractor 
+    <quote>zu'o</quote>means 
+    <quote>activity-of</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-89nw">
+      <title>
+        <anchor xml:id="c11e3d3" />
+        <anchor xml:id="cll_chapter11-section3-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi tatpi ri'a le zu'o mi plipe</jbo>
+        <gloss>I am-tired because-of the activity-of (I jump).</gloss>
+        <en>I am tired because I jump.</en>
+      </interlinear-gloss>
+    </example>
+    <para>An event considered as something that is either happening or not happening, with sharp boundaries, is called a 
+    <quote>state</quote>. The abstractor 
+    <quote>za'i</quote>means 
+    <quote>state-of</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-WztQ">
+      <title>
+        <anchor xml:id="c11e3d4" />
+        <anchor xml:id="cll_chapter11-section3-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le za'i mi jmive cu ckape do</jbo>
+        <gloss>The state-of (I am-alive) is-dangerous-to you.</gloss>
+        <en>My being alive is dangerous to you.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The abstractors in 
+    <xref linkend="cll_chapter11-section3-example1" />through 
+    <xref linkend="cll_chapter11-section3-example4" />could all have been replaced by 
+    <quote>nu</quote>, with some loss of precision. Note that Lojban allows every sort of event to be viewed in any of these four ways:</para>
+    <itemizedlist>
+      <listitem>
+        <para>the 
+        <quote>state of running</quote>begins when the runner starts and ends when the runner stops;</para>
+      </listitem>
+      <listitem>
+        <para>the 
+        <quote>activity of running</quote>consists of the cycle 
+        <quote>lift leg, step forward, drop leg, lift other leg...</quote>(each such cycle is a process, but the activity consists in the repetition of the cycle);</para>
+      </listitem>
+      <listitem>
+        <para>the 
+        <quote>process of running</quote>puts emphasis on the initial sprint, the steady speed, and the final slowdown;</para>
+      </listitem>
+      <listitem>
+        <para>the 
+        <quote>achievement of running</quote>is most alien to English, but sees the event of running as a single indivisible thing, like 
+        <quote>Pheidippides' run from Marathon to Athens</quote>(the original marathon).</para>
+      </listitem>
+    </itemizedlist>
+    <para>Further information on types of events can be found in 
+    <xref linkend="cll_chapter11-section12" />.</para>
+    <para>The four event type abstractors have the following place structures:</para>
+    <programlisting xml:space="preserve">
+       
+<quote>mu'e</quote>: x1 is a point event of (the bridi)
+       
+<quote>pu'u</quote>: x1 is a process of (the bridi) with stages x2
+       
+<quote>za'i</quote>: x1 is a continuous state of (the bridi) being true
+       
+<quote>zu'o</quote>: x1 is an activity of (the bridi) consisting of repeated actions x2
 </programlisting>
-  <para>An event considered as extended in time, and structured with a beginning, a middle containing one or more stages, and an end, is called a “process”. The abstractor “pu'u” means “process-of”:</para>
-  <programlisting><anchor xml:id="c11e3d2"/><anchor xml:id="cll_chapter11-section3-example2"/>3.2)   ca'o le pu'u le latmo balje'a
-             cu porpi kei
-             so'i je'atru cu selcatra
-       [continuitive] the process-of( the Latin great-state breaking-up )
-             many state-rulers were-killed
-       During the fall of the Roman Empire,
-             many Emperors were killed.
-</programlisting>
-  <para>An event considered as extended in time and cyclic or repetitive is called an “activity”. The abstractor “zu'o” means “activity-of”:</para>
-  <programlisting><anchor xml:id="c11e3d3"/><anchor xml:id="cll_chapter11-section3-example3"/>3.3)   mi tatpi ri'a le zu'o mi plipe
-       I am-tired because-of the activity-of (I jump).
-       I am tired because I jump.
-</programlisting>
-  <para>An event considered as something that is either happening or not happening, with sharp boundaries, is called a “state”. The abstractor “za'i” means “state-of”:</para>
-  <programlisting><anchor xml:id="c11e3d4"/><anchor xml:id="cll_chapter11-section3-example4"/>3.4)   le za'i mi jmive cu ckape do
-       The state-of (I am-alive) is-dangerous-to you.
-       My being alive is dangerous to you.
-</programlisting>
-  <para>The abstractors in <xref linkend="cll_chapter11-section3-example1"/> through <xref linkend="cll_chapter11-section3-example4"/> could all have been replaced by “nu”, with some loss of precision. Note that Lojban allows every sort of event to be viewed in any of these four ways:</para>
-  <itemizedlist>
-    <listitem>
-      <para>the “state of running” begins when the runner starts and ends when the runner stops;</para>
-    </listitem>
-    <listitem>
-      <para>the “activity of running” consists of the cycle “lift leg, step forward, drop leg, lift other leg...” (each such cycle is a process, but the activity consists in the repetition of the cycle);</para>
-    </listitem>
-    <listitem>
-      <para>the “process of running” puts emphasis on the initial sprint, the steady speed, and the final slowdown;</para>
-    </listitem>
-    <listitem>
-      <para>the “achievement of running” is most alien to English, but sees the event of running as a single indivisible thing, like “Pheidippides’ run from Marathon to Athens” (the original marathon).</para>
-    </listitem>
-  </itemizedlist>
-  <para>Further information on types of events can be found in <xref linkend="cll_chapter11-section12"/>.</para>
-  <para>The four event type abstractors have the following place structures:</para>
-  <programlisting>
-       “mu'e”: x1 is a point event of (the bridi)
-       “pu'u”: x1 is a process of (the bridi) with stages x2
-       “za'i”: x1 is a continuous state of (the bridi) being true
-       “zu'o”: x1 is an activity of (the bridi) consisting of repeated actions x2
-</programlisting>
-</section>
-
-<section xml:id="cll_chapter11-section4">
-  <title>4. Property abstractions</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+  </section>
+  <section xml:id="cll_chapter11-section4">
+    <title>4. Property abstractions</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      ka      NU                  property abstractor
      ce'u    KOhA                abstraction focus
 </programlisting>
-  <para>The things described by “le nu” descriptions (or, to put it another way, the things of which “nu” selbri may correctly be predicated) are only moderately “abstract”. They are still closely tied to happenings in space and time. Properties, however, are much more ethereal. What is “the property of being blue”, or “the property of being a go-er”? They are what logicians call “intensions”. If John has a heart, then “the property of having a heart” is an abstract object which, when applied to John, is true. In fact,</para>
-  <programlisting><anchor xml:id="c11e4d1"/><anchor xml:id="cll_chapter11-section4-example1"/>4.1)   la djan. cu se risna zo'e
-       John has-as-heart something-unspecified.
-       John has a heart.
-</programlisting>
-  <para>has the same truth conditions as</para>
-  <programlisting><anchor xml:id="c11e4d2"/><anchor xml:id="cll_chapter11-section4-example2"/>4.2)   la djan. cu ckaji
-             le ka se risna [zo'e] [kei]
-       John has-the-property
-             the property-of having-as-heart something.
-       John has the property of having a heart.
-</programlisting>
-  <para>(The English word “have” frequently appears in any discussion of Lojban properties: things are said to “have” properties, but this is not the same sense of “have” as in “I have money”, which is possession.)</para>
-  <para>Property descriptions, like event descriptions, are often wanted to fill places in brivla place structures:</para>
-  <programlisting><anchor xml:id="c11e4d3"/><anchor xml:id="cll_chapter11-section4-example3"/>4.3)   do cnino mi
-             le ka xunre [kei]
-       You are-new to-me
-             in-the-quality-of-the property-of being-red.
-       You are new to me in redness.
-</programlisting>
-  <para>(The English suffix “-ness” often signals a property abstraction, as does the suffix “-ity”.)</para>
-  <para>We can also move the property description to the x1 place of <xref linkend="cll_chapter11-section4-example3"/>, producing:</para>
-  <programlisting><anchor xml:id="c11e4d4"/><anchor xml:id="cll_chapter11-section4-example4"/>4.4)   le ka do xunre [kei] cu cnino mi
-       The property-of your being-red is-new to me.
-       Your redness is new to me.
-</programlisting>
-  <para>It would be suitable to use <xref linkend="cll_chapter11-section4-example3"/> and <xref linkend="cll_chapter11-section4-example4"/> to someone who has returned from the beach with a sunburn.</para>
-  <para>There are several different properties that can be extracted from a bridi, depending on which place of the bridi is “understood” as being specified externally. Thus:</para>
-  <programlisting><anchor xml:id="c11e4d5"/><anchor xml:id="cll_chapter11-section4-example5"/>4.5)   ka mi prami [zo'e] [kei]
-       a-property-of me loving something-unspecified
-</programlisting>
-  <para>is quite different from</para>
-  <programlisting><anchor xml:id="c11e4d6"/><anchor xml:id="cll_chapter11-section4-example6"/>4.6)   ka [zo'e] prami mi [kei]
-       a-property-of something-unspecified loving me
-</programlisting>
-  <para>In particular, sentences like <xref linkend="cll_chapter11-section4-example7"/> and <xref linkend="cll_chapter11-section4-example8"/> are quite different in meaning:</para>
-  <programlisting><anchor xml:id="c11e4d7"/><anchor xml:id="cll_chapter11-section4-example7"/>4.7)   la djan. cu zmadu la djordj. le ka mi prami
-       John exceeds George in-the property-of (I love X)
-       I love John more than I love George.
-
-<anchor xml:id="c11e4d8"/><anchor xml:id="cll_chapter11-section4-example8"/>4.8)   la djan. cu zmadu la djordj. le ka prami mi
-       John exceeds George in the property of (X loves me).
-       John loves me more than George loves me.
-</programlisting>
-  <para>The “X” used in the glosses of <xref linkend="cll_chapter11-section4-example7"/> through <xref linkend="cll_chapter11-section4-example8"/> as a place-holder cannot be represented only by ellipsis in Lojban, because ellipsis means that there must be a specific value that can fill the ellipsis, as mentioned in <xref linkend="cll_chapter11-section2"/>. Instead, the cmavo “ce'u” of selma'o KOhA is employed when an explicit sumti is wanted. (The form “X” will be used in literal translations.)</para>
-  <para>Therefore, an explicit equivalent of <xref linkend="cll_chapter11-section4-example7"/>, with no ellipsis, is:</para>
-  <programlisting><anchor xml:id="c11e4d9"/><anchor xml:id="cll_chapter11-section4-example9"/>4.9)   la djan. cu zmadu la djordj. le ka mi prami ce'u
-       John exceeds George in-the property-of (I love X).
-</programlisting>
-  <para>and of <xref linkend="cll_chapter11-section4-example8"/> is:</para>
-  <programlisting><anchor xml:id="c11e4d10"/><anchor xml:id="cll_chapter11-section4-example10"/>4.10)  la djan. cu zmadu la djordj. le ka ce'u prami mi
-       John exceeds George in-the property-of (X loves me).
-</programlisting>
-  <para>This convention allows disambiguation of cases like:</para>
-  <programlisting><anchor xml:id="c11e4d11"/><anchor xml:id="cll_chapter11-section4-example11"/>4.11)  le ka [zo'e] dunda le xirma [zo'e] [kei]
-       the property-of giving the horse
-</programlisting>
-  <para>into</para>
-  <programlisting><anchor xml:id="c11e4d12"/><anchor xml:id="cll_chapter11-section4-example12"/>4.12)  le ka ce'u dunda le xirma
-             [zo'e] [kei]
-       the property-of (X is-a-giver of-the horse
-             to someone-unspecified)
-       the property of being a giver of the horse
-</programlisting>
-  <para>which is the most natural interpretation of <xref linkend="cll_chapter11-section4-example11"/>, versus</para>
-  <programlisting><anchor xml:id="c11e4d13"/><anchor xml:id="cll_chapter11-section4-example13"/>4.13)  le ka [zo'e] dunda
-             le xirma ce'u [kei]
-       the property-of (someone-unspecified
-             is-a-giver of-the horse to X)
-       the property of being one to whom the horse is given
-</programlisting>
-  <para>which is also a possible interpretation.</para>
-  <para>It is also possible to have more than one “ce'u” in a “ka” abstraction, which transforms it from a property abstraction into a relationship abstraction. Relationship abstractions “package up” a complex relationship for future use; such an abstraction can be translated back into a selbri by placing it in the x2 place of the selbri “bridi”, whose place structure is:</para>
-  <programlisting>
-       “bridi”: x1 is a predicate relationship with relation
+    <para>The things described by 
+    <quote>le nu</quote>descriptions (or, to put it another way, the things of which 
+    <quote>nu</quote>selbri may correctly be predicated) are only moderately 
+    <quote>abstract</quote>. They are still closely tied to happenings in space and time. Properties, however, are much more ethereal. What is 
+    <quote>the property of being blue</quote>, or 
+    <quote>the property of being a go-er</quote>? They are what logicians call 
+    <quote>intensions</quote>. If John has a heart, then 
+    <quote>the property of having a heart</quote>is an abstract object which, when applied to John, is true. In fact,</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-YSUx">
+      <title>
+        <anchor xml:id="c11e4d1" />
+        <anchor xml:id="cll_chapter11-section4-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan. cu se risna zo'e</jbo>
+        <gloss>John has-as-heart something-unspecified.</gloss>
+        <en>John has a heart.</en>
+      </interlinear-gloss>
+    </example>
+    <para>has the same truth conditions as</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-1PPS">
+      <title>
+        <anchor xml:id="c11e4d2" />
+        <anchor xml:id="cll_chapter11-section4-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan. cu ckaji</jbo>
+        <gloss>le ka se risna [zo'e] [kei]</gloss>
+        <gloss>John has-the-property</gloss>
+        <gloss>the property-of having-as-heart something.</gloss>
+        <en>John has the property of having a heart.</en>
+      </interlinear-gloss>
+    </example>
+    <para>(The English word 
+    <quote>have</quote>frequently appears in any discussion of Lojban properties: things are said to 
+    <quote>have</quote>properties, but this is not the same sense of 
+    <quote>have</quote>as in 
+    <quote>I have money</quote>, which is possession.)</para>
+    <para>Property descriptions, like event descriptions, are often wanted to fill places in brivla place structures:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-v3Ba">
+      <title>
+        <anchor xml:id="c11e4d3" />
+        <anchor xml:id="cll_chapter11-section4-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>do cnino mi</jbo>
+        <gloss>le ka xunre [kei]</gloss>
+        <gloss>You are-new to-me</gloss>
+        <gloss>in-the-quality-of-the property-of being-red.</gloss>
+        <en>You are new to me in redness.</en>
+      </interlinear-gloss>
+    </example>
+    <para>(The English suffix 
+    <quote>-ness</quote>often signals a property abstraction, as does the suffix 
+    <quote>-ity</quote>.)</para>
+    <para>We can also move the property description to the x1 place of 
+    <xref linkend="cll_chapter11-section4-example3" />, producing:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-proQ">
+      <title>
+        <anchor xml:id="c11e4d4" />
+        <anchor xml:id="cll_chapter11-section4-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le ka do xunre [kei] cu cnino mi</jbo>
+        <gloss>The property-of your being-red is-new to me.</gloss>
+        <en>Your redness is new to me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>It would be suitable to use 
+    <xref linkend="cll_chapter11-section4-example3" />and 
+    <xref linkend="cll_chapter11-section4-example4" />to someone who has returned from the beach with a sunburn.</para>
+    <para>There are several different properties that can be extracted from a bridi, depending on which place of the bridi is 
+    <quote>understood</quote>as being specified externally. Thus:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-H71J">
+      <title>
+        <anchor xml:id="c11e4d5" />
+        <anchor xml:id="cll_chapter11-section4-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ka mi prami [zo'e] [kei]</jbo>
+        <en>a-property-of me loving something-unspecified</en>
+      </interlinear-gloss>
+    </example>
+    <para>is quite different from</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-wcxY">
+      <title>
+        <anchor xml:id="c11e4d6" />
+        <anchor xml:id="cll_chapter11-section4-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ka [zo'e] prami mi [kei]</jbo>
+        <en>a-property-of something-unspecified loving me</en>
+      </interlinear-gloss>
+    </example>
+    <para>In particular, sentences like 
+    <xref linkend="cll_chapter11-section4-example7" />and 
+    <xref linkend="cll_chapter11-section4-example8" />are quite different in meaning:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-HWEj">
+      <title>
+        <anchor xml:id="c11e4d7" />
+        <anchor xml:id="cll_chapter11-section4-example7" />
+        <anchor xml:id="c11e4d8" />
+        <anchor xml:id="cll_chapter11-section4-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan. cu zmadu la djordj. le ka mi prami</jbo>
+        <gloss>John exceeds George in-the property-of (I love X)</gloss>
+        <en>I love John more than I love George.</en>
+        <jbo>la djan. cu zmadu la djordj. le ka prami mi</jbo>
+        <gloss>John exceeds George in the property of (X loves me).</gloss>
+        <en>John loves me more than George loves me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The 
+    <quote>X</quote>used in the glosses of 
+    <xref linkend="cll_chapter11-section4-example7" />through 
+    <xref linkend="cll_chapter11-section4-example8" />as a place-holder cannot be represented only by ellipsis in Lojban, because ellipsis means that there must be a specific value that can fill the ellipsis, as mentioned in 
+    <xref linkend="cll_chapter11-section2" />. Instead, the cmavo 
+    <quote>ce'u</quote>of selma'o KOhA is employed when an explicit sumti is wanted. (The form 
+    <quote>X</quote>will be used in literal translations.)</para>
+    <para>Therefore, an explicit equivalent of 
+    <xref linkend="cll_chapter11-section4-example7" />, with no ellipsis, is:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-8DD8">
+      <title>
+        <anchor xml:id="c11e4d9" />
+        <anchor xml:id="cll_chapter11-section4-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan. cu zmadu la djordj. le ka mi prami ce'u</jbo>
+        <en>John exceeds George in-the property-of (I love X).</en>
+      </interlinear-gloss>
+    </example>
+    <para>and of 
+    <xref linkend="cll_chapter11-section4-example8" />is:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-JKBQ">
+      <title>
+        <anchor xml:id="c11e4d10" />
+        <anchor xml:id="cll_chapter11-section4-example10" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan. cu zmadu la djordj. le ka ce'u prami mi</jbo>
+        <en>John exceeds George in-the property-of (X loves me).</en>
+      </interlinear-gloss>
+    </example>
+    <para>This convention allows disambiguation of cases like:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-GiJp">
+      <title>
+        <anchor xml:id="c11e4d11" />
+        <anchor xml:id="cll_chapter11-section4-example11" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le ka [zo'e] dunda le xirma [zo'e] [kei]</jbo>
+        <en>the property-of giving the horse</en>
+      </interlinear-gloss>
+    </example>
+    <para>into</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-1vc4">
+      <title>
+        <anchor xml:id="c11e4d12" />
+        <anchor xml:id="cll_chapter11-section4-example12" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le ka ce'u dunda le xirma</jbo>
+        <gloss>[zo'e] [kei]</gloss>
+        <gloss>the property-of (X is-a-giver of-the horse</gloss>
+        <gloss>to someone-unspecified)</gloss>
+        <en>the property of being a giver of the horse</en>
+      </interlinear-gloss>
+    </example>
+    <para>which is the most natural interpretation of 
+    <xref linkend="cll_chapter11-section4-example11" />, versus</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-rDtg">
+      <title>
+        <anchor xml:id="c11e4d13" />
+        <anchor xml:id="cll_chapter11-section4-example13" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le ka [zo'e] dunda</jbo>
+        <gloss>le xirma ce'u [kei]</gloss>
+        <gloss>the property-of (someone-unspecified</gloss>
+        <gloss>is-a-giver of-the horse to X)</gloss>
+        <en>the property of being one to whom the horse is given</en>
+      </interlinear-gloss>
+    </example>
+    <para>which is also a possible interpretation.</para>
+    <para>It is also possible to have more than one 
+    <quote>ce'u</quote>in a 
+    <quote>ka</quote>abstraction, which transforms it from a property abstraction into a relationship abstraction. Relationship abstractions 
+    <quote>package up</quote>a complex relationship for future use; such an abstraction can be translated back into a selbri by placing it in the x2 place of the selbri 
+    <quote>bridi</quote>, whose place structure is:</para>
+    <programlisting xml:space="preserve">
+       
+<quote>bridi</quote>: x1 is a predicate relationship with relation
              x2 (abstraction) among arguments (sequence/set) x3
 </programlisting>
-  <para>The place structure of “ka” abstraction selbri is simply:</para>
-  <programlisting>
+    <para>The place structure of 
+    <quote>ka</quote>abstraction selbri is simply:</para>
+    <programlisting xml:space="preserve">
        ka: x1 is a property of (the bridi)
 </programlisting>
-</section>
-
-<section xml:id="cll_chapter11-section5">
-  <title>5. Amount abstractions</title>
-  <para>The following cmavo is discussed in this section:</para>
-  <programlisting>
+  </section>
+  <section xml:id="cll_chapter11-section5">
+    <title>5. Amount abstractions</title>
+    <para>The following cmavo is discussed in this section:</para>
+    <programlisting xml:space="preserve">
      ni      NU                  amount abstraction
 </programlisting>
-  <para>Amount abstractions are far more limited than event or property abstractions. They really make sense only if the selbri of the abstracted bridi is subject to measurement of some sort. Thus we can speak of:</para>
-  <programlisting><anchor xml:id="c11e5d1"/><anchor xml:id="cll_chapter11-section5-example1"/>5.1)   le ni le pixra cu blanu [kei]
-       the amount-of (the picture being-blue)
-       the amount of blueness in the picture
-</programlisting>
-  <para>because “blueness” could be measured with a colorimeter or a similar device. However,</para>
-  <programlisting><anchor xml:id="c11e5d2"/><anchor xml:id="cll_chapter11-section5-example2"/>5.2)   le ni la djein. cu mamta [kei]
-       the amount-of (Jane being-a-mother)
-       the amount of Jane’s mother-ness (?)
-       the amount of mother-ness in Jane (?)
-</programlisting>
-  <para>makes very little sense in either Lojban or English. We simply do not have any sort of measurement scale for being a mother.</para>
-  <para>Semantically, a sumti with “le ni” is a number; however, it cannot be treated grammatically as a quantifier in Lojban unless prefixed by the mathematical cmavo “mo'e”:</para>
-  <programlisting><anchor xml:id="c11e5d3"/><anchor xml:id="cll_chapter11-section5-example3"/>5.3)   li pa vu'u mo'e
-             le ni le pixra cu blanu [kei]
-       the-number 1 minus the-operand
-             the amount-of (the picture being-blue)
-       1 - B, where B = blueness of the picture
-</programlisting>
-  <para>Mathematical Lojban is beyond the scope of this chapter, and is explained more fully in <xref linkend="cll_chapter18"/>.</para>
-  <para>There are contexts where either property or amount abstractions make sense, and in such constructions, amount abstractions can make use of “ce'u” just like property abstractors. Thus,</para>
-  <programlisting><anchor xml:id="c11e5d4"/><anchor xml:id="cll_chapter11-section5-example4"/>5.4)   le pixra cu cenba le ka ce'u blanu [kei]
-       The picture varies in-the property-of (X is blue).
-       The picture varies in being blue.
-       The picture varies in blueness.
-</programlisting>
-  <para>is not the same as</para>
-  <programlisting><anchor xml:id="c11e5d5"/><anchor xml:id="cll_chapter11-section5-example5"/>5.5)   le pixra cu cenba le ni ce'u blanu [kei]
-       The picture varies in-the amount-of (X is blue).
-       The picture varies in how blue it is.
-       The picture varies in blueness.
-</programlisting>
-  <para><xref linkend="cll_chapter11-section5-example4"/> conveys that the blueness comes and goes, whereas <xref linkend="cll_chapter11-section5-example5"/> conveys that its quantity changes over time.</para>
-  <para>Whenever we talk of measurement of an amount, there is some sort of scale, and so the place structure of “ni” abstraction selbri is:</para>
-  <programlisting>
+    <para>Amount abstractions are far more limited than event or property abstractions. They really make sense only if the selbri of the abstracted bridi is subject to measurement of some sort. Thus we can speak of:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-QW2C">
+      <title>
+        <anchor xml:id="c11e5d1" />
+        <anchor xml:id="cll_chapter11-section5-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le ni le pixra cu blanu [kei]</jbo>
+        <gloss>the amount-of (the picture being-blue)</gloss>
+        <en>the amount of blueness in the picture</en>
+      </interlinear-gloss>
+    </example>
+    <para>because 
+    <quote>blueness</quote>could be measured with a colorimeter or a similar device. However,</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-FyL4">
+      <title>
+        <anchor xml:id="c11e5d2" />
+        <anchor xml:id="cll_chapter11-section5-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le ni la djein. cu mamta [kei]</jbo>
+        <gloss>the amount-of (Jane being-a-mother)</gloss>
+        <gloss>the amount of Jane's mother-ness (?)</gloss>
+        <en>the amount of mother-ness in Jane (?)</en>
+      </interlinear-gloss>
+    </example>
+    <para>makes very little sense in either Lojban or English. We simply do not have any sort of measurement scale for being a mother.</para>
+    <para>Semantically, a sumti with 
+    <quote>le ni</quote>is a number; however, it cannot be treated grammatically as a quantifier in Lojban unless prefixed by the mathematical cmavo 
+    <quote>mo'e</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-SaTi">
+      <title>
+        <anchor xml:id="c11e5d3" />
+        <anchor xml:id="cll_chapter11-section5-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>li pa vu'u mo'e</jbo>
+        <gloss>le ni le pixra cu blanu [kei]</gloss>
+        <gloss>the-number 1 minus the-operand</gloss>
+        <gloss>the amount-of (the picture being-blue)</gloss>
+        <en>1 - B, where B = blueness of the picture</en>
+      </interlinear-gloss>
+    </example>
+    <para>Mathematical Lojban is beyond the scope of this chapter, and is explained more fully in 
+    <xref linkend="cll_chapter18" />.</para>
+    <para>There are contexts where either property or amount abstractions make sense, and in such constructions, amount abstractions can make use of 
+    <quote>ce'u</quote>just like property abstractors. Thus,</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-1LtX">
+      <title>
+        <anchor xml:id="c11e5d4" />
+        <anchor xml:id="cll_chapter11-section5-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le pixra cu cenba le ka ce'u blanu [kei]</jbo>
+        <gloss>The picture varies in-the property-of (X is blue).</gloss>
+        <gloss>The picture varies in being blue.</gloss>
+        <en>The picture varies in blueness.</en>
+      </interlinear-gloss>
+    </example>
+    <para>is not the same as</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-QKpo">
+      <title>
+        <anchor xml:id="c11e5d5" />
+        <anchor xml:id="cll_chapter11-section5-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le pixra cu cenba le ni ce'u blanu [kei]</jbo>
+        <gloss>The picture varies in-the amount-of (X is blue).</gloss>
+        <gloss>The picture varies in how blue it is.</gloss>
+        <en>The picture varies in blueness.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter11-section5-example4" />conveys that the blueness comes and goes, whereas 
+    <xref linkend="cll_chapter11-section5-example5" />conveys that its quantity changes over time.</para>
+    <para>Whenever we talk of measurement of an amount, there is some sort of scale, and so the place structure of 
+    <quote>ni</quote>abstraction selbri is:</para>
+    <programlisting xml:space="preserve">
        ni: x1 is the amount of (the bridi) on scale x2
 </programlisting>
-  <para>Note: the best way to express the x2 places of abstract sumti is to use something like “le ni ... kei be”. See <xref linkend="cll_chapter11-section9-example5"/> for the use of this construction.</para>
-</section>
-
-<section xml:id="cll_chapter11-section6">
-  <title>6. Truth-value abstraction: “jei”</title>
-  <para>The “blueness of the picture” discussed in <xref linkend="cll_chapter11-section5"/> refers to the measurable amount of blue pigment (or other source of blueness), not to the degree of truth of the claim that blueness is present. That abstraction is expressed in Lojban using “jei”, which is closely related semantically to “ni”. In the simplest cases, “le jei” produces not a number but a truth value:</para>
-  <programlisting><anchor xml:id="c11e6d1"/><anchor xml:id="cll_chapter11-section6-example1"/>6.1)   le jei li re su'i re du li vo [kei]
-       the truth-value-of the-number 2 + 2 = the-number 4
-       the truth of 2 + 2 being 4
-</programlisting>
-  <para>is equivalent to “truth”, and</para>
-  <programlisting><anchor xml:id="c11e6d2"/><anchor xml:id="cll_chapter11-section6-example2"/>6.2)   le jei li re su'i re du li mu [kei]
-       the truth-value-of the-number 2 + 2 = the-number 5
-       the truth of 2 + 2 being 5
-</programlisting>
-  <para>is equivalent to “falsehood”.</para>
-  <para>However, not everything in life (or even in Lojban) is simply true or false. There are shades of gray even in truth value, and “jei” is Lojban’s mechanism for indicating the shade of grey intended:</para>
-  <programlisting><anchor xml:id="c11e6d3"/><anchor xml:id="cll_chapter11-section6-example3"/>6.3)   mi ba jdice le jei
-             la djordj. cu zekri gasnu [kei]
-       I [future] decide the truth-value of
-             (George being-a-(crime doer)).
-       I will decide whether George is a criminal.
-</programlisting>
-  <para><xref linkend="cll_chapter11-section6-example3"/> does not imply that George is, or is not, definitely a criminal. Depending on the legal system I am using, I may make some intermediate decision. As a result, “jei” requires an x2 place analogous to that of “ni”:</para>
-  <programlisting>
+    <para>Note: the best way to express the x2 places of abstract sumti is to use something like 
+    <quote>le ni ... kei be</quote>. See 
+    <xref linkend="cll_chapter11-section9-example5" />for the use of this construction.</para>
+  </section>
+  <section xml:id="cll_chapter11-section6">
+    <title>6. Truth-value abstraction: 
+    <quote>jei</quote></title>
+    <para>The 
+    <quote>blueness of the picture</quote>discussed in 
+    <xref linkend="cll_chapter11-section5" />refers to the measurable amount of blue pigment (or other source of blueness), not to the degree of truth of the claim that blueness is present. That abstraction is expressed in Lojban using 
+    <quote>jei</quote>, which is closely related semantically to 
+    <quote>ni</quote>. In the simplest cases, 
+    <quote>le jei</quote>produces not a number but a truth value:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-KuTE">
+      <title>
+        <anchor xml:id="c11e6d1" />
+        <anchor xml:id="cll_chapter11-section6-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le jei li re su'i re du li vo [kei]</jbo>
+        <gloss>the truth-value-of the-number 2 + 2 = the-number 4</gloss>
+        <en>the truth of 2 + 2 being 4</en>
+      </interlinear-gloss>
+    </example>
+    <para>is equivalent to 
+    <quote>truth</quote>, and</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-nYY2">
+      <title>
+        <anchor xml:id="c11e6d2" />
+        <anchor xml:id="cll_chapter11-section6-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le jei li re su'i re du li mu [kei]</jbo>
+        <gloss>the truth-value-of the-number 2 + 2 = the-number 5</gloss>
+        <en>the truth of 2 + 2 being 5</en>
+      </interlinear-gloss>
+    </example>
+    <para>is equivalent to 
+    <quote>falsehood</quote>.</para>
+    <para>However, not everything in life (or even in Lojban) is simply true or false. There are shades of gray even in truth value, and 
+    <quote>jei</quote>is Lojban's mechanism for indicating the shade of grey intended:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-MRD8">
+      <title>
+        <anchor xml:id="c11e6d3" />
+        <anchor xml:id="cll_chapter11-section6-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi ba jdice le jei</jbo>
+        <gloss>la djordj. cu zekri gasnu [kei]</gloss>
+        <gloss>I [future] decide the truth-value of</gloss>
+        <gloss>(George being-a-(crime doer)).</gloss>
+        <en>I will decide whether George is a criminal.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter11-section6-example3" />does not imply that George is, or is not, definitely a criminal. Depending on the legal system I am using, I may make some intermediate decision. As a result, 
+    <quote>jei</quote>requires an x2 place analogous to that of 
+    <quote>ni</quote>:</para>
+    <programlisting xml:space="preserve">
        jei: x1 is the truth value of (the bridi) under epistemology x2
 </programlisting>
-  <para>Abstractions using “jei” are the mechanism for fuzzy logic in Lojban; the “jei” abstraction refers to a number between 0 and 1 inclusive (as distinct from “ni” abstractions, which are often on open-ended scales). The detailed conventions for using “jei” in fuzzy-logic contexts have not yet been established.</para>
-</section>
-
-<section xml:id="cll_chapter11-section7">
-  <title>7. Predication/sentence abstraction</title>
-  <para>The following cmavo is discussed in this section:</para>
-  <programlisting>
+    <para>Abstractions using 
+    <quote>jei</quote>are the mechanism for fuzzy logic in Lojban; the 
+    <quote>jei</quote>abstraction refers to a number between 0 and 1 inclusive (as distinct from 
+    <quote>ni</quote>abstractions, which are often on open-ended scales). The detailed conventions for using 
+    <quote>jei</quote>in fuzzy-logic contexts have not yet been established.</para>
+  </section>
+  <section xml:id="cll_chapter11-section7">
+    <title>7. Predication/sentence abstraction</title>
+    <para>The following cmavo is discussed in this section:</para>
+    <programlisting xml:space="preserve">
      du'u    NU                  predication abstraction
 </programlisting>
-  <para>There are some selbri which demand an entire predication as a sumti; they make claims about some predication considered as a whole. Logicians call these the “propositional attitudes”, and they include (in English) things like knowing, believing, learning, seeing, hearing, and the like. Consider the English sentence:</para>
-  <programlisting><anchor xml:id="c11e7d1"/><anchor xml:id="cll_chapter11-section7-example1"/>7.1)   I know that Frank is a fool.
-</programlisting>
-  <para>How’s that in Lojban? Let us try:</para>
-  <programlisting><anchor xml:id="c11e7d2"/><anchor xml:id="cll_chapter11-section7-example2"/>7.2)   mi djuno le nu la frank. cu bebna [kei]
-       I know the event of Frank being a fool.
-</programlisting>
-  <para>Not quite right. Events are actually or potentially physical, and can’t be contained inside one’s mind, except for events of thinking, feeling, and the like; <xref linkend="cll_chapter11-section7-example2"/> comes close to claiming that Frank’s being-a-fool is purely a mental activity on the part of the speaker. (In fact, <xref linkend="cll_chapter11-section7-example2"/> is an instance of improperly marked “sumti raising”, a concept discussed further in <xref linkend="cll_chapter11-section10"/>).</para>
-  <para>Try again:</para>
-  <programlisting><anchor xml:id="c11e7d3"/><anchor xml:id="cll_chapter11-section7-example3"/>7.3)   mi djuno le jei la frank. cu bebna [kei]
-       I know the truth-value of Frank being a fool.
-</programlisting>
-  <para>Closer. <xref linkend="cll_chapter11-section7-example3"/> says that I know whether or not Frank is a fool, but doesn’t say that he is one, as <xref linkend="cll_chapter11-section7-example1"/> does. To catch that nuance, we must say:</para>
-  <programlisting><anchor xml:id="c11e7d4"/><anchor xml:id="cll_chapter11-section7-example4"/>7.4)   mi djuno le du'u la frank. cu bebna [kei]
-       I know the predication that Frank is a fool.
-</programlisting>
-  <para>Now we have it. Note that the implied assertion “Frank is a fool” is not a property of “le du'u” abstraction, but of “djuno”; we can only know what is in fact true. (As a result, “djuno” like “jei” has a place for epistemology, which specifies how we know.) <xref linkend="cll_chapter11-section7-example5"/> has no such implied assertion:</para>
-  <programlisting><anchor xml:id="c11e7d5"/><anchor xml:id="cll_chapter11-section7-example5"/>7.5)   mi kucli le du'u la frank. cu bebna [kei]
-       I am curious about whether Frank is a fool.
-</programlisting>
-  <para>and here “du'u” could probably be replaced by “jei” without much change in meaning:</para>
-  <programlisting><anchor xml:id="c11e7d6"/><anchor xml:id="cll_chapter11-section7-example6"/>7.6)   mi kucli le jei la frank. cu bebna [kei]
-       I am curious about how true it is that Frank is a fool.
-</programlisting>
-  <para>As a matter of convenience rather than logical necessity, “du'u” has been given an x2 place, which is a sentence (piece of language) expressing the bridi:</para>
-  <programlisting>
+    <para>There are some selbri which demand an entire predication as a sumti; they make claims about some predication considered as a whole. Logicians call these the 
+    <quote>propositional attitudes</quote>, and they include (in English) things like knowing, believing, learning, seeing, hearing, and the like. Consider the English sentence:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-7N2q">
+      <title>
+        <anchor xml:id="c11e7d1" />
+        <anchor xml:id="cll_chapter11-section7-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>I know that Frank is a fool.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>How's that in Lojban? Let us try:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-brpf">
+      <title>
+        <anchor xml:id="c11e7d2" />
+        <anchor xml:id="cll_chapter11-section7-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi djuno le nu la frank. cu bebna [kei]</jbo>
+        <en>I know the event of Frank being a fool.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Not quite right. Events are actually or potentially physical, and can't be contained inside one's mind, except for events of thinking, feeling, and the like; 
+    <xref linkend="cll_chapter11-section7-example2" />comes close to claiming that Frank's being-a-fool is purely a mental activity on the part of the speaker. (In fact, 
+    <xref linkend="cll_chapter11-section7-example2" />is an instance of improperly marked 
+    <quote>sumti raising</quote>, a concept discussed further in 
+    <xref linkend="cll_chapter11-section10" />).</para>
+    <para>Try again:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-oCgP">
+      <title>
+        <anchor xml:id="c11e7d3" />
+        <anchor xml:id="cll_chapter11-section7-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi djuno le jei la frank. cu bebna [kei]</jbo>
+        <en>I know the truth-value of Frank being a fool.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Closer. 
+    <xref linkend="cll_chapter11-section7-example3" />says that I know whether or not Frank is a fool, but doesn't say that he is one, as 
+    <xref linkend="cll_chapter11-section7-example1" />does. To catch that nuance, we must say:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-6p1K">
+      <title>
+        <anchor xml:id="c11e7d4" />
+        <anchor xml:id="cll_chapter11-section7-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi djuno le du'u la frank. cu bebna [kei]</jbo>
+        <en>I know the predication that Frank is a fool.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Now we have it. Note that the implied assertion 
+    <quote>Frank is a fool</quote>is not a property of 
+    <quote>le du'u</quote>abstraction, but of 
+    <quote>djuno</quote>; we can only know what is in fact true. (As a result, 
+    <quote>djuno</quote>like 
+    <quote>jei</quote>has a place for epistemology, which specifies how we know.) 
+    <xref linkend="cll_chapter11-section7-example5" />has no such implied assertion:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-eYiD">
+      <title>
+        <anchor xml:id="c11e7d5" />
+        <anchor xml:id="cll_chapter11-section7-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi kucli le du'u la frank. cu bebna [kei]</jbo>
+        <en>I am curious about whether Frank is a fool.</en>
+      </interlinear-gloss>
+    </example>
+    <para>and here 
+    <quote>du'u</quote>could probably be replaced by 
+    <quote>jei</quote>without much change in meaning:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-h4De">
+      <title>
+        <anchor xml:id="c11e7d6" />
+        <anchor xml:id="cll_chapter11-section7-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi kucli le jei la frank. cu bebna [kei]</jbo>
+        <en>I am curious about how true it is that Frank is a fool.</en>
+      </interlinear-gloss>
+    </example>
+    <para>As a matter of convenience rather than logical necessity, 
+    <quote>du'u</quote>has been given an x2 place, which is a sentence (piece of language) expressing the bridi:</para>
+    <programlisting xml:space="preserve">
        du'u: x1 is the predication (the bridi), expressed in sentence x2
 </programlisting>
-  <para>and “le se du'u ...” is very useful in filling places of selbri which refer to speaking, writing, or other linguistic behavior regarding bridi:</para>
-  <programlisting><anchor xml:id="c11e7d7"/><anchor xml:id="cll_chapter11-section7-example7"/>7.7)   la djan. cusku le se du'u la djordj. klama le zarci [kei]
-       John expresses the sentence-expressing-that George goes-to the store
-       John says that George goes to the store.
-</programlisting>
-  <para><xref linkend="cll_chapter11-section7-example7"/> differs from</para>
-  <programlisting><anchor xml:id="c11e7d8"/><anchor xml:id="cll_chapter11-section7-example8"/>7.8)   la djan cusku lu la djordj. klama le zarci li'u
-       John expresses, quote, George goes to the store, unquote.
-       John says “George goes to the store”.
-</programlisting>
-  <para>because <xref linkend="cll_chapter11-section7-example8"/> claims that John actually said the quoted words, whereas <xref linkend="cll_chapter11-section7-example7"/> claims only that he said some words or other which were to the same purpose.</para>
-  <para>“le se du'u” is much the same as “lu'e le du'u”, a symbol for the predication, but “se du'u” can be used as a selbri, whereas “lu'e” is ungrammatical in a selbri. (See <xref linkend="cll_chapter6"/> for a discussion of “lu'e”.)</para>
-</section>
-
-<section xml:id="cll_chapter11-section8">
-  <title>8. Indirect questions</title>
-  <para>The following cmavo is discussed in this section:</para>
-  <programlisting>
+    <para>and 
+    <quote>le se du'u ...</quote>is very useful in filling places of selbri which refer to speaking, writing, or other linguistic behavior regarding bridi:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-hzd8">
+      <title>
+        <anchor xml:id="c11e7d7" />
+        <anchor xml:id="cll_chapter11-section7-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan. cusku le se du'u la djordj. klama le zarci [kei]</jbo>
+        <gloss>John expresses the sentence-expressing-that George goes-to the store</gloss>
+        <en>John says that George goes to the store.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter11-section7-example7" />differs from</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-AX2I">
+      <title>
+        <anchor xml:id="c11e7d8" />
+        <anchor xml:id="cll_chapter11-section7-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan cusku lu la djordj. klama le zarci li'u</jbo>
+        <gloss>John expresses, quote, George goes to the store, unquote.</gloss>
+        <en>John says 
+        <quote>George goes to the store</quote>.</en>
+      </interlinear-gloss>
+    </example>
+    <para>because 
+    <xref linkend="cll_chapter11-section7-example8" />claims that John actually said the quoted words, whereas 
+    <xref linkend="cll_chapter11-section7-example7" />claims only that he said some words or other which were to the same purpose.</para>
+    <para>
+    <quote>le se du'u</quote>is much the same as 
+    <quote>lu'e le du'u</quote>, a symbol for the predication, but 
+    <quote>se du'u</quote>can be used as a selbri, whereas 
+    <quote>lu'e</quote>is ungrammatical in a selbri. (See 
+    <xref linkend="cll_chapter6" />for a discussion of 
+    <quote>lu'e</quote>.)</para>
+  </section>
+  <section xml:id="cll_chapter11-section8">
+    <title>8. Indirect questions</title>
+    <para>The following cmavo is discussed in this section:</para>
+    <programlisting xml:space="preserve">
      kau     UI                  indirect question marker
 </programlisting>
-  <para>There is an alternative type of sentence involving “du'u” and a selbri expressing a propositional attitude. In addition to sentences like</para>
-  <programlisting><anchor xml:id="c11e8d1"/><anchor xml:id="cll_chapter11-section8-example1"/>8.1)   I know that John went to the store.
-</programlisting>
-  <para>we can also say things like</para>
-  <programlisting><anchor xml:id="c11e8d2"/><anchor xml:id="cll_chapter11-section8-example2"/>8.2)   I know who went to the store.
-</programlisting>
-  <para>This form is called an “indirect question” in English because the embedded English sentence is a question: “Who went to the store?” A person who says <xref linkend="cll_chapter11-section8-example2"/> is claiming to know the answer to this question. Indirect questions can occur with many other English verbs as well: I can wonder, or doubt, or see, or hear, as well as know who went to the store.</para>
-  <para>To express indirect questions in Lojban, we use a “le du'u” abstraction, but rather than using a question word like “who” (“ma” in Lojban), we use any word that will fit grammatically and mark it with the suffix particle “kau”. This cmavo belongs to selma'o UI, so grammatically it can appear anywhere. The simplest Lojban translation of <xref linkend="cll_chapter11-section8-example2"/> is therefore:</para>
-  <programlisting><anchor xml:id="c11e8d3"/><anchor xml:id="cll_chapter11-section8-example3"/>8.3)   mi djuno le du'u
-             makau pu klama le zarci
-       I know the predication-of
-             X [indirect question] [past] going to the store.
-</programlisting>
-  <para>In <xref linkend="cll_chapter11-section8-example3"/>, we have chosen to use “ma” as the word marked by “kau”. In fact, any other sumti would have done as well: “zo'e” or “da” or even “la djan.”. Using “la djan.” would suggest that it was John who I knew had gone to the store, however:</para>
-  <programlisting><anchor xml:id="c11e8d4"/><anchor xml:id="cll_chapter11-section8-example4"/>8.4)   mi djuno le du'u
-             la djan. kau pu
-                 klama le zarci
-       I know the predication-of/fact-that
-             John [indirect question] [past]
-                 going to the store.
-       I know who went to the store, namely John.
-       I know that it was John who went to the store.
-</programlisting>
-  <para>Using one of the indefinite pro-sumti such as “ma”, “zo'e”, or “da” does not suggest any particular value.</para>
-  <para>Why does Lojban require the “kau” marker, rather than using “ma” as English and Chinese and many other languages do? Because “ma” always signals a direct question, and so</para>
-  <programlisting><anchor xml:id="c11e8d5"/><anchor xml:id="cll_chapter11-section8-example5"/>8.5)   mi djuno le du'u
-             ma pu klama le zarci
-       I know the predication-of
-             [what sumti?] [past] goes-to the store
-</programlisting>
-  <para>means</para>
-  <programlisting><anchor xml:id="c11e8d6"/><anchor xml:id="cll_chapter11-section8-example6"/>8.6)   Who is it that I know goes to the store?
-</programlisting>
-  <para>It is actually not necessary to use “le du'u” and “kau” at all if the indirect question involves a sumti; there is generally a paraphrase of the type:</para>
-  <programlisting><anchor xml:id="c11e8d7"/><anchor xml:id="cll_chapter11-section8-example7"/>8.7)   mi djuno fi le pu klama be le zarci
-       I know about the [past] goer to-the store.
-       I know something about the one who went to the store (namely, his identity).
-</programlisting>
-  <para>because the x3 place of “djuno” is the subject of knowledge, as opposed to the fact that is known. But when the questioned point is not a sumti, but (say) a logical connection, then there is no good alternative to “kau”:</para>
-  <programlisting><anchor xml:id="c11e8d8"/><anchor xml:id="cll_chapter11-section8-example8"/>8.8)   mi ba zgana le du'u
-             la djan. jikau la djordj.
-                 cu zvati le panka
-       I [future] observe the predication-of/fact-that
-             John [connective indirect question] George
-                 is-at the park.
-       I will see whether John or George (or both)
-             is at the park.
-</programlisting>
-  <para>In addition, <xref linkend="cll_chapter11-section8-example7"/> is only a loose paraphrase of <xref linkend="cll_chapter11-section8-example3"/>, because it is left to the listener’s insight to realize that what is known about the goer-to-the-store is his identity rather than some other of his attributes.</para>
-</section>
-
-<section xml:id="cll_chapter11-section9">
-  <title>9. Minor abstraction types</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+    <para>There is an alternative type of sentence involving 
+    <quote>du'u</quote>and a selbri expressing a propositional attitude. In addition to sentences like</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Fpid">
+      <title>
+        <anchor xml:id="c11e8d1" />
+        <anchor xml:id="cll_chapter11-section8-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>I know that John went to the store.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>we can also say things like</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-N4Ja">
+      <title>
+        <anchor xml:id="c11e8d2" />
+        <anchor xml:id="cll_chapter11-section8-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>I know who went to the store.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>This form is called an 
+    <quote>indirect question</quote>in English because the embedded English sentence is a question: 
+    <quote>Who went to the store?</quote>A person who says 
+    <xref linkend="cll_chapter11-section8-example2" />is claiming to know the answer to this question. Indirect questions can occur with many other English verbs as well: I can wonder, or doubt, or see, or hear, as well as know who went to the store.</para>
+    <para>To express indirect questions in Lojban, we use a 
+    <quote>le du'u</quote>abstraction, but rather than using a question word like 
+    <quote>who</quote>(
+    <quote>ma</quote>in Lojban), we use any word that will fit grammatically and mark it with the suffix particle 
+    <quote>kau</quote>. This cmavo belongs to selma'o UI, so grammatically it can appear anywhere. The simplest Lojban translation of 
+    <xref linkend="cll_chapter11-section8-example2" />is therefore:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-QUxG">
+      <title>
+        <anchor xml:id="c11e8d3" />
+        <anchor xml:id="cll_chapter11-section8-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi djuno le du'u</jbo>
+        <gloss>makau pu klama le zarci</gloss>
+        <gloss>I know the predication-of</gloss>
+        <en>X [indirect question] [past] going to the store.</en>
+      </interlinear-gloss>
+    </example>
+    <para>In 
+    <xref linkend="cll_chapter11-section8-example3" />, we have chosen to use 
+    <quote>ma</quote>as the word marked by 
+    <quote>kau</quote>. In fact, any other sumti would have done as well: 
+    <quote>zo'e</quote>or 
+    <quote>da</quote>or even 
+    <quote>la djan.</quote>. Using 
+    <quote>la djan.</quote>would suggest that it was John who I knew had gone to the store, however:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-hmDo">
+      <title>
+        <anchor xml:id="c11e8d4" />
+        <anchor xml:id="cll_chapter11-section8-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi djuno le du'u</jbo>
+        <gloss>la djan. kau pu</gloss>
+        <gloss>klama le zarci</gloss>
+        <gloss>I know the predication-of/fact-that</gloss>
+        <gloss>John [indirect question] [past]</gloss>
+        <gloss>going to the store.</gloss>
+        <gloss>I know who went to the store, namely John.</gloss>
+        <en>I know that it was John who went to the store.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Using one of the indefinite pro-sumti such as 
+    <quote>ma</quote>, 
+    <quote>zo'e</quote>, or 
+    <quote>da</quote>does not suggest any particular value.</para>
+    <para>Why does Lojban require the 
+    <quote>kau</quote>marker, rather than using 
+    <quote>ma</quote>as English and Chinese and many other languages do? Because 
+    <quote>ma</quote>always signals a direct question, and so</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-5WU4">
+      <title>
+        <anchor xml:id="c11e8d5" />
+        <anchor xml:id="cll_chapter11-section8-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi djuno le du'u</jbo>
+        <gloss>ma pu klama le zarci</gloss>
+        <gloss>I know the predication-of</gloss>
+        <en>[what sumti?] [past] goes-to the store</en>
+      </interlinear-gloss>
+    </example>
+    <para>means</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-LDrc">
+      <title>
+        <anchor xml:id="c11e8d6" />
+        <anchor xml:id="cll_chapter11-section8-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>Who is it that I know goes to the store?</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>It is actually not necessary to use 
+    <quote>le du'u</quote>and 
+    <quote>kau</quote>at all if the indirect question involves a sumti; there is generally a paraphrase of the type:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-b6VT">
+      <title>
+        <anchor xml:id="c11e8d7" />
+        <anchor xml:id="cll_chapter11-section8-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi djuno fi le pu klama be le zarci</jbo>
+        <gloss>I know about the [past] goer to-the store.</gloss>
+        <en>I know something about the one who went to the store (namely, his identity).</en>
+      </interlinear-gloss>
+    </example>
+    <para>because the x3 place of 
+    <quote>djuno</quote>is the subject of knowledge, as opposed to the fact that is known. But when the questioned point is not a sumti, but (say) a logical connection, then there is no good alternative to 
+    <quote>kau</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-2nIX">
+      <title>
+        <anchor xml:id="c11e8d8" />
+        <anchor xml:id="cll_chapter11-section8-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi ba zgana le du'u</jbo>
+        <gloss>la djan. jikau la djordj.</gloss>
+        <gloss>cu zvati le panka</gloss>
+        <gloss>I [future] observe the predication-of/fact-that</gloss>
+        <gloss>John [connective indirect question] George</gloss>
+        <gloss>is-at the park.</gloss>
+        <gloss>I will see whether John or George (or both)</gloss>
+        <en>is at the park.</en>
+      </interlinear-gloss>
+    </example>
+    <para>In addition, 
+    <xref linkend="cll_chapter11-section8-example7" />is only a loose paraphrase of 
+    <xref linkend="cll_chapter11-section8-example3" />, because it is left to the listener's insight to realize that what is known about the goer-to-the-store is his identity rather than some other of his attributes.</para>
+  </section>
+  <section xml:id="cll_chapter11-section9">
+    <title>9. Minor abstraction types</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      li'i    NU                  experience abstractor
      si'o    NU                  concept abstractor
      su'u    NU                  general abstractor
 </programlisting>
-  <para>There are three more abstractors in Lojban, all of them little used so far. The abstractor “li'i” expresses experience:</para>
-  <programlisting><anchor xml:id="c11e9d1"/><anchor xml:id="cll_chapter11-section9-example1"/>9.1)   mi morji le li'i mi verba
-       I remember the experience-of (my being-a-child)
-</programlisting>
-  <para>The abstractor “si'o” expresses a mental image, a concept, an idea:</para>
-  <programlisting><anchor xml:id="c11e9d2"/><anchor xml:id="cll_chapter11-section9-example2"/>9.2)   mi nelci le si'o la lojban. cu mulno
-       I enjoy the concept-of Lojban being-complete.
-</programlisting>
-  <para>Finally, the abstractor “su'u” is a vague abstractor, whose meaning must be grasped from context:</para>
-  <programlisting><anchor xml:id="c11e9d3"/><anchor xml:id="cll_chapter11-section9-example3"/>9.3)   ko zgana le su'u
-             le ci smacu cu bajra
-       you [imperative] observe the abstract-nature-of
-             the three mice running
-       See how the three mice run!
-</programlisting>
-  <para>All three of these abstractors have an x2 place. An experience requires an experiencer, so the place structure of “li'i” is:</para>
-  <programlisting>
+    <para>There are three more abstractors in Lojban, all of them little used so far. The abstractor 
+    <quote>li'i</quote>expresses experience:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-FS6r">
+      <title>
+        <anchor xml:id="c11e9d1" />
+        <anchor xml:id="cll_chapter11-section9-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi morji le li'i mi verba</jbo>
+        <en>I remember the experience-of (my being-a-child)</en>
+      </interlinear-gloss>
+    </example>
+    <para>The abstractor 
+    <quote>si'o</quote>expresses a mental image, a concept, an idea:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Yh42">
+      <title>
+        <anchor xml:id="c11e9d2" />
+        <anchor xml:id="cll_chapter11-section9-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi nelci le si'o la lojban. cu mulno</jbo>
+        <en>I enjoy the concept-of Lojban being-complete.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Finally, the abstractor 
+    <quote>su'u</quote>is a vague abstractor, whose meaning must be grasped from context:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-ycKt">
+      <title>
+        <anchor xml:id="c11e9d3" />
+        <anchor xml:id="cll_chapter11-section9-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ko zgana le su'u</jbo>
+        <gloss>le ci smacu cu bajra</gloss>
+        <gloss>you [imperative] observe the abstract-nature-of</gloss>
+        <gloss>the three mice running</gloss>
+        <en>See how the three mice run!</en>
+      </interlinear-gloss>
+    </example>
+    <para>All three of these abstractors have an x2 place. An experience requires an experiencer, so the place structure of 
+    <quote>li'i</quote>is:</para>
+    <programlisting xml:space="preserve">
        li'i: x1 is the experience of (the bridi) as experienced by x2
 </programlisting>
-  <para>Similarly, an idea requires a mind to hold it, so the place structure of “si'o” is:</para>
-  <programlisting>
+    <para>Similarly, an idea requires a mind to hold it, so the place structure of 
+    <quote>si'o</quote>is:</para>
+    <programlisting xml:space="preserve">
        si'o: x1 is the idea/concept of (the bridi) in the mind of x2
 </programlisting>
-  <para>Finally, there needs to be some way of specifying just what sort of abstraction “su'u” is representing, so its place structure is:</para>
-  <programlisting>
+    <para>Finally, there needs to be some way of specifying just what sort of abstraction 
+    <quote>su'u</quote>is representing, so its place structure is:</para>
+    <programlisting xml:space="preserve">
        su'u: x1 is an abstract nature of (the bridi) of type x2
 </programlisting>
-  <para>The x2 place of “su'u” allows it to serve as a substitute for any of the other abstractors, or as a template for creating new ones. For example,</para>
-  <programlisting><anchor xml:id="c11e9d4"/><anchor xml:id="cll_chapter11-section9-example4"/>9.4)   le nu mi klama
-       the event-of my going
-</programlisting>
-  <para>can be paraphrased as</para>
-  <programlisting><anchor xml:id="c11e9d5"/><anchor xml:id="cll_chapter11-section9-example5"/>9.5)   le su'u mi klama kei be lo fasnu
-       the abstract-nature-of (my going) of-type an event
-</programlisting>
-  <para>and there is a book whose title might be rendered in Lojban as:</para>
-  <programlisting><anchor xml:id="c11e9d6"/><anchor xml:id="cll_chapter11-section9-example6"/>9.6)   le su'u la .iecuas. kuctai
-             selcatra kei
-             be lo sa’ordzifa'a
-             ke nalmatma'e sutyterjvi
-       the abstract-nature-of (Jesus is-an-intersect-shape
-             type-of-killed-one)
-             of-type a slope-low-direction
-             type-of non-motor-vehicle speed-competition
-       The Crucifixion of Jesus Considered As A Downhill Bicycle Race
-</programlisting>
-  <para>Note the importance of using “kei” after “su'u” when the x2 of “su'u” (or any other abstractor) is being specified; otherwise, the “be lo” ends up inside the abstraction bridi.</para>
-</section>
-
-<section xml:id="cll_chapter11-section10">
-  <title>10. Lojban sumti raising</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+    <para>The x2 place of 
+    <quote>su'u</quote>allows it to serve as a substitute for any of the other abstractors, or as a template for creating new ones. For example,</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-FnNR">
+      <title>
+        <anchor xml:id="c11e9d4" />
+        <anchor xml:id="cll_chapter11-section9-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le nu mi klama</jbo>
+        <en>the event-of my going</en>
+      </interlinear-gloss>
+    </example>
+    <para>can be paraphrased as</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-zvfX">
+      <title>
+        <anchor xml:id="c11e9d5" />
+        <anchor xml:id="cll_chapter11-section9-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le su'u mi klama kei be lo fasnu</jbo>
+        <en>the abstract-nature-of (my going) of-type an event</en>
+      </interlinear-gloss>
+    </example>
+    <para>and there is a book whose title might be rendered in Lojban as:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-5Kw7">
+      <title>
+        <anchor xml:id="c11e9d6" />
+        <anchor xml:id="cll_chapter11-section9-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le su'u la .iecuas. kuctai</jbo>
+        <gloss>selcatra kei</gloss>
+        <gloss>be lo sa'ordzifa'a</gloss>
+        <gloss>ke nalmatma'e sutyterjvi</gloss>
+        <gloss>the abstract-nature-of (Jesus is-an-intersect-shape</gloss>
+        <gloss>type-of-killed-one)</gloss>
+        <gloss>of-type a slope-low-direction</gloss>
+        <gloss>type-of non-motor-vehicle speed-competition</gloss>
+        <en>The Crucifixion of Jesus Considered As A Downhill Bicycle Race</en>
+      </interlinear-gloss>
+    </example>
+    <para>Note the importance of using 
+    <quote>kei</quote>after 
+    <quote>su'u</quote>when the x2 of 
+    <quote>su'u</quote>(or any other abstractor) is being specified; otherwise, the 
+    <quote>be lo</quote>ends up inside the abstraction bridi.</para>
+  </section>
+  <section xml:id="cll_chapter11-section10">
+    <title>10. Lojban sumti raising</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      tu'a    LAhE                an abstraction involving
      jai     JAI                 abstraction conversion
 </programlisting>
-  <para>It is sometimes inconvenient, in a situation where an abstract description is logically required, to express the abstraction. In English we can say:</para>
-  <programlisting><anchor xml:id="c11e10d1"/><anchor xml:id="cll_chapter11-section10-example1"/>10.1)  I try to open the door.
-</programlisting>
-  <para>which in Lojban is:</para>
-  <programlisting><anchor xml:id="c11e10d2"/><anchor xml:id="cll_chapter11-section10-example2"/>10.2)  mi troci le nu
-             [mi] gasnu le nu
-                 le vorme cu karbi'o
-       I try the event-of
-             (I am-agent-in the event-of
-                 (the door open-becomes)).
-</programlisting>
-  <para>which has an abstract description within an abstract description, quite a complex structure. In English (but not in all other languages), we may also say:</para>
-  <programlisting><anchor xml:id="c11e10d3"/><anchor xml:id="cll_chapter11-section10-example3"/>10.3)  I try the door.
-</programlisting>
-  <para>where it is understood that what I try is actually not the door itself, but the act of opening it. The same simplification can be done in Lojban, but it must be marked explicitly using a cmavo. The relevant cmavo is “tu'a”, which belongs to selma'o LAhE. The Lojban equivalent of <xref linkend="cll_chapter11-section10-example3"/> is:</para>
-  <programlisting><anchor xml:id="c11e10d4"/><anchor xml:id="cll_chapter11-section10-example4"/>10.4)  mi troci tu'a le vorme
-       I try some-action-to-do-with the door.
-</programlisting>
-  <para>The term “sumti-raising”, as in the title of this section, signifies that a sumti which logically belongs within an abstraction (or even within an abstraction which is itself inside an intermediate abstraction) is “raised” to the main bridi level. This transformation from <xref linkend="cll_chapter11-section10-example2"/> to <xref linkend="cll_chapter11-section10-example4"/> loses information: nothing except convention tells us what the abstraction was.</para>
-  <para>Using “tu'a” is a kind of laziness: it makes speaking easier at the possible expense of clarity for the listener. The speaker must be prepared for the listener to respond something like:</para>
-  <programlisting><anchor xml:id="c11e10d5"/><anchor xml:id="cll_chapter11-section10-example5"/>10.5)  tu'a le vorme lu'u ki'a
-       something-to-do-with the door [terminator] [confusion!]
-</programlisting>
-  <para>which indicates that “tu'a le vorme” cannot be understood. (The terminator for “tu'a” is “lu'u”, and is used in <xref linkend="cll_chapter11-section10-example5"/> to make clear just what is being questioned: the sumti-raising, rather than the word “vorme” as such.) An example of a confusing raised sumti might be:</para>
-  <programlisting><anchor xml:id="c11e10d6"/><anchor xml:id="cll_chapter11-section10-example6"/>10.6)  tu'a la djan. cu cafne
-       something-to-do-with John frequently-occurs
-</programlisting>
-  <para>This must mean that something which John does, or which happens to John, occurs frequently: but without more context there is no way to figure out what. Note that without the “tu'a”, <xref linkend="cll_chapter11-section10-example6"/> would mean that John considered as an event frequently occurs — in other words, that John has some sort of on-and-off existence! Normally we do not think of people as events in English, but the x1 place of “cafne” is an event, and if something that does not seem to be an event is put there, the Lojbanic listener will attempt to construe it as one. (Of course, this analysis assumes that “djan.” is the name of a person, and not the name of some event.)</para>
-  <para>Logically, a counterpart of some sort is needed to “tu'a” which transposes an abstract sumti into a concrete one. This is achieved at the selbri level by the cmavo “jai” (of selma'o JAI). This cmavo has more than one function, discussed in <xref linkend="cll_chapter9"/> and <xref linkend="cll_chapter10"/>; for the purposes of this chapter, it operates as a conversion of selbri, similarly to the cmavo of selma'o SE. This conversion changes</para>
-  <programlisting><anchor xml:id="c11e10d7"/><anchor xml:id="cll_chapter11-section10-example7"/>10.7)  tu'a mi rinka
-             le nu do morsi
-       something-to-do-with me causes
-             the event-of you are-dead
-       My action causes your death.
-</programlisting>
-  <para>into</para>
-  <programlisting><anchor xml:id="c11e10d8"/><anchor xml:id="cll_chapter11-section10-example8"/>10.8)  mi jai rinka le nu do morsi
-       I am-associated-with causing the event-of your death.
-       I cause your death.
-</programlisting>
-  <para>In English, the subject of “cause” can either be the actual cause (an event), or else the agent of the cause (a person, typically); not so in Lojban, where the x1 of “rinka” is always an event. <xref linkend="cll_chapter11-section10-example7"/> and <xref linkend="cll_chapter11-section10-example8"/> look equally convenient (or inconvenient), but in making descriptions, <xref linkend="cll_chapter11-section10-example8"/> can be altered to:</para>
-  <programlisting><anchor xml:id="c11e10d9"/><anchor xml:id="cll_chapter11-section10-example9"/>10.9)  le jai rinka
-             be le nu do morsi
-       that-which-is associated-with causing
-             (the event-of your death)
-       the one who caused your death
-</programlisting>
-  <para>because “jai” modifies the selbri and can be incorporated into the description — not so for “tu'a”.</para>
-  <para>The weakness of “jai” used in descriptions in this way is that it does not specify which argument of the implicit abstraction is being raised into the x1 place of the description selbri. One can be more specific by using the modal form of “jai” explained in <xref linkend="cll_chapter9"/>:</para>
-  <programlisting><anchor xml:id="c11e10d10"/><anchor xml:id="cll_chapter11-section10-example10"/>10.10) le jai gau rinka
-             be le nu do morsi
-       that-which-is agent-in causing
-             (the event-of your death)
-</programlisting>
-</section>
-
-<section xml:id="cll_chapter11-section11">
-  <title>11. Event-type abstractors and event contour tenses</title>
-  <para>This section is a logical continuation of <xref linkend="cll_chapter11-section3"/>.</para>
-  <para>There exists a relationship between the four types of events explained in <xref linkend="cll_chapter11-section3"/> and the event contour tense cmavo of selma'o ZAhO. The specific cmavo of NU and of ZAhO are mutually interdefining; the ZAhO contours were chosen to fit the needs of the NU event types and vice versa. Event contours are explained in full in <xref linkend="cll_chapter10"/>, and only summarized here.</para>
-  <para>The purpose of ZAhO cmavo is to represent the natural portions of an event, such as the beginning, the middle, and the end. They fall into several groups:</para>
-  <itemizedlist>
-    <listitem>
-      <para>The cmavo “pu'o”, “ca'o”, and “ba'o” represent spans of time: before an event begins, while it is going on, and after it is over, respectively.</para>
-    </listitem>
-    <listitem>
-      <para>The cmavo “co'a”, “de'a”, “di'a”, and “co'u” represent points of time: the start of an event, the temporary stopping of an event, the resumption of an event after a stop, and the end of an event, respectively. Not all events can have breaks in them, in which case “de'a” and “di'a” do not apply.</para>
-    </listitem>
-    <listitem>
-      <para>The cmavo “mo'u” and “za'o” correspond to “co'u” and “ba'o” respectively, in the case of those events which have a natural ending point that may not be the same as the actual ending point: “mo'u” refers to the natural ending point, and “za'o” to the time between the natural ending point and the actual ending point (the “excessive” or “superfective” part of the event).</para>
-    </listitem>
-    <listitem>
-      <para>The cmavo “co'i” represents an entire event considered as a point-event or achievement.</para>
-    </listitem>
-  </itemizedlist>
-  <para>All these cmavo are applicable to events seen as processes and abstracted with “pu'u”. Only processes have enough internal structure to make all these points and spans of time meaningful.</para>
-  <para>For events seen as states and abstracted with “za'i”, the meaningful event contours are the spans “pu'o”, “ca'o”, and “ba'o”; the starting and ending points “co'a” and “co'u”, and the achievement contour “co'i”. States do not have natural endings distinct from their actual endings. (It is an open question whether states can be stopped and resumed.)</para>
-  <para>For events seen as activities and abstracted with “zu'o”, the meaningful event contours are the spans “pu'o”, “ca'o”, and “ba'o”, and the achievement contour “co'i”. Because activities are inherently cyclic and repetitive, the beginning and ending points are not well-defined: you do not know whether an activity has truly begun until it begins to repeat.</para>
-  <para>For events seen as point-events and abstracted with “mu'e”, the meaningful event contours are the spans “pu'o” and “ba'o” but not “ca'o” (a point-event has no duration), and the achievement contour “co'i”.</para>
-  <para>Note that the parts of events are themselves events, and may be treated as such. The points in time may be seen as “mu'e” point-events; the spans of time may constitute processes or activities. Therefore, Lojban allows us to refer to processes within processes, activities within states, and many other complicated abstract things.</para>
-</section>
-
-<section xml:id="cll_chapter11-section12">
-  <title>12. Abstractor connection</title>
-  <para>An abstractor may be replaced by two or more abstractors joined by logical or non-logical connectives. Connectives are explained in detail in <xref linkend="cll_chapter14"/>. The connection can be expanded to one between two bridi which differ only in abstraction marker. <xref linkend="cll_chapter11-section12-example1"/> and <xref linkend="cll_chapter11-section12-example2"/> are equivalent in meaning:</para>
-  <programlisting><anchor xml:id="c11e12d1"/><anchor xml:id="cll_chapter11-section12-example1"/>12.1)  le ka la frank. ciska cu xlali
-             .ije le ni la frank. ciska cu xlali
-       The quality-of Frank’s writing is bad,
-             and the quantity of Frank’s writing is bad.
-
-<anchor xml:id="c11e12d2"/><anchor xml:id="cll_chapter11-section12-example2"/>12.2)  le ka je ni la frank. ciska cu xlali
-       The quality and quantity of Frank’s writing is bad.
-</programlisting>
-  <para>This feature of Lojban has hardly ever been used, and nobody knows what uses it may eventually have.</para>
-</section>
-
-<section xml:id="cll_chapter11-section13">
-  <title>13. Table of abstractors</title>
-  <para>The following table gives each abstractor, an English gloss for it, a Lojban gismu which is connected with it (more or less remotely: the associations between abstractors and gismu are meant more as memory hooks than for any kind of inference), the rafsi associated with it, and (on the following line) its place structure.</para>
-  <programlisting>
+    <para>It is sometimes inconvenient, in a situation where an abstract description is logically required, to express the abstraction. In English we can say:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-BYp8">
+      <title>
+        <anchor xml:id="c11e10d1" />
+        <anchor xml:id="cll_chapter11-section10-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>I try to open the door.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>which in Lojban is:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-1WER">
+      <title>
+        <anchor xml:id="c11e10d2" />
+        <anchor xml:id="cll_chapter11-section10-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi troci le nu</jbo>
+        <gloss>[mi] gasnu le nu</gloss>
+        <gloss>le vorme cu karbi'o</gloss>
+        <gloss>I try the event-of</gloss>
+        <gloss>(I am-agent-in the event-of</gloss>
+        <en>(the door open-becomes)).</en>
+      </interlinear-gloss>
+    </example>
+    <para>which has an abstract description within an abstract description, quite a complex structure. In English (but not in all other languages), we may also say:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-K14X">
+      <title>
+        <anchor xml:id="c11e10d3" />
+        <anchor xml:id="cll_chapter11-section10-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>I try the door.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>where it is understood that what I try is actually not the door itself, but the act of opening it. The same simplification can be done in Lojban, but it must be marked explicitly using a cmavo. The relevant cmavo is 
+    <quote>tu'a</quote>, which belongs to selma'o LAhE. The Lojban equivalent of 
+    <xref linkend="cll_chapter11-section10-example3" />is:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-gabC">
+      <title>
+        <anchor xml:id="c11e10d4" />
+        <anchor xml:id="cll_chapter11-section10-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi troci tu'a le vorme</jbo>
+        <en>I try some-action-to-do-with the door.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The term 
+    <quote>sumti-raising</quote>, as in the title of this section, signifies that a sumti which logically belongs within an abstraction (or even within an abstraction which is itself inside an intermediate abstraction) is 
+    <quote>raised</quote>to the main bridi level. This transformation from 
+    <xref linkend="cll_chapter11-section10-example2" />to 
+    <xref linkend="cll_chapter11-section10-example4" />loses information: nothing except convention tells us what the abstraction was.</para>
+    <para>Using 
+    <quote>tu'a</quote>is a kind of laziness: it makes speaking easier at the possible expense of clarity for the listener. The speaker must be prepared for the listener to respond something like:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-mKBy">
+      <title>
+        <anchor xml:id="c11e10d5" />
+        <anchor xml:id="cll_chapter11-section10-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>tu'a le vorme lu'u ki'a</jbo>
+        <en>something-to-do-with the door [terminator] [confusion!]</en>
+      </interlinear-gloss>
+    </example>
+    <para>which indicates that 
+    <quote>tu'a le vorme</quote>cannot be understood. (The terminator for 
+    <quote>tu'a</quote>is 
+    <quote>lu'u</quote>, and is used in 
+    <xref linkend="cll_chapter11-section10-example5" />to make clear just what is being questioned: the sumti-raising, rather than the word 
+    <quote>vorme</quote>as such.) An example of a confusing raised sumti might be:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-9S5B">
+      <title>
+        <anchor xml:id="c11e10d6" />
+        <anchor xml:id="cll_chapter11-section10-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>tu'a la djan. cu cafne</jbo>
+        <en>something-to-do-with John frequently-occurs</en>
+      </interlinear-gloss>
+    </example>
+    <para>This must mean that something which John does, or which happens to John, occurs frequently: but without more context there is no way to figure out what. Note that without the 
+    <quote>tu'a</quote>, 
+    <xref linkend="cll_chapter11-section10-example6" />would mean that John considered as an event frequently occurs - in other words, that John has some sort of on-and-off existence! Normally we do not think of people as events in English, but the x1 place of 
+    <quote>cafne</quote>is an event, and if something that does not seem to be an event is put there, the Lojbanic listener will attempt to construe it as one. (Of course, this analysis assumes that 
+    <quote>djan.</quote>is the name of a person, and not the name of some event.)</para>
+    <para>Logically, a counterpart of some sort is needed to 
+    <quote>tu'a</quote>which transposes an abstract sumti into a concrete one. This is achieved at the selbri level by the cmavo 
+    <quote>jai</quote>(of selma'o JAI). This cmavo has more than one function, discussed in 
+    <xref linkend="cll_chapter9" />and 
+    <xref linkend="cll_chapter10" />; for the purposes of this chapter, it operates as a conversion of selbri, similarly to the cmavo of selma'o SE. This conversion changes</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-jAdY">
+      <title>
+        <anchor xml:id="c11e10d7" />
+        <anchor xml:id="cll_chapter11-section10-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>tu'a mi rinka</jbo>
+        <gloss>le nu do morsi</gloss>
+        <gloss>something-to-do-with me causes</gloss>
+        <gloss>the event-of you are-dead</gloss>
+        <en>My action causes your death.</en>
+      </interlinear-gloss>
+    </example>
+    <para>into</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-R8SN">
+      <title>
+        <anchor xml:id="c11e10d8" />
+        <anchor xml:id="cll_chapter11-section10-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi jai rinka le nu do morsi</jbo>
+        <gloss>I am-associated-with causing the event-of your death.</gloss>
+        <en>I cause your death.</en>
+      </interlinear-gloss>
+    </example>
+    <para>In English, the subject of 
+    <quote>cause</quote>can either be the actual cause (an event), or else the agent of the cause (a person, typically); not so in Lojban, where the x1 of 
+    <quote>rinka</quote>is always an event. 
+    <xref linkend="cll_chapter11-section10-example7" />and 
+    <xref linkend="cll_chapter11-section10-example8" />look equally convenient (or inconvenient), but in making descriptions, 
+    <xref linkend="cll_chapter11-section10-example8" />can be altered to:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Jt1n">
+      <title>
+        <anchor xml:id="c11e10d9" />
+        <anchor xml:id="cll_chapter11-section10-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le jai rinka</jbo>
+        <gloss>be le nu do morsi</gloss>
+        <gloss>that-which-is associated-with causing</gloss>
+        <gloss>(the event-of your death)</gloss>
+        <en>the one who caused your death</en>
+      </interlinear-gloss>
+    </example>
+    <para>because 
+    <quote>jai</quote>modifies the selbri and can be incorporated into the description - not so for 
+    <quote>tu'a</quote>.</para>
+    <para>The weakness of 
+    <quote>jai</quote>used in descriptions in this way is that it does not specify which argument of the implicit abstraction is being raised into the x1 place of the description selbri. One can be more specific by using the modal form of 
+    <quote>jai</quote>explained in 
+    <xref linkend="cll_chapter9" />:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-LPbo">
+      <title>
+        <anchor xml:id="c11e10d10" />
+        <anchor xml:id="cll_chapter11-section10-example10" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le jai gau rinka</jbo>
+        <gloss>be le nu do morsi</gloss>
+        <gloss>that-which-is agent-in causing</gloss>
+        <en>(the event-of your death)</en>
+      </interlinear-gloss>
+    </example>
+  </section>
+  <section xml:id="cll_chapter11-section11">
+    <title>11. Event-type abstractors and event contour tenses</title>
+    <para>This section is a logical continuation of 
+    <xref linkend="cll_chapter11-section3" />.</para>
+    <para>There exists a relationship between the four types of events explained in 
+    <xref linkend="cll_chapter11-section3" />and the event contour tense cmavo of selma'o ZAhO. The specific cmavo of NU and of ZAhO are mutually interdefining; the ZAhO contours were chosen to fit the needs of the NU event types and vice versa. Event contours are explained in full in 
+    <xref linkend="cll_chapter10" />, and only summarized here.</para>
+    <para>The purpose of ZAhO cmavo is to represent the natural portions of an event, such as the beginning, the middle, and the end. They fall into several groups:</para>
+    <itemizedlist>
+      <listitem>
+        <para>The cmavo 
+        <quote>pu'o</quote>, 
+        <quote>ca'o</quote>, and 
+        <quote>ba'o</quote>represent spans of time: before an event begins, while it is going on, and after it is over, respectively.</para>
+      </listitem>
+      <listitem>
+        <para>The cmavo 
+        <quote>co'a</quote>, 
+        <quote>de'a</quote>, 
+        <quote>di'a</quote>, and 
+        <quote>co'u</quote>represent points of time: the start of an event, the temporary stopping of an event, the resumption of an event after a stop, and the end of an event, respectively. Not all events can have breaks in them, in which case 
+        <quote>de'a</quote>and 
+        <quote>di'a</quote>do not apply.</para>
+      </listitem>
+      <listitem>
+        <para>The cmavo 
+        <quote>mo'u</quote>and 
+        <quote>za'o</quote>correspond to 
+        <quote>co'u</quote>and 
+        <quote>ba'o</quote>respectively, in the case of those events which have a natural ending point that may not be the same as the actual ending point: 
+        <quote>mo'u</quote>refers to the natural ending point, and 
+        <quote>za'o</quote>to the time between the natural ending point and the actual ending point (the 
+        <quote>excessive</quote>or 
+        <quote>superfective</quote>part of the event).</para>
+      </listitem>
+      <listitem>
+        <para>The cmavo 
+        <quote>co'i</quote>represents an entire event considered as a point-event or achievement.</para>
+      </listitem>
+    </itemizedlist>
+    <para>All these cmavo are applicable to events seen as processes and abstracted with 
+    <quote>pu'u</quote>. Only processes have enough internal structure to make all these points and spans of time meaningful.</para>
+    <para>For events seen as states and abstracted with 
+    <quote>za'i</quote>, the meaningful event contours are the spans 
+    <quote>pu'o</quote>, 
+    <quote>ca'o</quote>, and 
+    <quote>ba'o</quote>; the starting and ending points 
+    <quote>co'a</quote>and 
+    <quote>co'u</quote>, and the achievement contour 
+    <quote>co'i</quote>. States do not have natural endings distinct from their actual endings. (It is an open question whether states can be stopped and resumed.)</para>
+    <para>For events seen as activities and abstracted with 
+    <quote>zu'o</quote>, the meaningful event contours are the spans 
+    <quote>pu'o</quote>, 
+    <quote>ca'o</quote>, and 
+    <quote>ba'o</quote>, and the achievement contour 
+    <quote>co'i</quote>. Because activities are inherently cyclic and repetitive, the beginning and ending points are not well-defined: you do not know whether an activity has truly begun until it begins to repeat.</para>
+    <para>For events seen as point-events and abstracted with 
+    <quote>mu'e</quote>, the meaningful event contours are the spans 
+    <quote>pu'o</quote>and 
+    <quote>ba'o</quote>but not 
+    <quote>ca'o</quote>(a point-event has no duration), and the achievement contour 
+    <quote>co'i</quote>.</para>
+    <para>Note that the parts of events are themselves events, and may be treated as such. The points in time may be seen as 
+    <quote>mu'e</quote>point-events; the spans of time may constitute processes or activities. Therefore, Lojban allows us to refer to processes within processes, activities within states, and many other complicated abstract things.</para>
+  </section>
+  <section xml:id="cll_chapter11-section12">
+    <title>12. Abstractor connection</title>
+    <para>An abstractor may be replaced by two or more abstractors joined by logical or non-logical connectives. Connectives are explained in detail in 
+    <xref linkend="cll_chapter14" />. The connection can be expanded to one between two bridi which differ only in abstraction marker. 
+    <xref linkend="cll_chapter11-section12-example1" />and 
+    <xref linkend="cll_chapter11-section12-example2" />are equivalent in meaning:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-hybU">
+      <title>
+        <anchor xml:id="c11e12d1" />
+        <anchor xml:id="cll_chapter11-section12-example1" />
+        <anchor xml:id="c11e12d2" />
+        <anchor xml:id="cll_chapter11-section12-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le ka la frank. ciska cu xlali</jbo>
+        <gloss>.ije le ni la frank. ciska cu xlali</gloss>
+        <gloss>The quality-of Frank's writing is bad,</gloss>
+        <en>and the quantity of Frank's writing is bad.</en>
+        <jbo>le ka je ni la frank. ciska cu xlali</jbo>
+        <en>The quality and quantity of Frank's writing is bad.</en>
+      </interlinear-gloss>
+    </example>
+    <para>This feature of Lojban has hardly ever been used, and nobody knows what uses it may eventually have.</para>
+  </section>
+  <section xml:id="cll_chapter11-section13">
+    <title>13. Table of abstractors</title>
+    <para>The following table gives each abstractor, an English gloss for it, a Lojban gismu which is connected with it (more or less remotely: the associations between abstractors and gismu are meant more as memory hooks than for any kind of inference), the rafsi associated with it, and (on the following line) its place structure.</para>
+    <programlisting xml:space="preserve">
 nu      event of        fasnu  nun
        x1 is an event of (the bridi)
 ka      property of     ckaji  kam
@@ -614,7 +1353,5 @@ pu'u    process of      pruce  pup
 mu'e    point-event of  mulno  mub
        x1 is a point-event/achievement of (the bridi)
 </programlisting>
-</section>
-
-
+  </section>
 </chapter>

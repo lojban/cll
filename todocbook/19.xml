@@ -1,116 +1,282 @@
 <chapter xml:id="cll_chapter19">
-  <title>Chapter 19
-Putting It All Together: Notes on the Structure of Lojban Texts</title>
-
-
-<section xml:id="cll_chapter19-section1">
-  <title>1. Introductory</title>
-  <para>This chapter is incurably miscellaneous. It describes the cmavo that specify the structure of Lojban texts, from the largest scale (paragraphs) to the smallest (single words). There are fewer examples than are found in other chapters of this book, since the linguistic mechanisms described are generally made use of in conversation or else in long documents.</para>
-  <para>This chapter is also not very self-contained. It makes passing reference to a great many concepts which are explained in full only in other chapters. The alternative would be a chapter on text structure which was as complex as all the other chapters put together. Lojban is a unified language, and it is not possible to understand any part of it (in full) before understanding every part of it (to some degree).</para>
-</section>
-
-<section xml:id="cll_chapter19-section2">
-  <title>2. Sentences: I</title>
-  <para>The following cmavo is discussed in this section:</para>
-  <programlisting>
+  <title>Chapter 19 Putting It All Together: Notes on the Structure of Lojban Texts</title>
+  <section xml:id="cll_chapter19-section1">
+    <title>1. Introductory</title>
+    <para>This chapter is incurably miscellaneous. It describes the cmavo that specify the structure of Lojban texts, from the largest scale (paragraphs) to the smallest (single words). There are fewer examples than are found in other chapters of this book, since the linguistic mechanisms described are generally made use of in conversation or else in long documents.</para>
+    <para>This chapter is also not very self-contained. It makes passing reference to a great many concepts which are explained in full only in other chapters. The alternative would be a chapter on text structure which was as complex as all the other chapters put together. Lojban is a unified language, and it is not possible to understand any part of it (in full) before understanding every part of it (to some degree).</para>
+  </section>
+  <section xml:id="cll_chapter19-section2">
+    <title>2. Sentences: I</title>
+    <para>The following cmavo is discussed in this section:</para>
+    <programlisting xml:space="preserve">
      .i      I       sentence separator
 </programlisting>
-  <para>Since Lojban is audio-visually isomorphic, there needs to be a spoken and written way of signaling the end of a sentence and the start of the following one. In written English, a period serves this purpose; in spoken English, a tone contour (rising or falling) usually does the job, or sometimes a long pause. Lojban uses a single separator: the cmavo “.i” (of selma'o I):</para>
-  <programlisting><anchor xml:id="c19e2d1"/><anchor xml:id="cll_chapter19-section2-example1"/>2.1)   mi klama le zarci .i do cadzu le bisli
-       I go to-the store. You walk on-the ice.
-</programlisting>
-  <para>The word “separator” should be noted. “.i” is not normally used after the last sentence nor before the first one, although both positions are technically grammatical. “.i” signals a new sentence on the same topic, not necessarily by the same speaker. The relationship between the sentences is left vague, except in stories, where the relationship usually is temporal, and the following sentence states something that happened after the previous sentence.</para>
-  <para>Note that although the first letter of an English sentence is capitalized, the cmavo “.i” is never capitalized. In writing, it is appropriate to place extra space before “.i” to make it stand out better for the reader. In some styles of Lojban writing, every “.i” is placed at the beginning of a line, possibly leaving space at the end of the previous line.</para>
-  <para>An “.i” cmavo may or may not be used when the speaker of the following sentence is different from the speaker of the preceding sentence, depending on whether the sentences are felt to be connected or not.</para>
-  <para>An “.i” cmavo can be compounded with a logical or non-logical connective (a jek or joik), a modal or tense connective, or both: these constructs are explained in <xref linkend="cll_chapter9"/>, <xref linkend="cll_chapter10"/>, and <xref linkend="cll_chapter14"/>. In all cases, the “.i” comes first in the compound. Attitudinals can also be attached to an “.i” if they are meant to apply to the whole sentence: see <xref linkend="cll_chapter13"/>.</para>
-  <para>There exist a pair of mechanisms for binding a sequence of sentences closely together. If the “.i” (with or without connectives) is followed by “bo” (of selma'o BO), then the two sentences being separated are understood to be more closely grouped than sentences connected by “.i” alone.</para>
-  <para>Similarly, a group of sentences can be preceded by “tu'e” (of selma'o TUhE) and followed by “tu'u” (of selma'o TUhU) to fuse them into a single unit. A common use of “tu'e ... tu'u” is to group the sentences which compose a poem: the title sentence would precede the group, separated from it by “.i”. Another use might be a set of directions, where each numbered direction might be surrounded by “tu'e ... tu'u” and contain one or more sentences separated by “.i”. Grouping with “tu'e” and “tu'u” is analogous to grouping with “ke” and “ke'e” to establish the scope of logical or non-logical connectives (see <xref linkend="cll_chapter14"/>).</para>
-</section>
-
-<section xml:id="cll_chapter19-section3">
-  <title>3. Paragraphs: NIhO</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+    <para>Since Lojban is audio-visually isomorphic, there needs to be a spoken and written way of signaling the end of a sentence and the start of the following one. In written English, a period serves this purpose; in spoken English, a tone contour (rising or falling) usually does the job, or sometimes a long pause. Lojban uses a single separator: the cmavo 
+    <quote>.i</quote>(of selma'o I):</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-XKAG">
+      <title>
+        <anchor xml:id="c19e2d1" />
+        <anchor xml:id="cll_chapter19-section2-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi klama le zarci .i do cadzu le bisli</jbo>
+        <en>I go to-the store. You walk on-the ice.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The word 
+    <quote>separator</quote>should be noted. 
+    <quote>.i</quote>is not normally used after the last sentence nor before the first one, although both positions are technically grammatical. 
+    <quote>.i</quote>signals a new sentence on the same topic, not necessarily by the same speaker. The relationship between the sentences is left vague, except in stories, where the relationship usually is temporal, and the following sentence states something that happened after the previous sentence.</para>
+    <para>Note that although the first letter of an English sentence is capitalized, the cmavo 
+    <quote>.i</quote>is never capitalized. In writing, it is appropriate to place extra space before 
+    <quote>.i</quote>to make it stand out better for the reader. In some styles of Lojban writing, every 
+    <quote>.i</quote>is placed at the beginning of a line, possibly leaving space at the end of the previous line.</para>
+    <para>An 
+    <quote>.i</quote>cmavo may or may not be used when the speaker of the following sentence is different from the speaker of the preceding sentence, depending on whether the sentences are felt to be connected or not.</para>
+    <para>An 
+    <quote>.i</quote>cmavo can be compounded with a logical or non-logical connective (a jek or joik), a modal or tense connective, or both: these constructs are explained in 
+    <xref linkend="cll_chapter9" />, 
+    <xref linkend="cll_chapter10" />, and 
+    <xref linkend="cll_chapter14" />. In all cases, the 
+    <quote>.i</quote>comes first in the compound. Attitudinals can also be attached to an 
+    <quote>.i</quote>if they are meant to apply to the whole sentence: see 
+    <xref linkend="cll_chapter13" />.</para>
+    <para>There exist a pair of mechanisms for binding a sequence of sentences closely together. If the 
+    <quote>.i</quote>(with or without connectives) is followed by 
+    <quote>bo</quote>(of selma'o BO), then the two sentences being separated are understood to be more closely grouped than sentences connected by 
+    <quote>.i</quote>alone.</para>
+    <para>Similarly, a group of sentences can be preceded by 
+    <quote>tu'e</quote>(of selma'o TUhE) and followed by 
+    <quote>tu'u</quote>(of selma'o TUhU) to fuse them into a single unit. A common use of 
+    <quote>tu'e ... tu'u</quote>is to group the sentences which compose a poem: the title sentence would precede the group, separated from it by 
+    <quote>.i</quote>. Another use might be a set of directions, where each numbered direction might be surrounded by 
+    <quote>tu'e ... tu'u</quote>and contain one or more sentences separated by 
+    <quote>.i</quote>. Grouping with 
+    <quote>tu'e</quote>and 
+    <quote>tu'u</quote>is analogous to grouping with 
+    <quote>ke</quote>and 
+    <quote>ke'e</quote>to establish the scope of logical or non-logical connectives (see 
+    <xref linkend="cll_chapter14" />).</para>
+  </section>
+  <section xml:id="cll_chapter19-section3">
+    <title>3. Paragraphs: NIhO</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      ni'o    NIhO    new topic
      no'i    NIhO    old topic
 
      da'o    DAhO    cancel cmavo assignments
 </programlisting>
-  <para>The paragraph is a concept used in writing systems for two purposes: to indicate changes of topic, and to break up the hard-to-read appearance of large blocks of text on the page. The former function is represented in both spoken and written Lojban by the cmavo “ni'o” and “no'i”, both of selma'o NIhO. Of these two, “ni'o” is the more common. By convention, written Lojban is broken into paragraphs just before any “ni'o” or “no'i”, but a very long passage on a single topic might be paragraphed before an “.i”. On the other hand, it is conventional in English to start a new paragraph in dialogue when a new speaker starts, but this convention is not commonly observed in Lojban dialogues. Of course, none of these conventions affect meaning in any way.</para>
-  <para>A “ni'o” can take the place of an “.i” as a sentence separator, and in addition signals a new topic or paragraph. Grammatically, any number of “ni'o” cmavo can appear consecutively and are equivalent to a single one; semantically, a greater number of “ni'o” cmavo indicates a larger-scale change of topic. This feature allows complexly structured text, with topics, subtopics, and sub-subtopics, to be represented clearly and unambiguously in both spoken and written Lojban. However, some conventional differences do exist between “ni'o” in writing and in conversation.</para>
-  <para>In written text, a single “ni'o” is a mere discursive indicator of a new subject, whereas “ni'oni'o” marks a change in the context. In this situation, “ni'oni'o” implicitly cancels the definitions of all pro-sumti of selma'o KOhA as well as pro-bridi of selma'o GOhA. (Explicit cancelling is expressed by the cmavo “da'o” of selma'o DAhO, which has the free grammar of an indicator – it can appear almost anywhere.) The use of “ni'oni'o” does not affect indicators (of selma'o UI) or tense references, but “ni'oni'oni'o”, indicating a drastic change of topic, would serve to reset both indicators and tenses. (See <xref linkend="cll_chapter19-section8"/> for a discussion of indicator scope.)</para>
-  <para>In spoken text, which is inherently less structured, these levels are reduced by one, with “ni'o” indicating a change in context sufficient to cancel pro-sumti and pro-bridi assignment. On the other hand, in a book, or in stories within stories such as “The Arabian Nights”, further levels may be expressed by extending the “ni'o” string as needed. Normally, a written text will begin with the number of “ni'o” cmavo needed to signal the largest scale division which the text contains. “ni'o” strings may be subscripted to label each context of discourse: see <xref linkend="cll_chapter19-section6"/>.</para>
-  <para>“no'i” is similar in effect to “ni'o”, but indicates the resumption of a previous topic. In speech, it is analogous to (but much shorter than) such English discursive phrases as “But getting back to the point ... ”. By default, the topic resumed is that in effect before the last “ni'o”. When subtopics are nested within topics, then “no'i” would resume the previous subtopic and “no'ino'i” the previous topic. Note that “no'i” also resumes tense and pro-sumti assignments dropped at the previous “ni'o”.</para>
-  <para>If a “ni'o” is subscripted, then a “no'i” with the same subscript is assumed to be a continuation of it. A “no'i” may also have a negative subscript, which would specify counting backwards a number of paragraphs and resuming the topic found thereby.</para>
-</section>
-
-<section xml:id="cll_chapter19-section4">
-  <title>4. Topic-comment sentences: ZOhU</title>
-  <para>The following cmavo is discussed in this section:</para>
-  <programlisting>
+    <para>The paragraph is a concept used in writing systems for two purposes: to indicate changes of topic, and to break up the hard-to-read appearance of large blocks of text on the page. The former function is represented in both spoken and written Lojban by the cmavo 
+    <quote>ni'o</quote>and 
+    <quote>no'i</quote>, both of selma'o NIhO. Of these two, 
+    <quote>ni'o</quote>is the more common. By convention, written Lojban is broken into paragraphs just before any 
+    <quote>ni'o</quote>or 
+    <quote>no'i</quote>, but a very long passage on a single topic might be paragraphed before an 
+    <quote>.i</quote>. On the other hand, it is conventional in English to start a new paragraph in dialogue when a new speaker starts, but this convention is not commonly observed in Lojban dialogues. Of course, none of these conventions affect meaning in any way.</para>
+    <para>A 
+    <quote>ni'o</quote>can take the place of an 
+    <quote>.i</quote>as a sentence separator, and in addition signals a new topic or paragraph. Grammatically, any number of 
+    <quote>ni'o</quote>cmavo can appear consecutively and are equivalent to a single one; semantically, a greater number of 
+    <quote>ni'o</quote>cmavo indicates a larger-scale change of topic. This feature allows complexly structured text, with topics, subtopics, and sub-subtopics, to be represented clearly and unambiguously in both spoken and written Lojban. However, some conventional differences do exist between 
+    <quote>ni'o</quote>in writing and in conversation.</para>
+    <para>In written text, a single 
+    <quote>ni'o</quote>is a mere discursive indicator of a new subject, whereas 
+    <quote>ni'oni'o</quote>marks a change in the context. In this situation, 
+    <quote>ni'oni'o</quote>implicitly cancels the definitions of all pro-sumti of selma'o KOhA as well as pro-bridi of selma'o GOhA. (Explicit cancelling is expressed by the cmavo 
+    <quote>da'o</quote>of selma'o DAhO, which has the free grammar of an indicator – it can appear almost anywhere.) The use of 
+    <quote>ni'oni'o</quote>does not affect indicators (of selma'o UI) or tense references, but 
+    <quote>ni'oni'oni'o</quote>, indicating a drastic change of topic, would serve to reset both indicators and tenses. (See 
+    <xref linkend="cll_chapter19-section8" />for a discussion of indicator scope.)</para>
+    <para>In spoken text, which is inherently less structured, these levels are reduced by one, with 
+    <quote>ni'o</quote>indicating a change in context sufficient to cancel pro-sumti and pro-bridi assignment. On the other hand, in a book, or in stories within stories such as 
+    <quote>The Arabian Nights</quote>, further levels may be expressed by extending the 
+    <quote>ni'o</quote>string as needed. Normally, a written text will begin with the number of 
+    <quote>ni'o</quote>cmavo needed to signal the largest scale division which the text contains. 
+    <quote>ni'o</quote>strings may be subscripted to label each context of discourse: see 
+    <xref linkend="cll_chapter19-section6" />.</para>
+    <para>
+    <quote>no'i</quote>is similar in effect to 
+    <quote>ni'o</quote>, but indicates the resumption of a previous topic. In speech, it is analogous to (but much shorter than) such English discursive phrases as 
+    <quote>But getting back to the point ...</quote>. By default, the topic resumed is that in effect before the last 
+    <quote>ni'o</quote>. When subtopics are nested within topics, then 
+    <quote>no'i</quote>would resume the previous subtopic and 
+    <quote>no'ino'i</quote>the previous topic. Note that 
+    <quote>no'i</quote>also resumes tense and pro-sumti assignments dropped at the previous 
+    <quote>ni'o</quote>.</para>
+    <para>If a 
+    <quote>ni'o</quote>is subscripted, then a 
+    <quote>no'i</quote>with the same subscript is assumed to be a continuation of it. A 
+    <quote>no'i</quote>may also have a negative subscript, which would specify counting backwards a number of paragraphs and resuming the topic found thereby.</para>
+  </section>
+  <section xml:id="cll_chapter19-section4">
+    <title>4. Topic-comment sentences: ZOhU</title>
+    <para>The following cmavo is discussed in this section:</para>
+    <programlisting xml:space="preserve">
      zo'u    ZOhU    topic/comment separator
 </programlisting>
-  <para>The normal Lojban sentence is just a bridi, parallel to the normal English sentence which has a subject and a predicate:</para>
-  <programlisting><anchor xml:id="c19e4d1"/><anchor xml:id="cll_chapter19-section4-example1"/>4.1)   mi klama le zarci
-       I went to the market
-</programlisting>
-  <para>In Chinese, the normal sentence form is different: a topic is stated, and a comment about it is made. (Japanese also has the concept of a topic, but indicates it by attaching a suffix; other languages also distinguish topics in various ways.) The topic says what the sentence is about:</para>
-  <programlisting><anchor xml:id="c19e4d2"/><anchor xml:id="cll_chapter19-section4-example2"/>4.2)   zhe<superscript>4</superscript> xiao<superscript>1</superscript>xi<superscript>2</superscript>   wo<superscript>3</superscript> zhi<superscript>1</superscript>dao le
-       this news      I know [perfective]
-       As for this news, I knew it.
-       I’ve heard this news already.
-</programlisting>
-  <para>The wide space in the first two versions of <xref linkend="cll_chapter19-section4-example2"/> separate the topic (“this news”) from the comment (“I know already”).</para>
-  <para>Lojban uses the cmavo “zo'u” (of selma'o ZOhU) to separate topic (a sumti) from comment (a bridi):</para>
-  <programlisting><anchor xml:id="c19e4d3"/><anchor xml:id="cll_chapter19-section4-example3"/>4.3)   le nuzba zo'u mi ba'o djuno
-       The news : I [perfective] know.
-</programlisting>
-  <para><xref linkend="cll_chapter19-section4-example3"/> is the literal Lojban translation of <xref linkend="cll_chapter19-section4-example2"/>. Of course, the topic-comment structure can be changed to a straightforward bridi structure:</para>
-  <programlisting><anchor xml:id="c19e4d4"/><anchor xml:id="cll_chapter19-section4-example4"/>4.4)   mi ba'o djuno le nuzba
-       I [perfective] know the news.
-</programlisting>
-  <para><xref linkend="cll_chapter19-section4-example4"/> means the same as <xref linkend="cll_chapter19-section4-example3"/>, and it is simpler. However, often the position of the topic in the place structure of the selbri within the comment is vague:</para>
-  <programlisting><anchor xml:id="c19e4d5"/><anchor xml:id="cll_chapter19-section4-example5"/>4.5)   le finpe zo'u citka
-       the fish : eat
-</programlisting>
-  <para>Is the fish eating or being eaten? The sentence doesn’t say. The Chinese equivalent of <xref linkend="cll_chapter19-section4-example5"/> is:</para>
-  <programlisting><anchor xml:id="c19e4d6"/><anchor xml:id="cll_chapter19-section4-example6"/>4.6)   yu<superscript>2</superscript>    chi<superscript>1</superscript>
-       fish   eat
-</programlisting>
-  <para>which is vague in exactly the same way.</para>
-  <para>Grammatically, it is possible to have more than one sumti before “zo'u”. This is not normally useful in topic-comment sentences, but is necessary in the other use of “zo'u”: to separate a quantifying section from a bridi containing quantified variables. This usage belongs to a discussion of quantifier logic in Lojban (see <xref linkend="cll_chapter16"/>), but an example would be:</para>
-  <programlisting><anchor xml:id="c19e4d7"/><anchor xml:id="cll_chapter19-section4-example7"/>4.7)   roda poi prenu ku'o su'ode zo'u de patfu da
-        For-all X which-are-persons, there-exists-a-Y such-that Y is the father of X.
-        Every person has a father.
-</programlisting>
-  <para>The string of sumti before “zo'u” (called the “prenex”: see <xref linkend="cll_chapter16"/>) may contain both a topic and bound variables:</para>
-  <programlisting><anchor xml:id="c19e4d8"/><anchor xml:id="cll_chapter19-section4-example8"/>4.8)   loi patfu roda poi prenu ku'o
-            su'ode zo'u de patfu da
-       For-the-mass-of fathers for-all X which-are-persons,
-            there-exists-a-Y such-that Y is the father of X.
-       As for fathers, every person has one.
-</programlisting>
-  <para>To specify a topic which affects more than one sentence, wrap the sentences in “tu'e ... tu'u” brackets and place the topic and the “zo'u” directly in front. This is the exception to the rule that a topic attaches directly to a sentence:</para>
-  <programlisting><anchor xml:id="c19e4d9"/><anchor xml:id="cll_chapter19-section4-example9"/>4.9)   loi jdini zo'u tu'e do ponse .inaja do djica [tu'u]
-       The-mass-of money :  ( [if] you possess, then you want )
-       Money: if you have it, you want it.
-</programlisting>
-  <para>Note: In Lojban, you do not “want money”; you “want to have money” or something of the sort, as the x2 place of “djica” demands an event. As a result, the straightforward rendering of <xref linkend="cll_chapter19-section4-example8"/> without a topic is not:</para>
-  <programlisting><anchor xml:id="c19e4d10"/><anchor xml:id="cll_chapter19-section4-example10"/>4.10)  do ponse loi jdini .inaja do djica ri
-       You possess money only-if you desire its-mere-existence.
-</programlisting>
-  <para>where “ri” means “loi jdini” and is interpreted as “the mere existence of money”, but rather:</para>
-  <programlisting><anchor xml:id="c19e4d11"/><anchor xml:id="cll_chapter19-section4-example11"/>4.11)  do ponse loi jdini .inaja do djica tu'a ri
-       You possess money only-if you desire something-about it.
-</programlisting>
-  <para>namely, the possession of money. But topic-comment sentences like <xref linkend="cll_chapter19-section4-example9"/> are inherently vague, and this difference between “ponse” (which expects a physical object in x2) and “djica” is ignored. See <xref linkend="cll_chapter19-section9-example3"/> for another topic/comment sentence.</para>
-  <para>The subject of an English sentence is often the topic as well, but in Lojban the sumti in the x1 place is not necessarily the topic, especially if it is the normal (unconverted) x1 for the selbri. Thus Lojban sentences don’t necessarily have a “subject” in the English sense.</para>
-</section>
-
-<section xml:id="cll_chapter19-section5">
-  <title>5. Questions and answers</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+    <para>The normal Lojban sentence is just a bridi, parallel to the normal English sentence which has a subject and a predicate:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-4WsN">
+      <title>
+        <anchor xml:id="c19e4d1" />
+        <anchor xml:id="cll_chapter19-section4-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi klama le zarci</jbo>
+        <en>I went to the market</en>
+      </interlinear-gloss>
+    </example>
+    <para>In Chinese, the normal sentence form is different: a topic is stated, and a comment about it is made. (Japanese also has the concept of a topic, but indicates it by attaching a suffix; other languages also distinguish topics in various ways.) The topic says what the sentence is about:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-ovFJ">
+      <title>
+        <anchor xml:id="c19e4d2" />
+        <anchor xml:id="cll_chapter19-section4-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>zhe</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>The wide space in the first two versions of 
+    <xref linkend="cll_chapter19-section4-example2" />separate the topic (
+    <quote>this news</quote>) from the comment (
+    <quote>I know already</quote>).</para>
+    <para>Lojban uses the cmavo 
+    <quote>zo'u</quote>(of selma'o ZOhU) to separate topic (a sumti) from comment (a bridi):</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-p4ww">
+      <title>
+        <anchor xml:id="c19e4d3" />
+        <anchor xml:id="cll_chapter19-section4-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le nuzba zo'u mi ba'o djuno</jbo>
+        <en>The news : I [perfective] know.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter19-section4-example3" />is the literal Lojban translation of 
+    <xref linkend="cll_chapter19-section4-example2" />. Of course, the topic-comment structure can be changed to a straightforward bridi structure:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-V2B4">
+      <title>
+        <anchor xml:id="c19e4d4" />
+        <anchor xml:id="cll_chapter19-section4-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi ba'o djuno le nuzba</jbo>
+        <en>I [perfective] know the news.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter19-section4-example4" />means the same as 
+    <xref linkend="cll_chapter19-section4-example3" />, and it is simpler. However, often the position of the topic in the place structure of the selbri within the comment is vague:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-tpcK">
+      <title>
+        <anchor xml:id="c19e4d5" />
+        <anchor xml:id="cll_chapter19-section4-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le finpe zo'u citka</jbo>
+        <en>the fish : eat</en>
+      </interlinear-gloss>
+    </example>
+    <para>Is the fish eating or being eaten? The sentence doesn't say. The Chinese equivalent of 
+    <xref linkend="cll_chapter19-section4-example5" />is:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-N6H3">
+      <title>
+        <anchor xml:id="c19e4d6" />
+        <anchor xml:id="cll_chapter19-section4-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>yu</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>which is vague in exactly the same way.</para>
+    <para>Grammatically, it is possible to have more than one sumti before 
+    <quote>zo'u</quote>. This is not normally useful in topic-comment sentences, but is necessary in the other use of 
+    <quote>zo'u</quote>: to separate a quantifying section from a bridi containing quantified variables. This usage belongs to a discussion of quantifier logic in Lojban (see 
+    <xref linkend="cll_chapter16" />), but an example would be:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-6yRx">
+      <title>
+        <anchor xml:id="c19e4d7" />
+        <anchor xml:id="cll_chapter19-section4-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>roda poi prenu ku'o su'ode zo'u de patfu da</jbo>
+        <gloss>For-all X which-are-persons, there-exists-a-Y such-that Y is the father of X.</gloss>
+        <en>Every person has a father.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The string of sumti before 
+    <quote>zo'u</quote>(called the 
+    <quote>prenex</quote>: see 
+    <xref linkend="cll_chapter16" />) may contain both a topic and bound variables:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-ggMy">
+      <title>
+        <anchor xml:id="c19e4d8" />
+        <anchor xml:id="cll_chapter19-section4-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>loi patfu roda poi prenu ku'o</jbo>
+        <gloss>su'ode zo'u de patfu da</gloss>
+        <gloss>For-the-mass-of fathers for-all X which-are-persons,</gloss>
+        <gloss>there-exists-a-Y such-that Y is the father of X.</gloss>
+        <en>As for fathers, every person has one.</en>
+      </interlinear-gloss>
+    </example>
+    <para>To specify a topic which affects more than one sentence, wrap the sentences in 
+    <quote>tu'e ... tu'u</quote>brackets and place the topic and the 
+    <quote>zo'u</quote>directly in front. This is the exception to the rule that a topic attaches directly to a sentence:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-mK5Y">
+      <title>
+        <anchor xml:id="c19e4d9" />
+        <anchor xml:id="cll_chapter19-section4-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>loi jdini zo'u tu'e do ponse .inaja do djica [tu'u]</jbo>
+        <gloss>The-mass-of money : ( [if] you possess, then you want )</gloss>
+        <en>Money: if you have it, you want it.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Note: In Lojban, you do not 
+    <quote>want money</quote>; you 
+    <quote>want to have money</quote>or something of the sort, as the x2 place of 
+    <quote>djica</quote>demands an event. As a result, the straightforward rendering of 
+    <xref linkend="cll_chapter19-section4-example8" />without a topic is not:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Mdjd">
+      <title>
+        <anchor xml:id="c19e4d10" />
+        <anchor xml:id="cll_chapter19-section4-example10" />
+      </title>
+      <interlinear-gloss>
+        <jbo>do ponse loi jdini .inaja do djica ri</jbo>
+        <en>You possess money only-if you desire its-mere-existence.</en>
+      </interlinear-gloss>
+    </example>
+    <para>where 
+    <quote>ri</quote>means 
+    <quote>loi jdini</quote>and is interpreted as 
+    <quote>the mere existence of money</quote>, but rather:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-fx2b">
+      <title>
+        <anchor xml:id="c19e4d11" />
+        <anchor xml:id="cll_chapter19-section4-example11" />
+      </title>
+      <interlinear-gloss>
+        <jbo>do ponse loi jdini .inaja do djica tu'a ri</jbo>
+        <en>You possess money only-if you desire something-about it.</en>
+      </interlinear-gloss>
+    </example>
+    <para>namely, the possession of money. But topic-comment sentences like 
+    <xref linkend="cll_chapter19-section4-example9" />are inherently vague, and this difference between 
+    <quote>ponse</quote>(which expects a physical object in x2) and 
+    <quote>djica</quote>is ignored. See 
+    <xref linkend="cll_chapter19-section9-example3" />for another topic/comment sentence.</para>
+    <para>The subject of an English sentence is often the topic as well, but in Lojban the sumti in the x1 place is not necessarily the topic, especially if it is the normal (unconverted) x1 for the selbri. Thus Lojban sentences don't necessarily have a 
+    <quote>subject</quote>in the English sense.</para>
+  </section>
+  <section xml:id="cll_chapter19-section5">
+    <title>5. Questions and answers</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      xu      UI      truth question
      ma      KOhA    sumti question
      mo      GOhA    bridi question
@@ -125,376 +291,961 @@ Putting It All Together: Notes on the Structure of Lojban Texts</title>
      cu'e    CUhE    tense/modal question
      pau     UI      question premarker
 </programlisting>
-  <para>Lojban questions are not at all like English questions. There are two basic types: truth questions, of the form “Is it true that ... ”, and fill-in-the-blank questions. Truth questions are marked by preceding the bridi, or following any part of it specifically questioned, with the cmavo “xu” (of selma'o UI):</para>
-  <programlisting><anchor xml:id="c19e5d1"/><anchor xml:id="cll_chapter19-section5-example1"/>5.1)   xu do klama le zarci
-       [True or false?] You go to the store
-       Are you going to the store/Did you go to the store?
-</programlisting>
-  <para>(Since the Lojban is tenseless, either colloquial translation might be correct.) Truth questions are further discussed in <xref linkend="cll_chapter15"/>.</para>
-  <para>Fill-in-the-blank questions have a cmavo representing some Lojban word or phrase which is not known to the questioner, and which the answerer is to supply. There are a variety of cmavo belonging to different selma'o which provide different kinds of blanks.</para>
-  <para>Where a sumti is not known, a question may be formed with “ma” (of selma'o KOhA), which is a kind of pro-sumti:</para>
-  <programlisting><anchor xml:id="c19e5d2"/><anchor xml:id="cll_chapter19-section5-example2"/>5.2)   ma klama le zarci
-       [What sumti?] goes-to the store
-       Who is going to the store?
-</programlisting>
-  <para>Of course, the “ma” need not be in the x1 place:</para>
-  <programlisting><anchor xml:id="c19e5d3"/><anchor xml:id="cll_chapter19-section5-example3"/>5.3)   do klama ma
-       You go-to [what sumti?]
-       Where are you going?
-</programlisting>
-  <para>The answer is a simple sumti:</para>
-  <programlisting><anchor xml:id="c19e5d4"/><anchor xml:id="cll_chapter19-section5-example4"/>5.4)   le zarci
-       The store.
-</programlisting>
-  <para>A sumti, then, is a legal utterance, although it does not by itself constitute a bridi – it does not claim anything, but merely completes the open-ended claim of the previous bridi.</para>
-  <para>There can be two “ma” cmavo in a single question:</para>
-  <programlisting><anchor xml:id="c19e5d5"/><anchor xml:id="cll_chapter19-section5-example5"/>5.5)   ma klama ma
-       Who goes where?
-</programlisting>
-  <para>and the answer would be two sumti, which are meant to fill in the two “ma” cmavo in order:</para>
-  <programlisting><anchor xml:id="c19e5d6"/><anchor xml:id="cll_chapter19-section5-example6"/>5.6)   mi le zarci
-       I, to the store.
-</programlisting>
-  <para>An even more complex example, depending on the non-logical connective “fa'u” (of selma'o JOI), which is like the English “and ... respectively”:</para>
-  <programlisting><anchor xml:id="c19e5d7"/><anchor xml:id="cll_chapter19-section5-example7"/>5.7)   ma fa'u ma klama ma fa'u ma
-       Who and who goes where and where, respectively?
-</programlisting>
-  <para>An answer might be</para>
-  <programlisting><anchor xml:id="c19e5d8"/><anchor xml:id="cll_chapter19-section5-example8"/>5.8)   la djan. la marcas. le zarci le briju
-       John, Marsha, the store, the office.
-       John and Marsha go to the store and the office, respectively.
-</programlisting>
-  <para>(Note: A mechanical substitution of <xref linkend="cll_chapter19-section5-example8"/> into <xref linkend="cll_chapter19-section5-example7"/> produces an ungrammatical result, because “* ... le zarci fa'u le briju” is ungrammatical Lojban: the first “le zarci” has to be closed with its proper terminator “ku”, for reasons explained in <xref linkend="cll_chapter14"/>. This effect is not important: Lojban behaves as if all elided terminators have been supplied in both question and answer before inserting the latter into the former. The exchange is grammatical if question and answer are each separately grammatical.)</para>
-  <para>Questions to be answered with a selbri are expressed with “mo” of selma'o GOhA, which is a kind of pro-bridi:</para>
-  <programlisting><anchor xml:id="c19e5d9"/><anchor xml:id="cll_chapter19-section5-example9"/>5.9)   la lojban. mo
-       Lojban [what selbri?]
-       What is Lojban?
-</programlisting>
-  <para>Here the answerer is to supply some predicate which is true of Lojban. Such questions are extremely open-ended, due to the enormous range of possible predicate answers. The answer might be just a selbri, or might be a full bridi, in which case the sumti in the answer override those provided by the questioner. To limit the range of a “mo” question, make it part of a tanru.</para>
-  <para>Questions about numbers are expressed with “xo” of selma'o PA:</para>
-  <programlisting><anchor xml:id="c19e5d10"/><anchor xml:id="cll_chapter19-section5-example10"/>5.10)  do viska xo prenu
-       You saw [what number?] persons.
-       How many people did you see?
-</programlisting>
-  <para>The answer would be a simple number, another kind of non-bridi utterance:</para>
-  <programlisting><anchor xml:id="c19e5d11"/><anchor xml:id="cll_chapter19-section5-example11"/>5.11)  vomu
-       Forty-five.
-</programlisting>
-  <para>Fill-in-the-blank questions may also be asked about: logical connectives (using cmavo “ji” of A, “ge'i” of GA, “gi'i” of GIhA, “gu'i” of GUhA, or “je'i” of JA, and receiving an ek, gihek, ijek, or ijoik as an answer) — see <xref linkend="cll_chapter14"/>; attitudes (using “pei” of UI, and receiving an attitudinal as an answer) — see <xref linkend="cll_chapter13"/>; place structures (using “fi'a” of FA, and receiving a cmavo of FA as an answer) — see <xref linkend="cll_chapter9"/>; tenses and modals (using “cu'e” of CUhE, and receiving any tense or BAI cmavo as an answer) — see <xref linkend="cll_chapter9"/> and <xref linkend="cll_chapter10"/>.</para>
-  <para>Questions can be marked by placing “pau” (of selma'o UI) before the question bridi. See <xref linkend="cll_chapter13"/> for details.</para>
-  <para>The full list of non-bridi utterances suitable as answers to questions is:</para>
-  <itemizedlist>
-    <listitem>
-      <para>any number of sumti (with elidable terminator “vau”, see <xref linkend="cll_chapter6"/>)</para>
-    </listitem>
-    <listitem>
-      <para>an ek or gihek (logical connectives, see <xref linkend="cll_chapter14"/>)</para>
-    </listitem>
-    <listitem>
-      <para>a number, or any mathematical expression placed in parentheses (see <xref linkend="cll_chapter18"/>)</para>
-    </listitem>
-    <listitem>
-      <para>a bare “na” negator (to negate some previously expressed bridi), or corresponding “ja'a” affirmer (see <xref linkend="cll_chapter15"/>)</para>
-    </listitem>
-    <listitem>
-      <para>a relative clause (to modify some previously expressed sumti, see <xref linkend="cll_chapter8"/>)</para>
-    </listitem>
-    <listitem>
-      <para>a prenex/topic (to modify some previously expressed bridi, see <xref linkend="cll_chapter16"/>)</para>
-    </listitem>
-    <listitem>
-      <para>linked arguments (beginning with “be” or “bei” and attached to some previously expressed selbri, often in a description,see <xref linkend="cll_chapter5"/>)</para>
-    </listitem>
-  </itemizedlist>
-  <para>At the beginning of a text, the following non-bridi are also permitted:</para>
-  <itemizedlist>
-    <listitem>
-      <para>one or more names (to indicate direct address without “doi”, see <xref linkend="cll_chapter6"/>)</para>
-    </listitem>
-    <listitem>
-      <para>indicators (to express a prevailing attitude, see <xref linkend="cll_chapter13"/>)</para>
-    </listitem>
-    <listitem>
-      <para>“nai” (to vaguely negate something or other, see <xref linkend="cll_chapter15"/>)</para>
-    </listitem>
-  </itemizedlist>
-  <para>Where not needed for the expression of answers, most of these are made grammatical for pragmatic reasons: people will say them in conversation, and there is no reason to rule them out as ungrammatical merely because most of them are vague.</para>
-</section>
-
-<section xml:id="cll_chapter19-section6">
-  <title>6. Subscripts: XI</title>
-  <para>The following cmavo is discussed in this section:</para>
-  <programlisting>
+    <para>Lojban questions are not at all like English questions. There are two basic types: truth questions, of the form 
+    <quote>Is it true that ...</quote>, and fill-in-the-blank questions. Truth questions are marked by preceding the bridi, or following any part of it specifically questioned, with the cmavo 
+    <quote>xu</quote>(of selma'o UI):</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-2t28">
+      <title>
+        <anchor xml:id="c19e5d1" />
+        <anchor xml:id="cll_chapter19-section5-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>xu do klama le zarci</jbo>
+        <gloss>[True or false?] You go to the store</gloss>
+        <en>Are you going to the store/Did you go to the store?</en>
+      </interlinear-gloss>
+    </example>
+    <para>(Since the Lojban is tenseless, either colloquial translation might be correct.) Truth questions are further discussed in 
+    <xref linkend="cll_chapter15" />.</para>
+    <para>Fill-in-the-blank questions have a cmavo representing some Lojban word or phrase which is not known to the questioner, and which the answerer is to supply. There are a variety of cmavo belonging to different selma'o which provide different kinds of blanks.</para>
+    <para>Where a sumti is not known, a question may be formed with 
+    <quote>ma</quote>(of selma'o KOhA), which is a kind of pro-sumti:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Pqzy">
+      <title>
+        <anchor xml:id="c19e5d2" />
+        <anchor xml:id="cll_chapter19-section5-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ma klama le zarci</jbo>
+        <gloss>[What sumti?] goes-to the store</gloss>
+        <en>Who is going to the store?</en>
+      </interlinear-gloss>
+    </example>
+    <para>Of course, the 
+    <quote>ma</quote>need not be in the x1 place:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-oAJT">
+      <title>
+        <anchor xml:id="c19e5d3" />
+        <anchor xml:id="cll_chapter19-section5-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>do klama ma</jbo>
+        <gloss>You go-to [what sumti?]</gloss>
+        <en>Where are you going?</en>
+      </interlinear-gloss>
+    </example>
+    <para>The answer is a simple sumti:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-WUvX">
+      <title>
+        <anchor xml:id="c19e5d4" />
+        <anchor xml:id="cll_chapter19-section5-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le zarci</jbo>
+        <en>The store.</en>
+      </interlinear-gloss>
+    </example>
+    <para>A sumti, then, is a legal utterance, although it does not by itself constitute a bridi – it does not claim anything, but merely completes the open-ended claim of the previous bridi.</para>
+    <para>There can be two 
+    <quote>ma</quote>cmavo in a single question:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Cx50">
+      <title>
+        <anchor xml:id="c19e5d5" />
+        <anchor xml:id="cll_chapter19-section5-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ma klama ma</jbo>
+        <en>Who goes where?</en>
+      </interlinear-gloss>
+    </example>
+    <para>and the answer would be two sumti, which are meant to fill in the two 
+    <quote>ma</quote>cmavo in order:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-t39K">
+      <title>
+        <anchor xml:id="c19e5d6" />
+        <anchor xml:id="cll_chapter19-section5-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi le zarci</jbo>
+        <en>I, to the store.</en>
+      </interlinear-gloss>
+    </example>
+    <para>An even more complex example, depending on the non-logical connective 
+    <quote>fa'u</quote>(of selma'o JOI), which is like the English 
+    <quote>and ... respectively</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-nDeV">
+      <title>
+        <anchor xml:id="c19e5d7" />
+        <anchor xml:id="cll_chapter19-section5-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ma fa'u ma klama ma fa'u ma</jbo>
+        <en>Who and who goes where and where, respectively?</en>
+      </interlinear-gloss>
+    </example>
+    <para>An answer might be</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-yGYX">
+      <title>
+        <anchor xml:id="c19e5d8" />
+        <anchor xml:id="cll_chapter19-section5-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan. la marcas. le zarci le briju</jbo>
+        <gloss>John, Marsha, the store, the office.</gloss>
+        <en>John and Marsha go to the store and the office, respectively.</en>
+      </interlinear-gloss>
+    </example>
+    <para>(Note: A mechanical substitution of 
+    <xref linkend="cll_chapter19-section5-example8" />into 
+    <xref linkend="cll_chapter19-section5-example7" />produces an ungrammatical result, because 
+    <quote>* ... le zarci fa'u le briju</quote>is ungrammatical Lojban: the first 
+    <quote>le zarci</quote>has to be closed with its proper terminator 
+    <quote>ku</quote>, for reasons explained in 
+    <xref linkend="cll_chapter14" />. This effect is not important: Lojban behaves as if all elided terminators have been supplied in both question and answer before inserting the latter into the former. The exchange is grammatical if question and answer are each separately grammatical.)</para>
+    <para>Questions to be answered with a selbri are expressed with 
+    <quote>mo</quote>of selma'o GOhA, which is a kind of pro-bridi:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-uVCW">
+      <title>
+        <anchor xml:id="c19e5d9" />
+        <anchor xml:id="cll_chapter19-section5-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la lojban. mo</jbo>
+        <gloss>Lojban [what selbri?]</gloss>
+        <en>What is Lojban?</en>
+      </interlinear-gloss>
+    </example>
+    <para>Here the answerer is to supply some predicate which is true of Lojban. Such questions are extremely open-ended, due to the enormous range of possible predicate answers. The answer might be just a selbri, or might be a full bridi, in which case the sumti in the answer override those provided by the questioner. To limit the range of a 
+    <quote>mo</quote>question, make it part of a tanru.</para>
+    <para>Questions about numbers are expressed with 
+    <quote>xo</quote>of selma'o PA:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-pdeh">
+      <title>
+        <anchor xml:id="c19e5d10" />
+        <anchor xml:id="cll_chapter19-section5-example10" />
+      </title>
+      <interlinear-gloss>
+        <jbo>do viska xo prenu</jbo>
+        <gloss>You saw [what number?] persons.</gloss>
+        <en>How many people did you see?</en>
+      </interlinear-gloss>
+    </example>
+    <para>The answer would be a simple number, another kind of non-bridi utterance:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-zjVx">
+      <title>
+        <anchor xml:id="c19e5d11" />
+        <anchor xml:id="cll_chapter19-section5-example11" />
+      </title>
+      <interlinear-gloss>
+        <jbo>vomu</jbo>
+        <en>Forty-five.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Fill-in-the-blank questions may also be asked about: logical connectives (using cmavo 
+    <quote>ji</quote>of A, 
+    <quote>ge'i</quote>of GA, 
+    <quote>gi'i</quote>of GIhA, 
+    <quote>gu'i</quote>of GUhA, or 
+    <quote>je'i</quote>of JA, and receiving an ek, gihek, ijek, or ijoik as an answer) - see 
+    <xref linkend="cll_chapter14" />; attitudes (using 
+    <quote>pei</quote>of UI, and receiving an attitudinal as an answer) - see 
+    <xref linkend="cll_chapter13" />; place structures (using 
+    <quote>fi'a</quote>of FA, and receiving a cmavo of FA as an answer) - see 
+    <xref linkend="cll_chapter9" />; tenses and modals (using 
+    <quote>cu'e</quote>of CUhE, and receiving any tense or BAI cmavo as an answer) - see 
+    <xref linkend="cll_chapter9" />and 
+    <xref linkend="cll_chapter10" />.</para>
+    <para>Questions can be marked by placing 
+    <quote>pau</quote>(of selma'o UI) before the question bridi. See 
+    <xref linkend="cll_chapter13" />for details.</para>
+    <para>The full list of non-bridi utterances suitable as answers to questions is:</para>
+    <itemizedlist>
+      <listitem>
+        <para>any number of sumti (with elidable terminator 
+        <quote>vau</quote>, see 
+        <xref linkend="cll_chapter6" />)</para>
+      </listitem>
+      <listitem>
+        <para>an ek or gihek (logical connectives, see 
+        <xref linkend="cll_chapter14" />)</para>
+      </listitem>
+      <listitem>
+        <para>a number, or any mathematical expression placed in parentheses (see 
+        <xref linkend="cll_chapter18" />)</para>
+      </listitem>
+      <listitem>
+        <para>a bare 
+        <quote>na</quote>negator (to negate some previously expressed bridi), or corresponding 
+        <quote>ja'a</quote>affirmer (see 
+        <xref linkend="cll_chapter15" />)</para>
+      </listitem>
+      <listitem>
+        <para>a relative clause (to modify some previously expressed sumti, see 
+        <xref linkend="cll_chapter8" />)</para>
+      </listitem>
+      <listitem>
+        <para>a prenex/topic (to modify some previously expressed bridi, see 
+        <xref linkend="cll_chapter16" />)</para>
+      </listitem>
+      <listitem>
+        <para>linked arguments (beginning with 
+        <quote>be</quote>or 
+        <quote>bei</quote>and attached to some previously expressed selbri, often in a description,see 
+        <xref linkend="cll_chapter5" />)</para>
+      </listitem>
+    </itemizedlist>
+    <para>At the beginning of a text, the following non-bridi are also permitted:</para>
+    <itemizedlist>
+      <listitem>
+        <para>one or more names (to indicate direct address without 
+        <quote>doi</quote>, see 
+        <xref linkend="cll_chapter6" />)</para>
+      </listitem>
+      <listitem>
+        <para>indicators (to express a prevailing attitude, see 
+        <xref linkend="cll_chapter13" />)</para>
+      </listitem>
+      <listitem>
+        <para>
+        <quote>nai</quote>(to vaguely negate something or other, see 
+        <xref linkend="cll_chapter15" />)</para>
+      </listitem>
+    </itemizedlist>
+    <para>Where not needed for the expression of answers, most of these are made grammatical for pragmatic reasons: people will say them in conversation, and there is no reason to rule them out as ungrammatical merely because most of them are vague.</para>
+  </section>
+  <section xml:id="cll_chapter19-section6">
+    <title>6. Subscripts: XI</title>
+    <para>The following cmavo is discussed in this section:</para>
+    <programlisting xml:space="preserve">
      xi      XI      subscript
 </programlisting>
-  <para>The cmavo “xi” (of selma'o XI) indicates that a subscript (a number, a lerfu string, or a parenthesized mekso) follows. Subscripts can be attached to almost any construction and are placed following the construction (or its terminator word, which is generally required). They are useful either to extend the finite cmavo list to infinite length, or to make more refined distinctions than the standard cmavo list permits. The remainder of this section mentions some places where subscripts might naturally be used.</para>
-  <para>Lojban gismu have at most five places:</para>
-  <programlisting><anchor xml:id="c19e6d1"/><anchor xml:id="cll_chapter19-section6-example1"/>6.1)   mi cu klama le zarci le zdani le dargu le karce
-       I go to-the market from-the house via-the road using-the car.
-</programlisting>
-  <para>Consequently, selma'o SE (which operates on a selbri to change the order of its places) and selma'o FA (which provides place number tags for individual sumti) have only enough members to handle up to five places. Conversion of <xref linkend="cll_chapter19-section6-example1"/>, using “xe” to swap the x1 and x5 places, would produce:</para>
-  <programlisting><anchor xml:id="c19e6d2"/><anchor xml:id="cll_chapter19-section6-example2"/>6.2)   le karce cu xe klama le zarci le zdani le dargu mi
-       The car is-a-transportation-means to-the market from-the house via-the road for-me.
-</programlisting>
-  <para>And reordering of the place structures might produce:</para>
-  <programlisting><anchor xml:id="c19e6d3"/><anchor xml:id="cll_chapter19-section6-example3"/>6.3)   fo le dargu fi le zdani fa mi fe le zarci fu le karce cu klama
-       Via the road, from the house, I, to the market, using-the car, go.
-</programlisting>
-  <para><xref linkend="cll_chapter19-section6-example1"/> to <xref linkend="cll_chapter19-section6-example3"/> all mean the same thing. But consider the lujvo “nunkla”, formed by applying the abstraction operator “nu” to “klama”:</para>
-  <programlisting><anchor xml:id="c19e6d4"/><anchor xml:id="cll_chapter19-section6-example4"/>6.4)   la'edi'u cu nunkla
-            mi le zarci le zdani le dargu le karce
-       The-referent-of-the-previous-sentence is-an-event-of-going
-            by-me to-the market from-the house via-the road using-the car.
-</programlisting>
-  <para><xref linkend="cll_chapter19-section6-example4"/> shows that “nunkla” has six places: the five places of “klama” plus a new one (placed first) for the event itself. Performing transformations similar to that of <xref linkend="cll_chapter19-section6-example2"/> requires an additional conversion cmavo that exchanges the x1 and x6 places. The solution is to use any cmavo of SE with a subscript "6" (see Chapter 19):</para>
-  <programlisting><anchor xml:id="c19e6d5"/><anchor xml:id="cll_chapter19-section6-example5"/>6.5)   le karce cu sexixa nunkla mi
-            le zarci le zdani le dargu la'edi'u
-       The car is-a-transportation-means-in-the-event-of-going by-me
-            to-the market via-the road which-is-referred-to-by-the-last-sentence.
-</programlisting>
-  <para>Likewise, a sixth place tag can be created by using any cmavo of FA with a subscript:</para>
-  <programlisting><anchor xml:id="c19e6d6"/><anchor xml:id="cll_chapter19-section6-example6"/>6.6)   fu le dargu fo le zdani fe mi fa la'edi'u
-            fi le zarci faxixa le karce cu nunkla
-       Via the road, from the house, by me, the-referent-of-the-last-sentence,
-            to the market, using the car, is-an-event-of-going.
-</programlisting>
-  <para><xref linkend="cll_chapter19-section6-example4"/> to <xref linkend="cll_chapter19-section6-example6"/> also all mean the same thing, and each is derived straightforwardly from any of the others, despite the tortured nature of the English glosses. In addition, any other member of SE or FA could be substituted into “sexixa” and “faxixa” without change of meaning: “vexixa” means the same thing as “sexixa”.</para>
-  <para>Lojban provides two groups of pro-sumti, both belonging to selma'o KOhA. The ko'a-series cmavo are used to refer to explicitly specified sumti to which they have been bound using “goi”. The da-series, on the other hand, are existentially or universally quantified variables. (These concepts are explained more fully in <xref linkend="cll_chapter16"/>.) There are ten ko'a-series cmavo and 3 da-series cmavo available.</para>
-  <para>If more are required, any cmavo of the ko'a-series or the da-series can be subscripted:</para>
-  <programlisting><anchor xml:id="c19e6d7"/><anchor xml:id="cll_chapter19-section6-example7"/>6.7)   daxivo
-       X sub 4
-</programlisting>
-  <para>is the 4th bound variable of the 1st sequence of the da-series, and</para>
-  <programlisting><anchor xml:id="c19e6d8"/><anchor xml:id="cll_chapter19-section6-example8"/>6.8)   ko'ixipaso
-       something-3 sub 18
-</programlisting>
-  <para>is the 18th free variable of the 3rd sequence of the ko'a-series. This convention allows 10 sequences of ko'a-type pro-sumti and 3 sequences of da-type pro-sumti, each with as many members as needed. Note that “daxivo” and “dexivo” are considered to be distinct pro-sumti, unlike the situation with “sexixa” and “vexixa” above. Exactly similar treatment can be given to the bu'a-series of selma'o GOhA and to the gismu pro-bridi “broda”, “brode”, “brodi”, “brodo”, and “brodu”.</para>
-  <para>Subscripts on lerfu words are used in the standard mathematical way to extend the number of variables:</para>
-  <programlisting><anchor xml:id="c19e6d9"/><anchor xml:id="cll_chapter19-section6-example9"/>6.9)   li xy.boixipa du li xy.boixire su'i xy.boixici
-       The-number x-sub-1 equals the-number x-sub-2 plus x-sub-3
-       x<subscript>1</subscript>  = x<subscript>2</subscript>  + x<subscript>3</subscript></programlisting>
-  <para>and can be used to extend the number of pro-sumti as well, since lerfu strings outside mathematical contexts are grammatically and semantically equivalent to pro-sumti of the ko'a-series. (In <xref linkend="cll_chapter19-section6-example9"/>, note the required terminator “boi” after each “xy.” cmavo; this terminator allows the subscript to be attached without ambiguity.)</para>
-  <para>Names, which are similar to pro-sumti, can also be subscripted to distinguish two individuals with the same name:</para>
-  <programlisting><anchor xml:id="c19e6d10"/><anchor xml:id="cll_chapter19-section6-example10"/>6.10)  la djan. xipa cusku lu mi'enai do li'u la djan. xire
-       John<subscript>1</subscript> expresses “I-am-not you” to John<subscript>2</subscript>.
-</programlisting>
-  <para>Subscripts on tenses allow talking about more than one time or place that is described by the same general cmavo. For example, “puxipa” could refer to one point in the past, and “puxire” a second point (earlier or later).</para>
-  <para>You can place a subscript on the word “ja'a”, the bridi affirmative of selma'o NA, to express so-called fuzzy truths. The usual machinery for fuzzy logic (statements whose truth value is not merely “true” or “false”, but is expressed by a number in the range 0 to 1) in Lojban is the abstractor “jei”:</para>
-  <programlisting><anchor xml:id="c19e6d11"/><anchor xml:id="cll_chapter19-section6-example11"/>6.11)  li pimu jei mi ganra
-       The-number .5 is-the-truth-value-of my being-broad.
-</programlisting>
-  <para>However, by convention we can attach a subscript to “ja'a” to indicate fuzzy truth (or to “na” if we change the amount):</para>
-  <programlisting><anchor xml:id="c19e6d12"/><anchor xml:id="cll_chapter19-section6-example12"/>6.12)  mi ja'a xipimu ganra
-       I truly-sub-.5 am-broad
-</programlisting>
-  <para>Finally, as mentioned in <xref linkend="cll_chapter19-section2"/>, “ni'o” and “no'i” cmavo with matching subscripts mark the start and the continuation of a given topic respectively. Different topics can be assigned to different subscripts.</para>
-  <para>Other uses of subscripts will doubtless be devised in future.</para>
-</section>
-
-<section xml:id="cll_chapter19-section7">
-  <title>7. Utterance ordinals: MAI</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+    <para>The cmavo 
+    <quote>xi</quote>(of selma'o XI) indicates that a subscript (a number, a lerfu string, or a parenthesized mekso) follows. Subscripts can be attached to almost any construction and are placed following the construction (or its terminator word, which is generally required). They are useful either to extend the finite cmavo list to infinite length, or to make more refined distinctions than the standard cmavo list permits. The remainder of this section mentions some places where subscripts might naturally be used.</para>
+    <para>Lojban gismu have at most five places:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-GuYz">
+      <title>
+        <anchor xml:id="c19e6d1" />
+        <anchor xml:id="cll_chapter19-section6-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi cu klama le zarci le zdani le dargu le karce</jbo>
+        <en>I go to-the market from-the house via-the road using-the car.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Consequently, selma'o SE (which operates on a selbri to change the order of its places) and selma'o FA (which provides place number tags for individual sumti) have only enough members to handle up to five places. Conversion of 
+    <xref linkend="cll_chapter19-section6-example1" />, using 
+    <quote>xe</quote>to swap the x1 and x5 places, would produce:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-QPGC">
+      <title>
+        <anchor xml:id="c19e6d2" />
+        <anchor xml:id="cll_chapter19-section6-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le karce cu xe klama le zarci le zdani le dargu mi</jbo>
+        <en>The car is-a-transportation-means to-the market from-the house via-the road for-me.</en>
+      </interlinear-gloss>
+    </example>
+    <para>And reordering of the place structures might produce:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-PaKo">
+      <title>
+        <anchor xml:id="c19e6d3" />
+        <anchor xml:id="cll_chapter19-section6-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>fo le dargu fi le zdani fa mi fe le zarci fu le karce cu klama</jbo>
+        <en>Via the road, from the house, I, to the market, using-the car, go.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter19-section6-example1" />to 
+    <xref linkend="cll_chapter19-section6-example3" />all mean the same thing. But consider the lujvo 
+    <quote>nunkla</quote>, formed by applying the abstraction operator 
+    <quote>nu</quote>to 
+    <quote>klama</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-sMPn">
+      <title>
+        <anchor xml:id="c19e6d4" />
+        <anchor xml:id="cll_chapter19-section6-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la'edi'u cu nunkla</jbo>
+        <gloss>mi le zarci le zdani le dargu le karce</gloss>
+        <gloss>The-referent-of-the-previous-sentence is-an-event-of-going</gloss>
+        <en>by-me to-the market from-the house via-the road using-the car.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter19-section6-example4" />shows that 
+    <quote>nunkla</quote>has six places: the five places of 
+    <quote>klama</quote>plus a new one (placed first) for the event itself. Performing transformations similar to that of 
+    <xref linkend="cll_chapter19-section6-example2" />requires an additional conversion cmavo that exchanges the x1 and x6 places. The solution is to use any cmavo of SE with a subscript "6" (see Chapter 19):</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-zGhw">
+      <title>
+        <anchor xml:id="c19e6d5" />
+        <anchor xml:id="cll_chapter19-section6-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>le karce cu sexixa nunkla mi</jbo>
+        <gloss>le zarci le zdani le dargu la'edi'u</gloss>
+        <gloss>The car is-a-transportation-means-in-the-event-of-going by-me</gloss>
+        <en>to-the market via-the road which-is-referred-to-by-the-last-sentence.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Likewise, a sixth place tag can be created by using any cmavo of FA with a subscript:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-EW1n">
+      <title>
+        <anchor xml:id="c19e6d6" />
+        <anchor xml:id="cll_chapter19-section6-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>fu le dargu fo le zdani fe mi fa la'edi'u</jbo>
+        <gloss>fi le zarci faxixa le karce cu nunkla</gloss>
+        <gloss>Via the road, from the house, by me, the-referent-of-the-last-sentence,</gloss>
+        <en>to the market, using the car, is-an-event-of-going.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter19-section6-example4" />to 
+    <xref linkend="cll_chapter19-section6-example6" />also all mean the same thing, and each is derived straightforwardly from any of the others, despite the tortured nature of the English glosses. In addition, any other member of SE or FA could be substituted into 
+    <quote>sexixa</quote>and 
+    <quote>faxixa</quote>without change of meaning: 
+    <quote>vexixa</quote>means the same thing as 
+    <quote>sexixa</quote>.</para>
+    <para>Lojban provides two groups of pro-sumti, both belonging to selma'o KOhA. The ko'a-series cmavo are used to refer to explicitly specified sumti to which they have been bound using 
+    <quote>goi</quote>. The da-series, on the other hand, are existentially or universally quantified variables. (These concepts are explained more fully in 
+    <xref linkend="cll_chapter16" />.) There are ten ko'a-series cmavo and 3 da-series cmavo available.</para>
+    <para>If more are required, any cmavo of the ko'a-series or the da-series can be subscripted:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Bday">
+      <title>
+        <anchor xml:id="c19e6d7" />
+        <anchor xml:id="cll_chapter19-section6-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>daxivo</jbo>
+        <en>X sub 4</en>
+      </interlinear-gloss>
+    </example>
+    <para>is the 4th bound variable of the 1st sequence of the da-series, and</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-gfXT">
+      <title>
+        <anchor xml:id="c19e6d8" />
+        <anchor xml:id="cll_chapter19-section6-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ko'ixipaso</jbo>
+        <en>something-3 sub 18</en>
+      </interlinear-gloss>
+    </example>
+    <para>is the 18th free variable of the 3rd sequence of the ko'a-series. This convention allows 10 sequences of ko'a-type pro-sumti and 3 sequences of da-type pro-sumti, each with as many members as needed. Note that 
+    <quote>daxivo</quote>and 
+    <quote>dexivo</quote>are considered to be distinct pro-sumti, unlike the situation with 
+    <quote>sexixa</quote>and 
+    <quote>vexixa</quote>above. Exactly similar treatment can be given to the bu'a-series of selma'o GOhA and to the gismu pro-bridi 
+    <quote>broda</quote>, 
+    <quote>brode</quote>, 
+    <quote>brodi</quote>, 
+    <quote>brodo</quote>, and 
+    <quote>brodu</quote>.</para>
+    <para>Subscripts on lerfu words are used in the standard mathematical way to extend the number of variables:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-wez6">
+      <title>
+        <anchor xml:id="c19e6d9" />
+        <anchor xml:id="cll_chapter19-section6-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>li xy.boixipa du li xy.boixire su'i xy.boixici</jbo>
+        <gloss>The-number x-sub-1 equals the-number x-sub-2 plus x-sub-3</gloss>
+        <en>x</en>
+      </interlinear-gloss>
+    </example>
+    <para>and can be used to extend the number of pro-sumti as well, since lerfu strings outside mathematical contexts are grammatically and semantically equivalent to pro-sumti of the ko'a-series. (In 
+    <xref linkend="cll_chapter19-section6-example9" />, note the required terminator 
+    <quote>boi</quote>after each 
+    <quote>xy.</quote>cmavo; this terminator allows the subscript to be attached without ambiguity.)</para>
+    <para>Names, which are similar to pro-sumti, can also be subscripted to distinguish two individuals with the same name:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-tW4J">
+      <title>
+        <anchor xml:id="c19e6d10" />
+        <anchor xml:id="cll_chapter19-section6-example10" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan. xipa cusku lu mi'enai do li'u la djan. xire</jbo>
+        <en>John</en>
+      </interlinear-gloss>
+    </example>
+    <para>Subscripts on tenses allow talking about more than one time or place that is described by the same general cmavo. For example, 
+    <quote>puxipa</quote>could refer to one point in the past, and 
+    <quote>puxire</quote>a second point (earlier or later).</para>
+    <para>You can place a subscript on the word 
+    <quote>ja'a</quote>, the bridi affirmative of selma'o NA, to express so-called fuzzy truths. The usual machinery for fuzzy logic (statements whose truth value is not merely 
+    <quote>true</quote>or 
+    <quote>false</quote>, but is expressed by a number in the range 0 to 1) in Lojban is the abstractor 
+    <quote>jei</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-NGGv">
+      <title>
+        <anchor xml:id="c19e6d11" />
+        <anchor xml:id="cll_chapter19-section6-example11" />
+      </title>
+      <interlinear-gloss>
+        <jbo>li pimu jei mi ganra</jbo>
+        <en>The-number .5 is-the-truth-value-of my being-broad.</en>
+      </interlinear-gloss>
+    </example>
+    <para>However, by convention we can attach a subscript to 
+    <quote>ja'a</quote>to indicate fuzzy truth (or to 
+    <quote>na</quote>if we change the amount):</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-xpiI">
+      <title>
+        <anchor xml:id="c19e6d12" />
+        <anchor xml:id="cll_chapter19-section6-example12" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi ja'a xipimu ganra</jbo>
+        <en>I truly-sub-.5 am-broad</en>
+      </interlinear-gloss>
+    </example>
+    <para>Finally, as mentioned in 
+    <xref linkend="cll_chapter19-section2" />, 
+    <quote>ni'o</quote>and 
+    <quote>no'i</quote>cmavo with matching subscripts mark the start and the continuation of a given topic respectively. Different topics can be assigned to different subscripts.</para>
+    <para>Other uses of subscripts will doubtless be devised in future.</para>
+  </section>
+  <section xml:id="cll_chapter19-section7">
+    <title>7. Utterance ordinals: MAI</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      mai     MAI     utterance ordinal, -thly
      mo'o    MAI     higher order utterance ordinal
 </programlisting>
-  <para>Numerical free modifiers, corresponding to English “firstly”, “secondly”, and so on, can be created by suffixing “mai” or “mo'o” of selma'o MAI to a number or a lerfu string. Here are some examples:</para>
-  <programlisting><anchor xml:id="c19e7d1"/><anchor xml:id="cll_chapter19-section7-example1"/>7.1)   mi klama pamai le zarci .e remai le zdani
-       I go-to (firstly) the store and (secondly) the house.
-</programlisting>
-  <para>This does not imply that I go to the store before I go to the house: that meaning requires a tense. The sumti are simply numbered for convenience of reference. Like other free modifiers, the utterance ordinals can be inserted almost anywhere in a sentence without affecting its grammar or its meaning.</para>
-  <para>Any of the Lojban numbers can be used with MAI: “romai”, for example, means “all-thly” or “lastly”. Likewise, if you are enumerating a long list and have forgotten which number is wanted next, you can say “ny.mai”, or “Nthly”.</para>
-  <para>The difference between “mai” and “mo'o” is that “mo'o” enumerates larger subdivisions of a text; “mai” was designed for lists of numbered items, whereas “mo'o” was intended to subdivide structured works. If this chapter were translated into Lojban, it might number each section with “mo'o”: this section would then be introduced with “zemo'o”, or “Section 7.”</para>
-</section>
-
-<section xml:id="cll_chapter19-section8">
-  <title>8. Attitude scope markers: FUhE/FUhO</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+    <para>Numerical free modifiers, corresponding to English 
+    <quote>firstly</quote>, 
+    <quote>secondly</quote>, and so on, can be created by suffixing 
+    <quote>mai</quote>or 
+    <quote>mo'o</quote>of selma'o MAI to a number or a lerfu string. Here are some examples:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-ymMz">
+      <title>
+        <anchor xml:id="c19e7d1" />
+        <anchor xml:id="cll_chapter19-section7-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi klama pamai le zarci .e remai le zdani</jbo>
+        <en>I go-to (firstly) the store and (secondly) the house.</en>
+      </interlinear-gloss>
+    </example>
+    <para>This does not imply that I go to the store before I go to the house: that meaning requires a tense. The sumti are simply numbered for convenience of reference. Like other free modifiers, the utterance ordinals can be inserted almost anywhere in a sentence without affecting its grammar or its meaning.</para>
+    <para>Any of the Lojban numbers can be used with MAI: 
+    <quote>romai</quote>, for example, means 
+    <quote>all-thly</quote>or 
+    <quote>lastly</quote>. Likewise, if you are enumerating a long list and have forgotten which number is wanted next, you can say 
+    <quote>ny.mai</quote>, or 
+    <quote>Nthly</quote>.</para>
+    <para>The difference between 
+    <quote>mai</quote>and 
+    <quote>mo'o</quote>is that 
+    <quote>mo'o</quote>enumerates larger subdivisions of a text; 
+    <quote>mai</quote>was designed for lists of numbered items, whereas 
+    <quote>mo'o</quote>was intended to subdivide structured works. If this chapter were translated into Lojban, it might number each section with 
+    <quote>mo'o</quote>: this section would then be introduced with 
+    <quote>zemo'o</quote>, or 
+    <quote>Section 7.</quote></para>
+  </section>
+  <section xml:id="cll_chapter19-section8">
+    <title>8. Attitude scope markers: FUhE/FUhO</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      fu'e    FUhE    open attitudinal scope
      fu'o    FUhO    close attitudinal scope
 </programlisting>
-  <para>Lojban has a complex system of “attitudinals”, words which indicate the speaker’s attitude to what is being said. The attitudinals include indicators of emotion, intensity markers, discursives (which show the structure of discourse), and evidentials (which indicate “how the speaker knows”). Most of these words belong to selma'o UI; the intensity markers belong to selma'o CAI for historical reasons, but the two selma'o are grammatically identical. The individual cmavo of UI and CAI are discussed in <xref linkend="cll_chapter13"/>; only the rules for applying them in discourse are presented here.</para>
-  <para>Normally, an attitudinal applies to the preceding word only. However, if the preceding word is a structural cmavo which begins or ends a whole construction, then that whole construction is affected by the attitudinal:</para>
-  <programlisting><anchor xml:id="c19e8d1"/><anchor xml:id="cll_chapter19-section8-example1"/>8.1)   mi viska le blanu .ia zdani [ku]
-       I see the blue [belief] house.
-       I see the house, which I believe to be blue.
-
-<anchor xml:id="c19e8d2"/><anchor xml:id="cll_chapter19-section8-example2"/>8.2)   mi viska le blanu zdani .ia [ku]
-       I see the blue house [belief].
-       I see the blue thing, which I believe to be a house.
-
-<anchor xml:id="c19e8d3"/><anchor xml:id="cll_chapter19-section8-example3"/>8.3)   mi viska le .ia blanu zdani [ku]
-       I see the [belief] blue house
-       I see what I believe to be a blue house.
-
-<anchor xml:id="c19e8d4"/><anchor xml:id="cll_chapter19-section8-example4"/>8.4)   mi viska le blanu zdani ku .ia
-       I see (the blue house) [belief]
-       I see what I believe to be a blue house.
-</programlisting>
-  <para>An attitudinal meant to cover a whole sentence can be attached to the preceding “.i”, expressed or understood:</para>
-  <programlisting><anchor xml:id="c19e8d5"/><anchor xml:id="cll_chapter19-section8-example5"/>8.5)   [.i] .ia mi viska le blanu zdani
-       [belief] I see the blue house.
-       I believe I see a blue house.
-</programlisting>
-  <para>or to an explicit “vau” placed at the end of a bridi.</para>
-  <para>Likewise, an attitudinal meant to cover a whole paragraph can be attached to “ni'o” or “no'i”. An attitudinal at the beginning of a text applies to the whole text.</para>
-  <para>However, sometimes it is necessary to be more specific about the range of one or more attitudinals, particularly if the range crosses the boundaries of standard Lojban syntactic constructions. The cmavo “fu'e” (of selma'o FUhE) and “fu'o” (of selma'o FUhO) provide explicit scope markers. Placing “fu'e” in front of an attitudinal disconnects it from what precedes it, and instead says that it applies to all following words until further notice. The notice is given by “fu'o”, which can appear anywhere and cancels all in-force attitudinals. For example:</para>
-  <programlisting><anchor xml:id="c19e8d6"/><anchor xml:id="cll_chapter19-section8-example6"/>8.6)   mi viska le fu'e .ia blanu zdani fu'o ponse
-       I see the [start] [belief] blue house [end] possessor
-       I see the owner of what I believe to be a blue house.
-</programlisting>
-  <para>Here, only the “blanu zdani” portion of the three-part tanru “blanu zdani ponse” is marked as a belief of the speaker. Naturally, the attitudinal scope markers do not affect the rules for interpreting multi-part tanru: “blanu zdani” groups first because tanru group from left to right unless overridden with “ke” or “bo”.</para>
-  <para>Other attitudinals of more local scope can appear after attitudinals marked by FUhE; these attitudinals are added to the globally active attitudinals rather than superseding them.</para>
-</section>
-
-<section xml:id="cll_chapter19-section9">
-  <title>9. Quotations: LU, LIhU, LOhU, LEhU</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+    <para>Lojban has a complex system of 
+    <quote>attitudinals</quote>, words which indicate the speaker's attitude to what is being said. The attitudinals include indicators of emotion, intensity markers, discursives (which show the structure of discourse), and evidentials (which indicate 
+    <quote>how the speaker knows</quote>). Most of these words belong to selma'o UI; the intensity markers belong to selma'o CAI for historical reasons, but the two selma'o are grammatically identical. The individual cmavo of UI and CAI are discussed in 
+    <xref linkend="cll_chapter13" />; only the rules for applying them in discourse are presented here.</para>
+    <para>Normally, an attitudinal applies to the preceding word only. However, if the preceding word is a structural cmavo which begins or ends a whole construction, then that whole construction is affected by the attitudinal:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-WCHe">
+      <title>
+        <anchor xml:id="c19e8d1" />
+        <anchor xml:id="cll_chapter19-section8-example1" />
+        <anchor xml:id="c19e8d2" />
+        <anchor xml:id="cll_chapter19-section8-example2" />
+        <anchor xml:id="c19e8d3" />
+        <anchor xml:id="cll_chapter19-section8-example3" />
+        <anchor xml:id="c19e8d4" />
+        <anchor xml:id="cll_chapter19-section8-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi viska le blanu .ia zdani [ku]</jbo>
+        <gloss>I see the blue [belief] house.</gloss>
+        <en>I see the house, which I believe to be blue.</en>
+        <jbo>mi viska le blanu zdani .ia [ku]</jbo>
+        <gloss>I see the blue house [belief].</gloss>
+        <en>I see the blue thing, which I believe to be a house.</en>
+        <jbo>mi viska le .ia blanu zdani [ku]</jbo>
+        <gloss>I see the [belief] blue house</gloss>
+        <en>I see what I believe to be a blue house.</en>
+        <jbo>mi viska le blanu zdani ku .ia</jbo>
+        <gloss>I see (the blue house) [belief]</gloss>
+        <en>I see what I believe to be a blue house.</en>
+      </interlinear-gloss>
+    </example>
+    <para>An attitudinal meant to cover a whole sentence can be attached to the preceding 
+    <quote>.i</quote>, expressed or understood:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-tqGf">
+      <title>
+        <anchor xml:id="c19e8d5" />
+        <anchor xml:id="cll_chapter19-section8-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>[.i] .ia mi viska le blanu zdani</jbo>
+        <gloss>[belief] I see the blue house.</gloss>
+        <en>I believe I see a blue house.</en>
+      </interlinear-gloss>
+    </example>
+    <para>or to an explicit 
+    <quote>vau</quote>placed at the end of a bridi.</para>
+    <para>Likewise, an attitudinal meant to cover a whole paragraph can be attached to 
+    <quote>ni'o</quote>or 
+    <quote>no'i</quote>. An attitudinal at the beginning of a text applies to the whole text.</para>
+    <para>However, sometimes it is necessary to be more specific about the range of one or more attitudinals, particularly if the range crosses the boundaries of standard Lojban syntactic constructions. The cmavo 
+    <quote>fu'e</quote>(of selma'o FUhE) and 
+    <quote>fu'o</quote>(of selma'o FUhO) provide explicit scope markers. Placing 
+    <quote>fu'e</quote>in front of an attitudinal disconnects it from what precedes it, and instead says that it applies to all following words until further notice. The notice is given by 
+    <quote>fu'o</quote>, which can appear anywhere and cancels all in-force attitudinals. For example:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-0vML">
+      <title>
+        <anchor xml:id="c19e8d6" />
+        <anchor xml:id="cll_chapter19-section8-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi viska le fu'e .ia blanu zdani fu'o ponse</jbo>
+        <gloss>I see the [start] [belief] blue house [end] possessor</gloss>
+        <en>I see the owner of what I believe to be a blue house.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Here, only the 
+    <quote>blanu zdani</quote>portion of the three-part tanru 
+    <quote>blanu zdani ponse</quote>is marked as a belief of the speaker. Naturally, the attitudinal scope markers do not affect the rules for interpreting multi-part tanru: 
+    <quote>blanu zdani</quote>groups first because tanru group from left to right unless overridden with 
+    <quote>ke</quote>or 
+    <quote>bo</quote>.</para>
+    <para>Other attitudinals of more local scope can appear after attitudinals marked by FUhE; these attitudinals are added to the globally active attitudinals rather than superseding them.</para>
+  </section>
+  <section xml:id="cll_chapter19-section9">
+    <title>9. Quotations: LU, LIhU, LOhU, LEhU</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      lu      LU      begin quotation
      li'u    LIhU    end quotation
      lo'u    LOhU    begin error quotation
      le'u    LEhU    end error quotation
 </programlisting>
-  <para>Grammatically, quotations are very simple in Lojban: all of them are sumti, and they all mean something like “the piece of text here quoted”:</para>
-  <programlisting><anchor xml:id="c19e9d1"/><anchor xml:id="cll_chapter19-section9-example1"/>9.1)   mi pu cusku lu mi'e djan [li'u]
-       I [past] express [quote] I-am John [unquote]
-       I said, “I’m John”.
-</programlisting>
-  <para>But in fact there are four different flavors of quotation in the language, involving six cmavo of six different selma'o. This being the case, quotation deserves some elaboration.</para>
-  <para>The simplest kind of quotation, exhibited in <xref linkend="cll_chapter19-section9-example1"/>, uses the cmavo “lu” (of selma'o LU) as the opening quotation mark, and the cmavo “li'u” (of selma'o LIhU) as the closing quotation mark. The text between “lu” and “li'u” must be a valid, parseable Lojban text. If the quotation is ungrammatical, so is the surrounding expression. The cmavo “li'u” is technically an elidable terminator, but it’s almost never possible to elide it except at the end of text.</para>
-  <para>The cmavo “lo'u” (of selma'o LOhU) and “le'u” (of selma'o LEhU) are used to surround a quotation that is not necessarily grammatical Lojban. However, the text must consist of morphologically correct Lojban words (as defined in <xref linkend="cll_chapter4"/>), so that the “le'u” can be picked out reliably. The words need not be meaningful, but they must be recognizable as cmavo, brivla, or cmene. Quotation with “lo'u” is essential to quoting ungrammatical Lojban for teaching in the language, the equivalent of the * that is used in English to mark such errors:</para>
-  <programlisting><anchor xml:id="c19e9d2"/><anchor xml:id="cll_chapter19-section9-example2"/>9.2)   lo'u mi du do du la djan. le'u na tergerna la lojban.
-       [quote] mi du do du la djan. [unquote] is-not a-grammatical-structure in Lojban.
-</programlisting>
-  <para><xref linkend="cll_chapter19-section9-example2"/> is grammatical even though the embedded quotation is not. Similarly, “lo'u” quotation can quote fragments of a text which themselves do not constitute grammatical utterances:</para>
-  <programlisting><anchor xml:id="c19e9d3"/><anchor xml:id="cll_chapter19-section9-example3"/>9.3)   lu le mlatu cu viska le finpe li'u zo'u lo'u viska le le'u
-            cu selbasti .ei lo'u viska lo le'u
-       [quote] le mlatu cu viska le finpe [unquote] : [quote] viska le [unquote]
-            is-replaced-by [obligation!] [quote] viska lo [unquote].
-       In the sentence “le mlatu viska le finpe”, “viska le” should be replaced by “viska lo”.
-</programlisting>
-  <para>Note the topic-comment formulation (<xref linkend="cll_chapter19-section4"/>) and the indicator applying to the selbri only (<xref linkend="cll_chapter19-section8"/>). Neither “viska le” nor “viska lo” is a valid Lojban utterance, and both require “lo'u” quotation.</para>
-  <para>Additionally, pro-sumti or pro-bridi in the quoting sentence can refer to words appearing in the quoted sentence when “lu ... li'u” is used, but not when “lo'u ... le'u” is used:</para>
-  <programlisting><anchor xml:id="c19e9d4"/><anchor xml:id="cll_chapter19-section9-example4"/>9.4)   la tcarlis. cusku lu le ninmu cu morsi li'u
-            .iku'i ri jmive
-       Charlie says [quote] the woman is-dead [unquote].
-            However, the-last-mentioned is-alive.
-       Charlie says “The woman is dead”, but she is alive.
-</programlisting>
-  <para>In <xref linkend="cll_chapter19-section9-example4"/>, “ri” is a pro-sumti which refers to the most recent previous sumti, namely “le ninmu”. Compare:</para>
-  <programlisting><anchor xml:id="c19e9d5"/><anchor xml:id="cll_chapter19-section9-example5"/>9.5)   la tcarlis. cusku lo'u le ninmu cu morsi le'u
-            .iku'i ri jmive
-       Charlie says [quote] le ninmu cu morsi [unquote].
-            However, the-last-mentioned is-alive.
-       Charlie says “le ninmu cu morsi”, but he is alive.
-</programlisting>
-  <para>In <xref linkend="cll_chapter19-section9-example5"/>, “ri” cannot refer to the referent of the alleged sumti “le ninmu”, because “le ninmu cu morsi” is a mere uninterpreted sequence of Lojban words. Instead, “ri” ends up referring to the referent of the sumti “la tcarlis.”, and so it is Charlie who is alive.</para>
-  <para>The metalinguistic erasers “si”, “sa”, and “su”, discussed in <xref linkend="cll_chapter19-section13"/>, do not operate in text between “lo'u” and “le'u”. Since the first “le'u” terminates a “lo'u” quotation, it is not directly possible to have a “lo'u” quotation within another “lo'u” quotation. However, it is possible for a “le'u” to occur within a “lo'u ... le'u” quotation by preceding it with the cmavo “zo”, discussed in <xref linkend="cll_chapter19-section10"/>. Note that “le'u” is not an elidable terminator; it is required.</para>
-</section>
-
-<section xml:id="cll_chapter19-section10">
-  <title>10. More on quotations: ZO, ZOI</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+    <para>Grammatically, quotations are very simple in Lojban: all of them are sumti, and they all mean something like 
+    <quote>the piece of text here quoted</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-6SBj">
+      <title>
+        <anchor xml:id="c19e9d1" />
+        <anchor xml:id="cll_chapter19-section9-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi pu cusku lu mi'e djan [li'u]</jbo>
+        <gloss>I [past] express [quote] I-am John [unquote]</gloss>
+        <en>I said, 
+        <quote>I'm John</quote>.</en>
+      </interlinear-gloss>
+    </example>
+    <para>But in fact there are four different flavors of quotation in the language, involving six cmavo of six different selma'o. This being the case, quotation deserves some elaboration.</para>
+    <para>The simplest kind of quotation, exhibited in 
+    <xref linkend="cll_chapter19-section9-example1" />, uses the cmavo 
+    <quote>lu</quote>(of selma'o LU) as the opening quotation mark, and the cmavo 
+    <quote>li'u</quote>(of selma'o LIhU) as the closing quotation mark. The text between 
+    <quote>lu</quote>and 
+    <quote>li'u</quote>must be a valid, parseable Lojban text. If the quotation is ungrammatical, so is the surrounding expression. The cmavo 
+    <quote>li'u</quote>is technically an elidable terminator, but it's almost never possible to elide it except at the end of text.</para>
+    <para>The cmavo 
+    <quote>lo'u</quote>(of selma'o LOhU) and 
+    <quote>le'u</quote>(of selma'o LEhU) are used to surround a quotation that is not necessarily grammatical Lojban. However, the text must consist of morphologically correct Lojban words (as defined in 
+    <xref linkend="cll_chapter4" />), so that the 
+    <quote>le'u</quote>can be picked out reliably. The words need not be meaningful, but they must be recognizable as cmavo, brivla, or cmene. Quotation with 
+    <quote>lo'u</quote>is essential to quoting ungrammatical Lojban for teaching in the language, the equivalent of the * that is used in English to mark such errors:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-IUz8">
+      <title>
+        <anchor xml:id="c19e9d2" />
+        <anchor xml:id="cll_chapter19-section9-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>lo'u mi du do du la djan. le'u na tergerna la lojban.</jbo>
+        <en>[quote] mi du do du la djan. [unquote] is-not a-grammatical-structure in Lojban.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter19-section9-example2" />is grammatical even though the embedded quotation is not. Similarly, 
+    <quote>lo'u</quote>quotation can quote fragments of a text which themselves do not constitute grammatical utterances:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-EXeq">
+      <title>
+        <anchor xml:id="c19e9d3" />
+        <anchor xml:id="cll_chapter19-section9-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>lu le mlatu cu viska le finpe li'u zo'u lo'u viska le le'u</jbo>
+        <gloss>cu selbasti .ei lo'u viska lo le'u</gloss>
+        <gloss>[quote] le mlatu cu viska le finpe [unquote] : [quote] viska le [unquote]</gloss>
+        <gloss>is-replaced-by [obligation!] [quote] viska lo [unquote].</gloss>
+        <en>In the sentence 
+        <quote>le mlatu viska le finpe</quote>, 
+        <quote>viska le</quote>should be replaced by 
+        <quote>viska lo</quote>.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Note the topic-comment formulation (
+    <xref linkend="cll_chapter19-section4" />) and the indicator applying to the selbri only (
+    <xref linkend="cll_chapter19-section8" />). Neither 
+    <quote>viska le</quote>nor 
+    <quote>viska lo</quote>is a valid Lojban utterance, and both require 
+    <quote>lo'u</quote>quotation.</para>
+    <para>Additionally, pro-sumti or pro-bridi in the quoting sentence can refer to words appearing in the quoted sentence when 
+    <quote>lu ... li'u</quote>is used, but not when 
+    <quote>lo'u ... le'u</quote>is used:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-x8XL">
+      <title>
+        <anchor xml:id="c19e9d4" />
+        <anchor xml:id="cll_chapter19-section9-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la tcarlis. cusku lu le ninmu cu morsi li'u</jbo>
+        <gloss>.iku'i ri jmive</gloss>
+        <gloss>Charlie says [quote] the woman is-dead [unquote].</gloss>
+        <gloss>However, the-last-mentioned is-alive.</gloss>
+        <en>Charlie says 
+        <quote>The woman is dead</quote>, but she is alive.</en>
+      </interlinear-gloss>
+    </example>
+    <para>In 
+    <xref linkend="cll_chapter19-section9-example4" />, 
+    <quote>ri</quote>is a pro-sumti which refers to the most recent previous sumti, namely 
+    <quote>le ninmu</quote>. Compare:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-hvhb">
+      <title>
+        <anchor xml:id="c19e9d5" />
+        <anchor xml:id="cll_chapter19-section9-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la tcarlis. cusku lo'u le ninmu cu morsi le'u</jbo>
+        <gloss>.iku'i ri jmive</gloss>
+        <gloss>Charlie says [quote] le ninmu cu morsi [unquote].</gloss>
+        <gloss>However, the-last-mentioned is-alive.</gloss>
+        <en>Charlie says 
+        <quote>le ninmu cu morsi</quote>, but he is alive.</en>
+      </interlinear-gloss>
+    </example>
+    <para>In 
+    <xref linkend="cll_chapter19-section9-example5" />, 
+    <quote>ri</quote>cannot refer to the referent of the alleged sumti 
+    <quote>le ninmu</quote>, because 
+    <quote>le ninmu cu morsi</quote>is a mere uninterpreted sequence of Lojban words. Instead, 
+    <quote>ri</quote>ends up referring to the referent of the sumti 
+    <quote>la tcarlis.</quote>, and so it is Charlie who is alive.</para>
+    <para>The metalinguistic erasers 
+    <quote>si</quote>, 
+    <quote>sa</quote>, and 
+    <quote>su</quote>, discussed in 
+    <xref linkend="cll_chapter19-section13" />, do not operate in text between 
+    <quote>lo'u</quote>and 
+    <quote>le'u</quote>. Since the first 
+    <quote>le'u</quote>terminates a 
+    <quote>lo'u</quote>quotation, it is not directly possible to have a 
+    <quote>lo'u</quote>quotation within another 
+    <quote>lo'u</quote>quotation. However, it is possible for a 
+    <quote>le'u</quote>to occur within a 
+    <quote>lo'u ... le'u</quote>quotation by preceding it with the cmavo 
+    <quote>zo</quote>, discussed in 
+    <xref linkend="cll_chapter19-section10" />. Note that 
+    <quote>le'u</quote>is not an elidable terminator; it is required.</para>
+  </section>
+  <section xml:id="cll_chapter19-section10">
+    <title>10. More on quotations: ZO, ZOI</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      zo      ZO      quote single word
      zoi     ZOI     non-Lojban quotation
      la'o    ZOI     non-Lojban name
 </programlisting>
-  <para>The cmavo “zo” (of selma'o ZO) is a strong quotation mark for the single following word, which can be any Lojban word whatsoever. Among other uses, “zo” allows a metalinguistic word to be referenced without having it act on the surrounding text. The word must be a morphologically legal (but not necessarily meaningful) single Lojban word; compound cmavo are not permitted. For example:</para>
-  <programlisting><anchor xml:id="c19e10d1"/><anchor xml:id="cll_chapter19-section10-example1"/>10.1)  zo si cu lojbo valsi
-       “si” is a Lojbanic word.
-</programlisting>
-  <para>Since “zo” acts on a single word only, there is no corresponding terminator. Brevity, then, is a great advantage of “zo”, since the terminators for other kinds of quotation are rarely or never elidable.</para>
-  <para>The cmavo “zoi” (of selma'o ZOI) is a quotation mark for quoting non-Lojban text. Its syntax is “zoi X. text .X”, where X is a Lojban word (called the delimiting word) which is separated from the quoted text by pauses, and which is not found in the written text or spoken phoneme stream. It is common, but not required, to use the lerfu word (of selma'o BY) which corresponds to the Lojban name of the language being quoted:</para>
-  <programlisting><anchor xml:id="c19e10d2"/><anchor xml:id="cll_chapter19-section10-example2"/>10.2)  zoi gy. John is a man .gy. cu glico jufra
-       “John is a man” is an English sentence.
-</programlisting>
-  <para>where “gy” stands for “glico”. Other popular choices of delimiting words are “.kuot.”, a Lojban name which sounds like the English word “quote”, and the word “zoi” itself. Another possibility is a Lojban word suggesting the topic of the quotation.</para>
-  <para>Within written text, the Lojban written word used as a delimiting word may not appear, whereas within spoken text, the sound of the delimiting word may not be uttered. This leads to occasional breakdowns of audio-visual isomorphism: <xref linkend="cll_chapter19-section10-example3"/> is fine in speech but ungrammatical as written, whereas <xref linkend="cll_chapter19-section10-example4"/> is correct when written but ungrammatical in speech.</para>
-  <programlisting><anchor xml:id="c19e10d3"/><anchor xml:id="cll_chapter19-section10-example3"/>10.3)  ?mi djuno fi le valsi po'u zoi gy. gyrations .gy.
-       I know about the word which-is “gyrations”.
-
-<anchor xml:id="c19e10d4"/><anchor xml:id="cll_chapter19-section10-example4"/>10.4)  ?mi djuno fi le valsi po'u zoi jai. gyrations .jai
-       I know about the word which-is “gyrations”.
-</programlisting>
-  <para>The text “gy” appears in the written word “gyrations”, whereas the sound represented in Lojban by “jai” appears in the spoken word “gyrations”. Such borderline cases should be avoided as a matter of good style.</para>
-  <para>It should be noted particularly that “zoi” quotation is the only way to quote rafsi, specifically CCV rafsi, because they are not Lojban words, and “zoi” quotation is the only way to quote things which are not Lojban words. (CVC and CVV rafsi look like names and cmavo respectively, and so can be quoted using other methods.) For example:</para>
-  <programlisting><anchor xml:id="c19e10d5"/><anchor xml:id="cll_chapter19-section10-example5"/>10.5)  zoi ry. sku .ry. cu rafsi zo cusku
-       “sku” is a rafsi of “cusku”.
-</programlisting>
-  <para>(A minor note on interaction between “lo'u ... le'u” and “zoi”: The text between “lo'u” and “le'u” should consist of Lojban words only. In fact, non-Lojban material in the form of a “zoi” quotation may also appear. However, if the word “le'u” is used either as the delimiting word for the “zoi” quotation, or within the quotation itself, the outer “lo'u” quotation will be prematurely terminated. Therefore, “le'u” should be avoided as the delimiting word in any “zoi” quotation.)</para>
-  <para>Lojban strictly avoids any confusion between things and the names of things:</para>
-  <programlisting><anchor xml:id="c19e10d6"/><anchor xml:id="cll_chapter19-section10-example6"/>10.6)  zo .bab. cmene la bab.
-       The-word “Bob” is-the-name-of the-one-named Bob.
-</programlisting>
-  <para>In <xref linkend="cll_chapter19-section10-example6"/>, “zo .bab.” is the word, whereas “la bab.” is the thing named by the word. The cmavo “la'e” and “lu'e” (of selma'o LAhE) convert back and forth between references and their referents:</para>
-  <programlisting><anchor xml:id="c19e10d7"/><anchor xml:id="cll_chapter19-section10-example7"/>10.7)  zo .bab. cmene la'e zo .bab.
-       The-word “Bob” is-the-name-of the-referent-of the-word “Bob”.
-
-<anchor xml:id="c19e10d8"/><anchor xml:id="cll_chapter19-section10-example8"/>10.8)  lu'e la bab. cmene la bab.
-       A-symbol-for Bob is-the-name-of Bob.
-</programlisting>
-  <para><xref linkend="cll_chapter19-section10-example6"/> through <xref linkend="cll_chapter19-section10-example8"/> all mean approximately the same thing, except for differences in emphasis. <xref linkend="cll_chapter19-section10-example9"/> is different:</para>
-  <programlisting><anchor xml:id="c19e10d9"/><anchor xml:id="cll_chapter19-section10-example9"/>10.9)  la bab. cmene la bab.
-       Bob is the name of Bob.
-</programlisting>
-  <para>and says that Bob is both the name and the thing named, an unlikely situation. People are not names.</para>
-  <para>(In <xref linkend="cll_chapter19-section10-example6"/> through <xref linkend="cll_chapter19-section10-example7"/>, the name “bab.” was separated from a preceding “zo” by a pause, thus: “zo .bab.”. The reason for this extra pause is that all Lojban names must be separated by pause from any preceding word other than “la”, “lai”, “la'i” (all of selma'o LA) and “doi” (of selma'o DOI). There are numerous other cmavo that may precede a name: of these, “zo” is one of the most common.)</para>
-  <para>The cmavo “la'o” also belongs to selma'o ZOI, and is mentioned here for completeness, although it does not signal the beginning of a quotation. Instead, “la'o” serves to mark non-Lojban names, especially the Linnaean binomial names (such as “Homo sapiens”) which are the internationally standardized names for species of animals and plants. Internationally known names which can more easily be recognized by spelling rather than pronunciation, such as “Goethe”, can also appear in Lojban text with “la'o”:</para>
-  <programlisting><anchor xml:id="c19e10d10"/><anchor xml:id="cll_chapter19-section10-example10"/>10.10) la'o dy. Goethe .dy. cu me la'o ly. Homo sapiens .ly.
-       Goethe is a Homo sapiens.
-</programlisting>
-  <para>Using “la'o” for all names rather than Lojbanizing, however, makes for very cumbersome text. A rough equivalent of “la'o” might be “la me zoi”.</para>
-</section>
-
-<section xml:id="cll_chapter19-section11">
-  <title>11. Contrastive emphasis: BAhE</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+    <para>The cmavo 
+    <quote>zo</quote>(of selma'o ZO) is a strong quotation mark for the single following word, which can be any Lojban word whatsoever. Among other uses, 
+    <quote>zo</quote>allows a metalinguistic word to be referenced without having it act on the surrounding text. The word must be a morphologically legal (but not necessarily meaningful) single Lojban word; compound cmavo are not permitted. For example:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-qxjF">
+      <title>
+        <anchor xml:id="c19e10d1" />
+        <anchor xml:id="cll_chapter19-section10-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>zo si cu lojbo valsi</jbo>
+        <en>
+        <quote>si</quote>is a Lojbanic word.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Since 
+    <quote>zo</quote>acts on a single word only, there is no corresponding terminator. Brevity, then, is a great advantage of 
+    <quote>zo</quote>, since the terminators for other kinds of quotation are rarely or never elidable.</para>
+    <para>The cmavo 
+    <quote>zoi</quote>(of selma'o ZOI) is a quotation mark for quoting non-Lojban text. Its syntax is 
+    <quote>zoi X. text .X</quote>, where X is a Lojban word (called the delimiting word) which is separated from the quoted text by pauses, and which is not found in the written text or spoken phoneme stream. It is common, but not required, to use the lerfu word (of selma'o BY) which corresponds to the Lojban name of the language being quoted:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-wYzm">
+      <title>
+        <anchor xml:id="c19e10d2" />
+        <anchor xml:id="cll_chapter19-section10-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>zoi gy. John is a man .gy. cu glico jufra</jbo>
+        <en>
+        <quote>John is a man</quote>is an English sentence.</en>
+      </interlinear-gloss>
+    </example>
+    <para>where 
+    <quote>gy</quote>stands for 
+    <quote>glico</quote>. Other popular choices of delimiting words are 
+    <quote>.kuot.</quote>, a Lojban name which sounds like the English word 
+    <quote>quote</quote>, and the word 
+    <quote>zoi</quote>itself. Another possibility is a Lojban word suggesting the topic of the quotation.</para>
+    <para>Within written text, the Lojban written word used as a delimiting word may not appear, whereas within spoken text, the sound of the delimiting word may not be uttered. This leads to occasional breakdowns of audio-visual isomorphism: 
+    <xref linkend="cll_chapter19-section10-example3" />is fine in speech but ungrammatical as written, whereas 
+    <xref linkend="cll_chapter19-section10-example4" />is correct when written but ungrammatical in speech.</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-xfAM">
+      <title>
+        <anchor xml:id="c19e10d3" />
+        <anchor xml:id="cll_chapter19-section10-example3" />
+        <anchor xml:id="c19e10d4" />
+        <anchor xml:id="cll_chapter19-section10-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>?mi djuno fi le valsi po'u zoi gy. gyrations .gy.</jbo>
+        <en>I know about the word which-is 
+        <quote>gyrations</quote>.</en>
+        <jbo>?mi djuno fi le valsi po'u zoi jai. gyrations .jai</jbo>
+        <en>I know about the word which-is 
+        <quote>gyrations</quote>.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The text 
+    <quote>gy</quote>appears in the written word 
+    <quote>gyrations</quote>, whereas the sound represented in Lojban by 
+    <quote>jai</quote>appears in the spoken word 
+    <quote>gyrations</quote>. Such borderline cases should be avoided as a matter of good style.</para>
+    <para>It should be noted particularly that 
+    <quote>zoi</quote>quotation is the only way to quote rafsi, specifically CCV rafsi, because they are not Lojban words, and 
+    <quote>zoi</quote>quotation is the only way to quote things which are not Lojban words. (CVC and CVV rafsi look like names and cmavo respectively, and so can be quoted using other methods.) For example:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Eeya">
+      <title>
+        <anchor xml:id="c19e10d5" />
+        <anchor xml:id="cll_chapter19-section10-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>zoi ry. sku .ry. cu rafsi zo cusku</jbo>
+        <en>
+        <quote>sku</quote>is a rafsi of 
+        <quote>cusku</quote>.</en>
+      </interlinear-gloss>
+    </example>
+    <para>(A minor note on interaction between 
+    <quote>lo'u ... le'u</quote>and 
+    <quote>zoi</quote>: The text between 
+    <quote>lo'u</quote>and 
+    <quote>le'u</quote>should consist of Lojban words only. In fact, non-Lojban material in the form of a 
+    <quote>zoi</quote>quotation may also appear. However, if the word 
+    <quote>le'u</quote>is used either as the delimiting word for the 
+    <quote>zoi</quote>quotation, or within the quotation itself, the outer 
+    <quote>lo'u</quote>quotation will be prematurely terminated. Therefore, 
+    <quote>le'u</quote>should be avoided as the delimiting word in any 
+    <quote>zoi</quote>quotation.)</para>
+    <para>Lojban strictly avoids any confusion between things and the names of things:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-56m5">
+      <title>
+        <anchor xml:id="c19e10d6" />
+        <anchor xml:id="cll_chapter19-section10-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>zo .bab. cmene la bab.</jbo>
+        <en>The-word 
+        <quote>Bob</quote>is-the-name-of the-one-named Bob.</en>
+      </interlinear-gloss>
+    </example>
+    <para>In 
+    <xref linkend="cll_chapter19-section10-example6" />, 
+    <quote>zo .bab.</quote>is the word, whereas 
+    <quote>la bab.</quote>is the thing named by the word. The cmavo 
+    <quote>la'e</quote>and 
+    <quote>lu'e</quote>(of selma'o LAhE) convert back and forth between references and their referents:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-fUYu">
+      <title>
+        <anchor xml:id="c19e10d7" />
+        <anchor xml:id="cll_chapter19-section10-example7" />
+        <anchor xml:id="c19e10d8" />
+        <anchor xml:id="cll_chapter19-section10-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>zo .bab. cmene la'e zo .bab.</jbo>
+        <en>The-word 
+        <quote>Bob</quote>is-the-name-of the-referent-of the-word 
+        <quote>Bob</quote>.</en>
+        <jbo>lu'e la bab. cmene la bab.</jbo>
+        <en>A-symbol-for Bob is-the-name-of Bob.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter19-section10-example6" />through 
+    <xref linkend="cll_chapter19-section10-example8" />all mean approximately the same thing, except for differences in emphasis. 
+    <xref linkend="cll_chapter19-section10-example9" />is different:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-3yXJ">
+      <title>
+        <anchor xml:id="c19e10d9" />
+        <anchor xml:id="cll_chapter19-section10-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la bab. cmene la bab.</jbo>
+        <en>Bob is the name of Bob.</en>
+      </interlinear-gloss>
+    </example>
+    <para>and says that Bob is both the name and the thing named, an unlikely situation. People are not names.</para>
+    <para>(In 
+    <xref linkend="cll_chapter19-section10-example6" />through 
+    <xref linkend="cll_chapter19-section10-example7" />, the name 
+    <quote>bab.</quote>was separated from a preceding 
+    <quote>zo</quote>by a pause, thus: 
+    <quote>zo .bab.</quote>. The reason for this extra pause is that all Lojban names must be separated by pause from any preceding word other than 
+    <quote>la</quote>, 
+    <quote>lai</quote>, 
+    <quote>la'i</quote>(all of selma'o LA) and 
+    <quote>doi</quote>(of selma'o DOI). There are numerous other cmavo that may precede a name: of these, 
+    <quote>zo</quote>is one of the most common.)</para>
+    <para>The cmavo 
+    <quote>la'o</quote>also belongs to selma'o ZOI, and is mentioned here for completeness, although it does not signal the beginning of a quotation. Instead, 
+    <quote>la'o</quote>serves to mark non-Lojban names, especially the Linnaean binomial names (such as 
+    <quote>Homo sapiens</quote>) which are the internationally standardized names for species of animals and plants. Internationally known names which can more easily be recognized by spelling rather than pronunciation, such as 
+    <quote>Goethe</quote>, can also appear in Lojban text with 
+    <quote>la'o</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-Sn3u">
+      <title>
+        <anchor xml:id="c19e10d10" />
+        <anchor xml:id="cll_chapter19-section10-example10" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la'o dy. Goethe .dy. cu me la'o ly. Homo sapiens .ly.</jbo>
+        <en>Goethe is a Homo sapiens.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Using 
+    <quote>la'o</quote>for all names rather than Lojbanizing, however, makes for very cumbersome text. A rough equivalent of 
+    <quote>la'o</quote>might be 
+    <quote>la me zoi</quote>.</para>
+  </section>
+  <section xml:id="cll_chapter19-section11">
+    <title>11. Contrastive emphasis: BAhE</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      ba'e    BAhE    emphasize next word
      za'e    BAhE    next word is nonce
 </programlisting>
-  <para>English often uses strong stress on a word to single it out for contrastive emphasis, thus</para>
-  <programlisting><anchor xml:id="c19e11d1"/><anchor xml:id="cll_chapter19-section11-example1"/>11.1)  I saw George.
-</programlisting>
-  <para>is quite different from</para>
-  <programlisting><anchor xml:id="c19e11d2"/><anchor xml:id="cll_chapter19-section11-example2"/>11.2)  I saw <emphasis>George</emphasis>.
-</programlisting>
-  <para>The heavy stress on “<emphasis>George</emphasis>” (represented in writing by <emphasis>italics</emphasis>) indicates that I saw George rather than someone else. Lojban does not use stress in this way: stress is used only to help separate words (because every brivla is stressed on the penultimate syllable) and in names to match other languages’ stress patterns. Note that many other languages do not use stress in this way either; typically word order is rearranged, producing something like</para>
-  <programlisting><anchor xml:id="c19e11d3"/><anchor xml:id="cll_chapter19-section11-example3"/>11.3)  It was George whom I saw.
-</programlisting>
-  <para>In Lojban, the cmavo “ba'e” (of selma'o BAhE) precedes a single word which is to be emphasized:</para>
-  <programlisting><anchor xml:id="c19e11d4"/><anchor xml:id="cll_chapter19-section11-example4"/>11.4)  mi viska la ba'e .djordj.
-       I saw the-one-named [emphasis] “George”.
-       I saw <emphasis>George</emphasis>.
-</programlisting>
-  <para>Note the pause before the name “djordj.”, which serves to separate it unambiguously from the “ba'e”. Alternatively, the “ba'e” can be moved to a position before the “la”, which in effect emphasizes the whole construct “la djordj.”:</para>
-  <programlisting><anchor xml:id="c19e11d5"/><anchor xml:id="cll_chapter19-section11-example5"/>11.5)  mi viska ba'e la djordj.
-       I saw [emphasis] the-one-named “George”.
-       I saw <emphasis>George</emphasis>.
-</programlisting>
-  <para>Marking a word with a cmavo of BAhE does not change the word’s grammar in any way. Any word in a bridi can receive contrastive emphasis marking:</para>
-  <programlisting><anchor xml:id="c19e11d6"/><anchor xml:id="cll_chapter19-section11-example6"/>11.6)  ba'e mi viska la djordj.
-       I, no one else, saw George.
-
-<anchor xml:id="c19e11d7"/><anchor xml:id="cll_chapter19-section11-example7"/>11.7)  mi ba'e viska la djordj.
-       I saw (not heard or smelled) George.
-</programlisting>
-  <para>Emphasis on one of the structural components of a Lojban bridi can also be achieved by rearranging it into an order that is not the speaker’s or writer’s usual order. Any sumti moved out of place, or the selbri when moved out of place, is emphatic to some degree.</para>
-  <para>For completeness, the cmavo “za'e” should be mentioned, also of selma'o BAhE. It marks a word as possibly irregular, non-standard, or nonce (created for the occasion):</para>
-  <programlisting><anchor xml:id="c19e11d8"/><anchor xml:id="cll_chapter19-section11-example8"/>11.8)  mi klama la za'e. .albeinias
-       I go-to so-called Albania
-</programlisting>
-  <para>marks a Lojbanization of an English name, where a more appropriate standard form might be something like “la ctiipyris.”, reflecting the country’s name in Albanian.</para>
-  <para>Before a lujvo or fu'ivla, “za'e” indicates that the word has been made up on the spot and may be used in a sense that is not found in the unabridged dictionary (when we have an unabridged dictionary!).</para>
-</section>
-
-<section xml:id="cll_chapter19-section12">
-  <title>12. Parenthesis and metalinguistic commentary: TO, TOI, SEI</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+    <para>English often uses strong stress on a word to single it out for contrastive emphasis, thus</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-iW4P">
+      <title>
+        <anchor xml:id="c19e11d1" />
+        <anchor xml:id="cll_chapter19-section11-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>I saw George.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>is quite different from</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-GSTL">
+      <title>
+        <anchor xml:id="c19e11d2" />
+        <anchor xml:id="cll_chapter19-section11-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>I saw</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>The heavy stress on 
+    <quote>
+      <emphasis>George</emphasis>
+    </quote>(represented in writing by 
+    <emphasis>italics</emphasis>) indicates that I saw George rather than someone else. Lojban does not use stress in this way: stress is used only to help separate words (because every brivla is stressed on the penultimate syllable) and in names to match other languages' stress patterns. Note that many other languages do not use stress in this way either; typically word order is rearranged, producing something like</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-E8mx">
+      <title>
+        <anchor xml:id="c19e11d3" />
+        <anchor xml:id="cll_chapter19-section11-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>It was George whom I saw.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>In Lojban, the cmavo 
+    <quote>ba'e</quote>(of selma'o BAhE) precedes a single word which is to be emphasized:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-8SVn">
+      <title>
+        <anchor xml:id="c19e11d4" />
+        <anchor xml:id="cll_chapter19-section11-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi viska la ba'e .djordj.</jbo>
+        <gloss>I saw the-one-named [emphasis] 
+        <quote>George</quote>.</gloss>
+        <en>I saw</en>
+      </interlinear-gloss>
+    </example>
+    <para>Note the pause before the name 
+    <quote>djordj.</quote>, which serves to separate it unambiguously from the 
+    <quote>ba'e</quote>. Alternatively, the 
+    <quote>ba'e</quote>can be moved to a position before the 
+    <quote>la</quote>, which in effect emphasizes the whole construct 
+    <quote>la djordj.</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-ud6w">
+      <title>
+        <anchor xml:id="c19e11d5" />
+        <anchor xml:id="cll_chapter19-section11-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi viska ba'e la djordj.</jbo>
+        <gloss>I saw [emphasis] the-one-named 
+        <quote>George</quote>.</gloss>
+        <en>I saw</en>
+      </interlinear-gloss>
+    </example>
+    <para>Marking a word with a cmavo of BAhE does not change the word's grammar in any way. Any word in a bridi can receive contrastive emphasis marking:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-SVz2">
+      <title>
+        <anchor xml:id="c19e11d6" />
+        <anchor xml:id="cll_chapter19-section11-example6" />
+        <anchor xml:id="c19e11d7" />
+        <anchor xml:id="cll_chapter19-section11-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ba'e mi viska la djordj.</jbo>
+        <en>I, no one else, saw George.</en>
+        <jbo>mi ba'e viska la djordj.</jbo>
+        <en>I saw (not heard or smelled) George.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Emphasis on one of the structural components of a Lojban bridi can also be achieved by rearranging it into an order that is not the speaker's or writer's usual order. Any sumti moved out of place, or the selbri when moved out of place, is emphatic to some degree.</para>
+    <para>For completeness, the cmavo 
+    <quote>za'e</quote>should be mentioned, also of selma'o BAhE. It marks a word as possibly irregular, non-standard, or nonce (created for the occasion):</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-XtRW">
+      <title>
+        <anchor xml:id="c19e11d8" />
+        <anchor xml:id="cll_chapter19-section11-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi klama la za'e. .albeinias</jbo>
+        <en>I go-to so-called Albania</en>
+      </interlinear-gloss>
+    </example>
+    <para>marks a Lojbanization of an English name, where a more appropriate standard form might be something like 
+    <quote>la ctiipyris.</quote>, reflecting the country's name in Albanian.</para>
+    <para>Before a lujvo or fu'ivla, 
+    <quote>za'e</quote>indicates that the word has been made up on the spot and may be used in a sense that is not found in the unabridged dictionary (when we have an unabridged dictionary!).</para>
+  </section>
+  <section xml:id="cll_chapter19-section12">
+    <title>12. Parenthesis and metalinguistic commentary: TO, TOI, SEI</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      to      TO      open parenthesis
      to'i    TO      open editorial parenthesis
 
@@ -502,173 +1253,464 @@ Putting It All Together: Notes on the Structure of Lojban Texts</title>
 
      sei     SEI     metalinguistic bridi marker
 </programlisting>
-  <para>The cmavo “to” and “toi” are discursive (non-mathematical) parentheses, for inserting parenthetical remarks. Any text whatsoever can go within the parentheses, and it is completely invisible to its context. It can, however, refer to the context by the use of pro-sumti and pro-bridi: any that have been assigned in the context are still assigned in the parenthetical remarks, but the reverse is not true.</para>
-  <programlisting><anchor xml:id="c19e12d1"/><anchor xml:id="cll_chapter19-section12-example1"/>12.1)  doi lisas. mi djica le nu to doi frank. ko sisti toi do viska le mlatu
-       O Lisa, I desire the event-of (O Frank, [imperative] stop!) you see the cat.
-       Lisa, I want you to (Frank! Stop!) see the cat.
-</programlisting>
-  <para><xref linkend="cll_chapter19-section12-example1"/> implicitly redefines “do” within the parentheses: the listener is changed by “doi frank.” When the context sentence resumes, however, the old listener, Lisa, is automatically restored.</para>
-  <para>There is another cmavo of selma'o TO: “to'i”. The difference between “to” and “to'i” is the difference between parentheses and square brackets in English prose. Remarks within “to ... toi” cmavo are implicitly by the same speaker, whereas remarks within “to'i ... toi” are implicitly by someone else, perhaps an editor:</para>
-  <programlisting><anchor xml:id="c19e12d2"/><anchor xml:id="cll_chapter19-section12-example2"/>12.2)  la frank. cusku lu mi prami do to'isa'a do du la djein. toi li'u
-       Frank expresses “I love you [you = Jane]”
-</programlisting>
-  <para>The “sa'a” suffix is a discursive cmavo (of selma'o UI) meaning “editorial insertion”, and indicating that the marked word or construct (in this case, the entire bracketed remark) is not part of the quotation. It is required whenever the “to'i ... toi” remark is physically within quotation marks, at least when speaking to literal-minded listeners; the convention may be relaxed if no actual confusion results.</para>
-  <para>Note: The parser believes that parentheses are attached to the previous word or construct, because it treats them as syntactic equivalents of subscripts and other such so-called “free modifiers”. Semantically, however, parenthetical remarks are not necessarily attached either to what precedes them or what follows them.</para>
-  <para>The cmavo “sei” (of selma'o SEI) begins an embedded discursive bridi. Comments added with “sei” are called “metalinguistic”, because they are comments about the discourse itself rather than about the subject matter of the discourse. This sense of the term “metalinguistic” is used throughout this chapter, and is not to be confused with the sense “language for expressing other languages”.</para>
-  <para>When marked with “sei”, a metalinguistic utterance can be embedded in another utterance as a discursive. In this way, discursives which do not have cmavo assigned in selma'o UI can be expressed:</para>
-  <programlisting><anchor xml:id="c19e12d3"/><anchor xml:id="cll_chapter19-section12-example3"/>12.3)  la frank. prami sei la frank. gleki la djein.
-       Frank loves (Frank is happy) Jane.
-</programlisting>
-  <para>Using the happiness attitudinal, “.ui”, would imply that the speaker was happy. Instead, the speaker attributes happiness to Frank. It would probably be safe to elide the one who is happy, and say:</para>
-  <programlisting><anchor xml:id="c19e12d4"/><anchor xml:id="cll_chapter19-section12-example4"/>12.4)  la frank. prami sei gleki la djein.
-       Frank loves (he is happy) Jane.
-</programlisting>
-  <para>The grammar of the bridi following “sei” has an unusual limitation: the sumti must either precede the selbri, or must be glued into the selbri with “be” and “bei”:</para>
-  <programlisting><anchor xml:id="c19e12d5"/><anchor xml:id="cll_chapter19-section12-example5"/>12.5)  la frank. prami sei gleki be fa la suzn. la djein.
-       Frank loves (Susan is happy) Jane.
-</programlisting>
-  <para>This restriction allows the terminator cmavo “se'u” to almost always be elided.</para>
-  <para>Since a discursive utterance is working at a “higher” level of abstraction than a non-discursive utterance, a non-discursive utterance cannot refer to a discursive utterance. Specifically, the various back-counting, reciprocal, and reflexive constructs in selma'o KOhA ignore the utterances at “higher” metalinguistic levels in determining their referent. It is possible, and sometimes necessary, to refer to lower metalinguistic levels. For example, the English “he said” in a conversation is metalinguistic. For this purpose, quotations are considered to be at a lower metalinguistic level than the surrounding context (a quoted text cannot refer to the statements of the one who quotes it), whereas parenthetical remarks are considered to be at a higher level than the context.</para>
-  <para>Lojban works differently from English in that the “he said” can be marked instead of the quotation. In Lojban, you can say:</para>
-  <programlisting><anchor xml:id="c19e12d6"/><anchor xml:id="cll_chapter19-section12-example6"/>12.6)  la djan. cusku lu mi klama le zarci li'u
-       John expresses “I go to-the store”.
-</programlisting>
-  <para>which literally claims that John uttered the quoted text. If the central claim is that John made the utterance, as is likely in conversation, this style is the most sensible. However, in written text which quotes a conversation, you don’t want the “he said” or “she said” to be considered part of the conversation. If unmarked, it could mess up the anaphora counting. Instead, you can use:</para>
-  <programlisting><anchor xml:id="c19e12d7"/><anchor xml:id="cll_chapter19-section12-example7"/>12.7)  lu mi klama le zarci seisa'a la djan. cusku be dei li'u
-       “I go to-the store (John expresses this-sentence)”
-       “I go to the store”, said John.
-</programlisting>
-  <para>And of course other orders are possible:</para>
-  <programlisting><anchor xml:id="c19e12d8"/><anchor xml:id="cll_chapter19-section12-example8"/>12.8)  lu seisa'a la djan. cusku be dei mi klama le zarci
-       John said, “I go to the store”.
-
-<anchor xml:id="c19e12d9"/><anchor xml:id="cll_chapter19-section12-example9"/>12.9)  lu mi klama seisa'a la djan cusku le zarci
-       “I go”, John said, “to the store”.
-</programlisting>
-  <para>Note the “sa'a” following each “sei”, marking the “sei” and its attached bridi as an editorial insert, not part of the quotation. In a more relaxed style, these “sa'a” cmavo would probably be dropped.</para>
-  <para>The elidable terminator for “sei” is “se'u” (of selma'o SEhU); it is rarely needed, except to separate a selbri within the “sei” comment from an immediately following selbri (or component) outside the comment.</para>
-</section>
-
-<section xml:id="cll_chapter19-section13">
-  <title>13. Erasure: SI, SA, SU</title>
-  <para>The following cmavo are discussed in this section:</para>
-  <programlisting>
+    <para>The cmavo 
+    <quote>to</quote>and 
+    <quote>toi</quote>are discursive (non-mathematical) parentheses, for inserting parenthetical remarks. Any text whatsoever can go within the parentheses, and it is completely invisible to its context. It can, however, refer to the context by the use of pro-sumti and pro-bridi: any that have been assigned in the context are still assigned in the parenthetical remarks, but the reverse is not true.</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-FHJi">
+      <title>
+        <anchor xml:id="c19e12d1" />
+        <anchor xml:id="cll_chapter19-section12-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>doi lisas. mi djica le nu to doi frank. ko sisti toi do viska le mlatu</jbo>
+        <gloss>O Lisa, I desire the event-of (O Frank, [imperative] stop!) you see the cat.</gloss>
+        <en>Lisa, I want you to (Frank! Stop!) see the cat.</en>
+      </interlinear-gloss>
+    </example>
+    <para>
+    <xref linkend="cll_chapter19-section12-example1" />implicitly redefines 
+    <quote>do</quote>within the parentheses: the listener is changed by 
+    <quote>doi frank.</quote>When the context sentence resumes, however, the old listener, Lisa, is automatically restored.</para>
+    <para>There is another cmavo of selma'o TO: 
+    <quote>to'i</quote>. The difference between 
+    <quote>to</quote>and 
+    <quote>to'i</quote>is the difference between parentheses and square brackets in English prose. Remarks within 
+    <quote>to ... toi</quote>cmavo are implicitly by the same speaker, whereas remarks within 
+    <quote>to'i ... toi</quote>are implicitly by someone else, perhaps an editor:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-hXIi">
+      <title>
+        <anchor xml:id="c19e12d2" />
+        <anchor xml:id="cll_chapter19-section12-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la frank. cusku lu mi prami do to'isa'a do du la djein. toi li'u</jbo>
+        <en>Frank expresses 
+        <quote>I love you [you = Jane]</quote></en>
+      </interlinear-gloss>
+    </example>
+    <para>The 
+    <quote>sa'a</quote>suffix is a discursive cmavo (of selma'o UI) meaning 
+    <quote>editorial insertion</quote>, and indicating that the marked word or construct (in this case, the entire bracketed remark) is not part of the quotation. It is required whenever the 
+    <quote>to'i ... toi</quote>remark is physically within quotation marks, at least when speaking to literal-minded listeners; the convention may be relaxed if no actual confusion results.</para>
+    <para>Note: The parser believes that parentheses are attached to the previous word or construct, because it treats them as syntactic equivalents of subscripts and other such so-called 
+    <quote>free modifiers</quote>. Semantically, however, parenthetical remarks are not necessarily attached either to what precedes them or what follows them.</para>
+    <para>The cmavo 
+    <quote>sei</quote>(of selma'o SEI) begins an embedded discursive bridi. Comments added with 
+    <quote>sei</quote>are called 
+    <quote>metalinguistic</quote>, because they are comments about the discourse itself rather than about the subject matter of the discourse. This sense of the term 
+    <quote>metalinguistic</quote>is used throughout this chapter, and is not to be confused with the sense 
+    <quote>language for expressing other languages</quote>.</para>
+    <para>When marked with 
+    <quote>sei</quote>, a metalinguistic utterance can be embedded in another utterance as a discursive. In this way, discursives which do not have cmavo assigned in selma'o UI can be expressed:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-jA1T">
+      <title>
+        <anchor xml:id="c19e12d3" />
+        <anchor xml:id="cll_chapter19-section12-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la frank. prami sei la frank. gleki la djein.</jbo>
+        <en>Frank loves (Frank is happy) Jane.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Using the happiness attitudinal, 
+    <quote>.ui</quote>, would imply that the speaker was happy. Instead, the speaker attributes happiness to Frank. It would probably be safe to elide the one who is happy, and say:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-vago">
+      <title>
+        <anchor xml:id="c19e12d4" />
+        <anchor xml:id="cll_chapter19-section12-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la frank. prami sei gleki la djein.</jbo>
+        <en>Frank loves (he is happy) Jane.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The grammar of the bridi following 
+    <quote>sei</quote>has an unusual limitation: the sumti must either precede the selbri, or must be glued into the selbri with 
+    <quote>be</quote>and 
+    <quote>bei</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-sz7v">
+      <title>
+        <anchor xml:id="c19e12d5" />
+        <anchor xml:id="cll_chapter19-section12-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la frank. prami sei gleki be fa la suzn. la djein.</jbo>
+        <en>Frank loves (Susan is happy) Jane.</en>
+      </interlinear-gloss>
+    </example>
+    <para>This restriction allows the terminator cmavo 
+    <quote>se'u</quote>to almost always be elided.</para>
+    <para>Since a discursive utterance is working at a 
+    <quote>higher</quote>level of abstraction than a non-discursive utterance, a non-discursive utterance cannot refer to a discursive utterance. Specifically, the various back-counting, reciprocal, and reflexive constructs in selma'o KOhA ignore the utterances at 
+    <quote>higher</quote>metalinguistic levels in determining their referent. It is possible, and sometimes necessary, to refer to lower metalinguistic levels. For example, the English 
+    <quote>he said</quote>in a conversation is metalinguistic. For this purpose, quotations are considered to be at a lower metalinguistic level than the surrounding context (a quoted text cannot refer to the statements of the one who quotes it), whereas parenthetical remarks are considered to be at a higher level than the context.</para>
+    <para>Lojban works differently from English in that the 
+    <quote>he said</quote>can be marked instead of the quotation. In Lojban, you can say:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-DY0u">
+      <title>
+        <anchor xml:id="c19e12d6" />
+        <anchor xml:id="cll_chapter19-section12-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>la djan. cusku lu mi klama le zarci li'u</jbo>
+        <en>John expresses 
+        <quote>I go to-the store</quote>.</en>
+      </interlinear-gloss>
+    </example>
+    <para>which literally claims that John uttered the quoted text. If the central claim is that John made the utterance, as is likely in conversation, this style is the most sensible. However, in written text which quotes a conversation, you don't want the 
+    <quote>he said</quote>or 
+    <quote>she said</quote>to be considered part of the conversation. If unmarked, it could mess up the anaphora counting. Instead, you can use:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-b7Fi">
+      <title>
+        <anchor xml:id="c19e12d7" />
+        <anchor xml:id="cll_chapter19-section12-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>lu mi klama le zarci seisa'a la djan. cusku be dei li'u</jbo>
+        <gloss>
+          <quote>I go to-the store (John expresses this-sentence)</quote>
+        </gloss>
+        <en>
+        <quote>I go to the store</quote>, said John.</en>
+      </interlinear-gloss>
+    </example>
+    <para>And of course other orders are possible:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-fHRb">
+      <title>
+        <anchor xml:id="c19e12d8" />
+        <anchor xml:id="cll_chapter19-section12-example8" />
+        <anchor xml:id="c19e12d9" />
+        <anchor xml:id="cll_chapter19-section12-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>lu seisa'a la djan. cusku be dei mi klama le zarci</jbo>
+        <en>John said, 
+        <quote>I go to the store</quote>.</en>
+        <jbo>lu mi klama seisa'a la djan cusku le zarci</jbo>
+        <en>
+        <quote>I go</quote>, John said, 
+        <quote>to the store</quote>.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Note the 
+    <quote>sa'a</quote>following each 
+    <quote>sei</quote>, marking the 
+    <quote>sei</quote>and its attached bridi as an editorial insert, not part of the quotation. In a more relaxed style, these 
+    <quote>sa'a</quote>cmavo would probably be dropped.</para>
+    <para>The elidable terminator for 
+    <quote>sei</quote>is 
+    <quote>se'u</quote>(of selma'o SEhU); it is rarely needed, except to separate a selbri within the 
+    <quote>sei</quote>comment from an immediately following selbri (or component) outside the comment.</para>
+  </section>
+  <section xml:id="cll_chapter19-section13">
+    <title>13. Erasure: SI, SA, SU</title>
+    <para>The following cmavo are discussed in this section:</para>
+    <programlisting xml:space="preserve">
      si      SI      erase word
      sa      SA      erase phrase
      su      SU      erase discourse
 </programlisting>
-  <para>The cmavo “si” (of selma'o SI) is a metalinguistic operator that erases the preceding word, as if it had never been spoken:</para>
-  <programlisting><anchor xml:id="c19e13d1"/><anchor xml:id="cll_chapter19-section13-example1"/>13.1)  ti gerku si mlatu
-       This is-a-dog, er, is-a-cat.
-</programlisting>
-  <para>means the same thing as “ti mlatu”. Multiple “si” cmavo in succession erase the appropriate number of words:</para>
-  <programlisting><anchor xml:id="c19e13d2"/><anchor xml:id="cll_chapter19-section13-example2"/>13.2)  ta blanu zdani si si xekri zdani
-       That is-a-blue house, er, er, is-a-black house.
-</programlisting>
-  <para>In order to erase the word “zo”, it is necessary to use three “si” cmavo in a row:</para>
-  <programlisting><anchor xml:id="c19e13d3"/><anchor xml:id="cll_chapter19-section13-example3"/>13.3)  zo .bab. se cmene zo si si si la bab.
-       The-word “Bob” is-the-name-of the word “si”, er, er, Bob.
-</programlisting>
-  <para>The first use of “si” does not erase anything, but completes the “zo” quotation. Two more “si” cmavo are then necessary to erase the first “si” and the “zo”.</para>
-  <para>Incorrect names can likewise cause trouble with “si”:</para>
-  <programlisting><anchor xml:id="c19e13d4"/><anchor xml:id="cll_chapter19-section13-example4"/>13.4)  mi tavla fo la .esperanto si si .esperanton.
-       I talk in-language that-named “and” “speranto”, er, er, Esperanto.
-</programlisting>
-  <para>The Lojbanized spelling “.esperanto” breaks up, as a consequence of the Lojban morphology rules (see <xref linkend="cll_chapter4"/>) into two Lojban words, the cmavo “.e” and the undefined fu'ivla “speranto”. Therefore, two “si” cmavo are needed to erase them. Of course, “.e speranto” is not grammatical after “la”, but recognition of “si” is done before grammatical analysis.</para>
-  <para>Even more messy is the result of an incorrect “zoi”:</para>
-  <programlisting><anchor xml:id="c19e13d5"/><anchor xml:id="cll_chapter19-section13-example5"/>13.5)  mi cusku zoi fy. gy. .fy.  si si si si zo .djan
-       I express [foreign] [quote] “gy” [unquote], er, er, er, er, “John”.
-</programlisting>
-  <para>In <xref linkend="cll_chapter19-section13-example5"/>, the first “fy” is taken to be the delimiting word. The next word must be different from the delimiting word, and “gy.”, the Lojban name for the letter “g”, was chosen arbitrarily. Then the delimiting word must be repeated. For purposes of “si” erasure, the entire quoted text is taken to be a word, so four words have been uttered, and four more “si” cmavo are needed to erase them altogether. Similarly, a stray “lo'u” quotation mark must be erased with “fy. le'u si si si”, by completing the quotation and then erasing it all with three “si” cmavo.</para>
-  <para>What if less than the entire “zo” or “zoi” construct is erased? The result is something which has a loose “zo” or “zoi” in it, without its expected sequels, and which is incurably ungrammatical. Thus, to erase just the word quoted by “zo”, it turns out to be necessary to erase the “zo” as well:</para>
-  <programlisting><anchor xml:id="c19e13d6"/><anchor xml:id="cll_chapter19-section13-example6"/>13.6)  mi se cmene zo .djan.  si si zo .djordj.
-       I am-named-by the-word “John”, er, er, the-word “George”.
-</programlisting>
-  <para>The parser will reject “zo .djan. si .djordj.”, because in that context “djordj.” is a name (of selma'o CMENE) rather than a quoted word.</para>
-  <para>Note: The current machine parser does not implement “si” erasure.</para>
-  <para>As the above examples plainly show, precise erasures with “si” can be extremely hard to get right. Therefore, the cmavo “sa” (of selma'o SA) is provided for erasing more than one word. The cmavo following “sa” should be the starting marker of some grammatical construct. The effect of the “sa” is to erase back to and including the last starting marker of the same kind. For example:</para>
-  <programlisting><anchor xml:id="c19e13d7"/><anchor xml:id="cll_chapter19-section13-example7"/>13.7)  mi viska le sa .i mi cusku zo .djan.
-       I see the  ...  I say the-word “John”.
-</programlisting>
-  <para>Since the word following “sa” is “.i”, the sentence separator, its effect is to erase the preceding sentence. So <xref linkend="cll_chapter19-section13-example7"/> is equivalent to:</para>
-  <programlisting><anchor xml:id="c19e13d8"/><anchor xml:id="cll_chapter19-section13-example8"/>13.8)  mi cusku zo .djan.
-</programlisting>
-  <para>Another example, erasing a partial description rather than a partial sentence:</para>
-  <programlisting><anchor xml:id="c19e13d9"/><anchor xml:id="cll_chapter19-section13-example9"/>13.9)  mi viska le blanu zdan. sa le xekri zdani
-       I see the blue hou ...  the black house.
-</programlisting>
-  <para>In <xref linkend="cll_chapter19-section13-example9"/>, “le blanu zdan.” is ungrammatical, but clearly reflects the speaker’s original intention to say “le blanu zdani”. However, the “zdani” was cut off before the end and changed into a name. The entire ungrammatical “le” construct is erased and replaced by “le xekri zdani”.</para>
-  <para>Note: The current machine parser does not implement “sa” erasure. Getting “sa” right is even more difficult (for a computer) than getting “si” right, as the behavior of “si” is defined in terms of words rather than in terms of grammatical constructs (possibly incorrect ones) and words are conceptually simpler entities. On the other hand, “sa” is generally easier for human beings, because the rules for using it correctly are less finicky.</para>
-  <para>The cmavo “su” (of selma'o SU) is yet another metalinguistic operator that erases the entire text. However, if the text involves multiple speakers, then “su” will only erase the remarks made by the one who said it, unless that speaker has said nothing. Therefore “susu” is needed to eradicate a whole discussion in conversation.</para>
-  <para>Note: The current machine parser does not implement either “su” or “susu” erasure.</para>
-</section>
-
-<section xml:id="cll_chapter19-section14">
-  <title>14. Hesitation: Y</title>
-  <para>The following cmavo is discussed in this section:</para>
-  <programlisting>
+    <para>The cmavo 
+    <quote>si</quote>(of selma'o SI) is a metalinguistic operator that erases the preceding word, as if it had never been spoken:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-JErC">
+      <title>
+        <anchor xml:id="c19e13d1" />
+        <anchor xml:id="cll_chapter19-section13-example1" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ti gerku si mlatu</jbo>
+        <en>This is-a-dog, er, is-a-cat.</en>
+      </interlinear-gloss>
+    </example>
+    <para>means the same thing as 
+    <quote>ti mlatu</quote>. Multiple 
+    <quote>si</quote>cmavo in succession erase the appropriate number of words:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-rjyy">
+      <title>
+        <anchor xml:id="c19e13d2" />
+        <anchor xml:id="cll_chapter19-section13-example2" />
+      </title>
+      <interlinear-gloss>
+        <jbo>ta blanu zdani si si xekri zdani</jbo>
+        <en>That is-a-blue house, er, er, is-a-black house.</en>
+      </interlinear-gloss>
+    </example>
+    <para>In order to erase the word 
+    <quote>zo</quote>, it is necessary to use three 
+    <quote>si</quote>cmavo in a row:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-zSQi">
+      <title>
+        <anchor xml:id="c19e13d3" />
+        <anchor xml:id="cll_chapter19-section13-example3" />
+      </title>
+      <interlinear-gloss>
+        <jbo>zo .bab. se cmene zo si si si la bab.</jbo>
+        <en>The-word 
+        <quote>Bob</quote>is-the-name-of the word 
+        <quote>si</quote>, er, er, Bob.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The first use of 
+    <quote>si</quote>does not erase anything, but completes the 
+    <quote>zo</quote>quotation. Two more 
+    <quote>si</quote>cmavo are then necessary to erase the first 
+    <quote>si</quote>and the 
+    <quote>zo</quote>.</para>
+    <para>Incorrect names can likewise cause trouble with 
+    <quote>si</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-s7V6">
+      <title>
+        <anchor xml:id="c19e13d4" />
+        <anchor xml:id="cll_chapter19-section13-example4" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi tavla fo la .esperanto si si .esperanton.</jbo>
+        <en>I talk in-language that-named 
+        <quote>and</quote>
+        <quote>speranto</quote>, er, er, Esperanto.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The Lojbanized spelling 
+    <quote>.esperanto</quote>breaks up, as a consequence of the Lojban morphology rules (see 
+    <xref linkend="cll_chapter4" />) into two Lojban words, the cmavo 
+    <quote>.e</quote>and the undefined fu'ivla 
+    <quote>speranto</quote>. Therefore, two 
+    <quote>si</quote>cmavo are needed to erase them. Of course, 
+    <quote>.e speranto</quote>is not grammatical after 
+    <quote>la</quote>, but recognition of 
+    <quote>si</quote>is done before grammatical analysis.</para>
+    <para>Even more messy is the result of an incorrect 
+    <quote>zoi</quote>:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-zoWF">
+      <title>
+        <anchor xml:id="c19e13d5" />
+        <anchor xml:id="cll_chapter19-section13-example5" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi cusku zoi fy. gy. .fy. si si si si zo .djan</jbo>
+        <en>I express [foreign] [quote] 
+        <quote>gy</quote>[unquote], er, er, er, er, 
+        <quote>John</quote>.</en>
+      </interlinear-gloss>
+    </example>
+    <para>In 
+    <xref linkend="cll_chapter19-section13-example5" />, the first 
+    <quote>fy</quote>is taken to be the delimiting word. The next word must be different from the delimiting word, and 
+    <quote>gy.</quote>, the Lojban name for the letter 
+    <quote>g</quote>, was chosen arbitrarily. Then the delimiting word must be repeated. For purposes of 
+    <quote>si</quote>erasure, the entire quoted text is taken to be a word, so four words have been uttered, and four more 
+    <quote>si</quote>cmavo are needed to erase them altogether. Similarly, a stray 
+    <quote>lo'u</quote>quotation mark must be erased with 
+    <quote>fy. le'u si si si</quote>, by completing the quotation and then erasing it all with three 
+    <quote>si</quote>cmavo.</para>
+    <para>What if less than the entire 
+    <quote>zo</quote>or 
+    <quote>zoi</quote>construct is erased? The result is something which has a loose 
+    <quote>zo</quote>or 
+    <quote>zoi</quote>in it, without its expected sequels, and which is incurably ungrammatical. Thus, to erase just the word quoted by 
+    <quote>zo</quote>, it turns out to be necessary to erase the 
+    <quote>zo</quote>as well:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-FzoX">
+      <title>
+        <anchor xml:id="c19e13d6" />
+        <anchor xml:id="cll_chapter19-section13-example6" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi se cmene zo .djan. si si zo .djordj.</jbo>
+        <en>I am-named-by the-word 
+        <quote>John</quote>, er, er, the-word 
+        <quote>George</quote>.</en>
+      </interlinear-gloss>
+    </example>
+    <para>The parser will reject 
+    <quote>zo .djan. si .djordj.</quote>, because in that context 
+    <quote>djordj.</quote>is a name (of selma'o CMENE) rather than a quoted word.</para>
+    <para>Note: The current machine parser does not implement 
+    <quote>si</quote>erasure.</para>
+    <para>As the above examples plainly show, precise erasures with 
+    <quote>si</quote>can be extremely hard to get right. Therefore, the cmavo 
+    <quote>sa</quote>(of selma'o SA) is provided for erasing more than one word. The cmavo following 
+    <quote>sa</quote>should be the starting marker of some grammatical construct. The effect of the 
+    <quote>sa</quote>is to erase back to and including the last starting marker of the same kind. For example:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-YdX7">
+      <title>
+        <anchor xml:id="c19e13d7" />
+        <anchor xml:id="cll_chapter19-section13-example7" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi viska le sa .i mi cusku zo .djan.</jbo>
+        <en>I see the ... I say the-word 
+        <quote>John</quote>.</en>
+      </interlinear-gloss>
+    </example>
+    <para>Since the word following 
+    <quote>sa</quote>is 
+    <quote>.i</quote>, the sentence separator, its effect is to erase the preceding sentence. So 
+    <xref linkend="cll_chapter19-section13-example7" />is equivalent to:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-JJmn">
+      <title>
+        <anchor xml:id="c19e13d8" />
+        <anchor xml:id="cll_chapter19-section13-example8" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi cusku zo .djan.</jbo>
+      </interlinear-gloss>
+    </example>
+    <para>Another example, erasing a partial description rather than a partial sentence:</para>
+    <example role="interlinear-gloss-example" xml:id="random-id-SszI">
+      <title>
+        <anchor xml:id="c19e13d9" />
+        <anchor xml:id="cll_chapter19-section13-example9" />
+      </title>
+      <interlinear-gloss>
+        <jbo>mi viska le blanu zdan. sa le xekri zdani</jbo>
+        <en>I see the blue hou ... the black house.</en>
+      </interlinear-gloss>
+    </example>
+    <para>In 
+    <xref linkend="cll_chapter19-section13-example9" />, 
+    <quote>le blanu zdan.</quote>is ungrammatical, but clearly reflects the speaker's original intention to say 
+    <quote>le blanu zdani</quote>. However, the 
+    <quote>zdani</quote>was cut off before the end and changed into a name. The entire ungrammatical 
+    <quote>le</quote>construct is erased and replaced by 
+    <quote>le xekri zdani</quote>.</para>
+    <para>Note: The current machine parser does not implement 
+    <quote>sa</quote>erasure. Getting 
+    <quote>sa</quote>right is even more difficult (for a computer) than getting 
+    <quote>si</quote>right, as the behavior of 
+    <quote>si</quote>is defined in terms of words rather than in terms of grammatical constructs (possibly incorrect ones) and words are conceptually simpler entities. On the other hand, 
+    <quote>sa</quote>is generally easier for human beings, because the rules for using it correctly are less finicky.</para>
+    <para>The cmavo 
+    <quote>su</quote>(of selma'o SU) is yet another metalinguistic operator that erases the entire text. However, if the text involves multiple speakers, then 
+    <quote>su</quote>will only erase the remarks made by the one who said it, unless that speaker has said nothing. Therefore 
+    <quote>susu</quote>is needed to eradicate a whole discussion in conversation.</para>
+    <para>Note: The current machine parser does not implement either 
+    <quote>su</quote>or 
+    <quote>susu</quote>erasure.</para>
+  </section>
+  <section xml:id="cll_chapter19-section14">
+    <title>14. Hesitation: Y</title>
+    <para>The following cmavo is discussed in this section:</para>
+    <programlisting xml:space="preserve">
      .y.     Y       hesitation noise
 </programlisting>
-  <para>Speakers often need to hesitate to think of what to say next or for some extra-linguistic reason. There are two ways to hesitate in Lojban: to pause between words (that is, to say nothing) or to use the cmavo “.y.” (of selma'o Y). This resembles in sound the English hesitation noise written “uh” (or “er”), but differs from it in the requirement for pauses before and after. Unlike a long pause, it cannot be mistaken for having nothing more to say: it holds the floor for the speaker. Since vowel length is not significant in Lojban, the “y” sound can be dragged out for as long as necessary. Furthermore, the sound can be repeated, provided the required pauses are respected.</para>
-  <para>Since the hesitation sound in English is outside the formal language, English-speakers may question the need for a formal cmavo. Speakers of other languages, however, often hesitate by saying (or, if necessary, repeating) a word (“este” in some dialects of Spanish, roughly meaning “that is”), and Lojban’s audio-visual isomorphism requires a written representation of all meaningful spoken behavior. Of course, “.y.” has no grammatical significance: it can appear anywhere at all in a Lojban sentence except in the middle of a word.</para>
-</section>
-
-<section xml:id="cll_chapter19-section15">
-  <title>15. No more to say: FAhO</title>
-  <para>The following cmavo is discussed in this section:</para>
-  <programlisting>
+    <para>Speakers often need to hesitate to think of what to say next or for some extra-linguistic reason. There are two ways to hesitate in Lojban: to pause between words (that is, to say nothing) or to use the cmavo 
+    <quote>.y.</quote>(of selma'o Y). This resembles in sound the English hesitation noise written 
+    <quote>uh</quote>(or 
+    <quote>er</quote>), but differs from it in the requirement for pauses before and after. Unlike a long pause, it cannot be mistaken for having nothing more to say: it holds the floor for the speaker. Since vowel length is not significant in Lojban, the 
+    <quote>y</quote>sound can be dragged out for as long as necessary. Furthermore, the sound can be repeated, provided the required pauses are respected.</para>
+    <para>Since the hesitation sound in English is outside the formal language, English-speakers may question the need for a formal cmavo. Speakers of other languages, however, often hesitate by saying (or, if necessary, repeating) a word (
+    <quote>este</quote>in some dialects of Spanish, roughly meaning 
+    <quote>that is</quote>), and Lojban's audio-visual isomorphism requires a written representation of all meaningful spoken behavior. Of course, 
+    <quote>.y.</quote>has no grammatical significance: it can appear anywhere at all in a Lojban sentence except in the middle of a word.</para>
+  </section>
+  <section xml:id="cll_chapter19-section15">
+    <title>15. No more to say: FAhO</title>
+    <para>The following cmavo is discussed in this section:</para>
+    <programlisting xml:space="preserve">
      fa'o    FAhO    end of text
 </programlisting>
-  <para>The cmavo “fa'o” (of selma'o FAhO) is the usually omitted marker for the end of a text; it can be used in computer interaction to indicate the end of input or output, or for explicitly giving up the floor during a discussion. It is outside the regular grammar, and the machine parser takes it as an unconditional signal to stop parsing unless it is quoted with “zo” or with “lo'u ... le'u”. In particular, it is not used at the end of subordinate texts quoted with “lu ... li'u” or parenthesized with “to ... toi”.</para>
-</section>
-
-<section xml:id="cll_chapter19-section16">
-  <title>16. List of cmavo interactions</title>
-  <para>The following list gives the cmavo and selma'o that are recognized by the earliest stages of the parser, and specifies exactly which of them interact with which others. All of the cmavo are at least mentioned in this chapter. The cmavo are written in lower case, and the selma'o in UPPER CASE.</para>
-  <itemizedlist>
-    <listitem>
-      <para>“zo” quotes the following word, no matter what it is.</para>
-    </listitem>
-    <listitem>
-      <para>“si” erases the preceding word unless it is a “zo”.</para>
-    </listitem>
-    <listitem>
-      <para>“sa” erases the preceding word and other words, unless the preceding word is a “zo”.</para>
-    </listitem>
-    <listitem>
-      <para>“su” is the same as “sa”, but erases more words.</para>
-    </listitem>
-    <listitem>
-      <para>“lo'u” quotes all following words up to a “le'u” (but not a “zo le'u”).</para>
-    </listitem>
-    <listitem>
-      <para>“le'u” is ungrammatical except at the end of a “lo'u quotation.</para>
-    </listitem>
-    <listitem>
-      <para>ZOI cmavo use the following word as a delimiting word, no matter what it is, but using “le'u” may create difficulties.</para>
-    </listitem>
-    <listitem>
-      <para>“zei” combines the preceding and the following word into a lujvo, but does not affect “zo”, “si”, “sa”, “su”, “lo'u”, ZOI cmavo, “fa'o”, and “zei”.</para>
-    </listitem>
-    <listitem>
-      <para>BAhE cmavo mark the following word, unless it is “si”, “sa”, or “su”, or unless it is preceded by “zo”. Multiple BAhE cmavo may be used in succession.</para>
-    </listitem>
-    <listitem>
-      <para>“bu” makes the preceding word into a lerfu word, except for “zo”, “si”, “sa”, “su”, “lo'u”, ZOI cmavo, “fa'o”, “zei”, BAhE cmavo, and “bu”. Multiple “bu” cmavo may be used in succession.</para>
-    </listitem>
-    <listitem>
-      <para>UI and CAI cmavo mark the previous word, except for “zo”, “si”, “sa”, “su”, “lo'u”, ZOI, “fa'o”, “zei”, BAhE cmavo, and “bu”. Multiple UI cmavo may be used in succession. A following “nai” is made part of the UI.</para>
-    </listitem>
-    <listitem>
-      <para>“.y.”, “da'o”, “fu'e”, and “fu'o” are the same as UI, but do not absorb a following “nai”.</para>
-    </listitem>
-  </itemizedlist>
-</section>
-
-<section xml:id="cll_chapter19-section17">
-  <title>17. List of Elidable Terminators</title>
-  <para>The following list shows all the elidable terminators of Lojban. The first column is the terminator, the second column is the selma'o that starts the corresponding construction, and the third column states what kinds of grammatical constructs are terminated. Each terminator is the only cmavo of its selma'o, which naturally has the same name as the cmavo.</para>
-  <programlisting>
+    <para>The cmavo 
+    <quote>fa'o</quote>(of selma'o FAhO) is the usually omitted marker for the end of a text; it can be used in computer interaction to indicate the end of input or output, or for explicitly giving up the floor during a discussion. It is outside the regular grammar, and the machine parser takes it as an unconditional signal to stop parsing unless it is quoted with 
+    <quote>zo</quote>or with 
+    <quote>lo'u ... le'u</quote>. In particular, it is not used at the end of subordinate texts quoted with 
+    <quote>lu ... li'u</quote>or parenthesized with 
+    <quote>to ... toi</quote>.</para>
+  </section>
+  <section xml:id="cll_chapter19-section16">
+    <title>16. List of cmavo interactions</title>
+    <para>The following list gives the cmavo and selma'o that are recognized by the earliest stages of the parser, and specifies exactly which of them interact with which others. All of the cmavo are at least mentioned in this chapter. The cmavo are written in lower case, and the selma'o in UPPER CASE.</para>
+    <itemizedlist>
+      <listitem>
+        <para>
+        <quote>zo</quote>quotes the following word, no matter what it is.</para>
+      </listitem>
+      <listitem>
+        <para>
+        <quote>si</quote>erases the preceding word unless it is a 
+        <quote>zo</quote>.</para>
+      </listitem>
+      <listitem>
+        <para>
+        <quote>sa</quote>erases the preceding word and other words, unless the preceding word is a 
+        <quote>zo</quote>.</para>
+      </listitem>
+      <listitem>
+        <para>
+        <quote>su</quote>is the same as 
+        <quote>sa</quote>, but erases more words.</para>
+      </listitem>
+      <listitem>
+        <para>
+        <quote>lo'u</quote>quotes all following words up to a 
+        <quote>le'u</quote>(but not a 
+        <quote>zo le'u</quote>).</para>
+      </listitem>
+      <listitem>
+        <para>
+        <quote>le'u</quote>is ungrammatical except at the end of a “lo'u quotation.</para>
+      </listitem>
+      <listitem>
+        <para>ZOI cmavo use the following word as a delimiting word, no matter what it is, but using 
+        <quote>le'u</quote>may create difficulties.</para>
+      </listitem>
+      <listitem>
+        <para>
+        <quote>zei</quote>combines the preceding and the following word into a lujvo, but does not affect 
+        <quote>zo</quote>, 
+        <quote>si</quote>, 
+        <quote>sa</quote>, 
+        <quote>su</quote>, 
+        <quote>lo'u</quote>, ZOI cmavo, 
+        <quote>fa'o</quote>, and 
+        <quote>zei</quote>.</para>
+      </listitem>
+      <listitem>
+        <para>BAhE cmavo mark the following word, unless it is 
+        <quote>si</quote>, 
+        <quote>sa</quote>, or 
+        <quote>su</quote>, or unless it is preceded by 
+        <quote>zo</quote>. Multiple BAhE cmavo may be used in succession.</para>
+      </listitem>
+      <listitem>
+        <para>
+        <quote>bu</quote>makes the preceding word into a lerfu word, except for 
+        <quote>zo</quote>, 
+        <quote>si</quote>, 
+        <quote>sa</quote>, 
+        <quote>su</quote>, 
+        <quote>lo'u</quote>, ZOI cmavo, 
+        <quote>fa'o</quote>, 
+        <quote>zei</quote>, BAhE cmavo, and 
+        <quote>bu</quote>. Multiple 
+        <quote>bu</quote>cmavo may be used in succession.</para>
+      </listitem>
+      <listitem>
+        <para>UI and CAI cmavo mark the previous word, except for 
+        <quote>zo</quote>, 
+        <quote>si</quote>, 
+        <quote>sa</quote>, 
+        <quote>su</quote>, 
+        <quote>lo'u</quote>, ZOI, 
+        <quote>fa'o</quote>, 
+        <quote>zei</quote>, BAhE cmavo, and 
+        <quote>bu</quote>. Multiple UI cmavo may be used in succession. A following 
+        <quote>nai</quote>is made part of the UI.</para>
+      </listitem>
+      <listitem>
+        <para>
+        <quote>.y.</quote>, 
+        <quote>da'o</quote>, 
+        <quote>fu'e</quote>, and 
+        <quote>fu'o</quote>are the same as UI, but do not absorb a following 
+        <quote>nai</quote>.</para>
+      </listitem>
+    </itemizedlist>
+  </section>
+  <section xml:id="cll_chapter19-section17">
+    <title>17. List of Elidable Terminators</title>
+    <para>The following list shows all the elidable terminators of Lojban. The first column is the terminator, the second column is the selma'o that starts the corresponding construction, and the third column states what kinds of grammatical constructs are terminated. Each terminator is the only cmavo of its selma'o, which naturally has the same name as the cmavo.</para>
+    <programlisting xml:space="preserve">
      be'o    BE              sumti attached to a tanru unit
      boi     PA/BY           number or lerfu string
      do'u    COI/DOI         vocative phrases
@@ -691,7 +1733,5 @@ Putting It All Together: Notes on the Structure of Lojban Texts</title>
      vau     (none)          simple bridi or bridi-tails
      ve'o    VEI             mekso parentheses
 </programlisting>
-</section>
-
-
+  </section>
 </chapter>
