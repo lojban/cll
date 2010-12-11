@@ -231,9 +231,13 @@
     <title>3. Three-part tanru grouping with 
     <quote>bo</quote></title>
     <para>The following cmavo is discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     bo      BO                  closest scope grouping
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>bo</cmavo>
+        <selmaho>BO</selmaho>
+        <description>closest scope grouping</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Consider the English sentence:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-gCLr">
       <title>
@@ -449,10 +453,18 @@
     <quote>ke</quote>and 
     <quote>ke'e</quote></title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     ke      KE                  start grouping
-     ke'e    KEhE                end grouping
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>ke</cmavo>
+        <selmaho>KE</selmaho>
+        <description>start grouping</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ke'e</cmavo>
+        <selmaho>KEhE</selmaho>
+        <description>end grouping</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>There is, in fact, a fifth grouping of 
     <quote>pretty little girls' school</quote>that cannot be expressed with the resources explained so far. To handle it, we must introduce the grouping parentheses cmavo, 
     <quote>ke</quote>and 
@@ -905,11 +917,23 @@
     <title>7. Linked sumti: 
     <quote>be–bei–be'o</quote></title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     be      BE                  linked sumti marker
-     bei     BEI                 linked sumti separator
-     be'o    BEhO                linked sumti terminator
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>be</cmavo>
+        <selmaho>BE</selmaho>
+        <description>linked sumti marker</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>bei</cmavo>
+        <selmaho>BEI</selmaho>
+        <description>linked sumti separator</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>be'o</cmavo>
+        <selmaho>BEhO</selmaho>
+        <description>linked sumti terminator</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The question of the place structures of selbri has been glossed over so far. This chapter does not attempt to treat place structure issues in detail; they are discussed in 
     <xref linkend="cll_chapter9" />. One grammatical structure related to places belongs here, however. In simple sentences such as 
     <xref linkend="cll_chapter5-section1-example1" />, the place structure of the selbri is simply the defined place structure of the gismu 
@@ -1130,9 +1154,13 @@
     <title>8. Inversion of tanru: 
     <quote>co</quote></title>
     <para>The following cmavo is discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     co      CO                  tanru inversion marker
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>co</cmavo>
+        <selmaho>CO</selmaho>
+        <description>tanru inversion marker</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The standard order of Lojban tanru, whereby the modifier precedes what it modifies, is very natural to English-speakers: we talk of 
     <quote>blue houses</quote>, not of 
     <quote>houses blue</quote>. In other languages, however, such matters are differently arranged, and Lojban supports this reverse order (tertau before seltau) by inserting the particle 
@@ -1157,10 +1185,10 @@
     </example>
     <para>This change is called 
     <quote>tanru inversion</quote>. In tanru inversion, the element before 
-    <quote>co</quote>(
+    <quote>co</quote>( 
     <quote>zdani</quote>in 
     <xref linkend="cll_chapter5-section8-example2" />) is the tertau, and the element following 
-    <quote>co</quote>(
+    <quote>co</quote>( 
     <quote>blanu</quote>) in 
     <xref linkend="cll_chapter5-section8-example2" />) is the seltau.</para>
     <para>The meaning, and more specifically, the place structure, of a tanru is not affected by inversion: the place structure of 
@@ -1333,15 +1361,43 @@
   <section xml:id="cll_chapter5-section9">
     <title>9. Other kinds of simple selbri</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     go'i    GOhA                repeats the previous bridi
-     du      GOhA                equality
-     nu'a    NUhA                math operator to selbri
-     moi     MOI                 changes number to ordinal selbri
-     mei     MOI                 changes number to cardinal selbri
-     nu      NU                  event abstraction
-     kei     KEI                 terminator for NU
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>go'i</cmavo>
+        <selmaho>GOhA</selmaho>
+        <description>repeats the previous bridi</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>du</cmavo>
+        <selmaho>GOhA</selmaho>
+        <description>equality</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>nu'a</cmavo>
+        <selmaho>NUhA</selmaho>
+        <description>math operator to selbri</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>moi</cmavo>
+        <selmaho>MOI</selmaho>
+        <description>changes number to ordinal selbri</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mei</cmavo>
+        <selmaho>MOI</selmaho>
+        <description>changes number to cardinal selbri</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>nu</cmavo>
+        <selmaho>NU</selmaho>
+        <description>event abstraction</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>kei</cmavo>
+        <selmaho>KEI</selmaho>
+        <description>terminator for NU</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>So far we have only discussed brivla and tanru built up from brivla as possible selbri. In fact, there are a few other constructions in Lojban which are grammatically equivalent to brivla: they can be used either directly as selbri, or as components in tanru. Some of these types of simple selbri are discussed at length in 
     <xref linkend="cll_chapter7" />, 
     <xref linkend="cll_chapter11" />, and 
@@ -1769,7 +1825,7 @@
         <en>Alice doesn't walk to the market.</en>
       </interlinear-gloss>
     </example>
-    <para>meaning that Alice does go there in some way (
+    <para>meaning that Alice does go there in some way ( 
     <quote>klama</quote>is not negated), but by a means other than that of walking. 
     <xref linkend="cll_chapter5-section12-example1" />negates both 
     <quote>cadzu</quote>and 

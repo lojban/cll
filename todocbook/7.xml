@@ -69,7 +69,8 @@
     <title>2. Personal pro-sumti: the mi-series</title>
     <para>The following cmavo are discussed in this section:</para>
     <programlisting xml:space="preserve">
-     mi      KOhA  mi-series     I, me
+     mi      KOhA  mi-series     I, me 
+<!-- skip cmavo list automation -->
      do      KOhA  mi-series     you
      mi'o    KOhA  mi-series     you and I
      mi'a    KOhA  mi-series     I and others, we but not you
@@ -214,7 +215,8 @@
     <title>3. Demonstrative pro-sumti: the ti-series</title>
     <para>The following cmavo are discussed in this section:</para>
     <programlisting xml:space="preserve">
-     ti      KOhA  ti-series     this here, a nearby object
+     ti      KOhA  ti-series     this here, a nearby object 
+<!-- skip cmavo list automation -->
      ta      KOhA  ti-series     that there, a medium-distant object
      tu      KOhA  ti-series     that yonder, a far-distant object
 </programlisting>
@@ -293,7 +295,8 @@
     <title>4. Utterance pro-sumti: the di'u-series</title>
     <para>The following cmavo are discussed in this section:</para>
     <programlisting xml:space="preserve">
-     di'u    KOhA  di'u-series   the previous utterance
+     di'u    KOhA  di'u-series   the previous utterance 
+<!-- skip cmavo list automation -->
      de'u    KOhA  di'u-series   an earlier utterance
      da'u    KOhA  di'u-series   a much earlier utterance
      di'e    KOhA  di'u-series   the next utterance
@@ -337,12 +340,12 @@
     <quote>ti</quote>, 
     <quote>ta</quote>, and 
     <quote>tu</quote>, the cmavo of the di'u-series come in threes: a close utterance, a medium-distance utterance, and a distant utterance, either in the past or in the future. It turned out to be impossible to use the 
-    <quote>i</quote>/
-    <quote>a</quote>/
+    <quote>i</quote>/ 
+    <quote>a</quote>/ 
     <quote>u</quote>vowel convention of the demonstratives in 
     <xref linkend="cll_chapter7-section3" />without causing collisions with other cmavo, and so the di'u-series has a unique 
-    <quote>i</quote>/
-    <quote>e</quote>/
+    <quote>i</quote>/ 
+    <quote>e</quote>/ 
     <quote>a</quote>convention in the first vowel of the cmavo.</para>
     <para>Most references in speech are to the past (what has already been said), so 
     <quote>di'e</quote>, 
@@ -427,7 +430,8 @@
     <title>5. Assignable pro-sumti and pro-bridi: the ko'a-series and the broda-series</title>
     <para>The following cmavo and gismu are discussed in this section:</para>
     <programlisting xml:space="preserve">
-     ko'a    KOhA    ko'a-series     it-1
+     ko'a    KOhA    ko'a-series     it-1 
+<!-- skip cmavo list automation -->
      ko'e    KOhA    ko'a-series     it-2
      ko'i    KOhA    ko'a-series     it-3
      ko'o    KOhA    ko'a-series     it-4
@@ -626,7 +630,8 @@
     <title>6. Anaphoric pro-sumti and pro-bridi: the ri-series and the go'i-series</title>
     <para>The following cmavo are discussed in this section:</para>
     <programlisting xml:space="preserve">
-     ri      KOhA  ri-series     (repeats last sumti)
+     ri      KOhA  ri-series     (repeats last sumti) 
+<!-- skip cmavo list automation -->
      ra      KOhA  ri-series     (repeats previous sumti)
      ru      KOhA  ri-series     (repeats long-ago sumti)
 
@@ -910,7 +915,7 @@
     <para>The cmavo 
     <quote>go'o</quote>, 
     <quote>nei</quote>, and 
-    <quote>no'a</quote>have been little used so far. They repeat respectively some future bridi, the current bridi, and the bridi that encloses the current bridi (
+    <quote>no'a</quote>have been little used so far. They repeat respectively some future bridi, the current bridi, and the bridi that encloses the current bridi ( 
     <quote>no'a</quote>, unlike the other members of the go'i- series, can repeat non-sentence bridi). Here are a few examples:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-EUmV">
       <title>
@@ -1124,7 +1129,7 @@
     <xref linkend="cll_chapter7-section7-example4" />is true, then 
     <xref linkend="cll_chapter7-section7-example5" />through 
     <xref linkend="cll_chapter7-section7-example7" />must be true also. However, 
-    <xref linkend="cll_chapter7-section7-example3" />does not correspond to any sentence with three regular (non-
+    <xref linkend="cll_chapter7-section7-example3" />does not correspond to any sentence with three regular (non- 
     <quote>zi'o</quote>) sumti.</para>
     <para>The pro-bridi 
     <quote>co'e</quote>(which by itself constitutes the co'e-series of selma'o GOhA) represents the elliptical selbri. Lojban grammar does not allow the speaker to merely omit a selbri from a bridi, although any or all sumti may be freely omitted. Being vague about a relationship requires the use of 
@@ -1153,7 +1158,8 @@
     <title>8. Reflexive and reciprocal pro-sumti: the vo'a-series</title>
     <para>The following cmavo are discussed in this section:</para>
     <programlisting xml:space="preserve">
-     vo'a    KOhA  vo'a-series   x1 of this bridi
+     vo'a    KOhA  vo'a-series   x1 of this bridi 
+<!-- skip cmavo list automation -->
      vo'e    KOhA  vo'a-series   x2 of this bridi
      vo'i    KOhA  vo'a-series   x3 of this bridi
      vo'o    KOhA  vo'a-series   x4 of this bridi
@@ -1251,10 +1257,18 @@
     <quote>ma</quote>and 
     <quote>mo</quote></title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     ma      KOhA                sumti question
-     mo      GOhA                bridi question
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>ma</cmavo>
+        <selmaho>KOhA</selmaho>
+        <description>sumti question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mo</cmavo>
+        <selmaho>GOhA</selmaho>
+        <description>bridi question</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Lojban questions are more fully explained in 
     <xref linkend="cll_chapter19" />, but 
     <quote>ma</quote>and 
@@ -1347,9 +1361,13 @@
     <title>10. Relativized pro-sumti: 
     <quote>ke'a</quote></title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     ke'a    KOhA                relativized sumti
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>ke'a</cmavo>
+        <selmaho>KOhA</selmaho>
+        <description>relativized sumti</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>This pro-sumti is used in relative clauses (explained in 
     <xref linkend="cll_chapter8" />) to indicate how the sumti being relativized fits within the clause. For example:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-UNBb">
@@ -1396,9 +1414,13 @@
     <title>11. Abstraction focus pro-sumti: 
     <quote>ce'u</quote></title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     ce'u    KOhA                abstraction focus
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>ce'u</cmavo>
+        <selmaho>KOhA</selmaho>
+        <description>abstraction focus</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The cmavo 
     <quote>ce'u</quote>is used within abstraction bridi, particularly property abstractions introduced by the cmavo 
     <quote>ka</quote>. Abstractions, including the uses of 
@@ -1435,7 +1457,8 @@
     <title>12. Bound variable pro-sumti and pro-bridi: the da-series and the bu'a-series</title>
     <para>The following cmavo are discussed in this section:</para>
     <programlisting xml:space="preserve">
-     da      KOhA  da-series     something-1
+     da      KOhA  da-series     something-1 
+<!-- skip cmavo list automation -->
      de      KOhA  da-series     something-2
      di      KOhA  da-series     something-3
 
@@ -1461,9 +1484,13 @@
   <section xml:id="cll_chapter7-section13">
     <title>13. Pro-sumti and pro-bridi cancelling</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     da'o    DAhO                cancel all pro-sumti/pro-bridi
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>da'o</cmavo>
+        <selmaho>DAhO</selmaho>
+        <description>cancel all pro-sumti/pro-bridi</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>How long does a pro-sumti or pro-bridi remain stable? In other words, once we know the referent of a pro-sumti or pro-bridi, how long can we be sure that future uses of the same cmavo have the same referent? The answer to this question depends on which series the cmavo belongs to.</para>
     <para>Personal pro-sumti are stable until there is a change of speaker or listener, possibly signaled by a vocative. Assignable pro-sumti and pro-bridi last indefinitely or until rebound with 
     <quote>goi</quote>or 
@@ -1484,9 +1511,13 @@
   <section xml:id="cll_chapter7-section14">
     <title>14. The identity predicate: du</title>
     <para>The following cmavo is discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     du      GOhA                identity
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>du</cmavo>
+        <selmaho>GOhA</selmaho>
+        <description>identity</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The cmavo 
     <quote>du</quote>has the place structure:</para>
     <programlisting xml:space="preserve">
@@ -1714,13 +1745,37 @@
   </section>
   <section xml:id="cll_chapter7-section18">
     <title>18. Other cmavo discussed in this chapter</title>
-    <programlisting xml:space="preserve">
-     goi     GOI                 pro-sumti assignment (ko'a-series)
-     cei     CEI                 pro-bridi assignment (broda-series)
-     ra'o    RAhO                pro-sumti/pro-bridi update
-     soi     SOI                 reciprocity
-     se'u    SEhU                soi terminator
-     da'o    DAhO                cancel all pro-sumti/pro-bridi
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>goi</cmavo>
+        <selmaho>GOI</selmaho>
+        <description>pro-sumti assignment (ko'a-series)</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>cei</cmavo>
+        <selmaho>CEI</selmaho>
+        <description>pro-bridi assignment (broda-series)</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ra'o</cmavo>
+        <selmaho>RAhO</selmaho>
+        <description>pro-sumti/pro-bridi update</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>soi</cmavo>
+        <selmaho>SOI</selmaho>
+        <description>reciprocity</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>se'u</cmavo>
+        <selmaho>SEhU</selmaho>
+        <description>soi terminator</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>da'o</cmavo>
+        <selmaho>DAhO</selmaho>
+        <description>cancel all pro-sumti/pro-bridi</description>
+      </cmavo-entry>
+    </cmavo-list>
   </section>
 </chapter>

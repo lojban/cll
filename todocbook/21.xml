@@ -12,11 +12,11 @@
     <bridgehead>Step 2 - Filtering</bridgehead>
     <para>From start to end, performing the following filtering and lexing tasks using the given order of precedence in case of conflict:</para>
     <para>a. If the Lojban word “zoi” (selma'o ZOI) is identified, take the following Lojban word (which should be end delimited with a pause for separation from the following non-Lojban text) as an opening delimiter. Treat all text following that delimiter, until that delimiter recurs 
-    <emphasis>after a pause</emphasis>, as grammatically a single token (labelled ’
+    <emphasis>after a pause</emphasis>, as grammatically a single token (labelled ’ 
     <xref linkend="cll_yacc-699" />’ in this grammar). There is no need for processing within this text except as necessary to find the closing delimiter.</para>
-    <para>b. If the Lojban word “zo” (selma'o ZO) is identified, treat the following Lojban word as a token labelled ’
+    <para>b. If the Lojban word “zo” (selma'o ZO) is identified, treat the following Lojban word as a token labelled ’ 
     <xref linkend="cll_yacc-698" />’, instead of lexing it by its normal grammatical function.</para>
-    <para>c. If the Lojban word “lo'u” (selma'o LOhU) is identified, search for the closing delimiter “le'u” (selma'o LEhU), ignoring any such closing delimiters absorbed by the previous two steps. The text between the delimiters should be treated as the single token ’
+    <para>c. If the Lojban word “lo'u” (selma'o LOhU) is identified, search for the closing delimiter “le'u” (selma'o LEhU), ignoring any such closing delimiters absorbed by the previous two steps. The text between the delimiters should be treated as the single token ’ 
     <xref linkend="cll_yacc-697" />’.</para>
     <para>d. Categorize all remaining words into their Lojban selma'o category, including the various delimiters mentioned in the previous steps. In all steps after step 2, only the selma'o token type is significant for each word.</para>
     <para>e. If the word “si” (selma'o SI) is identified, erase it and the previous word (or token, if the previous text has been condensed into a single token by one of the above rules).</para>
@@ -6907,7 +6907,7 @@ the 900 series rules are found in the lexer.  */
     <para>Lojban Machine Grammar, EBNF Version, Final Baseline</para>
     <para>This EBNF document is explicitly dedicated to the public domain by its author, The Logical Language Group, Inc. Contact that organization at: 2904 Beau Lane, Fairfax VA 22031 USA 703-385-0273 (intl: +1 703 385 0273)</para>
     <para>Explanation of notation: All rules have the form:</para>
-    <para>name
+    <para>name 
     <subscript>number</subscript>= bnf-expression</para>
     <para>which means that the grammatical construct “name” is defined by “bnf-expression”. The number cross-references this grammar with the rule numbers in the YACC grammar. The names are the same as those in the YACC grammar, except that subrules are labeled with A, B, C, ... in the YACC grammar and with 1, 2, 3, ... in this grammar. In addition, rule 971 is “simple_tag” in the YACC grammar but “stag” in this grammar, because of its frequent appearance.</para>
     <orderedlist>
@@ -6947,7 +6947,7 @@ the 900 series rules are found in the lexer.  */
         <term>
         <anchor xml:id="b0" />
         <anchor xreflabel="BNF rule #0" xml:id="cll_bnf-0" />
-        <xref linkend="cll_yacc-0" />text
+        <xref linkend="cll_yacc-0" />text 
         <subscript>0</subscript>=</term>
         <listitem>
           <para>[NAI ...] [CMENE ... # | (indicators &amp; free ...)] [joik-jek] text-1 
@@ -6957,7 +6957,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>text-1
+        <term>text-1 
         <subscript>2</subscript>=</term>
         <listitem>
           <para>[(I [jek | joik] [[stag] BO] #) ... | NIhO ... #] [paragraphs] 
@@ -6967,7 +6967,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>paragraphs
+        <term>paragraphs 
         <subscript>4</subscript>=</term>
         <listitem>
           <para>paragraph [NIhO ... # paragraphs] 
@@ -6977,7 +6977,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>paragraph
+        <term>paragraph 
         <subscript>10</subscript>=</term>
         <listitem>
           <para>(statement | fragment) [I # [statement | fragment]] ... 
@@ -6987,7 +6987,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>statement
+        <term>statement 
         <subscript>11</subscript>=</term>
         <listitem>
           <para>statement-1 | prenex statement 
@@ -6997,7 +6997,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>statement-1
+        <term>statement-1 
         <subscript>12</subscript>=</term>
         <listitem>
           <para>statement-2 [I joik-jek [statement-2]] ... 
@@ -7007,7 +7007,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>statement-2
+        <term>statement-2 
         <subscript>13</subscript>=</term>
         <listitem>
           <para>statement-3 [I [jek | joik] [stag] BO # [statement-2]] 
@@ -7017,7 +7017,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>statement-3
+        <term>statement-3 
         <subscript>14</subscript>=</term>
         <listitem>
           <para>sentence | [tag] TUhE # text-1 /TUhU#/ 
@@ -7027,7 +7027,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>fragment
+        <term>fragment 
         <subscript>20</subscript>=</term>
         <listitem>
           <para>ek # | gihek # | quantifier | NA # | terms /VAU#/ | prenex | relative-clauses | links | linkargs 
@@ -7037,7 +7037,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>prenex
+        <term>prenex 
         <subscript>30</subscript>=</term>
         <listitem>
           <para>terms ZOhU # 
@@ -7047,7 +7047,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sentence
+        <term>sentence 
         <subscript>40</subscript>=</term>
         <listitem>
           <para>[terms [CU #]] bridi-tail 
@@ -7057,7 +7057,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>subsentence
+        <term>subsentence 
         <subscript>41</subscript>=</term>
         <listitem>
           <para>sentence | prenex subsentence 
@@ -7067,7 +7067,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>bridi-tail
+        <term>bridi-tail 
         <subscript>50</subscript>=</term>
         <listitem>
           <para>bridi-tail-1 [gihek [stag] KE # bridi-tail /KEhE#/ tail-terms] 
@@ -7077,7 +7077,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>bridi-tail-1
+        <term>bridi-tail-1 
         <subscript>51</subscript>=</term>
         <listitem>
           <para>bridi-tail-2 [gihek # bridi-tail-2 tail-terms] ... 
@@ -7087,7 +7087,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>bridi-tail-2
+        <term>bridi-tail-2 
         <subscript>52</subscript>=</term>
         <listitem>
           <para>bridi-tail-3 [gihek [stag] BO # bridi-tail-2 tail-terms] 
@@ -7097,7 +7097,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>bridi-tail-3
+        <term>bridi-tail-3 
         <subscript>53</subscript>=</term>
         <listitem>
           <para>selbri tail-terms | gek-sentence 
@@ -7107,7 +7107,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>gek-sentence
+        <term>gek-sentence 
         <subscript>54</subscript>=</term>
         <listitem>
           <para>gek subsentence gik subsentence tail-terms | [tag] KE # gek-sentence /KEhE#/ | NA # gek-sentence 
@@ -7117,7 +7117,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>tail-terms
+        <term>tail-terms 
         <subscript>71</subscript>=</term>
         <listitem>
           <para>[terms] /VAU#/ 
@@ -7127,7 +7127,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>terms
+        <term>terms 
         <subscript>80</subscript>=</term>
         <listitem>
           <para>terms-1 ... 
@@ -7137,7 +7137,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>terms-1
+        <term>terms-1 
         <subscript>81</subscript>=</term>
         <listitem>
           <para>terms-2 [PEhE # joik-jek terms-2] ... 
@@ -7147,7 +7147,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>terms-2
+        <term>terms-2 
         <subscript>82</subscript>=</term>
         <listitem>
           <para>term [CEhE # term] ... 
@@ -7157,7 +7157,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>term
+        <term>term 
         <subscript>83</subscript>=</term>
         <listitem>
           <para>sumti | (tag | FA #) (sumti | /KU#/) | termset | NA KU # 
@@ -7167,7 +7167,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>termset
+        <term>termset 
         <subscript>85</subscript>=</term>
         <listitem>
           <para>NUhI # gek terms /NUhU#/ gik terms /NUhU#/ | NUhI # terms /NUhU#/ 
@@ -7177,7 +7177,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti
+        <term>sumti 
         <subscript>90</subscript>=</term>
         <listitem>
           <para>sumti-1 [VUhO # relative-clauses] 
@@ -7187,7 +7187,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-1
+        <term>sumti-1 
         <subscript>91</subscript>=</term>
         <listitem>
           <para>sumti-2 [(ek | joik) [stag] KE # sumti /KEhE#/] 
@@ -7197,7 +7197,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-2
+        <term>sumti-2 
         <subscript>92</subscript>=</term>
         <listitem>
           <para>sumti-3 [joik-ek sumti-3] ... 
@@ -7207,7 +7207,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-3
+        <term>sumti-3 
         <subscript>93</subscript>=</term>
         <listitem>
           <para>sumti-4 [(ek | joik) [stag] BO # sumti-3] 
@@ -7217,7 +7217,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-4
+        <term>sumti-4 
         <subscript>94</subscript>=</term>
         <listitem>
           <para>sumti-5 | gek sumti gik sumti-4 
@@ -7227,7 +7227,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-5
+        <term>sumti-5 
         <subscript>95</subscript>=</term>
         <listitem>
           <para>[quantifier] sumti-6 [relative-clauses] | quantifier selbri /KU#/ [relative-clauses] 
@@ -7237,7 +7237,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-6
+        <term>sumti-6 
         <subscript>97</subscript>=</term>
         <listitem>
           <para>(LAhE # | NAhE BO #) [relative-clauses] sumti /LUhU#/ | KOhA # | lerfu-string /BOI#/ | LA # [relative-clauses] CMENE ... # | (LA | LE) # sumti-tail /KU#/ | LI # mex /LOhO#/ | ZO any-word # | LU text /LIhU#/ | LOhU any-word ... LEhU # | ZOI any-word anything any-word # 
@@ -7247,7 +7247,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-tail
+        <term>sumti-tail 
         <subscript>111</subscript>=</term>
         <listitem>
           <para>[sumti-6 [relative-clauses]] sumti-tail-1 | relative-clauses sumti-tail-1 
@@ -7257,7 +7257,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-tail-1
+        <term>sumti-tail-1 
         <subscript>112</subscript>=</term>
         <listitem>
           <para>[quantifier] selbri [relative-clauses] | quantifier sumti 
@@ -7267,7 +7267,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>relative-clauses
+        <term>relative-clauses 
         <subscript>121</subscript>=</term>
         <listitem>
           <para>relative-clause [ZIhE # relative-clause] ... 
@@ -7277,7 +7277,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>relative-clause
+        <term>relative-clause 
         <subscript>122</subscript>=</term>
         <listitem>
           <para>GOI # term /GEhU#/ | NOI # subsentence /KUhO#/ 
@@ -7287,7 +7287,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri
+        <term>selbri 
         <subscript>130</subscript>=</term>
         <listitem>
           <para>[tag] selbri-1 
@@ -7297,7 +7297,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri-1
+        <term>selbri-1 
         <subscript>131</subscript>=</term>
         <listitem>
           <para>selbri-2 | NA # selbri 
@@ -7307,7 +7307,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri-2
+        <term>selbri-2 
         <subscript>132</subscript>=</term>
         <listitem>
           <para>selbri-3 [CO # selbri-2] 
@@ -7317,7 +7317,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri-3
+        <term>selbri-3 
         <subscript>133</subscript>=</term>
         <listitem>
           <para>selbri-4 ... 
@@ -7327,7 +7327,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri-4
+        <term>selbri-4 
         <subscript>134</subscript>=</term>
         <listitem>
           <para>selbri-5 [joik-jek selbri-5 | joik [stag] KE # selbri-3 /KEhE#/] ... 
@@ -7337,7 +7337,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri-5
+        <term>selbri-5 
         <subscript>135</subscript>=</term>
         <listitem>
           <para>selbri-6 [(jek | joik) [stag] BO # selbri-5] 
@@ -7347,7 +7347,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri-6
+        <term>selbri-6 
         <subscript>136</subscript>=</term>
         <listitem>
           <para>tanru-unit [BO # selbri-6] | [NAhE #] guhek selbri gik selbri-6 
@@ -7357,7 +7357,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>tanru-unit
+        <term>tanru-unit 
         <subscript>150</subscript>=</term>
         <listitem>
           <para>tanru-unit-1 [CEI # tanru-unit-1] ... 
@@ -7367,7 +7367,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>tanru-unit-1
+        <term>tanru-unit-1 
         <subscript>151</subscript>=</term>
         <listitem>
           <para>tanru-unit-2 [linkargs] 
@@ -7377,7 +7377,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>tanru-unit-2
+        <term>tanru-unit-2 
         <subscript>152</subscript>=</term>
         <listitem>
           <para>BRIVLA # | GOhA [RAhO] # | KE # selbri-3 /KEhE#/ | ME # sumti /MEhU#/ [MOI #] | (number | lerfu-string) MOI # | NUhA # mex-operator | SE # tanru-unit-2 | JAI # [tag] tanru-unit-2 | any-word (ZEI any-word) ... | NAhE # tanru-unit-2 | NU [NAI] # [joik-jek NU [NAI] #] ... subsentence /KEI#/ 
@@ -7387,7 +7387,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>linkargs
+        <term>linkargs 
         <subscript>160</subscript>=</term>
         <listitem>
           <para>BE # term [links] /BEhO#/ 
@@ -7397,7 +7397,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>links
+        <term>links 
         <subscript>161</subscript>=</term>
         <listitem>
           <para>BEI # term [links] 
@@ -7407,7 +7407,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>quantifier
+        <term>quantifier 
         <subscript>300</subscript>=</term>
         <listitem>
           <para>number /BOI#/ | VEI # mex /VEhO#/ 
@@ -7417,7 +7417,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>mex
+        <term>mex 
         <subscript>310</subscript>=</term>
         <listitem>
           <para>mex-1 [operator mex-1] ... | FUhA # rp-expression 
@@ -7427,7 +7427,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>mex-1
+        <term>mex-1 
         <subscript>311</subscript>=</term>
         <listitem>
           <para>mex-2 [BIhE # operator mex-1] 
@@ -7437,7 +7437,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>mex-2
+        <term>mex-2 
         <subscript>312</subscript>=</term>
         <listitem>
           <para>operand | [PEhO #] operator mex-2 ... /KUhE#/ 
@@ -7447,7 +7447,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>rp-expression
+        <term>rp-expression 
         <subscript>330</subscript>=</term>
         <listitem>
           <para>rp-operand rp-operand operator 
@@ -7457,7 +7457,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>rp-operand
+        <term>rp-operand 
         <subscript>332</subscript>=</term>
         <listitem>
           <para>operand | rp-expression 
@@ -7467,7 +7467,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operator
+        <term>operator 
         <subscript>370</subscript>=</term>
         <listitem>
           <para>operator-1 [joik-jek operator-1 | joik [stag] KE # operator /KEhE#/] ... 
@@ -7477,7 +7477,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operator-1
+        <term>operator-1 
         <subscript>371</subscript>=</term>
         <listitem>
           <para>operator-2 | guhek operator-1 gik operator-2 | operator-2 (jek | joik) [stag] BO # operator-1 
@@ -7487,7 +7487,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operator-2
+        <term>operator-2 
         <subscript>372</subscript>=</term>
         <listitem>
           <para>mex-operator | KE # operator /KEhE#/ 
@@ -7497,7 +7497,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>mex-operator
+        <term>mex-operator 
         <subscript>374</subscript>=</term>
         <listitem>
           <para>SE # mex-operator | NAhE # mex-operator | MAhO # mex /TEhU#/ | NAhU # selbri /TEhU#/ | VUhU # 
@@ -7507,7 +7507,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operand
+        <term>operand 
         <subscript>381</subscript>=</term>
         <listitem>
           <para>operand-1 [(ek | joik) [stag] KE # operand /KEhE#/] 
@@ -7517,7 +7517,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operand-1
+        <term>operand-1 
         <subscript>382</subscript>=</term>
         <listitem>
           <para>operand-2 [joik-ek operand-2] ... 
@@ -7527,7 +7527,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operand-2
+        <term>operand-2 
         <subscript>383</subscript>=</term>
         <listitem>
           <para>operand-3 [(ek | joik) [stag] BO # operand-2] 
@@ -7537,7 +7537,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operand-3
+        <term>operand-3 
         <subscript>385</subscript>=</term>
         <listitem>
           <para>quantifier | lerfu-string /BOI#/ | NIhE # selbri /TEhU#/ | MOhE # sumti /TEhU#/ | JOhI # mex-2 ... /TEhU#/ | gek operand gik operand-3 | (LAhE # | NAhE BO #) operand /LUhU#/ 
@@ -7547,7 +7547,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>number
+        <term>number 
         <subscript>812</subscript>=</term>
         <listitem>
           <para>PA [PA | lerfu-word] ... 
@@ -7557,7 +7557,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>lerfu-string
+        <term>lerfu-string 
         <subscript>817</subscript>=</term>
         <listitem>
           <para>lerfu-word [PA | lerfu-word] ... 
@@ -7567,7 +7567,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>lerfu-word
+        <term>lerfu-word 
         <subscript>987</subscript>=</term>
         <listitem>
           <para>BY | any-word BU | LAU lerfu-word | TEI lerfu-string FOI 
@@ -7577,7 +7577,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>ek
+        <term>ek 
         <subscript>802</subscript>=</term>
         <listitem>
           <para>[NA] [SE] A [NAI] 
@@ -7587,7 +7587,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>gihek
+        <term>gihek 
         <subscript>818</subscript>=</term>
         <listitem>
           <para>[NA] [SE] GIhA [NAI] 
@@ -7597,7 +7597,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>jek
+        <term>jek 
         <subscript>805</subscript>=</term>
         <listitem>
           <para>[NA] [SE] JA [NAI] 
@@ -7607,7 +7607,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>joik
+        <term>joik 
         <subscript>806</subscript>=</term>
         <listitem>
           <para>[SE] JOI [NAI] | interval | GAhO interval GAhO 
@@ -7617,7 +7617,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>interval
+        <term>interval 
         <subscript>932</subscript>=</term>
         <listitem>
           <para>[SE] BIhI [NAI] 
@@ -7627,7 +7627,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>joik-ek
+        <term>joik-ek 
         <subscript>421</subscript>=</term>
         <listitem>
           <para>joik # | ek # 
@@ -7637,7 +7637,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>joik-jek
+        <term>joik-jek 
         <subscript>422</subscript>=</term>
         <listitem>
           <para>joik # | jek # 
@@ -7647,7 +7647,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>gek
+        <term>gek 
         <subscript>807</subscript>=</term>
         <listitem>
           <para>[SE] GA [NAI] # | joik GI # | stag gik 
@@ -7657,7 +7657,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>guhek
+        <term>guhek 
         <subscript>808</subscript>=</term>
         <listitem>
           <para>[SE] GUhA [NAI] # 
@@ -7667,7 +7667,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>gik
+        <term>gik 
         <subscript>816</subscript>=</term>
         <listitem>
           <para>GI [NAI] # 
@@ -7677,7 +7677,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>tag
+        <term>tag 
         <subscript>491</subscript>=</term>
         <listitem>
           <para>tense-modal [joik-jek tense-modal] ... 
@@ -7687,7 +7687,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>stag
+        <term>stag 
         <subscript>971</subscript>=</term>
         <listitem>
           <para>simple-tense-modal [(jek | joik) simple-tense-modal] ... 
@@ -7697,7 +7697,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>tense-modal
+        <term>tense-modal 
         <subscript>815</subscript>=</term>
         <listitem>
           <para>simple-tense-modal # | FIhO # selbri /FEhU#/ 
@@ -7707,7 +7707,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>simple-tense-modal
+        <term>simple-tense-modal 
         <subscript>972</subscript>=</term>
         <listitem>
           <para>[NAhE] [SE] BAI [NAI] [KI] | [NAhE] (time [space] | space [time]) &amp; CAhA [KI] | KI | CUhE 
@@ -7717,7 +7717,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>time
+        <term>time 
         <subscript>1030</subscript>=</term>
         <listitem>
           <para>ZI &amp; time-offset ... &amp; ZEhA [PU [NAI]] &amp; interval-property ... 
@@ -7727,7 +7727,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>time-offset
+        <term>time-offset 
         <subscript>1033</subscript>=</term>
         <listitem>
           <para>PU [NAI] [ZI] 
@@ -7737,7 +7737,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>space
+        <term>space 
         <subscript>1040</subscript>=</term>
         <listitem>
           <para>VA &amp; space-offset ... &amp; space-interval &amp; (MOhI space-offset) 
@@ -7747,7 +7747,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>space-offset
+        <term>space-offset 
         <subscript>1045</subscript>=</term>
         <listitem>
           <para>FAhA [NAI] [VA] 
@@ -7757,7 +7757,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>space-interval
+        <term>space-interval 
         <subscript>1046</subscript>=</term>
         <listitem>
           <para>((VEhA &amp; VIhA) [FAhA [NAI]]) &amp; space-int-props 
@@ -7767,7 +7767,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>space-int-props
+        <term>space-int-props 
         <subscript>1049</subscript>=</term>
         <listitem>
           <para>(FEhE interval-property) ... 
@@ -7777,7 +7777,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>interval-property
+        <term>interval-property 
         <subscript>1051</subscript>=</term>
         <listitem>
           <para>number ROI [NAI] | TAhE [NAI] | ZAhO [NAI] 
@@ -7787,7 +7787,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>free
+        <term>free 
         <subscript>32</subscript>=</term>
         <listitem>
           <para>SEI # [terms [CU #]] selbri /SEhU/ | SOI # sumti [sumti] /SEhU/ | vocative [relative-clauses] selbri [relative-clauses] /DOhU/ | vocative [relative-clauses] CMENE ... # [relative-clauses] /DOhU/ | vocative [sumti] /DOhU/ | (number | lerfu-string) MAI | TO text /TOI/ | XI # (number | lerfu-string) /BOI/ | XI # VEI # mex /VEhO/ 
@@ -7797,7 +7797,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>vocative
+        <term>vocative 
         <subscript>415</subscript>=</term>
         <listitem>
           <para>(COI [NAI]) ... &amp; DOI 
@@ -7807,7 +7807,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>indicators
+        <term>indicators 
         <subscript>411</subscript>=</term>
         <listitem>
           <para>[FUhE] indicator ... 
@@ -7817,7 +7817,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>indicator
+        <term>indicator 
         <subscript>413</subscript>=</term>
         <listitem>
           <para>(UI | CAI) [NAI] | Y | DAhO | FUhO</para>
@@ -7830,7 +7830,7 @@ the 900 series rules are found in the lexer.  */
         <term>
         <anchor xml:id="b1100" />
         <anchor xreflabel="BNF rule #1100" xml:id="cll_bnf-1100" />
-        <xref linkend="cll_yacc-1100" />word
+        <xref linkend="cll_yacc-1100" />word 
         <subscript>1100</subscript>=</term>
         <listitem>
           <para>[BAhE] any-word [indicators]</para>
@@ -7852,7 +7852,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>null
+        <term>null 
         <subscript>1101</subscript>=</term>
         <listitem>
           <para>any-word SI | utterance SA | text SU</para>

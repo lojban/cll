@@ -8,9 +8,13 @@
   <section xml:id="cll_chapter19-section2">
     <title>2. Sentences: I</title>
     <para>The following cmavo is discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     .i      I       sentence separator
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>.i</cmavo>
+        <selmaho>I</selmaho>
+        <description>sentence separator</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Since Lojban is audio-visually isomorphic, there needs to be a spoken and written way of signaling the end of a sentence and the start of the following one. In written English, a period serves this purpose; in spoken English, a tone contour (rising or falling) usually does the job, or sometimes a long pause. Lojban uses a single separator: the cmavo 
     <quote>.i</quote>(of selma'o I):</para>
     <example role="interlinear-gloss-example" xml:id="random-id-XKAG">
@@ -61,12 +65,23 @@
   <section xml:id="cll_chapter19-section3">
     <title>3. Paragraphs: NIhO</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     ni'o    NIhO    new topic
-     no'i    NIhO    old topic
-
-     da'o    DAhO    cancel cmavo assignments
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>ni'o</cmavo>
+        <selmaho>NIhO</selmaho>
+        <description>new topic</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>no'i</cmavo>
+        <selmaho>NIhO</selmaho>
+        <description>old topic</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>da'o</cmavo>
+        <selmaho>DAhO</selmaho>
+        <description>cancel cmavo assignments</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The paragraph is a concept used in writing systems for two purposes: to indicate changes of topic, and to break up the hard-to-read appearance of large blocks of text on the page. The former function is represented in both spoken and written Lojban by the cmavo 
     <quote>ni'o</quote>and 
     <quote>no'i</quote>, both of selma'o NIhO. Of these two, 
@@ -112,9 +127,13 @@
   <section xml:id="cll_chapter19-section4">
     <title>4. Topic-comment sentences: ZOhU</title>
     <para>The following cmavo is discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     zo'u    ZOhU    topic/comment separator
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>zo'u</cmavo>
+        <selmaho>ZOhU</selmaho>
+        <description>topic/comment separator</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The normal Lojban sentence is just a bridi, parallel to the normal English sentence which has a subject and a predicate:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-4WsN">
       <title>
@@ -137,8 +156,8 @@
       </interlinear-gloss>
     </example>
     <para>The wide space in the first two versions of 
-    <xref linkend="cll_chapter19-section4-example2" />separate the topic (
-    <quote>this news</quote>) from the comment (
+    <xref linkend="cll_chapter19-section4-example2" />separate the topic ( 
+    <quote>this news</quote>) from the comment ( 
     <quote>I know already</quote>).</para>
     <para>Lojban uses the cmavo 
     <quote>zo'u</quote>(of selma'o ZOhU) to separate topic (a sumti) from comment (a bridi):</para>
@@ -276,21 +295,73 @@
   <section xml:id="cll_chapter19-section5">
     <title>5. Questions and answers</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     xu      UI      truth question
-     ma      KOhA    sumti question
-     mo      GOhA    bridi question
-     xo      PA      number question
-     ji      A       sumti connective question
-     ge'i    GA      forethought connective question
-     gi'i    GIhA    bridi-tail connective question
-     gu'i    GUhA    tanru forethought connective question
-     je'i    JA      tanru connective question
-     pei     UI      attitude question
-     fi'a    FA      place structure question
-     cu'e    CUhE    tense/modal question
-     pau     UI      question premarker
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>xu</cmavo>
+        <selmaho>UI</selmaho>
+        <description>truth question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ma</cmavo>
+        <selmaho>KOhA</selmaho>
+        <description>sumti question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mo</cmavo>
+        <selmaho>GOhA</selmaho>
+        <description>bridi question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>xo</cmavo>
+        <selmaho>PA</selmaho>
+        <description>number question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ji</cmavo>
+        <selmaho>A</selmaho>
+        <description>sumti connective question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ge'i</cmavo>
+        <selmaho>GA</selmaho>
+        <description>forethought connective question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>gi'i</cmavo>
+        <selmaho>GIhA</selmaho>
+        <description>bridi-tail connective question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>gu'i</cmavo>
+        <selmaho>GUhA</selmaho>
+        <description>tanru forethought connective question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>je'i</cmavo>
+        <selmaho>JA</selmaho>
+        <description>tanru connective question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>pei</cmavo>
+        <selmaho>UI</selmaho>
+        <description>attitude question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>fi'a</cmavo>
+        <selmaho>FA</selmaho>
+        <description>place structure question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>cu'e</cmavo>
+        <selmaho>CUhE</selmaho>
+        <description>tense/modal question</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>pau</cmavo>
+        <selmaho>UI</selmaho>
+        <description>question premarker</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Lojban questions are not at all like English questions. There are two basic types: truth questions, of the form 
     <quote>Is it true that ...</quote>, and fill-in-the-blank questions. Truth questions are marked by preceding the bridi, or following any part of it specifically questioned, with the cmavo 
     <quote>xu</quote>(of selma'o UI):</para>
@@ -516,9 +587,13 @@
   <section xml:id="cll_chapter19-section6">
     <title>6. Subscripts: XI</title>
     <para>The following cmavo is discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     xi      XI      subscript
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>xi</cmavo>
+        <selmaho>XI</selmaho>
+        <description>subscript</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The cmavo 
     <quote>xi</quote>(of selma'o XI) indicates that a subscript (a number, a lerfu string, or a parenthesized mekso) follows. Subscripts can be attached to almost any construction and are placed following the construction (or its terminator word, which is generally required). They are useful either to extend the finite cmavo list to infinite length, or to make more refined distinctions than the standard cmavo list permits. The remainder of this section mentions some places where subscripts might naturally be used.</para>
     <para>Lojban gismu have at most five places:</para>
@@ -713,10 +788,18 @@
   <section xml:id="cll_chapter19-section7">
     <title>7. Utterance ordinals: MAI</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     mai     MAI     utterance ordinal, -thly
-     mo'o    MAI     higher order utterance ordinal
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>mai</cmavo>
+        <selmaho>MAI</selmaho>
+        <description>utterance ordinal, -thly</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mo'o</cmavo>
+        <selmaho>MAI</selmaho>
+        <description>higher order utterance ordinal</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Numerical free modifiers, corresponding to English 
     <quote>firstly</quote>, 
     <quote>secondly</quote>, and so on, can be created by suffixing 
@@ -752,10 +835,18 @@
   <section xml:id="cll_chapter19-section8">
     <title>8. Attitude scope markers: FUhE/FUhO</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     fu'e    FUhE    open attitudinal scope
-     fu'o    FUhO    close attitudinal scope
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>fu'e</cmavo>
+        <selmaho>FUhE</selmaho>
+        <description>open attitudinal scope</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>fu'o</cmavo>
+        <selmaho>FUhO</selmaho>
+        <description>close attitudinal scope</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Lojban has a complex system of 
     <quote>attitudinals</quote>, words which indicate the speaker's attitude to what is being said. The attitudinals include indicators of emotion, intensity markers, discursives (which show the structure of discourse), and evidentials (which indicate 
     <quote>how the speaker knows</quote>). Most of these words belong to selma'o UI; the intensity markers belong to selma'o CAI for historical reasons, but the two selma'o are grammatically identical. The individual cmavo of UI and CAI are discussed in 
@@ -832,12 +923,28 @@
   <section xml:id="cll_chapter19-section9">
     <title>9. Quotations: LU, LIhU, LOhU, LEhU</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     lu      LU      begin quotation
-     li'u    LIhU    end quotation
-     lo'u    LOhU    begin error quotation
-     le'u    LEhU    end error quotation
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>lu</cmavo>
+        <selmaho>LU</selmaho>
+        <description>begin quotation</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>li'u</cmavo>
+        <selmaho>LIhU</selmaho>
+        <description>end quotation</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lo'u</cmavo>
+        <selmaho>LOhU</selmaho>
+        <description>begin error quotation</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>le'u</cmavo>
+        <selmaho>LEhU</selmaho>
+        <description>end error quotation</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Grammatically, quotations are very simple in Lojban: all of them are sumti, and they all mean something like 
     <quote>the piece of text here quoted</quote>:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-6SBj">
@@ -895,8 +1002,8 @@
         <quote>viska lo</quote>.</en>
       </interlinear-gloss>
     </example>
-    <para>Note the topic-comment formulation (
-    <xref linkend="cll_chapter19-section4" />) and the indicator applying to the selbri only (
+    <para>Note the topic-comment formulation ( 
+    <xref linkend="cll_chapter19-section4" />) and the indicator applying to the selbri only ( 
     <xref linkend="cll_chapter19-section8" />). Neither 
     <quote>viska le</quote>nor 
     <quote>viska lo</quote>is a valid Lojban utterance, and both require 
@@ -963,11 +1070,23 @@
   <section xml:id="cll_chapter19-section10">
     <title>10. More on quotations: ZO, ZOI</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     zo      ZO      quote single word
-     zoi     ZOI     non-Lojban quotation
-     la'o    ZOI     non-Lojban name
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>zo</cmavo>
+        <selmaho>ZO</selmaho>
+        <description>quote single word</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>zoi</cmavo>
+        <selmaho>ZOI</selmaho>
+        <description>non-Lojban quotation</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>la'o</cmavo>
+        <selmaho>ZOI</selmaho>
+        <description>non-Lojban name</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The cmavo 
     <quote>zo</quote>(of selma'o ZO) is a strong quotation mark for the single following word, which can be any Lojban word whatsoever. Among other uses, 
     <quote>zo</quote>allows a metalinguistic word to be referenced without having it act on the surrounding text. The word must be a morphologically legal (but not necessarily meaningful) single Lojban word; compound cmavo are not permitted. For example:</para>
@@ -1139,10 +1258,18 @@
   <section xml:id="cll_chapter19-section11">
     <title>11. Contrastive emphasis: BAhE</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     ba'e    BAhE    emphasize next word
-     za'e    BAhE    next word is nonce
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>ba'e</cmavo>
+        <selmaho>BAhE</selmaho>
+        <description>emphasize next word</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>za'e</cmavo>
+        <selmaho>BAhE</selmaho>
+        <description>next word is nonce</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>English often uses strong stress on a word to single it out for contrastive emphasis, thus</para>
     <example role="interlinear-gloss-example" xml:id="random-id-iW4P">
       <title>
@@ -1245,14 +1372,28 @@
   <section xml:id="cll_chapter19-section12">
     <title>12. Parenthesis and metalinguistic commentary: TO, TOI, SEI</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     to      TO      open parenthesis
-     to'i    TO      open editorial parenthesis
-
-     toi     TOI     close parenthesis
-
-     sei     SEI     metalinguistic bridi marker
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>to</cmavo>
+        <selmaho>TO</selmaho>
+        <description>open parenthesis</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>to'i</cmavo>
+        <selmaho>TO</selmaho>
+        <description>open editorial parenthesis</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>toi</cmavo>
+        <selmaho>TOI</selmaho>
+        <description>close parenthesis</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>sei</cmavo>
+        <selmaho>SEI</selmaho>
+        <description>metalinguistic bridi marker</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The cmavo 
     <quote>to</quote>and 
     <quote>toi</quote>are discursive (non-mathematical) parentheses, for inserting parenthetical remarks. Any text whatsoever can go within the parentheses, and it is completely invisible to its context. It can, however, refer to the context by the use of pro-sumti and pro-bridi: any that have been assigned in the context are still assigned in the parenthetical remarks, but the reverse is not true.</para>
@@ -1405,11 +1546,23 @@
   <section xml:id="cll_chapter19-section13">
     <title>13. Erasure: SI, SA, SU</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     si      SI      erase word
-     sa      SA      erase phrase
-     su      SU      erase discourse
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>si</cmavo>
+        <selmaho>SI</selmaho>
+        <description>erase word</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>sa</cmavo>
+        <selmaho>SA</selmaho>
+        <description>erase phrase</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>su</cmavo>
+        <selmaho>SU</selmaho>
+        <description>erase discourse</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The cmavo 
     <quote>si</quote>(of selma'o SI) is a metalinguistic operator that erases the preceding word, as if it had never been spoken:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-JErC">
@@ -1591,15 +1744,19 @@
   <section xml:id="cll_chapter19-section14">
     <title>14. Hesitation: Y</title>
     <para>The following cmavo is discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     .y.     Y       hesitation noise
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>.y.</cmavo>
+        <selmaho>Y</selmaho>
+        <description>hesitation noise</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Speakers often need to hesitate to think of what to say next or for some extra-linguistic reason. There are two ways to hesitate in Lojban: to pause between words (that is, to say nothing) or to use the cmavo 
     <quote>.y.</quote>(of selma'o Y). This resembles in sound the English hesitation noise written 
     <quote>uh</quote>(or 
     <quote>er</quote>), but differs from it in the requirement for pauses before and after. Unlike a long pause, it cannot be mistaken for having nothing more to say: it holds the floor for the speaker. Since vowel length is not significant in Lojban, the 
     <quote>y</quote>sound can be dragged out for as long as necessary. Furthermore, the sound can be repeated, provided the required pauses are respected.</para>
-    <para>Since the hesitation sound in English is outside the formal language, English-speakers may question the need for a formal cmavo. Speakers of other languages, however, often hesitate by saying (or, if necessary, repeating) a word (
+    <para>Since the hesitation sound in English is outside the formal language, English-speakers may question the need for a formal cmavo. Speakers of other languages, however, often hesitate by saying (or, if necessary, repeating) a word ( 
     <quote>este</quote>in some dialects of Spanish, roughly meaning 
     <quote>that is</quote>), and Lojban's audio-visual isomorphism requires a written representation of all meaningful spoken behavior. Of course, 
     <quote>.y.</quote>has no grammatical significance: it can appear anywhere at all in a Lojban sentence except in the middle of a word.</para>
@@ -1607,9 +1764,13 @@
   <section xml:id="cll_chapter19-section15">
     <title>15. No more to say: FAhO</title>
     <para>The following cmavo is discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     fa'o    FAhO    end of text
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>fa'o</cmavo>
+        <selmaho>FAhO</selmaho>
+        <description>end of text</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The cmavo 
     <quote>fa'o</quote>(of selma'o FAhO) is the usually omitted marker for the end of a text; it can be used in computer interaction to indicate the end of input or output, or for explicitly giving up the floor during a discussion. It is outside the regular grammar, and the machine parser takes it as an unconditional signal to stop parsing unless it is quoted with 
     <quote>zo</quote>or with 
@@ -1710,28 +1871,112 @@
   <section xml:id="cll_chapter19-section17">
     <title>17. List of Elidable Terminators</title>
     <para>The following list shows all the elidable terminators of Lojban. The first column is the terminator, the second column is the selma'o that starts the corresponding construction, and the third column states what kinds of grammatical constructs are terminated. Each terminator is the only cmavo of its selma'o, which naturally has the same name as the cmavo.</para>
-    <programlisting xml:space="preserve">
-     be'o    BE              sumti attached to a tanru unit
-     boi     PA/BY           number or lerfu string
-     do'u    COI/DOI         vocative phrases
-     fe'u    FIhO            ad-hoc modal tags
-     ge'u    GOI             relative phrases
-     kei     NU              abstraction bridi
-     ke'e    KE              groups of various kinds
-     ku      LE/LA           description sumti
-     ku'e    PEhO            forethought mekso
-     ku'o    NOI             relative clauses
-     li'u    LU              quotations
-     lo'o    LI              number sumti
-     lu'u    LAhE/NAhE+BO    sumti qualifiers
-     me'u    ME              tanru units formed from sumti
-     nu'u    NUhI            forethought termsets
-     se'u    SEI/SOI         metalinguistic insertions
-     te'u    various         mekso conversion constructs
-     toi     TO              parenthetical remarks
-     tu'u    TUhE            multiple sentences or paragraphs
-     vau     (none)          simple bridi or bridi-tails
-     ve'o    VEI             mekso parentheses
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>be'o</cmavo>
+        <selmaho>BE</selmaho>
+        <description>sumti attached to a tanru unit</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>boi</cmavo>
+        <selmaho>PA/BY</selmaho>
+        <description>number or lerfu string</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>do'u</cmavo>
+        <selmaho>COI/DOI</selmaho>
+        <description>vocative phrases</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>fe'u</cmavo>
+        <selmaho>FIhO</selmaho>
+        <description>ad-hoc modal tags</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ge'u</cmavo>
+        <selmaho>GOI</selmaho>
+        <description>relative phrases</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>kei</cmavo>
+        <selmaho>NU</selmaho>
+        <description>abstraction bridi</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ke'e</cmavo>
+        <selmaho>KE</selmaho>
+        <description>groups of various kinds</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ku</cmavo>
+        <selmaho>LE/LA</selmaho>
+        <description>description sumti</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ku'e</cmavo>
+        <selmaho>PEhO</selmaho>
+        <description>forethought mekso</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ku'o</cmavo>
+        <selmaho>NOI</selmaho>
+        <description>relative clauses</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>li'u</cmavo>
+        <selmaho>LU</selmaho>
+        <description>quotations</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lo'o</cmavo>
+        <selmaho>LI</selmaho>
+        <description>number sumti</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lu'u</cmavo>
+        <selmaho>LAhE/NAhE+BO</selmaho>
+        <description>sumti qualifiers</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>me'u</cmavo>
+        <selmaho>ME</selmaho>
+        <description>tanru units formed from sumti</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>nu'u</cmavo>
+        <selmaho>NUhI</selmaho>
+        <description>forethought termsets</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>se'u</cmavo>
+        <selmaho>SEI/SOI</selmaho>
+        <description>metalinguistic insertions</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>te'u</cmavo>
+        <selmaho>various</selmaho>
+        <description>mekso conversion constructs</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>toi</cmavo>
+        <selmaho>TO</selmaho>
+        <description>parenthetical remarks</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>tu'u</cmavo>
+        <selmaho>TUhE</selmaho>
+        <description>multiple sentences or paragraphs</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>vau</cmavo>
+        <selmaho>(none)</selmaho>
+        <description>simple bridi or bridi-tails</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ve'o</cmavo>
+        <selmaho>VEI</selmaho>
+        <description>mekso parentheses</description>
+      </cmavo-entry>
+    </cmavo-list>
   </section>
 </chapter>

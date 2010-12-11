@@ -1,6 +1,6 @@
 
 web: html/index.html
-	cp docbook2html.css html
+	cp docbook2html.css html/
 	rm -rf ~/www/public_media/docbook-cll-test
 	cp -pr html ~/www/public_media/docbook-cll-test
 
@@ -12,7 +12,7 @@ cll.xml: 1.xml 2.xml 3.xml 4.xml 5.xml 6.xml 7.xml 8.xml 9.xml 10.xml 11.xml 12.
 	merge.sh
 
 webt: webt.touch
-	cp docbook2html.css html
+	cp docbook2html.css html/
 	rm -rf ~/www/public_media/docbook-cll-test
 	cp -pr html ~/www/public_media/docbook-cll-test
 	touch webt.touch

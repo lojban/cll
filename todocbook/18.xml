@@ -2,7 +2,7 @@
   <title>Chapter 18 lojbau mekso: Mathematical Expressions in Lojban</title>
   <section xml:id="cll_chapter18-section1">
     <title>1. Introductory</title>
-    <para>lojbau mekso (
+    <para>lojbau mekso ( 
     <quote>Lojbanic mathematical-expression</quote>) is the part of the Lojban language that is tailored for expressing statements of a mathematical character, or for adding numerical information to non-mathematical statements. Its formal design goals include:</para>
     <orderedlist>
       <listitem>
@@ -39,18 +39,58 @@
   <section xml:id="cll_chapter18-section2">
     <title>2. Lojban numbers</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     pa      PA                  1
-     re      PA                  2
-     ci      PA                  3
-     vo      PA                  4
-     mu      PA                  5
-     xa      PA                  6
-     ze      PA                  7
-     bi      PA                  8
-     so      PA                  9
-     no      PA                  0
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>pa</cmavo>
+        <selmaho>PA</selmaho>
+        <description>1</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>re</cmavo>
+        <selmaho>PA</selmaho>
+        <description>2</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ci</cmavo>
+        <selmaho>PA</selmaho>
+        <description>3</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>vo</cmavo>
+        <selmaho>PA</selmaho>
+        <description>4</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mu</cmavo>
+        <selmaho>PA</selmaho>
+        <description>5</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>xa</cmavo>
+        <selmaho>PA</selmaho>
+        <description>6</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ze</cmavo>
+        <selmaho>PA</selmaho>
+        <description>7</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>bi</cmavo>
+        <selmaho>PA</selmaho>
+        <description>8</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>so</cmavo>
+        <selmaho>PA</selmaho>
+        <description>9</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>no</cmavo>
+        <selmaho>PA</selmaho>
+        <description>0</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The simplest kind of mekso are numbers, which are cmavo or compound cmavo. There are cmavo for each of the 10 decimal digits, and numbers greater than 9 are made by stringing together the cmavo. Some examples:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-LmPr">
       <title>
@@ -481,10 +521,10 @@
       <interlinear-gloss>
         <jbo>li vei ny. su'i pa ve'o pi'i vei ny. su'i pa [ve'o] du</jbo>
         <gloss>li ny. [bi'e] te'a re su'i re bi'e pi'i ny. su'i pa</gloss>
-        <gloss>The-number (
-        <quote>n</quote>plus one) times (
+        <gloss>The-number ( 
+        <quote>n</quote>plus one) times ( 
         <quote>n</quote>plus one)</gloss>
-        <gloss>equals the-number n-power-two plus two-times-
+        <gloss>equals the-number n-power-two plus two-times- 
         <quote>n</quote>plus 1.</gloss>
         <en>(n + 1)(n + 1) = n</en>
       </interlinear-gloss>
@@ -559,7 +599,7 @@
       <interlinear-gloss>
         <jbo>li py. su'i va'a ny. ku'e su'i zy du li xy.</jbo>
         <gloss>The-number 
-        <quote>p</quote>plus negative-of(
+        <quote>p</quote>plus negative-of( 
         <quote>n</quote>) plus 
         <quote>z</quote>equals the-number 
         <quote>x</quote>.</gloss>
@@ -654,7 +694,8 @@
     </example>
     <para>Here is a partial list of selbri useful in mathematical bridi:</para>
     <programlisting xml:space="preserve">
-     du          x1 is identical to x2, x3, x4, ...
+     du          x1 is identical to x2, x3, x4, ... 
+<!-- skip cmavo list automation -->
      dunli       x1 is equal/congruent to x2 in/on property/quality/dimension/quantity x3
      mleca       x1 is less than x2
      zmadu       x1 is greater than x2
@@ -706,32 +747,63 @@
   <section xml:id="cll_chapter18-section8">
     <title>8. Indefinite numbers</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     ro      PA      all
-     so'a    PA      almost all
-     so'e    PA      most
-     so'i    PA      many
-     so'o    PA      several
-     so'u    PA      a few
-     no'o    PA      the typical number of
-     da'a    PA      all but (one) of
-
-     piro    PA+PA   the whole of/all of
-     piso'a  PA+PA   almost the whole of
-     piso'e  PA+PA   most of
-     piso'i  PA+PA   much of
-     piso'o  PA+PA   a small part of
-     piso'u  PA+PA   a tiny part of
-     pino'o  PA+PA   the typical portion of
-
-     rau     PA      enough
-     du'e    PA      too many
-     mo'a    PA      too few
-
-     pirau   PA+PA   enough of
-     pidu'e  PA+PA   too much of
-     pimo'a  PA+PA   too little of
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>ro</cmavo>
+        <selmaho>PA</selmaho>
+        <description>all</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>so'a</cmavo>
+        <selmaho>PA</selmaho>
+        <description>almost all</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>so'e</cmavo>
+        <selmaho>PA</selmaho>
+        <description>most</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>so'i</cmavo>
+        <selmaho>PA</selmaho>
+        <description>many</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>so'o</cmavo>
+        <selmaho>PA</selmaho>
+        <description>several</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>so'u</cmavo>
+        <selmaho>PA</selmaho>
+        <description>a few</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>no'o</cmavo>
+        <selmaho>PA</selmaho>
+        <description>the typical number of</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>da'a</cmavo>
+        <selmaho>PA</selmaho>
+        <description>all but (one) of</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>rau</cmavo>
+        <selmaho>PA</selmaho>
+        <description>enough</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>du'e</cmavo>
+        <selmaho>PA</selmaho>
+        <description>too many</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mo'a</cmavo>
+        <selmaho>PA</selmaho>
+        <description>too few</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Not all the cmavo of PA represent numbers in the usual mathematical sense. For example, the cmavo 
     <quote>ro</quote>means 
     <quote>all</quote>or 
@@ -904,7 +976,7 @@
         <en>I possess a-positive-number-of currency-units.</en>
       </interlinear-gloss>
     </example>
-    <para>All of the numbers discussed so far are objective, even if indefinite. If there are exactly six superpowers (
+    <para>All of the numbers discussed so far are objective, even if indefinite. If there are exactly six superpowers ( 
     <quote>rairgugde</quote>, 
     <quote>superlative-states</quote>) in the world, then 
     <quote>ro rairgugde</quote>means the same as 
@@ -991,7 +1063,7 @@
       </interlinear-gloss>
     </example>
     <para>If 
-    <quote>ji'i</quote>appears at the end of a number, it indicates that the number has been rounded. In addition, it can then be followed by a sign cmavo (
+    <quote>ji'i</quote>appears at the end of a number, it indicates that the number has been rounded. In addition, it can then be followed by a sign cmavo ( 
     <quote>ma'u</quote>or 
     <quote>ni'u</quote>), which indicate truncation towards positive or negative infinity respectively.</para>
     <example role="interlinear-gloss-example" xml:id="random-id-85C3">
@@ -1084,17 +1156,48 @@
   <section xml:id="cll_chapter18-section10">
     <title>10. Non-decimal and compound bases</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-    ju'u     VUhU    to the base
-
-    dau      PA      hex digit A = 10
-    fei      PA      hex digit B = 11
-    gai      PA      hex digit C = 12
-    jau      PA      hex digit D = 13
-    rei      PA      hex digit E = 14
-    vai      PA      hex digit F = 15
-    pi'e     PA      compound base point
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>ju'u</cmavo>
+        <selmaho>VUhU</selmaho>
+        <description>to the base</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>dau</cmavo>
+        <selmaho>PA</selmaho>
+        <description>hex digit A = 10</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>fei</cmavo>
+        <selmaho>PA</selmaho>
+        <description>hex digit B = 11</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>gai</cmavo>
+        <selmaho>PA</selmaho>
+        <description>hex digit C = 12</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>jau</cmavo>
+        <selmaho>PA</selmaho>
+        <description>hex digit D = 13</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>rei</cmavo>
+        <selmaho>PA</selmaho>
+        <description>hex digit E = 14</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>vai</cmavo>
+        <selmaho>PA</selmaho>
+        <description>hex digit F = 15</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>pi'e</cmavo>
+        <selmaho>PA</selmaho>
+        <description>compound base point</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>In normal contexts, Lojban assumes that all numbers are expressed in the decimal (base 10) system. However, other bases are possible, and may be appropriate in particular circumstances.</para>
     <para>To specify a number in a particular base, the VUhU operator 
     <quote>ju'u</quote>is suitable:</para>
@@ -1242,17 +1345,43 @@
   <section xml:id="cll_chapter18-section11">
     <title>11. Special mekso selbri</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     mei     MOI     cardinal selbri
-     moi     MOI     ordinal selbri
-     si'e    MOI     portion selbri
-     cu'o    MOI     probability selbri
-     va'e    MOI     scale selbri
-
-     me      ME      make sumti into selbri
-
-     me'u    MEhU    terminator for ME
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>mei</cmavo>
+        <selmaho>MOI</selmaho>
+        <description>cardinal selbri</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>moi</cmavo>
+        <selmaho>MOI</selmaho>
+        <description>ordinal selbri</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>si'e</cmavo>
+        <selmaho>MOI</selmaho>
+        <description>portion selbri</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>cu'o</cmavo>
+        <selmaho>MOI</selmaho>
+        <description>probability selbri</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>va'e</cmavo>
+        <selmaho>MOI</selmaho>
+        <description>scale selbri</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>me</cmavo>
+        <selmaho>ME</selmaho>
+        <description>make sumti into selbri</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>me'u</cmavo>
+        <selmaho>MEhU</selmaho>
+        <description>terminator for ME</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Lojban possesses a special category of selbri which are based on mekso. The simplest kind of such selbri are made by suffixing a member of selma'o MOI to a number. There are five members of MOI, each of which serves to create number-based selbri with specific place structures.</para>
     <para>The cmavo 
     <quote>mei</quote>creates cardinal selbri. The basic place structure is:</para>
@@ -1497,9 +1626,13 @@
   <section xml:id="cll_chapter18-section12">
     <title>12. Number questions</title>
     <para>The following cmavo is discussed in this section:</para>
-    <programlisting xml:space="preserve">
-      xo      PA      number question
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>xo</cmavo>
+        <selmaho>PA</selmaho>
+        <description>number question</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The cmavo 
     <quote>xo</quote>, a member of selma'o PA, is used to ask questions whose answers are numbers. Like most Lojban question words, it fills the blank where the answer should go. (See 
     <xref linkend="cll_chapter19" />for more on Lojban questions.)</para>
@@ -1538,9 +1671,13 @@
   <section xml:id="cll_chapter18-section13">
     <title>13. Subscripts</title>
     <para>The following cmavo is discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     xi      XI      subscript
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>xi</cmavo>
+        <selmaho>XI</selmaho>
+        <description>subscript</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Subscripting is a general Lojban feature, not used only in mekso; there are many things that can logically be subscripted, and grammatically a subscript is a free modifier, usable almost anywhere. In particular, of course, mekso variables (lerfu strings) can be subscripted:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-MT0a">
       <title>
@@ -1597,11 +1734,23 @@
   <section xml:id="cll_chapter18-section14">
     <title>14. Infix operators revisited</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     tu'o    PA      null operand
-     ge'a    VUhU    null operator
-     gei     VUhU    exponential notation
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>tu'o</cmavo>
+        <selmaho>PA</selmaho>
+        <description>null operand</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ge'a</cmavo>
+        <selmaho>VUhU</selmaho>
+        <description>null operator</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>gei</cmavo>
+        <selmaho>VUhU</selmaho>
+        <description>exponential notation</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The infix operators presented so far have always had exactly two operands, and for more or fewer operands forethought notation has been required. However, it is possible to use an operator in infix style even though it has more or fewer than two operands, through the use of a pair of tricks: the null operand 
     <quote>tu'o</quote>and the null operator 
     <quote>ge'a</quote>. The first is suitable when there are too few operands, the second when there are too many. For example, suppose we wanted to express the numerical negation operator 
@@ -1670,12 +1819,28 @@
   <section xml:id="cll_chapter18-section15">
     <title>15. Vectors and matrices</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     jo'i    JOhI    start vector
-     te'u    TEhU    end vector
-     pi'a    VUhU    matrix row combiner
-     sa'i    VUhU    matrix column combiner
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>jo'i</cmavo>
+        <selmaho>JOhI</selmaho>
+        <description>start vector</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>te'u</cmavo>
+        <selmaho>TEhU</selmaho>
+        <description>end vector</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>pi'a</cmavo>
+        <selmaho>VUhU</selmaho>
+        <description>matrix row combiner</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>sa'i</cmavo>
+        <selmaho>VUhU</selmaho>
+        <description>matrix column combiner</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>A mathematical vector is a list of numbers, and a mathematical matrix is a table of numbers. Lojban considers matrices to be built up out of vectors, which are in turn built up out of operands.</para>
     <para>
     <quote>jo'i</quote>, the only cmavo of selma'o JOhI, is the vector indicator: it has a syntax reminiscent of a forethought operator, but has very high precedence. The components must be simple operands rather than full expressions (unless parenthesized). A vector can have any number of components; 
@@ -1737,9 +1902,13 @@
   <section xml:id="cll_chapter18-section16">
     <title>16. Reverse Polish notation</title>
     <para>The following cmavo is discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     fu'a    FUhA    reverse Polish flag
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>fu'a</cmavo>
+        <selmaho>FUhA</selmaho>
+        <description>reverse Polish flag</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>So far, the Lojban notational conventions have mapped fairly familiar kinds of mathematical discourse. The use of forethought operators may have seemed odd when applied to 
     <quote>+</quote>, but when applied to 
     <quote>f</quote>they appear as the usual functional notation. Now comes a sharp break. Reverse Polish (RP) notation represents something completely different; even mathematicians don't use it much. (The only common uses of RP, in fact, are in some kinds of calculators and in the implementation of some programming languages.)</para>
@@ -1994,7 +2163,7 @@
       <interlinear-gloss>
         <jbo>xy. xi vei by. ce'o dy. [ve'o]</jbo>
         <gloss>
-        <quote>x</quote>sub (
+        <quote>x</quote>sub ( 
         <quote>b</quote>sequence 
         <quote>d</quote>)</gloss>
         <en>x</en>
@@ -2004,12 +2173,28 @@
   <section xml:id="cll_chapter18-section18">
     <title>18. Using Lojban resources within mekso</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     na'u    NAhU    selbri to operator
-     ni'e    NIhE    selbri to operand
-     mo'e    MOhE    sumti to operand
-     te'u    TEhU    terminator for all three
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>na'u</cmavo>
+        <selmaho>NAhU</selmaho>
+        <description>selbri to operator</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ni'e</cmavo>
+        <selmaho>NIhE</selmaho>
+        <description>selbri to operand</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mo'e</cmavo>
+        <selmaho>MOhE</selmaho>
+        <description>sumti to operand</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>te'u</cmavo>
+        <selmaho>TEhU</selmaho>
+        <description>terminator for all three</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>One of the mekso design goals requires the ability to make use of Lojban's vocabulary resources within mekso to extend the built-in cmavo for operands and operators. There are three relevant constructs: all three share the elidable terminator 
     <quote>te'u</quote>(which is also used to terminate vectors marked with 
     <quote>jo'i</quote>)</para>
@@ -2078,13 +2263,33 @@
   <section xml:id="cll_chapter18-section19">
     <title>19. Other uses of mekso</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     me'o    LI      the mekso
-     nu'a    NUhA    operator to selbri
-     mai     MAI     utterance ordinal
-     mo'o    MAI     higher order utterance ordinal
-     roi     ROI     quantified tense
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>me'o</cmavo>
+        <selmaho>LI</selmaho>
+        <description>the mekso</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>nu'a</cmavo>
+        <selmaho>NUhA</selmaho>
+        <description>operator to selbri</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mai</cmavo>
+        <selmaho>MAI</selmaho>
+        <description>utterance ordinal</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mo'o</cmavo>
+        <selmaho>MAI</selmaho>
+        <description>higher order utterance ordinal</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>roi</cmavo>
+        <selmaho>ROI</selmaho>
+        <description>quantified tense</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>So far we have seen mekso used as sumti (with 
     <quote>li</quote>), as quantifiers (often parenthesized), and in MOI and ME-MOI selbri. There are a few other minor uses of mekso within Lojban.</para>
     <para>The cmavo 
@@ -2348,9 +2553,9 @@
     <quote>cu'o</quote>. The cmavo 
     <quote>mei</quote>and 
     <quote>moi</quote>of MOI have their own rafsi, two each in fact: 
-    <quote>mem</quote>/
+    <quote>mem</quote>/ 
     <quote>mei</quote>and 
-    <quote>mom</quote>/
+    <quote>mom</quote>/ 
     <quote>moi</quote>respectively.</para>
     <para>The grammar of mekso as described so far imposes a rigid distinction between operators and operands. Some flavors of mathematics (lambda calculus, algebra of functions) blur this distinction, and Lojban must have a method of doing the same. An operator can be changed into an operand with 
     <quote>ni'enu'a</quote>, which transforms the operator into a matching selbri and then the selbri into an operand.</para>
@@ -2554,28 +2759,32 @@ rafsi: piz,                cez,           fi'u (from frinu; see
       </listitem>
       <listitem>
         <para>Indefinite numbers: 
-        <programlisting xml:space="preserve">
-       ro,        so'a,          so'e,           so'i,    so'o,       so'u,     da'a
-       all,       almost all,    most,           many,    several,    few,      all but
-rafsi: rol,       soj,           sor or so'i,    sos,     sot,        daz
-
-       su'e,      su'o
-       at most,   at least
-rafsi: su'e,      su'o
-
-       me'i,      za'u
-       less than, more than
-
-       no'o
-       the typical number
-</programlisting></para>
+        <cmavo-list>
+          <cmavo-entry>
+            <cmavo>ro, so'a, so'e, so'i, so'o,</cmavo>
+            <selmaho>so'u,</selmaho>
+            <description>da'a</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>all, almost all, most, many, several,</cmavo>
+            <selmaho>few,</selmaho>
+            <description>all but</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>rafsi: rol, soj, sor or so'i, sos,</cmavo>
+            <selmaho>sot,</selmaho>
+            <description>daz</description>
+          </cmavo-entry>
+        </cmavo-list></para>
       </listitem>
       <listitem>
         <para>Subjective numbers: 
-        <programlisting xml:space="preserve">
-       rau,       du'e,        mo'a
-       enough,    too many,    too few
-</programlisting></para>
+        <cmavo-list>
+        <cmavo-entry>
+          <cmavo>rau,</cmavo>
+          <selmaho>du'e,</selmaho>
+          <description>mo'a</description>
+        </cmavo-entry>enough, too many, too few</cmavo-list></para>
       </listitem>
       <listitem>
         <para>Miscellaneous: 

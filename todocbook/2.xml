@@ -44,15 +44,12 @@
       </imageobject>
     </mediaobject>
     <!--fallback for text-based browsers w/o css:-->
-    <programlisting xml:space="preserve">
-         bridi (predicate)
-    ______________|________________
-    |                              |
-    John     is the father of    Sam
-    |___|    |______________|   |___|
-       |              |           |
-    sumti      selbri       sumti (argument)
-</programlisting>
+    <cmavo-list>John is the father of Sam| | |
+    <cmavo-entry>
+      <cmavo>sumti</cmavo>
+      <selmaho>selbri</selmaho>
+      <description>sumti (argument)</description>
+    </cmavo-entry></cmavo-list>
     <para>In a relationship, there are a definite number of things being related. In English, for example, 
     <quote>give</quote>has three places: the donor, the recipient and the gift. For example:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-DE08">
@@ -318,7 +315,7 @@
 <foreignphrase xml:lang="jbo" role="sumti">ti</foreignphrase>
        I talk to someone about that thing yonder in this language.
 </programlisting>
-    <para>(
+    <para>( 
     <xref linkend="cll_chapter2-section5-example7" />is a bit unusual, as there is no easy way to point to a language; one might point to a copy of this book, and hope the meaning gets across!)</para>
     <para>When there are one or more occurrences of the cmavo 
     <quote>zo'e</quote>at the end of a bridi, they may be omitted, a process called 

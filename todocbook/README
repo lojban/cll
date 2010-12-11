@@ -69,4 +69,10 @@ on:
        docbook2html_preprocess.xsl
        identity.xsl
 
+The third pass was pretty limited, and was basically just:
 
+       make_cmavo.pl
+       massage2.sh
+
+(with the .orig trick as above).  It create the <cmavo-list>
+entries.

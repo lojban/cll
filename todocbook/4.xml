@@ -31,13 +31,33 @@
           <programlisting xml:space="preserve">
       ai ei oi au
 </programlisting>or a two-syllable vowel pair with an apostrophe separating the vowels, one of the following: 
-          <programlisting xml:space="preserve">
-      a'a    a'e    a'i    a'o    a'u
-      e'a    e'e    e'i    e'o    e'u
-      i'a    i'e    i'i    i'o    i'u
-      o'a    o'e    o'i    o'o    o'u
-      u'a    u'e    u'i    u'o    u'u
-</programlisting></para>
+          <cmavo-list>
+            <cmavo-entry>
+              <cmavo>a'a a'e a'i</cmavo>
+              <selmaho>a'o</selmaho>
+              <description>a'u</description>
+            </cmavo-entry>
+            <cmavo-entry>
+              <cmavo>e'a e'e e'i</cmavo>
+              <selmaho>e'o</selmaho>
+              <description>e'u</description>
+            </cmavo-entry>
+            <cmavo-entry>
+              <cmavo>i'a i'e i'i</cmavo>
+              <selmaho>i'o</selmaho>
+              <description>i'u</description>
+            </cmavo-entry>
+            <cmavo-entry>
+              <cmavo>o'a o'e o'i</cmavo>
+              <selmaho>o'o</selmaho>
+              <description>o'u</description>
+            </cmavo-entry>
+            <cmavo-entry>
+              <cmavo>u'a u'e u'i</cmavo>
+              <selmaho>u'o</selmaho>
+              <description>u'u</description>
+            </cmavo-entry>
+          </cmavo-list></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -129,12 +149,28 @@
     <xref linkend="cll_chapter19" />and summarized in 
     <xref linkend="cll_chapter20" />.</para>
     <para>Standard cmavo occur in four forms defined by their word structure. Here are some examples of the various forms:</para>
-    <programlisting xml:space="preserve">
-    V-form      .a      .e     .i      .o     .u
-    CV-form     ba      ce     di      fo     gu
-    VV-form     .au     .ei    .ia     .o'u   .u'e
-    CVV-form    ki'a    pei    mi'o    coi    cu'u
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>V-form .a .e .i</cmavo>
+        <selmaho>.o</selmaho>
+        <description>.u</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CV-form ba ce di</cmavo>
+        <selmaho>fo</selmaho>
+        <description>gu</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>VV-form .au .ei</cmavo>
+        <selmaho>.ia</selmaho>
+        <description>.o'u .u'e</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CVV-form ki'a pei mi'o</cmavo>
+        <selmaho>coi</selmaho>
+        <description>cu'u</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>In addition, there is the cmavo 
     <quote>.y.</quote>(remember that 
     <quote>y</quote>is not a V), which must have pauses before and after it.</para>
@@ -147,10 +183,18 @@
     <quote>Experimental use</quote>means that the language designers will not assign any standard meaning or usage to these words, and words and usages coined by Lojban speakers will not appear in official dictionaries for the indefinite future. Experimental-use words provide an escape hatch for adding grammatical mechanisms (as opposed to semantic concepts) the need for which was not foreseen.</para>
     <para>The cmavo of VV-form include not only the diphthongs and vowel pairs listed in 
     <xref linkend="cll_chapter4-section1" />, but also the following ten additional diphthongs:</para>
-    <programlisting xml:space="preserve">
-            .ia    .ie    .ii    .io    .iu
-            .ua    .ue    .ui    .uo    .uu
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>.ia .ie .ii</cmavo>
+        <selmaho>.io</selmaho>
+        <description>.iu</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>.ua .ue .ui</cmavo>
+        <selmaho>.uo</selmaho>
+        <description>.uu</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>In addition, cmavo can have the form 
     <quote>Cy</quote>, a consonant followed by the letter 
     <quote>y</quote>. These cmavo represent letters of the Lojban alphabet, and are discussed in detail in 
@@ -307,7 +351,7 @@
     <quote>lojban.</quote>must be a name because it lacks a final vowel.</para>
     <para>Thus, 
     <quote>bisycla</quote>has the consonant pair 
-    <quote>sc</quote>in the first five non-
+    <quote>sc</quote>in the first five non- 
     <quote>y</quote>letters even though the 
     <quote>sc</quote>actually appears in the form of 
     <quote>syc</quote>. Similarly, the word 
@@ -444,9 +488,9 @@
     <para>representing roughly the same concept as the English word 
     <quote>ship</quote>.</para>
     <para>The binary metaphor 
-    <quote>father mother</quote>can refer to a paternal grandmother (
+    <quote>father mother</quote>can refer to a paternal grandmother ( 
     <quote>a father-ly type of mother</quote>), while 
-    <quote>mother father</quote>can refer to a maternal grandfather (
+    <quote>mother father</quote>can refer to a maternal grandfather ( 
     <quote>a mother-ly type of father</quote>). In Lojban, these become the tanru</para>
     <example role="interlinear-gloss-example" xml:id="random-id-4wK9">
       <title>
@@ -617,7 +661,7 @@
     </example>
     <para>In addition to these two forms, each gismu may have up to three additional short rafsi, three letters long. All short rafsi have one of the forms CVC, CCV, or CVV. The total number of rafsi forms that are assigned to a gismu depends on how useful the gismu is, or is presumed to be, in making lujvo, when compared to other gismu that could be assigned the rafsi.</para>
     <para>For example, 
-    <quote>zmadu</quote>(
+    <quote>zmadu</quote>( 
     <quote>more than</quote>) has the two short rafsi 
     <quote>zma</quote>and 
     <quote>mau</quote>(in addition to its unreduced rafsi 
@@ -627,35 +671,87 @@
     <quote>-er</quote>such as 
     <quote>whiter</quote>(Lojban 
     <quote>labmau</quote>). On the other hand, 
-    <quote>bakri</quote>(
+    <quote>bakri</quote>( 
     <quote>chalk</quote>) has no short rafsi and few lujvo.</para>
     <para>There are at most one CVC-form, one CCV-form, and one CVV-form rafsi per gismu. In fact, only a tiny handful of gismu have both a CCV-form and a CVV-form rafsi assigned, and still fewer have all three forms of short rafsi. However, gismu with both a CVC-form and another short rafsi are fairly common, partly because more possible CVC-form rafsi exist. Yet CVC-form rafsi, even though they are fairly easy to remember, cannot be used at the end of a lujvo (because lujvo must end in vowels), so justifying the assignment of an additional short rafsi to many gismu.</para>
     <para>The intention was to use the available 
     <quote>rafsi space</quote>- the set of all possible short rafsi forms - in the most efficient way possible; the goal is to make the most-used lujvo as short as possible (thus maximizing the use of short rafsi), while keeping the rafsi very recognizable to anyone who knows the source gismu. For this reason, the letters in a rafsi have always been chosen from among the five letters of the corresponding gismu. As a result, there are a limited set of short rafsi available for assignment to each gismu. At most seven possible short rafsi are available for consideration (of which at most three can be used, as explained above).</para>
     <para>Here are the only short rafsi forms that can possibly exist for gismu of the form CVC/CV, like 
     <quote>sakli</quote>. The digits in the second column represent the gismu letters used to form the rafsi.</para>
-    <programlisting xml:space="preserve">
-    CVC     123     -sak-
-    CVC     124     -sal-
-    CVV     12'5    -sa'i-
-    CVV     125     -sai-
-    CCV     345     -kli-
-    CCV     132     -ska-
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>CVC</cmavo>
+        <selmaho>123</selmaho>
+        <description>-sak-</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CVC</cmavo>
+        <selmaho>124</selmaho>
+        <description>-sal-</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CVV</cmavo>
+        <selmaho>12'5</selmaho>
+        <description>-sa'i-</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CVV</cmavo>
+        <selmaho>125</selmaho>
+        <description>-sai-</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CCV</cmavo>
+        <selmaho>345</selmaho>
+        <description>-kli-</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CCV</cmavo>
+        <selmaho>132</selmaho>
+        <description>-ska-</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>(The only actual short rafsi for 
     <quote>sakli</quote>is 
     <quote>-sal-</quote>.)</para>
     <para>For gismu of the form CCVCV, like 
     <quote>blaci</quote>, the only short rafsi forms that can exist are:</para>
-    <programlisting xml:space="preserve">
-    CVC     134     -bac-
-    CVC     234     -lac
-    CVV     13'5    -ba'i-
-    CVV     135     -bai-
-    CVV     23'5    -la'i-
-    CVV     235     -lai-
-    CCV     123     -bla-
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>CVC</cmavo>
+        <selmaho>134</selmaho>
+        <description>-bac-</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CVC</cmavo>
+        <selmaho>234</selmaho>
+        <description>-lac</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CVV</cmavo>
+        <selmaho>13'5</selmaho>
+        <description>-ba'i-</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CVV</cmavo>
+        <selmaho>135</selmaho>
+        <description>-bai-</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CVV</cmavo>
+        <selmaho>23'5</selmaho>
+        <description>-la'i-</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CVV</cmavo>
+        <selmaho>235</selmaho>
+        <description>-lai-</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>CCV</cmavo>
+        <selmaho>123</selmaho>
+        <description>-bla-</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>(In fact, 
     <quote>blaci</quote>has none of these short rafsi; they are all assigned to other gismu. Lojban speakers are not free to reassign any of the rafsi; the tables shown here are to help understand how the rafsi were chosen in the first place.)</para>
     <para>There are a few restrictions: a CVV-form rafsi without an apostrophe cannot exist unless the vowels make up one of the four diphthongs 
@@ -745,12 +841,12 @@
     <para>The 
     <quote>y</quote>-hyphen is used after a CVC-form rafsi when joining it with the following rafsi could result in an impermissible consonant pair, or when the resulting lujvo could fall apart into two or more words (either cmavo or gismu).</para>
     <para>Thus, the tanru 
-    <quote>pante tavla</quote>(
+    <quote>pante tavla</quote>( 
     <quote>protest talk</quote>) cannot produce the lujvo 
     <quote>patta'a</quote>, because 
     <quote>tt</quote>is not a permissible consonant pair; the lujvo must be 
     <quote>patyta'a</quote>. Similarly, the tanru 
-    <quote>mudri siclu</quote>(
+    <quote>mudri siclu</quote>( 
     <quote>wooden whistle</quote>) cannot form the lujvo 
     <quote>mudsiclu</quote>; instead, 
     <quote>mudysiclu</quote>must be used. (Remember that 
@@ -764,7 +860,7 @@
     <quote>zunlyjma</quote>, 
     <quote>zuljamfu</quote>, and 
     <quote>zuljma</quote>are all legitimate and equivalent forms made from the tanru 
-    <quote>zunle jamfu</quote>(
+    <quote>zunle jamfu</quote>( 
     <quote>left foot</quote>). Of these, 
     <quote>zuljma</quote>is the preferred one since it is the shortest; it thus is likely to be the form listed in a Lojban dictionary.</para>
     <para>The 
@@ -777,7 +873,7 @@
     <quote>n</quote>-hyphen is only used in place of an 
     <quote>r</quote>-hyphen when the following rafsi begins with 
     <quote>r</quote>. For example, the tanru 
-    <quote>rokci renro</quote>(
+    <quote>rokci renro</quote>( 
     <quote>rock throw</quote>) cannot be expressed as 
     <quote>ro'ire'o</quote>(which breaks up into two cmavo), nor can it be 
     <quote>ro'irre'o</quote>(which has an impermissible double consonant); the 
@@ -1000,7 +1096,7 @@
     </example>
     <para>where 
     <quote>cirl-</quote>represents 
-    <quote>cirla</quote>(
+    <quote>cirla</quote>( 
     <quote>cheese</quote>).</para>
     <example role="interlinear-gloss-example" xml:id="random-id-DQju">
       <title>
@@ -1015,7 +1111,7 @@
     </example>
     <para>where 
     <quote>sinc-</quote>represents 
-    <quote>since</quote>(
+    <quote>since</quote>( 
     <quote>snake</quote>).</para>
     <example role="interlinear-gloss-example" xml:id="random-id-TFzH">
       <title>
@@ -1031,7 +1127,7 @@
     </example>
     <para>where 
     <quote>sask-</quote>represents 
-    <quote>saske</quote>(
+    <quote>saske</quote>( 
     <quote>science</quote>). Note the extra vowel 
     <quote>a</quote>added to the end of the word, and the diphthong 
     <quote>ua</quote>, which never appears in gismu or lujvo, but may appear in fu'ivla.</para>
@@ -1049,7 +1145,7 @@
     </example>
     <para>where 
     <quote>ler-</quote>represents 
-    <quote>lerfu</quote>(
+    <quote>lerfu</quote>( 
     <quote>letter</quote>). Note the l-hyphen in "lerldjamo", since "lerndjamo" contains the forbidden cluster "ndj".</para>
     <para>The use of the prefix helps distinguish among the many possible meanings of the borrowed word, depending on the field. As it happens, 
     <quote>spageti</quote>and 
@@ -1069,7 +1165,7 @@
     <quote>integrale</quote>is removed, or something like 
     <quote>cmacrnintegrale</quote>, if a new consonant is added to the beginning; 
     <quote>cmac-</quote>is the rafsi for 
-    <quote>cmaci</quote>(
+    <quote>cmaci</quote>( 
     <quote>mathematics</quote>). The architectural sense of 
     <quote>integral</quote>might be conveyed with 
     <quote>djinrnintegrale</quote>or 
@@ -1602,17 +1698,48 @@
         <listitem>
           <para>For each rafsi, find the value in the following table. Sum this value over all rafsi; call it 
           <quote>R</quote>: 
-          <programlisting xml:space="preserve">
-      CVC/CV (final)               (-sarji)    1
-      CVC/C                        (-sarj-)    2
-      CCVCV (final)                (-zbasu)    3
-      CCVC                         (-zbas-)    4
-      CVC                          (-nun-)     5
-      CVV with an apostrophe       (-ta'u-)    6
-      CCV                          (-zba-)     7
-      CVV with no apostrophe       (-sai-)     8
-      
-</programlisting></para>
+          <cmavo-list>
+            <cmavo-entry>
+              <cmavo>CVC/CV (final)</cmavo>
+              <selmaho>(-sarji)</selmaho>
+              <description>1</description>
+            </cmavo-entry>
+            <cmavo-entry>
+              <cmavo>CVC/C</cmavo>
+              <selmaho>(-sarj-)</selmaho>
+              <description>2</description>
+            </cmavo-entry>
+            <cmavo-entry>
+              <cmavo>CCVCV (final)</cmavo>
+              <selmaho>(-zbasu)</selmaho>
+              <description>3</description>
+            </cmavo-entry>
+            <cmavo-entry>
+              <cmavo>CCVC</cmavo>
+              <selmaho>(-zbas-)</selmaho>
+              <description>4</description>
+            </cmavo-entry>
+            <cmavo-entry>
+              <cmavo>CVC</cmavo>
+              <selmaho>(-nun-)</selmaho>
+              <description>5</description>
+            </cmavo-entry>
+            <cmavo-entry>
+              <cmavo>CVV with an apostrophe</cmavo>
+              <selmaho>(-ta'u-)</selmaho>
+              <description>6</description>
+            </cmavo-entry>
+            <cmavo-entry>
+              <cmavo>CCV</cmavo>
+              <selmaho>(-zba-)</selmaho>
+              <description>7</description>
+            </cmavo-entry>
+            <cmavo-entry>
+              <cmavo>CVV with no apostrophe</cmavo>
+              <selmaho>(-sai-)</selmaho>
+              <description>8</description>
+            </cmavo-entry>
+          </cmavo-list></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -1664,7 +1791,7 @@
   <section xml:id="cll_chapter4-section13">
     <title>13. lujvo-making examples</title>
     <para>This section contains examples of making and scoring lujvo. First, we will start with the tanru 
-    <quote>gerku zdani</quote>(
+    <quote>gerku zdani</quote>( 
     <quote>dog house</quote>) and construct a lujvo meaning 
     <quote>doghouse</quote>, that is, a house where a dog lives. We will use a brute-force application of the algorithm in 
     <xref linkend="cll_chapter4-section12" />, using every possible rafsi.</para>
@@ -1715,7 +1842,7 @@
     <quote>gerzda</quote>would win. Its L score is 6, its A score is 0, its H score is 0, its R score is 12, and its V score is 3, for a final score of 5878. The other forms have scores of 7917, 6367, 9506, 8008, and 10047 respectively. Consequently, this lujvo would probably appear in the dictionary in the form 
     <quote>gerzda</quote>.</para>
     <para>For the next example, we will use the tanru 
-    <quote>bloti klesi</quote>(
+    <quote>bloti klesi</quote>( 
     <quote>boat class</quote>) presumably referring to the category (rowboat, motorboat, cruise liner) into which a boat falls. We will omit the long rafsi from the process, since lujvo containing long rafsi are almost never preferred by the scoring algorithm when there are short rafsi available.</para>
     <para>The rafsi for 
     <quote>bloti</quote>are 
@@ -1726,14 +1853,16 @@
     <quote>-kle-</quote>and 
     <quote>-lei-</quote>. Both these gismu are among the handful which have both CVV-form and CCV-form rafsi, so there is an unusual number of possibilities available for a two-part tanru:</para>
     <programlisting xml:space="preserve">
-          lotkle      blokle      lo'ikle
+      lotkle      blokle      lo'ikle 
+<!-- not a cmavo list -->
           lotlei      blolei      lo'irlei
 </programlisting>
     <para>Only 
     <quote>lo'irlei</quote>requires hyphenation (to avoid confusion with the cmavo sequence 
     <quote>lo'i lei</quote>). All six forms are valid versions of the lujvo, as are the six further forms using long rafsi; however, the scoring algorithm produces the following results:</para>
     <programlisting xml:space="preserve">
-          lotkle  5878      blokle  5858      lo'ikle  6367
+          lotkle  5878      blokle  5858      lo'ikle  6367 
+<!-- not a cmavo list -->
           lotlei  5867      blolei  5847      lo'irlei 7456
 </programlisting>
     <para>So the form 
@@ -1743,7 +1872,7 @@
     <quote>lo'irlei</quote>because of having both apostrophe and hyphen.</para>
     <para>Our third example will result in forming both a lujvo and a name from the tanru 
     <quote>logji bangu girzu</quote>, or 
-    <quote>logical-language group</quote>in English. (
+    <quote>logical-language group</quote>in English. ( 
     <quote>The Logical Language Group</quote>is the name of the publisher of this book and the organization for the promotion of Lojban.)</para>
     <para>The available rafsi are 
     <quote>-loj-</quote>and 
@@ -1756,21 +1885,24 @@
     <quote>-gir-</quote>and 
     <quote>-girz-</quote>. The resulting 12 lujvo possibilities are:</para>
     <programlisting xml:space="preserve">
-          loj-ban-gri      loj-bau-gri      loj-bang-gri
+          loj-ban-gri      loj-bau-gri      loj-bang-gri 
+<!-- not a cmavo list -->
           logj-ban-gri     logj-bau-gri     logj-bang-gri
           loj-ban-girzu    loj-bau-girzu    loj-bang-girzu
           logj-ban-girzu   logj-bau-girzu   logj-bang-girzu
 </programlisting>
     <para>and the 12 name possibilities are:</para>
     <programlisting xml:space="preserve">
-          loj-ban-gir.     loj-bau-gir.     loj-bang-gir.
+          loj-ban-gir.     loj-bau-gir.     loj-bang-gir. 
+<!-- not a cmavo list -->
           logj-ban-gir.    logj-bau-gir.    logj-bang-gir.
           loj-ban-girz.    loj-bau-girz.    loj-bang-girz.
           logj-ban-girz.   logj-bau-girz.   logj-bang-girz.
 </programlisting>
     <para>After hyphenation, we have:</para>
     <programlisting xml:space="preserve">
-          lojbangri        lojbaugri        lojbangygri
+          lojbangri        lojbaugri        lojbangygri 
+<!-- not a cmavo list -->
           logjybangri      logjybaugri      logjybangygri
           lojbangirzu      lojbaugirzu      lojbangygirzu
           logjybangirzu    logjybaugirzu    logjybangygirzu
@@ -1806,7 +1938,7 @@
     <quote>cinse ctuca</quote>(which would be 
     <quote>cinctu</quote>) since the sex of the teacher is rarely important. If there was a reason to specify 
     <quote>male</quote>, then the simpler tanru 
-    <quote>nakni cinctu</quote>(
+    <quote>nakni cinctu</quote>( 
     <quote>male sexual-teacher</quote>) would be appropriate. This tanru is actually shorter than the four-part lujvo, since the 
     <quote>ke</quote>required for grouping need not be expressed.</para>
   </section>
@@ -1817,7 +1949,7 @@
       <varlistentry>
         <term>1)</term>
         <listitem>
-          <para>At least one word was found in each of the six source languages (Chinese, English, Hindi, Spanish, Russian, Arabic) corresponding to the proposed gismu. This word was rendered into Lojban phonetics rather liberally: consonant clusters consisting of a stop and the corresponding fricative were simplified to just the fricative (
+          <para>At least one word was found in each of the six source languages (Chinese, English, Hindi, Spanish, Russian, Arabic) corresponding to the proposed gismu. This word was rendered into Lojban phonetics rather liberally: consonant clusters consisting of a stop and the corresponding fricative were simplified to just the fricative ( 
           <quote>tc</quote>became 
           <quote>c</quote>, 
           <quote>dj</quote>became 

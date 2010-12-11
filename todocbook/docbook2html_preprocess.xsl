@@ -13,7 +13,7 @@
   <xsl:template name="counted_table">
     <xsl:param name="maximal" select="''"/>
     <xsl:param name="items" select="''"/>
-    <informaltable> <xsl:text>&#10;</xsl:text>
+    <informaltable>
       <tgroup>
         <xsl:attribute name="cols">
           <xsl:value-of select="count(str:tokenize($maximal))"/>
@@ -23,28 +23,45 @@
             <xsl:attribute name="colname">
               <xsl:value-of select="concat('col',position())"/>
             </xsl:attribute>
-          </colspec> <xsl:text>&#10;</xsl:text>
+          </colspec>
         </xsl:for-each>
-        <tbody> <xsl:text>&#10;</xsl:text>
+        <tbody>
           <xsl:for-each select="$items/jbo">
-            <row> <xsl:text>&#10;</xsl:text>
+            <row>
               <xsl:for-each select="str:tokenize(.)">
-                <entry><xsl:value-of select="."/></entry> <xsl:text>&#10;</xsl:text>
+                <entry><xsl:value-of select="."/></entry>
               </xsl:for-each>
             </row>
           </xsl:for-each>
           <xsl:for-each select="$items/gloss">
-            <row> <xsl:text>&#10;</xsl:text>
+            <row>
               <xsl:for-each select="str:tokenize(.)">
-                <entry><xsl:value-of select="."/></entry> <xsl:text>&#10;</xsl:text>
+                <entry><xsl:value-of select="."/></entry>
               </xsl:for-each>
             </row>
           </xsl:for-each>
           <xsl:for-each select="$items/en">
             <xsl:variable name="startcol" select="concat('col',1)" />
             <xsl:variable name="endcol" select="concat('col',count(str:tokenize($maximal)))" />
-            <row> <xsl:text>&#10;</xsl:text>
-              <entry namest="{$startcol}" nameend="{$endcol}"><xsl:value-of select="."/></entry> <xsl:text>&#10;</xsl:text>
+            <row>
+              <entry namest="{$startcol}" nameend="{$endcol}"><xsl:value-of select="."/></entry>
+            </row>
+          </xsl:for-each>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </xsl:template>
+
+  <!-- Turn cmavo-list nodes into tables. -->
+  <xsl:template match="cmavo-list">
+    <informaltable>
+      <tgroup cols="3">
+        <tbody>
+          <xsl:for-each select=".//cmavo-entry">
+            <row>
+              <xsl:for-each select="cmavo|selmaho|description">
+                <entry><xsl:value-of select="."/></entry>
+              </xsl:for-each>
             </row>
           </xsl:for-each>
         </tbody>

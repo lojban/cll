@@ -62,19 +62,42 @@
       </listitem>
     </itemizedlist>
     <para>Therefore, the following table represents the basic Lojban alphabet:</para>
-    <programlisting xml:space="preserve">
-    '      a      b      c      d      e
-    .y'y.  .abu   by.    cy.   dy.    .ebu
-
-    f      g      i      j      k      l
-    fy.    gy.    .ibu   jy.    ky.    ly.
-
-    m      n      o      p      r      s
-    my.    ny.    .obu   py.    ry.    sy.
-
-    t      u      v      x      y      z
-    ty.    .ubu   vy.    xy.    .ybu   zy.
-</programlisting>
+    <cmavo-list>
+    <cmavo-entry>
+      <cmavo>' a b c</cmavo>
+      <selmaho>d</selmaho>
+      <description>e</description>
+    </cmavo-entry>.y'y. .abu by. cy. dy. .ebu
+    <cmavo-entry>
+      <cmavo>f g i j</cmavo>
+      <selmaho>k</selmaho>
+      <description>l</description>
+    </cmavo-entry>
+    <cmavo-entry>
+      <cmavo>fy. gy. .ibu jy.</cmavo>
+      <selmaho>ky.</selmaho>
+      <description>ly.</description>
+    </cmavo-entry>
+    <cmavo-entry>
+      <cmavo>m n o p</cmavo>
+      <selmaho>r</selmaho>
+      <description>s</description>
+    </cmavo-entry>
+    <cmavo-entry>
+      <cmavo>my. ny. .obu py.</cmavo>
+      <selmaho>ry.</selmaho>
+      <description>sy.</description>
+    </cmavo-entry>
+    <cmavo-entry>
+      <cmavo>t u v x</cmavo>
+      <selmaho>y</selmaho>
+      <description>z</description>
+    </cmavo-entry>
+    <cmavo-entry>
+      <cmavo>ty. .ubu vy.</cmavo>
+      <selmaho>xy.</selmaho>
+      <description>.ybu zy.</description>
+    </cmavo-entry></cmavo-list>
     <para>There are several things to note about this table. The consonant lerfu words are a single syllable, whereas the vowel and 
     <quote>'</quote>lerfu words are two syllables and must be preceded by pause (since they all begin with a vowel). Another fact, not evident from the table but important nonetheless, is that 
     <quote>by</quote>and its like are single cmavo of selma'o BY, as is 
@@ -125,7 +148,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi cy. claxu</jbo>
-        <gloss>I lerfu-
+        <gloss>I lerfu- 
         <quote>c</quote>without</gloss>
         <en>I am without (whatever is referred to by) the letter 
         <quote>c</quote>.</en>
@@ -465,17 +488,17 @@
   </section>
   <section xml:id="cll_chapter17-section8">
     <title>8. What about Chinese characters?</title>
-    <para>Chinese characters (
-    <quote>han
-    <superscript>4</superscript>zi
+    <para>Chinese characters ( 
+    <quote>han 
+    <superscript>4</superscript>zi 
     <superscript>4</superscript></quote>in Chinese, 
     <quote>kanji</quote>in Japanese) represent an entirely different approach to writing from alphabets or syllabaries. (A syllabary, such as Japanese hiragana or Amharic writing, has one lerfu for each syllable of the spoken language.) Very roughly, Chinese characters represent single elements of meaning; also very roughly, they represent single syllables of spoken Chinese. There is in principle no limit to the number of Chinese characters that can exist, and many thousands are in regular use.</para>
     <para>It is hopeless for Lojban, with its limited lerfu and shift words, to create an alphabet which will match this diversity. However, there are various possible ways around the problem.</para>
     <para>First, both Chinese and Japanese have standard Latin-alphabet representations, known as 
     <quote>pinyin</quote>for Chinese and 
     <quote>romaji</quote>for Japanese, and these can be used. Thus, the word 
-    <quote>han
-    <superscript>4</superscript>zi
+    <quote>han 
+    <superscript>4</superscript>zi 
     <superscript>4</superscript></quote>is conventionally written with two characters, but it may be spelled out as:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-fBfe">
       <title>
@@ -823,7 +846,7 @@
       </title>
       <interlinear-gloss>
         <jbo>vei ny. [ve'o] lo prenu</jbo>
-        <en>(
+        <en>( 
         <quote>n</quote>) persons</en>
       </interlinear-gloss>
     </example>
@@ -942,7 +965,7 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="cll_chapter17-section12-example5" />does not of course refer to a bear (
+    <xref linkend="cll_chapter17-section12-example5" />does not of course refer to a bear ( 
     <quote>le cribe</quote>or 
     <quote>lo cribe</quote>) but to something else, probably a person, named 
     <quote>Bear</quote>. Similarly, 
@@ -989,31 +1012,88 @@
   </section>
   <section xml:id="cll_chapter17-section14">
     <title>14. List of all auxiliary lerfu-word cmavo</title>
-    <programlisting xml:space="preserve">
-     cmavo   selma'o     meaning
-
-     bu      BU          makes previous word into a lerfu word
-
-     ga'e    BY          upper case shift
-     to'a    BY          lower case shift
-     tau     LAU         case-shift next lerfu word only
-
-     lo'a    BY          Latin/Lojban alphabet shift
-     ge'o    BY          Greek alphabet shift
-     je'o    BY          Hebrew alphabet shift
-     jo'o    BY          Arabic alphabet shift
-     ru'o    BY          Cyrillic alphabet shift
-
-     se'e    BY          following digits are a character code
-     na'a    BY          cancel all shifts
-
-     zai     LAU         following lerfu word specifies alphabet
-     ce'a    LAU         following lerfu word specifies font
-     lau     LAU         following lerfu word is punctuation
-
-     tei     TEI         start compound lerfu word
-     foi     FOI         end compound lerfu word
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>bu</cmavo>
+        <selmaho>BU</selmaho>
+        <description>makes previous word into a lerfu word</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ga'e</cmavo>
+        <selmaho>BY</selmaho>
+        <description>upper case shift</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>to'a</cmavo>
+        <selmaho>BY</selmaho>
+        <description>lower case shift</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>tau</cmavo>
+        <selmaho>LAU</selmaho>
+        <description>case-shift next lerfu word only</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lo'a</cmavo>
+        <selmaho>BY</selmaho>
+        <description>Latin/Lojban alphabet shift</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ge'o</cmavo>
+        <selmaho>BY</selmaho>
+        <description>Greek alphabet shift</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>je'o</cmavo>
+        <selmaho>BY</selmaho>
+        <description>Hebrew alphabet shift</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>jo'o</cmavo>
+        <selmaho>BY</selmaho>
+        <description>Arabic alphabet shift</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ru'o</cmavo>
+        <selmaho>BY</selmaho>
+        <description>Cyrillic alphabet shift</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>se'e</cmavo>
+        <selmaho>BY</selmaho>
+        <description>following digits are a character code</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>na'a</cmavo>
+        <selmaho>BY</selmaho>
+        <description>cancel all shifts</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>zai</cmavo>
+        <selmaho>LAU</selmaho>
+        <description>following lerfu word specifies alphabet</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ce'a</cmavo>
+        <selmaho>LAU</selmaho>
+        <description>following lerfu word specifies font</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lau</cmavo>
+        <selmaho>LAU</selmaho>
+        <description>following lerfu word is punctuation</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>tei</cmavo>
+        <selmaho>TEI</selmaho>
+        <description>start compound lerfu word</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>foi</cmavo>
+        <selmaho>FOI</selmaho>
+        <description>end compound lerfu word</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Note that LAU cmavo must be followed by a BY cmavo or the equivalent, where 
     <quote>equivalent</quote>means: either any Lojban word followed by 
     <quote>bu</quote>, another LAU cmavo (and its required sequel), or a 
@@ -1030,7 +1110,8 @@
   <section xml:id="cll_chapter17-section16">
     <title>16. Proposed lerfu words for the Greek alphabet</title>
     <programlisting xml:space="preserve">
-     alpha       .alfas. bu      .abu
+     alpha       .alfas. bu      .abu 
+<!-- skip cmavo list automation -->
      beta        .betas. bu      by
      gamma       .gamas. bu      gy
      delta       .deltas. bu     dy
@@ -1062,7 +1143,8 @@
     <title>17. Proposed lerfu words for the Cyrillic alphabet</title>
     <para>The second column in this listing is based on the historical names of the letters in Old Church Slavonic. Only those letters used in Russian are shown; other languages require more letters which can be devised as needed.</para>
     <programlisting xml:space="preserve">
-     a           .azys. bu         .abu
+     a           .azys. bu         .abu 
+<!-- skip cmavo list automation -->
      b           .bukys. bu        by
      v           .vedis. bu        vy
      g           .glagolis. bu     gy
@@ -1099,7 +1181,8 @@
   <section xml:id="cll_chapter17-section18">
     <title>18. Proposed lerfu words for the Hebrew alphabet</title>
     <programlisting xml:space="preserve">
-     aleph       .alef. bu       .alef. bu
+     aleph       .alef. bu       .alef. bu 
+<!-- skip cmavo list automation -->
      bet         .bet. bu        by
      gimel       .gimel. bu      gy
      daled       .daled. bu      dy
@@ -1139,7 +1222,8 @@
     <para>This list is intended to be suggestive, not complete: there are lerfu such as Polish 
     <quote>dark</quote>l and Maltese h-bar that do not yet have symbols.</para>
     <programlisting xml:space="preserve">
-     acute              .akut. bu
+     acute              .akut. bu 
+<!-- skip cmavo list automation -->
                   or    .pritygal. bu          [pritu galtu]
      grave              .grav. bu
                   or    .zulgal. bu            [zunle galtu]
@@ -1169,7 +1253,8 @@
     <quote>carlis. bu</quote>, not 
     <quote>tcarlis. bu</quote>).</para>
     <programlisting xml:space="preserve">
-     Alfa        .alfas. bu
+     Alfa        .alfas. bu 
+<!-- skip cmavo list automation -->
      Bravo       .bravos. bu
      Charlie     .carlis. bu
      Delta       .deltas. bu

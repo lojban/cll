@@ -119,12 +119,28 @@
   <section xml:id="cll_chapter6-section2">
     <title>2. The three basic description types</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     le      LE                  the, the one(s) described as
-     lo      LE                  some, some of those which really are
-     la      LA                  the one(s) named
-     ku      KU                  elidable terminator for LE, LA
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>le</cmavo>
+        <selmaho>LE</selmaho>
+        <description>the, the one(s) described as</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lo</cmavo>
+        <selmaho>LE</selmaho>
+        <description>some, some of those which really are</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>la</cmavo>
+        <selmaho>LA</selmaho>
+        <description>the one(s) named</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ku</cmavo>
+        <selmaho>KU</selmaho>
+        <description>elidable terminator for LE, LA</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>The syntax of descriptions is fairly complex, and not all of it can be explained within the confines of this chapter: relative clauses, in particular, are discussed in 
     <xref linkend="cll_chapter8" />. However, most descriptions have just two components: a descriptor belonging to selma'o LE or LA, and a selbri. (The difference between selma'o LE and selma'o LA is not important until 
     <xref linkend="cll_chapter6-section12" />.) Furthermore, the selbri is often just a single brivla. Here is an elementary example:</para>
@@ -162,8 +178,8 @@
         <en>The markets are big.</en>
       </interlinear-gloss>
     </example>
-    <para>Note that English-speakers must state whether a reference to markets is to just one (
-    <quote>the market</quote>) or to more than one (
+    <para>Note that English-speakers must state whether a reference to markets is to just one ( 
+    <quote>the market</quote>) or to more than one ( 
     <quote>the markets</quote>). Lojban requires no such forced choice, so both colloquial translations of 
     <xref linkend="cll_chapter6-section2-example2" />are valid. Only the context can specify which is meant. (This rule does not mean that Lojban has no way of specifying the number of markets in such a case: that mechanism is explained in 
     <xref linkend="cll_chapter6-section7" />.)</para>
@@ -344,11 +360,23 @@
   <section xml:id="cll_chapter6-section3">
     <title>3. Individuals and masses</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     lei     LE                  the mass I describe as
-     loi     LE                  part of the mass of those which really are
-     lai     LA                  the mass of those named
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>lei</cmavo>
+        <selmaho>LE</selmaho>
+        <description>the mass I describe as</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>loi</cmavo>
+        <selmaho>LE</selmaho>
+        <description>part of the mass of those which really are</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lai</cmavo>
+        <selmaho>LA</selmaho>
+        <description>the mass of those named</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>All Lojban sumti are classified by whether they refer to one of three types of objects, known as 
     <quote>individuals</quote>, 
     <quote>masses</quote>, and 
@@ -393,8 +421,8 @@
     <quote>loi</quote>and 
     <quote>lai</quote>are analogous to 
     <quote>lo</quote>and 
-    <quote>la</quote>respectively, but refer to masses either by property (
-    <quote>loi</quote>) or by name (
+    <quote>la</quote>respectively, but refer to masses either by property ( 
+    <quote>loi</quote>) or by name ( 
     <quote>lai</quote>). A classic example of 
     <quote>loi</quote>use is:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-T1pF">
@@ -477,11 +505,23 @@
   <section xml:id="cll_chapter6-section4">
     <title>4. Masses and sets</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     le'i    LE                  the set described as
-     lo'i    LE                  the set of those which really are
-     la'i    LA                  the set of those named
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>le'i</cmavo>
+        <selmaho>LE</selmaho>
+        <description>the set described as</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lo'i</cmavo>
+        <selmaho>LE</selmaho>
+        <description>the set of those which really are</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>la'i</cmavo>
+        <selmaho>LA</selmaho>
+        <description>the set of those named</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Having said so much about masses, let us turn to sets. Sets are easier to understand than masses, but are more rarely used. Like a mass, a set is an abstract object formed from a number of individuals; however, the properties of a set are not derived from any of the properties of the individuals that compose it.</para>
     <para>Sets have properties like cardinality (how many elements in the set), membership (the relationship between a set and its elements), and set inclusion (the relationship between two sets, one of which - the superset – contains all the elements of the other - the subset). The set descriptors 
     <quote>le'i</quote>, 
@@ -543,10 +583,18 @@
   <section xml:id="cll_chapter6-section5">
     <title>5. Descriptors for typical objects</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     lo'e    LE                  the typical
-     le'e    LE                  the stereotypical
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>lo'e</cmavo>
+        <selmaho>LE</selmaho>
+        <description>the typical</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>le'e</cmavo>
+        <selmaho>LE</selmaho>
+        <description>the stereotypical</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>As promised in 
     <xref linkend="cll_chapter6-section3" />, Lojban has a method for discriminating between 
     <quote>the lion</quote>who lives in Africa and 
@@ -623,10 +671,18 @@
   <section xml:id="cll_chapter6-section6">
     <title>6. Quantified sumti</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     ro      PA                  all of/each of
-     su'o    PA                  at least (one of)
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>ro</cmavo>
+        <selmaho>PA</selmaho>
+        <description>all of/each of</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>su'o</cmavo>
+        <selmaho>PA</selmaho>
+        <description>at least (one of)</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Quantifiers tell us how many: in the case of quantifiers with sumti, how many things we are talking about. In Lojban, quantifiers are expressed by numbers and mathematical expressions: a large topic discussed in some detail in 
     <xref linkend="cll_chapter18" />. For the purposes of this chapter, a simplified treatment will suffice. Our examples will employ either the simple Lojban numbers 
     <quote>pa</quote>, 
@@ -769,10 +825,13 @@
   <section xml:id="cll_chapter6-section7">
     <title>7. Quantified descriptions</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     piro    PA                  the whole of
-     pisu'o  PA                  a part of
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>piro</cmavo>
+        <selmaho>PA</selmaho>
+        <description>the whole of</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Like other sumti, descriptions can be quantified. When a quantifier appears before a description, it has the same meaning as one appearing before a non-description sumti: it specifies how many things, of all those referred to by the description, are being talked about in this particular bridi. Suppose that context tells us that 
     <quote>le gerku</quote>refers to three dogs. Then we can say that exactly two of them are white as follows:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-WtUh">
@@ -1088,22 +1147,48 @@
   <section xml:id="cll_chapter6-section10">
     <title>10. sumti qualifiers</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     la'e    LAhE                something referred to by
-     lu'e    LAhE                a reference to
-     tu'a    LAhE                an abstraction involving
-     lu'a    LAhE                an individual/member/component of
-     lu'i    LAhE                a set formed from
-     lu'o    LAhE                a mass formed from
-     vu'i    LAhE                a sequence formed from
-
-     na'ebo  NAhE+BO             something other than
-     to'ebo  NAhE+BO             the opposite of
-     no'ebo  NAhE+BO             the neutral form of
-     je'abo  NAhE+BO             that which indeed is
-
-     lu'u    LUhU                elidable terminator for LAhE and NAhE+BO
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>la'e</cmavo>
+        <selmaho>LAhE</selmaho>
+        <description>something referred to by</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lu'e</cmavo>
+        <selmaho>LAhE</selmaho>
+        <description>a reference to</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>tu'a</cmavo>
+        <selmaho>LAhE</selmaho>
+        <description>an abstraction involving</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lu'a</cmavo>
+        <selmaho>LAhE</selmaho>
+        <description>an individual/member/component of</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lu'i</cmavo>
+        <selmaho>LAhE</selmaho>
+        <description>a set formed from</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lu'o</cmavo>
+        <selmaho>LAhE</selmaho>
+        <description>a mass formed from</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>vu'i</cmavo>
+        <selmaho>LAhE</selmaho>
+        <description>a sequence formed from</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>lu'u</cmavo>
+        <selmaho>LUhU</selmaho>
+        <description>elidable terminator for LAhE and NAhE+BO</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Well, that's quite a list of cmavo. What are they all about?</para>
     <para>The above cmavo and compound cmavo are called the 
     <quote>sumti qualifiers</quote>. All of them are either single cmavo of selma'o LAhE, or else compound cmavo involving a scalar negation cmavo of selma'o NAhE immediately followed by 
@@ -1158,8 +1243,8 @@
     <para>So when 
     <quote>la'e</quote>is prefixed to a sumti referring to a symbol, it produces a sumti referring to the referent of that symbol. (In computer jargon, 
     <quote>la'e</quote>dereferences a pointer.)</para>
-    <para>By introducing a sumti qualifier, we correct a false sentence (
-    <xref linkend="cll_chapter6-section10-example1" />), which too closely resembles its literal English equivalent, into a true sentence (
+    <para>By introducing a sumti qualifier, we correct a false sentence ( 
+    <xref linkend="cll_chapter6-section10-example1" />), which too closely resembles its literal English equivalent, into a true sentence ( 
     <xref linkend="cll_chapter6-section10-example3" />), without having to change it overmuch; in particular, the structure remains the same. Most of the uses of sumti qualifiers are of this general kind.</para>
     <para>The sumti qualifier 
     <quote>lu'e</quote>provides the converse operation: it can be prefixed to a sumti referring to some thing to produce a sumti referring to a sign or symbol for the thing. For example,</para>
@@ -1523,15 +1608,23 @@
     <quote>doi</quote>by 
     <quote>do'i</quote>or 
     <quote>dai</quote>. Here are a few examples:</para>
-    <programlisting xml:space="preserve">
-     English name              invalid Lojban name   valid Lojban names
-
-       Doyle                     *doi,l                do'il or dai,l
-       Lyra                      *lairas               ly'iras
-       Lottie                    *latis                LYtis. or lotis.
-
-     (American pronunciation)
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>Doyle</cmavo>
+        <selmaho>*doi,l</selmaho>
+        <description>do'il or dai,l</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>Lyra</cmavo>
+        <selmaho>*lairas</selmaho>
+        <description>ly'iras</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>Lottie</cmavo>
+        <selmaho>*latis</selmaho>
+        <description>LYtis. or lotis.</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>Names may be borrowed from other languages or created arbitrarily. Another common practice is to use one or more rafsi, arranged to end with a consonant, to form a name: thus the rafsi 
     <quote>loj-</quote>for 
     <quote>logji</quote>(logical) and 
@@ -1563,7 +1656,7 @@
     <quote>ro</quote>(all). In the case of pro-sumti which refer to other sumti, the 
     <quote>ro</quote>signifies 
     <quote>all of those referred to by the other sumti</quote>: thus it is possible to restrict, but not to extend, the quantification of the other sumti.</para>
-    <para>Personal pro-sumti (
+    <para>Personal pro-sumti ( 
     <quote>mi</quote>, 
     <quote>do</quote>, 
     <quote>mi'o</quote>, 
@@ -1588,7 +1681,7 @@
     <quote>mi'a</quote>, 
     <quote>ma'a</quote>, and 
     <quote>do'o</quote>specifically represent mass combinations of the individuals (you and I, I and others, you and I and others, you and others) that make them up.</para>
-    <para>Definable pro-sumti (
+    <para>Definable pro-sumti ( 
     <quote>ko'a</quote>, 
     <quote>ko'e</quote>, 
     <quote>ko'i</quote>, 
@@ -1611,7 +1704,7 @@
         <en>The bear defined-as it-1 is-black. It-1 eats the mouse.</en>
       </interlinear-gloss>
     </example>
-    <para>Quantificational pro-sumti (
+    <para>Quantificational pro-sumti ( 
     <quote>da</quote>, 
     <quote>de</quote>, 
     <quote>di</quote>) are used as variables in bridi involving predicate logic:</para>
@@ -1631,7 +1724,7 @@
     <xref linkend="cll_chapter16" />. Roughly speaking, the quantifier is 
     <quote>su'o</quote>(at least one) when the pro-sumti is first used, and 
     <quote>ro</quote>(all) thereafter.</para>
-    <para>Reflexive pro-sumti (
+    <para>Reflexive pro-sumti ( 
     <quote>vo'a</quote>, 
     <quote>vo'e</quote>, 
     <quote>vo'i</quote>, 
@@ -1648,7 +1741,7 @@
         <en>The bear bites itself.</en>
       </interlinear-gloss>
     </example>
-    <para>Back-counting pro-sumti (
+    <para>Back-counting pro-sumti ( 
     <quote>ri</quote>, 
     <quote>ra</quote>, 
     <quote>ru</quote>) refer to the referents of previous sumti counted backwards from the pro-sumti:</para>
@@ -1663,7 +1756,7 @@
         <en>I go from Frankfurt to Frankfurt (by some unstated route).</en>
       </interlinear-gloss>
     </example>
-    <para>Indefinite pro-sumti (
+    <para>Indefinite pro-sumti ( 
     <quote>zo'e</quote>, 
     <quote>zu'i</quote>, 
     <quote>zi'o</quote>) refer to something which is unspecified:</para>
@@ -1682,7 +1775,7 @@
     <quote>su'o</quote>(at least one) or conceivably even 
     <quote>no</quote>(none), though 
     <quote>no</quote>would require a very odd context indeed.</para>
-    <para>Demonstrative pro-sumti (
+    <para>Demonstrative pro-sumti ( 
     <quote>ti</quote>, 
     <quote>ta</quote>, 
     <quote>tu</quote>) refer to things pointed at by the speaker, or when pointing is not possible, to things near or far from the speaker:</para>
@@ -1699,7 +1792,7 @@
         <en>Move this from there to over there!</en>
       </interlinear-gloss>
     </example>
-    <para>Metalinguistic pro-sumti (
+    <para>Metalinguistic pro-sumti ( 
     <quote>di'u</quote>, 
     <quote>de'u</quote>, 
     <quote>da'u</quote>, 
@@ -1723,7 +1816,7 @@
     <para>The implicit quantifier for metalinguistic pro-sumti is 
     <quote>su'o</quote>(at least one), because they are considered analogous to 
     <quote>lo</quote>descriptions: they refer to things which really are previous, current, or following utterances.</para>
-    <para>The relative pro-sumti (
+    <para>The relative pro-sumti ( 
     <quote>ke'a</quote>) is used within relative clauses (see 
     <xref linkend="cll_chapter8" />for a discussion of relative clauses) to refer to whatever sumti the relative clause is attached to.</para>
     <example role="interlinear-gloss-example" xml:id="random-id-sf2T">
@@ -1739,7 +1832,7 @@
         <en>I see the cat(s) made of plastic.</en>
       </interlinear-gloss>
     </example>
-    <para>The question pro-sumti (
+    <para>The question pro-sumti ( 
     <quote>ma</quote>) is used to ask questions which request the listener to supply a sumti which will make the question into a truth:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-9tSb">
       <title>
