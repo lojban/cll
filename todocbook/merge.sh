@@ -14,4 +14,6 @@ done
 
 echo '
 
+<index/>
+
 </book>' >>cll.xml
