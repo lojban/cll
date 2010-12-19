@@ -8,6 +8,9 @@
   <xsl:param name="admon.graphics.path"></xsl:param>
   <xsl:param name="chunk.section.depth" select="0"></xsl:param>
   <xsl:param name="html.stylesheet" select="'docbook2html.css'"/>
+  <xsl:param name="index.on.type" select="1"/>
+  <xsl:param name="index.on.role" select="1"/>
+  <xsl:param name="index.links.to.section" select="0"/>
 
   <xsl:template match="itemizedlist[@role='word_spacing_list']" mode="class.value">
     <xsl:value-of select="'word_spacing_list'"/>

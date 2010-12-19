@@ -3,13 +3,13 @@
   <section xml:id="cll_chapter14-section1">
     <title>Logical connection and truth tables</title>
 <!-- ^^   truth tables: abbreviated format, 334; for 4 fundamental Lojban truth functions, 335; list of 16 in abbreviated form, 334; notation convention, 334 -->
-<indexterm><primary>truth tables</primary></indexterm>
+<indexterm type="general"><primary>truth tables</primary></indexterm>
     <para>Lojban is a logical language: the name of the language itself means 
 <!-- ^^   logical language: truth functions, 333 -->
-<indexterm><primary>logical language</primary></indexterm>
+<indexterm type="general"><primary>logical language</primary></indexterm>
     <quote>logical language</quote>. The fundamentals of ordinary logic (there are variant logics, which aren't addressed in this book) include the notions of a 
 <!-- ^^   logical language: truth functions, 333 -->
-<indexterm><primary>logical language</primary></indexterm>
+<indexterm type="general"><primary>logical language</primary></indexterm>
     <quote>sentence</quote>(sometimes called a 
     <quote>statement</quote>or 
     <quote>proposition</quote>), which asserts a truth or falsehood, and a small set of 
@@ -33,7 +33,7 @@
     <para>We will use the phrase 
     <quote>negating a sentence</quote>to mean changing its truth value. An English sentence may always be negated by prefixing 
 <!-- ^^   negating a sentence: and truth value, 333 -->
-<indexterm><primary>negating a sentence</primary></indexterm>
+<indexterm type="general"><primary>negating a sentence</primary></indexterm>
     <quote>It is false that ...</quote>, or more idiomatically by inserting 
     <quote>not</quote>at the right point, generally before the verb. 
     <quote>James is not a woman</quote>is the negation of 
@@ -43,7 +43,7 @@
     <quote>or</quote>are called 
     <quote>logical connectives</quote>, and Lojban has many of them, as befits a logical language. This chapter is mostly concerned with explaining the forms and uses of the Lojban logical connectives. There are a number of other logical connectives in English such as 
 <!-- ^^   logical language: truth functions, 333 -->
-<indexterm><primary>logical language</primary></indexterm>
+<indexterm type="general"><primary>logical language</primary></indexterm>
     <quote>and</quote>, 
     <quote>and/or</quote>, 
     <quote>if</quote>, 
@@ -52,7 +52,7 @@
     <para>The Lojban connectives form a system (as the title of this chapter suggests), regular and predictable, whereas natural-language connectives are rather less systematic and therefore less predictable.</para>
     <para>There exist 16 possible different truth functions. A truth table is a graphical device for specifying a truth function, making it clear what the value of the truth function is for every possible value of the component sentences. Here is a truth table for 
 <!-- ^^   truth table: explanation, 333 -->
-<indexterm><primary>truth table</primary></indexterm>
+<indexterm type="general"><primary>truth table</primary></indexterm>
     <quote>or</quote>:</para>
     <informaltable>
       <tgroup cols="3">
@@ -97,7 +97,7 @@
     <quote>James is a woman</quote>is false (and 
     <quote>James is not a woman</quote>is true). Then the truth table tells us that</para>
 <!-- ^^   truth table: explanation, 333 -->
-<indexterm><primary>truth table</primary></indexterm>
+<indexterm type="general"><primary>truth table</primary></indexterm>
     <programlisting xml:space="preserve">
        
 <quote>John is a man, or James is not a woman</quote>             (true   true )  is true;
@@ -112,14 +112,14 @@
     <quote>or</quote>used in this example can also be expressed (in formal English) with 
     <quote>and/or</quote>. There is a different truth table for the kind of 
 <!-- ^^   truth table: explanation, 333 -->
-<indexterm><primary>truth table</primary></indexterm>
+<indexterm type="general"><primary>truth table</primary></indexterm>
     <quote>or</quote>that means 
     <quote>either ... or ... but not both</quote>.</para>
     <para>To save space, we will write truth tables in a shorter format henceforth. Let the letters T and F stand for True and False. The rows will always be given in the order shown above: TT, TF, FT, FF for the two sentences. Then it is only necessary to give the four letters from the result column, which can be written TTTF, as can be seen by reading down the third column of the table above. So TTTF is the abbreviated truth table for the 
 <!-- ^^   truth tables: abbreviated format, 334; for 4 fundamental Lojban truth functions, 335; list of 16 in abbreviated form, 334; notation convention, 334 -->
-<indexterm><primary>truth tables</primary></indexterm>
+<indexterm type="general"><primary>truth tables</primary></indexterm>
 <!-- ^^   truth table: explanation, 333 -->
-<indexterm><primary>truth table</primary></indexterm>
+<indexterm type="general"><primary>truth table</primary></indexterm>
     <quote>or</quote>truth function. Here are the 16 possible truth functions, with an English version of what it means to assert that each function is, in fact, true ( 
     <quote>first</quote>refers to the first sentence, and 
     <quote>second</quote>to the second sentence):</para>
@@ -144,7 +144,7 @@
 </programlisting>
     <para>Skeptics may work out the detailed truth tables for themselves.</para>
 <!-- ^^   truth tables: abbreviated format, 334; for 4 fundamental Lojban truth functions, 335; list of 16 in abbreviated form, 334; notation convention, 334 -->
-<indexterm><primary>truth tables</primary></indexterm>
+<indexterm type="general"><primary>truth tables</primary></indexterm>
   </section>
   <section xml:id="cll_chapter14-section2">
     <title>The Four basic vowels</title>
@@ -154,7 +154,7 @@
     <phrase role="logical-vowel">O</phrase>, and 
     <phrase role="logical-vowel">U</phrase>. These letters do not represent actual cmavo or selma'o, but rather a component vowel from which actual logical-connective cmavo are built up, as explained in the next section. Here are the four vowels, their truth tables, and rough English equivalents:</para>
 <!-- ^^   truth tables: abbreviated format, 334; for 4 fundamental Lojban truth functions, 335; list of 16 in abbreviated form, 334; notation convention, 334 -->
-<indexterm><primary>truth tables</primary></indexterm>
+<indexterm type="general"><primary>truth tables</primary></indexterm>
     <programlisting xml:space="preserve">
 <phrase role="logical-vowel">A</phrase>   TTTF    or, and/or
     
@@ -209,7 +209,7 @@
     <para>Note that exchanging the sentences is only necessary with 
     <phrase role="logical-vowel">U</phrase>. The three other basic truth functions are commutative; that is, they mean the same thing regardless of the order of the component sentences. There are other ways of getting some of these truth tables; these just happen to be the methods usually employed.</para>
 <!-- ^^   truth tables: abbreviated format, 334; for 4 fundamental Lojban truth functions, 335; list of 16 in abbreviated form, 334; notation convention, 334 -->
-<indexterm><primary>truth tables</primary></indexterm>
+<indexterm type="general"><primary>truth tables</primary></indexterm>
   </section>
   <section xml:id="cll_chapter14-section3">
     <title>The six types of logical connectives</title>
@@ -223,7 +223,7 @@
       <interlinear-gloss>
         <jbo>Mary went to the window and ...</jbo>
 <!-- ^^   window: example, 336 -->
-<indexterm><primary>window</primary></indexterm>
+<indexterm type="general"><primary>window</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>where the last word could be followed by 
@@ -251,7 +251,7 @@
     <quote>-ek</quote>are buried deep in the history of the Loglan Project. Thus, compound cmavo based on selma'o A are known as eks, and those based on selma'o JA are known as jeks. (When writing in English, it is conventional to use 
     <quote>eks</quote>as the plural of 
 <!-- ^^   plural: Lojban contrasted with English in necessity of marking, 120; Lojban equivalent of, 443; meaning of le with, 123 -->
-<indexterm><primary>plural</primary></indexterm>
+<indexterm type="general"><primary>plural</primary></indexterm>
     <quote>ek</quote>.) When the term 
     <quote>logical connective</quote>is used in this chapter, it refers to one or more of these kinds of compound cmavo.</para>
     <para>Why does the title of this section refer to 
@@ -259,14 +259,14 @@
     <quote>.i</quote>, the usual Lojban cmavo for connecting two sentences. The compound produced by 
     <quote>.i</quote>followed by a jek is known as an ijek. It is useful to think of ijeks as a sixth kind of logical connective, parallel to eks, jeks, geks, giheks, and guheks.</para>
 <!-- ^^   guheks: connecting operators, 361; syntax of, 350 -->
-<indexterm><primary>guheks</primary></indexterm>
+<indexterm type="general"><primary>guheks</primary></indexterm>
 <!-- ^^   giheks: syntax of, 346 -->
-<indexterm><primary>giheks</primary></indexterm>
+<indexterm type="general"><primary>giheks</primary></indexterm>
     <para>There also exist giks, joiks, ijoiks, and joigiks, which are not logical connectives, but are other kinds of compound cmavo which will be introduced later.</para>
 <!-- ^^   joigiks: connection types, 361; syntax of, 361 -->
-<indexterm><primary>joigiks</primary></indexterm>
+<indexterm type="general"><primary>joigiks</primary></indexterm>
 <!-- ^^   giks: syntax of, 340 -->
-<indexterm><primary>giks</primary></indexterm>
+<indexterm type="general"><primary>giks</primary></indexterm>
   </section>
   <section xml:id="cll_chapter14-section4">
     <title>Logical connection of bridi</title>
@@ -308,7 +308,7 @@
     </example>
     <para>To obtain the other truth tables listed in 
 <!-- ^^   truth tables: abbreviated format, 334; for 4 fundamental Lojban truth functions, 335; list of 16 in abbreviated form, 334; notation convention, 334 -->
-<indexterm><primary>truth tables</primary></indexterm>
+<indexterm type="general"><primary>truth tables</primary></indexterm>
     <xref linkend="cll_chapter14-section2" />, we need to know how to negate the two bridi which represent the component sentences. We could negate them directly by inserting 
     <quote>na</quote>before the selbri, but Lojban also allows us to place the negation within the connective itself.</para>
     <para>To negate the first or left-hand bridi, prefix 
@@ -317,7 +317,7 @@
     <quote>-nai</quote>to the JA cmavo. In either case, the negating word is placed on the side of the connective that is closest to the bridi being negated.</para>
     <para>So to express the truth table FTTF, which requires 
 <!-- ^^   truth table: explanation, 333 -->
-<indexterm><primary>truth table</primary></indexterm>
+<indexterm type="general"><primary>truth table</primary></indexterm>
     <phrase role="logical-vowel">O</phrase>with either of the two bridi negated (not both), we can say either:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-A5FC">
       <title>
@@ -382,10 +382,10 @@
     </example>
     <para>This can be thought of as a principle of consistency, and may be paraphrased as follows: 
 <!-- ^^   principle of consistency: of logical-if statements, 337 -->
-<indexterm><primary>principle of consistency</primary></indexterm>
+<indexterm type="general"><primary>principle of consistency</primary></indexterm>
     <quote>If a false statement is true, any statement follows from it.</quote>All uses of English 
 <!-- ^^   false statement: implications of, 337 -->
-<indexterm><primary>false statement</primary></indexterm>
+<indexterm type="general"><primary>false statement</primary></indexterm>
     <quote>if</quote>must be considered very carefully when translating into Lojban to see if they really fit this Lojban mold.</para>
     <para>
     <xref linkend="cll_chapter14-section4-example10" />, which uses the TFTT truth function, is subject to the same rules: the stated gloss of TFTT as 
@@ -393,7 +393,7 @@
     <xref linkend="cll_chapter14-section4-example10" />illustrates the use of 
     <quote>if ... then</quote>as a more natural substitute for 
 <!-- ^^   if ... then: compared with only if, 338; logical connectives contrasted with other translations, 339 -->
-<indexterm><primary>if ... then</primary></indexterm>
+<indexterm type="general"><primary>if ... then</primary></indexterm>
     <quote>only if</quote>.</para>
     <example role="interlinear-gloss-example" xml:id="random-id-9CCS">
       <title>
@@ -436,15 +436,15 @@
     <title>Forethought bridi connection</title>
 <!-- ^^   bridi connection: use of imperatives in, 353; use of truth questions in, 353 -->
 <!-- ^^   imperatives: and truth, 353; attitude, 308; English contrasted with Lojban in presence of subject of command, 147; quick-tour version, 22; with ko, 146 -->
-<indexterm><primary>imperatives</primary></indexterm>
-<indexterm><primary>bridi connection</primary></indexterm>
+<indexterm type="general"><primary>imperatives</primary></indexterm>
+<indexterm type="general"><primary>bridi connection</primary></indexterm>
     <para>Many concepts in Lojban are expressible in two different ways, generally referred to as 
     <quote>afterthought</quote>and 
     <quote>forethought</quote>. 
     <xref linkend="cll_chapter14-section4" />discussed what is called 
     <quote>afterthought bridi logical connection</quote>. The word 
 <!-- ^^   bridi logical connection: compared with sumti logical connections, 340 -->
-<indexterm><primary>bridi logical connection</primary></indexterm>
+<indexterm type="general"><primary>bridi logical connection</primary></indexterm>
     <quote>afterthought</quote>is used because the connective cmavo and the second bridi were added, as it were, afterwards and without changing the form of the first bridi. This form might be used by someone who makes a statement and then wishes to add or qualify that statement after it has been completed. Thus,</para>
     <example role="interlinear-gloss-example" xml:id="random-id-dp8V">
       <title>
@@ -457,7 +457,7 @@
     </example>
     <para>is a complete bridi, and adding an afterthought connection to make</para>
 <!-- ^^   afterthought connection: contrasted with forethought for grammatical utterances, 352; definition, 199; of operands, 453; of operators, 453 -->
-<indexterm><primary>afterthought connection</primary></indexterm>
+<indexterm type="general"><primary>afterthought connection</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-7h3s">
       <title>
         <anchor xml:id="c14e5d2" />
@@ -471,7 +471,7 @@
     <para>provides additional information without requiring any change in the form of what has come before; changes which may not be possible or practical, especially in speaking. (The meaning, however, may be changed by the use of a negating connective.) Afterthought connectives make it possible to construct all the important truth-functional relationships in a variety of ways.</para>
     <para>In forethought style the speaker decides in advance, before expressing the first bridi, that a logical connection will be expressed. Forethought and afterthought connectives are expressed with separate selma'o. The forethought logical connectives corresponding to afterthought ijeks are geks:</para>
 <!-- ^^   forethought logical connectives: within tanru, 92 -->
-<indexterm><primary>forethought logical connectives</primary></indexterm>
+<indexterm type="general"><primary>forethought logical connectives</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-mYeS">
       <title>
         <anchor xml:id="c14e5d3" />
@@ -492,15 +492,15 @@
     <quote>or</quote>: not so in Lojban.</para>
     <para>Even though two bridi are being connected, geks and giks do not have any 
 <!-- ^^   giks: syntax of, 340 -->
-<indexterm><primary>giks</primary></indexterm>
+<indexterm type="general"><primary>giks</primary></indexterm>
     <quote>.i</quote>in them. The forethought construct binds up the two bridi into a single sentence as far as the grammar is concerned.</para>
     <para>Some more examples of forethought bridi connection are:</para>
 <!-- ^^   forethought bridi connection: as grammatically one sentence, 339 -->
-<indexterm><primary>forethought bridi connection</primary></indexterm>
+<indexterm type="general"><primary>forethought bridi connection</primary></indexterm>
 <!-- ^^   bridi connection: use of imperatives in, 353; use of truth questions in, 353 -->
 <!-- ^^   imperatives: and truth, 353; attitude, 308; English contrasted with Lojban in presence of subject of command, 147; quick-tour version, 22; with ko, 146 -->
-<indexterm><primary>imperatives</primary></indexterm>
-<indexterm><primary>bridi connection</primary></indexterm>
+<indexterm type="general"><primary>imperatives</primary></indexterm>
+<indexterm type="general"><primary>bridi connection</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-Saaq">
       <title>
         <anchor xml:id="c14e5d4" />
@@ -522,7 +522,7 @@
     <para>Perhaps the most important of the truth functions commonly expressed in forethought is TFTT, which can be paraphrased as 
     <quote>if ... then ...</quote>:</para>
 <!-- ^^   if ... then: compared with only if, 338; logical connectives contrasted with other translations, 339 -->
-<indexterm><primary>if ... then</primary></indexterm>
+<indexterm type="general"><primary>if ... then</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-Xcg1">
       <title>
         <anchor xml:id="c14e5d6" />
@@ -544,16 +544,16 @@
     <para>It must be reiterated here that not every use of English 
     <quote>if ... then</quote>is properly translated by 
 <!-- ^^   if ... then: compared with only if, 338; logical connectives contrasted with other translations, 339 -->
-<indexterm><primary>if ... then</primary></indexterm>
+<indexterm type="general"><primary>if ... then</primary></indexterm>
     <quote>.inaja</quote>or 
     <quote>ganai ... gi</quote>; anything with implications of time needs a somewhat different Lojban translation, which will be discussed in 
     <xref linkend="cll_chapter14-section18" />. Causal sentences like 
     <quote>If you feed the pig, then it will grow</quote>are not logical connectives of any type, but rather need a translation using 
 <!-- ^^   feed: example, 288 -->
-<indexterm><primary>feed</primary></indexterm>
+<indexterm type="general"><primary>feed</primary></indexterm>
     <quote>rinka</quote>as the selbri joining two event abstractions, thus:</para>
 <!-- ^^   event abstractions, 256 -->
-<indexterm><primary>event abstractions</primary></indexterm>
+<indexterm type="general"><primary>event abstractions</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-TQP9">
       <title>
         <anchor xml:id="c14e5d7" />
@@ -597,7 +597,7 @@
     <para>A compound cmavo based on 
     <quote>gi</quote>is called a gik; the only giks are 
 <!-- ^^   giks: syntax of, 340 -->
-<indexterm><primary>giks</primary></indexterm>
+<indexterm type="general"><primary>giks</primary></indexterm>
     <quote>gi</quote>itself and 
     <quote>ginai</quote>.</para>
     <para>Further examples:</para>
@@ -621,11 +621,11 @@
 </programlisting>
     <para>and of giks (which are not themselves connectives, but part of the machinery of forethought connection) is:</para>
 <!-- ^^   giks: syntax of, 340 -->
-<indexterm><primary>giks</primary></indexterm>
+<indexterm type="general"><primary>giks</primary></indexterm>
 <!-- ^^   forethought connection: contrasted with afterthought for grammatical utterances, 352; definition, 199; in abstractions, 365; in tenses, 363; observatives, 347; of operands, 453; of operators, 453 -->
 <!-- ^^   observatives: and abstractions, 255; quick-tour version, 15 -->
-<indexterm><primary>observatives</primary></indexterm>
-<indexterm><primary>forethought connection</primary></indexterm>
+<indexterm type="general"><primary>observatives</primary></indexterm>
+<indexterm type="general"><primary>forethought connection</primary></indexterm>
     <programlisting xml:space="preserve">
       gi [nai]
 </programlisting>
@@ -633,7 +633,7 @@
   <section xml:id="cll_chapter14-section6">
     <title>sumti connection</title>
 <!-- ^^   sumti connection: afterthought, 340; forethought, 341 -->
-<indexterm><primary>sumti connection</primary></indexterm>
+<indexterm type="general"><primary>sumti connection</primary></indexterm>
     <para>Geks and ijeks are sufficient to state every possible logical connection between two bridi. However, it is often the case that two bridi to be logically connected have one or more portions in common:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-Ecnq">
       <title>
@@ -689,11 +689,11 @@
     <xref linkend="cll_chapter14-section6-example3" />is highly stilted English, but the first line (of which it is a literal translation) is excellent Lojban.</para>
     <para>What about forethought sumti connection? As is the case for bridi connection, geks are appropriate. They are not the only selma'o of forethought logical-connectives, but are the most commonly used ones.</para>
 <!-- ^^   sumti connection: afterthought, 340; forethought, 341 -->
-<indexterm><primary>sumti connection</primary></indexterm>
+<indexterm type="general"><primary>sumti connection</primary></indexterm>
 <!-- ^^   bridi connection: use of imperatives in, 353; use of truth questions in, 353 -->
 <!-- ^^   imperatives: and truth, 353; attitude, 308; English contrasted with Lojban in presence of subject of command, 147; quick-tour version, 22; with ko, 146 -->
-<indexterm><primary>imperatives</primary></indexterm>
-<indexterm><primary>bridi connection</primary></indexterm>
+<indexterm type="general"><primary>imperatives</primary></indexterm>
+<indexterm type="general"><primary>bridi connection</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-YEa4">
       <title>
         <anchor xml:id="c14e6d5" />
@@ -757,7 +757,7 @@
     <para>
     <phrase role="logical-vowel">O</phrase>, however, is different. Working out the truth table for</para>
 <!-- ^^   truth table: explanation, 333 -->
-<indexterm><primary>truth table</primary></indexterm>
+<indexterm type="general"><primary>truth table</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-3zE1">
       <title>
         <anchor xml:id="c14e7d3" />
@@ -880,7 +880,7 @@
     <para>Forethought connectives, however, never can be suffixed with 
     <quote>bo</quote>, for every use of forethought connectives clearly indicates the intended pattern of grouping.</para>
 <!-- ^^   forethought connectives: with tense, 364 -->
-<indexterm><primary>forethought connectives</primary></indexterm>
+<indexterm type="general"><primary>forethought connectives</primary></indexterm>
     <para>What happens if 
     <quote>bo</quote>is used on both connectives, giving them the same high precedence, as in 
     <xref linkend="cll_chapter14-section8-example3" />?</para>
@@ -899,7 +899,7 @@
     <quote>bo</quote>is that where several 
     <quote>bo</quote>-marked connectives are used in succession, the normal Lojban left-grouping rule is replaced by a right-grouping rule. As a result, 
 <!-- ^^   right-grouping rule: definition of, 87 -->
-<indexterm><primary>right-grouping rule</primary></indexterm>
+<indexterm type="general"><primary>right-grouping rule</primary></indexterm>
     <xref linkend="cll_chapter14-section8-example3" />in fact means the same as 
     <xref linkend="cll_chapter14-section8-example1" />and 
     <xref linkend="cll_chapter14-section8-example2" />. This rule may be occasionally exploited for special effects, but is tricky to keep straight; in writing intended to be easy to understand, multiple consecutive connectives marked with 
@@ -975,7 +975,7 @@
     </example>
     <para>What about parenthesized sumti connection? Consider</para>
 <!-- ^^   sumti connection: afterthought, 340; forethought, 341 -->
-<indexterm><primary>sumti connection</primary></indexterm>
+<indexterm type="general"><primary>sumti connection</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-y9CC">
       <title>
         <anchor xml:id="c14e8d8" />
@@ -1022,21 +1022,21 @@
     </example>
     <para>The truth table, when worked out, produces T if and only if all three component sentences are true or all three are false.</para>
 <!-- ^^   truth table: explanation, 333 -->
-<indexterm><primary>truth table</primary></indexterm>
+<indexterm type="general"><primary>truth table</primary></indexterm>
   </section>
   <section xml:id="cll_chapter14-section9">
     <title>Compound bridi</title>
     <para>So far we have seen how to handle two sentences that need have no similarity at all (bridi connection) and sentences that are identical except for a difference in one sumti (sumti connection). It would seem natural to ask how to logically connect sentences that are identical except for having different selbri.</para>
 <!-- ^^   sumti connection: afterthought, 340; forethought, 341 -->
-<indexterm><primary>sumti connection</primary></indexterm>
+<indexterm type="general"><primary>sumti connection</primary></indexterm>
 <!-- ^^   bridi connection: use of imperatives in, 353; use of truth questions in, 353 -->
 <!-- ^^   imperatives: and truth, 353; attitude, 308; English contrasted with Lojban in presence of subject of command, 147; quick-tour version, 22; with ko, 146 -->
-<indexterm><primary>imperatives</primary></indexterm>
-<indexterm><primary>bridi connection</primary></indexterm>
+<indexterm type="general"><primary>imperatives</primary></indexterm>
+<indexterm type="general"><primary>bridi connection</primary></indexterm>
     <para>Surprise! Lojban provides no logical connective that is designed to handle selbri and nothing else. Instead, selbri connection is provided as part of a more general-purpose mechanism called 
     <quote>compound bridi</quote>. Compound bridi result from logically connecting sentences that differ in their selbri and possibly some of their sumti.</para>
 <!-- ^^   compound bridi: definition, 344; logical connection of, 344; more than one sumti in common, 345; multiple with bo, 346; multiple with ke...ke'e, 346; one sumti in common, 344; separate tail-terms for bridi-tails, 346; separate tail-terms for forethought-connected bridi-tails, 347 -->
-<indexterm><primary>compound bridi</primary></indexterm>
+<indexterm type="general"><primary>compound bridi</primary></indexterm>
     <para>The simplest cases result when the x1 sumti is the only common point:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-WebJ">
       <title>
@@ -1050,7 +1050,7 @@
     </example>
     <para>is equivalent in meaning to the compound bridi:</para>
 <!-- ^^   compound bridi: definition, 344; logical connection of, 344; more than one sumti in common, 345; multiple with bo, 346; multiple with ke...ke'e, 346; one sumti in common, 344; separate tail-terms for bridi-tails, 346; separate tail-terms for forethought-connected bridi-tails, 347 -->
-<indexterm><primary>compound bridi</primary></indexterm>
+<indexterm type="general"><primary>compound bridi</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-9H9e">
       <title>
         <anchor xml:id="c14e9d2" />
@@ -1064,9 +1064,9 @@
     <para>As 
     <xref linkend="cll_chapter14-section9-example2" />indicates, giheks are used in afterthought to create compound bridi; 
 <!-- ^^   giheks: syntax of, 346 -->
-<indexterm><primary>giheks</primary></indexterm>
+<indexterm type="general"><primary>giheks</primary></indexterm>
 <!-- ^^   compound bridi: definition, 344; logical connection of, 344; more than one sumti in common, 345; multiple with bo, 346; multiple with ke...ke'e, 346; one sumti in common, 344; separate tail-terms for bridi-tails, 346; separate tail-terms for forethought-connected bridi-tails, 347 -->
-<indexterm><primary>compound bridi</primary></indexterm>
+<indexterm type="general"><primary>compound bridi</primary></indexterm>
     <quote>gi'e</quote>is the gihek corresponding to 
     <quote>and</quote>. The actual phrases 
     <quote>klama le zarci</quote>and 
@@ -1131,7 +1131,7 @@
     <quote>vau</quote>(of selma'o VAU) serves to separate the bridi-tail from the tail-terms. Every bridi-tail is terminated by an elidable 
     <quote>vau</quote>, but only in connection with compound bridi is it ever necessary to express this 
 <!-- ^^   compound bridi: definition, 344; logical connection of, 344; more than one sumti in common, 345; multiple with bo, 346; multiple with ke...ke'e, 346; one sumti in common, 344; separate tail-terms for bridi-tails, 346; separate tail-terms for forethought-connected bridi-tails, 347 -->
-<indexterm><primary>compound bridi</primary></indexterm>
+<indexterm type="general"><primary>compound bridi</primary></indexterm>
     <quote>vau</quote>. Thus:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-L3eN">
       <title>
@@ -1160,9 +1160,9 @@
     <xref linkend="cll_chapter14-section9-example8" />terminates both the right-hand bridi-tail and the unexpressed tail-terms.</para>
     <para>A final use of giheks is to combine bridi-tails used as complete sentences, the Lojban observative:</para>
 <!-- ^^   observative: contrasted with observation evidential, 316; definition, 188 -->
-<indexterm><primary>observative</primary></indexterm>
+<indexterm type="general"><primary>observative</primary></indexterm>
 <!-- ^^   giheks: syntax of, 346 -->
-<indexterm><primary>giheks</primary></indexterm>
+<indexterm type="general"><primary>giheks</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-rvUD">
       <title>
         <anchor xml:id="c14e9d9" />
@@ -1176,7 +1176,7 @@
     <para>Since x1 is omitted in both of the bridi underlying 
     <xref linkend="cll_chapter14-section9-example9" />, this compound bridi does not necessarily imply that the goer and the walker are the same. Only the presence of an explicit x1 (other than 
 <!-- ^^   compound bridi: definition, 344; logical connection of, 344; more than one sumti in common, 345; multiple with bo, 346; multiple with ke...ke'e, 346; one sumti in common, 344; separate tail-terms for bridi-tails, 346; separate tail-terms for forethought-connected bridi-tails, 347 -->
-<indexterm><primary>compound bridi</primary></indexterm>
+<indexterm type="general"><primary>compound bridi</primary></indexterm>
     <quote>zo'e</quote>, which is equivalent to omission) can force the goer and the walker to be identical.</para>
     <para>A strong argument for this convention is provided by analysis of the following example:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-cBrg">
@@ -1206,7 +1206,7 @@
     </example>
     <para>The syntax of giheks is:</para>
 <!-- ^^   giheks: syntax of, 346 -->
-<indexterm><primary>giheks</primary></indexterm>
+<indexterm type="general"><primary>giheks</primary></indexterm>
     <programlisting xml:space="preserve">
       [na] [se] GIhA [nai]
 </programlisting>
@@ -1215,7 +1215,7 @@
   <section xml:id="cll_chapter14-section10">
     <title>Multiple compound bridi</title>
 <!-- ^^   compound bridi: definition, 344; logical connection of, 344; more than one sumti in common, 345; multiple with bo, 346; multiple with ke...ke'e, 346; one sumti in common, 344; separate tail-terms for bridi-tails, 346; separate tail-terms for forethought-connected bridi-tails, 347 -->
-<indexterm><primary>compound bridi</primary></indexterm>
+<indexterm type="general"><primary>compound bridi</primary></indexterm>
     <para>Giheks can be combined with 
     <quote>bo</quote>in the same way as eks:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-DpCN">
@@ -1233,7 +1233,7 @@
     <xref linkend="cll_chapter14-section8-example2" />. Likewise, 
     <quote>ke ... ke'e</quote>grouping can be used after giheks:</para>
 <!-- ^^   giheks: syntax of, 346 -->
-<indexterm><primary>giheks</primary></indexterm>
+<indexterm type="general"><primary>giheks</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-rH4n">
       <title>
         <anchor xml:id="c14e10d2" />
@@ -1252,7 +1252,7 @@
     <xref linkend="cll_chapter14-section10-example2" />cannot be explicitly grouped; implicit left-grouping suffices to associate them.</para>
     <para>Each of the pairs of bridi-tails joined by multiple giheks can have its own set of tail-terms:</para>
 <!-- ^^   giheks: syntax of, 346 -->
-<indexterm><primary>giheks</primary></indexterm>
+<indexterm type="general"><primary>giheks</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-1asY">
       <title>
         <anchor xml:id="c14e10d3" />
@@ -1314,7 +1314,7 @@
     <xref linkend="cll_chapter14-section9-example2" />.</para>
     <para>Of course, either of the connected sentences may contain giheks:</para>
 <!-- ^^   giheks: syntax of, 346 -->
-<indexterm><primary>giheks</primary></indexterm>
+<indexterm type="general"><primary>giheks</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-mInd">
       <title>
         <anchor xml:id="c14e10d7" />
@@ -1351,7 +1351,7 @@
     </example>
     <para>Here is a pair of gek-connected observatives, a forethought equivalent of 
 <!-- ^^   observatives: and abstractions, 255; quick-tour version, 15 -->
-<indexterm><primary>observatives</primary></indexterm>
+<indexterm type="general"><primary>observatives</primary></indexterm>
     <xref linkend="cll_chapter14-section9-example9" />:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-C5Wc">
       <title>
@@ -1380,11 +1380,11 @@
     <title>Termset logical connection</title>
     <para>So far we have seen sentences that differ in all components, and require bridi connection; sentences that differ in one sumti only, and permit sumti connection; and sentences that differ in the selbri and possibly one or more sumti, and permit bridi-tail connection. Termset logical connectives are employed for sentences that differ in more than one sumti but not in the selbri, such as:</para>
 <!-- ^^   sumti connection: afterthought, 340; forethought, 341 -->
-<indexterm><primary>sumti connection</primary></indexterm>
+<indexterm type="general"><primary>sumti connection</primary></indexterm>
 <!-- ^^   bridi connection: use of imperatives in, 353; use of truth questions in, 353 -->
 <!-- ^^   imperatives: and truth, 353; attitude, 308; English contrasted with Lojban in presence of subject of command, 147; quick-tour version, 22; with ko, 146 -->
-<indexterm><primary>imperatives</primary></indexterm>
-<indexterm><primary>bridi connection</primary></indexterm>
+<indexterm type="general"><primary>imperatives</primary></indexterm>
+<indexterm type="general"><primary>bridi connection</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-G02C">
       <title>
         <anchor xml:id="c14e11d1" />
@@ -1393,7 +1393,7 @@
       <interlinear-gloss>
         <jbo>I go to the market from the office and to the house from the school.</jbo>
 <!-- ^^   to the market from the office, 348 -->
-<indexterm><primary>to the market from the office</primary></indexterm>
+<indexterm type="general"><primary>to the market from the office</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>The Lojban version of 
@@ -1404,10 +1404,10 @@
     <quote>ce'e</quote>(of selma'o CEhE) between each of them. Furthermore, the logical connective (which is a jek) must be prefixed by the cmavo 
     <quote>pe'e</quote>(of selma'o PEhE). (We could refer to the combination of 
 <!-- ^^   pe'e, 347 -->
-<indexterm><primary>pe'e</primary></indexterm>
+<indexterm type="general"><primary>pe'e</primary></indexterm>
     <quote>pe'e</quote>and a jek as a 
 <!-- ^^   pe'e, 347 -->
-<indexterm><primary>pe'e</primary></indexterm>
+<indexterm type="general"><primary>pe'e</primary></indexterm>
     <quote>pehejek</quote>, I suppose.)</para>
     <example role="interlinear-gloss-example" xml:id="random-id-UVPj">
       <title>
@@ -1417,7 +1417,7 @@
       <interlinear-gloss>
         <jbo>mi klama le zarci ce'e le briju pe'e je</jbo>
 <!-- ^^   pe'e, 347 -->
-<indexterm><primary>pe'e</primary></indexterm>
+<indexterm type="general"><primary>pe'e</primary></indexterm>
         <gloss>le zdani ce'e le ckule</gloss>
         <gloss>I go to-the market [plus] from-the office [joint] and</gloss>
         <en>to-the house [plus] from-the school.</en>
@@ -1440,8 +1440,8 @@
     <para>What happens if the two joined sets of terms are of unequal length? Expanding to bridi connection will always make clear which term goes in which place of which bridi. It can happen that a sumti may fall in the x2 place of one bridi and the x3 place of another:</para>
 <!-- ^^   bridi connection: use of imperatives in, 353; use of truth questions in, 353 -->
 <!-- ^^   imperatives: and truth, 353; attitude, 308; English contrasted with Lojban in presence of subject of command, 147; quick-tour version, 22; with ko, 146 -->
-<indexterm><primary>imperatives</primary></indexterm>
-<indexterm><primary>bridi connection</primary></indexterm>
+<indexterm type="general"><primary>imperatives</primary></indexterm>
+<indexterm type="general"><primary>bridi connection</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-yYsr">
       <title>
         <anchor xml:id="c14e11d4" />
@@ -1450,7 +1450,7 @@
       <interlinear-gloss>
         <jbo>mi pe'e ja do ce'e le zarci cu klama le briju</jbo>
 <!-- ^^   pe'e, 347 -->
-<indexterm><primary>pe'e</primary></indexterm>
+<indexterm type="general"><primary>pe'e</primary></indexterm>
         <en>I [joint] or you to-the market [plus] go to/from-the office.</en>
       </interlinear-gloss>
     </example>
@@ -1472,7 +1472,7 @@
     <quote>mi</quote>in 
     <xref linkend="cll_chapter14-section11-example4" />is serving as a termset containing only one term. An analogous paradox applies to compound bridi with tail-terms and unequal numbers of sumti within the connected bridi-tails:</para>
 <!-- ^^   compound bridi: definition, 344; logical connection of, 344; more than one sumti in common, 345; multiple with bo, 346; multiple with ke...ke'e, 346; one sumti in common, 344; separate tail-terms for bridi-tails, 346; separate tail-terms for forethought-connected bridi-tails, 347 -->
-<indexterm><primary>compound bridi</primary></indexterm>
+<indexterm type="general"><primary>compound bridi</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-zsiy">
       <title>
         <anchor xml:id="c14e11d6" />
@@ -1485,7 +1485,7 @@
     </example>
     <para>means that I go to the market from the office, and I walk to the office; 
 <!-- ^^   to the market from the office, 348 -->
-<indexterm><primary>to the market from the office</primary></indexterm>
+<indexterm type="general"><primary>to the market from the office</primary></indexterm>
     <quote>le briju</quote>is the x3 place of 
     <quote>klama</quote>and the x2 place of 
     <quote>dzukla</quote>.</para>
@@ -1522,7 +1522,7 @@
     <xref linkend="cll_chapter14-section11" />also, but there they were always prefixed by 
     <quote>pe'e</quote>; in this section they are used alone.) Here is a pair of examples:</para>
 <!-- ^^   pe'e, 347 -->
-<indexterm><primary>pe'e</primary></indexterm>
+<indexterm type="general"><primary>pe'e</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-IxBH">
       <title>
         <anchor xml:id="c14e12d1" />
@@ -1576,7 +1576,7 @@
     </example>
     <para>the rule of expansion into separate bridi simply does not always work for tanru connection. Supposing Alice to be a person who lives in blue houses, then</para>
 <!-- ^^   tanru connection: connotation of non-logical, 354 -->
-<indexterm><primary>tanru connection</primary></indexterm>
+<indexterm type="general"><primary>tanru connection</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-DG5K">
       <title>
         <anchor xml:id="c14e12d6" />
@@ -1590,8 +1590,8 @@
     <para>would be true, because tanru grouping with a jek has higher precedence than unmarked tanru grouping, but:</para>
 <!-- ^^   tanru grouping: complex, 87; effect of tanru inversion on, 96; guheks compared with jeks, 350; three-part, 85; with bo, 87; with ke, 88; with ke and bo, 88 -->
 <!-- ^^   tanru inversion, 95; definition, 95; effect on tanru grouping, 96; in complex tanru, 96; multiple, 96; rule for removing, 96; where allowed, 96 -->
-<indexterm><primary>tanru inversion</primary></indexterm>
-<indexterm><primary>tanru grouping</primary></indexterm>
+<indexterm type="general"><primary>tanru inversion</primary></indexterm>
+<indexterm type="general"><primary>tanru grouping</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-eh2i">
       <title>
         <anchor xml:id="c14e12d7" />
@@ -1605,10 +1605,10 @@
     <para>is probably false, because the blueness is associated with the house, not with Alice, even leaving aside the question of what it means to say 
     <quote>Alice is a blue person</quote>. (Perhaps she belongs to the Blue team, or is wearing blue clothes.) The semantic ambiguity of tanru make such logical manipulations impossible.</para>
 <!-- ^^   ambiguity of tanru, 85 -->
-<indexterm><primary>ambiguity of tanru</primary></indexterm>
+<indexterm type="general"><primary>ambiguity of tanru</primary></indexterm>
     <para>It suffices to note here, then, a few purely grammatical points about tanru logical connection. 
 <!-- ^^   tanru logical connection: contrasted with sumti logical connection, 350 -->
-<indexterm><primary>tanru logical connection</primary></indexterm>
+<indexterm type="general"><primary>tanru logical connection</primary></indexterm>
     <quote>bo</quote>may be appended to jeks as to eks, with the same rules:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-RNMY">
       <title>
@@ -1618,7 +1618,7 @@
       <interlinear-gloss>
         <jbo>la teris. cu ricfu je nakni jabo fetsi</jbo>
 <!-- ^^   jabo, 91 -->
-<indexterm><primary>jabo</primary></indexterm>
+<indexterm type="general"><primary>jabo</primary></indexterm>
         <en>Terry is rich and ( male or female ).</en>
       </interlinear-gloss>
     </example>
@@ -1643,20 +1643,20 @@
 </programlisting>
     <para>parallel to eks and giheks.</para>
 <!-- ^^   giheks: syntax of, 346 -->
-<indexterm><primary>giheks</primary></indexterm>
+<indexterm type="general"><primary>giheks</primary></indexterm>
     <para>Forethought tanru connection does not use geks, but uses guheks instead. Guheks have exactly the same form as geks:</para>
 <!-- ^^   tanru connection: connotation of non-logical, 354 -->
-<indexterm><primary>tanru connection</primary></indexterm>
+<indexterm type="general"><primary>tanru connection</primary></indexterm>
 <!-- ^^   guheks: connecting operators, 361; syntax of, 350 -->
-<indexterm><primary>guheks</primary></indexterm>
+<indexterm type="general"><primary>guheks</primary></indexterm>
     <programlisting xml:space="preserve">
        [se] GUhA [nai]
 </programlisting>
     <para>Using guheks in tanru connection (rather than geks) resolves what would otherwise be an unacceptable ambiguity between bridi-tail and tanru connection:</para>
 <!-- ^^   tanru connection: connotation of non-logical, 354 -->
-<indexterm><primary>tanru connection</primary></indexterm>
+<indexterm type="general"><primary>tanru connection</primary></indexterm>
 <!-- ^^   guheks: connecting operators, 361; syntax of, 350 -->
-<indexterm><primary>guheks</primary></indexterm>
+<indexterm type="general"><primary>guheks</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-mjog">
       <title>
         <anchor xml:id="c14e12d10" />
@@ -1670,12 +1670,12 @@
     <para>Note that giks are used with guheks in exactly the same way they are used with geks. Like jeks, guheks bind more closely than unmarked tanru grouping does:</para>
 <!-- ^^   tanru grouping: complex, 87; effect of tanru inversion on, 96; guheks compared with jeks, 350; three-part, 85; with bo, 87; with ke, 88; with ke and bo, 88 -->
 <!-- ^^   tanru inversion, 95; definition, 95; effect on tanru grouping, 96; in complex tanru, 96; multiple, 96; rule for removing, 96; where allowed, 96 -->
-<indexterm><primary>tanru inversion</primary></indexterm>
-<indexterm><primary>tanru grouping</primary></indexterm>
+<indexterm type="general"><primary>tanru inversion</primary></indexterm>
+<indexterm type="general"><primary>tanru grouping</primary></indexterm>
 <!-- ^^   guheks: connecting operators, 361; syntax of, 350 -->
-<indexterm><primary>guheks</primary></indexterm>
+<indexterm type="general"><primary>guheks</primary></indexterm>
 <!-- ^^   giks: syntax of, 340 -->
-<indexterm><primary>giks</primary></indexterm>
+<indexterm type="general"><primary>giks</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-Gyrc">
       <title>
         <anchor xml:id="c14e12d11" />
@@ -1730,7 +1730,7 @@
   <section xml:id="cll_chapter14-section13">
     <title>Truth questions and connective questions</title>
 <!-- ^^   connective questions: answering, 352; compared with other languages, 353; non-logical, 359 -->
-<indexterm><primary>connective questions</primary></indexterm>
+<indexterm type="general"><primary>connective questions</primary></indexterm>
     <para>So far we have addressed only sentences which are statements. Lojban, like all human languages, needs also to deal with sentences which are questions. There are many ways of asking questions in Lojban, but some of these (like questions about quantity, tense, and emotion) are discussed in other chapters.</para>
     <para>The simplest kind of question is of the type 
     <quote>Is it true that ...</quote>where some statement follows. This type is called a 
@@ -1772,7 +1772,7 @@
     <quote>no</quote>is 
     <quote>nago'i</quote>. (The reasons for this rule are explained in 
 <!-- ^^   nago'i: quick-tour version, 24 -->
-<indexterm><primary>nago'i</primary></indexterm>
+<indexterm type="general"><primary>nago'i</primary></indexterm>
     <xref linkend="cll_chapter7" />.) In answer to 
     <xref linkend="cll_chapter14-section13-example2" />, the possible answers are:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-XSmq">
@@ -1794,7 +1794,7 @@
       <interlinear-gloss>
         <jbo>nago'i</jbo>
 <!-- ^^   nago'i: quick-tour version, 24 -->
-<indexterm><primary>nago'i</primary></indexterm>
+<indexterm type="general"><primary>nago'i</primary></indexterm>
         <en>Fido is not a dog.</en>
       </interlinear-gloss>
     </example>
@@ -1836,7 +1836,7 @@
     <quote>go'i</quote>; if Fido were a fish, the appropriate answer would be 
     <quote>nago'i</quote>.</para>
 <!-- ^^   nago'i: quick-tour version, 24 -->
-<indexterm><primary>nago'i</primary></indexterm>
+<indexterm type="general"><primary>nago'i</primary></indexterm>
     <para>But that is not what an English-speaker who utters 
     <xref linkend="cll_chapter14-section13-example5" />is asking! The true significance of 
     <xref linkend="cll_chapter14-section13-example5" />is that the speaker desires to know the truth value of either of the two underlying bridi (it is presupposed that only one is true).</para>
@@ -1845,32 +1845,32 @@
       <cmavo-entry>
         <cmavo>ge'i</cmavo>
 <!-- ^^   ge'i, 352 -->
-<indexterm><primary>ge'i</primary></indexterm>
+<indexterm type="general"><primary>ge'i</primary></indexterm>
         <selmaho>GA</selmaho>
         <description>forethought connective question</description>
 <!-- ^^   forethought connective(s): as ungrammatical utterance, 352; contrasted with afterthought connective, 338 -->
-<indexterm><primary>forethought connective</primary></indexterm>
+<indexterm type="general"><primary>forethought connective</primary></indexterm>
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>gi'i</cmavo>
 <!-- ^^   gi'i, 352 -->
-<indexterm><primary>gi'i</primary></indexterm>
+<indexterm type="general"><primary>gi'i</primary></indexterm>
         <selmaho>GIhA</selmaho>
         <description>bridi-tail connective question</description>
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>gu'i</cmavo>
 <!-- ^^   gu'i, 352 -->
-<indexterm><primary>gu'i</primary></indexterm>
+<indexterm type="general"><primary>gu'i</primary></indexterm>
         <selmaho>GUhA</selmaho>
         <description>tanru forethought connective question</description>
 <!-- ^^   forethought connective(s): as ungrammatical utterance, 352; contrasted with afterthought connective, 338 -->
-<indexterm><primary>forethought connective</primary></indexterm>
+<indexterm type="general"><primary>forethought connective</primary></indexterm>
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>je'i</cmavo>
 <!-- ^^   je'i, 352 -->
-<indexterm><primary>je'i</primary></indexterm>
+<indexterm type="general"><primary>je'i</primary></indexterm>
         <selmaho>JA</selmaho>
         <description>tanru connective question</description>
       </cmavo-entry>
@@ -1894,7 +1894,7 @@
       <interlinear-gloss>
         <jbo>la .alis gerku gi'i mlatu</jbo>
 <!-- ^^   gi'i, 352 -->
-<indexterm><primary>gi'i</primary></indexterm>
+<indexterm type="general"><primary>gi'i</primary></indexterm>
         <en>Alice is-a-dog [truth function?] is-a-cat?</en>
       </interlinear-gloss>
     </example>
@@ -1928,7 +1928,7 @@
     <para>The answer 
     <quote>gi'e</quote>, meaning that Alice is a dog and is a cat, is impossible in the real world, but for:</para>
 <!-- ^^   real world: contrasted with hypothetical world, example, 320 -->
-<indexterm><primary>real world</primary></indexterm>
+<indexterm type="general"><primary>real world</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-xtIf">
       <title>
         <anchor xml:id="c14e13d13" />
@@ -1941,7 +1941,7 @@
         <gloss>[truth function?] a-mass-of tea?</gloss>
         <en>Do you want coffee or tea?</en>
 <!-- ^^   coffee or tea: example, 352 -->
-<indexterm><primary>coffee or tea</primary></indexterm>
+<indexterm type="general"><primary>coffee or tea</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>the answer 
@@ -1949,12 +1949,12 @@
     <para>The forethought questions 
     <quote>ge'i</quote>and 
 <!-- ^^   ge'i, 352 -->
-<indexterm><primary>ge'i</primary></indexterm>
+<indexterm type="general"><primary>ge'i</primary></indexterm>
     <quote>gu'i</quote>are used like the others, but ambiguity forbids the use of isolated forethought connectives as answers - they sound like the start of forethought-connected bridi. So although 
 <!-- ^^   gu'i, 352 -->
-<indexterm><primary>gu'i</primary></indexterm>
+<indexterm type="general"><primary>gu'i</primary></indexterm>
 <!-- ^^   forethought connectives: with tense, 364 -->
-<indexterm><primary>forethought connectives</primary></indexterm>
+<indexterm type="general"><primary>forethought connectives</primary></indexterm>
     <xref linkend="cll_chapter14-section13-example14" />is the forethought version of 
     <xref linkend="cll_chapter14-section13-example13" />:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-286J">
@@ -1966,7 +1966,7 @@
         <jbo>do djica tu'a</jbo>
         <gloss>ge'i loi ckafi</gloss>
 <!-- ^^   ge'i, 352 -->
-<indexterm><primary>ge'i</primary></indexterm>
+<indexterm type="general"><primary>ge'i</primary></indexterm>
         <gloss>gi loi tcati</gloss>
         <gloss>You desire something-about</gloss>
         <gloss>[truth function?] a-mass-of coffee</gloss>
@@ -1994,7 +1994,7 @@
       <interlinear-gloss>
         <jbo>do cadzu gi'i bajra</jbo>
 <!-- ^^   gi'i, 352 -->
-<indexterm><primary>gi'i</primary></indexterm>
+<indexterm type="general"><primary>gi'i</primary></indexterm>
         <en>You walk [or?] run?</en>
       </interlinear-gloss>
     </example>
@@ -2002,14 +2002,14 @@
     <para>Truth questions may be used in bridi connection. This form of sentence is perfectly legitimate, and can be interpreted by using the convention that a truth question is true if the answer is 
 <!-- ^^   bridi connection: use of imperatives in, 353; use of truth questions in, 353 -->
 <!-- ^^   imperatives: and truth, 353; attitude, 308; English contrasted with Lojban in presence of subject of command, 147; quick-tour version, 22; with ko, 146 -->
-<indexterm><primary>imperatives</primary></indexterm>
-<indexterm><primary>bridi connection</primary></indexterm>
+<indexterm type="general"><primary>imperatives</primary></indexterm>
+<indexterm type="general"><primary>bridi connection</primary></indexterm>
     <quote>yes</quote>and false if the answer is 
     <quote>no</quote>. Analogously, an imperative sentence (involving the special pro-sumti 
     <quote>ko</quote>, which means 
     <quote>you</quote>but marks the sentence as a command) is true if the command is obeyed, and false otherwise. A request of Abraham Lincoln's may be translated thus:</para>
 <!-- ^^   Abraham Lincoln: example, 353 -->
-<indexterm><primary>Abraham Lincoln</primary></indexterm>
+<indexterm type="general"><primary>Abraham Lincoln</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-BPv0">
       <title>
         <anchor xml:id="c14e13d17" />
@@ -2029,7 +2029,7 @@
     <quote>but</quote>is felt to be in tension or opposition to the sentence before it. Lojban represents this distinction by adding the discursive cmavo 
     <quote>ku'i</quote>(of selma'o UI), which is explained in 
 <!-- ^^   ku'i, 317, 353 -->
-<indexterm><primary>ku'i</primary></indexterm>
+<indexterm type="general"><primary>ku'i</primary></indexterm>
     <xref linkend="cll_chapter13" />, to the logical 
     <quote>.ije</quote>.)</para>
   </section>
@@ -2040,7 +2040,7 @@
     <quote>and</quote>, 
     <quote>if ... then</quote>, and so on represents a Lojban logical connective. In particular, consider the 
 <!-- ^^   if ... then: compared with only if, 338; logical connectives contrasted with other translations, 339 -->
-<indexterm><primary>if ... then</primary></indexterm>
+<indexterm type="general"><primary>if ... then</primary></indexterm>
     <quote>and</quote>of:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-x6JW">
       <title>
@@ -2073,13 +2073,13 @@
         <jbo>la djan. joi la .alis. cu bevri le pipno</jbo>
         <en>John massed-with Alice carry the piano.</en>
 <!-- ^^   carry the piano: example, 361 -->
-<indexterm><primary>carry the piano</primary></indexterm>
+<indexterm type="general"><primary>carry the piano</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>
     <xref linkend="cll_chapter14-section14-example3" />covers the case mentioned, where John and Alice divide the labor; it also could mean that John did all the hauling and Alice did the supervising. This possibility arises because the properties of a mass are the properties of its components, which can lead to apparent contradictions: if John is small and Alice is large, then John-and-Alice is both small and large. Masses are also discussed in 
 <!-- ^^   supervising: as a contribution to mass action, 354 -->
-<indexterm><primary>supervising</primary></indexterm>
+<indexterm type="general"><primary>supervising</primary></indexterm>
     <xref linkend="cll_chapter6" />.</para>
     <para>Grammatically, 
     <quote>joi</quote>can appear between two sumti (like an ek) or between two tanru components (like a jek). This flexibility must be paid for in the form of occasional terminators that cannot be elided:</para>
@@ -2104,7 +2104,7 @@
     <quote>joi</quote>has the connotation 
     <quote>mixed with</quote>, as in the following example:</para>
 <!-- ^^   mixed with: example, 354 -->
-<indexterm><primary>mixed with</primary></indexterm>
+<indexterm type="general"><primary>mixed with</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-Xxp2">
       <title>
         <anchor xml:id="c14e14d5" />
@@ -2115,7 +2115,7 @@
         <gloss>This is-a-(blue mixed-with red) ball.</gloss>
         <en>This is a blue and red ball.</en>
 <!-- ^^   blue and red: example, 354 -->
-<indexterm><primary>blue and red</primary></indexterm>
+<indexterm type="general"><primary>blue and red</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>Here the ball is neither wholly blue nor wholly red, but partly blue and partly red. Its blue/redness is a mass property. (Just how blue something has to be to count as 
@@ -2127,41 +2127,41 @@
     A ce B      the set with elements A and B
     A ce'o B    the sequence with elements A and B in order
 <!-- ^^   ce'o, 354, 362 -->
-<indexterm><primary>ce'o</primary></indexterm>
+<indexterm type="general"><primary>ce'o</primary></indexterm>
     A sece'o B  the sequence with elements B and A in order
 <!-- ^^   sece'o, 354 -->
-<indexterm><primary>sece'o</primary></indexterm>
+<indexterm type="general"><primary>sece'o</primary></indexterm>
     A jo'u B    A and B considered jointly
 <!-- ^^   jo'u, 354, 355; contrasted with ce, 355; contrasted with ce'o, 355; contrasted with joi, 355; result of connection with, 355 -->
-<indexterm><primary>jo'u</primary></indexterm>
+<indexterm type="general"><primary>jo'u</primary></indexterm>
     A fa'u B    A and B respectively
     A sefa'u B  B and A respectively
 <!-- ^^   sefa'u, 354 -->
-<indexterm><primary>sefa'u</primary></indexterm>
+<indexterm type="general"><primary>sefa'u</primary></indexterm>
     A jo'e B    the union of sets A and B
 <!-- ^^   union of sets: compared with or, 357 -->
-<indexterm><primary>union of sets</primary></indexterm>
+<indexterm type="general"><primary>union of sets</primary></indexterm>
 <!-- ^^   union: of sets, 356 -->
-<indexterm><primary>union</primary></indexterm>
+<indexterm type="general"><primary>union</primary></indexterm>
 <!-- ^^   jo'e, 354, 356 -->
-<indexterm><primary>jo'e</primary></indexterm>
+<indexterm type="general"><primary>jo'e</primary></indexterm>
     A ku'a B    the intersection of sets A and B
 <!-- ^^   ku'a, 354, 356 -->
-<indexterm><primary>ku'a</primary></indexterm>
+<indexterm type="general"><primary>ku'a</primary></indexterm>
 <!-- ^^   intersection of sets: compared with and, 357 -->
-<indexterm><primary>intersection of sets</primary></indexterm>
+<indexterm type="general"><primary>intersection of sets</primary></indexterm>
 <!-- ^^   intersection: of sets, 356 -->
-<indexterm><primary>intersection</primary></indexterm>
+<indexterm type="general"><primary>intersection</primary></indexterm>
     A pi'u B    the cross product of sets A and B
 <!-- ^^   pi'u, 246, 354, 356; contrasted with .e, 357; use in connecting tenses, 246 -->
-<indexterm><primary>pi'u</primary></indexterm>
+<indexterm type="general"><primary>pi'u</primary></indexterm>
 <!-- ^^   cross product: with tenses, 246 -->
-<indexterm><primary>cross product</primary></indexterm>
+<indexterm type="general"><primary>cross product</primary></indexterm>
     A sepi'u B  the cross product of sets B and A
 <!-- ^^   sepi'u, 354 -->
-<indexterm><primary>sepi'u</primary></indexterm>
+<indexterm type="general"><primary>sepi'u</primary></indexterm>
 <!-- ^^   cross product: with tenses, 246 -->
-<indexterm><primary>cross product</primary></indexterm>
+<indexterm type="general"><primary>cross product</primary></indexterm>
 </programlisting>
     <para>The cmavo 
     <quote>se</quote>is grammatical before any JOI cmavo, but only useful with those that have inherent order. Here are some examples of joiks:</para>
@@ -2179,7 +2179,7 @@
     <para>The x3 place of 
     <quote>cuxna</quote>is a set from which the choice is being made. A set is an abstract object which is determined by specifying its members. Unlike those of a mass, the properties of a set are unrelated to its members' properties: the set of all rats is large (since many rats exist), but the rats themselves are small. This chapter does not attempt to explain set theory (the mathematical study of sets) in detail: explaining propositional logic is quite enough for one chapter!</para>
 <!-- ^^   set of all rats: example, 447 -->
-<indexterm><primary>set of all rats</primary></indexterm>
+<indexterm type="general"><primary>set of all rats</primary></indexterm>
     <para>In 
     <xref linkend="cll_chapter14-section14-example6" />we specify that set by listing the members with 
     <quote>ce</quote>joining them.</para>
@@ -2191,7 +2191,7 @@
       <interlinear-gloss>
         <jbo>ti liste mi ce'o do ce'o la djan.</jbo>
 <!-- ^^   ce'o, 354, 362 -->
-<indexterm><primary>ce'o</primary></indexterm>
+<indexterm type="general"><primary>ce'o</primary></indexterm>
         <gloss>This is-a-list-of me and-sequence you and-sequence John.</gloss>
         <en>This is a list of you, me, and John.</en>
       </interlinear-gloss>
@@ -2202,18 +2202,18 @@
     <quote>lo porsi</quote>, a sequence.) Here the three sumti connected by 
     <quote>ce'o</quote>are in a definite order, not just lumped together in a set or a mass.</para>
 <!-- ^^   ce'o, 354, 362 -->
-<indexterm><primary>ce'o</primary></indexterm>
+<indexterm type="general"><primary>ce'o</primary></indexterm>
     <para>So 
     <quote>joi</quote>, 
     <quote>ce</quote>, and 
     <quote>ce'o</quote>are parallel, in that the sumti connected are taken to be individuals, and the result is something else: a mass, a set, or a sequence respectively. The cmavo 
 <!-- ^^   ce'o, 354, 362 -->
-<indexterm><primary>ce'o</primary></indexterm>
+<indexterm type="general"><primary>ce'o</primary></indexterm>
     <quote>jo'u</quote>serves as a fourth element in this pattern: the sumti connected are individuals, and the result is still individuals - but inseparably so. The normal Lojban way of saying that James and George are brothers is:</para>
 <!-- ^^   jo'u, 354, 355; contrasted with ce, 355; contrasted with ce'o, 355; contrasted with joi, 355; result of connection with, 355 -->
-<indexterm><primary>jo'u</primary></indexterm>
+<indexterm type="general"><primary>jo'u</primary></indexterm>
 <!-- ^^   brothers: example, 355 -->
-<indexterm><primary>brothers</primary></indexterm>
+<indexterm type="general"><primary>brothers</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-sy2V">
       <title>
         <anchor xml:id="c14e14d8" />
@@ -2228,7 +2228,7 @@
     <quote>and vice versa</quote>. However, 
     <quote>James and George are brothers</quote>cannot be correctly translated as:</para>
 <!-- ^^   brothers: example, 355 -->
-<indexterm><primary>brothers</primary></indexterm>
+<indexterm type="general"><primary>brothers</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-1PHN">
       <title>
         <anchor xml:id="c14e14d9" />
@@ -2243,7 +2243,7 @@
     <quote>.e</quote>is changed to 
     <quote>jo'u</quote>, however, the meaning of 
 <!-- ^^   jo'u, 354, 355; contrasted with ce, 355; contrasted with ce'o, 355; contrasted with joi, 355; result of connection with, 355 -->
-<indexterm><primary>jo'u</primary></indexterm>
+<indexterm type="general"><primary>jo'u</primary></indexterm>
     <xref linkend="cll_chapter14-section14-example8" />is preserved:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-gnwy">
       <title>
@@ -2253,16 +2253,16 @@
       <interlinear-gloss>
         <jbo>la djeimyz. jo'u la djordj. cu remei bruna</jbo>
 <!-- ^^   jo'u, 354, 355; contrasted with ce, 355; contrasted with ce'o, 355; contrasted with joi, 355; result of connection with, 355 -->
-<indexterm><primary>jo'u</primary></indexterm>
+<indexterm type="general"><primary>jo'u</primary></indexterm>
         <en>James in-common-with George are-a-twosome type-of-brothers.</en>
 <!-- ^^   brothers: example, 355 -->
-<indexterm><primary>brothers</primary></indexterm>
+<indexterm type="general"><primary>brothers</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>The tanru 
     <quote>remei bruna</quote>is not strictly necessary in this sentence, but is used to make clear that we are not saying that James and George are both brothers of some third person not specified. Alternatively, we could turn the tanru around: the x1 place of 
 <!-- ^^   brothers: example, 355 -->
-<indexterm><primary>brothers</primary></indexterm>
+<indexterm type="general"><primary>brothers</primary></indexterm>
     <quote>remei</quote>is a mass with two components, leading to:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-t0FJ">
       <title>
@@ -2329,13 +2329,13 @@
       <interlinear-gloss>
         <jbo>la djeimyz. ce'e la meris. pe'e .e la djordj. ce'e la martas. prami</jbo>
 <!-- ^^   pe'e, 347 -->
-<indexterm><primary>pe'e</primary></indexterm>
+<indexterm type="general"><primary>pe'e</primary></indexterm>
         <en>James [plus] Mary [joint] and George [plus] Martha loves.</en>
       </interlinear-gloss>
     </example>
     <para>at the expense of re-ordering the list of names so as to make the pairs explicit. This option is not available when one of the lists is only described rather than enumerated:</para>
 <!-- ^^   lists: use of tu'e/tu'u in, 358 -->
-<indexterm><primary>lists</primary></indexterm>
+<indexterm type="general"><primary>lists</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-1r61">
       <title>
         <anchor xml:id="c14e14d16" />
@@ -2353,31 +2353,31 @@
     <para>The final three JOI cmavo, 
     <quote>jo'e</quote>, 
 <!-- ^^   jo'e, 354, 356 -->
-<indexterm><primary>jo'e</primary></indexterm>
+<indexterm type="general"><primary>jo'e</primary></indexterm>
     <quote>ku'a</quote>, and 
 <!-- ^^   ku'a, 354, 356 -->
-<indexterm><primary>ku'a</primary></indexterm>
+<indexterm type="general"><primary>ku'a</primary></indexterm>
     <quote>pi'u</quote>, are probably only useful when talking explicitly about sets. They represent three standard set operators usually called 
 <!-- ^^   pi'u, 246, 354, 356; contrasted with .e, 357; use in connecting tenses, 246 -->
-<indexterm><primary>pi'u</primary></indexterm>
+<indexterm type="general"><primary>pi'u</primary></indexterm>
     <quote>union</quote>, 
 <!-- ^^   union: of sets, 356 -->
-<indexterm><primary>union</primary></indexterm>
+<indexterm type="general"><primary>union</primary></indexterm>
     <quote>intersection</quote>, and 
 <!-- ^^   intersection: of sets, 356 -->
-<indexterm><primary>intersection</primary></indexterm>
+<indexterm type="general"><primary>intersection</primary></indexterm>
     <quote>cross product</quote>(also known as 
 <!-- ^^   cross product: with tenses, 246 -->
-<indexterm><primary>cross product</primary></indexterm>
+<indexterm type="general"><primary>cross product</primary></indexterm>
     <quote>Cartesian product</quote>). The union of two sets is a set containing all the members that are in either set; the intersection of two sets is a set containing all the members that are in both sets. The cross product of two sets is the set of all possible ordered pairs, where each ordered pair contains a single element from the first set followed by a single element from the second. This may seem very abstract; hopefully, the following examples will help:</para>
 <!-- ^^   union: of sets, 356 -->
-<indexterm><primary>union</primary></indexterm>
+<indexterm type="general"><primary>union</primary></indexterm>
 <!-- ^^   intersection: of sets, 356 -->
-<indexterm><primary>intersection</primary></indexterm>
+<indexterm type="general"><primary>intersection</primary></indexterm>
 <!-- ^^   cross product: with tenses, 246 -->
-<indexterm><primary>cross product</primary></indexterm>
+<indexterm type="general"><primary>cross product</primary></indexterm>
 <!-- ^^   Cartesian product: with tenses, 246 -->
-<indexterm><primary>Cartesian product</primary></indexterm>
+<indexterm type="general"><primary>Cartesian product</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-jdb5">
       <title>
         <anchor xml:id="c14e15d1" />
@@ -2388,16 +2388,16 @@
       <interlinear-gloss>
         <jbo>lo'i ricfu ku jo'e lo'i dotco cu barda</jbo>
 <!-- ^^   jo'e, 354, 356 -->
-<indexterm><primary>jo'e</primary></indexterm>
+<indexterm type="general"><primary>jo'e</primary></indexterm>
         <en>The-set-of rich-things union the-set-of German-things is large.</en>
 <!-- ^^   union: of sets, 356 -->
-<indexterm><primary>union</primary></indexterm>
+<indexterm type="general"><primary>union</primary></indexterm>
         <jbo>lo'i ricfu ku ku'a lo'i dotco cu cmalu</jbo>
 <!-- ^^   ku'a, 354, 356 -->
-<indexterm><primary>ku'a</primary></indexterm>
+<indexterm type="general"><primary>ku'a</primary></indexterm>
         <en>The set-of rich-things intersection the-set-of German-things is small.</en>
 <!-- ^^   intersection: of sets, 356 -->
-<indexterm><primary>intersection</primary></indexterm>
+<indexterm type="general"><primary>intersection</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>There is a parallelism between logic and set theory that makes 
@@ -2434,11 +2434,11 @@
       <interlinear-gloss>
         <jbo>la djeimyz. ce[bo] la djordj. pi'u la meris. cebo la martas.</jbo>
 <!-- ^^   pi'u, 246, 354, 356; contrasted with .e, 357; use in connecting tenses, 246 -->
-<indexterm><primary>pi'u</primary></indexterm>
+<indexterm type="general"><primary>pi'u</primary></indexterm>
         <gloss>cu prami se remei</gloss>
         <gloss>James and-set George cross-product Mary and-set Martha</gloss>
 <!-- ^^   cross-product: contrasted with and, 357; of sets, 356 -->
-<indexterm><primary>cross-product</primary></indexterm>
+<indexterm type="general"><primary>cross-product</primary></indexterm>
         <en>are-lover type-of-pairs.</en>
       </interlinear-gloss>
     </example>
@@ -2462,7 +2462,7 @@
     <para>asserts that there is a set of two items each of which is a mass.</para>
     <para>Non-logical connection is permitted at the joint of a termset; this is useful for associating more than one sumti or tagged sumti with each side of the non-logical connection. The place structure of 
 <!-- ^^   non-logical connection: and elidability of terminators, 354; in mathematical expressions, 361; in tanru, distinguishing from connection of sumti, 354; of individuals into mass, 355; of individuals into set, 355; of modals, 208; of operands, 455; of operators, 455; of sumti, distinguishing from connection in tanru, 354; of termsets, 357 -->
-<indexterm><primary>non-logical connection</primary></indexterm>
+<indexterm type="general"><primary>non-logical connection</primary></indexterm>
     <quote>casnu</quote>is:</para>
     <programlisting xml:space="preserve">
       casnu: the mass x1 discusses/talks about x2
@@ -2477,7 +2477,7 @@
         <jbo>mi ce'e bau la lojban.</jbo>
         <gloss>pe'e joi do ce'e bau la gliban. nu'u casnu</gloss>
 <!-- ^^   pe'e, 347 -->
-<indexterm><primary>pe'e</primary></indexterm>
+<indexterm type="general"><primary>pe'e</primary></indexterm>
         <gloss>( I [plus] in-language Lojban</gloss>
         <en>massed-with you [plus] in-language English ) discuss.</en>
       </interlinear-gloss>
@@ -2496,7 +2496,7 @@
     </example>
     <para>Non-logical forethought termsets are also useful when the things to be non-logically connected are sumti preceded with tense or modal (BAI) tags:</para>
 <!-- ^^   forethought termsets: logical connection of, 348 -->
-<indexterm><primary>forethought termsets</primary></indexterm>
+<indexterm type="general"><primary>forethought termsets</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-wVSG">
       <title>
         <anchor xml:id="c14e15d9" />
@@ -2513,14 +2513,14 @@
     <para>
     <xref linkend="cll_chapter14-section15-example9" />associates speaking in Lojban with John, and speaking under George's compulsion with Frank. We do not know what language Frank uses, or whether John speaks under anyone's compulsion.</para>
 <!-- ^^   anyone: contrasted with everyone in assumption of existence, 399 -->
-<indexterm><primary>anyone</primary></indexterm>
+<indexterm type="general"><primary>anyone</primary></indexterm>
     <para>Joiks may be prefixed with 
     <quote>.i</quote>to produce ijoiks, which serve to non-logically connect sentences. The ijoik 
 <!-- ^^   ijoik: as name for compound cmavo, 336; definition, 358 -->
-<indexterm><primary>ijoik</primary></indexterm>
+<indexterm type="general"><primary>ijoik</primary></indexterm>
     <quote>.ice'o</quote>indicates that the event of the second bridi follows that of the first bridi in some way other than a time relationship (which is handled with a tense):</para>
 <!-- ^^   ice'o: contrasted with .ibabo, 358 -->
-<indexterm><primary>ice'o</primary></indexterm>
+<indexterm type="general"><primary>ice'o</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-27xU">
       <title>
         <anchor xml:id="c14e15d10" />
@@ -2531,16 +2531,16 @@
         <gloss>.i tu'e kanji lo ni cteki</gloss>
 <!-- ^^   kanji: contrasted with alphabets and syllabaries, 420; representing based on romaji spelling, 420; representing based on strokes, 420 -->
 <!-- ^^   syllabaries: lerfu word representation, 420 -->
-<indexterm><primary>syllabaries</primary></indexterm>
+<indexterm type="general"><primary>syllabaries</primary></indexterm>
 <!-- ^^   romaji: as a basis for kanji characters in Lojban lerfu words, 420 -->
-<indexterm><primary>romaji</primary></indexterm>
-<indexterm><primary>kanji</primary></indexterm>
+<indexterm type="general"><primary>romaji</primary></indexterm>
+<indexterm type="general"><primary>kanji</primary></indexterm>
         <gloss>.ice'o lumci le karce</gloss>
 <!-- ^^   ice'o: contrasted with .ibabo, 358 -->
-<indexterm><primary>ice'o</primary></indexterm>
+<indexterm type="general"><primary>ice'o</primary></indexterm>
         <gloss>.ice'o dzukansa le gerku tu'u</gloss>
 <!-- ^^   ice'o: contrasted with .ibabo, 358 -->
-<indexterm><primary>ice'o</primary></indexterm>
+<indexterm type="general"><primary>ice'o</primary></indexterm>
         <gloss>I [future] do the-referent-of-the-following:</gloss>
         <gloss>( Compute the quantity of taxes.</gloss>
         <gloss>And-then wash the car.</gloss>
@@ -2559,7 +2559,7 @@
     <quote>mi ba gasnu la'edi'e</quote>and the rest. The brackets effectively show how large an utterance the word 
     <quote>di'e</quote>, which means 
 <!-- ^^   di'e, 149, 358; effect of tu'e/tu'u on, 358 -->
-<indexterm><primary>di'e</primary></indexterm>
+<indexterm type="general"><primary>di'e</primary></indexterm>
     <quote>the following utterance</quote>, refers to.</para>
     <para>Similarly, 
     <quote>.ijoi</quote>is used to connect sentences that represent the components of a joint event such as a joint cause: the Lojban equivalent of 
@@ -2582,10 +2582,10 @@
     <para>The result of 
     <quote>mi jo'u do</quote>would be two individuals, not a mass, therefore 
 <!-- ^^   jo'u, 354, 355; contrasted with ce, 355; contrasted with ce'o, 355; contrasted with joi, 355; result of connection with, 355 -->
-<indexterm><primary>jo'u</primary></indexterm>
+<indexterm type="general"><primary>jo'u</primary></indexterm>
     <quote>jo'u</quote>is not applicable; 
 <!-- ^^   jo'u, 354, 355; contrasted with ce, 355; contrasted with ce'o, 355; contrasted with joi, 355; result of connection with, 355 -->
-<indexterm><primary>jo'u</primary></indexterm>
+<indexterm type="general"><primary>jo'u</primary></indexterm>
     <quote>joi</quote>would be the correct connective.</para>
     <para>There is no joik question cmavo as such; however, joiks and ijoiks may be uttered in isolation in response to a logical connective question, as in the following exchange:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-9wAR">
@@ -2602,7 +2602,7 @@
         <gloss>a-mass-of coffee [what connective?] a-mass-of tea?</gloss>
         <en>Do you want coffee or tea?</en>
 <!-- ^^   coffee or tea: example, 352 -->
-<indexterm><primary>coffee or tea</primary></indexterm>
+<indexterm type="general"><primary>coffee or tea</primary></indexterm>
         <jbo>joi</jbo>
         <gloss>Mixed-mass-and.</gloss>
         <en>Both as a mass (i.e, mixed together).</en>
@@ -2613,7 +2613,7 @@
   <section xml:id="cll_chapter14-section16">
     <title>Interval connectives and forethought non-logical connection</title>
 <!-- ^^   non-logical connection: and elidability of terminators, 354; in mathematical expressions, 361; in tanru, distinguishing from connection of sumti, 354; of individuals into mass, 355; of individuals into set, 355; of modals, 208; of operands, 455; of operators, 455; of sumti, distinguishing from connection in tanru, 354; of termsets, 357 -->
-<indexterm><primary>non-logical connection</primary></indexterm>
+<indexterm type="general"><primary>non-logical connection</primary></indexterm>
     <para>In addition to the non-logical connectives of selma'o JOI explained in 
     <xref linkend="cll_chapter14-section14" />and 
     <xref linkend="cll_chapter14-section15" />, there are three other connectives which can appear in joiks: 
@@ -2621,16 +2621,16 @@
     <quote>bi'o</quote>, and 
     <quote>mi'i</quote>, all of selma'o BIhI. The first two cmavo are used to specify intervals: abstract objects defined by two endpoints. The cmavo 
 <!-- ^^   mi'i, 359, 455 -->
-<indexterm><primary>mi'i</primary></indexterm>
+<indexterm type="general"><primary>mi'i</primary></indexterm>
     <quote>bi'i</quote>is correct if the endpoints are independent of order, whereas 
     <quote>bi'o</quote>or 
     <quote>sebi'o</quote>are used when order matters.</para>
 <!-- ^^   sebi'o, 359 -->
-<indexterm><primary>sebi'o</primary></indexterm>
+<indexterm type="general"><primary>sebi'o</primary></indexterm>
     <para>An example of 
     <quote>bi'i</quote>in sumti connection:</para>
 <!-- ^^   sumti connection: afterthought, 340; forethought, 341 -->
-<indexterm><primary>sumti connection</primary></indexterm>
+<indexterm type="general"><primary>sumti connection</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-sHhA">
       <title>
         <anchor xml:id="c14e16d1" />
@@ -2641,13 +2641,13 @@
         <gloss>I [present] stand-on-surface Dresden [interval] Frankfurt.</gloss>
         <en>I am standing between Dresden and Frankfurt.</en>
 <!-- ^^   between Dresden and Frankfurt: example, 359, 360, 361 -->
-<indexterm><primary>between Dresden and Frankfurt</primary></indexterm>
+<indexterm type="general"><primary>between Dresden and Frankfurt</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>In 
     <xref linkend="cll_chapter14-section16-example1" />, it is all the same whether I am standing between Dresden and Frankfurt or between Frankfurt and Dresden, so 
 <!-- ^^   between Dresden and Frankfurt: example, 359, 360, 361 -->
-<indexterm><primary>between Dresden and Frankfurt</primary></indexterm>
+<indexterm type="general"><primary>between Dresden and Frankfurt</primary></indexterm>
     <quote>bi'i</quote>is the appropriate interval connective. The sumti 
     <quote>la drezdn. bi'i la frankfurt.</quote>falls into the x2 place of 
     <quote>sanli</quote>, which is the surface I stand on; the interval specifies that surface by its limits. (Obviously, I am not standing on the whole of the interval; the x2 place of 
@@ -2677,18 +2677,18 @@
       <interlinear-gloss>
         <jbo>mi cadzu ca la recac. sebi'o la pacac.</jbo>
 <!-- ^^   sebi'o, 359 -->
-<indexterm><primary>sebi'o</primary></indexterm>
+<indexterm type="general"><primary>sebi'o</primary></indexterm>
         <en>I walk simultaneous-with Second-hour [reverse] [ordered] First-hour.</en>
       </interlinear-gloss>
     </example>
     <para>English cannot readily express 
     <quote>sebi'o</quote>, but its meaning can be understood by reversing the two sumti.</para>
 <!-- ^^   sebi'o, 359 -->
-<indexterm><primary>sebi'o</primary></indexterm>
+<indexterm type="general"><primary>sebi'o</primary></indexterm>
     <para>The third cmavo of selma'o BIhI, namely 
     <quote>mi'i</quote>, expresses an interval seen from a different viewpoint: not a pair of endpoints, but a center point and a distance. For example:</para>
 <!-- ^^   mi'i, 359, 455 -->
-<indexterm><primary>mi'i</primary></indexterm>
+<indexterm type="general"><primary>mi'i</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-wm5E">
       <title>
         <anchor xml:id="c14e16d4" />
@@ -2697,7 +2697,7 @@
       <interlinear-gloss>
         <jbo>le jbama pu daspo la .uacintyn. mi'i lo minli be li muno</jbo>
 <!-- ^^   mi'i, 359, 455 -->
-<indexterm><primary>mi'i</primary></indexterm>
+<indexterm type="general"><primary>mi'i</primary></indexterm>
         <gloss>The bomb [past] destroys Washington [center] what-is measured-in-miles by 50.</gloss>
         <en>The bomb destroyed Washington and fifty miles around.</en>
       </interlinear-gloss>
@@ -2725,7 +2725,7 @@
         <gloss>I [present] stand Dresden [inclusive] [interval] [inclusive] Frankfurt.</gloss>
         <en>I am standing between Dresden and Frankfurt, inclusive of both.</en>
 <!-- ^^   between Dresden and Frankfurt: example, 359, 360, 361 -->
-<indexterm><primary>between Dresden and Frankfurt</primary></indexterm>
+<indexterm type="general"><primary>between Dresden and Frankfurt</primary></indexterm>
         <jbo>mi ca sanli la drezdn. ga'o bi'i ke'i la frankfurt.</jbo>
         <gloss>I [present] stand Dresden [inclusive] [interval] [exclusive] Frankfurt.</gloss>
         <en>I am standing between Dresden (inclusive) and Frankfurt (exclusive).</en>
@@ -2736,7 +2736,7 @@
         <gloss>I [present] stand Dresden [exclusive] [interval] [exclusive] Frankfurt.</gloss>
         <en>I am standing between Dresden and Frankfurt, exclusive of both.</en>
 <!-- ^^   between Dresden and Frankfurt: example, 359, 360, 361 -->
-<indexterm><primary>between Dresden and Frankfurt</primary></indexterm>
+<indexterm type="general"><primary>between Dresden and Frankfurt</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>As these examples should make clear, the GAhO cmavo that applies to a given endpoint is the one that stands physically adjacent to it: the left-hand endpoint is referred to by the first GAhO, and the right-hand endpoint by the second GAhO. It is ungrammatical to have just one GAhO.</para>
@@ -2749,7 +2749,7 @@
     <quote>open</quote>. In mathematics, inclusive intervals are referred to as closed intervals, and exclusive intervals as open ones.)</para>
     <para>BIhI joiks are grammatical anywhere that other joiks are, including in tanru connection and (as ijoiks) between sentences. No meanings have been found for these uses.</para>
 <!-- ^^   tanru connection: connotation of non-logical, 354 -->
-<indexterm><primary>tanru connection</primary></indexterm>
+<indexterm type="general"><primary>tanru connection</primary></indexterm>
     <para>Negated intervals, marked with a 
     <quote>-nai</quote>following the BIhI cmavo, indicate an interval that includes everything but what is between the endpoints (with respect to some understood scale):</para>
     <example role="interlinear-gloss-example" xml:id="random-id-39EI">
@@ -2760,11 +2760,11 @@
       <interlinear-gloss>
         <jbo>do dicra .e'a mi ca la daucac. bi'onai la gaicac.</jbo>
 <!-- ^^   e'a, 303 -->
-<indexterm><primary>e'a</primary></indexterm>
+<indexterm type="general"><primary>e'a</primary></indexterm>
         <gloss>You disturb (allowed) me at 10 not-from ... to 12</gloss>
         <en>You can contact me except from 10 to 12.</en>
 <!-- ^^   except from 10 to 12: example, 360 -->
-<indexterm><primary>except from 10 to 12</primary></indexterm>
+<indexterm type="general"><primary>except from 10 to 12</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>The complete syntax of joiks is:</para>
@@ -2781,13 +2781,13 @@
     <quote>from ... to</quote>for 
     <quote>bi'o</quote>. In Lojban too, non-logical connectives can be expressed in forethought. Rather than using a separate selma'o, the forethought logical connectives are constructed from the afterthought ones by suffixing 
 <!-- ^^   forethought logical connectives: within tanru, 92 -->
-<indexterm><primary>forethought logical connectives</primary></indexterm>
+<indexterm type="general"><primary>forethought logical connectives</primary></indexterm>
     <quote>gi</quote>. Such a compound cmavo is not unnaturally called a 
     <quote>joigik</quote>; the syntax of joigiks is any of:</para>
 <!-- ^^   joigiks: connection types, 361; syntax of, 361 -->
-<indexterm><primary>joigiks</primary></indexterm>
+<indexterm type="general"><primary>joigiks</primary></indexterm>
 <!-- ^^   joigik: as name for compound cmavo, 336; definition, 361 -->
-<indexterm><primary>joigik</primary></indexterm>
+<indexterm type="general"><primary>joigik</primary></indexterm>
     <programlisting xml:space="preserve">
             [se] JOI  [nai] GI
             [se] BIhI [nai] GI
@@ -2805,13 +2805,13 @@
         <jbo>joigi la djan. gi la .alis. bevri le pipno</jbo>
         <en>[Together] John and Alice carry the piano.</en>
 <!-- ^^   carry the piano: example, 361 -->
-<indexterm><primary>carry the piano</primary></indexterm>
+<indexterm type="general"><primary>carry the piano</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>The first 
     <quote>gi</quote>is part of the joigik; the second 
 <!-- ^^   joigik: as name for compound cmavo, 336; definition, 361 -->
-<indexterm><primary>joigik</primary></indexterm>
+<indexterm type="general"><primary>joigik</primary></indexterm>
     <quote>gi</quote>is the regular gik that separates the two things being connected in all forethought forms.</para>
     <para>
     <xref linkend="cll_chapter14-section16-example6" />can be expressed in forethought as:</para>
@@ -2832,14 +2832,14 @@
     <title>Logical and non-logical connectives within mekso</title>
     <para>Lojban has a separate grammar embedded within the main grammar for representing mathematical expressions (or mekso in Lojban) such as 
 <!-- ^^   mathematical expressions: connectives in, 361; implicit quantifier for, 142; tensed connection in, 364 -->
-<indexterm><primary>mathematical expressions</primary></indexterm>
+<indexterm type="general"><primary>mathematical expressions</primary></indexterm>
     <quote>2 + 2</quote>. Mathematical expressions are explained fully in 
     <xref linkend="cll_chapter18" />. The basic components of mekso are operands, like 
     <quote>2</quote>, and operators, like 
     <quote>+</quote>. Both of these may be either logically or non-logically connected.</para>
     <para>Operands are connected in afterthought with eks and in forethought with geks, just like sumti. Operators, on the other hand, are connected in afterthought with jeks and in forethought with guheks, just like tanru components. (However, jeks and joiks with 
 <!-- ^^   guheks: connecting operators, 361; syntax of, 350 -->
-<indexterm><primary>guheks</primary></indexterm>
+<indexterm type="general"><primary>guheks</primary></indexterm>
     <quote>bo</quote>are not allowed for operators.) This parallelism is no accident.</para>
     <para>In addition, eks with 
     <quote>bo</quote>and with 
@@ -2863,8 +2863,8 @@
     <xref linkend="cll_chapter14-section17-example2" />is equivalent in meaning, but uses forethought connection:</para>
 <!-- ^^   forethought connection: contrasted with afterthought for grammatical utterances, 352; definition, 199; in abstractions, 365; in tenses, 363; observatives, 347; of operands, 453; of operators, 453 -->
 <!-- ^^   observatives: and abstractions, 255; quick-tour version, 15 -->
-<indexterm><primary>observatives</primary></indexterm>
-<indexterm><primary>forethought connection</primary></indexterm>
+<indexterm type="general"><primary>observatives</primary></indexterm>
+<indexterm type="general"><primary>forethought connection</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-ftNY">
       <title>
         <anchor xml:id="c14e17d2" />
@@ -2908,10 +2908,10 @@
     </example>
     <para>Non-logical connection with joiks or joigiks is also permitted between operands and between operators. One use for this construct is to connect operands with 
 <!-- ^^   joigiks: connection types, 361; syntax of, 361 -->
-<indexterm><primary>joigiks</primary></indexterm>
+<indexterm type="general"><primary>joigiks</primary></indexterm>
     <quote>bi'i</quote>to create mathematical intervals:</para>
 <!-- ^^   mathematical intervals, 362 -->
-<indexterm><primary>mathematical intervals</primary></indexterm>
+<indexterm type="general"><primary>mathematical intervals</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-z2oF">
       <title>
         <anchor xml:id="c14e17d5" />
@@ -2923,15 +2923,15 @@
         <gloss>[0,1)</gloss>
         <en>the numbers from zero to one, including zero but not including one</en>
 <!-- ^^   zero to one: example, 362 -->
-<indexterm><primary>zero to one</primary></indexterm>
+<indexterm type="general"><primary>zero to one</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>You can also combine two operands with 
     <quote>ce'o</quote>, the sequence connective of selma'o JOI, to make a compound subscript:</para>
 <!-- ^^   compound subscript, 362, 455 -->
-<indexterm><primary>compound subscript</primary></indexterm>
+<indexterm type="general"><primary>compound subscript</primary></indexterm>
 <!-- ^^   ce'o, 354, 362 -->
-<indexterm><primary>ce'o</primary></indexterm>
+<indexterm type="general"><primary>ce'o</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-8rEL">
       <title>
         <anchor xml:id="c14e17d6" />
@@ -2940,7 +2940,7 @@
       <interlinear-gloss>
         <jbo>xy. boi xi vei by. ce'o dy. [ve'o]</jbo>
 <!-- ^^   ce'o, 354, 362 -->
-<indexterm><primary>ce'o</primary></indexterm>
+<indexterm type="general"><primary>ce'o</primary></indexterm>
         <gloss>
         <quote>x</quote>sub ( 
         <quote>b</quote>sequence 
@@ -2963,9 +2963,9 @@
     <xref linkend="cll_chapter11" />).</para>
     <para>The two types of interaction between tenses and logical connectives are logically connected tenses and tensed logical connections. The former are fairly simple. Jeks may be used between tense cmavo to specify two connected bridi that differ only in tense:</para>
 <!-- ^^   logically connected tenses: definition, 363; expansion to sentences, 245; with JA, 245 -->
-<indexterm><primary>logically connected tenses</primary></indexterm>
+<indexterm type="general"><primary>logically connected tenses</primary></indexterm>
 <!-- ^^   connected tenses: negation of compared with negation in connective, 245 -->
-<indexterm><primary>connected tenses</primary></indexterm>
+<indexterm type="general"><primary>connected tenses</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-g6iT">
       <title>
         <anchor xml:id="c14e18d1" />
@@ -3004,19 +3004,19 @@
         <jbo>mi pu bi'o ba vasxu</jbo>
         <gloss>I [past] from ... to [future] breathe.</gloss>
 <!-- ^^   breathe: example, 363 -->
-<indexterm><primary>breathe</primary></indexterm>
+<indexterm type="general"><primary>breathe</primary></indexterm>
         <en>I breathe from a past time until a future time.</en>
 <!-- ^^   breathe: example, 363 -->
-<indexterm><primary>breathe</primary></indexterm>
+<indexterm type="general"><primary>breathe</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>The full tense system makes more interesting tense intervals expressible, such as 
 <!-- ^^   tense system: and space location, 215 -->
-<indexterm><primary>tense system</primary></indexterm>
+<indexterm type="general"><primary>tense system</primary></indexterm>
     <quote>from a medium time ago until a long time from now</quote>.</para>
     <para>No forethought connections between tenses are permitted by the grammar, nor is there any way to override the default left-grouping rule; these limitations are imposed to keep the tense grammar simpler. Whatever can be said with tenses or modals can be said with subordinate bridi stating the time, place, or mode explicitly, so it is reasonable to try to remove at least some complications.</para>
 <!-- ^^   forethought connections: modal compared with tense in semantics, 249 -->
-<indexterm><primary>forethought connections</primary></indexterm>
+<indexterm type="general"><primary>forethought connections</primary></indexterm>
     <para>Tensed logical connections are both more complex and more important than logical connections between tenses. Consider the English sentence:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-efav">
       <title>
@@ -3054,7 +3054,7 @@
       <interlinear-gloss>
         <jbo>mi pu klama le zarci .ijebabo mi pu tervecnu lo cidja</jbo>
 <!-- ^^   ijebabo, 363 -->
-<indexterm><primary>ijebabo</primary></indexterm>
+<indexterm type="general"><primary>ijebabo</primary></indexterm>
         <en>I [past] go-to the market. And [later] I [past] buy items-of food.</en>
       </interlinear-gloss>
     </example>
@@ -3066,10 +3066,10 @@
     <quote>pu</quote>would run together to form a compound tense 
 <!-- ^^   compound tense: compared with multiple tenses in sentence, 234; compared with tense in scope of sticky tense, 234; definition, 218; Lojban contrasted with English in order of specification, 218 -->
 <!-- ^^   tense in scope of sticky tense: compared with compound tense, 234 -->
-<indexterm><primary>tense in scope of sticky tense</primary></indexterm>
+<indexterm type="general"><primary>tense in scope of sticky tense</primary></indexterm>
 <!-- ^^   multiple tenses: effect of order in sentence, 235 -->
-<indexterm><primary>multiple tenses</primary></indexterm>
-<indexterm><primary>compound tense</primary></indexterm>
+<indexterm type="general"><primary>multiple tenses</primary></indexterm>
+<indexterm type="general"><primary>compound tense</primary></indexterm>
     <quote>bapu</quote>applying to the second bridi-tail only.</para>
     <para>Adding tense or modal information to a logical connective is permitted only in the following situations:</para>
     <para>Between an ek (or joik) and 
@@ -3126,7 +3126,7 @@
     </example>
     <para>Between an ijek (or ijoik) and 
 <!-- ^^   ijoik: as name for compound cmavo, 336; definition, 358 -->
-<indexterm><primary>ijoik</primary></indexterm>
+<indexterm type="general"><primary>ijoik</primary></indexterm>
     <quote>bo</quote>, as in:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-AhnP">
       <title>
@@ -3136,14 +3136,14 @@
       <interlinear-gloss>
         <jbo>mi viska pa nanmu .ijebabo mi viska pa ninmu</jbo>
 <!-- ^^   ijebabo, 363 -->
-<indexterm><primary>ijebabo</primary></indexterm>
+<indexterm type="general"><primary>ijebabo</primary></indexterm>
         <gloss>I see a man. And [later] I see a woman.</gloss>
         <en>I see a man, and then I see a woman.</en>
       </interlinear-gloss>
     </example>
     <para>Between an ijek (or ijoik) and 
 <!-- ^^   ijoik: as name for compound cmavo, 336; definition, 358 -->
-<indexterm><primary>ijoik</primary></indexterm>
+<indexterm type="general"><primary>ijoik</primary></indexterm>
     <quote>tu'e</quote>, as in:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-GBgP">
       <title>
@@ -3197,7 +3197,7 @@
     </example>
     <para>is a simple example. There is a special grammatical rule for use when a tense applies to both of the selbri in a forethought bridi-tail connection: the entire forethought construction can just be preceded by a tense. For example:</para>
 <!-- ^^   forethought bridi-tail connection: special rule for tense, 365 -->
-<indexterm><primary>forethought bridi-tail connection</primary></indexterm>
+<indexterm type="general"><primary>forethought bridi-tail connection</primary></indexterm>
     <example role="interlinear-gloss-example" xml:id="random-id-DxuA">
       <title>
         <anchor xml:id="c14e18d15" />
@@ -3206,7 +3206,7 @@
       <interlinear-gloss>
         <jbo>mi pu ge klama le zarci gi tervecnu lo cidja</jbo>
 <!-- ^^   pu ge, 365 -->
-<indexterm><primary>pu ge</primary></indexterm>
+<indexterm type="general"><primary>pu ge</primary></indexterm>
         <gloss>I [past] both go-to the market and buy some food</gloss>
         <en>I went to the market and bought some food.</en>
       </interlinear-gloss>
@@ -3220,8 +3220,8 @@
     <para>Last and (as a matter of fact) least: a logical connective is allowed between abstraction markers of selma'o NU. As usual, the connection can be expanded to a bridi connection between two bridi which differ only in abstraction marker. Jeks are the appropriate connective. 
 <!-- ^^   bridi connection: use of imperatives in, 353; use of truth questions in, 353 -->
 <!-- ^^   imperatives: and truth, 353; attitude, 308; English contrasted with Lojban in presence of subject of command, 147; quick-tour version, 22; with ko, 146 -->
-<indexterm><primary>imperatives</primary></indexterm>
-<indexterm><primary>bridi connection</primary></indexterm>
+<indexterm type="general"><primary>imperatives</primary></indexterm>
+<indexterm type="general"><primary>bridi connection</primary></indexterm>
     <xref linkend="cll_chapter14-section19-example1" />and 
     <xref linkend="cll_chapter14-section19-example2" />are equivalent in meaning:</para>
     <example role="interlinear-gloss-example" xml:id="random-id-C7PL">
@@ -3237,7 +3237,7 @@
         <jbo>le ka je ni la frank. ciska cu xlali</jbo>
         <en>The quality and quantity of Frank's writing is bad.</en>
 <!-- ^^   quality and quantity: example, 365 -->
-<indexterm><primary>quality and quantity</primary></indexterm>
+<indexterm type="general"><primary>quality and quantity</primary></indexterm>
       </interlinear-gloss>
     </example>
     <para>As with tenses and modals, there is no forethought and no way to override the left-grouping rule.</para>
@@ -3508,7 +3508,7 @@
     <quote>nai</quote>into any connective is:</para>
     <para>Afterthought logical connectives (eks, jeks, giheks, ijeks):</para>
 <!-- ^^   giheks: syntax of, 346 -->
-<indexterm><primary>giheks</primary></indexterm>
+<indexterm type="general"><primary>giheks</primary></indexterm>
     <itemizedlist>
       <listitem>
         <para>Negate first construct: Place 
@@ -3527,7 +3527,7 @@
     </itemizedlist>
     <para>Forethought logical connectives (geks, guheks):</para>
 <!-- ^^   guheks: connecting operators, 361; syntax of, 350 -->
-<indexterm><primary>guheks</primary></indexterm>
+<indexterm type="general"><primary>guheks</primary></indexterm>
     <itemizedlist>
       <listitem>
         <para>Negate first construct: Place 
@@ -3545,14 +3545,14 @@
     </itemizedlist>
     <para>Non-logical connectives (joiks, joigiks):</para>
 <!-- ^^   joigiks: connection types, 361; syntax of, 361 -->
-<indexterm><primary>joigiks</primary></indexterm>
+<indexterm type="general"><primary>joigiks</primary></indexterm>
     <itemizedlist>
       <listitem>
         <para>Negate connection: Place 
         <quote>nai</quote>after the connective cmavo (but before the 
         <quote>gi</quote>of a joigik).</para>
 <!-- ^^   joigik: as name for compound cmavo, 336; definition, 361 -->
-<indexterm><primary>joigik</primary></indexterm>
+<indexterm type="general"><primary>joigik</primary></indexterm>
       </listitem>
       <listitem>
         <para>Exchange constructs: Place 
@@ -3569,7 +3569,7 @@
     <para>
     <xref linkend="cll_chapter14-section13" />: a table of the connective question cmavo.</para>
 <!-- ^^   connective question cmavo: departure from regularity of, 352 -->
-<indexterm><primary>connective question cmavo</primary></indexterm>
+<indexterm type="general"><primary>connective question cmavo</primary></indexterm>
     <para>
     <xref linkend="cll_chapter14-section14" />: a table of the meanings of JOI cmavo when used to connect sumti.</para>
   </section>

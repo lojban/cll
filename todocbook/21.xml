@@ -4,22 +4,22 @@
     <title>YACC Grammar of Lojban</title>
     <para>The following two listings constitute the formal grammar of Lojban. The first version is written in the YACC language, which is used to describe parsers, and has been used to create a parser for Lojban texts. This parser is available from the Logical Language Group. The second listing is in Extended Backus-Naur Form (EBNF) and represents the same grammar in a more human-readable form. (In case of discrepancies, the YACC version is official.) There is a cross-reference listing for each format that shows, for each selma'o and rule, which rules refer to it.</para>
 <!-- ^^   formal grammar, 511 -->
-<indexterm><primary>formal grammar</primary></indexterm>
+<indexterm type="general"><primary>formal grammar</primary></indexterm>
     <para>/* /*Lojban Machine Grammar, Final Baseline The Lojban Machine Grammardocument is explicitly dedicated to the public domain by its author,The Logical Language Group, Inc.</para>
     <para>grammar.300 */</para>
     <para>/* The Lojban machine parsing algorithm is a multi-step process. The YACC machine grammar presented here is an amalgam of those steps, concatenated so as to allow YACC to verify the syntactic ambiguity of the grammar. YACC is used to generate a parser for a portion of the grammar, which is LALR1 (the type of grammar that YACC is designed to identify and process successfully), but most of the rest of the grammar must be parsed using some language-coded processing.</para>
 <!-- ^^   machine grammar, 511 -->
-<indexterm><primary>machine grammar</primary></indexterm>
+<indexterm type="general"><primary>machine grammar</primary></indexterm>
     <bridgehead>Step 1 - Lexing</bridgehead>
     <para>From phonemes, stress, and pause, it is possible to resolve Lojban unambiguously into a stream of words. Any machine processing of speech will have to have some way to deal with ’non-Lojban’ failures of fluent speech, of course. The resolved words can be expressed as a text file using Lojban’s phonetic spelling rules.</para>
     <para>The following steps assume that there is the possibility of non-Lojban text within the Lojban text (delimited appropriately). Such non-Lojban text may not be reducible from speech phonetically. However, step 2 allows the filtering of a phonetically transcribed text stream, to recognize such portions of non-Lojban text where properly delimited, without interference with the parsing algorithm.</para>
 <!-- ^^   non-Lojban text: rules for pause with, 69 -->
-<indexterm><primary>non-Lojban text</primary></indexterm>
+<indexterm type="general"><primary>non-Lojban text</primary></indexterm>
     <bridgehead>Step 2 - Filtering</bridgehead>
     <para>From start to end, performing the following filtering and lexing tasks using the given order of precedence in case of conflict:</para>
     <para>a. If the Lojban word “zoi” (selma'o ZOI) is identified, take the following Lojban word (which should be end delimited with a pause for separation from the following non-Lojban text) as an opening delimiter. Treat all text following that delimiter, until that delimiter recurs 
 <!-- ^^   non-Lojban text: rules for pause with, 69 -->
-<indexterm><primary>non-Lojban text</primary></indexterm>
+<indexterm type="general"><primary>non-Lojban text</primary></indexterm>
     <emphasis>after a pause</emphasis>, as grammatically a single token (labelled ’ 
     <xref linkend="cll_yacc-699" />’ in this grammar). There is no need for processing within this text except as necessary to find the closing delimiter.</para>
     <para>b. If the Lojban word “zo” (selma'o ZO) is identified, treat the following Lojban word as a token labelled ’ 
@@ -42,12 +42,12 @@
     <bridgehead>Step 5 - Insertion of Lexer Lexemes</bridgehead>
     <para>Lojban is not in itself LALR1. There are words whose grammatical function is determined by following tokens. As a result, parsing of the YACC grammar must take place in two steps. In the first step, certain strings of tokens with defined grammars are identified, and either</para>
 <!-- ^^   YACC grammar, 511 -->
-<indexterm><primary>YACC grammar</primary></indexterm>
+<indexterm type="general"><primary>YACC grammar</primary></indexterm>
     <para>a. are replaced by a single specified ’lexer token’ for step 6, or</para>
     <para>b. the lexer token is inserted in front of the token string to identify it uniquely.</para>
     <para>The YACC grammar included herein is written to make YACC generation of a step 6 parser easy regardless of whether a. or b. is used. The strings of tokens to be labelled with lexer tokens are found in rule terminals labelled with numbers between 900 and 1099. These rules are defined with the lexer tokens inserted, with the result that it can be verified that the language is LALR1 under option b. after steps 1 through 4 have been performed. Alternatively, if option a. is to be used, these rules are commented out, and the rule terminals labelled from 800 to 900 refer to the lexer tokens 
 <!-- ^^   YACC grammar, 511 -->
-<indexterm><primary>YACC grammar</primary></indexterm>
+<indexterm type="general"><primary>YACC grammar</primary></indexterm>
     <emphasis>without</emphasis>the strings of defining tokens. Two sets of lexer tokens are defined in the token set so as to be compatible with either option.</para>
     <para>In this step, the strings must be labelled with the appropriate lexer tokens. Order of inserting lexer tokens 
     <emphasis>IS</emphasis>significant, since some shorter strings that would be marked with a lexer token may be found inside longer strings. If the tokens are inserted before or in place of the shorter strings, the longer strings cannot be identified.</para>
@@ -93,7 +93,7 @@
 <anchor xml:id="y514" />
 <anchor xreflabel="YACC rule #514" xml:id="cll_yacc-514" />CAhA_514         /* specifies actuality/potentiality of tense */
 <!-- ^^   actuality: expressing in past/future, 244; Lojban contrasted with English in implying, 243; marking, 491 -->
-<indexterm><primary>actuality</primary></indexterm>
+<indexterm type="general"><primary>actuality</primary></indexterm>
 %token 
 <anchor xml:id="y515" />
 <anchor xreflabel="YACC rule #515" xml:id="cll_yacc-515" />CAI_515          /* afterthought intensity marker */
@@ -108,13 +108,13 @@
 <anchor xreflabel="YACC rule #518" xml:id="cll_yacc-518" />CMENE_518        /* names; require consonant end, then pause no
                                    LA or DOI selma'o embedded, pause before if
 <!-- ^^   DOI selma'o, 136, 183, 323, 492; quick-tour version, 21; terminator for, 492 -->
-<indexterm><primary>DOI selma'o</primary></indexterm>
+<indexterm type="general"><primary>DOI selma'o</primary></indexterm>
                                    vowel initial and preceded by a vowel */
 %token 
 <anchor xml:id="y519" />
 <anchor xreflabel="YACC rule #519" xml:id="cll_yacc-519" />CO_519           /* tanru inversion  */
 <!-- ^^   tanru inversion, 95; definition, 95; effect on tanru grouping, 96; in complex tanru, 96; multiple, 96; rule for removing, 96; where allowed, 96 -->
-<indexterm><primary>tanru inversion</primary></indexterm>
+<indexterm type="general"><primary>tanru inversion</primary></indexterm>
 %token 
 <anchor xml:id="y520" />
 <anchor xreflabel="YACC rule #520" xml:id="cll_yacc-520" />COI_520          /* vocative marker permitted inside names; must
@@ -129,7 +129,7 @@
 <anchor xml:id="y524" />
 <anchor xreflabel="YACC rule #524" xml:id="cll_yacc-524" />DAhO_524         /* cancel anaphora/cataphora assignments */
 <!-- ^^   anaphora: definition, 152; pro-bridi go'i-series as, 152; pro-sumti ri-series as, 152; pro-sumti vo'a-series as, 158 -->
-<indexterm><primary>anaphora</primary></indexterm>
+<indexterm type="general"><primary>anaphora</primary></indexterm>
 %token 
 <anchor xml:id="y525" />
 <anchor xreflabel="YACC rule #525" xml:id="cll_yacc-525" />DOI_525          /* vocative marker */
@@ -153,12 +153,12 @@
 <anchor xml:id="y531" />
 <anchor xreflabel="YACC rule #531" xml:id="cll_yacc-531" />FEhU_531         /* ends bridi to modal conversion */
 <!-- ^^   modal conversion: access to original first place with fai, 206; grammar of, 206; place structure of, 206; with no modal specified, 206 -->
-<indexterm><primary>modal conversion</primary></indexterm>
+<indexterm type="general"><primary>modal conversion</primary></indexterm>
 %token 
 <anchor xml:id="y532" />
 <anchor xreflabel="YACC rule #532" xml:id="cll_yacc-532" />FIhO_532         /* marks bridi to modal conversion */
 <!-- ^^   modal conversion: access to original first place with fai, 206; grammar of, 206; place structure of, 206; with no modal specified, 206 -->
-<indexterm><primary>modal conversion</primary></indexterm>
+<indexterm type="general"><primary>modal conversion</primary></indexterm>
 %token 
 <anchor xml:id="y533" />
 <anchor xreflabel="YACC rule #533" xml:id="cll_yacc-533" />FOI_533          /* end compound lerfu */
@@ -172,7 +172,7 @@
 <anchor xml:id="y537" />
 <anchor xreflabel="YACC rule #537" xml:id="cll_yacc-537" />GA_537           /* geks; forethought logical connectives */
 <!-- ^^   forethought logical connectives: within tanru, 92 -->
-<indexterm><primary>forethought logical connectives</primary></indexterm>
+<indexterm type="general"><primary>forethought logical connectives</primary></indexterm>
 %token 
 <anchor xml:id="y538" />
 <anchor xreflabel="YACC rule #538" xml:id="cll_yacc-538" />GEhU_538         /* marker ending GOI relative clauses */
@@ -201,7 +201,7 @@
 <anchor xml:id="y547" />
 <anchor xreflabel="YACC rule #547" xml:id="cll_yacc-547" />JAI_547          /* modal conversion flag */
 <!-- ^^   modal conversion: access to original first place with fai, 206; grammar of, 206; place structure of, 206; with no modal specified, 206 -->
-<indexterm><primary>modal conversion</primary></indexterm>
+<indexterm type="general"><primary>modal conversion</primary></indexterm>
 %token 
 <anchor xml:id="y548" />
 <anchor xreflabel="YACC rule #548" xml:id="cll_yacc-548" />JOI_548          /* non-logical connectives */
@@ -221,7 +221,7 @@
 <anchor xml:id="y555" />
 <anchor xreflabel="YACC rule #555" xml:id="cll_yacc-555" />KOhA_555         /* sumti anaphora */
 <!-- ^^   anaphora: definition, 152; pro-bridi go'i-series as, 152; pro-sumti ri-series as, 152; pro-sumti vo'a-series as, 158 -->
-<indexterm><primary>anaphora</primary></indexterm>
+<indexterm type="general"><primary>anaphora</primary></indexterm>
 %token 
 <anchor xml:id="y556" />
 <anchor xreflabel="YACC rule #556" xml:id="cll_yacc-556" />KU_556           /* right terminator for descriptions, etc. */
@@ -326,7 +326,7 @@
 <anchor xml:id="y602" />
 <anchor xreflabel="YACC rule #602" xml:id="cll_yacc-602" />SOI_602          /* reciprocal sumti marker */
 <!-- ^^   reciprocal: expression of mathematical, 433 -->
-<indexterm><primary>reciprocal</primary></indexterm>
+<indexterm type="general"><primary>reciprocal</primary></indexterm>
 %token 
 <anchor xml:id="y603" />
 <anchor xreflabel="YACC rule #603" xml:id="cll_yacc-603" />SU_603           /* metalinguistic eraser of the entire text */
@@ -334,7 +334,7 @@
 <anchor xml:id="y604" />
 <anchor xreflabel="YACC rule #604" xml:id="cll_yacc-604" />TAhE_604         /* tense interval properties */
 <!-- ^^   interval properties: meaning as sumti tcita, 233; strings of, 246 -->
-<indexterm><primary>interval properties</primary></indexterm>
+<indexterm type="general"><primary>interval properties</primary></indexterm>
 %token 
 <anchor xml:id="y605" />
 <anchor xreflabel="YACC rule #605" xml:id="cll_yacc-605" />TEI_605          /* start compound lerfu */
@@ -360,17 +360,17 @@
 <anchor xml:id="y614" />
 <anchor xreflabel="YACC rule #614" xml:id="cll_yacc-614" />VAU_614          /* end simple bridi or bridi-tail */
 <!-- ^^   simple bridi: terminator for, 506 -->
-<indexterm><primary>simple bridi</primary></indexterm>
+<indexterm type="general"><primary>simple bridi</primary></indexterm>
 %token 
 <anchor xml:id="y615" />
 <anchor xreflabel="YACC rule #615" xml:id="cll_yacc-615" />VEhA_615         /* space-time interval size */
 <!-- ^^   interval size: as context-dependent, 222; meaning as sumti tcita, 233; spatial, 506; time, 507; unspecified, 223; vague, 223 -->
-<indexterm><primary>interval size</primary></indexterm>
+<indexterm type="general"><primary>interval size</primary></indexterm>
 %token 
 <anchor xml:id="y616" />
 <anchor xreflabel="YACC rule #616" xml:id="cll_yacc-616" />VIhA_616         /* space-time dimensionality marker */
 <!-- ^^   dimensionality: of walking, 224; order with size in spatial tense intervals, 224; spatial, 506 -->
-<indexterm><primary>dimensionality</primary></indexterm>
+<indexterm type="general"><primary>dimensionality</primary></indexterm>
 %token 
 <anchor xml:id="y617" />
 <anchor xreflabel="YACC rule #617" xml:id="cll_yacc-617" />VUhO_617         /* glue between logically connected sumti
@@ -382,7 +382,7 @@
 <anchor xml:id="y619" />
 <anchor xreflabel="YACC rule #619" xml:id="cll_yacc-619" />Y_619            /* hesitation */
 <!-- ^^   hesitation, 484, 507 -->
-<indexterm><primary>hesitation</primary></indexterm>
+<indexterm type="general"><primary>hesitation</primary></indexterm>
 %token 
 <anchor xml:id="y621" />
 <anchor xreflabel="YACC rule #621" xml:id="cll_yacc-621" />ZAhO_621         /* event properties - inchoative, etc. */
@@ -390,7 +390,7 @@
 <anchor xml:id="y622" />
 <anchor xreflabel="YACC rule #622" xml:id="cll_yacc-622" />ZEhA_622         /* time interval size tense */
 <!-- ^^   interval size: as context-dependent, 222; meaning as sumti tcita, 233; spatial, 506; time, 507; unspecified, 223; vague, 223 -->
-<indexterm><primary>interval size</primary></indexterm>
+<indexterm type="general"><primary>interval size</primary></indexterm>
 %token 
 <anchor xml:id="y623" />
 <anchor xreflabel="YACC rule #623" xml:id="cll_yacc-623" />ZEI_623          /* lujvo glue */
@@ -424,8 +424,8 @@
 <anchor xreflabel="YACC rule #656" xml:id="cll_yacc-656" />GAhO_656         /* open/closed interval markers for BIhI */
 <!-- ^^   closed interval, 360; expressed with mi'i, 455 -->
 <!-- ^^   mi'i, 359, 455 -->
-<indexterm><primary>mi'i</primary></indexterm>
-<indexterm><primary>closed interval</primary></indexterm>
+<indexterm type="general"><primary>mi'i</primary></indexterm>
+<indexterm type="general"><primary>closed interval</primary></indexterm>
 %token 
 <anchor xml:id="y657" />
 <anchor xreflabel="YACC rule #657" xml:id="cll_yacc-657" />JOhI_657         /* flags an array operand */
@@ -436,7 +436,7 @@
 <anchor xml:id="y661" />
 <anchor xreflabel="YACC rule #661" xml:id="cll_yacc-661" />MAI_661          /* change numbers to utterance ordinals */
 <!-- ^^   ordinals: utterance, 474 -->
-<indexterm><primary>ordinals</primary></indexterm>
+<indexterm type="general"><primary>ordinals</primary></indexterm>
 %token 
 <anchor xml:id="y662" />
 <anchor xreflabel="YACC rule #662" xml:id="cll_yacc-662" />MAhO_662         /* change MEX expressions to MEX operators */
@@ -494,7 +494,7 @@ the 900 series rules are found in the lexer.  */
 <anchor xml:id="y701" />
 <anchor xreflabel="YACC rule #701" xml:id="cll_yacc-701" />A_701      /* flags a MAI utterance ordinal */
 <!-- ^^   utterance ordinal: lerfu string as, 423 -->
-<indexterm><primary>utterance ordinal</primary></indexterm>
+<indexterm type="general"><primary>utterance ordinal</primary></indexterm>
 %token lexer_
 <anchor xml:id="y702" />
 <anchor xreflabel="YACC rule #702" xml:id="cll_yacc-702" />B_702      /* flags an EK unless EK_BO, EK_KE */
@@ -890,7 +890,7 @@ the 900 series rules are found in the lexer.  */
 <anchor xreflabel="YACC rule #40" xml:id="cll_yacc-40" />sentence_40             :  
 <xref linkend="cll_yacc-50" />  /* bare observative or mo answer */
 <!-- ^^   observative: contrasted with observation evidential, 316; definition, 188 -->
-<indexterm><primary>observative</primary></indexterm>
+<indexterm type="general"><primary>observative</primary></indexterm>
                         |  
 <xref linkend="cll_yacc-80" />
 <xref linkend="cll_yacc-451" />
@@ -1102,8 +1102,8 @@ the 900 series rules are found in the lexer.  */
                            /* indefinite sumti */
 <!-- ^^   indefinite sumti: as implicit quantification, 406; compared to sumti with lo, 399; meaning when multiple in sentence, 398; multiple in sentence, 398 -->
 <!-- ^^   sumti with lo: compared to indefinite sumti, 399 -->
-<indexterm><primary>sumti with lo</primary></indexterm>
-<indexterm><primary>indefinite sumti</primary></indexterm>
+<indexterm type="general"><primary>sumti with lo</primary></indexterm>
+<indexterm type="general"><primary>indefinite sumti</primary></indexterm>
                         |  
 <xref linkend="cll_yacc-300" />
 <xref linkend="cll_yacc-130" />
@@ -1122,9 +1122,9 @@ the 900 series rules are found in the lexer.  */
 <!-- ^^   quantified sumti: different types contrasted for scope for distribution, 399; relative clause scope with, 178 -->
 <!-- ^^   relative clause scope: extending to preceding sumti with vu'o, 182; with quantified relativized sumti, 178 -->
 <!-- ^^   relativized sumti: definition, 169; in relative clauses within relative clauses, 184 -->
-<indexterm><primary>relativized sumti</primary></indexterm>
-<indexterm><primary>relative clause scope</primary></indexterm>
-<indexterm><primary>quantified sumti</primary></indexterm>
+<indexterm type="general"><primary>relativized sumti</primary></indexterm>
+<indexterm type="general"><primary>relative clause scope</primary></indexterm>
+<indexterm type="general"><primary>quantified sumti</primary></indexterm>
                         |  
 <xref linkend="cll_yacc-300" />
 <xref linkend="cll_yacc-97" />
@@ -1180,9 +1180,9 @@ the 900 series rules are found in the lexer.  */
 <!-- ^^   quantified sumti: different types contrasted for scope for distribution, 399; relative clause scope with, 178 -->
 <!-- ^^   relative clause scope: extending to preceding sumti with vu'o, 182; with quantified relativized sumti, 178 -->
 <!-- ^^   relativized sumti: definition, 169; in relative clauses within relative clauses, 184 -->
-<indexterm><primary>relativized sumti</primary></indexterm>
-<indexterm><primary>relative clause scope</primary></indexterm>
-<indexterm><primary>quantified sumti</primary></indexterm>
+<indexterm type="general"><primary>relativized sumti</primary></indexterm>
+<indexterm type="general"><primary>relative clause scope</primary></indexterm>
+<indexterm type="general"><primary>quantified sumti</primary></indexterm>
                         |  
 <xref linkend="cll_yacc-121" />
 <xref linkend="cll_yacc-112" />
@@ -1424,10 +1424,10 @@ the 900 series rules are found in the lexer.  */
 
 /*  This rule supports left-grouping infix expressions and reverse Polish
 <!-- ^^   infix expressions: in operands being used in Polish notation, 439 -->
-<indexterm><primary>infix expressions</primary></indexterm>
+<indexterm type="general"><primary>infix expressions</primary></indexterm>
     expressions. To handle infix monadic, use a null operand; to handle
 <!-- ^^   null operand: for infix operations with too few operands, 450 -->
-<indexterm><primary>null operand</primary></indexterm>
+<indexterm type="general"><primary>null operand</primary></indexterm>
     infix with more than two operands (whatever that means) use an extra
     operator or an array operand.   */
 
@@ -1445,7 +1445,7 @@ the 900 series rules are found in the lexer.  */
 
 /*  Support for right-grouping (short scope) infix expressions with BIhE.  */
 <!-- ^^   infix expressions: in operands being used in Polish notation, 439 -->
-<indexterm><primary>infix expressions</primary></indexterm>
+<indexterm type="general"><primary>infix expressions</primary></indexterm>
 
 <anchor xml:id="y311" />
 <anchor xreflabel="YACC rule #311" xml:id="cll_yacc-311" />MEX_A_311               :  
@@ -1486,10 +1486,10 @@ the 900 series rules are found in the lexer.  */
 /*  Reverse Polish expressions always have exactly two operands.
     To handle one operand, use a null operand;
 <!-- ^^   null operand: for infix operations with too few operands, 450 -->
-<indexterm><primary>null operand</primary></indexterm>
+<indexterm type="general"><primary>null operand</primary></indexterm>
     to handle more than two operands, use a null operator.  */
 <!-- ^^   null operator: for infix operations with too many operands, 451 -->
-<indexterm><primary>null operator</primary></indexterm>
+<indexterm type="general"><primary>null operator</primary></indexterm>
 
 <anchor xml:id="y330" />
 <anchor xreflabel="YACC rule #330" xml:id="cll_yacc-330" />rp_expression_330       :  
@@ -1948,7 +1948,7 @@ the 900 series rules are found in the lexer.  */
 /* It may be seen that any of the ZO/ZOI/LOhU trio of quotation markers
    may contain the powerful metalinguistic erasers.  Since these quotations
 <!-- ^^   metalinguistic erasers: within ungrammatical-Lojban quotation, 477 -->
-<indexterm><primary>metalinguistic erasers</primary></indexterm>
+<indexterm type="general"><primary>metalinguistic erasers</primary></indexterm>
    are not parsed internally, these operators are ignored within the quote.
    To erase a ZO, then, two SI’s are needed after giving a quoted word of
    any type.  ZOI takes four SI’s, with the ENTIRE BODY OF THE QUOTE
@@ -2669,7 +2669,7 @@ the 900 series rules are found in the lexer.  */
 /* The following rules are used only in lexer processing.  They have been
    tested for ambiguity at various levels in the YACC grammar, but are in
 <!-- ^^   YACC grammar, 511 -->
-<indexterm><primary>YACC grammar</primary></indexterm>
+<indexterm type="general"><primary>YACC grammar</primary></indexterm>
    the recursive descent lexer in the current parser.  The lexer inserts
    the lexer tokens before the processed strings, but leaves the original
    tokens.  */
@@ -3059,7 +3059,7 @@ the 900 series rules are found in the lexer.  */
                         ;
 /* specifies actuality/potentiality of the bridi */
 <!-- ^^   actuality: expressing in past/future, 244; Lojban contrasted with English in implying, 243; marking, 491 -->
-<indexterm><primary>actuality</primary></indexterm>
+<indexterm type="general"><primary>actuality</primary></indexterm>
 
 /* puca'a = actually was */
 /* baca'a = actually will be */
@@ -3415,17 +3415,17 @@ the 900 series rules are found in the lexer.  */
 
 /* This terminal gives an interval size in space-time (VEhA), and possibly a
 <!-- ^^   interval size: as context-dependent, 222; meaning as sumti tcita, 233; spatial, 506; time, 507; unspecified, 223; vague, 223 -->
-<indexterm><primary>interval size</primary></indexterm>
+<indexterm type="general"><primary>interval size</primary></indexterm>
    dimensionality of the interval.  The dimensionality may also be used
 <!-- ^^   dimensionality: of walking, 224; order with size in spatial tense intervals, 224; spatial, 506 -->
-<indexterm><primary>dimensionality</primary></indexterm>
+<indexterm type="general"><primary>dimensionality</primary></indexterm>
    with the interval size left unspecified.  When this terminal is used for the
 <!-- ^^   interval size: as context-dependent, 222; meaning as sumti tcita, 233; spatial, 506; time, 507; unspecified, 223; vague, 223 -->
-<indexterm><primary>interval size</primary></indexterm>
+<indexterm type="general"><primary>interval size</primary></indexterm>
    spacetime origin, then barring any overriding VIhA, a VIhA here defines
    the dimensionality of the space-time being discussed.                 */
 <!-- ^^   dimensionality: of walking, 224; order with size in spatial tense intervals, 224; spatial, 506 -->
-<indexterm><primary>dimensionality</primary></indexterm>
+<indexterm type="general"><primary>dimensionality</primary></indexterm>
 
 
 
@@ -3454,17 +3454,17 @@ the 900 series rules are found in the lexer.  */
 /* These may be appended to any defined interval, or may stand in place of
    either time or space tenses.  If no other tense is present, this terminal
 <!-- ^^   space tenses: quick-tour version, 26 -->
-<indexterm><primary>space tenses</primary></indexterm>
+<indexterm type="general"><primary>space tenses</primary></indexterm>
    stands for the time-space interval parameter with an unspecified interval.*/
 
    /* roroi = always and everywhere */
 <!-- ^^   always and everywhere: example, 231 -->
-<indexterm><primary>always and everywhere</primary></indexterm>
+<indexterm type="general"><primary>always and everywhere</primary></indexterm>
    /* roroiku'avi = always here (ku'a = intersection) */
 <!-- ^^   ku'a, 354, 356 -->
-<indexterm><primary>ku'a</primary></indexterm>
+<indexterm type="general"><primary>ku'a</primary></indexterm>
 <!-- ^^   intersection: of sets, 356 -->
-<indexterm><primary>intersection</primary></indexterm>
+<indexterm type="general"><primary>intersection</primary></indexterm>
    /* puroroi = always in the past
    /* paroi = once upon a time (somewhere) */
    /* paroiku'avi = once upon a time here */
@@ -3490,7 +3490,7 @@ the 900 series rules are found in the lexer.  */
 <xref linkend="cll_yacc-595" />, and 
 <xref linkend="cll_yacc-603" /> are metalinguistic erasers.
 <!-- ^^   metalinguistic erasers: within ungrammatical-Lojban quotation, 477 -->
-<indexterm><primary>metalinguistic erasers</primary></indexterm>
+<indexterm type="general"><primary>metalinguistic erasers</primary></indexterm>
 
 <anchor xml:id="y1100" />
 <anchor xreflabel="YACC rule #1100" xml:id="cll_yacc-1100" />token_1100              :  
@@ -7015,7 +7015,7 @@ the 900 series rules are found in the lexer.  */
     <subscript>number</subscript>= bnf-expression</para>
     <para>which means that the grammatical construct “name” is defined by “bnf-expression”. The number cross-references this grammar with the rule numbers in the YACC grammar. The names are the same as those in the YACC grammar, except that subrules are labeled with A, B, C, ... in the YACC grammar and with 1, 2, 3, ... in this grammar. In addition, rule 971 is “simple_tag” in the YACC grammar but “stag” in this grammar, because of its frequent appearance.</para>
 <!-- ^^   YACC grammar, 511 -->
-<indexterm><primary>YACC grammar</primary></indexterm>
+<indexterm type="general"><primary>YACC grammar</primary></indexterm>
     <orderedlist>
       <listitem>
         <para>Names in lower case are grammatical constructs.</para>
@@ -7458,7 +7458,7 @@ the 900 series rules are found in the lexer.  */
         <listitem>
           <para>tanru-unit [BO # selbri-6] | [NAhE #] guhek selbri gik selbri-6 
 <!-- ^^   guhek: definition, 350 -->
-<indexterm><primary>guhek</primary></indexterm>
+<indexterm type="general"><primary>guhek</primary></indexterm>
           <anchor xml:id="b150" />
           <anchor xreflabel="BNF rule #150" xml:id="cll_bnf-150" />
           <xref linkend="cll_yacc-150" /></para>
@@ -7590,7 +7590,7 @@ the 900 series rules are found in the lexer.  */
         <listitem>
           <para>operator-2 | guhek operator-1 gik operator-2 | operator-2 (jek | joik) [stag] BO # operator-1 
 <!-- ^^   guhek: definition, 350 -->
-<indexterm><primary>guhek</primary></indexterm>
+<indexterm type="general"><primary>guhek</primary></indexterm>
           <anchor xml:id="b372" />
           <anchor xreflabel="BNF rule #372" xml:id="cll_bnf-372" />
           <xref linkend="cll_yacc-372" /></para>
@@ -7769,7 +7769,7 @@ the 900 series rules are found in the lexer.  */
       <varlistentry>
         <term>guhek 
 <!-- ^^   guhek: definition, 350 -->
-<indexterm><primary>guhek</primary></indexterm>
+<indexterm type="general"><primary>guhek</primary></indexterm>
         <subscript>808</subscript>=</term>
         <listitem>
           <para>[SE] GUhA [NAI] # 

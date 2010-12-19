@@ -121,4 +121,91 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- turn a string into a lowercase & dashes slug -->
+  <xsl:template name="make_slug">
+    <xsl:param name="input" select="''"/>
+    <!-- This bit below just replaces ' with h-->
+    <xsl:variable name="slug1">
+      <xsl:value-of select="translate( $input, &#x22;&#x27;&#x22;, 'h' )"/>
+    </xsl:variable>
+    <!-- This bit below just deletes " -->
+    <xsl:variable name="slug2">
+      <xsl:value-of select='translate( $slug1, &#x27;&#x22;&#x27;, "" )'/>
+    </xsl:variable>
+    <xsl:variable name="slug3">
+      <xsl:value-of select="translate( $slug2, '@#$%^*()?+/=[]{}!', '' )"/>
+    </xsl:variable>
+    <xsl:variable name="slug4">
+      <xsl:value-of select="normalize-space($slug3)"/>
+    </xsl:variable>
+    <!-- lowercase, and replace space with - -->
+    <xsl:variable name="slug">
+      <xsl:value-of select="translate( $slug4,
+        '&#x20;&#x9;&#xD;&#xA;ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        '----abcdefghijklmnopqrstuvwxyz' )"/>
+    </xsl:variable>
+    <xsl:value-of select="$slug"/>
+  </xsl:template>
+
+  <!-- lojban words -->
+  <xsl:template match="jbophrase[count(str:tokenize(text())) = 1 and ( not(@glossary) or @glossary != 'false')]">
+    <xsl:variable name="wordsnum">
+      <xsl:value-of select="count(str:tokenize(text()))"/>
+    </xsl:variable>
+    <xsl:variable name="slug">
+      <xsl:call-template name="make_slug">
+        <xsl:with-param name="input" select="text()"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <!-- FIXME: the role is currently only used by the chapter2
+         markup stuff, which still needs to be implemented
+    -->
+    <glossterm linkend='jbogloss-{$slug}'>
+      <foreignphrase xml:lang="jbo">
+        <xsl:if test="boolean(@role)">
+          <xsl:attribute name="role">
+            <xsl:value-of select="@role"/>
+          </xsl:attribute>
+        </xsl:if>
+        <indexterm>
+          <xsl:attribute name="type">lojban-words</xsl:attribute>
+          <primary><xsl:value-of select="text()"/></primary>
+        </indexterm>
+        <xsl:value-of select="text()"/>
+      </foreignphrase>
+    </glossterm>
+  </xsl:template>
+
+  <!-- lojban phrases and/or unglossed words -->
+  <xsl:template match="jbophrase[count(str:tokenize(text())) > 1 or @glossary = 'false']">
+    <xsl:variable name="wordsnum">
+      <xsl:value-of select="count(str:tokenize(text()))"/>
+    </xsl:variable>
+    <xsl:variable name="slug">
+      <xsl:call-template name="make_slug">
+        <xsl:with-param name="input" select="text()"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <!-- FIXME: the role is currently only used by the chapter2
+         markup stuff, which still needs to be implemented
+    -->
+    <foreignphrase xml:lang="jbo">
+      <xsl:if test="boolean(@role)">
+        <xsl:attribute name="role">
+          <xsl:value-of select="@role"/>
+        </xsl:attribute>
+      </xsl:if>
+      <indexterm>
+        <xsl:if test="boolean($wordsnum > 1)">
+          <xsl:attribute name="type">lojban-phrases</xsl:attribute>
+        </xsl:if>
+        <xsl:if test="boolean($wordsnum = 1)">
+          <xsl:attribute name="type">lojban-words</xsl:attribute>
+        </xsl:if>
+        <primary><xsl:value-of select="text()"/></primary>
+      </indexterm>
+      <xsl:value-of select="text()"/>
+    </foreignphrase>
+  </xsl:template>
+
 </xsl:stylesheet>
