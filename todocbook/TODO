@@ -7,6 +7,11 @@ Most of the below is intended to be done as needed as you review a
 particular chapter/section.  It looks like more complexity than it
 actually is; you'll get used to it.
 
+    SAY HERE WHAT YOU'VE DONE, including parts you haven't completed
+    (like index work).
+
+Robin Powell: 5.1, 5.2
+
  ------
 
 Ignore Chapter 2 for now.
@@ -61,6 +66,35 @@ based on the current state of the docs.
 
  ------
 
+With the caveat that indexterm entries for examples should look
+exactly like this:
+
+<indexterm><primary>[item]</primary><secondary>example</secondary></indexterm>
+
+, do feel free to add index entries where they seem useful.  It's
+unlikely that we can ever have a too-thorough index (and it's a lot
+easier to cut the thing down than to grow it anyways).
+
+ ------
+
+Feel free to do visual cleanup *of the source*; don't worry about
+how crappy the *output* looks, we're only doing data structures
+right now.  In particular, there are a lot of elements with no space
+after their terminators; it doesn't really matter, but it's
+annoying.
+
+ ------
+
+If you see a <quote>...</quote> around Lojban text, replace it with
+<jbophrase>...</jbophrase>.  There are lots of these.
+
+ ------
+
+If an example/interlinear-gloss consists solely of English, replace
+the <interlinear-gloss>...</interlinear-gloss> with <para>...</para>
+
+ ------
+
 Deal with index entries already in the text, like these:
 
     <example role="interlinear-gloss-example" xml:id="random-id-UMjE">
@@ -74,13 +108,19 @@ Deal with index entries already in the text, like these:
 <!-- ^^   schooner: example, 83 -->
 <indexterm><primary>schooner</primary></indexterm>
 
-There are three steps:
+There are several steps:
 
 1.  Add a <secondary> tag as appropriate.  In this case, "example".
 
 2.  Move it to somewhere that seems aesthetically pleasing, is
 accepted by docbook (try running "make" to check), and is very near
 the text in question.  For examples, this is just after the title.
+Just inside a <para> (move the actual text after the <indexterm>) is
+often a good choice.
+  
+  YOU MAY NEED A COPY OF THE RED BOOK to do this part effectively,
+  because you should be tagging the same bits of text as it is
+  (along with others if you wish).
 
 3.  Check, and possibly remove, other instances of the same index
 word.
@@ -111,40 +151,25 @@ Please use *exactly* that
 format for examples, as we might want to automatically munge it
 later.
 
- ------
+4.  Make sure that all the *other* options listed for the keyword
+exist somewhere.  For example, given:
 
-With the caveat that indexterm entries for examples should look
-exactly like this:
+  <!-- ^^   tanru grouping: complex, 87; effect of tanru inversion on, 96; guheks compared with jeks, 350; three-part, 85; with bo, 87; with ke, 88; with ke and bo, 88 -->
 
-<indexterm><primary>[item]</primary><secondary>example</secondary></indexterm>
+that all 7 of those entries actually have referents somewhere in the text.
 
-, do feel free to add index entries where they seem useful.  It's
-unlikely that we can ever have a too-thorough index (and it's a lot
-easier to cut the thing down than to grow it anyways).
-
- ------
-
-Feel free to do visual cleanup *of the source*; don't worry about
-how crappy the *output* looks, we're only doing data structures
-right now.  In particular, there are a lot of elements with no space
-after their terminators; it doesn't really matter, but it's
-annoying.
-
- ------
-
-If you see a <quote>...</quote> around Lojban text, replace it with
-<jbophrase>...</jbophrase>.  There are lots of these.
-
- ------
-
-If an example/interlinear-gloss consists solely of English, replace
-the <interlinear-gloss>...</interlinear-gloss> with <para>...</para>
+  YOU MAY NEED A COPY OF THE RED BOOK to do this part effectively,
+  because you should be tagging the same bits of text as it is
+  (along with others if you wish).
 
  ------
 
 NON-CHATPER work: Add index entries based on TODO-index.  Pick a
 point in the middle somewhere, please, and *especially* for this
 work, check in often.
+
+You will almost certainly need a physical copy of the red book to do
+this effectively.
 
 There are two kinds of entries in that file:
 
