@@ -34,11 +34,11 @@ columns are so spaced out).
 
 Fix IDs/tags.  A command like the following should do the trick:
 
-  sed -i 's/"cll_chapter5"/"selbri"/g' [0-9]*.xml
+  sed -i 's/"cll_chapter5"/"chapter-selbri"/g' [0-9]*.xml
 
 BUT FIRST: check that it doesn't already exist:
 
-  grep '"selbri"' [0-9]*.xml
+  grep '"chapter-selbri"' [0-9]*.xml
 
 because duplicates would really suck.
 
@@ -51,6 +51,10 @@ so on.  If multi-word, please make a slug (see
 http://en.wikipedia.org/wiki/Slug_%28web_publishing%29 ); we are
 using - based slugs rather than _ based, so drop all special
 characters, lowercase, replace space with -.
+
+Make sure that the ids for chapters have "chapter-" at the start,
+"section-" for the sections, and "example-" for the examples; we
+might need them for auto-processing.
 
 Do this for all sections.  Feel free to do it for examples too if an
 example has an obvious title, but it's much less important there, so

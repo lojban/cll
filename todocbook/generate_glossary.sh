@@ -16,7 +16,7 @@ IFS='
 '
 initial=''
 indiv=''
-for line in $(xsltproc --path . --novalid generate_glossary.xsl cll_preglossary.xml | grep -P '\t' | sort | uniq)
+for line in $(xsltproc --nonet --path . --novalid generate_glossary.xsl cll_preglossary.xml | grep -P '\t' | sort | uniq)
 do
   slug=$(echo $line | awk -F'\t' '{ print $1 }')
   word=$(echo $line | awk -F'\t' '{ print $2 }')

@@ -10,9 +10,15 @@ echo '<?xml version="1.0"?>
 
 ' >cll.xml
 
-for dir in $(ls .. | grep -P '^[0-9]+/?$' | sort -n | sed -e 's;/*$;;' -e 's;.*/;;')
+if [ "$1" == "-t" ]
+then
+  echo "Entering testing mode: will replace all external xrefs in each chapter."
+fi
+<chapter xml:id="selbri">
+
+for file in $@
 do
-  cat $dir.xml >>cll.xml
+  cat $file >>cll.xml
 done
 
 cp cll.xml cll_preglossary.xml
