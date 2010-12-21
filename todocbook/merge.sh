@@ -14,7 +14,8 @@ if [ "$1" == "-t" ]
 then
   echo "Entering testing mode: will replace all external xrefs in each chapter."
 fi
-<chapter xml:id="selbri">
+#<chapter xml:id="chapter-selbri">
+#<section xml:id="section-brivla">
 
 for file in $@
 do
