@@ -10,8 +10,11 @@ echo '<?xml version="1.0"?>
 
 ' >cll.xml
 
+testing=""
 if [ "$1" == "-t" ]
 then
+  testing=1
+  shift
   echo "Entering testing mode: will replace all external xrefs in each chapter."
 fi
 #<chapter xml:id="chapter-selbri">
@@ -19,7 +22,20 @@ fi
 
 for file in $@
 do
-  cat $file >>cll.xml
+  if [ "$testing" ]
+  then
+    # This breaks working sections/chapters as well as broken ones; oh well.
+
+    chaptertag=$(grep '<chapter ' $file | head -n 1 | sed 's/.*xml:id="//' | sed 's/".*//')
+    sectiontag=$(grep '<section ' $file | head -n 1 | sed 's/.*xml:id="//' | sed 's/".*//')
+
+    cat $file | \
+      sed "s/<xref linkend=\"chapter-[^\"]*\"/<xref linkend=\"$chaptertag\"/g" | \
+      sed "s/<xref linkend=\"cll_chapter[^\"]*\"/<xref linkend=\"$chaptertag\"/g" | \
+      sed "s/<xref linkend=\"section-[^\"]*\"/<xref linkend=\"$sectiontag\"/g" >>cll.xml
+  else
+    cat $file >>cll.xml
+  fi
 done
 
 cp cll.xml cll_preglossary.xml
