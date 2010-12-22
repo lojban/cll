@@ -16,8 +16,8 @@
     <indexterm type="general">
       <primary>logical language</primary>
     </indexterm>
-    <quote>sentence</quote>(sometimes called a 
-    <quote>statement</quote>or 
+    <quote>sentence</quote> (sometimes called a 
+    <quote>statement</quote> or 
     <quote>proposition</quote>), which asserts a truth or falsehood, and a small set of 
     <quote>truth functions</quote>, which combine two sentences to create a new sentence. The truth functions have the special characteristic that the truth value (that is, the truth or falsehood) of the results depends only on the truth value of the component sentences. For example,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-mJ6y">
@@ -29,25 +29,25 @@
       </interlinear-gloss>
     </example>
     <para>is true if 
-    <quote>John is a man</quote>is true, or if 
-    <quote>James is a woman</quote>is true. If we know whether John is a man, and we know whether James is a woman, we know whether 
-    <quote>John is a man or James is a woman</quote>is true, provided we know the meaning of 
+    <quote>John is a man</quote> is true, or if 
+    <quote>James is a woman</quote> is true. If we know whether John is a man, and we know whether James is a woman, we know whether 
+    <quote>John is a man or James is a woman</quote> is true, provided we know the meaning of 
     <quote>or</quote>. Here 
-    <quote>John is a man</quote>and 
-    <quote>James is a woman</quote>are the component sentences.</para>
+    <quote>John is a man</quote> and 
+    <quote>James is a woman</quote> are the component sentences.</para>
     <para>We will use the phrase 
-    <quote>negating a sentence</quote>to mean changing its truth value. An English sentence may always be negated by prefixing 
+    <quote>negating a sentence</quote> to mean changing its truth value. An English sentence may always be negated by prefixing 
     <!-- ^^   negating a sentence: and truth value, 333 -->
     <indexterm type="general">
       <primary>negating a sentence</primary>
     </indexterm>
     <quote>It is false that ...</quote>, or more idiomatically by inserting 
-    <quote>not</quote>at the right point, generally before the verb. 
-    <quote>James is not a woman</quote>is the negation of 
+    <quote>not</quote> at the right point, generally before the verb. 
+    <quote>James is not a woman</quote> is the negation of 
     <quote>James is a woman</quote>, and vice versa. Recent slang can also negate a sentence by following it with the exclamation 
     <quote>Not!</quote></para>
     <para>Words like 
-    <quote>or</quote>are called 
+    <quote>or</quote> are called 
     <quote>logical connectives</quote>, and Lojban has many of them, as befits a logical language. This chapter is mostly concerned with explaining the forms and uses of the Lojban logical connectives. There are a number of other logical connectives in English such as 
     <!-- ^^   logical language: truth functions, 333 -->
     <indexterm type="general">
@@ -103,10 +103,10 @@
     </informaltable>
     <para>This table means that if the first sentence stated is true, and the second sentence stated is true, then the result of the truth function is also true. The same is true for every other possible combination of truth values except the one where both the first and the second sentences are false, in which case the truth value of the result is also false.</para>
     <para>Suppose that 
-    <quote>John is a man</quote>is true (and 
-    <quote>John is not a man</quote>is false), and that 
-    <quote>James is a woman</quote>is false (and 
-    <quote>James is not a woman</quote>is true). Then the truth table tells us that</para>
+    <quote>John is a man</quote> is true (and 
+    <quote>John is not a man</quote> is false), and that 
+    <quote>James is a woman</quote> is false (and 
+    <quote>James is not a woman</quote> is true). Then the truth table tells us that</para>
     <!-- ^^   truth table: explanation, 333 -->
     <indexterm type="general">
       <primary>truth table</primary>
@@ -122,13 +122,13 @@
 <quote>John is not a man, or James is a woman</quote>             (false, false)  is false.
 </programlisting>
     <para>Note that the kind of 
-    <quote>or</quote>used in this example can also be expressed (in formal English) with 
+    <quote>or</quote> used in this example can also be expressed (in formal English) with 
     <quote>and/or</quote>. There is a different truth table for the kind of 
     <!-- ^^   truth table: explanation, 333 -->
     <indexterm type="general">
       <primary>truth table</primary>
     </indexterm>
-    <quote>or</quote>that means 
+    <quote>or</quote> that means 
     <quote>either ... or ... but not both</quote>.</para>
     <para>To save space, we will write truth tables in a shorter format henceforth. Let the letters T and F stand for True and False. The rows will always be given in the order shown above: TT, TF, FT, FF for the two sentences. Then it is only necessary to give the four letters from the result column, which can be written TTTF, as can be seen by reading down the third column of the table above. So TTTF is the abbreviated truth table for the 
     <!-- ^^   truth tables: abbreviated format, 334; for 4 fundamental Lojban truth functions, 335; list of 16 in abbreviated form, 334; notation convention, 334 -->
@@ -139,9 +139,9 @@
     <indexterm type="general">
       <primary>truth table</primary>
     </indexterm>
-    <quote>or</quote>truth function. Here are the 16 possible truth functions, with an English version of what it means to assert that each function is, in fact, true ( 
-    <quote>first</quote>refers to the first sentence, and 
-    <quote>second</quote>to the second sentence):</para>
+    <quote>or</quote> truth function. Here are the 16 possible truth functions, with an English version of what it means to assert that each function is, in fact, true ( 
+    <quote>first</quote> refers to the first sentence, and 
+    <quote>second</quote> to the second sentence):</para>
     <programlisting xml:space="preserve">
     TTTT    (always true)
     TTTF    first is true and/or second is true.
@@ -258,13 +258,13 @@
     <quote>John went to the door</quote>, a full sentence, or by one of a variety of other English grammatical constructions. Lojban cannot tolerate such grammatical looseness.</para>
     <para>Instead, there are a total of five different selma'o used for logical connection: A, GA, GIhA, GUhA, and JA. Each of these includes four cmavo, one based on each of the four vowels, which is always the last vowel in the cmavo. In selma'o A, the vowel is the entire cmavo.</para>
     <para>Thus, in selma'o A, the cmavo for the function 
-    <phrase role="logical-vowel">A</phrase>is 
+    <phrase role="logical-vowel">A</phrase> is 
     <quote>a</quote>. (Do not confuse A, which is a selma'o, with 
     <phrase role="logical-vowel">A</phrase>, which is a truth function, or 
     <quote>a</quote>, which is a cmavo.) Likewise, the cmavo for 
-    <phrase role="logical-vowel">E</phrase>in selma'o GIhA is 
+    <phrase role="logical-vowel">E</phrase> in selma'o GIhA is 
     <quote>gi'e</quote>, and the cmavo for 
-    <phrase role="logical-vowel">U</phrase>in selma'o GA is 
+    <phrase role="logical-vowel">U</phrase> in selma'o GA is 
     <quote>gu</quote>. This systematic regularity makes the cmavo easier to learn.</para>
     <para>Obviously, four cmavo are not enough to express the 14 truth functions explained in 
     <xref linkend="cll_chapter14-section1" />. Therefore, compound cmavo must be used. These compound cmavo follow a systematic pattern: each has one cmavo from the five logical connection selma'o at its heart, and may also contain one or more of the auxiliary cmavo 
@@ -272,20 +272,20 @@
     <quote>na</quote>, or 
     <quote>nai</quote>. Which auxiliaries are used with which logical connection cmavo, and with what grammar and meaning, will be explained in the following sections. The uses of each of these auxiliary cmavo relates to its other uses in other parts of Lojban grammar.</para>
     <para>For convenience, each of the types of compound cmavo used for logical connection is designated by a Lojban name. The name is derived by changing the final 
-    <quote>-A</quote>of the selma'o name to 
+    <quote>-A</quote> of the selma'o name to 
     <quote>-ek</quote>; the reasons for using 
-    <quote>-ek</quote>are buried deep in the history of the Loglan Project. Thus, compound cmavo based on selma'o A are known as eks, and those based on selma'o JA are known as jeks. (When writing in English, it is conventional to use 
-    <quote>eks</quote>as the plural of 
+    <quote>-ek</quote> are buried deep in the history of the Loglan Project. Thus, compound cmavo based on selma'o A are known as eks, and those based on selma'o JA are known as jeks. (When writing in English, it is conventional to use 
+    <quote>eks</quote> as the plural of 
     <!-- ^^   plural: Lojban contrasted with English in necessity of marking, 120; Lojban equivalent of, 443; meaning of le with, 123 -->
     <indexterm type="general">
       <primary>plural</primary>
     </indexterm>
     <quote>ek</quote>.) When the term 
-    <quote>logical connective</quote>is used in this chapter, it refers to one or more of these kinds of compound cmavo.</para>
+    <quote>logical connective</quote> is used in this chapter, it refers to one or more of these kinds of compound cmavo.</para>
     <para>Why does the title of this section refer to 
-    <quote>six types</quote>when there are only five selma'o? A jek may be preceded by 
+    <quote>six types</quote> when there are only five selma'o? A jek may be preceded by 
     <quote>.i</quote>, the usual Lojban cmavo for connecting two sentences. The compound produced by 
-    <quote>.i</quote>followed by a jek is known as an ijek. It is useful to think of ijeks as a sixth kind of logical connective, parallel to eks, jeks, geks, giheks, and guheks.</para>
+    <quote>.i</quote> followed by a jek is known as an ijek. It is useful to think of ijeks as a sixth kind of logical connective, parallel to eks, jeks, geks, giheks, and guheks.</para>
     <!-- ^^   guheks: connecting operators, 361; syntax of, 350 -->
     <indexterm type="general">
       <primary>guheks</primary>
@@ -307,7 +307,7 @@
   <section xml:id="cll_chapter14-section4">
     <title>Logical connection of bridi</title>
     <para>Now we are ready to express 
-    <xref linkend="example-random-id-mJ6y" />in Lojban! The kind of logical connective which is placed between two Lojban bridi to connect them logically is an ijek:</para>
+    <xref linkend="example-random-id-mJ6y" /> in Lojban! The kind of logical connective which is placed between two Lojban bridi to connect them logically is an ijek:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-h2hN">
       <title>
         <anchor xml:id="c14e4d1" />
@@ -318,11 +318,11 @@
       </interlinear-gloss>
     </example>
     <para>Here we have two separate Lojban bridi, 
-    <quote>la djan. nanmu</quote>and 
+    <quote>la djan. nanmu</quote> and 
     <quote>la djeimyz. ninmu</quote>. These bridi are connected by 
     <quote>.ija</quote>, the ijek for the truth function 
     <phrase role="logical-vowel">A</phrase>. The 
-    <quote>.i</quote>portion of the ijek tells us that we are dealing with separate sentences here. Similarly, we can now say:</para>
+    <quote>.i</quote> portion of the ijek tells us that we are dealing with separate sentences here. Similarly, we can now say:</para>
     <example xml:id="example-random-id-qGiu" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c14e4d2" />
@@ -356,17 +356,17 @@
       <primary>truth tables</primary>
     </indexterm>
     <xref linkend="cll_chapter14-section2" />, we need to know how to negate the two bridi which represent the component sentences. We could negate them directly by inserting 
-    <quote>na</quote>before the selbri, but Lojban also allows us to place the negation within the connective itself.</para>
+    <quote>na</quote> before the selbri, but Lojban also allows us to place the negation within the connective itself.</para>
     <para>To negate the first or left-hand bridi, prefix 
-    <quote>na</quote>to the JA cmavo but after the 
+    <quote>na</quote> to the JA cmavo but after the 
     <quote>.i</quote>. To negate the second or right-hand bridi, suffix 
-    <quote>-nai</quote>to the JA cmavo. In either case, the negating word is placed on the side of the connective that is closest to the bridi being negated.</para>
+    <quote>-nai</quote> to the JA cmavo. In either case, the negating word is placed on the side of the connective that is closest to the bridi being negated.</para>
     <para>So to express the truth table FTTF, which requires 
     <!-- ^^   truth table: explanation, 333 -->
     <indexterm type="general">
       <primary>truth table</primary>
     </indexterm>
-    <phrase role="logical-vowel">O</phrase>with either of the two bridi negated (not both), we can say either:</para>
+    <phrase role="logical-vowel">O</phrase> with either of the two bridi negated (not both), we can say either:</para>
     <example xml:id="example-random-id-qgKB" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c14e4d5" />
@@ -386,8 +386,8 @@
       </interlinear-gloss>
     </example>
     <para>The meaning of both 
-    <xref linkend="example-random-id-qgKB" />and 
-    <xref linkend="example-random-id-qgLH" />is the same as that of:</para>
+    <xref linkend="example-random-id-qgKB" /> and 
+    <xref linkend="example-random-id-qgLH" /> is the same as that of:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-1Kp9">
       <title>
         <anchor xml:id="c14e4d7" />
@@ -408,17 +408,17 @@
       </interlinear-gloss>
     </example>
     <para>How's that again? Are those two English sentences in 
-    <xref linkend="example-random-id-FXSC" />really equivalent? In English, no. The Lojban TTFT truth function can be glossed 
+    <xref linkend="example-random-id-FXSC" /> really equivalent? In English, no. The Lojban TTFT truth function can be glossed 
     <quote>A if B</quote>, but the 
-    <quote>if</quote>does not quite have its English sense. 
-    <xref linkend="example-random-id-FXSC" />is true so long as John is a man, even if James is not a woman; likewise, it is true just because James is not a woman, regardless of John's gender. This kind of 
-    <quote>if-then</quote>is technically known as a 
+    <quote>if</quote> does not quite have its English sense. 
+    <xref linkend="example-random-id-FXSC" /> is true so long as John is a man, even if James is not a woman; likewise, it is true just because James is not a woman, regardless of John's gender. This kind of 
+    <quote>if-then</quote> is technically known as a 
     <quote>material conditional</quote>.</para>
     <para>Since James is not a woman (by our assertions in 
     <xref linkend="cll_chapter14-section1" />), the English sentence 
-    <quote>John is a man if James is a woman</quote>seems to be neither true nor false, since it assumes something which is not true. It turns out to be most convenient to treat this 
-    <quote>if</quote>as TTFT, which on investigation means that 
-    <xref linkend="example-random-id-FXSC" />is true. 
+    <quote>John is a man if James is a woman</quote> seems to be neither true nor false, since it assumes something which is not true. It turns out to be most convenient to treat this 
+    <quote>if</quote> as TTFT, which on investigation means that 
+    <xref linkend="example-random-id-FXSC" /> is true. 
     <xref linkend="example-random-id-EdY5" />, however, is equally true:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-EdY5">
       <title>
@@ -434,17 +434,17 @@
     <indexterm type="general">
       <primary>principle of consistency</primary>
     </indexterm>
-    <quote>If a false statement is true, any statement follows from it.</quote>All uses of English 
+    <quote>If a false statement is true, any statement follows from it.</quote> All uses of English 
     <!-- ^^   false statement: implications of, 337 -->
     <indexterm type="general">
       <primary>false statement</primary>
     </indexterm>
-    <quote>if</quote>must be considered very carefully when translating into Lojban to see if they really fit this Lojban mold.</para>
+    <quote>if</quote> must be considered very carefully when translating into Lojban to see if they really fit this Lojban mold.</para>
     <para>
     <xref linkend="example-random-id-9CCS" />, which uses the TFTT truth function, is subject to the same rules: the stated gloss of TFTT as 
-    <quote>only if</quote>works naturally only when the right-hand bridi is false; if it is true, the left-hand bridi may be either true or false. The last gloss of 
-    <xref linkend="example-random-id-9CCS" />illustrates the use of 
-    <quote>if ... then</quote>as a more natural substitute for 
+    <quote>only if</quote> works naturally only when the right-hand bridi is false; if it is true, the left-hand bridi may be either true or false. The last gloss of 
+    <xref linkend="example-random-id-9CCS" /> illustrates the use of 
+    <quote>if ... then</quote> as a more natural substitute for 
     <!-- ^^   if ... then: compared with only if, 338; logical connectives contrasted with other translations, 339 -->
     <indexterm type="general">
       <primary>if ... then</primary>
@@ -462,8 +462,8 @@
       </interlinear-gloss>
     </example>
     <para>The following example illustrates the use of 
-    <quote>se</quote>to, in effect, exchange the two sentences. The normal use of 
-    <quote>se</quote>is to (in effect) transpose places of a bridi, as explained in 
+    <quote>se</quote> to, in effect, exchange the two sentences. The normal use of 
+    <quote>se</quote> is to (in effect) transpose places of a bridi, as explained in 
     <xref linkend="chapter-selbri" />.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-z43X">
       <title>
@@ -475,9 +475,9 @@
       </interlinear-gloss>
     </example>
     <para>If both 
-    <quote>na</quote>and 
-    <quote>se</quote>are present, which is legal but never necessary, 
-    <quote>na</quote>would come before 
+    <quote>na</quote> and 
+    <quote>se</quote> are present, which is legal but never necessary, 
+    <quote>na</quote> would come before 
     <quote>se</quote>.</para>
     <para>The full syntax of ijeks, therefore, is:</para>
     <programlisting xml:space="preserve">
@@ -496,15 +496,15 @@
       <primary>bridi connection</primary>
     </indexterm>
     <para>Many concepts in Lojban are expressible in two different ways, generally referred to as 
-    <quote>afterthought</quote>and 
+    <quote>afterthought</quote> and 
     <quote>forethought</quote>. 
-    <xref linkend="cll_chapter14-section4" />discussed what is called 
+    <xref linkend="cll_chapter14-section4" /> discussed what is called 
     <quote>afterthought bridi logical connection</quote>. The word 
     <!-- ^^   bridi logical connection: compared with sumti logical connections, 340 -->
     <indexterm type="general">
       <primary>bridi logical connection</primary>
     </indexterm>
-    <quote>afterthought</quote>is used because the connective cmavo and the second bridi were added, as it were, afterwards and without changing the form of the first bridi. This form might be used by someone who makes a statement and then wishes to add or qualify that statement after it has been completed. Thus,</para>
+    <quote>afterthought</quote> is used because the connective cmavo and the second bridi were added, as it were, afterwards and without changing the form of the first bridi. This form might be used by someone who makes a statement and then wishes to add or qualify that statement after it has been completed. Thus,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-dp8V">
       <title>
         <anchor xml:id="c14e5d1" />
@@ -543,19 +543,19 @@
       </interlinear-gloss>
     </example>
     <para>
-    <quote>ga</quote>is the cmavo which represents the 
-    <phrase role="logical-vowel">A</phrase>truth function in selma'o GA. The word 
-    <quote>gi</quote>does not belong to GA at all, but constitutes its own selma'o: it serves only to separate the two bridi without having any content of its own. The English translation of 
-    <quote>ga ... gi</quote>is 
+    <quote>ga</quote> is the cmavo which represents the 
+    <phrase role="logical-vowel">A</phrase> truth function in selma'o GA. The word 
+    <quote>gi</quote> does not belong to GA at all, but constitutes its own selma'o: it serves only to separate the two bridi without having any content of its own. The English translation of 
+    <quote>ga ... gi</quote> is 
     <quote>either ... or</quote>, but in the English form the truth function is specified both by the word 
-    <quote>either</quote>and by the word 
+    <quote>either</quote> and by the word 
     <quote>or</quote>: not so in Lojban.</para>
     <para>Even though two bridi are being connected, geks and giks do not have any 
     <!-- ^^   giks: syntax of, 340 -->
     <indexterm type="general">
       <primary>giks</primary>
     </indexterm>
-    <quote>.i</quote>in them. The forethought construct binds up the two bridi into a single sentence as far as the grammar is concerned.</para>
+    <quote>.i</quote> in them. The forethought construct binds up the two bridi into a single sentence as far as the grammar is concerned.</para>
     <para>Some more examples of forethought bridi connection are:</para>
     <!-- ^^   forethought bridi connection: as grammatically one sentence, 339 -->
     <indexterm type="general">
@@ -588,9 +588,9 @@
       </interlinear-gloss>
     </example>
     <para>It is worth emphasizing that 
-    <xref linkend="example-random-id-qgMN" />does not assert that James is (or is not) a woman. The 
-    <quote>gu</quote>which indicates that 
-    <quote>la djeimyz. ninmu</quote>may be true or false is unfortunately rather remote from the bridi thus affected.</para>
+    <xref linkend="example-random-id-qgMN" /> does not assert that James is (or is not) a woman. The 
+    <quote>gu</quote> which indicates that 
+    <quote>la djeimyz. ninmu</quote> may be true or false is unfortunately rather remote from the bridi thus affected.</para>
     <para>Perhaps the most important of the truth functions commonly expressed in forethought is TFTT, which can be paraphrased as 
     <quote>if ... then ...</quote>:</para>
     <!-- ^^   if ... then: compared with only if, 338; logical connectives contrasted with other translations, 339 -->
@@ -608,27 +608,27 @@
       </interlinear-gloss>
     </example>
     <para>Note the placement of the 
-    <quote>nai</quote>in 
+    <quote>nai</quote> in 
     <xref linkend="example-random-id-Xcg1" />. When added to afterthought selma'o such as JA, a following 
-    <quote>nai</quote>negates the second bridi, to which it is adjacent. Since GA cmavo precede the first bridi, a following 
-    <quote>nai</quote>negates the first bridi instead.</para>
+    <quote>nai</quote> negates the second bridi, to which it is adjacent. Since GA cmavo precede the first bridi, a following 
+    <quote>nai</quote> negates the first bridi instead.</para>
     <para>Why does English insist on forethought in the translation of 
     <xref linkend="example-random-id-Xcg1" />? Possibly because it would be confusing to seemingly assert a sentence and then make it conditional (which, as the Lojban form shows, involves a negation). Truth functions which involve negating the first sentence may be confusing, even to the Lojbanic understanding, when expressed using afterthought.</para>
     <para>It must be reiterated here that not every use of English 
-    <quote>if ... then</quote>is properly translated by 
+    <quote>if ... then</quote> is properly translated by 
     <!-- ^^   if ... then: compared with only if, 338; logical connectives contrasted with other translations, 339 -->
     <indexterm type="general">
       <primary>if ... then</primary>
     </indexterm>
-    <quote>.inaja</quote>or 
+    <quote>.inaja</quote> or 
     <quote>ganai ... gi</quote>; anything with implications of time needs a somewhat different Lojban translation, which will be discussed in 
     <xref linkend="cll_chapter14-section18" />. Causal sentences like 
-    <quote>If you feed the pig, then it will grow</quote>are not logical connectives of any type, but rather need a translation using 
+    <quote>If you feed the pig, then it will grow</quote> are not logical connectives of any type, but rather need a translation using 
     <!-- ^^   feed: example, 288 -->
     <indexterm type="general">
       <primary>feed</primary>
     </indexterm>
-    <quote>rinka</quote>as the selbri joining two event abstractions, thus:</para>
+    <quote>rinka</quote> as the selbri joining two event abstractions, thus:</para>
     <!-- ^^   event abstractions, 256 -->
     <indexterm type="general">
       <primary>event abstractions</primary>
@@ -645,8 +645,8 @@
     <para>Causality is discussed in far more detail in 
     <xref linkend="cll_chapter9" />.</para>
     <para>
-    <xref linkend="example-random-id-I2jU" />and 
-    <xref linkend="example-random-id-Tiz6" />illustrates a truth function, FTTF, which needs to negate either the first or the second bridi. We already understand how to negate the first bridi:</para>
+    <xref linkend="example-random-id-I2jU" /> and 
+    <xref linkend="example-random-id-Tiz6" /> illustrates a truth function, FTTF, which needs to negate either the first or the second bridi. We already understand how to negate the first bridi:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-I2jU">
       <title>
         <anchor xml:id="c14e5d8" />
@@ -658,7 +658,7 @@
       </interlinear-gloss>
     </example>
     <para>How can the second bridi be negated? By adding 
-    <quote>-nai</quote>to the 
+    <quote>-nai</quote> to the 
     <quote>gi</quote>.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Tiz6">
       <title>
@@ -671,12 +671,12 @@
       </interlinear-gloss>
     </example>
     <para>A compound cmavo based on 
-    <quote>gi</quote>is called a gik; the only giks are 
+    <quote>gi</quote> is called a gik; the only giks are 
     <!-- ^^   giks: syntax of, 340 -->
     <indexterm type="general">
       <primary>giks</primary>
     </indexterm>
-    <quote>gi</quote>itself and 
+    <quote>gi</quote> itself and 
     <quote>ginai</quote>.</para>
     <para>Further examples:</para>
     <example xml:id="example-random-id-qgmv" role="interlinear-gloss-example">
@@ -745,7 +745,7 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-JTIm" />means exactly the same thing as 
+    <xref linkend="example-random-id-JTIm" /> means exactly the same thing as 
     <xref linkend="example-random-id-Ecnq" />: one may be rigorously transformed into the other without any change of logical meaning. This rule is true in general for every different kind of logical connection in Lojban; all of them, with one exception (see 
     <xref linkend="cll_chapter14-section12" />), can always be transformed into a logical connection between sentences that expresses the same truth function.</para>
     <para>The afterthought logical connectives between sumti are eks, which contain a connective cmavo of selma'o A. If ijeks were used in 
@@ -772,7 +772,7 @@
       </interlinear-gloss>
     </example>
     <para>The second line of 
-    <xref linkend="example-random-id-7KHA" />is highly stilted English, but the first line (of which it is a literal translation) is excellent Lojban.</para>
+    <xref linkend="example-random-id-7KHA" /> is highly stilted English, but the first line (of which it is a literal translation) is excellent Lojban.</para>
     <para>What about forethought sumti connection? As is the case for bridi connection, geks are appropriate. They are not the only selma'o of forethought logical-connectives, but are the most commonly used ones.</para>
     <!-- ^^   sumti connection: afterthought, 340; forethought, 341 -->
     <indexterm type="general">
@@ -796,8 +796,8 @@
       </interlinear-gloss>
     </example>
     <para>Of course, eks include all the same patterns of compound cmavo that ijeks do. When 
-    <quote>na</quote>or 
-    <quote>se</quote>is part of an ek, a special writing convention is invoked, as in the following example:</para>
+    <quote>na</quote> or 
+    <quote>se</quote> is part of an ek, a special writing convention is invoked, as in the following example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-caoY">
       <title>
         <anchor xml:id="c14e6d6" />
@@ -810,8 +810,8 @@
     </example>
     <para>Note the period in 
     <quote>na.a</quote>. The cmavo of A begin with vowels, and therefore must always be preceded by a pause. It is conventional to write all connective compounds as single words (with no spaces), but this pause must still be marked in writing as in speech; otherwise, the 
-    <quote>na</quote>and 
-    <quote>a</quote>would tend to run together.</para>
+    <quote>na</quote> and 
+    <quote>a</quote> would tend to run together.</para>
   </section>
   <section xml:id="cll_chapter14-section7">
     <title>More than two propositions</title>
@@ -821,7 +821,7 @@
     <phrase role="logical-vowel">E</phrase>, 
     <phrase role="logical-vowel">O</phrase>, and 
     <phrase role="logical-vowel">U</phrase>, all but 
-    <phrase role="logical-vowel">O</phrase>have the same truth values no matter how their component sentences are associated in pairs. Therefore,</para>
+    <phrase role="logical-vowel">O</phrase> have the same truth values no matter how their component sentences are associated in pairs. Therefore,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-9tHr">
       <title>
         <anchor xml:id="c14e7d1" />
@@ -860,15 +860,15 @@
       </interlinear-gloss>
     </example>
     <para>shows that 
-    <xref linkend="example-random-id-3zE1" />does not mean that either I am all three of these things or none of them; instead, an accurate translation would be:</para>
+    <xref linkend="example-random-id-3zE1" /> does not mean that either I am all three of these things or none of them; instead, an accurate translation would be:</para>
     <programlisting xml:space="preserve">
        Of the three properties - German-ness, wealth, and manhood - I possess either exactly one or else all three.
 </programlisting>
     <para>Because of the counterintuitiveness of this outcome, it is safest to avoid 
-    <phrase role="logical-vowel">O</phrase>with more than two sentences. Likewise, the connectives which involve negation also have unexpected truth values when used with more than two sentences.</para>
+    <phrase role="logical-vowel">O</phrase> with more than two sentences. Likewise, the connectives which involve negation also have unexpected truth values when used with more than two sentences.</para>
     <para>In fact, no combination of logical connectives can produce the 
-    <quote>all or none</quote>interpretation intended (but not achieved) by 
-    <xref linkend="example-random-id-3zE1" />without repeating one of the bridi. See 
+    <quote>all or none</quote> interpretation intended (but not achieved) by 
+    <xref linkend="example-random-id-3zE1" /> without repeating one of the bridi. See 
     <xref linkend="example-random-id-KyHw" />.</para>
     <para>There is an additional difficulty with the use of more than two sentences. What is the meaning of:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-mLo1">
@@ -899,7 +899,7 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-dPcI" />is the correct translation of 
+    <xref linkend="example-random-id-dPcI" /> is the correct translation of 
     <xref linkend="example-random-id-mLo1" />. The reason is that Lojban logical connectives pair off from the left, like many constructs in the language. This rule, called the left-grouping rule, is easy to forget, especially when intuition pulls the other way. Forethought connectives are not subject to this problem:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-487z">
       <title>
@@ -928,11 +928,11 @@
   <section xml:id="cll_chapter14-section8">
     <title>Grouping of afterthought connectives</title>
     <para>There are several ways in Lojban to render 
-    <xref linkend="example-random-id-BSuT" />using afterthought only. The simplest method is to make use of the cmavo 
-    <quote>bo</quote>(of selma'o BO). This cmavo has several functions in Lojban, but is always associated with high precedence and short scope. In particular, if 
-    <quote>bo</quote>is placed after an ijek, the result is a grammatically distinct kind of ijek which overrides the regular left-grouping rule. Connections marked with 
-    <quote>bo</quote>are interpreted before connections not so marked. 
-    <xref linkend="example-random-id-Uu7D" />is equivalent in meaning to 
+    <xref linkend="example-random-id-BSuT" /> using afterthought only. The simplest method is to make use of the cmavo 
+    <quote>bo</quote> (of selma'o BO). This cmavo has several functions in Lojban, but is always associated with high precedence and short scope. In particular, if 
+    <quote>bo</quote> is placed after an ijek, the result is a grammatically distinct kind of ijek which overrides the regular left-grouping rule. Connections marked with 
+    <quote>bo</quote> are interpreted before connections not so marked. 
+    <xref linkend="example-random-id-Uu7D" /> is equivalent in meaning to 
     <xref linkend="example-random-id-1Dd2" />:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Uu7D">
       <title>
@@ -944,13 +944,13 @@
       </interlinear-gloss>
     </example>
     <para>The English translation feebly indicates with a comma what the Lojban marks far more clearly: the 
-    <quote>I like Martha</quote>and 
-    <quote>I like Mary</quote>sentences are joined by 
-    <quote>.ija</quote>first, before the result is joined to 
-    <quote>I like John</quote>by 
+    <quote>I like Martha</quote> and 
+    <quote>I like Mary</quote> sentences are joined by 
+    <quote>.ija</quote> first, before the result is joined to 
+    <quote>I like John</quote> by 
     <quote>.ije</quote>. Eks can have 
-    <quote>bo</quote>attached in exactly the same way, so that 
-    <xref linkend="example-random-id-JVhK" />is equivalent in meaning to Example 8.1:</para>
+    <quote>bo</quote> attached in exactly the same way, so that 
+    <xref linkend="example-random-id-JVhK" /> is equivalent in meaning to Example 8.1:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-JVhK">
       <title>
         <anchor xml:id="c14e8d2" />
@@ -966,7 +966,7 @@
       <primary>forethought connectives</primary>
     </indexterm>
     <para>What happens if 
-    <quote>bo</quote>is used on both connectives, giving them the same high precedence, as in 
+    <quote>bo</quote> is used on both connectives, giving them the same high precedence, as in 
     <xref linkend="example-random-id-YJeE" />?</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-YJeE">
       <title>
@@ -977,28 +977,28 @@
       </interlinear-gloss>
     </example>
     <para>Does this wind up meaning the same as 
-    <xref linkend="example-random-id-mLo1" />and 
+    <xref linkend="example-random-id-mLo1" /> and 
     <xref linkend="example-random-id-dPcI" />? Not at all. A second rule relating to 
-    <quote>bo</quote>is that where several 
+    <quote>bo</quote> is that where several 
     <quote>bo</quote>-marked connectives are used in succession, the normal Lojban left-grouping rule is replaced by a right-grouping rule. As a result, 
     <!-- ^^   right-grouping rule: definition of, 87 -->
     <indexterm type="general">
       <primary>right-grouping rule</primary>
     </indexterm>
-    <xref linkend="example-random-id-YJeE" />in fact means the same as 
-    <xref linkend="example-random-id-Uu7D" />and 
+    <xref linkend="example-random-id-YJeE" /> in fact means the same as 
+    <xref linkend="example-random-id-Uu7D" /> and 
     <xref linkend="example-random-id-JVhK" />. This rule may be occasionally exploited for special effects, but is tricky to keep straight; in writing intended to be easy to understand, multiple consecutive connectives marked with 
-    <quote>bo</quote>should be avoided.</para>
+    <quote>bo</quote> should be avoided.</para>
     <para>The use of 
     <quote>bo</quote>, therefore, gets tricky in complex connections of more than three sentences. Looking back at the English translations of 
-    <xref linkend="example-random-id-487z" />and 
+    <xref linkend="example-random-id-487z" /> and 
     <xref linkend="example-random-id-1Dd2" />, parentheses were used to clarify the grouping. These parentheses have their Lojban equivalents, two sets of them actually. 
-    <quote>tu'e</quote>and 
-    <quote>tu'u</quote>are used with ijeks, and 
-    <quote>ke</quote>and 
-    <quote>ke'e</quote>with eks and other connectives to be discussed later. ( 
-    <quote>ke</quote>and 
-    <quote>ke'e</quote>are also used in other roles in the language, but always as grouping markers). Consider the English sentence:</para>
+    <quote>tu'e</quote> and 
+    <quote>tu'u</quote> are used with ijeks, and 
+    <quote>ke</quote> and 
+    <quote>ke'e</quote> with eks and other connectives to be discussed later. ( 
+    <quote>ke</quote> and 
+    <quote>ke'e</quote> are also used in other roles in the language, but always as grouping markers). Consider the English sentence:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-aqIg">
       <title>
         <anchor xml:id="c14e8d4" />
@@ -1008,9 +1008,9 @@
       </interlinear-gloss>
     </example>
     <para>where the semantics tells us that the instances of 
-    <quote>and</quote>are meant to have higher precedence than that of 
+    <quote>and</quote> are meant to have higher precedence than that of 
     <quote>if</quote>. If we wish to express 
-    <xref linkend="example-random-id-aqIg" />in afterthought, we can say:</para>
+    <xref linkend="example-random-id-aqIg" /> in afterthought, we can say:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-1PSK">
       <title>
         <anchor xml:id="c14e8d5" />
@@ -1021,8 +1021,8 @@
       </interlinear-gloss>
     </example>
     <para>marking two of the ijeks with 
-    <quote>bo</quote>for high precedence. (The first 
-    <quote>bo</quote>is not strictly necessary, because of the left-grouping rule, and is shown here in brackets.)</para>
+    <quote>bo</quote> for high precedence. (The first 
+    <quote>bo</quote> is not strictly necessary, because of the left-grouping rule, and is shown here in brackets.)</para>
     <para>But it may be clearer to use explicit parenthesis words and say:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-erTb">
       <title>
@@ -1036,13 +1036,13 @@
       </interlinear-gloss>
     </example>
     <para>where the 
-    <quote>tu'e ... tu'u</quote>pairs set off the structure. The cmavo 
-    <quote>tu'u</quote>is an elidable terminator, and its second occurrence in 
-    <xref linkend="example-random-id-erTb" />is bracketed, because all terminators may be elided at the end of a text.</para>
+    <quote>tu'e ... tu'u</quote> pairs set off the structure. The cmavo 
+    <quote>tu'u</quote> is an elidable terminator, and its second occurrence in 
+    <xref linkend="example-random-id-erTb" /> is bracketed, because all terminators may be elided at the end of a text.</para>
     <para>In addition, parentheses are a general solution: multiple parentheses may be nested inside one another, and additional afterthought material may be added without upsetting the existing structure. Neither of these two advantages apply to 
-    <quote>bo</quote>grouping. In general, afterthought constructions trade generality for simplicity.</para>
+    <quote>bo</quote> grouping. In general, afterthought constructions trade generality for simplicity.</para>
     <para>Because of the left-grouping rule, the first set of 
-    <quote>tu'e ... tu'u</quote>parentheses may actually be left off altogether, producing:</para>
+    <quote>tu'e ... tu'u</quote> parentheses may actually be left off altogether, producing:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-QGBz">
       <title>
         <anchor xml:id="c14e8d7" />
@@ -1083,12 +1083,12 @@
     </example>
     <para>If sumti were allowed to begin with 
     <quote>ke</quote>, unavoidable ambiguities would result, so 
-    <quote>ke</quote>grouping of sumti is allowed only just after a logical connective. This rule does not apply to 
-    <quote>tu'e</quote>grouping of bridi, as 
-    <xref linkend="example-random-id-erTb" />shows.</para>
+    <quote>ke</quote> grouping of sumti is allowed only just after a logical connective. This rule does not apply to 
+    <quote>tu'e</quote> grouping of bridi, as 
+    <xref linkend="example-random-id-erTb" /> shows.</para>
     <para>Now we have enough facilities to handle the problem of 
     <xref linkend="example-random-id-3zE1" />: 
-    <quote>I am German, rich, and a man - or else none of these.</quote>The following paraphrase has the correct meaning:</para>
+    <quote>I am German, rich, and a man - or else none of these.</quote> The following paraphrase has the correct meaning:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-KyHw">
       <title>
         <anchor xml:id="c14e8d10" />
@@ -1152,7 +1152,7 @@
       </interlinear-gloss>
     </example>
     <para>As 
-    <xref linkend="example-random-id-9H9e" />indicates, giheks are used in afterthought to create compound bridi; 
+    <xref linkend="example-random-id-9H9e" /> indicates, giheks are used in afterthought to create compound bridi; 
     <!-- ^^   giheks: syntax of, 346 -->
     <indexterm type="general">
       <primary>giheks</primary>
@@ -1161,12 +1161,12 @@
     <indexterm type="general">
       <primary>compound bridi</primary>
     </indexterm>
-    <quote>gi'e</quote>is the gihek corresponding to 
+    <quote>gi'e</quote> is the gihek corresponding to 
     <quote>and</quote>. The actual phrases 
-    <quote>klama le zarci</quote>and 
-    <quote>nelci la djan.</quote>that the gihek connects are known as 
+    <quote>klama le zarci</quote> and 
+    <quote>nelci la djan.</quote> that the gihek connects are known as 
     <quote>bridi-tails</quote>, because they represent (in this use) the 
-    <quote>tail end</quote>of a bridi, including the selbri and any following sumti, but excluding any sumti that precede the selbri:</para>
+    <quote>tail end</quote> of a bridi, including the selbri and any following sumti, but excluding any sumti that precede the selbri:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-F3RE">
       <title>
         <anchor xml:id="c14e9d3" />
@@ -1192,7 +1192,7 @@
     </example>
     <para>In 
     <xref linkend="example-random-id-PRxj" />, the first and last sumti of each bridi are identical; the selbri and the second sumti are different. By moving the final sumti to the beginning, a form analogous to 
-    <xref linkend="example-random-id-9H9e" />can be achieved:</para>
+    <xref linkend="example-random-id-9H9e" /> can be achieved:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Evo4">
       <title>
         <anchor xml:id="c14e9d5" />
@@ -1203,11 +1203,11 @@
       </interlinear-gloss>
     </example>
     <para>where the 
-    <quote>fi</quote>does not have an exact English translation because it merely places 
-    <quote>do</quote>in the third place of both 
-    <quote>lebna</quote>and 
+    <quote>fi</quote> does not have an exact English translation because it merely places 
+    <quote>do</quote> in the third place of both 
+    <quote>lebna</quote> and 
     <quote>dunda</quote>. However, a form that preserves natural sumti order also exists in Lojban. Giheks connect two bridi-tails, but also allow sumti to be added following the bridi-tail. These sumti are known as tail-terms, and apply to both bridi. The straightforward gihek version of 
-    <xref linkend="example-random-id-PRxj" />therefore is:</para>
+    <xref linkend="example-random-id-PRxj" /> therefore is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-DYBN">
       <title>
         <anchor xml:id="c14e9d6" />
@@ -1218,7 +1218,7 @@
       </interlinear-gloss>
     </example>
     <para>The 
-    <quote>vau</quote>(of selma'o VAU) serves to separate the bridi-tail from the tail-terms. Every bridi-tail is terminated by an elidable 
+    <quote>vau</quote> (of selma'o VAU) serves to separate the bridi-tail from the tail-terms. Every bridi-tail is terminated by an elidable 
     <quote>vau</quote>, but only in connection with compound bridi is it ever necessary to express this 
     <!-- ^^   compound bridi: definition, 344; logical connection of, 344; more than one sumti in common, 345; multiple with bo, 346; multiple with ke...ke'e, 346; one sumti in common, 344; separate tail-terms for bridi-tails, 346; separate tail-terms for forethought-connected bridi-tails, 347 -->
     <indexterm type="general">
@@ -1236,7 +1236,7 @@
     </example>
     <para>has a single elided 
     <quote>vau</quote>, and 
-    <xref linkend="example-random-id-9H9e" />is equivalent to:</para>
+    <xref linkend="example-random-id-9H9e" /> is equivalent to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-RfIR">
       <title>
         <anchor xml:id="c14e9d8" />
@@ -1246,8 +1246,8 @@
       </interlinear-gloss>
     </example>
     <para>where the double 
-    <quote>vau</quote>at the end of 
-    <xref linkend="example-random-id-RfIR" />terminates both the right-hand bridi-tail and the unexpressed tail-terms.</para>
+    <quote>vau</quote> at the end of 
+    <xref linkend="example-random-id-RfIR" /> terminates both the right-hand bridi-tail and the unexpressed tail-terms.</para>
     <para>A final use of giheks is to combine bridi-tails used as complete sentences, the Lojban observative:</para>
     <!-- ^^   observative: contrasted with observation evidential, 316; definition, 188 -->
     <indexterm type="general">
@@ -1314,7 +1314,7 @@
       <primary>compound bridi</primary>
     </indexterm>
     <para>Giheks can be combined with 
-    <quote>bo</quote>in the same way as eks:</para>
+    <quote>bo</quote> in the same way as eks:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-DpCN">
       <title>
         <anchor xml:id="c14e10d1" />
@@ -1325,9 +1325,9 @@
       </interlinear-gloss>
     </example>
     <para>is equivalent in meaning to 
-    <xref linkend="example-random-id-Uu7D" />and 
+    <xref linkend="example-random-id-Uu7D" /> and 
     <xref linkend="example-random-id-JVhK" />. Likewise, 
-    <quote>ke ... ke'e</quote>grouping can be used after giheks:</para>
+    <quote>ke ... ke'e</quote> grouping can be used after giheks:</para>
     <!-- ^^   giheks: syntax of, 346 -->
     <indexterm type="general">
       <primary>giheks</primary>
@@ -1345,8 +1345,8 @@
     </example>
     <para>is the gihek version of 
     <xref linkend="example-random-id-0mJM" />. The same rule about using 
-    <quote>ke ... ke'e</quote>bracketing only just after a connective applies to bridi-tails as to sumti, so the first two bridi-tails in 
-    <xref linkend="example-random-id-rH4n" />cannot be explicitly grouped; implicit left-grouping suffices to associate them.</para>
+    <quote>ke ... ke'e</quote> bracketing only just after a connective applies to bridi-tails as to sumti, so the first two bridi-tails in 
+    <xref linkend="example-random-id-rH4n" /> cannot be explicitly grouped; implicit left-grouping suffices to associate them.</para>
     <para>Each of the pairs of bridi-tails joined by multiple giheks can have its own set of tail-terms:</para>
     <!-- ^^   giheks: syntax of, 346 -->
     <indexterm type="general">
@@ -1374,17 +1374,17 @@
       </interlinear-gloss>
     </example>
     <para>The literal English translation in 
-    <xref linkend="example-random-id-901t" />is almost unintelligible, but the Lojban is perfectly grammatical. 
-    <quote>mi</quote>fills the x1 place of all three selbri; 
-    <quote>lo rupnu</quote>is the x2 of 
+    <xref linkend="example-random-id-901t" /> is almost unintelligible, but the Lojban is perfectly grammatical. 
+    <quote>mi</quote> fills the x1 place of all three selbri; 
+    <quote>lo rupnu</quote> is the x2 of 
     <quote>dejni</quote>, whereas 
-    <quote>le cukta</quote>is a tail-term shared between 
-    <quote>dunda</quote>and 
+    <quote>le cukta</quote> is a tail-term shared between 
+    <quote>dunda</quote> and 
     <quote>lebna</quote>; 
-    <quote>la djan.</quote>is a tail-term shared by 
-    <quote>dejni</quote>and by 
+    <quote>la djan.</quote> is a tail-term shared by 
+    <quote>dejni</quote> and by 
     <quote>dunda gi'abo lebna</quote>. In this case, greater clarity is probably achieved by moving 
-    <quote>la djan.</quote>to the beginning of the sentence, as in 
+    <quote>la djan.</quote> to the beginning of the sentence, as in 
     <xref linkend="example-random-id-Evo4" />:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7NnV">
       <title>
@@ -1433,7 +1433,7 @@
       </interlinear-gloss>
     </example>
     <para>Since a pair of sentences joined by geks is the equivalent of a bridi-tail, it may be followed by tail terms. The forethought equivalent of 
-    <xref linkend="example-random-id-DYBN" />is:</para>
+    <xref linkend="example-random-id-DYBN" /> is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-BUsi">
       <title>
         <anchor xml:id="c14e10d9" />
@@ -1498,17 +1498,17 @@
       </interlinear-gloss>
     </example>
     <para>The Lojban version of 
-    <xref linkend="example-random-id-G02C" />requires two termsets joined by a logical connective. A 
-    <quote>term</quote>is either a sumti or a sumti preceded by a tense or modal tag such as 
-    <quote>pu</quote>or 
+    <xref linkend="example-random-id-G02C" /> requires two termsets joined by a logical connective. A 
+    <quote>term</quote> is either a sumti or a sumti preceded by a tense or modal tag such as 
+    <quote>pu</quote> or 
     <quote>bai</quote>. Afterthought termsets are formed by linking terms together by inserting the cmavo 
-    <quote>ce'e</quote>(of selma'o CEhE) between each of them. Furthermore, the logical connective (which is a jek) must be prefixed by the cmavo 
-    <quote>pe'e</quote>(of selma'o PEhE). (We could refer to the combination of 
+    <quote>ce'e</quote> (of selma'o CEhE) between each of them. Furthermore, the logical connective (which is a jek) must be prefixed by the cmavo 
+    <quote>pe'e</quote> (of selma'o PEhE). (We could refer to the combination of 
     <!-- ^^   pe'e, 347 -->
     <indexterm type="general">
       <primary>pe'e</primary>
     </indexterm>
-    <quote>pe'e</quote>and a jek as a 
+    <quote>pe'e</quote> and a jek as a 
     <!-- ^^   pe'e, 347 -->
     <indexterm type="general">
       <primary>pe'e</primary>
@@ -1530,8 +1530,8 @@
       </interlinear-gloss>
     </example>
     <para>The literal translation uses 
-    <quote>[plus]</quote>to indicate the termset connective, and 
-    <quote>[joint]</quote>to indicate the position of the logical connective joint. As usual, there is an equivalent bridi-connection form:</para>
+    <quote>[plus]</quote> to indicate the termset connective, and 
+    <quote>[joint]</quote> to indicate the position of the logical connective joint. As usual, there is an equivalent bridi-connection form:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Bp2v">
       <title>
         <anchor xml:id="c14e11d3" />
@@ -1575,11 +1575,11 @@
       </interlinear-gloss>
     </example>
     <para>So 
-    <quote>le briju</quote>is your origin but my destination, and thus falls in the x2 and x3 places of 
-    <quote>klama</quote>simultaneously! This is legal because even though there is only one selbri, 
+    <quote>le briju</quote> is your origin but my destination, and thus falls in the x2 and x3 places of 
+    <quote>klama</quote> simultaneously! This is legal because even though there is only one selbri, 
     <quote>klama</quote>, there are two distinct bridi expressed here. In addition, 
-    <quote>mi</quote>in 
-    <xref linkend="example-random-id-yYsr" />is serving as a termset containing only one term. An analogous paradox applies to compound bridi with tail-terms and unequal numbers of sumti within the connected bridi-tails:</para>
+    <quote>mi</quote> in 
+    <xref linkend="example-random-id-yYsr" /> is serving as a termset containing only one term. An analogous paradox applies to compound bridi with tail-terms and unequal numbers of sumti within the connected bridi-tails:</para>
     <!-- ^^   compound bridi: definition, 344; logical connection of, 344; more than one sumti in common, 345; multiple with bo, 346; multiple with ke...ke'e, 346; one sumti in common, 344; separate tail-terms for bridi-tails, 346; separate tail-terms for forethought-connected bridi-tails, 347 -->
     <indexterm type="general">
       <primary>compound bridi</primary>
@@ -1598,14 +1598,14 @@
     <indexterm type="general">
       <primary>to the market from the office</primary>
     </indexterm>
-    <quote>le briju</quote>is the x3 place of 
-    <quote>klama</quote>and the x2 place of 
+    <quote>le briju</quote> is the x3 place of 
+    <quote>klama</quote> and the x2 place of 
     <quote>dzukla</quote>.</para>
     <para>Forethought termsets also exist, and use 
-    <quote>nu'i</quote>of selma'o NUhI to signal the beginning and 
-    <quote>nu'u</quote>of selma'o NUhU (an elidable terminator) to signal the end. Nothing is inserted between the individual terms: they simply sit side-by-side. To make a logical connection in a forethought termset, use a gek, with the gek just after the 
+    <quote>nu'i</quote> of selma'o NUhI to signal the beginning and 
+    <quote>nu'u</quote> of selma'o NUhU (an elidable terminator) to signal the end. Nothing is inserted between the individual terms: they simply sit side-by-side. To make a logical connection in a forethought termset, use a gek, with the gek just after the 
     <quote>nu'i</quote>, and an extra 
-    <quote>nu'u</quote>just before the gik:</para>
+    <quote>nu'u</quote> just before the gik:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-KeLv">
       <title>
         <anchor xml:id="c14e11d7" />
@@ -1618,9 +1618,9 @@
       </interlinear-gloss>
     </example>
     <para>Note that even though two termsets are being connected, only one 
-    <quote>nu'i</quote>is used.</para>
+    <quote>nu'i</quote> is used.</para>
     <para>The grammatical uses of termsets that do not contain logical connectives are explained in 
-    <xref linkend="cll_chapter12" />and 
+    <xref linkend="cll_chapter12" /> and 
     <xref linkend="cll_chapter16" />.</para>
   </section>
   <section xml:id="cll_chapter14-section12">
@@ -1630,7 +1630,7 @@
     <quote>blanu zdani</quote>, blue house. Now anything that is a blue ball, in the most ordinary understanding of the phrase at least, is both blue and a ball. And indeed, instead of 
     <quote>blanu bolci</quote>, Lojbanists can say 
     <quote>blanu je bolci</quote>, using a jek connective within the tanru. (We saw jeks used in 
-    <xref linkend="cll_chapter14-section11" />also, but there they were always prefixed by 
+    <xref linkend="cll_chapter14-section11" /> also, but there they were always prefixed by 
     <quote>pe'e</quote>; in this section they are used alone.) Here is a pair of examples:</para>
     <!-- ^^   pe'e, 347 -->
     <indexterm type="general">
@@ -1655,9 +1655,9 @@
       </interlinear-gloss>
     </example>
     <para>But of course 
-    <xref linkend="example-random-id-qGoH" />and 
-    <xref linkend="example-random-id-qgoW" />are not necessarily equivalent in meaning! It is the most elementary point about Lojban tanru that 
-    <xref linkend="example-random-id-qGoH" />might just as well mean</para>
+    <xref linkend="example-random-id-qGoH" /> and 
+    <xref linkend="example-random-id-qgoW" /> are not necessarily equivalent in meaning! It is the most elementary point about Lojban tanru that 
+    <xref linkend="example-random-id-qGoH" /> might just as well mean</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-DxVB">
       <title>
         <anchor xml:id="c14e12d3" />
@@ -1667,10 +1667,10 @@
       </interlinear-gloss>
     </example>
     <para>and 
-    <xref linkend="example-random-id-qgoW" />certainly is not equivalent in meaning to 
+    <xref linkend="example-random-id-qgoW" /> certainly is not equivalent in meaning to 
     <xref linkend="example-random-id-DxVB" />.</para>
     <para>A full explanation of logical connection within tanru belongs rather to a discussion of selbri structure than to logical connectives in general. Why? Because although 
-    <xref linkend="example-random-id-qgoW" />happens to mean the same as</para>
+    <xref linkend="example-random-id-qgoW" /> happens to mean the same as</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-XXX6">
       <title>
         <anchor xml:id="c14e12d4" />
@@ -1706,7 +1706,7 @@
     <indexterm type="general">
       <primary>tanru grouping</primary>
       <secondary>effect of jeks</secondary>
-    </indexterm>would be true, because tanru grouping with a jek has higher precedence than unmarked tanru grouping, but:</para>
+    </indexterm> would be true, because tanru grouping with a jek has higher precedence than unmarked tanru grouping, but:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-eh2i">
       <title>
         <anchor xml:id="c14e12d7" />
@@ -1727,7 +1727,7 @@
     <indexterm type="general">
       <primary>tanru logical connection</primary>
     </indexterm>
-    <quote>bo</quote>may be appended to jeks as to eks, with the same rules:</para>
+    <quote>bo</quote> may be appended to jeks as to eks, with the same rules:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-RNMY">
       <title>
         <anchor xml:id="c14e12d8" />
@@ -1745,8 +1745,8 @@
     <indexterm type="general">
       <primary>tanru grouping</primary>
       <secondary>guheks compared with jeks</secondary>
-    </indexterm>The components of tanru may be grouped with 
-    <quote>ke</quote>both before and after a logical connective:</para>
+    </indexterm> The components of tanru may be grouped with 
+    <quote>ke</quote> both before and after a logical connective:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-JdID">
       <title>
         <anchor xml:id="c14e12d9" />
@@ -1757,8 +1757,8 @@
       </interlinear-gloss>
     </example>
     <para>where the first 
-    <quote>ke ... ke'e</quote>pair may be omitted altogether by the rule of left-grouping, but is optionally permitted. In any case, the last instance of 
-    <quote>ke'e</quote>may be elided.</para>
+    <quote>ke ... ke'e</quote> pair may be omitted altogether by the rule of left-grouping, but is optionally permitted. In any case, the last instance of 
+    <quote>ke'e</quote> may be elided.</para>
     <para>The syntax of jeks is:</para>
     <programlisting xml:space="preserve">
        [na] [se] JA [nai]
@@ -1802,7 +1802,7 @@
     <indexterm type="general">
       <primary>tanru grouping</primary>
       <secondary>guheks compared with jeks</secondary>
-    </indexterm>Note that giks are used with guheks in exactly the same way they are used with geks. Like jeks, guheks bind more closely than unmarked tanru grouping does:</para>
+    </indexterm> Note that giks are used with guheks in exactly the same way they are used with geks. Like jeks, guheks bind more closely than unmarked tanru grouping does:</para>
     <!-- ^^   guheks: connecting operators, 361; syntax of, 350 -->
     <indexterm type="general">
       <primary>guheks</primary>
@@ -1853,9 +1853,9 @@
       </interlinear-gloss>
     </example>
     <para>But 
-    <xref linkend="example-random-id-ag8r" />means that you see one thing which is both a man and a woman simultaneously! A 
-    <quote>nanmu je ninmu</quote>is a manwoman, a presumably non-existent creature who is both a 
-    <quote>nanmu</quote>and a 
+    <xref linkend="example-random-id-ag8r" /> means that you see one thing which is both a man and a woman simultaneously! A 
+    <quote>nanmu je ninmu</quote> is a manwoman, a presumably non-existent creature who is both a 
+    <quote>nanmu</quote> and a 
     <quote>ninmu</quote>.</para>
   </section>
   <section xml:id="cll_chapter14-section13">
@@ -1866,7 +1866,7 @@
     </indexterm>
     <para>So far we have addressed only sentences which are statements. Lojban, like all human languages, needs also to deal with sentences which are questions. There are many ways of asking questions in Lojban, but some of these (like questions about quantity, tense, and emotion) are discussed in other chapters.</para>
     <para>The simplest kind of question is of the type 
-    <quote>Is it true that ...</quote>where some statement follows. This type is called a 
+    <quote>Is it true that ...</quote> where some statement follows. This type is called a 
     <quote>truth question</quote>, and can be represented in English by 
     <xref linkend="example-random-id-bMjE" />:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-bMjE">
@@ -1879,10 +1879,10 @@
       </interlinear-gloss>
     </example>
     <para>Note the two formulations. English truth questions can always be formed by prefixing 
-    <quote>Is is true that</quote>to the beginning of a statement; there is also usually a more idiomatic way involving putting the verb before its subject. 
-    <quote>Is Fido a dog?</quote>is the truth question corresponding to 
+    <quote>Is is true that</quote> to the beginning of a statement; there is also usually a more idiomatic way involving putting the verb before its subject. 
+    <quote>Is Fido a dog?</quote> is the truth question corresponding to 
     <quote>Fido is a dog</quote>. In Lojban, the equivalent mechanism is to prefix the cmavo 
-    <quote>xu</quote>(of selma'o UI) to the statement:</para>
+    <quote>xu</quote> (of selma'o UI) to the statement:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-gKaM">
       <title>
         <anchor xml:id="c14e13d2" />
@@ -1893,14 +1893,14 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-bMjE" />and 
-    <xref linkend="example-random-id-gKaM" />are equivalent in meaning.</para>
+    <xref linkend="example-random-id-bMjE" /> and 
+    <xref linkend="example-random-id-gKaM" /> are equivalent in meaning.</para>
     <para>A truth question can be answered 
-    <quote>yes</quote>or 
+    <quote>yes</quote> or 
     <quote>no</quote>, depending on the truth or falsity, respectively, of the underlying statement. The standard way of saying 
-    <quote>yes</quote>in Lojban is 
-    <quote>go'i</quote>and of saying 
-    <quote>no</quote>is 
+    <quote>yes</quote> in Lojban is 
+    <quote>go'i</quote> and of saying 
+    <quote>no</quote> is 
     <quote>nago'i</quote>. (The reasons for this rule are explained in 
     <!-- ^^   nago'i: quick-tour version, 24 -->
     <indexterm type="general">
@@ -1941,7 +1941,7 @@
       </interlinear-gloss>
     </example>
     <para>Superficially, 
-    <xref linkend="example-random-id-mftC" />seems like a truth question with the underlying statement:</para>
+    <xref linkend="example-random-id-mftC" /> seems like a truth question with the underlying statement:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-n6Ec">
       <title>
         <anchor xml:id="c14e13d6" />
@@ -1951,8 +1951,8 @@
       </interlinear-gloss>
     </example>
     <para>By translating 
-    <xref linkend="example-random-id-n6Ec" />into Lojban and prefixing 
-    <quote>xu</quote>to signal a truth question, we get:</para>
+    <xref linkend="example-random-id-n6Ec" /> into Lojban and prefixing 
+    <quote>xu</quote> to signal a truth question, we get:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-hz4S">
       <title>
         <anchor xml:id="c14e13d7" />
@@ -1970,8 +1970,8 @@
       <primary>nago'i</primary>
     </indexterm>
     <para>But that is not what an English-speaker who utters 
-    <xref linkend="example-random-id-mftC" />is asking! The true significance of 
-    <xref linkend="example-random-id-mftC" />is that the speaker desires to know the truth value of either of the two underlying bridi (it is presupposed that only one is true).</para>
+    <xref linkend="example-random-id-mftC" /> is asking! The true significance of 
+    <xref linkend="example-random-id-mftC" /> is that the speaker desires to know the truth value of either of the two underlying bridi (it is presupposed that only one is true).</para>
     <para>Lojban has an elegant mechanism for rendering this kind of question which is very unlike that used in English. Instead of asking about the truth value of the connected bridi, Lojban users ask about the truth function which connects them. This is done by using a special question cmavo: there is one of these for each of the logical connective selma'o, as shown by the following table:</para>
     <cmavo-list>
       <cmavo-entry>
@@ -2025,11 +2025,11 @@
       </cmavo-entry>
     </cmavo-list>
     <para>(This list unfortunately departs from the pretty regularity of the other cmavo for logical connection. The two-syllable selma'o, GIhA and GUhA, make use of the cmavo ending in 
-    <quote>-i</quote>which is not used for a truth function, but 
-    <quote>gi</quote>and 
-    <quote>.i</quote>were not available, and different cmavo had to be chosen. This table must simply be memorized, like most other non-connective cmavo assignments.)</para>
+    <quote>-i</quote> which is not used for a truth function, but 
+    <quote>gi</quote> and 
+    <quote>.i</quote> were not available, and different cmavo had to be chosen. This table must simply be memorized, like most other non-connective cmavo assignments.)</para>
     <para>One correct translation of 
-    <xref linkend="example-random-id-mftC" />employs a question gihek:</para>
+    <xref linkend="example-random-id-mftC" /> employs a question gihek:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-G1Xs">
       <title>
         <anchor xml:id="c14e13d8" />
@@ -2082,7 +2082,7 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-qGRz" />is correct but uncooperative.</para>
+    <xref linkend="example-random-id-qGRz" /> is correct but uncooperative.</para>
     <para>As usual, Lojban questions are answered by filling in the blank left by the question. Here the blank is a logical connective, and therefore it is grammatical in Lojban to utter a bare logical connective without anything for it to connect.</para>
     <para>The answer 
     <quote>gi'e</quote>, meaning that Alice is a dog and is a cat, is impossible in the real world, but for:</para>
@@ -2109,12 +2109,12 @@
     <para>the answer 
     <quote>.e</quote>, meaning that I want both, is perfectly plausible, if not necessarily polite.</para>
     <para>The forethought questions 
-    <quote>ge'i</quote>and 
+    <quote>ge'i</quote> and 
     <!-- ^^   ge'i, 352 -->
     <indexterm type="general">
       <primary>ge'i</primary>
     </indexterm>
-    <quote>gu'i</quote>are used like the others, but ambiguity forbids the use of isolated forethought connectives as answers - they sound like the start of forethought-connected bridi. So although 
+    <quote>gu'i</quote> are used like the others, but ambiguity forbids the use of isolated forethought connectives as answers - they sound like the start of forethought-connected bridi. So although 
     <!-- ^^   gu'i, 352 -->
     <indexterm type="general">
       <primary>gu'i</primary>
@@ -2123,7 +2123,7 @@
     <indexterm type="general">
       <primary>forethought connectives</primary>
     </indexterm>
-    <xref linkend="example-random-id-286J" />is the forethought version of 
+    <xref linkend="example-random-id-286J" /> is the forethought version of 
     <xref linkend="example-random-id-xtIf" />:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-286J">
       <title>
@@ -2177,10 +2177,10 @@
     <indexterm type="general">
       <primary>bridi connection</primary>
     </indexterm>
-    <quote>yes</quote>and false if the answer is 
+    <quote>yes</quote> and false if the answer is 
     <quote>no</quote>. Analogously, an imperative sentence (involving the special pro-sumti 
     <quote>ko</quote>, which means 
-    <quote>you</quote>but marks the sentence as a command) is true if the command is obeyed, and false otherwise. A request of Abraham Lincoln's may be translated thus:</para>
+    <quote>you</quote> but marks the sentence as a command) is true if the command is obeyed, and false otherwise. A request of Abraham Lincoln's may be translated thus:</para>
     <!-- ^^   Abraham Lincoln: example, 353 -->
     <indexterm type="general">
       <primary>Abraham Lincoln</primary>
@@ -2198,10 +2198,10 @@
       </interlinear-gloss>
     </example>
     <para>In logical terms, however, 
-    <quote>but</quote>is the same as 
+    <quote>but</quote> is the same as 
     <quote>and</quote>; the difference is that the sentence after a 
-    <quote>but</quote>is felt to be in tension or opposition to the sentence before it. Lojban represents this distinction by adding the discursive cmavo 
-    <quote>ku'i</quote>(of selma'o UI), which is explained in 
+    <quote>but</quote> is felt to be in tension or opposition to the sentence before it. Lojban represents this distinction by adding the discursive cmavo 
+    <quote>ku'i</quote> (of selma'o UI), which is explained in 
     <!-- ^^   ku'i, 317, 353 -->
     <indexterm type="general">
       <primary>ku'i</primary>
@@ -2219,7 +2219,7 @@
     <indexterm type="general">
       <primary>if ... then</primary>
     </indexterm>
-    <quote>and</quote>of:</para>
+    <quote>and</quote> of:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-x6JW">
       <title>
         <anchor xml:id="c14e14d1" />
@@ -2239,7 +2239,7 @@
     </example>
     <para>which would mean that each of them carried the piano by himself/herself. Lojban deals with this particular linguistic phenomenon as a 
     <quote>mass</quote>. John and Alice are joined together into a mass, John-and-Alice, and it is this mass which carried the piano, not either of them separately. The cmavo 
-    <quote>joi</quote>(of selma'o JOI) is used to join two or more components into a mass:</para>
+    <quote>joi</quote> (of selma'o JOI) is used to join two or more components into a mass:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-pC5x">
       <title>
         <anchor xml:id="c14e14d3" />
@@ -2254,14 +2254,14 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-pC5x" />covers the case mentioned, where John and Alice divide the labor; it also could mean that John did all the hauling and Alice did the supervising. This possibility arises because the properties of a mass are the properties of its components, which can lead to apparent contradictions: if John is small and Alice is large, then John-and-Alice is both small and large. Masses are also discussed in 
+    <xref linkend="example-random-id-pC5x" /> covers the case mentioned, where John and Alice divide the labor; it also could mean that John did all the hauling and Alice did the supervising. This possibility arises because the properties of a mass are the properties of its components, which can lead to apparent contradictions: if John is small and Alice is large, then John-and-Alice is both small and large. Masses are also discussed in 
     <!-- ^^   supervising: as a contribution to mass action, 354 -->
     <indexterm type="general">
       <primary>supervising</primary>
     </indexterm>
     <xref linkend="cll_chapter6" />.</para>
     <para>Grammatically, 
-    <quote>joi</quote>can appear between two sumti (like an ek) or between two tanru components (like a jek). This flexibility must be paid for in the form of occasional terminators that cannot be elided:</para>
+    <quote>joi</quote> can appear between two sumti (like an ek) or between two tanru components (like a jek). This flexibility must be paid for in the form of occasional terminators that cannot be elided:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-NN93">
       <title>
         <anchor xml:id="c14e14d4" />
@@ -2272,14 +2272,14 @@
       </interlinear-gloss>
     </example>
     <para>The cmavo 
-    <quote>ku</quote>is the elidable terminator for 
+    <quote>ku</quote> is the elidable terminator for 
     <quote>le</quote>, which can almost always be elided, but not in this case. If the first 
-    <quote>ku</quote>were elided here, Lojban's parsing rules would see 
-    <quote>le nanmu joi</quote>and assume that another tanru component is to follow; since the second 
-    <quote>le</quote>cannot be part of a tanru, a parsing error results. No such problem can occur with logical connectives, because an ek signals a following sumti and a jek a following tanru component unambiguously.</para>
+    <quote>ku</quote> were elided here, Lojban's parsing rules would see 
+    <quote>le nanmu joi</quote> and assume that another tanru component is to follow; since the second 
+    <quote>le</quote> cannot be part of a tanru, a parsing error results. No such problem can occur with logical connectives, because an ek signals a following sumti and a jek a following tanru component unambiguously.</para>
     <para>Single or compound cmavo involving members of selma'o JOI are called joiks, by analogy with the names for logical connectives. It is not grammatical to use joiks to connect bridi-tails.</para>
     <para>In tanru, 
-    <quote>joi</quote>has the connotation 
+    <quote>joi</quote> has the connotation 
     <quote>mixed with</quote>, as in the following example:</para>
     <!-- ^^   mixed with: example, 354 -->
     <indexterm type="general">
@@ -2300,8 +2300,8 @@
       </interlinear-gloss>
     </example>
     <para>Here the ball is neither wholly blue nor wholly red, but partly blue and partly red. Its blue/redness is a mass property. (Just how blue something has to be to count as 
-    <quote>wholly blue</quote>is an unsettled question, though. A 
-    <quote>blanu zdani</quote>may be so even though not every part of it is blue.)</para>
+    <quote>wholly blue</quote> is an unsettled question, though. A 
+    <quote>blanu zdani</quote> may be so even though not every part of it is blue.)</para>
     <para>There are several other cmavo in selma'o JOI which can be used in the same grammatical constructions. Not all of them are well-defined as yet in all contexts. All have clear definitions as sumti connectives; those definitions are shown in the following table:</para>
     <programlisting xml:space="preserve">
     A joi B     the mass with components A and B
@@ -2387,7 +2387,7 @@
 </indexterm>
 </programlisting>
     <para>The cmavo 
-    <quote>se</quote>is grammatical before any JOI cmavo, but only useful with those that have inherent order. Here are some examples of joiks:</para>
+    <quote>se</quote> is grammatical before any JOI cmavo, but only useful with those that have inherent order. Here are some examples of joiks:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-cwG8">
       <title>
         <anchor xml:id="c14e14d6" />
@@ -2399,14 +2399,14 @@
       </interlinear-gloss>
     </example>
     <para>The x3 place of 
-    <quote>cuxna</quote>is a set from which the choice is being made. A set is an abstract object which is determined by specifying its members. Unlike those of a mass, the properties of a set are unrelated to its members' properties: the set of all rats is large (since many rats exist), but the rats themselves are small. This chapter does not attempt to explain set theory (the mathematical study of sets) in detail: explaining propositional logic is quite enough for one chapter!</para>
+    <quote>cuxna</quote> is a set from which the choice is being made. A set is an abstract object which is determined by specifying its members. Unlike those of a mass, the properties of a set are unrelated to its members' properties: the set of all rats is large (since many rats exist), but the rats themselves are small. This chapter does not attempt to explain set theory (the mathematical study of sets) in detail: explaining propositional logic is quite enough for one chapter!</para>
     <!-- ^^   set of all rats: example, 447 -->
     <indexterm type="general">
       <primary>set of all rats</primary>
     </indexterm>
     <para>In 
-    <xref linkend="example-random-id-cwG8" />we specify that set by listing the members with 
-    <quote>ce</quote>joining them.</para>
+    <xref linkend="example-random-id-cwG8" /> we specify that set by listing the members with 
+    <quote>ce</quote> joining them.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Emw0">
       <title>
         <anchor xml:id="c14e14d7" />
@@ -2422,10 +2422,10 @@
       </interlinear-gloss>
     </example>
     <para>The x2 place of 
-    <quote>liste</quote>is a sequence of the things which are mentioned in the list. (It is worth pointing out that 
-    <quote>lo liste</quote>means a physical object such as a grocery list: a purely abstract list is 
+    <quote>liste</quote> is a sequence of the things which are mentioned in the list. (It is worth pointing out that 
+    <quote>lo liste</quote> means a physical object such as a grocery list: a purely abstract list is 
     <quote>lo porsi</quote>, a sequence.) Here the three sumti connected by 
-    <quote>ce'o</quote>are in a definite order, not just lumped together in a set or a mass.</para>
+    <quote>ce'o</quote> are in a definite order, not just lumped together in a set or a mass.</para>
     <!-- ^^   ce'o, 354, 362 -->
     <indexterm type="general">
       <primary>ce'o</primary>
@@ -2433,12 +2433,12 @@
     <para>So 
     <quote>joi</quote>, 
     <quote>ce</quote>, and 
-    <quote>ce'o</quote>are parallel, in that the sumti connected are taken to be individuals, and the result is something else: a mass, a set, or a sequence respectively. The cmavo 
+    <quote>ce'o</quote> are parallel, in that the sumti connected are taken to be individuals, and the result is something else: a mass, a set, or a sequence respectively. The cmavo 
     <!-- ^^   ce'o, 354, 362 -->
     <indexterm type="general">
       <primary>ce'o</primary>
     </indexterm>
-    <quote>jo'u</quote>serves as a fourth element in this pattern: the sumti connected are individuals, and the result is still individuals - but inseparably so. The normal Lojban way of saying that James and George are brothers is:</para>
+    <quote>jo'u</quote> serves as a fourth element in this pattern: the sumti connected are individuals, and the result is still individuals - but inseparably so. The normal Lojban way of saying that James and George are brothers is:</para>
     <!-- ^^   jo'u, 354, 355; contrasted with ce, 355; contrasted with ce'o, 355; contrasted with joi, 355; result of connection with, 355 -->
     <indexterm type="general">
       <primary>jo'u</primary>
@@ -2458,7 +2458,7 @@
     </example>
     <para>possibly adding a discursive element meaning 
     <quote>and vice versa</quote>. However, 
-    <quote>James and George are brothers</quote>cannot be correctly translated as:</para>
+    <quote>James and George are brothers</quote> cannot be correctly translated as:</para>
     <!-- ^^   brothers: example, 355 -->
     <indexterm type="general">
       <primary>brothers</primary>
@@ -2473,13 +2473,13 @@
       </interlinear-gloss>
     </example>
     <para>since that expands to two bridi and means that James is a brother and so is George, but not necessarily of each other. If the 
-    <quote>.e</quote>is changed to 
+    <quote>.e</quote> is changed to 
     <quote>jo'u</quote>, however, the meaning of 
     <!-- ^^   jo'u, 354, 355; contrasted with ce, 355; contrasted with ce'o, 355; contrasted with joi, 355; result of connection with, 355 -->
     <indexterm type="general">
       <primary>jo'u</primary>
     </indexterm>
-    <xref linkend="example-random-id-sy2V" />is preserved:</para>
+    <xref linkend="example-random-id-sy2V" /> is preserved:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-gnwy">
       <title>
         <anchor xml:id="c14e14d10" />
@@ -2498,12 +2498,12 @@
       </interlinear-gloss>
     </example>
     <para>The tanru 
-    <quote>remei bruna</quote>is not strictly necessary in this sentence, but is used to make clear that we are not saying that James and George are both brothers of some third person not specified. Alternatively, we could turn the tanru around: the x1 place of 
+    <quote>remei bruna</quote> is not strictly necessary in this sentence, but is used to make clear that we are not saying that James and George are both brothers of some third person not specified. Alternatively, we could turn the tanru around: the x1 place of 
     <!-- ^^   brothers: example, 355 -->
     <indexterm type="general">
       <primary>brothers</primary>
     </indexterm>
-    <quote>remei</quote>is a mass with two components, leading to:</para>
+    <quote>remei</quote> is a mass with two components, leading to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-t0FJ">
       <title>
         <anchor xml:id="c14e14d11" />
@@ -2514,10 +2514,10 @@
       </interlinear-gloss>
     </example>
     <para>where 
-    <quote>joi</quote>is used to create the necessary mass.</para>
+    <quote>joi</quote> is used to create the necessary mass.</para>
     <para>Likewise, 
-    <quote>fa'u</quote>can be used to put two individuals together where order matters. Typically, there will be another 
-    <quote>fa'u</quote>somewhere else in the same bridi:</para>
+    <quote>fa'u</quote> can be used to put two individuals together where order matters. Typically, there will be another 
+    <quote>fa'u</quote> somewhere else in the same bridi:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-MBsp">
       <title>
         <anchor xml:id="c14e14d12" />
@@ -2531,7 +2531,7 @@
     <para>Here the information carried by the English adverb 
     <quote>respectively</quote>, namely that James loves Mary and George loves Martha, is divided between the two occurrences of 
     <quote>fa'u</quote>. If both uses of 
-    <quote>fa'u</quote>were to be changed to 
+    <quote>fa'u</quote> were to be changed to 
     <quote>.e</quote>, we would get:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7bv3">
       <title>
@@ -2556,7 +2556,7 @@
     </example>
     <para>which represents quite a different state of affairs from 
     <xref linkend="example-random-id-MBsp" />. The meaning of 
-    <xref linkend="example-random-id-MBsp" />can also be conveyed by a termset:</para>
+    <xref linkend="example-random-id-MBsp" /> can also be conveyed by a termset:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-nER7">
       <title>
         <anchor xml:id="c14e14d15" />
@@ -2614,7 +2614,7 @@
     <indexterm type="general">
       <primary>intersection</primary>
     </indexterm>
-    <quote>cross product</quote>(also known as 
+    <quote>cross product</quote> (also known as 
     <!-- ^^   cross product: with tenses, 246 -->
     <indexterm type="general">
       <primary>cross product</primary>
@@ -2671,8 +2671,8 @@
       </interlinear-gloss>
     </example>
     <para>There is a parallelism between logic and set theory that makes 
-    <xref linkend="example-random-id-qGSA" />and 
-    <xref linkend="example-random-id-qgSe" />equivalent respectively to:</para>
+    <xref linkend="example-random-id-qGSA" /> and 
+    <xref linkend="example-random-id-qgSe" /> equivalent respectively to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-azCQ">
       <title>
         <anchor xml:id="c14e15d3" />
@@ -2716,8 +2716,8 @@
     <para>means that each of the pairs James/Mary, George/Mary, James/Martha, and George/Martha love each other. Therefore it is similar in meaning to 
     <xref linkend="example-random-id-7bv3" />; however, that example speaks only of the men loving the women, not vice versa.</para>
     <para>Joiks may be combined with 
-    <quote>bo</quote>or with 
-    <quote>ke</quote>in the same way as eks and jeks; this allows grouping of non-logical connections between sumti and tanru units, in complete parallelism with logical connections:</para>
+    <quote>bo</quote> or with 
+    <quote>ke</quote> in the same way as eks and jeks; this allows grouping of non-logical connections between sumti and tanru units, in complete parallelism with logical connections:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-mwpo">
       <title>
         <anchor xml:id="c14e15d6" />
@@ -2735,7 +2735,7 @@
     <indexterm type="general">
       <primary>non-logical connection</primary>
     </indexterm>
-    <quote>casnu</quote>is:</para>
+    <quote>casnu</quote> is:</para>
     <programlisting xml:space="preserve">
       casnu: the mass x1 discusses/talks about x2
 </programlisting>
@@ -2756,8 +2756,8 @@
       </interlinear-gloss>
     </example>
     <para>Like all non-logical connectives, the usage shown in 
-    <xref linkend="example-random-id-sdba" />cannot be mechanically converted into a non-logical connective placed at another location in the bridi. The forethought equivalent of 
-    <xref linkend="example-random-id-sdba" />is:</para>
+    <xref linkend="example-random-id-sdba" /> cannot be mechanically converted into a non-logical connective placed at another location in the bridi. The forethought equivalent of 
+    <xref linkend="example-random-id-sdba" /> is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-DgXI">
       <title>
         <anchor xml:id="c14e15d8" />
@@ -2784,18 +2784,18 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-wVSG" />associates speaking in Lojban with John, and speaking under George's compulsion with Frank. We do not know what language Frank uses, or whether John speaks under anyone's compulsion.</para>
+    <xref linkend="example-random-id-wVSG" /> associates speaking in Lojban with John, and speaking under George's compulsion with Frank. We do not know what language Frank uses, or whether John speaks under anyone's compulsion.</para>
     <!-- ^^   anyone: contrasted with everyone in assumption of existence, 399 -->
     <indexterm type="general">
       <primary>anyone</primary>
     </indexterm>
     <para>Joiks may be prefixed with 
-    <quote>.i</quote>to produce ijoiks, which serve to non-logically connect sentences. The ijoik 
+    <quote>.i</quote> to produce ijoiks, which serve to non-logically connect sentences. The ijoik 
     <!-- ^^   ijoik: as name for compound cmavo, 336; definition, 358 -->
     <indexterm type="general">
       <primary>ijoik</primary>
     </indexterm>
-    <quote>.ice'o</quote>indicates that the event of the second bridi follows that of the first bridi in some way other than a time relationship (which is handled with a tense):</para>
+    <quote>.ice'o</quote> indicates that the event of the second bridi follows that of the first bridi in some way other than a time relationship (which is handled with a tense):</para>
     <!-- ^^   ice'o: contrasted with .ibabo, 358 -->
     <indexterm type="general">
       <primary>ice'o</primary>
@@ -2840,11 +2840,11 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-27xU" />represents a list of things to be done in priority order. The order is important, hence the need for a sequence connective, but does not necessarily represent a time order (the dog may end up getting walked first). Note the use of 
-    <quote>tu'e</quote>and 
-    <quote>tu'u</quote>as general brackets around the whole list. This is related to, but distinct from, their use in 
+    <xref linkend="example-random-id-27xU" /> represents a list of things to be done in priority order. The order is important, hence the need for a sequence connective, but does not necessarily represent a time order (the dog may end up getting walked first). Note the use of 
+    <quote>tu'e</quote> and 
+    <quote>tu'u</quote> as general brackets around the whole list. This is related to, but distinct from, their use in 
     <xref linkend="cll_chapter14-section8" />, because there is no logical connective between the introductory phrase 
-    <quote>mi ba gasnu la'edi'e</quote>and the rest. The brackets effectively show how large an utterance the word 
+    <quote>mi ba gasnu la'edi'e</quote> and the rest. The brackets effectively show how large an utterance the word 
     <quote>di'e</quote>, which means 
     <!-- ^^   di'e, 149, 358; effect of tu'e/tu'u on, 358 -->
     <indexterm type="general">
@@ -2852,10 +2852,10 @@
     </indexterm>
     <quote>the following utterance</quote>, refers to.</para>
     <para>Similarly, 
-    <quote>.ijoi</quote>is used to connect sentences that represent the components of a joint event such as a joint cause: the Lojban equivalent of 
-    <quote>Fran hit her head and fell out of the boat, so that she drowned</quote>would join the events 
-    <quote>Fran hit her head</quote>and 
-    <quote>Fran fell out of the boat</quote>with 
+    <quote>.ijoi</quote> is used to connect sentences that represent the components of a joint event such as a joint cause: the Lojban equivalent of 
+    <quote>Fran hit her head and fell out of the boat, so that she drowned</quote> would join the events 
+    <quote>Fran hit her head</quote> and 
+    <quote>Fran fell out of the boat</quote> with 
     <quote>.ijoi</quote>.</para>
     <para>The following 
     <quote>nai</quote>, if present, does not negate either of the things to be connected, but instead specifies that some other connection (logical or non-logical) is applicable: it is a scalar negation:</para>
@@ -2869,17 +2869,17 @@
       </interlinear-gloss>
     </example>
     <para>The result of 
-    <quote>mi jo'u do</quote>would be two individuals, not a mass, therefore 
+    <quote>mi jo'u do</quote> would be two individuals, not a mass, therefore 
     <!-- ^^   jo'u, 354, 355; contrasted with ce, 355; contrasted with ce'o, 355; contrasted with joi, 355; result of connection with, 355 -->
     <indexterm type="general">
       <primary>jo'u</primary>
     </indexterm>
-    <quote>jo'u</quote>is not applicable; 
+    <quote>jo'u</quote> is not applicable; 
     <!-- ^^   jo'u, 354, 355; contrasted with ce, 355; contrasted with ce'o, 355; contrasted with joi, 355; result of connection with, 355 -->
     <indexterm type="general">
       <primary>jo'u</primary>
     </indexterm>
-    <quote>joi</quote>would be the correct connective.</para>
+    <quote>joi</quote> would be the correct connective.</para>
     <para>There is no joik question cmavo as such; however, joiks and ijoiks may be uttered in isolation in response to a logical connective question, as in the following exchange:</para>
     <example xml:id="example-random-id-qGSm" role="interlinear-gloss-example">
       <title>
@@ -2916,7 +2916,7 @@
       <primary>non-logical connection</primary>
     </indexterm>
     <para>In addition to the non-logical connectives of selma'o JOI explained in 
-    <xref linkend="cll_chapter14-section14" />and 
+    <xref linkend="cll_chapter14-section14" /> and 
     <xref linkend="cll_chapter14-section15" />, there are three other connectives which can appear in joiks: 
     <quote>bi'i</quote>, 
     <quote>bi'o</quote>, and 
@@ -2925,15 +2925,15 @@
     <indexterm type="general">
       <primary>mi'i</primary>
     </indexterm>
-    <quote>bi'i</quote>is correct if the endpoints are independent of order, whereas 
-    <quote>bi'o</quote>or 
-    <quote>sebi'o</quote>are used when order matters.</para>
+    <quote>bi'i</quote> is correct if the endpoints are independent of order, whereas 
+    <quote>bi'o</quote> or 
+    <quote>sebi'o</quote> are used when order matters.</para>
     <!-- ^^   sebi'o, 359 -->
     <indexterm type="general">
       <primary>sebi'o</primary>
     </indexterm>
     <para>An example of 
-    <quote>bi'i</quote>in sumti connection:</para>
+    <quote>bi'i</quote> in sumti connection:</para>
     <!-- ^^   sumti connection: afterthought, 340; forethought, 341 -->
     <indexterm type="general">
       <primary>sumti connection</primary>
@@ -2958,10 +2958,10 @@
     <indexterm type="general">
       <primary>between Dresden and Frankfurt</primary>
     </indexterm>
-    <quote>bi'i</quote>is the appropriate interval connective. The sumti 
-    <quote>la drezdn. bi'i la frankfurt.</quote>falls into the x2 place of 
+    <quote>bi'i</quote> is the appropriate interval connective. The sumti 
+    <quote>la drezdn. bi'i la frankfurt.</quote> falls into the x2 place of 
     <quote>sanli</quote>, which is the surface I stand on; the interval specifies that surface by its limits. (Obviously, I am not standing on the whole of the interval; the x2 place of 
-    <quote>sanli</quote>specifies a surface which is typically larger in extent than just the size of the stander's feet.)</para>
+    <quote>sanli</quote> specifies a surface which is typically larger in extent than just the size of the stander's feet.)</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-rYv4">
       <title>
         <anchor xml:id="c14e16d2" />
@@ -2974,10 +2974,10 @@
     </example>
     <para>In 
     <xref linkend="example-random-id-rYv4" />, on the other hand, it is essential that 
-    <quote>la pacac.</quote>comes before 
+    <quote>la pacac.</quote> comes before 
     <quote>la recac.</quote>; otherwise we have an 11-hour (or 23-hour) interval rather than a one-hour interval. In this use of an interval, the whole interval is probably intended, or at least most of it.</para>
     <para>
-    <xref linkend="example-random-id-rYv4" />is equivalent to:</para>
+    <xref linkend="example-random-id-rYv4" /> is equivalent to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-qqIr">
       <title>
         <anchor xml:id="c14e16d3" />
@@ -3020,10 +3020,10 @@
     <para>Here we have an interval whose center is Washington and whose distance, or radius, is fifty miles.</para>
     <para>In 
     <xref linkend="example-random-id-sHhA" />, is it possible that I am standing in Dresden (or Frankfurt) itself? Yes. The connectives of selma'o BIhI are ambiguous about whether the endpoints themselves are included in or excluded from the interval. Two auxiliary cmavo 
-    <quote>ga'o</quote>and 
-    <quote>ke'i</quote>(of cmavo GAhO) are used to indicate the status of the endpoints: 
-    <quote>ga'o</quote>means that the endpoint is included, 
-    <quote>ke'i</quote>that it is excluded:</para>
+    <quote>ga'o</quote> and 
+    <quote>ke'i</quote> (of cmavo GAhO) are used to indicate the status of the endpoints: 
+    <quote>ga'o</quote> means that the endpoint is included, 
+    <quote>ke'i</quote> that it is excluded:</para>
     <example xml:id="example-random-id-qGTc" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c14e16d5" />
@@ -3074,10 +3074,10 @@
     </example>
     <para>As these examples should make clear, the GAhO cmavo that applies to a given endpoint is the one that stands physically adjacent to it: the left-hand endpoint is referred to by the first GAhO, and the right-hand endpoint by the second GAhO. It is ungrammatical to have just one GAhO.</para>
     <para>(Etymologically, 
-    <quote>ga'o</quote>is derived from 
+    <quote>ga'o</quote> is derived from 
     <quote>ganlo</quote>, which means 
     <quote>closed</quote>, and 
-    <quote>ke'i</quote>from 
+    <quote>ke'i</quote> from 
     <quote>kalri</quote>, which means 
     <quote>open</quote>. In mathematics, inclusive intervals are referred to as closed intervals, and exclusive intervals as open ones.)</para>
     <para>BIhI joiks are grammatical anywhere that other joiks are, including in tanru connection and (as ijoiks) between sentences. No meanings have been found for these uses.</para>
@@ -3086,7 +3086,7 @@
       <primary>tanru connection</primary>
     </indexterm>
     <para>Negated intervals, marked with a 
-    <quote>-nai</quote>following the BIhI cmavo, indicate an interval that includes everything but what is between the endpoints (with respect to some understood scale):</para>
+    <quote>-nai</quote> following the BIhI cmavo, indicate an interval that includes everything but what is between the endpoints (with respect to some understood scale):</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-39EI">
       <title>
         <anchor xml:id="c14e16d9" />
@@ -3112,11 +3112,11 @@
        GAhO [se] BIhI [nai] GAhO
 </programlisting>
     <para>Notice that the colloquial English translations of 
-    <quote>bi'i</quote>and 
-    <quote>bi'o</quote>have forethought form: 
-    <quote>between ... and</quote>for 
+    <quote>bi'i</quote> and 
+    <quote>bi'o</quote> have forethought form: 
+    <quote>between ... and</quote> for 
     <quote>bi'i</quote>, and 
-    <quote>from ... to</quote>for 
+    <quote>from ... to</quote> for 
     <quote>bi'o</quote>. In Lojban too, non-logical connectives can be expressed in forethought. Rather than using a separate selma'o, the forethought logical connectives are constructed from the afterthought ones by suffixing 
     <!-- ^^   forethought logical connectives: within tanru, 92 -->
     <indexterm type="general">
@@ -3139,7 +3139,7 @@
 </programlisting>
     <para>Joigiks may be used to non-logically connect bridi, sumti, and bridi-tails; and also in termsets.</para>
     <para>
-    <xref linkend="example-random-id-pC5x" />in forethought becomes:</para>
+    <xref linkend="example-random-id-pC5x" /> in forethought becomes:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-iBpP">
       <title>
         <anchor xml:id="c14e16d10" />
@@ -3154,14 +3154,14 @@
       </interlinear-gloss>
     </example>
     <para>The first 
-    <quote>gi</quote>is part of the joigik; the second 
+    <quote>gi</quote> is part of the joigik; the second 
     <!-- ^^   joigik: as name for compound cmavo, 336; definition, 361 -->
     <indexterm type="general">
       <primary>joigik</primary>
     </indexterm>
-    <quote>gi</quote>is the regular gik that separates the two things being connected in all forethought forms.</para>
+    <quote>gi</quote> is the regular gik that separates the two things being connected in all forethought forms.</para>
     <para>
-    <xref linkend="example-random-id-qGtv" />can be expressed in forethought as:</para>
+    <xref linkend="example-random-id-qGtv" /> can be expressed in forethought as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-u51K">
       <title>
         <anchor xml:id="c14e16d11" />
@@ -3190,15 +3190,15 @@
     <indexterm type="general">
       <primary>guheks</primary>
     </indexterm>
-    <quote>bo</quote>are not allowed for operators.) This parallelism is no accident.</para>
+    <quote>bo</quote> are not allowed for operators.) This parallelism is no accident.</para>
     <para>In addition, eks with 
-    <quote>bo</quote>and with 
-    <quote>ke ... ke'e</quote>are allowed for grouping logically connected operands, and 
-    <quote>ke ... ke'e</quote>is allowed for grouping logically connected operators, although there is no analogue of tanru among the operators.</para>
+    <quote>bo</quote> and with 
+    <quote>ke ... ke'e</quote> are allowed for grouping logically connected operands, and 
+    <quote>ke ... ke'e</quote> is allowed for grouping logically connected operators, although there is no analogue of tanru among the operators.</para>
     <para>Only a few examples of each kind of mekso connection will be given. Despite the large number of rules required to support this feature, it is of relatively minor importance in either the mekso or the logical-connective scheme of things. These examples are drawn from 
     <xref linkend="cll_chapter18" />, and contain many mekso features not explained in this chapter.</para>
     <para>
-    <xref linkend="example-random-id-gMU4" />exhibits afterthought logical connection between operands:</para>
+    <xref linkend="example-random-id-gMU4" /> exhibits afterthought logical connection between operands:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-gMU4">
       <title>
         <anchor xml:id="c14e17d1" />
@@ -3209,7 +3209,7 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-ftNY" />is equivalent in meaning, but uses forethought connection:</para>
+    <xref linkend="example-random-id-ftNY" /> is equivalent in meaning, but uses forethought connection:</para>
     <!-- ^^   forethought connection: contrasted with afterthought for grammatical utterances, 352; definition, 199; in abstractions, 365; in tenses, 363; observatives, 347; of operands, 453; of operators, 453 -->
     <!-- ^^   observatives: and abstractions, 255; quick-tour version, 15 -->
     <indexterm type="general">
@@ -3228,10 +3228,10 @@
       </interlinear-gloss>
     </example>
     <para>Note that the mekso in 
-    <xref linkend="example-random-id-gMU4" />and 
-    <xref linkend="example-random-id-ftNY" />are being used as quantifiers. Lojban requires that any mekso other than a simple number be enclosed in 
-    <quote>vei</quote>and 
-    <quote>ve'o</quote>parentheses when used as a quantifier. The right parenthesis mark, 
+    <xref linkend="example-random-id-gMU4" /> and 
+    <xref linkend="example-random-id-ftNY" /> are being used as quantifiers. Lojban requires that any mekso other than a simple number be enclosed in 
+    <quote>vei</quote> and 
+    <quote>ve'o</quote> parentheses when used as a quantifier. The right parenthesis mark, 
     <quote>ve'o</quote>, is an elidable terminator.</para>
     <para>Simple examples of logical connection between operators are hard to come by. A contrived example is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-dCxf">
@@ -3245,7 +3245,7 @@
       </interlinear-gloss>
     </example>
     <para>The forethought form of 
-    <xref linkend="example-random-id-dCxf" />is:</para>
+    <xref linkend="example-random-id-dCxf" /> is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-YBD6">
       <title>
         <anchor xml:id="c14e17d4" />
@@ -3261,7 +3261,7 @@
     <indexterm type="general">
       <primary>joigiks</primary>
     </indexterm>
-    <quote>bi'i</quote>to create mathematical intervals:</para>
+    <quote>bi'i</quote> to create mathematical intervals:</para>
     <!-- ^^   mathematical intervals, 362 -->
     <indexterm type="general">
       <primary>mathematical intervals</primary>
@@ -3302,24 +3302,24 @@
           <primary>ce'o</primary>
         </indexterm>
         <gloss>
-        <quote>x</quote>sub ( 
-        <quote>b</quote>sequence 
+        <quote>x</quote> sub ( 
+        <quote>b</quote> sequence 
         <quote>d</quote>)</gloss>
         <en>x</en>
       </interlinear-gloss>
     </example>
     <para>Note that the 
-    <quote>boi</quote>in 
-    <xref linkend="example-random-id-8rEL" />is not elidable, because the 
-    <quote>xi</quote>subscript needs something to attach to.</para>
+    <quote>boi</quote> in 
+    <xref linkend="example-random-id-8rEL" /> is not elidable, because the 
+    <quote>xi</quote> subscript needs something to attach to.</para>
   </section>
   <section xml:id="cll_chapter14-section18">
     <title>Tenses, modals, and logical connection</title>
     <para>The tense and modal systems of Lojban interact with the logical connective system. No one chapter can explain all of these simultaneously, so each chapter must present its own view of the area of interaction with emphasis on its own concepts and terminology. In the examples of this chapter, the many tenses of various selma'o as well as the modals of selma'o BAI are represented by the simple time cmavo 
     <quote>pu</quote>, 
     <quote>ca</quote>, and 
-    <quote>ba</quote>(of selma'o PU) representing the past, the present, and the future respectively. Preceding a selbri, these cmavo state the time when the bridi was, is, or will be true (analogous to English verb tenses); preceding a sumti, they state that the event of the main bridi is before, simultaneous with, or after the event given by the sumti (which is generally a 
-    <quote>le nu</quote>abstraction; see 
+    <quote>ba</quote> (of selma'o PU) representing the past, the present, and the future respectively. Preceding a selbri, these cmavo state the time when the bridi was, is, or will be true (analogous to English verb tenses); preceding a sumti, they state that the event of the main bridi is before, simultaneous with, or after the event given by the sumti (which is generally a 
+    <quote>le nu</quote> abstraction; see 
     <xref linkend="cll_chapter11" />).</para>
     <para>The two types of interaction between tenses and logical connectives are logically connected tenses and tensed logical connections. The former are fairly simple. Jeks may be used between tense cmavo to specify two connected bridi that differ only in tense:</para>
     <!-- ^^   logically connected tenses: definition, 363; expansion to sentences, 245; with JA, 245 -->
@@ -3354,8 +3354,8 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-g6iT" />and 
-    <xref linkend="example-random-id-PLgw" />are equivalent in meaning; neither says anything about whether Arthur is king now.</para>
+    <xref linkend="example-random-id-g6iT" /> and 
+    <xref linkend="example-random-id-PLgw" /> are equivalent in meaning; neither says anything about whether Arthur is king now.</para>
     <para>Non-logical connection with joiks is also possible between tenses:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Mcsi">
       <title>
@@ -3408,10 +3408,10 @@
     </example>
     <para>fails to fully represent a feature of the English, namely that the buying came after the going. (It also fails to represent that the buying was a consequence of the going, which can be expressed by a modal that is discussed in 
     <xref linkend="cll_chapter9" />.) However, the tense information - that the event of my going to the market preceded the event of my buying food - can be added to the logical connective as follows. The 
-    <quote>.ije</quote>is replaced by 
+    <quote>.ije</quote> is replaced by 
     <quote>.ijebo</quote>, and the tense cmavo 
-    <quote>ba</quote>is inserted between 
-    <quote>.ije</quote>and 
+    <quote>ba</quote> is inserted between 
+    <quote>.ije</quote> and 
     <quote>bo</quote>:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-BPG1">
       <title>
@@ -3427,11 +3427,11 @@
       </interlinear-gloss>
     </example>
     <para>Here the 
-    <quote>pu</quote>cmavo in the two bridi-tails express the time of both actions with respect to the speaker: in the past. The 
-    <quote>ba</quote>relates the two items to one another: the second item is later than the first item. The grammar does not permit omitting the 
+    <quote>pu</quote> cmavo in the two bridi-tails express the time of both actions with respect to the speaker: in the past. The 
+    <quote>ba</quote> relates the two items to one another: the second item is later than the first item. The grammar does not permit omitting the 
     <quote>bo</quote>; if it were omitted, the 
-    <quote>ba</quote>and the second 
-    <quote>pu</quote>would run together to form a compound tense 
+    <quote>ba</quote> and the second 
+    <quote>pu</quote> would run together to form a compound tense 
     <!-- ^^   compound tense: compared with multiple tenses in sentence, 234; compared with tense in scope of sticky tense, 234; definition, 218; Lojban contrasted with English in order of specification, 218 -->
     <!-- ^^   tense in scope of sticky tense: compared with compound tense, 234 -->
     <indexterm type="general">
@@ -3444,7 +3444,7 @@
     <indexterm type="general">
       <primary>compound tense</primary>
     </indexterm>
-    <quote>bapu</quote>applying to the second bridi-tail only.</para>
+    <quote>bapu</quote> applying to the second bridi-tail only.</para>
     <para>Adding tense or modal information to a logical connective is permitted only in the following situations:</para>
     <para>Between an ek (or joik) and 
     <quote>bo</quote>, as in:</para>
@@ -3543,20 +3543,20 @@
       </interlinear-gloss>
     </example>
     <para>As can be seen from 
-    <xref linkend="example-random-id-AhnP" />and 
+    <xref linkend="example-random-id-AhnP" /> and 
     <xref linkend="example-random-id-GBgP" />, the choice between 
-    <quote>bo</quote>and 
-    <quote>ke</quote>(or 
+    <quote>bo</quote> and 
+    <quote>ke</quote> (or 
     <quote>tu'e</quote>) is arbitrary when there are only two things to be connected. If there were no tense information to include, of course neither would be required; it is only the rule that tense information must always be sandwiched between the logical connective and a following 
     <quote>bo</quote>, 
     <quote>ke</quote>, or 
-    <quote>tu'e</quote>that requires the use of one of these grouping cmavo in 
-    <xref linkend="example-random-id-129L" />and 
-    <xref linkend="example-random-id-APPE" />through 
+    <quote>tu'e</quote> that requires the use of one of these grouping cmavo in 
+    <xref linkend="example-random-id-129L" /> and 
+    <xref linkend="example-random-id-APPE" /> through 
     <xref linkend="example-random-id-Ce09" />.</para>
     <para>Non-logical connectives with 
-    <quote>bo</quote>and 
-    <quote>ke</quote>can include tense information in exactly the same way as logical connectives. Forethought connectives, however (except as noted below) are unable to do so, as are termsets or tense connectives. Mathematical operands and operators can also include tense information in their logical connectives as a result of their close parallelism with sumti and tanru components respectively:</para>
+    <quote>bo</quote> and 
+    <quote>ke</quote> can include tense information in exactly the same way as logical connectives. Forethought connectives, however (except as noted below) are unable to do so, as are termsets or tense connectives. Mathematical operands and operators can also include tense information in their logical connectives as a result of their close parallelism with sumti and tanru components respectively:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-sgUo">
       <title>
         <anchor xml:id="c14e18d14" />
@@ -3587,7 +3587,7 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-DxuA" />is similar to 
+    <xref linkend="example-random-id-DxuA" /> is similar to 
     <xref linkend="example-random-id-PMTu" />. There is no time relationship specified between the going and the buying; both are simply set in the past.</para>
   </section>
   <section xml:id="cll_chapter14-section19">
@@ -3601,8 +3601,8 @@
     <indexterm type="general">
       <primary>bridi connection</primary>
     </indexterm>
-    <xref linkend="example-random-id-qGVP" />and 
-    <xref linkend="example-random-id-qgVR" />are equivalent in meaning:</para>
+    <xref linkend="example-random-id-qGVP" /> and 
+    <xref linkend="example-random-id-qgVR" /> are equivalent in meaning:</para>
     <example xml:id="example-random-id-qGVP" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c14e19d1" />
@@ -3650,7 +3650,7 @@
       </interlinear-gloss>
     </example>
     <para>is false, since I have no evidence one way or the other ( 
-    <quote>jinvi</quote>requires some sort of evidence, real or fancied, unlike 
+    <quote>jinvi</quote> requires some sort of evidence, real or fancied, unlike 
     <quote>krici</quote>).</para>
   </section>
   <section xml:id="cll_chapter14-section20">
@@ -3744,7 +3744,7 @@
   <section xml:id="cll_chapter14-section21">
     <title>Truth functions and corresponding logical connectives</title>
     <para>The following table specifies, for each truth function, the most-often used cmavo or compound cmavo which expresses it for each of the six types of logical connective. (Other compound cmavo are often possible: for example, 
-    <quote>se.a</quote>means the same as 
+    <quote>se.a</quote> means the same as 
     <quote>a</quote>, and could be used instead.)</para>
     <informaltable>
       <tgroup cols="6">
@@ -3888,7 +3888,7 @@
     <para>The full set of rules for inserting 
     <quote>na</quote>, 
     <quote>se</quote>, and 
-    <quote>nai</quote>into any connective is:</para>
+    <quote>nai</quote> into any connective is:</para>
     <para>Afterthought logical connectives (eks, jeks, giheks, ijeks):</para>
     <!-- ^^   giheks: syntax of, 346 -->
     <indexterm type="general">
@@ -3897,17 +3897,17 @@
     <itemizedlist>
       <listitem>
         <para>Negate first construct: Place 
-        <quote>na</quote>before the connective cmavo (but after the 
-        <quote>.i</quote>of an ijek).</para>
+        <quote>na</quote> before the connective cmavo (but after the 
+        <quote>.i</quote> of an ijek).</para>
       </listitem>
       <listitem>
         <para>Negate second construct: Place 
-        <quote>nai</quote>after the connective cmavo.</para>
+        <quote>nai</quote> after the connective cmavo.</para>
       </listitem>
       <listitem>
         <para>Exchange constructs: Place 
-        <quote>se</quote>before the connective cmavo (after 
-        <quote>na</quote>if any).</para>
+        <quote>se</quote> before the connective cmavo (after 
+        <quote>na</quote> if any).</para>
       </listitem>
     </itemizedlist>
     <para>Forethought logical connectives (geks, guheks):</para>
@@ -3918,16 +3918,16 @@
     <itemizedlist>
       <listitem>
         <para>Negate first construct: Place 
-        <quote>nai</quote>after the connective cmavo.</para>
+        <quote>nai</quote> after the connective cmavo.</para>
       </listitem>
       <listitem>
         <para>Negate second construct: Place 
-        <quote>nai</quote>after the 
+        <quote>nai</quote> after the 
         <quote>gi</quote>.</para>
       </listitem>
       <listitem>
         <para>Exchange constructs: Place 
-        <quote>se</quote>before the connective cmavo.</para>
+        <quote>se</quote> before the connective cmavo.</para>
       </listitem>
     </itemizedlist>
     <para>Non-logical connectives (joiks, joigiks):</para>
@@ -3938,8 +3938,8 @@
     <itemizedlist>
       <listitem>
         <para>Negate connection: Place 
-        <quote>nai</quote>after the connective cmavo (but before the 
-        <quote>gi</quote>of a joigik).</para>
+        <quote>nai</quote> after the connective cmavo (but before the 
+        <quote>gi</quote> of a joigik).</para>
         <!-- ^^   joigik: as name for compound cmavo, 336; definition, 361 -->
         <indexterm type="general">
           <primary>joigik</primary>
@@ -3947,7 +3947,7 @@
       </listitem>
       <listitem>
         <para>Exchange constructs: Place 
-        <quote>se</quote>before the connective cmavo.</para>
+        <quote>se</quote> before the connective cmavo.</para>
       </listitem>
     </itemizedlist>
   </section>

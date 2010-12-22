@@ -60,9 +60,9 @@
     <indexterm type="general">
       <primary>YACC grammar</primary>
     </indexterm>
-    <emphasis>without</emphasis>the strings of defining tokens. Two sets of lexer tokens are defined in the token set so as to be compatible with either option.</para>
+    <emphasis>without</emphasis> the strings of defining tokens. Two sets of lexer tokens are defined in the token set so as to be compatible with either option.</para>
     <para>In this step, the strings must be labelled with the appropriate lexer tokens. Order of inserting lexer tokens 
-    <emphasis>IS</emphasis>significant, since some shorter strings that would be marked with a lexer token may be found inside longer strings. If the tokens are inserted before or in place of the shorter strings, the longer strings cannot be identified.</para>
+    <emphasis>IS</emphasis> significant, since some shorter strings that would be marked with a lexer token may be found inside longer strings. If the tokens are inserted before or in place of the shorter strings, the longer strings cannot be identified.</para>
     <para>If option a. is chosen, the following order of insertion works correctly (it is not the only possible order): A, C, D, B, U, E, H, I, J, K, M, N, G, O, V, W, F, P, R, T, S, Y, L, Q. This ensures that the longest rules will be processed first; a PA+MAI will not be seen as a PA with a dangling MAI at the end, for example.</para>
     <bridgehead>Step 6 - YACC Parsing</bridgehead>
     <para>YACC should now be able to parse the Lojban text in accordance with the rule terminals labelled from 1 to 899 under option 5a, or 1 to 1099 under option 5b. Comment out the rules beyond 900 if option 5a is used, and comment out the 700-series of lexer-tokens, while restoring the series of lexer tokens numbered from 900 up.</para>
@@ -7205,7 +7205,7 @@ the 900 series rules are found in the lexer.  */
         <term>
         <anchor xml:id="b0" />
         <anchor xreflabel="BNF rule #0" xml:id="cll_bnf-0" />
-        <xref linkend="cll_yacc-0" />text 
+        <xref linkend="cll_yacc-0" /> text 
         <subscript>0</subscript>=</term>
         <listitem>
           <para>[NAI ...] [CMENE ... # | (indicators &amp; free ...)] [joik-jek] text-1 
@@ -8100,7 +8100,7 @@ the 900 series rules are found in the lexer.  */
         <term>
         <anchor xml:id="b1100" />
         <anchor xreflabel="BNF rule #1100" xml:id="cll_bnf-1100" />
-        <xref linkend="cll_yacc-1100" />word 
+        <xref linkend="cll_yacc-1100" /> word 
         <subscript>1100</subscript>=</term>
         <listitem>
           <para>[BAhE] any-word [indicators]</para>
