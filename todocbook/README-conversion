@@ -83,3 +83,21 @@ index:
       make_index.sh
       origcllindex.txt
       TODO-index
+
+There were various other ad-hoc conversion passes, and manual work.
+The next major conversion pass was to fix the last few non-<example>
+examples and split the examples so that there was one <example> for
+each anchor set.  This used:
+
+      breakup_examples.xsl
+      fix_still_broken_examples.xsl
+
+Used to find empty elements to delete:
+
+      find_empty.xsl
+
+Used to convert examples to using the random ids instead of the
+sectional numbered ones:
+
+      find_example_ids.xsl
+      fix_numbered_example_ids.sh
