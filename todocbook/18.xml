@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V5.0//EN"
+"dtd/docbook-5.0.dtd">
 <chapter xml:id="cll_chapter18">
   <title>Chapter 18 lojbau mekso: Mathematical Expressions in Lojban</title>
   <section xml:id="cll_chapter18-section1">
@@ -191,45 +193,54 @@
      ma'u    PA  positive sign
 <!-- ^^   positive sign: contrasted with addition operator, 436 -->
 <indexterm type="general">
-  <primary>positive sign</primary>
+  
+<primary>positive sign</primary>
 </indexterm>
      ni'u    PA  negative sign
 <!-- ^^   negative sign: contrasted with negation operator, 438; contrasted with subtraction operator, 434 -->
 <!-- ^^   subtraction operator: contrasted with negation operator, 438; contrasted with negative sign, 434 -->
 <indexterm type="general">
-  <primary>subtraction operator</primary>
+  
+<primary>subtraction operator</primary>
 </indexterm>
 <indexterm type="general">
-  <primary>negative sign</primary>
+  
+<primary>negative sign</primary>
 </indexterm>
      pi      PA  decimal point
 <!-- ^^   decimal point: as numerical punctuation, 433; effect of different notations, 433; in bases other than 10, 444 -->
 <indexterm type="general">
-  <primary>decimal point</primary>
+  
+<primary>decimal point</primary>
 </indexterm>
      fi'u    PA  fraction slash
 <!-- ^^   fi'u, 433 -->
 <indexterm type="general">
-  <primary>fi'u</primary>
+  
+<primary>fi'u</primary>
 </indexterm>
      ra'e    PA  repeating decimal
 <!-- ^^   ra'e, 433 -->
 <indexterm type="general">
-  <primary>ra'e</primary>
+  
+<primary>ra'e</primary>
 </indexterm>
      ce'i    PA  percent sign
 <!-- ^^   percent: as numerical punctuation, 433 -->
 <indexterm type="general">
-  <primary>percent</primary>
+  
+<primary>percent</primary>
 </indexterm>
 <!-- ^^   ce'i, 433 -->
 <indexterm type="general">
-  <primary>ce'i</primary>
+  
+<primary>ce'i</primary>
 </indexterm>
      ki'o    PA  comma between digits
 <!-- ^^   ki'o, 433 -->
 <indexterm type="general">
-  <primary>ki'o</primary>
+  
+<primary>ki'o</primary>
 </indexterm>
 </programlisting>
     <para>A number can be given an explicit sign by the use of 
@@ -425,16 +436,19 @@
      ci'i    PA  infinity
 <!-- ^^   infinity: example, 434 -->
 <indexterm type="general">
-  <primary>infinity</primary>
+  
+<primary>infinity</primary>
 </indexterm>
 <!-- ^^   ci'i, 434 -->
 <indexterm type="general">
-  <primary>ci'i</primary>
+  
+<primary>ci'i</primary>
 </indexterm>
      ka'o    PA  imaginary i, sqrt(-1)
 <!-- ^^   ka'o, 434; as special number compared with as numerical punctuation, 434 -->
 <indexterm type="general">
-  <primary>ka'o</primary>
+  
+<primary>ka'o</primary>
 </indexterm>
      pai     PA  
 <phrase role="IPA">π</phrase>, pi (approx 3.14159...)
@@ -442,32 +456,48 @@
      fi'u    PA  golden ratio, 
 <!-- ^^   fi'u, 433 -->
 <indexterm type="general">
-  <primary>fi'u</primary>
+  
+<primary>fi'u</primary>
 </indexterm>
 <phrase role="IPA">Φ</phrase>, phi, (1 + sqrt(5))/2 (approx. 1.61803...)
 </programlisting>
     <para>The last cmavo is the same as the fraction sign cmavo: a fraction sign with neither numerator nor denominator represents the golden ratio.</para>
     <para>Numbers can have any of these digit, punctuation, and special-number cmavo of Sections 2, 3, and 4 in any combination:</para>
-    <programlisting xml:space="preserve">
-<anchor xml:id="c18e4d1" />
-<anchor xml:id="cll_chapter18-section4-example1" /> 4.1)   ma'u ci'i
+    <example role="interlinear-gloss-example" xml:id="RANDOM">
+      <title>
+        <anchor xml:id="c18e4d1" />
+        <anchor xml:id="cll_chapter18-section4-example1" />
+      </title>
+      <programlisting xml:space="preserve">
+
+ 4.1)   ma'u ci'i
 <!-- ^^   ci'i, 434 -->
 <indexterm type="general">
-  <primary>ci'i</primary>
+  
+<primary>ci'i</primary>
 </indexterm>
        +
 <phrase role="IPA">∞</phrase>
-    </programlisting>
-    <programlisting xml:space="preserve">
-<anchor xml:id="c18e4d2" />
-<anchor xml:id="cll_chapter18-section4-example2" /> 4.2)   ci ka'o re
+    
+</programlisting>
+    </example>
+    <example role="interlinear-gloss-example" xml:id="RANDOM">
+      <title>
+        <anchor xml:id="c18e4d2" />
+        <anchor xml:id="cll_chapter18-section4-example2" />
+      </title>
+      <programlisting xml:space="preserve">
+
+ 4.2)   ci ka'o re
 <!-- ^^   ka'o, 434; as special number compared with as numerical punctuation, 434 -->
 <indexterm type="general">
-  <primary>ka'o</primary>
+  
+<primary>ka'o</primary>
 </indexterm>
        3i2 (a complex number equivalent to 
 <quote>3 + 2i</quote>)
 </programlisting>
+    </example>
     <para>Note that 
     <quote>ka'o</quote>is both a special number (meaning 
     <!-- ^^   ka'o, 434; as special number compared with as numerical punctuation, 434 -->
@@ -475,40 +505,62 @@
       <primary>ka'o</primary>
     </indexterm>
     <quote>i</quote>) and a number punctuation mark (separating the real and the imaginary parts of a complex number).</para>
-    <programlisting xml:space="preserve">
-<anchor xml:id="c18e4d3" />
-<anchor xml:id="cll_chapter18-section4-example3" /> 4.3)   ci'i no
+    <example role="interlinear-gloss-example" xml:id="RANDOM">
+      <title>
+        <anchor xml:id="c18e4d3" />
+        <anchor xml:id="cll_chapter18-section4-example3" />
+      </title>
+      <programlisting xml:space="preserve">
+
+ 4.3)   ci'i no
 <!-- ^^   ci'i, 434 -->
 <indexterm type="general">
-  <primary>ci'i</primary>
+  
+<primary>ci'i</primary>
 </indexterm>
        infinity zero
 <!-- ^^   infinity: example, 434 -->
 <indexterm type="general">
-  <primary>infinity</primary>
+  
+<primary>infinity</primary>
 </indexterm>
        
 <phrase role="IPA">ℵ</phrase>
 <subscript>0</subscript> (a transfinite cardinal)
 <!-- ^^   transfinite cardinal: example, 434 -->
 <indexterm type="general">
-  <primary>transfinite cardinal</primary>
+  
+<primary>transfinite cardinal</primary>
 </indexterm>
 </programlisting>
+    </example>
     <para>The special numbers 
     <quote>pai</quote>and 
     <quote>te'o</quote>are mathematically important, which is why they are given their own cmavo:</para>
-    <programlisting xml:space="preserve">
-<anchor xml:id="c18e4d4" />
-<anchor xml:id="cll_chapter18-section4-example4" /> 4.4)   pai
+    <example role="interlinear-gloss-example" xml:id="RANDOM">
+      <title>
+        <anchor xml:id="c18e4d4" />
+        <anchor xml:id="cll_chapter18-section4-example4" />
+      </title>
+      <programlisting xml:space="preserve">
+
+ 4.4)   pai
        pi, 
 <phrase role="IPA">π</phrase>
-    </programlisting>
-    <programlisting xml:space="preserve">
-<anchor xml:id="c18e4d5" />
-<anchor xml:id="cll_chapter18-section4-example5" /> 4.5)   te'o
+    
+</programlisting>
+    </example>
+    <example role="interlinear-gloss-example" xml:id="RANDOM">
+      <title>
+        <anchor xml:id="c18e4d5" />
+        <anchor xml:id="cll_chapter18-section4-example5" />
+      </title>
+      <programlisting xml:space="preserve">
+
+ 4.5)   te'o
        e
 </programlisting>
+    </example>
     <para>However, many combinations are as yet undefined:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-rv8p">
       <title>
@@ -548,7 +600,8 @@
      te'a    VUhU    raised to the power
 <!-- ^^   te'a, 437 -->
 <indexterm type="general">
-  <primary>te'a</primary>
+  
+<primary>te'a</primary>
 </indexterm>
      ny.     BY      letter 
 <quote>n</quote>
@@ -846,7 +899,8 @@
      pe'o    PEhO    forethought flag
 <!-- ^^   pe'o, 439 -->
 <indexterm type="general">
-  <primary>pe'o</primary>
+  
+<primary>pe'o</primary>
 </indexterm>
      ku'e    KUhE    forethought terminator
      py.     BY      letter 
@@ -1048,11 +1102,13 @@
      dunli       x1 is equal/congruent to x2 in/on property/quality/dimension/quantity x3
 <!-- ^^   dunli: contrasted with du, 163, 439 -->
 <indexterm type="general">
-  <primary>dunli</primary>
+  
+<primary>dunli</primary>
 </indexterm>
 <!-- ^^   dimension: meaning as sumti tcita, 233 -->
 <indexterm type="general">
-  <primary>dimension</primary>
+  
+<primary>dimension</primary>
 </indexterm>
      mleca       x1 is less than x2
      zmadu       x1 is greater than x2
@@ -1061,12 +1117,14 @@
      tamdu'i     x1 is similar to x2                    [tarmi dunli, shape-equal]
 <!-- ^^   dunli: contrasted with du, 163, 439 -->
 <indexterm type="general">
-  <primary>dunli</primary>
+  
+<primary>dunli</primary>
 </indexterm>
      turdu'i     x1 is isomorphic to x2                 [stura dunli, structure-equal]
 <!-- ^^   dunli: contrasted with du, 163, 439 -->
 <indexterm type="general">
-  <primary>dunli</primary>
+  
+<primary>dunli</primary>
 </indexterm>
      cmima       x1 is a member of set x2
      gripau      x1 is a subset of set x2               [girzu pagbu, set-part]
@@ -1601,22 +1659,26 @@
      su'e    PA  at most
 <!-- ^^   su'e, 443; with elided number, 443 -->
 <indexterm type="general">
-  <primary>su'e</primary>
+  
+<primary>su'e</primary>
 </indexterm>
 <!-- ^^   at most: contrasted with more than, at least, less than, 443; example, 443 -->
 <indexterm type="general">
-  <primary>at most</primary>
+  
+<primary>at most</primary>
 </indexterm>
      su'o    PA  at least
      me'i    PA  less than
 <!-- ^^   me'i, 443; with elided number, 443 -->
 <indexterm type="general">
-  <primary>me'i</primary>
+  
+<primary>me'i</primary>
 </indexterm>
      za'u    PA  more than
 <!-- ^^   za'u, 443; with elided number, 443 -->
 <indexterm type="general">
-  <primary>za'u</primary>
+  
+<primary>za'u</primary>
 </indexterm>
 </programlisting>
     <para>The cmavo 
@@ -3077,7 +3139,8 @@
       lo'o   LOhO    terminator for LI
 <!-- ^^   lo'o, 454; effect of logical connective on elidability of, 454 -->
 <indexterm type="general">
-  <primary>lo'o</primary>
+  
+<primary>lo'o</primary>
 </indexterm>
 </programlisting>
     <para>As befits a logical language, Lojban has extensive provision for logical connectives within both operators and operands. Full details on logical and non-logical connectives are provided in 
@@ -3182,12 +3245,18 @@
       </interlinear-gloss>
     </example>
     <para>Here is a classic example of operand logical connection:</para>
-    <programlisting xml:space="preserve">
-<anchor xml:id="c18e17d6" />
-<anchor xml:id="cll_chapter18-section17-example6" /> 17.6)  go li .abu bi'epi'i vei xy. te'a re ve'o su'i by. bi'epi'i xy.
+    <example role="interlinear-gloss-example" xml:id="RANDOM">
+      <title>
+        <anchor xml:id="c18e17d6" />
+        <anchor xml:id="cll_chapter18-section17-example6" />
+      </title>
+      <programlisting xml:space="preserve">
+
+ 17.6)  go li .abu bi'epi'i vei xy. te'a re ve'o su'i by. bi'epi'i xy.
 <!-- ^^   te'a, 437 -->
 <indexterm type="general">
-  <primary>te'a</primary>
+  
+<primary>te'a</primary>
 </indexterm>
             su'i cy.  du li no
        gi li xy. du li vei va'a by. ku'e su'i ja vu'u
@@ -3217,6 +3286,7 @@
 <!-- fraction bar -->
                          2a
 </programlisting>
+    </example>
     <para>Note the mixture of styles in 
     <xref linkend="cll_chapter18-section17-example6" />: the negation of b and the square root are represented by forethought and most of the operator precedence by prefixed 
     <!-- ^^   operator precedence: and mathematical notation, 436; effect of pragmatic convention, 436; generalized explicit specification, 437; in Lojban default, 436; plans for future, 458; rationale for default left-grouping, 436; scope modification with bi'e, 437; specifying by parenthesis, 437 -->
@@ -3361,23 +3431,31 @@
     <quote>jo'i</quote>)</para>
     <para>The cmavo 
     <quote>na'u</quote>makes a selbri into an operator. In general, the first place of the selbri specifies the result of the operator, and the other unfilled places specify the operands:</para>
-    <programlisting xml:space="preserve">
-<anchor xml:id="c18e18d1" />
-<anchor xml:id="cll_chapter18-section18-example1" /> 18.1)  li na'u tanjo te'u vei pai fe'i re [ve'o] du li ci'i
+    <example role="interlinear-gloss-example" xml:id="RANDOM">
+      <title>
+        <anchor xml:id="c18e18d1" />
+        <anchor xml:id="cll_chapter18-section18-example1" />
+      </title>
+      <programlisting xml:space="preserve">
+
+ 18.1)  li na'u tanjo te'u vei pai fe'i re [ve'o] du li ci'i
 <!-- ^^   ci'i, 434 -->
 <indexterm type="general">
-  <primary>ci'i</primary>
+  
+<primary>ci'i</primary>
 </indexterm>
        The-number the-operator tangent ( 
 <phrase role="IPA">π</phrase> / 2 ) = the-number infinity.
 <!-- ^^   infinity: example, 434 -->
 <indexterm type="general">
-  <primary>infinity</primary>
+  
+<primary>infinity</primary>
 </indexterm>
        tan(
 <phrase role="IPA">π</phrase>/2) = 
 <phrase role="IPA">∞</phrase>
 </programlisting>
+    </example>
     <para>
     <quote>tanjo</quote>is the gismu for 
     <quote>x1 is the tangent of x2</quote>, and the 
@@ -4024,24 +4102,28 @@
 <quote>du</quote> (mathematical equality) and other non-mekso cmavo
 <!-- ^^   mathematical equality: expressing, 435 -->
 <indexterm type="general">
-  <primary>mathematical equality</primary>
+  
+<primary>mathematical equality</primary>
 </indexterm>
      JOhI    array flag
      KUhE    elidable terminator for forethought mekso
      LI      mekso articles (li and me'o)
 <!-- ^^   articles: cmavo as Lojban equivalents, 50 -->
 <indexterm type="general">
-  <primary>articles</primary>
+  
+<primary>articles</primary>
 </indexterm>
      MAhO    make operand into operator
      MOI     creates mekso selbri (moi, mei, si'e, and cu'o, see 
 <!-- ^^   si'e, 447 -->
 <indexterm type="general">
-  <primary>si'e</primary>
+  
+<primary>si'e</primary>
 </indexterm>
 <!-- ^^   cu'o, 447 -->
 <indexterm type="general">
-  <primary>cu'o</primary>
+  
+<primary>cu'o</primary>
 </indexterm>
 <xref linkend="cll_chapter18-section11" />)
      MOhE    make sumti into operand
@@ -4073,19 +4155,22 @@
     fa'i    reciprocal of/multiplicative inverse  1 / 
 <!-- ^^   reciprocal: expression of mathematical, 433 -->
 <indexterm type="general">
-  <primary>reciprocal</primary>
+  
+<primary>reciprocal</primary>
 </indexterm>
 <emphasis>a</emphasis>
     gei     scientific notation                   b × (c [default 10] to the 
 <!-- ^^   scientific notation: rationale for order of places, 451; with gei, 450 -->
 <indexterm type="general">
-  <primary>scientific notation</primary>
+  
+<primary>scientific notation</primary>
 </indexterm>
 <emphasis>a</emphasis> power)
     ge'a    null operator                         (no operands)
 <!-- ^^   null operator: for infix operations with too many operands, 451 -->
 <indexterm type="general">
-  <primary>null operator</primary>
+  
+<primary>null operator</primary>
 </indexterm>
     de'o    logarithm                             log 
 <emphasis>a</emphasis> to base 
@@ -4094,7 +4179,8 @@
     te'a    to the power/exponential              
 <!-- ^^   te'a, 437 -->
 <indexterm type="general">
-  <primary>te'a</primary>
+  
+<primary>te'a</primary>
 </indexterm>
 <emphasis>a</emphasis> to the 
 <emphasis>b</emphasis> power
@@ -4105,17 +4191,20 @@
     pi'a    matrix row vector combiner            (all operands are row vectors)
 <!-- ^^   pi'a, 452 -->
 <indexterm type="general">
-  <primary>pi'a</primary>
+  
+<primary>pi'a</primary>
 </indexterm>
     sa'i    matrix column vector combiner         (all operands are column vectors)
 <!-- ^^   sa'i, 452 -->
 <indexterm type="general">
-  <primary>sa'i</primary>
+  
+<primary>sa'i</primary>
 </indexterm>
     ri'o    integral                              integral of a with respect to b over range c
 <!-- ^^   integral: architectural concept, example, 64; mathematical concept, example, 64 -->
 <indexterm type="general">
-  <primary>integral</primary>
+  
+<primary>integral</primary>
 </indexterm>
     sa'o    derivative                            derivative of a with respect to b of degree c (default 1)
     fu'u    non-specific operator                 (variable)
@@ -4149,17 +4238,20 @@
        pai,    ka'o,           te'o,             ci'i
 <!-- ^^   ka'o, 434; as special number compared with as numerical punctuation, 434 -->
 <indexterm type="general">
-  <primary>ka'o</primary>
+  
+<primary>ka'o</primary>
 </indexterm>
 <!-- ^^   ci'i, 434 -->
 <indexterm type="general">
-  <primary>ci'i</primary>
+  
+<primary>ci'i</primary>
 </indexterm>
        
 <phrase role="IPA">π</phrase>,      imaginary i,    exponential e,    infinity (
 <!-- ^^   infinity: example, 434 -->
 <indexterm type="general">
-  <primary>infinity</primary>
+  
+<primary>infinity</primary>
 </indexterm>
 <phrase role="IPA">∞</phrase>)
 </programlisting></para>
@@ -4170,21 +4262,25 @@
        pi,                 ce'i,          fi'u
 <!-- ^^   fi'u, 433 -->
 <indexterm type="general">
-  <primary>fi'u</primary>
+  
+<primary>fi'u</primary>
 </indexterm>
 <!-- ^^   ce'i, 433 -->
 <indexterm type="general">
-  <primary>ce'i</primary>
+  
+<primary>ce'i</primary>
 </indexterm>
        decimal point,      percentage,    fraction (not division)
 <!-- ^^   decimal point: as numerical punctuation, 433; effect of different notations, 433; in bases other than 10, 444 -->
 <indexterm type="general">
-  <primary>decimal point</primary>
+  
+<primary>decimal point</primary>
 </indexterm>
 rafsi: piz,                cez,           fi'u (from frinu; see 
 <!-- ^^   fi'u, 433 -->
 <indexterm type="general">
-  <primary>fi'u</primary>
+  
+<primary>fi'u</primary>
 </indexterm>
 <xref linkend="cll_chapter18-section20" />)
 
@@ -4192,24 +4288,28 @@ rafsi: piz,                cez,           fi'u (from frinu; see
        mixed-base point,   plus sign (not addition), minus sign (not subtraction)
 <!-- ^^   base point: in bases other than 10, 444 -->
 <indexterm type="general">
-  <primary>base point</primary>
+  
+<primary>base point</primary>
 </indexterm>
 
        ki'o,               ra'e
 <!-- ^^   ra'e, 433 -->
 <indexterm type="general">
-  <primary>ra'e</primary>
+  
+<primary>ra'e</primary>
 </indexterm>
 <!-- ^^   ki'o, 433 -->
 <indexterm type="general">
-  <primary>ki'o</primary>
+  
+<primary>ki'o</primary>
 </indexterm>
        thousands comma,    repeating-decimal indicator
 
        ji'i,               ka'o
 <!-- ^^   ka'o, 434; as special number compared with as numerical punctuation, 434 -->
 <indexterm type="general">
-  <primary>ka'o</primary>
+  
+<primary>ka'o</primary>
 </indexterm>
        approximation sign, complex number separator
 </programlisting></para>
@@ -4285,16 +4385,19 @@ rafsi: piz,                cez,           fi'u (from frinu; see
        xo,                 tu'o
 <!-- ^^   xo, 449 -->
 <indexterm type="general">
-  <primary>xo</primary>
+  
+<primary>xo</primary>
 </indexterm>
 <!-- ^^   tu'o, 450, 453; for infix operations with too few operands, 450 -->
 <indexterm type="general">
-  <primary>tu'o</primary>
+  
+<primary>tu'o</primary>
 </indexterm>
        number question,    null operand
 <!-- ^^   null operand: for infix operations with too few operands, 450 -->
 <indexterm type="general">
-  <primary>null operand</primary>
+  
+<primary>null operand</primary>
 </indexterm>
 </programlisting></para>
       </listitem>
@@ -4314,27 +4417,31 @@ rafsi: piz,                cez,           fi'u (from frinu; see
     si'e    x1 is an (n)th portion of mass x2 [by standard x3]
 <!-- ^^   si'e, 447 -->
 <indexterm type="general">
-  <primary>si'e</primary>
+  
+<primary>si'e</primary>
 </indexterm>
     rafsi:  none
 
     cu'o    event x1 has probability (n) of occurring under conditions x2
 <!-- ^^   cu'o, 447 -->
 <indexterm type="general">
-  <primary>cu'o</primary>
+  
+<primary>cu'o</primary>
 </indexterm>
             [by standard x3]
     rafsi:  cu'o (borrowed from cunso; see 
 <!-- ^^   cu'o, 447 -->
 <indexterm type="general">
-  <primary>cu'o</primary>
+  
+<primary>cu'o</primary>
 </indexterm>
 <xref linkend="cll_chapter18-section20" />)
 
     va'e    x1 is at scale position (n) on the scale x2
 <!-- ^^   va'e, 447 -->
 <indexterm type="general">
-  <primary>va'e</primary>
+  
+<primary>va'e</primary>
 </indexterm>
             [by standard x3]
     rafsi:  none
