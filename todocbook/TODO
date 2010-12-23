@@ -116,6 +116,9 @@ the <interlinear-gloss>...</interlinear-gloss> with <para>...</para>
 
  ------
 
+    YOU CAN SKIP THIS PART; it's easy to check for it later on, even
+    in parts that have theoretically already been reviewed.
+
 Deal with index entries already in the text, like these:
 
     <example role="interlinear-gloss-example" xml:id="random-id-UMjE">
@@ -131,7 +134,8 @@ Deal with index entries already in the text, like these:
       </interlinear-gloss>
     </example>
 
-There are several steps:
+There are several steps for single-entry situations like this;
+multi-entry situations are something else again.
 
 1.  Add a <secondary> tag as appropriate.  In this case, "example".
 
@@ -176,13 +180,55 @@ later.
 4.  Make sure that all the *other* options listed for the keyword
 exist somewhere.  For example, given:
 
+ ------
+
+    YOU CAN SKIP THIS PART; it's easy to check for it later on, even
+    in parts that have theoretically already been reviewed.
+
+Multi-entry index situations are a whole different kettle of fish.
+Here's an example:
+
   <!-- ^^   tanru grouping: complex, 87; effect of tanru inversion on, 96; guheks compared with jeks, 350; three-part, 85; with bo, 87; with ke, 88; with ke and bo, 88 -->
+  <indexterm><primary>schooner</primary></indexterm>
 
-that all 7 of those entries actually have referents somewhere in the text.
+The problem is that just because the automated inclusion of that
+indexterm was inserted in this particular place, which presumably is
+near where one of the 7 entries listed there is supposed to actually
+point to, that doesn't mean that any of the *other* entries got
+inserted in the right place.  That means that
 
-  YOU MAY NEED A COPY OF THE RED BOOK to do this part effectively,
-  because you should be tagging the same bits of text as it is
-  (along with others if you wish).
+  <!-- ^^   tanru grouping: complex, 87; effect of tanru inversion on, 96; guheks compared with jeks, 350; three-part, 85; with bo, 87; with ke, 88; with ke and bo, 88 -->
+  <indexterm><primary>schooner</primary></indexterm>
+
+needs to be turned into *all of*:
+
+  <indexterm><primary>tanru grouping</primary><secondary>complex</secondary></indexterm>
+
+  <indexterm><primary>tanru grouping</primary><secondary>effect of tanru inversion on</secondary></indexterm>
+
+  <indexterm><primary>tanru grouping</primary><secondary>guheks compared with jeks</secondary></indexterm>
+
+  <indexterm><primary>tanru grouping</primary><secondary>three-part</secondary></indexterm>
+
+  <indexterm><primary>tanru grouping</primary><secondary>with bo</secondary></indexterm>
+
+  <indexterm><primary>tanru grouping</primary><secondary>with ke</secondary></indexterm>
+
+  <indexterm><primary>tanru grouping</primary><secondary>with ke and bo</secondary></indexterm>
+
+And each of those needs to be placed in some appropriate place in
+the text, where "appropriate" means "in about the same place as it
+currently is in the red book", *and* all instances of the original
+bits, i.e.:
+
+  <!-- ^^   tanru grouping: complex, 87; effect of tanru inversion on, 96; guheks compared with jeks, 350; three-part, 85; with bo, 87; with ke, 88; with ke and bo, 88 -->
+  <indexterm><primary>schooner</primary></indexterm>
+
+need to be removed.
+
+YOU NEED A COPY OF THE RED BOOK to do this part effectively, because
+you should be tagging the same bits of text as it is (along with
+others if you wish).
 
  ------
 
