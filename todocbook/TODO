@@ -92,6 +92,9 @@ annoying.
 If you see a <quote>...</quote> around Lojban text, replace it with
 <jbophrase>...</jbophrase>.  There are lots of these.
 
+Also, use <jbophrase valid="false">...</jbophrase> for na gendra and
+<jbophrase valid="iffy">...</jbophrase> for na smudra
+
  ------
 
 <programlisting> is bad; change it.  If you can't figure out how to
@@ -110,13 +113,15 @@ Deal with index entries already in the text, like these:
     <example role="interlinear-gloss-example" xml:id="random-id-UMjE">
       <title>
         <anchor xml:id="c5e1d5" />
-        <anchor xml:id="cll_chapter5-section1-example5" />
       </title>
       <interlinear-gloss>
         <jbo>ta blotrskunri</jbo>
         <gloss>That is-a-(boat)-schooner.</gloss>
 <!-- ^^   schooner: example, 83 -->
 <indexterm><primary>schooner</primary></indexterm>
+        <en>That is a schooner.</en>
+      </interlinear-gloss>
+    </example>
 
 There are several steps:
 
@@ -140,7 +145,6 @@ The result here is:
     <example role="interlinear-gloss-example" xml:id="random-id-UMjE">
       <title>
         <anchor xml:id="c5e1d5" />
-        <anchor xml:id="cll_chapter5-section1-example5" />
       </title>
       <indexterm><primary>schooner</primary><secondary>example</secondary></indexterm>
       <interlinear-gloss>
@@ -220,6 +224,16 @@ if you need it.
 - make sure the examples that aren't interlinear glosses don't have
   that as their role
 - <phrase role="IPA">∞</phrase> is *not* IPA
+- <@xalbo> I do think having distinct structures for quoted correct
+  lojban and for intentionally incorrect lojban (if there's any, but
+  I would expect there is) would probably be a good thing. <@xalbo>
+  (found one: search for djeimz) <@xalbo> I see three cases, though
+  I don't know if they're all represented in the text: valid, good
+  lojban, invalid lojban, and something in between ({lo nanmu
+  bajra}, for instance; maybe worth flagging with a "this isn't what
+  you think it is" type of thing
+  - use <jbophrase valid="false">...</jbophrase> for na gendra and
+    <jbophrase valid="iffy">...</jbophrase> for na smudra
 
 ==================
   Display
