@@ -244,7 +244,7 @@
     <indexterm type="general">
       <primary>articles</primary>
     </indexterm>
-    <quote>selma'o</quote>, each having a specifically defined grammatical usage. The various selma'o are discussed throughout 
+    <jbophrase>selma'o</jbophrase>, each having a specifically defined grammatical usage. The various selma'o are discussed throughout 
     <xref linkend="chapter-selbri" /> to 
     <xref linkend="cll_chapter19" /> and summarized in 
     <xref linkend="cll_chapter20" />.</para>
@@ -2537,11 +2537,29 @@
           <para>Test all forms with one or more initial CVC-form rafsi - with the pattern 
           <quote>CVC ... CVC + X</quote>- for 
           <quote>tosmabru failure</quote>. X must either be a CVCCV long rafsi that happens to have a permissible initial pair as the consonant cluster, or is something which has caused a 
-          <!-- ^^   long rafsi: definition, 57 -->
-          <indexterm type="general">
-            <primary>long rafsi</primary>
-          </indexterm>
           <quote>y</quote>-hyphen to be installed between the previous CVC and itself by one of the above rules.</para>
+        <para>The test is as follows:</para>
+          <variablelist>
+            <varlistentry>
+              <term>5a)</term>
+              <listitem>
+                <para>Examine all the C/C consonant pairs up to the first <quote>y</quote>-hyphen, or up to the end of the word in case there are no <quote>y</quote>-hyphens.</para>
+                <para>These consonant pairs are called "joints”.</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>5b)</term>
+              <listitem>
+                <para>If all of those joints are permissible initials, then the trial word will break up into a cmavo and a shorter brivla. If not, the word will not break up, and no further hyphens are needed.</para>
+              </listitem>
+            </varlistentry>
+            <varlistentry>
+              <term>5c)</term>
+              <listitem>
+                <para>Install a <quote>y</quote>-hyphen at the first such joint.</para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
         </listitem>
       </varlistentry>
     </variablelist>
@@ -2981,6 +2999,28 @@
         <term>4)</term>
         <listitem>
           <para>Any gismu forms that conflicted with existing gismu were removed. Obviously, being identical with an existing gismu constitutes a conflict. In addition, a proposed gismu that was identical to an existing gismu except for the final vowel was considered a conflict, since two such gismu would have identical 4-letter rafsi.</para>
+          <para>More subtly: If the proposed gismu was identical to an existing gismu except for a single consonant, and the consonant was "too similar” based on the following table, then the proposed gismu was rejected.</para>
+          <programlisting>
+       proposed gismu		   existing gismu
+                b			p, v
+		c			j, s
+		d			t
+		f			p, v
+		g			k, x
+		j			c, z
+		k			g, x
+		l			r
+		m			n
+		n			m
+		p			b, f
+		r			l
+		s			c, z
+		t			d
+		v			b, f
+		x			g, k
+		z			j, s
+              </programlisting>
+              <para>See <xref linkend="cll_chapter4-section4" /> for an example.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -2989,6 +3029,25 @@
           <para>The gismu form with the highest score usually became the actual gismu. Sometimes a lower-scoring form was used to provide a better rafsi. A few gismu were changed in error as a result of transcription blunders (for example, the gismu 
           <quote>gismu</quote> should have been 
           <quote>gicmu</quote>, but it's too late to fix it now).</para>
+          <para>The language weights used to make most of the gismu were as follows:</para>
+<programlisting>
+        Chinese	0.36
+	English	0.21
+	Hindi		0.16
+	Spanish	0.11
+	Russian	0.09
+	Arabic		0.07
+		</programlisting>
+<para>reflecting 1985 number-of-speakers data. A few gismu were made much later using updated weights:</para>
+<programlisting>
+        Chinese	0.347
+	Hindi		0.196
+	English	0.160
+	Spanish	0.123
+	Russian	0.089
+	Arabic		0.085
+</programlisting>
+<para>(English and Hindi switched places due to demographic changes.)</para>
         </listitem>
       </varlistentry>
     </variablelist>
