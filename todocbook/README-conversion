@@ -136,3 +136,23 @@ As part of this process,
   drop_indexterms.xsl
 
 was used to remove the bits that make_index.sh added earlier.
+
+- ----------------------
+
+Then there was some automated conversion of <quote> to <jbophrase>,
+for parseable Lojban stuff.
+
+The script:
+
+  prep_jbophrase.sh
+
+was used to create:
+
+  lojban_quotes
+
+which had a list of apparently-valid Lojban quotes, which was used
+by:
+
+  make_jbophrase.sh
+
+to do the actual conversion.
