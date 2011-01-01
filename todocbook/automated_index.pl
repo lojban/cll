@@ -3,6 +3,9 @@
 use strict;
 use warnings;
 
+# THIS SCRIPT IS CRAZY.  You almost certainly don't want or need to
+# be running it.  See README-conversion for what it does.
+
 $|=1;
 
 my $skip=$ARGV[0] ? $ARGV[0] : 0;

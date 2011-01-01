@@ -101,3 +101,32 @@ sectional numbered ones:
 
       find_example_ids.xsl
       fix_numbered_example_ids.sh
+
+- ----------------------
+
+The next major bit of "automation" actually required a great deal of
+manual labour by Robin Lee Powell, but this is believed to be less
+labour that it would have taken to accomplish the same task entirely
+by hand, which is to recreate all of the index entries.
+
+The main script was:
+
+  automated_index.pl
+
+which runs through through
+
+  orig/catdoc.out.indexing
+
+(which contains dozens upon dozens of by-hand modifications) and the
+[0-9]*.xml files (also modified in some places to support his
+process), using fuzzy logic (lots of regex massaging + a levenshtein
+distance check) to match each paragraph in the catdoc to each
+paragraph in the master source.  It then uses that information to
+transfer <cx>, <lx>, and <ex> entries from the former to the latter.
+
+The script
+
+  fix_cx.pl
+
+was used to make automated changes to the <cx>, <lx>, and <ex>
+entries in orig/catdoc.out.indexing
