@@ -1,3 +1,5 @@
+<?xml version="1.0"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V5.0//EN" "dtd/docbook-5.0.dtd">
 <chapter xml:id="chapter-sumti-tcita">
   <title>To Boston Via The Road Go I, With An Excursion Into The Land Of Modals</title>
   <section xml:id="cll_chapter9-section1">
@@ -8,7 +10,7 @@
     <para>The sumti are not randomly associated with the selbri, but according to a systematic pattern known as the 
     <quote>place structure</quote> of the selbri. This chapter describes the various ways in which the place structure of Lojban bridi is expressed and by which it can be manipulated. The place structure of a selbri is a sequence of empty slots into which the sumti associated with that selbri are placed. The sumti are said to occupy the places of the selbri.</para>
     <para>For our present purposes, every selbri is assumed to have a well-known place structure. If the selbri is a brivla, the place structure can be looked up in a dictionary (or, if the brivla is a lujvo not in any dictionary, inferred from the principles of lujvo construction as explained in 
-    <xref linkend="chapter-lujvo" />); if the selbri is a tanru, the place structure is the same as that of the final component in the tanru.</para>
+    <xref linkend="chapter-lujvo"/>); if the selbri is a tanru, the place structure is the same as that of the final component in the tanru.</para>
     <para>The stock example of a place structure is that of the gismu 
     <quote>klama</quote>:</para>
     <programlisting xml:space="preserve">
@@ -29,9 +31,7 @@
         <cmavo>cu</cmavo>
         <selmaho>CU</selmaho>
         <description>prefixed selbri separator</description>
-        <indexterm type="general">
-          <primary>selbri separator</primary>
-        </indexterm>
+        
       </cmavo-entry>
     </cmavo-list>
     <para>The most usual way of constructing a bridi from a selbri such as 
@@ -39,7 +39,7 @@
 <para>FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Ji94">
       <title>
-        <anchor xml:id="c9e2d1" />
+        <anchor xml:id="c9e2d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi cu klama la bastn. la .atlantas. le dargu le karce</jbo>
@@ -55,18 +55,14 @@
        x5  means         le karce
 </programlisting>
     <para>(Note: Many of the examples in the rest of this chapter will turn out to have the same meaning as 
-    <xref linkend="example-random-id-Ji94" />; this fact will not be reiterated.)</para>
+    <xref linkend="example-random-id-Ji94"/>; this fact will not be reiterated.)</para>
     <para>This ordering, with the x1 place before the selbri and all other places in natural order after the selbri, is called 
     <quote>standard bridi form</quote>, and is found in the bulk of Lojban bridi, whether used in main sentences or in subordinate clauses. However, many other forms are possible, such as:</para>
-    <indexterm type="general">
-      <primary>subordinate clauses</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>standard bridi form</primary>
-    </indexterm>
+    
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-yLqT">
       <title>
-        <anchor xml:id="c9e2d2" />
+        <anchor xml:id="c9e2d2"/>
       </title>
       <interlinear-gloss>
         <jbo>mi la bastn. la .atlantas. le dargu le karce cu klama</jbo>
@@ -77,7 +73,7 @@
     <para>Similarly, we may split up the sumti, putting some before the selbri and others after it:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-vzNY">
       <title>
-        <anchor xml:id="c9e2d3" />
+        <anchor xml:id="c9e2d3"/>
       </title>
       <interlinear-gloss>
         <jbo>mi la bastn. cu klama la .atlantas. le dargu le karce</jbo>
@@ -85,63 +81,55 @@
       </interlinear-gloss>
     </example>
     <para>All of the variant forms in this section and following sections can be used to place emphasis on the part or parts which have been moved out of their standard places. Thus, 
-    <xref linkend="example-random-id-yLqT" /> places emphasis on the selbri (because it is at the end); 
-    <xref linkend="example-random-id-vzNY" /> emphasizes 
+    <xref linkend="example-random-id-yLqT"/> places emphasis on the selbri (because it is at the end); 
+    <xref linkend="example-random-id-vzNY"/> emphasizes 
     <quote>la bastn.</quote>, because it has been moved before the selbri. Moving more than one component may dilute this emphasis. It is permitted, but no stylistic significance has yet been established for drastic reordering.</para>
     <para>In all these examples, the cmavo 
     <quote>cu</quote> (belonging to selma'o CU) is used to separate the selbri from any preceding sumti. It is never absolutely necessary to use 
     <quote>cu</quote>. However, providing it helps the reader or listener to locate the selbri quickly, and may make it possible to place a complex sumti just before the selbri, allowing the speaker to omit elidable terminators, possibly a whole stream of them, that would otherwise be necessary.</para>
-    <indexterm type="general">
-      <primary>elidable terminators</primary>
-    </indexterm>
+    
     <para>The general rule, then, is that the selbri may occur anywhere in the bridi as long as the sumti maintain their order. The only exception (and it is an important one) is that if the selbri appears first, the x1 sumti is taken to have been omitted:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-aQtM">
       <title>
-        <anchor xml:id="c9e2d4" />
+        <anchor xml:id="c9e2d4"/>
       </title>
       <interlinear-gloss>
         <jbo>klama la bastn. la .atlantas. le dargu le karce</jbo>
         <gloss>A-goer to-Boston from-Atlanta via-the road using-the car.</gloss>
         <gloss>Goes to-Boston from-Atlanta via-the road using-the car.</gloss>
         <en>Look: a goer to Boston from Atlanta via the road using the car!</en>
-        <indexterm type="general">
-          <primary>Boston from Atlanta</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>Here the x1 place is empty: the listener must guess from context who is going to Boston. In 
-    <xref linkend="example-random-id-aQtM" />, 
+    <xref linkend="example-random-id-aQtM"/>, 
     <quote>klama</quote> is glossed 
     <quote>a goer</quote> rather than 
     <quote>go</quote> because 
     <quote>Go</quote> at the beginning of an English sentence would suggest a command: 
     <quote>Go to Boston!</quote>. 
-    <xref linkend="example-random-id-aQtM" /> is not a command, simply a normal statement with the x1 place unspecified, causing the emphasis to fall on the selbri 
+    <xref linkend="example-random-id-aQtM"/> is not a command, simply a normal statement with the x1 place unspecified, causing the emphasis to fall on the selbri 
     <quote>klama</quote>. Such a bridi, with empty x1, is called an 
     <quote>observative</quote>, because it usually calls on the listener to observe something in the environment which would belong in the x1 place. The third translation above shows this observative nature. Sometimes it is the relationship itself which the listener is asked to observe.</para>
-    <indexterm type="general">
-      <primary>observative</primary>
-    </indexterm>
+    
     <para>(There is a way to both provide a sumti for the x1 place and put the selbri first in the bridi: see 
-    <xref linkend="example-random-id-oDES" />.)</para>
+    <xref linkend="example-random-id-oDES"/>.)</para>
     <para>Suppose the speaker desires to omit a place other than the x1 place? (Presumably it is obvious or, for one reason or another, not worth saying.) Places at the end may simply be dropped:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-5Eqa">
       <title>
-        <anchor xml:id="c9e2d5" />
+        <anchor xml:id="c9e2d5"/>
       </title>
       <interlinear-gloss>
         <jbo>mi klama la bastn. la .atlantas.</jbo>
         <en>I go to-Boston from-Atlanta (via an unspecified route, using an unspecified means).</en>
-        <indexterm type="general">
-          <primary>unspecified route</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-5Eqa" /> has empty x4 and x5 places: the speaker does not specify the route or the means of transport. However, simple omission will not work for a place when the places around it are to be specified: in</para>
+    <xref linkend="example-random-id-5Eqa"/> has empty x4 and x5 places: the speaker does not specify the route or the means of transport. However, simple omission will not work for a place when the places around it are to be specified: in</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-jh7T">
       <title>
-        <anchor xml:id="c9e2d6" />
+        <anchor xml:id="c9e2d6"/>
       </title>
       <interlinear-gloss>
         <jbo>mi klama la bastn. la .atlantas. le karce</jbo>
@@ -150,22 +138,16 @@
     </example>
     <para>
     <quote>le karce</quote> occupies the x4 place, and therefore 
-    <xref linkend="example-random-id-jh7T" /> means:</para>
+    <xref linkend="example-random-id-jh7T"/> means:</para>
     <programlisting xml:space="preserve">
        I go to Boston from Atlanta, using the car as a route.
-<indexterm type="general">
-  
-<primary>go to Boston from Atlanta</primary>
-</indexterm>
-<indexterm type="general">
-  
-<primary>Boston from Atlanta</primary>
-</indexterm>
+
+
 </programlisting>
     <para>This is nonsense, since a car cannot be a route. What the speaker presumably meant is expressed by:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-tqoQ">
       <title>
-        <anchor xml:id="c9e2d7" />
+        <anchor xml:id="c9e2d7"/>
       </title>
       <interlinear-gloss>
         <jbo>mi klama la bastn. la .atlantas. zo'e le karce</jbo>
@@ -208,15 +190,13 @@
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>fi'a</cmavo>
-        <indexterm type="general">
-          <primary>fi'a</primary>
-        </indexterm>
+        
         <selmaho>FA</selmaho>
         <description>place structure question</description>
       </cmavo-entry>
     </cmavo-list>
     <para>In sentences like 
-    <xref linkend="example-random-id-Ji94" />, it is easy to get lost and forget which sumti falls in which place, especially if the sumti are more complicated than simple names or descriptions. The place structure tags of selma'o FA may be used to help clarify place structures. The five cmavo 
+    <xref linkend="example-random-id-Ji94"/>, it is easy to get lost and forget which sumti falls in which place, especially if the sumti are more complicated than simple names or descriptions. The place structure tags of selma'o FA may be used to help clarify place structures. The five cmavo 
     <quote>fa</quote>, 
     <quote>fe</quote>, 
     <quote>fi</quote>, 
@@ -224,22 +204,18 @@
     <quote>fu</quote> may be inserted just before the sumti in the x1 to x5 places respectively:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-yLop">
       <title>
-        <anchor xml:id="c9e3d1" />
+        <anchor xml:id="c9e3d1"/>
       </title>
       <interlinear-gloss>
         <jbo>fa mi cu klama fe la bastn. fi la .atlantas. fo le dargu fu le karce</jbo>
         <gloss>x1= I go x2= Boston x3= Atlanta x4= the road x5= the car.</gloss>
         <en>I go to Boston from Atlanta via the road using the car.</en>
-        <indexterm type="general">
-          <primary>go to Boston from Atlanta</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>Boston from Atlanta</primary>
-        </indexterm>
+        
+        
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-yLop" />, the tag 
+    <xref linkend="example-random-id-yLop"/>, the tag 
     <quote>fu</quote> before 
     <quote>le karce</quote> clarifies that 
     <quote>le karce</quote> occupies the x5 place of 
@@ -247,11 +223,11 @@
     <quote>fu</quote> tells us nothing about the purpose or meaning of the x5 place; it simply says that 
     <quote>le karce</quote> occupies it.</para>
     <para>In 
-    <xref linkend="example-random-id-yLop" />, the tags are overkill; they serve only to make 
-    <xref linkend="example-random-id-Ji94" /> even longer than it is. Here is a better illustration of the use of FA tags for clarification:</para>
+    <xref linkend="example-random-id-yLop"/>, the tags are overkill; they serve only to make 
+    <xref linkend="example-random-id-Ji94"/> even longer than it is. Here is a better illustration of the use of FA tags for clarification:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-3CPJ">
       <title>
-        <anchor xml:id="c9e3d2" />
+        <anchor xml:id="c9e3d2"/>
       </title>
       <interlinear-gloss>
         <jbo>fa mi klama fe le zdani be mi be'o poi nurma vau fi la nu,IORK.</jbo>
@@ -259,7 +235,7 @@
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-3CPJ" />, the place structure of 
+    <xref linkend="example-random-id-3CPJ"/>, the place structure of 
     <quote>klama</quote> is as follows:</para>
     <programlisting xml:space="preserve">
        x1  agent         mi
@@ -274,7 +250,7 @@
     <para>Of course, once the sumti have been tagged, the order in which they are specified no longer carries the burden of distinguishing the places. Therefore, it is perfectly all right to scramble them into any order desired, and to move the selbri to anywhere in the bridi, even the beginning:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-YmN2">
       <title>
-        <anchor xml:id="c9e3d3" />
+        <anchor xml:id="c9e3d3"/>
       </title>
       <interlinear-gloss>
         <jbo>klama fa mi fi la .atlantas. fu le karce fe la bastn. fo le dargu</jbo>
@@ -284,12 +260,12 @@
     </example>
     <para>Note that no 
     <quote>cu</quote> is permitted before the selbri in 
-    <xref linkend="example-random-id-YmN2" />, because 
+    <xref linkend="example-random-id-YmN2"/>, because 
     <quote>cu</quote> separates the selbri from any preceding sumti, and 
-    <xref linkend="example-random-id-YmN2" /> has no such sumti.</para>
+    <xref linkend="example-random-id-YmN2"/> has no such sumti.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-fG8R">
       <title>
-        <anchor xml:id="c9e3d4" />
+        <anchor xml:id="c9e3d4"/>
       </title>
       <interlinear-gloss>
         <jbo>fu le karce fo le dargu fi la .atlantas. fe la bastn. cu klama fa mi</jbo>
@@ -298,15 +274,13 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-fG8R" /> exhibits the reverse of the standard bridi form seen in 
-    <indexterm type="general">
-      <primary>standard bridi form</primary>
-    </indexterm>
-    <xref linkend="example-random-id-Ji94" /> and 
-    <xref linkend="example-random-id-yLop" />, but still means exactly the same thing. If the FA tags were left out, however, producing:</para>
+    <xref linkend="example-random-id-fG8R"/> exhibits the reverse of the standard bridi form seen in 
+    
+    <xref linkend="example-random-id-Ji94"/> and 
+    <xref linkend="example-random-id-yLop"/>, but still means exactly the same thing. If the FA tags were left out, however, producing:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-j7Nu">
       <title>
-        <anchor xml:id="c9e3d5" />
+        <anchor xml:id="c9e3d5"/>
       </title>
       <interlinear-gloss>
         <jbo>le karce le dargu la .atlantas. la bastn. cu klama mi</jbo>
@@ -319,7 +293,7 @@
     <quote>zo'e</quote> or special rules about the x1 place:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-brGX">
       <title>
-        <anchor xml:id="c9e3d6" />
+        <anchor xml:id="c9e3d6"/>
       </title>
       <interlinear-gloss>
         <jbo>klama fi la .atlantas. fe la bastn. fu le karce</jbo>
@@ -333,25 +307,23 @@
     <para>What if some sumti have FA tags and others do not? The rule is that after a FA-tagged sumti, any sumti following it occupy the places numerically succeeding it, subject to the proviso that an already-filled place is skipped:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-oDES">
       <title>
-        <anchor xml:id="c9e3d7" />
+        <anchor xml:id="c9e3d7"/>
       </title>
       <interlinear-gloss>
         <jbo>klama fa mi la bastn. la .atlantas. le dargu le karce</jbo>
         <gloss>Go x1= I x2= Boston x3= Atlanta x4= the road x5= the car.</gloss>
         <en>Go I to Boston from Atlanta via the road using the car.</en>
-        <indexterm type="general">
-          <primary>Boston from Atlanta</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-oDES" />, the 
+    <xref linkend="example-random-id-oDES"/>, the 
     <quote>fa</quote> causes 
     <quote>mi</quote> to occupy the x1 place, and then the following untagged sumti occupy in order the x2 through x5 places. This is the mechanism by which Lojban allows placing the selbri first while specifying a sumti for the x1 place.</para>
     <para>Here is a more complex (and more confusing) example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-q8is">
       <title>
-        <anchor xml:id="c9e3d8" />
+        <anchor xml:id="c9e3d8"/>
       </title>
       <interlinear-gloss>
         <jbo>mi klama fi la .atlantas. le dargu fe la bastn. le karce</jbo>
@@ -360,12 +332,10 @@
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-q8is" />, 
+    <xref linkend="example-random-id-q8is"/>, 
     <quote>mi</quote> occupies the x1 place because it is the first sumti in the sentence (and is before the selbri). The second sumti, 
     <quote>la .atlantas.</quote>, occupies the x3 place by virtue of the tag 
-    <indexterm type="general">
-      <primary>virtue</primary>
-    </indexterm>
+    
     <quote>fi</quote>, and 
     <quote>le dargu</quote> occupies the x4 place as a result of following 
     <quote>la .atlantas.</quote>. Finally, 
@@ -376,7 +346,7 @@
     <para>It is grammatically permitted to tag more than one sumti with the same FA cmavo. The effect is that of making more than one claim:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-N1aE">
       <title>
-        <anchor xml:id="c9e3d9" />
+        <anchor xml:id="c9e3d9"/>
       </title>
       <interlinear-gloss>
         <jbo>[fa] la rik. fa la djein. klama [fe] le skina fe le zdani fe le zarci</jbo>
@@ -384,56 +354,46 @@
       </interlinear-gloss>
     </example>
     <para>may be taken to say that both Rick and Jane go to the movie, the house, and the office, merging six claims into one. More likely, however, it will simply confuse the listener. There are better ways, involving logical connectives (explained in 
-    <xref linkend="chapter-connectives" />), to say such things in Lojban. In fact, putting more than one sumti into a place is odd enough that it can only be done by explicit FA usage: this is the motivation for the proviso above, that already-occupied places are skipped. In this way, no sumti can be forced into a place already occupied unless it has an explicit FA cmavo tagging it.</para>
+    <xref linkend="chapter-connectives"/>), to say such things in Lojban. In fact, putting more than one sumti into a place is odd enough that it can only be done by explicit FA usage: this is the motivation for the proviso above, that already-occupied places are skipped. In this way, no sumti can be forced into a place already occupied unless it has an explicit FA cmavo tagging it.</para>
     <para>The cmavo 
     <quote>fi'a</quote> also belongs to selma'o FA, and allows Lojban users to ask questions about place structures. A bridi containing 
-    <indexterm type="general">
-      <primary>fi'a</primary>
-    </indexterm>
+    
     <quote>fi'a</quote> is a question, asking the listener to supply the appropriate other member of FA which will make the bridi a true statement:</para>
-    <indexterm type="general">
-      <primary>fi'a</primary>
-    </indexterm>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-GnTu">
       <title>
-        <anchor xml:id="c9e3d10" />
+        <anchor xml:id="c9e3d10"/>
       </title>
       <interlinear-gloss>
         <jbo>fi'a do dunda [fe] le vi rozgu</jbo>
-        <indexterm type="general">
-          <primary>fi'a</primary>
-        </indexterm>
+        
         <gloss>[what place]? you give x2= the nearby rose</gloss>
         <gloss>In what way are you involved in the giving of this rose?</gloss>
         <en>Are you the giver or the receiver of this rose?</en>
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-GnTu" />, the speaker uses the selbri 
+    <xref linkend="example-random-id-GnTu"/>, the speaker uses the selbri 
     <quote>dunda</quote>, whose place structure is:</para>
     <programlisting xml:space="preserve">
        dunda: x1 gives x2 to x3
 </programlisting>
     <para>The tagged sumti 
     <quote>fi'a do</quote> indicates that the speaker wishes to know whether the sumti 
-    <indexterm type="general">
-      <primary>fi'a</primary>
-    </indexterm>
+    
     <quote>do</quote> falls in the x1 or the x3 place (the x2 place is already occupied by 
     <quote>le rozgu</quote>). The listener can reply with a sentence consisting solely of a FA cmavo: 
     <quote>fa</quote> if the listener is the giver, 
     <quote>fi</quote> if he/she is the receiver.</para>
     <para>I have inserted the tag 
     <quote>fe</quote> in brackets into 
-    <xref linkend="example-random-id-GnTu" />, but it is actually not necessary, because 
+    <xref linkend="example-random-id-GnTu"/>, but it is actually not necessary, because 
     <quote>fi'a</quote> does not count as a numeric tag; therefore, 
-    <indexterm type="general">
-      <primary>fi'a</primary>
-    </indexterm>
+    
     <quote>le vi rozgu</quote> would necessarily be in the x2 place even if no tag were present, because it immediately follows the selbri.</para>
     <para>There is also another member of FA, namely 
     <quote>fai</quote>, which is discussed in 
-    <xref linkend="cll_chapter9-section12" />.</para>
+    <xref linkend="cll_chapter9-section12"/>.</para>
   </section>
   <section xml:id="cll_chapter9-section4">
     <title>Conversion: SE</title>
@@ -461,9 +421,7 @@
       </cmavo-entry>
     </cmavo-list>
     <para>So far we have seen ways to move sumti around within a bridi, but the actual place structure of the selbri has always remained untouched. The conversion cmavo of selma'o SE are incorporated within the selbri itself, and produce a new selbri (called a converted selbri) with a different place structure. In particular, after the application of any SE cmavo, the number and purposes of the places remain the same, but two of them have been exchanged, the x1 place and another. Which place has been exchanged with x1 depends on the cmavo chosen. Thus, for example, when 
-    <indexterm type="general">
-      <primary>converted selbri</primary>
-    </indexterm>
+    
     <quote>se</quote> is used, the x1 place is swapped with the x2 place.</para>
     <para>Note that the cmavo of SE begin with consecutive consonants in alphabetical order. There is no 
     <quote>1st place conversion</quote> cmavo, because exchanging the x1 place with itself is a pointless maneuver.</para>
@@ -471,25 +429,17 @@
     <quote>se klama</quote>:</para>
     <programlisting xml:space="preserve">
        x1 is the destination of x2's going from x3 via x4 using x5
-<indexterm type="general">
-  
-<primary>the destination</primary>
-</indexterm>
+
 </programlisting>
     <para>and 
     <quote>te klama</quote>:</para>
     <programlisting xml:space="preserve">
        x1 is the origin and x2 the destination of x3 going via x4 using x5
-<indexterm type="general">
-  
-<primary>the destination</primary>
-</indexterm>
+
 </programlisting>
     <para>and 
     <quote>ve klama</quote>:</para>
-    <indexterm type="general">
-      <primary>ve klama</primary>
-    </indexterm>
+    
     <programlisting xml:space="preserve">
        x1 is the route to x2 from x3 used by x4 going via x5
 </programlisting>
@@ -502,7 +452,7 @@
     <para>Consider the following pair of examples:</para>
     <example xml:id="example-random-id-qmHh" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e4d1" />
+        <anchor xml:id="c9e4d1"/>
       </title>
       <interlinear-gloss>
         <jbo>la bastn. cu se klama mi</jbo>
@@ -513,7 +463,7 @@
     </example>
     <example xml:id="example-random-id-qMHH" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e4d2" />
+        <anchor xml:id="c9e4d2"/>
       </title>
       <interlinear-gloss>
         <jbo>fe la bastn. cu klama fa mi</jbo>
@@ -522,16 +472,14 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-qmHh" /> and 
-    <xref linkend="example-random-id-qMHH" /> mean the same thing, in the sense that there is a relationship of going with the speaker as the agent and Boston as the destination (and with unspecified origin, route, and means). Structurally, however, they are quite different. 
-    <indexterm type="general">
-      <primary>the destination</primary>
-    </indexterm>
-    <xref linkend="example-random-id-qmHh" /> has 
+    <xref linkend="example-random-id-qmHh"/> and 
+    <xref linkend="example-random-id-qMHH"/> mean the same thing, in the sense that there is a relationship of going with the speaker as the agent and Boston as the destination (and with unspecified origin, route, and means). Structurally, however, they are quite different. 
+    
+    <xref linkend="example-random-id-qmHh"/> has 
     <quote>la bastn.</quote> in the x1 place and 
     <quote>mi</quote> in the x2 place of the selbri 
     <quote>se klama</quote>, and uses standard bridi order; 
-    <xref linkend="example-random-id-qMHH" /> has 
+    <xref linkend="example-random-id-qMHH"/> has 
     <quote>mi</quote> in the x1 place and 
     <quote>la bastn.</quote> in the x2 place of the selbri 
     <quote>klama</quote>, and uses a non-standard order.</para>
@@ -540,14 +488,12 @@
     <quote>le karce</quote>. To this we could add:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-3YoA">
       <title>
-        <anchor xml:id="c9e4d3" />
+        <anchor xml:id="c9e4d3"/>
       </title>
       <interlinear-gloss>
         <jbo>le klama</jbo>
         <en>the go-er, the one who goes</en>
-        <indexterm type="general">
-          <primary>the go-er</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>In every case, the description is about something which fits into the x1 place of the selbri. In order to get a description of a destination (that is, something fitting the x2 place of 
@@ -556,20 +502,18 @@
 <para>FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-brDN">
       <title>
-        <anchor xml:id="c9e4d4" />
+        <anchor xml:id="c9e4d4"/>
       </title>
       <interlinear-gloss>
         <jbo>le se klama</jbo>
         <en>the destination gone to by someone</en>
-        <indexterm type="general">
-          <primary>the destination</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>Likewise, we can create three more converted descriptions:</para>
     <example xml:id="example-random-id-qMIQ" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e4d5" />
+        <anchor xml:id="c9e4d5"/>
       </title>
       <interlinear-gloss>
         <jbo>le te klama</jbo>
@@ -578,19 +522,17 @@
     </example>
     <example xml:id="example-random-id-qMjE" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e4d6" />
+        <anchor xml:id="c9e4d6"/>
       </title>
       <interlinear-gloss>
         <jbo>le ve klama</jbo>
-        <indexterm type="general">
-          <primary>ve klama</primary>
-        </indexterm>
+        
         <en>the route of someone's going</en>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qmji" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e4d7" />
+        <anchor xml:id="c9e4d7"/>
       </title>
       <interlinear-gloss>
         <jbo>le xe klama</jbo>
@@ -598,41 +540,27 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-qMjE" /> does not mean 
+    <xref linkend="example-random-id-qMjE"/> does not mean 
     <quote>the route</quote> plain and simple: that is 
     <quote>le pluta</quote>, using a different selbri. It means a route that is used by someone for an act of 
-    <indexterm type="general">
-      <primary>ve klama</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>pluta</primary>
-    </indexterm>
+    
+    
     <quote>klama</quote>; that is, a journey with origin and destination. A 
     <quote>road</quote> on Mars, on which no one has traveled or is ever likely to, may be called 
     <quote>le pluta</quote>, but it cannot be 
-    <indexterm type="general">
-      <primary>ve klama</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>pluta</primary>
-    </indexterm>
+    
+    
     <quote>le ve klama</quote>, since there exists no one for whom it is 
-    <indexterm type="general">
-      <primary>ve klama</primary>
-    </indexterm>
+    
     <quote>le ve klama be fo da</quote> (the route taken in an actual journey by someone [da]).</para>
-    <indexterm type="general">
-      <primary>ve klama</primary>
-    </indexterm>
+    
     <para>When converting selbri that are more complex than a single brivla, it is important to realize that the scope of a SE cmavo is only the following brivla (or equivalent unit). In order to convert an entire tanru, it is necessary to enclose the tanru in 
-    <indexterm type="general">
-      <primary>converting</primary>
-    </indexterm>
+    
     <quote>ke ... ke'e</quote> brackets:</para>
 <para>FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-wQbB">
       <title>
-        <anchor xml:id="c9e4d8" />
+        <anchor xml:id="c9e4d8"/>
       </title>
       <interlinear-gloss>
         <jbo>mi se ke blanu zdani [ke'e] ti</jbo>
@@ -642,7 +570,7 @@
     <para>The place structure of 
     <quote>blanu zdani</quote> (blue house) is the same as that of 
     <quote>zdani</quote>, by the rule given in 
-    <xref linkend="cll_chapter9-section1" />. The place structure of 
+    <xref linkend="cll_chapter9-section1"/>. The place structure of 
     <quote>zdani</quote> is:</para>
     <programlisting xml:space="preserve">
        zdani: x1 is a house/nest/lair/den for inhabitant x2
@@ -653,25 +581,20 @@
        x1 is the inhabitant of the blue house (etc.) x2
 </programlisting>
     <para>Consequently, 
-    <xref linkend="example-random-id-wQbB" /> means:</para>
+    <xref linkend="example-random-id-wQbB"/> means:</para>
     <programlisting xml:space="preserve">
        I am the inhabitant of the blue house which is this thing.
 </programlisting>
     <para>Conversion applied to only part of a tanru has subtler effects which are explained in 
-    <xref linkend="chapter-selbri" />.</para>
+    <xref linkend="chapter-selbri"/>.</para>
     <para>It is grammatical to convert a selbri more than once with SE; later (inner) conversions are applied before earlier (outer) ones. For example, the place structure of 
     <quote>se te klama</quote> is achieved by exchanging the x1 and x2 place of 
-    <indexterm type="general">
-      <primary>se te</primary>
-    </indexterm>
+    
     <quote>te klama</quote>, producing:</para>
 <para>FIXME: TAG SPOT</para>
     <programlisting xml:space="preserve">
        x1 is the destination and x2 is the origin of x3 going via x4 using x5
-<indexterm type="general">
-  
-<primary>the destination</primary>
-</indexterm>
+
 </programlisting>
     <para>On the other hand, 
     <quote>te se klama</quote> has a place structure derived from swapping the x1 and x3 places of 
@@ -682,13 +605,9 @@
     <para>which is quite different. However, multiple conversions like this are never necessary. Arbitrary scrambling of places can be achieved more easily and far more intelligibly with FA tags, and only a single conversion is ever needed in a description.</para>
     <para>(Although no one has made any real use of it, it is perhaps worth noting that compound conversions of the form 
     <quote>setese</quote>, where the first and third cmavo are the same, effectively swap the two given places while leaving the others, including x1, alone: 
-    <indexterm type="general">
-      <primary>setese</primary>
-    </indexterm>
+    
     <quote>setese</quote> (or equivalently 
-    <indexterm type="general">
-      <primary>setese</primary>
-    </indexterm>
+    
     <quote>tesete</quote>) swap the x2 and x3 places, whereas 
     <quote>texete</quote> (or 
     <quote>xetexe</quote>) swap the x3 and x5 places.)</para>
@@ -721,7 +640,7 @@
     <quote>with eye x4</quote> or the like. Lojban allows you to solve the problem by adding a new place, changing the relationship:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-BSAc">
       <title>
-        <anchor xml:id="c9e5d1" />
+        <anchor xml:id="c9e5d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi viska do fi'o kanla [fe'u] le zunle</jbo>
@@ -754,28 +673,22 @@
     <quote>fi'o</quote> construction marking a modal place is called a 
     <quote>modal tag</quote>, and the sumti which follows it a 
     <quote>modal sumti</quote>; the purely Lojban terms 
-    <indexterm type="general">
-      <primary>seltcita sumti</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>modal sumti</primary>
-    </indexterm>
+    
+    
     <quote>sumti tcita</quote> and 
     <quote>seltcita sumti</quote>, respectively, are also commonly used. Modal sumti may be placed anywhere within the bridi, in any order; they have no effect whatever on the rules for assigning unmarked bridi to numbered places, and they may not be marked with FA cmavo.</para>
-    <indexterm type="general">
-      <primary>seltcita sumti</primary>
-    </indexterm>
+    
     <para>Consider 
-    <xref linkend="example-random-id-BSAc" /> again. Another way to view the situation is to consider the speaker's left eye as a tool, a tool for seeing. The relevant selbri then becomes 
+    <xref linkend="example-random-id-BSAc"/> again. Another way to view the situation is to consider the speaker's left eye as a tool, a tool for seeing. The relevant selbri then becomes 
     <quote>pilno</quote>, whose place structure is</para>
     <programlisting xml:space="preserve">
        pilno: x1 uses x2 as a tool for purpose x3
 </programlisting>
     <para>and we can rewrite 
-    <xref linkend="example-random-id-BSAc" /> as</para>
+    <xref linkend="example-random-id-BSAc"/> as</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Lu15">
       <title>
-        <anchor xml:id="c9e5d2" />
+        <anchor xml:id="c9e5d2"/>
       </title>
       <interlinear-gloss>
         <jbo>mi viska do fi'o se pilno le zunle kanla</jbo>
@@ -787,12 +700,8 @@
     <quote>se pilno</quote>. The conversion of 
     <quote>pilno</quote> is necessary in order to get the 
     <quote>tool</quote> place into x1, since only x1 can be the modal sumti. The 
-    <indexterm type="general">
-      <primary>seltcita sumti</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>modal sumti</primary>
-    </indexterm>
+    
+    
     <quote>tool user</quote> place is the x2 of 
     <quote>se pilno</quote> (because it is the x1 of 
     <quote>pilno</quote>) and remains unspecified. The tag 
@@ -810,59 +719,44 @@
     <para>and almost any selbri which represents an action may need to specify a tool. Having to say 
     <quote>fi'o se pilno</quote> frequently would make many Lojban sentences unnecessarily verbose and clunky, so an abbreviation is provided in the language design: the compound cmavo 
     <quote>sepi'o</quote>.</para>
-    <indexterm type="general">
-      <primary>sepi'o</primary>
-    </indexterm>
+    
     <para>Here 
     <quote>se</quote> is used before a cmavo, namely 
     <quote>pi'o</quote>, rather than before a brivla. The meaning of this cmavo, which belongs to selma'o BAI, is exactly the same as that of 
-    <indexterm type="general">
-      <primary>pi'o</primary>
-    </indexterm>
+    
     <quote>fi'o pilno fe'u</quote>. Since what we want is a tag based on 
     <quote>se pilno</quote> rather than 
     <quote>pilno</quote>- the tool, not the tool user - the grammar allows a BAI cmavo to be converted using a SE cmavo. 
-    <xref linkend="example-random-id-Lu15" /> may therefore be rewritten as:</para>
+    <xref linkend="example-random-id-Lu15"/> may therefore be rewritten as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-N32m">
       <title>
-        <anchor xml:id="c9e6d1" />
+        <anchor xml:id="c9e6d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi viska do sepi'o le zunle kanla</jbo>
-        <indexterm type="general">
-          <primary>sepi'o</primary>
-        </indexterm>
+        
         <gloss>I see you with-tool: the left eye</gloss>
         <en>I see you using my left eye.</en>
       </interlinear-gloss>
     </example>
     <para>The compound cmavo 
     <quote>sepi'o</quote> is much shorter than 
-    <indexterm type="general">
-      <primary>sepi'o</primary>
-    </indexterm>
+    
     <quote>fi'o se pilno [fe'u]</quote> and can be thought of as a single word meaning 
     <quote>with-tool</quote>. The modal tag 
     <quote>pi'o</quote>, with no 
-    <indexterm type="general">
-      <primary>pi'o</primary>
-    </indexterm>
+    
     <quote>se</quote>, similarly means 
     <quote>with-tool-user</quote>, probably a less useful concept. Nevertheless, the parallelism with the place structure of 
     <quote>pilno</quote> makes the additional syllable worthwhile.</para>
     <para>Some BAI cmavo make sense with as well as without a SE cmavo; for example, 
     <quote>ka'a</quote>, the BAI corresponding to the gismu 
-    <indexterm type="general">
-      <primary>ka'a</primary>
-    </indexterm>
+    
     <quote>klama</quote>, has five usable forms corresponding to the five places of 
     <quote>klama</quote> respectively:</para>
     <programlisting xml:space="preserve">
        ka'a        with-goer
-<indexterm type="general">
-  
-<primary>ka'a</primary>
-</indexterm>
+
        seka'a      with-destination
        teka'a      with-origin
        veka'a      with-route
@@ -871,29 +765,23 @@
     <para>Any of these tags may be used to provide modal places for bridi, as in the following examples:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-r0QA">
       <title>
-        <anchor xml:id="c9e6d2" />
+        <anchor xml:id="c9e6d2"/>
       </title>
       <interlinear-gloss>
         <jbo>la .eivn. cu vecnu loi flira cinta ka'a mi</jbo>
-        <indexterm type="general">
-          <primary>ka'a</primary>
-        </indexterm>
+        
         <gloss>Avon sells a-mass-of face paint with-goer me.</gloss>
-        <indexterm type="general">
-          <primary>Avon</primary>
-        </indexterm>
+        
         <en>I am a traveling cosmetics salesperson for Avon.</en>
-        <indexterm type="general">
-          <primary>Avon</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>( 
-    <xref linkend="example-random-id-r0QA" /> may seem a bit strained, but it illustrates the way in which an existing selbri, 
+    <xref linkend="example-random-id-r0QA"/> may seem a bit strained, but it illustrates the way in which an existing selbri, 
     <quote>vecnu</quote> in this case, may have a place added to it which might otherwise seem utterly unrelated.)</para>
     <example xml:id="example-random-id-qmJM" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e6d3" />
+        <anchor xml:id="c9e6d3"/>
       </title>
       <interlinear-gloss>
         <jbo>mi cadzu seka'a la bratfyd.</jbo>
@@ -903,7 +791,7 @@
     </example>
     <example xml:id="example-random-id-qMjz" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e6d4" />
+        <anchor xml:id="c9e6d4"/>
       </title>
       <interlinear-gloss>
         <jbo>bloti teka'a la nu,IORK.</jbo>
@@ -913,7 +801,7 @@
     </example>
     <example xml:id="example-random-id-qmLX" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e6d5" />
+        <anchor xml:id="c9e6d5"/>
       </title>
       <interlinear-gloss>
         <jbo>do bajra veka'a lo djine</jbo>
@@ -923,7 +811,7 @@
     </example>
     <example xml:id="example-random-id-qMMX" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e6d6" />
+        <anchor xml:id="c9e6d6"/>
       </title>
       <interlinear-gloss>
         <jbo>mi citka xeka'a le vinji</jbo>
@@ -932,52 +820,30 @@
       </interlinear-gloss>
     </example>
     <para>There are sixty-odd cmavo of selma'o BAI, based on selected gismu that seemed useful in a variety of settings. The list is somewhat biased toward English, because many of the cmavo were selected on the basis of corresponding English prepositions and preposition compounds such as 
-    <indexterm type="general">
-      <primary>prepositions</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>prepositions</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>English prepositions</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>prepositions</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>basis</primary>
-    </indexterm>
+    
+    
+    
+    
+    
     <quote>with</quote>, 
     <quote>without</quote>, and 
     <quote>by means of</quote>. The BAI cmavo, however, are far more precise than English prepositions, because their meanings are fixed by the place structures of the corresponding gismu.</para>
-    <indexterm type="general">
-      <primary>prepositions</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>prepositions</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>English prepositions</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>prepositions</primary>
-    </indexterm>
+    
+    
+    
+    
     <para>All BAI cmavo have the form CV'V or CVV. Most of them are CV'V, where the C is the first consonant of the corresponding gismu and the two Vs are the two vowels of the gismu. The table in 
-    <xref linkend="cll_chapter9-section16" /> shows the exceptions.</para>
+    <xref linkend="cll_chapter9-section16"/> shows the exceptions.</para>
     <para>There is one additional BAI cmavo that is not derived from a gismu: 
     <quote>do'e</quote>. This cmavo is used when an extra place is needed, but it seems useful to be vague about the semantic implications of the extra place:</para>
-    <indexterm type="general">
-      <primary>do'e</primary>
-    </indexterm>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-2vMd">
       <title>
-        <anchor xml:id="c9e6d7" />
+        <anchor xml:id="c9e6d7"/>
       </title>
       <interlinear-gloss>
         <jbo>lo nanmu be do'e le berti cu klama le tcadu</jbo>
-        <indexterm type="general">
-          <primary>do'e</primary>
-        </indexterm>
+        
         <gloss>Some man [related to] the north came to-the city.</gloss>
         <en>A man of the north came to the city.</en>
       </interlinear-gloss>
@@ -986,16 +852,14 @@
     <quote>le berti</quote> is provided as a modal place of the selbri 
     <quote>nanmu</quote>, but its exact significance is vague, and is paralleled in the colloquial translation by the vague English preposition 
     <quote>of</quote>. 
-    <xref linkend="example-random-id-2vMd" /> also illustrates a modal place bound into a selbri with 
+    <xref linkend="example-random-id-2vMd"/> also illustrates a modal place bound into a selbri with 
     <quote>be</quote>. This construction is useful when the selbri of a description requires a modal place; this and other uses of 
     <quote>be</quote> are more fully explained in 
-    <xref linkend="chapter-selbri" />.</para>
+    <xref linkend="chapter-selbri"/>.</para>
   </section>
   <section xml:id="cll_chapter9-section7">
     <title>Modal sentence connection: the causals</title>
-    <indexterm type="general">
-      <primary>causals</primary>
-    </indexterm>
+    
     <para>The following cmavo are discussed in this section:</para>
 <para>FIXME: TAG SPOT</para>
     <cmavo-list>
@@ -1006,37 +870,27 @@
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>ki'u</cmavo>
-        <indexterm type="general">
-          <primary>ki'u</primary>
-        </indexterm>
+        
         <selmaho>BAI</selmaho>
         <description>krinu modal: justification</description>
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>mu'i</cmavo>
-        <indexterm type="general">
-          <primary>mu'i</primary>
-        </indexterm>
+        
         <selmaho>BAI</selmaho>
         <description>mukti modal: motivation</description>
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>ni'i</cmavo>
-        <indexterm type="general">
-          <primary>ni'i</primary>
-        </indexterm>
+        
         <selmaho>BAI</selmaho>
         <description>nibli modal: logical entailment</description>
       </cmavo-entry>
     </cmavo-list>
     <para>This section has two purposes. On the one hand, it explains the grammatical construct called 
     <quote>modal sentence connection</quote>. On the other, it exemplifies some of the more useful BAI cmavo: the causals. (There are other BAI cmavo which have causal implications: 
-    <indexterm type="general">
-      <primary>modal sentence connection</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>causals</primary>
-    </indexterm>
+    
+    
     <quote>ja'e</quote> means 
     <quote>with result</quote>, and so 
     <quote>seja'e</quote> means 
@@ -1045,12 +899,8 @@
     <quote>with agent</quote> and 
     <quote>tezu'e</quote> means 
     <quote>with purpose</quote>. These other modal cmavo will not be further discussed here, as my purpose is to explain modal sentence connection rather than Lojbanic views of causation.)</para>
-    <indexterm type="general">
-      <primary>modal sentence connection</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>modal cmavo</primary>
-    </indexterm>
+    
+    
     <para>There are four causal gismu in Lojban, distinguishing different versions of the relationships lumped in English as 
     <quote>causal</quote>:</para>
     <programlisting xml:space="preserve">
@@ -1062,20 +912,14 @@
     <para>Each of these gismu has a related modal: 
     <quote>ri'a</quote>, 
     <quote>ki'u</quote>, 
-    <indexterm type="general">
-      <primary>ki'u</primary>
-    </indexterm>
+    
     <quote>mu'i</quote>, and 
-    <indexterm type="general">
-      <primary>mu'i</primary>
-    </indexterm>
+    
     <quote>ni'i</quote> respectively. Using these gismu and these modals, we can create various causal sentences with different implications:</para>
-    <indexterm type="general">
-      <primary>ni'i</primary>
-    </indexterm>
+    
     <example xml:id="example-random-id-qmMz" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e7d1" />
+        <anchor xml:id="c9e7d1"/>
       </title>
       <interlinear-gloss>
         <jbo>le spati cu banro ri'a le nu do djacu dunda fi le spati</jbo>
@@ -1085,67 +929,53 @@
     </example>
     <example xml:id="example-random-id-qmN2" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e7d2" />
+        <anchor xml:id="c9e7d2"/>
       </title>
       <interlinear-gloss>
         <jbo>la djan. cpacu le pamoi se jinga ki'u le nu la djan. jinga</jbo>
-        <indexterm type="general">
-          <primary>ki'u</primary>
-        </indexterm>
+        
         <gloss>John gets the first prize with-justification the event-of John wins.</gloss>
         <en>John got the first prize because he won.</en>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qMN7" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e7d3" />
+        <anchor xml:id="c9e7d3"/>
       </title>
       <interlinear-gloss>
         <jbo>mi lebna le cukta mu'i le nu mi viska le cukta</jbo>
-        <indexterm type="general">
-          <primary>mu'i</primary>
-        </indexterm>
+        
         <gloss>I took the book with-motivation the event-of I saw the book.</gloss>
         <en>I took the book because I saw it.</en>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qMNc" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e7d4" />
+        <anchor xml:id="c9e7d4"/>
       </title>
       <interlinear-gloss>
         <jbo>la sokrates. morsi binxo ni'i le nu la sokrates. remna</jbo>
-        <indexterm type="general">
-          <primary>ni'i</primary>
-        </indexterm>
+        
         <gloss>Socrates dead-became with-logical-justification Socrates is-human.</gloss>
-        <indexterm type="general">
-          <primary>Socrates</primary>
-        </indexterm>
+        
         <en>Socrates died because Socrates is human.</en>
-        <indexterm type="general">
-          <primary>Socrates</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-qmMz" /> through 
-    <xref linkend="example-random-id-qMNc" />, the same English word 
+    <xref linkend="example-random-id-qmMz"/> through 
+    <xref linkend="example-random-id-qMNc"/>, the same English word 
     <quote>because</quote> is used to translate all four modals, but the types of cause being expressed are quite different. Let us now focus on 
-    <xref linkend="example-random-id-qmMz" />, and explore some variations on it.</para>
+    <xref linkend="example-random-id-qmMz"/>, and explore some variations on it.</para>
     <para>As written, 
-    <xref linkend="example-random-id-qmMz" /> claims that the plant grows, but only refers to the event of watering it in an abstraction bridi (abstractions are explained in 
-    <indexterm type="general">
-      <primary>abstraction bridi</primary>
-    </indexterm>
-    <xref linkend="chapter-abstractions" />) without actually making a claim. If I express 
-    <xref linkend="example-random-id-qmMz" />, I have said that the plant in fact grows, but I have not said that you actually water it, merely that there is a causal relationship between watering and growing. This is semantically asymmetrical. Suppose I wanted to claim that the plant was being watered, and only mention its growth as ancillary information? Then we could reverse the main bridi and the abstraction bridi, saying:</para>
-    <indexterm type="general">
-      <primary>abstraction bridi</primary>
-    </indexterm>
+    <xref linkend="example-random-id-qmMz"/> claims that the plant grows, but only refers to the event of watering it in an abstraction bridi (abstractions are explained in 
+    
+    <xref linkend="chapter-abstractions"/>) without actually making a claim. If I express 
+    <xref linkend="example-random-id-qmMz"/>, I have said that the plant in fact grows, but I have not said that you actually water it, merely that there is a causal relationship between watering and growing. This is semantically asymmetrical. Suppose I wanted to claim that the plant was being watered, and only mention its growth as ancillary information? Then we could reverse the main bridi and the abstraction bridi, saying:</para>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-ibro">
       <title>
-        <anchor xml:id="c9e7d5" />
+        <anchor xml:id="c9e7d5"/>
       </title>
       <interlinear-gloss>
         <jbo>do djacu dunda fi le spati seri'a le nu ri banro</jbo>
@@ -1158,7 +988,7 @@
     <quote>seri'a</quote>. In addition, there are also symmetrical forms:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-1YHv">
       <title>
-        <anchor xml:id="c9e7d6" />
+        <anchor xml:id="c9e7d6"/>
       </title>
       <interlinear-gloss>
         <jbo>le nu do djacu dunda fi le spati cu rinka</jbo>
@@ -1170,20 +1000,18 @@
       </interlinear-gloss>
     </example>
     <para>does not claim either event, but asserts only the causal relationship between them. So in 
-    <xref linkend="example-random-id-1YHv" />, I am not saying that the plant grows nor that you have in fact watered it. The second colloquial translation shows a form of 
+    <xref linkend="example-random-id-1YHv"/>, I am not saying that the plant grows nor that you have in fact watered it. The second colloquial translation shows a form of 
     <quote>if-then</quote> in English quite distinct from the logical connective 
     <quote>if-then</quote> explained in 
-    <xref linkend="chapter-connectives" />.</para>
+    <xref linkend="chapter-connectives"/>.</para>
     <para>Suppose we wish to claim both events as well as their causal relationship? We can use one of two methods:</para>
     <example xml:id="example-random-id-qMnX" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e7d7" />
+        <anchor xml:id="c9e7d7"/>
       </title>
       <interlinear-gloss>
         <jbo>le spati cu banro .iri'abo do djacu dunda fi le spati</jbo>
-        <indexterm type="general">
-          <primary>iri'abo</primary>
-        </indexterm>
+        
         <gloss>The plant grows. Because you water-give to the plant.</gloss>
         <en>The plant grows because you water it.</en>
       </interlinear-gloss>
@@ -1191,7 +1019,7 @@
 <para>FIXME: TAG SPOT</para>
     <example xml:id="example-random-id-qMPn" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e7d8" />
+        <anchor xml:id="c9e7d8"/>
       </title>
       <interlinear-gloss>
         <jbo>do djacu dunda fi le spati .iseri'abo le spati cu banro</jbo>
@@ -1201,18 +1029,16 @@
     </example>
     <para>The compound cmavo 
     <quote>.iri'abo</quote> and 
-    <indexterm type="general">
-      <primary>iri'abo</primary>
-    </indexterm>
+    
     <quote>.iseri'abo</quote> serve to connect two bridi, as the initial 
     <quote>.i</quote> indicates. The final 
     <quote>bo</quote> is necessary to prevent the modal from 
     <quote>taking over</quote> the following sumti. If the 
     <quote>bo</quote> were omitted from 
-    <xref linkend="example-random-id-qMnX" /> we would have:</para>
+    <xref linkend="example-random-id-qMnX"/> we would have:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Wo6K">
       <title>
-        <anchor xml:id="c9e7d9" />
+        <anchor xml:id="c9e7d9"/>
       </title>
       <interlinear-gloss>
         <jbo>le spati cu banro .i ri'a do djacu dunda fi le spati</jbo>
@@ -1222,64 +1048,52 @@
     </example>
     <para>Because 
     <quote>ri'a do</quote> is a modal sumti in 
-    <indexterm type="general">
-      <primary>seltcita sumti</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>modal sumti</primary>
-    </indexterm>
-    <xref linkend="example-random-id-Wo6K" />, there is no longer an explicit sumti in the x1 place of 
+    
+    
+    <xref linkend="example-random-id-Wo6K"/>, there is no longer an explicit sumti in the x1 place of 
     <quote>djacu dunda</quote>, and the translation must be changed.</para>
     <para>The effect of sentences like 
-    <xref linkend="example-random-id-qMnX" /> and 
-    <xref linkend="example-random-id-qMPn" /> is that the modal, 
+    <xref linkend="example-random-id-qMnX"/> and 
+    <xref linkend="example-random-id-qMPn"/> is that the modal, 
     <quote>ri'a</quote> in this example, no longer modifies an explicit sumti. Instead, the sumti is implicit, the event given by a full bridi. Furthermore, there is a second implication: that the first bridi fills the x2 place of the gismu 
     <quote>rinka</quote>; it specifies an event which is the effect. I am therefore claiming three things: that the plant grows, that you have watered it, and that there is a cause-and-effect relationship between the two.</para>
     <para>In principle, any modal tag can appear in a sentence connective of the type exemplified by 
-    <xref linkend="example-random-id-qMnX" /> and 
-    <xref linkend="example-random-id-qMPn" />. However, it makes little sense to use any modals which do not expect events or other abstractions to fill the places of the corresponding gismu. The sentence connective 
+    <xref linkend="example-random-id-qMnX"/> and 
+    <xref linkend="example-random-id-qMPn"/>. However, it makes little sense to use any modals which do not expect events or other abstractions to fill the places of the corresponding gismu. The sentence connective 
     <quote>.ibaubo</quote> is perfectly grammatical, but it is hard to imagine any two sentences which could be connected by an 
     <quote>in-language</quote> modal. This is because a sentence describes an event, and an event can be a cause or an effect, but not a language.</para>
   </section>
   <section xml:id="cll_chapter9-section8">
     <title>Other modal connections</title>
     <para>Like many Lojban grammatical constructions, sentence modal connection has both forethought and afterthought forms. (See 
-    <xref linkend="chapter-connectives" /> for a more detailed discussion of Lojban connectives.) 
-    <xref linkend="cll_chapter9-section7" /> exemplifies only afterthought modal connection, illustrated here by:</para>
+    <xref linkend="chapter-connectives"/> for a more detailed discussion of Lojban connectives.) 
+    <xref linkend="cll_chapter9-section7"/> exemplifies only afterthought modal connection, illustrated here by:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2D4c">
       <title>
-        <anchor xml:id="c9e8d1" />
+        <anchor xml:id="c9e8d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi jgari lei djacu .iri'abo mi jgari le kabri</jbo>
-        <indexterm type="general">
-          <primary>iri'abo</primary>
-        </indexterm>
+        
         <gloss>I grasp the-mass-of water with-physical-cause I grasp the cup.</gloss>
         <gloss>Causing the mass of water to be grasped by me, I grasped the cup.</gloss>
         <en>I grasp the water because I grasp the cup.</en>
       </interlinear-gloss>
     </example>
     <para>An afterthought connection is one that is signaled only by a cmavo (or a compound cmavo, in this case) between the two constructs being connected. Forethought connection uses a signal both before the first construct and between the two: the use of 
-    <indexterm type="general">
-      <primary>afterthought connection</primary>
-    </indexterm>
+    
     <quote>both</quote> and 
     <quote>and</quote> in the first half of this sentence represents a forethought connection (though not a modal one).</para>
-    <indexterm type="general">
-      <primary>observatives</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>forethought connection</primary>
-    </indexterm>
+    
+    
     <para>To make forethought modal sentence connections in Lojban, place the modal plus 
     <quote>gi</quote> before the first bridi, and 
     <quote>gi</quote> between the two. No 
     <quote>.i</quote> is used within the construct. The forethought equivalent of 
-    <xref linkend="example-random-id-2D4c" /> is:</para>
+    <xref linkend="example-random-id-2D4c"/> is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-d2b9">
       <title>
-        <anchor xml:id="c9e8d2" />
+        <anchor xml:id="c9e8d2"/>
       </title>
       <interlinear-gloss>
         <jbo>ri'agi mi jgari le kabri gi mi jgari lei djacu</jbo>
@@ -1289,10 +1103,10 @@
     </example>
     <para>Note that the cause, the x1 of 
     <quote>rinka</quote> is now placed first. To keep the two bridi in the original order of 
-    <xref linkend="example-random-id-2D4c" />, we could say:</para>
+    <xref linkend="example-random-id-2D4c"/>, we could say:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-rQ77">
       <title>
-        <anchor xml:id="c9e8d3" />
+        <anchor xml:id="c9e8d3"/>
       </title>
       <interlinear-gloss>
         <jbo>seri'agi mi jgari lei djacu gi mi jgari le kabri</jbo>
@@ -1306,16 +1120,12 @@
     <quote>seri'agi</quote> can be used just like 
     <quote>ri'agi</quote>.</para>
     <para>When the two bridi joined by a modal connection have one or more elements (selbri or sumti or both) in common, there are various condensed forms that can be used in place of full modal sentence connection with both bridi completely stated.</para>
-    <indexterm type="general">
-      <primary>modal sentence connection</primary>
-    </indexterm>
+    
     <para>When the bridi are the same except for a single sumti, as in Examples 8.1 through 8.3, then a sumti modal connection may be employed:</para>
-    <indexterm type="general">
-      <primary>sumti modal connection</primary>
-    </indexterm>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-o7FG">
       <title>
-        <anchor xml:id="c9e8d4" />
+        <anchor xml:id="c9e8d4"/>
       </title>
       <interlinear-gloss>
         <jbo>mi jgari ri'agi le kabri gi lei djacu</jbo>
@@ -1323,14 +1133,14 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-o7FG" /> means exactly the same as 
-    <xref linkend="example-random-id-2D4c" /> through 
-    <xref linkend="example-random-id-rQ77" />, but there is no idiomatic English translation that will distinguish it from them.</para>
+    <xref linkend="example-random-id-o7FG"/> means exactly the same as 
+    <xref linkend="example-random-id-2D4c"/> through 
+    <xref linkend="example-random-id-rQ77"/>, but there is no idiomatic English translation that will distinguish it from them.</para>
     <para>If the two connected bridi are different in more than one sumti, then a termset may be employed. Termsets are explained more fully in 
-    <xref linkend="chapter-connectives" />, but are essentially a mechanism for creating connections between multiple sumti simultaneously.</para>
+    <xref linkend="chapter-connectives"/>, but are essentially a mechanism for creating connections between multiple sumti simultaneously.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-LetE">
       <title>
-        <anchor xml:id="c9e8d5" />
+        <anchor xml:id="c9e8d5"/>
       </title>
       <interlinear-gloss>
         <jbo>mi dunda le cukta la djan. .imu'ibo la djan. dunda lei jdini mi</jbo>
@@ -1342,7 +1152,7 @@
 <para>FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-tFSC">
       <title>
-        <anchor xml:id="c9e8d6" />
+        <anchor xml:id="c9e8d6"/>
       </title>
       <interlinear-gloss>
         <jbo>nu'i mu'igi mi le cukta la djan. gi la djan. lei jdini mi nu'u dunda</jbo>
@@ -1351,14 +1161,12 @@
     </example>
     <para>Here there are three sumti in each half of the termset, because the two bridi share only their selbri.</para>
     <para>There is no modal connection between selbri as such: bridi which differ only in the selbri can be modally connected using bridi-tail modal connection. The bridi-tail construct is more fully explained in 
-    <indexterm type="general">
-      <primary>bridi-tail modal connection</primary>
-    </indexterm>
-    <xref linkend="chapter-connectives" />, but essentially it consists of a selbri with optional sumti following it. 
-    <xref linkend="example-random-id-qMN7" /> is suitable for bridi-tail connection, and could be shortened to:</para>
+    
+    <xref linkend="chapter-connectives"/>, but essentially it consists of a selbri with optional sumti following it. 
+    <xref linkend="example-random-id-qMN7"/> is suitable for bridi-tail connection, and could be shortened to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Do9b">
       <title>
-        <anchor xml:id="c9e8d7" />
+        <anchor xml:id="c9e8d7"/>
       </title>
       <interlinear-gloss>
         <jbo>mi mu'igi viska le cukta gi lebna le cukta</jbo>
@@ -1366,10 +1174,10 @@
       </interlinear-gloss>
     </example>
     <para>Again, no straightforward English translation exists. It is even possible to shorten 
-    <xref linkend="example-random-id-Do9b" /> further to:</para>
+    <xref linkend="example-random-id-Do9b"/> further to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-YXps">
       <title>
-        <anchor xml:id="c9e8d8" />
+        <anchor xml:id="c9e8d8"/>
       </title>
       <interlinear-gloss>
         <jbo>mi mu'igi viska gi lebna vau le cukta</jbo>
@@ -1379,12 +1187,12 @@
     <para>where 
     <quote>le cukta</quote> is set off by the non-elidable 
     <quote>vau</quote> and is made to belong to both bridi-tails - see 
-    <xref linkend="chapter-connectives" /> for more explanations.</para>
+    <xref linkend="chapter-connectives"/> for more explanations.</para>
     <para>Since this is a chapter on rearranging sumti, it is worth pointing out that 
-    <xref linkend="example-random-id-YXps" /> can be further rearranged to:</para>
+    <xref linkend="example-random-id-YXps"/> can be further rearranged to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Pxca">
       <title>
-        <anchor xml:id="c9e8d9" />
+        <anchor xml:id="c9e8d9"/>
       </title>
       <interlinear-gloss>
         <jbo>mi le cukta mu'igi viska gi lebna</jbo>
@@ -1396,7 +1204,7 @@
     <para>Finally, mathematical operands can be modally connected.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-J2T5">
       <title>
-        <anchor xml:id="c9e8d10" />
+        <anchor xml:id="c9e8d10"/>
       </title>
       <interlinear-gloss>
         <jbo>li ny. du li vo</jbo>
@@ -1407,7 +1215,7 @@
     <para>can be reduced to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Mfe4">
       <title>
-        <anchor xml:id="c9e8d11" />
+        <anchor xml:id="c9e8d11"/>
       </title>
       <interlinear-gloss>
         <jbo>li ny. du li ni'igi vei re su'i re [ve'o] gi vo</jbo>
@@ -1423,46 +1231,38 @@
     <quote>ni'igi</quote> affects more than just the immediately following operand, namely the first 
     <quote>re</quote>. (The right parenthesis, 
     <quote>ve'o</quote>, is an elidable terminator.) As usual, no English translation does 
-    <xref linkend="example-random-id-Mfe4" /> justice.</para>
+    <xref linkend="example-random-id-Mfe4"/> justice.</para>
     <para>Note: Due to restrictions on the Lojban parsing algorithm, it is not possible to form modal connectives using the 
-    <indexterm type="general">
-      <primary>modal connectives</primary>
-    </indexterm>
+    
     <quote>fi'o</quote>-plus-selbri form of modal. Only the predefined modals of selma'o BAI can be compounded as shown in 
-    <xref linkend="cll_chapter9-section7" /> and 
-    <xref linkend="cll_chapter9-section8" />.</para>
+    <xref linkend="cll_chapter9-section7"/> and 
+    <xref linkend="cll_chapter9-section8"/>.</para>
   </section>
   <section xml:id="cll_chapter9-section9">
     <title>Modal selbri</title>
     <para>Consider the example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-bT4c">
       <title>
-        <anchor xml:id="c9e9d1" />
+        <anchor xml:id="c9e9d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi tavla bau la lojban. bai tu'a la frank.</jbo>
         <gloss>I speak in-language Lojban with-compeller some-act-by Frank.</gloss>
         <en>I speak in Lojban, under compulsion by Frank.</en>
-        <indexterm type="general">
-          <primary>under compulsion</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-bT4c" /> has two modal sumti, using the modals 
-    <indexterm type="general">
-      <primary>seltcita sumti</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>modal sumti</primary>
-    </indexterm>
+    <xref linkend="example-random-id-bT4c"/> has two modal sumti, using the modals 
+    
+    
     <quote>bau</quote> and 
     <quote>bai</quote>. Suppose we wanted to specify the language explicitly but be vague about who's doing the compelling. We can simplify 
-    <xref linkend="example-random-id-bT4c" /> to:</para>
+    <xref linkend="example-random-id-bT4c"/> to:</para>
 <para>FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-dbSy">
       <title>
-        <anchor xml:id="c9e9d2" />
+        <anchor xml:id="c9e9d2"/>
       </title>
       <interlinear-gloss>
         <jbo>mi tavla bau la lojban. bai [ku].</jbo>
@@ -1470,12 +1270,12 @@
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-dbSy" />, the elidable terminator 
+    <xref linkend="example-random-id-dbSy"/>, the elidable terminator 
     <quote>ku</quote> has taken the place of the sumti which would normally follow 
     <quote>bai</quote>. Alternatively, we could specify the one who compels but keep the language vague:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Qc8w">
       <title>
-        <anchor xml:id="c9e9d3" />
+        <anchor xml:id="c9e9d3"/>
       </title>
       <interlinear-gloss>
         <jbo>mi tavla bau [ku] bai tu'a la frank.</jbo>
@@ -1486,7 +1286,7 @@
     <quote>ku</quote> around the bridi:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2utY">
       <title>
-        <anchor xml:id="c9e9d4" />
+        <anchor xml:id="c9e9d4"/>
       </title>
       <interlinear-gloss>
         <jbo>bau [ku] bai ku mi tavla</jbo>
@@ -1495,14 +1295,12 @@
     </example>
     <para>An alternative to using 
     <quote>ku</quote> is to place the modal cmavo right before the selbri, following the 
-    <indexterm type="general">
-      <primary>modal cmavo</primary>
-    </indexterm>
+    
     <quote>cu</quote> which often appears there. When a modal is present, the 
     <quote>cu</quote> is almost never necessary.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-613h">
       <title>
-        <anchor xml:id="c9e9d5" />
+        <anchor xml:id="c9e9d5"/>
       </title>
       <interlinear-gloss>
         <jbo>mi bai tavla bau la lojban.</jbo>
@@ -1510,10 +1308,10 @@
       </interlinear-gloss>
     </example>
     <para>In this use, the modal is like a tanru modifier semantically, although grammatically it is quite distinct. 
-    <xref linkend="example-random-id-613h" /> is very similar in meaning to:</para>
+    <xref linkend="example-random-id-613h"/> is very similar in meaning to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-pVUT">
       <title>
-        <anchor xml:id="c9e9d6" />
+        <anchor xml:id="c9e9d6"/>
       </title>
       <interlinear-gloss>
         <jbo>mi se bapli tavla bau la lojban.</jbo>
@@ -1531,7 +1329,7 @@
     <quote>fe'u</quote> is required to prevent the main selbri and the modal selbri from colliding:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-SfwV">
       <title>
-        <anchor xml:id="c9e9d7" />
+        <anchor xml:id="c9e9d7"/>
       </title>
       <interlinear-gloss>
         <jbo>mi fi'o kanla fe'u viska do</jbo>
@@ -1540,16 +1338,14 @@
       </interlinear-gloss>
     </example>
     <para>There are two other uses of modals. A modal can be attached to a pair of bridi-tails that have already been connected by a logical, non-logical, or modal connection (see 
-    <xref linkend="chapter-connectives" /> for more on logical and non-logical connections):</para>
+    <xref linkend="chapter-connectives"/> for more on logical and non-logical connections):</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-vCzL">
       <title>
-        <anchor xml:id="c9e9d8" />
+        <anchor xml:id="c9e9d8"/>
       </title>
       <interlinear-gloss>
         <jbo>mi bai ke ge klama le zarci gi cadzu le bisli [ke'e]</jbo>
-        <indexterm type="general">
-          <primary>bai ke</primary>
-        </indexterm>
+        
         <gloss>I under-compulsion (both go to-the market and walk on-the ice).</gloss>
         <en>Under compulsion, I both go to the market and walk on the ice.</en>
       </interlinear-gloss>
@@ -1563,10 +1359,10 @@
     <para>Similarly, a modal can be attached to multiple sentences that have been combined with 
     <quote>tu'e</quote> and 
     <quote>tu'u</quote>, which are explained in more detail in 
-    <xref linkend="chapter-structure" />:</para>
+    <xref linkend="chapter-structure"/>:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-boYr">
       <title>
-        <anchor xml:id="c9e9d9" />
+        <anchor xml:id="c9e9d9"/>
       </title>
       <interlinear-gloss>
         <jbo>bai tu'e mi klama le zarci .i mi cadzu le bisli [tu'u]</jbo>
@@ -1574,7 +1370,7 @@
       </interlinear-gloss>
     </example>
     <para>means the same thing as 
-    <xref linkend="example-random-id-vCzL" />.</para>
+    <xref linkend="example-random-id-vCzL"/>.</para>
     <para>Note: Either BAI modals or 
     <quote>fi'o</quote>-plus-selbri modals may correctly be used in any of the constructions discussed in this section.</para>
   </section>
@@ -1594,166 +1390,126 @@
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>mau</cmavo>
-        <indexterm type="general">
-          <primary>mau</primary>
-        </indexterm>
+        
         <selmaho>BAI</selmaho>
         <description>zmadu modal</description>
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>me'a</cmavo>
-        <indexterm type="general">
-          <primary>me'a</primary>
-        </indexterm>
+        
         <selmaho>BAI</selmaho>
         <description>mleca modal</description>
       </cmavo-entry>
     </cmavo-list>
     <para>Relative phrases and clauses are explained in much more detail in 
-    <xref linkend="chapter-relative-clauses" />. However, there is a construction which combines a modal with a relative phrase which is relevant to this chapter. Consider the following examples of relative clauses:</para>
+    <xref linkend="chapter-relative-clauses"/>. However, there is a construction which combines a modal with a relative phrase which is relevant to this chapter. Consider the following examples of relative clauses:</para>
     <example xml:id="example-random-id-qmPP" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e10d1" />
+        <anchor xml:id="c9e10d1"/>
       </title>
       <interlinear-gloss>
         <jbo>la .apasionatas. poi se cusku la .artr. rubnstain. cu se nelci mi</jbo>
         <en>The Appassionata which is-expressed-by Arthur Rubinstein is-liked-by me.</en>
-        <indexterm type="general">
-          <primary>Appassionata</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qmPr" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e10d2" />
+        <anchor xml:id="c9e10d2"/>
       </title>
       <interlinear-gloss>
         <jbo>la .apasionatas. noi se finti la betovn. cu se nelci mi</jbo>
         <en>The Appassionata, which is-created-by Beethoven, is-liked-by me.</en>
-        <indexterm type="general">
-          <primary>Beethoven</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>Appassionata</primary>
-        </indexterm>
+        
+        
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-qmPP" />, 
+    <xref linkend="example-random-id-qmPP"/>, 
     <quote>la .apasionatas.</quote> refers to a particular performance of the sonata, namely the one performed by Rubinstein. Therefore, the relative clause 
     <quote>poi se cusku</quote> uses the cmavo 
     <quote>poi</quote> (of selma'o NOI) to restrict the meaning of 
     <quote>la .apasionatas</quote> to the performance in question.</para>
     <para>In 
-    <xref linkend="example-random-id-qmPr" />, however, 
+    <xref linkend="example-random-id-qmPr"/>, however, 
     <quote>la .apasionatas.</quote> refers to the sonata as a whole, and the information that it was composed by Beethoven is merely incidental. The cmavo 
-    <indexterm type="general">
-      <primary>Beethoven</primary>
-    </indexterm>
+    
     <quote>noi</quote> (also of selma'o NOI) expresses the incidental nature of this relationship.</para>
     <para>The cmavo 
     <quote>pe</quote> and 
     <quote>ne</quote> (of selma'o GOI) are roughly equivalent to 
     <quote>poi</quote> and 
     <quote>noi</quote> respectively, but are followed by sumti rather than full bridi. We can abbreviate 
-    <xref linkend="example-random-id-qmPP" /> and 
-    <xref linkend="example-random-id-qmPr" /> to:</para>
+    <xref linkend="example-random-id-qmPP"/> and 
+    <xref linkend="example-random-id-qmPr"/> to:</para>
     <example xml:id="example-random-id-qMq1" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e10d3" />
+        <anchor xml:id="c9e10d3"/>
       </title>
       <interlinear-gloss>
         <jbo>la .apasionatas pe la .artr. rubnstain. se nelci mi</jbo>
         <en>The Appassionata of Arthur Rubinstein is-liked-by me.</en>
-        <indexterm type="general">
-          <primary>Appassionata</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qMQ1" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e10d4" />
+        <anchor xml:id="c9e10d4"/>
       </title>
       <interlinear-gloss>
         <jbo>la .apasionatas ne la betovn. se nelci mi</jbo>
         <en>The Appassionata, which is of Beethoven, is-liked-by me.</en>
-        <indexterm type="general">
-          <primary>Beethoven</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>Appassionata</primary>
-        </indexterm>
+        
+        
       </interlinear-gloss>
     </example>
     <para>Here the precise selbri of the relative clauses is lost: all we can tell is that the Appassionata is connected in some way with Rubinstein (in 
-    <indexterm type="general">
-      <primary>Appassionata</primary>
-    </indexterm>
-    <xref linkend="example-random-id-qMq1" />) and Beethoven (in 
-    <indexterm type="general">
-      <primary>Beethoven</primary>
-    </indexterm>
-    <xref linkend="example-random-id-qMQ1" />), and that the relationships are respectively restrictive and incidental.</para>
+    
+    <xref linkend="example-random-id-qMq1"/>) and Beethoven (in 
+    
+    <xref linkend="example-random-id-qMQ1"/>), and that the relationships are respectively restrictive and incidental.</para>
     <para>It happens that both 
     <quote>cusku</quote> and 
     <quote>finti</quote> have BAI cmavo, namely 
     <quote>cu'u</quote> and 
-    <indexterm type="general">
-      <primary>cu'u</primary>
-    </indexterm>
+    
     <quote>fi'e</quote>. We can recast 
-    <indexterm type="general">
-      <primary>fi'e</primary>
-    </indexterm>
-    <xref linkend="example-random-id-qMq1" /> and 
-    <xref linkend="example-random-id-qMQ1" /> as:</para>
+    
+    <xref linkend="example-random-id-qMq1"/> and 
+    <xref linkend="example-random-id-qMQ1"/> as:</para>
     <example xml:id="example-random-id-qMqF" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e10d5" />
+        <anchor xml:id="c9e10d5"/>
       </title>
       <interlinear-gloss>
         <jbo>la .apasionatas pe cu'u la .artr. rubnstain. cu se nelci mi</jbo>
-        <indexterm type="general">
-          <primary>cu'u</primary>
-        </indexterm>
+        
         <en>The Appassionata expressed-by Arthur Rubinstein is-liked-by me.</en>
-        <indexterm type="general">
-          <primary>Appassionata</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qmqy" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e10d6" />
+        <anchor xml:id="c9e10d6"/>
       </title>
       <interlinear-gloss>
         <jbo>la .apasionatas ne fi'e la betovn. cu se nelci mi</jbo>
-        <indexterm type="general">
-          <primary>fi'e</primary>
-        </indexterm>
+        
         <en>The Appassionata, invented-by Beethoven, is-liked-by me.</en>
-        <indexterm type="general">
-          <primary>Beethoven</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>Appassionata</primary>
-        </indexterm>
+        
+        
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-qMqF" /> and 
-    <xref linkend="example-random-id-qmqy" /> have the full semantic content of 
-    <xref linkend="example-random-id-qmPP" /> and 
-    <xref linkend="example-random-id-qmPr" /> respectively.</para>
+    <xref linkend="example-random-id-qMqF"/> and 
+    <xref linkend="example-random-id-qmqy"/> have the full semantic content of 
+    <xref linkend="example-random-id-qmPP"/> and 
+    <xref linkend="example-random-id-qmPr"/> respectively.</para>
     <para>Modal relative phrases are often used with the BAI cmavo 
     <quote>mau</quote> and 
-    <indexterm type="general">
-      <primary>mau</primary>
-    </indexterm>
+    
     <quote>me'a</quote>, which are based on the comparative gismu 
-    <indexterm type="general">
-      <primary>me'a</primary>
-    </indexterm>
+    
     <quote>zmadu</quote> (more than) and 
     <quote>mleca</quote> (less than) respectively. The place structures are:</para>
     <programlisting xml:space="preserve">
@@ -1763,7 +1519,7 @@
     <para>Here are some examples:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Jr4V">
       <title>
-        <anchor xml:id="c9e10d7" />
+        <anchor xml:id="c9e10d7"/>
       </title>
       <interlinear-gloss>
         <jbo>la frank. nelci la betis. ne semau la meiris.</jbo>
@@ -1772,18 +1528,14 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-Jr4V" /> requires that Frank likes Betty, but adds the information that his liking for Betty exceeds his liking for Mary. The modal appears in the form 
+    <xref linkend="example-random-id-Jr4V"/> requires that Frank likes Betty, but adds the information that his liking for Betty exceeds his liking for Mary. The modal appears in the form 
     <quote>semau</quote> because the x2 place of 
     <quote>zmadu</quote> is the basis for comparison: in this case, Frank's liking for Mary.</para>
-    <indexterm type="general">
-      <primary>comparison</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>basis</primary>
-    </indexterm>
+    
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-ecf1">
       <title>
-        <anchor xml:id="c9e10d8" />
+        <anchor xml:id="c9e10d8"/>
       </title>
       <interlinear-gloss>
         <jbo>la frank. nelci la meiris. ne seme'a la betis.</jbo>
@@ -1792,46 +1544,32 @@
       </interlinear-gloss>
     </example>
     <para>Here we are told that Frank likes Mary less than he likes Betty; the information about the comparison is the same. It would be possible to rephrase 
-    <indexterm type="general">
-      <primary>comparison</primary>
-    </indexterm>
-    <xref linkend="example-random-id-Jr4V" /> using 
+    
+    <xref linkend="example-random-id-Jr4V"/> using 
     <quote>me'a</quote> rather than 
-    <indexterm type="general">
-      <primary>me'a</primary>
-    </indexterm>
+    
     <quote>semau</quote>, and 
-    <xref linkend="example-random-id-ecf1" /> using 
+    <xref linkend="example-random-id-ecf1"/> using 
     <quote>mau</quote> rather than 
-    <indexterm type="general">
-      <primary>mau</primary>
-    </indexterm>
+    
     <quote>seme'a</quote>, but such usage would be unnecessarily confusing. Like many BAI cmavo, 
     <quote>mau</quote> and 
-    <indexterm type="general">
-      <primary>mau</primary>
-    </indexterm>
+    
     <quote>me'a</quote> are more useful when converted with 
-    <indexterm type="general">
-      <primary>me'a</primary>
-    </indexterm>
+    
     <quote>se</quote>.</para>
     <para>If the 
     <quote>ne</quote> were omitted in 
-    <xref linkend="example-random-id-Jr4V" /> and 
-    <xref linkend="example-random-id-ecf1" />, the modal sumti ( 
-    <indexterm type="general">
-      <primary>seltcita sumti</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>modal sumti</primary>
-    </indexterm>
+    <xref linkend="example-random-id-Jr4V"/> and 
+    <xref linkend="example-random-id-ecf1"/>, the modal sumti ( 
+    
+    
     <quote>la meiris.</quote> and 
     <quote>la betis.</quote> respectively) would become attached to the bridi as a whole, producing a very different translation. 
-    <xref linkend="example-random-id-ecf1" /> would become:</para>
+    <xref linkend="example-random-id-ecf1"/> would become:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-5QHA">
       <title>
-        <anchor xml:id="c9e10d9" />
+        <anchor xml:id="c9e10d9"/>
       </title>
       <interlinear-gloss>
         <jbo>la frank. nelci la meiris. seme'a la betis.</jbo>
@@ -1841,12 +1579,10 @@
     </example>
     <para>which compares a liking with a person, and is therefore nonsense.</para>
     <para>Pure comparison, which states only the comparative information but says nothing about whether Frank actually likes either Mary or Betty (he may like neither, but dislike Betty less), would be expressed differently, as:</para>
-    <indexterm type="general">
-      <primary>comparison</primary>
-    </indexterm>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-AAQp">
       <title>
-        <anchor xml:id="c9e10d10" />
+        <anchor xml:id="c9e10d10"/>
       </title>
       <interlinear-gloss>
         <jbo>le ni la frank. nelci la betis. cu zmadu</jbo>
@@ -1859,24 +1595,16 @@
     <quote>semau</quote> and 
     <quote>seme'a</quote>. Some other modals that are often associated with relative phrases are: 
     <quote>seba'i</quote> ( 
-    <indexterm type="general">
-      <primary>seba'i</primary>
-    </indexterm>
+    
     <quote>instead of</quote>), 
     <quote>ci'u</quote> ( 
-    <indexterm type="general">
-      <primary>ci'u</primary>
-    </indexterm>
+    
     <quote>on scale</quote>), 
     <quote>de'i</quote> ( 
-    <indexterm type="general">
-      <primary>de'i</primary>
-    </indexterm>
+    
     <quote>dated</quote>), 
     <quote>du'i</quote> ( 
-    <indexterm type="general">
-      <primary>du'i</primary>
-    </indexterm>
+    
     <quote>as much as</quote>). Some BAI tags can be used equally well in relative phrases or attached to bridi; others seem useful only attached to bridi. But it is also possible that the usefulness of particular BAI modals is an English-speaker bias, and that speakers of other languages may find other BAIs useful in divergent ways.</para>
     <para>Note: The uses of modals discussed in this section are applicable both to BAI modals and to 
     <quote>fi'o</quote>-plus-selbri modals.</para>
@@ -1884,10 +1612,10 @@
   <section xml:id="cll_chapter9-section11">
     <title>Mixed modal connection</title>
     <para>It is possible to mix logical connection (explained in 
-    <xref linkend="chapter-connectives" />) with modal connection, in a way that simultaneously asserts the logical connection and the modal relationship. Consider the sentences:</para>
+    <xref linkend="chapter-connectives"/>) with modal connection, in a way that simultaneously asserts the logical connection and the modal relationship. Consider the sentences:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-4qz4">
       <title>
-        <anchor xml:id="c9e11d1" />
+        <anchor xml:id="c9e11d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi nelci do .ije mi nelci la djein.</jbo>
@@ -1897,7 +1625,7 @@
     <para>which is a logical connection, and</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-6EE5">
       <title>
-        <anchor xml:id="c9e11d2" />
+        <anchor xml:id="c9e11d2"/>
       </title>
       <interlinear-gloss>
         <jbo>mi nelci do .iki'ubo mi nelci la djein.</jbo>
@@ -1905,11 +1633,11 @@
       </interlinear-gloss>
     </example>
     <para>The meanings of 
-    <xref linkend="example-random-id-4qz4" /> and 
-    <xref linkend="example-random-id-6EE5" /> can be simultaneously expressed by combining the two compound cmavo, thus:</para>
+    <xref linkend="example-random-id-4qz4"/> and 
+    <xref linkend="example-random-id-6EE5"/> can be simultaneously expressed by combining the two compound cmavo, thus:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-W3Le">
       <title>
-        <anchor xml:id="c9e11d3" />
+        <anchor xml:id="c9e11d3"/>
       </title>
       <interlinear-gloss>
         <jbo>mi nelci do .ijeki'ubo mi nelci la djein.</jbo>
@@ -1921,19 +1649,15 @@
     <quote>mi nelci la djein.</quote> are simultaneously asserted, their logical connection is asserted, and their causal relationship is asserted. The logical connective 
     <quote>je</quote> comes before the modal 
     <quote>ki'u</quote> in all such mixed connections.</para>
-    <indexterm type="general">
-      <primary>ki'u</primary>
-    </indexterm>
+    
     <para>Since 
     <quote>mi nelci do</quote> and 
     <quote>mi nelci la djein.</quote> differ only in the final sumti, we can transform 
-    <xref linkend="example-random-id-W3Le" /> into a mixed sumti connection:</para>
-    <indexterm type="general">
-      <primary>sumti connection</primary>
-    </indexterm>
+    <xref linkend="example-random-id-W3Le"/> into a mixed sumti connection:</para>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-gE1z">
       <title>
-        <anchor xml:id="c9e11d4" />
+        <anchor xml:id="c9e11d4"/>
       </title>
       <interlinear-gloss>
         <jbo>mi nelci do .eki'ubo la djein.</jbo>
@@ -1941,14 +1665,12 @@
       </interlinear-gloss>
     </example>
     <para>Note that this connection is an afterthought one. Mixed connectives are always afterthought; forethought connectives must be either logical or modal.</para>
-    <indexterm type="general">
-      <primary>forethought connectives</primary>
-    </indexterm>
+    
     <para>There are numerous other afterthought logical and non-logical connectives that can have modal information planted within them. For example, a bridi-tail connected version of 
-    <xref linkend="example-random-id-gE1z" /> would be:</para>
+    <xref linkend="example-random-id-gE1z"/> would be:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7LmA">
       <title>
-        <anchor xml:id="c9e11d5" />
+        <anchor xml:id="c9e11d5"/>
       </title>
       <interlinear-gloss>
         <jbo>mi nelci do gi'eki'ubo nelci la djein.</jbo>
@@ -1958,7 +1680,7 @@
     <para>The following three complex examples all mean the same thing.</para>
     <example xml:id="example-random-id-qMRB" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e11d6" />
+        <anchor xml:id="c9e11d6"/>
       </title>
       <interlinear-gloss>
         <jbo>mi bevri le dakli</jbo>
@@ -1971,7 +1693,7 @@
     </example>
     <example xml:id="example-random-id-qmRL" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e11d7" />
+        <anchor xml:id="c9e11d7"/>
       </title>
       <interlinear-gloss>
         <jbo>mi bevri le dakli</jbo>
@@ -1983,7 +1705,7 @@
     </example>
     <example xml:id="example-random-id-qMSb" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e11d8" />
+        <anchor xml:id="c9e11d8"/>
       </title>
       <interlinear-gloss>
         <jbo>mi bevri le dakli</jbo>
@@ -1994,17 +1716,17 @@
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-qMRB" />, the 
+    <xref linkend="example-random-id-qMRB"/>, the 
     <quote>tu'e ... tu'u</quote> brackets are the equivalent of the 
     <quote>ke ... ke'e</quote> brackets in 
-    <xref linkend="example-random-id-qmRL" /> and 
-    <xref linkend="example-random-id-qMSb" />, because 
+    <xref linkend="example-random-id-qmRL"/> and 
+    <xref linkend="example-random-id-qMSb"/>, because 
     <quote>ke ... ke'e</quote> cannot extend across more than one sentence. It would also be possible to change the 
     <quote>.ijeseri'abo</quote> to 
     <quote>.ije seri'a</quote>, which would show that the 
     <quote>tu'e ... tu'u</quote> portion was an effect, but would not pin down the 
     <quote>mi bevri le dakli</quote> portion as the cause. It is legal for a modal (or a tense; see 
-    <xref linkend="chapter-tenses" />) to modify the whole of a 
+    <xref linkend="chapter-tenses"/>) to modify the whole of a 
     <quote>tu'e ... tu'u</quote> construct.</para>
     <para>Note: The uses of modals discussed in this section are applicable both to BAI modals and to 
     <quote>fi'o</quote>-plus-selbri modals.</para>
@@ -2017,9 +1739,7 @@
         <cmavo>jai</cmavo>
         <selmaho>JAI</selmaho>
         <description>modal conversion</description>
-        <indexterm type="general">
-          <primary>modal conversion</primary>
-        </indexterm>
+        
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>fai</cmavo>
@@ -2030,7 +1750,7 @@
     <para>So far, conversion of numbered bridi places with SE and the addition of modal places with BAI have been two entirely separate operations. However, it is possible to convert a selbri in such a way that, rather than exchanging two numbered places, a modal place is made into a numbered place. For example,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-KMMX">
       <title>
-        <anchor xml:id="c9e12d1" />
+        <anchor xml:id="c9e12d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi cusku bau la lojban.</jbo>
@@ -2041,20 +1761,14 @@
     <quote>mi</quote> and an explicit 
     <quote>bau</quote> place occupied by 
     <quote>la lojban.</quote> To exchange these two, we use a modal conversion operator consisting of 
-    <indexterm type="general">
-      <primary>modal conversion</primary>
-    </indexterm>
+    
     <quote>jai</quote> (of selma'o JAI) followed by the modal cmavo. Thus, the modal conversion of 
-    <indexterm type="general">
-      <primary>modal conversion</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>modal cmavo</primary>
-    </indexterm>
-    <xref linkend="example-random-id-KMMX" /> is:</para>
+    
+    
+    <xref linkend="example-random-id-KMMX"/> is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-KjyW">
       <title>
-        <anchor xml:id="c9e12d2" />
+        <anchor xml:id="c9e12d2"/>
       </title>
       <interlinear-gloss>
         <jbo>la lojban. jai bau cusku fai mi</jbo>
@@ -2062,7 +1776,7 @@
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-KjyW" />, the modal place 
+    <xref linkend="example-random-id-KjyW"/>, the modal place 
     <quote>la lojban.</quote> has become the x1 place of the new selbri 
     <quote>jai bau cusku</quote>. What has happened to the old x1 place? There is no numbered place for it to move to, so it moves to a special 
     <quote>unnumbered place</quote> marked by the tag 
@@ -2070,9 +1784,7 @@
     <para>Note: For the purposes of place numbering, 
     <quote>fai</quote> behaves like 
     <quote>fi'a</quote>; it does not affect the numbering of the other places around it.</para>
-    <indexterm type="general">
-      <primary>fi'a</primary>
-    </indexterm>
+    
     <para>Like SE conversions, JAI conversions are especially convenient in descriptions. We may refer to 
     <quote>the language of an expression</quote> as 
     <quote>le jai bau cusku</quote>, for example.</para>
@@ -2080,10 +1792,10 @@
     <quote>jai</quote> without a following modal. This usage is not related to modals, but is explained here for completeness. The effect of 
     <quote>jai</quote> by itself is to send the x1 place, which should be an abstraction, into the 
     <quote>fai</quote> position, and to raise one of the sumti from the abstract sub-bridi into the x1 place of the main bridi. This feature is discussed in more detail in 
-    <xref linkend="chapter-abstractions" />. The following two examples mean the same thing:</para>
+    <xref linkend="chapter-abstractions"/>. The following two examples mean the same thing:</para>
     <example xml:id="example-random-id-qMsd" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e12d3" />
+        <anchor xml:id="c9e12d3"/>
       </title>
       <interlinear-gloss>
         <jbo>le nu mi lebna le cukta cu se krinu le nu mi viska le cukta</jbo>
@@ -2093,7 +1805,7 @@
     </example>
     <example xml:id="example-random-id-qMse" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e12d4" />
+        <anchor xml:id="c9e12d4"/>
       </title>
       <interlinear-gloss>
         <jbo>mi jai se krinu le nu mi viska le cukta kei</jbo>
@@ -2104,7 +1816,7 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-qMse" />, with the bracketed part omitted, allows us to say that 
+    <xref linkend="example-random-id-qMse"/>, with the bracketed part omitted, allows us to say that 
     <quote>I am justified</quote> whereas in fact it is my action that is justified. This construction is vague, but useful in representing natural-language methods of expression.</para>
     <para>Note: The uses of modals discussed in this section are applicable both to BAI modals and to 
     <quote>fi'o</quote>-plus-selbri modals.</para>
@@ -2112,7 +1824,7 @@
   <section xml:id="cll_chapter9-section13">
     <title>Modal negation</title>
     <para>Negation is explained in detail in 
-    <xref linkend="chapter-negation" />. There are two forms of negation in Lojban: contradictory and scalar negation. Contradictory negation expresses what is false, whereas scalar negation says that some alternative to what has been stated is true. A simple example is the difference between 
+    <xref linkend="chapter-negation"/>. There are two forms of negation in Lojban: contradictory and scalar negation. Contradictory negation expresses what is false, whereas scalar negation says that some alternative to what has been stated is true. A simple example is the difference between 
     <quote>John didn't go to Paris</quote> (contradictory negation) and 
     <quote>John went to (somewhere) other than Paris</quote> (scalar negation).</para>
     <para>Contradictory negation involving BAI cmavo is performed by appending 
@@ -2120,7 +1832,7 @@
     <quote>-nai</quote> is to deny a causal relationship:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-ej84">
       <title>
-        <anchor xml:id="c9e13d1" />
+        <anchor xml:id="c9e13d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi nelci do mu'inai le nu do nelci mi</jbo>
@@ -2128,12 +1840,12 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-ej84" /> denies that the relationship between my liking you (which is asserted) and your liking me (which is not asserted) is one of motivation. Nothing is said about whether you like me or not, merely that that hypothetical liking is not the motivation for my liking you.</para>
+    <xref linkend="example-random-id-ej84"/> denies that the relationship between my liking you (which is asserted) and your liking me (which is not asserted) is one of motivation. Nothing is said about whether you like me or not, merely that that hypothetical liking is not the motivation for my liking you.</para>
     <para>Scalar negation is achieved by prefixing 
     <quote>na'e</quote> (of selma'o NAhE), or any of the other cmavo of NAhE, to the BAI cmavo.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-9WC5">
       <title>
-        <anchor xml:id="c9e13d2" />
+        <anchor xml:id="c9e13d2"/>
       </title>
       <interlinear-gloss>
         <jbo>le spati cu banro na'emu'i le nu</jbo>
@@ -2143,11 +1855,9 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-9WC5" /> says that the relationship between the plant's growth and your watering it is not one of motivation: the plant is not motivated to grow, as plants are not something which can have motivation as a rule. Implicitly, some other relationship between watering and growth exists, but 
-    <indexterm type="general">
-      <primary>plants</primary>
-    </indexterm>
-    <xref linkend="example-random-id-9WC5" /> doesn't say what it is (presumably 
+    <xref linkend="example-random-id-9WC5"/> says that the relationship between the plant's growth and your watering it is not one of motivation: the plant is not motivated to grow, as plants are not something which can have motivation as a rule. Implicitly, some other relationship between watering and growth exists, but 
+    
+    <xref linkend="example-random-id-9WC5"/> doesn't say what it is (presumably 
     <quote>ri'a</quote>).</para>
     <para>Note: Modals made with 
     <quote>fi'o</quote> plus a selbri cannot be negated directly. The selbri can itself be negated either with contradictory or with scalar negation, however.</para>
@@ -2167,7 +1877,7 @@
     <quote>ki</quote> of selma'o KI. For example,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-1UGf">
       <title>
-        <anchor xml:id="c9e14d1" />
+        <anchor xml:id="c9e14d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi tavla bau la lojban. bai ki tu'a la frank.</jbo>
@@ -2179,7 +1889,7 @@
     <para>means the same as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-txFr">
       <title>
-        <anchor xml:id="c9e14d2" />
+        <anchor xml:id="c9e14d2"/>
       </title>
       <interlinear-gloss>
         <jbo>mi tavla bau la lojban. bai tu'a la frank.</jbo>
@@ -2191,7 +1901,7 @@
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-1UGf" />, 
+    <xref linkend="example-random-id-1UGf"/>, 
     <quote>bai</quote> is made sticky, and so Frank's compelling is made applicable to every following bridi. 
     <quote>bau</quote> is not sticky, and so the language may vary from bridi to bridi, and if not specified in a particular bridi, no assumption can safely be made about its value.</para>
     <para>To cancel stickiness, use the form 
@@ -2201,7 +1911,7 @@
     <quote>ki ku</quote>) anywhere in the bridi:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-sYdo">
       <title>
-        <anchor xml:id="c9e14d3" />
+        <anchor xml:id="c9e14d3"/>
       </title>
       <interlinear-gloss>
         <jbo>mi ki tavla</jbo>
@@ -2213,16 +1923,14 @@
   </section>
   <section xml:id="cll_chapter9-section15">
     <title>Logical and non-logical connection of modals</title>
-    <indexterm type="general">
-      <primary>non-logical connection</primary>
-    </indexterm>
+    
     <para>Logical and non-logical connectives are explained in detail in 
-    <xref linkend="chapter-connectives" />. For the purposes of this chapter, it suffices to point out that a logical (or non-logical) connection between two bridi which differ only in a modal can be reduced to a single bridi with a connective between the modals. As a result, 
-    <xref linkend="example-random-id-qMsx" /> and 
-    <xref linkend="example-random-id-qMte" /> mean the same thing:</para>
+    <xref linkend="chapter-connectives"/>. For the purposes of this chapter, it suffices to point out that a logical (or non-logical) connection between two bridi which differ only in a modal can be reduced to a single bridi with a connective between the modals. As a result, 
+    <xref linkend="example-random-id-qMsx"/> and 
+    <xref linkend="example-random-id-qMte"/> mean the same thing:</para>
     <example xml:id="example-random-id-qMsx" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e15d1" />
+        <anchor xml:id="c9e15d1"/>
       </title>
       <interlinear-gloss>
         <jbo>la frank. bajra seka'a le zdani .ije la frank. bajra teka'a le zdani</jbo>
@@ -2232,7 +1940,7 @@
     </example>
     <example xml:id="example-random-id-qMte" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c9e15d2" />
+        <anchor xml:id="c9e15d2"/>
       </title>
       <interlinear-gloss>
         <jbo>la frank. bajra seka'a je teka'a le zdani</jbo>
@@ -2243,7 +1951,7 @@
     <para>Neither example implies whether a single act, or two acts, of running is referred to. To compel the sentence to refer to a single act of running, you can use the form:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-b0LW">
       <title>
-        <anchor xml:id="c9e15d3" />
+        <anchor xml:id="c9e15d3"/>
       </title>
       <interlinear-gloss>
         <jbo>la frank. bajra seka'a le zdani ce'e teka'a le zdani</jbo>
@@ -2252,17 +1960,15 @@
     </example>
     <para>The cmavo 
     <quote>ce'e</quote> creates a termset containing two terms (termsets are explained in 
-    <xref linkend="chapter-connectives" /> and 
-    <xref linkend="chapter-quantifiers" />). When a termset contains more than one modal tag derived from a single BAI, the convention is that the two tags are derived from a common event.</para>
+    <xref linkend="chapter-connectives"/> and 
+    <xref linkend="chapter-quantifiers"/>). When a termset contains more than one modal tag derived from a single BAI, the convention is that the two tags are derived from a common event.</para>
   </section>
   <section xml:id="cll_chapter9-section16">
     <title>CV'V cmavo of selma'o BAI with irregular forms</title>
     <para>There are 65 cmavo of selma'o BAI, of which all but one ( 
     <quote>do'e</quote>, discussed in 
-    <indexterm type="general">
-      <primary>do'e</primary>
-    </indexterm>
-    <xref linkend="cll_chapter9-section6" />), are derived directly from selected gismu. Of these 64 cmavo, 36 are entirely regular and have the form CV'V, where C is the first consonant of the corresponding gismu, and the Vs are the two vowels of the gismu. The remaining BAI cmavo, which are irregular in one way or another, are listed in the table below. The table is divided into sub-tables according to the nature of the exception; some cmavo appear in more than one sub-table, and are so noted.</para>
+    
+    <xref linkend="cll_chapter9-section6"/>), are derived directly from selected gismu. Of these 64 cmavo, 36 are entirely regular and have the form CV'V, where C is the first consonant of the corresponding gismu, and the Vs are the two vowels of the gismu. The remaining BAI cmavo, which are irregular in one way or another, are listed in the table below. The table is divided into sub-tables according to the nature of the exception; some cmavo appear in more than one sub-table, and are so noted.</para>
     <programlisting xml:space="preserve">
    cmavo    gismu        comments
 
@@ -2275,10 +1981,7 @@
     gau     gasnu
     kai     ckaji        uses 2nd consonant of gismu
     mau     zmadu        uses 2nd consonant of gismu
-<indexterm type="general">
-  
-<primary>mau</primary>
-</indexterm>
+
     koi     korbi
     rai     traji        uses 2nd consonant of gismu
     sau     sarcu
@@ -2294,10 +1997,7 @@
     la'u    klani        has irregular 2nd V
     le'a    klesi        has irregular 2nd V
     mau     zmadu        has CVV form (monosyllable)
-<indexterm type="general">
-  
-<primary>mau</primary>
-</indexterm>
+
     me'e    cmene
     ra'a    srana
     ra'i    krasi
@@ -2308,10 +2008,7 @@
     Irregular 2nd V:
 
     fi'e    finti
-<indexterm type="general">
-  
-<primary>fi'e</primary>
-</indexterm>
+
     la'u    klani        uses 2nd consonant of gismu
     le'a    klesi        uses 2nd consonant of gismu
     ma'e    marji
@@ -2350,46 +2047,25 @@
                     te=of system components
     ci'o    cinmo   felt by                        feeling emotion
     ci'u    ckilu   on the scale                   on scale measuring
-<indexterm type="general">
-  
-<primary>ci'u</primary>
-</indexterm>
+
     cu'u    cusku   as said by                     expressing
-<indexterm type="general">
-  
-<primary>cu'u</primary>
-</indexterm>
+
                     te=as told to                  ve=expressed in medium
     de'i    detri   dated                          on the same date as
-<indexterm type="general">
-  
-<primary>de'i</primary>
-</indexterm>
+
     di'o    diklo   at the locus of                at specific locus
     do'e    -----   vaguely related to
-<indexterm type="general">
-  
-<primary>do'e</primary>
-</indexterm>
+
     du'i    dunli   as much as                     equal to
-<indexterm type="general">
-  
-<primary>dunli</primary>
-</indexterm>
-<indexterm type="general">
-  
-<primary>du'i</primary>
-</indexterm>
+
+
     du'o    djuno   according to                   knowing facts
                     te=knowing about
                     ve=under epistemology
     fa'e    fatne   reverse of                     in reversal of
     fau     fasnu   in the event of
     fi'e    finti   created by                     creating work
-<indexterm type="general">
-  
-<primary>fi'e</primary>
-</indexterm>
+
                     te=created                     for purpose
     ga'a    zgana   to observer                    observing
                     te=observed                    by means
@@ -2401,10 +2077,7 @@
     ji'o    jitro   under direction                controlling
     ji'u    jicmu   based on                       supporting
     ka'a    klama   gone to by                     with destination
-<indexterm type="general">
-  
-<primary>ka'a</primary>
-</indexterm>
+
                     te=with origin                 ve=via route
                     xe=by transport mode
     ka'i    krati   represented by                 on behalf of
@@ -2412,10 +2085,7 @@
     ki'i    ckini   as relation of                 related to
                     te=with relation
     ki'u    krinu   justified by                   with justified result
-<indexterm type="general">
-  
-<primary>ki'u</primary>
-</indexterm>
+
     koi     korbi   bounded by                     as boundary of
                     te=bordering
     ku'u    kulnu   in culture                     in culture of
@@ -2426,46 +2096,25 @@
     ma'e    marji   of material                    made from material
                     te=in material form of
     ma'i    manri   in reference frame             as a standard for
-<indexterm type="general">
-  
-<primary>reference frame</primary>
-</indexterm>
-<indexterm type="general">
-  
-<primary>ma'i</primary>
-</indexterm>
+
+
     mau     zmadu   exceeded by                    more than
-<indexterm type="general">
-  
-<primary>mau</primary>
-</indexterm>
+
     me'a    mleca   undercut by                    less than
-<indexterm type="general">
-  
-<primary>me'a</primary>
-</indexterm>
+
     me'e    cmene   with name                      as a name for
                     te=as a name to
     mu'i    mukti   motivated by                   motive therefore
-<indexterm type="general">
-  
-<primary>mu'i</primary>
-</indexterm>
+
     mu'u    mupli   exemplified by                 as an example of
     ni'i    nibli   entailed by                    entails
-<indexterm type="general">
-  
-<primary>ni'i</primary>
-</indexterm>
+
     pa'a    panra   in addition to                 similar to
                     te=similar in pattern
                     ve=similar by standard
     pa'u    pagbu   with component                 as a part of
     pi'o    pilno   used by                        using tool
-<indexterm type="general">
-  
-<primary>pi'o</primary>
-</indexterm>
+
     po'i    porsi   in the sequence                sequenced by rule
     pu'a    pluka   pleased by                     in order to please
     pu'e    pruce   by process                     processing from
@@ -2477,10 +2126,7 @@
                     te=at extreme                  ve=superlative among
     ri'a    rinka   caused by                      causing
     ri'i    lifri   experienced by                 experiencing
-<indexterm type="general">
-  
-<primary>experienced</primary>
-</indexterm>
+
     sau     sarcu   requiring                      necessarily for
                     te=necessarily under conditions
     si'u    sidju   aided by                       assisting in

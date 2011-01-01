@@ -1,3 +1,5 @@
+<?xml version="1.0"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V5.0//EN" "dtd/docbook-5.0.dtd">
 <chapter xml:id="chapter-morphology">
   <title>The Shape Of Words To Come: Lojban Morphology</title>
   
@@ -5,22 +7,16 @@
     <title>Introductory</title>
     <para>Morphology is the part of grammar that deals with the form of words. Lojban's morphology is fairly simple compared to that of many languages, because Lojban words don't change form depending on how they are used. English has only a small number of such changes compared to languages like Russian, but it does have changes like 
     <quote>boys</quote> as the plural of 
-    <indexterm type="general">
-      <primary>plural</primary>
-    </indexterm>
+    
     <quote>boy</quote>, or 
     <quote>walked</quote> as the past-tense form of 
     <quote>walk</quote>. To make plurals or past tenses in Lojban, you add separate words to the sentence that express the number of boys, or the time when the walking was going on.</para>
     <para>However, Lojban does have what is called 
     <quote>derivational morphology</quote>: the capability of building new words from old words. In addition, the form of words tells us something about their grammatical uses, and sometimes about the means by which they entered the language. Lojban has very orderly rules for the formation of words of various types, both the words that already exist and new words yet to be created by speakers and writers.</para>
-    <indexterm type="general">
-      <primary>derivational morphology</primary>
-    </indexterm>
+    
     <para>A stream of Lojban sounds can be uniquely broken up into its component words according to specific rules. These so-called 
     <quote>morphology rules</quote> are summarized in this chapter. (However, a detailed algorithm for breaking sounds into words has not yet been fully debugged, and so is not presented in this book.) First, here are some conventions used to talk about groups of Lojban letters, including vowels and consonants.</para>
-    <indexterm type="general">
-      <primary>Lojban letters</primary>
-    </indexterm>
+    
     <variablelist>
       <varlistentry>
         <term>1)</term>
@@ -44,58 +40,38 @@
           <cmavo-list>
             <cmavo-entry>
               <cmavo>a'a a'e a'i</cmavo>
-              <indexterm type="general">
-                <primary>a'i</primary>
-              </indexterm>
-              <indexterm type="general">
-                <primary>a'a</primary>
-              </indexterm>
+              
+              
               <selmaho>a'o</selmaho>
-              <indexterm type="general">
-                <primary>a'o</primary>
-              </indexterm>
+              
               <description>a'u</description>
             </cmavo-entry>
             <cmavo-entry>
               <cmavo>e'a e'e e'i</cmavo>
-              <indexterm type="general">
-                <primary>e'e</primary>
-              </indexterm>
-              <indexterm type="general">
-                <primary>e'a</primary>
-              </indexterm>
+              
+              
               <selmaho>e'o</selmaho>
-              <indexterm type="general">
-                <primary>e'o</primary>
-              </indexterm>
+              
               <description>e'u</description>
             </cmavo-entry>
             <cmavo-entry>
               <cmavo>i'a i'e i'i</cmavo>
-              <indexterm type="general">
-                <primary>i'e</primary>
-              </indexterm>
+              
               <selmaho>i'o</selmaho>
               <description>i'u</description>
             </cmavo-entry>
             <cmavo-entry>
               <cmavo>o'a o'e o'i</cmavo>
-              <indexterm type="general">
-                <primary>o'i</primary>
-              </indexterm>
+              
               <selmaho>o'o</selmaho>
               <description>o'u</description>
-              <indexterm type="general">
-                <primary>o'u</primary>
-              </indexterm>
+              
             </cmavo-entry>
             <cmavo-entry>
               <cmavo>u'a u'e u'i</cmavo>
               <selmaho>u'o</selmaho>
               <description>u'u</description>
-              <indexterm type="general">
-                <primary>u'u</primary>
-              </indexterm>
+              
             </cmavo-entry>
           </cmavo-list></para>
         </listitem>
@@ -131,12 +107,8 @@
         <term>4)</term>
         <listitem>
           <para>CC represents two adjacent consonants of type C which constitute one of the 48 permissible initial consonant pairs: 
-          <indexterm type="general">
-            <primary>initial consonant pairs</primary>
-          </indexterm>
-          <indexterm type="general">
-            <primary>consonant pairs</primary>
-          </indexterm>
+          
+          
           <programlisting xml:space="preserve">
       bl br
       cf ck cl cm cn cp cr ct
@@ -159,10 +131,8 @@
         <term>5)</term>
         <listitem>
           <para>C/C represents two adjacent consonants which constitute one of the permissible consonant pairs (not necessarily a permissible initial consonant pair). The permissible consonant pairs are explained in 
-          <indexterm type="general">
-            <primary>consonant pairs</primary>
-          </indexterm>
-          <xref linkend="chapter-phonology" />. In brief, any consonant pair is permissible unless it: contains two identical letters, contains both a voiced (excluding 
+          
+          <xref linkend="chapter-phonology"/>. In brief, any consonant pair is permissible unless it: contains two identical letters, contains both a voiced (excluding 
           <quote>r</quote>, 
           <quote>l</quote>, 
           <quote>m</quote>, 
@@ -177,16 +147,10 @@
       </varlistentry>
     </variablelist>
     <para>Lojban has three basic word classes - parts of speech - in contrast to the eight that are traditional in English. These three classes are called cmavo, brivla, and cmene. Each of these classes has uniquely identifying properties - an arrangement of letters that allows the word to be uniquely and unambiguously recognized as a separate word in a string of Lojban, upon either reading or hearing, and as belonging to a specific word-class.</para>
-    <indexterm type="general">
-      <primary>word classes</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>parts of speech</primary>
-    </indexterm>
+    
+    
     <para>They are also functionally different: cmavo are the structure words, corresponding to English words like 
-    <indexterm type="general">
-      <primary>structure words</primary>
-    </indexterm>
+    
     <quote>and</quote>, 
     <quote>if</quote>, 
     <quote>the</quote> and 
@@ -202,28 +166,16 @@
   <section xml:id="chapter-morphology-section2">
     <title>cmavo</title>
     <para>The first group of Lojban words discussed in this chapter are the cmavo. They are the structure words that hold the Lojban language together. They often have no semantic meaning in themselves, though they may affect the semantics of brivla to which they are attached. The cmavo include the equivalent of English articles, conjunctions, prepositions, numbers, and punctuation marks. There are over a hundred subcategories of cmavo, known as 
-    <indexterm type="general">
-      <primary>structure words</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>punctuation marks</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>prepositions</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>hundred</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>conjunctions</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>articles</primary>
-    </indexterm>
+    
+    
+    
+    
+    
+    
     <jbophrase>selma'o</jbophrase>, each having a specifically defined grammatical usage. The various selma'o are discussed throughout 
-    <xref linkend="chapter-selbri" /> to 
-    <xref linkend="chapter-structure" /> and summarized in 
-    <xref linkend="chapter-catalogue" />.</para>
+    <xref linkend="chapter-selbri"/> to 
+    <xref linkend="chapter-structure"/> and summarized in 
+    <xref linkend="chapter-catalogue"/>.</para>
     <para>Standard cmavo occur in four forms defined by their word structure. Here are some examples of the various forms:</para>
     <cmavo-list>
       <cmavo-entry>
@@ -240,40 +192,30 @@
         <cmavo>VV-form .au .ei</cmavo>
         <selmaho>.ia</selmaho>
         <description>.o'u .u'e</description>
-        <indexterm type="general">
-          <primary>o'u</primary>
-        </indexterm>
+        
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>CVV-form ki'a pei mi'o</cmavo>
         <selmaho>coi</selmaho>
         <description>cu'u</description>
-        <indexterm type="general">
-          <primary>cu'u</primary>
-        </indexterm>
+        
       </cmavo-entry>
     </cmavo-list>
     <para>In addition, there is the cmavo 
     <quote>.y.</quote> (remember that 
     <quote>y</quote> is not a V), which must have pauses before and after it.</para>
     <para>A simple cmavo thus has the property of having only one or two vowels, or of having a single consonant followed by one or two vowels. Words consisting of three or more vowels in a row, or a single consonant followed by three or more vowels, are also of cmavo form, but are reserved for experimental use: a few examples are 
-    <indexterm type="general">
-      <primary>cmavo form</primary>
-    </indexterm>
+    
     <quote>ku'a'e</quote>, 
-    <indexterm type="general">
-      <primary>ku'a</primary>
-    </indexterm>
+    
     <quote>sau'e</quote>, and 
     <quote>bai'ai</quote>. All CVV cmavo beginning with the letter 
     <quote>x</quote> are also reserved for experimental use. In general, though, the form of a cmavo tells you little or nothing about its grammatical use.</para>
     <para>
     <quote>Experimental use</quote> means that the language designers will not assign any standard meaning or usage to these words, and words and usages coined by Lojban speakers will not appear in official dictionaries for the indefinite future. Experimental-use words provide an escape hatch for adding grammatical mechanisms (as opposed to semantic concepts) the need for which was not foreseen.</para>
     <para>The cmavo of VV-form include not only the diphthongs and vowel pairs listed in 
-    <indexterm type="general">
-      <primary>vowel pairs</primary>
-    </indexterm>
-    <xref linkend="chapter-morphology-section1" />, but also the following ten additional diphthongs:</para>
+    
+    <xref linkend="chapter-morphology-section1"/>, but also the following ten additional diphthongs:</para>
     <cmavo-list>
       <cmavo-entry>
         <cmavo>.ia .ie .ii</cmavo>
@@ -282,9 +224,7 @@
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>.ua .ue .ui</cmavo>
-        <indexterm type="general">
-          <primary>ue</primary>
-        </indexterm>
+        
         <selmaho>.uo</selmaho>
         <description>.uu</description>
       </cmavo-entry>
@@ -292,10 +232,8 @@
     <para>In addition, cmavo can have the form 
     <quote>Cy</quote>, a consonant followed by the letter 
     <quote>y</quote>. These cmavo represent letters of the Lojban alphabet, and are discussed in detail in 
-    <indexterm type="general">
-      <primary>Lojban alphabet</primary>
-    </indexterm>
-    <xref linkend="chapter-letterals" />.</para>
+    
+    <xref linkend="chapter-letterals"/>.</para>
     <para>Compound cmavo are sequences of cmavo attached together to form a single written word. A compound cmavo is always identical in meaning and in grammatical use to the separated sequence of simple cmavo from which it is composed. These words are written in compound form merely to save visual space, and to ease the reader's burden in identifying when the component cmavo are acting together.</para>
     <para>Compound cmavo, while not visually short like their components, can be readily identified by two characteristics:</para>
     <variablelist>
@@ -303,9 +241,7 @@
         <term>1)</term>
         <listitem>
           <para>They have no consonant pairs or clusters, and</para>
-          <indexterm type="general">
-            <primary>consonant pairs</primary>
-          </indexterm>
+          
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -318,19 +254,17 @@
     <para>For example:</para>
     <example xml:id="example-random-id-qiXV" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e2d1" />
+        <anchor xml:id="c4e2d1"/>
       </title>
       <interlinear-gloss>
         <jbo>.iseci'i</jbo>
         <en>.i se ci'i</en>
-        <indexterm type="general">
-          <primary>ci'i</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qIYK" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e2d2" />
+        <anchor xml:id="c4e2d2"/>
       </title>
       <interlinear-gloss>
         <jbo>punaijecanai</jbo>
@@ -339,17 +273,13 @@
     </example>
     <example xml:id="example-random-id-qiz6" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e2d3" />
+        <anchor xml:id="c4e2d3"/>
       </title>
       <interlinear-gloss>
         <jbo>ki'e.u'e</jbo>
-        <indexterm type="general">
-          <primary>ki'e</primary>
-        </indexterm>
+        
         <en>ki'e .u'e</en>
-        <indexterm type="general">
-          <primary>ki'e</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>The cmavo 
@@ -357,19 +287,17 @@
     <quote>.</quote>) before it. This pause cannot be omitted simply because the cmavo is incorporated into a compound cmavo. On the other hand,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-FDhH">
       <title>
-        <anchor xml:id="c4e2d4" />
+        <anchor xml:id="c4e2d4"/>
       </title>
       <interlinear-gloss>
         <jbo>ki'e'u'e</jbo>
-        <indexterm type="general">
-          <primary>ki'e</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>is a single cmavo reserved for experimental purposes: it has four vowels.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-CtnR">
       <title>
-        <anchor xml:id="c4e2d5" />
+        <anchor xml:id="c4e2d5"/>
       </title>
       <interlinear-gloss>
         <jbo>cy.ibu.abu</jbo>
@@ -377,30 +305,26 @@
       </interlinear-gloss>
     </example>
     <para>Again the pauses are required (see 
-    <xref linkend="chapter-morphology-section9" />); the pause after 
+    <xref linkend="chapter-morphology-section9"/>); the pause after 
     <quote>cy.</quote> merges with the pause before 
     <quote>.ibu</quote>.</para>
     <para>There is no particular stress required in cmavo or their compounds. Some conventions do exist that are not mandatory. For two-syllable cmavo, for example, stress is typically placed on the first vowel; an example is</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-pdGY">
       <title>
-        <anchor xml:id="c4e2d6" />
+        <anchor xml:id="c4e2d6"/>
       </title>
       <interlinear-gloss>
         <jbo>.e'o ko ko kurji</jbo>
-        <indexterm type="general">
-          <primary>e'o</primary>
-        </indexterm>
+        
         <en>.E'o ko ko KURji</en>
       </interlinear-gloss>
     </example>
     <para>This convention results in a consistent rhythm to the language, since brivla are required to have penultimate stress; some find this esthetically pleasing.</para>
     <para>If the final syllable of one word is stressed, and the first syllable of the next word is stressed, you must insert a pause or glottal stop between the two stressed syllables. Thus</para>
-    <indexterm type="general">
-      <primary>glottal stop</primary>
-    </indexterm>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-uqDz">
       <title>
-        <anchor xml:id="c4e2d7" />
+        <anchor xml:id="c4e2d7"/>
       </title>
       <interlinear-gloss>
         <jbo>le re nanmu</jbo>
@@ -409,7 +333,7 @@
     <para>can be optionally pronounced</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-dfzc">
       <title>
-        <anchor xml:id="c4e2d8" />
+        <anchor xml:id="c4e2d8"/>
       </title>
       <interlinear-gloss>
         <jbo>le RE. NANmu</jbo>
@@ -420,15 +344,11 @@
     <quote>re</quote> from the following syllable 
     <quote>nan</quote> to ensure that the stress on 
     <quote>nan</quote> is properly heard as a stressed syllable. The alternative pronunciation</para>
-    <indexterm type="general">
-      <primary>stressed vowel</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>stressed syllable</primary>
-    </indexterm>
+    
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-bLbf">
       <title>
-        <anchor xml:id="c4e2d9" />
+        <anchor xml:id="c4e2d9"/>
       </title>
       <interlinear-gloss>
         <jbo>LE re NANmu</jbo>
@@ -437,13 +357,13 @@
     <para>is also valid; this would apply secondary stress (used for purposes of emphasis, contrast or sentence rhythm) to 
     <quote>le</quote>, comparable in rhythmical effect to the English phrase 
     <quote>THE two men</quote>. In 
-    <xref linkend="example-random-id-dfzc" />, the secondary stress on 
+    <xref linkend="example-random-id-dfzc"/>, the secondary stress on 
     <quote>re</quote> would be similar to that in the English phrase 
     <quote>the TWO men</quote>.</para>
     <para>Both cmavo may also be left unstressed, thus:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-sg0p">
       <title>
-        <anchor xml:id="c4e2d10" />
+        <anchor xml:id="c4e2d10"/>
       </title>
       <interlinear-gloss>
         <jbo>le re NANmu</jbo>
@@ -455,27 +375,15 @@
     <title>brivla</title>
     <para>Predicate words, called 
     <quote>brivla</quote>, are at the core of Lojban. They carry most of the semantic information in the language. They serve as the equivalent of English nouns, verbs, adjectives, and adverbs, all in a single part of speech.</para>
-    <indexterm type="general">
-      <primary>verbs</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>nouns</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>adverbs</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>adjectives</primary>
-    </indexterm>
+    
+    
+    
+    
     <para>Every brivla belongs to one of three major subtypes. These subtypes are defined by the form, or morphology, of the word - all words of a particular structure can be assigned by sight or sound to a particular type (cmavo, brivla, or cmene) and subtype. Knowing the type and subtype then gives you, the reader or listener, significant clues to the meaning and the origin of the word, even if you have never heard the word before.</para>
-    <indexterm type="general">
-      <primary>have never</primary>
-    </indexterm>
+    
     <para>The same principle allows you, when speaking or writing, to invent new brivla for new concepts 
     <quote>on the fly</quote>; yet it offers people that you are trying to communicate with a good chance to figure out your meaning. In this way, Lojban has a flexible vocabulary which can be expanded indefinitely.</para>
-    <indexterm type="general">
-      <primary>flexible vocabulary</primary>
-    </indexterm>
+    
     <para>All brivla have the following properties:</para>
     <orderedlist>
       <listitem>
@@ -484,7 +392,7 @@
       <listitem>
         <para>always contain a consonant pair in the first five letters, where 
         <quote>y</quote> and apostrophe are not counted as letters for this purpose. (See 
-        <xref linkend="chapter-morphology-section6" />.)</para>
+        <xref linkend="chapter-morphology-section6"/>.)</para>
       </listitem>
       <listitem>
         <para>always are stressed on the next-to-the-last (penultimate) syllable; this implies that they have two or more syllables.</para>
@@ -505,9 +413,7 @@
     <orderedlist>
       <listitem>
         <para>gismu, the Lojban primitive roots from which all other brivla are built;</para>
-        <indexterm type="general">
-          <primary>primitive roots</primary>
-        </indexterm>
+        
       </listitem>
       <listitem>
         <para>lujvo, the compounds of two or more gismu; and</para>
@@ -525,16 +431,12 @@
     <quote>gismu</quote> themselves).</para>
     <para>The gismu do not represent any sort of systematic partitioning of semantic space. Some gismu may be superfluous, or appear for historical reasons: the gismu list was being collected for almost 35 years and was only weeded out once. Instead, the intention is that the gismu blanket semantic space: they make it possible to talk about the entire range of human concerns.</para>
     <para>There are about 1350 gismu. In learning Lojban, you need only to learn most of these gismu and their combining forms (known as 
-    <indexterm type="general">
-      <primary>magnitude</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>learning Lojban</primary>
-    </indexterm>
+    
+    
     <quote>rafsi</quote>) as well as perhaps 200 major cmavo, and you will be able to communicate effectively in the language. This may sound like a lot, but it is a small number compared to the vocabulary needed for similar communications in other languages.</para>
     <para>All gismu have very strong form restrictions. Using the conventions defined in 
-    <xref linkend="chapter-morphology-section1" />, all gismu are of the forms CVC/CV or CCVCV. They must meet the rules for all brivla given in 
-    <xref linkend="chapter-morphology-section3" />; furthermore, they:</para>
+    <xref linkend="chapter-morphology-section1"/>, all gismu are of the forms CVC/CV or CCVCV. They must meet the rules for all brivla given in 
+    <xref linkend="chapter-morphology-section3"/>; furthermore, they:</para>
     <orderedlist>
       <listitem>
         <para>always have five letters;</para>
@@ -564,14 +466,12 @@
     <quote>gizmu</quote>, and 
     <quote>gisnu</quote> cannot be.</para>
     <para>Almost all Lojban gismu are constructed from pieces of words drawn from other languages, specifically Chinese, English, Hindi, Spanish, Russian, and Arabic, the six most widely spoken natural languages. For a given concept, words in the six languages that represent that concept were written in Lojban phonetics. Then a gismu was selected to maximize the recognizability of the Lojban word for speakers of the six languages by weighting the inclusion of the sounds drawn from each language by the number of speakers of that language. See 
-    <indexterm type="general">
-      <primary>inclusion</primary>
-    </indexterm>
-    <xref linkend="chapter-morphology-section14" /> for a full explanation of the algorithm.</para>
+    
+    <xref linkend="chapter-morphology-section14"/> for a full explanation of the algorithm.</para>
     <para>Here are a few examples of gismu, with rough English equivalents (not definitions):</para>
     <example xml:id="example-random-id-qJ0x" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e4d1" />
+        <anchor xml:id="c4e4d1"/>
       </title>
       <interlinear-gloss>
         <jbo>creka</jbo>
@@ -580,7 +480,7 @@
     </example>
     <example xml:id="example-random-id-qj4M" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e4d2" />
+        <anchor xml:id="c4e4d2"/>
       </title>
       <interlinear-gloss>
         <jbo>lijda</jbo>
@@ -589,7 +489,7 @@
     </example>
     <example xml:id="example-random-id-qJ4M" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e4d3" />
+        <anchor xml:id="c4e4d3"/>
       </title>
       <interlinear-gloss>
         <jbo>blanu</jbo>
@@ -598,7 +498,7 @@
     </example>
     <example xml:id="example-random-id-qJ5Y" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e4d4" />
+        <anchor xml:id="c4e4d4"/>
       </title>
       <interlinear-gloss>
         <jbo>mamta</jbo>
@@ -607,7 +507,7 @@
     </example>
     <example xml:id="example-random-id-qj6K" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e4d5" />
+        <anchor xml:id="c4e4d5"/>
       </title>
       <interlinear-gloss>
         <jbo>cukta</jbo>
@@ -616,7 +516,7 @@
     </example>
     <example xml:id="example-random-id-qJ6R" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e4d6" />
+        <anchor xml:id="c4e4d6"/>
       </title>
       <interlinear-gloss>
         <jbo>patfu</jbo>
@@ -625,7 +525,7 @@
     </example>
     <example xml:id="example-random-id-qJ6y" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e4d7" />
+        <anchor xml:id="c4e4d7"/>
       </title>
       <interlinear-gloss>
         <jbo>nanmu</jbo>
@@ -634,7 +534,7 @@
     </example>
     <example xml:id="example-random-id-qj71" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e4d8" />
+        <anchor xml:id="c4e4d8"/>
       </title>
       <interlinear-gloss>
         <jbo>ninmu</jbo>
@@ -642,21 +542,17 @@
       </interlinear-gloss>
     </example>
     <para>A small number of gismu were formed differently; see 
-    <xref linkend="chapter-morphology-section15" /> for a list.</para>
+    <xref linkend="chapter-morphology-section15"/> for a list.</para>
   </section>
   <section xml:id="chapter-morphology-section5">
     <title>lujvo</title>
     <para>When specifying a concept that is not found among the gismu (or, more specifically, when the relevant gismu seems too general in meaning), a Lojbanist generally attempts to express the concept as a tanru. Lojban tanru are an elaboration of the concept of 
     <quote>metaphor</quote> used in English. In Lojban, any brivla can be used to modify another brivla. The first of the pair modifies the second. This modification is usually restrictive - the modifying brivla reduces the broader sense of the modified brivla to form a more narrow, concrete, or specific concept. Modifying brivla may thus be seen as acting like English adverbs or adjectives. For example,</para>
-    <indexterm type="general">
-      <primary>adverbs</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>adjectives</primary>
-    </indexterm>
+    
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-xhQP">
       <title>
-        <anchor xml:id="c4e5d1" />
+        <anchor xml:id="c4e5d1"/>
       </title>
       <interlinear-gloss>
         <jbo>skami pilno</jbo>
@@ -668,15 +564,13 @@
     <para>The meaning of a tanru is usually at least partly ambiguous: 
     <quote>skami pilno</quote> could refer to a computer that is a user, or to a user of computers. There are a variety of ways that the modifier component can be related to the modified component. It is also possible to use cmavo within tanru to provide variations (or to prevent ambiguities) of meaning.</para>
     <para>Making tanru is essentially a poetic or creative act, not a science. While the syntax expressing the grouping relationships within tanru is unambiguous, tanru are still semantically ambiguous, since the rules defining the relationships between the gismu are flexible. The process of devising a new tanru is dealt with in detail in 
-    <xref linkend="chapter-selbri" />.</para>
+    <xref linkend="chapter-selbri"/>.</para>
     <para>To express a simple tanru, simply say the component gismu together. Thus the binary metaphor 
     <quote>big boat</quote> becomes the tanru</para>
-    <indexterm type="general">
-      <primary>big boat</primary>
-    </indexterm>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-oLE3">
       <title>
-        <anchor xml:id="c4e5d2" />
+        <anchor xml:id="c4e5d2"/>
       </title>
       <interlinear-gloss>
         <jbo>barda bloti</jbo>
@@ -686,21 +580,15 @@
     <quote>ship</quote>.</para>
     <para>The binary metaphor 
     <quote>father mother</quote> can refer to a paternal grandmother ( 
-    <indexterm type="general">
-      <primary>paternal grandmother</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>father mother</primary>
-    </indexterm>
+    
+    
     <quote>a father-ly type of mother</quote>), while 
     <quote>mother father</quote> can refer to a maternal grandfather ( 
-    <indexterm type="general">
-      <primary>mother father</primary>
-    </indexterm>
+    
     <quote>a mother-ly type of father</quote>). In Lojban, these become the tanru</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-4wK9">
       <title>
-        <anchor xml:id="c4e5d3" />
+        <anchor xml:id="c4e5d3"/>
       </title>
       <interlinear-gloss>
         <jbo>patfu mamta</jbo>
@@ -709,7 +597,7 @@
     <para>and</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-KQ4s">
       <title>
-        <anchor xml:id="c4e5d4" />
+        <anchor xml:id="c4e5d4"/>
       </title>
       <interlinear-gloss>
         <jbo>mamta patfu</jbo>
@@ -717,16 +605,16 @@
     </example>
     <para>respectively.</para>
     <para>The possibility of semantic ambiguity can easily be seen in the last case. To interpret 
-    <xref linkend="example-random-id-KQ4s" />, the listener must determine what type of motherliness pertains to the father being referred to. In an appropriate context, 
+    <xref linkend="example-random-id-KQ4s"/>, the listener must determine what type of motherliness pertains to the father being referred to. In an appropriate context, 
     <quote>mamta patfu</quote> could mean not 
     <quote>grandfather</quote> but simply 
     <quote>father with some motherly attributes</quote>, depending on the culture. If absolute clarity is required, there are ways to expand upon and explain the exact interrelationship between the components; but such detail is usually not needed.</para>
     <para>When a concept expressed in a tanru proves useful, or is frequently expressed, it is desirable to choose one of the possible meanings of the tanru and assign it to a new brivla. For 
-    <xref linkend="example-random-id-xhQP" />, we would probably choose 
+    <xref linkend="example-random-id-xhQP"/>, we would probably choose 
     <quote>user of computers</quote>, and form the new word</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-v5YD">
       <title>
-        <anchor xml:id="c4e5d5" />
+        <anchor xml:id="c4e5d5"/>
       </title>
       <interlinear-gloss>
         <jbo>sampli</jbo>
@@ -734,10 +622,10 @@
     </example>
     <para>Such a brivla, built from the rafsi which represent its component words, is called a 
     <quote>lujvo</quote>. Another example, corresponding to the tanru of 
-    <xref linkend="example-random-id-oLE3" />, would be:</para>
+    <xref linkend="example-random-id-oLE3"/>, would be:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-aiAR">
       <title>
-        <anchor xml:id="c4e5d6" />
+        <anchor xml:id="c4e5d6"/>
       </title>
       <interlinear-gloss>
         <jbo>bralo'i</jbo>
@@ -748,15 +636,13 @@
     <para>The lujvo representing a given tanru is built from units representing the component gismu. These units are called 
     <quote>rafsi</quote> in Lojban. Each rafsi represents only one gismu. The rafsi are attached together in the order of the words in the tanru, occasionally inserting so-called 
     <quote>hyphen</quote> letters to ensure that the pieces stick together as a single word and cannot accidentally be broken apart into cmavo, gismu, or other word forms. As a result, each lujvo can be readily and accurately recognized, allowing a listener to pick out the word from a string of spoken Lojban, and if necessary, unambiguously decompose the word to a unique source tanru, thus providing a strong clue to its meaning.</para>
-    <indexterm type="general">
-      <primary>word forms</primary>
-    </indexterm>
+    
     <para>The lujvo that can be built from the tanru 
     <quote>mamta patfu</quote> in 
-    <xref linkend="example-random-id-KQ4s" /> is</para>
+    <xref linkend="example-random-id-KQ4s"/> is</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-TCUH">
       <title>
-        <anchor xml:id="c4e5d7" />
+        <anchor xml:id="c4e5d7"/>
       </title>
       <interlinear-gloss>
         <jbo>mampa'u</jbo>
@@ -769,13 +655,9 @@
     <quote>-pa'u</quote>, respectively; these two rafsi are then concatenated together to form 
     <quote>mampa'u</quote>.</para>
     <para>Like gismu, lujvo have only one meaning. When a lujvo is formally entered into a dictionary of the language, a specific definition will be assigned based on one particular interrelationship between the terms. (See 
-    <xref linkend="chapter-lujvo" /> for how this has been done.) Unlike gismu, lujvo may have more than one form. This is because there is no difference in meaning between the various rafsi for a gismu when they are used to build a lujvo. A long rafsi may be used, especially in noisy environments, in place of a short rafsi; the result is considered the same lujvo, even though the word is spelled and pronounced differently. Thus the word 
-    <indexterm type="general">
-      <primary>noisy environments</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>long rafsi</primary>
-    </indexterm>
+    <xref linkend="chapter-lujvo"/> for how this has been done.) Unlike gismu, lujvo may have more than one form. This is because there is no difference in meaning between the various rafsi for a gismu when they are used to build a lujvo. A long rafsi may be used, especially in noisy environments, in place of a short rafsi; the result is considered the same lujvo, even though the word is spelled and pronounced differently. Thus the word 
+    
+    
     <quote>brivla</quote>, built from the tanru 
     <quote>bridi valsi</quote>, is the same lujvo as 
     <quote>brivalsi</quote>, 
@@ -786,71 +668,53 @@
     <quote>'</quote>), and the lujvo must end in a vowel.</para>
     <para>A 
     <quote>y</quote> (which is ignored in determining stress or consonant clusters) is inserted in the middle of the consonant cluster to glue the word together when the resulting cluster is either not permissible or the word is likely to break up. There are specific rules describing these conditions, detailed in 
-    <indexterm type="general">
-      <primary>doubled consonants</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>consonant clusters</primary>
-    </indexterm>
-    <xref linkend="chapter-morphology-section6" />.</para>
+    
+    
+    <xref linkend="chapter-morphology-section6"/>.</para>
     <para>An 
     <quote>r</quote> (in some cases, an 
     <quote>n</quote>) is inserted when a CVV-form rafsi attaches to the beginning of a lujvo in such a way that there is no consonant cluster. For example, in the lujvo</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-3Qtv">
       <title>
-        <anchor xml:id="c4e5d8" />
+        <anchor xml:id="c4e5d8"/>
       </title>
       <interlinear-gloss>
         <jbo>soirsai</jbo>
         <gloss>sonci sanmi</gloss>
         <gloss>soldier meal</gloss>
         <en>field rations</en>
-        <indexterm type="general">
-          <primary>field rations</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>the rafsi 
     <quote>soi-</quote> and 
     <quote>-sai</quote> are joined, with the additional 
-    <indexterm type="general">
-      <primary>sai</primary>
-    </indexterm>
+    
     <quote>r</quote> making up the 
     <quote>rs</quote> consonant pair needed to make the word a brivla. Without the 
     <quote>r</quote>, the word would break up into 
     <quote>soi sai</quote>, two cmavo. The pair of cmavo have no relation to their rafsi lookalikes; they will either be ungrammatical (as in this case), or will express a different meaning from what was intended.</para>
-    <indexterm type="general">
-      <primary>sai</primary>
-    </indexterm>
+    
     <para>Learning rafsi and the rules for assembling them into lujvo is clearly seen to be necessary for fully using the potential Lojban vocabulary.</para>
     <para>Most important, it is possible to invent new lujvo while you speak or write in order to represent a new or unfamiliar concept, one for which you do not know any existing Lojban word. As long as you follow the rules for building these compounds, there is a good chance that you will be understood without explanation.</para>
   </section>
   <section xml:id="chapter-morphology-section6">
     <title>rafsi</title>
     <para>Every gismu has from two to five rafsi, each of a different form, but each such rafsi represents only one gismu. It is valid to use any of the rafsi forms in building lujvo - whichever the reader or listener will most easily understand, or whichever is most pleasing - subject to the rules of lujvo making. There is a scoring algorithm which is intended to determine which of the possible and legal lujvo forms will be the standard dictionary form (see 
-    <xref linkend="chapter-morphology-section12" />).</para>
+    <xref linkend="chapter-morphology-section12"/>).</para>
     <para>Each gismu always has at least two rafsi forms; one is the gismu itself (used only at the end of a lujvo), and one is the gismu without its final vowel (used only at the beginning or middle of a lujvo). These forms are represented as CVC/CV or CCVCV (called 
     <quote>the 5-letter rafsi</quote>), and CVC/C or CCVC (called 
     <quote>the 4-letter rafsi</quote>) respectively. The dashes in these rafsi form representations show where other rafsi may be attached to form a valid lujvo. When lujvo are formed only from 4-letter and 5-letter rafsi, known collectively as 
-    <indexterm type="general">
-      <primary>rafsi form</primary>
-    </indexterm>
+    
     <quote>long rafsi</quote>, they are called 
-    <indexterm type="general">
-      <primary>long rafsi</primary>
-    </indexterm>
+    
     <quote>unreduced lujvo</quote>.</para>
-    <indexterm type="general">
-      <primary>unreduced lujvo</primary>
-    </indexterm>
+    
     <para>Some examples of unreduced lujvo forms are:</para>
-    <indexterm type="general">
-      <primary>unreduced lujvo</primary>
-    </indexterm>
+    
     <example xml:id="example-random-id-qj84" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d1" />
+        <anchor xml:id="c4e6d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mamtypatfu</jbo>
@@ -858,15 +722,13 @@
         <quote>mamta patfu</quote></gloss>
         <en>
         <quote>mother father</quote> or 
-        <indexterm type="general">
-          <primary>mother father</primary>
-        </indexterm>
+        
         <quote>maternal grandfather</quote></en>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qj99" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d2" />
+        <anchor xml:id="c4e6d2"/>
       </title>
       <interlinear-gloss>
         <jbo>lerfyliste</jbo>
@@ -880,7 +742,7 @@
     </example>
     <example xml:id="example-random-id-qj9G" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d3" />
+        <anchor xml:id="c4e6d3"/>
       </title>
       <interlinear-gloss>
         <jbo>nancyprali</jbo>
@@ -893,7 +755,7 @@
     </example>
     <example xml:id="example-random-id-qJbi" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d4" />
+        <anchor xml:id="c4e6d4"/>
       </title>
       <interlinear-gloss>
         <jbo>prunyplipe</jbo>
@@ -906,7 +768,7 @@
     </example>
     <example xml:id="example-random-id-qjbP" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d5" />
+        <anchor xml:id="c4e6d5"/>
       </title>
       <interlinear-gloss>
         <jbo>vancysanmi</jbo>
@@ -915,9 +777,7 @@
         <en>
         <quote>evening meal</quote> or 
         <quote>supper</quote></en>
-        <indexterm type="general">
-          <primary>supper</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>In addition to these two forms, each gismu may have up to three additional short rafsi, three letters long. All short rafsi have one of the forms CVC, CCV, or CVV. The total number of rafsi forms that are assigned to a gismu depends on how useful the gismu is, or is presumed to be, in making lujvo, when compared to other gismu that could be assigned the rafsi.</para>
@@ -926,35 +786,23 @@
     <quote>more than</quote>) has the two short rafsi 
     <quote>zma</quote> and 
     <quote>mau</quote> (in addition to its unreduced rafsi 
-    <indexterm type="general">
-      <primary>mau</primary>
-    </indexterm>
+    
     <quote>zmad</quote> and 
     <quote>zmadu</quote>), because a vast number of lujvo have been created based on 
     <quote>zmadu</quote>, corresponding in general to English comparative adjectives ending in 
-    <indexterm type="general">
-      <primary>adjectives</primary>
-    </indexterm>
+    
     <quote>-er</quote> such as 
     <quote>whiter</quote> (Lojban 
     <quote>labmau</quote>). On the other hand, 
     <quote>bakri</quote> ( 
     <quote>chalk</quote>) has no short rafsi and few lujvo.</para>
     <para>There are at most one CVC-form, one CCV-form, and one CVV-form rafsi per gismu. In fact, only a tiny handful of gismu have both a CCV-form and a CVV-form rafsi assigned, and still fewer have all three forms of short rafsi. However, gismu with both a CVC-form and another short rafsi are fairly common, partly because more possible CVC-form rafsi exist. Yet CVC-form rafsi, even though they are fairly easy to remember, cannot be used at the end of a lujvo (because lujvo must end in vowels), so justifying the assignment of an additional short rafsi to many gismu.</para>
-    <indexterm type="general">
-      <primary>at most</primary>
-    </indexterm>
+    
     <para>The intention was to use the available 
     <quote>rafsi space</quote>- the set of all possible short rafsi forms - in the most efficient way possible; the goal is to make the most-used lujvo as short as possible (thus maximizing the use of short rafsi), while keeping the rafsi very recognizable to anyone who knows the source gismu. For this reason, the letters in a rafsi have always been chosen from among the five letters of the corresponding gismu. As a result, there are a limited set of short rafsi available for assignment to each gismu. At most seven possible short rafsi are available for consideration (of which at most three can be used, as explained above).</para>
-    <indexterm type="general">
-      <primary>rafsi space</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>at most</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>anyone</primary>
-    </indexterm>
+    
+    
+    
     <para>Here are the only short rafsi forms that can possibly exist for gismu of the form CVC/CV, like 
     <quote>sakli</quote>. The digits in the second column represent the gismu letters used to form the rafsi.</para>
     <cmavo-list>
@@ -972,17 +820,13 @@
         <cmavo>CVV</cmavo>
         <selmaho>12'5</selmaho>
         <description>-sa'i-</description>
-        <indexterm type="general">
-          <primary>sa'i</primary>
-        </indexterm>
+        
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>CVV</cmavo>
         <selmaho>125</selmaho>
         <description>-sai-</description>
-        <indexterm type="general">
-          <primary>sai</primary>
-        </indexterm>
+        
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>CCV</cmavo>
@@ -1044,26 +888,22 @@
     <quote>ei</quote>, 
     <quote>oi</quote>, or 
     <quote>au</quote>; and a CCV-form rafsi is possible only if the two consonants form a permissible initial consonant pair (see 
-    <xref linkend="chapter-morphology-section1" />). Thus 
+    <xref linkend="chapter-morphology-section1"/>). Thus 
     <quote>mamta</quote>, which has the same form as 
     <quote>salci</quote>, can only have 
     <quote>mam</quote>, 
     <quote>mat</quote>, and 
     <quote>ma'a</quote> as possible rafsi: in fact, only 
-    <indexterm type="general">
-      <primary>ma'a</primary>
-    </indexterm>
+    
     <quote>mam</quote> is assigned to it.</para>
     <para>Some cmavo also have associated rafsi, usually CVC-form. For example, the ten common numerical digits, which are all CV form cmavo, each have a CVC-form rafsi formed by adding a consonant to the cmavo. Most cmavo that have rafsi are ones used in composing tanru (for a complete list, see 
-    <xref linkend="chapter-lujvo" />).</para>
+    <xref linkend="chapter-lujvo"/>).</para>
     <para>The term for a lujvo made up solely of short rafsi is 
     <quote>fully reduced lujvo</quote>. Here are some examples of fully reduced lujvo:</para>
-    <indexterm type="general">
-      <primary>fully reduced lujvo</primary>
-    </indexterm>
+    
     <example xml:id="example-random-id-qJc2" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d6" />
+        <anchor xml:id="c4e6d6"/>
       </title>
       <interlinear-gloss>
         <jbo>cumfri</jbo>
@@ -1076,7 +916,7 @@
     </example>
     <example xml:id="example-random-id-qjcA" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d7" />
+        <anchor xml:id="c4e6d7"/>
       </title>
       <interlinear-gloss>
         <jbo>klezba</jbo>
@@ -1089,7 +929,7 @@
     </example>
     <example xml:id="example-random-id-qjD7" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d8" />
+        <anchor xml:id="c4e6d8"/>
       </title>
       <interlinear-gloss>
         <jbo>kixta'a</jbo>
@@ -1102,7 +942,7 @@
     </example>
     <example xml:id="example-random-id-qJDa" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d9" />
+        <anchor xml:id="c4e6d9"/>
       </title>
       <interlinear-gloss>
         <jbo>sniju'o</jbo>
@@ -1116,7 +956,7 @@
     <para>In addition, some of the unreduced forms in the previous example may be fully reduced to:</para>
     <example xml:id="example-random-id-qjdE" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d10" />
+        <anchor xml:id="c4e6d10"/>
       </title>
       <interlinear-gloss>
         <jbo>mampa'u</jbo>
@@ -1124,15 +964,13 @@
         <quote>mamta patfu</quote></gloss>
         <en>
         <quote>mother father</quote> or 
-        <indexterm type="general">
-          <primary>mother father</primary>
-        </indexterm>
+        
         <quote>maternal grandfather</quote></en>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qJDg" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d11" />
+        <anchor xml:id="c4e6d11"/>
       </title>
       <interlinear-gloss>
         <jbo>lerste</jbo>
@@ -1145,9 +983,7 @@
     </example>
     <para>As noted above, CVC-form rafsi cannot appear as the final rafsi in a lujvo, because all lujvo must end with one or two vowels. As a brivla, a lujvo must also contain a consonant cluster within the first five letters - this ensures that they cannot be mistaken for compound cmavo. Of course, all lujvo have at least six letters since they have two or more rafsi, each at least three letters long; hence they cannot be confused with gismu.</para>
     <para>When attaching two rafsi together, it may be necessary to insert a hyphen letter. In Lojban, the term 
-    <indexterm type="general">
-      <primary>hyphen letter</primary>
-    </indexterm>
+    
     <quote>hyphen</quote> always refers to a letter, either the vowel 
     <quote>y</quote> or one of the consonants 
     <quote>r</quote> and 
@@ -1168,8 +1004,8 @@
     <quote>y</quote> is not counted in determining whether the first five letters of a brivla contain a consonant cluster: this is why.)</para>
     <para>The 
     <quote>y</quote>-hyphen is also used to attach a 4-letter rafsi, formed by dropping the final vowel of a gismu, to the following rafsi. (This procedure was shown, but not explained, in 
-    <xref linkend="example-random-id-qj84" /> to 
-    <xref linkend="example-random-id-qjbP" />.)</para>
+    <xref linkend="example-random-id-qj84"/> to 
+    <xref linkend="example-random-id-qjbP"/>.)</para>
     <para>The lujvo forms 
     <quote>zunlyjamfu</quote>, 
     <quote>zunlyjma</quote>, 
@@ -1199,7 +1035,7 @@
     <quote>zei</quote>. Thus,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-VeGL">
       <title>
-        <anchor xml:id="c4e6d12" />
+        <anchor xml:id="c4e6d12"/>
       </title>
       <interlinear-gloss>
         <jbo>bridi zei valsi</jbo>
@@ -1211,7 +1047,7 @@
     <quote>zei</quote> is the only way to get a cmavo lacking a rafsi, a cmene, or a fu'ivla into a lujvo:</para>
     <example xml:id="example-random-id-qJe1" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d13" />
+        <anchor xml:id="c4e6d13"/>
       </title>
       <interlinear-gloss>
         <jbo>xy. zei kantu</jbo>
@@ -1220,81 +1056,61 @@
     </example>
     <example xml:id="example-random-id-qJeE" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d14" />
+        <anchor xml:id="c4e6d14"/>
       </title>
       <interlinear-gloss>
         <jbo>kulnr,farsi zei lolgai</jbo>
         <gloss>Farsi floor-cover</gloss>
         <en>Persian rug</en>
-        <indexterm type="general">
-          <primary>rug</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>rug</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>Persian rug</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>rug</primary>
-        </indexterm>
+        
+        
+        
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qJef" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d15" />
+        <anchor xml:id="c4e6d15"/>
       </title>
       <interlinear-gloss>
         <jbo>na'e zei .a zei na'e zei by. livgyterbilma</jbo>
         <gloss>non-A, non-B liver-disease</gloss>
         <en>non-A, non-B hepatitis</en>
-        <indexterm type="general">
-          <primary>hepatitis</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qJEh" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e6d16" />
+        <anchor xml:id="c4e6d16"/>
       </title>
       <interlinear-gloss>
         <jbo>.cerman. zei jamkarce</jbo>
         <gloss>Sherman war-car</gloss>
         <en>Sherman tank</en>
-        <indexterm type="general">
-          <primary>tank</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>tank</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>Sherman tank</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>tank</primary>
-        </indexterm>
+        
+        
+        
+        
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-qJef" /> is particularly noteworthy because the phrase that would be produced by removing the 
+    <xref linkend="example-random-id-qJef"/> is particularly noteworthy because the phrase that would be produced by removing the 
     <quote>zei</quote> s from it doesn't end with a brivla, and in fact is not even grammatical. As written, the example is a tanru with two components, but by adding a 
     <quote>zei</quote> between 
     <quote>by.</quote> and 
     <quote>livgyterbilma</quote> to produce</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Wnaz">
       <title>
-        <anchor xml:id="c4e6d17" />
+        <anchor xml:id="c4e6d17"/>
       </title>
       <interlinear-gloss>
         <jbo>na'e zei .a zei na'e zei by. zei livgyterbilma</jbo>
         <en>non-A-non-B-hepatitis</en>
-        <indexterm type="general">
-          <primary>hepatitis</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>the whole phrase would become a single lujvo. The longer lujvo of 
-    <xref linkend="example-random-id-Wnaz" /> may be preferable, because its place structure can be built from that of 
+    <xref linkend="example-random-id-Wnaz"/> may be preferable, because its place structure can be built from that of 
     <quote>bilma</quote>, whereas the place structure of a lujvo without a brivla must be constructed ad hoc.</para>
     <para>Note that rafsi may not be used in 
     <quote>zei</quote> phrases, because they are not words. CVV rafsi look like words (specifically cmavo) but there can be no confusion between the two uses of the same letters, because cmavo appear only as separate words or in compound cmavo (which are really just a notation for writing separate but closely related words as if they were one); rafsi appear only as parts of lujvo.</para>
@@ -1302,79 +1118,53 @@
   <section xml:id="chapter-morphology-section7">
     <title>fu'ivla</title>
     <para>The use of tanru or lujvo is not always appropriate for very concrete or specific terms (e.g. 
-    <indexterm type="general">
-      <primary>specific terms</primary>
-    </indexterm>
+    
     <quote>brie</quote> or 
-    <indexterm type="general">
-      <primary>brie</primary>
-    </indexterm>
+    
     <quote>cobra</quote>), or for jargon words specialized to a narrow field (e.g. 
-    <indexterm type="general">
-      <primary>jargon</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>cobra</primary>
-    </indexterm>
+    
+    
     <quote>quark</quote>, 
-    <indexterm type="general">
-      <primary>quark</primary>
-    </indexterm>
+    
     <quote>integral</quote>, or 
-    <indexterm type="general">
-      <primary>integral</primary>
-    </indexterm>
+    
     <quote>iambic pentameter</quote>). These words are in effect names for concepts, and the names were invented by speakers of another language. The vast majority of words referring to plants, animals, foods, and scientific terminology cannot be easily expressed as tanru. They thus must be borrowed (actually 
-    <indexterm type="general">
-      <primary>plants</primary>
-    </indexterm>
+    
     <quote>copied</quote>) into Lojban from the original language.</para>
     <para>There are four stages of borrowing in Lojban, as words become more and more modified (but shorter and easier to use). Stage 1 is the use of a foreign name quoted with the cmavo 
-    <indexterm type="general">
-      <primary>borrowing</primary>
-    </indexterm>
+    
     <quote>la'o</quote> (explained in full in 
-    <xref linkend="chapter-structure" />):</para>
+    <xref linkend="chapter-structure"/>):</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-QpNm">
       <title>
-        <anchor xml:id="c4e7d1" />
+        <anchor xml:id="c4e7d1"/>
       </title>
       <interlinear-gloss>
         <jbo>me la'o ly. spaghetti .ly.</jbo>
-        <indexterm type="general">
-          <primary>spaghetti</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>is a predicate with the place structure 
     <quote>x1 is a quantity of spaghetti</quote>.</para>
-    <indexterm type="general">
-      <primary>spaghetti</primary>
-    </indexterm>
+    
     <para>Stage 2 involves changing the foreign name to a Lojbanized name, as explained in 
-    <xref linkend="chapter-morphology-section8" />:</para>
+    <xref linkend="chapter-morphology-section8"/>:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-zijY">
       <title>
-        <anchor xml:id="c4e7d2" />
+        <anchor xml:id="c4e7d2"/>
       </title>
       <interlinear-gloss>
         <jbo>me la spagetis.</jbo>
       </interlinear-gloss>
     </example>
     <para>One of these expedients is often quite sufficient when you need a word quickly in conversation. (This can make it easier to get by when you do not yet have full command of the Lojban vocabulary, provided you are talking to someone who will recognize the borrowing.)</para>
-    <indexterm type="general">
-      <primary>borrowing</primary>
-    </indexterm>
+    
     <para>Where a little more universality is desired, the word to be borrowed must be Lojbanized into one of several permitted forms. A rafsi is then usually attached to the beginning of the Lojbanized form, using a hyphen to ensure that the resulting word doesn't fall apart.</para>
     <para>The rafsi categorizes or limits the meaning of the fu'ivla; otherwise a word having several different jargon meanings in other languages would require the word-inventor to choose which meaning should be assigned to the fu'ivla, since fu'ivla (like other brivla) are not permitted to have more than one definition. Such a Stage 3 borrowing is the most common kind of fu'ivla.</para>
-    <indexterm type="general">
-      <primary>jargon</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>borrowing</primary>
-    </indexterm>
+    
+    
     <para>Finally, Stage 4 fu'ivla do not have any rafsi classifier, and are used where a fu'ivla has become so common or so important that it must be made as short as possible. (See 
-    <xref linkend="chapter-morphology-section16" /> for a proposal concerning Stage 4 fu'ivla.)</para>
+    <xref linkend="chapter-morphology-section16"/> for a proposal concerning Stage 4 fu'ivla.)</para>
     <para>The form of a fu'ivla reliably distinguishes it from both the gismu and the cmavo. Like cultural gismu, fu'ivla are generally based on a word from a single non-Lojban language. The word is 
     <quote>borrowed</quote> (actually 
     <quote>copied</quote>, hence the Lojban tanru 
@@ -1392,9 +1182,7 @@
       <listitem>
         <para>must not be gismu or lujvo, or any combination of cmavo, gismu, and lujvo; furthermore, a fu'ivla with a CV cmavo joined to the front of it must not have the form of a lujvo (the so-called 
         <quote>slinku'i test</quote>, not discussed further in this book);</para>
-        <indexterm type="general">
-          <primary>slinku'i test</primary>
-        </indexterm>
+        
       </listitem>
       <listitem>
         <para>cannot contain 
@@ -1405,12 +1193,8 @@
       </listitem>
     </orderedlist>
     <para>Note that consonant triples or larger clusters that are not at the beginning of a fu'ivla can be quite flexible, as long as all consonant pairs are permissible. There is no need to restrict fu'ivla clusters to permissible initial pairs except at the beginning.</para>
-    <indexterm type="general">
-      <primary>consonant triples</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>consonant pairs</primary>
-    </indexterm>
+    
+    
     <para>This is a fairly liberal definition and allows quite a lot of possibilities within 
     <quote>fu'ivla space</quote>. Stage 3 fu'ivla can be made easily on the fly, as lujvo can, because the procedure for forming them always guarantees a word that cannot violate any of the rules. Stage 4 fu'ivla require running tests that are not simple to characterize or perform, and should be made only after deliberation and by someone knowledgeable about all the considerations that apply.</para>
     <para>Here is a simple and reliable procedure for making a non-Lojban word into a valid Stage 3 fu'ivla:</para>
@@ -1439,9 +1223,7 @@
         <quote>l</quote>-hyphen. (This is the only use of 
         <quote>l</quote>-hyphen in Lojban.)</para>
         <para>Alternatively, if a CVC-form short rafsi is available it can be used instead of the long rafsi.</para>
-        <indexterm type="general">
-          <primary>long rafsi</primary>
-        </indexterm>
+        
       </listitem>
       <listitem>
         <para>Remember that the stress necessarily appears on the penultimate (next-to-the-last) syllable.</para>
@@ -1451,18 +1233,14 @@
     <para>Here are a few examples:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-ufin">
       <title>
-        <anchor xml:id="c4e7d3" />
+        <anchor xml:id="c4e7d3"/>
       </title>
       <interlinear-gloss>
         <jbo>spaghetti (from English or Italian)</jbo>
-        <indexterm type="general">
-          <primary>spaghetti</primary>
-        </indexterm>
+        
         <gloss>spageti (Lojbanize)</gloss>
         <gloss>cidj,r,spageti (prefix long rafsi)</gloss>
-        <indexterm type="general">
-          <primary>long rafsi</primary>
-        </indexterm>
+        
         <en>dja,r,spageti (prefix short rafsi)</en>
       </interlinear-gloss>
     </example>
@@ -1473,16 +1251,12 @@
     <quote>cidjrspageti</quote> as a kind of food. The form with the short rafsi happens to work, but such good fortune cannot be relied on: in any event, it means the same thing.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-pzXe">
       <title>
-        <anchor xml:id="c4e7d4" />
+        <anchor xml:id="c4e7d4"/>
       </title>
       <interlinear-gloss>
         <jbo>Acer (the scientific name of maple trees)</jbo>
-        <indexterm type="general">
-          <primary>maple trees</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>Acer</primary>
-        </indexterm>
+        
+        
         <gloss>acer (Lojbanize)</gloss>
         <gloss>xaceru (add initial consonant and final vowel)</gloss>
         <gloss>tric,r,xaceru (prefix rafsi)</gloss>
@@ -1495,22 +1269,18 @@
     <quote>tricu</quote>, the gismu for 
     <quote>tree</quote>. Note that by the same principles, 
     <quote>maple sugar</quote> could get the fu'ivla 
-    <indexterm type="general">
-      <primary>maple sugar</primary>
-    </indexterm>
+    
     <quote>saktrxaceru</quote>, or could be represented by the tanru 
     <quote>tricrxaceru sakta</quote>. Technically, 
     <quote>ricrxaceru</quote> and 
     <quote>tricrxaceru</quote> are distinct fu'ivla, but they would surely be given the same meanings if both happened to be in use.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-C0YS">
       <title>
-        <anchor xml:id="c4e7d5" />
+        <anchor xml:id="c4e7d5"/>
       </title>
       <interlinear-gloss>
         <jbo>brie (from French)</jbo>
-        <indexterm type="general">
-          <primary>brie</primary>
-        </indexterm>
+        
         <gloss>bri (Lojbanize)</gloss>
         <en>cirl,r,bri (prefix rafsi)</en>
       </interlinear-gloss>
@@ -1521,13 +1291,11 @@
     <quote>cheese</quote>).</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-DQju">
       <title>
-        <anchor xml:id="c4e7d6" />
+        <anchor xml:id="c4e7d6"/>
       </title>
       <interlinear-gloss>
         <jbo>cobra</jbo>
-        <indexterm type="general">
-          <primary>cobra</primary>
-        </indexterm>
+        
         <gloss>kobra (Lojbanize)</gloss>
         <en>sinc,r,kobra (prefix rafsi)</en>
       </interlinear-gloss>
@@ -1539,13 +1307,11 @@
 <para>FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-TFzH">
       <title>
-        <anchor xml:id="c4e7d7" />
+        <anchor xml:id="c4e7d7"/>
       </title>
       <interlinear-gloss>
         <jbo>quark</jbo>
-        <indexterm type="general">
-          <primary>quark</primary>
-        </indexterm>
+        
         <gloss>kuark (Lojbanize)</gloss>
         <gloss>kuarka (add final vowel)</gloss>
         <en>sask,r,kuarka (prefix rafsi)</en>
@@ -1559,13 +1325,11 @@
     <quote>ua</quote>, which never appears in gismu or lujvo, but may appear in fu'ivla.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-FTfQ">
       <title>
-        <anchor xml:id="c4e7d8" />
+        <anchor xml:id="c4e7d8"/>
       </title>
       <interlinear-gloss>
         <jbo>자모 (from Korean)</jbo>
-        <indexterm type="general">
-          <primary>Korean</primary>
-        </indexterm>
+        
         <gloss>djamo (Lojbanize)</gloss>
         <gloss>lerf,r,djamo (prefix rafsi)</gloss>
         <en>ler,l,djamo (prefix rafsi)</en>
@@ -1575,9 +1339,7 @@
     <quote>ler-</quote> represents 
     <quote>lerfu</quote> ( 
     <quote>letter</quote>). Note the l-hyphen in "lerldjamo", since "lerndjamo" contains the forbidden cluster "ndj".</para>
-    <indexterm type="general">
-      <primary>l-hyphen</primary>
-    </indexterm>
+    
     <para>The use of the prefix helps distinguish among the many possible meanings of the borrowed word, depending on the field. As it happens, 
     <quote>spageti</quote> and 
     <quote>kuarka</quote> are valid Stage 4 fu'ivla, but 
@@ -1585,20 +1347,14 @@
     <quote>kobra</quote> like a gismu.</para>
     <para>For another example, 
     <quote>integral</quote> has a specific meaning to a mathematician. But the Lojban fu'ivla 
-    <indexterm type="general">
-      <primary>integral</primary>
-    </indexterm>
+    
     <quote>integrale</quote>, which is a valid Stage 4 fu'ivla, does not convey that mathematical sense to a non-mathematical listener, even one with an English-speaking background; its source - the English word 
     <quote>integral</quote>- has various other specialized meanings in other fields.</para>
-    <indexterm type="general">
-      <primary>integral</primary>
-    </indexterm>
+    
     <para>Left uncontrolled, 
     <quote>integrale</quote> almost certainly would eventually come to mean the same collection of loosely related concepts that English associates with 
     <quote>integral</quote>, with only the context to indicate (possibly) that the mathematical term is meant.</para>
-    <indexterm type="general">
-      <primary>integral</primary>
-    </indexterm>
+    
     <para>The prefix method would render the mathematical concept as 
     <quote>cmacrntegrale</quote>, if the 
     <quote>i</quote> of 
@@ -1608,9 +1364,7 @@
     <quote>cmaci</quote> ( 
     <quote>mathematics</quote>). The architectural sense of 
     <quote>integral</quote> might be conveyed with 
-    <indexterm type="general">
-      <primary>integral</primary>
-    </indexterm>
+    
     <quote>djinrnintegrale</quote> or 
     <quote>tarmrnintegrale</quote>, where 
     <quote>dinju</quote> and 
@@ -1620,31 +1374,27 @@
     <para>Here are some fu'ivla representing cultures and related things, shown with more than one rafsi prefix:</para>
     <example xml:id="example-random-id-qJG8" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e7d9" />
+        <anchor xml:id="c4e7d9"/>
       </title>
       <interlinear-gloss>
         <jbo>bang,r,blgaria</jbo>
         <en>Bulgarian (in language)</en>
-        <indexterm type="general">
-          <primary>Bulgarian</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qJga" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e7d10" />
+        <anchor xml:id="c4e7d10"/>
       </title>
       <interlinear-gloss>
         <jbo>kuln,r,blgaria</jbo>
         <en>Bulgarian (in culture)</en>
-        <indexterm type="general">
-          <primary>Bulgarian</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qjGf" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e7d11" />
+        <anchor xml:id="c4e7d11"/>
       </title>
       <interlinear-gloss>
         <jbo>gugd,r,blgaria</jbo>
@@ -1653,54 +1403,44 @@
     </example>
     <example xml:id="example-random-id-qJGv" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e7d12" />
+        <anchor xml:id="c4e7d12"/>
       </title>
       <interlinear-gloss>
         <jbo>bang,r,kore,a</jbo>
         <en>Korean (the language)</en>
-        <indexterm type="general">
-          <primary>Korean</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qjh0" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e7d13" />
+        <anchor xml:id="c4e7d13"/>
       </title>
       <interlinear-gloss>
         <jbo>kuln,r,kore,a</jbo>
         <en>Korean (the culture)</en>
-        <indexterm type="general">
-          <primary>Korean</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>Note the commas in 
-    <xref linkend="example-random-id-qJGv" /> and 
-    <xref linkend="example-random-id-qjh0" />, used because 
+    <xref linkend="example-random-id-qJGv"/> and 
+    <xref linkend="example-random-id-qjh0"/>, used because 
     <quote>ea</quote> is not a valid diphthong in Lojban. Arguably, some form of the native name 
     <quote>Chosen</quote> should have been used instead of the internationally known 
     <quote>Korea</quote>; this is a recurring problem in all borrowings. In general, it is better to use the native name unless using it will severely impede understanding: 
-    <indexterm type="general">
-      <primary>borrowings</primary>
-    </indexterm>
+    
     <quote>Navajo</quote> is far more widely known than 
-    <indexterm type="general">
-      <primary>Navajo</primary>
-    </indexterm>
+    
     <quote>Dine'e</quote>.</para>
   </section>
   <section xml:id="chapter-morphology-section8">
     <title>cmene</title>
     <para>Lojbanized names, called 
     <quote>cmene</quote>, are very much like their counterparts in other languages. They are labels applied to things (or people) to stand for them in descriptions or in direct address. They may convey meaning in themselves, but do not necessarily do so.</para>
-    <indexterm type="general">
-      <primary>direct address</primary>
-    </indexterm>
+    
     <para>Because names are often highly personal and individual, Lojban attempts to allow native language names to be used with a minimum of modification. The requirement that the Lojban speech stream be unambiguously analyzable, however, means that most names must be modified somewhat when they are Lojbanized. Here are a few examples of English names and possible Lojban equivalents:</para>
     <example xml:id="example-random-id-qjhN" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e8d1" />
+        <anchor xml:id="c4e8d1"/>
       </title>
       <interlinear-gloss>
         <jbo>djim.</jbo>
@@ -1709,7 +1449,7 @@
     </example>
     <example xml:id="example-random-id-qjHo" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e8d2" />
+        <anchor xml:id="c4e8d2"/>
       </title>
       <interlinear-gloss>
         <jbo>djein.</jbo>
@@ -1718,93 +1458,75 @@
     </example>
     <example xml:id="example-random-id-qjIj" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e8d3" />
+        <anchor xml:id="c4e8d3"/>
       </title>
       <interlinear-gloss>
         <jbo>.arnold.</jbo>
         <en>Arnold</en>
-        <indexterm type="general">
-          <primary>Arnold</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qjim" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e8d4" />
+        <anchor xml:id="c4e8d4"/>
       </title>
       <interlinear-gloss>
         <jbo>pit.</jbo>
         <en>Pete</en>
-        <indexterm type="general">
-          <primary>Pete</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qjin" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e8d5" />
+        <anchor xml:id="c4e8d5"/>
       </title>
       <interlinear-gloss>
         <jbo>katrinas.</jbo>
         <en>Katrina</en>
-        <indexterm type="general">
-          <primary>Katrina</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qjIq" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e8d6" />
+        <anchor xml:id="c4e8d6"/>
       </title>
       <interlinear-gloss>
         <jbo>kat,r,in.</jbo>
         <en>Catherine</en>
-        <indexterm type="general">
-          <primary>Catherine</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>(Note that syllabic 
     <quote>r</quote> is skipped in determining the stressed syllable, so 
-    <indexterm type="general">
-      <primary>stressed vowel</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>stressed syllable</primary>
-    </indexterm>
-    <xref linkend="example-random-id-qjIq" /> is stressed on the 
+    
+    
+    <xref linkend="example-random-id-qjIq"/> is stressed on the 
     <quote>ka</quote>.)</para>
     <example xml:id="example-random-id-qJiv" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e8d7" />
+        <anchor xml:id="c4e8d7"/>
       </title>
       <interlinear-gloss>
         <jbo>katis.</jbo>
         <en>Cathy</en>
-        <indexterm type="general">
-          <primary>Cathy</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qjIy" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e8d8" />
+        <anchor xml:id="c4e8d8"/>
       </title>
       <interlinear-gloss>
         <jbo>keit.</jbo>
         <en>Kate</en>
-        <indexterm type="general">
-          <primary>Kate</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>Names may have almost any form, but always end in a consonant, and are followed by a pause. They are penultimately stressed, unless unusual stress is marked with capitalization. A name may have multiple parts, each ending with a consonant and pause, or the parts may be combined into a single word with no pause. For example,</para>
-    <indexterm type="general">
-      <primary>capitalization</primary>
-    </indexterm>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-43uP">
       <title>
-        <anchor xml:id="c4e8d9" />
+        <anchor xml:id="c4e8d9"/>
       </title>
       <interlinear-gloss>
         <jbo>djan. djonz.</jbo>
@@ -1813,7 +1535,7 @@
     <para>and</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-QnyL">
       <title>
-        <anchor xml:id="c4e8d10" />
+        <anchor xml:id="c4e8d10"/>
       </title>
       <interlinear-gloss>
         <jbo>djandjonz.</jbo>
@@ -1821,9 +1543,7 @@
     </example>
     <para>are both valid Lojbanizations of 
     <quote>John Jones</quote>.</para>
-    <indexterm type="general">
-      <primary>John Jones</primary>
-    </indexterm>
+    
     <para>The final arbiter of the correct form of a name is the person doing the naming, although most cultures grant people the right to determine how they want their own name to be spelled and pronounced. The English name 
     <quote>Mary</quote> can thus be Lojbanized as 
     <quote>meris.</quote>, 
@@ -1849,14 +1569,10 @@
     <quote>ly</quote>, 
     <quote>lei</quote>, and 
     <quote>dai</quote> or 
-    <indexterm type="general">
-      <primary>dai</primary>
-    </indexterm>
+    
     <quote>do'i</quote>, that do not cause these problems.</para>
     <para>Lojban cmene are identifiable as word forms by the following characteristics:</para>
-    <indexterm type="general">
-      <primary>word forms</primary>
-    </indexterm>
+    
     <orderedlist>
       <listitem>
         <para>They must end in one or more consonants. There are no rules about how many consonants may appear in a cluster in cmene, provided that each consonant pair (whether standing by itself, or as part of a larger cluster) is a permissible pair.</para>
@@ -1872,15 +1588,13 @@
       </listitem>
       <listitem>
         <para>They may be stressed on any syllable; if this syllable is not the penultimate one, it must be capitalized when writing. Neither names nor words that begin sentences are capitalized in Lojban, so this is the only use of capital letters.</para>
-        <indexterm type="general">
-          <primary>capital letters</primary>
-        </indexterm>
+        
       </listitem>
     </orderedlist>
     <para>Names meeting these criteria may be invented, Lojbanized from names in other languages, or formed by appending a consonant onto a cmavo, a gismu, a fu'ivla or a lujvo. Some cmene built from Lojban words are:</para>
     <example xml:id="example-random-id-qjj1" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e8d11" />
+        <anchor xml:id="c4e8d11"/>
       </title>
       <interlinear-gloss>
         <jbo>pav.</jbo>
@@ -1893,33 +1607,27 @@
     </example>
     <example xml:id="example-random-id-qjjN" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e8d12" />
+        <anchor xml:id="c4e8d12"/>
       </title>
       <interlinear-gloss>
         <jbo>sol.</jbo>
         <gloss>the Sun</gloss>
-        <indexterm type="general">
-          <primary>Sun</primary>
-        </indexterm>
+        
         <en>from the gismu 
         <quote>solri</quote>, meaning 
         <quote>solar</quote>, or actually 
         <quote>pertaining to the Sun</quote></en>
-        <indexterm type="general">
-          <primary>Sun</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qjJz" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e8d13" />
+        <anchor xml:id="c4e8d13"/>
       </title>
       <interlinear-gloss>
         <jbo>ralj.</jbo>
         <gloss>Chief (as a title)</gloss>
-        <indexterm type="general">
-          <primary>Chief</primary>
-        </indexterm>
+        
         <en>from the gismu 
         <quote>ralju</quote>, meaning 
         <quote>principal</quote>.</en>
@@ -1927,17 +1635,13 @@
     </example>
     <example xml:id="example-random-id-qJKt" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e8d14" />
+        <anchor xml:id="c4e8d14"/>
       </title>
       <interlinear-gloss>
         <jbo>nol.</jbo>
         <gloss>Lord/Lady</gloss>
-        <indexterm type="general">
-          <primary>Lord</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>Lady</primary>
-        </indexterm>
+        
+        
         <en>from the gismu 
         <quote>nobli</quote>, with rafsi 
         <quote>nol</quote>, meaning 
@@ -1959,12 +1663,8 @@
       </listitem>
       <listitem>
         <para>If possible and acceptable, shift the stress to the penultimate (next-to-the-last) syllable. Use commas and capitalization in written Lojban when it is necessary to preserve non-standard syllabication or stress. Do not capitalize names otherwise.</para>
-        <indexterm type="general">
-          <primary>syllabication</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>capitalization</primary>
-        </indexterm>
+        
+        
       </listitem>
       <listitem>
         <para>If the name contains an impermissible consonant pair, insert a vowel between the consonants: 
@@ -1978,34 +1678,20 @@
         <quote>ly</quote>, 
         <quote>ly'i</quote>, and 
         <quote>dai</quote> or 
-        <indexterm type="general">
-          <primary>dai</primary>
-        </indexterm>
+        
         <quote>do'i</quote>, respectively.</para>
       </listitem>
     </orderedlist>
     <para>There are some additional rules for Lojbanizing the scientific names (technically known as 
-    <indexterm type="general">
-      <primary>scientific names</primary>
-    </indexterm>
+    
     <quote>Linnaean binomials</quote> after their inventor) which are internationally applied to each species of animal or plant. Where precision is essential, these names need not be Lojbanized, but can be directly inserted into Lojban text using the cmavo 
-    <indexterm type="general">
-      <primary>Linnaean binomials</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>Linnaean</primary>
-    </indexterm>
+    
+    
     <quote>la'o</quote>, explained in 
-    <xref linkend="chapter-structure" />. Using this cmavo makes the already lengthy Latinized names at least four syllables longer, however, and leaves the pronunciation in doubt. The following suggestions, though incomplete, will assist in converting Linnaean binomals to valid Lojban names. They can also help to create fu'ivla based on Linnaean binomials or other words of the international scientific vocabulary. The term 
-    <indexterm type="general">
-      <primary>Linnaean binomials</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>Linnaean</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>converting</primary>
-    </indexterm>
+    <xref linkend="chapter-structure"/>. Using this cmavo makes the already lengthy Latinized names at least four syllables longer, however, and leaves the pronunciation in doubt. The following suggestions, though incomplete, will assist in converting Linnaean binomals to valid Lojban names. They can also help to create fu'ivla based on Linnaean binomials or other words of the international scientific vocabulary. The term 
+    
+    
+    
     <quote>back vowel</quote> in the following list refers to any of the letters 
     <quote>a</quote>, 
     <quote>o</quote>, or 
@@ -2085,9 +1771,7 @@
       <listitem>
         <para>Place 
         <quote>'</quote> between any remaining vowel pairs that do not form Lojban diphthongs.</para>
-        <indexterm type="general">
-          <primary>vowel pairs</primary>
-        </indexterm>
+        
       </listitem>
     </orderedlist>
     <para>Some further examples of Lojbanized names are:</para>
@@ -2108,81 +1792,48 @@
 <quote>Elise</quote>            .eLIS.
     English 
 <quote>Johnson</quote>          djansn.
-<indexterm type="general">
-  
-<primary>Johnson</primary>
-</indexterm>
+
     English 
 <quote>William</quote>          .uiliam.
-<indexterm type="general">
-  
-<primary>William</primary>
-</indexterm>
+
                  or            .uil,iam.
     English 
 <quote>Brown</quote>            braun.
-<indexterm type="general">
-  
-<primary>Brown</primary>
-</indexterm>
+
     English 
 <quote>Charles</quote>          tcarlz.
     French 
 <quote>Charles</quote>           carl.
     French 
 <quote>De Gaulle</quote>         dyGOL.
-<indexterm type="general">
-  
-<primary>De Gaulle</primary>
-</indexterm>
+
     German 
 <quote>Heinrich</quote>          xainrix.
     Spanish 
 <quote>Joaquin</quote>          xuaKIN.
     Russian 
 <quote>Svetlana</quote>         sfietlanys.
-<indexterm type="general">
-  
-<primary>Svetlana</primary>
-</indexterm>
+
     Russian 
 <quote>Khrushchev</quote>       xrucTCOF.
-<indexterm type="general">
-  
-<primary>Khrushchev</primary>
-</indexterm>
+
     Hindi 
 <quote>Krishna</quote>            kricnas.
-<indexterm type="general">
-  
-<primary>Krishna</primary>
-</indexterm>
+
     Polish 
 <quote>Lech Walesa</quote>       lex. va,uensas.
-<indexterm type="general">
-  
-<primary>Lech Walesa</primary>
-</indexterm>
+
     Spanish 
 <quote>Don Quixote</quote>      don. kicotes.
-<indexterm type="general">
-  
-<primary>Don Quixote</primary>
-</indexterm>
+
       or modern Spanish:       don. kixotes.
       or Mexican dialect:      don. ki'otes.
     Chinese 
 <quote>Mao Zedong</quote>       maudzydyn.
-<indexterm type="general">
-  
-<primary>Mao Zedong</primary>
-</indexterm>
+
     Japanese 
 <quote>Fujiko</quote>          fudjikos.
-<indexterm type="general">
-  
-<primary>Fujiko</primary>
-</indexterm>
+
                 or             fujikos.
 </programlisting>
   </section>
@@ -2216,75 +1867,49 @@
       </listitem>
       <listitem>
         <para>When non-Lojban text is embedded in Lojban, it must be preceded and followed by pauses. (How to embed non-Lojban text is explained in 
-        <indexterm type="general">
-          <primary>non-Lojban text</primary>
-        </indexterm>
-        <xref linkend="chapter-structure" />.)</para>
+        
+        <xref linkend="chapter-structure"/>.)</para>
       </listitem>
     </orderedlist>
   </section>
   <section xml:id="chapter-morphology-section10">
     <title>Considerations for making lujvo</title>
     <para>Given a tanru which expresses an idea to be used frequently, it can be turned into a lujvo by following the lujvo-making algorithm which is given in 
-    <xref linkend="chapter-morphology-section11" />.</para>
+    <xref linkend="chapter-morphology-section11"/>.</para>
     <para>In building a lujvo, the first step is to replace each gismu with a rafsi that uniquely represents that gismu. These rafsi are then attached together by fixed rules that allow the resulting compound to be recognized as a single word and to be analyzed in only one way.</para>
     <para>There are three other complications; only one is serious.</para>
     <para>The first is that there is usually more than one rafsi that can be used for each gismu. The one to be used is simply whichever one sounds or looks best to the speaker or writer. There are usually many valid combinations of possible rafsi. They all are equally valid, and all of them mean exactly the same thing. (The scoring algorithm given in 
-    <xref linkend="chapter-morphology-section12" /> is used to choose the standard form of the lujvo - the version which would be entered into a dictionary.)</para>
+    <xref linkend="chapter-morphology-section12"/> is used to choose the standard form of the lujvo - the version which would be entered into a dictionary.)</para>
     <para>The second complication is the serious one. Remember that a tanru is ambiguous - it has several possible meanings. A lujvo, or at least one that would be put into the dictionary, has just a single meaning. Like a gismu, a lujvo is a predicate which encompasses one area of the semantic universe, with one set of places. Hopefully the meaning chosen is the most useful of the possible semantic spaces. A possible source of linguistic drift in Lojban is that as Lojbanic society evolves, the concept that seems the most useful one may change.</para>
-    <indexterm type="general">
-      <primary>linguistic drift in Lojban</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>linguistic drift</primary>
-    </indexterm>
+    
+    
     <para>You must also be aware of the possibility of some prior meaning of a new lujvo, especially if you are writing for posterity. If a lujvo is invented which involves the same tanru as one that is in the dictionary, and is assigned a different meaning (or even just a different place structure), linguistic drift results. This isn't necessarily bad. Every natural language does it. But in communication, when you use a meaning different from the dictionary definition, someone else may use the dictionary and therefore misunderstand you. You can use the cmavo 
-    <indexterm type="general">
-      <primary>linguistic drift</primary>
-    </indexterm>
+    
     <quote>za'e</quote> (explained in 
-    <indexterm type="general">
-      <primary>za'e</primary>
-    </indexterm>
-    <xref linkend="chapter-structure" />) before a newly coined lujvo to indicate that it may have a non-dictionary meaning.</para>
+    
+    <xref linkend="chapter-structure"/>) before a newly coined lujvo to indicate that it may have a non-dictionary meaning.</para>
     <para>The essential nature of human communication is that if the listener understands, then all is well. Let this be the ultimate guideline for choosing meanings and place structures for invented lujvo.</para>
     <para>The third complication is also simple, but tends to scare new Lojbanists with its implications. It is based on Zipf's Law, which says that the length of words is inversely proportional to their usage. The shortest words are those which are used more; the longest ones are used less. Conversely, commonly used concepts will be tend to be abbreviated. In English, we have abbreviations and acronyms and jargon, all of which represent complex ideas that are used often by small groups of people, so they shortened them to convey more information more rapidly.</para>
-    <indexterm type="general">
-      <primary>Zipf's Law</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>jargon</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>acronyms</primary>
-    </indexterm>
+    
+    
+    
     <para>Therefore, given a complicated tanru with grouping markers, abstraction markers, and other cmavo in it to make it syntactically unambiguous, the psychological basis of Zipf's Law may compel the lujvo-maker to drop some of the cmavo to make a shorter (technically incorrect) tanru, and then use that tanru to make the lujvo.</para>
-    <indexterm type="general">
-      <primary>Zipf's Law</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>basis</primary>
-    </indexterm>
+    
+    
     <para>This doesn't lead to ambiguity, as it might seem to. A given lujvo still has exactly one meaning and place structure. It is just that more than one tanru is competing for the same lujvo. But more than one meaning for the tanru was already competing for the 
     <quote>right</quote> to define the meaning of the lujvo. Someone has to use judgment in deciding which one meaning is to be chosen over the others.</para>
     <para>If the lujvo made by a shorter form of tanru is in use, or is likely to be useful for another meaning, the decider then retains one or more of the cmavo, preferably ones that set this meaning apart from the shorter form meaning that is used or anticipated. As a rule, therefore, the shorter lujvo will be used for a more general concept, possibly even instead of a more frequent word. If both words are needed, the simpler one should be shorter. It is easier to add a cmavo to clarify the meaning of the more complex term than it is to find a good alternate tanru for the simpler term.</para>
-    <indexterm type="general">
-      <primary>anticipated</primary>
-    </indexterm>
+    
     <para>And of course, we have to consider the listener. On hearing an unknown word, the listener will decompose it and get a tanru that makes no sense or the wrong sense for the context. If the listener realizes that the grouping operators may have been dropped out, he or she may try alternate groupings, or try inserting an abstraction operator if that seems plausible. (The grouping of tanru is explained in 
-    <xref linkend="chapter-selbri" />; abstraction is explained in 
-    <xref linkend="chapter-abstractions" />.) Plausibility is the key to learning new ideas and to evaluating unfamiliar lujvo.</para>
+    <xref linkend="chapter-selbri"/>; abstraction is explained in 
+    <xref linkend="chapter-abstractions"/>.) Plausibility is the key to learning new ideas and to evaluating unfamiliar lujvo.</para>
   </section>
   <section xml:id="chapter-morphology-section11">
     <title>The lujvo-making algorithm</title>
     <para>The following is the current algorithm for generating Lojban lujvo given a known tanru and a complete list of gismu and their assigned rafsi. The algorithm was designed by Bob LeChevalier and Dr. James Cooke Brown for computer program implementation. It was modified in 1989 with the assistance of Nora LeChevalier, who detected a flaw in the original 
-    <indexterm type="general">
-      <primary>Brown</primary>
-    </indexterm>
+    
     <quote>tosmabru test</quote>.</para>
-    <indexterm type="general">
-      <primary>tosmabru test</primary>
-    </indexterm>
+    
     <para>Given a tanru that is to be made into a lujvo:</para>
     <variablelist>
       <varlistentry>
@@ -2303,9 +1928,7 @@
         <term>3)</term>
         <listitem>
           <para>Join the resulting string of rafsi, initially without hyphens.</para>
-          <indexterm type="general">
-            <primary>hyphens</primary>
-          </indexterm>
+          
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -2340,9 +1963,7 @@
               <listitem>
                 <para>Put a 
                 <quote>y</quote>-hyphen after any 4-letter rafsi form.</para>
-                <indexterm type="general">
-                  <primary>rafsi form</primary>
-                </indexterm>
+                
               </listitem>
             </varlistentry>
           </variablelist></para>
@@ -2382,12 +2003,8 @@
     </variablelist>
     <para>Note that the 
     <quote>tosmabru test</quote> implies that the algorithm will be more efficient if rafsi junctures are tested for required hyphens from right to left, instead of from left to right; when the test is required, it cannot be completed until hyphenation to the right has been determined.</para>
-    <indexterm type="general">
-      <primary>tosmabru test</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>hyphens</primary>
-    </indexterm>
+    
+    
   </section>
   <section xml:id="chapter-morphology-section12">
     <title>The lujvo scoring algorithm</title>
@@ -2397,9 +2014,7 @@
         <term>1)</term>
         <listitem>
           <para>Count the total number of letters, including hyphens and apostrophes; call it 
-          <indexterm type="general">
-            <primary>hyphens</primary>
-          </indexterm>
+          
           <quote>L</quote>.</para>
         </listitem>
       </varlistentry>
@@ -2417,9 +2032,7 @@
           <quote>y</quote>-, 
           <quote>r</quote>-, and 
           <quote>n</quote>-hyphens; call it 
-          <indexterm type="general">
-            <primary>hyphens</primary>
-          </indexterm>
+          
           <quote>H</quote>.</para>
         </listitem>
       </varlistentry>
@@ -2457,9 +2070,7 @@
             <cmavo-entry>
               <cmavo>CVV with an apostrophe</cmavo>
               <selmaho>(-ta'u-)</selmaho>
-              <indexterm type="general">
-                <primary>ta'u</primary>
-              </indexterm>
+              
               <description>6</description>
             </cmavo-entry>
             <cmavo-entry>
@@ -2470,9 +2081,7 @@
             <cmavo-entry>
               <cmavo>CVV with no apostrophe</cmavo>
               <selmaho>(-sai-)</selmaho>
-              <indexterm type="general">
-                <primary>sai</primary>
-              </indexterm>
+              
               <description>8</description>
             </cmavo-entry>
           </cmavo-list></para>
@@ -2492,58 +2101,48 @@
       (1000 * L) - (500 * A) + (100 * H) - (10 * R) - V
 </programlisting>
     <para>In case of ties, there is no preference. This should be rare. Note that the algorithm essentially encodes a hierarchy of priorities: short words are preferred (counting apostrophes as half a letter), then words with fewer hyphens, words with more pleasing rafsi (this judgment is subjective), and finally words with more vowels are chosen. Each decision principle is applied in turn if the ones before it have failed to choose; it is possible that a lower-ranked principle might dominate a higher-ranked one if it is ten times better than the alternative.</para>
-    <indexterm type="general">
-      <primary>hyphens</primary>
-    </indexterm>
+    
     <para>Here are some lujvo with their scores (not necessarily the lowest scoring forms for these lujvo, nor even necessarily sensible lujvo):</para>
     <example xml:id="example-random-id-qJKu" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e12d1" />
+        <anchor xml:id="c4e12d1"/>
       </title>
       <interlinear-gloss>
         <jbo>zbasai</jbo>
         <gloss>zba + sai</gloss>
-        <indexterm type="general">
-          <primary>sai</primary>
-        </indexterm>
+        
         <gloss>(1000 * 6) - (500 * 0) + (100 * 0) - (10 * 15) - 3</gloss>
         <en>= 5847</en>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qjLd" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e12d2" />
+        <anchor xml:id="c4e12d2"/>
       </title>
       <interlinear-gloss>
         <jbo>nunynau</jbo>
         <gloss>nun + y + nau</gloss>
-        <indexterm type="general">
-          <primary>nau</primary>
-        </indexterm>
+        
         <gloss>(1000 * 7) - (500 * 0) + (100 * 1) - (10 * 13) - 3</gloss>
         <en>= 6967</en>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qJLQ" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e12d3" />
+        <anchor xml:id="c4e12d3"/>
       </title>
       <interlinear-gloss>
         <jbo>sairzbata'u</jbo>
         <gloss>sai + r + zba + ta'u</gloss>
-        <indexterm type="general">
-          <primary>ta'u</primary>
-        </indexterm>
-        <indexterm type="general">
-          <primary>sai</primary>
-        </indexterm>
+        
+        
         <gloss>(1000 * 11) - (500 * 1) + (100 * 1) - (10 * 21) - 5</gloss>
         <en>= 10385</en>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qJmn" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c4e12d4" />
+        <anchor xml:id="c4e12d4"/>
       </title>
       <interlinear-gloss>
         <jbo>zbazbasysarji</jbo>
@@ -2558,14 +2157,10 @@
     <para>This section contains examples of making and scoring lujvo. First, we will start with the tanru 
     <quote>gerku zdani</quote> ( 
     <quote>dog house</quote>) and construct a lujvo meaning 
-    <indexterm type="general">
-      <primary>lujvo meaning</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>dog house</primary>
-    </indexterm>
+    
+    
     <quote>doghouse</quote>, that is, a house where a dog lives. We will use a brute-force application of the algorithm in 
-    <xref linkend="chapter-morphology-section12" />, using every possible rafsi.</para>
+    <xref linkend="chapter-morphology-section12"/>, using every possible rafsi.</para>
     <para>The rafsi for 
     <quote>gerku</quote> are:</para>
     <programlisting xml:space="preserve">
@@ -2593,9 +2188,7 @@
           gerk-zdani
 </programlisting>
     <para>We must then insert appropriate hyphens in each case. The first two forms need no hyphenation: 
-    <indexterm type="general">
-      <primary>hyphens</primary>
-    </indexterm>
+    
     <quote>ge</quote> cannot fall off the front, because the following word would begin with 
     <quote>rz</quote>, which is not a permissible initial consonant pair. So the lujvo forms are 
     <quote>gerzda</quote> and 
@@ -2610,9 +2203,7 @@
     <quote>ge'urzdani</quote>.</para>
     <para>The last two forms require 
     <quote>y</quote>-hyphens, as all 4-letter rafsi do, and so are 
-    <indexterm type="general">
-      <primary>hyphens</primary>
-    </indexterm>
+    
     <quote>gerkyzda</quote> and 
     <quote>gerkyzdani</quote> respectively.</para>
     <para>The scoring algorithm is heavily weighted in favor of short lujvo, so we might expect that 
@@ -2621,12 +2212,8 @@
     <para>For the next example, we will use the tanru 
     <quote>bloti klesi</quote> ( 
     <quote>boat class</quote>) presumably referring to the category (rowboat, motorboat, cruise liner) into which a boat falls. We will omit the long rafsi from the process, since lujvo containing long rafsi are almost never preferred by the scoring algorithm when there are short rafsi available.</para>
-    <indexterm type="general">
-      <primary>long rafsi</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>boat class</primary>
-    </indexterm>
+    
+    
     <para>The rafsi for 
     <quote>bloti</quote> are 
     <quote>-lot-</quote>, 
@@ -2643,9 +2230,7 @@
     <para>Only 
     <quote>lo'irlei</quote> requires hyphenation (to avoid confusion with the cmavo sequence 
     <quote>lo'i lei</quote>). All six forms are valid versions of the lujvo, as are the six further forms using long rafsi; however, the scoring algorithm produces the following results:</para>
-    <indexterm type="general">
-      <primary>long rafsi</primary>
-    </indexterm>
+    
     <programlisting xml:space="preserve">
           lotkle  5878      blokle  5858      lo'ikle  6367 
 <!-- not a cmavo list -->
@@ -2699,9 +2284,7 @@
           logjybangirz.    logjybaugirz.    logjybangygirz.
 </programlisting>
     <para>The only fully reduced lujvo forms are 
-    <indexterm type="general">
-      <primary>fully reduced lujvo</primary>
-    </indexterm>
+    
     <quote>lojbangri</quote> and 
     <quote>lojbaugri</quote>, of which the latter has a slightly lower score: 8827 versus 8796, respectively. However, for the name of the organization, we chose to make sure the name of the language was embedded in it, and to use the clearer long-form rafsi for 
     <quote>girzu</quote>, producing 
@@ -2709,9 +2292,7 @@
     <para>Finally, here is a four-part lujvo with a cmavo in it, based on the tanru 
     <quote>nakni ke cinse ctuca</quote> or 
     <quote>male (sexual teacher)</quote>. The 
-    <indexterm type="general">
-      <primary>sexual teacher</primary>
-    </indexterm>
+    
     <quote>ke</quote> cmavo ensures the interpretation 
     <quote>teacher of sexuality who is male</quote>, rather than 
     <quote>teacher of male sexuality</quote>. Here are the possible forms of the lujvo, both before and after hyphenation:</para>
@@ -2742,15 +2323,9 @@
         <term>1)</term>
         <listitem>
           <para>At least one word was found in each of the six source languages (Chinese, English, Hindi, Spanish, Russian, Arabic) corresponding to the proposed gismu. This word was rendered into Lojban phonetics rather liberally: consonant clusters consisting of a stop and the corresponding fricative were simplified to just the fricative ( 
-          <indexterm type="general">
-            <primary>source languages</primary>
-          </indexterm>
-          <indexterm type="general">
-            <primary>doubled consonants</primary>
-          </indexterm>
-          <indexterm type="general">
-            <primary>consonant clusters</primary>
-          </indexterm>
+          
+          
+          
           <quote>tc</quote> became 
           <quote>c</quote>, 
           <quote>dj</quote> became 
@@ -2814,7 +2389,7 @@
 		x			g, k
 		z			j, s
               </programlisting>
-              <para>See <xref linkend="cll_chapter4-section4" /> for an example.</para>
+              <para>See <xref linkend="cll_chapter4-section4"/> for an example.</para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -2846,9 +2421,7 @@
       </varlistentry>
     </variablelist>
     <para>Note that the stressed vowel of the gismu was considered sufficiently distinctive that two or more gismu may differ only in this vowel; as an extreme example, 
-    <indexterm type="general">
-      <primary>stressed vowel</primary>
-    </indexterm>
+    
     <quote>bradi</quote>, 
     <quote>bredi</quote>, 
     <quote>bridi</quote>, and 
@@ -2922,9 +2495,7 @@
     <quote>tanjo</quote> were only made non-algorithmically because they were identical (having been borrowed from a common source) in all the dictionaries that had translations. The other terms in this group are units in the international metric system; some metric units, however, were made by the ordinary process (usually because they are different in Chinese).</para>
     <para>Finally, there are the cultural gismu, which are also borrowed, but by modifying a word from one particular language, instead of using the multi-lingual gismu creation algorithm. Cultural gismu are used for words that have local importance to a particular culture; other cultures or languages may have no word for the concept at all, or may borrow the word from its home culture, just as Lojban does. In such a case, the gismu algorithm, which uses weighted averages, doesn't accurately represent the frequency of usage of the individual concept. Cultural gismu are not even required to be based on the six major languages.</para>
     <para>The six Lojban source languages:</para>
-    <indexterm type="general">
-      <primary>source languages</primary>
-    </indexterm>
+    
     <programlisting xml:space="preserve">
     jungo       Chinese (from 
 <quote>Zhong
@@ -3000,9 +2571,7 @@
     
 </programlisting>
     <para>The continents (and oceanic regions) of the Earth:</para>
-    <indexterm type="general">
-      <primary>continents</primary>
-    </indexterm>
+    
     <programlisting xml:space="preserve">
     bemro       North American (from 
 <quote>berti merko</quote>)
@@ -3041,15 +2610,15 @@
   <section xml:id="chapter-morphology-section16">
     <title>rafsi fu'ivla: a proposal</title>
     <para>The list of cultures represented by gismu, given in 
-    <xref linkend="chapter-morphology-section15" />, is unavoidably controversial. Much time has been spent debating whether this or that culture 
+    <xref linkend="chapter-morphology-section15"/>, is unavoidably controversial. Much time has been spent debating whether this or that culture 
     <quote>deserves a gismu</quote> or 
     <quote>must languish in fu'ivla space</quote>. To help defuse this argument, a last-minute proposal was made when this book was already substantially complete. I have added it here with experimental status: it is not yet a standard part of Lojban, since all its implications have not been tested in open debate, and it affects a part of the language (lujvo-making) that has long been stable, but is known to be fragile in the face of small changes. (Many attempts were made to add general mechanisms for making lujvo that contained fu'ivla, but all failed on obvious or obscure counterexamples; finally the general 
     <quote>zei</quote> mechanism was devised instead.)</para>
     <para>The first part of the proposal is uncontroversial and involves no change to the language mechanisms. All valid Type 4 fu'ivla of the form CCVVCV would be reserved for cultural brivla analogous to those described in 
-    <xref linkend="chapter-morphology-section15" />. For example,</para>
+    <xref linkend="chapter-morphology-section15"/>. For example,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-PMb2">
       <title>
-        <anchor xml:id="c4e16d1" />
+        <anchor xml:id="c4e16d1"/>
       </title>
       <interlinear-gloss>
         <jbo>tci'ile</jbo>
@@ -3060,21 +2629,19 @@
     <para>The second, and fully experimental, part of the proposal is to allow rafsi to be formed from these cultural fu'ivla by removing the final vowel and treating the result as a 4-letter rafsi (although it would contain five letters, not four). These rafsi could then be used on a par with all other rafsi in forming lujvo. The tanru</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-hcR6">
       <title>
-        <anchor xml:id="c4e16d2" />
+        <anchor xml:id="c4e16d2"/>
       </title>
       <interlinear-gloss>
         <jbo>tci'ile ke canre tutra</jbo>
         <gloss>Chilean type-of (sand territory)</gloss>
         <en>Chilean desert</en>
-        <indexterm type="general">
-          <primary>Chilean desert</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>could be represented by the lujvo</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-0rzn">
       <title>
-        <anchor xml:id="c4e16d3" />
+        <anchor xml:id="c4e16d3"/>
       </title>
       <interlinear-gloss>
         <jbo>tci'ilykemcantutra</jbo>
@@ -3083,8 +2650,6 @@
     <para>which is an illegal word in standard Lojban, but a valid lujvo under this proposal. There would be no short rafsi or 5-letter rafsi assigned to any fu'ivla, so no fu'ivla could appear as the last element of a lujvo.</para>
     <para>The cultural fu'ivla introduced under this proposal are called 
     <quote>rafsi fu'ivla</quote>, since they are distinguished from other Type 4 fu'ivla by the property of having rafsi. If this proposal is workable and introduces no problems into Lojban morphology, it might become standard for all Type 4 fu'ivla, including those made for plants, animals, foodstuffs, and other things.</para>
-    <indexterm type="general">
-      <primary>plants</primary>
-    </indexterm>
+    
   </section>
 </chapter>

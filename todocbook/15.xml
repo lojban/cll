@@ -1,3 +1,5 @@
+<?xml version="1.0"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V5.0//EN" "dtd/docbook-5.0.dtd">
 <chapter xml:id="chapter-negation">
   <title>
   <quote>No</quote> Problems: On Lojban Negation</title>
@@ -7,15 +9,13 @@
     <quote>not</quote>. For Lojban's unambiguous grammar, this means further that meanings of 
     <quote>not</quote> with different grammatical effect must be different words, and even different grammatical structures.</para>
     <para>Logical assertions are implicitly required in a logical language; thus, an apparatus for expressing them is built into Lojban's logical connectives and other structures.</para>
-    <indexterm type="general">
-      <primary>logical language</primary>
-    </indexterm>
+    
     <para>In natural languages, especially those of Indo-European grammar, we have sentences composed of two parts which are typically called 
     <quote>subject</quote> and 
     <quote>predicate</quote>. In the statement</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-vrXe">
       <title>
-        <anchor xml:id="c15e1d1" />
+        <anchor xml:id="c15e1d1"/>
       </title>
       <interlinear-gloss>
         <jbo>John goes to the store</jbo>
@@ -24,23 +24,23 @@
     <para>
     <quote>John</quote> is the subject, and 
     <quote>goes to the store</quote> is the predicate. Negating 
-    <xref linkend="example-random-id-vrXe" /> to produce</para>
+    <xref linkend="example-random-id-vrXe"/> to produce</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-gm3I">
       <title>
-        <anchor xml:id="c15e1d2" />
+        <anchor xml:id="c15e1d2"/>
       </title>
       <interlinear-gloss>
         <jbo>John doesn't go to the store.</jbo>
       </interlinear-gloss>
     </example>
     <para>has the effect of declaring that the predicate does not hold for the subject. 
-    <xref linkend="example-random-id-gm3I" /> says nothing about whether John goes somewhere else, or whether someone else besides John goes to the store.</para>
+    <xref linkend="example-random-id-gm3I"/> says nothing about whether John goes somewhere else, or whether someone else besides John goes to the store.</para>
     <para>We will call this kind of negation 
     <quote>natural language negation</quote>. This kind of negation is difficult to manipulate by the tools of logic, because it doesn't always follow the rules of logic. Logical negation is bi-polar: either a statement is true, or it is false. If a statement is false, then its negation must be true. Such negation is termed contradictory negation.</para>
     <para>Let's look at some examples of how natural language negation can violate the rules of contradictory negation.</para>
     <example xml:id="example-random-id-qGWR" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e1d3" />
+        <anchor xml:id="c15e1d3"/>
       </title>
       <interlinear-gloss>
         <jbo>Some animals are not white.</jbo>
@@ -48,7 +48,7 @@
     </example>
     <example xml:id="example-random-id-qgXI" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e1d4" />
+        <anchor xml:id="c15e1d4"/>
       </title>
       <interlinear-gloss>
         <jbo>Some animals are white.</jbo>
@@ -57,7 +57,7 @@
     <para>Both of these statements are true; yet one is apparently the negation of the other. Another example:</para>
     <example xml:id="example-random-id-qgxL" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e1d5" />
+        <anchor xml:id="c15e1d5"/>
       </title>
       <interlinear-gloss>
         <jbo>I mustn't go to the dance.</jbo>
@@ -65,19 +65,19 @@
     </example>
     <example xml:id="example-random-id-qGXL" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e1d6" />
+        <anchor xml:id="c15e1d6"/>
       </title>
       <interlinear-gloss>
         <jbo>I must go to the dance.</jbo>
       </interlinear-gloss>
     </example>
     <para>At first thought, 
-    <xref linkend="example-random-id-qgxL" /> negates 
-    <xref linkend="example-random-id-qGXL" />. Thinking further, we realize that there is an intermediate state wherein I am permitted to go to the dance, but not obligated to do so. Thus, it is possible that both statements are false.</para>
+    <xref linkend="example-random-id-qgxL"/> negates 
+    <xref linkend="example-random-id-qGXL"/>. Thinking further, we realize that there is an intermediate state wherein I am permitted to go to the dance, but not obligated to do so. Thus, it is possible that both statements are false.</para>
     <para>Sometimes order is significant:</para>
     <example xml:id="example-random-id-qgyb" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e1d7" />
+        <anchor xml:id="c15e1d7"/>
       </title>
       <interlinear-gloss>
         <jbo>The falling rock didn't kill Sam.</jbo>
@@ -85,27 +85,27 @@
     </example>
     <example xml:id="example-random-id-qGYX" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e1d8" />
+        <anchor xml:id="c15e1d8"/>
       </title>
       <interlinear-gloss>
         <jbo>Sam wasn't killed by the falling rock.</jbo>
       </interlinear-gloss>
     </example>
     <para>Our minds play tricks on us with this one. Because 
-    <xref linkend="example-random-id-qgyb" /> is written in what is called the 
+    <xref linkend="example-random-id-qgyb"/> is written in what is called the 
     <quote>active voice</quote>, we immediately get confused about whether 
     <quote>the falling rock</quote> is a suitable subject for the predicate 
     <quote>did kill Sam</quote>. 
     <quote>Kill</quote> implies volition to us, and rocks do not have volition. This confusion is employed by opponents of gun control who use the argument 
     <quote>Guns don't kill people; people kill people.</quote></para>
     <para>Somehow, we don't have the same problem with 
-    <xref linkend="example-random-id-qGYX" />. The subject is Sam, and we determine the truth or falsity of the statement by whether he was or wasn't killed by the falling rock.</para>
+    <xref linkend="example-random-id-qGYX"/>. The subject is Sam, and we determine the truth or falsity of the statement by whether he was or wasn't killed by the falling rock.</para>
     <para>
-    <xref linkend="example-random-id-qGYX" /> also helps us focus on the fact that there are at least two questionable facts implicit in this sentence: whether Sam was killed, and if so, whether the falling rock killed him. If Sam wasn't killed, the question of what killed him is moot.</para>
+    <xref linkend="example-random-id-qGYX"/> also helps us focus on the fact that there are at least two questionable facts implicit in this sentence: whether Sam was killed, and if so, whether the falling rock killed him. If Sam wasn't killed, the question of what killed him is moot.</para>
     <para>This type of problem becomes more evident when the subject of the sentence turns out not to exist:</para>
     <example xml:id="example-random-id-qgzq" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e1d9" />
+        <anchor xml:id="c15e1d9"/>
       </title>
       <interlinear-gloss>
         <jbo>The King of Mexico didn't come to dinner.</jbo>
@@ -113,7 +113,7 @@
     </example>
     <example xml:id="example-random-id-qgzv" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e1d10" />
+        <anchor xml:id="c15e1d10"/>
       </title>
       <interlinear-gloss>
         <jbo>The King of Mexico did come to dinner.</jbo>
@@ -129,12 +129,10 @@
     <quote>I haven't stopped beating my wife</quote> without implying that I ever started, nor even that I have a wife, meaning simply 
     <quote>It isn't true that I have stopped beating my wife.</quote> Since Lojban uses bridi as smaller components of complex sentences, bridi negation is permitted in these components as well at the sentence level.</para>
     <para>For the bridi negation of a sentence to be true, the sentence being negated must be false. A major use of bridi negation is in making a negative response to a yes/no question; such responses are usually contradictory, denying the truth of the entire sentence. A negative answer to</para>
-    <indexterm type="general">
-      <primary>negative answer</primary>
-    </indexterm>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-sCNE">
       <title>
-        <anchor xml:id="c15e2d1" />
+        <anchor xml:id="c15e2d1"/>
       </title>
       <interlinear-gloss>
         <jbo>Did you go to the store?</jbo>
@@ -143,7 +141,7 @@
     <para>is taken as a negation of the entire sentence, equivalent to</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-vFYC">
       <title>
-        <anchor xml:id="c15e2d2" />
+        <anchor xml:id="c15e2d2"/>
       </title>
       <interlinear-gloss>
         <jbo>No, I didn't go to the store.</jbo>
@@ -155,7 +153,7 @@
     <quote>cu</quote>, if there is one):</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7nrv">
       <title>
-        <anchor xml:id="c15e2d3" />
+        <anchor xml:id="c15e2d3"/>
       </title>
       <interlinear-gloss>
         <jbo>mi klama le zarci</jbo>
@@ -165,7 +163,7 @@
     <para>when negated becomes:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-bV3b">
       <title>
-        <anchor xml:id="c15e2d4" />
+        <anchor xml:id="c15e2d4"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na klama le zarci</jbo>
@@ -178,15 +176,13 @@
     <quote>not</quote>. In English, the word 
     <quote>not</quote> can apply to a single word, to a phrase, to an English predicate, or to the entire sentence. In addition, 
     <quote>not</quote> may indicate either contradictory negation or another form of negation, depending on the sentence. Lojban's internal bridi negation, on the other hand, always applies to an entire bridi, and is always a contradictory negation; that is, it contradicts the claim of the whole bridi.</para>
-    <indexterm type="general">
-      <primary>internal bridi negation</primary>
-    </indexterm>
+    
     <para>Because of the ambiguity of English 
     <quote>not</quote>, we will use 
     <quote>[false]</quote> in the translation of Lojban examples to remind the reader that we are expressing a contradictory negation. Here are more examples of bridi negation:</para>
     <example xml:id="example-random-id-qgzz" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e2d5" />
+        <anchor xml:id="c15e2d5"/>
       </title>
       <interlinear-gloss>
         <jbo>mi [cu] na ca klama le zarci</jbo>
@@ -196,7 +192,7 @@
     </example>
     <example xml:id="example-random-id-qh10" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e2d6" />
+        <anchor xml:id="c15e2d6"/>
       </title>
       <interlinear-gloss>
         <jbo>lo ca nolraitru be le fasygu'e cu na krecau</jbo>
@@ -206,28 +202,22 @@
     </example>
     <example xml:id="example-random-id-qh2i" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e2d7" />
+        <anchor xml:id="c15e2d7"/>
       </title>
       <interlinear-gloss>
         <jbo>ti na barda prenu co melbi mi</jbo>
         <gloss>This [false] is a big-person of-type (beautiful to me).</gloss>
         <en>This isn't a big person who is beautiful to me.</en>
-        <indexterm type="general">
-          <primary>big person</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>Although there is this fundamental difference between Lojban's internal bridi negation and English negation, we note that in many cases, especially when there are no existential or quantified variables (the cmavo 
-    <indexterm type="general">
-      <primary>internal bridi negation</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>existential</primary>
-    </indexterm>
+    
+    
     <quote>da</quote>, 
     <quote>de</quote>, and 
     <quote>di</quote> of selma'o KOhA, explained in 
-    <xref linkend="chapter-quantifiers" />) in the bridi, you can indeed translate Lojban 
+    <xref linkend="chapter-quantifiers"/>) in the bridi, you can indeed translate Lojban 
     <quote>na</quote> as 
     <quote>not</quote> (or 
     <quote>isn't</quote> or 
@@ -237,7 +227,7 @@
     <quote>na</quote>. For example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-WU9u">
       <title>
-        <anchor xml:id="c15e2d8" />
+        <anchor xml:id="c15e2d8"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na gleki le nu</jbo>
@@ -250,12 +240,10 @@
       </interlinear-gloss>
     </example>
     <para>In the previous example, we used internal negations in abstraction bridi; bridi negation may also be found in descriptions within sumti. For example:</para>
-    <indexterm type="general">
-      <primary>abstraction bridi</primary>
-    </indexterm>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-N65f">
       <title>
-        <anchor xml:id="c15e2d9" />
+        <anchor xml:id="c15e2d9"/>
       </title>
       <interlinear-gloss>
         <jbo>mi nelci le na melbi</jbo>
@@ -266,7 +254,7 @@
     <para>A more extreme (and more indefinite) example is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-eQaI">
       <title>
-        <anchor xml:id="c15e2d10" />
+        <anchor xml:id="c15e2d10"/>
       </title>
       <interlinear-gloss>
         <jbo>mi nelci lo na ca nolraitru be le frasygu'e</jbo>
@@ -275,34 +263,28 @@
       </interlinear-gloss>
     </example>
     <para>The claim of 
-    <xref linkend="example-random-id-eQaI" /> could apply to anyone except a person who is fond of no one at all, since the relation within the description is false for everyone. You cannot readily express these situations in colloquial English.</para>
-    <indexterm type="general">
-      <primary>anyone</primary>
-    </indexterm>
+    <xref linkend="example-random-id-eQaI"/> could apply to anyone except a person who is fond of no one at all, since the relation within the description is false for everyone. You cannot readily express these situations in colloquial English.</para>
+    
     <para>Negation with 
     <quote>na</quote> applies to an entire bridi, and not to just part of a selbri. Therefore, you won't likely have reason to put 
     <quote>na</quote> inside a tanru. In fact, the grammar currently does not allow you to do so (except in a lujvo and in elaborate constructs involving GUhA, the forethought connector for selbri). Any situation where you might want to do so can be expressed in a less-compressed non-tanru form. This grammatical restriction helps ensure that bridi negation is kept separate from other forms of negation.</para>
-    <indexterm type="general">
-      <primary>connector</primary>
-    </indexterm>
+    
     <para>The grammar of 
     <quote>na</quote> allows multiple adjacent negations, which cancel out, as in normal logic:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-RJKu">
       <title>
-        <anchor xml:id="c15e2d11" />
+        <anchor xml:id="c15e2d11"/>
       </title>
       <interlinear-gloss>
         <jbo>ti na na barda prenu co melbi mi</jbo>
         <en>This [false] [false] is-a-big person that is (beautiful to me).</en>
-        <indexterm type="general">
-          <primary>big person</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <para>which is the same as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2UpW">
       <title>
-        <anchor xml:id="c15e2d12" />
+        <anchor xml:id="c15e2d12"/>
       </title>
       <interlinear-gloss>
         <jbo>ti barda prenu co melbi mi</jbo>
@@ -313,27 +295,23 @@
     <quote>na</quote> is permitted in two positions: before or after the tag. No semantic difference between these forms has yet been defined, but this is not finally determined, since the interactions between tenses/modals and bridi negation have not been fully explored. In particular, it remains to be seen whether sentences using less familiar tenses, such as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-fgmv">
       <title>
-        <anchor xml:id="c15e2d13" />
+        <anchor xml:id="c15e2d13"/>
       </title>
       <interlinear-gloss>
         <jbo>mi [cu] ta'e klama le zarci</jbo>
-        <indexterm type="general">
-          <primary>ta'e</primary>
-        </indexterm>
+        
         <en>I habitually go to the market.</en>
       </interlinear-gloss>
     </example>
     <para>mean the same thing with 
     <quote>na</quote> before the 
     <quote>ta'e</quote>, as when the negation occurs afterwards; we'll let future, Lojban-speaking, logicians decide on how they relate to each other.</para>
-    <indexterm type="general">
-      <primary>ta'e</primary>
-    </indexterm>
+    
     <para>A final caution on translating English negations into Lojban: if you translate the English literally, you'll get the wrong one. With English causal statements, and other statements with auxiliary clauses, this problem is more likely.</para>
     <para>Thus, if you translate the English:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-hEa7">
       <title>
-        <anchor xml:id="c15e2d14" />
+        <anchor xml:id="c15e2d14"/>
       </title>
       <interlinear-gloss>
         <jbo>I do not go to the market because the car is broken.</jbo>
@@ -342,13 +320,11 @@
     <para>as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-q8su">
       <title>
-        <anchor xml:id="c15e2d15" />
+        <anchor xml:id="c15e2d15"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na klama le zarci ki'u lenu le karce cu spofu</jbo>
-        <indexterm type="general">
-          <primary>ki'u</primary>
-        </indexterm>
+        
         <gloss>I [false] go-to the market because the car is broken.</gloss>
         <en>It is false that: 
         <quote>I go to the market because the car is broken.</quote></en>
@@ -356,10 +332,10 @@
     </example>
     <para>you end up negating too much.</para>
     <para>Such mistranslations result from the ambiguity of English compounded by the messiness of natural language negation. A correct translation of the normal interpretation of 
-    <xref linkend="example-random-id-hEa7" /> is:</para>
+    <xref linkend="example-random-id-hEa7"/> is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-R3GU">
       <title>
-        <anchor xml:id="c15e2d16" />
+        <anchor xml:id="c15e2d16"/>
       </title>
       <interlinear-gloss>
         <jbo>lenu mi na klama le zarci cu se krinu</jbo>
@@ -370,17 +346,13 @@
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-R3GU" />, the negation is clearly confined to the event abstraction in the x1 sumti, and does not extend to the whole sentence. The English could also have been expressed by two separate sentences joined by a causal connective (which we'll not go into here).</para>
-    <indexterm type="general">
-      <primary>event abstraction</primary>
-    </indexterm>
+    <xref linkend="example-random-id-R3GU"/>, the negation is clearly confined to the event abstraction in the x1 sumti, and does not extend to the whole sentence. The English could also have been expressed by two separate sentences joined by a causal connective (which we'll not go into here).</para>
+    
     <para>The problem is not confined to obvious causals. In the English:</para>
-    <indexterm type="general">
-      <primary>causals</primary>
-    </indexterm>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-MGvB">
       <title>
-        <anchor xml:id="c15e2d17" />
+        <anchor xml:id="c15e2d17"/>
       </title>
       <interlinear-gloss>
         <jbo>I was not conscripted into the Army with the help of my uncle the Senator.</jbo>
@@ -389,7 +361,7 @@
     <para>we do not intend the uncle's help to be part of the negation. We must thus move the negation into an event clause or use two separate sentences. The event-clause version would look like:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-NILi">
       <title>
-        <anchor xml:id="c15e2d18" />
+        <anchor xml:id="c15e2d18"/>
       </title>
       <interlinear-gloss>
         <jbo>The event-of (my [false] being-conscripted-into the Army) was aided by my uncle the Senator.</jbo>
@@ -398,14 +370,14 @@
     <para>It is possible that someone will want to incorporate bridi negations into lujvo. For this reason, the rafsi 
     <quote>-nar-</quote> has been reserved for 
     <quote>na</quote>. However, before using this rafsi, make sure that you intend the contradictory bridi negation, and not the scalar negation described in 
-    <xref linkend="cll_chapter15-section3" />, which will be much more common in tanru and lujvo.</para>
+    <xref linkend="cll_chapter15-section3"/>, which will be much more common in tanru and lujvo.</para>
   </section>
   <section xml:id="cll_chapter15-section3">
     <title>Scalar Negation</title>
     <para>Let us now consider some other types of negation. For example, when we say:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-GJga">
       <title>
-        <anchor xml:id="c15e3d1" />
+        <anchor xml:id="c15e3d1"/>
       </title>
       <interlinear-gloss>
         <jbo>The chair is not brown.</jbo>
@@ -414,7 +386,7 @@
     <para>we make a positive inference - that the chair is some other color. Thus, it is legitimate to respond:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-DDN8">
       <title>
-        <anchor xml:id="c15e3d2" />
+        <anchor xml:id="c15e3d2"/>
       </title>
       <interlinear-gloss>
         <jbo>It is green.</jbo>
@@ -423,7 +395,7 @@
     <para>Whether we agree that the chair is brown or not, the fact that the statement refers to color has significant effect on how we interpret some responses. If we hear the following exchange:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-muQB">
       <title>
-        <anchor xml:id="c15e3d3" />
+        <anchor xml:id="c15e3d3"/>
       </title>
       <interlinear-gloss>
         <jbo>The chair is not brown.</jbo>
@@ -433,7 +405,7 @@
     <para>we immediately start to wonder about the unusual wood that isn't brown. If we hear the exchange:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-MxWM">
       <title>
-        <anchor xml:id="c15e3d4" />
+        <anchor xml:id="c15e3d4"/>
       </title>
       <interlinear-gloss>
         <jbo>Is the chair green?</jbo>
@@ -441,14 +413,12 @@
       </interlinear-gloss>
     </example>
     <para>we are unsettled because the response seems to be a non-sequitur. But since it might be true and it is a statement about the chair, one can't say it is entirely irrelevant!</para>
-    <indexterm type="general">
-      <primary>irrelevant</primary>
-    </indexterm>
+    
     <para>What is going on in these statements is something called 
     <quote>scalar negation</quote>. As the name suggests, scalar negation presumes an implied scale. A negation of this type not only states that one scalar value is false, but implies that another value on the scale must be true. This can easily lead to complications. The following exchange seems reasonably natural (a little suspension of disbelief in such inane conversation will help):</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-s5DJ">
       <title>
-        <anchor xml:id="c15e3d5" />
+        <anchor xml:id="c15e3d5"/>
       </title>
       <interlinear-gloss>
         <jbo>That isn't a blue house.</jbo>
@@ -458,7 +428,7 @@
     <para>We have acknowledged a scalar negation by providing a correct value which is another color in the set of colors permissible for houses. While a little less likely, the following exchange is also natural:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-M472">
       <title>
-        <anchor xml:id="c15e3d6" />
+        <anchor xml:id="c15e3d6"/>
       </title>
       <interlinear-gloss>
         <jbo>That isn't a blue house.</jbo>
@@ -469,7 +439,7 @@
     <para>Now, if the following exchange occurs:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-sq36">
       <title>
-        <anchor xml:id="c15e3d7" />
+        <anchor xml:id="c15e3d7"/>
       </title>
       <interlinear-gloss>
         <jbo>That isn't a blue house.</jbo>
@@ -481,7 +451,7 @@
     <quote>green car</quote> seem to be reasonably equivalent units that should be mutually replaceable in a sentence. It's just that we don't have a clear way in English to say:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-hd0I">
       <title>
-        <anchor xml:id="c15e3d8" />
+        <anchor xml:id="c15e3d8"/>
       </title>
       <interlinear-gloss>
         <jbo>That isn't a 
@@ -492,19 +462,19 @@
     <para>Another even more confusing example of scalar negation is to the sentence:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-JTrd">
       <title>
-        <anchor xml:id="c15e3d9" />
+        <anchor xml:id="c15e3d9"/>
       </title>
       <interlinear-gloss>
         <jbo>John didn't go to Paris from Rome.</jbo>
       </interlinear-gloss>
     </example>
     <para>Might 
-    <xref linkend="example-random-id-JTrd" /> imply that John went to Paris from somewhere else? Or did he go somewhere else from Rome? Or perhaps he didn't go anywhere at all: maybe someone else did, or maybe there was no event of going whatsoever. One can devise circumstances where any one, two or all three of these statements might be inferred by a listener.</para>
+    <xref linkend="example-random-id-JTrd"/> imply that John went to Paris from somewhere else? Or did he go somewhere else from Rome? Or perhaps he didn't go anywhere at all: maybe someone else did, or maybe there was no event of going whatsoever. One can devise circumstances where any one, two or all three of these statements might be inferred by a listener.</para>
     <para>In English, we have a clear way of distinguishing scalar negation from predicate negation that can be used in many situations. We can use the partial word 
     <quote>non-</quote> as a prefix. But this is not always considered good usage, even though it would render many statements much clearer. For example, we can clearly distinguish</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-gN3C">
       <title>
-        <anchor xml:id="c15e3d10" />
+        <anchor xml:id="c15e3d10"/>
       </title>
       <interlinear-gloss>
         <jbo>That is a non-blue house.</jbo>
@@ -513,20 +483,20 @@
     <para>from the related sentence</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-GtQC">
       <title>
-        <anchor xml:id="c15e3d11" />
+        <anchor xml:id="c15e3d11"/>
       </title>
       <interlinear-gloss>
         <jbo>That is a blue non-house.</jbo>
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-gN3C" /> and 
-    <xref linkend="example-random-id-GtQC" /> have the advantage that, while they contain a negative indication, they are in fact positive assertions. They say what is true by excluding the false; they do not say what is false.</para>
+    <xref linkend="example-random-id-gN3C"/> and 
+    <xref linkend="example-random-id-GtQC"/> have the advantage that, while they contain a negative indication, they are in fact positive assertions. They say what is true by excluding the false; they do not say what is false.</para>
     <para>We can't always use 
     <quote>non-</quote> though, because of the peculiarities of English's grammar. It would sound strange to say:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-A3yR">
       <title>
-        <anchor xml:id="c15e3d12" />
+        <anchor xml:id="c15e3d12"/>
       </title>
       <interlinear-gloss>
         <jbo>John went to non-Paris from Rome.</jbo>
@@ -535,7 +505,7 @@
     <para>or</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-sn2I">
       <title>
-        <anchor xml:id="c15e3d13" />
+        <anchor xml:id="c15e3d13"/>
       </title>
       <interlinear-gloss>
         <jbo>John went to Paris from non-Rome.</jbo>
@@ -547,7 +517,7 @@
     <para>Finally, we have natural language negations that are called polar negations, or opposites:</para>
     <example xml:id="example-random-id-qh2s" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e3d14" />
+        <anchor xml:id="c15e3d14"/>
       </title>
       <interlinear-gloss>
         <jbo>John is moral</jbo>
@@ -555,14 +525,14 @@
     </example>
     <example xml:id="example-random-id-qh3s" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e3d15" />
+        <anchor xml:id="c15e3d15"/>
       </title>
       <interlinear-gloss>
         <jbo>John is immoral</jbo>
       </interlinear-gloss>
     </example>
     <para>To be immoral is much more than to just be not moral: it implies the opposite condition. Statements like 
-    <xref linkend="example-random-id-qh3s" /> are strong negations which not only deny the truth of a statement, but assert its opposite. Since, 
+    <xref linkend="example-random-id-qh3s"/> are strong negations which not only deny the truth of a statement, but assert its opposite. Since, 
     <quote>opposite</quote> implies a scale, polar negations are a special variety of scalar negations.</para>
     <para>To examine this concept more closely, let us draw a linear scale, showing two examples of how the scale is used:</para>
     <cmavo-list>
@@ -584,9 +554,7 @@
     <quote>false</quote> in a bi-valued truth-functional logic, while in tri-valued logic an intermediate between 
     <quote>true</quote> and 
     <quote>false</quote> is permitted, and in fuzzy logic a continuous scale exists from true to false. The meaning of 
-    <indexterm type="general">
-      <primary>continuous</primary>
-    </indexterm>
+    
     <quote>not true</quote> requires a knowledge of which variety of truth scale is being considered.</para>
     <para>We will define the most general form of scalar negation as indicating only that the particular point or value in the scale or range is not valid and that some other (unspecified) point on the scale is correct. This is the intent expressed in most contexts by 
     <quote>not mild</quote>, for example.</para>
@@ -600,19 +568,19 @@
     <quote>il-</quote>, and 
     <quote>im-</quote>. Just which form and permissible values are implied by a scalar negation is dependent on the semantics of the word or concept which is being negated, and on the context. Much confusion in English results from the uncontrolled variations in meaning of these phrases and prefixes.</para>
     <para>In the examples of 
-    <xref linkend="cll_chapter15-section4" />, we will translate the general case of scalar negation using the general formula 
+    <xref linkend="cll_chapter15-section4"/>, we will translate the general case of scalar negation using the general formula 
     <quote>other than</quote> when a phrase is scalar-negated, and 
     <quote>non-</quote> when a single word is scalar-negated.</para>
   </section>
   <section xml:id="cll_chapter15-section4">
     <title>selbri and tanru negation</title>
     <para>All the scalar negations illustrated in 
-    <xref linkend="cll_chapter15-section3" /> are expressed in Lojban using the cmavo 
+    <xref linkend="cll_chapter15-section3"/> are expressed in Lojban using the cmavo 
     <quote>na'e</quote> (of selma'o NAhE). The most common use of 
     <quote>na'e</quote> is as a prefix to the selbri:</para>
     <example xml:id="example-random-id-qh42" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e4d1" />
+        <anchor xml:id="c15e4d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi klama le zarci</jbo>
@@ -621,7 +589,7 @@
     </example>
     <example xml:id="example-random-id-qH4n" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e4d2" />
+        <anchor xml:id="c15e4d2"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na'e klama le zarci</jbo>
@@ -629,19 +597,11 @@
       </interlinear-gloss>
     </example>
     <para>Comparing these two, we see that the negation operator being used in 
-    <indexterm type="general">
-      <primary>subtraction operator</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>subtraction operator</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>negative sign</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>negation operator</primary>
-    </indexterm>
-    <xref linkend="example-random-id-qH4n" /> is 
+    
+    
+    
+    
+    <xref linkend="example-random-id-qH4n"/> is 
     <quote>na'e</quote>. But what exactly does 
     <quote>na'e</quote> negate? Does the negation include only the gismu 
     <quote>klama</quote>, which is the entire selbri in this case, or does it include the 
@@ -649,10 +609,10 @@
     <quote>only the gismu</quote>. The cmavo 
     <quote>na'e</quote> always applies only to what follows it.</para>
     <para>
-    <xref linkend="example-random-id-qH4n" /> looks as if it were parallel to:</para>
+    <xref linkend="example-random-id-qH4n"/> looks as if it were parallel to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-tqX1">
       <title>
-        <anchor xml:id="c15e4d3" />
+        <anchor xml:id="c15e4d3"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na klama le zarci</jbo>
@@ -668,7 +628,7 @@
     <quote>na'e</quote> as well. The positive sentence</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-ETuV">
       <title>
-        <anchor xml:id="c15e4d4" />
+        <anchor xml:id="c15e4d4"/>
       </title>
       <interlinear-gloss>
         <jbo>mi cadzu klama le zarci</jbo>
@@ -678,7 +638,7 @@
     <para>can be subjected to selbri negation in several ways. Two are:</para>
     <example xml:id="example-random-id-qh4w" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e4d5" />
+        <anchor xml:id="c15e4d5"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na'e cadzu klama le zarci</jbo>
@@ -687,7 +647,7 @@
     </example>
     <example xml:id="example-random-id-qH6w" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e4d6" />
+        <anchor xml:id="c15e4d6"/>
       </title>
       <interlinear-gloss>
         <jbo>mi cadzu na'e klama le zarci</jbo>
@@ -696,17 +656,15 @@
     </example>
     <para>These negations show the default scope of 
     <quote>na'e</quote> is close-binding on an individual brivla in a tanru. 
-    <indexterm type="general">
-      <primary>close-binding</primary>
-    </indexterm>
-    <xref linkend="example-random-id-qh4w" /> says that I am going to the market, but in some kind of a non-walking manner. (As with most tanru, there are a few other possible interpretations, but we'll assume this one - see 
-    <xref linkend="chapter-selbri" /> for a discussion of tanru meaning).</para>
+    
+    <xref linkend="example-random-id-qh4w"/> says that I am going to the market, but in some kind of a non-walking manner. (As with most tanru, there are a few other possible interpretations, but we'll assume this one - see 
+    <xref linkend="chapter-selbri"/> for a discussion of tanru meaning).</para>
     <para>In neither 
-    <xref linkend="example-random-id-qh4w" /> nor 
-    <xref linkend="example-random-id-qH6w" /> does the 
+    <xref linkend="example-random-id-qh4w"/> nor 
+    <xref linkend="example-random-id-qH6w"/> does the 
     <quote>na'e</quote> negate the entire selbri. While both sentences contain negations that deny a particular relationship between the sumti, they also have a component which makes a positive claim about such a relationship. This is clearer in 
-    <xref linkend="example-random-id-qh4w" />, which says that I am going, but in a non-walking manner. In 
-    <xref linkend="example-random-id-qH6w" />, we have claimed that the relationship between me and the market in some way involves walking, but is not one of 
+    <xref linkend="example-random-id-qh4w"/>, which says that I am going, but in a non-walking manner. In 
+    <xref linkend="example-random-id-qH6w"/>, we have claimed that the relationship between me and the market in some way involves walking, but is not one of 
     <quote>going to</quote> (perhaps we are walking around the market, or walking-in-place while at the market).</para>
     <para>The 
     <quote>scale</quote>, or actually the 
@@ -716,7 +674,7 @@
     <quote>na'e</quote>):</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-t20b">
       <title>
-        <anchor xml:id="c15e4d7" />
+        <anchor xml:id="c15e4d7"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na'eke cadzu klama [ke'e] le zarci</jbo>
@@ -733,7 +691,7 @@
     <para>Negations of just part of the selbri are also permitted:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-PVct">
       <title>
-        <anchor xml:id="c15e4d8" />
+        <anchor xml:id="c15e4d8"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na'eke sutra cadzu ke'e klama le zarci</jbo>
@@ -742,7 +700,7 @@
       </interlinear-gloss>
     </example>
     <para>In 
-    <xref linkend="example-random-id-PVct" />, only the 
+    <xref linkend="example-random-id-PVct"/>, only the 
     <quote>sutra cadzu</quote> tanru is negated, so the speaker is indeed going to the market, but not by walking quickly.</para>
     <para>Negations made with 
     <quote>na'e</quote> or 
@@ -751,7 +709,7 @@
     <quote>bei</quote>. Such attached sumti are considered part of the brivla or tanru:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-MYYa">
       <title>
-        <anchor xml:id="c15e4d9" />
+        <anchor xml:id="c15e4d9"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na'e ke sutra cadzu be le mi birka ke'e klama le zarci</jbo>
@@ -759,11 +717,11 @@
       </interlinear-gloss>
     </example>
     <para>Note that 
-    <xref linkend="example-random-id-qh7T" /> and 
-    <xref linkend="example-random-id-qH8J" /> do not express the same thing:</para>
+    <xref linkend="example-random-id-qh7T"/> and 
+    <xref linkend="example-random-id-qH8J"/> do not express the same thing:</para>
     <example xml:id="example-random-id-qh7T" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e4d10" />
+        <anchor xml:id="c15e4d10"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na'eke sutra cadzu [ke'e] lemi birka</jbo>
@@ -773,7 +731,7 @@
     </example>
     <example xml:id="example-random-id-qH8J" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e4d11" />
+        <anchor xml:id="c15e4d11"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na'eke sutra cadzu be lemi birka [ke'e]</jbo>
@@ -782,7 +740,7 @@
       </interlinear-gloss>
     </example>
     <para>The translations show that the negation in 
-    <xref linkend="example-random-id-qh7T" /> is more restricted in scope; i.e. less of the sentence is negated with respect to x1 ( 
+    <xref linkend="example-random-id-qh7T"/> is more restricted in scope; i.e. less of the sentence is negated with respect to x1 ( 
     <quote>mi</quote>).</para>
     <para>Logical scope being an important factor in Lojban's claims to be unambiguous, let us indicate the relative precedence of 
     <quote>na'e</quote> as an operator. Grouping with 
@@ -792,9 +750,7 @@
     <quote>bo</quote>, is not as tightly bound as 
     <quote>na'e</quote>. 
     <quote>co</quote>, the tanru inversion operator has a scope that is longer than all other tanru constructs.</para>
-    <indexterm type="general">
-      <primary>tanru inversion</primary>
-    </indexterm>
+    
     <para>In short, 
     <quote>na'e</quote> and 
     <quote>na'eke</quote> define a type of negation, which is shorter in scope than bridi negation, and which affects all or part of a selbri. The result of 
@@ -805,7 +761,7 @@
     <quote>non-</quote>. Turning a series of related negations into lujvo gives:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2buq">
       <title>
-        <anchor xml:id="c15e4d12" />
+        <anchor xml:id="c15e4d12"/>
       </title>
       <interlinear-gloss>
         <jbo>na'e klama becomes nalkla</jbo>
@@ -818,9 +774,7 @@
     <quote>-kem-</quote> is the rafsi for 
     <quote>ke</quote>, but it is omitted in the final lujvo as superfluous - 
     <quote>ke'e</quote> is its own rafsi, and its inclusion in the lujvo implies a 
-    <indexterm type="general">
-      <primary>inclusion</primary>
-    </indexterm>
+    
     <quote>ke</quote> after the 
     <quote>-nal-</quote>, since it needs to close something; only a 
     <quote>ke</quote> immediately after the negation would make the 
@@ -836,7 +790,7 @@
     <quote>na'e</quote> in tanru; the translator must render the Lojban into English so it is clear in context. Let's go back to our simplest example:</para>
     <example xml:id="example-random-id-qh9c" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e4d13" />
+        <anchor xml:id="c15e4d13"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na'e klama le zarci</jbo>
@@ -846,7 +800,7 @@
     </example>
     <example xml:id="example-random-id-qH9e" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e4d14" />
+        <anchor xml:id="c15e4d14"/>
       </title>
       <interlinear-gloss>
         <jbo>mi nalkla le zarci</jbo>
@@ -859,7 +813,7 @@
     <para>Consider the following highly problematic sentence:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-GFFo">
       <title>
-        <anchor xml:id="c15e4d15" />
+        <anchor xml:id="c15e4d15"/>
       </title>
       <interlinear-gloss>
         <jbo>lo ca nolraitru be le fasygu'e cu krecau</jbo>
@@ -872,7 +826,7 @@
     <quote>na'e</quote> as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2maY">
       <title>
-        <anchor xml:id="c15e4d16" />
+        <anchor xml:id="c15e4d16"/>
       </title>
       <interlinear-gloss>
         <jbo>lo ca nolraitru be le fasygu'e cu na'e krecau</jbo>
@@ -883,7 +837,7 @@
     <para>or, as a lujvo:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-wGXL">
       <title>
-        <anchor xml:id="c15e4d17" />
+        <anchor xml:id="c15e4d17"/>
       </title>
       <interlinear-gloss>
         <jbo>lo ca nolraitru be le fasygu'e cu nalkrecau</jbo>
@@ -892,31 +846,21 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-2maY" /> and 
-    <xref linkend="example-random-id-wGXL" /> express the predicate negation forms using a negation word ( 
+    <xref linkend="example-random-id-2maY"/> and 
+    <xref linkend="example-random-id-wGXL"/> express the predicate negation forms using a negation word ( 
     <quote>na'e</quote>) or rafsi ( 
     <quote>-nal-</quote>); yet they make positive assertions about the current King of France; ie., that he is other-than-bald or non-bald. This follows from the close binding of 
     <quote>na'e</quote> to the brivla. The lujvo form makes this overt by absorbing the negative marker into the word.</para>
-    <indexterm type="general">
-      <primary>y-hyphen</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>r-hyphen</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>r-hyphen</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>n-hyphen</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>lujvo form</primary>
-    </indexterm>
+    
+    
+    
+    
+    
     <para>Since there is no current King of France, it is false to say that he is bald, or non-bald, or to make any other affirmative claim about him. Any sentence about the current King of France containing only a selbri negation is as false as the sentence without the negation. No amount of selbri negations have any effect on the truth value of the sentence, which is invariably 
     <quote>false</quote>, since no affirmative statement about the current King of France can be true. On the other hand, bridi negation does produce a truth:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Bwdy">
       <title>
-        <anchor xml:id="c15e4d18" />
+        <anchor xml:id="c15e4d18"/>
       </title>
       <interlinear-gloss>
         <jbo>lo ca nolraitru be le fasygu'e cu na krecau</jbo>
@@ -929,15 +873,15 @@
     <quote>le</quote> instead of 
     <quote>lo</quote> can be true even if there is no current king of France, as long as the speaker and the listener agree to describe something as the current king of France. (See the explanations of 
     <quote>le</quote> in 
-    <xref linkend="chapter-sumti" />.)</para>
+    <xref linkend="chapter-sumti"/>.)</para>
   </section>
   <section xml:id="cll_chapter15-section5">
     <title>Expressing scales in selbri negation</title>
     <para>In expressing a scalar negation, we can provide some indication of the scale, range, frame-of-reference, or universe of discourse that is being dealt with in an assertion. As stated in 
-    <xref linkend="cll_chapter15-section4" />, the default is the set of plausible alternatives. Thus if we say:</para>
+    <xref linkend="cll_chapter15-section4"/>, the default is the set of plausible alternatives. Thus if we say:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-mw3B">
       <title>
-        <anchor xml:id="c15e5d1" />
+        <anchor xml:id="c15e5d1"/>
       </title>
       <interlinear-gloss>
         <jbo>le stizu cu na'e xunre</jbo>
@@ -947,7 +891,7 @@
     <para>the pragmatic interpretation is that we mean a different color and not</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7iMz">
       <title>
-        <anchor xml:id="c15e5d2" />
+        <anchor xml:id="c15e5d2"/>
       </title>
       <interlinear-gloss>
         <jbo>le stizu cu dzukla be le zarci</jbo>
@@ -957,7 +901,7 @@
     <para>However, if we have reason to be more explicit (an obtuse or contrary listener, or simply an overt logical analysis), we can clarify that we are referring to a color by saying:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-yWSC">
       <title>
-        <anchor xml:id="c15e5d3" />
+        <anchor xml:id="c15e5d3"/>
       </title>
       <interlinear-gloss>
         <jbo>le stizu cu na'e xunre skari</jbo>
@@ -968,25 +912,21 @@
     <quote>as perceived by</quote> and 
     <quote>under conditions</quote> places have been added to the place structure of 
     <quote>xunre</quote>). But assume we have a really stubborn listener (an artificially semi-intelligent computer?) who will find a way to misinterpret 
-    <xref linkend="example-random-id-yWSC" /> even with three specific sumti provided.</para>
+    <xref linkend="example-random-id-yWSC"/> even with three specific sumti provided.</para>
     <para>In this case, we use a sumti tagged with the sumti tcita 
     <quote>ci'u</quote>, which translates roughly as 
-    <indexterm type="general">
-      <primary>ci'u</primary>
-    </indexterm>
+    
     <quote>on a scale of X</quote>, where 
     <quote>X</quote> is the sumti. For maximal clarity, the tagged sumti can be bound into the negated selbri with 
     <quote>be</quote>. To clarify 
-    <xref linkend="example-random-id-yWSC" />, we might say:</para>
+    <xref linkend="example-random-id-yWSC"/>, we might say:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-a8S1">
       <title>
-        <anchor xml:id="c15e5d4" />
+        <anchor xml:id="c15e5d4"/>
       </title>
       <interlinear-gloss>
         <jbo>le stizu cu na'e xunre be ci'u loka skari</jbo>
-        <indexterm type="general">
-          <primary>ci'u</primary>
-        </indexterm>
+        
         <en>The chair is a non-(red on-a-scale-of-colorness)-thing.</en>
       </interlinear-gloss>
     </example>
@@ -994,10 +934,10 @@
     <quote>teci'e</quote>, based on 
     <quote>ciste</quote>, which translates roughly as 
     <quote>of a system of components X</quote>, for universes of discourse; in this case, we would express 
-    <xref linkend="example-random-id-yWSC" /> as:</para>
+    <xref linkend="example-random-id-yWSC"/> as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-I0eV">
       <title>
-        <anchor xml:id="c15e5d5" />
+        <anchor xml:id="c15e5d5"/>
       </title>
       <interlinear-gloss>
         <jbo>le stizu cu na'e xunre be teci'e le skari</jbo>
@@ -1008,7 +948,7 @@
     <quote>ciste</quote> can be brought out using the grammar of selma'o BAI modals, allowing slightly different forms of expression, thus:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Rj71">
       <title>
-        <anchor xml:id="c15e5d6" />
+        <anchor xml:id="c15e5d6"/>
       </title>
       <interlinear-gloss>
         <jbo>le stizu cu na'e xunre be ci'e lo'i skari</jbo>
@@ -1019,7 +959,7 @@
     <quote>le'a</quote>, also in selma'o BAI, can be used to specify a category:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-5ibb">
       <title>
-        <anchor xml:id="c15e5d7" />
+        <anchor xml:id="c15e5d7"/>
       </title>
       <interlinear-gloss>
         <jbo>le stizu cu na'e xunre be le'a lo'i skari</jbo>
@@ -1027,20 +967,18 @@
       </interlinear-gloss>
     </example>
     <para>which is minimally different in meaning from 
-    <xref linkend="example-random-id-Rj71" />.</para>
+    <xref linkend="example-random-id-Rj71"/>.</para>
     <para>The cmavo 
     <quote>na'e</quote> is not the only member of selma'o NAhE. If we want to express a scalar negation which is a polar opposite, we use the cmavo 
     <quote>to'e</quote>, which is grammatically equivalent to 
     <quote>na'e</quote>:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-RuvP">
       <title>
-        <anchor xml:id="c15e5d8" />
+        <anchor xml:id="c15e5d8"/>
       </title>
       <interlinear-gloss>
         <jbo>le stizu cu to'e xunre be ci'u loka skari</jbo>
-        <indexterm type="general">
-          <primary>ci'u</primary>
-        </indexterm>
+        
         <en>The chair is a (opposite-of red) on-scale a-property-of color-ness.</en>
       </interlinear-gloss>
     </example>
@@ -1052,7 +990,7 @@
     <quote>to'e</quote>:</para>
     <example xml:id="example-random-id-qH9T" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e5d9" />
+        <anchor xml:id="c15e5d9"/>
       </title>
       <interlinear-gloss>
         <jbo>ta melbi</jbo>
@@ -1061,7 +999,7 @@
     </example>
     <example xml:id="example-random-id-qh9U" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e5d10" />
+        <anchor xml:id="c15e5d10"/>
       </title>
       <interlinear-gloss>
         <jbo>ta na'e melbi</jbo>
@@ -1072,7 +1010,7 @@
     </example>
     <example xml:id="example-random-id-qhAI" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e5d11" />
+        <anchor xml:id="c15e5d11"/>
       </title>
       <interlinear-gloss>
         <jbo>ta no'e melbi</jbo>
@@ -1082,7 +1020,7 @@
     </example>
     <example xml:id="example-random-id-qHAV" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e5d12" />
+        <anchor xml:id="c15e5d12"/>
       </title>
       <interlinear-gloss>
         <jbo>ta to'e melbi</jbo>
@@ -1097,8 +1035,8 @@
     <quote>no'e</quote> has the assigned rafsi 
     <quote>-nor-</quote> and 
     <quote>-no'e-</quote>. The selbri in 
-    <xref linkend="example-random-id-qh9U" /> through 
-    <xref linkend="example-random-id-qHAV" /> could be replaced by the lujvo 
+    <xref linkend="example-random-id-qh9U"/> through 
+    <xref linkend="example-random-id-qHAV"/> could be replaced by the lujvo 
     <quote>nalmle</quote>, 
     <quote>normle</quote>, and 
     <quote>tolmle</quote> respectively.</para>
@@ -1109,25 +1047,19 @@
     <para>Correspondingly, some selbri have no obvious 
     <quote>to'e</quote>- what is the opposite of a dog? - while others have more than one, and need 
     <quote>ci'u</quote> to specify which opposite is meant.</para>
-    <indexterm type="general">
-      <primary>ci'u</primary>
-    </indexterm>
+    
   </section>
   <section xml:id="cll_chapter15-section6">
     <title>sumti negation</title>
     <para>There are two ways of negating sumti in Lojban. We have the choice of quantifying the sumti with zero, or of applying the sumti-negator 
     <quote>na'ebo</quote> before the sumti. It turns out that a zero quantification serves for contradictory negation. As the cmavo we use implies, 
-    <indexterm type="general">
-      <primary>na'ebo</primary>
-    </indexterm>
+    
     <quote>na'ebo</quote> forms a scalar negation.</para>
-    <indexterm type="general">
-      <primary>na'ebo</primary>
-    </indexterm>
+    
     <para>Let us show examples of each.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-PL1E">
       <title>
-        <anchor xml:id="c15e6d1" />
+        <anchor xml:id="c15e6d1"/>
       </title>
       <interlinear-gloss>
         <jbo>no lo ca nolraitru be le fasygu'e cu krecau</jbo>
@@ -1136,38 +1068,32 @@
       </interlinear-gloss>
     </example>
     <para>Is 
-    <xref linkend="example-random-id-PL1E" /> true? Yes, because it merely claims that of the current Kings of France, however many there may be, none are bald, which is plainly true, since there are no such current Kings of France.</para>
+    <xref linkend="example-random-id-PL1E"/> true? Yes, because it merely claims that of the current Kings of France, however many there may be, none are bald, which is plainly true, since there are no such current Kings of France.</para>
     <para>Now let us look at the same sentence using 
     <quote>na'ebo</quote> negation:</para>
-    <indexterm type="general">
-      <primary>na'ebo</primary>
-    </indexterm>
+    
     <example role="interlinear-gloss-example" xml:id="example-random-id-LebJ">
       <title>
-        <anchor xml:id="c15e6d2" />
+        <anchor xml:id="c15e6d2"/>
       </title>
       <interlinear-gloss>
         <jbo>na'ebo lo ca nolraitru be le fasygu'e cu krecau</jbo>
-        <indexterm type="general">
-          <primary>na'ebo</primary>
-        </indexterm>
+        
         <gloss>[Something] other-than-(the-current-noblest-governor of the French country) is-hair-without.</gloss>
         <en>Something other than the current King of France is bald.</en>
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-LebJ" /> is true provided that something reasonably describable as 
+    <xref linkend="example-random-id-LebJ"/> is true provided that something reasonably describable as 
     <quote>other than a current King of France</quote>, such as the King of Saudi Arabia, or a former King of France, is in fact bald.</para>
     <para>In place of 
     <quote>na'ebo</quote>, you may also use 
-    <indexterm type="general">
-      <primary>na'ebo</primary>
-    </indexterm>
+    
     <quote>no'ebo</quote> and 
     <quote>to'ebo</quote>, to be more specific about the sumti which would be appropriate in place of the stated sumti. Good examples are hard to come by, but here's a valiant try:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-S4AU">
       <title>
-        <anchor xml:id="c15e6d3" />
+        <anchor xml:id="c15e6d3"/>
       </title>
       <interlinear-gloss>
         <jbo>mi klama to'ebo la bastn.</jbo>
@@ -1190,14 +1116,14 @@
     <para>The following are places where 
     <quote>nai</quote> is used:</para>
     <para>When attached to tenses and modals (see 
-    <xref linkend="chapter-tenses" />), the 
+    <xref linkend="chapter-tenses"/>), the 
     <quote>nai</quote> suffix usually indicates a contradictory negation of the tagged bridi. Thus 
     <quote>punai</quote> as a tense inflection means 
     <quote>not-in-the-past</quote>, or 
     <quote>not-previously</quote>, without making any implication about any other time period unless explicitly stated. As a result,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-PprX">
       <title>
-        <anchor xml:id="c15e7d1" />
+        <anchor xml:id="c15e7d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi na pu klama le zarci</jbo>
@@ -1208,7 +1134,7 @@
     <para>and</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-0hv2">
       <title>
-        <anchor xml:id="c15e7d2" />
+        <anchor xml:id="c15e7d2"/>
       </title>
       <interlinear-gloss>
         <jbo>mi punai klama le zarci</jbo>
@@ -1222,10 +1148,10 @@
     <quote>pu naje ca</quote>.</para>
     <para>As a special case, a 
     <quote>-nai</quote> attached to the interval modifiers of selma'o TAhE, ROI, or ZAhO (explained in 
-    <xref linkend="chapter-tenses" />) signals a scalar negation:</para>
+    <xref linkend="chapter-tenses"/>) signals a scalar negation:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-4YYQ">
       <title>
-        <anchor xml:id="c15e7d3" />
+        <anchor xml:id="c15e7d3"/>
       </title>
       <interlinear-gloss>
         <jbo>mi paroinai dansu le bisli</jbo>
@@ -1233,50 +1159,40 @@
       </interlinear-gloss>
     </example>
     <para>means that I dance on the ice either zero or else two or more times within the relevant time interval described by the bridi. 
-    <xref linkend="example-random-id-4YYQ" /> is very different from the English use of 
+    <xref linkend="example-random-id-4YYQ"/> is very different from the English use of 
     <quote>not once</quote>, which is an emphatic way of saying 
     <quote>never</quote>- that is, exactly zero times.</para>
     <para>In indicators and attitudinals of selma'o UI or CAI, 
     <quote>nai</quote> denotes a polar negation. As discussed in 
-    <xref linkend="chapter-attitudinals" />, most indicators have an implicit scale, and 
+    <xref linkend="chapter-attitudinals"/>, most indicators have an implicit scale, and 
     <quote>nai</quote> changes the indicator to refer to the opposite end of the scale. Thus 
     <quote>.uinai</quote> expresses unhappiness, and 
     <quote>.ienai</quote> expresses disagreement (not ambivalence, which is expressed with the neutral or undecided intensity as 
     <quote>.iecu'i</quote>).</para>
     <para>Vocative cmavo of selma'o COI are considered a kind of indicator, but one which identifies the listener. Semantically, we could dispense with about half of the COI selma'o words based on the scalar paradigm. For example, 
-    <indexterm type="general">
-      <primary>pause before name</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>COI selma'o</primary>
-    </indexterm>
+    
+    
     <quote>co'o</quote> could be expressed as 
     <quote>coinai</quote>. However, this is not generally done.</para>
     <para>Most of the COI cmavo are used in what are commonly called protocol situations. These protocols are used, for example, in radio conversations, which often take place in a noisy environment. The negatives of protocol words tend to convey diametrically opposite communications situations (as might be expected). Therefore, only one protocol vocative is dependent on 
-    <indexterm type="general">
-      <primary>protocol</primary>
-    </indexterm>
+    
     <quote>nai</quote>: negative acknowledgement, which is 
     <quote>je'enai</quote> ( 
     <quote>I didn't get that</quote>).</para>
     <para>Unlike the attitudinal indicators, which tend to be unimportant in noisy situations, the protocol vocatives become more important. So if, in a noisy environment, a protocol listener makes out only 
-    <indexterm type="general">
-      <primary>protocol</primary>
-    </indexterm>
-    <indexterm type="general">
-      <primary>attitudinal indicators</primary>
-    </indexterm>
+    
+    
     <quote>nai</quote>, he or she can presume it is a negative acknowledgement and repeat transmission or otherwise respond accordingly. 
-    <xref linkend="chapter-attitudinals" /> provides more detail on this topic.</para>
+    <xref linkend="chapter-attitudinals"/> provides more detail on this topic.</para>
     <para>The abstractors of selma'o NU follow the pattern of the tenses and modals. NU allows negative abstractions, especially in compound abstractions connected by logical connectives: 
     <quote>su'ujeninai</quote>, which corresponds to 
     <quote>su'u jenai ni</quote> just as 
     <quote>punai je ca</quote> corresponds to 
     <quote>pu naje ca</quote>. It is not clear how much use logically connected abstractors will be: see 
-    <xref linkend="chapter-attitudinals" />.</para>
+    <xref linkend="chapter-attitudinals"/>.</para>
     <para>A 
     <quote>nai</quote> attached to a non-logical connective (of selma'o JOI or BIhI) is a scalar negation, and says that the bridi is false under the specified mixture, but that another connective is applicable. Non-logical connectives are discussed in 
-    <xref linkend="chapter-connectives" />.</para>
+    <xref linkend="chapter-connectives"/>.</para>
   </section>
   <section xml:id="cll_chapter15-section8">
     <title>Truth questions</title>
@@ -1286,7 +1202,7 @@
     <quote>xu</quote> is in selma'o UI; placed at the beginning of a sentence, it asks whether the sentence as a whole is true or false.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-5y84">
       <title>
-        <anchor xml:id="c15e8d1" />
+        <anchor xml:id="c15e8d1"/>
       </title>
       <interlinear-gloss>
         <jbo>xu la djan. pu klama la paris. .e la rom.</jbo>
@@ -1295,14 +1211,12 @@
     </example>
     <para>You can now use each of the several kinds of negation we've discussed in answer to this (presuming the same question and context for each answer).</para>
     <para>The straightforward negative answer is grammatically equivalent to the expanded sentence with the 
-    <indexterm type="general">
-      <primary>negative answer</primary>
-    </indexterm>
+    
     <quote>na</quote> immediately after the 
     <quote>cu</quote> (and before any tense/modal):</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-DMAd">
       <title>
-        <anchor xml:id="c15e8d2" />
+        <anchor xml:id="c15e8d2"/>
       </title>
       <interlinear-gloss>
         <jbo>na go'i</jbo>
@@ -1313,7 +1227,7 @@
     <para>which means</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-mQSJ">
       <title>
-        <anchor xml:id="c15e8d3" />
+        <anchor xml:id="c15e8d3"/>
       </title>
       <interlinear-gloss>
         <jbo>la djan. [cu] na pu klama la paris. .e la rom.</jbo>
@@ -1325,7 +1239,7 @@
     <quote>na</quote> in either before or after the new tense:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-rii2">
       <title>
-        <anchor xml:id="c15e8d4" />
+        <anchor xml:id="c15e8d4"/>
       </title>
       <interlinear-gloss>
         <jbo>na ba go'i</jbo>
@@ -1335,7 +1249,7 @@
     <para>meaning</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Fn2c">
       <title>
-        <anchor xml:id="c15e8d5" />
+        <anchor xml:id="c15e8d5"/>
       </title>
       <interlinear-gloss>
         <jbo>la djan. [cu] na ba klama la paris. .e la rom.</jbo>
@@ -1346,7 +1260,7 @@
     <para>or alternatively</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-acM9">
       <title>
-        <anchor xml:id="c15e8d6" />
+        <anchor xml:id="c15e8d6"/>
       </title>
       <interlinear-gloss>
         <jbo>ba na go'i</jbo>
@@ -1356,7 +1270,7 @@
     <para>meaning</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2SK0">
       <title>
-        <anchor xml:id="c15e8d7" />
+        <anchor xml:id="c15e8d7"/>
       </title>
       <interlinear-gloss>
         <jbo>la djan. [cu] ba na klama la paris. .e la rom.</jbo>
@@ -1364,15 +1278,15 @@
       </interlinear-gloss>
     </example>
     <para>We stated in 
-    <xref linkend="cll_chapter15-section3" /> that sentences like 
-    <xref linkend="example-random-id-Fn2c" /> and 
-    <xref linkend="example-random-id-2SK0" /> appear to be semantically identical, but that subtle semantic distinctions may eventually be found.</para>
+    <xref linkend="cll_chapter15-section3"/> that sentences like 
+    <xref linkend="example-random-id-Fn2c"/> and 
+    <xref linkend="example-random-id-2SK0"/> appear to be semantically identical, but that subtle semantic distinctions may eventually be found.</para>
     <para>You can also use a scalar negation with 
     <quote>na'e</quote>, in which case, it is equivalent to putting a 
     <quote>na'eke</quote> immediately after any tense:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-q70h">
       <title>
-        <anchor xml:id="c15e8d8" />
+        <anchor xml:id="c15e8d8"/>
       </title>
       <interlinear-gloss>
         <jbo>na'e go'i</jbo>
@@ -1382,7 +1296,7 @@
     <para>which means</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-nQRQ">
       <title>
-        <anchor xml:id="c15e8d9" />
+        <anchor xml:id="c15e8d9"/>
       </title>
       <interlinear-gloss>
         <jbo>la djan. [cu] pu na'eke klama</jbo>
@@ -1400,10 +1314,10 @@
     <para>There is an explicit positive form for both selma'o NA ( 
     <quote>ja'a</quote>) and selma'o NAhE ( 
     <quote>je'a</quote>), each of which would supplant the corresponding negator in the grammatical position used, allowing one to assert the positive in response to a negative question or statement without confusion. Assuming the same context as in 
-    <xref linkend="cll_chapter15-section8" />:</para>
+    <xref linkend="cll_chapter15-section8"/>:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-KhoH">
       <title>
-        <anchor xml:id="c15e9d1" />
+        <anchor xml:id="c15e9d1"/>
       </title>
       <interlinear-gloss>
         <jbo>xu na go'i</jbo>
@@ -1413,7 +1327,7 @@
     <para>or equivalently</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-8VCt">
       <title>
-        <anchor xml:id="c15e9d2" />
+        <anchor xml:id="c15e9d2"/>
       </title>
       <interlinear-gloss>
         <jbo>xu la djan. [cu] na pu klama</jbo>
@@ -1425,7 +1339,7 @@
     <para>The obvious, but incorrect, positive response to this negative question is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-F3LE">
       <title>
-        <anchor xml:id="c15e9d3" />
+        <anchor xml:id="c15e9d3"/>
       </title>
       <interlinear-gloss>
         <jbo>go'i</jbo>
@@ -1435,11 +1349,11 @@
     <para>A plain 
     <quote>go'i</quote> does not mean 
     <quote>Yes it is</quote>; it merely abbreviates repeating the previous statement unmodified, including any negators present; and 
-    <xref linkend="example-random-id-F3LE" /> actually states that it is false that John went to both Paris and Rome.</para>
+    <xref linkend="example-random-id-F3LE"/> actually states that it is false that John went to both Paris and Rome.</para>
     <para>When considering:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Pgrw">
       <title>
-        <anchor xml:id="c15e9d4" />
+        <anchor xml:id="c15e9d4"/>
       </title>
       <interlinear-gloss>
         <jbo>na go'i</jbo>
@@ -1447,19 +1361,17 @@
       </interlinear-gloss>
     </example>
     <para>as a response to a negative question like 
-    <xref linkend="example-random-id-8VCt" />, Lojban designers had to choose between two equally plausible interpretations with opposite effects. Does 
-    <xref linkend="example-random-id-Pgrw" /> create a double negative in the sentence by adding a new 
+    <xref linkend="example-random-id-8VCt"/>, Lojban designers had to choose between two equally plausible interpretations with opposite effects. Does 
+    <xref linkend="example-random-id-Pgrw"/> create a double negative in the sentence by adding a new 
     <quote>na</quote> to the one already there (forming a double negative and hence a positive statement), or does the 
     <quote>na</quote> replace the previous one, leaving the sentence unchanged?</para>
     <para>It was decided that substitution, the latter alternative, is the preferable choice, since it is then clear whether we intend a positive or a negative sentence without performing any manipulations. This is the way English usually works, but not all languages work this way - Russian, Japanese, and Navajo all interpret a negative reply to a negative question as positive.</para>
-    <indexterm type="general">
-      <primary>Navajo</primary>
-    </indexterm>
+    
     <para>The positive assertion cmavo of selma'o NA, which is "ja'a", can also replace the 
     <quote>na</quote> in the context, giving:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-iUfV">
       <title>
-        <anchor xml:id="c15e9d5" />
+        <anchor xml:id="c15e9d5"/>
       </title>
       <interlinear-gloss>
         <jbo>ja'a go'i</jbo>
@@ -1471,7 +1383,7 @@
     <quote>na</quote> in a similar manner wherever the latter is used:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-mrtu">
       <title>
-        <anchor xml:id="c15e9d6" />
+        <anchor xml:id="c15e9d6"/>
       </title>
       <interlinear-gloss>
         <jbo>mi ja'a klama le zarci</jbo>
@@ -1483,7 +1395,7 @@
     <quote>na'e</quote> in exactly the same way, stating that scalar negation does not apply, and that the relation indeed holds as stated. In the absence of a negation context, it emphasizes the positive:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-toQK">
       <title>
-        <anchor xml:id="c15e9d7" />
+        <anchor xml:id="c15e9d7"/>
       </title>
       <interlinear-gloss>
         <jbo>ta je'a melbi</jbo>
@@ -1496,28 +1408,24 @@
     <para>The question of truth or falsity is not entirely synonymous with negation. Consider the English sentence</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-QsJ9">
       <title>
-        <anchor xml:id="c15e10d1" />
+        <anchor xml:id="c15e10d1"/>
       </title>
       <interlinear-gloss>
         <jbo>I have not stopped beating my wife.</jbo>
       </interlinear-gloss>
     </example>
     <para>If I never started such a heinous activity, then this sentence is neither true nor false. Such a negation simply says that something is wrong with the non-negated statement. Generally, we then use either tone of voice or else a correction to express a preferred true claim: 
-    <indexterm type="general">
-      <primary>tone of voice</primary>
-    </indexterm>
+    
     <quote>I never have beaten my wife.</quote></para>
     <para>Negations which follow such a pattern are called 
     <quote>metalinguistic negations</quote>. In natural languages, the mark of metalinguistic negation is that an indication of a correct statement always, or almost always, follows the negation. Tone of voice or emphasis may be further used to clarify the error.</para>
     <para>Negations of every sort must be expressible in Lojban; errors are inherent to human thought, and are not excluded from the language. When such negations are metalinguistic, we must separate them from logical claims about the truth or falsity of the statement, as well as from scalar negations which may not easily express (or imply) the preferred claim. Because Lojban allows concepts to be so freely combined in tanru, limits on what is plausible or not plausible tend to be harder to determine.</para>
     <para>Mimicking the muddled nature of natural language negation would destroy this separation. Since Lojban does not use tone of voice, we need other means to metalinguistically indicate what is wrong with a statement. When the statement is entirely inappropriate, we need to be able to express metalinguistic negation in a more non-specific fashion.</para>
-    <indexterm type="general">
-      <primary>tone of voice</primary>
-    </indexterm>
+    
     <para>Here is a list of some different kinds of metalinguistic negation with English-language examples:</para>
     <example xml:id="example-random-id-qhbg" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d2" />
+        <anchor xml:id="c15e10d2"/>
       </title>
       <interlinear-gloss>
         <jbo>I have not 
@@ -1528,7 +1436,7 @@
     </example>
     <example xml:id="example-random-id-qHcI" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d3" />
+        <anchor xml:id="c15e10d3"/>
       </title>
       <interlinear-gloss>
         <jbo>5 is not blue</jbo>
@@ -1537,19 +1445,17 @@
     </example>
     <example xml:id="example-random-id-qHEQ" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d4" />
+        <anchor xml:id="c15e10d4"/>
       </title>
       <interlinear-gloss>
         <jbo>The current King of France is not bald.</jbo>
         <en>(there is no current King of France - existential failure)</en>
-        <indexterm type="general">
-          <primary>existential</primary>
-        </indexterm>
+        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qhet" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d5" />
+        <anchor xml:id="c15e10d5"/>
       </title>
       <interlinear-gloss>
         <jbo>I do not have THREE children.</jbo>
@@ -1558,7 +1464,7 @@
     </example>
     <example xml:id="example-random-id-qhEU" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d6" />
+        <anchor xml:id="c15e10d6"/>
       </title>
       <interlinear-gloss>
         <jbo>I have not held THREE jobs previously, but four.</jbo>
@@ -1568,7 +1474,7 @@
     </example>
     <example xml:id="example-random-id-qhf5" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d7" />
+        <anchor xml:id="c15e10d7"/>
       </title>
       <interlinear-gloss>
         <jbo>It is not good, but bad.</jbo>
@@ -1578,7 +1484,7 @@
     </example>
     <example xml:id="example-random-id-qHhA" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d8" />
+        <anchor xml:id="c15e10d8"/>
       </title>
       <interlinear-gloss>
         <jbo>She is not PRETTY; she is beautiful.</jbo>
@@ -1587,7 +1493,7 @@
     </example>
     <example xml:id="example-random-id-qhHI" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d9" />
+        <anchor xml:id="c15e10d9"/>
       </title>
       <interlinear-gloss>
         <jbo>The house is not blue, but green.</jbo>
@@ -1596,7 +1502,7 @@
     </example>
     <example xml:id="example-random-id-qHHw" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d10" />
+        <anchor xml:id="c15e10d10"/>
       </title>
       <interlinear-gloss>
         <jbo>The house is not blue, but is colored.</jbo>
@@ -1605,7 +1511,7 @@
     </example>
     <example xml:id="example-random-id-qHI4" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d11" />
+        <anchor xml:id="c15e10d11"/>
       </title>
       <interlinear-gloss>
         <jbo>The cat is not blue, but long-haired.</jbo>
@@ -1614,7 +1520,7 @@
     </example>
     <example xml:id="example-random-id-qHja" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d12" />
+        <anchor xml:id="c15e10d12"/>
       </title>
       <interlinear-gloss>
         <jbo>A: He ain't coming today.</jbo>
@@ -1625,7 +1531,7 @@
     </example>
     <example xml:id="example-random-id-qHJi" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d13" />
+        <anchor xml:id="c15e10d13"/>
       </title>
       <interlinear-gloss>
         <jbo>I haven't STOOPED beating my wife; I've STOPPED.</jbo>
@@ -1634,7 +1540,7 @@
     </example>
     <example xml:id="example-random-id-qhJj" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d14" />
+        <anchor xml:id="c15e10d14"/>
       </title>
       <interlinear-gloss>
         <jbo>Not only was it a sheep, it was a black sheep.</jbo>
@@ -1654,9 +1560,7 @@
     <quote>na'i</quote> need not be assumed to cancel each other. Indeed, we can use the position of 
     <quote>na'i</quote> to indicate metalinguistically what is incorrect, preparatory to correcting it in a later sentence; for this reason, we give 
     <quote>na'i</quote> the grammar of UI. The inclusion of 
-    <indexterm type="general">
-      <primary>inclusion</primary>
-    </indexterm>
+    
     <quote>na'i</quote> anywhere in a sentence makes it a non-assertion, and suggests one or more pitfalls in assigning a truth value.</para>
     <para>Let us briefly indicate how the above-mentioned metalinguistic errors can be identified. Other metalinguistic problems can then be marked by devising analogies to these examples:</para>
     <para>Existential failure can be marked by attaching 
@@ -1664,7 +1568,7 @@
     <quote>lo</quote> or the 
     <quote>poi</quote> in a 
     <quote>da poi</quote>-form sumti. (See Chapter 6 and 
-    <xref linkend="chapter-quantifiers" /> for details on these constructions.) Remember that if a 
+    <xref linkend="chapter-quantifiers"/> for details on these constructions.) Remember that if a 
     <quote>le</quote> sumti seems to refer to a non-existent referent, you may not understand what the speaker has in mind - the appropriate response is then 
     <quote>ki'a</quote>, asking for clarification.</para>
     <para>Presupposition failure can be marked directly if the presupposition is overt; if not, one can insert a 
@@ -1672,23 +1576,19 @@
     <quote>ji'u</quote>; 
     <quote>ji'uku</quote> thus explicitly refers to an unexpressed assumption, and 
     <quote>ji'una'iku</quote> metalinguistically says that something is wrong with that assumption. (See 
-    <xref linkend="chapter-tenses" />.)</para>
+    <xref linkend="chapter-tenses"/>.)</para>
     <para>Scale errors and category errors can be similarly expressed with selma'o BAI. 
     <quote>le'a</quote> has meaning 
     <quote>of category/class/type X</quote>, 
     <quote>ci'u</quote> has meaning 
-    <indexterm type="general">
-      <primary>ci'u</primary>
-    </indexterm>
+    
     <quote>on scale X</quote>, and 
     <quote>ci'e</quote>, based on 
     <quote>ciste</quote>, can be used to talk about universes of discourse defined either as systems or sets of components, as shown in 
-    <xref linkend="cll_chapter15-section8" />. 
+    <xref linkend="cll_chapter15-section8"/>. 
     <quote>kai</quote> and 
     <quote>la'u</quote> also exist in BAI for discussing other quality and quantity errors.</para>
-    <indexterm type="general">
-      <primary>quality and quantity</primary>
-    </indexterm>
+    
     <para>We have to make particular note of potential problems in the areas of undue quantity and incorrect scale/category. Assertions about the relationships between gismu are among the basic substance of the language. It is thus invalid to logically require that if something is blue, that it is colored, or if it is not-blue, then it is some other color. In Lojban, 
     <quote>blanu</quote> ( 
     <quote>blue</quote>) is not explicitly defined as a 
@@ -1697,39 +1597,29 @@
     <quote>good</quote> is 
     <quote>bad</quote>.</para>
     <para>This mutual independence of gismu is only an ideal. Pragmatically, people will categorize things based on their world-views. We will write dictionary definitions that will relate gismu, unfortunately including some of these world-view assumptions. Lojbanists should try to minimize these assumptions, but this seems a likely area where logical rules will break down (or where Sapir-Whorf effects will be made evident). In terms of negation, however, it is vital that we clearly preserve the capability of denying a presumably obvious scale or category assumption.</para>
-    <indexterm type="general">
-      <primary>Sapir-Whorf effects</primary>
-    </indexterm>
+    
     <para>Solecisms, grammatical and spelling errors will be marked by marking the offending word or phrase with 
     <quote>na'i</quote> (in the manner of any selma'o UI cmavo). In this sense, 
     <quote>na'i</quote> becomes equivalent to the English metalinguistic marker 
     <quote>[sic]</quote>. Purists may choose to use ZOI or LOhU/LEhU quotes or 
     <quote>sa'a</quote>-marked corrections to avoid repeating a truly unparsable passage, especially if a computer is to analyze the speech/text. See 
-    <indexterm type="general">
-      <primary>sa'a</primary>
-    </indexterm>
-    <xref linkend="chapter-structure" /> for explanations of these usages.</para>
+    
+    <xref linkend="chapter-structure"/> for explanations of these usages.</para>
     <para>In summary, metalinguistic negation will typically take the form of referring to a previous statement and marking it with one or more 
     <quote>na'i</quote> to indicate what metalinguistic errors have been made, and then repeating the statement with corrections. References to previous statements may be full repetitions, or may use members of selma'o GOhA. 
     <quote>na'i</quote> at the beginning of a statement merely says that something is inappropriate about the statement, without specificity.</para>
-    <indexterm type="general">
-      <primary>specificity</primary>
-    </indexterm>
+    
     <para>In normal use, metalinguistic negation requires that a corrected statement follow the negated statement. In Lojban, however, it is possible to completely and unambiguously specify metalinguistic errors without correcting them. It will eventually be seen whether an uncorrected metalinguistic negation remains an acceptable form in Lojban. In such a statement, metalinguistic expression would involve an ellipsis not unlike that of tenseless expression.</para>
-    <indexterm type="general">
-      <primary>ellipsis</primary>
-    </indexterm>
+    
     <para>Note that metalinguistic negation gives us another kind of legitimate negative answer to a 
-    <indexterm type="general">
-      <primary>negative answer</primary>
-    </indexterm>
+    
     <quote>xu</quote> question (see 
-    <xref linkend="cll_chapter15-section8" />). 
+    <xref linkend="cll_chapter15-section8"/>). 
     <quote>na'i</quote> will be used when something about the questioned statement is inappropriate, such as in questions like 
     <quote>Have you stopped beating your wife?</quote>:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-SfSU">
       <title>
-        <anchor xml:id="c15e10d15" />
+        <anchor xml:id="c15e10d15"/>
       </title>
       <interlinear-gloss>
         <jbo>xu do sisti lezu'o do rapydarxi ledo fetspe</jbo>
@@ -1739,7 +1629,7 @@
     <para>Responses could include:</para>
     <example xml:id="example-random-id-qHJJ" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d16" />
+        <anchor xml:id="c15e10d16"/>
       </title>
       <interlinear-gloss>
         <jbo>na'i go'i</jbo>
@@ -1748,7 +1638,7 @@
     </example>
     <example xml:id="example-random-id-qHKe" role="interlinear-gloss-example">
       <title>
-        <anchor xml:id="c15e10d17" />
+        <anchor xml:id="c15e10d17"/>
       </title>
       <interlinear-gloss>
         <jbo>go'i na'i</jbo>
@@ -1758,7 +1648,7 @@
     <para>One can also specifically qualify the metalinguistic negation, by explicitly repeating the erroneous portion of the bridi to be metalinguistically negated, or adding on of the selma'o BAI qualifiers mentioned above:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-ANpd">
       <title>
-        <anchor xml:id="c15e10d18" />
+        <anchor xml:id="c15e10d18"/>
       </title>
       <interlinear-gloss>
         <jbo>go'i ji'una'iku</jbo>
@@ -1767,19 +1657,15 @@
     </example>
     <para>Finally, one may metalinguistically affirm a bridi with 
     <quote>jo'a</quote>, another cmavo of selma'o UI. A common use for 
-    <indexterm type="general">
-      <primary>jo'a</primary>
-    </indexterm>
+    
     <quote>jo'a</quote> might be to affirm that a particular construction, though unusual or counterintuitive, is in fact correct; another usage would be to disagree with - by overriding - a respondent's metalinguistic negation.</para>
-    <indexterm type="general">
-      <primary>jo'a</primary>
-    </indexterm>
+    
   </section>
   <section xml:id="cll_chapter15-section11">
     <title>Summary - Are All Possible Questions About Negation Now Answered?</title>
     <example role="interlinear-gloss-example" xml:id="example-random-id-MdRP">
       <title>
-        <anchor xml:id="c15e11d1" />
+        <anchor xml:id="c15e11d1"/>
       </title>
       <interlinear-gloss>
         <jbo>na go'i .ije na'e go'i .ije na'i go'i</jbo>
