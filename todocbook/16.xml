@@ -5,7 +5,7 @@
   <quote>Who Did You Pass On The Road? Nobody</quote>: Lojban And Logic</title>
   <section xml:id="cll_chapter16-section1">
     <title>What's wrong with this picture?</title>
-    <para>The following brief dialogue is from 
+    <para> <indexterm type="general-imported"><primary>nobody</primary><secondary>interpretation of</secondary></indexterm> The following brief dialogue is from 
     <xref linkend="chapter-anaphoric-cmavo"/> of 
     <citation>Through The Looking Glass</citation> by Lewis Carroll.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-KB90">
@@ -59,7 +59,7 @@
     <para>This nonsensical conversation results because the King insists on treating the word 
     <quote>nobody</quote> as a name, a name of somebody. However, the essential nature of the English word 
     <quote>nobody</quote> is that it doesn't refer to somebody; or to put the matter another way, there isn't anybody to which it refers.</para>
-    <para>The central point of contradiction in the dialogue arises in 
+    <para> <indexterm type="general-imported"><primary>nobody</primary><secondary>ambiguous interpretations of</secondary></indexterm> The central point of contradiction in the dialogue arises in 
     <xref linkend="example-random-id-x9fC"/>, when the King says 
     <quote>... Nobody walks slower than you</quote>. This claim would be plausible if 
     <quote>Nobody</quote> were really a name, since the Messenger could only pass someone who does walk more slowly than he. But the Messenger interprets the word 
@@ -67,7 +67,7 @@
     <xref linkend="example-random-id-105i"/>) 
     <quote>... nobody walks much faster than I do</quote> (i.e., I walk faster, or as fast as, almost everyone), which the King then again misunderstands. Both the King and the Messenger are correct according to their respective understandings of the ambiguous word 
     <quote>nobody/Nobody</quote>.</para>
-    <para>There are Lojban words or phrases corresponding to the problematic English words 
+    <para> <indexterm type="general-imported"><primary>nobody</primary><secondary>Lojban contrasted with English</secondary></indexterm> There are Lojban words or phrases corresponding to the problematic English words 
     <quote>somebody</quote>, 
     <quote>nobody</quote>, 
     <quote>anybody</quote>, 
@@ -78,8 +78,8 @@
     
     <quote>Nobody walks slower than the Messenger</quote> and 
     <quote>Nobody walks faster than the Messenger</quote> and both be telling the truth. (Unless, of course, nobody but the Messenger walks at all, or everyone walks at exactly the same speed.)</para>
-    <para>This chapter will explore the Lojban mechanisms that allow the correct and consistent construction of sentences like those in the dialogue. There are no new grammatical constructs explained in this chapter; instead, it discusses the way in which existing facilities that allow Lojban-speakers to resolve problems like the above, using the concepts of modern logic. However, we will not approach the matter from the viewpoint of logicians, although readers who know something of logic will discover familiar notions in Lojban guise.</para>
-    <para>Although Lojban is called a logical language, not every feature of it is 
+    <para> <indexterm type="general-imported"><primary>logic</primary><secondary>resolving ambiguities of &quot;nobody&quot;</secondary></indexterm> This chapter will explore the Lojban mechanisms that allow the correct and consistent construction of sentences like those in the dialogue. There are no new grammatical constructs explained in this chapter; instead, it discusses the way in which existing facilities that allow Lojban-speakers to resolve problems like the above, using the concepts of modern logic. However, we will not approach the matter from the viewpoint of logicians, although readers who know something of logic will discover familiar notions in Lojban guise.</para>
+    <para> <indexterm type="general-imported"><primary>logic</primary><secondary>limits of</secondary></indexterm> Although Lojban is called a logical language, not every feature of it is 
     
     <quote>logical</quote>. In particular, the use of 
     <quote>le</quote> is incompatible with logical reasoning based on the description selbri, because that selbri may not truthfully apply: you cannot conclude from my statement that</para>
@@ -94,13 +94,13 @@
       </interlinear-gloss>
     </example>
     <para>that there really is a man; the only thing you can conclude is that there is one thing (or more) that I choose to refer to as a man. You cannot even tell which man is meant for sure without asking me (although communication is served if you already know from the context).</para>
-    <para>In addition, the use of attitudinals (see 
+    <para> <indexterm type="general-imported"><primary>attitudinals</primary><secondary>and logic</secondary></indexterm>  <indexterm type="general-imported"><primary>logic</primary><secondary>and attitudinals</secondary></indexterm> In addition, the use of attitudinals (see 
     <xref linkend="chapter-attitudinals"/>) often reduces or removes the ability to make deductions about the bridi to which those attitudinals are applied. From the fact that I hope George will win the election, you can conclude nothing about George's actual victory or defeat.</para>
   </section>
   <section xml:id="cll_chapter16-section2">
     <title>Existential claims, prenexes, and variables</title>
     <para>Let us consider, to begin with, a sentence that is not in the dialogue:</para>
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="example-imported"><primary>something sees me</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Mxj3">
       <title>
         <anchor xml:id="c16e2d1"/>
@@ -120,7 +120,7 @@
         <en>Something-unspecified sees me.</en>
       </interlinear-gloss>
     </example>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>zo'e</primary></indexterm>  <indexterm type="general-imported"><primary>something</primary><secondary>unspecified definite with &quot;zo'e&quot;</secondary></indexterm>  <indexterm type="general-imported"><primary>zo'e</primary><secondary>as a translation for &quot;something&quot;</secondary></indexterm> The cmavo 
     <quote>zo'e</quote> indicates that a sumti has been omitted (indeed, even 
     <quote>zo'e</quote> itself can be omitted in this case, as explained in 
     <xref linkend="chapter-anaphoric-cmavo"/>) and the listener must fill in the correct value from context. In other words, 
@@ -137,13 +137,13 @@
         <en>There-is-an-X such-that X sees me.</en>
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="lojban-word-imported"><primary>da</primary></indexterm>  <indexterm type="general-imported"><primary>zo'e</primary><secondary>contrasted with da</secondary></indexterm>  <indexterm type="general-imported"><primary>da</primary><secondary>contrasted with zo'e</secondary></indexterm>  <indexterm type="general-imported"><primary>existential claims</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>da</primary><secondary>as a translation for &quot;something&quot;</secondary></indexterm> 
     <xref linkend="example-random-id-jjLd"/> does not presuppose that the listener knows who sees the speaker, but simply tells the listener that there is someone who sees the speaker. Statements of this kind are called 
     <quote>existential claims</quote>. (Formally, the one doing the seeing is not restricted to being a person; it could be an animal or - in principle - an inanimate object. We will see in 
     
     
     <xref linkend="cll_chapter16-section4"/> how to represent such restrictions.)</para>
-    <para>
+    <para> <indexterm type="lojban-word-imported"><primary>ZOhU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>zo'u</primary></indexterm>  <indexterm type="general-imported"><primary>logical variables</primary><secondary>notation convention</secondary></indexterm>  <indexterm type="general-imported"><primary>variables</primary><secondary>logical</secondary></indexterm>  <indexterm type="general-imported"><primary>prenex</primary><secondary>syntax of</secondary></indexterm>  <indexterm type="general-imported"><primary>prenex</primary><secondary>explanation</secondary></indexterm> 
     <xref linkend="example-random-id-jjLd"/> has a two-part structure: there is the part 
     <quote>da zo'u</quote>, called the prenex, and the part 
     <quote>da viska mi</quote>, the main bridi. Almost any Lojban bridi can be preceded by a prenex, which syntactically is any number of sumti followed by the cmavo 
@@ -166,7 +166,7 @@
         <en>Somebody loves somebody.</en>
       </interlinear-gloss>
     </example>
-    <para>In 
+    <para> <indexterm type="example-imported"><primary>somebody loves somebody</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>logical variables</primary><secondary>effect of using multiple different</secondary></indexterm>  <indexterm type="general-imported"><primary>somebody</primary><secondary>contrasted with somebody else</secondary></indexterm> In 
     <xref linkend="example-random-id-t4qI"/>, the literal interpretation of the two variables 
     <quote>da</quote> and 
     <quote>de</quote> as 
@@ -176,7 +176,7 @@
     <quote>Somebody loves somebody else.</quote> The things referred to by different variables may be different or the same. (We use 
     <quote>somebody</quote> here rather than 
     <quote>something</quote> for naturalness; lovers and beloveds are usually persons, though the Lojban does not say so.)</para>
-    <para>It is perfectly all right for the variables to appear more than once in the main bridi:</para>
+    <para> <indexterm type="general-imported"><primary>logical variables</primary><secondary>with multiple appearances in bridi</secondary></indexterm> It is perfectly all right for the variables to appear more than once in the main bridi:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-wBYE">
       <title>
         <anchor xml:id="c16e2d5"/>
@@ -188,7 +188,7 @@
         <en>Somebody loves himself/herself.</en>
       </interlinear-gloss>
     </example>
-    <para>What 
+    <para> <indexterm type="example-imported"><primary>somebody loves self</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>da prami de</primary><secondary>contrasted with da prami da</secondary></indexterm>  <indexterm type="general-imported"><primary>da prami da</primary><secondary>contrasted with da prami de</secondary></indexterm> What 
     <xref linkend="example-random-id-wBYE"/> claims is fundamentally different from what 
     <xref linkend="example-random-id-t4qI"/> claims, because 
     <quote>da prami da</quote> is not structurally the same as 
@@ -203,7 +203,7 @@
         <en>There-is-a-Y such that Y loves Y</en>
       </interlinear-gloss>
     </example>
-    <para>means exactly the same thing as 
+    <para> <indexterm type="general-imported"><primary>logical variables</primary><secondary>effect of global substitution</secondary></indexterm> means exactly the same thing as 
     <xref linkend="example-random-id-wBYE"/>; it does not matter which variable is used as long as they are used consistently.</para>
     <para>It is not necessary for a variable to be a sumti of the main bridi directly:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-ArXX">
@@ -216,10 +216,10 @@
         <en>Somebody's dog sees me</en>
       </interlinear-gloss>
     </example>
-    <para>is perfectly correct even though the 
+    <para> <indexterm type="example-imported"><primary>somebody's dog</primary><secondary>example</secondary></indexterm> is perfectly correct even though the 
     <quote>da</quote> is used only in a possessive construction. (Possessives are explained in 
     <xref linkend="chapter-relative-clauses"/>.)</para>
-    <para>It is very peculiar, however, even if technically grammatical, for the variable not to appear in the main bridi at all:</para>
+    <para> <indexterm type="general-imported"><primary>logical variables</primary><secondary>when not in main bridi</secondary></indexterm> It is very peculiar, however, even if technically grammatical, for the variable not to appear in the main bridi at all:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-mE4m">
       <title>
         <anchor xml:id="c16e2d8"/>
@@ -230,7 +230,7 @@
         
       </interlinear-gloss>
     </example>
-    <para>has a variable bound in a prenex whose relevance to the claim of the following bridi is completely unspecified.</para>
+    <para> <indexterm type="example-imported"><primary>Ralph</primary><secondary>example</secondary></indexterm> has a variable bound in a prenex whose relevance to the claim of the following bridi is completely unspecified.</para>
   </section>
   <section xml:id="cll_chapter16-section3">
     <title>Universal claims</title>
@@ -246,9 +246,9 @@
         <jbo>Everything sees me.</jbo>
       </interlinear-gloss>
     </example>
-    <para>Of course, this example is false, because there are many things which do not see the speaker. It is not easy to find simple truthful examples of so-called universal claims (those which are about everything), so bear with us for a while. (Indeed, some Lojbanists tend to avoid universal claims even in other languages, since they are so rarely true in Lojban.)</para>
+    <para> <indexterm type="general-imported"><primary>universal claims</primary><secondary>explanation</secondary></indexterm> Of course, this example is false, because there are many things which do not see the speaker. It is not easy to find simple truthful examples of so-called universal claims (those which are about everything), so bear with us for a while. (Indeed, some Lojbanists tend to avoid universal claims even in other languages, since they are so rarely true in Lojban.)</para>
     
-    <para>The Lojban translation of 
+    <para> <indexterm type="example-imported"><primary>everything sees me</primary><secondary>example</secondary></indexterm> The Lojban translation of 
     <xref linkend="example-random-id-UwYG"/> is</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-nraD">
       <title>
@@ -259,7 +259,7 @@
         <en>For-every X : X sees me.</en>
       </interlinear-gloss>
     </example>
-    <para>When the variable cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>ro da</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ro</primary></indexterm>  <indexterm type="general-imported"><primary>everything</primary><secondary>expressing with &quot;ro da&quot;</secondary></indexterm> When the variable cmavo 
     <quote>da</quote> is preceded by 
     <quote>ro</quote>, the combination means 
     <quote>For every X</quote> rather than 
@@ -268,7 +268,7 @@
     <quote>ro da</quote> for 
     <quote>everything</quote> on faith.</para>
     <para>Here is a universal claim with two variables:</para>
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="example-imported"><primary>everything loves everything</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-jSrU">
       <title>
         <anchor xml:id="c16e3d3"/>
@@ -284,7 +284,7 @@
     <quote>Everything loves everything else.</quote> Furthermore, because the claim is universal, it is about every thing, not merely every person, so we cannot use 
     <quote>everyone</quote> or 
     <quote>everybody</quote> in the translation.</para>
-    <para>Note that 
+    <para> <indexterm type="general-imported"><primary>universal</primary><secondary>mixed claim with existential</secondary></indexterm>  <indexterm type="general-imported"><primary>existential</primary><secondary>mixed claim with universal</secondary></indexterm>  <indexterm type="general-imported"><primary>mixed claim</primary><secondary>definition</secondary></indexterm> Note that 
     <quote>ro</quote> appears before both 
     <quote>da</quote> and 
     <quote>de</quote>. If 
@@ -311,7 +311,7 @@
         <en>Something sees everything.</en>
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="example-imported"><primary>something sees everything</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>everything sees something</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>logical variables</primary><secondary>effect of order in prenex</secondary></indexterm> 
     <xref linkend="example-random-id-qHKm"/> and 
     <xref linkend="example-random-id-qHKo"/> mean completely different things. 
     <xref linkend="example-random-id-qHKm"/> says that for everything, there is something which it sees, not necessarily the same thing seen for every seer. 
@@ -326,14 +326,14 @@
   <section xml:id="cll_chapter16-section4">
     <title>Restricted claims: 
     <quote>da poi</quote></title>
-    <para>The universal claims of 
+    <para> <indexterm type="general-imported"><primary>restricted claims</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>universal claims</primary><secondary>restricting</secondary></indexterm> The universal claims of 
     
     <xref linkend="cll_chapter16-section3"/> are not only false but absurd: there is really very little to be said that is both true and non-trivial about every object whatsoever. Furthermore, we have been glossing over the distinction between 
     <quote>everything</quote> and 
     <quote>everybody</quote> and the other pairs ending in 
     <quote>-thing</quote> and 
     <quote>-body</quote>. It is time to bring up the most useful feature of Lojban variables: the ability to restrict their ranges.</para>
-    <para>In Lojban, a variable 
+    <para> <indexterm type="lojban-word-imported"><primary>vau</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ku'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>da poi</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>poi</primary></indexterm>  <indexterm type="general-imported"><primary>existential claims</primary><secondary>restricting</secondary></indexterm>  <indexterm type="general-imported"><primary>relative clauses</primary><secondary>use in restricting existential claims</secondary></indexterm> In Lojban, a variable 
     <quote>da</quote>, 
     <quote>de</quote>, or 
     <quote>di</quote> may be followed by a 
@@ -363,7 +363,7 @@
         <en>Someone sees Jim.</en>
       </interlinear-gloss>
     </example>
-    <para>In 
+    <para> <indexterm type="general-imported"><primary>something</primary><secondary>contrasted with someone</secondary></indexterm> In 
     <xref linkend="example-random-id-NPX7"/>, the variable 
     <quote>da</quote> can refer to any object whatever; there are no restrictions on it. In 
     <xref linkend="example-random-id-I8AF"/>, 
@@ -375,7 +375,7 @@
     <quote>somebody</quote> is a matter of English style, with no real counterpart in Lojban.) If 
     <xref linkend="example-random-id-I8AF"/> is true, then 
     <xref linkend="example-random-id-NPX7"/> must be true, but not necessarily vice versa.</para>
-    <para>Universal claims benefit even more from the existence of relative clauses. Consider</para>
+    <para> <indexterm type="general-imported"><primary>universal claims</primary><secondary>restricting</secondary></indexterm>  <indexterm type="general-imported"><primary>relative clauses</primary><secondary>use in restricting universal claims</secondary></indexterm> Universal claims benefit even more from the existence of relative clauses. Consider</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-DFen">
       <title>
         <anchor xml:id="c16e4d3"/>
@@ -386,7 +386,7 @@
         <en>Everything breathes</en>
       </interlinear-gloss>
     </example>
-    <para>and</para>
+    <para> <indexterm type="example-imported"><primary>everything breathes</primary><secondary>example</secondary></indexterm> and</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-njh0">
       <title>
         <anchor xml:id="c16e4d4"/>
@@ -402,7 +402,7 @@
         
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="general-imported"><primary>dog breathes</primary></indexterm> 
     <xref linkend="example-random-id-DFen"/> is a silly falsehood, but 
     <xref linkend="example-random-id-njh0"/> is an important truth (at least if applied in a timeless or potential sense: see 
     <xref linkend="chapter-tenses"/>). Note the various colloquial translations 
@@ -427,7 +427,7 @@
   </section>
   <section xml:id="cll_chapter16-section5">
     <title>Dropping the prenex</title>
-    <para>It isn't really necessary for every Lojban bridi involving variables to have a prenex on the front. In fact, none of the examples we've seen so far required prenexes at all! The rule for dropping the prenex is simple: if the variables appear in the same order within the bridi as they did in the prenex, then the prenex is superfluous. However, any 
+    <para> <indexterm type="general-imported"><primary>prenex</primary><secondary>considerations for dropping</secondary></indexterm> It isn't really necessary for every Lojban bridi involving variables to have a prenex on the front. In fact, none of the examples we've seen so far required prenexes at all! The rule for dropping the prenex is simple: if the variables appear in the same order within the bridi as they did in the prenex, then the prenex is superfluous. However, any 
     <quote>ro</quote> or 
     <quote>poi</quote> appearing in the prenex must be transferred to the first occurrence of the variable in the main part of the bridi. Thus, 
     <xref linkend="example-random-id-jjLd"/> becomes just:</para>
@@ -454,8 +454,8 @@
         
       </interlinear-gloss>
     </example>
-    <para>You might well suppose, then, that the purpose of the prenex is to allow the variables in it to appear in a different order than the bridi order, and that would be correct. Consider</para>
-<para>FIXME: TAG SPOT</para>
+    <para> <indexterm type="general-imported"><primary>prenex</primary><secondary>effect of order of variables in</secondary></indexterm>  <indexterm type="general-imported"><primary>prenex</primary><secondary>purpose of</secondary></indexterm> You might well suppose, then, that the purpose of the prenex is to allow the variables in it to appear in a different order than the bridi order, and that would be correct. Consider</para>
+<para> <indexterm type="general-imported"><primary>everyone bitten by dog</primary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Cfnb">
       <title>
         <anchor xml:id="c16e5d3"/>
@@ -490,11 +490,11 @@
         <en>Some dog bites everyone.</en>
       </interlinear-gloss>
     </example>
-    <para>which has the structure of 
+    <para> <indexterm type="example-imported"><primary>dog bites</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Fido</primary><secondary>example</secondary></indexterm> which has the structure of 
     <xref linkend="example-random-id-qHKo"/>: it says that there is a dog (call him Fido) who bites, has bitten, or will bite every person that has ever existed! We can safely rule out Fido's existence, and say that 
     <xref linkend="example-random-id-c9bq"/> is false, while agreeing to 
     <xref linkend="example-random-id-Cfnb"/>.</para>
-    <para>Even so, 
+    <para> <indexterm type="general-imported"><primary>universal claims</primary><secondary>dangers of using</secondary></indexterm> Even so, 
     <xref linkend="example-random-id-Cfnb"/> is most probably false, since some people never experience dogbite. Examples like 5.3 and 4.4 (might there be some dogs which never have breathed, because they died as embryos?) indicate the danger in Lojban of universal claims even when restricted. In English we are prone to say that 
     
     
@@ -502,7 +502,7 @@
     <quote>Everyone says</quote> or that 
     <quote>Everybody does</quote> or that 
     <quote>Everything is</quote> when in fact there are obvious counterexamples which we are ignoring for the sake of making a rhetorical point. Such statements are plain falsehoods in Lojban, unless saved by a context (such as tense) which implicitly restricts them.</para>
-    <para>How can we express 
+    <para> <indexterm type="lojban-word-imported"><primary>SE selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>se</primary></indexterm>  <indexterm type="general-imported"><primary>re-ordering logical variables with se</primary></indexterm>  <indexterm type="general-imported"><primary>se</primary><secondary>using to re-order logical variables</secondary></indexterm> How can we express 
     <xref linkend="example-random-id-Cfnb"/> in Lojban without a prenex? Since it is the order in which variables appear that matters, we can say:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-y90e">
       <title>
@@ -525,7 +525,7 @@
     
     
     <quote>se</quote>; one must be careful to preserve the order of the variables.</para>
-    <para>If a variable occurs more than once, then any 
+    <para> <indexterm type="lojban-word-imported"><primary>poi</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ro</primary></indexterm>  <indexterm type="general-imported"><primary>poi</primary><secondary>dropping from multiple appearances on logical variables</secondary></indexterm>  <indexterm type="general-imported"><primary>ro</primary><secondary>dropping from multiple appearances on logical variables</secondary></indexterm>  <indexterm type="general-imported"><primary>logical variables</primary><secondary>with poi</secondary><tertiary>in multiple appearances</tertiary></indexterm>  <indexterm type="general-imported"><primary>logical variables</primary><secondary>with ro</secondary><tertiary>in multiple appearances</tertiary></indexterm> If a variable occurs more than once, then any 
     <quote>ro</quote> or 
     <quote>poi</quote> decorations are moved only to the first occurrence of the variable when the prenex is dropped. For example,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-4nqt">
@@ -538,7 +538,7 @@
         <en>This is a weapon for someone to use against himself/herself.</en>
       </interlinear-gloss>
     </example>
-    <para>(in which 
+    <para> <indexterm type="example-imported"><primary>weapon against self</primary><secondary>example</secondary></indexterm> (in which 
     <quote>di</quote> is used rather than 
     <quote>da</quote> just for variety) loses its prenex as follows:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-CseH">
@@ -550,11 +550,11 @@
         <en>This-thing is-a-weapon-for-use-against some-Z which is-a-person by-Z.</en>
       </interlinear-gloss>
     </example>
-    <para>As the examples in this section show, dropping the prenex makes for terseness of expression often even greater than that of English (Lojban is meant to be an unambiguous language, not necessarily a terse or verbose one), provided the rules are observed.</para>
+    <para> <indexterm type="general-imported"><primary>prenex</primary><secondary>dropping for terseness</secondary></indexterm> As the examples in this section show, dropping the prenex makes for terseness of expression often even greater than that of English (Lojban is meant to be an unambiguous language, not necessarily a terse or verbose one), provided the rules are observed.</para>
   </section>
   <section xml:id="cll_chapter16-section6">
     <title>Variables with generalized quantifiers</title>
-    <para>So far, we have seen variables with either nothing in front, or with the cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>PA selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>quantifiers</primary><secondary>with logical variables</secondary></indexterm> So far, we have seen variables with either nothing in front, or with the cmavo 
     <quote>ro</quote> in front. Now 
     <quote>ro</quote> is a Lojban number, and means 
     <quote>all</quote>; thus 
@@ -569,7 +569,7 @@
     <quote>at least one</quote>. Why is this? Consider 
     <xref linkend="example-random-id-jjLd"/> again, this time with an explicit 
     <quote>su'o</quote>:</para>
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="lojban-word-imported"><primary>su'o</primary></indexterm>  <indexterm type="example-imported"><primary>something sees me</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>something</primary><secondary>expressing using &quot;su'o&quot;</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-TI8K">
       <title>
         <anchor xml:id="c16e6d1"/>
@@ -584,7 +584,7 @@
     <xref linkend="example-random-id-jjLd"/>, we understand the speaker's claim to be that of all the things that there are, at least one of them sees him or her. The corresponding universal claim, 
     <xref linkend="example-random-id-nraD"/>, says that of all the things that exist, every one of them can see the speaker.</para>
     
-    <para>Any other number can be used instead of 
+    <para> <indexterm type="general-imported"><primary>numbers</primary><secondary>on logical variables</secondary></indexterm> Any other number can be used instead of 
     <quote>ro</quote> or 
     <quote>su'o</quote> to precede a variable. Then we get claims like:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-3C69">
@@ -597,7 +597,7 @@
         <en>Two things see me.</en>
       </interlinear-gloss>
     </example>
-    <para>This means that exactly two things, no more or less, saw the speaker on the relevant occasion. In English, we might take 
+    <para> <indexterm type="general-imported"><primary>numbers</primary><secondary>English contrasted with Lojban on exactness</secondary></indexterm>  <indexterm type="general-imported"><primary>numbers</primary><secondary>Lojban contrasted with English on exactness</secondary></indexterm> This means that exactly two things, no more or less, saw the speaker on the relevant occasion. In English, we might take 
     <quote>Two things see me</quote> to mean that at least two things see the speaker, but there might be more; in Lojban, though, that claim would have to be made as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-mSzo">
       <title>
@@ -616,7 +616,7 @@
     <quote>pa</quote> means 
     <quote>one</quote>, as is explained in 
     <xref linkend="chapter-mekso"/>.</para>
-    <para>The prenex may be removed from 
+    <para> <indexterm type="general-imported"><primary>prenex</primary><secondary>removing when numeric quantifiers present</secondary></indexterm> The prenex may be removed from 
     <xref linkend="example-random-id-3C69"/> and 
     <xref linkend="example-random-id-mSzo"/> as from the others, leading to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2r5v">
@@ -640,7 +640,7 @@
     </example>
     <para>respectively, subject to the rules prescribed in 
     <xref linkend="cll_chapter16-section5"/>.</para>
-    <para>Now we can explain the constructions 
+    <para> <indexterm type="lojban-word-imported"><primary>ro prenu</primary></indexterm>  <indexterm type="example-imported"><primary>all persons</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>restricted variable</primary><secondary>compared with indefinite description</secondary></indexterm>  <indexterm type="general-imported"><primary>indefinite description</primary><secondary>compared with restricted variable</secondary></indexterm>  <indexterm type="general-imported"><primary>indefinite description</primary><secondary>definition</secondary></indexterm> Now we can explain the constructions 
     <quote>ro prenu</quote> for 
     
     <quote>all persons</quote> and 
@@ -687,11 +687,11 @@
         <en>For-two Xes which are-persons : X sees me.</en>
       </interlinear-gloss>
     </example>
-    <para>Note that when we move more than one variable to the prenex (along with its attached relative clause), we must make sure that the variables are in the same order in the prenex as in the bridi proper.</para>
+    <para> <indexterm type="general-imported"><primary>order of variables</primary><secondary>in moving to prenex</secondary></indexterm> Note that when we move more than one variable to the prenex (along with its attached relative clause), we must make sure that the variables are in the same order in the prenex as in the bridi proper.</para>
   </section>
   <section xml:id="cll_chapter16-section7">
     <title>Grouping of quantifiers</title>
-    <para>Let us consider a sentence containing two quantifier expressions neither of which is 
+    <para> <indexterm type="general-imported"><primary>distribution of quantified sumti</primary></indexterm>  <indexterm type="general-imported"><primary>indefinite sumti</primary><secondary>multiple in sentence</secondary></indexterm> Let us consider a sentence containing two quantifier expressions neither of which is 
     <quote>ro</quote> or 
     <quote>su'o</quote> (remembering that 
     <quote>su'o</quote> is implicit where no explicit quantifier is given):</para>
@@ -704,7 +704,7 @@
         <en>Three dogs bite two men.</en>
       </interlinear-gloss>
     </example>
-    <para>The question raised by 
+    <para> <indexterm type="example-imported"><primary>dogs bite</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>three dogs bite two men</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>multiple indefinite sumti</primary><secondary>meaning</secondary></indexterm>  <indexterm type="general-imported"><primary>indefinite sumti</primary><secondary>meaning when multiple in sentence</secondary></indexterm> The question raised by 
     <xref linkend="example-random-id-Uovr"/> is, does each of the dogs bite the same two men, or is it possible that there are two different men per dog, for six men altogether? If the former interpretation is taken, the number of men involved is fixed at two; but if the latter, then the speaker has to be taken as saying that there might be any number of men between two and six inclusive. Let us transform 
     <xref linkend="example-random-id-Uovr"/> step by step as we did with 
     <xref linkend="example-random-id-Kr4S"/>:</para>
@@ -732,7 +732,7 @@
       </interlinear-gloss>
     </example>
     <para>Here we see that indeed each of the dogs is said to bite two men, and it might be different men each time; a total of six biting events altogether.</para>
-    <para>How then are we to express the other interpretation, in which just two men are involved? We cannot just reverse the order of variables in the prenex to</para>
+    <para> <indexterm type="general-imported"><primary>multiple indefinite sumti</primary><secondary>effect of re-ordering in sentence</secondary></indexterm> How then are we to express the other interpretation, in which just two men are involved? We cannot just reverse the order of variables in the prenex to</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-4Qxe">
       <title>
@@ -749,7 +749,7 @@
     <quote>ci gerku</quote> is said to have wider scope than 
     <quote>re nanmu</quote>, and therefore precedes it in the prenex. In 
     <xref linkend="example-random-id-4Qxe"/> the reverse is true.</para>
-    <para>The solution is to use a termset, which is a group of terms either joined by 
+    <para> <indexterm type="lojban-word-imported"><primary>NUhU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>NUhI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>nu'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>nu'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>CEhE selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ce'e</primary></indexterm>  <indexterm type="general-imported"><primary>termset</primary><secondary>effect on scope of multiple indefinite sumti</secondary></indexterm>  <indexterm type="general-imported"><primary>multiple indefinite sumti scope</primary><secondary>in termset</secondary></indexterm>  <indexterm type="general-imported"><primary>multiple indefinite sumti</primary><secondary>expressing with equal scope</secondary></indexterm> The solution is to use a termset, which is a group of terms either joined by 
     <quote>ce'e</quote> (of selma'o CEhE) between each term, or else surrounded by 
     <quote>nu'i</quote> (of selma'o NUhI) on the front and 
     <quote>nu'u</quote> (of selma'o NUhU) on the rear. Terms (which are either sumti or sumti prefixed by tense or modal tags) that are grouped into a termset are understood to have equal scope:</para>
@@ -765,7 +765,7 @@
     </example>
     <para>which picks out two groups, one of three dogs and the other of two men, and says that every one of the dogs bites each of the men. The second Lojban version uses forethought; note that 
     <quote>nu'u</quote> is an elidable terminator, and in this case can be freely elided.</para>
-    <para>What about descriptors, like 
+    <para> <indexterm type="general-imported"><primary>ro</primary><secondary>effect of order when multiple in sentence</secondary></indexterm>  <indexterm type="general-imported"><primary>indefinite sumti</primary><secondary>compared to sumti with lo</secondary></indexterm>  <indexterm type="general-imported"><primary>sumti with lo</primary><secondary>compared to indefinite sumti</secondary></indexterm>  <indexterm type="general-imported"><primary>quantified sumti</primary><secondary>different types contrasted for scope for distribution</secondary></indexterm> What about descriptors, like 
     <quote>ci lo gerku</quote>, 
     <quote>le nanmu</quote> or 
     <quote>re le ci mlatu</quote>? They too can be grouped in termsets, but usually need not be, except for the 
@@ -791,7 +791,7 @@
     <title>The problem of 
     <quote>any</quote></title>
     <para>Consider the English sentence</para>
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="example-imported"><primary>anyone who goes</primary><secondary>walks</secondary><tertiary>example</tertiary></indexterm>  <indexterm type="general-imported"><primary>any</primary><secondary>as a translation problem</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-R4mX">
       <title>
         <anchor xml:id="c16e8d1"/>
@@ -811,7 +811,7 @@
         <en>Everyone who goes to the store walks across the field.</en>
       </interlinear-gloss>
     </example>
-    <para>But there is a subtle difference between 
+    <para> <indexterm type="general-imported"><primary>everyone</primary><secondary>contrasted with anyone in assumption of existence</secondary></indexterm>  <indexterm type="general-imported"><primary>anyone</primary><secondary>contrasted with everyone in assumption of existence</secondary></indexterm>  <indexterm type="general-imported"><primary>any</primary><secondary>as a restricted universal claim</secondary></indexterm> But there is a subtle difference between 
     <xref linkend="example-random-id-R4mX"/> and 
     <xref linkend="example-random-id-7Kn8"/>. 
     <xref linkend="example-random-id-7Kn8"/> tells us that, in fact, there are people who go to the store, and that they walk across the field. A sumti of the type 
@@ -833,9 +833,9 @@
         <en>For-every X: if X is-a-goer-to the store then X is-a-walker-on the field.</en>
       </interlinear-gloss>
     </example>
-    <para>Although 
+    <para> <indexterm type="general-imported"><primary>any</primary><secondary>as a universal claim</secondary><tertiary>later restricted</tertiary></indexterm> Although 
     <xref linkend="example-random-id-BwU7"/> is a universal claim as well, its universality only implies that there are objects of some sort or another in the universe of discourse. Because the claim is conditional, nothing is implied about the existence of goers-to-the-store or of walkers-on-the-field, merely that any entity which is one is also the other.</para>
-    <para>There is another use of 
+    <para> <indexterm type="general-imported"><primary>any</primary><secondary>as an existential claim</secondary></indexterm> There is another use of 
     <quote>any</quote> in English that is not universal but existential. Consider</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-7Eu9">
@@ -848,7 +848,7 @@
         
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="general-imported"><primary>any box</primary></indexterm>  <indexterm type="general-imported"><primary>need any box</primary></indexterm> 
     <xref linkend="example-random-id-7Eu9"/> does not at all mean that I need every box bigger than this one, for indeed I do not; I require only one box. But the naive translation</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-KHya">
       <title>
@@ -894,7 +894,7 @@
         <en>X is-possessed-by me and is-a-box and is-bigger-than this-thing.</en>
       </interlinear-gloss>
     </example>
-    <para>So we see that a prenex can be attached to a bridi that is within a sentence. By default, a variable always behaves as if it is bound in the prenex which (notionally) is attached to the smallest enclosing bridi, and its scope does not extend beyond that bridi. However, the variable may be placed in an outer prenex explicitly:</para>
+    <para> <indexterm type="general-imported"><primary>logical variables</primary><secondary>explicitly placing in outer prenex</secondary></indexterm>  <indexterm type="general-imported"><primary>logical variables</primary><secondary>implicit placement in smallest enclosing bridi prenex</secondary></indexterm>  <indexterm type="general-imported"><primary>prenex</primary><secondary>internal to a bridi</secondary></indexterm> So we see that a prenex can be attached to a bridi that is within a sentence. By default, a variable always behaves as if it is bound in the prenex which (notionally) is attached to the smallest enclosing bridi, and its scope does not extend beyond that bridi. However, the variable may be placed in an outer prenex explicitly:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7KKM">
       <title>
         <anchor xml:id="c16e8d9"/>
@@ -906,7 +906,7 @@
         <en>I need the event-of my possessing X.</en>
       </interlinear-gloss>
     </example>
-    <para>But what are the implications of 
+    <para> <indexterm type="general-imported"><primary>existential variable</primary><secondary>in main bridi contrasted with in abstraction</secondary></indexterm>  <indexterm type="general-imported"><primary>existential variable</primary><secondary>in abstraction contrasted with in main bridi</secondary></indexterm> But what are the implications of 
     <xref linkend="example-random-id-e7ta"/> and 
     <xref linkend="example-random-id-7KKM"/>? The main difference is that in 
     <xref linkend="example-random-id-7KKM"/>, the 
@@ -922,7 +922,7 @@
         <jbo>There's a box, bigger than this one, that I need</jbo>
       </interlinear-gloss>
     </example>
-    <para>which is what 
+    <para> <indexterm type="general-imported"><primary>any</primary><secondary>expressing as existential by variable in subordinate bridi</secondary></indexterm> which is what 
     <xref linkend="example-random-id-fAo5"/> says, whereas 
     <xref linkend="example-random-id-e7ta"/> turns out to be an effective translation of our original 
     <xref linkend="example-random-id-R4mX"/>. So uses of 
@@ -930,14 +930,14 @@
   </section>
   <section xml:id="cll_chapter16-section9">
     <title>Negation boundaries</title>
-    <para>This section, as well as 
+    <para> <indexterm type="general-imported"><primary>&quot;there is a Y&quot;</primary><secondary>expression</secondary><tertiary>notation convention</tertiary></indexterm> This section, as well as 
     <xref linkend="cll_chapter16-section10"/> through 
     <xref linkend="cll_chapter16-section12"/>, are in effect a continuation of 
     <xref linkend="chapter-negation"/>, introducing features of Lojban negation that require an understanding of prenexes and variables. In the examples below, 
     <quote>there is a Y</quote> and the like must be understood as 
     
     <quote>there is at least one Y, possibly more</quote>.</para>
-    <para>As explained in 
+    <para> <indexterm type="general-imported"><primary>bridi negation</primary><secondary>two forms of</secondary></indexterm> As explained in 
     <xref linkend="chapter-negation"/>, the negation of a bridi is usually accomplished by inserting 
     <quote>na</quote> at the beginning of the selbri:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-hBRH">
@@ -951,14 +951,14 @@
         <en>I don't go to the store.</en>
       </interlinear-gloss>
     </example>
-    <para>The other form of bridi negation is expressed by using the compound cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>naku</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>na</primary></indexterm> The other form of bridi negation is expressed by using the compound cmavo 
     <quote>naku</quote> in the prenex, which is identified and compounded by the lexer before looking at the sentence grammar. In Lojban grammar, 
     <quote>naku</quote> is then treated like a sumti. In a prenex, 
     <quote>naku</quote> means precisely the same thing as the logician's 
     <quote>it is not the case that</quote> in a similar English context. (Outside of a prenex, 
     <quote>naku</quote> is also grammatically treated as a single entity - the equivalent of a sumti - but does not have this exact meaning; we'll discuss these other situations in 
     <xref linkend="cll_chapter16-section11"/>.)</para>
-    <para>To represent a bridi negation using a prenex, remove the 
+    <para> <indexterm type="general-imported"><primary>external bridi negation</primary><secondary>compared to internal bridi negation</secondary></indexterm>  <indexterm type="general-imported"><primary>internal bridi negation</primary><secondary>compared to external bridi negation</secondary></indexterm>  <indexterm type="general-imported"><primary>internal bridi negation</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>external bridi negation</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>bridi negation</primary><secondary>na before selbri compared to naku in prenex</secondary></indexterm>  <indexterm type="general-imported"><primary>bridi negation</primary><secondary>naku in prenex compared to na before selbri</secondary></indexterm> To represent a bridi negation using a prenex, remove the 
     <quote>na</quote> from before the selbri and place 
     <quote>naku</quote> at the left end of the prenex. This form is called 
     <quote>external bridi negation</quote>, as opposed to 
@@ -978,7 +978,7 @@
         <en>It is false that: John comes.</en>
       </interlinear-gloss>
     </example>
-    <para>However, 
+    <para> <indexterm type="general-imported"><primary>negation in prenex</primary><secondary>effects of position</secondary></indexterm> However, 
     <quote>naku</quote> can appear at other points in the prenex as well. Compare</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-cy6j">
       <title>
@@ -992,7 +992,7 @@
         <en>Nothing sits.</en>
       </interlinear-gloss>
     </example>
-    <para>with</para>
+    <para> <indexterm type="example-imported"><primary>nothing sits</primary><secondary>example</secondary></indexterm> with</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2Fw3">
       <title>
         <anchor xml:id="c16e9d4"/>
@@ -1015,8 +1015,8 @@
         <en>Everybody loves at least one thing (each, not necessarily the same thing).</en>
       </interlinear-gloss>
     </example>
-    <para>or:</para>
-<para>FIXME: TAG SPOT</para>
+    <para> <indexterm type="example-imported"><primary>everybody loves something</primary><secondary>example</secondary></indexterm> or:</para>
+<para> <indexterm type="example-imported"><primary>something is loved by everybody</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Tj99">
       <title>
         <anchor xml:id="c16e9d6"/>
@@ -1056,7 +1056,7 @@
     </example>
     <para>the negation of 
     <xref linkend="example-random-id-Tj99"/>.</para>
-    <para>The rules of formal logic require that, to move a negation boundary within a prenex, you must 
+    <para> <indexterm type="general-imported"><primary>inversion of quantifiers</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>inversion of quantifiers</primary><secondary>in moving negation boundary</secondary></indexterm>  <indexterm type="general-imported"><primary>negation boundary</primary><secondary>effect of moving</secondary></indexterm> The rules of formal logic require that, to move a negation boundary within a prenex, you must 
     <quote>invert any quantifier</quote> that the negation boundary passes across. Inverting a quantifier means that any 
     <quote>ro</quote> (all) is changed to 
     <quote>su'o</quote> (at least one) and vice versa. Thus, 
@@ -1106,10 +1106,10 @@
         <en>For each thing there is someone who doesn't love it.</en>
       </interlinear-gloss>
     </example>
-    <para>Investigation will show that, indeed, each transformation preserves the meanings of 
+    <para> <indexterm type="general-imported"><primary>inversion of quantifiers on passing negation boundary</primary><secondary>rationale for</secondary></indexterm> Investigation will show that, indeed, each transformation preserves the meanings of 
     <xref linkend="example-random-id-1LqV"/> and 
     <xref linkend="example-random-id-u1jY"/>.</para>
-    <para>The quantifier 
+    <para> <indexterm type="general-imported"><primary>negation boundary</primary><secondary>and zero</secondary></indexterm>  <indexterm type="general-imported"><primary>zero</primary><secondary>relation to negation boundary</secondary></indexterm> The quantifier 
     <quote>no</quote> (meaning 
     <quote>zero of</quote>) also involves a negation boundary. To transform a bridi containing a variable quantified with 
     <quote>no</quote>, we must first expand it. Consider</para>
@@ -1136,7 +1136,7 @@
         <en>It is false that there is nobody who loves everything.</en>
       </interlinear-gloss>
     </example>
-    <para>We can simplify 
+    <para> <indexterm type="general-imported"><primary>naku su'oda</primary><secondary>as expansion of noda</secondary></indexterm>  <indexterm type="general-imported"><primary>noda</primary><secondary>expanding to naku su'oda</secondary></indexterm>  <indexterm type="general-imported"><primary>&quot;no&quot; quantifier</primary><secondary>expanding</secondary></indexterm>  <indexterm type="general-imported"><primary>expanding &quot;no&quot; quantifier</primary></indexterm> We can simplify 
     <xref linkend="example-random-id-fpeW"/> by transforming the prenex. To move the negation phrase within the prenex, we must first expand the 
     <quote>no</quote> quantifier. Thus 
     <quote>for no x</quote> means the same thing as 
@@ -1170,7 +1170,7 @@
     </example>
     <para>which is clearly the desired contradiction of 
     <xref linkend="example-random-id-qCph"/>.</para>
-    <para>The interactions between quantifiers and negation mean that you cannot eliminate double negatives that are not adjacent. You must first move the negation phrases so that they are adjacent, inverting any quantifiers they cross, and then the double negative can be eliminated.</para>
+    <para> <indexterm type="general-imported"><primary>double negatives</primary><secondary>effect of interactions between quantifiers and negation on</secondary></indexterm>  <indexterm type="general-imported"><primary>interactions between quantifiers and negation</primary><secondary>effect</secondary></indexterm> The interactions between quantifiers and negation mean that you cannot eliminate double negatives that are not adjacent. You must first move the negation phrases so that they are adjacent, inverting any quantifiers they cross, and then the double negative can be eliminated.</para>
     
     
     
@@ -1181,7 +1181,7 @@
     
     
     
-    <para>A complete discussion of logical connectives appears in 
+    <para> <indexterm type="general-imported"><primary>logical connectives and bridi negation</primary></indexterm>  <indexterm type="general-imported"><primary>bridi negation and logical connectives</primary></indexterm>  <indexterm type="general-imported"><primary>logical connectives and negation</primary><secondary>caveat for logic chapter discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>negation and logical connectives</primary><secondary>caveat for logic chapter discussions</secondary></indexterm> A complete discussion of logical connectives appears in 
     <xref linkend="chapter-connectives"/>. What is said here is intentionally quite incomplete and makes several oversimplifications.</para>
     <para>A logical connective is a cmavo or compound cmavo. In this chapter, we will make use of the logical connectives 
     <quote>and</quote> and 
@@ -1191,7 +1191,7 @@
     <quote>either or both</quote>). The following simplified recipes explain how to make some logical connectives:</para>
     <itemizedlist>
       <listitem>
-        <para>To logically connect two Lojban sumti with 
+        <para> <indexterm type="general-imported"><primary>logical connectives</primary><secondary>recipes</secondary><tertiary>simplified for logic chapter discussion</tertiary></indexterm> To logically connect two Lojban sumti with 
         <quote>and</quote>, put them both in the bridi and separate them with the cmavo 
         <quote>.e</quote>.</para>
       </listitem>
@@ -1251,7 +1251,7 @@
     <quote>na</quote> or 
     <quote>nai</quote> attached. No change in meaning occurs under such a transformation.</para>
     <para>Clearly, if we know what negation means in the expanded sentence forms, then we know what it means in all of the other forms. But what does negation mean between sentences?</para>
-    <para>The mystery is easily solved. A negation in a logical expression is identical to the corresponding bridi negation, with the negator placed at the beginning of the prenex. Thus:</para>
+    <para> <indexterm type="general-imported"><primary>negation between sentences</primary><secondary>meaning of</secondary></indexterm>  <indexterm type="general-imported"><primary>bridi negation</primary><secondary>compared with negation between sentences</secondary></indexterm>  <indexterm type="general-imported"><primary>negation between sentences</primary><secondary>compared with bridi negation</secondary></indexterm> The mystery is easily solved. A negation in a logical expression is identical to the corresponding bridi negation, with the negator placed at the beginning of the prenex. Thus:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-pLiB">
       <title>
         <anchor xml:id="c16e10d3"/>
@@ -1281,7 +1281,7 @@
         <en>For each thing: I love it, and it is false that you love (the same) it.</en>
       </interlinear-gloss>
     </example>
-    <para>By the rules of predicate logic, the 
+    <para> <indexterm type="general-imported"><primary>quantifier scope</primary><secondary>in multiple connected sentences</secondary></indexterm> By the rules of predicate logic, the 
     <quote>ro</quote> quantifier on 
     <quote>da</quote> has scope over both sentences. That is, once you've picked a value for 
     <quote>da</quote> for the first sentence, it stays the same for both sentences. (The 
@@ -1298,15 +1298,15 @@
         <en>There is something that I love that you don't.</en>
       </interlinear-gloss>
     </example>
-    <para>If you remember only two rules for prenex manipulation of negations, you won't go wrong:</para>
+    <para> <indexterm type="general-imported"><primary>prenex manipulation</primary><secondary>rules</secondary></indexterm> If you remember only two rules for prenex manipulation of negations, you won't go wrong:</para>
     
     <itemizedlist>
       <listitem>
-        <para>Within a prenex, whenever you move 
+        <para> <indexterm type="general-imported"><primary>prenex manipulation</primary><secondary>moving naku past bound variable</secondary></indexterm> Within a prenex, whenever you move 
         <quote>naku</quote> past a bound variable (da, de, di, etc.), you must invert the quantifier.</para>
       </listitem>
       <listitem>
-        <para>A 
+        <para> <indexterm type="general-imported"><primary>prenex manipulation</primary><secondary>exporting na from left of prenex</secondary></indexterm>  <indexterm type="general-imported"><primary>prenex manipulation</primary><secondary>importing na from selbri</secondary></indexterm> A 
         <quote>na</quote> before the selbri is always transformed into a 
         <quote>naku</quote> at the left-hand end of the prenex, and vice versa.</para>
       </listitem>
@@ -1316,7 +1316,7 @@
     <title>Using 
     <quote>naku</quote> outside a prenex</title>
     <para>Let us consider the English sentence</para>
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="example-imported"><primary>some do not go to school</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-hp0j">
       <title>
         <anchor xml:id="c16e11d1"/>
@@ -1347,7 +1347,7 @@
         <en>All children don't go to some school (not just some children).</en>
       </interlinear-gloss>
     </example>
-    <para>Lojban provides a negation form which more closely emulates natural language negation. This involves putting 
+    <para> <indexterm type="general-imported"><primary>contradictory negation</primary><secondary>using naku before selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>naku</primary><secondary>outside of prenex</secondary></indexterm>  <indexterm type="general-imported"><primary>negation</primary><secondary>form for emulating natural language negation</secondary></indexterm> Lojban provides a negation form which more closely emulates natural language negation. This involves putting 
     <quote>naku</quote> before the selbri, instead of a 
     <quote>na</quote>. 
     <quote>naku</quote> is clearly a contradictory negation, given its parallel with prenex bridi negation. Using 
@@ -1363,9 +1363,9 @@
         <en>Some children don't go to a school.</en>
       </interlinear-gloss>
     </example>
-    <para>Although it is not technically a sumti, 
+    <para> <indexterm type="general-imported"><primary>naku</primary><secondary>compared with sumti in grammar</secondary></indexterm> Although it is not technically a sumti, 
     <quote>naku</quote> can be used in most of the places where a sumti may appear. We'll see what this means in a moment.</para>
-    <para>When you use 
+    <para> <indexterm type="general-imported"><primary>inverting quantifiers</primary><secondary>with movement relative to naku</secondary></indexterm>  <indexterm type="general-imported"><primary>quantifiers</primary><secondary>effect of moving naku</secondary></indexterm>  <indexterm type="general-imported"><primary>naku</primary><secondary>effect on moving quantifiers</secondary></indexterm>  <indexterm type="general-imported"><primary>naku</primary><secondary>as creating a negation boundary</secondary></indexterm> When you use 
     <quote>naku</quote> within a bridi, you are explicitly creating a negation boundary. As explained in 
     <xref linkend="cll_chapter16-section9"/>, when a prenex negation boundary expressed by 
     <quote>naku</quote> moves past a quantifier, the quantifier has to be inverted. The same is true for 
@@ -1405,7 +1405,7 @@
     <xref linkend="example-random-id-qhoH"/> we moved the negation boundary across the quantifier of 
     <quote>da</quote>, forcing us to invert it instead. 
     <xref linkend="example-random-id-qhnP"/> merely switched the selbri and the negation boundary, with no effect on the quantifiers.</para>
-    <para>The same rules apply if you rearrange the sentence so that the quantifier crosses an otherwise fixed negation. You can't just convert the selbri of 
+    <para> <indexterm type="general-imported"><primary>inverting quantifiers</primary><secondary>with movement relative to fixed negation</secondary></indexterm> The same rules apply if you rearrange the sentence so that the quantifier crosses an otherwise fixed negation. You can't just convert the selbri of 
     <xref linkend="example-random-id-nvtf"/> and rearrange the sumti to produce</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-rHwu">
       <title>
@@ -1416,7 +1416,7 @@
         <en>Some schools aren't gone-to-by every child.</en>
       </interlinear-gloss>
     </example>
-    <para>or rather, 
+    <para> <indexterm type="general-imported"><primary>naku negation</primary><secondary>rationale for considering an advanced technique</secondary></indexterm>  <indexterm type="general-imported"><primary>naku negation boundary</primary><secondary>effect on conversion with se</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion with se</primary><secondary>effect of naku negation boundary on</secondary></indexterm> or rather, 
     <xref linkend="example-random-id-rHwu"/> means something completely different from 
     <xref linkend="example-random-id-nvtf"/>. Conversion with 
     <quote>se</quote> under 
@@ -1433,11 +1433,11 @@
         <en>Some children don't go-to some school.</en>
       </interlinear-gloss>
     </example>
-    <para>but in 
+    <para> <indexterm type="general-imported"><primary>indefinite sumti</primary><secondary>as implicit quantification</secondary></indexterm> but in 
     <xref linkend="example-random-id-S6y4"/>, the bound variables 
     <quote>da</quote> and 
     <quote>de</quote> have been hidden.</para>
-    <para>It is trivial to export an internal bridi negation expressed with 
+    <para> <indexterm type="general-imported"><primary>exporting negation to prenex</primary><secondary>&quot;naku&quot; contrasted with internal bridi negation</secondary></indexterm>  <indexterm type="general-imported"><primary>exporting negation to prenex</primary><secondary>internal bridi negation contrasted with &quot;naku&quot;</secondary></indexterm> It is trivial to export an internal bridi negation expressed with 
     
     <quote>na</quote> to the prenex, as we saw in 
     <xref linkend="cll_chapter16-section9"/>; you just move it to the left end of the prenex. In comparison, it is non-trivial to export a 
@@ -1493,7 +1493,7 @@
         <en>All children [false] go-to some school(s).</en>
       </interlinear-gloss>
     </example>
-    <para>As noted in 
+    <para> <indexterm type="general-imported"><primary>conversion of sentence with quantified variables</primary><secondary>technique</secondary></indexterm> As noted in 
     <xref linkend="cll_chapter16-section5"/>, a sentence with two different quantified variables, such as 
     <xref linkend="example-random-id-msIC"/>, cannot always be converted with 
     <quote>se</quote> without first exporting the quantified variables. When the variables have been exported, the sentence proper can be converted, but the quantifier order in the prenex must remain unchanged:</para>
@@ -1509,19 +1509,19 @@
         
       </interlinear-gloss>
     </example>
-    <para>While you can't freely convert with 
+    <para> <indexterm type="general-imported"><primary>multiple quantification</primary><secondary>effect on selbri placement among sumti</secondary></indexterm>  <indexterm type="general-imported"><primary>selbri placement among sumti</primary><secondary>effect of multiple quantification on</secondary></indexterm> While you can't freely convert with 
     <quote>se</quote> when you have two quantified variables in a sentence, you can still freely move sumti to either side of the selbri, as long as the order isn't changed. If you use 
     <quote>na</quote> negation in such a sentence, nothing special need be done. If you use 
     <quote>naku</quote> negation, then quantified variables that cross the negation boundary must be inverted.</para>
-    <para>Clearly, if all of Lojban negation was built on 
+    <para> <indexterm type="general-imported"><primary>negation manipulation</primary><secondary>&quot;na&quot; contrasted with &quot;naku&quot; in difficulty of</secondary></indexterm>  <indexterm type="general-imported"><primary>negation manipulation</primary><secondary>&quot;naku&quot; contrasted with &quot;na&quot; in difficulty of</secondary></indexterm> Clearly, if all of Lojban negation was built on 
     <quote>naku</quote> negation instead of 
     <quote>na</quote> negation, logical manipulation in Lojban would be as difficult as in natural languages. In 
     <xref linkend="cll_chapter16-section12"/>, for example, we'll discuss DeMorgan's Law, which must be used whenever a sumti with a logical connection is moved across a negation boundary.</para>
-    <para>Since 
+    <para> <indexterm type="general-imported"><primary>naku</primary><secondary>in linked sumti places</secondary></indexterm> Since 
     <quote>naku</quote> has the grammar of a sumti, it can be placed almost anywhere a sumti can go, including 
     <quote>be</quote> and 
     <quote>bei</quote> clauses; it isn't clear what these mean, and we recommend avoiding such constructs.</para>
-    <para>You can put multiple 
+    <para> <indexterm type="general-imported"><primary>double negation</primary><secondary>and naku</secondary></indexterm>  <indexterm type="general-imported"><primary>naku</primary><secondary>multiple in sentence</secondary></indexterm> You can put multiple 
     <quote>naku</quote> s in a sentence, each forming a separate negation boundary. Two adjacent 
     <quote>naku</quote> s in a bridi are a double negative and cancel out:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-u784">
@@ -1540,7 +1540,7 @@
   </section>
   <section xml:id="cll_chapter16-section12">
     <title>Logical Connectives and DeMorgan's Law</title>
-    <para>DeMorgan's Law states that when a logical connective between terms falls within a negation, then expanding the negation requires a change in the connective. Thus (where 
+    <para> <indexterm type="general-imported"><primary>negations with logical connectives</primary><secondary>effects on expansion of sentence</secondary></indexterm>  <indexterm type="general-imported"><primary>logical connectives within negation</primary><secondary>effects of expansion on</secondary></indexterm> DeMorgan's Law states that when a logical connective between terms falls within a negation, then expanding the negation requires a change in the connective. Thus (where 
     <quote>p</quote> and 
     <quote>q</quote> stand for terms or sentences) 
     <quote>not (p or q)</quote> is identical to 
@@ -1562,10 +1562,10 @@
     <quote>se</quote> modifier of the original connectives. Cancel any double negatives that result.</para>
     
     
-    <para>When do we apply DeMorgan's Law? Whenever we wish to 
+    <para> <indexterm type="general-imported"><primary>DeMorgan's Law</primary><secondary>and moving a logical connective relative to &quot;naku&quot;</secondary></indexterm>  <indexterm type="general-imported"><primary>DeMorgan's Law</primary><secondary>and distributing a negation</secondary></indexterm>  <indexterm type="general-imported"><primary>distributing a negation</primary></indexterm> When do we apply DeMorgan's Law? Whenever we wish to 
     <quote>distribute</quote> a negation over a logical connective; and, for internal 
     <quote>naku</quote> negation, whenever a logical connective moves in to, or out of, the scope of a negation - when it crosses a negation boundary.</para>
-    <para>Let us apply DeMorgan's Law to some sample sentences. These sentences make use of forethought logical connectives, which are explained in 
+    <para> <indexterm type="lojban-word-imported"><primary>nai</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>gi</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ge</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ga</primary></indexterm>  <indexterm type="general-imported"><primary>DeMorgan's Law</primary><secondary>sample applications</secondary></indexterm> Let us apply DeMorgan's Law to some sample sentences. These sentences make use of forethought logical connectives, which are explained in 
     
     <xref linkend="chapter-connectives"/>. It suffices to know that 
     <quote>ga</quote> and 
@@ -1580,7 +1580,7 @@
     <quote>ge</quote>, and 
     <quote>gi</quote> can all be suffixed with 
     <quote>nai</quote> to negate the bridi or sumti that follows.</para>
-    <para>We have defined 
+    <para> <indexterm type="lojban-word-imported"><primary>naku zo'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>na</primary></indexterm>  <indexterm type="general-imported"><primary>bridi negation</primary><secondary>and DeMorgan's Law</secondary></indexterm>  <indexterm type="general-imported"><primary>bridi negation</primary><secondary>and negation boundary</secondary></indexterm>  <indexterm type="general-imported"><primary>naku zo'u</primary><secondary>and negation boundary</secondary></indexterm>  <indexterm type="general-imported"><primary>na</primary><secondary>and negation boundary</secondary></indexterm> We have defined 
     <quote>na</quote> and 
     <quote>naku zo'u</quote> as, respectively, internal and external bridi negation. These forms being identical, the negation boundary always remains at the left end of the prenex. Thus, exporting or importing negation between external and internal bridi negation forms never requires DeMorgan's Law to be applied. 
     
@@ -1606,7 +1606,7 @@
         <en>It-is-false that: John goes-to either Paris or Rome.</en>
       </interlinear-gloss>
     </example>
-    <para>It is not an acceptable logical manipulation to move a negator from the bridi level to one or more sumti. However, 
+    <para> <indexterm type="example-imported"><primary>go to Paris or Rome</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>DeMorgan's Law</primary><secondary>and logically connected sentences</secondary></indexterm>  <indexterm type="general-imported"><primary>logically connected sentences</primary><secondary>and DeMorgan's Law</secondary></indexterm>  <indexterm type="general-imported"><primary>negator</primary><secondary>movement from bridi to sumti</secondary></indexterm> It is not an acceptable logical manipulation to move a negator from the bridi level to one or more sumti. However, 
     <xref linkend="example-random-id-qHPi"/> and related examples are not sumti negations, but rather expand to form two logically connected sentences. In such a situation, DeMorgan's Law must be applied. For instance, 
     
     <xref linkend="example-random-id-qHPI"/> expands to:</para>
@@ -1628,7 +1628,7 @@
     <quote>ge</quote> and 
     <quote>gi</quote>, meaning 
     <quote>both-and</quote>, as a consequence of moving the negators into the individual bridi.</para>
-    <para>Here is another example of DeMorgan's Law in action, involving bridi-tail logical connection (explained in 
+    <para> <indexterm type="general-imported"><primary>DeMorgan's Law</primary><secondary>and bridi-tail logical connection</secondary></indexterm>  <indexterm type="general-imported"><primary>bridi-tail logical connection</primary><secondary>and DeMorgan's Law</secondary></indexterm> Here is another example of DeMorgan's Law in action, involving bridi-tail logical connection (explained in 
     
     <xref linkend="chapter-connectives"/>):</para>
     <example xml:id="example-random-id-qHpR" role="interlinear-gloss-example">
@@ -1652,7 +1652,7 @@
     </example>
     <para>(Placing 
     <quote>le zarci</quote> before the selbri makes sure that it is properly associated with both parts of the logical connection. Otherwise, it is easy to erroneously leave it off one of the two sentences.)</para>
-    <para>It is wise, before freely doing transformations such as the one from 
+    <para> <indexterm type="general-imported"><primary>transformations with logical connectives</primary><secondary>steps</secondary></indexterm> It is wise, before freely doing transformations such as the one from 
     <xref linkend="example-random-id-qHpR"/> to 
     <xref linkend="example-random-id-qHQ2"/>, that you become familiar with expanding logical connectives to separate sentences, transforming the sentences, and then recondensing. Thus, you would prove the transformation correct by the following steps. By moving its 
     <quote>na</quote> to the beginning of the prenex as a 
@@ -1707,7 +1707,7 @@
     </example>
     <para>which then condenses down to 
     <xref linkend="example-random-id-qHQ2"/>.</para>
-    <para>DeMorgan's Law must also be applied to internal 
+    <para> <indexterm type="general-imported"><primary>DeMorgan's Law</primary><secondary>and internal naku negations</secondary></indexterm>  <indexterm type="general-imported"><primary>internal naku negations</primary><secondary>and DeMorgan's Law</secondary></indexterm> DeMorgan's Law must also be applied to internal 
     <quote>naku</quote> negations:</para>
     <example xml:id="example-random-id-qhQP" role="interlinear-gloss-example">
       <title>
@@ -1734,7 +1734,7 @@
   <section xml:id="cll_chapter16-section13">
     <title>selbri variables</title>
     
-    <para>In addition to the variables 
+    <para> <indexterm type="lojban-word-imported"><primary>bu'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>bu'e</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>bu'a</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>GOhA selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>selbri logical variables</primary></indexterm>  <indexterm type="general-imported"><primary>logical variables</primary><secondary>for selbri</secondary></indexterm> In addition to the variables 
     <quote>da</quote>, 
     <quote>de</quote>, and 
     <quote>di</quote> that we have seen so far, which function as sumti and belong to selma'o KOhA, there are three corresponding variables 
@@ -1761,7 +1761,7 @@
         
       </interlinear-gloss>
     </example>
-    <para>The translations of 
+    <para> <indexterm type="example-imported"><primary>some relationship</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>selbri variables</primary><secondary>prenex form as indefinite description</secondary></indexterm> The translations of 
     <xref linkend="example-random-id-gEWB"/> show how unidiomatic selbri variables are in English; Lojban sentences like 
     
     <xref linkend="example-random-id-gEWB"/> need to be totally reworded in English. Furthermore, when a selbri variable appears in the prenex, it is necessary to precede it with a quantifier such as 
@@ -1773,7 +1773,7 @@
     <quote>re nanmu</quote>, since 
     <quote>bu'a</quote> is grammatically equivalent to a brivla like 
     <quote>nanmu</quote>. However, indefinite descriptions involving the bu'a-series cannot be imported from the prenex.</para>
-    <para>When the prenex is omitted, the preceding number has to be omitted too:</para>
+    <para> <indexterm type="general-imported"><primary>selbri variables</primary><secondary>form when not in prenex</secondary></indexterm> When the prenex is omitted, the preceding number has to be omitted too:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-XxgT">
       <title>
         <anchor xml:id="c16e13d2"/>
@@ -1783,7 +1783,7 @@
         <en>Jim stands-in-at-least-one-relationship to-John.</en>
       </interlinear-gloss>
     </example>
-    <para>As a result, if the number before the variable is anything but 
+    <para> <indexterm type="general-imported"><primary>selbri variables</primary><secondary>quantified</secondary></indexterm> As a result, if the number before the variable is anything but 
     <quote>su'o</quote>, the prenex is required:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-L068">
       <title>
@@ -1804,8 +1804,8 @@
   </section>
   <section xml:id="cll_chapter16-section14">
     <title>A few notes on variables</title>
-    <para>A variable may have a quantifier placed in front of it even though it has already been quantified explicitly or implicitly by a previous appearance, as in:</para>
-<para>FIXME: TAG SPOT</para>
+    <para> <indexterm type="general-imported"><primary>quantifier</primary><secondary>on previously quantified variable</secondary></indexterm> A variable may have a quantifier placed in front of it even though it has already been quantified explicitly or implicitly by a previous appearance, as in:</para>
+<para> <indexterm type="example-imported"><primary>three cats white</primary><secondary>and two big</secondary><tertiary>example</tertiary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-x0FP">
       <title>
         <anchor xml:id="c16e14d1"/>
@@ -1822,7 +1822,7 @@
     <quote>re da</quote> appears later, it refers to two of those three things - there is no saying which ones. Further uses of 
     <quote>da</quote> alone, if there were any, would refer once more to the three cats, so the requantification of 
     <quote>da</quote> is purely local.</para>
-    <para>In general, the scope of a prenex that precedes a sentence extends to following sentences that are joined by ijeks (explained in 
+    <para> <indexterm type="general-imported"><primary>prenex scope</primary><secondary>in abstractions</secondary></indexterm>  <indexterm type="general-imported"><primary>prenex scope</primary><secondary>in relative clauses</secondary></indexterm>  <indexterm type="general-imported"><primary>prenex scope</primary><secondary>in embedded bridi</secondary></indexterm>  <indexterm type="general-imported"><primary>prenex scope</primary><secondary>informal</secondary></indexterm>  <indexterm type="general-imported"><primary>prenex scope</primary><secondary>for sentences joined by .i</secondary></indexterm>  <indexterm type="general-imported"><primary>prenex scope</primary><secondary>for sentences joined by ijeks</secondary></indexterm> In general, the scope of a prenex that precedes a sentence extends to following sentences that are joined by ijeks (explained in 
     <xref linkend="chapter-connectives"/>) such as the 
     <quote>.ije</quote> in 
     <xref linkend="example-random-id-x0FP"/>. Theoretically, a bare 
@@ -1832,7 +1832,7 @@
     <xref linkend="cll_chapter16-section8"/>. A prenex preceding 
     <quote>tu'e ... tu'u</quote> long-scope brackets persists until the 
     <quote>tu'u</quote>, which may be many sentences or even paragraphs later.</para>
-    <para>If the variables 
+    <para> <indexterm type="general-imported"><primary>subscripts</primary><secondary>use with logical variables</secondary></indexterm>  <indexterm type="general-imported"><primary>logical variables</primary><secondary>creating more by subscripting</secondary></indexterm> If the variables 
     <quote>da</quote>, 
     <quote>de</quote>, and 
     <quote>di</quote> (or the selbri variables 
@@ -1864,7 +1864,7 @@
   </section>
   <section xml:id="cll_chapter16-section15">
     <title>Conclusion</title>
-    <para>This chapter is incomplete. There are many more aspects of logic that I neither fully understand nor feel competent to explain, neither in abstract nor in their Lojban realization. Lojban was designed to be a language that makes predicate logic speakable, and achieving that goal completely will need to wait for someone who understands both logic and Lojban better than I do. I can only hope to have pointed out the areas that are well-understood (and by implication, those that are not).</para>
+    <para> <indexterm type="general-imported"><primary>logic and Lojban</primary><secondary>more aspects</secondary></indexterm> This chapter is incomplete. There are many more aspects of logic that I neither fully understand nor feel competent to explain, neither in abstract nor in their Lojban realization. Lojban was designed to be a language that makes predicate logic speakable, and achieving that goal completely will need to wait for someone who understands both logic and Lojban better than I do. I can only hope to have pointed out the areas that are well-understood (and by implication, those that are not).</para>
     
   </section>
 </chapter>

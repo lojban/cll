@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 
+use IO::File;
+
 # THIS SCRIPT IS CRAZY.  You almost certainly don't want or need to
 # be running it.  See README-conversion for what it does.
 
@@ -94,9 +96,11 @@ my $chapfh;
 my $chapcontent;
 my $chapter=0;
 my $para=0;
-my $chapline;
+my $chapline='';
 my $chapcontline;
 my $cdline;
+my $chapoutfh;
+my $lastchaplinenum=0;
 
 $cdline = $cdcontent;
 $cdline =~ s{\n.*}{}s;
@@ -105,32 +109,50 @@ $cdline =~ s{\n.*}{}s;
 while( 1 ) {
   #print "cdline: $cdline\n";
 
-    if( $cdline =~ m{<h2>} ) {
-      $para=0;
-      $chapter++;
-
-      if( $chapter == 21 ) {
-        print "Chapter 21 reached; stopping.\n";
-        exit 0;
+  if( $cdline =~ m{<h2>} ) {
+    if( $chapfh ) {
+      while( <$chapfh> ) {
+        $chapline=$_;
+        if( $chapfh && $lastchaplinenum != $chapfh->input_line_number() ) {
+          print $chapoutfh $chapline;
+          print "outputing chapline: $chapline";
+          $lastchaplinenum = $chapfh->input_line_number();
+        }
       }
-
-      $skip--;
-      goto ADVANCE if( $skip gt 0 );
-
-      print "opening $chapter.xml\n";
-      open $fh, "<", "$chapter.xml" or die $!;
-      {
-        local $/; # enable localized slurp mode
-        $chapcontent = <$fh>;
-      }
-      close $fh;
-
-      $chapcontent =~ s{<para>(.*?)</para>}{my $foo = $1; $foo =~ s(\n)()g; "<para>$foo</para>\n";}esg;
-
-      open $chapfh, "<", "$chapter.xml" or die $!;
     }
 
+    if( $chapfh ) { close $chapfh; }
+    if( $chapoutfh ) { close $chapoutfh; }
+
+    $para=0;
+    $chapter++;
+
+    if( $chapter == 21 ) {
+      print "Chapter 21 reached; stopping.\n";
+      exit 0;
+    }
+
+    $skip--;
     goto ADVANCE if( $skip gt 0 );
+
+    print "opening $chapter.xml\n";
+    open $fh, "<", "$chapter.xml" or die $!;
+    {
+      local $/; # enable localized slurp mode
+      $chapcontent = <$fh>;
+    }
+    close $fh;
+
+    $chapcontent =~ s{<para>(.*?)</para>}{my $foo = $1; $foo =~ s(\n)()g; "<para>$foo</para>\n";}esg;
+
+    $chapfh = IO::File->new( "$chapter.xml", "r" ) or die $!;
+
+    $lastchaplinenum=0;
+
+    open $chapoutfh, ">", "$chapter.xml.new" or die $!;
+  }
+
+  goto ADVANCE if( $skip gt 0 );
 
   if( $cdline =~ m{<p>} && $cdline !~ m{<h[0-9]>} ) {
 
@@ -146,7 +168,7 @@ while( 1 ) {
 
     use Text::LevenshteinXS qw(distance);
 
-my $ratio=0;
+    my $ratio=0;
 
     while( 1 ) {
       if( $chapcontent !~ m{\n}s ) {
@@ -158,12 +180,20 @@ my $ratio=0;
       $chapcontline = $chapcontent;
       $chapcontline =~ s{\n.*}{}s;
 
-        print "testing chapcontline: $chapcontline\n";
+      print "testing chapcontline: $chapcontline\n";
       if( $chapcontline =~ m{<para>} ) {
         while( <$chapfh> ) {
           $chapline = $_;
           #print "chapline: $chapline\n";
-          if( m{<para>} ) { last; }
+          if( m{<para>} ) {
+            last;
+          } else {
+            if( $chapfh && $lastchaplinenum != $chapfh->input_line_number() ) {
+              print $chapoutfh $chapline;
+              print "outputing chapline: $chapline";
+              $lastchaplinenum = $chapfh->input_line_number();
+            }
+          }
         }
 
         #print "new chapcontline: $chapcontline\n";
@@ -177,9 +207,9 @@ my $ratio=0;
         next;
       }
 
-my $dist=distance( $chapcontshort, $cdshort );
-my $length=( ( length $chapcontshort ) + ( length $cdshort ) );
-$ratio=($dist / $length);
+      my $dist=distance( $chapcontshort, $cdshort );
+      my $length=( ( length $chapcontshort ) + ( length $cdshort ) );
+      $ratio=($dist / $length);
       if( $ratio < 0.04 ) {
         print "------------- cdshort for distance:\n      cd: $cdshort\n------------- chapcontshort for distance:\n      ch: $chapcontshort\n";
         print "distance: $dist ; length: $length ; ratio: $ratio -- SUCCEEDED\n";
@@ -188,54 +218,90 @@ $ratio=($dist / $length);
         print "------------- cdshort for distance:\n      cd: $cdshort\n------------- chapcontshort for distance:\n      ch: $chapcontshort\n";
         print "distance: $dist ; length: $length ; ratio: $ratio -- FAILED\n";
       }
+
+      if( $chapfh && $lastchaplinenum != $chapfh->input_line_number() ) {
+        print $chapoutfh $chapline;
+        print "outputing chapline: $chapline";
+        $lastchaplinenum = $chapfh->input_line_number();
+      }
     }
 
     if( $ratio > 0.04 ) {
       print "No match found for the following strings; bailing.\n";
-        print "------------- cdshort for distance:\n      $cdshort\n------------- chapcontshort for distance:\n      $chapcontshort\n";
-        exit 1;
+      print "------------- cdshort for distance:\n      $cdshort\n------------- chapcontshort for distance:\n      $chapcontshort\n";
+      exit 1;
     }
 
     #print "------------- cdline: $cdline\n------------- chapline: $chapline\n------------- chapcontline: $chapcontline\n";
-goto ADVANCE;
+#goto ADVANCE;
 
 #FIXME: TODO: also output example titles for future processing; see "Clean out the ex/XE bits" above
-    my @cxes;
-    foreach my $cx (m{<cx\s+"([^"]*)">}g) {
-      my $cx_regex=$cx;
-      $cx_regex =~ s{[,:]}{.}g;
-      s{<cx\s+"$cx_regex">\s+XE\s+"$cx_regex"\s+}{}g;
-      push @cxes, $cx;
+    foreach my $cx ($cdline =~ m{<cx\s+"([^"]*)">}g) {
+      print "cx: $cx\n";
+      my $indexterm=qq{<indexterm type="general-imported">};
+      my $type='primary';
 
-    }
-
-    print "c: $chapter ; p: $para -- $_\n";
-    {
-      open( my $chap, "<", "$chapter.xml" );
-      my $chappara=0;
-      while( <$chap> ) {
-        if( m{<para>} ) {
-          $chappara++;
+      foreach my $cxpart (split( /\s*[:,]\s*/, $cx, 3 ) ) {
+        $indexterm .= qq{<$type>$cxpart</$type>};
+        if( $type eq 'secondary' ) {
+          $type='tertiary';
         }
-        if( $chappara eq $para + 1 ) {
-          print "chappara: $_\n";
-          last;
+        if( $type eq 'primary' ) {
+          $type='secondary';
         }
       }
+      $indexterm .= qq{</indexterm>};
+      $chapline =~ s{<para>}{<para> $indexterm };
+
+      print "new chapline: $chapline";
     }
+    foreach my $ex ($cdline =~ m{<ex\s+"([^"]*)">}g) {
+      print "ex: $ex\n";
+      my $indexterm=qq{<indexterm type="example-imported">};
+      my $type='primary';
 
-#    my $pararegex = ( m{^([^.]*)} )[0];
-#    $pararegex =~ s{([)(<>&"]|[^[:ascii:]]+)}{.}g;
-#    print "grep: $pararegex \n";
-#    my $grepres=qx{ grep "$pararegex" [0-9]*.xml};
-#    print "grepres: $grepres\n";
+      foreach my $expart (split( /\s*[:,]\s*/, $ex, 3 ) ) {
+        $indexterm .= qq{<$type>$expart</$type>};
+        if( $type eq 'secondary' ) {
+          $type='tertiary';
+        }
+        if( $type eq 'primary' ) {
+          $type='secondary';
+        }
+      }
+      $indexterm .= qq{</indexterm>};
+      $chapline =~ s{<para>}{<para> $indexterm };
 
-    foreach my $cx (@cxes) {
-#      print "cx: $cx -- $_\n";
+      print "new chapline: $chapline";
+    }
+    foreach my $lx ($cdline =~ m{<lx\s+"([^"]*)">}g) {
+      print "lx: $lx\n";
+      my $indexterm=qq{<indexterm type="lojban-word-imported">};
+      my $type='primary';
+
+      foreach my $lxpart (split( /\s*[:,]\s*/, $lx, 3 ) ) {
+        $indexterm .= qq{<$type>$lxpart</$type>};
+        if( $type eq 'secondary' ) {
+          $type='tertiary';
+        }
+        if( $type eq 'primary' ) {
+          $type='secondary';
+        }
+      }
+      $indexterm .= qq{</indexterm>};
+      $chapline =~ s{<para>}{<para> $indexterm };
+
+      print "new chapline: $chapline";
     }
   }
 
-ADVANCE:
+  ADVANCE:
+
+  if( $chapfh && $lastchaplinenum != $chapfh->input_line_number ) {
+    print $chapoutfh $chapline;
+    print "outputing chapline: $chapline";
+    $lastchaplinenum = $chapfh->input_line_number;
+  }
 
   $cdcontent =~ s{^[^\n]*\n}{}s;
 

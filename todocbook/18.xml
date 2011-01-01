@@ -8,22 +8,22 @@
     <quote>Lojbanic mathematical-expression</quote>) is the part of the Lojban language that is tailored for expressing statements of a mathematical character, or for adding numerical information to non-mathematical statements. Its formal design goals include:</para>
     <orderedlist>
       <listitem>
-        <para>representing all the different forms of expression used by mathematicians in their normal modes of writing, so that a reader can unambiguously read off mathematical text as written with minimal effort and expect a listener to understand it;</para>
+        <para> <indexterm type="general-imported"><primary>mekso goal</primary><secondary>for mathematical writing</secondary></indexterm>  <indexterm type="general-imported"><primary>mekso</primary><secondary>design goals</secondary></indexterm> representing all the different forms of expression used by mathematicians in their normal modes of writing, so that a reader can unambiguously read off mathematical text as written with minimal effort and expect a listener to understand it;</para>
       </listitem>
       <listitem>
-        <para>providing a vocabulary of commonly used mathematical terms which can readily be expanded to include newly coined words using the full resources of Lojban;</para>
+        <para> <indexterm type="general-imported"><primary>mekso goal</primary><secondary>for common use</secondary></indexterm>  <indexterm type="general-imported"><primary>mekso goal</primary><secondary>expandable</secondary></indexterm> providing a vocabulary of commonly used mathematical terms which can readily be expanded to include newly coined words using the full resources of Lojban;</para>
       </listitem>
       <listitem>
-        <para>permitting the formulation, both in writing and in speech, of unambiguous mathematical text;</para>
+        <para> <indexterm type="general-imported"><primary>mekso goal</primary><secondary>unambiguous</secondary></indexterm> permitting the formulation, both in writing and in speech, of unambiguous mathematical text;</para>
       </listitem>
       <listitem>
-        <para>encompassing all forms of quantified expression found in natural languages, as well as encouraging greater precision in ordinary language situations than natural languages allow.</para>
+        <para> <indexterm type="general-imported"><primary>mekso goal</primary><secondary>precision</secondary></indexterm>  <indexterm type="general-imported"><primary>mekso goal</primary><secondary>coverage</secondary></indexterm> encompassing all forms of quantified expression found in natural languages, as well as encouraging greater precision in ordinary language situations than natural languages allow.</para>
       </listitem>
     </orderedlist>
-    <para>Goal 1 requires that mekso not be constrained to a single notation such as Polish notation or reverse Polish notation, but make provision for all forms, with the most commonly used forms the most easily used.</para>
+    <para> <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>and mekso goals</secondary></indexterm>  <indexterm type="general-imported"><primary>Polish notation</primary><secondary>and mekso goals</secondary></indexterm>  <indexterm type="general-imported"><primary>mekso goals</primary><secondary>mathematical notation form</secondary></indexterm> Goal 1 requires that mekso not be constrained to a single notation such as Polish notation or reverse Polish notation, but make provision for all forms, with the most commonly used forms the most easily used.</para>
     
-    <para>Goal 2 requires the provision of several conversion mechanisms, so that the boundary between mekso and full Lojban can be crossed from either side at many points.</para>
-    <para>Goal 3 is the most subtle. Written mathematical expression is culturally unambiguous, in the sense that mathematicians in all parts of the world understand the same written texts to have the same meanings. However, international mathematical notation does not prescribe unique forms. For example, the expression</para>
+    <para> <indexterm type="general-imported"><primary>mekso goals</primary><secondary>and non-mathematical expression</secondary></indexterm> Goal 2 requires the provision of several conversion mechanisms, so that the boundary between mekso and full Lojban can be crossed from either side at many points.</para>
+    <para> <indexterm type="general-imported"><primary>mathematical notation</primary><secondary>international uniqueness of</secondary></indexterm>  <indexterm type="general-imported"><primary>mekso goals</primary><secondary>and ambiguity</secondary></indexterm> Goal 3 is the most subtle. Written mathematical expression is culturally unambiguous, in the sense that mathematicians in all parts of the world understand the same written texts to have the same meanings. However, international mathematical notation does not prescribe unique forms. For example, the expression</para>
     
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-dGcT">
@@ -34,14 +34,14 @@
         <jbo>3x + 2y</jbo>
       </interlinear-gloss>
     </example>
-    <para>contains omitted multiplication operators, but there are other possible interpretations for the strings 
+    <para> <indexterm type="general-imported"><primary>mathematical notation</primary><secondary>and omitted operators</secondary></indexterm> contains omitted multiplication operators, but there are other possible interpretations for the strings 
     
     <quote>3x</quote> and 
     <quote>2y</quote> than as mathematical multiplication. Therefore, the Lojban verbal (spoken and written) form of 
     
     <xref linkend="example-random-id-dGcT"/> must not omit the multiplication operators.</para>
     
-    <para>The remainder of this chapter explains (in as much detail as is currently possible) the mekso system. This chapter is by intention complete as regards mekso components, but only suggestive about uses of those components - as of now, there has been no really comprehensive use made of mekso facilities, and many matters must await the test of usage to be fully clarified.</para>
+    <para> <indexterm type="general-imported"><primary>mekso chapter</primary><secondary>completeness</secondary></indexterm>  <indexterm type="general-imported"><primary>mekso chapter</primary><secondary>table notation convention</secondary></indexterm> The remainder of this chapter explains (in as much detail as is currently possible) the mekso system. This chapter is by intention complete as regards mekso components, but only suggestive about uses of those components - as of now, there has been no really comprehensive use made of mekso facilities, and many matters must await the test of usage to be fully clarified.</para>
   </section>
   <section xml:id="cll_chapter18-section2">
     <title>Lojban numbers</title>
@@ -98,7 +98,7 @@
         <description>0</description>
       </cmavo-entry>
     </cmavo-list>
-    <para>The simplest kind of mekso are numbers, which are cmavo or compound cmavo. There are cmavo for each of the 10 decimal digits, and numbers greater than 9 are made by stringing together the cmavo. Some examples:</para>
+    <para> <indexterm type="lojban-word-imported"><primary>PA selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>hundred</primary><secondary>expressing as number</secondary></indexterm>  <indexterm type="general-imported"><primary>ten</primary><secondary>expressing as number</secondary></indexterm>  <indexterm type="general-imported"><primary>numbers</primary><secondary>as compound cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>digits</primary><secondary>cmavo for</secondary></indexterm>  <indexterm type="general-imported"><primary>numbers</primary><secondary>expressing simple</secondary></indexterm> The simplest kind of mekso are numbers, which are cmavo or compound cmavo. There are cmavo for each of the 10 decimal digits, and numbers greater than 9 are made by stringing together the cmavo. Some examples:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-LmPr">
       <title>
         <anchor xml:id="c18e2d1"/>
@@ -134,11 +134,11 @@
         
       </interlinear-gloss>
     </example>
-    <para>Therefore, there are no separate cmavo for 
+    <para> <indexterm type="example-imported"><primary>123</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>numbers</primary><secondary>greater than 9</secondary></indexterm> Therefore, there are no separate cmavo for 
     <quote>ten</quote>, 
     <quote>hundred</quote>, etc.</para>
     
-    <para>There is a pattern to the digit cmavo (except for 
+    <para> <indexterm type="general-imported"><primary>number words</primary><secondary>pattern in</secondary></indexterm> There is a pattern to the digit cmavo (except for 
     <quote>no</quote>, 0) which is worth explaining. The cmavo from 1 to 5 end in the vowels 
     <quote>a</quote>, 
     <quote>e</quote>, 
@@ -153,7 +153,7 @@
   </section>
   <section xml:id="cll_chapter18-section3">
     <title>Signs and numerical punctuation</title>
-    <para>The following cmavo are discussed in this section:</para>
+    <para> <indexterm type="lojban-word-imported"><primary>PA selma'o</primary></indexterm> The following cmavo are discussed in this section:</para>
     <programlisting xml:space="preserve">
      ma'u    PA  positive sign
 
@@ -172,7 +172,7 @@
      ki'o    PA  comma between digits
 
 </programlisting>
-    <para>A number can be given an explicit sign by the use of 
+    <para> <indexterm type="lojban-word-imported"><primary>ni'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>mau</primary></indexterm>  <indexterm type="general-imported"><primary>negative numbers</primary><secondary>expressing</secondary></indexterm>  <indexterm type="general-imported"><primary>positive numbers</primary><secondary>explicit expression</secondary></indexterm>  <indexterm type="general-imported"><primary>signed numbers</primary><secondary>expressing</secondary></indexterm> A number can be given an explicit sign by the use of 
     <quote>ma'u</quote> and 
     <quote>ni'u</quote>, which are the positive and negative signs as distinct from the addition, subtraction, and negation operators. For example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-6A5H">
@@ -185,11 +185,11 @@
         <en>-1</en>
       </interlinear-gloss>
     </example>
-    <para>Grammatically, the signs are part of the number to which they are attached. It is also possible to use 
+    <para> <indexterm type="lojban-word-imported"><primary>pa</primary></indexterm>  <indexterm type="example-imported"><primary>-1</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>signs on numbers</primary><secondary>grammar</secondary></indexterm> Grammatically, the signs are part of the number to which they are attached. It is also possible to use 
     <quote>ma'u</quote> and 
     <quote>ni'u</quote> by themselves as numbers; the meaning of these numbers is explained in 
     <xref linkend="cll_chapter18-section8"/>.</para>
-    <para>Various numerical punctuation marks are likewise expressed by cmavo, as illustrated in the following examples:</para>
+    <para> <indexterm type="general-imported"><primary>decimal point</primary><secondary>as numerical punctuation</secondary></indexterm>  <indexterm type="general-imported"><primary>punctuation</primary><secondary>in numbers</secondary></indexterm>  <indexterm type="general-imported"><primary>numerical punctuation</primary></indexterm> Various numerical punctuation marks are likewise expressed by cmavo, as illustrated in the following examples:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-Ust4">
       <title>
@@ -201,7 +201,7 @@
         <en>3.1415</en>
       </interlinear-gloss>
     </example>
-    <para>(In some cultures, a comma is used instead of a period in the symbolic version of 
+    <para> <indexterm type="lojban-word-imported"><primary>pi</primary></indexterm>  <indexterm type="example-imported"><primary>3.1415</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>decimal point</primary><secondary>effect of different notations</secondary></indexterm> (In some cultures, a comma is used instead of a period in the symbolic version of 
     <xref linkend="example-random-id-Ust4"/>; 
     <quote>pi</quote> is still the Lojban representation for the decimal point.)</para>
     
@@ -216,7 +216,7 @@
         <en>2/7</en>
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="lojban-word-imported"><primary>fi'u</primary></indexterm>  <indexterm type="example-imported"><primary>2/7</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>reciprocal</primary><secondary>expression of mathematical</secondary></indexterm>  <indexterm type="general-imported"><primary>fractions</primary><secondary>numerator default</secondary></indexterm>  <indexterm type="general-imported"><primary>fractions</primary><secondary>expressing with numerical punctuation</secondary></indexterm> 
     <xref linkend="example-random-id-AeRL"/> is the name of the number two-sevenths; it is not the same as 
     <quote>the result of 2 divided by 7</quote> in Lojban, although numerically these two are equal. If the denominator of the fraction is present but the numerator is not, the numerator is taken to be 1, thus expressing the reciprocal of the following number:</para>
     
@@ -242,7 +242,7 @@
         <en>.35142857142857...</en>
       </interlinear-gloss>
     </example>
-    <para>Note that the 
+    <para> <indexterm type="lojban-word-imported"><primary>ra'e</primary></indexterm>  <indexterm type="general-imported"><primary>repeating decimals</primary><secondary>marking start of repeating portion</secondary></indexterm>  <indexterm type="general-imported"><primary>repeating decimals</primary><secondary>expressing with numerical punctuation</secondary></indexterm> Note that the 
     <quote>ra'e</quote> marks unambiguously where the repeating portion 
     
     <quote>142857</quote> begins.</para>
@@ -269,11 +269,11 @@
         <en>1,234,567</en>
       </interlinear-gloss>
     </example>
-    <para>(In some cultures, spaces are used in the symbolic representation of 
+    <para> <indexterm type="lojban-word-imported"><primary>ki'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ce'i</primary></indexterm>  <indexterm type="general-imported"><primary>commas in numbers</primary><secondary>effect of other notation conventions</secondary></indexterm>  <indexterm type="general-imported"><primary>commas in numbers</primary><secondary>as numerical punctuation</secondary></indexterm>  <indexterm type="general-imported"><primary>percent</primary><secondary>as numerical punctuation</secondary></indexterm> (In some cultures, spaces are used in the symbolic representation of 
     <xref linkend="example-random-id-qhwM"/>; 
     <quote>ki'o</quote> is still the Lojban representation.)</para>
     
-    <para>It is also possible to have less than three digits between successive 
+    <para> <indexterm type="general-imported"><primary>commas in numbers</primary><secondary>with elided digits</secondary></indexterm> It is also possible to have less than three digits between successive 
     <quote>ki'o</quote> s, in which case zeros are assumed to have been elided:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-TTBx">
@@ -331,7 +331,7 @@
 
 <phrase role="IPA">Φ</phrase>, phi, (1 + sqrt(5))/2 (approx. 1.61803...)
 </programlisting>
-    <para>The last cmavo is the same as the fraction sign cmavo: a fraction sign with neither numerator nor denominator represents the golden ratio.</para>
+    <para> <indexterm type="general-imported"><primary>fraction</primary><secondary>meaning with elided numerator and denominator</secondary></indexterm>  <indexterm type="general-imported"><primary>numbers</primary><secondary>special</secondary></indexterm> The last cmavo is the same as the fraction sign cmavo: a fraction sign with neither numerator nor denominator represents the golden ratio.</para>
     <para>Numbers can have any of these digit, punctuation, and special-number cmavo of Sections 2, 3, and 4 in any combination:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-k2U4">
       <title>
@@ -358,7 +358,7 @@
 <quote>3 + 2i</quote>)
 </programlisting>
     </example>
-    <para>Note that 
+    <para> <indexterm type="lojban-word-imported"><primary>ka'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ci'i</primary></indexterm>  <indexterm type="example-imported"><primary>infinity</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>ka'o</primary><secondary>as special number compared with as numerical punctuation</secondary></indexterm>  <indexterm type="general-imported"><primary>complex numbers</primary><secondary>expressing</secondary></indexterm> Note that 
     <quote>ka'o</quote> is both a special number (meaning 
     
     <quote>i</quote>) and a number punctuation mark (separating the real and the imaginary parts of a complex number).</para>
@@ -376,7 +376,7 @@
 <phrase role="IPA">ℵ</phrase>
 <subscript>0</subscript> (a transfinite cardinal)
 
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="lojban-word-imported"><primary>ci'i</primary></indexterm>  <indexterm type="example-imported"><primary>aleph null</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>transfinite cardinal</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
 </programlisting>
     </example>
     <para>The special numbers 
@@ -404,7 +404,7 @@
        e
 </programlisting>
     </example>
-    <para>However, many combinations are as yet undefined:</para>
+    <para> <indexterm type="general-imported"><primary>numerical punctuation</primary><secondary>undefined</secondary></indexterm> However, many combinations are as yet undefined:</para>
     <example xml:id="example-random-id-qHXr" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c18e4d6"/>
@@ -423,7 +423,7 @@
         <en>1 negative-sign 2</en>
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="general-imported"><primary>subtraction operator</primary><secondary>contrasted with negative sign</secondary></indexterm>  <indexterm type="general-imported"><primary>negative sign</primary><secondary>contrasted with subtraction operator</secondary></indexterm> 
     <xref linkend="example-random-id-qHya"/> is not 
     <quote>1 minus 2</quote>, which is represented by a different cmavo sequence altogether. It is a single number which has not been assigned a meaning. There are many such numbers which have no well-defined meaning; they may be used for experimental purposes or for future expansion of the Lojban number system.</para>
     <para>It is possible, of course, that some of these 
@@ -448,7 +448,7 @@
      vei     VEI     left parenthesis
      ve'o    VEhO    right parenthesis
 </programlisting>
-    <para>Let us begin at the beginning: one plus one equals two. In Lojban, that sentence translates to:</para>
+    <para> <indexterm type="lojban-word-imported"><primary>VUhU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>su'i</primary></indexterm>  <indexterm type="example-imported"><primary>1 + 1 = 2</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>mathematical notation</primary><secondary>infix</secondary></indexterm> Let us begin at the beginning: one plus one equals two. In Lojban, that sentence translates to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-CUeK">
       <title>
         <anchor xml:id="c18e5d1"/>
@@ -459,14 +459,14 @@
         <en>1 + 1 = 2</en>
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="general-imported"><primary>du</primary><secondary>grammar of</secondary></indexterm>  <indexterm type="general-imported"><primary>mathematical equality</primary><secondary>expressing</secondary></indexterm> 
     <xref linkend="example-random-id-CUeK"/>, a mekso sentence, is a regular Lojban bridi that exploits mekso features. 
     <quote>du</quote> is the predicate meaning 
     <quote>x1 is mathematically equal to x2</quote>. It is a cmavo for conciseness, but it has the same grammatical uses as any brivla. Outside mathematical contexts, 
     <quote>du</quote> means 
     <quote>x1 is identical with x2</quote> or 
     <quote>x1 is the same object as x2</quote>.</para>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>li</primary></indexterm>  <indexterm type="general-imported"><primary>numbers</primary><secondary>using for quantification contrasted with talking about</secondary></indexterm>  <indexterm type="general-imported"><primary>numbers</primary><secondary>talking about contrasted with using for quantification</secondary></indexterm>  <indexterm type="general-imported"><primary>number article</primary><secondary>explanation of use</secondary></indexterm>  <indexterm type="general-imported"><primary>the</primary><secondary>for talking about numbers themselves</secondary></indexterm>  <indexterm type="general-imported"><primary>article</primary><secondary>number</secondary></indexterm> The cmavo 
     <quote>li</quote> is the number article. It is required whenever a sentence talks about numbers as numbers, as opposed to using numbers to quantify things. For example:</para>
     
     
@@ -494,7 +494,7 @@
         <en>This fly has a mass of 3 grams.</en>
       </interlinear-gloss>
     </example>
-    <para>requires 
+    <para> <indexterm type="example-imported"><primary>3 grams</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>units of measurement</primary><secondary>expressing</secondary></indexterm>  <indexterm type="general-imported"><primary>measurements</primary><secondary>expressing</secondary></indexterm> requires 
     <quote>li</quote> because 
     <quote>ci</quote> is being used as a sumti. Note that this is the way in which measurements are stated in Lojban: all the predicates for units of length, mass, temperature, and so on have the measured object as the first place and a number as the second place. Using 
     
@@ -511,13 +511,13 @@
       </interlinear-gloss>
     </example>
     <para>which is grammatical but nonsensical: numbers are not persons.</para>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>VUhU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>su'i</primary></indexterm>  <indexterm type="general-imported"><primary>addition operator</primary><secondary>contrasted with positive sign</secondary></indexterm>  <indexterm type="general-imported"><primary>positive sign</primary><secondary>contrasted with addition operator</secondary></indexterm>  <indexterm type="general-imported"><primary>addition</primary><secondary>a mathematical operator</secondary></indexterm>  <indexterm type="general-imported"><primary>mathematical operators</primary></indexterm> The cmavo 
     <quote>su'i</quote> belongs to selma'o VUhU, which is composed of mathematical operators, and means 
     
     <quote>addition</quote>. As mentioned before, it is distinct from 
     <quote>ma'u</quote> which means the positive sign as an indication of a positive number:</para>
     
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="example-imported"><primary>+1 + -1 = 0</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-4gsp">
       <title>
         <anchor xml:id="c18e5d5"/>
@@ -540,21 +540,21 @@
         <en>5 + 1 = 3 + 3</en>
       </interlinear-gloss>
     </example>
-    <para>Why don't we say 
+    <para> <indexterm type="general-imported"><primary>conversion into sumti from mekso</primary></indexterm>  <indexterm type="general-imported"><primary>conversion of mekso into sumti</primary></indexterm>  <indexterm type="general-imported"><primary>li</primary><secondary>as converter of mekso into sumti</secondary></indexterm>  <indexterm type="general-imported"><primary>general sumti</primary><secondary>contrasted with operands</secondary></indexterm>  <indexterm type="general-imported"><primary>operands</primary><secondary>contrasted with general sumti</secondary></indexterm>  <indexterm type="general-imported"><primary>VUhU operands</primary></indexterm>  <indexterm type="general-imported"><primary>operators of VUhU</primary><secondary>grammar of operands</secondary></indexterm>  <indexterm type="general-imported"><primary>du</primary><secondary>with complex mekso on both sides</secondary></indexterm> Why don't we say 
     <quote>li mu su'i li pa</quote> rather than just 
     <quote>li mu su'i pa</quote>? The answer is that VUhU operators connect mekso operands (numbers, in 
     <xref linkend="example-random-id-d6bM"/>), not general sumti. 
     
     <quote>li</quote> is used to make the entire mekso into a sumti, which then plays the roles applicable to other sumti: in 
     <xref linkend="example-random-id-d6bM"/>, filling the places of a bridi</para>
-    <para>By default, Lojban mathematics is like simple calculator mathematics: there is no notion of 
+    <para> <indexterm type="general-imported"><primary>precedence</primary><secondary>mathematical default</secondary></indexterm>  <indexterm type="general-imported"><primary>operator left-right grouping</primary><secondary>as Lojban default</secondary></indexterm>  <indexterm type="general-imported"><primary>operator precedence</primary><secondary>in Lojban default</secondary></indexterm>  <indexterm type="general-imported"><primary>calculator mathematics</primary><secondary>as default in Lojban</secondary></indexterm> By default, Lojban mathematics is like simple calculator mathematics: there is no notion of 
     
     <quote>operator precedence</quote>. Consider the following example, where 
     
     <quote>pi'i</quote> means 
     <quote>times</quote>, the multiplication operator:</para>
     
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="lojban-word-imported"><primary>pi'i</primary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7a2Q">
       <title>
         <anchor xml:id="c18e5d7"/>
@@ -581,14 +581,14 @@
         <en>3 + 4 × 5 = 35</en>
       </interlinear-gloss>
     </example>
-    <para>Here we calculate 3 + 4 first, giving 7, and then calculate 7 × 5 second, leading to the result 35. While possessing the advantage of simplicity, this result violates the design goal of matching the standards of mathematics. What can be done?</para>
-    <para>There are three solutions, all of which will probably be used to some degree. The first solution is to ignore the problem. People will say 
+    <para> <indexterm type="general-imported"><primary>default operator precedence</primary><secondary>contrasted with mekso goal</secondary></indexterm> Here we calculate 3 + 4 first, giving 7, and then calculate 7 × 5 second, leading to the result 35. While possessing the advantage of simplicity, this result violates the design goal of matching the standards of mathematics. What can be done?</para>
+    <para> <indexterm type="general-imported"><primary>operator precedence</primary><secondary>effect of pragmatic convention</secondary></indexterm>  <indexterm type="general-imported"><primary>operator precedence</primary><secondary>and mathematical notation</secondary></indexterm>  <indexterm type="general-imported"><primary>mathematical notation</primary><secondary>and operator precedence</secondary></indexterm> There are three solutions, all of which will probably be used to some degree. The first solution is to ignore the problem. People will say 
     <quote>li ci su'i vo pi'i mu</quote> and mean 23 by it, because the notion that multiplication takes precedence over addition is too deeply ingrained to be eradicated by Lojban parsing, which totally ignores semantics. This convention essentially allows semantics to dominate syntax in this one area.</para>
     
-    <para>(Why not hard-wire the precedences into the grammar, as is done in computer programming languages? Essentially because there are too many operators, known and unknown, with levels of precedence that vary according to usage. The programming language 'C' has 13 levels of precedence, and its list of operators is not even extensible. For Lojban this approach is just not practical. In addition, hard-wired precedence could not be overridden in mathematical systems such as spreadsheets where the conventions are different.)</para>
-    <para>The second solution is to use explicit means to specify the precedence of operators. This approach is fully general, but clumsy, and will be explained in 
+    <para> <indexterm type="general-imported"><primary>operator precedence in other languages</primary></indexterm>  <indexterm type="general-imported"><primary>operator precedence</primary><secondary>rationale for default left-grouping</secondary></indexterm> (Why not hard-wire the precedences into the grammar, as is done in computer programming languages? Essentially because there are too many operators, known and unknown, with levels of precedence that vary according to usage. The programming language 'C' has 13 levels of precedence, and its list of operators is not even extensible. For Lojban this approach is just not practical. In addition, hard-wired precedence could not be overridden in mathematical systems such as spreadsheets where the conventions are different.)</para>
+    <para> <indexterm type="general-imported"><primary>operator precedence</primary><secondary>generalized explicit specification</secondary></indexterm> The second solution is to use explicit means to specify the precedence of operators. This approach is fully general, but clumsy, and will be explained in 
     <xref linkend="cll_chapter18-section20"/>.</para>
-    <para>The third solution is simple but not very general. When an operator is prefixed with the cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>BIhE selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>bi'e</primary></indexterm>  <indexterm type="general-imported"><primary>bi'e</primary><secondary>effect on following operator</secondary></indexterm>  <indexterm type="general-imported"><primary>operator precedence</primary><secondary>scope modification with bi'e</secondary></indexterm> The third solution is simple but not very general. When an operator is prefixed with the cmavo 
     <quote>bi'e</quote> (of selma'o BIhE), it becomes automatically of higher precedence than other operators not so prefixed. Thus,</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-LIUa">
@@ -607,7 +607,7 @@
     
     <quote>bi'e</quote> prefixes on a single operator are not allowed.</para>
     
-    <para>In addition, of course, Lojban has the mathematical parentheses 
+    <para> <indexterm type="lojban-word-imported"><primary>ve'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>vei</primary></indexterm>  <indexterm type="general-imported"><primary>parenthesis</primary><secondary>mathematical</secondary></indexterm>  <indexterm type="general-imported"><primary>operator precedence</primary><secondary>specifying by parenthesis</secondary></indexterm> In addition, of course, Lojban has the mathematical parentheses 
     <quote>vei</quote> and 
     <quote>ve'o</quote>, which can be used just like their written equivalents 
     <quote>(</quote> and 
@@ -629,7 +629,7 @@
         <en>(n + 1)(n + 1) = n</en>
       </interlinear-gloss>
     </example>
-    <para>There are several new usages in 
+    <para> <indexterm type="lojban-word-imported"><primary>ny</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>te'a</primary></indexterm>  <indexterm type="example-imported"><primary>(n + 1)(n + 1) = n^2 + 2n + 1</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu strings</primary><secondary>interpretation of contrasted with normal mathematical interpretation</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu strings</primary><secondary>in mathematical expressions</secondary></indexterm> There are several new usages in 
     <xref linkend="example-random-id-wfFV"/>: 
     <quote>te'a</quote> means 
     
@@ -1099,7 +1099,7 @@
         <en>I eat a-typical-amount-of the-mass-of bread.</en>
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="lojban-word-imported"><primary>da'a</primary></indexterm>  <indexterm type="general-imported"><primary>times</primary><secondary>implicit expression of</secondary></indexterm>  <indexterm type="general-imported"><primary>times</primary><secondary>explicit expression of</secondary></indexterm> 
     <quote>da'a</quote> is a related cmavo meaning 
     <quote>all but</quote>:</para>
     <example xml:id="example-random-id-qi94" role="interlinear-gloss-example">
@@ -1124,7 +1124,7 @@
     <para>
     <xref linkend="example-random-id-qia0"/> is similar in meaning to 
     <xref linkend="example-random-id-qi4a"/>.</para>
-    <para>If no number follows 
+    <para> <indexterm type="general-imported"><primary>da'a</primary><secondary>default number for</secondary></indexterm> If no number follows 
     <quote>da'a</quote>, then 
     <quote>pa</quote> is assumed; 
     <quote>da'a</quote> by itself means 
@@ -1141,13 +1141,13 @@
         <en>All rats can eat all other rats.</en>
       </interlinear-gloss>
     </example>
-    <para>(The use of 
+    <para> <indexterm type="example-imported"><primary>eat themselves</primary><secondary>example</secondary></indexterm> (The use of 
     <quote>da'a</quote> means that 
     <xref linkend="example-random-id-3z2U"/> does not require that all rats can eat themselves, but does allow it. Each rat has one rat it cannot eat, but that one might be some rat other than itself. Context often dictates that 
     
     <quote>itself</quote> is, indeed, the 
     <quote>other</quote> rat.)</para>
-    <para>As mentioned in 
+    <para> <indexterm type="lojban-word-imported"><primary>ni'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ma'u</primary></indexterm>  <indexterm type="general-imported"><primary>ni'u</primary><secondary>with elided number</secondary></indexterm>  <indexterm type="general-imported"><primary>ma'u</primary><secondary>with elided number</secondary></indexterm> As mentioned in 
     <xref linkend="cll_chapter18-section3"/>, 
     <quote>ma'u</quote> and 
     <quote>ni'u</quote> are also legal numbers, and they mean 
@@ -1180,7 +1180,7 @@
         <en>I possess a-positive-number-of currency-units.</en>
       </interlinear-gloss>
     </example>
-    <para>All of the numbers discussed so far are objective, even if indefinite. If there are exactly six superpowers ( 
+    <para> <indexterm type="lojban-word-imported"><primary>mo'a</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>du'e</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>rau</primary></indexterm>  <indexterm type="general-imported"><primary>indefinite values</primary><secondary>subjective</secondary></indexterm>  <indexterm type="general-imported"><primary>subjective amounts</primary><secondary>expressing</secondary></indexterm> All of the numbers discussed so far are objective, even if indefinite. If there are exactly six superpowers ( 
     <quote>rairgugde</quote>, 
     <quote>superlative-states</quote>) in the world, then 
     <quote>ro rairgugde</quote> means the same as 
@@ -1203,7 +1203,7 @@
         
       </interlinear-gloss>
     </example>
-    <para>Like the 
+    <para> <indexterm type="lojban-word-imported"><primary>pi</primary></indexterm>  <indexterm type="example-imported"><primary>enough currency</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>indefinite portions</primary><secondary>subjective</secondary></indexterm>  <indexterm type="general-imported"><primary>subjective portions</primary><secondary>expressing</secondary></indexterm> Like the 
     <quote>so'a</quote>-series, 
     
     <quote>rau</quote>, 
@@ -1215,7 +1215,7 @@
     <quote>pi</quote>; for example, 
     <quote>pirau</quote> means 
     <quote>a sufficient part of.</quote></para>
-    <para>Another possibility is that of combining definite and indefinite numbers into a single number. This usage implies that the two kinds of numbers have the same value in the given context:</para>
+    <para> <indexterm type="general-imported"><primary>definite numbers</primary><secondary>combined with indefinite</secondary></indexterm>  <indexterm type="general-imported"><primary>indefinite numbers</primary><secondary>combined with definite</secondary></indexterm> Another possibility is that of combining definite and indefinite numbers into a single number. This usage implies that the two kinds of numbers have the same value in the given context:</para>
     
     <example xml:id="example-random-id-qibb" role="interlinear-gloss-example">
       <title>
@@ -1239,7 +1239,7 @@
         <quote>many</quote> in the circumstances).</en>
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="example-imported"><primary>both dogs</primary><secondary>example</secondary></indexterm> 
     <xref linkend="example-random-id-qIBi"/> assumes a mostly monogamous culture by stating that three is 
     <quote>many</quote>.</para>
   </section>
@@ -1257,7 +1257,7 @@
      za'u    PA  more than
 
 </programlisting>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>ji'i</primary></indexterm>  <indexterm type="general-imported"><primary>ji'i</primary><secondary>effect of placement</secondary></indexterm>  <indexterm type="general-imported"><primary>approximate numbers</primary><secondary>expressing</secondary></indexterm> The cmavo 
     <quote>ji'i</quote> (of selma'o PA) is used in several ways to indicate approximate or rounded numbers. If it appears at the beginning of a number, the whole number is approximate:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-YLcy">
@@ -1271,7 +1271,7 @@
         
       </interlinear-gloss>
     </example>
-    <para>If 
+    <para> <indexterm type="example-imported"><primary>approximately 40</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>approximate numbers</primary><secondary>expressing some exactness of</secondary></indexterm> If 
     <quote>ji'i</quote> appears in the middle of a number, all the digits following it are approximate:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-BANC">
       <title>
@@ -1285,7 +1285,7 @@
         <quote>fifty</quote> is approximate)</en>
       </interlinear-gloss>
     </example>
-    <para>If 
+    <para> <indexterm type="general-imported"><primary>rounded numbers</primary><secondary>expressing</secondary></indexterm>  <indexterm type="general-imported"><primary>truncation of number</primary><secondary>expressing</secondary></indexterm> If 
     <quote>ji'i</quote> appears at the end of a number, it indicates that the number has been rounded. In addition, it can then be followed by a sign cmavo ( 
     <quote>ma'u</quote> or 
     <quote>ni'u</quote>), which indicate truncation towards positive or negative infinity respectively.</para>
@@ -1322,14 +1322,14 @@
         
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="example-imported"><primary>rounded down</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>rounded up</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>ji'i</primary><secondary>with elided number</secondary></indexterm> 
     <xref linkend="example-random-id-qIc5"/> through 
     <xref linkend="example-random-id-qiDE"/> are all approximations to 
     <quote>te'o</quote> (exponential e). 
     <quote>ji'i</quote> can also appear by itself, in which case it means 
     <quote>approximately the typical value in this context</quote>.</para>
     
-    <para>The four cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>za'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>me'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>su'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>su'e</primary></indexterm>  <indexterm type="general-imported"><primary>inexact numbers with bounds</primary></indexterm> The four cmavo 
     <quote>su'e</quote>, 
     
     <quote>su'o</quote>, 
@@ -1376,7 +1376,7 @@
         <en>I look-at more-than two persons</en>
       </interlinear-gloss>
     </example>
-    <para>Each of these is a subtly different claim: 
+    <para> <indexterm type="example-imported"><primary>exactly two</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>more than</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>less than</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>at least</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>at most</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>plural</primary><secondary>Lojban equivalent of</secondary></indexterm>  <indexterm type="general-imported"><primary>exact number</primary><secondary>expressing</secondary></indexterm>  <indexterm type="general-imported"><primary>at most</primary><secondary>contrasted with more than</secondary><tertiary>at least, less than</tertiary></indexterm>  <indexterm type="general-imported"><primary>at least</primary><secondary>contrasted with more than</secondary><tertiary>less than, at most</tertiary></indexterm>  <indexterm type="general-imported"><primary>more than</primary><secondary>contrasted with less than</secondary><tertiary>at least, at most</tertiary></indexterm>  <indexterm type="general-imported"><primary>less than</primary><secondary>contrasted with more than</secondary><tertiary>at least, at most</tertiary></indexterm> Each of these is a subtly different claim: 
     <xref linkend="example-random-id-qiE3"/> is true of two or any greater number, whereas 
     <xref linkend="example-random-id-qIfM"/> requires three persons or more. Likewise, 
     <xref linkend="example-random-id-qidi"/> refers to zero, one, or two; 
@@ -1386,7 +1386,7 @@
     <quote>exactly 2, neither more nor less</quote> is just 
     <quote>re</quote>. Note that 
     <quote>su'ore</quote> is the exact Lojban equivalent of English plurals.</para>
-    <para>If no number follows one of these cmavo, 
+    <para> <indexterm type="general-imported"><primary>za'u</primary><secondary>with elided number</secondary></indexterm>  <indexterm type="general-imported"><primary>me'i</primary><secondary>with elided number</secondary></indexterm>  <indexterm type="general-imported"><primary>su'o</primary><secondary>with elided number</secondary></indexterm>  <indexterm type="general-imported"><primary>su'e</primary><secondary>with elided number</secondary></indexterm> If no number follows one of these cmavo, 
     <quote>pa</quote> is understood: therefore,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-brir">
       <title>
@@ -1398,7 +1398,7 @@
       </interlinear-gloss>
     </example>
     <para>is a meaningful claim.</para>
-    <para>Like the numbers in 
+    <para> <indexterm type="lojban-word-imported"><primary>pi</primary></indexterm>  <indexterm type="general-imported"><primary>inexact portions with bounds</primary></indexterm> Like the numbers in 
     <xref linkend="cll_chapter18-section8"/>, all of these cmavo may be preceded by 
     <quote>pi</quote> to make the corresponding quantifiers for part of a whole. For example, 
     <quote>pisu'o</quote> means 
@@ -1458,8 +1458,8 @@
         
       </cmavo-entry>
     </cmavo-list>
-    <para>In normal contexts, Lojban assumes that all numbers are expressed in the decimal (base 10) system. However, other bases are possible, and may be appropriate in particular circumstances.</para>
-    <para>To specify a number in a particular base, the VUhU operator 
+    <para> <indexterm type="general-imported"><primary>radix</primary><secondary>decimal (see also base)</secondary></indexterm> In normal contexts, Lojban assumes that all numbers are expressed in the decimal (base 10) system. However, other bases are possible, and may be appropriate in particular circumstances.</para>
+    <para> <indexterm type="general-imported"><primary>octal system</primary><secondary>specifying numbers in (see also base)</secondary></indexterm>  <indexterm type="general-imported"><primary>binary system</primary><secondary>specifying numbers in (see also base)</secondary></indexterm>  <indexterm type="general-imported"><primary>base</primary><secondary>specifying</secondary></indexterm> To specify a number in a particular base, the VUhU operator 
     <quote>ju'u</quote> is suitable:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Iw8u">
       <title>
@@ -1470,9 +1470,9 @@
         <en>The-number 1010 base 2 equals the-number 10.</en>
       </interlinear-gloss>
     </example>
-    <para>Here, the final 
+    <para> <indexterm type="general-imported"><primary>base</primary><secondary>changing permanently</secondary></indexterm>  <indexterm type="general-imported"><primary>base</primary><secondary>assumed</secondary></indexterm> Here, the final 
     <quote>pa no</quote> is assumed to be base 10, as usual; so is the base specification. (The base may also be changed permanently by a metalinguistic specification; no standard way of doing so has as yet been worked out.)</para>
-    <para>Lojban has digits for representing bases up to 16, because 16 is a base often used in computer applications. In English, it is customary to use the letters A-F as the base 16 digits equivalent to the numbers ten through fifteen. In Lojban, this ambiguity is avoided:</para>
+    <para> <indexterm type="general-imported"><primary>hexadecimal system</primary><secondary>specifying numbers in (see also base)</secondary></indexterm>  <indexterm type="general-imported"><primary>digits</primary><secondary>rationale for having 16</secondary></indexterm> Lojban has digits for representing bases up to 16, because 16 is a base often used in computer applications. In English, it is customary to use the letters A-F as the base 16 digits equivalent to the numbers ten through fifteen. In Lojban, this ambiguity is avoided:</para>
     <example xml:id="example-random-id-qIgb" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c18e10d2"/>
@@ -1492,11 +1492,11 @@
         <en>The-number DEF base 16 equals the-number 3567.</en>
       </interlinear-gloss>
     </example>
-    <para>Note the pattern in the cmavo: the diphthongs 
+    <para> <indexterm type="example-imported"><primary>ABC base 16</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>digits beyond 9</primary><secondary>word pattern</secondary></indexterm> Note the pattern in the cmavo: the diphthongs 
     <quote>au</quote>, 
     <quote>ei</quote>, 
     <quote>ai</quote> are used twice in the same order. The digits for A to D use consonants different from those used in the decimal digit cmavo; E and F unfortunately overlap 2 and 4 - there was simply not enough available cmavo space to make a full differentiation possible. The cmavo are also in alphabetical order.</para>
-    <para>The base point 
+    <para> <indexterm type="general-imported"><primary>decimal point</primary><secondary>in bases other than 10</secondary></indexterm>  <indexterm type="general-imported"><primary>base point</primary><secondary>in bases other than 10</secondary></indexterm> The base point 
     
     <quote>pi</quote> is used in non-decimal bases just as in base 10:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-gCo4">
@@ -1509,10 +1509,10 @@
         
       </interlinear-gloss>
     </example>
-    <para>Since 
+    <para> <indexterm type="lojban-word-imported"><primary>VUhU selma'o</primary></indexterm>  <indexterm type="example-imported"><primary>F.8 base 16</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>base</primary><secondary>non-constant</secondary></indexterm>  <indexterm type="general-imported"><primary>ju'u</primary><secondary>grammar of</secondary></indexterm> Since 
     <quote>ju'u</quote> is an operator of selma'o VUhU, it is grammatical to use any operand as the left argument. Semantically, however, it is undefined to use anything but a numeral string on the left. The reason for making 
     <quote>ju'u</quote> an operator is to allow reference to a base which is not a constant.</para>
-    <para>There are some numerical values that require a 
+    <para> <indexterm type="lojban-word-imported"><primary>pi'e</primary></indexterm>  <indexterm type="example-imported"><primary>hours</primary><secondary>minutes</secondary><tertiary>seconds: example</tertiary></indexterm>  <indexterm type="general-imported"><primary>compound base</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>compound base</primary><secondary>separator for</secondary></indexterm>  <indexterm type="general-imported"><primary>base varying for each digit</primary><secondary>separator for</secondary></indexterm> There are some numerical values that require a 
     <quote>base</quote> that varies from digit to digit. For example, times represented in hours, minutes, and seconds have, in effect, three 
     
     <quote>digits</quote>: the first is base 24, the second and third are base 60. To express such numbers, the compound base separator 
@@ -1527,7 +1527,7 @@
         <en>3:22:40</en>
       </interlinear-gloss>
     </example>
-    <para>Each digit sequence separated by instances of 
+    <para> <indexterm type="general-imported"><primary>compound base</primary><secondary>expressing digits in</secondary></indexterm> Each digit sequence separated by instances of 
     <quote>pi'e</quote> is expressed in decimal notation, but the number as a whole is not decimal and can only be added and subtracted by special rules:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-iUYu">
       <title>
@@ -1543,7 +1543,7 @@
     <xref linkend="example-random-id-17HR"/> and 
     <xref linkend="example-random-id-iUYu"/> is hours, the second minutes, and the third seconds.</para>
     
-    <para>The same mechanism using 
+    <para> <indexterm type="general-imported"><primary>base greater than 16</primary><secondary>expressing numbers in</secondary></indexterm>  <indexterm type="general-imported"><primary>Mayan mathematics</primary><secondary>as a system with base larger than 16</secondary></indexterm> The same mechanism using 
     <quote>pi'e</quote> can be used to express numbers which have a base larger than 16. For example, base-20 Mayan mathematics might use digits from 
     
     <quote>no</quote> to 
@@ -1558,7 +1558,7 @@
         <en>the-number 1;2;3 base 20 equals the-number 443</en>
       </interlinear-gloss>
     </example>
-    <para>Carefully note the difference between:</para>
+    <para> <indexterm type="general-imported"><primary>base greater than 16</primary><secondary>two digits contrasted with compound single-digits</secondary></indexterm>  <indexterm type="general-imported"><primary>base greater than 16</primary><secondary>compound single-digits contrasted with two digits</secondary></indexterm> Carefully note the difference between:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-ydwP">
       <title>
         <anchor xml:id="c18e10d8"/>
@@ -1579,7 +1579,7 @@
       </interlinear-gloss>
     </example>
     <para>which is equal to twenty.</para>
-    <para>Both 
+    <para> <indexterm type="general-imported"><primary>large-base decimal fraction</primary><secondary>expressing</secondary></indexterm> Both 
     <quote>pi</quote> and 
     <quote>pi'e</quote> can be used to express large-base fractions:</para>
     
@@ -1592,7 +1592,7 @@
         <en>The-number 1;4.7 base 20 equals the-number 24.35.</en>
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="general-imported"><primary>base</primary><secondary>vague</secondary></indexterm> 
     <quote>pi'e</quote> is also used where the base of each digit is vague, as in the numbering of the examples in this chapter:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-U161">
       <title>
@@ -1654,17 +1654,17 @@
         <description>terminator for ME</description>
       </cmavo-entry>
     </cmavo-list>
-    <para>Lojban possesses a special category of selbri which are based on mekso. The simplest kind of such selbri are made by suffixing a member of selma'o MOI to a number. There are five members of MOI, each of which serves to create number-based selbri with specific place structures.</para>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>MOI selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>numerical selbri</primary><secondary>special</secondary></indexterm> Lojban possesses a special category of selbri which are based on mekso. The simplest kind of such selbri are made by suffixing a member of selma'o MOI to a number. There are five members of MOI, each of which serves to create number-based selbri with specific place structures.</para>
+    <para> <indexterm type="lojban-word-imported"><primary>mei</primary></indexterm>  <indexterm type="general-imported"><primary>cardinal selbri</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>cardinal selbri</primary><secondary>place structure</secondary></indexterm> The cmavo 
     <quote>mei</quote> creates cardinal selbri. The basic place structure is:</para>
     
     <programlisting xml:space="preserve">
        x1 is a mass formed from the set x2 of n members, one or more of which is/are x3
 </programlisting>
-    <para>A cardinal selbri interrelates a set with a given number of members, the mass formed from that set, and the individuals which make the set up. The mass argument is placed first as a matter of convenience, not logical necessity.</para>
+    <para> <indexterm type="general-imported"><primary>mass</primary><secondary>expressing relation with individuals forming</secondary></indexterm>  <indexterm type="general-imported"><primary>mass</primary><secondary>expressing relation with set forming</secondary></indexterm>  <indexterm type="general-imported"><primary>individuals</primary><secondary>expressing relation with mass formed</secondary></indexterm>  <indexterm type="general-imported"><primary>individuals</primary><secondary>expressing relation with set formed</secondary></indexterm>  <indexterm type="general-imported"><primary>set</primary><secondary>expressing relation with individuals forming set</secondary></indexterm>  <indexterm type="general-imported"><primary>set</primary><secondary>expressing relation with mass formed from set</secondary></indexterm> A cardinal selbri interrelates a set with a given number of members, the mass formed from that set, and the individuals which make the set up. The mass argument is placed first as a matter of convenience, not logical necessity.</para>
     
     <para>Some examples:</para>
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="example-imported"><primary>three rats</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-ujSA">
       <title>
         <anchor xml:id="c18e11d1"/>
@@ -1680,7 +1680,7 @@
     <para>Here, the mass of my rats is said to have three components; that is, I have three rats.</para>
     
     <para>Another example, with one element this time:</para>
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="example-imported"><primary>singular me</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>individual</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-1Pen">
       <title>
         <anchor xml:id="c18e11d2"/>
@@ -1697,7 +1697,7 @@
     <para>However, when the number expressed before 
     <quote>-mei</quote> is an objective indefinite number of the kind explained in 
     <xref linkend="cll_chapter18-section8"/>, a slightly different place structure is required:</para>
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="general-imported"><primary>individuals of set</primary><secondary>expressing measurement standard for indefinites</secondary></indexterm>  <indexterm type="general-imported"><primary>set</primary><secondary>expressing measurement standard for indefinites</secondary></indexterm>  <indexterm type="general-imported"><primary>mass</primary><secondary>expressing measurement standard for indefinites</secondary></indexterm>  <indexterm type="general-imported"><primary>mei</primary><secondary>place structure formed for objective indefinites</secondary></indexterm> FIXME: TAG SPOT</para>
     <programlisting xml:space="preserve">
        x1 is a mass formed from a set x2 of n members, one or more of which is/are x3,
             measured relative to the set x4.
@@ -1714,13 +1714,13 @@
         <en>The rats in the park are a small number of all the rats there are.</en>
       </interlinear-gloss>
     </example>
-    <para>In 
+    <para> <indexterm type="lojban-word-imported"><primary>lo'i</primary></indexterm>  <indexterm type="example-imported"><primary>set of all rats</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>rats in park</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>fewsome</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>lo'i</primary><secondary>with elided quantifiers</secondary></indexterm> In 
     <xref linkend="example-random-id-GJsg"/>, the x2 and x3 places are vacant, and the x4 place is filled by 
     <quote>lo'i ratcu</quote>, which (because no quantifiers are explicitly given) means 
     <quote>the whole of the set of all those things which are rats</quote>, or simply 
     <quote>the set of all rats.</quote></para>
     
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="example-imported"><primary>manysome</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-n52D">
       <title>
         <anchor xml:id="c18e11d4"/>
@@ -1739,7 +1739,7 @@
     
     <para>More explanations about the interrelationship of sets, masses, and individuals can be found in 
     <xref linkend="chapter-sumti"/>.</para>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>moi</primary></indexterm>  <indexterm type="general-imported"><primary>ordinal selbri</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>ordinal selbri</primary><secondary>place structure</secondary></indexterm> The cmavo 
     <quote>moi</quote> creates ordinal selbri. The place structure is:</para>
     
     <programlisting xml:space="preserve">
@@ -1779,9 +1779,9 @@
         
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="example-imported"><primary>enough-th</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>all-th</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>first rat</primary><secondary>example</secondary></indexterm> 
     <xref linkend="example-random-id-qIiA"/> means, in the appropriate context, that my position in line is sufficiently far to the front that I will get a seat for the movie.</para>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>si'e</primary></indexterm>  <indexterm type="general-imported"><primary>portion selbri</primary><secondary>place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>portion selbri</primary><secondary>definition</secondary></indexterm> The cmavo 
     <quote>si'e</quote> creates portion selbri. The place structure is:</para>
     
     
@@ -1799,14 +1799,14 @@
         <en>This meal is one-third of my daily food.</en>
       </interlinear-gloss>
     </example>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>cu'o</primary></indexterm>  <indexterm type="general-imported"><primary>probability selbri</primary><secondary>place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>probability selbri</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>one-third of food</primary></indexterm> The cmavo 
     <quote>cu'o</quote> creates probability selbri. The place structure is:</para>
     
     
     <programlisting xml:space="preserve">
        event x1 has probability (n) of occurring under conditions x2
 </programlisting>
-    <para>The number must be between 0 and 1 inclusive. For example:</para>
+    <para> <indexterm type="general-imported"><primary>probability selbri</primary><secondary>values</secondary></indexterm> The number must be between 0 and 1 inclusive. For example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-9sf6">
       <title>
         <anchor xml:id="c18e11d9"/>
@@ -1817,14 +1817,14 @@
         
       </interlinear-gloss>
     </example>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>va'e</primary></indexterm>  <indexterm type="example-imported"><primary>coin heads</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>probability .5</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>scale selbri</primary><secondary>place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>scale selbri</primary><secondary>definition</secondary></indexterm> The cmavo 
     <quote>va'e</quote> creates a scale selbri. The place structure is:</para>
     
     
     <programlisting xml:space="preserve">
        x1 is at scale position (n) on the scale x2
 </programlisting>
-    <para>If the scale is granular rather than continuous, a form like 
+    <para> <indexterm type="general-imported"><primary>unreduced fractions</primary><secondary>use in granular scales</secondary></indexterm>  <indexterm type="general-imported"><primary>scale</primary><secondary>granular contrasted with continuous</secondary></indexterm> If the scale is granular rather than continuous, a form like 
     
     <quote>cifi'uxa</quote> (3/6) may be used; in this case, 3/6 is not the same as 1/2, because the third position on a scale of six positions is not the same as the first position on a scale of two positions. Here is an example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-XiTd">
@@ -1839,7 +1839,7 @@
         <en>This rose is very red.</en>
       </interlinear-gloss>
     </example>
-    <para>When the quantifier preceding any MOI cmavo includes the subjective numbers 
+    <para> <indexterm type="lojban-word-imported"><primary>mo'a</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>du'e</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>rau</primary></indexterm>  <indexterm type="example-imported"><primary>scale of redness</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>8 out of ten</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>scale selbri</primary><secondary>place structure effect from subjective numbers</secondary></indexterm>  <indexterm type="general-imported"><primary>probability selbri</primary><secondary>place structure effect from subjective numbers</secondary></indexterm>  <indexterm type="general-imported"><primary>portion selbri</primary><secondary>place structure effect from subjective numbers</secondary></indexterm>  <indexterm type="general-imported"><primary>ordinal selbri</primary><secondary>place structure effect from subjective numbers</secondary></indexterm>  <indexterm type="general-imported"><primary>cardinal selbri</primary><secondary>place structure effect from subjective numbers</secondary></indexterm>  <indexterm type="general-imported"><primary>subjective numbers</primary><secondary>effect on place structure for scale selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>subjective numbers</primary><secondary>effect on place structure for probability selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>subjective numbers</primary><secondary>effect on place structure for portion selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>subjective numbers</primary><secondary>effect on place structure for ordinal selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>subjective numbers</primary><secondary>effect on place structure for cardinal selbri</secondary></indexterm> When the quantifier preceding any MOI cmavo includes the subjective numbers 
     <quote>rau</quote>, 
     
     <quote>du'e</quote>, or 
@@ -1858,18 +1858,18 @@
         
       </interlinear-gloss>
     </example>
-    <para>The extra place (which for 
+    <para> <indexterm type="general-imported"><primary>subjective numbers</primary><secondary>rationale for effect on place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>too many rats</primary><secondary>example</secondary></indexterm> The extra place (which for 
     <quote>-mei</quote> is the x4 place labeled by 
     <quote>fo</quote>) is provided rather than using a BAI tag such as 
     <quote>ma'i</quote> because a specification of the standard for judgment is essential to the meaning of subjective words like 
     
     <quote>enough</quote>.</para>
-    <para>This place is not normally explicit when using one of the subjective numbers directly as a number. Therefore, 
+    <para> <indexterm type="general-imported"><primary>subjective numbers</primary><secondary>specifying standard for</secondary></indexterm>  <indexterm type="general-imported"><primary>standard for subjective numbers</primary><secondary>specifying</secondary></indexterm> This place is not normally explicit when using one of the subjective numbers directly as a number. Therefore, 
     <quote>du'e ratcu</quote> means 
     
     <quote>too many rats</quote> without specifying any standard.</para>
     
-    <para>It is also grammatical to substitute a lerfu string for a number:</para>
+    <para> <indexterm type="general-imported"><primary>lerfu strings</primary><secondary>with numerical selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>numerical selbri</primary><secondary>special</secondary><tertiary>with lerfu strings</tertiary></indexterm> It is also grammatical to substitute a lerfu string for a number:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-cyLo">
       <title>
         <anchor xml:id="c18e11d12"/>
@@ -1880,11 +1880,11 @@
         <en>That is my nth rat.</en>
       </interlinear-gloss>
     </example>
-    <para>More complex mekso cannot be placed directly in front of MOI, due to the resulting grammatical ambiguities. Instead, a somewhat artificial form of expression is required.</para>
-    <para>The cmavo 
+    <para> <indexterm type="example-imported"><primary>nth rat</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>numerical selbri</primary><secondary>restriction on numbers used for</secondary></indexterm>  <indexterm type="general-imported"><primary>numerical selbri</primary><secondary>grammar</secondary></indexterm> More complex mekso cannot be placed directly in front of MOI, due to the resulting grammatical ambiguities. Instead, a somewhat artificial form of expression is required.</para>
+    <para> <indexterm type="lojban-word-imported"><primary>me'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ME selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>me</primary></indexterm>  <indexterm type="general-imported"><primary>numerical selbri</primary><secondary>alternative to compensate for restriction on numbers</secondary></indexterm>  <indexterm type="general-imported"><primary>&quot;me&quot;</primary><secondary>effect of MOI on</secondary></indexterm>  <indexterm type="general-imported"><primary>numerical selbri</primary><secondary>complex</secondary></indexterm>  <indexterm type="general-imported"><primary>numerical selbri</primary><secondary>use of &quot;me&quot; with</secondary></indexterm> The cmavo 
     <quote>me</quote> (of selma'o ME) has the function of making a sumti into a selbri. A whole 
     <quote>me</quote> construction can have a member of MOI added to the end to create a complex mekso selbri:</para>
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="example-imported"><primary>(n+1)-th rat</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-xaYd">
       <title>
         <anchor xml:id="c18e11d13"/>
@@ -1904,7 +1904,7 @@
     <quote>pa</quote> and the 
     <quote>moi</quote> separate; otherwise, the parser will combine them into the compound 
     <quote>pamoi</quote> and reject the sentence as ungrammatical.</para>
-    <para>It is perfectly possible to use non-numerical sumti after 
+    <para> <indexterm type="general-imported"><primary>numerical selbri</primary><secondary>based on non-numerical sumti</secondary></indexterm> It is perfectly possible to use non-numerical sumti after 
     <quote>me</quote> and before a member of MOI, producing strange results indeed:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-enCe">
       <title>
@@ -1921,7 +1921,7 @@
         
       </interlinear-gloss>
     </example>
-    <para>Note: the elidable terminator 
+    <para> <indexterm type="lojban-word-imported"><primary>PA selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>MOI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>boi</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>me'u</primary></indexterm>  <indexterm type="example-imported"><primary>snowball's chance</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>boi</primary><secondary>effect on elidability of me'u</secondary></indexterm>  <indexterm type="general-imported"><primary>MOI selma'o</primary><secondary>use of boi before</secondary></indexterm>  <indexterm type="general-imported"><primary>PA selma'o</primary><secondary>exception on use of boi with MOI</secondary></indexterm>  <indexterm type="general-imported"><primary>boi</primary><secondary>exception before MOI</secondary></indexterm> Note: the elidable terminator 
     <quote>boi</quote> is not used between a number and a member of MOI. As a result, the 
     <quote>me'u</quote> in 
     <xref linkend="example-random-id-xaYd"/> could also be replaced by a 
@@ -1940,7 +1940,7 @@
         <description>number question</description>
       </cmavo-entry>
     </cmavo-list>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>xo</primary></indexterm>  <indexterm type="general-imported"><primary>number questions</primary></indexterm>  <indexterm type="general-imported"><primary>questions</primary><secondary>number</secondary></indexterm> The cmavo 
     <quote>xo</quote>, a member of selma'o PA, is used to ask questions whose answers are numbers. Like most Lojban question words, it fills the blank where the answer should go. (See 
     
     <xref linkend="chapter-structure"/> for more on Lojban questions.)</para>
@@ -1966,7 +1966,7 @@
         
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="general-imported"><primary>questions</primary><secondary>digit</secondary></indexterm>  <indexterm type="general-imported"><primary>digit questions</primary></indexterm>  <indexterm type="general-imported"><primary>police lineup</primary></indexterm> 
     <quote>xo</quote> can also be combined with other digits to ask questions whose answers are already partly specified. This ability could be very useful in writing tests of elementary arithmetical knowledge:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-hSee">
@@ -1978,7 +1978,7 @@
         <en>The-number 25 times 6 equals the-number 1?0</en>
       </interlinear-gloss>
     </example>
-    <para>to which the correct reply would be 
+    <para> <indexterm type="general-imported"><primary>number questions</primary><secondary>answers to</secondary></indexterm>  <indexterm type="general-imported"><primary>numbers</primary><secondary>as grammatically complete utterances</secondary></indexterm> to which the correct reply would be 
     <quote>mu</quote>, or 5. The ability to utter bare numbers as grammatical Lojban sentences is primarily intended for giving answers to 
     <quote>xo</quote> questions. (Another use, obviously, is for counting off physical objects one by one.)</para>
     
@@ -1993,7 +1993,7 @@
         <description>subscript</description>
       </cmavo-entry>
     </cmavo-list>
-    <para>Subscripting is a general Lojban feature, not used only in mekso; there are many things that can logically be subscripted, and grammatically a subscript is a free modifier, usable almost anywhere. In particular, of course, mekso variables (lerfu strings) can be subscripted:</para>
+    <para> <indexterm type="general-imported"><primary>subscripts</primary><secondary>external grammar of</secondary></indexterm> Subscripting is a general Lojban feature, not used only in mekso; there are many things that can logically be subscripted, and grammatically a subscript is a free modifier, usable almost anywhere. In particular, of course, mekso variables (lerfu strings) can be subscripted:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-MT0a">
       <title>
         <anchor xml:id="c18e13d1"/>
@@ -2005,7 +2005,7 @@
         <en>x</en>
       </interlinear-gloss>
     </example>
-    <para>Subscripts always begin with the flag 
+    <para> <indexterm type="lojban-word-imported"><primary>XI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>xi</primary></indexterm>  <indexterm type="example-imported"><primary>x-sub-3</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>subscripts</primary><secondary>internal grammar of</secondary></indexterm> Subscripts always begin with the flag 
     <quote>xi</quote> (of selma'o XI). 
     <quote>xi</quote> may be followed by a number, a lerfu string, or a general mekso expression in parentheses:</para>
     <example xml:id="example-random-id-qiIs" role="interlinear-gloss-example">
@@ -2035,11 +2035,11 @@
         <en>x</en>
       </interlinear-gloss>
     </example>
-    <para>Note that subscripts attached directly to lerfu words (variables) generally need a 
+    <para> <indexterm type="general-imported"><primary>free modifiers</primary><secondary>effects on elidability of terminators</secondary></indexterm>  <indexterm type="general-imported"><primary>subscripts</primary><secondary>effects on elidability of terminators</secondary></indexterm>  <indexterm type="general-imported"><primary>subscripts on lerfu words</primary><secondary>effect on elidability of boi</secondary></indexterm> Note that subscripts attached directly to lerfu words (variables) generally need a 
     <quote>boi</quote> terminating the variable. Free modifiers, of which subscripts are one variety, generally require the explicit presence of an otherwise elidable terminator.</para>
-    <para>There is no standard way of handling superscripts (other than those used as exponents) or for subscripts or superscripts that come before the main expression. If necessary, further cmavo could be assigned to selma'o XI for these purposes.</para>
+    <para> <indexterm type="general-imported"><primary>superscripts</primary></indexterm>  <indexterm type="general-imported"><primary>subscripts</primary><secondary>before main expression</secondary></indexterm> There is no standard way of handling superscripts (other than those used as exponents) or for subscripts or superscripts that come before the main expression. If necessary, further cmavo could be assigned to selma'o XI for these purposes.</para>
     
-    <para>The elidable terminator for a subscript is that for a general number or lerfu string, namely 
+    <para> <indexterm type="lojban-word-imported"><primary>boi</primary></indexterm>  <indexterm type="general-imported"><primary>sub-subscripts</primary></indexterm>  <indexterm type="general-imported"><primary>subscripts</primary><secondary>multiple as sub-subscript</secondary></indexterm>  <indexterm type="general-imported"><primary>subscripts</primary><secondary>terminator for</secondary></indexterm> The elidable terminator for a subscript is that for a general number or lerfu string, namely 
     <quote>boi</quote>. By convention, a subscript following another subscript is taken to be a sub-subscript:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-FddL">
       <title>
@@ -2079,7 +2079,7 @@
         
       </cmavo-entry>
     </cmavo-list>
-    <para>The infix operators presented so far have always had exactly two operands, and for more or fewer operands forethought notation has been required. However, it is possible to use an operator in infix style even though it has more or fewer than two operands, through the use of a pair of tricks: the null operand 
+    <para> <indexterm type="lojban-word-imported"><primary>ge'a</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>tu'o</primary></indexterm> The infix operators presented so far have always had exactly two operands, and for more or fewer operands forethought notation has been required. However, it is possible to use an operator in infix style even though it has more or fewer than two operands, through the use of a pair of tricks: the null operand 
     
     <quote>tu'o</quote> and the null operator 
     
@@ -2102,11 +2102,11 @@
         <en>-n = 0 − n</en>
       </interlinear-gloss>
     </example>
-    <para>The 
+    <para> <indexterm type="general-imported"><primary>operands</primary><secondary>too few for infix operation</secondary></indexterm>  <indexterm type="general-imported"><primary>null operand</primary><secondary>for infix operations with too few operands</secondary></indexterm>  <indexterm type="general-imported"><primary>tu'o</primary><secondary>for infix operations with too few operands</secondary></indexterm> The 
     <quote>tu'o</quote> fulfills the grammatical requirement for a left operand for the infix use of 
     
     <quote>va'a</quote>, even though semantically none is needed or wanted.</para>
-    <para>Finding a suitable example of 
+    <para> <indexterm type="lojban-word-imported"><primary>gei</primary></indexterm>  <indexterm type="general-imported"><primary>exponential notation</primary><secondary>with gei</secondary></indexterm>  <indexterm type="general-imported"><primary>scientific notation</primary><secondary>with gei</secondary></indexterm>  <indexterm type="general-imported"><primary>gei</primary><secondary>as a binary operator</secondary></indexterm> Finding a suitable example of 
     <quote>ge'a</quote> requires exhibiting a ternary operator, and ternary operators are not common. The operator 
     <quote>gei</quote>, however, has both a binary and a ternary use. As a binary operator, it provides a terse representation of scientific (also called 
     <quote>exponential</quote>) notation. The first operand of 
@@ -2123,7 +2123,7 @@
         <en>300,000,000 = 3 × 10</en>
       </interlinear-gloss>
     </example>
-    <para>Why are the arguments to 
+    <para> <indexterm type="example-imported"><primary>3 ( 10^8</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>gei</primary><secondary>rationale for order of places</secondary></indexterm>  <indexterm type="general-imported"><primary>scientific notation</primary><secondary>rationale for order of places</secondary></indexterm> Why are the arguments to 
     <quote>gei</quote> in reverse order from the conventional symbolic notation? So that 
     <quote>gei</quote> can be used in forethought to allow easy specification of a large (or small) imprecise number:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-zmqy">
@@ -2136,7 +2136,7 @@
         <en>10</en>
       </interlinear-gloss>
     </example>
-    <para>Note, however, that although 10 is far and away the most common exponent base, it is not the only possible one. The third operand of 
+    <para> <indexterm type="example-imported"><primary>10^20</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>floating point numbers</primary><secondary>expressing</secondary></indexterm>  <indexterm type="general-imported"><primary>exponential notation</primary><secondary>with base other than 10</secondary></indexterm>  <indexterm type="general-imported"><primary>gei</primary><secondary>as a ternary operator</secondary></indexterm>  <indexterm type="general-imported"><primary>operands</primary><secondary>too many for infix operation</secondary></indexterm>  <indexterm type="general-imported"><primary>null operator</primary><secondary>for infix operations with too many operands</secondary></indexterm>  <indexterm type="general-imported"><primary>ge'a</primary><secondary>for infix operations with too many operands</secondary></indexterm> Note, however, that although 10 is far and away the most common exponent base, it is not the only possible one. The third operand of 
     <quote>gei</quote>, therefore, is the base, with 10 as the default value. Most computers internally store so-called 
     <quote>floating-point</quote> numbers using 2 as the exponent base. (This has nothing to do with the fact that computers also represent all integers in base 2; the IBM 360 series used an exponent base of 16 for floating point, although each component of the number was expressed in base 2.) Here is a computer floating-point number with a value of 40:</para>
     
@@ -2178,8 +2178,8 @@
         <description>matrix column combiner</description>
       </cmavo-entry>
     </cmavo-list>
-    <para>A mathematical vector is a list of numbers, and a mathematical matrix is a table of numbers. Lojban considers matrices to be built up out of vectors, which are in turn built up out of operands.</para>
-    <para>
+    <para> <indexterm type="general-imported"><primary>matrix</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>vector</primary><secondary>definition</secondary></indexterm> A mathematical vector is a list of numbers, and a mathematical matrix is a table of numbers. Lojban considers matrices to be built up out of vectors, which are in turn built up out of operands.</para>
+    <para> <indexterm type="lojban-word-imported"><primary>te'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>JOhI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>jo'i</primary></indexterm>  <indexterm type="general-imported"><primary>vector indicator</primary><secondary>terminator for</secondary></indexterm>  <indexterm type="general-imported"><primary>vector</primary><secondary>components of</secondary></indexterm>  <indexterm type="general-imported"><primary>jo'i</primary><secondary>precedence of</secondary></indexterm>  <indexterm type="general-imported"><primary>vector indicator</primary></indexterm> 
     <quote>jo'i</quote>, the only cmavo of selma'o JOhI, is the vector indicator: it has a syntax reminiscent of a forethought operator, but has very high precedence. The components must be simple operands rather than full expressions (unless parenthesized). A vector can have any number of components; 
     
     <quote>te'u</quote> is the elidable terminator. An example:</para>
@@ -2195,7 +2195,7 @@
         <en>(1,2) + (3,4) = (4,6)</en>
       </interlinear-gloss>
     </example>
-    <para>Vectors can be combined into matrices using either 
+    <para> <indexterm type="lojban-word-imported"><primary>ge'a</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>sa'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>pi'a</primary></indexterm>  <indexterm type="general-imported"><primary>matrix</primary><secondary>with ge'a for more than 2 rows/columns</secondary></indexterm>  <indexterm type="general-imported"><primary>matrix</primary><secondary>as combination of vectors</secondary></indexterm>  <indexterm type="general-imported"><primary>matrix column operator</primary></indexterm>  <indexterm type="general-imported"><primary>matrix row operator</primary></indexterm> Vectors can be combined into matrices using either 
     <quote>pi'a</quote>, the matrix row operator, or 
     
     
@@ -2204,7 +2204,7 @@
     
     
     <quote>ge'a</quote>.</para>
-    <para>Therefore, the 
+    <para> <indexterm type="example-imported"><primary>magic square</primary><secondary>example</secondary></indexterm> Therefore, the 
     <quote>magic square</quote> matrix</para>
     
     <programlisting xml:space="preserve">
@@ -2234,9 +2234,9 @@
         <en>the-vector (8 3 4) matrix-column the-vector (1 5 9), the-vector (6 7 2)</en>
       </interlinear-gloss>
     </example>
-    <para>The regular mekso operators can be applied to vectors and to matrices, since grammatically both of these are expressions. It is usually necessary to parenthesize matrices when used with operators in order to avoid incorrect groupings. There are no VUhU operators for the matrix operators of inner or outer products, but appropriate operators can be created using a suitable symbolic lerfu word or string prefixed by 
+    <para> <indexterm type="general-imported"><primary>matrices</primary><secondary>use of parentheses with</secondary></indexterm>  <indexterm type="general-imported"><primary>vectors</primary><secondary>use of parentheses with</secondary></indexterm>  <indexterm type="general-imported"><primary>matrices</primary><secondary>use as operands</secondary></indexterm>  <indexterm type="general-imported"><primary>vectors</primary><secondary>use as operands</secondary></indexterm>  <indexterm type="general-imported"><primary>inner product</primary></indexterm>  <indexterm type="general-imported"><primary>outer product</primary></indexterm> The regular mekso operators can be applied to vectors and to matrices, since grammatically both of these are expressions. It is usually necessary to parenthesize matrices when used with operators in order to avoid incorrect groupings. There are no VUhU operators for the matrix operators of inner or outer products, but appropriate operators can be created using a suitable symbolic lerfu word or string prefixed by 
     <quote>ma'o</quote>.</para>
-    <para>Matrices of more than two dimensions can be built up using either 
+    <para> <indexterm type="lojban-word-imported"><primary>xi</primary></indexterm>  <indexterm type="general-imported"><primary>subscripts</primary><secondary>to form matrices of more than 2 dimensions</secondary></indexterm>  <indexterm type="general-imported"><primary>matrix</primary><secondary>with more than 2 dimensions</secondary></indexterm> Matrices of more than two dimensions can be built up using either 
     <quote>pi'a</quote> or 
     
     <quote>sa'i</quote> with an appropriate subscript numbering the dimension. When subscripted, there is no difference between 
@@ -2258,11 +2258,11 @@
         <description>reverse Polish flag</description>
       </cmavo-entry>
     </cmavo-list>
-    <para>So far, the Lojban notational conventions have mapped fairly familiar kinds of mathematical discourse. The use of forethought operators may have seemed odd when applied to 
+    <para> <indexterm type="general-imported"><primary>RP</primary><secondary>as abbreviation for reverse Polish notation</secondary></indexterm> So far, the Lojban notational conventions have mapped fairly familiar kinds of mathematical discourse. The use of forethought operators may have seemed odd when applied to 
     <quote>+</quote>, but when applied to 
     <quote>f</quote> they appear as the usual functional notation. Now comes a sharp break. Reverse Polish (RP) notation represents something completely different; even mathematicians don't use it much. (The only common uses of RP, in fact, are in some kinds of calculators and in the implementation of some programming languages.)</para>
     
-    <para>In RP notation, the operator follows the operands. (Polish notation, where the operator precedes its operands, is another name for forethought mekso of the kind explained in 
+    <para> <indexterm type="lojban-word-imported"><primary>fu'a</primary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>terminator</secondary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>marker</secondary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>use of parentheses in</secondary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>definition</secondary></indexterm> In RP notation, the operator follows the operands. (Polish notation, where the operator precedes its operands, is another name for forethought mekso of the kind explained in 
     <xref linkend="cll_chapter18-section6"/>.) The number of operands per operator is always fixed. No parentheses are required or permitted. In Lojban, RP notation is always explicitly marked by a 
     <quote>fu'a</quote> at the beginning of the expression; there is no terminator. Here is a simple example:</para>
     
@@ -2304,8 +2304,8 @@
     <quote>voboi mu pi'i</quote>, or 20. As you can see, it is easy to get lost in the world of reverse Polish notation; on the other hand, it is especially easy for a mechanical listener (who has a deep mental stack and doesn't get lost) to comprehend.</para>
     
     
-    <para>The operands of an RP operator can be any legal mekso operand, including parenthesized mekso that can contain any valid syntax, whether more RP or something more conventional.</para>
-    <para>In Lojban, RP operators are always parsed with exactly two operands. What about operators which require only one operand, or more than two operands? The null operand 
+    <para> <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>parentheses in operands of</secondary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>operands of</secondary></indexterm> The operands of an RP operator can be any legal mekso operand, including parenthesized mekso that can contain any valid syntax, whether more RP or something more conventional.</para>
+    <para> <indexterm type="lojban-word-imported"><primary>ge'a gei</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>tu'o va'a</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ge'a</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>tu'o</primary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>with too many operands</secondary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>with too few operands</secondary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>number of operands</secondary></indexterm> In Lojban, RP operators are always parsed with exactly two operands. What about operators which require only one operand, or more than two operands? The null operand 
     
     <quote>tu'o</quote> and the null operator 
     
@@ -2366,10 +2366,10 @@
       lo'o   LOhO    terminator for LI
 
 </programlisting>
-    <para>As befits a logical language, Lojban has extensive provision for logical connectives within both operators and operands. Full details on logical and non-logical connectives are provided in 
+    <para> <indexterm type="lojban-word-imported"><primary>GA selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>A selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>afterthought connection</primary><secondary>of operators</secondary></indexterm>  <indexterm type="general-imported"><primary>afterthought connection</primary><secondary>of operands</secondary></indexterm>  <indexterm type="general-imported"><primary>forethought connection</primary><secondary>of operators</secondary></indexterm>  <indexterm type="general-imported"><primary>forethought connection</primary><secondary>of operands</secondary></indexterm>  <indexterm type="general-imported"><primary>operator connection</primary><secondary>forethought</secondary></indexterm>  <indexterm type="general-imported"><primary>operator connection</primary><secondary>afterthought</secondary></indexterm>  <indexterm type="general-imported"><primary>operand connection</primary><secondary>forethought</secondary></indexterm>  <indexterm type="general-imported"><primary>operand connection</primary><secondary>afterthought</secondary></indexterm> As befits a logical language, Lojban has extensive provision for logical connectives within both operators and operands. Full details on logical and non-logical connectives are provided in 
     
     <xref linkend="chapter-connectives"/>. Operands are connected in afterthought with selma'o A and in forethought with selma'o GA, just like sumti. Operators are connected in afterthought with selma'o JA and in forethought with selma'o GUhA, just like tanru components. This parallelism is no accident.</para>
-    <para>In addition, A+BO and A+KE constructs are allowed for grouping logically connected operands, and 
+    <para> <indexterm type="lojban-word-imported"><primary>KE selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>BO selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>connection of operators</primary><secondary>grouping</secondary></indexterm>  <indexterm type="general-imported"><primary>connection of operands</primary><secondary>grouping</secondary></indexterm> In addition, A+BO and A+KE constructs are allowed for grouping logically connected operands, and 
     <quote>ke ... ke'e</quote> is allowed for grouping logically connected operators, although there are no analogues of tanru among the operators.</para>
     <para>Despite the large number of rules required to support this feature, it is of relatively minor importance in the mekso scheme of things. 
     <xref linkend="example-random-id-e9Xi"/> exhibits afterthought logical connection between operands:</para>
@@ -2382,7 +2382,7 @@
         <en>( Three or four ) people go-to the market.</en>
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="example-imported"><primary>three or four people</primary><secondary>example</secondary></indexterm> 
     <xref linkend="example-random-id-eiTM"/> is equivalent in meaning, but uses forethought connection:</para>
     
     
@@ -2395,9 +2395,9 @@
         <en>( Either 3 or 4 ) people go-to the market.</en>
       </interlinear-gloss>
     </example>
-    <para>Note that the mekso here are being used as quantifiers. Lojban requires that any mekso other than a simple number be enclosed in parentheses when used as a quantifier. This rule prevents ambiguities that do not exist when using 
+    <para> <indexterm type="general-imported"><primary>parentheses</primary><secondary>for complex mekso used as quantifier</secondary></indexterm>  <indexterm type="general-imported"><primary>mekso</primary><secondary>complex used as quantifier</secondary></indexterm> Note that the mekso here are being used as quantifiers. Lojban requires that any mekso other than a simple number be enclosed in parentheses when used as a quantifier. This rule prevents ambiguities that do not exist when using 
     <quote>li</quote>.</para>
-    <para>By the way, 
+    <para> <indexterm type="lojban-word-imported"><primary>lo'o</primary></indexterm>  <indexterm type="general-imported"><primary>lo'o</primary><secondary>effect of logical connective on elidability of</secondary></indexterm>  <indexterm type="general-imported"><primary>logical connection</primary><secondary>effect on elidability of lo'o</secondary></indexterm>  <indexterm type="general-imported"><primary>li</primary><secondary>terminator for</secondary></indexterm> By the way, 
     <quote>li</quote> has an elidable terminator, 
     <quote>lo'o</quote>, which is needed when a 
     
@@ -2482,7 +2482,7 @@
                          2a
 </programlisting>
     </example>
-    <para>Note the mixture of styles in 
+    <para> <indexterm type="example-imported"><primary>quadratic formula</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>infix notation mixed with Polish</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>Polish notation mixed with infix</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>infix notation mixed with Polish</primary></indexterm>  <indexterm type="general-imported"><primary>Polish notation mixed with infix</primary></indexterm> Note the mixture of styles in 
     <xref linkend="example-random-id-k36J"/>: the negation of b and the square root are represented by forethought and most of the operator precedence by prefixed 
     
     <quote>bi'e</quote>, but explicit parentheses had to be added to group the numerator properly. In addition, the square root parentheses cannot be removed here in favor of simple 
@@ -2492,7 +2492,7 @@
     <xref linkend="example-random-id-k36J"/> to parse perfectly using the current parser took several tries: a more relaxed style would dispense with most of the 
     <quote>bi'e</quote> cmavo and just let the standard precedence rules be understood.</para>
     
-    <para>Non-logical connection with JOI and BIhI is also permitted between operands and between operators. One use for this construct is to connect operands with 
+    <para> <indexterm type="lojban-word-imported"><primary>BIhI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>JOI selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>non-logical connection</primary><secondary>of operators</secondary></indexterm>  <indexterm type="general-imported"><primary>non-logical connection</primary><secondary>of operands</secondary></indexterm> Non-logical connection with JOI and BIhI is also permitted between operands and between operators. One use for this construct is to connect operands with 
     <quote>bi'o</quote> to create intervals:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Bzf6">
       <title>
@@ -2506,7 +2506,7 @@
         
       </interlinear-gloss>
     </example>
-    <para>Intervals defined by a midpoint and range rather than beginning and end points can be expressed by 
+    <para> <indexterm type="lojban-word-imported"><primary>mi'i</primary></indexterm> Intervals defined by a midpoint and range rather than beginning and end points can be expressed by 
     <quote>mi'i</quote>:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-LvBT">
@@ -2519,7 +2519,7 @@
         <en>the-number 0.5 ± 0.5</en>
       </interlinear-gloss>
     </example>
-    <para>which expresses the same interval as 
+    <para> <indexterm type="general-imported"><primary>closed interval</primary><secondary>expressed with mi'i</secondary></indexterm>  <indexterm type="general-imported"><primary>open interval</primary><secondary>expressed with mi'i</secondary></indexterm> which expresses the same interval as 
     <xref linkend="example-random-id-Bzf6"/>. Note that the 
     <quote>ga'o</quote> and 
     <quote>ke'i</quote> still refer to the endpoints, although these are now implied rather than expressed. Another way of expressing the same thing:</para>
@@ -2532,10 +2532,10 @@
         <en>the-number 0.5 plus [-0.5 from-to +0.5]</en>
       </interlinear-gloss>
     </example>
-    <para>Here we have the sum of a number and an interval, which produces another interval centered on the number. As 
+    <para> <indexterm type="general-imported"><primary>connection of operands</primary><secondary>precedence over operator</secondary></indexterm> Here we have the sum of a number and an interval, which produces another interval centered on the number. As 
     <xref linkend="example-random-id-CEvD"/> shows, non-logical (or logical) connection of operands has higher precedence than any mekso operator.</para>
     
-    <para>You can also combine two operands with 
+    <para> <indexterm type="general-imported"><primary>subscripts</primary><secondary>multiple for same base word</secondary></indexterm>  <indexterm type="general-imported"><primary>compound subscript</primary></indexterm> You can also combine two operands with 
     <quote>ce'o</quote>, the sequence connective of selma'o JOI, to make a compound subscript:</para>
     
     
@@ -2581,10 +2581,10 @@
         <description>terminator for all three</description>
       </cmavo-entry>
     </cmavo-list>
-    <para>One of the mekso design goals requires the ability to make use of Lojban's vocabulary resources within mekso to extend the built-in cmavo for operands and operators. There are three relevant constructs: all three share the elidable terminator 
+    <para> <indexterm type="lojban-word-imported"><primary>te'u</primary></indexterm>  <indexterm type="general-imported"><primary>mo'e</primary><secondary>terminator for</secondary></indexterm>  <indexterm type="general-imported"><primary>ni'e</primary><secondary>terminator for</secondary></indexterm>  <indexterm type="general-imported"><primary>na'u</primary><secondary>terminator for</secondary></indexterm> One of the mekso design goals requires the ability to make use of Lojban's vocabulary resources within mekso to extend the built-in cmavo for operands and operators. There are three relevant constructs: all three share the elidable terminator 
     <quote>te'u</quote> (which is also used to terminate vectors marked with 
     <quote>jo'i</quote>)</para>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>na'u</primary></indexterm>  <indexterm type="general-imported"><primary>operator derived from selbri</primary><secondary>effect of selbri place structure on</secondary></indexterm>  <indexterm type="general-imported"><primary>selbri place structure</primary><secondary>effect on operator formed by</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion of selbri into operator</primary></indexterm>  <indexterm type="general-imported"><primary>operator</primary><secondary>converting selbri into</secondary></indexterm>  <indexterm type="general-imported"><primary>selbri</primary><secondary>converting into an operator</secondary></indexterm> The cmavo 
     <quote>na'u</quote> makes a selbri into an operator. In general, the first place of the selbri specifies the result of the operator, and the other unfilled places specify the operands:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-k38f">
       <title>
@@ -2602,11 +2602,11 @@
 <phrase role="IPA">∞</phrase>
 </programlisting>
     </example>
-    <para>
+    <para> <indexterm type="example-imported"><primary>tan(pi/2) = infinity</primary><secondary>example</secondary></indexterm> 
     <quote>tanjo</quote> is the gismu for 
     <quote>x1 is the tangent of x2</quote>, and the 
     <quote>na'u</quote> here makes it into an operator which is then used in forethought</para>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>ni'e</primary></indexterm>  <indexterm type="general-imported"><primary>formulae</primary><secondary>expressing based on pure dimensions</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion of selbri into operand</primary></indexterm>  <indexterm type="general-imported"><primary>operand</primary><secondary>converting selbri into</secondary></indexterm>  <indexterm type="general-imported"><primary>selbri</primary><secondary>converting into an operand</secondary></indexterm> The cmavo 
     <quote>ni'e</quote> makes a selbri into an operand. The x1 place of the selbri generally represents a number, and therefore is often a 
     
     <quote>ni</quote> abstraction, since 
@@ -2627,7 +2627,7 @@
         <en>Length × Width × Depth = Volume</en>
       </interlinear-gloss>
     </example>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>mo'e</primary></indexterm>  <indexterm type="example-imported"><primary>Length ( Width ( Depth = Volume</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>dimensioned numbers</primary><secondary>expressing</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion of sumti into operand</primary></indexterm>  <indexterm type="general-imported"><primary>operand</primary><secondary>converting sumti into</secondary></indexterm>  <indexterm type="general-imported"><primary>sumti</primary><secondary>converting into an operand</secondary></indexterm> The cmavo 
     <quote>mo'e</quote> operates similarly to 
     
     <quote>ni'e</quote>, but makes a sumti (rather than a selbri) into an operand. This construction is useful in stating equations involving dimensioned numbers:</para>
@@ -2644,7 +2644,7 @@
         <en>2 rats + 2 rabbits = 4 animals.</en>
       </interlinear-gloss>
     </example>
-    <para>Another use is in constructing Lojbanic versions of so-called 
+    <para> <indexterm type="example-imported"><primary>pride of lions</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>2 rats + 2 rabbits = 4 animals</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>folk quantifiers</primary><secondary>expressing</secondary></indexterm> Another use is in constructing Lojbanic versions of so-called 
     <quote>folk quantifiers</quote>, such as 
     
     <quote>a pride of lions</quote>:</para>
@@ -2697,7 +2697,7 @@
     </cmavo-list>
     <para>So far we have seen mekso used as sumti (with 
     <quote>li</quote>), as quantifiers (often parenthesized), and in MOI and ME-MOI selbri. There are a few other minor uses of mekso within Lojban.</para>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>me'o</primary></indexterm>  <indexterm type="general-imported"><primary>mathematical expression</primary><secondary>referring to</secondary></indexterm>  <indexterm type="general-imported"><primary>li</primary><secondary>contrasted with me'o</secondary></indexterm>  <indexterm type="general-imported"><primary>me'o</primary><secondary>contrasted with li</secondary></indexterm> The cmavo 
     <quote>me'o</quote> has the same grammatical use as 
     <quote>li</quote> but slightly different semantics. 
     <quote>li</quote> means 
@@ -2727,7 +2727,7 @@
         <quote>4</quote></en>
       </interlinear-gloss>
     </example>
-    <para>since the expressions 
+    <para> <indexterm type="general-imported"><primary>me'o</primary><secondary>relation to li compared with la/zo relation</secondary></indexterm>  <indexterm type="general-imported"><primary>li</primary><secondary>relation to me'o compared with la/zo relation</secondary></indexterm> since the expressions 
     <quote>2 + 2</quote> and 
     <quote>4</quote> are not the same. The relationship between 
     <quote>li</quote> and 
@@ -2735,7 +2735,7 @@
     <quote>la djan.</quote>, the person named John, and 
     <quote>zo .djan.</quote>, the name 
     <quote>John</quote></para>
-    <para>The cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>nu'a</primary></indexterm>  <indexterm type="general-imported"><primary>selbri</primary><secondary>place structure of converted operator</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion of operator into selbri</primary></indexterm>  <indexterm type="general-imported"><primary>operator</primary><secondary>converting into selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>selbri</primary><secondary>converting operator into</secondary></indexterm> The cmavo 
     <quote>nu'a</quote> is the inverse of 
     <quote>na'u</quote>, and allows a mekso operator to be used as a normal selbri, with the place structure:</para>
     <programlisting xml:space="preserve">
@@ -2754,7 +2754,7 @@
     <para>uses 
     <quote>nu'a</quote> to make the operator 
     <quote>va'a</quote> into a two-place bridi</para>
-    <para>Used together, 
+    <para> <indexterm type="general-imported"><primary>nu'a</primary><secondary>use in answering operator questions</secondary></indexterm>  <indexterm type="general-imported"><primary>na'u</primary><secondary>use in asking operator questions</secondary></indexterm>  <indexterm type="general-imported"><primary>answers</primary><secondary>to operator questions</secondary></indexterm>  <indexterm type="general-imported"><primary>questions</primary><secondary>operator</secondary></indexterm> Used together, 
     <quote>nu'a</quote> and 
     <quote>na'u</quote> make it possible to ask questions about mekso operators, even though there is no specific cmavo for an operator question, nor is it grammatical to utter an operator in isolation. Consider 
     <xref linkend="example-random-id-qIKp"/>, to which 
@@ -2799,7 +2799,7 @@
     </example>
     <para>where the 
     <quote>na'u nu'a</quote> cancels out, leaving a truthful bridi</para>
-    <para>Numerical free modifiers, corresponding to English 
+    <para> <indexterm type="lojban-word-imported"><primary>MAI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>mai</primary></indexterm>  <indexterm type="example-imported"><primary>firstly</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>digit string</primary><secondary>definition of</secondary></indexterm>  <indexterm type="general-imported"><primary>section numbering</primary></indexterm>  <indexterm type="general-imported"><primary>text</primary><secondary>sub-division numbering with -mai</secondary></indexterm> Numerical free modifiers, corresponding to English 
     
     <quote>firstly</quote>, 
     
@@ -2852,7 +2852,7 @@
         <en>nineteenthly (higher order)</en>
       </interlinear-gloss>
     </example>
-    <para>The difference between 
+    <para> <indexterm type="lojban-word-imported"><primary>MAI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>mo'o</primary></indexterm>  <indexterm type="example-imported"><primary>firstly</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>chapter numbering</primary></indexterm>  <indexterm type="general-imported"><primary>mo'o</primary><secondary>contrasted with mai</secondary></indexterm>  <indexterm type="general-imported"><primary>mai</primary><secondary>contrasted with mo'o</secondary></indexterm>  <indexterm type="general-imported"><primary>text</primary><secondary>division numbering with -mai</secondary></indexterm> The difference between 
     <quote>mai</quote> and 
     <quote>mo'o</quote> is that 
     <quote>mo'o</quote> enumerates larger subdivisions of a text. Each 
@@ -2860,28 +2860,28 @@
     <quote>mai</quote>. If this chapter were translated into Lojban, each section would be numbered with 
     <quote>mo'o</quote>. (See 
     <xref linkend="chapter-structure"/> for more on these words.)</para>
-    <para>A numerical tense can be created by suffixing a digit string with 
+    <para> <indexterm type="lojban-word-imported"><primary>roi</primary></indexterm>  <indexterm type="example-imported"><primary>once</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>numerical</secondary></indexterm> A numerical tense can be created by suffixing a digit string with 
     
     <quote>roi</quote>. This usage generates tenses corresponding to English 
     
     <quote>once</quote>, 
     <quote>twice</quote>, and so on. This topic belongs to a detailed discussion of Lojban tenses, and is explained further in 
     <xref linkend="chapter-tenses"/>.</para>
-    <para>Note: the elidable terminator 
+    <para> <indexterm type="lojban-word-imported"><primary>boi</primary></indexterm>  <indexterm type="general-imported"><primary>numerical tenses</primary><secondary>effect on use of boi</secondary></indexterm>  <indexterm type="general-imported"><primary>boi</primary><secondary>exception before ROI</secondary></indexterm>  <indexterm type="general-imported"><primary>boi</primary><secondary>exception before MAI</secondary></indexterm>  <indexterm type="general-imported"><primary>MAI selma'o</primary><secondary>exception on use of boi before</secondary></indexterm>  <indexterm type="general-imported"><primary>ROI selma'o</primary><secondary>exception on use of boi before</secondary></indexterm> Note: the elidable terminator 
     <quote>boi</quote> is not used between a number and a member of MAI or ROI.</para>
   </section>
   <section xml:id="cll_chapter18-section20">
     <title>Explicit operator precedence</title>
     
     <para>As mentioned earlier, Lojban does provide a way for the precedences of operators to be explicitly declared, although current parsers do not understand these declarations.</para>
-    <para>The declaration is made in the form of a metalinguistic comment using 
+    <para> <indexterm type="lojban-word-imported"><primary>SEI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ti'o</primary></indexterm> The declaration is made in the form of a metalinguistic comment using 
     
     <quote>ti'o</quote>, a member of selma'o SEI. 
     
     <quote>sei</quote>, the other member of SEI, is used to insert metalinguistic comments on a bridi which give information about the discourse which the bridi comprises. The format of a 
     <quote>ti'o</quote> declaration has not been formally established, but presumably would take the form of mentioning a mekso operator and then giving it either an absolute numerical precedence on some pre-established scale, or else specifying relative precedences between new operators and existing operators.</para>
     
-    <para>In future, we hope to create an improved machine parser that can understand declarations of the precedences of simple operators belonging to selma'o VUhU. Originally, all operators would have the same precedence. Declarations would have the effect of raising the specified cmavo of VUhU to higher precedence levels. Complex operators formed with 
+    <para> <indexterm type="general-imported"><primary>operator precedence</primary><secondary>plans for future</secondary></indexterm> In future, we hope to create an improved machine parser that can understand declarations of the precedences of simple operators belonging to selma'o VUhU. Originally, all operators would have the same precedence. Declarations would have the effect of raising the specified cmavo of VUhU to higher precedence levels. Complex operators formed with 
     <quote>na'u</quote>, 
     <quote>ni'e</quote>, or 
     
@@ -2893,7 +2893,7 @@
   <section xml:id="cll_chapter18-section21">
     <title>Miscellany</title>
     <para>A few other points:</para>
-    <para>
+    <para> <indexterm type="lojban-word-imported"><primary>se</primary></indexterm>  <indexterm type="general-imported"><primary>se</primary><secondary>use with operators</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>of operator places</secondary></indexterm> 
     <quote>se</quote> can be used to convert an operator as if it were a selbri, so that its arguments are exchanged. For example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-NwYJ">
       <title>
@@ -2905,8 +2905,8 @@
         <en>3 subtracted from 4 equals 1.</en>
       </interlinear-gloss>
     </example>
-    <para>The other converters of selma'o SE can also be used on operators with more than two operands, and they can be compounded to create (probably unintelligible) operators as needed.</para>
-    <para>Members of selma'o NAhE are also legal on an operator to produce a scalar negation of it. The implication is that some other operator would apply to make the bridi true:</para>
+    <para> <indexterm type="lojban-word-imported"><primary>SE selma'o</primary></indexterm> The other converters of selma'o SE can also be used on operators with more than two operands, and they can be compounded to create (probably unintelligible) operators as needed.</para>
+    <para> <indexterm type="lojban-word-imported"><primary>NAhE selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>negation</primary><secondary>of operator</secondary></indexterm> Members of selma'o NAhE are also legal on an operator to produce a scalar negation of it. The implication is that some other operator would apply to make the bridi true:</para>
     <example xml:id="example-random-id-qIPR" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c18e21d2"/>
@@ -2916,7 +2916,7 @@
         <en>The-number 3 non-plus 4 equals the-number 12.</en>
       </interlinear-gloss>
     </example>
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="example-imported"><primary>opposite-of-minus</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example xml:id="example-random-id-qiqd" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c18e21d3"/>
@@ -2930,7 +2930,7 @@
     <para>The sense in which 
     <quote>plus</quote> is the opposite of 
     <quote>minus</quote> is not a mathematical but rather a linguistic one; negated operators are defined only loosely.</para>
-    <para>
+    <para> <indexterm type="lojban-word-imported"><primary>bo</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>lu'e</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>la'e</primary></indexterm>  <indexterm type="general-imported"><primary>negation</primary><secondary>of operand</secondary></indexterm>  <indexterm type="general-imported"><primary>symbol</primary><secondary>for operand</secondary></indexterm>  <indexterm type="general-imported"><primary>referent</primary><secondary>of operand</secondary></indexterm> 
     <quote>la'e</quote> and 
     <quote>lu'e</quote> can be used on operands with the usual semantics to get the referent of or a symbol for an operand. Likewise, a member of selma'o NAhE followed by 
     <quote>bo</quote> serves to scalar-negate an operand, implying that some other operand would make the bridi true:</para>
@@ -2945,7 +2945,7 @@
         <en>2 + 2 = something other than 5.</en>
       </interlinear-gloss>
     </example>
-    <para>The digits 0-9 have rafsi, and therefore can be used in making lujvo. Additionally, all the rafsi have CVC form and can stand alone or together as names:</para>
+    <para> <indexterm type="general-imported"><primary>digits</primary><secondary>names from</secondary></indexterm>  <indexterm type="general-imported"><primary>digits</primary><secondary>rafsi for</secondary></indexterm> The digits 0-9 have rafsi, and therefore can be used in making lujvo. Additionally, all the rafsi have CVC form and can stand alone or together as names:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-hvGK">
       <title>
         <anchor xml:id="c18e21d5"/>
@@ -2969,7 +2969,7 @@
         <en>Those-named-the Sevensome who attack Thebes [past] are-men.</en>
       </interlinear-gloss>
     </example>
-    <para>Certain other members of PA also have assigned rafsi: 
+    <para> <indexterm type="general-imported"><primary>rafsi</primary><secondary>conventional meaning for frinu</secondary></indexterm>  <indexterm type="general-imported"><primary>PA selma'o</primary><secondary>members with rafsi</secondary></indexterm> Certain other members of PA also have assigned rafsi: 
     <quote>so'a</quote>, 
     
     <quote>so'e</quote>, 
@@ -2993,7 +2993,7 @@
     <quote>frinu</quote>, meaning 
     <quote>fraction</quote>; therefore, in a context of numeric rafsi, you can use any of the rafsi for 
     <quote>frinu</quote> to indicate a fraction slash.</para>
-    <para>A similar convention is used for the cmavo 
+    <para> <indexterm type="general-imported"><primary>rafsi</primary><secondary>conventional meaning for cu'o</secondary></indexterm> A similar convention is used for the cmavo 
     <quote>cu'o</quote> of selma'o MOI, which is closely related to 
     
     <quote>cunso</quote> (probability); use a rafsi for 
@@ -3006,17 +3006,17 @@
     <quote>mei</quote> and 
     <quote>mom</quote>/ 
     <quote>moi</quote> respectively.</para>
-    <para>The grammar of mekso as described so far imposes a rigid distinction between operators and operands. Some flavors of mathematics (lambda calculus, algebra of functions) blur this distinction, and Lojban must have a method of doing the same. An operator can be changed into an operand with 
+    <para> <indexterm type="lojban-word-imported"><primary>ni'enu'a</primary></indexterm>  <indexterm type="general-imported"><primary>operand</primary><secondary>converting from operator</secondary></indexterm>  <indexterm type="general-imported"><primary>operator</primary><secondary>converting into operand</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion of operator into operand</primary></indexterm>  <indexterm type="general-imported"><primary>algebra of functions</primary><secondary>operator and operand distinction in</secondary></indexterm>  <indexterm type="general-imported"><primary>lambda calculus</primary><secondary>operator and operand distinction in</secondary></indexterm> The grammar of mekso as described so far imposes a rigid distinction between operators and operands. Some flavors of mathematics (lambda calculus, algebra of functions) blur this distinction, and Lojban must have a method of doing the same. An operator can be changed into an operand with 
     
     
     <quote>ni'enu'a</quote>, which transforms the operator into a matching selbri and then the selbri into an operand.</para>
     
-    <para>To change an operand into an operator, we use the cmavo 
+    <para> <indexterm type="lojban-word-imported"><primary>te'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ma'o</primary></indexterm>  <indexterm type="general-imported"><primary>operator</primary><secondary>converting from operand</secondary></indexterm>  <indexterm type="general-imported"><primary>operand</primary><secondary>converting into operator</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion of operand into operator</primary></indexterm> To change an operand into an operator, we use the cmavo 
     <quote>ma'o</quote>, already introduced as a means of changing a lerfu string such as 
     <quote>fy.</quote> into an operator. In fact, 
     <quote>ma'o</quote> can be followed by any mekso operand, using the elidable terminator 
     <quote>te'u</quote> if necessary.</para>
-    <para>There is a potential semantic ambiguity in 
+    <para> <indexterm type="general-imported"><primary>ma'o</primary><secondary>potential ambiguity caveat</secondary></indexterm> There is a potential semantic ambiguity in 
     <quote>ma'o fy. [te'u]</quote> if 
     <quote>fy.</quote> is already in use as a variable: it comes to mean 
     <quote>the function whose value is always ‘f'</quote>. However, mathematicians do not normally use the same lerfu words or strings as both functions and variables, so this case should not arise in practice.</para>
@@ -3024,7 +3024,7 @@
   <section xml:id="cll_chapter18-section22">
     <title>Four score and seven: a mekso problem</title>
     
-    <para>Abraham Lincoln's Gettysburg Address begins with the words 
+    <para> <indexterm type="example-imported"><primary>Four score and seven</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Gettysburg Address</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>mekso</primary><secondary>and literary translation</secondary></indexterm> Abraham Lincoln's Gettysburg Address begins with the words 
     
     
     <quote>Four score and seven years ago</quote>. This section exhibits several different ways of saying the number 
@@ -3054,7 +3054,7 @@
         <en>4 × 20 + 7</en>
       </interlinear-gloss>
     </example>
-    <para>
+    <para> <indexterm type="general-imported"><primary>score</primary><secondary>as 20-year span</secondary></indexterm> 
     <xref linkend="example-random-id-HNyL"/> is also mathematically correct, but still misses something. 
     <quote>Score</quote> is not a word for 20 in the same way that 
     <quote>ten</quote> is a word for 10: it contains the implication of 20 objects. The original may be taken as short for 
@@ -3076,7 +3076,7 @@
     
     <quote>te'u</quote> then make this sumti into a number in order to allow it to be the operand of 
     <quote>su'i</quote>.</para>
-    <para>Another approach is to think of 
+    <para> <indexterm type="general-imported"><primary>base-20 arithmetic</primary><secondary>remnants of</secondary></indexterm>  <indexterm type="general-imported"><primary>score</primary><secondary>as alternate base for years</secondary></indexterm> Another approach is to think of 
     <quote>score</quote> as setting a representation base. There are remnants of base-20 arithmetic in some languages, notably French, in which 87 is 
     
     <quote>quatre-vingt-sept</quote>, literally 
@@ -3137,7 +3137,7 @@
   <section xml:id="cll_chapter18-section24">
     <title>Complete table of VUhU cmavo, with operand structures</title>
     <para>The operand structures specify what various operands (labeled a, b, c, ...) mean. The implied context is forethought, since only forethought operators can have a variable number of operands; however, the same rules apply to infix and RP uses of VUhU.</para>
-<para>FIXME: TAG SPOT</para>
+<para> <indexterm type="general-imported"><primary>operators</primary><secondary>list of simple</secondary></indexterm> FIXME: TAG SPOT</para>
     <programlisting xml:space="preserve">
     su'i    plus                                  (((a + b) + c) + ...)
     pi'i    times                                 (((a × b) × c) × ...)
@@ -3184,7 +3184,7 @@
     <title>Complete table of PA cmavo: digits, punctuation, and other numbers.</title>
     <itemizedlist>
       <listitem>
-        <para>Decimal digits:</para>
+        <para> <indexterm type="general-imported"><primary>digits</primary><secondary>list of decimal</secondary></indexterm> Decimal digits:</para>
         <programlisting xml:space="preserve">
               no,  pa,  re,  ci,  vo,  mu,  xa,  ze,  bi,  so
               0,   1,   2,   3,   4,   5,   6,   7,   8,   9
@@ -3192,14 +3192,14 @@
 </programlisting>
       </listitem>
       <listitem>
-        <para>Hexadecimal digits:</para>
+        <para> <indexterm type="general-imported"><primary>digits</primary><secondary>list of hexadecimal</secondary></indexterm> Hexadecimal digits:</para>
         <programlisting xml:space="preserve">
        dau,  fei,  gai,  jau,  rei,  vai
        A/10, B/11, C/12, D/13, E/14, F/15
 </programlisting>
       </listitem>
       <listitem>
-        <para>Special numbers:</para>
+        <para> <indexterm type="general-imported"><primary>numbers</primary><secondary>list of special</secondary></indexterm> Special numbers:</para>
         <programlisting xml:space="preserve">
        pai,    ka'o,           te'o,             ci'i
 
@@ -3211,7 +3211,7 @@
 </programlisting>
       </listitem>
       <listitem>
-        <para>Number punctuation:</para>
+        <para> <indexterm type="general-imported"><primary>punctuation</primary><secondary>list of numerical</secondary></indexterm> Number punctuation:</para>
         <programlisting xml:space="preserve">
        pi,                 ce'i,          fi'u
 
@@ -3237,7 +3237,7 @@ rafsi: piz,                cez,           fi'u (from frinu; see
 </programlisting>
       </listitem>
       <listitem>
-        <para>Indefinite numbers:</para>
+        <para> <indexterm type="general-imported"><primary>numbers</primary><secondary>list of indefinite</secondary></indexterm> Indefinite numbers:</para>
         <cmavo-list>
           <cmavo-entry>
             <cmavo>ro, so'a, so'e, so'i, so'o,</cmavo>
