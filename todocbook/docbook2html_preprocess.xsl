@@ -147,7 +147,9 @@
     <xsl:value-of select="$slug"/>
   </xsl:template>
 
-  <!-- lojban words -->
+  <!-- turn <jbophrase> elements with single lojban words into
+       glossary and indexed elements
+       -->
   <xsl:template match="jbophrase[count(str:tokenize(text())) = 1 and ( not(@glossary) or @glossary != 'false')]">
     <xsl:variable name="wordsnum">
       <xsl:value-of select="count(str:tokenize(text()))"/>
