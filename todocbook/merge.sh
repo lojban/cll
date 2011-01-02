@@ -42,7 +42,7 @@ cp cll.xml cll_preglossary.xml
 
 echo '</book>' >>cll_preglossary.xml
 
-generate_glossary.sh >>cll.xml
+./generate_glossary.sh >>cll.xml
 
 rm cll_preglossary.xml
 
