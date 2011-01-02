@@ -11,7 +11,7 @@ echo '<?xml version="1.0"?>
 ' >cll.xml
 
 testing=""
-if [ "$1" == "-t" ]
+if [ "$1" -eq "-t" ]
 then
   testing=1
   shift
