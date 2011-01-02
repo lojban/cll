@@ -34,7 +34,11 @@
   </xsl:template>
 
   <!-- lojban words -->
-  <xsl:template match="//jbophrase[count(str:tokenize(text())) = 1 and ( not(@glossary) or @glossary != 'false')]">
+  <!-- If you change the match here, also change it in
+       docbook2html_preprocess.xsl ; search for LOJBAN WORDS MATCH
+       -->
+  <xsl:template match="//jbophrase[count(str:tokenize(text())) = 1 and ( not(@glossary) or @glossary != 'false')
+    and ( not(@role) or ( @role != 'morphology' and @role != 'rafsi' and @role != 'diphthong' and @role != 'letteral' ) ) ]">
     <xsl:variable name="slug">
       <xsl:call-template name="make_slug">
         <xsl:with-param name="input" select="text()"/>

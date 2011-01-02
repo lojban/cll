@@ -48,7 +48,7 @@ rm cll_preglossary.xml
 
 echo '
 
-<index type="general">
+<index>
 <title>General Index</title>
 </index>
 
@@ -58,6 +58,14 @@ echo '
 
 <index type="lojban-phrases">
 <title>Lojban Phrases Index</title>
+</index>
+
+<index type="lojban-word-imported">
+<title>Lojban Automated Words Index</title>
+</index>
+
+<index type="example-imported">
+<title>Lojban Examples Index</title>
 </index>
 
 </book>' >>cll.xml

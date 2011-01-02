@@ -121,6 +121,57 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- Deal with pronunciation nodes
+  -->
+  <xsl:template match="pronunciation">
+    <xsl:choose>
+      <xsl:when test="false">
+      </xsl:when>
+      <!-- FIXME: We should enforce something like these at some point.
+
+      <xsl:when test="count(.//jbo) &lt; 1">
+        <xsl:message>interlinear-gloss needs at least one jbo line; look for "ERROR" in the output</xsl:message>
+        <xsl:text>
+          ERROR: The following interlinear-gloss needs at least one jbo line:
+        </xsl:text>
+        <xsl:copy/>
+      </xsl:when>
+      <xsl:when test="count(.//en) &lt; 1">
+        <xsl:message>interlinear-gloss needs at least one en line; look for "ERROR" in the output</xsl:message>
+        <xsl:text>
+          ERROR: The following interlinear-gloss needs at least one en line:
+        </xsl:text>
+        <xsl:copy/>
+      </xsl:when>
+      -->
+      <xsl:otherwise>
+        <itemizedlist role="pronunciation">
+        <xsl:for-each select=".//jbo">
+          <listitem role="pronunciation-jbo">
+            <para>
+              <xsl:value-of select=".//text()"/>
+            </para>
+          </listitem>
+        </xsl:for-each>
+        <xsl:for-each select=".//ipa">
+          <listitem role="pronunciation-ipa">
+            <para>
+              <xsl:value-of select=".//text()"/>
+            </para>
+          </listitem>
+        </xsl:for-each>
+        </itemizedlist>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- <en> tags that arn't in <interlinear-gloss> tags -->
+  <xsl:template match="example/en[not(boolean(ancestor::interlinear-gloss))]">
+    <para>
+      <xsl:value-of select='.//text()'/>
+    </para>
+  </xsl:template>
+
   <!-- turn a string into a lowercase & dashes slug -->
   <xsl:template name="make_slug">
     <xsl:param name="input" select="''"/>
@@ -150,7 +201,11 @@
   <!-- turn <jbophrase> elements with single lojban words into
        glossary and indexed elements
        -->
-  <xsl:template match="jbophrase[count(str:tokenize(text())) = 1 and ( not(@glossary) or @glossary != 'false')]">
+  <!-- If you change the match here, also change it in
+       docbook2html_preprocess.xsl ; search for LOJBAN WORDS MATCH
+       -->
+  <xsl:template match="jbophrase[count(str:tokenize(text())) = 1 and ( not(@glossary) or @glossary != 'false')
+    and ( not(@role) or ( @role != 'morphology' and @role != 'rafsi' and @role != 'dipthong' and @role != 'letteral' ) ) ]">
     <xsl:variable name="wordsnum">
       <xsl:value-of select="count(str:tokenize(text()))"/>
     </xsl:variable>
@@ -179,7 +234,8 @@
   </xsl:template>
 
   <!-- lojban phrases and/or unglossed words -->
-  <xsl:template match="jbophrase[count(str:tokenize(text())) > 1 or @glossary = 'false']">
+  <xsl:template match="jbophrase[count(str:tokenize(text())) > 1 or @glossary = 'false'
+    or @role = 'morphology' or @role = 'rafsi' or @role = 'diphthong' or @role = 'letteral' ]">
     <xsl:variable name="wordsnum">
       <xsl:value-of select="count(str:tokenize(text()))"/>
     </xsl:variable>

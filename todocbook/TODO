@@ -19,6 +19,12 @@ Ignore Chapter 2 for now.
 
  ------
 
+If you have any trouble, add a FIXME comment, like so:
+
+<!-- FIXME: detailed explanation here -->
+
+ ------
+
 Fix the chapter name so it's just the second part, i.e.
 
     <title>Chapter 5
@@ -112,7 +118,16 @@ the <interlinear-gloss>...</interlinear-gloss> with <para>...</para>
 
  ------
  
-Entries like <indexterm type="example-imported"> need to be moved into examples.
+Entries like <indexterm type="lojban-word-imported"> (NOTE the type)
+probably need to be destroyed; there should be a bit of Lojban near
+them that can be wrapped in <jbophrase>, to exactly the same effect
+as the <indexterm> entry.  If you can't find such a correspondance,
+add a FIXME comment.
+
+ ------
+ 
+Entries like <indexterm type="example-imported"> (NOTE the type)
+need to be moved into examples.
 
 Especially things like this:
 
@@ -162,6 +177,8 @@ All such indexterm entries should end up in the example itself, like so:
   beginning of sections having missing entries; in particular, ones
   wwith + in the selma'o, maybe?; they need to be manually checked
 - Replace chapter xrefs with section xrefs
+- Fix all FIXMEs; in particular the output of:
+  grep 'FIXME:' [0-9]*.xml | grep -v 'TAG SPOT'
 
 ==================
   Display

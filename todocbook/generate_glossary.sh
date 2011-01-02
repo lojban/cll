@@ -19,7 +19,7 @@ indiv=''
 for line in $(xsltproc --nonet --path . --novalid generate_glossary.xsl cll_preglossary.xml | grep -P '\t' | sort | uniq)
 do
   slug=$(echo $line | awk -F'\t' '{ print $1 }')
-  word=$(echo $line | awk -F'\t' '{ print $2 }')
+  word=$(echo $line | awk -F'\t' '{ print $2 }' | sed 's/\.//g')
 #  echo "$slug--$word"
   newinitial=$(echo $word | cut -c 1)
 
@@ -35,14 +35,21 @@ do
     initial=$newinitial
   fi
 
-  definition=$(dict --formatted -d 'jbo->en' -h dict.lojban.org $word | \
-      sed '/^\s*Notes:\s*/,$d' | grep -A 10 '^\s*Definition:\s*' | \
-      tr -d '\012' | sed 's/^\s*Definition:\s*//' | \
-      sed 's/\&/\&amp;/g' | sed 's/\s\s*/ /g')
+  if [ ! -f jbovlaste.xml -o "$(find jbovlaste.xml -mtime +1)" ]
+  then
+    echo "jbovlaste file is old; refetching."
+    wget 'http://jbovlaste.lojban.org/export/xml-export.html?lang=en' -O jbovlaste.xml
+  fi
+  
+  definition=$(grep -E "^<valsi word=\"$word\" " jbovlaste.xml | \
+      sed -e 's/.*<definition>//' -e 's;</definition>.*;;' | \
+      sed -e 's/\&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' | \
+      sed 's/\s\s*/ /g')
 
   if [ ! "$(echo $definition | sed 's/\s*//g')" ]
   then
     definition="NO JBOVLASTE DEFINITION FOR \"$word\" FOUND!"
+    echo $definition 1>&2
   fi
 
   cat <<EOF
