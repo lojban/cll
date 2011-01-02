@@ -908,80 +908,87 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>outer quantifier</primary><secondary>implicit on descriptors</secondary></indexterm>  <indexterm type="general-imported"><primary>inner quantifier</primary><secondary>implicit on descriptors</secondary></indexterm>  <indexterm type="general-imported"><primary>descriptors</primary><secondary>implicit quantifiers for</secondary></indexterm> There are rules for each of the 11 descriptors specifying what the implicit values for the inner and outer quantifiers are. They are meant to provide sensible default values when context is absent, not necessarily to prescribe hard and fast rules. The following table lists the implicit values:</para>
-    
-    <!--
-FIXME: CONVERT
--->
-<!--
-<lx "le">  XE "le"   
-<lx "ro">  XE "ro"   
-<lx "su'o">  XE "su'o" 
-<pre>le:	</pre><p>ro le su'o
-		all of the at-least-one described as
-</pre>
-<p>
-<lx "lo">  XE "lo"   <dl compact><p>
-<pre>lo:	</pre><p>su'o lo ro
-		at least one of all of those which really are
-</pre>
-<p>
-<lx "la">  XE "la"   <dl compact><p>
-<pre>la:	</pre><p>ro la su'o
-		all of the at least one named
 
-</pre>
-<p>
-<lx "lei">  XE "lei"   <dl compact><p>
-<pre>lei:	</pre><p>pisu'o lei su'o
-		some part of the mass of the at-least-one described as
-</pre>
-<p>
-<lx "loi">  XE "loi"   <dl compact><p>
-<pre>loi:	</pre><p>pisu'o loi ro
-		some part of the mass of all those that really are
-</pre>
-<p>
-<lx "lai">  XE "lai"   <dl compact><p>
-<pre>lai:	</pre><p>pisu'o lai su'o
-		some part of the mass of the at-least-one named
-</pre>
-<p>
-<lx "le'i">  XE "le'i"   <dl compact><p>
-<pre>le'i:	</pre><p>piro le'i su'o
-		the whole of the set of the at-least-one described as
-</pre>
-<p>
-<lx "lo'i">  XE "lo'i"   <dl compact><p>
-<pre>lo'i:	</pre><p>piro lo'i ro
-		the whole of the set of all those that really are
-</pre>
-<p>
-<lx "la'i">  XE "la'i"   <dl compact><p>
-<pre>la'i:	</pre><p>piro la'i su'o
-		the whole of the set of the at-least-one named
-</pre>
-<p>
-<lx "le'e">  XE "le'e"   <dl compact><p>
-<pre>le'e:	</pre><p>ro le'e su'o
-		all the stereotypes of the at-least-one described as
-</pre>
-<p>
-<lx "lo'e">  XE "lo'e"   <dl compact><p>
-<pre>lo'e:	</pre><p>su'o lo'e ro
-		at least one of the types of all those that really are
-</pre>
+<!--This stuff was here before, not sure what it means - zort-->
+<!--<lx "le">  XE "le"   -->
+<!--<lx "ro">  XE "ro"   -->
+<!--<lx "su'o">  XE "su'o" -->
+<!--<lx "lo">  XE "lo"   <dl compact><p>-->
+<!--<lx "la">  XE "la"   <dl compact><p>-->
+<!--<lx "lei">  XE "lei"   <dl compact><p>-->
+<!--<lx "loi">  XE "loi"   <dl compact><p>-->
+<!--<lx "lai">  XE "lai"   <dl compact><p>-->
+<!--<lx "le'i">  XE "le'i"   <dl compact><p>-->
+<!--<lx "lo'i">  XE "lo'i"   <dl compact><p>-->
+<!--<lx "la'i">  XE "la'i"   <dl compact><p>-->
+<!--<lx "le'e">  XE "le'e"   <dl compact><p>-->
+<!--<lx "lo'e">  XE "lo'e"   <dl compact><p>-->
 
-old version was like this note the missing English
-
-    <variablelist>
-      <varlistentry>
-        <term>le:</term>
-        <listitem>
-          <para>ro le su'o</para>
-        </listitem>
-      </varlistentry>
--->
-    <para> <indexterm type="general-imported"><primary>le-series cmavo</primary><secondary>as encompassing le-series and la-series descriptors for quantification discussion</secondary></indexterm>  <indexterm type="general-imported"><primary>le-series cmavo</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>la-series descriptors</primary><secondary>compared with le-series in implicit quantification</secondary></indexterm>  <indexterm type="general-imported"><primary>le-series descriptors</primary><secondary>compared with la-series in implicit quantification</secondary></indexterm> When examined for the first time, this table looks dreadfully arbitrary. In fact, there are quite a few regularities in it. First of all, the la-series (that is, the descriptors 
+<informaltable>
+  <tgroup cols="4">
+    <colspec colnum="1" colname="col1"/>
+    <colspec colnum="2" colname="col2"/>
+    <colspec colnum="3" colname="col3"/>
+    <colspec colnum="4" colname="col4"/>
+    <tbody>
+      <row>
+        <entry><jbophrase>le</jbophrase>:</entry>
+        <entry><jbophrase>ro le su'o</jbophrase></entry>
+        <entry>all of the at-least-one described as</entry>
+      </row>
+      <row>
+        <entry><jbophrase>lo</jbophrase>:</entry>
+        <entry><jbophrase>su'o lo ro</jbophrase></entry>
+        <entry>at least one of all of those which really are</entry>
+      </row>
+      <row>
+        <entry><jbophrase>la</jbophrase>:</entry>
+        <entry><jbophrase>ro la su'o</jbophrase></entry>
+        <entry>all of the at least one named</entry>
+      </row>
+      <row>
+        <entry><jbophrase>lei</jbophrase>:</entry>
+        <entry><jbophrase>pisu'o lei su'o</jbophrase></entry>
+        <entry>some part of the mass of the at-least-one described as</entry>
+      </row>
+      <row>
+        <entry><jbophrase>loi</jbophrase>:</entry>
+        <entry><jbophrase>pisu'o loi ro</jbophrase></entry>
+        <entry>some part of the mass of all those that really are</entry>
+      </row>
+      <row>
+        <entry><jbophrase>lai</jbophrase>:</entry>
+        <entry><jbophrase>pisu'o lai su'o</jbophrase></entry>
+        <entry>some part of the mass of the at-least-one named</entry>
+      </row>
+      <row>
+        <entry><jbophrase>le'i</jbophrase>:</entry>
+        <entry><jbophrase>piro le'i su'o</jbophrase></entry>
+        <entry>the whole of the set of the at-least-one described as</entry>
+      </row>
+      <row>
+        <entry><jbophrase>lo'i</jbophrase>:</entry>
+        <entry><jbophrase>piro lo'i ro</jbophrase></entry>
+        <entry>the whole of the set of all those that really are</entry>
+      </row>
+      <row>
+        <entry><jbophrase>la'i</jbophrase>:</entry>
+        <entry><jbophrase>piro la'i su'o</jbophrase></entry>
+        <entry>the whole of the set of the at-least-one named</entry>
+      </row>
+      <row>
+        <entry><jbophrase>le'e</jbophrase>:</entry>
+        <entry><jbophrase>ro le'e su'o</jbophrase></entry>
+        <entry>all the stereotypes of the at-least-one described as</entry>
+      </row>
+      <row>
+        <entry><jbophrase>lo'e</jbophrase>:</entry>
+        <entry><jbophrase>su'o lo'e ro</jbophrase></entry>
+        <entry>at least one of the types of all those that really are</entry>
+      </row>
+    </tbody>
+  </tgroup>
+</informaltable>    <para> <indexterm type="general-imported"><primary>le-series cmavo</primary><secondary>as encompassing le-series and la-series descriptors for quantification discussion</secondary></indexterm>  <indexterm type="general-imported"><primary>le-series cmavo</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>la-series descriptors</primary><secondary>compared with le-series in implicit quantification</secondary></indexterm>  <indexterm type="general-imported"><primary>le-series descriptors</primary><secondary>compared with la-series in implicit quantification</secondary></indexterm> When examined for the first time, this table looks dreadfully arbitrary. In fact, there are quite a few regularities in it. First of all, the la-series (that is, the descriptors 
     <quote>la</quote>, 
     <quote>lai</quote>, and 
     <quote>la'i</quote>) and the le-series (that is, the descriptors 
