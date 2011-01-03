@@ -37,7 +37,7 @@ do
 
   if [ ! -f jbovlaste.xml -o "$(find jbovlaste.xml -mtime +1)" ]
   then
-    echo "jbovlaste file is old; refetching."
+    echo "jbovlaste file is old; refetching." 1>&2
     wget 'http://jbovlaste.lojban.org/export/xml-export.html?lang=en' -O jbovlaste.xml
   fi
   
