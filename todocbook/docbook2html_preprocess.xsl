@@ -172,6 +172,17 @@
     </para>
   </xsl:template>
 
+  <!-- <compound-cmavo> tags; placeholder -->
+  <xsl:template match="compound-cmavo">
+    <simplelist>
+      <xsl:for-each select=".//jbo">
+        <member>
+          <xsl:value-of select=".//text()"/>
+        </member>
+      </xsl:for-each>
+    </simplelist>
+  </xsl:template>
+
   <!-- turn a string into a lowercase & dashes slug -->
   <xsl:template name="make_slug">
     <xsl:param name="input" select="''"/>
@@ -202,10 +213,11 @@
        glossary and indexed elements
        -->
   <!-- If you change the match here, also change it in
-       docbook2html_preprocess.xsl ; search for LOJBAN WORDS MATCH
+       generate_glossary.xsl ; search for LOJBAN WORDS MATCH
        -->
   <xsl:template match="jbophrase[count(str:tokenize(text())) = 1 and ( not(@glossary) or @glossary != 'false')
-    and ( not(@role) or ( @role != 'morphology' and @role != 'rafsi' and @role != 'dipthong' and @role != 'letteral' ) ) ]">
+    and ( not(@role) or ( @role != 'morphology' and @role != 'rafsi' and @role != 'diphthong' and @role != 'letteral' ) ) ]"
+    priority="2">
     <xsl:variable name="wordsnum">
       <xsl:value-of select="count(str:tokenize(text()))"/>
     </xsl:variable>
@@ -234,8 +246,8 @@
   </xsl:template>
 
   <!-- lojban phrases and/or unglossed words -->
-  <xsl:template match="jbophrase[count(str:tokenize(text())) > 1 or @glossary = 'false'
-    or @role = 'morphology' or @role = 'rafsi' or @role = 'diphthong' or @role = 'letteral' ]">
+  <xsl:template match="jbophrase"
+    priority="1">
     <xsl:variable name="wordsnum">
       <xsl:value-of select="count(str:tokenize(text()))"/>
     </xsl:variable>
