@@ -26,15 +26,6 @@ If you have any trouble, add a FIXME comment, like so:
 
  ------
 
-Fix the chapter name so it's just the second part, i.e.
-
-    <title>Chapter 5
-      <quote>Pretty Little Girls' School</quote>: The Structure Of Lojban selbri</title>
-
-becomes:
-
-    <title><quote>Pretty Little Girls' School</quote>: The Structure Of Lojban selbri</title>
-
 Make sure the <interlinear-gloss> bits look right in the output (which
 is why the columns are so spaced out).
 
@@ -68,8 +59,8 @@ Do this for all sections.  Feel free to do it for examples too if an
 example has an obvious title, but it's much less important there, so
 not worth spending time on for the first pass.
 
-References to examples should be changed to <xref>s, using the random
-id of the example in question, e.g. <xref linkend="example-random-id-qjmr"/>
+References to examples in the text should be changed to <xref>s, using
+the random id of the example in question, e.g. <xref linkend="example-random-id-qjmr"/>
 
 The important thing here is that *NOTHING* mentions a fixed number!
 *NOWHERE* in the docbook should *ANYTHING* be aware that it is in
@@ -122,11 +113,9 @@ the <interlinear-gloss>...</interlinear-gloss> with <para>...</para>
 
  ------
 
-
-Make sure all the components of <example>s are appropriate wrapped in
-<jbo>, <gloss>, <en>, or <ipa> (if it doesn't fit one of those, make
-up a tag and report it). Many of the non-three-part examples are
-messed up like this.
+Make sure all the components of <example>s are appropriately wrapped in
+<jbo>, <gloss>, <en>, <ipa>, or <foreign> (if it doesn't fit one of
+those, make up a tag and report it).
 
  ------
  
@@ -182,8 +171,9 @@ All such indexterm entries should end up in the example itself, like so:
 - list the members of each selma'o in chapter 20
 - make sure the examples that aren't interlinear glosses don't have
   that as their role
-   - so far there's also pronunciation-example,
-   compound-cmavo-example, lujvo-making-example, lojbanization-example
+   - so far there's pronunciation-example,
+   compound-cmavo-example, lujvo-making-example,
+   lojbanization-example, english-example
 - <phrase role="IPA">∞</phrase> is *not* IPA
 - <@xalbo> I do think having distinct structures for quoted correct
   lojban and for intentionally incorrect lojban (if there's any, but
@@ -193,7 +183,7 @@ All such indexterm entries should end up in the example itself, like so:
   lojban, invalid lojban, and something in between ({lo nanmu
   bajra}, for instance; maybe worth flagging with a "this isn't what
   you think it is" type of thing
-  - use <jbophrase valid="false">...</jbophrase> for purposely na
+  - use <jbophrase valid="false">...</jbophrase> for purposeful na
       gendra and <jbophrase valid="iffy">...</jbophrase> for na smudra
 - In the mediaobjects in chapter 1, can we do better than <alt>The
   picture for chapter 20</alt> in terms of non-numerical cross
