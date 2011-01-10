@@ -146,9 +146,9 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-qF0u"/> through 
-    <xref linkend="example-random-id-qf4x"/> are descriptions that isolate the five individual sumti places of the selbri 
-    <jbophrase>klama</jbophrase>. 
+      <xref linkend="example-random-id-qF0u"/> through 
+      <xref linkend="example-random-id-qf4x"/> are descriptions that isolate the five individual sumti places of the selbri 
+      <jbophrase>klama</jbophrase>. 
     <xref linkend="example-random-id-qf97"/> describes something associated with the bridi as a whole: the event of it.</para>
     <para> <indexterm type="general-imported"><primary>events</primary><secondary>duration</secondary></indexterm> In Lojban, the term 
     <quote>event</quote> is divorced from its ordinary English sense of something that happens over a short period of time. The description:</para>
@@ -221,9 +221,9 @@
       </interlinear-gloss>
     </example>
     <para>which in this context means</para>
-    <programlisting>
-       My swimming happens often.
-</programlisting>
+    <place-structure>
+      My swimming happens often.
+    </place-structure>
     <para>Event descriptions with 
     <jbophrase>le nu</jbophrase> are commonly used to fill the 
     <quote>under conditions...</quote> places, among others, of gismu and lujvo place structures:</para>
@@ -232,10 +232,8 @@
         <anchor xml:id="c11e2d12"/>
       </title>
       <interlinear-gloss>
-        <jbo>la lojban. cu frili mi</jbo>
-        <gloss>le nu mi tadni [kei]</gloss>
-        <gloss>Lojban is-easy for-me</gloss>
-        <gloss>under-conditions-the event-of I study</gloss>
+        <jbo>la lojban. cu frili mi le nu mi tadni [kei]</jbo>
+        <gloss>Lojban is-easy for-me under-conditions-the event-of I study</gloss>
         <en>Lojban is easy for me when I study.</en>
       </interlinear-gloss>
     </example>
@@ -243,9 +241,9 @@
     <quote>when</quote> of the English would also be appropriate for a construction involving a Lojban tense, but the Lojban sentence says more than that the studying is concurrent with the ease.)</para>
     <para> <indexterm type="general-imported"><primary>nu</primary><secondary>place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>events</primary><secondary>place structure</secondary></indexterm> The place structure of a 
     <jbophrase>nu</jbophrase> abstraction selbri is simply:</para>
-    <programlisting>
+    <place-structure>
       x1 is an event of (the bridi)
-</programlisting>
+    </place-structure>
   </section>
   <section xml:id="section-event-types">
     <title>Types of event abstractions</title>
@@ -312,16 +310,10 @@
         <anchor xml:id="c11e3d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>ca'o le pu'u le latmo balje'a</jbo>
+        <jbo>ca'o le pu'u le latmo balje'a cu porpi kei so'i je'atru cu selcatra</jbo>
         
-        <gloss>cu porpi kei</gloss>
-        <gloss>so'i je'atru cu selcatra</gloss>
-        
-        <gloss>[continuitive] the process-of( the Latin great-state breaking-up )</gloss>
-        <gloss>many state-rulers were-killed</gloss>
-        <gloss>During the fall of the Roman Empire,</gloss>
-        
-        <en>many Emperors were killed.</en>
+        <gloss>[continuitive] the process-of( the Latin great-state breaking-up ) many state-rulers were-killed</gloss>
+        <en>During the fall of the Roman Empire, many Emperors were killed.</en>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>zu'o</primary></indexterm>  <indexterm type="example-imported"><primary>Roman Empire</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>activity</secondary></indexterm>  <indexterm type="general-imported"><primary>activity abstractions</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>activity abstractor</primary></indexterm>  <indexterm type="general-imported"><primary>Roman Empire</primary></indexterm> An event considered as extended in time and cyclic or repetitive is called an 
@@ -390,48 +382,48 @@
     <para>Further information on types of events can be found in 
     <xref linkend="section-abstractor-connection"/>.</para>
     <para>The four event type abstractors have the following place structures:</para>
-    <programlisting>
-<!--
-FIXME: put the index entries in
+    <place-structure>
+      <!--
+          FIXME: put the index entries in
 
 <cx "achievement abstraction: place structure"> XE "achievement abstraction: place structure"
-   
+
 <cx "point-event abstraction: place structure"> XE "point-event abstraction: place structure"
-   
+
 <cx "mu'e: place structure"> XE "mu'e: place structure"
-  
+
 <dt><dd>"mu'e”:  x1 is a point event of (the bridi)
 
 <cx "process abstraction: place structure"> XE "process abstraction: place structure"
-   
+
 <cx "pu'u: place structure"> XE "pu'u: place structure"
-   "pu'u”:  x1 is a process of (the bridi) with stages x2
+"pu'u”:  x1 is a process of (the bridi) with stages x2
 
 <cx "state abstraction: place structure"> XE "state abstraction: place structure"
-   
+
 <cx "za'i: place structure"> XE "za'i: place structure"
-   "za'i”:  x1 is a continuous state of (the bridi) being true
+"za'i”:  x1 is a continuous state of (the bridi) being true
 
 <cx "activity abstraction: place structure"> XE "activity abstraction: place structure"
-   
+
 <cx "zu'o: place structure"> XE "zu'o: place structure"
-   "zu'o”:  x1 is an activity of (the bridi) consisting of repeated actions x2
-       
--->
+"zu'o”:  x1 is an activity of (the bridi) consisting of repeated actions x2
 
-<jbophrase>mu'e</jbophrase>: x1 is a point event of (the bridi)
+      -->
 
-       
-<jbophrase>pu'u</jbophrase>: x1 is a process of (the bridi) with stages x2
+      <jbophrase>mu'e</jbophrase>: x1 is a point event of (the bridi)
 
-       
-<jbophrase>za'i</jbophrase>: x1 is a continuous state of (the bridi) being true
+      
+      <jbophrase>pu'u</jbophrase>: x1 is a process of (the bridi) with stages x2
+
+      
+      <jbophrase>za'i</jbophrase>: x1 is a continuous state of (the bridi) being true
 
 
-       
-<jbophrase>zu'o</jbophrase>: x1 is an activity of (the bridi) consisting of repeated actions x2
+      
+      <jbophrase>zu'o</jbophrase>: x1 is an activity of (the bridi) consisting of repeated actions x2
 
-</programlisting>
+    </place-structure>
   </section>
   <section xml:id="section-properties">
     <title>Property abstractions</title>
@@ -475,10 +467,8 @@ FIXME: put the index entries in
         <anchor xml:id="c11e4d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>la djan. cu ckaji</jbo>
-        <gloss>le ka se risna [zo'e] [kei]</gloss>
-        <gloss>John has-the-property</gloss>
-        <gloss>the property-of having-as-heart something.</gloss>
+        <jbo>la djan. cu ckaji le ka se risna [zo'e] [kei]</jbo>
+        <gloss>John has-the-property the property-of having-as-heart something.</gloss>
         <en>John has the property of having a heart.</en>
       </interlinear-gloss>
     </example>
@@ -493,10 +483,8 @@ FIXME: put the index entries in
         <anchor xml:id="c11e4d3"/>
       </title>
       <interlinear-gloss>
-        <jbo>do cnino mi</jbo>
-        <gloss>le ka xunre [kei]</gloss>
-        <gloss>You are-new to-me</gloss>
-        <gloss>in-the-quality-of-the property-of being-red.</gloss>
+        <jbo>do cnino mi le ka xunre [kei]</jbo>
+        <gloss>You are-new to-me in-the-quality-of-the property-of being-red.</gloss>
         <en>You are new to me in redness.</en>
       </interlinear-gloss>
     </example>
@@ -557,11 +545,11 @@ FIXME: put the index entries in
         <en>I love John more than I love George.</en>
       </interlinear-gloss>
     </example>
-<para> <indexterm type="lojban-word-imported"><primary>KOhA selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ce'u</primary></indexterm>  <indexterm type="example-imported"><primary>love more</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="lojban-word-imported"><primary>KOhA selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ce'u</primary></indexterm>  <indexterm type="example-imported"><primary>love more</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example xml:id="example-random-id-qfav" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c11e4d8"/>
-      </title>
+      </title> 
       <interlinear-gloss>
         <jbo>la djan. cu zmadu la djordj. le ka prami mi</jbo>
         <gloss>John exceeds George in the property of (X loves me).</gloss>
@@ -616,10 +604,8 @@ FIXME: put the index entries in
         <anchor xml:id="c11e4d12"/>
       </title>
       <interlinear-gloss>
-        <jbo>le ka ce'u dunda le xirma</jbo>
-        <gloss>[zo'e] [kei]</gloss>
-        <gloss>the property-of (X is-a-giver of-the horse</gloss>
-        <gloss>to someone-unspecified)</gloss>
+        <jbo>le ka ce'u dunda le xirma [zo'e] [kei]</jbo>
+        <gloss>the property-of (X is-a-giver of-the horse to someone-unspecified)</gloss>
         <en>the property of being a giver of the horse</en>
       </interlinear-gloss>
     </example>
@@ -630,10 +616,8 @@ FIXME: put the index entries in
         <anchor xml:id="c11e4d13"/>
       </title>
       <interlinear-gloss>
-        <jbo>le ka [zo'e] dunda</jbo>
-        <gloss>le xirma ce'u [kei]</gloss>
-        <gloss>the property-of (someone-unspecified</gloss>
-        <gloss>is-a-giver of-the horse to X)</gloss>
+        <jbo>le ka [zo'e] dunda le xirma ce'u [kei]</jbo>
+        <gloss>the property-of (someone-unspecified is-a-giver of-the horse to X)</gloss>
         <en>the property of being one to whom the horse is given</en>
       </interlinear-gloss>
     </example>
@@ -646,16 +630,16 @@ FIXME: put the index entries in
     
     <quote>package up</quote> a complex relationship for future use; such an abstraction can be translated back into a selbri by placing it in the x2 place of the selbri 
     <jbophrase>bridi</jbophrase>, whose place structure is:</para>
-    <programlisting>
-       
-<jbophrase>bridi</jbophrase>: x1 is a predicate relationship with relation
-             x2 (abstraction) among arguments (sequence/set) x3
-</programlisting>
+    <place-structure>
+      
+      <jbophrase>bridi</jbophrase>: x1 is a predicate relationship with relation
+      x2 (abstraction) among arguments (sequence/set) x3
+    </place-structure>
     <para> <indexterm type="general-imported"><primary>properties</primary><secondary>place structure</secondary></indexterm> The place structure of 
     <jbophrase>ka</jbophrase> abstraction selbri is simply:</para>
-    <programlisting>
-       ka: x1 is a property of (the bridi)
-</programlisting>
+    <place-structure>
+      <jbophrase>ka</jbophrase>: x1 is a property of (the bridi)
+    </place-structure>
   </section>
   <section xml:id="section-amounts">
     <title>Amount abstractions</title>
@@ -707,12 +691,9 @@ FIXME: put the index entries in
         <anchor xml:id="c11e5d3"/>
       </title>
       <interlinear-gloss>
-        <jbo>li pa vu'u mo'e</jbo>
-        
-        <gloss>le ni le pixra cu blanu [kei]</gloss>
-        <gloss>the-number 1 minus the-operand</gloss>
-        <gloss>the amount-of (the picture being-blue)</gloss>
-        <gloss>1 - B, where B = blueness of the picture</gloss>
+        <jbo>li pa vu'u mo'e le ni le pixra cu blanu [kei]</jbo>
+        <gloss>the-number 1 minus the-operand the amount-of (the picture being-blue)</gloss>
+        <en><inlineequation><mathphrase>1 - B</mathphrase></inlineequation>, where <varname>B</varname> = blueness of the picture</en>
       </interlinear-gloss>
     </example>
     <para>Mathematical Lojban is beyond the scope of this chapter, and is explained more fully in 
@@ -743,13 +724,13 @@ FIXME: put the index entries in
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-1LtX"/> conveys that the blueness comes and goes, whereas 
+      <xref linkend="example-random-id-1LtX"/> conveys that the blueness comes and goes, whereas 
     <xref linkend="example-random-id-QKpo"/> conveys that its quantity changes over time.</para>
     <para>Whenever we talk of measurement of an amount, there is some sort of scale, and so the place structure of 
     <jbophrase>ni</jbophrase> abstraction selbri is:</para>
-    <programlisting>
-       ni: x1 is the amount of (the bridi) on scale x2
-</programlisting>
+    <place-structure>
+      ni: x1 is the amount of (the bridi) on scale x2
+    </place-structure>
     <para>Note: the best way to express the x2 places of abstract sumti is to use something like 
     <jbophrase>le ni ... kei be</jbophrase>. See 
     <xref linkend="example-random-id-zvfX"/> for the use of this construction.</para>
@@ -795,10 +776,8 @@ FIXME: put the index entries in
         <anchor xml:id="c11e6d3"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi ba jdice le jei</jbo>
-        <gloss>la djordj. cu zekri gasnu [kei]</gloss>
-        <gloss>I [future] decide the truth-value of</gloss>
-        <gloss>(George being-a-(crime doer)).</gloss>
+        <jbo>mi ba jdice le jei la djordj. cu zekri gasnu [kei]</jbo>
+        <gloss>I [future] decide the truth-value of (George being-a-(crime doer)).</gloss>
         <en>I will decide whether George is a criminal.</en>
       </interlinear-gloss>
     </example>
@@ -807,9 +786,9 @@ FIXME: put the index entries in
     
     <jbophrase>jei</jbophrase> requires an x2 place analogous to that of 
     <jbophrase>ni</jbophrase>:</para>
-    <programlisting>
-       jei: x1 is the truth value of (the bridi) under epistemology x2
-</programlisting>
+    <place-structure>
+      jei: x1 is the truth value of (the bridi) under epistemology x2
+    </place-structure>
     <para> <indexterm type="general-imported"><primary>fuzzy logic and truth-value abstraction</primary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>truth-value and fuzzy logic</secondary></indexterm> Abstractions using 
     <jbophrase>jei</jbophrase> are the mechanism for fuzzy logic in Lojban; the 
     <jbophrase>jei</jbophrase> abstraction refers to a number between 0 and 1 inclusive (as distinct from 
@@ -831,7 +810,7 @@ FIXME: put the index entries in
     <para> <indexterm type="general-imported"><primary>abstractions</primary><secondary>mental activity</secondary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>with knowing</secondary><tertiary>believing, etc.</tertiary></indexterm>  <indexterm type="general-imported"><primary>propositional attitudes</primary></indexterm> There are some selbri which demand an entire predication as a sumti; they make claims about some predication considered as a whole. Logicians call these the 
     <quote>propositional attitudes</quote>, and they include (in English) things like knowing, believing, learning, seeing, hearing, and the like. Consider the English sentence:</para>
     
-<para> <indexterm type="example-imported"><primary>Frank is a fool</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>know</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="example-imported"><primary>Frank is a fool</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>know</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7N2q">
       <title>
         <anchor xml:id="c11e7d1"/>
@@ -872,7 +851,7 @@ FIXME: put the index entries in
     <xref linkend="example-random-id-oCgP"/> says that I know whether or not Frank is a fool, but doesn't say that he is one, as 
     
     <xref linkend="example-random-id-7N2q"/> does. To catch that nuance, we must say:</para>
-<para> <indexterm type="lojban-word-imported"><primary>NU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>du'u</primary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="lojban-word-imported"><primary>NU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>du'u</primary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-6p1K">
       <title>
         <anchor xml:id="c11e7d4"/>
@@ -905,7 +884,7 @@ FIXME: put the index entries in
     <para> <indexterm type="example-imported"><primary>Frank is a fool</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>curious</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>curious</primary></indexterm> and here 
     <jbophrase>du'u</jbophrase> could probably be replaced by 
     <jbophrase>jei</jbophrase> without much change in meaning:</para>
-<para>FIXME: TAG SPOT</para>
+    <para>FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-h4De">
       <title>
         <anchor xml:id="c11e7d6"/>
@@ -919,9 +898,9 @@ FIXME: put the index entries in
     </example>
     <para> <indexterm type="general-imported"><primary>truth-value abstractions</primary><secondary>place structure</secondary></indexterm> As a matter of convenience rather than logical necessity, 
     <jbophrase>du'u</jbophrase> has been given an x2 place, which is a sentence (piece of language) expressing the bridi:</para>
-    <programlisting>
-       du'u: x1 is the predication (the bridi), expressed in sentence x2
-</programlisting>
+    <place-structure>
+      du'u: x1 is the predication (the bridi), expressed in sentence x2
+    </place-structure>
     <para> <indexterm type="general-imported"><primary>abstractions</primary><secondary>speaking</secondary><tertiary>writing, etc.</tertiary></indexterm>  <indexterm type="general-imported"><primary>se du'u</primary></indexterm>  <indexterm type="general-imported"><primary>linguistic behavior</primary></indexterm> and 
     <jbophrase>le se du'u ...</jbophrase> is very useful in filling places of selbri which refer to speaking, writing, or other linguistic behavior regarding bridi:</para>
     
@@ -1033,15 +1012,9 @@ FIXME: put the index entries in
         <anchor xml:id="c11e8d4"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi djuno le du'u</jbo>
-        <gloss>la djan. kau pu</gloss>
-        
-        <gloss>klama le zarci</gloss>
-        <gloss>I know the predication-of/fact-that</gloss>
-        <gloss>John [indirect question] [past]</gloss>
-        
-        <gloss>going to the store.</gloss>
-        <gloss>I know who went to the store, namely John.</gloss>
+        <jbo>mi djuno le du'u la djan. kau pu klama le zarci</jbo>
+        <gloss>I know the predication-of/fact-that John [indirect question] [past] going to the store.</gloss>
+        <en>I know who went to the store, namely John.</en>
         
         <en>I know that it was John who went to the store.</en>
       </interlinear-gloss>
@@ -1061,20 +1034,16 @@ FIXME: put the index entries in
         <anchor xml:id="c11e8d5"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi djuno le du'u</jbo>
-        <gloss>ma pu klama le zarci</gloss>
-        <gloss>I know the predication-of</gloss>
-        <gloss>[what sumti?] [past] goes-to the store</gloss>
+        <jbo>mi djuno le du'u ma pu klama le zarci</jbo>
+        <gloss>I know the predication-of [what sumti?] [past] goes-to the store</gloss>
       </interlinear-gloss>
     </example>
     <para>means</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-LDrc">
+    <example xml:id="example-random-id-LDrc">
       <title>
         <anchor xml:id="c11e8d6"/>
       </title>
-      <interlinear-gloss>
-        <jbo>Who is it that I know goes to the store?</jbo>
-      </interlinear-gloss>
+      <para>Who is it that I know goes to the store?</para>
     </example>
     <para> <indexterm type="general-imported"><primary>indirect questions without &quot;kau&quot;</primary></indexterm>  <indexterm type="general-imported"><primary>indirect question involving sumti</primary></indexterm> It is actually not necessary to use 
     <jbophrase>le du'u</jbophrase> and 
@@ -1100,15 +1069,9 @@ FIXME: put the index entries in
         <anchor xml:id="c11e8d8"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi ba zgana le du'u</jbo>
-        <gloss>la djan. jikau la djordj.</gloss>
-        <gloss>cu zvati le panka</gloss>
-        <gloss>I [future] observe the predication-of/fact-that</gloss>
-        <gloss>John [connective indirect question] George</gloss>
-        
-        <gloss>is-at the park.</gloss>
-        <gloss>I will see whether John or George (or both)</gloss>
-        <en>is at the park.</en>
+        <jbo>mi ba zgana le du'u la djan. jikau la djordj. cu zvati le panka</jbo>
+        <gloss>I [future] observe the predication-of/fact-that John [connective indirect question] George is-at the park.</gloss>
+        <en>I will see whether John or George (or both) is at the park.</en>
       </interlinear-gloss>
     </example>
     <para>In addition, 
@@ -1170,10 +1133,8 @@ FIXME: put the index entries in
         <anchor xml:id="c11e9d3"/>
       </title>
       <interlinear-gloss>
-        <jbo>ko zgana le su'u</jbo>
-        <gloss>le ci smacu cu bajra</gloss>
-        <gloss>you [imperative] observe the abstract-nature-of</gloss>
-        <gloss>the three mice running</gloss>
+        <jbo>ko zgana le su'u le ci smacu cu bajra</jbo>
+        <gloss>you [imperative] observe the abstract-nature-of the three mice running</gloss>
         
         <en>See how the three mice run!</en>
         
@@ -1182,21 +1143,21 @@ FIXME: put the index entries in
     <para> <indexterm type="example-imported"><primary>mice</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>experience abstractions</primary><secondary>place structure</secondary></indexterm> All three of these abstractors have an x2 place. An experience requires an experiencer, so the place structure of 
     <jbophrase>li'i</jbophrase> is:</para>
     
-    <programlisting>
-       li'i: x1 is the experience of (the bridi) as experienced by x2
+    <place-structure>
+      <jbophrase>li'i</jbophrase>: x1 is the experience of (the bridi) as experienced by x2
 
 
-</programlisting>
+    </place-structure>
     <para> <indexterm type="general-imported"><primary>idea abstractions</primary><secondary>place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>concept abstractions</primary><secondary>place structure</secondary></indexterm> Similarly, an idea requires a mind to hold it, so the place structure of 
     <jbophrase>si'o</jbophrase> is:</para>
-    <programlisting>
-       si'o: x1 is the idea/concept of (the bridi) in the mind of x2
-</programlisting>
+    <place-structure>
+      si'o: x1 is the idea/concept of (the bridi) in the mind of x2
+    </place-structure>
     <para> <indexterm type="general-imported"><primary>vague abstractions</primary><secondary>place structure</secondary></indexterm> Finally, there needs to be some way of specifying just what sort of abstraction 
     <jbophrase>su'u</jbophrase> is representing, so its place structure is:</para>
-    <programlisting>
-       su'u: x1 is an abstract nature of (the bridi) of type x2
-</programlisting>
+    <place-structure>
+      su'u: x1 is an abstract nature of (the bridi) of type x2
+    </place-structure>
     <para> <indexterm type="general-imported"><primary>abstractions</primary><secondary>creating new types</secondary></indexterm>  <indexterm type="general-imported"><primary>template</primary></indexterm> The x2 place of 
     <jbophrase>su'u</jbophrase> allows it to serve as a substitute for any of the other abstractors, or as a template for creating new ones. For example,</para>
     
@@ -1220,22 +1181,14 @@ FIXME: put the index entries in
       </interlinear-gloss>
     </example>
     <para>and there is a book whose title might be rendered in Lojban as:</para>
-<para> <indexterm type="example-imported"><primary>bicycle race</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Jesus</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>intersect</primary></indexterm>  <indexterm type="general-imported"><primary>Jesus</primary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="example-imported"><primary>bicycle race</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Jesus</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>intersect</primary></indexterm>  <indexterm type="general-imported"><primary>Jesus</primary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-5Kw7">
       <title>
         <anchor xml:id="c11e9d6"/>
       </title>
       <interlinear-gloss>
-        <jbo>le su'u la .iecuas. kuctai</jbo>
-        <gloss>selcatra kei</gloss>
-        <gloss>be lo sa'ordzifa'a</gloss>
-        <gloss>ke nalmatma'e sutyterjvi</gloss>
-        <gloss>the abstract-nature-of (Jesus is-an-intersect-shape</gloss>
-        
-        
-        <gloss>type-of-killed-one)</gloss>
-        <gloss>of-type a slope-low-direction</gloss>
-        <gloss>type-of non-motor-vehicle speed-competition</gloss>
+        <jbo>le su'u la .iecuas. kuctai selcatra kei be lo sa'ordzifa'a ke nalmatma'e sutyterjvi</jbo>
+        <gloss>the abstract-nature-of (Jesus is-an-intersect-shape type-of-killed-one) of-type a slope-low-direction type-of non-motor-vehicle speed-competition</gloss>
         <en>The Crucifixion of Jesus Considered As A Downhill Bicycle Race</en>
         
       </interlinear-gloss>
@@ -1282,24 +1235,18 @@ FIXME: put the index entries in
         <anchor xml:id="c11e10d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi troci le nu</jbo>
-        <gloss>[mi] gasnu le nu</gloss>
-        <gloss>le vorme cu karbi'o</gloss>
-        <gloss>I try the event-of</gloss>
-        <gloss>(I am-agent-in the event-of</gloss>
-        <gloss>(the door open-becomes)).</gloss>
+        <jbo>mi troci le nu [mi] gasnu le nu le vorme cu karbi'o</jbo>
+        <gloss>I try the event-of (I am-agent-in the event-of (the door open-becomes)).</gloss>
       </interlinear-gloss>
     </example>
     <para>which has an abstract description within an abstract description, quite a complex structure. In English (but not in all other languages), we may also say:</para>
     
-    <example role="interlinear-gloss-example" xml:id="example-random-id-K14X">
+    <example xml:id="example-random-id-K14X">
       <title>
         <anchor xml:id="c11e10d3"/>
       </title>
-      <interlinear-gloss>
-        <jbo>I try the door.</jbo>
-        
-      </interlinear-gloss>
+      <para>I try the door.</para>
+      
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>LAhE selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>tu'a</primary></indexterm>  <indexterm type="example-imported"><primary>try the door</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>simplification to sumti with tu'a</secondary></indexterm> where it is understood that what I try is actually not the door itself, but the act of opening it. The same simplification can be done in Lojban, but it must be marked explicitly using a cmavo. The relevant cmavo is 
     <jbophrase>tu'a</jbophrase>, which belongs to selma'o LAhE. The Lojban equivalent of 
@@ -1362,10 +1309,8 @@ FIXME: put the index entries in
         <anchor xml:id="c11e10d7"/>
       </title>
       <interlinear-gloss>
-        <jbo>tu'a mi rinka</jbo>
-        <gloss>le nu do morsi</gloss>
-        <gloss>something-to-do-with me causes</gloss>
-        <gloss>the event-of you are-dead</gloss>
+        <jbo>tu'a mi rinka le nu do morsi</jbo>
+        <gloss>something-to-do-with me causes the event-of you are-dead</gloss>
         <en>My action causes your death.</en>
       </interlinear-gloss>
     </example>
@@ -1511,10 +1456,8 @@ FIXME: put the index entries in
         <anchor xml:id="c11e12d1"/>
       </title>
       <interlinear-gloss>
-        <jbo>le ka la frank. ciska cu xlali</jbo>
-        <gloss>.ije le ni la frank. ciska cu xlali</gloss>
-        <gloss>The quality-of Frank's writing is bad,</gloss>
-        <en>and the quantity of Frank's writing is bad.</en>
+        <jbo>le ka la frank. ciska cu xlali .ije le ni la frank. ciska cu xlali</jbo>
+        <gloss>The quality-of Frank's writing is bad, and the quantity of Frank's writing is bad.</gloss>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qFdz" role="interlinear-gloss-example">
@@ -1532,37 +1475,100 @@ FIXME: put the index entries in
   <section xml:id="section-summary">
     <title>Table of abstractors</title>
     <para>The following table gives each abstractor, an English gloss for it, a Lojban gismu which is connected with it (more or less remotely: the associations between abstractors and gismu are meant more as memory hooks than for any kind of inference), the rafsi associated with it, and (on the following line) its place structure.</para>
-    <programlisting>
-nu      event of        fasnu  nun  
-<!-- skip cmavo list automation -->
-       x1 is an event of (the bridi)
-ka      property of     ckaji  kam
-       x1 is a property of (the bridi)
-ni      amount of       klani  nil
-       x1 is an amount of (the bridi) measured on scale x2
-jei     truth-value of  jetnu  jez
-       x1 is a truth-value of (the bridi) under epistemology x2
-li'i    experience of   lifri  liz
-
-       x1 is an experience of (the bridi) to experiencer x2
-si'o    idea of         sidbo  siz
-       x1 is an idea/concept of (the bridi) in the mind of x2
-du'u    predication of  -----  dum
-       x1 is the bridi (the bridi) expressed by sentence x2
-su'u    abstraction of  sucta  sus
-       x1 is an abstract nature of (the bridi)
-za'i    state of        zasti  zam
-
-       x1 is a state of (the bridi)
-zu'o    activity of     zukte  zum
-
-       x1 is an activity of (the bridi)
-pu'u    process of      pruce  pup
-
-       x1 is a process of (the bridi)
-mu'e    point-event of  mulno  mub
-
-       x1 is a point-event/achievement of (the bridi)
-</programlisting>
+    <informaltable>
+      <tgroup cols="5">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <tbody>
+          <row>
+            <entry><jbophrase>nu</jbophrase></entry>
+            <entry>event of</entry>
+            <entry><jbophrase>fasnu</jbophrase></entry>
+            <entry><jbophrase>nun</jbophrase></entry>
+            <entry>x1 is an event of (the bridi)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>ka</jbophrase></entry>
+            <entry>property of</entry>
+            <entry><jbophrase>ckaji</jbophrase></entry>
+            <entry><jbophrase role="rafsi">kam</jbophrase></entry>
+            <entry>x1 is a property of (the bridi)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>ni</jbophrase></entry>
+            <entry>amount of</entry>
+            <entry><jbophrase>klani</jbophrase></entry>
+            <entry><jbophrase role="rafsi">nil</jbophrase></entry>
+            <entry>x1 is an amount of (the bridi) measured on scale x2</entry>
+          </row>
+          <row>
+            <entry><jbophrase>jei</jbophrase></entry>
+            <entry>truth-value of</entry>
+            <entry><jbophrase>jetnu</jbophrase></entry>
+            <entry><jbophrase role="rafsi">jez</jbophrase></entry>
+            <entry>x1 is a truth-value of (the bridi) under epistemology x2</entry>
+          </row>
+          <row>
+            <entry><jbophrase>li'i</jbophrase></entry>
+            <entry>experience of</entry>
+            <entry><jbophrase>lifri</jbophrase></entry>
+            <entry><jbophrase role="rafsi">liz</jbophrase></entry>
+            <entry>x1 is an experience of (the bridi) to experiencer x2</entry>
+          </row>
+          <row>
+            <entry><jbophrase>si'o</jbophrase></entry>
+            <entry>idea of</entry>
+            <entry><jbophrase>sidbo</jbophrase></entry>
+            <entry><jbophrase role="rafsi">siz</jbophrase></entry>
+            <entry>x1 is an idea/concept of (the bridi) in the mind of x2</entry>
+          </row>
+          <row>
+            <entry><jbophrase>du'u</jbophrase></entry>
+            <entry>predication of</entry>
+            <entry>-----</entry>
+            <entry><jbophrase role="rafsi">dum</jbophrase></entry>
+            <entry>x1 is the bridi (the bridi) expressed by sentence x2</entry>
+          </row>
+          <row>
+            <entry><jbophrase>su'u</jbophrase></entry>
+            <entry>abstraction of</entry>
+            <entry><jbophrase>sucta</jbophrase></entry>
+            <entry><jbophrase role="rafsi">sus</jbophrase></entry>
+            <entry>x1 is an abstract nature of (the bridi)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>za'i</jbophrase></entry>
+            <entry>state of</entry>
+            <entry><jbophrase>zasti</jbophrase></entry>
+            <entry><jbophrase role="rafsi">zam</jbophrase></entry>
+            <entry>x1 is a state of (the bridi)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>zu'o</jbophrase></entry>
+            <entry>activity of</entry>
+            <entry><jbophrase>zukte</jbophrase></entry>
+            <entry><jbophrase role="rafsi">zum</jbophrase></entry>
+            <entry>x1 is an activity of (the bridi)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>pu'u</jbophrase></entry>
+            <entry>process of</entry>
+            <entry><jbophrase>pruce</jbophrase></entry>
+            <entry><jbophrase role="rafsi">pup</jbophrase></entry>
+            <entry>x1 is a process of (the bridi)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>mu'e</jbophrase></entry>
+            <entry>point-event of</entry>
+            <entry><jbophrase>mulno</jbophrase></entry>
+            <entry><jbophrase role="rafsi">mub</jbophrase></entry>
+            <entry>x1 is a point-event/achievement of (the bridi)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
   </section>
 </chapter>
