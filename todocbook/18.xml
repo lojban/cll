@@ -1550,7 +1550,7 @@
     <jbophrase>piro</jbophrase>, and 
     <jbophrase>pisu'o</jbophrase> are particularly important in Lojban, as they are implicitly used in the descriptions introduced by the cmavo of selma'o LA and LE, as explained in 
     
-    <xref linkend="chapter-sumti"/>. Descriptions in general are outside the scope of this chapter.</para>
+    <xref linkend="chapter-sumti-section-quantified-descriptions"/>. Descriptions in general are outside the scope of this chapter.</para>
   </section>
   <section xml:id="section-radixen">
     <title>Non-decimal and compound bases</title>
@@ -1878,7 +1878,7 @@
     <quote>many</quote> with respect to some unspecified comparison set.</para>
     
     <para>More explanations about the interrelationship of sets, masses, and individuals can be found in 
-    <xref linkend="chapter-sumti"/>.</para>
+    <xref linkend="chapter-sumti-section-masses"/>.</para>
     <para> <indexterm type="lojban-word-imported"><primary>moi</primary></indexterm>  <indexterm type="general-imported"><primary>ordinal selbri</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>ordinal selbri</primary><secondary>place structure</secondary></indexterm> The cmavo 
     <jbophrase>moi</jbophrase> creates ordinal selbri. The place structure is:</para>
     
@@ -2081,7 +2081,7 @@
     <para> <indexterm type="lojban-word-imported"><primary>xo</primary></indexterm>  <indexterm type="general-imported"><primary>number questions</primary></indexterm>  <indexterm type="general-imported"><primary>questions</primary><secondary>number</secondary></indexterm> The cmavo 
     <jbophrase>xo</jbophrase>, a member of selma'o PA, is used to ask questions whose answers are numbers. Like most Lojban question words, it fills the blank where the answer should go. (See 
     
-    <xref linkend="chapter-structure"/> for more on Lojban questions.)</para>
+    <xref linkend="chapter-structure-section-questions"/> for more on Lojban questions.)</para>
     <example xml:id="example-random-id-qIiE" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c18e12d1"/>
@@ -2191,7 +2191,7 @@
     <para>See 
     <xref linkend="example-random-id-eMsd"/> for the standard method of specifying multiple subscripts on a single object.</para>
     <para>More information on the uses of subscripts may be found in 
-    <xref linkend="chapter-structure"/>.</para>
+    <xref linkend="chapter-structure-section-subscripts"/>.</para>
   </section>
   <section xml:id="section-infix-again">
     <title>Infix operators revisited</title>
@@ -2340,12 +2340,24 @@
     <jbophrase>ge'a</jbophrase>.</para>
     <para> <indexterm type="example-imported"><primary>magic square</primary><secondary>example</secondary></indexterm> Therefore, the 
     <quote>magic square</quote> matrix</para>
-    
-    <programlisting xml:space="preserve">
-      8 1 6
-      3 5 7
-      4 9 2
-    </programlisting>
+    <informaltable>
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>    
+          <row>
+            <entry>8</entry><entry>1</entry><entry>6</entry>
+          </row>
+          <row>
+            <entry>3</entry><entry>5</entry><entry>7</entry>
+          </row>
+          <row>
+            <entry>4</entry><entry>9</entry><entry>2</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
     <para>can be represented either as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-zbJP">
       <title>
@@ -2990,14 +3002,14 @@
     <jbophrase>mo'o</jbophrase> subdivision can then be divided into pieces and internally numbered with 
     <jbophrase>mai</jbophrase>. If this chapter were translated into Lojban, each section would be numbered with 
     <jbophrase>mo'o</jbophrase>. (See 
-    <xref linkend="chapter-structure"/> for more on these words.)</para>
+    <xref linkend="chapter-structure-section-utterance-ordinals"/> for more on these words.)</para>
     <para> <indexterm type="lojban-word-imported"><primary>roi</primary></indexterm>  <indexterm type="example-imported"><primary>once</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>numerical</secondary></indexterm> A numerical tense can be created by suffixing a digit string with 
     
     <jbophrase>roi</jbophrase>. This usage generates tenses corresponding to English 
     
     <quote>once</quote>, 
     <quote>twice</quote>, and so on. This topic belongs to a detailed discussion of Lojban tenses, and is explained further in 
-    <xref linkend="chapter-tenses"/>.</para>
+    <xref linkend="chapter-tenses-section-interval-properties"/>.</para>
     <para> <indexterm type="lojban-word-imported"><primary>boi</primary></indexterm>  <indexterm type="general-imported"><primary>numerical tenses</primary><secondary>effect on use of boi</secondary></indexterm>  <indexterm type="general-imported"><primary>boi</primary><secondary>exception before ROI</secondary></indexterm>  <indexterm type="general-imported"><primary>boi</primary><secondary>exception before MAI</secondary></indexterm>  <indexterm type="general-imported"><primary>MAI selma'o</primary><secondary>exception on use of boi before</secondary></indexterm>  <indexterm type="general-imported"><primary>ROI selma'o</primary><secondary>exception on use of boi before</secondary></indexterm> Note: the elidable terminator 
     <jbophrase>boi</jbophrase> is not used between a number and a member of MAI or ROI.</para>
   </section>
@@ -3238,7 +3250,7 @@
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>BY</selmaho>
-        <description>lerfu for variables and functions (see <xref linkend="chapter-letterals"/>)</description>
+        <description>lerfu for variables and functions (see <xref linkend="chapter-letterals-section-math"/>)</description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>FUhA</selmaho>
