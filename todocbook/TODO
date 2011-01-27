@@ -31,34 +31,6 @@ is why the columns are so spaced out).
 
  ------
 
-Fix IDs/tags.  A command like the following should do the trick:
-
-  sed -i 's/"cll_chapter8-section1"/"chapter-relative-clauses-section-poi"/g' [0-9]*.xml
-
-BUT FIRST: check that it doesn't already exist:
-
-  grep '"chapter-relative-clauses-section-poi"' [0-9]*.xml
-
-because duplicates would really suck.
-
-Please run "git diff" afterwards to make sure it did what you
-expected.  Check in as often as you like (to make the diffs
-manageable).
-
-We want short and meaningful; these are used to make file names and
-so on.  If multi-word, please make a slug (see
-http://en.wikipedia.org/wiki/Slug_%28web_publishing%29 ); we are
-using - based slugs rather than _ based, so drop all special
-characters, lowercase, replace space with -.
-
-Make sure that the ids for chapters have "chapter-" at the start,
-"section-" for the sections, and "example-" for the examples; we
-might need them for auto-processing.
-
-Do this for all sections.  Feel free to do it for examples too if an
-example has an obvious title, but it's much less important there, so
-not worth spending time on for the first pass.
-
 References to examples in the text should be changed to <xref>s, using
 the random id of the example in question, e.g. <xref linkend="example-random-id-qjmr"/>
 
@@ -114,15 +86,16 @@ the <interlinear-gloss>...</interlinear-gloss> with <para>...</para>
  ------
 
 Make sure all the components of <example>s are appropriately wrapped in
-<jbo>, <gloss>, <en>, <ipa>, or <foreign> (if it doesn't fit one of
-those, make up a tag and report it).
+<jbo>, <gloss>, <en>, <ipa>, <math>, or <foreign> (if it doesn't fit
+one of those, make up a tag).
 
  ------
  
 Entries like <indexterm type="lojban-word-imported"> (NOTE the type)
 probably need to be destroyed; there should be a bit of Lojban near
 them that can be wrapped in <jbophrase>, to exactly the same effect
-as the <indexterm> entry.  If you can't find such a correspondance,
+as the <indexterm> entry, UNLESS said Lojban text is part of a bigger
+Lojban phrase; leave those for now. If you can't find such a correspondance,
 add a FIXME comment.
 
  ------
