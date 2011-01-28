@@ -11,7 +11,7 @@ actually is; you'll get used to it.
     (like index work).
 
 Robin Powell: 5.1, 5.2, 5.3
-Zort: 3.*, 5.*
+Zort: 3, 5
 
  ------
 
@@ -42,18 +42,18 @@ becomes:
 
     <title><quote>Pretty Little Girls' School</quote>: The Structure Of Lojban selbri</title>
 
-Make sure the <interlinear-gloss> bits look right (which is why the
-columns are so spaced out).
+Make sure the <interlinear-gloss> bits look right in the output (which
+is why the columns are so spaced out).
 
  ------
 
 Fix IDs/tags.  A command like the following should do the trick:
 
-  sed -i 's/"cll_chapter5"/"chapter-selbri"/g' [0-9]*.xml
+  sed -i 's/"cll_chapter8-section1"/"chapter-relative-clauses-section-poi"/g' [0-9]*.xml
 
 BUT FIRST: check that it doesn't already exist:
 
-  grep '"chapter-selbri"' [0-9]*.xml
+  grep '"chapter-relative-clauses-section-poi"' [0-9]*.xml
 
 because duplicates would really suck.
 
@@ -74,6 +74,9 @@ might need them for auto-processing.
 Do this for all sections.  Feel free to do it for examples too if an
 example has an obvious title, but it's much less important there, so
 not worth spending time on for the first pass.
+
+References to examples should be changed to <xref>s, using the random
+id of the example in question, e.g. <xref linkend="example-random-id-qjmr"/>
 
 The important thing here is that *NOTHING* mentions a fixed number!
 *NOWHERE* in the docbook should *ANYTHING* be aware that it is in
@@ -107,11 +110,11 @@ If you see a <quote>...</quote> around Lojban text, replace it with
 Also, use <jbophrase valid="false">...</jbophrase> for purposeful na
 gendra and <jbophrase valid="iffy">...</jbophrase> for na smudra
 
-Turn letterals, like <quote>l</quote>, into <jbophrase
-role="letteral">l</jbophrase>
+Turn letters, like <quote>l</quote>, into <jbophrase
+role="letteral">l</jbophrase> (including ",", ".", and "'").
 
 Similarily we have role="morphology" (consonant clusters),
-role="diphthong", and role="rafsi"
+role="diphthong", and role="rafsi".
 
  ------
 
@@ -123,6 +126,13 @@ post to the BPFK list.
 
 If an example/interlinear-gloss consists solely of English, replace
 the <interlinear-gloss>...</interlinear-gloss> with <para>...</para>
+
+ ------
+
+Make sure all the components of <example>s are appropriate wrapped in
+<jbo>, <gloss>, <en>, or <ipa> (if it doesn't fit one of those, make
+up a tag and report it). Many of the non-three-part examples are
+messed up like this.
 
  ------
  
@@ -152,14 +162,25 @@ All such indexterm entries should end up in the example itself, like so:
 
  ------
 
-
 ==================
   Data
 ==================
-- Need some sort of structure for the per-section cmavo lists.
+- The per-section cmavo lists should be like this:
+   <cmavo-list>
+     <cmavo-entry>
+       <cmavo>ke</cmavo>
+       <selmaho>KE</selmaho>
+       <description>start grouping</description>
+     </cmavo-entry>
+   ...
+   </cmavo-list>
   - also need to wrap the lojban words there in a way that does
     indexing, and ideally auto-generation of the cmavo-per-selmaho
     lists we want for chapter 20
+      - does the <cmavo-list> structure achieve this?
+- It seems that there is a problem with the cmavo lists at the
+  beginning of sections having missing entries; in particular, ones
+  wwith + in the selma'o, maybe?; they need to be manually checked
 - lojban words, lojban phrases, terms of art ("abstraction"),
   others?... should each have their own index
 - cll_chapter5-section1 should be content-words-brivla or so ; those
@@ -167,6 +188,7 @@ All such indexterm entries should end up in the example itself, like so:
 - list the members of each selma'o in chapter 20
 - make sure the examples that aren't interlinear glosses don't have
   that as their role
+   - so far there's also role="pronunciation-example", probably need more
 - <phrase role="IPA">∞</phrase> is *not* IPA
 - <@xalbo> I do think having distinct structures for quoted correct
   lojban and for intentionally incorrect lojban (if there's any, but
@@ -176,14 +198,11 @@ All such indexterm entries should end up in the example itself, like so:
   lojban, invalid lojban, and something in between ({lo nanmu
   bajra}, for instance; maybe worth flagging with a "this isn't what
   you think it is" type of thing
-  - use <jbophrase valid="false">...</jbophrase> for na gendra and
-    <jbophrase valid="iffy">...</jbophrase> for na smudra
+  - use <jbophrase valid="false">...</jbophrase> for purposely na
+      gendra and <jbophrase valid="iffy">...</jbophrase> for na smudra
 - In the mediaobjects in chapter 1, can we do better than <alt>The
   picture for chapter 20</alt> in terms of non-numerical cross
   referencing?
-- It seems that there is a problem with the cmavo lists at the
-  beginning of sections having missing entries; in particular, ones
-  wwith + in the selma'o, maybe?; they need to be manually checked
 - Replace chapter xrefs with section xrefs
 - Fix all FIXMEs; in particular the output of:
   grep 'FIXME:' [0-9]*.xml | grep -v 'TAG SPOT'

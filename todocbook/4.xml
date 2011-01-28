@@ -15,135 +15,124 @@
     <para> <indexterm type="general-imported"><primary>morphology</primary><secondary>conventions for</secondary></indexterm> A stream of Lojban sounds can be uniquely broken up into its component words according to specific rules. These so-called 
     <quote>morphology rules</quote> are summarized in this chapter. (However, a detailed algorithm for breaking sounds into words has not yet been fully debugged, and so is not presented in this book.) First, here are some conventions used to talk about groups of Lojban letters, including vowels and consonants.</para>
     
-    <variablelist>
-      <varlistentry>
-        <term>1)</term>
-        <listitem>
-          <para> <indexterm type="general-imported"><primary>y</primary><secondary>considered not to be a vowel for morphological discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>V</primary><secondary>as a symbol for a single vowel</secondary></indexterm>  <indexterm type="general-imported"><primary>morphology</primary><secondary>symbolic conventions for discussing</secondary></indexterm> V represents any single Lojban vowel except 
-          <jbophrase role="letteral">y</jbophrase>; that is, it represents 
-          <jbophrase role="letteral">a</jbophrase>, 
-          <jbophrase role="letteral">e</jbophrase>, 
-          <jbophrase role="letteral">i</jbophrase>, 
-          <jbophrase role="letteral">o</jbophrase>, or 
-          <jbophrase role="letteral">u</jbophrase>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>2)</term>
-        <listitem>
-          <para> <indexterm type="general-imported"><primary>VV string</primary><secondary>as a symbol for a double vowel</secondary></indexterm> VV represents either a diphthong, one of the following: 
-          <programlisting xml:space="preserve">
-            ai ei oi au
-            </programlisting> or a two-syllable vowel pair with an apostrophe separating the vowels, one of the following: 
-            <cmavo-list>
-              <cmavo-entry>
-                <cmavo>a'a a'e a'i</cmavo>
-                
-                
-                <selmaho>a'o</selmaho>
-                
-                <description>a'u</description>
-              </cmavo-entry>
-              <cmavo-entry>
-                <cmavo>e'a e'e e'i</cmavo>
-                
-                
-                <selmaho>e'o</selmaho>
-                
-                <description>e'u</description>
-              </cmavo-entry>
-              <cmavo-entry>
-                <cmavo>i'a i'e i'i</cmavo>
-                
-                <selmaho>i'o</selmaho>
-                <description>i'u</description>
-              </cmavo-entry>
-              <cmavo-entry>
-                <cmavo>o'a o'e o'i</cmavo>
-                
-                <selmaho>o'o</selmaho>
-                <description>o'u</description>
-                
-              </cmavo-entry>
-              <cmavo-entry>
-                <cmavo>u'a u'e u'i</cmavo>
-                <selmaho>u'o</selmaho>
-                <description>u'u</description>
-                
-              </cmavo-entry>
-          </cmavo-list></para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>3)</term>
-        <listitem>
-          <para> <indexterm type="general-imported"><primary>apostrophe</primary><secondary>as not a consonant for morphological discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>syllabic r</primary><secondary>as a consonant for morphological discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>syllabic n</primary><secondary>as a consonant for morphological discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>syllabic m</primary><secondary>as a consonant for morphological discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>syllabic l</primary><secondary>considered as a consonant for morphological discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>C string</primary><secondary>as a symbol for a single consonant</secondary></indexterm> C represents a single Lojban consonant, not including the apostrophe, one of 
-          <jbophrase role="letteral">b</jbophrase>, 
-          <jbophrase role="letteral">c</jbophrase>, 
-          <jbophrase role="letteral">d</jbophrase>, 
-          <jbophrase role="letteral">f</jbophrase>, 
-          <jbophrase role="letteral">g</jbophrase>, 
-          <jbophrase role="letteral">j</jbophrase>, 
-          <jbophrase role="letteral">k</jbophrase>, 
-          <jbophrase role="letteral">l</jbophrase>, 
-          <jbophrase role="letteral">m</jbophrase>, 
-          <jbophrase role="letteral">n</jbophrase>, 
-          <jbophrase role="letteral">p</jbophrase>, 
-          <jbophrase role="letteral">r</jbophrase>, 
-          <jbophrase role="letteral">s</jbophrase>, 
-          <jbophrase role="letteral">t</jbophrase>, 
-          <jbophrase role="letteral">v</jbophrase>, 
-          <jbophrase role="letteral">x</jbophrase>, or 
-          <jbophrase role="letteral">z</jbophrase>. Syllabic 
-          <jbophrase role="letteral">l</jbophrase>, 
-          <jbophrase role="letteral">m</jbophrase>, 
-          <jbophrase role="letteral">n</jbophrase>, and 
-          <jbophrase role="letteral">r</jbophrase> always count as consonants for the purposes of this chapter.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>4)</term>
-        <listitem>
-          <para> <indexterm type="general-imported"><primary>CC string</primary><secondary>as a symbol for a permissible initial consonant pair</secondary></indexterm> CC represents two adjacent consonants of type C which constitute one of the 48 permissible initial consonant pairs: 
+    <orderedlist>
+      <listitem>
+        <para> <indexterm type="general-imported"><primary>y</primary><secondary>considered not to be a vowel for morphological discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>V</primary><secondary>as a symbol for a single vowel</secondary></indexterm>  <indexterm type="general-imported"><primary>morphology</primary><secondary>symbolic conventions for discussing</secondary></indexterm> V represents any single Lojban vowel except 
+        <jbophrase role="letteral">y</jbophrase>; that is, it represents 
+        <jbophrase role="letteral">a</jbophrase>, 
+        <jbophrase role="letteral">e</jbophrase>, 
+        <jbophrase role="letteral">i</jbophrase>, 
+        <jbophrase role="letteral">o</jbophrase>, or 
+        <jbophrase role="letteral">u</jbophrase>.</para>
+      </listitem>
+      <listitem>
+        <para> <indexterm type="general-imported"><primary>VV string</primary><secondary>as a symbol for a double vowel</secondary></indexterm> VV represents either a diphthong, one of the following:
+        <simplelist type="horiz" columns="4">
+          <member><jbophrase role="dipthong">ai</jbophrase></member>
+          <member><jbophrase role="dipthong">ei</jbophrase></member>
+          <member><jbophrase role="dipthong">oi</jbophrase></member>
+          <member><jbophrase role="dipthong">au</jbophrase></member>
+        </simplelist>
+        or a two-syllable vowel pair with an apostrophe separating the vowels, one of the following:
+        <simplelist type="horiz" columns="5">
+          <member><jbophrase>a'a</jbophrase></member>
+          <member><jbophrase>a'e</jbophrase></member>
+          <member><jbophrase>a'i</jbophrase></member>
+          <member><jbophrase>a'o</jbophrase></member>
+          <member><jbophrase>a'u</jbophrase></member>
           
+          <member><jbophrase>e'a</jbophrase></member>
+          <member><jbophrase>e'e</jbophrase></member>
+          <member><jbophrase>e'i</jbophrase></member>
+          <member><jbophrase>e'o</jbophrase></member>
+          <member><jbophrase>e'u</jbophrase></member>
           
-          <programlisting xml:space="preserve">
-            bl br
-            cf ck cl cm cn cp cr ct
-            dj dr dz
-            fl fr
-            gl gr
-            jb jd jg jm jv
-            kl kr
-            ml mr
-            pl pr
-            sf sk sl sm sn sp sr st
-            tc tr ts
-            vl vr
-            xl xr
-            zb zd zg zm zv
-          </programlisting></para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>5)</term>
-        <listitem>
-          <para> <indexterm type="general-imported"><primary>C/C string</primary><secondary>as a symbol for a permissible consonant pair</secondary></indexterm> C/C represents two adjacent consonants which constitute one of the permissible consonant pairs (not necessarily a permissible initial consonant pair). The permissible consonant pairs are explained in 
+          <member><jbophrase>i'a</jbophrase></member>
+          <member><jbophrase>i'e</jbophrase></member>
+          <member><jbophrase>i'i</jbophrase></member>
+          <member><jbophrase>i'o</jbophrase></member>
+          <member><jbophrase>i'u</jbophrase></member>
           
-          <xref linkend="chapter-phonology"/>. In brief, any consonant pair is permissible unless it: contains two identical letters, contains both a voiced (excluding 
-          <jbophrase role="letteral">r</jbophrase>, 
-          <jbophrase role="letteral">l</jbophrase>, 
-          <jbophrase role="letteral">m</jbophrase>, 
-          <jbophrase role="letteral">n</jbophrase>) and an unvoiced consonant, or is one of certain specified forbidden pairs.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>6)</term>
-        <listitem>
-          <para> <indexterm type="general-imported"><primary>C/CC string</primary><secondary>as a symbol for a consonant triple</secondary></indexterm> C/CC represents a consonant triple. The first two consonants must constitute a permissible consonant pair; the last two consonants must constitute a permissible initial consonant pair.</para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
+          <member><jbophrase>o'a</jbophrase></member>
+          <member><jbophrase>o'e</jbophrase></member>
+          <member><jbophrase>o'i</jbophrase></member>
+          <member><jbophrase>o'o</jbophrase></member>
+          <member><jbophrase>o'u</jbophrase></member>
+          
+          <member><jbophrase>u'a</jbophrase></member>
+          <member><jbophrase>u'e</jbophrase></member>
+          <member><jbophrase>u'i</jbophrase></member>
+          <member><jbophrase>u'o</jbophrase></member>
+          <member><jbophrase>u'u</jbophrase></member>
+        </simplelist>
+        </para>
+      </listitem>
+      <listitem>
+        <para> <indexterm type="general-imported"><primary>apostrophe</primary><secondary>as not a consonant for morphological discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>syllabic r</primary><secondary>as a consonant for morphological discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>syllabic n</primary><secondary>as a consonant for morphological discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>syllabic m</primary><secondary>as a consonant for morphological discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>syllabic l</primary><secondary>considered as a consonant for morphological discussions</secondary></indexterm>  <indexterm type="general-imported"><primary>C string</primary><secondary>as a symbol for a single consonant</secondary></indexterm> C represents a single Lojban consonant, not including the apostrophe, one of
+        <simplelist type="inline">
+          <member><jbophrase role="letteral">b</jbophrase></member> 
+          <member><jbophrase role="letteral">c</jbophrase></member> 
+          <member><jbophrase role="letteral">d</jbophrase></member> 
+          <member><jbophrase role="letteral">f</jbophrase></member> 
+          <member><jbophrase role="letteral">g</jbophrase></member> 
+          <member><jbophrase role="letteral">j</jbophrase></member> 
+          <member><jbophrase role="letteral">k</jbophrase></member> 
+          <member><jbophrase role="letteral">l</jbophrase></member> 
+          <member><jbophrase role="letteral">m</jbophrase></member> 
+          <member><jbophrase role="letteral">n</jbophrase></member> 
+          <member><jbophrase role="letteral">p</jbophrase></member> 
+          <member><jbophrase role="letteral">r</jbophrase></member> 
+          <member><jbophrase role="letteral">s</jbophrase></member> 
+          <member><jbophrase role="letteral">t</jbophrase></member> 
+          <member><jbophrase role="letteral">v</jbophrase></member> 
+          <member><jbophrase role="letteral">x</jbophrase></member>
+          or
+          <member><jbophrase role="letteral">z</jbophrase></member>
+        </simplelist>
+        . Syllabic
+        <simplelist type="inline">
+          <member><jbophrase role="letteral">l</jbophrase></member> 
+          <member><jbophrase role="letteral">m</jbophrase></member> 
+          <member><jbophrase role="letteral">n</jbophrase></member> and 
+          <member><jbophrase role="letteral">r</jbophrase></member>
+        </simplelist>
+        always count as consonants for the purposes of this chapter.
+        </para>
+      </listitem>
+      <listitem>
+        <para> <indexterm type="general-imported"><primary>CC string</primary><secondary>as a symbol for a permissible initial consonant pair</secondary></indexterm> CC represents two adjacent consonants of type C which constitute one of the 48 permissible initial consonant pairs: 
+        <!-- FIXME: There's a table of the permissible initial pairs in chapter 3, too; however, the pairs are grouped differently in that table. Can we copy that or must we use this specific grouping here? Also, in draft CLL it's not even a table, just a straight inline list. -->
+        <programlisting xml:space="preserve">
+          bl br
+          cf ck cl cm cn cp cr ct
+          dj dr dz
+          fl fr
+          gl gr
+          jb jd jg jm jv
+          kl kr
+          ml mr
+          pl pr
+          sf sk sl sm sn sp sr st
+          tc tr ts
+          vl vr 
+          xl xr
+          zb zd zg zm zv
+        </programlisting></para>
+      </listitem>
+      <listitem>
+        <para> <indexterm type="general-imported"><primary>C/C string</primary><secondary>as a symbol for a permissible consonant pair</secondary></indexterm> C/C represents two adjacent consonants which constitute one of the permissible consonant pairs (not necessarily a permissible initial consonant pair). The permissible consonant pairs are explained in <xref linkend="chapter-phonology"/>. In brief, any consonant pair is permissible unless it: contains two identical letters, contains both a voiced (excluding
+        <simplelist>
+          <member><jbophrase role="letteral">r</jbophrase></member>
+          <member><jbophrase role="letteral">l</jbophrase></member> 
+          <member><jbophrase role="letteral">m</jbophrase></member> 
+          <member><jbophrase role="letteral">n</jbophrase></member>
+          </simplelist>) and an unvoiced consonant, or is one of certain specified forbidden pairs.
+        </para>
+      </listitem>
+      <listitem>
+        <para> <indexterm type="general-imported"><primary>C/CC string</primary><secondary>as a symbol for a consonant triple</secondary></indexterm> C/CC represents a consonant triple. The first two consonants must constitute a permissible consonant pair; the last two consonants must constitute a permissible initial consonant pair.</para>
+      </listitem>
+    </orderedlist>
     <para> <indexterm type="general-imported"><primary>brivla</primary><secondary>as one of the 3 basic word classes</secondary></indexterm>  <indexterm type="general-imported"><primary>cmene</primary><secondary>as one of the 3 basic word classes</secondary></indexterm>  <indexterm type="general-imported"><primary>cmavo</primary><secondary>as one of the 3 basic word classes</secondary></indexterm>  <indexterm type="general-imported"><primary>parts of speech</primary></indexterm>  <indexterm type="general-imported"><primary>word classes</primary></indexterm> Lojban has three basic word classes - parts of speech - in contrast to the eight that are traditional in English. These three classes are called cmavo, brivla, and cmene. Each of these classes has uniquely identifying properties - an arrangement of letters that allows the word to be uniquely and unambiguously recognized as a separate word in a string of Lojban, upon either reading or hearing, and as belonging to a specific word-class.</para>
     
     
@@ -152,7 +141,7 @@
     <quote>and</quote>, 
     <quote>if</quote>, 
     <quote>the</quote> and 
-    <jbophrase>to</jbophrase>; brivla are the content words, corresponding to English words like 
+    <quote>to</quote>; brivla are the content words, corresponding to English words like 
     <quote>come</quote>, 
     <quote>red</quote>, 
     <quote>doctor</quote>, and 
@@ -163,47 +152,60 @@
   </section>
   <section xml:id="section-cmavo">
     <title>cmavo</title>
-    <para> <indexterm type="general-imported"><primary>punctuation marks</primary><secondary>cmavo as Lojban equivalents</secondary></indexterm>  <indexterm type="general-imported"><primary>numbers</primary><secondary>cmavo as Lojban equivalents</secondary></indexterm>  <indexterm type="general-imported"><primary>prepositions</primary><secondary>cmavo as Lojban equivalents</secondary></indexterm>  <indexterm type="general-imported"><primary>conjunctions</primary><secondary>cmavo as Lojban equivalents</secondary></indexterm>  <indexterm type="general-imported"><primary>articles</primary><secondary>cmavo as Lojban equivalents</secondary></indexterm>  <indexterm type="general-imported"><primary>structure words</primary></indexterm>  <indexterm type="general-imported"><primary>selma'o</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>cmavo</primary><secondary>definition</secondary></indexterm> The first group of Lojban words discussed in this chapter are the cmavo. They are the structure words that hold the Lojban language together. They often have no semantic meaning in themselves, though they may affect the semantics of brivla to which they are attached. The cmavo include the equivalent of English articles, conjunctions, prepositions, numbers, and punctuation marks. There are over a hundred subcategories of cmavo, known as 
-    
-    
-    
-    
-    
-    
-    <jbophrase>selma'o</jbophrase>, each having a specifically defined grammatical usage. The various selma'o are discussed throughout 
+    <para> <indexterm type="general-imported"><primary>punctuation marks</primary><secondary>cmavo as Lojban equivalents</secondary></indexterm>  <indexterm type="general-imported"><primary>numbers</primary><secondary>cmavo as Lojban equivalents</secondary></indexterm>  <indexterm type="general-imported"><primary>prepositions</primary><secondary>cmavo as Lojban equivalents</secondary></indexterm>  <indexterm type="general-imported"><primary>conjunctions</primary><secondary>cmavo as Lojban equivalents</secondary></indexterm>  <indexterm type="general-imported"><primary>articles</primary><secondary>cmavo as Lojban equivalents</secondary></indexterm>  <indexterm type="general-imported"><primary>structure words</primary></indexterm>  <indexterm type="general-imported"><primary>selma'o</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>cmavo</primary><secondary>definition</secondary></indexterm> The first group of Lojban words discussed in this chapter are the cmavo. They are the structure words that hold the Lojban language together. They often have no semantic meaning in themselves, though they may affect the semantics of brivla to which they are attached. The cmavo include the equivalent of English articles, conjunctions, prepositions, numbers, and punctuation marks. There are over a hundred subcategories of cmavo, known as <jbophrase>selma'o</jbophrase>, each having a specifically defined grammatical usage. The various selma'o are discussed throughout 
     <xref linkend="chapter-selbri"/> to 
     <xref linkend="chapter-structure"/> and summarized in 
     <xref linkend="chapter-catalogue"/>.</para>
     <para> <indexterm type="general-imported"><primary>cmavo</primary><secondary>structure of</secondary></indexterm> Standard cmavo occur in four forms defined by their word structure. Here are some examples of the various forms:</para>
-    <cmavo-list>
-      <cmavo-entry>
-        <cmavo>V-form .a .e .i</cmavo>
-        <selmaho>.o</selmaho>
-        <description>.u</description>
-      </cmavo-entry>
-      <cmavo-entry>
-        <cmavo>CV-form ba ce di</cmavo>
-        <selmaho>fo</selmaho>
-        <description>gu</description>
-      </cmavo-entry>
-      <cmavo-entry>
-        <cmavo>VV-form .au .ei</cmavo>
-        <selmaho>.ia</selmaho>
-        <description>.o'u .u'e</description>
-        
-      </cmavo-entry>
-      <cmavo-entry>
-        <cmavo>CVV-form ki'a pei mi'o</cmavo>
-        <selmaho>coi</selmaho>
-        <description>cu'u</description>
-        
-      </cmavo-entry>
-    </cmavo-list>
+    <informaltable>
+      <tgroup cols="6">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <colspec colnum="6" colname="col6"/>
+        <tbody>
+          <row>
+            <entry>V-form</entry>
+            <entry><jbophrase>.a</jbophrase></entry>
+            <entry><jbophrase>.e</jbophrase></entry>
+            <entry><jbophrase>.i</jbophrase></entry>
+            <entry><jbophrase>.o</jbophrase></entry>
+            <entry><jbophrase>.u</jbophrase></entry>
+          </row>
+          <row>
+            <entry>CV-form</entry>
+            <entry><jbophrase>ba</jbophrase></entry>
+            <entry><jbophrase>ce</jbophrase></entry>
+            <entry><jbophrase>di</jbophrase></entry>
+            <entry><jbophrase>fo</jbophrase></entry>
+            <entry><jbophrase>gu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>VV-form</entry>
+            <entry><jbophrase>.au</jbophrase></entry>
+            <entry><jbophrase>.ei</jbophrase></entry>
+            <entry><jbophrase>.ia</jbophrase></entry>
+            <entry><jbophrase>.o'u</jbophrase></entry>
+            <entry><jbophrase>.u'e</jbophrase></entry>
+          </row>
+          <row>
+            <entry>CVV-form</entry>
+            <entry><jbophrase>ki'a</jbophrase></entry>
+            <entry><jbophrase>pei</jbophrase></entry>
+            <entry><jbophrase>mi'o</jbophrase></entry>
+            <entry><jbophrase>coi</jbophrase></entry>
+            <entry><jbophrase>cu'u</jbophrase></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
     <para>In addition, there is the cmavo 
     <jbophrase>.y.</jbophrase> (remember that 
     <jbophrase role="letteral">y</jbophrase> is not a V), which must have pauses before and after it.</para>
     <para> <indexterm type="general-imported"><primary>cmavo</primary><secondary>lack of relation of form to grammatical use</secondary></indexterm>  <indexterm type="general-imported"><primary>experimental cmavo</primary><secondary>forms for</secondary></indexterm>  <indexterm type="general-imported"><primary>cmavo</primary><secondary>for experimental use</secondary></indexterm>  <indexterm type="general-imported"><primary>cmavo</primary><secondary>simple</secondary></indexterm> A simple cmavo thus has the property of having only one or two vowels, or of having a single consonant followed by one or two vowels. Words consisting of three or more vowels in a row, or a single consonant followed by three or more vowels, are also of cmavo form, but are reserved for experimental use: a few examples are 
-    <!-- FIXME: is this valid="false"? -->
+    <!-- FIXME: is this valid="false"? probably not, but just checking -->
     <jbophrase>ku'a'e</jbophrase>, 
     
     <jbophrase>sau'e</jbophrase>, and 
@@ -250,39 +252,36 @@
       </varlistentry>
     </variablelist>
     <para>For example:</para>
-    <example xml:id="example-random-id-qiXV" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qiXV" role="compound-cmavo-example">
       <title>
         <anchor xml:id="c4e2d1"/>
       </title>
-      <interlinear-gloss>
+      <compound-cmavo>
         <jbo>.iseci'i</jbo>
-        <en>.i se ci'i</en>
-        
-      </interlinear-gloss>
+        <jbo>.i se ci'i</jbo>
+      </compound-cmavo>
     </example>
-    <example xml:id="example-random-id-qIYK" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qIYK" role="compound-cmavo-example">
       <title>
         <anchor xml:id="c4e2d2"/>
       </title>
-      <interlinear-gloss>
+      <compound-cmavo>
         <jbo>punaijecanai</jbo>
-        <en>pu nai je ca nai</en>
-      </interlinear-gloss>
+        <jbo>pu nai je ca nai</jbo>
+      </compound-cmavo>
     </example>
-    <example xml:id="example-random-id-qiz6" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qiz6" role="compound-cmavo-example">
       <title>
         <anchor xml:id="c4e2d3"/>
       </title>
-      <interlinear-gloss>
+      <compound-cmavo>
         <jbo>ki'e.u'e</jbo>
-        
-        <en>ki'e .u'e</en>
-        
-      </interlinear-gloss>
+        <jbo>ki'e .u'e</jbo>
+      </compound-cmavo>
     </example>
     <para> <indexterm type="general-imported"><primary>pauses</primary><secondary>before vowels</secondary></indexterm> The cmavo 
     <jbophrase>.u'e</jbophrase> begins with a vowel, and like all words beginning with a vowel, requires a pause (represented by 
-    <jbophrase>.</jbophrase>) before it. This pause cannot be omitted simply because the cmavo is incorporated into a compound cmavo. On the other hand,</para>
+    <jbophrase role="letteral">.</jbophrase>) before it. This pause cannot be omitted simply because the cmavo is incorporated into a compound cmavo. On the other hand,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-FDhH">
       <title>
         <anchor xml:id="c4e2d4"/>
@@ -293,13 +292,13 @@
       </interlinear-gloss>
     </example>
     <para>is a single cmavo reserved for experimental purposes: it has four vowels.</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-CtnR">
+    <example role="compound-cmavo-example" xml:id="example-random-id-CtnR">
       <title>
         <anchor xml:id="c4e2d5"/>
       </title>
       <interlinear-gloss>
         <jbo>cy.ibu.abu</jbo>
-        <en>cy. .ibu .abu</en>
+        <jbo>cy. .ibu .abu</jbo>
       </interlinear-gloss>
     </example>
     <para>Again the pauses are required (see 
@@ -307,14 +306,13 @@
     <jbophrase>cy.</jbophrase> merges with the pause before 
     <jbophrase>.ibu</jbophrase>.</para>
     <para> <indexterm type="general-imported"><primary>stress</primary><secondary>on cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>cmavo</primary><secondary>stress on</secondary></indexterm> There is no particular stress required in cmavo or their compounds. Some conventions do exist that are not mandatory. For two-syllable cmavo, for example, stress is typically placed on the first vowel; an example is</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-pdGY">
+    <example role="pronunciation-example" xml:id="example-random-id-pdGY">
       <title>
         <anchor xml:id="c4e2d6"/>
       </title>
       <interlinear-gloss>
         <jbo>.e'o ko ko kurji</jbo>
-        
-        <en>.E'o ko ko KURji</en>
+        <jbo role="pronunciation">.E'o ko ko KURji</jbo>
       </interlinear-gloss>
     </example>
     <para>This convention results in a consistent rhythm to the language, since brivla are required to have penultimate stress; some find this esthetically pleasing.</para>
@@ -359,12 +357,12 @@
     <jbophrase>re</jbophrase> would be similar to that in the English phrase 
     <quote>the TWO men</quote>.</para>
     <para>Both cmavo may also be left unstressed, thus:</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-sg0p">
+    <example role="pronunciation-example" xml:id="example-random-id-sg0p">
       <title>
         <anchor xml:id="c4e2d10"/>
       </title>
       <interlinear-gloss>
-        <jbo>le re NANmu</jbo>
+        <jbo role="pronunciation">le re NANmu</jbo>
       </interlinear-gloss>
     </example>
     <para>This would probably be the most common usage.</para>
@@ -1023,7 +1021,7 @@
     <para>An 
     <jbophrase role="letteral">r</jbophrase>- hyphen or 
     <jbophrase role="letteral">n</jbophrase>-hyphen is also required after the CVV-form rafsi of any lujvo of the form CVV-CVC/CV or CVV-CCVCV since it would otherwise fall apart into a CVV-form cmavo and a gismu. In any lujvo with more than two parts, a CVV-form rafsi in the initial position must always be followed by a hyphen. If the hyphen were to be omitted, the supposed lujvo could be broken into smaller words without the hyphen: because the CVV-form rafsi would be interpreted as a cmavo, and the remainder of the word as a valid lujvo that is one rafsi shorter.</para>
-    <para> <indexterm type="general-imported"><primary>r-hyphen</primary><secondary>contrasted with &quot;n&quot;-hyphen in requirements for use</secondary></indexterm>  <indexterm type="general-imported"><primary>n-hyphen</primary><secondary>contrasted with &quot;r&quot;-hyphen in requirements for use</secondary></indexterm>  <indexterm type="general-imported"><primary>n-hyphen</primary><secondary>use of</secondary></indexterm> An 
+    <para> <indexterm type="general-imported"><primary>r-hyphen</primary><secondary>contrasted with <jbophrase role="letteral">n</jbophrase>-hyphen in requirements for use</secondary></indexterm>  <indexterm type="general-imported"><primary>n-hyphen</primary><secondary>contrasted with <jbophrase role="letteral">r</jbophrase>-hyphen in requirements for use</secondary></indexterm>  <indexterm type="general-imported"><primary>n-hyphen</primary><secondary>use of</secondary></indexterm> An 
     <jbophrase role="letteral">n</jbophrase>-hyphen is only used in place of an 
     <jbophrase role="letteral">r</jbophrase>-hyphen when the following rafsi begins with 
     <jbophrase role="letteral">r</jbophrase>. For example, the tanru 
@@ -1034,7 +1032,7 @@
     <jbophrase role="letteral">n</jbophrase>-hyphen is required, and the correct form of the hyphenated lujvo is 
     <jbophrase>ro'inre'o</jbophrase>. The same lujvo could also be expressed without hyphenation as 
     <jbophrase>rokre'o</jbophrase>.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>ZEI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>zei</primary></indexterm>  <indexterm type="general-imported"><primary>lujvo</primary><secondary>with zei</secondary></indexterm> There is also a different way of building lujvo, or rather phrases which are grammatically and semantically equivalent to lujvo. You can make a phrase containing any desired words, joining each pair of them with the special cmavo 
+    <para><!-- FIXME: what to do with this indexterm? --><indexterm type="lojban-word-imported"><primary>ZEI selma'o</primary></indexterm><indexterm type="general-imported"><primary>lujvo</primary><secondary>with zei</secondary></indexterm> There is also a different way of building lujvo, or rather phrases which are grammatically and semantically equivalent to lujvo. You can make a phrase containing any desired words, joining each pair of them with the special cmavo 
     <jbophrase>zei</jbophrase>. Thus,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-VeGL">
       <title>
@@ -1068,10 +1066,6 @@
         <jbo>kulnr,farsi zei lolgai</jbo>
         <gloss>Farsi floor-cover</gloss>
         <en>Persian rug</en>
-        
-        
-        
-        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qJef" role="interlinear-gloss-example">
@@ -1083,7 +1077,6 @@
         <jbo>na'e zei .a zei na'e zei by. livgyterbilma</jbo>
         <gloss>non-A, non-B liver-disease</gloss>
         <en>non-A, non-B hepatitis</en>
-        
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qJEh" role="interlinear-gloss-example">
@@ -1096,10 +1089,6 @@
         <jbo>.cerman. zei jamkarce</jbo>
         <gloss>Sherman war-car</gloss>
         <en>Sherman tank</en>
-        
-        
-        
-        
       </interlinear-gloss>
     </example>
     <para><xref linkend="example-random-id-qJef"/> is particularly noteworthy because the phrase that would be produced by removing the 
@@ -1115,7 +1104,6 @@
       <interlinear-gloss>
         <jbo>na'e zei .a zei na'e zei by. zei livgyterbilma</jbo>
         <en>non-A-non-B-hepatitis</en>
-        
       </interlinear-gloss>
     </example>
     <para>the whole phrase would become a single lujvo. The longer lujvo of 
@@ -1140,7 +1128,7 @@
     <quote>iambic pentameter</quote>). These words are in effect names for concepts, and the names were invented by speakers of another language. The vast majority of words referring to plants, animals, foods, and scientific terminology cannot be easily expressed as tanru. They thus must be borrowed (actually 
     
     <quote>copied</quote>) into Lojban from the original language.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>la'o</primary></indexterm>  <indexterm type="general-imported"><primary>borrowings</primary><secondary>Stage 1</secondary></indexterm>  <indexterm type="general-imported"><primary>borrowings</primary><secondary>using foreign-language name</secondary></indexterm>  <indexterm type="general-imported"><primary>borrowing</primary><secondary>four stages of</secondary></indexterm> There are four stages of borrowing in Lojban, as words become more and more modified (but shorter and easier to use). Stage 1 is the use of a foreign name quoted with the cmavo 
+    <para><indexterm type="general-imported"><primary>borrowings</primary><secondary>Stage 1</secondary></indexterm>  <indexterm type="general-imported"><primary>borrowings</primary><secondary>using foreign-language name</secondary></indexterm>  <indexterm type="general-imported"><primary>borrowing</primary><secondary>four stages of</secondary></indexterm> There are four stages of borrowing in Lojban, as words become more and more modified (but shorter and easier to use). Stage 1 is the use of a foreign name quoted with the cmavo 
     
     <jbophrase>la'o</jbophrase> (explained in full in 
     <xref linkend="chapter-structure"/>):</para>
@@ -1246,7 +1234,7 @@
         <indexterm type="example-imported"><primary>syllabic pronunciations of consonants</primary><secondary>in fu'ivla category attachment</secondary><tertiary>example</tertiary></indexterm> <!-- FIXME: this indexterm fits with five different examples; should it go in all five or just the first? -->
         <anchor xml:id="c4e7d3"/>
       </title>
-      <interlinear-gloss>
+      <interlinear-gloss>       <!-- FIXME: should the commentary sit inside the jbo/gloss/en or outside in para? -->
         <jbo>spaghetti (from English or Italian)</jbo>
         
         <gloss>spageti (Lojbanize)</gloss>
@@ -1267,7 +1255,7 @@
         <indexterm type="example-imported"><primary>maple sugar</primary><secondary>example</secondary></indexterm>
         <anchor xml:id="c4e7d4"/>
       </title>
-      <interlinear-gloss>
+      <interlinear-gloss> <!-- FIXME: should the commentary sit inside the jbo/gloss/en or outside in para? -->
         <jbo>Acer (the scientific name of maple trees)</jbo>
         
         
@@ -1394,7 +1382,7 @@
         <anchor xml:id="c4e7d9"/>
       </title>
       <interlinear-gloss>
-        <jbo>bang,r,blgaria</jbo>
+        <jbo role="pronunciation">bang,r,blgaria</jbo>
         <en>Bulgarian (in language)</en>
         
       </interlinear-gloss>
@@ -1404,7 +1392,7 @@
         <anchor xml:id="c4e7d10"/>
       </title>
       <interlinear-gloss>
-        <jbo>kuln,r,blgaria</jbo>
+        <jbo role="pronunciation">kuln,r,blgaria</jbo>
         <en>Bulgarian (in culture)</en>
         
       </interlinear-gloss>
@@ -1415,7 +1403,7 @@
         <anchor xml:id="c4e7d11"/>
       </title>
       <interlinear-gloss>
-        <jbo>gugd,r,blgaria</jbo>
+        <jbo role="pronunciation">gugd,r,blgaria</jbo>
         <en>Bulgaria (the country)</en>
       </interlinear-gloss>
     </example>
@@ -1424,7 +1412,7 @@
         <anchor xml:id="c4e7d12"/>
       </title>
       <interlinear-gloss>
-        <jbo>bang,r,kore,a</jbo>
+        <jbo role="pronunciation">bang,r,kore,a</jbo>
         <en>Korean (the language)</en>
         
       </interlinear-gloss>
@@ -1435,7 +1423,7 @@
         <anchor xml:id="c4e7d13"/>
       </title>
       <interlinear-gloss>
-        <jbo>kuln,r,kore,a</jbo>
+        <jbo role="pronunciation">kuln,r,kore,a</jbo>
         <en>Korean (the culture)</en>
         
       </interlinear-gloss>
@@ -1568,7 +1556,7 @@
         <anchor xml:id="c4e8d10"/>
       </title>
       <interlinear-gloss>
-        <jbo>djandjonz.</jbo>
+        <jbo>djandjonz.</jbo>   <!-- FIXME: "ndj" not an allowed cluster (jcowan-approved) -->
       </interlinear-gloss>
     </example>
     <para>are both valid Lojbanizations of 
@@ -1592,9 +1580,9 @@
     <jbophrase>la plas.</jbophrase>, and 
     <jbophrase>ilanas.</jbophrase> would be misunderstood as 
     <jbophrase>.i la nas.</jbophrase>. However, 
-    <jbophrase role="pronuncation">NEderlants.</jbophrase> cannot be misheard as 
-    <jbophrase role="pronuncation">NEder lants.</jbophrase>, because 
-    <jbophrase role="pronuncation">NEder</jbophrase> with no following pause is not a possible Lojban word.</para>
+    <jbophrase role="pronunciation">NEderlants.</jbophrase> cannot be misheard as 
+    <jbophrase role="pronunciation">NEder lants.</jbophrase>, because 
+    <jbophrase role="pronunciation">NEder</jbophrase> with no following pause is not a possible Lojban word.</para>
     <para> <indexterm type="general-imported"><primary>names</primary><secondary>alternatives for restricted sequences in</secondary></indexterm>  <indexterm type="general-imported"><primary>cmene</primary><secondary>alternatives for restricted sequences in</secondary></indexterm> There are close alternatives to these forbidden sequences that can be used in Lojbanizing names, such as 
     <jbophrase>ly</jbophrase>, 
     <jbophrase>lei</jbophrase>, and 
@@ -1614,7 +1602,7 @@
       </listitem>
       <listitem>
         <para> <indexterm type="general-imported"><primary>names</primary><secondary>requirement for pause after</secondary></indexterm>  <indexterm type="general-imported"><primary>cmene</primary><secondary>requirement for pause after</secondary></indexterm> They are always followed in speech by a pause after the final consonant, written as 
-        <jbophrase>.</jbophrase>.</para>
+        <jbophrase role="letteral">.</jbophrase>.</para>
       </listitem>
       <listitem>
         <para> <indexterm type="general-imported"><primary>capitalization</primary><secondary>use of</secondary></indexterm>  <indexterm type="general-imported"><primary>capitalization</primary><secondary>for unusual stress in names</secondary></indexterm>  <indexterm type="general-imported"><primary>capitalization</primary><secondary>use in names</secondary></indexterm>  <indexterm type="general-imported"><primary>names</primary><secondary>stress in</secondary></indexterm>  <indexterm type="general-imported"><primary>cmene</primary><secondary>stress in</secondary></indexterm> They may be stressed on any syllable; if this syllable is not the penultimate one, it must be capitalized when writing. Neither names nor words that begin sentences are capitalized in Lojban, so this is the only use of capital letters.</para>
@@ -1629,7 +1617,7 @@
       </title>
       <interlinear-gloss>
         <jbo>pav.</jbo>
-        <gloss>the One</gloss>
+        <en>the One</en>
       </interlinear-gloss>
     </example>
     <para>from the cmavo <jbophrase>pa</jbophrase>, with rafsi <jbophrase role="rafsi">pav</jbophrase>, meaning <quote>one</quote></para>
@@ -1640,7 +1628,7 @@
       </title>
       <interlinear-gloss>
         <jbo>sol.</jbo>
-        <gloss>the Sun</gloss>
+        <en>the Sun</en>
       </interlinear-gloss>
     </example>
     <para>from the gismu <jbophrase>solri</jbophrase>, meaning <quote>solar</quote>, or actually <quote>pertaining to the Sun</quote></para>
@@ -1651,7 +1639,7 @@
       </title>
       <interlinear-gloss>
         <jbo>ralj.</jbo>
-        <gloss>Chief (as a title)</gloss>
+        <en>Chief (as a title)</en>
       </interlinear-gloss>
     </example>
     <para>from the gismu <jbophrase>ralju</jbophrase>, meaning <quote>principal</quote>.</para>
@@ -1663,7 +1651,7 @@
       </title>
       <interlinear-gloss>
         <jbo>nol.</jbo>
-        <gloss>Lord/Lady</gloss>
+        <en>Lord/Lady</en>
       </interlinear-gloss>
     </example>
     <para>from the gismu <jbophrase>nobli</jbophrase>, with rafsi <jbophrase role="rafsi">nol</jbophrase>, meaning <quote>noble</quote>.</para>
@@ -1881,8 +1869,8 @@
       </listitem>
       <listitem>
         <para> <indexterm type="general-imported"><primary>pause</primary><secondary>and Cy-form cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>cmavo</primary><secondary>rules for pause after Cy-form</secondary></indexterm>  <indexterm type="general-imported"><primary>Cy-form cmavo</primary><secondary>rules for pause after</secondary></indexterm> A cmavo of the form 
-        <jbophrase role="morphology">Cy</jbophrase> must be followed by a pause unless another 
-        <jbophrase role="morphology">Cy</jbophrase>-form cmavo follows.</para>
+        <quote>Cy</quote> must be followed by a pause unless another 
+        <quote>Cy</quote>-form cmavo follows.</para>
       </listitem>
       <listitem>
         <para> <indexterm type="general-imported"><primary>non-Lojban text</primary><secondary>rules for pause with</secondary></indexterm>  <indexterm type="general-imported"><primary>pause</primary><secondary>and non-Lojban text</secondary></indexterm> When non-Lojban text is embedded in Lojban, it must be preceded and followed by pauses. (How to embed non-Lojban text is explained in 
@@ -1902,7 +1890,7 @@
     <para> <indexterm type="general-imported"><primary>linguistic drift in Lojban</primary><secondary>possible source of</secondary></indexterm>  <indexterm type="general-imported"><primary>lujvo</primary><secondary>consideration in choosing meaning for</secondary></indexterm>  <indexterm type="general-imported"><primary>lujvo</primary><secondary>unambiguity of</secondary></indexterm> The second complication is the serious one. Remember that a tanru is ambiguous - it has several possible meanings. A lujvo, or at least one that would be put into the dictionary, has just a single meaning. Like a gismu, a lujvo is a predicate which encompasses one area of the semantic universe, with one set of places. Hopefully the meaning chosen is the most useful of the possible semantic spaces. A possible source of linguistic drift in Lojban is that as Lojbanic society evolves, the concept that seems the most useful one may change.</para>
     
     
-    <para> <indexterm type="lojban-word-imported"><primary>za'e</primary></indexterm>  <indexterm type="general-imported"><primary>za'e</primary><secondary>use to avoid lujvo misunderstandings</secondary></indexterm>  <indexterm type="general-imported"><primary>lujvo</primary><secondary>meaning drift of</secondary></indexterm> You must also be aware of the possibility of some prior meaning of a new lujvo, especially if you are writing for posterity. If a lujvo is invented which involves the same tanru as one that is in the dictionary, and is assigned a different meaning (or even just a different place structure), linguistic drift results. This isn't necessarily bad. Every natural language does it. But in communication, when you use a meaning different from the dictionary definition, someone else may use the dictionary and therefore misunderstand you. You can use the cmavo 
+    <para><indexterm type="general-imported"><primary>za'e</primary><secondary>use to avoid lujvo misunderstandings</secondary></indexterm>  <indexterm type="general-imported"><primary>lujvo</primary><secondary>meaning drift of</secondary></indexterm> You must also be aware of the possibility of some prior meaning of a new lujvo, especially if you are writing for posterity. If a lujvo is invented which involves the same tanru as one that is in the dictionary, and is assigned a different meaning (or even just a different place structure), linguistic drift results. This isn't necessarily bad. Every natural language does it. But in communication, when you use a meaning different from the dictionary definition, someone else may use the dictionary and therefore misunderstand you. You can use the cmavo 
     
     <jbophrase>za'e</jbophrase> (explained in 
     
