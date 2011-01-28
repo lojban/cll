@@ -604,19 +604,33 @@
   <section xml:id="section-logical-connection">
     <title>Logical connection within tanru</title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     je      JA                  tanru logical 
-<quote>and</quote>
-     ja      JA                  tanru logical 
-<quote>or</quote>
-     joi     JOI                 mixed mass 
-<quote>and</quote>
-     gu'e    GUhA                tanru forethought logical 
-<quote>and</quote>
-     gi      GI                  forethought connection separator
-
-
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>je</cmavo>
+        <selmaho>JA</selmaho>
+        <description>tanru logical <quote>and</quote></description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ja</cmavo>
+        <selmaho>JA</selmaho>
+        <description>tanru logical <quote>or</quote></description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>joi</cmavo>
+        <selmaho>JOI</selmaho>
+        <description>mixed mass <quote>and</quote></description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>gu'e</cmavo>
+        <selmaho>GUhA</selmaho>
+        <description>tanru forethought logical <quote>and</quote></description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>gi</cmavo>
+        <selmaho>GI</selmaho>
+        <description>forethought connection separator</description>
+      </cmavo-entry>
+    </cmavo-list>
     <para>  Consider the English phrase 
     <quote>big red dog</quote>. How shall this be rendered as a Lojban tanru? The naive attempt:</para>
     
@@ -1504,9 +1518,8 @@
     <xref linkend="example-random-id-EvoD"/>.</para>
     <para> <indexterm type="general-imported"><primary>du</primary><secondary>as an exception within GOhA selma'o</secondary></indexterm> The exceptional member of GOhA is 
     <jbophrase>du</jbophrase>, which represents the relation of identity. Its place structure is:</para>
-    <programlisting xml:space="preserve">
-             x1 is identical with x2, x3, ...
-</programlisting>
+    <!-- FIXME: This definition is supposed to be set out from the rest of the text, but which Docbook tag to use? -->
+    <para>x1 is identical with x2, x3, ...</para>
     <para>for as many places as are given. More information on selma'o GOhA is available in 
     <xref linkend="chapter-anaphoric-cmavo"/>.</para>
     <para> <indexterm type="lojban-word-imported"><primary>su'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>nu'a</primary></indexterm>  <indexterm type="general-imported"><primary>tanru</primary><secondary>containing mathematical expressions</secondary></indexterm>  <indexterm type="general-imported"><primary>mathematical expressions in tanru</primary></indexterm> Lojban mathematical expressions (mekso) can be incorporated into selbri in two different ways. Mathematical operators such as 
@@ -1514,9 +1527,8 @@
     <jbophrase>su'i</jbophrase>, meaning 
     <quote>plus</quote>, can be transformed into selbri by prefixing them with 
     <jbophrase>nu'a</jbophrase> (of selma'o NUhA). The resulting place structure is:</para>
-    <programlisting xml:space="preserve">
-             x1 is the result of applying (the operator) to arguments x2, x3, etc.
-</programlisting>
+    <!-- FIXME: This definition is supposed to be set out from the rest of the text, but which Docbook tag to use? -->
+    <para>x1 is the result of applying (the operator) to arguments x2, x3, etc.</para>
     <para>for as many arguments as are required. (The result goes in the x1 place because the number of following places may be indefinite.) For example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-pp6j">
       <title>
@@ -1597,21 +1609,25 @@
   </section>
 
   <section xml:id="section-me-selbri">
-    <title>selbri based on sumti: 
-    <jbophrase>me</jbophrase></title>
+    <title>selbri based on sumti: <jbophrase>me</jbophrase></title>
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
-     me      ME                  changes sumti to simple selbri
-     me'u    MEhU                terminator for 
-<jbophrase>me</jbophrase>
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>me</cmavo>
+        <selmaho>ME</selmaho>
+        <description>changes sumti to simple selbri</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>me'u</cmavo>
+        <selmaho>MEhU</selmaho>
+        <description>terminator for <jbophrase>me</jbophrase></description>
+      </cmavo-entry>
+    </cmavo-list>
     <para> <indexterm type="lojban-word-imported"><primary>MEhU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>me'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ME selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>me</primary></indexterm>  <indexterm type="general-imported"><primary>me</primary><secondary>place structure of</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion of sumti into selbri</primary></indexterm>  <indexterm type="general-imported"><primary>sumti into selbri</primary></indexterm>  <indexterm type="general-imported"><primary>selbri from sumti</primary></indexterm> A sumti can be made into a simple selbri by preceding it with 
     <jbophrase>me</jbophrase> (of selma'o ME) and following it with the elidable terminator 
     <jbophrase>me'u</jbophrase> (of selma'o MEhU). This makes a selbri with the place structure</para>
-    <programlisting xml:space="preserve">
-             x1 is one of the referents of 
-<quote>[the sumti]</quote>
-</programlisting>
+    <!-- FIXME: This definition is supposed to be set out from the rest of the text, but which Docbook tag to use? -->    
+    <para>x1 is one of the referents of <quote>[the sumti]</quote></para>
     <para>which is true of the thing, or things, that are the referents of the sumti, and not of anything else. For example, consider the sumti</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-v6QW">
       <title>
@@ -2136,19 +2152,88 @@
     <para> <indexterm type="general-imported"><primary>tanru</primary><secondary>asymmetrical</secondary></indexterm>  <indexterm type="general-imported"><primary>asymmetrical tanru</primary></indexterm> This section and 
     <xref linkend="section-symmetric-tanru"/> contain some example tanru classified into groups based on the type of relationship between the modifying seltau and the modified tertau. All the examples are paralleled by compounds actually observed in various natural languages. In the tables which follow, each group is preceded by a brief explanation of the relationship. The tables themselves contain a tanru, a literal gloss, an indication of the languages which exhibit a compound analogous to this tanru, and (for those tanru with no English parallel) a translation.</para>
     <para> <indexterm type="general-imported"><primary>languages</primary><secondary>abbreviations for</secondary></indexterm> Here are the 3-letter abbreviations used for the various languages (it is presumed to be obvious whether a compound is found in English or not, so English is not explicitly noted):</para>
-    <programlisting xml:space="preserve">
-      Aba = Abazin                 Kaz = Kazakh
-      Chi = Chinese                Kor = Korean
-
-      Ewe = Ewe                    Mon = Mongolian
-      Fin = Finnish                Qab = Qabardian
-      Geo = Georgian               Que = Quechua
-      Gua = Guarani                Rus = Russian
-      Hop = Hopi                   Skt = Sanskrit
-      Hun = Hungarian              Swe = Swedish
-      Imb = Imbabura Quechua       Tur = Turkish
-      Kar = Karaitic               Udm = Udmurt
-</programlisting>
+    <variablelist>
+      <varlistentry>
+        <term>Aba</term>
+        <listitem><para>Abazin</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Chi</term>
+        <listitem><para>Chinese</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Ewe</term>
+        <listitem><para>Ewe</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Fin</term>
+        <listitem><para>Finnish</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Geo</term>
+        <listitem><para>Georgian</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Gua</term>
+        <listitem><para>Guarani</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Hop</term>
+        <listitem><para>Hopi</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Hun</term>
+        <listitem><para>Hungarian</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Imb</term>
+        <listitem><para>Imbabura Quechua</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Kar</term>
+        <listitem><para>Karaitpic</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Kaz</term>
+        <listitem><para>Kazakh</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Kor</term>
+        <listitem><para>Korean</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Mon</term>
+        <listitem><para>Mongolian</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Qab</term>
+        <listitem><para>Qabardian</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Que</term>
+        <listitem><para>Quechua</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Rus</term>
+        <listitem><para>Russian</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Skt</term>
+        <listitem><para>Sanskrit</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Swe</term>
+        <listitem><para>Swedish</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Tur</term>
+        <listitem><para>Turkish</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Udm</term>
+        <listitem><para>Udmurt</para></listitem>
+      </varlistentry>
+    </variablelist>
     <para>Any lujvo or fu'ivla used in a group are glossed at the end of that group.</para>
     <para> <indexterm type="general-imported"><primary>asymmetrical tanru</primary><secondary>definition</secondary></indexterm> The tanru discussed in this section are asymmetrical tanru; that is, ones in which the order of the terms is fundamental to the meaning of the tanru. For example, 
     
@@ -2158,24 +2243,87 @@
     <quote>pendulum clock</quote>, is the kind of clock that employs a pendulum. Most tanru are asymmetrical in this sense. Symmetrical tanru are discussed in 
     <xref linkend="section-symmetric-tanru"/>.</para>
     <para> <indexterm type="general-imported"><primary>asymmetrical tanru types</primary><secondary>object-of-action + action</secondary></indexterm> The tertau represents an action, and the seltau then represents the object of that action:</para>
-    <programlisting xml:space="preserve">
-      pinsi nunkilbra              pencil sharpener (Hun)
-      zgike nunctu                 music instruction (Hun)
-      mirli nunkalte               deer hunting (Hun)
-      finpe nunkalte               fish hunting (Tur,Kor,Udm,Aba = fishing)
-      smacu terkavbu               mousetrap (Tur,Kor,Hun,Udm,Aba)
-      zdani turni                  house ruler (Kar = host)
-      zerle'a nunte'a              thief fear (Skt = fear of thieves)
-      cevni zekri                  god crime (Skt = offense against the gods)
-
-          nunkilbra = sharpness-apparatus
-          nunctu = event-of-teaching
-          nunkalte = event-of-hunting
-          terkavbu = trap
-          zerle'a = crime-taker
-          nunte'a = event-of-fearing
-</programlisting>
-    <para> <indexterm type="general-imported"><primary>asymmetrical tanru types</primary><secondary>elements-in-set + set</secondary></indexterm> The tertau represents a set, and the seltau the type of the elements contained in that set:</para>
+<informaltable>
+  <tgroup cols="4">
+    <colspec colnum="1" colname="col1"/>
+    <colspec colnum="2" colname="col2"/>
+    <colspec colnum="3" colname="col3"/>
+    <colspec colnum="4" colname="col4"/>
+    <tbody>
+      <row>
+        <entry><jbophrase>pinsi nunkilbra</jbophrase></entry>
+        <entry>pencil sharpener</entry>
+        <entry>Hun</entry>
+      </row>
+      <row>
+        <entry><jbophrase>zgike nunctu</jbophrase></entry>
+        <entry>music instruction</entry>
+        <entry>Hun</entry>
+      </row>
+      <row>
+        <entry><jbophrase>mirli nunkalte</jbophrase></entry>
+        <entry>deer hunting</entry>
+        <entry>Hun</entry>
+      </row>
+      <row>
+        <entry><jbophrase>finpe nunkalte</jbophrase></entry>
+        <entry>fish hunting</entry>
+        <entry>Tur,Kor,Udm,Aba</entry>
+        <entry>fishing</entry>
+      </row>
+      <row>
+        <entry><jbophrase>smacu terkavbu</jbophrase></entry>
+        <entry>mousetrap</entry>
+        <entry>Tur,Kor,Hun,Udm,Aba</entry>
+      </row>
+      <row>
+        <entry><jbophrase>zdani turni</jbophrase></entry>
+        <entry>house ruler</entry>
+        <entry>Kar</entry>
+        <entry>host</entry>
+      </row>
+      <row>
+        <entry><jbophrase>zerle'a nunte'a</jbophrase></entry>
+        <entry>thief fear</entry>
+        <entry>Skt</entry>
+        <entry>fear of thieves</entry>
+      </row>
+      <row>
+        <entry><jbophrase>cevni zekri</jbophrase></entry>
+        <entry>god crime</entry>
+        <entry>Skt</entry>
+        <entry>offense against the gods</entry>
+      </row>
+    </tbody>
+  </tgroup>
+</informaltable>
+<variablelist>
+  <varlistentry>
+    <term><jbophrase>nunkilbra</jbophrase></term>
+    <listitem><para>sharpness-apparatus</para></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><jbophrase>nunctu</jbophrase></term>
+    <listitem><para>event-of-teaching</para></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><jbophrase>nunkalte</jbophrase></term>
+    <listitem><para>event-of-hunting</para></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><jbophrase>terkavbu</jbophrase></term>
+    <listitem><para>trap</para></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><jbophrase>zerle'a</jbophrase></term>
+    <listitem><para>crime-taker</para></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><jbophrase>nunte'a</jbophrase></term>
+    <listitem><para>event-of-fearing</para></listitem>
+  </varlistentry>
+</variablelist>
+<para> <indexterm type="general-imported"><primary>asymmetrical tanru types</primary><secondary>elements-in-set + set</secondary></indexterm> The tertau represents a set, and the seltau the type of the elements contained in that set:</para>
     <programlisting xml:space="preserve">
       zdani lijgri                 house row
       selci lamgri                 cell block
