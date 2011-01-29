@@ -3,7 +3,7 @@
   
   <section xml:id="section-introduction">
     <title>Introductory</title>
-    <para> <indexterm type="general-imported"><primary>word forms</primary><secondary>in Lojban (see also morphology)</secondary></indexterm>  <indexterm type="general-imported"><primary>morphology</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>morphology</primary><secondary>simplicity of</secondary></indexterm> Morphology is the part of grammar that deals with the form of words. Lojban's morphology is fairly simple compared to that of many languages, because Lojban words don't change form depending on how they are used. English has only a small number of such changes compared to languages like Russian, but it does have changes like 
+    <para><jbophrase role="letteral">,</jbophrase> <indexterm type="general-imported"><primary>word forms</primary><secondary>in Lojban (see also morphology)</secondary></indexterm>  <indexterm type="general-imported"><primary>morphology</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>morphology</primary><secondary>simplicity of</secondary></indexterm> Morphology is the part of grammar that deals with the form of words. Lojban's morphology is fairly simple compared to that of many languages, because Lojban words don't change form depending on how they are used. English has only a small number of such changes compared to languages like Russian, but it does have changes like 
     <quote>boys</quote> as the plural of 
     
     <quote>boy</quote>, or 
@@ -216,19 +216,19 @@
     <para> <indexterm type="general-imported"><primary>cmavo</primary><secondary>diphthongs in</secondary></indexterm> The cmavo of VV-form include not only the diphthongs and vowel pairs listed in 
     
     <xref linkend="section-introduction"/>, but also the following ten additional diphthongs:</para>
-    <cmavo-list>
-      <cmavo-entry>
-        <cmavo>.ia .ie .ii</cmavo>
-        <selmaho>.io</selmaho>
-        <description>.iu</description>
-      </cmavo-entry>
-      <cmavo-entry>
-        <cmavo>.ua .ue .ui</cmavo>
-        
-        <selmaho>.uo</selmaho>
-        <description>.uu</description>
-      </cmavo-entry>
-    </cmavo-list>
+    <simplelist type="horiz" columns="5">
+      <member><jbophrase role="diphthong">.ia</jbophrase></member>
+      <member><jbophrase role="diphthong">.ie</jbophrase></member>
+      <member><jbophrase role="diphthong">.ii</jbophrase></member>
+      <member><jbophrase role="diphthong">.io</jbophrase></member>
+      <member><jbophrase role="diphthong">.iu</jbophrase></member>
+      
+      <member><jbophrase role="diphthong">.ua</jbophrase></member>
+      <member><jbophrase role="diphthong">.ue</jbophrase></member>
+      <member><jbophrase role="diphthong">.ui</jbophrase></member>
+      <member><jbophrase role="diphthong">.uo</jbophrase></member>
+      <member><jbophrase role="diphthong">.uu</jbophrase></member>
+    </simplelist>
     <para>In addition, cmavo can have the form 
     <jbophrase role="morphology">Cy</jbophrase>, a consonant followed by the letter 
     <jbophrase role="letteral">y</jbophrase>. These cmavo represent letters of the Lojban alphabet, and are discussed in detail in 
@@ -448,7 +448,7 @@
       </listitem>
     </orderedlist>
     <para> <indexterm type="general-imported"><primary>gismu</primary><secondary>length of</secondary></indexterm> The five letter length distinguishes gismu from lujvo and fu'ivla. In addition, no gismu contains 
-    <jbophrase>'</jbophrase>.</para>
+    <jbophrase role="letteral">'</jbophrase>.</para>
     <para> <indexterm type="general-imported"><primary>gismu</primary><secondary>conflicts between</secondary></indexterm>  <indexterm type="general-imported"><primary>gismu</primary><secondary>special</secondary></indexterm> With the exception of five special brivla variables, 
     <jbophrase>broda</jbophrase>, 
     <jbophrase>brode</jbophrase>, 
@@ -650,8 +650,8 @@
     <para>which refers specifically to the concept 
     <quote>maternal grandfather</quote>. The two gismu that constitute the tanru are represented in 
     <jbophrase>mampa'u</jbophrase> by the rafsi 
-    <jbophrase role="rafsi">mam-</jbophrase> and 
-    <jbophrase role="rafsi">-pa'u</jbophrase>, respectively; these two rafsi are then concatenated together to form 
+    <jbophrase role="rafsi">mam</jbophrase>- and 
+    -<jbophrase role="rafsi">pa'u</jbophrase>, respectively; these two rafsi are then concatenated together to form 
     <jbophrase>mampa'u</jbophrase>.</para>
     <para> <indexterm type="general-imported"><primary>long rafsi form</primary><secondary>compared with short form in effect on lujvo meaning</secondary></indexterm>  <indexterm type="general-imported"><primary>short rafsi form</primary><secondary>compared with long form in effect on lujvo meaning</secondary></indexterm>  <indexterm type="general-imported"><primary>rafsi form</primary><secondary>effect of choice on meaning of lujvo</secondary></indexterm>  <indexterm type="general-imported"><primary>lujvo</primary><secondary>multiple forms of</secondary></indexterm>  <indexterm type="general-imported"><primary>lujvo</primary><secondary>meaning of</secondary></indexterm> Like gismu, lujvo have only one meaning. When a lujvo is formally entered into a dictionary of the language, a specific definition will be assigned based on one particular interrelationship between the terms. (See 
     <xref linkend="chapter-lujvo"/> for how this has been done.) Unlike gismu, lujvo may have more than one form. This is because there is no difference in meaning between the various rafsi for a gismu when they are used to build a lujvo. A long rafsi may be used, especially in noisy environments, in place of a short rafsi; the result is considered the same lujvo, even though the word is spelled and pronounced differently. Thus the word 
@@ -664,7 +664,7 @@
     <jbophrase>bridyvalsi</jbophrase>, each of which uses a different combination of rafsi.</para>
     <para> <indexterm type="general-imported"><primary>apostrophe</primary><secondary>and consonant cluster determination in lujvo</secondary></indexterm>  <indexterm type="general-imported"><primary>' symbol</primary><secondary>and consonant cluster determination in lujvo</secondary></indexterm>  <indexterm type="general-imported"><primary>y-hyphen</primary><secondary>and consonant cluster determination</secondary></indexterm>  <indexterm type="general-imported"><primary>rafsi</primary><secondary>rules for combining to form lujvo</secondary></indexterm>  <indexterm type="general-imported"><primary>lujvo</primary><secondary>rules for formation of</secondary></indexterm> When assembling rafsi together into lujvo, the rules for valid brivla must be followed: a consonant cluster must occur in the first five letters (excluding 
     <jbophrase role="letteral">y</jbophrase> and 
-    <jbophrase>'</jbophrase>), and the lujvo must end in a vowel.</para>
+    <jbophrase role="letteral">'</jbophrase>), and the lujvo must end in a vowel.</para>
     <para> <indexterm type="general-imported"><primary>glue in lujvo</primary><secondary>y-hyphen as</secondary></indexterm>  <indexterm type="general-imported"><primary>y-hyphen</primary><secondary>and stress determination</secondary></indexterm>  <indexterm type="general-imported"><primary>y-hyphen</primary><secondary>use of</secondary></indexterm> A 
     <jbophrase role="letteral">y</jbophrase> (which is ignored in determining stress or consonant clusters) is inserted in the middle of the consonant cluster to glue the word together when the resulting cluster is either not permissible or the word is likely to break up. There are specific rules describing these conditions, detailed in 
     
@@ -680,15 +680,15 @@
       </title>
       <interlinear-gloss>
         <jbo>soirsai</jbo>
-        <gloss>sonci sanmi</gloss>
+        <jbo>sonci sanmi</jbo>
         <gloss>soldier meal</gloss>
         <en>field rations</en>
         
       </interlinear-gloss>
     </example>
     <para>   <indexterm type="general-imported"><primary>cmavo</primary><secondary>contrasted with same-form rafsi in meaning</secondary></indexterm>  <indexterm type="general-imported"><primary>rafsi</primary><secondary>contrasted with same-form cmavo in meaning</secondary></indexterm> the rafsi 
-    <jbophrase role="rafsi">soi-</jbophrase> and 
-    <jbophrase role="rafsi">-sai</jbophrase> are joined, with the additional 
+    <jbophrase role="rafsi">soi</jbophrase>- and 
+    -<jbophrase role="rafsi">sai</jbophrase> are joined, with the additional 
     
     <jbophrase role="letteral">r</jbophrase> making up the 
     <jbophrase role="morphology">rs</jbophrase> consonant pair needed to make the word a brivla. Without the 
@@ -842,7 +842,7 @@
     </cmavo-list>
     <para>(The only actual short rafsi for 
     <jbophrase>sakli</jbophrase> is 
-    <jbophrase role="rafsi">-sal-</jbophrase>.)</para>
+    -<jbophrase role="rafsi">sal</jbophrase>-.)</para>
     <para>For gismu of the form CCVCV, like 
     <jbophrase>blaci</jbophrase>, the only short rafsi forms that can exist are:</para>
     <cmavo-list>
@@ -1244,7 +1244,7 @@
       </interlinear-gloss>
     </example>
     <para>  where 
-    <jbophrase role="rafsi">cidj-</jbophrase> is the 4-letter rafsi for 
+    <jbophrase role="rafsi">cidj</jbophrase>- is the 4-letter rafsi for 
     <jbophrase>cidja</jbophrase>, the Lojban gismu for 
     <quote>food</quote>, thus categorizing 
     <jbophrase>cidjrspageti</jbophrase> as a kind of food. The form with the short rafsi happens to work, but such good fortune cannot be relied on: in any event, it means the same thing.</para>
@@ -1266,8 +1266,8 @@
       </interlinear-gloss>
     </example>
     <para>where 
-    <jbophrase role="rafsi">tric-</jbophrase> and 
-    <jbophrase role="rafsi">ric-</jbophrase> are rafsi for 
+    <jbophrase role="rafsi">tric</jbophrase>- and 
+    <jbophrase role="rafsi">ric</jbophrase>- are rafsi for 
     <jbophrase>tricu</jbophrase>, the gismu for 
     <quote>tree</quote>. Note that by the same principles, 
     <quote>maple sugar</quote> could get the fu'ivla 
@@ -1289,7 +1289,7 @@
       </interlinear-gloss>
     </example>
     <para>  where 
-    <jbophrase role="rafsi">cirl-</jbophrase> represents 
+    <jbophrase role="rafsi">cirl</jbophrase>- represents 
     <jbophrase>cirla</jbophrase> ( 
     <quote>cheese</quote>).</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-DQju">
@@ -1305,7 +1305,7 @@
       </interlinear-gloss>
     </example>
     <para>  where 
-    <jbophrase role="rafsi">sinc-</jbophrase> represents 
+    <jbophrase role="rafsi">sinc</jbophrase>- represents 
     <jbophrase>since</jbophrase> ( 
     <quote>snake</quote>).</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-TFzH">
@@ -1322,7 +1322,7 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>allowable diphthongs</primary><secondary>in gismu and lujvo contrasted with in fu'ivla</secondary></indexterm>  <indexterm type="general-imported"><primary>allowable diphthongs</primary><secondary>in fu'ivla contrasted with in gismu and lujvo</secondary></indexterm>  <indexterm type="general-imported"><primary>diphthongs</primary><secondary>in fu'ivla</secondary></indexterm>  <indexterm type="general-imported"><primary>fu'ivla</primary><secondary>diphthongs in</secondary></indexterm> where 
-    <jbophrase role="rafsi">sask-</jbophrase> represents 
+    <jbophrase role="rafsi">sask</jbophrase>- represents 
     <jbophrase>saske</jbophrase> ( 
     <quote>science</quote>). Note the extra vowel 
     <jbophrase role="letteral">a</jbophrase> added to the end of the word, and the diphthong 
@@ -1341,7 +1341,7 @@
       </interlinear-gloss>
     </example>
     <para>where 
-    <jbophrase role="rafsi">ler-</jbophrase> represents 
+    <jbophrase role="rafsi">ler</jbophrase>- represents 
     <jbophrase>lerfu</jbophrase> ( 
     <quote>letter</quote>). Note the l-hyphen in "lerldjamo", since "lerndjamo" contains the forbidden cluster "ndj".</para>
     
@@ -1365,7 +1365,7 @@
     <jbophrase role="letteral">i</jbophrase> of 
     <jbophrase>integrale</jbophrase> is removed, or something like 
     <jbophrase>cmacrnintegrale</jbophrase>, if a new consonant is added to the beginning; 
-    <jbophrase role="rafsi">cmac-</jbophrase> is the rafsi for 
+    <jbophrase role="rafsi">cmac</jbophrase>- is the rafsi for 
     <jbophrase>cmaci</jbophrase> ( 
     <quote>mathematics</quote>). The architectural sense of 
     <quote>integral</quote> might be conveyed with 
@@ -1749,101 +1749,190 @@
         <jbophrase role="letteral">i</jbophrase>.</para>
       </listitem>
       <listitem>
-        <para>Make the following idiosyncratic substitutions: 
-        <programlisting xml:space="preserve">
-          aa     a
-          ae     e
-          ch     k
-          ee     i
-          eigh   ei
-          ew     u
-          igh    ai
-          oo     u
-          ou     u
-          ow     au
-          ph     f
-          q      k
-          sc     sk
-          w      u
-          y      i
-        </programlisting> However, the diphthong substitutions should not be done if the two vowels are in two different syllables.</para>
+        <para>Make the following idiosyncratic substitutions:</para>
+        <informaltable>
+          <tgroup cols="2">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <tbody>
+              <row>
+                <entry>aa</entry><entry>a</entry>
+              </row>
+              <row>
+                <entry>ae</entry><entry>e</entry>
+              </row>
+              <row>
+                <entry>ch</entry><entry>k</entry>
+              </row>
+              <row>
+                <entry>ee</entry><entry>i</entry>
+              </row>
+              <row>
+                <entry>eigh</entry><entry>ei</entry>
+              </row>
+              <row>
+                <entry>ew</entry><entry>u</entry>
+              </row>
+              <row>
+                <entry>igh</entry><entry>ai</entry>
+              </row>
+              <row>
+                <entry>oo</entry><entry>u</entry>
+              </row>
+              <row>
+                <entry>ou</entry><entry>u</entry>
+              </row>
+              <row>
+                <entry>ow</entry><entry>au</entry>
+              </row>
+              <row>
+                <entry>ph</entry><entry>f</entry>
+              </row>
+              <row>
+                <entry>q</entry><entry>k</entry>
+              </row>
+              <row>
+                <entry>sc</entry><entry>sk</entry>
+              </row>
+              <row>
+                <entry>w</entry><entry>u</entry>
+              </row>
+              <row>
+                <entry>y</entry><entry>i</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </informaltable>
+        <para>However, the diphthong substitutions should not be done if the two vowels are in two different syllables.</para>
       </listitem>
       <listitem>
         <para>Change 
         <quote>h</quote> between two vowels to 
-        <jbophrase>'</jbophrase>, but otherwise remove it completely. If preservation of the 
+        <jbophrase role="letteral">'</jbophrase>, but otherwise remove it completely. If preservation of the 
         <quote>h</quote> seems essential, change it to 
         <jbophrase role="letteral">x</jbophrase> instead.</para>
       </listitem>
       <listitem>
-        <para>Place 
-        <jbophrase>'</jbophrase> between any remaining vowel pairs that do not form Lojban diphthongs.</para>
-        
+        <para>Place <jbophrase role="letteral">'</jbophrase> between any remaining vowel pairs that do not form Lojban diphthongs.</para>
       </listitem>
     </orderedlist>
     <para>Some further examples of Lojbanized names are:</para>
-    <programlisting xml:space="preserve">
-      English 
-      <quote>Mary</quote>             meris.
-      or            meiris.
-      English 
-      <quote>Smith</quote>            smit.
-      English 
-      <quote>Jones</quote>            djonz.
-      English 
-      <quote>John</quote>             djan. or jan. (American)
-      or            djon. or jon. (British)
-      English 
-      <quote>Alice</quote>            .alis.
-      English 
-      <quote>Elise</quote>            .eLIS.
-      English 
-      <quote>Johnson</quote>          djansn.
-
-      English 
-      <quote>William</quote>          .uiliam.
-
-      or            .uil,iam.
-      English 
-      <quote>Brown</quote>            braun.
-
-      English 
-      <quote>Charles</quote>          tcarlz.
-      French 
-      <quote>Charles</quote>           carl.
-      French 
-      <quote>De Gaulle</quote>         dyGOL.
-
-      German 
-      <quote>Heinrich</quote>          xainrix.
-      Spanish 
-      <quote>Joaquin</quote>          xuaKIN.
-      Russian 
-      <quote>Svetlana</quote>         sfietlanys.
-
-      Russian 
-      <quote>Khrushchev</quote>       xrucTCOF.
-
-      Hindi 
-      <quote>Krishna</quote>            kricnas.
-
-      Polish 
-      <quote>Lech Walesa</quote>       lex. va,uensas.
-
-      Spanish 
-      <quote>Don Quixote</quote>      don. kicotes.
-
-      or modern Spanish:       don. kixotes.
-      or Mexican dialect:      don. ki'otes.
-      Chinese 
-      <quote>Mao Zedong</quote>       maudzydyn.
-
-      Japanese 
-      <quote>Fujiko</quote>          fudjikos.
-
-      or             fujikos.
-    </programlisting>
+    <informaltable>
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>English</entry>
+            <entry><quote>Mary</quote></entry>
+            <entry><jbophrase>meris.</jbophrase> or <jbophrase>meiris.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>English</entry>
+            <entry><quote>Smith</quote></entry>
+            <entry><jbophrase>smit.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>English</entry>
+            <entry><quote>Jones</quote></entry>
+            <entry><jbophrase>djonz.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>English</entry>
+            <entry><quote>John</quote></entry>
+            <entry><jbophrase>djan.</jbophrase> or <jbophrase>jan.</jbophrase> (American) or <jbophrase>djon.</jbophrase> or <jbophrase>jon.</jbophrase> (British)</entry>
+          </row>
+          <row>
+            <entry>English</entry>
+            <entry><quote>Alice</quote></entry>
+            <entry><jbophrase>.alis.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>English</entry>
+            <entry><quote>Elise</quote></entry>
+            <entry><jbophrase>.eLIS.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>English</entry>
+            <entry><quote>Johnson</quote></entry>
+            <entry><jbophrase>djansn.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>English</entry>
+            <entry><quote>William</quote></entry>
+            <entry><jbophrase>.uiliam.</jbophrase> or <jbophrase>.uil,iam.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>English</entry>
+            <entry><quote>Brown</quote></entry>
+            <entry><jbophrase>braun.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>English</entry>
+            <entry><quote>Charles</quote></entry>
+            <entry><jbophrase>tcarlz.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>French</entry>
+            <entry><quote>Charles</quote></entry>
+            <entry><jbophrase>carl.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>French</entry>
+            <entry><quote>De Gaulle</quote></entry>
+            <entry><jbophrase>dyGOL.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>German</entry>
+            <entry><quote>Heinrich</quote></entry>
+            <entry><jbophrase>xainrix.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>Spanish</entry>
+            <entry><quote>Joaquin</quote></entry>
+            <entry><jbophrase>xuaKIN.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>Russian</entry>
+            <entry><quote>Svetlana</quote></entry>
+            <entry><jbophrase>sfietlanys.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>Russian</entry>
+            <entry><quote>Khrushchev</quote></entry>
+            <entry><jbophrase>xrucTCOF.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>Hindi</entry>
+            <entry><quote>Krishna</quote></entry>
+            <entry><jbophrase>kricnas.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>Polish</entry>
+            <entry><quote>Lech Walesa</quote></entry>
+            <entry><jbophrase>lex. va,uensas.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>Spanish</entry>
+            <entry><quote>Don Quixote</quote></entry>
+            <entry><jbophrase>don. kicotes.</jbophrase> or modern Spanish: <jbophrase>don. kixotes.</jbophrase> or Mexican dialect: <jbophrase>don. ki'otes.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>Chinese</entry>
+            <entry><quote>Mao Zedong</quote></entry>
+            <entry><jbophrase>maudzydyn.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>Japanese</entry>
+            <entry><quote>Fujiko</quote></entry>
+            <entry><jbophrase>fudjikos.</jbophrase> or <jbophrase>fujikos.</jbophrase></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
   </section>
+
   <section xml:id="section-pauses">
     <title>Rules for inserting pauses</title>
     <para> <indexterm type="general-imported"><primary>pauses</primary><secondary>rules for</secondary></indexterm> Summarized in one place, here are the rules for inserting pauses between Lojban words:</para>
@@ -2048,50 +2137,56 @@
         <listitem>
           <para>For each rafsi, find the value in the following table. Sum this value over all rafsi; call it 
           <quote>R</quote>: 
-          <cmavo-list>
-            <cmavo-entry>
-              <cmavo>CVC/CV (final)</cmavo>
-              <selmaho>(-sarji)</selmaho>
-              <description>1</description>
-            </cmavo-entry>
-            <cmavo-entry>
-              <cmavo>CVC/C</cmavo>
-              <selmaho>(-sarj-)</selmaho>
-              <description>2</description>
-            </cmavo-entry>
-            <cmavo-entry>
-              <cmavo>CCVCV (final)</cmavo>
-              <selmaho>(-zbasu)</selmaho>
-              <description>3</description>
-            </cmavo-entry>
-            <cmavo-entry>
-              <cmavo>CCVC</cmavo>
-              <selmaho>(-zbas-)</selmaho>
-              <description>4</description>
-            </cmavo-entry>
-            <cmavo-entry>
-              <cmavo>CVC</cmavo>
-              <selmaho>(-nun-)</selmaho>
-              <description>5</description>
-            </cmavo-entry>
-            <cmavo-entry>
-              <cmavo>CVV with an apostrophe</cmavo>
-              <selmaho>(-ta'u-)</selmaho>
-              
-              <description>6</description>
-            </cmavo-entry>
-            <cmavo-entry>
-              <cmavo>CCV</cmavo>
-              <selmaho>(-zba-)</selmaho>
-              <description>7</description>
-            </cmavo-entry>
-            <cmavo-entry>
-              <cmavo>CVV with no apostrophe</cmavo>
-              <selmaho>(-sai-)</selmaho>
-              
-              <description>8</description>
-            </cmavo-entry>
-          </cmavo-list></para>
+          <informaltable>
+            <tgroup cols="3">
+              <colspec colnum="1" colname="col1"/>
+              <colspec colnum="2" colname="col2"/>
+              <colspec colnum="3" colname="col3"/>
+              <tbody>
+                <row>
+                  <entry>CVC/CV (final)</entry>
+                  <entry>(-<jbophrase role="rafsi">sarji</jbophrase>-)</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry>CVC/C</entry>
+                  <entry>(-<jbophrase role="rafsi">sarj</jbophrase>-)</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry>CCVCV (final)</entry>
+                  <entry>(-<jbophrase role="rafsi">zbasu</jbophrase>-)</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry>CCVC</entry>
+                  <entry>(-<jbophrase role="rafsi">zbas</jbophrase>-)</entry>
+                  <entry>4</entry>
+                </row>
+                <row>
+                  <entry>CVC</entry>
+                  <entry>(-<jbophrase role="rafsi">nun</jbophrase>-)</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry>CVV with an apostrophe</entry>
+                  <entry>(-<jbophrase role="rafsi">ta'u</jbophrase>-)</entry>
+                  <entry>6</entry>
+                </row>
+                <row>
+                  <entry>CCV</entry>
+                  <entry>(-<jbophrase role="rafsi">zba</jbophrase>-)</entry>
+                  <entry>7</entry>
+                </row>
+                <row>
+                  <entry>CVV with no apostrophe</entry>
+                  <entry>(-<jbophrase role="rafsi">sai</jbophrase>-)</entry>
+                  <entry>8</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </informaltable>
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -2103,11 +2198,9 @@
         </listitem>
       </varlistentry>
     </variablelist>
-    <para> <indexterm type="general-imported"><primary>lujvo form</primary><secondary>hierarchy of priorities for selection of</secondary></indexterm>  <indexterm type="general-imported"><primary>hierarchy of priorities for selecting lujvo form</primary></indexterm> The score is then:</para>
-    <programlisting xml:space="preserve">
-      (1000 * L) - (500 * A) + (100 * H) - (10 * R) - V
-    </programlisting>
-    <para> <indexterm type="general-imported"><primary>lujvo</primary><secondary>scored examples of</secondary></indexterm> In case of ties, there is no preference. This should be rare. Note that the algorithm essentially encodes a hierarchy of priorities: short words are preferred (counting apostrophes as half a letter), then words with fewer hyphens, words with more pleasing rafsi (this judgment is subjective), and finally words with more vowels are chosen. Each decision principle is applied in turn if the ones before it have failed to choose; it is possible that a lower-ranked principle might dominate a higher-ranked one if it is ten times better than the alternative.</para>
+    <para> <indexterm type="general-imported"><primary>lujvo form</primary><secondary>hierarchy of priorities for selection of</secondary></indexterm>  <indexterm type="general-imported"><primary>hierarchy of priorities for selecting lujvo form</primary></indexterm> The score is then:
+    <informalequation>(1000 * L) - (500 * A) + (100 * H) - (10 * R) - V</informalequation>
+    <indexterm type="general-imported"><primary>lujvo</primary><secondary>scored examples of</secondary></indexterm> In case of ties, there is no preference. This should be rare. Note that the algorithm essentially encodes a hierarchy of priorities: short words are preferred (counting apostrophes as half a letter), then words with fewer hyphens, words with more pleasing rafsi (this judgment is subjective), and finally words with more vowels are chosen. Each decision principle is applied in turn if the ones before it have failed to choose; it is possible that a lower-ranked principle might dominate a higher-ranked one if it is ten times better than the alternative.</para>
     
     <para> <!-- FIXME: there's nowhere for this indexterm to go --><indexterm type="example-imported"><primary>doghouse</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>lujvo</primary><secondary>examples of making</secondary></indexterm> Here are some lujvo with their scores (not necessarily the lowest scoring forms for these lujvo, nor even necessarily sensible lujvo):</para>
     <example xml:id="example-random-id-qJKu" role="interlinear-gloss-example">
@@ -2160,168 +2253,241 @@
     </example>
   </section>
   <section xml:id="section-lujvo-making-examples">
-    <title>lujvo-making examples</title>
-    <para>This section contains examples of making and scoring lujvo. First, we will start with the tanru 
-    <jbophrase>gerku zdani</jbophrase> ( 
-    <quote>dog house</quote>) and construct a lujvo meaning 
+  <title>lujvo-making examples</title>
+  <para>This section contains examples of making and scoring lujvo. First, we will start with the tanru 
+  <jbophrase>gerku zdani</jbophrase> ( 
+  <quote>dog house</quote>) and construct a lujvo meaning 
+  
+  
+  <quote>doghouse</quote>, that is, a house where a dog lives. We will use a brute-force application of the algorithm in 
+  <xref linkend="section-lujvo-scoring"/>, using every possible rafsi.</para>
+  <para>The rafsi for 
+  <jbophrase>gerku</jbophrase> are:</para>
+  <simplelist type="horiz" columns="4">
+    <member>-<jbophrase role="rafsi">ger</jbophrase>-, </member>
+    <member>-<jbophrase role="rafsi">ge'u</jbophrase>-, </member>
+    <member>-<jbophrase role="rafsi">gerk</jbophrase>-, </member>
+    <member>-<jbophrase role="rafsi">gerku</jbophrase></member>
+  </simplelist>
+  <para>The rafsi for 
+  <jbophrase>zdani</jbophrase> are:</para>
+  <simplelist type="horiz" columns="3">
+    <member>-<jbophrase role="rafsi">zda</jbophrase>-, </member>
+    <member>-<jbophrase role="rafsi">zdan</jbophrase>-, </member>
+    <member>-<jbophrase role="rafsi">zdani</jbophrase>.</member>
+  </simplelist>
+  <para>Step 1 of the algorithm directs us to use 
+  -<jbophrase role="rafsi">ger</jbophrase>-, 
+  -<jbophrase role="rafsi">ge'u</jbophrase>- and 
+  -<jbophrase role="rafsi">gerk</jbophrase>- as possible rafsi for 
+  <jbophrase>gerku</jbophrase>; Step 2 directs us to use 
+  -<jbophrase role="rafsi">zda</jbophrase>- and 
+  -<jbophrase role="rafsi">zdani</jbophrase> as possible rafsi for 
+  <jbophrase>zdani</jbophrase>. The six possible forms of the lujvo are then:</para>
+  <simplelist type="vert" columns="1">
+    <member><jbophrase>ger-zda</jbophrase></member>
+    <member><jbophrase>ger-zdani</jbophrase></member>
+    <member><jbophrase>ge'u-zda</jbophrase></member>
+    <member><jbophrase>ge'u-zdani</jbophrase></member>
+    <member><jbophrase>gerk-zda</jbophrase></member>
+    <member><jbophrase>gerk-zdani</jbophrase></member>
+  </simplelist>
+  <para>We must then insert appropriate hyphens in each case. The first two forms need no hyphenation: 
+  
+  <jbophrase>ge</jbophrase> cannot fall off the front, because the following word would begin with 
+  <jbophrase role="morphology">rz</jbophrase>, which is not a permissible initial consonant pair. So the lujvo forms are 
+  <jbophrase>gerzda</jbophrase> and 
+  <jbophrase>gerzdani</jbophrase>.</para>
+  <para>The third form, 
+  <jbophrase>ge'u-zda</jbophrase>, needs no hyphen, because even though the first rafsi is CVV, the second one is CCV, so there is a consonant cluster in the first five letters. So 
+  <jbophrase>ge'uzda</jbophrase> is this form of the lujvo.</para>
+  <para>The fourth form, 
+  <jbophrase valid="false">ge'u-zdani</jbophrase>, however, requires an 
+  <jbophrase role="letteral">r</jbophrase>-hyphen; otherwise, the 
+  <jbophrase role="rafsi">ge'u</jbophrase>- part would fall off as a cmavo. So this form of the lujvo is 
+  <jbophrase>ge'urzdani</jbophrase>.</para>
+  <para>The last two forms require 
+  <jbophrase role="letteral">y</jbophrase>-hyphens, as all 4-letter rafsi do, and so are 
+  
+  <jbophrase>gerkyzda</jbophrase> and 
+  <jbophrase>gerkyzdani</jbophrase> respectively.</para>
+  <para> <!-- FIXME: there's nowhere for this indexterm to go --><indexterm type="example-imported"><primary>boat class</primary><secondary>example</secondary></indexterm> The scoring algorithm is heavily weighted in favor of short lujvo, so we might expect that 
+  <jbophrase>gerzda</jbophrase> would win. Its <varname>L</varname> score is 6, its <varname>A</varname> score is 0, its <varname>H</varname> score is 0, its <varname>R</varname> score is 12, and its <varname>V</varname> score is 3, for a final score of 5878. The other forms have scores of 7917, 6367, 9506, 8008, and 10047 respectively. Consequently, this lujvo would probably appear in the dictionary in the form 
+  <jbophrase>gerzda</jbophrase>.</para>
+  <para>For the next example, we will use the tanru 
+  <jbophrase>bloti klesi</jbophrase> ( 
+  <quote>boat class</quote>) presumably referring to the category (rowboat, motorboat, cruise liner) into which a boat falls. We will omit the long rafsi from the process, since lujvo containing long rafsi are almost never preferred by the scoring algorithm when there are short rafsi available.</para>
+  <para>The rafsi for 
+  <jbophrase>bloti</jbophrase> are 
+  -<jbophrase role="rafsi">lot</jbophrase>-, 
+  -<jbophrase role="rafsi">blo</jbophrase>-, and 
+  -<jbophrase role="rafsi">lo'i</jbophrase>-; for 
+  <jbophrase>klesi</jbophrase> they are 
+  -<jbophrase role="rafsi">kle</jbophrase>- and 
+  -<jbophrase role="rafsi">lei</jbophrase>-. Both these gismu are among the handful which have both CVV-form and CCV-form rafsi, so there is an unusual number of possibilities available for a two-part tanru:</para>
+  <simplelist type="horiz" columns="3">
+    <member><jbophrase>lotkle</jbophrase></member>
+    <member><jbophrase>blokle</jbophrase></member>
+    <member><jbophrase>lo'ikle</jbophrase></member>
     
+    <member><jbophrase>lotlei</jbophrase></member>
+    <member><jbophrase>blolei</jbophrase></member>
+    <member><jbophrase>lo'irlei</jbophrase></member>
+  </simplelist>
+  <para>Only 
+  <jbophrase>lo'irlei</jbophrase> requires hyphenation (to avoid confusion with the cmavo sequence 
+  <jbophrase>lo'i lei</jbophrase>). All six forms are valid versions of the lujvo, as are the six further forms using long rafsi; however, the scoring algorithm produces the following results:</para>
+  
+  <simplelist type="horiz" columns="6">
+    <member><jbophrase>lotkle</jbophrase></member>
+    <member>5878</member>
+    <member><jbophrase>blokle</jbophrase></member>
+    <member>5858</member>
+    <member><jbophrase>lo'ikle</jbophrase></member>
+    <member>6367</member>
     
-    <quote>doghouse</quote>, that is, a house where a dog lives. We will use a brute-force application of the algorithm in 
-    <xref linkend="section-lujvo-scoring"/>, using every possible rafsi.</para>
-    <para>The rafsi for 
-    <jbophrase>gerku</jbophrase> are:</para>
-    <programlisting xml:space="preserve">
-      -ger-, -ge'u-, -gerk-, -gerku
-    </programlisting>
-    <para>The rafsi for 
-    <jbophrase>zdani</jbophrase> are:</para>
-    <programlisting xml:space="preserve">
-      -zda-, -zdan-, -zdani.
-    </programlisting>
-    <para>Step 1 of the algorithm directs us to use 
-    <jbophrase role="rafsi">-ger-</jbophrase>, 
-    <jbophrase role="rafsi">-ge'u-</jbophrase> and 
-    <jbophrase role="rafsi">-gerk-</jbophrase> as possible rafsi for 
-    <jbophrase>gerku</jbophrase>; Step 2 directs us to use 
-    <jbophrase role="rafsi">-zda-</jbophrase> and 
-    <jbophrase role="rafsi">-zdani</jbophrase> as possible rafsi for 
-    <jbophrase>zdani</jbophrase>. The six possible forms of the lujvo are then:</para>
-    <programlisting xml:space="preserve">
-      ger-zda
-      ger-zdani
-      ge'u-zda
-      ge'u-zdani
-      gerk-zda
-      gerk-zdani
-    </programlisting>
-    <para>We must then insert appropriate hyphens in each case. The first two forms need no hyphenation: 
+    <member><jbophrase>lotlei</jbophrase></member>
+    <member>5867</member>
+    <member><jbophrase>blolei</jbophrase></member>
+    <member>5847</member>
+    <member><jbophrase>lo'irlei</jbophrase></member>
+    <member>7456</member>
+  </simplelist>
+  <para> <indexterm type="example-imported"><primary>Logical Language Group</primary><secondary>example</secondary></indexterm> So the form 
+  <jbophrase>blolei</jbophrase> is preferred, but only by a tiny margin over 
+  <jbophrase>blokle</jbophrase>; "lotlei" and "lotkle" are only slightly worse; 
+  <jbophrase>lo'ikle</jbophrase> suffers because of its apostrophe, and 
+  <jbophrase>lo'irlei</jbophrase> because of having both apostrophe and hyphen.</para>
+  <para>Our third example will result in forming both a lujvo and a name from the tanru 
+  <jbophrase>logji bangu girzu</jbophrase>, or 
+  <quote>logical-language group</quote> in English. ( 
+  <quote>The Logical Language Group</quote> is the name of the publisher of this book and the organization for the promotion of Lojban.)</para>
+  <para>The available rafsi are 
+  -<jbophrase role="rafsi">loj</jbophrase>- and 
+  -<jbophrase role="rafsi">logj</jbophrase>-; 
+  -<jbophrase role="rafsi">ban</jbophrase>-, 
+  -<jbophrase role="rafsi">bau</jbophrase>-, and 
+  -<jbophrase role="rafsi">bang</jbophrase>-; and 
+  -<jbophrase role="rafsi">gri</jbophrase>- and 
+  -<jbophrase role="rafsi">girzu</jbophrase>, and (for name purposes only) 
+  -<jbophrase role="rafsi">gir</jbophrase>- and 
+  -<jbophrase role="rafsi">girz</jbophrase>-. The resulting 12 lujvo possibilities are:</para>
+  <simplelist type="horiz" columns="3">
+    <member><jbophrase>loj-ban-gri</jbophrase></member>
+    <member><jbophrase>loj-bau-gri</jbophrase></member>
+    <member><jbophrase>loj-bang-gri</jbophrase></member>
     
-    <jbophrase>ge</jbophrase> cannot fall off the front, because the following word would begin with 
-    <jbophrase role="morphology" valid="false">rz</jbophrase>, which is not a permissible initial consonant pair. So the lujvo forms are 
-    <jbophrase>gerzda</jbophrase> and 
-    <jbophrase>gerzdani</jbophrase>.</para>
-    <para>The third form, 
-    <jbophrase>ge'u-zda</jbophrase>, needs no hyphen, because even though the first rafsi is CVV, the second one is CCV, so there is a consonant cluster in the first five letters. So 
-    <jbophrase>ge'uzda</jbophrase> is this form of the lujvo.</para>
-    <para>The fourth form, 
-    <jbophrase valid="false">ge'u-zdani</jbophrase>, however, requires an 
-    <jbophrase role="letteral">r</jbophrase>-hyphen; otherwise, the 
-    <jbophrase role="rafsi">ge'u-</jbophrase> part would fall off as a cmavo. So this form of the lujvo is 
-    <jbophrase>ge'urzdani</jbophrase>.</para>
-    <para>The last two forms require 
-    <jbophrase role="letteral">y</jbophrase>-hyphens, as all 4-letter rafsi do, and so are 
+    <member><jbophrase>logj-ban-gri</jbophrase></member>
+    <member><jbophrase>logj-bau-gri</jbophrase></member>
+    <member><jbophrase>logj-bang-gri</jbophrase></member>
     
-    <jbophrase>gerkyzda</jbophrase> and 
-    <jbophrase>gerkyzdani</jbophrase> respectively.</para>
-    <para> <!-- FIXME: there's nowhere for this indexterm to go --><indexterm type="example-imported"><primary>boat class</primary><secondary>example</secondary></indexterm> The scoring algorithm is heavily weighted in favor of short lujvo, so we might expect that 
-    <jbophrase>gerzda</jbophrase> would win. Its L score is 6, its A score is 0, its H score is 0, its R score is 12, and its V score is 3, for a final score of 5878. The other forms have scores of 7917, 6367, 9506, 8008, and 10047 respectively. Consequently, this lujvo would probably appear in the dictionary in the form 
-    <jbophrase>gerzda</jbophrase>.</para>
-    <para>For the next example, we will use the tanru 
-    <jbophrase>bloti klesi</jbophrase> ( 
-    <quote>boat class</quote>) presumably referring to the category (rowboat, motorboat, cruise liner) into which a boat falls. We will omit the long rafsi from the process, since lujvo containing long rafsi are almost never preferred by the scoring algorithm when there are short rafsi available.</para>
+    <member><jbophrase>loj-ban-girzu</jbophrase></member>
+    <member><jbophrase>loj-bau-girzu</jbophrase></member>
+    <member><jbophrase>loj-bang-girzu</jbophrase></member>
     
+    <member><jbophrase>logj-ban-girzu</jbophrase></member>
+    <member><jbophrase>logj-bau-girzu</jbophrase></member>
+    <member><jbophrase>logj-bang-girzu</jbophrase></member>
+  </simplelist>
+  <para>and the 12 name possibilities are:</para>
+  <simplelist type="horiz" columns="3">
+    <member><jbophrase>loj-ban-gir</jbophrase></member>
+    <member><jbophrase>loj-bau-gir</jbophrase></member>
+    <member><jbophrase>loj-bang-gir</jbophrase></member>
     
-    <para>The rafsi for 
-    <jbophrase>bloti</jbophrase> are 
-    <jbophrase role="rafsi">-lot-</jbophrase>, 
-    <jbophrase role="rafsi">-blo-</jbophrase>, and 
-    <jbophrase role="rafsi">-lo'i-</jbophrase>; for 
-    <jbophrase>klesi</jbophrase> they are 
-    <jbophrase role="rafsi">-kle-</jbophrase> and 
-    <jbophrase role="rafsi">-lei-</jbophrase>. Both these gismu are among the handful which have both CVV-form and CCV-form rafsi, so there is an unusual number of possibilities available for a two-part tanru:</para>
-    <programlisting xml:space="preserve">
-      lotkle      blokle      lo'ikle 
-      <!-- not a cmavo list -->
-      lotlei      blolei      lo'irlei
-    </programlisting>
-    <para>Only 
-    <jbophrase>lo'irlei</jbophrase> requires hyphenation (to avoid confusion with the cmavo sequence 
-    <jbophrase>lo'i lei</jbophrase>). All six forms are valid versions of the lujvo, as are the six further forms using long rafsi; however, the scoring algorithm produces the following results:</para>
+    <member><jbophrase>logj-ban-gir</jbophrase></member>
+    <member><jbophrase>logj-bau-gir</jbophrase></member>
+    <member><jbophrase>logj-bang-gir</jbophrase></member>
     
-    <programlisting xml:space="preserve">
-      lotkle  5878      blokle  5858      lo'ikle  6367 
-      <!-- not a cmavo list -->
-      lotlei  5867      blolei  5847      lo'irlei 7456
-    </programlisting>
-    <para> <indexterm type="example-imported"><primary>Logical Language Group</primary><secondary>example</secondary></indexterm> So the form 
-    <jbophrase>blolei</jbophrase> is preferred, but only by a tiny margin over 
-    <jbophrase>blokle</jbophrase>; "lotlei" and "lotkle" are only slightly worse; 
-    <jbophrase>lo'ikle</jbophrase> suffers because of its apostrophe, and 
-    <jbophrase>lo'irlei</jbophrase> because of having both apostrophe and hyphen.</para>
-    <para>Our third example will result in forming both a lujvo and a name from the tanru 
-    <jbophrase>logji bangu girzu</jbophrase>, or 
-    <quote>logical-language group</quote> in English. ( 
-    <quote>The Logical Language Group</quote> is the name of the publisher of this book and the organization for the promotion of Lojban.)</para>
-    <para>The available rafsi are 
-    <jbophrase role="rafsi">-loj-</jbophrase> and 
-    <jbophrase role="rafsi">-logj-</jbophrase>; 
-    <jbophrase role="rafsi">-ban-</jbophrase>, 
-    <jbophrase role="rafsi">-bau-</jbophrase>, and 
-    <jbophrase role="rafsi">-bang-</jbophrase>; and 
-    <jbophrase role="rafsi">-gri-</jbophrase> and 
-    <jbophrase role="rafsi">-girzu</jbophrase>, and (for name purposes only) 
-    <jbophrase role="rafsi">-gir-</jbophrase> and 
-    <jbophrase role="rafsi">-girz-</jbophrase>. The resulting 12 lujvo possibilities are:</para>
-    <programlisting xml:space="preserve">
-      loj-ban-gri      loj-bau-gri      loj-bang-gri 
-      <!-- not a cmavo list -->
-      logj-ban-gri     logj-bau-gri     logj-bang-gri
-      loj-ban-girzu    loj-bau-girzu    loj-bang-girzu
-      logj-ban-girzu   logj-bau-girzu   logj-bang-girzu
-    </programlisting>
-    <para>and the 12 name possibilities are:</para>
-    <programlisting xml:space="preserve">
-      loj-ban-gir.     loj-bau-gir.     loj-bang-gir. 
-      <!-- not a cmavo list -->
-      logj-ban-gir.    logj-bau-gir.    logj-bang-gir.
-      loj-ban-girz.    loj-bau-girz.    loj-bang-girz.
-      logj-ban-girz.   logj-bau-girz.   logj-bang-girz.
-    </programlisting>
-    <para>After hyphenation, we have:</para>
-    <programlisting xml:space="preserve">
-      lojbangri        lojbaugri        lojbangygri 
-      <!-- not a cmavo list -->
-      logjybangri      logjybaugri      logjybangygri
-      lojbangirzu      lojbaugirzu      lojbangygirzu
-      logjybangirzu    logjybaugirzu    logjybangygirzu
-
-      lojbangir.       lojbaugir.       lojbangygir.
-      logjybangir.     logjybaugir.     logjybangygir.
-      lojbangirz.      lojbaugirz.      lojbangygirz.
-      logjybangirz.    logjybaugirz.    logjybangygirz.
-    </programlisting>
-    <para> <!-- FIXME: there's nowhere for these two indexterms to go --><indexterm type="example-imported"><primary>sexual teacher</primary><secondary>male</secondary><tertiary>example</tertiary></indexterm>  <indexterm type="example-imported"><primary>male sexual teacher</primary><secondary>example</secondary></indexterm> The only fully reduced lujvo forms are 
+    <member><jbophrase>loj-ban-girz</jbophrase></member>
+    <member><jbophrase>loj-bau-girz</jbophrase></member>
+    <member><jbophrase>loj-bang-girz</jbophrase></member>
     
-    <jbophrase>lojbangri</jbophrase> and 
-    <jbophrase>lojbaugri</jbophrase>, of which the latter has a slightly lower score: 8827 versus 8796, respectively. However, for the name of the organization, we chose to make sure the name of the language was embedded in it, and to use the clearer long-form rafsi for 
-    <jbophrase>girzu</jbophrase>, producing 
-    <jbophrase>lojbangirz.</jbophrase></para>
-    <para>Finally, here is a four-part lujvo with a cmavo in it, based on the tanru 
-    <jbophrase>nakni ke cinse ctuca</jbophrase> or 
-    <quote>male (sexual teacher)</quote>. The 
+    <member><jbophrase>logj-ban-girz</jbophrase></member>
+    <member><jbophrase>logj-bau-girz</jbophrase></member>
+    <member><jbophrase>logj-bang-girz</jbophrase></member>
+  </simplelist>
+  <para>After hyphenation, we have:</para>
+  <simplelist type="horiz" columns="3">
+    <member><jbophrase>lojbangri</jbophrase></member>
+    <member><jbophrase>lojbaugri</jbophrase></member>
+    <member><jbophrase>lojbangygri</jbophrase></member>
     
-    <jbophrase>ke</jbophrase> cmavo ensures the interpretation 
-    <quote>teacher of sexuality who is male</quote>, rather than 
-    <quote>teacher of male sexuality</quote>. Here are the possible forms of the lujvo, both before and after hyphenation:</para>
-    <programlisting xml:space="preserve">
-      nak-kem-cin-ctu          nakykemcinctu
-      nak-kem-cin-ctuca        nakykemcinctuca
-      nak-kem-cins-ctu         nakykemcinsyctu
-      nak-kem-cins-ctuca       nakykemcinsyctuca
-      nakn-kem-cin-ctu         naknykemcinctu
-      nakn-kem-cin-ctuca       naknykemcinctuca
-      nakn-kem-cins-ctu        naknykemcinsyctu
-      nakn-kem-cins-ctuca      naknykemcinsyctuca
-    </programlisting>
-    <para> <indexterm type="general-imported"><primary>gismu</primary><secondary>algorithm for</secondary></indexterm> Of these forms, 
-    <jbophrase>nakykemcinctu</jbophrase> is the shortest and is preferred by the scoring algorithm. On the whole, however, it might be better to just make a lujvo for 
-    <jbophrase>cinse ctuca</jbophrase> (which would be 
-    <jbophrase>cinctu</jbophrase>) since the sex of the teacher is rarely important. If there was a reason to specify 
-    <quote>male</quote>, then the simpler tanru 
-    <jbophrase>nakni cinctu</jbophrase> ( 
-    <quote>male sexual-teacher</quote>) would be appropriate. This tanru is actually shorter than the four-part lujvo, since the 
-    <jbophrase>ke</jbophrase> required for grouping need not be expressed.</para>
-  </section>
+    <member><jbophrase>logjybangri</jbophrase></member>
+    <member><jbophrase>logjybaugri</jbophrase></member>
+    <member><jbophrase>logjybangygri</jbophrase></member>
+    
+    <member><jbophrase>lojbangirzu</jbophrase></member>
+    <member><jbophrase>lojbaugirzu</jbophrase></member>
+    <member><jbophrase>lojbangygirzu</jbophrase></member>
+    
+    <member><jbophrase>logjybangirzu</jbophrase></member>
+    <member><jbophrase>logjybaugirzu</jbophrase></member>
+    <member><jbophrase>logjybangygirzu</jbophrase></member>
+    
+    <member><jbophrase>lojbangir</jbophrase></member>
+    <member><jbophrase>lojbaugir</jbophrase></member>
+    <member><jbophrase>lojbangygir</jbophrase></member>
+    
+    <member><jbophrase>logjybangir</jbophrase></member>
+    <member><jbophrase>logjybaugir</jbophrase></member>
+    <member><jbophrase>logjybangygir</jbophrase></member>
+    
+    <member><jbophrase>lojbangirz</jbophrase></member>
+    <member><jbophrase>lojbaugirz</jbophrase></member>
+    <member><jbophrase>lojbangygirz</jbophrase></member>
+    
+    <member><jbophrase>logjybangirz</jbophrase></member>
+    <member><jbophrase>logjybaugirz</jbophrase></member>
+    <member><jbophrase>logjybangygirz</jbophrase></member>
+  </simplelist>
+  <para> <!-- FIXME: there's nowhere for these two indexterms to go --><indexterm type="example-imported"><primary>sexual teacher</primary><secondary>male</secondary><tertiary>example</tertiary></indexterm>  <indexterm type="example-imported"><primary>male sexual teacher</primary><secondary>example</secondary></indexterm> The only fully reduced lujvo forms are 
+  
+  <jbophrase>lojbangri</jbophrase> and 
+  <jbophrase>lojbaugri</jbophrase>, of which the latter has a slightly lower score: 8827 versus 8796, respectively. However, for the name of the organization, we chose to make sure the name of the language was embedded in it, and to use the clearer long-form rafsi for 
+  <jbophrase>girzu</jbophrase>, producing 
+  <jbophrase>lojbangirz.</jbophrase></para>
+  <para>Finally, here is a four-part lujvo with a cmavo in it, based on the tanru 
+  <jbophrase>nakni ke cinse ctuca</jbophrase> or 
+  <quote>male (sexual teacher)</quote>. The 
+  
+  <jbophrase>ke</jbophrase> cmavo ensures the interpretation 
+  <quote>teacher of sexuality who is male</quote>, rather than 
+  <quote>teacher of male sexuality</quote>. Here are the possible forms of the lujvo, both before and after hyphenation:</para>
+  <simplelist type="horiz" columns="2">
+    <member><jbophrase>nak-kem-cin-ctu</jbophrase></member>  
+    <member><jbophrase>nakykemcinctu</jbophrase></member>
+    
+    <member><jbophrase>nak-kem-cin-ctuca</jbophrase></member>
+    <member><jbophrase>nakykemcinctuca</jbophrase></member>
+    
+    <member><jbophrase>nak-kem-cins-ctu</jbophrase></member>
+    <member><jbophrase>nakykemcinsyctu</jbophrase></member>
+    
+    <member><jbophrase>nak-kem-cins-ctuca</jbophrase></member>
+    <member><jbophrase>nakykemcinsyctuca</jbophrase></member>
+    
+    <member><jbophrase>nakn-kem-cin-ctu</jbophrase></member>
+    <member><jbophrase>naknykemcinctu</jbophrase></member>
+    
+    <member><jbophrase>nakn-kem-cin-ctuca</jbophrase></member>
+    <member><jbophrase>naknykemcinctuca</jbophrase></member>
+    
+    <member><jbophrase>nakn-kem-cins-ctu</jbophrase></member>
+    <member><jbophrase>naknykemcinsyctu</jbophrase></member>
+    
+    <member><jbophrase>nakn-kem-cins-ctuca</jbophrase></member>
+    <member><jbophrase>naknykemcinsyctuca</jbophrase></member>
+  </simplelist>
+  <para> <indexterm type="general-imported"><primary>gismu</primary><secondary>algorithm for</secondary></indexterm> Of these forms, 
+  <jbophrase>nakykemcinctu</jbophrase> is the shortest and is preferred by the scoring algorithm. On the whole, however, it might be better to just make a lujvo for 
+  <jbophrase>cinse ctuca</jbophrase> (which would be 
+  <jbophrase>cinctu</jbophrase>) since the sex of the teacher is rarely important. If there was a reason to specify 
+  <quote>male</quote>, then the simpler tanru 
+  <jbophrase>nakni cinctu</jbophrase> ( 
+  <quote>male sexual-teacher</quote>) would be appropriate. This tanru is actually shorter than the four-part lujvo, since the 
+  <jbophrase>ke</jbophrase> required for grouping need not be expressed.</para>
+</section>
   <section xml:id="section-gismu-making">
     <title>The gismu creation algorithm</title>
     <para> <indexterm type="general-imported"><primary>source languages</primary><secondary>use in creating gismu</secondary></indexterm> The gismu were created through the following process:</para>
@@ -2376,26 +2542,88 @@
         <listitem>
           <para>Any gismu forms that conflicted with existing gismu were removed. Obviously, being identical with an existing gismu constitutes a conflict. In addition, a proposed gismu that was identical to an existing gismu except for the final vowel was considered a conflict, since two such gismu would have identical 4-letter rafsi.</para>
           <para> <indexterm type="general-imported"><primary>gismu</primary><secondary>creation</secondary><tertiary>and transcription blunders</tertiary></indexterm> More subtly: If the proposed gismu was identical to an existing gismu except for a single consonant, and the consonant was "too similar” based on the following table, then the proposed gismu was rejected.</para>
-          <programlisting>
-            proposed gismu		   existing gismu
-            b			p, v
-            c			j, s
-            d			t
-            f			p, v
-            g			k, x
-            j			c, z
-            k			g, x
-            l			r
-            m			n
-            n			m
-            p			b, f
-            r			l
-            s			c, z
-            t			d
-            v			b, f
-            x			g, k
-            z			j, s
-          </programlisting>
+          <informaltable>
+  <tgroup cols="2">
+    <colspec colnum="1" colname="col1"/>
+    <colspec colnum="1" colname="col1"/>
+    <thead>
+      <row>
+        <entry>proposed gismu</entry>
+        <entry>existing gismu</entry>
+      </row>
+    </thead>
+    <tbody>
+      <row>
+        <entry><jbophrase role="letteral">b</jbophrase></entry>
+        <entry><jbophrase role="letteral">p</jbophrase>, <jbophrase role="letteral">v</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">c</jbophrase></entry>
+        <entry><jbophrase role="letteral">j</jbophrase>, <jbophrase role="letteral">s</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">d</jbophrase></entry>
+        <entry><jbophrase role="letteral">t</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">f</jbophrase></entry>
+        <entry><jbophrase role="letteral">p</jbophrase>, <jbophrase role="letteral">v</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">g</jbophrase></entry>
+        <entry><jbophrase role="letteral">k</jbophrase>, <jbophrase role="letteral">x</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">j</jbophrase></entry>
+        <entry><jbophrase role="letteral">c</jbophrase>, <jbophrase role="letteral">z</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">k</jbophrase></entry>
+        <entry><jbophrase role="letteral">g</jbophrase>, <jbophrase role="letteral">x</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">l</jbophrase></entry>
+        <entry><jbophrase role="letteral">r</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">m</jbophrase></entry>
+        <entry><jbophrase role="letteral">n</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">n</jbophrase></entry>
+        <entry><jbophrase role="letteral">m</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">p</jbophrase></entry>
+        <entry><jbophrase role="letteral">b</jbophrase>, <jbophrase role="letteral">f</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">r</jbophrase></entry>
+        <entry><jbophrase role="letteral">l</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">s</jbophrase></entry>
+        <entry><jbophrase role="letteral">c</jbophrase>, <jbophrase role="letteral">z</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">t</jbophrase></entry>
+        <entry><jbophrase role="letteral">d</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">v</jbophrase></entry>
+        <entry><jbophrase role="letteral">b</jbophrase>, <jbophrase role="letteral">f</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">x</jbophrase></entry>
+        <entry><jbophrase role="letteral">g</jbophrase>, <jbophrase role="letteral">k</jbophrase></entry>
+      </row>
+      <row>
+        <entry><jbophrase role="letteral">z</jbophrase></entry>
+        <entry><jbophrase role="letteral">j</jbophrase>, <jbophrase role="letteral">s</jbophrase></entry>
+      </row>
+    </tbody>
+  </tgroup>
+</informaltable>
           <para> <indexterm type="general-imported"><primary>gismu</primary><secondary>source-language weights for</secondary></indexterm> See <xref linkend="section-gismu"/> for an example.</para>
         </listitem>
       </varlistentry>
@@ -2438,7 +2666,7 @@
   <section xml:id="section-cultural-gismu">
     <title>Cultural and other non-algorithmic gismu</title>
     <para>The following gismu were not made by the gismu creation algorithm. They are, in effect, coined words similar to fu'ivla. They are exceptions to the otherwise mandatory gismu creation algorithm where there was sufficient justification for such exceptions. Except for the small metric prefixes and the assignable predicates beginning with 
-    <jbophrase>brod-</jbophrase>, they all end in the letter 
+    <jbophrase role="rafsi">brod</jbophrase>-, they all end in the letter 
     <jbophrase role="letteral">o</jbophrase>, which is otherwise a rare letter in Lojban gismu.</para>
     <para> <indexterm type="general-imported"><primary>gismu</primary><secondary>scientific-mathematical</secondary></indexterm> The following gismu represent concepts that are sufficiently unique to Lojban that they were either coined from combining forms of other gismu, or else made up out of whole cloth. These gismu are thus conceptually similar to lujvo even though they are only five letters long; however, unlike lujvo, they have rafsi assigned to them for use in building more complex lujvo. Assigning gismu to these concepts helps to keep the resulting lujvo reasonably short.</para>
     <programlisting xml:space="preserve">
