@@ -85,17 +85,10 @@
           <member><jbophrase role="letteral">s</jbophrase></member> 
           <member><jbophrase role="letteral">t</jbophrase></member> 
           <member><jbophrase role="letteral">v</jbophrase></member> 
-          <member><jbophrase role="letteral">x</jbophrase> or</member>
-          <member><jbophrase role="letteral">z</jbophrase></member>
+          <member><jbophrase role="letteral">x</jbophrase></member>
+          <member> or <jbophrase role="letteral">z</jbophrase></member>
         </simplelist>
-        . Syllabic
-        <simplelist type="inline">
-          <member><jbophrase role="letteral">l</jbophrase></member> 
-          <member><jbophrase role="letteral">m</jbophrase></member> 
-          <member><jbophrase role="letteral">n</jbophrase> and</member> 
-          <member><jbophrase role="letteral">r</jbophrase></member>
-        </simplelist>
-        always count as consonants for the purposes of this chapter.
+        . Syllabic <jbophrase role="letteral">l</jbophrase>, <jbophrase role="letteral">m</jbophrase>, <jbophrase role="letteral">n</jbophrase>, and <jbophrase role="letteral">r</jbophrase> always count as consonants for the purposes of this chapter.
         </para>
       </listitem>
       <listitem>
@@ -119,13 +112,7 @@
         </programlisting></para>
       </listitem>
       <listitem>
-        <para> <indexterm type="general-imported"><primary>C/C string</primary><secondary>as a symbol for a permissible consonant pair</secondary></indexterm> C/C represents two adjacent consonants which constitute one of the permissible consonant pairs (not necessarily a permissible initial consonant pair). The permissible consonant pairs are explained in <xref linkend="chapter-phonology"/>. In brief, any consonant pair is permissible unless it: contains two identical letters, contains both a voiced (excluding
-        <simplelist>
-          <member><jbophrase role="letteral">r</jbophrase></member>
-          <member><jbophrase role="letteral">l</jbophrase></member> 
-          <member><jbophrase role="letteral">m</jbophrase></member> 
-          <member><jbophrase role="letteral">n</jbophrase></member>
-          </simplelist>) and an unvoiced consonant, or is one of certain specified forbidden pairs.
+        <para> <indexterm type="general-imported"><primary>C/C string</primary><secondary>as a symbol for a permissible consonant pair</secondary></indexterm> C/C represents two adjacent consonants which constitute one of the permissible consonant pairs (not necessarily a permissible initial consonant pair). The permissible consonant pairs are explained in <xref linkend="chapter-phonology"/>. In brief, any consonant pair is permissible unless it: contains two identical letters, contains both a voiced (excluding <jbophrase role="letteral">r</jbophrase>, <jbophrase role="letteral">l</jbophrase>, <jbophrase role="letteral">m</jbophrase>, <jbophrase role="letteral">n</jbophrase>) and an unvoiced consonant, or is one of certain specified forbidden pairs.
         </para>
       </listitem>
       <listitem>
@@ -1563,11 +1550,11 @@
     
     <para> <indexterm type="general-imported"><primary>names</primary><secondary>authority for</secondary></indexterm>  <indexterm type="general-imported"><primary>cmene</primary><secondary>authority for</secondary></indexterm> The final arbiter of the correct form of a name is the person doing the naming, although most cultures grant people the right to determine how they want their own name to be spelled and pronounced. The English name 
     <quote>Mary</quote> can thus be Lojbanized as 
-    <jbophrase>meris.</jbophrase>, 
-    <jbophrase>maris.</jbophrase>, 
-    <jbophrase>meiris.</jbophrase>, 
-    <jbophrase>merix.</jbophrase>, or even 
-    <jbophrase>marys.</jbophrase>. The last alternative is not pronounced much like its English equivalent, but may be desirable to someone who values spelling over pronunciation. The final consonant need not be an 
+    <jbophrase glossay="false">meris.</jbophrase>, 
+    <jbophrase glossay="false">maris.</jbophrase>, 
+    <jbophrase glossay="false">meiris.</jbophrase>, 
+    <jbophrase glossay="false">merix.</jbophrase>, or even 
+    <jbophrase glossay="false">marys.</jbophrase>. The last alternative is not pronounced much like its English equivalent, but may be desirable to someone who values spelling over pronunciation. The final consonant need not be an 
     <jbophrase role="letteral">s</jbophrase>; there must, however, be some Lojban consonant at the end.</para>
     <para> <indexterm type="general-imported"><primary>names</primary><secondary>restrictions on form of</secondary></indexterm>  <indexterm type="general-imported"><primary>cmene</primary><secondary>restrictions on form of</secondary></indexterm> Names are not permitted to have the sequences 
     <jbophrase>la</jbophrase>, 
@@ -1575,9 +1562,9 @@
     <jbophrase>doi</jbophrase> embedded in them, unless the sequence is immediately preceded by a consonant. These minor restrictions are due to the fact that all Lojban cmene embedded in a speech stream will be preceded by one of these words or by a pause. With one of these words embedded, the cmene might break up into valid Lojban words followed by a shorter cmene. However, break-up cannot happen after a consonant, because that would imply that the word before the 
     <jbophrase>la</jbophrase>, or whatever, ended in a consonant without pause, which is impossible.</para>
     <para> <!-- FIXME: there's nowhere for these two indexterms to go --><indexterm type="example-imported"><primary>Nederlands</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Laplace</primary><secondary>example</secondary></indexterm> For example, the invalid name 
-    <jbophrase>laplas.</jbophrase> would look like the Lojban words 
+    <jbophrase glossay="false">laplas.</jbophrase> would look like the Lojban words 
     <jbophrase>la plas.</jbophrase>, and 
-    <jbophrase>ilanas.</jbophrase> would be misunderstood as 
+    <jbophrase glossay="false">ilanas.</jbophrase> would be misunderstood as 
     <jbophrase>.i la nas.</jbophrase>. However, 
     <jbophrase role="pronunciation">NEderlants.</jbophrase> cannot be misheard as 
     <jbophrase role="pronunciation">NEder lants.</jbophrase>, because 
@@ -1825,22 +1812,22 @@
           <row>
             <entry>English</entry>
             <entry><quote>Mary</quote></entry>
-            <entry><jbophrase>meris.</jbophrase> or <jbophrase>meiris.</jbophrase></entry>
+            <entry><jbophrase glossay="false">meris.</jbophrase> or <jbophrase glossay="false">meiris.</jbophrase></entry>
           </row>
           <row>
             <entry>English</entry>
             <entry><quote>Smith</quote></entry>
-            <entry><jbophrase>smit.</jbophrase></entry>
+            <entry><jbophrase glossay="false">smit.</jbophrase></entry>
           </row>
           <row>
             <entry>English</entry>
             <entry><quote>Jones</quote></entry>
-            <entry><jbophrase>djonz.</jbophrase></entry>
+            <entry><jbophrase glossay="false">djonz.</jbophrase></entry>
           </row>
           <row>
             <entry>English</entry>
             <entry><quote>John</quote></entry>
-            <entry><jbophrase>djan.</jbophrase> or <jbophrase>jan.</jbophrase> (American) or <jbophrase>djon.</jbophrase> or <jbophrase>jon.</jbophrase> (British)</entry>
+            <entry><jbophrase glossay="false">djan.</jbophrase> or <jbophrase glossay="false">jan.</jbophrase> (American) or <jbophrase glossay="false">djon.</jbophrase> or <jbophrase glossay="false">jon.</jbophrase> (British)</entry>
           </row>
           <row>
             <entry>English</entry>
@@ -1855,7 +1842,7 @@
           <row>
             <entry>English</entry>
             <entry><quote>Johnson</quote></entry>
-            <entry><jbophrase>djansn.</jbophrase></entry>
+            <entry><jbophrase glossay="false">djansn.</jbophrase></entry>
           </row>
           <row>
             <entry>English</entry>
@@ -1865,47 +1852,47 @@
           <row>
             <entry>English</entry>
             <entry><quote>Brown</quote></entry>
-            <entry><jbophrase>braun.</jbophrase></entry>
+            <entry><jbophrase glossay="false">braun.</jbophrase></entry>
           </row>
           <row>
             <entry>English</entry>
             <entry><quote>Charles</quote></entry>
-            <entry><jbophrase>tcarlz.</jbophrase></entry>
+            <entry><jbophrase glossay="false">tcarlz.</jbophrase></entry>
           </row>
           <row>
             <entry>French</entry>
             <entry><quote>Charles</quote></entry>
-            <entry><jbophrase>carl.</jbophrase></entry>
+            <entry><jbophrase glossay="false">carl.</jbophrase></entry>
           </row>
           <row>
             <entry>French</entry>
             <entry><quote>De Gaulle</quote></entry>
-            <entry><jbophrase>dyGOL.</jbophrase></entry>
+            <entry><jbophrase glossay="false">dyGOL.</jbophrase></entry>
           </row>
           <row>
             <entry>German</entry>
             <entry><quote>Heinrich</quote></entry>
-            <entry><jbophrase>xainrix.</jbophrase></entry>
+            <entry><jbophrase glossay="false">xainrix.</jbophrase></entry>
           </row>
           <row>
             <entry>Spanish</entry>
             <entry><quote>Joaquin</quote></entry>
-            <entry><jbophrase>xuaKIN.</jbophrase></entry>
+            <entry><jbophrase glossay="false">xuaKIN.</jbophrase></entry>
           </row>
           <row>
             <entry>Russian</entry>
             <entry><quote>Svetlana</quote></entry>
-            <entry><jbophrase>sfietlanys.</jbophrase></entry>
+            <entry><jbophrase glossay="false">sfietlanys.</jbophrase></entry>
           </row>
           <row>
             <entry>Russian</entry>
             <entry><quote>Khrushchev</quote></entry>
-            <entry><jbophrase>xrucTCOF.</jbophrase></entry>
+            <entry><jbophrase glossay="false">xrucTCOF.</jbophrase></entry>
           </row>
           <row>
             <entry>Hindi</entry>
             <entry><quote>Krishna</quote></entry>
-            <entry><jbophrase>kricnas.</jbophrase></entry>
+            <entry><jbophrase glossay="false">kricnas.</jbophrase></entry>
           </row>
           <row>
             <entry>Polish</entry>
@@ -1920,12 +1907,12 @@
           <row>
             <entry>Chinese</entry>
             <entry><quote>Mao Zedong</quote></entry>
-            <entry><jbophrase>maudzydyn.</jbophrase></entry>
+            <entry><jbophrase glossay="false">maudzydyn.</jbophrase></entry>
           </row>
           <row>
             <entry>Japanese</entry>
             <entry><quote>Fujiko</quote></entry>
-            <entry><jbophrase>fudjikos.</jbophrase> or <jbophrase>fujikos.</jbophrase></entry>
+            <entry><jbophrase glossay="false">fudjikos.</jbophrase> or <jbophrase glossay="false">fujikos.</jbophrase></entry>
           </row>
         </tbody>
       </tgroup>
@@ -2284,12 +2271,12 @@
     -<jbophrase role="rafsi">zdani</jbophrase> as possible rafsi for 
     <jbophrase>zdani</jbophrase>. The six possible forms of the lujvo are then:</para>
     <simplelist type="vert" columns="1">
-      <member><jbophrase>ger-zda</jbophrase></member>
-      <member><jbophrase>ger-zdani</jbophrase></member>
-      <member><jbophrase>ge'u-zda</jbophrase></member>
-      <member><jbophrase>ge'u-zdani</jbophrase></member>
-      <member><jbophrase>gerk-zda</jbophrase></member>
-      <member><jbophrase>gerk-zdani</jbophrase></member>
+      <member><jbophrase role="rafsi">ger</jbophrase>-<jbophrase role="rafsi">zda</jbophrase></member>
+      <member><jbophrase role="rafsi">ger</jbophrase>-<jbophrase role="rafsi">zdani</jbophrase></member>
+      <member><jbophrase role="rafsi">ge'u</jbophrase>-<jbophrase role="rafsi">zda</jbophrase></member>
+      <member><jbophrase role="rafsi">ge'u</jbophrase>-<jbophrase role="rafsi">zdani</jbophrase></member>
+      <member><jbophrase role="rafsi">gerk</jbophrase>-<jbophrase role="rafsi">zda</jbophrase></member>
+      <member><jbophrase role="rafsi">gerk</jbophrase>-<jbophrase role="rafsi">zdani</jbophrase></member>
     </simplelist>
     <para>We must then insert appropriate hyphens in each case. The first two forms need no hyphenation: 
     
@@ -2298,7 +2285,7 @@
     <jbophrase>gerzda</jbophrase> and 
     <jbophrase>gerzdani</jbophrase>.</para>
     <para>The third form, 
-    <jbophrase>ge'u-zda</jbophrase>, needs no hyphen, because even though the first rafsi is CVV, the second one is CCV, so there is a consonant cluster in the first five letters. So 
+    <jbophrase role="rafsi">ge'u</jbophrase>-<jbophrase role="rafsi">zda</jbophrase>, needs no hyphen, because even though the first rafsi is CVV, the second one is CCV, so there is a consonant cluster in the first five letters. So 
     <jbophrase>ge'uzda</jbophrase> is this form of the lujvo.</para>
     <para>The fourth form, 
     <jbophrase valid="false">ge'u-zdani</jbophrase>, however, requires an 
@@ -2372,39 +2359,39 @@
     -<jbophrase role="rafsi">gir</jbophrase>- and 
     -<jbophrase role="rafsi">girz</jbophrase>-. The resulting 12 lujvo possibilities are:</para>
     <simplelist type="horiz" columns="3">
-      <member><jbophrase>loj-ban-gri</jbophrase></member>
-      <member><jbophrase>loj-bau-gri</jbophrase></member>
-      <member><jbophrase>loj-bang-gri</jbophrase></member>
+      <member><jbophrase role="rafsi">loj</jbophrase>-<jbophrase role="rafsi">ban</jbophrase>-<jbophrase role="rafsi">gri</jbophrase></member>
+      <member><jbophrase role="rafsi">loj</jbophrase>-<jbophrase role="rafsi">bau</jbophrase>-<jbophrase role="rafsi">gri</jbophrase></member>
+      <member><jbophrase role="rafsi">loj</jbophrase>-<jbophrase role="rafsi">bang</jbophrase>-<jbophrase role="rafsi">gri</jbophrase></member>
       
-      <member><jbophrase>logj-ban-gri</jbophrase></member>
-      <member><jbophrase>logj-bau-gri</jbophrase></member>
-      <member><jbophrase>logj-bang-gri</jbophrase></member>
+      <member><jbophrase role="rafsi">logj</jbophrase>-<jbophrase role="rafsi">ban</jbophrase>-<jbophrase role="rafsi">gri</jbophrase></member>
+      <member><jbophrase role="rafsi">logj</jbophrase>-<jbophrase role="rafsi">bau</jbophrase>-<jbophrase role="rafsi">gri</jbophrase></member>
+      <member><jbophrase role="rafsi">logj</jbophrase>-<jbophrase role="rafsi">bang</jbophrase>-<jbophrase role="rafsi">gri</jbophrase></member>
       
-      <member><jbophrase>loj-ban-girzu</jbophrase></member>
-      <member><jbophrase>loj-bau-girzu</jbophrase></member>
-      <member><jbophrase>loj-bang-girzu</jbophrase></member>
+      <member><jbophrase role="rafsi">loj</jbophrase>-<jbophrase role="rafsi">ban</jbophrase>-<jbophrase role="rafsi">girzu</jbophrase></member>
+      <member><jbophrase role="rafsi">loj</jbophrase>-<jbophrase role="rafsi">bau</jbophrase>-<jbophrase role="rafsi">girzu</jbophrase></member>
+      <member><jbophrase role="rafsi">loj</jbophrase>-<jbophrase role="rafsi">bang</jbophrase>-<jbophrase role="rafsi">girzu</jbophrase></member>
       
-      <member><jbophrase>logj-ban-girzu</jbophrase></member>
-      <member><jbophrase>logj-bau-girzu</jbophrase></member>
-      <member><jbophrase>logj-bang-girzu</jbophrase></member>
+      <member><jbophrase role="rafsi">logj</jbophrase>-<jbophrase role="rafsi">ban</jbophrase>-<jbophrase role="rafsi">girzu</jbophrase></member>
+      <member><jbophrase role="rafsi">logj</jbophrase>-<jbophrase role="rafsi">bau</jbophrase>-<jbophrase role="rafsi">girzu</jbophrase></member>
+      <member><jbophrase role="rafsi">logj</jbophrase>-<jbophrase role="rafsi">bang</jbophrase>-<jbophrase role="rafsi">girzu</jbophrase></member>
     </simplelist>
     <para>and the 12 name possibilities are:</para>
     <simplelist type="horiz" columns="3">
-      <member><jbophrase>loj-ban-gir</jbophrase></member>
-      <member><jbophrase>loj-bau-gir</jbophrase></member>
-      <member><jbophrase>loj-bang-gir</jbophrase></member>
+      <member><jbophrase role="rafsi">loj</jbophrase>-<jbophrase role="rafsi">ban</jbophrase>-<jbophrase role="rafsi">gir</jbophrase></member>
+      <member><jbophrase role="rafsi">loj</jbophrase>-<jbophrase role="rafsi">bau</jbophrase>-<jbophrase role="rafsi">gir</jbophrase></member>
+      <member><jbophrase role="rafsi">loj</jbophrase>-<jbophrase role="rafsi">bang</jbophrase>-<jbophrase role="rafsi">gir</jbophrase></member>
       
-      <member><jbophrase>logj-ban-gir</jbophrase></member>
-      <member><jbophrase>logj-bau-gir</jbophrase></member>
-      <member><jbophrase>logj-bang-gir</jbophrase></member>
+      <member><jbophrase role="rafsi">logj</jbophrase>-<jbophrase role="rafsi">ban</jbophrase>-<jbophrase role="rafsi">gir</jbophrase></member>
+      <member><jbophrase role="rafsi">logj</jbophrase>-<jbophrase role="rafsi">bau</jbophrase>-<jbophrase role="rafsi">gir</jbophrase></member>
+      <member><jbophrase role="rafsi">logj</jbophrase>-<jbophrase role="rafsi">bang</jbophrase>-<jbophrase role="rafsi">gir</jbophrase></member>
       
-      <member><jbophrase>loj-ban-girz</jbophrase></member>
-      <member><jbophrase>loj-bau-girz</jbophrase></member>
-      <member><jbophrase>loj-bang-girz</jbophrase></member>
+      <member><jbophrase role="rafsi">loj</jbophrase>-<jbophrase role="rafsi">ban</jbophrase>-<jbophrase role="rafsi">girz</jbophrase></member>
+      <member><jbophrase role="rafsi">loj</jbophrase>-<jbophrase role="rafsi">bau</jbophrase>-<jbophrase role="rafsi">girz</jbophrase></member>
+      <member><jbophrase role="rafsi">loj</jbophrase>-<jbophrase role="rafsi">bang</jbophrase>-<jbophrase role="rafsi">girz</jbophrase></member>
       
-      <member><jbophrase>logj-ban-girz</jbophrase></member>
-      <member><jbophrase>logj-bau-girz</jbophrase></member>
-      <member><jbophrase>logj-bang-girz</jbophrase></member>
+      <member><jbophrase role="rafsi">logj</jbophrase>-<jbophrase role="rafsi">ban</jbophrase>-<jbophrase role="rafsi">girz</jbophrase></member>
+      <member><jbophrase role="rafsi">logj</jbophrase>-<jbophrase role="rafsi">bau</jbophrase>-<jbophrase role="rafsi">girz</jbophrase></member>
+      <member><jbophrase role="rafsi">logj</jbophrase>-<jbophrase role="rafsi">bang</jbophrase>-<jbophrase role="rafsi">girz</jbophrase></member>
     </simplelist>
     <para>After hyphenation, we have:</para>
     <simplelist type="horiz" columns="3">
@@ -2445,7 +2432,7 @@
     <jbophrase>lojbangri</jbophrase> and 
     <jbophrase>lojbaugri</jbophrase>, of which the latter has a slightly lower score: 8827 versus 8796, respectively. However, for the name of the organization, we chose to make sure the name of the language was embedded in it, and to use the clearer long-form rafsi for 
     <jbophrase>girzu</jbophrase>, producing 
-    <jbophrase>lojbangirz.</jbophrase></para>
+    <jbophrase glossay="false">lojbangirz.</jbophrase></para>
     <para>Finally, here is a four-part lujvo with a cmavo in it, based on the tanru 
     <jbophrase>nakni ke cinse ctuca</jbophrase> or 
     <quote>male (sexual teacher)</quote>. The 
@@ -2454,28 +2441,28 @@
     <quote>teacher of sexuality who is male</quote>, rather than 
     <quote>teacher of male sexuality</quote>. Here are the possible forms of the lujvo, both before and after hyphenation:</para>
     <simplelist type="horiz" columns="2">
-      <member><jbophrase>nak-kem-cin-ctu</jbophrase></member>  
+      <member><jbophrase role="rafsi">nak</jbophrase>-<jbophrase role="rafsi">kem</jbophrase>-<jbophrase role="rafsi">cin</jbophrase>-<jbophrase role="rafsi">ctu</jbophrase></member>  
       <member><jbophrase>nakykemcinctu</jbophrase></member>
       
-      <member><jbophrase>nak-kem-cin-ctuca</jbophrase></member>
+      <member><jbophrase role="rafsi">nak</jbophrase>-<jbophrase role="rafsi">kem</jbophrase>-<jbophrase role="rafsi">cin</jbophrase>-<jbophrase role="rafsi">ctuca</jbophrase></member>
       <member><jbophrase>nakykemcinctuca</jbophrase></member>
       
-      <member><jbophrase>nak-kem-cins-ctu</jbophrase></member>
+      <member><jbophrase role="rafsi">nak</jbophrase>-<jbophrase role="rafsi">kem</jbophrase>-<jbophrase role="rafsi">cins</jbophrase>-<jbophrase role="rafsi">ctu</jbophrase></member>
       <member><jbophrase>nakykemcinsyctu</jbophrase></member>
       
-      <member><jbophrase>nak-kem-cins-ctuca</jbophrase></member>
+      <member><jbophrase role="rafsi">nak</jbophrase>-<jbophrase role="rafsi">kem</jbophrase>-<jbophrase role="rafsi">cins</jbophrase>-<jbophrase role="rafsi">ctuca</jbophrase></member>
       <member><jbophrase>nakykemcinsyctuca</jbophrase></member>
       
-      <member><jbophrase>nakn-kem-cin-ctu</jbophrase></member>
+      <member><jbophrase role="rafsi">nakn</jbophrase>-<jbophrase role="rafsi">kem</jbophrase>-<jbophrase role="rafsi">cin</jbophrase>-<jbophrase role="rafsi">ctu</jbophrase></member>
       <member><jbophrase>naknykemcinctu</jbophrase></member>
       
-      <member><jbophrase>nakn-kem-cin-ctuca</jbophrase></member>
+      <member><jbophrase role="rafsi">nakn</jbophrase>-<jbophrase role="rafsi">kem</jbophrase>-<jbophrase role="rafsi">cin</jbophrase>-<jbophrase role="rafsi">ctuca</jbophrase></member>
       <member><jbophrase>naknykemcinctuca</jbophrase></member>
       
-      <member><jbophrase>nakn-kem-cins-ctu</jbophrase></member>
+      <member><jbophrase role="rafsi">nakn</jbophrase>-<jbophrase role="rafsi">kem</jbophrase>-<jbophrase role="rafsi">cins</jbophrase>-<jbophrase role="rafsi">ctu</jbophrase></member>
       <member><jbophrase>naknykemcinsyctu</jbophrase></member>
       
-      <member><jbophrase>nakn-kem-cins-ctuca</jbophrase></member>
+      <member><jbophrase role="rafsi">nakn</jbophrase>-<jbophrase role="rafsi">kem</jbophrase>-<jbophrase role="rafsi">cins</jbophrase>-<jbophrase role="rafsi">ctuca</jbophrase></member>
       <member><jbophrase>naknykemcinsyctuca</jbophrase></member>
     </simplelist>
     <para> <indexterm type="general-imported"><primary>gismu</primary><secondary>algorithm for</secondary></indexterm> Of these forms, 
