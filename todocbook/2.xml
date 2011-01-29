@@ -53,6 +53,7 @@
       </imageobject>
     </mediaobject>
     <!--fallback for text-based browsers w/o css:-->
+    <!-- FIXME -->
     <cmavo-list>John is the father of Sam| | | 
     <cmavo-entry>
       <cmavo>sumti</cmavo>
@@ -320,7 +321,7 @@
       <title>
         <anchor xml:id="c2e5d1"/>
       </title>
-      <para>x1 talks to x2 about x3 in language x4</para>
+      <para><place-structure>x1 talks to x2 about x3 in language x4</place-structure></para>
     </example>
     <para>where the 
     <quote>x</quote> es with following numbers represent the various arguments that could be inserted at the given positions in the English sentence. For example:</para>
@@ -350,11 +351,14 @@
         <anchor xml:id="c2e5d4"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti" glossary="false">x1</jbophrase> [cu] 
-        <jbophrase role="selbri">tavla</jbophrase> 
-        <jbophrase role="sumti" glossary="false">x2</jbophrase> 
-        <jbophrase role="sumti" glossary="false">x3</jbophrase> 
-        <jbophrase role="sumti" glossary="false">x4</jbophrase>
+        <jbo>
+          <sumti glossary="false">x1</sumti>
+          <elidable>cu</elidable>
+          <selbri>tavla</selbri> 
+          <sumti glossary="false">x2</sumti> 
+          <sumti glossary="false">x3</sumti> 
+          <sumti glossary="false">x4</sumti>
+        </jbo>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>cu</primary><secondary>quick-tour version</secondary></indexterm>  <indexterm type="lojban-word-imported"><primary>tavla</primary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>use of</secondary><tertiary>quick-tour version</tertiary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>omission of</secondary><tertiary>quick-tour version</tertiary></indexterm> The word 
@@ -364,11 +368,13 @@
         <anchor xml:id="c2e5d5"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase> 
-        <jbophrase role="selbri">tavla</jbophrase> 
-        <jbophrase role="sumti">do</jbophrase> 
-        <jbophrase role="sumti">zo'e</jbophrase> 
-        <jbophrase role="sumti">zo'e</jbophrase>
+        <jbo>
+          <sumti>mi</sumti> 
+          <selbri>tavla</selbri> 
+          <sumti>do</sumti> 
+          <sumti>zo'e</sumti> 
+          <sumti>zo'e</sumti>
+        </jbo>
         <en>I talk to you about something in some language.</en>
 
         
@@ -379,11 +385,13 @@
         <anchor xml:id="c2e5d6"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">do</jbophrase> 
-        <jbophrase role="selbri">tavla</jbophrase> 
-        <jbophrase role="sumti">mi</jbophrase> 
-        <jbophrase role="sumti">ta</jbophrase> 
-        <jbophrase role="sumti">zo'e</jbophrase>
+        <jbo>
+          <sumti>do</sumti> 
+          <selbri>tavla</selbri> 
+          <sumti>mi</sumti> 
+          <sumti>ta</sumti> 
+          <sumti>zo'e</sumti>
+        </jbo>
         <en>You talk to me about that thing in a language.</en>
 
         
@@ -394,11 +402,13 @@
         <anchor xml:id="c2e5d7"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase> 
-        <jbophrase role="selbri">tavla</jbophrase> 
-        <jbophrase role="sumti">zo'e</jbophrase> 
-        <jbophrase role="sumti">tu</jbophrase> 
-        <jbophrase role="sumti">ti</jbophrase>
+        <jbo>
+          <sumti>mi</sumti> 
+          <selbri>tavla</selbri> 
+          <sumti>zo'e</sumti> 
+          <sumti>tu</sumti> 
+          <sumti>ti</sumti>
+        </jbo>
         <en>I talk to someone about that thing yonder in this language.</en>
       </interlinear-gloss>
     </example>
@@ -407,7 +417,7 @@
     <para> <indexterm type="lojban-word-imported"><primary>zo'e</primary><secondary>quick-tour version</secondary></indexterm>  <indexterm type="general-imported"><primary>ellipsis</primary><secondary>quick-tour version</secondary></indexterm> When there are one or more occurrences of the cmavo 
     <jbophrase>zo'e</jbophrase> at the end of a bridi, they may be omitted, a process called 
     <quote>ellipsis</quote>. 
-    
+
     <xref linkend="example-random-id-k02C"/> and 
     <xref linkend="example-random-id-k02u"/> may be expressed thus:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-k04J">
@@ -415,9 +425,11 @@
         <anchor xml:id="c2e5d8"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase> 
-        <jbophrase role="selbri">tavla</jbophrase> 
-        <jbophrase role="sumti">do</jbophrase>
+        <jbo>
+          <sumti>mi</sumti> 
+          <selbri>tavla</selbri> 
+          <sumti>do</sumti>
+        </jbo>
         <en>I talk to you (about something in some language).</en>
 
         
@@ -428,16 +440,18 @@
         <anchor xml:id="c2e5d9"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">do</jbophrase> 
-        <jbophrase role="selbri">tavla</jbophrase> 
-        <jbophrase role="sumti">mi</jbophrase> 
-        <jbophrase role="sumti">ta</jbophrase>
+        <jbo>
+          <sumti>do</sumti> 
+          <selbri>tavla</selbri> 
+          <sumti>mi</sumti> 
+          <sumti>ta</sumti>
+        </jbo>
         <en>You talk to me about that thing (in some language).</en>
       </interlinear-gloss>
     </example>
     <para>Note that 
     <xref linkend="example-random-id-k03n"/> is not subject to ellipsis by this direct method, as the 
-    
+
     <jbophrase>zo'e</jbophrase> in it is not at the end of the bridi.</para>
   </section>
   <section xml:id="section-variant-bridi-structure">
@@ -448,15 +462,35 @@
         <anchor xml:id="c2e6d1"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase>       [cu] 
-        <jbophrase role="selbri">vecnu</jbophrase>
-        <jbophrase role="sumti">ti</jbophrase>
-        <jbophrase role="sumti">ta</jbophrase>
-        <jbophrase role="sumti">zo'e</jbophrase>
-        seller-x1     sells  goods-sold-x2  buyer-x3 price-x4
-        I             sell   this           to that  for some price.
-        I sell this-thing/these-things to that-buyer/those-buyers.
-        (The price is obvious or unimportant.)
+        <jbo>
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>vecnu</selbri>
+          <sumti>ti</sumti>
+          <sumti>ta</sumti>
+          <sumti>zo'e</sumti>
+        </jbo>
+        <gloss>
+          <sumti>seller-x1</sumti>
+          <selbri>sells</selbri>
+          <sumti>goods-sold-x2</sumti>
+          <sumti>buyer-x3</sumti>
+          <sumti>price-x4</sumti>
+        </gloss>
+        <gloss>
+          <sumti>I</sumti>
+          <selbri>sell</selbri>
+          <sumti>this</sumti>
+          <sumti>to that</sumti>
+          <sumti>for some price.</sumti>
+        </gloss>
+        <gloss>
+          <sumti>I</sumti>
+          <selbri>sell</selbri>
+          <sumti>this-thing/these-things</sumti>
+          <sumti>to that-buyer/those-buyers.</sumti>
+          <comment>The price is obvious or unimportant.</comment>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>
@@ -466,16 +500,28 @@
         <anchor xml:id="c2e6d2"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase>
-        <jbophrase role="sumti">ti</jbophrase>           [cu] 
-        <jbophrase role="selbri">vecnu</jbophrase>
-        <jbophrase role="sumti">ta</jbophrase>
-        seller-x1 goods-sold-x2     sells buyer-x3
-        I         this              sell  to that.
-        (translates as stilted or poetic English)
-        I this thing do sell to that buyer.
+        <jbo>
+          <sumti>mi</sumti>
+          <sumti>ti</sumti>          
+          <elidable>cu</elidable>
+          <selbri>vecnu</selbri>
+          <sumti>ta</sumti>
+        </jbo>
+        <gloss>
+          <sumti>seller-x1</sumti>
+          <sumti>goods-sold-x2</sumti>
+          <selbri>sells</selbri>
+          <sumti>buyer-x3</sumti>
 
-        
+        </gloss>
+        <gloss>
+          <sumti>I</sumti>
+          <sumti>this</sumti>
+          <sumti>sell</sumti>
+          <sumti>to that.</sumti>
+          <comment>translates as stilted or poetic English</comment>
+        </gloss>
+        <en>I this thing do sell to that buyer.</en>
       </interlinear-gloss>
     </example>
     <example role="interlinear-gloss-example" xml:id="example-random-id-k0Bm">
@@ -483,14 +529,27 @@
         <anchor xml:id="c2e6d3"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase>
-        <jbophrase role="sumti">ti</jbophrase>
-        <jbophrase role="sumti">ta</jbophrase>      [cu] 
-        <jbophrase role="selbri">vecnu</jbophrase>
-        seller-x1 goods-sold-x2 buyer-x3     sells
-        I         this          to that      sell.
-        (translates as stilted or poetic English)
-        I this thing to that buyer do sell.
+        <jbo>
+          <sumti>mi</sumti>
+          <sumti>ti</sumti>
+          <sumti>ta</sumti>     
+          <elidable>cu</elidable>
+          <selbri>vecnu</selbri>
+        </jbo>
+        <gloss>
+          <sumti>seller-x1</sumti>
+          <sumti>goods-sold-x2</sumti>
+          <sumti>buyer-x3</sumti>
+          <selbri>sells</selbri>
+        </gloss>
+        <gloss>
+          <sumti>I</sumti>
+          <sumti>this</sumti>
+          <sumti>to that</sumti>
+          <sumti>sell.</sumti>
+          <comment>translates as stilted or poetic English</comment>
+        </gloss>
+        <en>I this thing to that buyer do sell.</en>
       </interlinear-gloss>
     </example>
     <para>
@@ -503,12 +562,22 @@
         <anchor xml:id="c2e6d4"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">ta</jbophrase>            [cu] 
-        <jbophrase role="selbri">melbi</jbophrase>
-        object/idea-x1     is-beautiful (to someone by some standard)
-        That/Those         is/are beautiful.
-        That is beautiful.
-        Those are beautiful.
+        <jbo>
+          <sumti>ta</sumti>           
+          <elidable>cu</elidable>
+          <selbri>melbi</selbri>
+        </jbo>
+        <gloss>
+          <sumti>object/idea-x1</sumti>
+          <selbri>is-beautiful</selbri> 
+          <comment>to someone by some standard</comment>
+        </gloss>
+        <gloss>
+          <sumti>That/Those</sumti>
+          <selbri>is/are beautiful.</selbri>
+        </gloss>
+        <en>That is beautiful.</en>
+        <en>Those are beautiful.</en>
       </interlinear-gloss>
     </example>
     <para>when the x1 is omitted, becomes:</para>
@@ -517,11 +586,18 @@
         <anchor xml:id="c2e6d5"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti" glossary="false">________</jbophrase>   [cu] 
-        <jbophrase role="selbri">melbi</jbophrase>
-        unspecified-x1 is-beautiful (to someone by some standard)
-        Beautiful!
-        It's beautiful!
+        <jbo>
+          <sumti glossary="false">________</sumti>  
+          <elidable>cu</elidable>
+          <selbri>melbi</selbri>
+        </jbo>
+        <gloss>
+          <sumti>unspecified-x1</sumti>
+          <selbri>is-beautiful</selbri> 
+          <comment>to someone by some standard</comment>
+        </gloss>
+        <en>Beautiful!</en>
+        <en>It's beautiful!</en>
       </interlinear-gloss>
     </example>
     <para>Omitting the x1 adds emphasis to the selbri relation, which has become first in the sentence. This kind of sentence is termed an observative, because it is often used when someone first observes or takes note of the relationship, and wishes to quickly communicate it to someone else. Commonly understood English observatives include 
@@ -548,10 +624,12 @@
         <anchor xml:id="c2e7d1"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase>
-        <jbophrase role="selbri">tavla</jbophrase>
-        <jbophrase role="sumti">do</jbophrase>
-        <jbophrase role="sumti">ti</jbophrase>
+        <jbo>
+          <sumti>mi</sumti>
+          <selbri>tavla</selbri>
+          <sumti>do</sumti>
+          <sumti>ti</sumti>
+        </jbo>
         <en>I talk to you about this.</en>
       </interlinear-gloss>
     </example>
@@ -561,10 +639,12 @@
         <anchor xml:id="c2e7d2"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">do</jbophrase>
-        <jbophrase role="selbri">se tavla</jbophrase>
-        <jbophrase role="sumti">mi</jbophrase>
-        <jbophrase role="sumti">ti</jbophrase>
+        <jbo>
+          <sumti>do</sumti>
+          <selbri>se tavla</selbri>
+          <sumti>mi</sumti>
+          <sumti>ti</sumti>
+        </jbo>
         <en>You are talked to by me about this.</en>
       </interlinear-gloss>
     </example>
@@ -575,10 +655,12 @@
         <anchor xml:id="c2e7d3"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase>
-        <jbophrase role="selbri">tavla</jbophrase>
-        <jbophrase role="sumti">do</jbophrase>
-        <jbophrase role="sumti">ti</jbophrase>
+        <jbo>
+          <sumti>mi</sumti>
+          <selbri>tavla</selbri>
+          <sumti>do</sumti>
+          <sumti>ti</sumti>
+        </jbo>
         <en>I talk to you about this.</en>
       </interlinear-gloss>
     </example>
@@ -588,10 +670,12 @@
         <anchor xml:id="c2e7d4"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">ti</jbophrase>
-        <jbophrase role="selbri">te tavla</jbophrase>
-        <jbophrase role="sumti">do</jbophrase>
-        <jbophrase role="sumti">mi</jbophrase>
+        <jbo>
+          <sumti>ti</sumti>
+          <selbri>te tavla</selbri>
+          <sumti>do</sumti>
+          <sumti>mi</sumti>
+        </jbo>
         <en>This is talked about to you by me.</en>
       </interlinear-gloss>
     </example>
@@ -653,8 +737,8 @@
       <title>
         <anchor xml:id="c2e9d2"/>
       </title>
-      <para>x1 is a fast type-of talker to x2 about x3 in language x4</para>
-      <para>x1 talks fast to x2 about x3 in language x4</para>
+      <para><place-structure>x1 is a fast type-of talker to x2 about x3 in language x4</place-structure></para>
+      <para><place-structure>x1 talks fast to x2 about x3 in language x4</place-structure></para>
     </example>
     <para> <indexterm type="example-imported"><primary>fast talker</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>tanru default grouping</primary><secondary>quick-tour version</secondary></indexterm> When three or more gismu are in a row, the first modifies the second, and that combined meaning modifies the third, and that combined meaning modifies the fourth, and so on. For example</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-pzS9">
@@ -670,7 +754,7 @@
       <title>
         <anchor xml:id="c2e9d4"/>
       </title>
-      <para>s1 is a fast-talker type of shoe worn by s2 of material s3</para>
+      <para><place-structure>s1 is a fast-talker type of shoe worn by s2 of material s3</place-structure></para>
     </example>
     <para>That is, it is a shoe that is worn by a fast talker rather than a shoe that is fast and is also worn by a talker.</para>
     
@@ -719,10 +803,17 @@
         <anchor xml:id="c2e9d8"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase> [cu] 
-        <jbophrase role="selbri">sutra klama</jbophrase>
-        <jbophrase role="sumti">la meris.</jbophrase>
-        <gloss>I       quickly-go  to Mary.</gloss>
+        <jbo>
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>sutra klama</selbri>
+          <sumti>la meris.</sumti>
+        </jbo>
+        <gloss>
+          <sumti>I</sumti>
+          <selbri>quickly-go</selbri>
+          <sumti>to Mary.</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>tanru conversion</primary><secondary>effect on place structure</secondary><tertiary>quick-tour version</tertiary></indexterm> With the conversion 
@@ -734,10 +825,19 @@
         <anchor xml:id="c2e9d9"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase> [cu] 
-        <jbophrase role="selbri">sutra se klama</jbophrase>
-        <jbophrase role="sumti">la meris.</jbophrase>
-        <gloss>I       quickly am-gone-to by Mary.</gloss>
+        <jbo>
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>sutra se klama</selbri>
+          <sumti>la meris.</sumti>
+        </jbo>
+        <gloss>
+          <sumti>I</sumti>
+
+          <selbri>quickly</selbri>
+          <sumti>am-gone-to</sumti>
+          <sumti>by Mary.</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>tanru</primary><secondary>and conversion</secondary><tertiary>quick-tour version</tertiary></indexterm> The following example shows that there is more to conversion than merely switching places, though:</para>
@@ -746,11 +846,22 @@
         <anchor xml:id="c2e9d10"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">la tam.</jbophrase> [cu] 
-        <jbophrase role="selbri">melbi tavla</jbophrase>
-        <jbophrase role="sumti">la meris.</jbophrase>
-        <gloss>Tom          beautifully-talks to Mary.</gloss>
-        Tom is a beautiful-talker to Mary.
+        <jbo>
+          <sumti>la tam.</sumti>
+          <elidable>cu</elidable>
+          <selbri>melbi tavla</selbri>
+          <sumti>la meris.</sumti>
+        </jbo>
+        <gloss>
+          <sumti>Tom</sumti>
+          <selbri>beautifully-talks</selbri>
+          <sumti>to Mary.</sumti>
+        </gloss>
+        <gloss>
+          <sumti>Tom</sumti>
+          <selbri>is a beautiful-talker</selbri>
+          <sumti>to Mary.</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>has the place structure of 
@@ -762,11 +873,22 @@
         <anchor xml:id="c2e9d11"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">la meris.</jbophrase> [cu] 
-        <jbophrase role="selbri">melbi se tavla</jbophrase>
-        <jbophrase role="sumti">la tam.</jbophrase>
-        <gloss>Mary           is beautifully-talked-to by Tom.</gloss>
-        Mary is a beautiful-audience for Tom.
+        <jbo>
+          <sumti>la meris.</sumti>
+          <elidable>cu</elidable>
+          <selbri>melbi se tavla</selbri>
+          <sumti>la tam.</sumti>
+        </jbo>
+        <gloss>
+          <sumti>Mary</sumti>
+          <selbri>is beautifully-talked-to</selbri>
+          <sumti>by Tom.</sumti>
+        </gloss>
+        <gloss>
+          <sumti>Mary</sumti>
+          <selbri>is a beautiful-audience</selbri>
+          <sumti>for Tom.</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>and we see that the modification has been changed so as to focus on Mary's role in the bridi relationship, leading to a different set of possible interpretations.</para>
@@ -776,10 +898,17 @@
         <anchor xml:id="c2e9d12"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">la tam.</jbophrase> [cu] 
-        <jbophrase role="selbri">tavla melbi</jbophrase>
-        <jbophrase role="sumti">la meris.</jbophrase>
-        <gloss>Tom          is talkerly-beautiful to Mary.</gloss>
+        <jbo>
+          <sumti>la tam.</sumti>
+          <elidable>cu</elidable>
+          <selbri>tavla melbi</selbri>
+          <sumti>la meris.</sumti>
+        </jbo>
+        <gloss>
+          <sumti>Tom</sumti>
+          <selbri>is talkerly-beautiful</selbri>
+          <sumti>to Mary.</sumti>
+        </gloss>
 
       </interlinear-gloss>
     </example>
@@ -788,10 +917,17 @@
         <anchor xml:id="c2e9d13"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">la tam.</jbophrase> [cu] 
-        <jbophrase role="selbri">se tavla melbi</jbophrase>
-        <jbophrase role="sumti">la meris.</jbophrase>
-        <gloss>Tom          is audiencely-beautiful to Mary.</gloss>
+        <jbo>
+          <sumti>la tam.</sumti>
+          <elidable>cu</elidable>
+          <selbri>se tavla melbi</selbri>
+          <sumti>la meris.</sumti>
+        </jbo>
+        <gloss>
+          <sumti>Tom</sumti>
+          <selbri>is audiencely-beautiful</selbri>
+          <sumti>to Mary.</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>and we see that the manner in which Tom is seen as beautiful by Mary changes, but Tom is still the one perceived as beautiful, and Mary, the observer of beauty.</para>
@@ -810,20 +946,21 @@
         <anchor xml:id="c2e10d1"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase>
-        <jbophrase role="selbri">tavla</jbophrase>
-        <jbophrase role="sumti">do</jbophrase>
-        <jbophrase role="sumti">le tavla ku</jbophrase>
+        <jbo>
+          <sumti>mi</sumti>
+          <selbri>tavla</selbri>
+          <sumti>do</sumti>
+          <sumti>le tavla</sumti>
+          <elidable delineated="false">ku</elidable>
+        </jbo>
       </interlinear-gloss>
     </example>
     <para>means the same as</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-oH9T">
+    <example xml:id="example-random-id-oH9T">
       <title>
         <anchor xml:id="c2e10d2"/>
       </title>
-      <interlinear-gloss>
-        <jbo>I talk to you about the talker</jbo>
-      </interlinear-gloss>
+      <para>I talk to you about the talker</para>
     </example>
     <para>where 
     <quote>the talker</quote> is presumably someone other than me, though not necessarily.</para>
@@ -841,11 +978,18 @@
         <anchor xml:id="c2e10d3"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase>
-        <jbophrase role="selbri">tavla</jbophrase>
-        <jbophrase role="sumti">do</jbophrase>
-        <jbophrase role="sumti">le tavla</jbophrase>
-        <gloss>I  talk-to you about-the talker</gloss>
+        <jbo>
+          <sumti>mi</sumti>
+          <selbri>tavla</selbri>
+          <sumti>do</sumti>
+          <sumti>le tavla</sumti>
+        </jbo>
+        <gloss>
+          <sumti>I</sumti>
+          <selbri>talk-to</selbri>
+          <sumti>you</sumti>
+          <sumti>about-the talker</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>means exactly the same thing as 
@@ -866,11 +1010,8 @@
         <anchor xml:id="c2e10d4"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">le sutra tavla</jbophrase>
-        <en>The fast talker</en>
-
-
-        
+        <jbo> <sumti>le sutra tavla</sumti> </jbo>
+        <gloss> <sumti>The fast talker</sumti> </gloss>
       </interlinear-gloss>
     </example>
     <example role="interlinear-gloss-example" xml:id="example-random-id-k0qb">
@@ -878,11 +1019,15 @@
         <anchor xml:id="c2e10d5"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">le sutra</jbophrase> cu 
-        <jbophrase role="selbri">tavla</jbophrase>
-        <en>The fast one is talking.</en>
-
-        
+        <jbo>
+          <sumti>le sutra</sumti>
+          <elidable elidable="false">cu</elidable>
+          <selbri>tavla</selbri>
+        </jbo>
+        <gloss>
+          <sumti>The fast one</sumti>
+          <selbri>is talking.</selbri>
+        </gloss>
       </interlinear-gloss>
     </example>
     <example role="interlinear-gloss-example" xml:id="example-random-id-k0Qf">
@@ -890,10 +1035,8 @@
         <anchor xml:id="c2e10d6"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">le sutra se tavla</jbophrase>
-        <gloss>The fast talked-to one</gloss>
-
-        
+        <jbo><sumti>le sutra se tavla</sumti></jbo>
+        <gloss><sumti>The fast talked-to one</sumti> </gloss>
       </interlinear-gloss>
     </example>
     <example role="interlinear-gloss-example" xml:id="example-random-id-k0ru">
@@ -901,9 +1044,15 @@
         <anchor xml:id="c2e10d7"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">le sutra</jbophrase> cu 
-        <jbophrase role="selbri">se tavla</jbophrase>
-        <en>The fast one is talked to.</en>
+        <jbo>
+          <sumti>le sutra</sumti>
+          <elidable elidable="false">cu</elidable>
+          <selbri>se tavla</selbri>
+        </jbo>
+        <gloss>
+          <sumti>The fast one</sumti>
+          <selbri>is talked to.</selbri>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>KU selma'o</primary><secondary>quick-tour version</secondary></indexterm>  <indexterm type="general-imported"><primary>ku</primary><secondary>quick-tour version</secondary></indexterm> Consider the following more complex example, with two description sumti.</para>
@@ -912,11 +1061,21 @@
         <anchor xml:id="c2e10d8"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase> [cu] 
-        <jbophrase role="selbri">tavla</jbophrase>
-        <jbophrase role="sumti">le vecnu [ku]</jbophrase>
-        <jbophrase role="sumti">le blari'o [ku]</jbophrase>
-        I       talk-to the seller    about the blue-green-thing.
+        <jbo>
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>tavla</selbri>
+          <sumti>le vecnu</sumti>
+          <elidable>ku</elidable>
+          <sumti>le blari'o</sumti>
+          <elidable>ku</elidable>
+        </jbo>
+        <gloss>
+          <sumti>I</sumti>
+          <selbri>talk-to</selbri>
+          <sumti>the seller</sumti>
+          <sumti>about the blue-green-thing.</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>The sumti 
@@ -942,14 +1101,32 @@
         <anchor xml:id="c2e11d1"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase>   [cu] 
-        <jbophrase role="selbri">klama</jbophrase>
-        <jbophrase role="sumti">ti</jbophrase>
-        <jbophrase role="sumti">zo'e</jbophrase>
-        <jbophrase role="sumti">zo'e</jbophrase>
-        <jbophrase role="sumti">ta</jbophrase>
-        Go-er     goes  destination origin route means.
-        I go here (to this) using that means (from somewhere via some route).
+        <jbo>
+          <sumti>mi</sumti>  
+          <elidable>cu</elidable>
+          <selbri>klama</selbri>
+          <sumti>ti</sumti>
+          <sumti>zo'e</sumti>
+          <sumti>zo'e</sumti>
+          <sumti>ta</sumti>
+        </jbo>
+        <gloss>
+          <sumti>Go-er</sumti>
+          <selbri>goes</selbri>
+          <sumti>destination</sumti>
+          <sumti>origin</sumti>
+          <sumti>route</sumti>
+          <sumti>means.</sumti>
+        </gloss>
+        <gloss>
+          <sumti>I</sumti>
+          <selbri>go</selbri>
+          <sumti>here</sumti>
+          <sumti>(to this)</sumti>
+          <sumti>using that means</sumti>
+          <sumti>(from somewhere</sumti>
+          <sumti>via some route).</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>lujvo</primary><secondary>quick-tour version</secondary></indexterm> lujvo:</para>
@@ -958,9 +1135,15 @@
         <anchor xml:id="c2e11d2"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">ta</jbophrase>  [cu] 
-        <jbophrase role="selbri">blari'o</jbophrase>
-        That    is-blue-green.
+        <jbo>
+          <sumti>ta</sumti> 
+          <elidable>cu</elidable>
+          <selbri>blari'o</selbri>
+        </jbo>
+        <gloss>
+          <sumti>That</sumti>
+          <selbri>is-blue-green.</selbri>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>fu'ivla</primary><secondary>quick-tour version</secondary></indexterm> fu'ivla:</para>
@@ -969,9 +1152,15 @@
         <anchor xml:id="c2e11d3"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">ti</jbophrase>  [cu] 
-        <jbophrase role="selbri">djarspageti</jbophrase>
-        This     is-spaghetti.
+        <jbo>
+          <sumti>ti</sumti> 
+          <elidable>cu</elidable>
+          <selbri>djarspageti</selbri>
+        </jbo>
+        <gloss>
+          <sumti>This</sumti>
+          <selbri>is-spaghetti.</selbri>
+        </gloss>
 
       </interlinear-gloss>
     </example>
@@ -982,10 +1171,16 @@
         <anchor xml:id="c2e11d4"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">ta</jbophrase>  [cu] 
-        <jbophrase role="selbri">go'i</jbophrase>
-        That     too/same-as-last selbri.
-        That (is spaghetti), too.
+        <jbo>
+          <sumti>ta</sumti> 
+          <elidable>cu</elidable>
+          <selbri>go'i</selbri>
+        </jbo>
+        <gloss>
+          <sumti>That</sumti>
+          <selbri>too/same-as-last selbri.</selbri>
+        </gloss>
+        <en>That (is spaghetti), too.</en>
 
       </interlinear-gloss>
     </example>
@@ -1005,8 +1200,12 @@
         <anchor xml:id="c2e12d1"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">le gerku [ku]</jbophrase> cu 
-        <jbophrase role="selbri">melbi</jbophrase>
+        <jbo>
+          <sumti>le gerku</sumti>
+          <elidable>ku</elidable>
+          <elidable elidable="false">cu</elidable> 
+          <selbri>melbi</selbri>
+        </jbo>
         <en>The dog is beautiful.</en>
       </interlinear-gloss>
     </example>
@@ -1018,9 +1217,12 @@
         <anchor xml:id="c2e12d2"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">ti</jbophrase> [cu] 
-        <jbophrase role="selbri">pluka</jbophrase>
-        <jbophrase role="sumti">mi</jbophrase>
+        <jbo>
+          <sumti>ti</sumti>
+          <elidable>cu</elidable>
+          <selbri>pluka</selbri>
+          <sumti>mi</sumti>
+        </jbo>
         <en>This (the dog) pleases me.</en>
 
       </interlinear-gloss>
@@ -1030,9 +1232,12 @@
         <anchor xml:id="c2e12d3"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">di'u</jbophrase> [cu] 
-        <jbophrase role="selbri">pluka</jbophrase>
-        <jbophrase role="sumti">mi</jbophrase>
+        <jbo>
+          <sumti>di'u</sumti>
+          <elidable>cu</elidable>
+          <selbri>pluka</selbri>
+          <sumti>mi</sumti>
+        </jbo>
         <en>This (the last sentence) pleases me (perhaps because it is grammatical or sounds nice).</en>
 
       </interlinear-gloss>
@@ -1042,9 +1247,12 @@
         <anchor xml:id="c2e12d4"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">la'e di'u</jbophrase> [cu] 
-        <jbophrase role="selbri">pluka</jbophrase>
-        <jbophrase role="sumti">mi</jbophrase>
+        <jbo>
+          <sumti>la'e di'u</sumti>
+          <elidable>cu</elidable>
+          <selbri>pluka</selbri>
+          <sumti>mi</sumti>
+        </jbo>
         <en>This (the meaning of the last sentence; i.e. that the dog is beautiful) pleases me.</en>
 
       </interlinear-gloss>
@@ -1066,10 +1274,16 @@
         <anchor xml:id="c2e13d1"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">le mi gerku</jbophrase> cu 
-        <jbophrase role="selbri">sutra</jbophrase>
-        The of-me dog  is fast.
-        My dog is fast.
+        <jbo>
+          <sumti>le mi gerku</sumti>
+          <elidable elidable="false">cu</elidable> 
+          <selbri>sutra</selbri>
+        </jbo>
+        <gloss>
+          <sumti>The of-me dog</sumti>
+          <selbri>is fast.</selbri>
+        </gloss>
+        <en>My dog is fast.</en>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>possession not ownership</primary><secondary>quick-tour version</secondary></indexterm> In Lojban, possession doesn't necessarily mean ownership: one may 
@@ -1131,9 +1345,14 @@
         <anchor xml:id="c2e14d4"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">do</jbophrase>
-        <jbophrase role="selbri">tavla</jbophrase>
-        You are-talking.
+        <jbo>
+          <sumti>do</sumti>
+          <selbri>tavla</selbri>
+        </jbo>
+        <gloss>
+          <sumti>You</sumti>
+          <selbri>are-talking.</selbri>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>you are simply making a statement of fact. In order to issue a command in Lojban, substitute the word 
@@ -1144,8 +1363,10 @@
         <anchor xml:id="c2e14d5"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">ko</jbophrase>
-        <jbophrase role="selbri">tavla</jbophrase>
+        <jbo>
+          <sumti>ko</sumti>
+          <selbri>tavla</selbri>
+        </jbo>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>ko</primary><secondary>quick-tour version</secondary></indexterm>  <indexterm type="example-imported"><primary>Talk!</primary><secondary>example</secondary></indexterm> instructs the listener to do whatever is necessary to make 
@@ -1156,8 +1377,10 @@
         <anchor xml:id="c2e14d6"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">ko</jbophrase>
-        <jbophrase role="selbri">sutra</jbophrase>
+        <jbo>
+          <sumti>ko</sumti>
+          <selbri>sutra</selbri>
+        </jbo>
         <en>Be fast!</en>
       </interlinear-gloss>
     </example>
@@ -1169,11 +1392,13 @@
         <anchor xml:id="c2e14d7"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase>
-        <jbophrase role="selbri">tavla</jbophrase>
-        <jbophrase role="sumti">ko</jbophrase>
-        Be talked to by me
-        Let me talk to you.
+        <jbo>
+          <sumti>mi</sumti>
+          <selbri>tavla</selbri>
+          <sumti>ko</sumti>
+        </jbo>
+        <en>Be talked to by me.</en>
+        <en>Let me talk to you.</en>
       </interlinear-gloss>
     </example>
     <para>The cmavo 
@@ -1183,9 +1408,11 @@
         <anchor xml:id="c2e14d8"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">ko</jbophrase>
-        <jbophrase role="selbri">kurji</jbophrase>
-        <jbophrase role="sumti">ko</jbophrase>
+        <jbo>
+          <sumti>ko</sumti>
+          <selbri>kurji</selbri>
+          <sumti>ko</sumti>
+        </jbo>
       </interlinear-gloss>
     </example>
     <para>and</para>
@@ -1194,9 +1421,11 @@
         <anchor xml:id="c2e14d9"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">ko</jbophrase>
-        <jbophrase role="sumti">ko</jbophrase>
-        <jbophrase role="selbri">kurji</jbophrase>
+        <jbo>
+          <sumti>ko</sumti>
+          <sumti>ko</sumti>
+          <selbri>kurji</selbri>
+        </jbo>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>Take care!</primary><secondary>example</secondary></indexterm> both mean 
@@ -1223,12 +1452,19 @@
         <anchor xml:id="c2e15d1"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">ma</jbophrase>
-        <jbophrase role="selbri">tavla</jbophrase>
-        <jbophrase role="sumti">do</jbophrase>
-        <jbophrase role="sumti">mi</jbophrase>
-        Who? talks to-you about-me.
-        Who is talking to you about me?
+        <jbo>
+          <sumti>ma</sumti>
+          <selbri>tavla</selbri>
+          <sumti>do</sumti>
+          <sumti>mi</sumti>
+        </jbo>
+        <gloss>
+          <sumti>Who?</sumti>
+          <selbri>talks</selbri>
+          <sumti>to-you</sumti>
+          <sumti>about-me.</sumti>
+        </gloss>
+        <en>Who is talking to you about me?</en>
       </interlinear-gloss>
     </example>
     <para>The listener can reply by simply stating a sumti:</para>
@@ -1237,8 +1473,8 @@
         <anchor xml:id="c2e15d2"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">la djan.</jbophrase>
-        John (is talking to you about me).
+        <jbo> <sumti>la djan.</sumti> </jbo>
+        <en>John (is talking to you about me).</en>
       </interlinear-gloss>
     </example>
     <para>Like 
@@ -1249,10 +1485,17 @@
         <anchor xml:id="c2e15d3"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">do</jbophrase> [cu] 
-        <jbophrase role="selbri">tavla</jbophrase>
-        <jbophrase role="sumti">ma</jbophrase>
-        You     talk    to what/whom?
+        <jbo>
+          <sumti>do</sumti>
+          <elidable>cu</elidable>
+          <selbri>tavla</selbri>
+          <sumti>ma</sumti>
+        </jbo>
+        <gloss>
+          <sumti>You</sumti>
+          <selbri>talk</selbri>
+          <sumti>to what/whom?</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>A 
@@ -1262,10 +1505,17 @@
         <anchor xml:id="c2e15d4"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">ma</jbophrase> [cu]  
-        <jbophrase role="selbri">tavla</jbophrase>
-        <jbophrase role="sumti">ma</jbophrase>
-        What/Who talks    to what/whom?
+        <jbo>
+          <sumti>ma</sumti>
+          <elidable>cu</elidable>  
+          <selbri>tavla</selbri>
+          <sumti>ma</sumti>
+        </jbo>
+        <gloss>
+          <sumti>What/Who</sumti>
+          <selbri>talks</selbri>
+          <sumti>to what/whom?</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>separate questions</primary><secondary>quick-tour version</secondary></indexterm> The two separate 
@@ -1280,9 +1530,15 @@
         <anchor xml:id="c2e15d5"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">do</jbophrase> [cu] 
-        <jbophrase role="selbri">mo</jbophrase>
-        You     are-what/do-what?
+        <jbo>
+          <sumti>do</sumti>
+          <elidable>cu</elidable>
+          <selbri>mo</selbri>
+        </jbo>
+        <gloss>
+          <sumti>You</sumti>
+          <selbri>are-what/do-what?</selbri>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>A 
@@ -1294,8 +1550,11 @@
         <anchor xml:id="c2e15d6"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase> [cu] 
-        <jbophrase role="selbri">melbi</jbophrase>
+        <jbo>
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>melbi</selbri>
+        </jbo>
         <en>I am beautiful.</en>
       </interlinear-gloss>
     </example>
@@ -1305,8 +1564,11 @@
         <anchor xml:id="c2e15d7"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase> [cu] 
-        <jbophrase role="selbri">tavla</jbophrase>
+        <jbo>
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>tavla</selbri>
+        </jbo>
         <en>I talk.</en>
       </interlinear-gloss>
     </example>
@@ -1340,11 +1602,18 @@
         <anchor xml:id="c2e15d10"/>
       </title>
       <interlinear-gloss>
-        xu              
-        <jbophrase role="sumti">do</jbophrase>
-        <jbophrase role="selbri">tavla</jbophrase>
-        <jbophrase role="sumti">mi</jbophrase>
-        Is-it-true-that you are-talking to-me?
+        <jbo>
+          <cmavo>xu</cmavo>              
+          <sumti>do</sumti>
+          <selbri>tavla</selbri>
+          <sumti>mi</sumti>
+        </jbo>
+        <gloss>
+          <cmavo>Is-it-true-that</cmavo>
+          <sumti>you</sumti>
+          <selbri>are-talking</selbri>
+          <sumti>to-me?</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>is the Lojban translation of 
@@ -1361,11 +1630,12 @@
         <anchor xml:id="c2e15d11"/>
       </title>
       <interlinear-gloss>
-        xu 
-        <jbophrase role="sumti">do</jbophrase>
-        <jbophrase role="selbri">kanro</jbophrase>
-        Are you healthy?
-
+        <jbo>
+          <cmavo>xu</cmavo>
+          <sumti>do</sumti>
+          <selbri>kanro</selbri>
+        </jbo>
+        <en>Are you healthy?</en>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>healthy</primary><secondary>example</secondary></indexterm> can be answered with</para>
@@ -1374,9 +1644,11 @@
         <anchor xml:id="c2e15d12"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase>
-        <jbophrase role="selbri">kanro</jbophrase>
-        I am healthy.
+        <jbo>
+          <sumti>mi</sumti>
+          <selbri>kanro</selbri>
+        </jbo>
+        <en>I am healthy.</en>
 
       </interlinear-gloss>
     </example>
@@ -1386,8 +1658,10 @@
         <anchor xml:id="c2e15d13"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="selbri">go'i</jbophrase>
-        I am healthy.
+        <jbo>
+          <selbri>go'i</selbri>
+        </jbo>
+        <en>I am healthy.</en>
 
 
       </interlinear-gloss>
@@ -1403,9 +1677,12 @@
         <anchor xml:id="c2e15d14"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">le tavla</jbophrase> cu 
-        <jbophrase role="selbri">kanro</jbophrase>
-        The talker is healthy.
+        <jbo>
+          <sumti>le tavla</sumti>
+          <elidable elidable="false">cu</elidable>
+          <selbri>kanro</selbri>
+        </jbo>
+        <en>The talker is healthy.</en>
 
       </interlinear-gloss>
     </example>
@@ -1415,9 +1692,12 @@
         <anchor xml:id="c2e15d15"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">le tavla</jbophrase> cu 
-        <jbophrase role="selbri">go'i</jbophrase>
-        The talker is healthy.
+        <jbo>
+          <sumti>le tavla</sumti>
+          <elidable elidable="false">cu</elidable>
+          <selbri>go'i</selbri>
+        </jbo>
+        <en>The talker is healthy.</en>
 
       </interlinear-gloss>
     </example>
@@ -1431,7 +1711,7 @@
   </section>
   <section xml:id="section-attitudinals">
     <title>Indicators</title>
-    <para> <indexterm type="general-imported"><primary>interjections</primary><secondary>quick-tour version</secondary></indexterm>  <indexterm type="general-imported"><primary>attitudinal indicators</primary><secondary>quick-tour version</secondary></indexterm>  <indexterm type="general-imported"><primary>indicators</primary><secondary>quick-tour version</secondary></indexterm> Different cultures express emotions and attitudes with a variety of intonations and gestures that are not usually included in written language. Some of these are available in some languages as interjections (i.e. Aha!, Oh no!, Ouch!, Aahh!, etc.), but they vary greatly from culture to culture.</para>
+    <para> <indexterm type="general-imported"><primary>interjections</primary><secondary>quick-tour version</secondary></indexterm>  <indexterm type="general-imported"><primary>attitudinal indicators</primary><secondary>quick-tour version</secondary></indexterm>  <indexterm type="general-imported"><primary>indicators</primary><secondary>quick-tour version</secondary></indexterm> Different cultures express emotions and attitudes with a variety of intonations and gestures that are not usually included in written language. Some of these are available in some languages as interjections (i.e. Aha!, Oh no!, Ouch!, Aahh!, etc.), but they vary greatly from culture to culture.</para> <!-- FIXME: put <quote>s around the interjections? -->
     
     <para>Lojban has a group of cmavo known as 
     <quote>attitudinal indicators</quote> which specifically covers this type of commentary on spoken statements. They are both written and spoken, but require no specific intonation or gestures. Grammatically they are very simple: one or more attitudinals at the beginning of a bridi apply to the entire bridi; anywhere else in the bridi they apply to the word immediately to the left. For example:</para>
@@ -1441,11 +1721,18 @@
         <anchor xml:id="c2e16d1"/>
       </title>
       <interlinear-gloss>
-        .ie 
-        <jbophrase role="sumti">mi</jbophrase> [cu] 
-        <jbophrase role="selbri">klama</jbophrase>
-        Agreement! I go.
-        Yep! I'll go.
+        <jbo>
+          <cmavo>.ie</cmavo> 
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>klama</selbri>
+        </jbo>
+        <gloss>
+          <cmavo>Agreement!</cmavo>
+          <sumti>I</sumti>
+          <selbri>go.</selbri>
+        </gloss>
+        <en>Yep! I'll go.</en>
 
         
       </interlinear-gloss>
@@ -1455,11 +1742,18 @@
         <anchor xml:id="c2e16d2"/>
       </title>
       <interlinear-gloss>
-        .ei 
-        <jbophrase role="sumti">mi</jbophrase> [cu] 
-        <jbophrase role="selbri">klama</jbophrase>
-        Obligation! I go.
-        I should go.
+        <jbo>
+          <cmavo>.ei</cmavo> 
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>klama</selbri>
+        </jbo>
+        <gloss>
+          <cmavo>Obligation!</cmavo>
+          <sumti>I</sumti>
+          <selbri>go.</selbri>
+        </gloss>
+        <en>I should go.</en>
 
         
       </interlinear-gloss>
@@ -1469,11 +1763,20 @@
         <anchor xml:id="c2e16d3"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase> [cu] 
-        <jbophrase role="selbri">klama</jbophrase>
-        <jbophrase role="sumti">le melbi .ui [ku]</jbophrase>
-        I go to the beautiful-thing (and I am happy because it is the beautiful
-        thing I'm going to).
+        <jbo>
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>klama</selbri>
+          <sumti>le melbi</sumti>
+          <cmavo>.ui</cmavo>
+          <elidable>ku</elidable>
+        </jbo>
+        <gloss>
+          <sumti>I</sumti>
+          <selbri>go</selbri>
+          <sumti>to the beautiful-thing</sumti>
+          <comment>and I am happy because it is the beautiful thing I'm going to).</comment>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>UI selma'o</primary><secondary>quick-tour version</secondary></indexterm>  <indexterm type="general-imported"><primary>but/and equivalence</primary></indexterm>  <indexterm type="general-imported"><primary>metalinguistic words</primary><secondary>quick-tour version</secondary></indexterm>  <indexterm type="general-imported"><primary>discursives</primary><secondary>quick-tour version</secondary></indexterm> Not all indicators indicate attitudes. Discursives, another group of cmavo with the same grammatical rules as attitudinal indicators, allow free expression of certain kinds of commentary about the main utterances. Using discursives allows a clear separation of these so-called 
@@ -1490,11 +1793,21 @@
         <anchor xml:id="c2e16d4"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase> [cu] 
-        <jbophrase role="selbri">klama</jbophrase> .i 
-        <jbophrase role="sumti">do</jbophrase> [cu] 
-        <jbophrase role="selbri">stali</jbophrase>
-        I go.  You stay.
+        <jbo>
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>klama</selbri>
+          <cmavo>.i</cmavo> 
+          <sumti>do</sumti>
+          <elidable>cu</elidable>
+          <selbri>stali</selbri>
+        </jbo>
+        <gloss>
+          <sumti>I</sumti>
+          <selbri>go.</selbri>
+          <sumti>You</sumti>
+          <selbri>stay.</selbri>
+        </gloss>
 
         
       </interlinear-gloss>
@@ -1504,12 +1817,24 @@
         <anchor xml:id="c2e16d5"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase> [cu] 
-        <jbophrase role="selbri">klama</jbophrase> .i ji'a 
-
-        <jbophrase role="sumti">do</jbophrase> [cu] 
-        <jbophrase role="selbri">stali</jbophrase>
-        I go.  In addition, you stay.  (added weight)
+        <jbo>
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>klama</selbri>
+          <cmavo>.i</cmavo>
+          <cmavo>ji'a</cmavo>
+          <sumti>do</sumti>
+          <elidable>cu</elidable>
+          <selbri>stali</selbri>
+        </jbo>
+        <gloss>
+          <sumti>I</sumti>
+          <selbri>go.</selbri>
+          <cmavo>In addition,</cmavo>
+          <sumti>you</sumti>
+          <selbri>stay.</selbri>
+          <comment>added weight</comment>
+        </gloss>
 
         
       </interlinear-gloss>
@@ -1519,12 +1844,24 @@
         <anchor xml:id="c2e16d6"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">mi</jbophrase> [cu] 
-        <jbophrase role="selbri">klama</jbophrase> .i ku'i 
-
-        <jbophrase role="sumti">do</jbophrase> [cu] 
-        <jbophrase role="selbri">stali</jbophrase>
-        I go.  However, you stay.  (contrast)
+        <jbo>
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>klama</selbri>
+          <cmavo>.i</cmavo>
+          <cmavo>ku'i</cmavo>
+          <sumti>do</sumti>
+          <elidable>cu</elidable>
+          <selbri>stali</selbri>
+        </jbo>
+        <gloss>
+          <sumti>I</sumti>
+          <selbri>go.</selbri>
+          <cmavo>However,</cmavo>
+          <sumti>you</sumti>
+          <selbri>stay.</selbri>
+          <comment>contrast</comment>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>evidentials</primary><secondary>quick-tour version</secondary></indexterm> Another group of indicators are called 
@@ -1542,11 +1879,18 @@
         <anchor xml:id="c2e16d7"/>
       </title>
       <interlinear-gloss>
-        pe'i 
 
-        <jbophrase role="sumti">do</jbophrase> [cu] 
-        <jbophrase role="selbri">melbi</jbophrase>
-        I opine!  You are beautiful.
+        <jbo>
+          <cmavo>pe'i</cmavo>
+          <sumti>do</sumti>
+          <elidable>cu</elidable>
+          <selbri>melbi</selbri>
+        </jbo>
+        <gloss>
+          <cmavo>I opine!</cmavo>
+          <sumti>You</sumti>
+          <selbri>are beautiful.</selbri>
+        </gloss>
 
         
       </interlinear-gloss>
@@ -1556,11 +1900,18 @@
         <anchor xml:id="c2e16d8"/>
       </title>
       <interlinear-gloss>
-        za'a 
 
-        <jbophrase role="sumti">do</jbophrase> [cu] 
-        <jbophrase role="selbri">melbi</jbophrase>
-        I directly observe!  You are beautiful.
+        <jbo>
+          <cmavo>za'a</cmavo>
+          <sumti>do</sumti>
+          <elidable>cu</elidable>
+          <selbri>melbi</selbri>
+        </jbo>
+        <gloss>
+          <cmavo>I directly observe!</cmavo>
+          <sumti>You</sumti>
+          <selbri>are beautiful.</selbri>
+        </gloss>
       </interlinear-gloss>
     </example>
   </section>
@@ -1587,10 +1938,17 @@
         <anchor xml:id="c2e17d3"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">la djan.</jbophrase>  [cu] 
-        <jbophrase role="selbri">klama</jbophrase>
-        <jbophrase role="sumti">le zarci</jbophrase>
-        John      goes/went/will-go  to-the store
+        <jbo>
+          <sumti>la djan.</sumti> 
+          <elidable>cu</elidable>
+          <selbri>klama</selbri>
+          <sumti>le zarci</sumti>
+        </jbo>
+        <gloss>
+          <sumti>John</sumti>
+          <selbri>goes/went/will-go</selbri>
+          <sumti>to-the store</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>serves as a translation of either 
@@ -1602,10 +1960,13 @@
         <anchor xml:id="c2e17d4"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">la djan.</jbophrase>
-        <jbophrase role="selbri">pu klama</jbophrase>
-        <jbophrase role="sumti">le zarci</jbophrase>
-        John       [past] goes to-the store
+        <jbo>
+          <sumti>la djan.</sumti>
+          <selbri>pu klama</selbri>
+          <sumti>le zarci</sumti>
+        </jbo>
+        <sumti>John</sumti>
+        <selbri>[past] goes to-the store</selbri>
       </interlinear-gloss>
     </example>
     <para>where the tag 
@@ -1615,10 +1976,15 @@
         <anchor xml:id="c2e17d5"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">la djan.</jbophrase>
-        <jbophrase role="selbri">ca klama</jbophrase>
-        <jbophrase role="sumti">le zarci</jbophrase>
-        John       [present] goes to-the store
+        <jbo>
+          <sumti>la djan.</sumti>
+          <selbri>ca klama</selbri>
+          <sumti>le zarci</sumti>
+        </jbo>
+        <gloss>
+          <sumti>John</sumti>
+          <selbri>[present] goes to-the store</selbri>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>necessarily refers to the present, because of the tag 
@@ -1634,10 +2000,16 @@
         <anchor xml:id="c2e17d6"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">do</jbophrase>
-        <jbophrase role="selbri">vu vecnu</jbophrase>
-        <jbophrase role="sumti">zo'e</jbophrase>
-        You yonder sell something-unspecified.
+        <jbo>
+          <sumti>do</sumti>
+          <selbri>vu vecnu</selbri>
+          <sumti>zo'e</sumti>
+        </jbo>
+        <gloss>
+          <sumti>You</sumti>
+          <selbri>yonder sell</selbri>
+          <sumti>something-unspecified.</sumti>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>In addition, tense tags (either for time or space) can be prefixed to the selbri of a description, producing a tensed sumti:</para>
@@ -1646,9 +2018,16 @@
         <anchor xml:id="c2e17d7"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">le pu bajra [ku]</jbophrase> cu            
-        <jbophrase role="selbri">tavla</jbophrase>
-        The earlier/former/past runner talked/talks.
+        <jbo>
+          <sumti>le pu bajra </sumti>
+          <elidable>ku</elidable>
+          <elidable elidable="false">cu</elidable>
+          <selbri>tavla</selbri>
+        </jbo>
+        <gloss>
+          <sumti>The earlier/former/past runner</sumti>
+          <selbri>talked/talks.</selbri>
+        </gloss>
       </interlinear-gloss>
     </example>
     <para>(Since Lojban tense is optional, we don't know when he or she talks.)</para>
@@ -1663,9 +2042,16 @@
         <anchor xml:id="c2e17d8"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">le vi bajra [ku]</jbophrase>   cu 
-        <jbophrase role="selbri">tavla</jbophrase>
-        The nearby runner     talks.
+        <jbo>
+          <sumti>le vi bajra </sumti>
+          <elidable>ku</elidable>
+          <elidable elidable="false">cu</elidable>
+          <selbri>tavla</selbri>
+        </jbo>
+        <gloss>
+          <sumti>The nearby runner</sumti>
+          <selbri>talks.</selbri>
+        </gloss>
         <en>This runner talks.</en>
       </interlinear-gloss>
     </example>
@@ -1682,10 +2068,17 @@
         <anchor xml:id="c2e17d9"/>
       </title>
       <interlinear-gloss>
-        <jbophrase role="sumti">le vi tavla [ku]</jbophrase> cu 
-        <jbophrase role="selbri">ba klama</jbophrase>
-        The here talker     [future] goes.
-        The talker who is here will go.
+        <jbo>
+          <sumti>le vi tavla </sumti>
+          <elidable>ku</elidable>
+          <elidable elidable="false">cu</elidable>
+          <selbri>ba klama</selbri>
+        </jbo>
+        <gloss>
+          <sumti>The here talker</sumti>
+          <selbri>[future] goes.</selbri>
+        </gloss>
+        <en>The talker who is here will go.</en>
         <en>This talker will go.</en>
       </interlinear-gloss>
     </example>
