@@ -185,14 +185,13 @@
       </title>
       <interlinear-gloss>
         <jbo>le nanmu zu'a batci le gerku</jbo>
-        <en>The man [left] bites the dog.</en>
+        <gloss>The man [left] bites the dog.</gloss>
       </interlinear-gloss>
     </example>
     <para>Here the imaginary journey is again from the speaker's location to the location of the bridi, but it is now performed by going to the left (in the speaker's reference frame) for an unspecified distance. So a reasonable translation is:</para>
-    
-    <programlisting>
+    <place-structure>
        To my left, the man bites the dog.
-</programlisting>
+    </place-structure>
     <para>The 
     <jbophrase>my</jbophrase> does not have an explicit equivalent in the Lojban, because the speaker's location is understood as the starting point.</para>
     <para> <indexterm type="lojban-word-imported"><primary>vu</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>va</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>vi</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>VA selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>zu'a</primary></indexterm>  <indexterm type="general-imported"><primary>VA selma'o</primary><secondary>relation of words to ti</secondary><tertiary>ta, tu</tertiary></indexterm>  <indexterm type="general-imported"><primary>zu'a</primary><secondary>derivation of word</secondary></indexterm> (Etymologically, by the way, 
@@ -250,14 +249,14 @@
       </title>
       <interlinear-gloss>
         <jbo>le nanmu ga'u zu'a batci le gerku</jbo>
-        <en>The man [up] [left] bites the dog.</en>
+        <gloss>The man [up] [left] bites the dog.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>manhole</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>imaginary journey</primary><secondary>stages of in compound tenses</secondary></indexterm>  <indexterm type="general-imported"><primary>compound spatial tense</primary><secondary>explanation of</secondary></indexterm> The proper interpretation of 
     <xref linkend="example-random-id-rWtP"/> is that the imaginary journey has two stages: first move from the speaker's location upward, and then to the left. A translation might read:</para>
-    <programlisting>
+    <place-structure>
        Left of a place above me, the man bites the dog.
-</programlisting>
+    </place-structure>
     <para>(Perhaps the speaker is at the bottom of a manhole, and the dog-biting is going on at the edge of the street.)</para>
     
     <para> <indexterm type="general-imported"><primary>compound tense ordering</primary><secondary>Lojban contrasted with English</secondary></indexterm>  <indexterm type="general-imported"><primary>compound tense</primary><secondary>Lojban contrasted with English in order of specification</secondary></indexterm> In the English translation, the keywords 
@@ -308,14 +307,9 @@
         <anchor xml:id="c10e3d5"/>
       </title>
       <interlinear-gloss>
-        <jbo>le nanmu ca'uvi ni'ava ri'uvu ne'i</jbo>
-        <gloss>batci le gerku</gloss>
-        <gloss>The man [front] [short] [down] [medium] [right] [long] [within]</gloss>
-        <gloss>bites the dog.</gloss>
-        <gloss>Within a place a long distance to the right of a place which is a medium</gloss>
-        <gloss>distance downward from a place a short distance in front of me,</gloss>
-        <en>the man bites the dog.</en>
-      </interlinear-gloss>
+        <jbo>le nanmu ca'uvi ni'ava ri'uvu ne'i batci le gerku</jbo>
+        <gloss>The man [front] [short] [down] [medium] [right] [long] [within] bites the dog.</gloss>
+        <en>Within a place a long distance to the right of a place which is a medium distance downward from a place a short distance in front of me, the man bites the dog.</en> </interlinear-gloss>
     </example>
     <para>Whew! It's a good thing tense constructs are optional: having to say all that could certainly be painful. Note, however, how much shorter the Lojban version of 
     <xref linkend="example-random-id-mqTU"/> is than the English version.</para>
@@ -415,7 +409,7 @@
         <jbo>le nanmu pu pu batci le gerku</jbo>
         <gloss>The man [past] [past] bites the dog.</gloss>
         <gloss>Earlier than an earlier time than now, the man bit the dog.</gloss>
-        <gloss>The man had bitten the dog.</gloss>
+        <en>The man had bitten the dog.</en>
         <en>The man had been biting the dog.</en>
       </interlinear-gloss>
     </example>
@@ -428,7 +422,7 @@
         <gloss>The man [future] [past] [short] bites the dog.</gloss>
         <gloss>Shortly earlier than some time later than now, the man will bite the dog.</gloss>
         <gloss>Soon before then, the man will have bitten the dog.</gloss>
-        <gloss>The man will have just bitten the dog.</gloss>
+        <en>The man will have just bitten the dog.</en>
         <en>The man will just have been biting the dog.</en>
       </interlinear-gloss>
     </example>
@@ -666,11 +660,11 @@
       </interlinear-gloss>
     </example>
     <para>really means:</para>
-    <programlisting>
+    <place-structure>
        At a moment in the past, and possibly other moments as
        well, the event 
 <quote>I went to the market</quote> was in progress.
-</programlisting>
+</place-structure>
     <para> <indexterm type="general-imported"><primary>tense direction</primary><secondary>implications on scope of event</secondary></indexterm>  <indexterm type="general-imported"><primary>past event</primary><secondary>possible extension into present</secondary></indexterm> The vague or unspecified interval contains an instant in the speaker's past. However, there is no indication whether or not the whole interval is in the speaker's past! It is entirely possible that the interval during which the going-to-the-market is happening stretches into the speaker's present or even future.</para>
     <para> <indexterm type="general-imported"><primary>tense</primary><secondary>Lojban contrasted with English in implications of completeness</secondary></indexterm> 
     <xref linkend="example-random-id-naft"/> points up a fundamental difference between Lojban tenses and English tenses. An English past-tense sentence like 
@@ -778,9 +772,10 @@
     <para> <indexterm type="lojban-word-imported"><primary>MOhI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>mo'i</primary></indexterm>  <indexterm type="general-imported"><primary>movement specification</primary><secondary>interaction with direction in tenses</secondary></indexterm>  <indexterm type="general-imported"><primary>direction</primary><secondary>interaction with movement specification in tenses</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>expressing movement in</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>static contrasted with moving</secondary></indexterm> All the information carried by the tense constructs so far presented has been presumed to be static: the bridi is occurring somewhere or other in space and time, more or less remote from the speaker. Suppose the truth of the bridi itself depends on the result of a movement, or represents an action being done while the speaker is moving? This too can be represented by the tense system, using the cmavo 
     
     <jbophrase>mo'i</jbophrase> (of selma'o MOhI) plus a spatial direction and optional distance; the direction now refers to a direction of motion rather than a static direction from the speaker.</para>
-<para> <indexterm type="example-imported"><primary>toward my right</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>on right</primary><secondary>contrasted with toward right</secondary></indexterm>  <indexterm type="general-imported"><primary>toward right</primary><secondary>contrasted with on right</secondary></indexterm> FIXME: TAG SPOT</para>
+<para><indexterm type="general-imported"><primary>on right</primary><secondary>contrasted with toward right</secondary></indexterm>  <indexterm type="general-imported"><primary>toward right</primary><secondary>contrasted with on right</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-d8yP">
       <title>
+        <indexterm type="example-imported"><primary>toward my right</primary><secondary>example</secondary></indexterm>
         <anchor xml:id="c10e8d1"/>
       </title>
       <interlinear-gloss>
@@ -862,34 +857,79 @@
     <jbophrase>roi</jbophrase></title>
     
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting>
-     di'i    TAhE                regularly
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>di'i</cmavo>
+        <selmaho>TAhE</selmaho>
+        <description>regularly</description>
+      </cmavo-entry>
 
-     na'o    TAhE                typically
+      <cmavo-entry>
+        <cmavo>na'o</cmavo>
+        <selmaho>TAhE</selmaho>
+        <description>typically</description>
+      </cmavo-entry>
 
-     ru'i    TAhE                continuously
+      <cmavo-entry>
+        <cmavo>ru'i</cmavo>
+        <selmaho>TAhE</selmaho>
+        <description>continuously</description>
+      </cmavo-entry>
 
-     ta'e    TAhE                habitually
-
-
-     di'inai TAhE                irregularly
-     na'onai TAhE                atypically
-     ru'inai TAhE                intermittently
-
-     ta'enai TAhE                contrary to habit
-
-     roi     ROI                 
-
-<quote>n</quote> times
-     roinai  ROI                 other than 
-<quote>n</quote> times
-
-     ze'e    ZEhA                whole time interval
+      <cmavo-entry>
+        <cmavo>ta'e</cmavo>
+        <selmaho>TAhE</selmaho>
+        <description>habitually</description>
+      </cmavo-entry>
 
 
-     ve'e    VEhA                whole space interval
+      <cmavo-entry>
+        <cmavo>di'inai</cmavo>
+        <selmaho>TAhE</selmaho>
+        <description>irregularly</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>na'onai</cmavo>
+        <selmaho>TAhE</selmaho>
+        <description>atypically</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ru'inai</cmavo>
+        <selmaho>TAhE</selmaho>
+        <description>intermittently</description>
+      </cmavo-entry>
 
-</programlisting>
+      <cmavo-entry>
+        <cmavo>ta'enai</cmavo>
+        <selmaho>TAhE</selmaho>
+        <description>contrary to habit</description>
+      </cmavo-entry>
+
+      <cmavo-entry>
+        <cmavo>roi</cmavo>
+        <selmaho>ROI</selmaho>
+        <description><quote>n</quote> times</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>roinai</cmavo>
+        <selmaho>ROI</selmaho>
+        <description>other than <quote>n</quote> times</description>
+      </cmavo-entry>
+
+      <cmavo-entry>
+        <cmavo>ze'e</cmavo>
+        <selmaho>ZEhA</selmaho>
+        <description>whole time interval</description>
+      </cmavo-entry>
+
+
+      <cmavo-entry>
+        <cmavo>ve'e</cmavo>
+        <selmaho>VEhA</selmaho>
+        <description>whole space interval</description>
+      </cmavo-entry>
+
+    </cmavo-list>
     <para> <indexterm type="lojban-word-imported"><primary>TAhE selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>intervals</primary><secondary>spread of actions over</secondary></indexterm>  <indexterm type="general-imported"><primary>discrete</primary><secondary>of tense intervals</secondary></indexterm>  <indexterm type="general-imported"><primary>continuous</primary><secondary>of tense intervals</secondary></indexterm> Consider Lojban bridi which express events taking place in time. Whether a very short interval (a point) or a long interval of time is involved, the event may not be spread consistently throughout that interval. Lojban can use the cmavo of selma'o TAhE to express the idea of continuous or non-continuous actions.</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-GCXM">
@@ -1435,11 +1475,7 @@
         <anchor xml:id="c10e11d3"/>
       </title>
       <interlinear-gloss>
-        <jbo>ze'e roroi ve'e fe'e roroi ku</jbo>
-        
-        
-        <gloss>li re su'i re du li vo</gloss>
-        <gloss>[whole time] [all times] [whole space] [space:] [all places]</gloss>
+        <jbo>ze'e roroi ve'e fe'e roroi ku li re su'i re du li vo [whole time] [all times] [whole space] [space:] [all places]</jbo>
         <gloss>The-number 2 + 2 = the-number 4.</gloss>
         <en>Always and everywhere, two plus two is four.</en>
       </interlinear-gloss>
@@ -1520,9 +1556,9 @@
     <para> <indexterm type="general-imported"><primary>imaginary journey</primary><secondary>starting at a different point</secondary></indexterm>  <indexterm type="general-imported"><primary>imaginary journey</primary><secondary>starting point</secondary></indexterm> All of our imaginary journeys so far have started at the speaker's location in space and time. Now we are specifying an imaginary journey that starts at a different location, namely at the event of your going to the house. 
     <xref linkend="example-random-id-4aPT"/> then says that my going to the market is in the past, relative not to the speaker's present moment, but instead relative to the moment when you went to the house. 
     <xref linkend="example-random-id-4aPT"/> can therefore be translated:</para>
-    <programlisting>
+    <place-structure>
        I had gone to the market before you went to the house.
-</programlisting>
+</place-structure>
     <para> <indexterm type="general-imported"><primary>sumti tcita</primary><secondary>based on tense distance</secondary></indexterm>  <indexterm type="general-imported"><primary>tense distance</primary><secondary>as sumti tcita</secondary></indexterm>  <indexterm type="general-imported"><primary>spatial tenses</primary><secondary>as sumti tcita</secondary></indexterm> (Other translations are possible, depending on the ever-present context.) Spatial direction and distance sumti tcita are exactly analogous:</para>
     <example xml:id="example-random-id-qe2C" role="interlinear-gloss-example">
       <title>
@@ -1614,14 +1650,9 @@
         <anchor xml:id="c10e12d10"/>
       </title>
       <interlinear-gloss>
-        <jbo>le bloti pu za'o xelklama</jbo>
-        
-        <gloss>fe'e ba'o le lalxu</gloss>
-        <gloss>The boat [past] [superfective] is-a-transport-mechanism</gloss>
-        <gloss>[space] [perfective] the lake.</gloss>
+        <jbo>le bloti pu za'o xelklama fe'e ba'o le lalxu</jbo>
+        <gloss>The boat [past] [superfective] is-a-transport-mechanism [space] [perfective] the lake.</gloss>
         <en>The boat sailed for too long and beyond the lake.</en>
-        
-        
       </interlinear-gloss>
     </example>
     <para>Probably it sailed up onto the dock. One point of clarification: although 
@@ -1718,14 +1749,12 @@
     <para>Here the second 
     <jbophrase>pu</jbophrase> does not replace the sticky tense, but adds to it, in the sense that the starting point of its imaginary journey is taken to be the previously set sticky time. So the translation of 
     <xref linkend="example-random-id-L9GA"/> is:</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-oJQz">
+    <example xml:id="example-random-id-oJQz">
       <title>
         <anchor xml:id="c10e13d3"/>
       </title>
-      <interlinear-gloss>
-        <jbo>I went to the market. The man had earlier bitten the dog.</jbo>
+        <para>I went to the market. The man had earlier bitten the dog.</para>
         
-      </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>compound tense</primary><secondary>compared with tense in scope of sticky tense</secondary></indexterm>  <indexterm type="general-imported"><primary>tense in scope of sticky tense</primary><secondary>compared with compound tense</secondary></indexterm> and it is equivalent in meaning (when considered in isolation from any other sentences) to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-N5xa">
@@ -1807,9 +1836,9 @@
     <jbophrase>pu</jbophrase>, since only 
     <jbophrase>pu</jbophrase> was made sticky with 
     <jbophrase>ki</jbophrase>. So the translation is:</para>
-    <programlisting>
+    <place-structure>
        I was going to go to the market. The man bit the dog.
-</programlisting>
+</place-structure>
     <para> <indexterm type="general-imported"><primary>sumti with tense</primary><secondary>effect of main bridi tense on</secondary></indexterm>  <indexterm type="general-imported"><primary>embedded bridi tenses</primary><secondary>effect of main bridi tense on</secondary></indexterm>  <indexterm type="general-imported"><primary>tense on main bridi</primary><secondary>effect on embedded sumti with tenses</secondary></indexterm>  <indexterm type="general-imported"><primary>tense on main bridi</primary><secondary>effect on embedded bridi tenses</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>on embedded bridi</secondary></indexterm> Lojban has several ways of embedding a bridi within another bridi: descriptions, abstractors, relative clauses. (Technically, descriptions contain selbri rather than bridi.) Any of the selbri of these subordinate bridi may have tenses attached. These tenses are interpreted relative to the tense of the main bridi:</para>
 <para> <indexterm type="example-imported"><primary>former market</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-yxFP">
@@ -1869,11 +1898,8 @@
         <anchor xml:id="c10e14d1"/>
       </title>
       <interlinear-gloss>
-        <jbo>puzuki ku ne'iki le kevna</jbo>
-        <gloss>le ninmu goi ko'a zutse le rokci</gloss>
-        <gloss>[past] [long] [sticky] [,] [inside] [sticky] the cave,</gloss>
-        
-        <gloss>the woman defined-as she-1 sat-on the rock</gloss>
+        <jbo>puzuki ku ne'iki le kevna le ninmu goi ko'a zutse le rokci</jbo>
+        <gloss>[past] [long] [sticky] [,] [inside] [sticky] the cave, the woman defined-as she-1 sat-on the rock</gloss>
         <en>Long ago, in a cave, a woman sat on a rock.</en>
         
       </interlinear-gloss>
@@ -1972,7 +1998,8 @@
     <xref linkend="example-random-id-qebT"/> and 
     <xref linkend="example-random-id-qeBW"/> are again tenseless, and so happen after 
     <xref linkend="example-random-id-qebJ"/>. (Story time is changed.)</para>
-    <para>So the overall order is 14.1 - 14.3 - 14.2 - 14.4 - (medium interval) - 14.5 - 14.6 - 14.7. It is also possible that 14.3 happens before 14.1.</para>
+    <para>So the overall order is <xref linkend="example-random-id-qE94"/> - <xref linkend="example-random-id-qEa7"/> - <xref linkend="example-random-id-qEa4"/> - <xref linkend="example-random-id-qEao"/> - (medium interval) - <xref linkend="example-random-id-qebJ"/> - <xref linkend="example-random-id-qebT"/> - <xref linkend="example-random-id-qeBW"/>. It is also possible that <xref linkend="example-random-id-qEa7"/> happens before <xref linkend="example-random-id-qE94"/>.</para>
+    <!-- <para>So the overall order is 14.1 - 14.3 - 14.2 - 14.4 - (medium interval) - 14.5 - 14.6 - 14.7. It is also possible that 14.3 happens before 14.1.</para> -->
     <para> <indexterm type="general-imported"><primary>story time</primary><secondary>with no initial sticky time</secondary></indexterm> If no sticky time (or space) is set initially, the story is set at an unspecified time (or space): the effect is like that of choosing an arbitrary reference point and making it sticky. This style is common in stories that are jokes. The same convention may be used if the context specifies the sticky time sufficiently.</para>
     
     
@@ -1982,37 +2009,29 @@
     <para> <indexterm type="general-imported"><primary>subordinate clauses</primary><secondary>tense usage rules in English</secondary></indexterm> English has a set of rules, formally known as 
     <quote>sequence of tense rules</quote>, for determining what tense should be used in a subordinate clause, depending on the tense used in the main sentence. Here are some examples:</para>
     
-    <example xml:id="example-random-id-qECX" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qECX">
       <title>
         <anchor xml:id="c10e15d1"/>
       </title>
-      <interlinear-gloss>
-        <jbo>John says that George is going to the market.</jbo>
-      </interlinear-gloss>
+        <para>John says that George is going to the market.</para>
     </example>
-    <example xml:id="example-random-id-qeds" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qeds">
       <title>
         <anchor xml:id="c10e15d2"/>
       </title>
-      <interlinear-gloss>
-        <jbo>John says that George went to the market.</jbo>
-      </interlinear-gloss>
+        <para>John says that George went to the market.</para>
     </example>
-    <example xml:id="example-random-id-qEE5" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qEE5">
       <title>
         <anchor xml:id="c10e15d3"/>
       </title>
-      <interlinear-gloss>
-        <jbo>John said that George went to the market.</jbo>
-      </interlinear-gloss>
+        <para>John said that George went to the market.</para>
     </example>
-    <example xml:id="example-random-id-qeFQ" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qeFQ">
       <title>
         <anchor xml:id="c10e15d4"/>
       </title>
-      <interlinear-gloss>
-        <jbo>John said that George had gone to the market.</jbo>
-      </interlinear-gloss>
+        <para>John said that George had gone to the market.</para>
     </example>
     <para>In 
     <xref linkend="example-random-id-qECX"/> and 
@@ -2090,11 +2109,8 @@
         <anchor xml:id="c10e15d9"/>
       </title>
       <interlinear-gloss>
-        <jbo>la djan. pu cusku le se du'u la .alis pu cusku le se du'u</jbo>
-        <gloss>la djordj. pu cusku le se du'u la maris. nau klama le zarci</gloss>
-        
-        <gloss>John [past] says the statement-that Alice [past] says the statement-that</gloss>
-        <gloss>George [past] says the statement that Mary [now] goes-to the market.</gloss>
+        <jbo>la djan. pu cusku le se du'u la .alis pu cusku le se du'u la djordj. pu cusku le se du'u la maris. nau klama le zarci</jbo>
+        <gloss>John [past] says the statement-that Alice [past] says the statement-that George [past] says the statement that Mary [now] goes-to the market.</gloss>
         <en>John said that Alice had said that George had earlier said that Mary is now going to the market.</en>
         
       </interlinear-gloss>
@@ -2149,11 +2165,9 @@
         <anchor xml:id="c10e16d3"/>
       </title>
       <interlinear-gloss>
-        <jbo>le nanmu cu batci le gerku</jbo>
-        <gloss>.i zu'a la'edi'u le verba cu cadzu le bisli</gloss>
+        <jbo>le nanmu cu batci le gerku .i zu'a la'edi'u le verba cu cadzu le bisli</jbo>
         
-        <gloss>The man bites the dog.</gloss>
-        <gloss>[Left] the-referent-of-the-last-sentence the child walks-on the ice.</gloss>
+        <gloss>The man bites the dog. [Left] the-referent-of-the-last-sentence the child walks-on the ice.</gloss>
         <en>The man bites the dog. Left of what I just mentioned, the child walks on the ice.</en>
       </interlinear-gloss>
     </example>
@@ -2192,13 +2206,6 @@
     <jbophrase>zu'aku</jbophrase>. 
     <xref linkend="example-random-id-9Q0x"/> makes the origin point of the tense the event described by the first sentence.</para>
     <para> <indexterm type="general-imported"><primary>tense connected sentences</primary><secondary>forethought mode</secondary></indexterm> Two sentences may also be connected in forethought by a tense relationship. Just like afterthought tense connection, forethought tense connection claims both sentences, and in addition claims that the time or space relationship specified by the tense holds between the events the two sentences describe.</para>
-    
-    
-    
-    
-    
-    
-    
     <para> <indexterm type="lojban-word-imported"><primary>gi</primary></indexterm>  <indexterm type="general-imported"><primary>imaginary journey</primary><secondary>origin in tense forethought sentence connection</secondary></indexterm>  <indexterm type="general-imported"><primary>sentences</primary><secondary>forethought tense connection of</secondary></indexterm>  <indexterm type="general-imported"><primary>forethought tense connection of sentences</primary><secondary>order of</secondary></indexterm> The origin sentence is placed first, preceded by a tense plus 
     <jbophrase>gi</jbophrase>. Another 
     <jbophrase>gi</jbophrase> is used to separate the sentences:</para>
@@ -2250,11 +2257,20 @@
     <jbophrase>mi klama le zarci</jbophrase> and 
     <jbophrase>mi klama le zdani</jbophrase> are not claimed; only the relationship in time between them is claimed.</para>
     <para> <indexterm type="general-imported"><primary>tense afterthought connection forms</primary><secondary>selma'o allowed</secondary></indexterm>  <indexterm type="general-imported"><primary>tense forethought connection forms</primary><secondary>selma'o allowed</secondary></indexterm>  <indexterm type="general-imported"><primary>tense connection</primary><secondary>expansions of</secondary></indexterm>  <indexterm type="general-imported"><primary>tense connection</primary><secondary>equivalent meanings</secondary></indexterm> Both the forethought and the afterthought forms are appropriate with PU, ZI, FAhA, VA, and ZAhO tenses. In all cases, the equivalent forms are (where X and Y stand for sentences, and TENSE for a tense cmavo):</para>
-    <programlisting>
-      subordinate:               X TENSE le nu Y
-      afterthought coordinate:   Y .i+TENSE+bo X
-      forethought coordinate:    TENSE+gi X gi Y
-</programlisting>
+    <variablelist>
+      <varlistentry>
+        <term>subordinate:</term>
+        <listitem><para>X TENSE le nu Y</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>afterthought coordinate:</term>
+        <listitem><para>Y .i+TENSE+bo X</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>forethought coordinate:</term>
+        <listitem><para>TENSE+gi X gi Y</para></listitem>
+      </varlistentry>
+    </variablelist>
   </section>
   <section xml:id="section-tense-logical-connection">
     <title>Tensed logical connectives</title>
@@ -2380,12 +2396,9 @@
         <anchor xml:id="c10e17d10"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi bevri le dakli .ije ba tu'e mi bevri le gerku</jbo>
-        <gloss>.ijacabo mi bevri le mlatu tu'u</gloss>
-        <gloss>I carry the sack. And [future] (I carry the dog.</gloss>
-        <gloss>And/or [present] I carry the cat.)</gloss>
-        <gloss>I carry the sack. And then I will carry the dog or I will carry the cat</gloss>
-        <en>or I will carry both at once.</en>
+        <jbo>mi bevri le dakli .ije ba tu'e mi bevri le gerku .ijacabo mi bevri le mlatu tu'u</jbo>
+        <gloss>I carry the sack. And [future] (I carry the dog. And/or [present] I carry the cat.)</gloss>
+        <en>I carry the sack. And then I will carry the dog or I will carry the cat or I will carry both at once.</en>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qeMo" role="interlinear-gloss-example">
@@ -3099,7 +3112,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi nelci do .imu'ibo do nelci mi</jbo>
-        <en>I like you. [That is] Because you like me.</en>
+        <gloss>I like you. [That is] Because you like me.</gloss>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qEWp" role="interlinear-gloss-example">
@@ -3146,17 +3159,17 @@
     </example>
     <para>respectively.</para>
     <para> <indexterm type="general-imported"><primary>modal sentence connection</primary><secondary>table of equivalent schemata</secondary></indexterm> The following modal sentence schemata (where X and Y represent sentences) all have the same meaning:</para>
-    <programlisting>
+    <place-structure>
        X .i BAI bo Y
        BAI gi Y gi X
        X BAI le nu Y
-</programlisting>
+    </place-structure>
     <para> <indexterm type="general-imported"><primary>tense sentence connection</primary><secondary>table of equivalent schemata</secondary></indexterm> whereas the following tensed sentence schemata also have the same meaning:</para>
-    <programlisting>
+    <place-structure>
        X .i TENSE bo Y
        TENSE gi X gi Y
        Y TENSE le nu X
-</programlisting>
+    </place-structure>
     <para>neglecting the question of what is claimed. In the modal sentence schemata, the modal tag is always followed by Y, the sentence representing the event in the x1 place of the gismu that underlies the BAI. In the tensed sentences, no such simple rule exists.</para>
   </section>
   <section xml:id="section-tense-questions">
@@ -3310,10 +3323,8 @@
         <anchor xml:id="c10e25d1"/>
       </title>
       <interlinear-gloss>
-        <jbo>la frank. sanli zu'a nu'i la djordj.</jbo>
-        <gloss>la'u lo mitre be li mu [nu'u]</gloss>
-        <gloss>Frank stands [left] [start termset] George</gloss>
-        <gloss>[quantity] a thing-measuring-in-meters the-number 5 [end termset].</gloss>
+        <jbo>la frank. sanli zu'a nu'i la djordj. la'u lo mitre be li mu [nu'u]</jbo>
+        <gloss>Frank stands [left] [start termset] George [quantity] a thing-measuring-in-meters the-number 5 [end termset].</gloss>
         <en>Frank is standing five meters to the left of George.</en>
       </interlinear-gloss>
     </example>
@@ -3337,10 +3348,8 @@
         <anchor xml:id="c10e25d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>la frank. sanli zu'a nu'i la'u</jbo>
-        <gloss>lo mitre be li mu</gloss>
-        <gloss>Frank stands [left] [termset] [quantity]</gloss>
-        <gloss>a thing-measuring-in-meters the-number 5.</gloss>
+        <jbo>la frank. sanli zu'a nu'i la'u lo mitre be li mu</jbo>
+        <gloss>Frank stands [left] [termset] [quantity] a thing-measuring-in-meters the-number 5.</gloss>
         <en>Frank stands five meters to the left.</en>
       </interlinear-gloss>
     </example>
@@ -3352,86 +3361,217 @@
         <anchor xml:id="c10e26d1"/>
       </title>
       <interlinear-gloss>
-        <jbo>.a'o do pu seju ba roroi ca'o fe'e su'oroi jimpe</jbo>
-        
-        <en>fi le lojbo temci selsku ciste</en>
+        <jbo>.a'o do pu seju ba roroi ca'o fe'e su'oroi jimpe fi le lojbo temci selsku ciste</jbo>
       </interlinear-gloss>
     </example>
   </section>
   <section xml:id="section-summary">
     <title>Summary of tense selma'o</title>
-<para> <indexterm type="general-imported"><primary>tense selma'o</primary><secondary>summary of</secondary></indexterm> FIXME: TAG SPOT</para>
-    
-    <programlisting>
-      PU    temporal direction
-
-
-            pu = past, ca = present, ba = future
-
-      ZI    temporal distance
-            zi = short, za = medium, zu = long
-
-      ZEhA  temporal interval
-            ze'i = short, ze'a = medium, ze'u = long, ze'e = infinite
-
-
-      ROI   objective quantified tense flag
-            noroi = never, paroi = once, ..., roroi = always, etc.
-            pare'u = the first time, rere'u = the second time, etc.
-
-      TAhE  subjective quantified tense
-            di'i = regularly, na'o = typically, ru'i = continuously, ta'e = habitually
-
-
-
-
-
-      ZAhO  event contours
-
-
-            see 
-<xref linkend="section-event-contours"/>
-
-      FAhA  spatial direction
-            see 
-<xref linkend="section-direction-cmavo"/>
-
-      VA    spatial distance
-            vi = short, va = medium, vu = long
-
-      VEhA  spatial interval
-
-            ve'i = short, ve'a = medium, ve'u = long, ve'e = infinite
-
-
-      VIhA  spatial dimensionality
-
-            vi'i = line, vi'a = plane, vi'u = space, vi'e = space-time
-
-
-
-      FEhE  spatial interval modifier flag
-
-            fe'enoroi = nowhere, fe'eroroi = everywhere, fe'eba'o = beyond, etc.
-
-      MOhI  spatial movement flag
-            mo'i = motion; see 
-<xref linkend="section-direction-cmavo"/>
-
-      KI    set or reset sticky tense
-            tense+
-<jbophrase>ki</jbophrase> = set, 
-<jbophrase>ki</jbophrase> alone = reset
-
-      CUhE  tense question, reference point
-            cu'e = asks for a tense or aspect, nau = use speaker's reference point
-
-
-
-      JAI   tense conversion
-
-            jaica = the time of, jaivi = the place of, etc.
-</programlisting>
+    <para> <indexterm type="general-imported"><primary>tense selma'o</primary><secondary>summary of</secondary></indexterm> FIXME: TAG SPOT</para>
+    <varlistentry>
+      <term>PU</term>
+      <listitem>
+        <para>temporal direction</para>
+        <variablelist>
+          <term><jbophrase>pu</jbophrase></term>
+          <listitem><para>past</para></listitem>
+          <term><jbophrase>ca</jbophrase></term>
+          <listitem><para>present</para></listitem>
+          <term><jbophrase>ba</jbophrase></term>
+          <listitem><para>future</para></listitem>
+        </variablelist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>ZI</term>
+      <listitem>
+        <para>temporal distance</para>
+        <variablelist>
+          <term><jbophrase>zi</jbophrase></term>
+          <listitem><para>short</para></listitem>
+          <term><jbophrase>za</jbophrase></term>
+          <listitem><para>medium</para></listitem>
+          <term><jbophrase>zu</jbophrase></term>
+          <listitem><para>long</para></listitem>
+        </variablelist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>ZEhA</term>
+      <listitem>
+        <para>temporal interval</para>
+        <variablelist>
+          <term><jbophrase>ze'i</jbophrase></term>
+          <listitem><para>short</para></listitem>
+          <term><jbophrase>ze'a</jbophrase></term>
+          <listitem><para>medium</para></listitem>
+          <term><jbophrase>ze'u</jbophrase></term>
+          <listitem><para>long</para></listitem>
+          <term><jbophrase>ze'e</jbophrase></term>
+          <listitem><para>infinite</para></listitem>
+        </variablelist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>ROI</term>
+      <listitem>
+        <para>objective quantified tense flag</para>
+        <variablelist>
+          <term><jbophrase>noroi</jbophrase></term>
+          <listitem><para>never</para></listitem>
+          <term><jbophrase>paroi</jbophrase></term>
+          <listitem><para>once</para></listitem>
+          <para>...</para>
+          <term><jbophrase>roroi</jbophrase></term>
+          <listitem><para>always</para></listitem>
+          <para>etc.</para>
+          <term><jbophrase>pare'u</jbophrase></term>
+          <listitem><para>the first time</para></listitem>
+          <term><jbophrase>rere'u</jbophrase></term>
+          <listitem><para>the second time</para></listitem>
+          <para>etc.</para>
+        </variablelist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>TAhE</term>
+      <listitem>
+        <para>subjective quantified tense</para>
+        <variablelist>
+          <term><jbophrase>di'i</jbophrase></term>
+          <listitem><para>regularly</para></listitem>
+          <term><jbophrase>na'o</jbophrase></term>
+          <listitem><para>typically</para></listitem>
+          <term><jbophrase>ru'i</jbophrase></term>
+          <listitem><para>continuously</para></listitem>
+          <term><jbophrase>ta'e</jbophrase></term>
+          <listitem><para>habitually</para></listitem>
+        </variablelist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>ZAhO</term>
+      <listitem>
+        <para>event contours</para>
+        <para>see <xref linkend="section-event-contours"/></para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>FAhA</term>
+      <listitem>
+        <para>spatial direction</para>
+        <para>see <xref linkend="section-direction-cmavo"/></para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>VA</term>
+      <listitem>
+        <para>spatial distance</para>
+        <variablelist>
+          <term><jbophrase>vi</jbophrase></term>
+          <listitem><para>short</para></listitem>
+          <term><jbophrase>va</jbophrase></term>
+          <listitem><para>medium</para></listitem>
+          <term><jbophrase>vu</jbophrase></term>
+          <listitem><para>long</para></listitem>
+        </variablelist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>VEhA</term>
+      <listitem>
+        <para>spatial interval</para>
+        <variablelist>
+          <term><jbophrase>ve'i</jbophrase></term>
+          <listitem><para>short</para></listitem>
+          <term><jbophrase>ve'a</jbophrase></term>
+          <listitem><para>medium</para></listitem>
+          <term><jbophrase>ve'u</jbophrase></term>
+          <listitem><para>long</para></listitem>
+          <term><jbophrase>ve'e</jbophrase></term>
+          <listitem><para>infinite</para></listitem>
+        </variablelist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>VIhA</term>
+      <listitem>
+        <para>spatial dimensionality</para>
+        <variablelist>
+          <term><jbophrase>vi'i</jbophrase></term>
+          <listitem><para>line</para></listitem>
+          <term><jbophrase>vi'a</jbophrase></term>
+          <listitem><para>plane</para></listitem>
+          <term><jbophrase>vi'u</jbophrase></term>
+          <listitem><para>space</para></listitem>
+          <term><jbophrase>vi'e</jbophrase></term>
+          <listitem><para>space-time</para></listitem>
+        </variablelist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>FEhE</term>
+      <listitem>
+        <para>spatial interval modifier flag</para>
+        <variablelist>
+          <term><jbophrase>fe'enoroi</jbophrase></term>
+          <listitem><para>nowhere</para></listitem>
+          <term><jbophrase>fe'eroroi</jbophrase></term>
+          <listitem><para>everywhere</para></listitem>
+          <term><jbophrase>fe'eba'o</jbophrase></term>
+          <listitem><para>beyond</para></listitem>
+          <para>etc.</para>
+        </variablelist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>MOhI</term>
+      <listitem>
+        <para>spatial movement flag</para>
+        <variablelist>
+          <term>mo'i</term>
+          <listitem><para>motion</para></listitem>
+        </variablelist>
+        <para>see <xref linkend="section-direction-cmavo"/></para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>KI</term>
+      <listitem>
+        <para>set or reset sticky tense</para>
+        <variablelist>
+          <term>tense+<jbophrase>ki</jbophrase></term>
+          <listitem><para>set</para></listitem>
+          <term><jbophrase>ki</jbophrase> alone</term>
+          <listitem><para>reset</para></listitem>
+        </variablelist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>CUhE</term>
+      <listitem>
+        <para>tense question, reference point</para>
+        <variablelist>
+          <term><jbophrase>cu'e</jbophrase></term>
+          <listitem><para>asks for a tense or aspect</para></listitem>
+          <term><jbophrase>nau</jbophrase></term>
+          <listitem><para>use speaker's reference point</para></listitem>
+        </variablelist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>JAI</term>
+      <listitem>
+        <para>tense conversion</para>
+        <variablelist>
+          <term><jbophrase>jaica</jbophrase></term>
+          <listitem><para>the time of</para></listitem>
+          <term><jbophrase>jaivi</jbophrase></term>
+          <listitem><para>the place of</para></listitem>
+          <para>etc.</para>
+        </variablelist>
+      </listitem>
+    </varlistentry>
   </section>
   <section xml:id="section-direction-cmavo">
     <title>List of spatial directions and direction-like relations</title>
@@ -3439,31 +3579,154 @@
     <para> <indexterm type="general-imported"><primary>spatial directions</primary><secondary>list of</secondary></indexterm> The following list of FAhA cmavo gives rough English glosses for the cmavo, first when used without 
     <jbophrase>mo'i</jbophrase> to express a direction, and then when used with 
     <jbophrase>mo'i</jbophrase> to express movement in the direction. When possible, the gismu from which the cmavo is derived is also listed.</para>
-    <cmavo-list>ca'u crane in front (of) forwardti'a trixe behind backwardzu'a zunle on the left (of) leftwardga'u gapru above upward(ly)ni'a cnita below downward(ly)ne'i nenri within intoru'u sruri surrounding orbitingpa'o pagre transfixing passing throughne'a next to moving while next to 
-    <cmavo-entry>
-      <cmavo>te'e</cmavo>
-      <selmaho>bordering</selmaho>
-      <description>moving along the border (of)</description>
-    </cmavo-entry> re'o adjacent (to) alongfa'a farna towards arriving atto'o away from departing fromzo'i inward (from) approachingze'o outward (from) receding fromzo'a tangential (to) passing (by)be'a berti north (of) northward(ly)ne'u snanu south (of) southward(ly)du'a stuna east (of) eastward(ly)vu'a west (of) westward(ly)</cmavo-list>
-    
+    <informaltable>
+      <tgroup cols="4">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <thead>
+          <row>
+            <entry>cmavo</entry>
+            <entry>gismu</entry>
+            <entry>without <jbophrase>mo'i</jbophrase></entry>
+            <entry>with <jbophrase>mo'i</jbophrase></entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry><jbophrase>ca'u</jbophrase></entry>
+            <entry><jbophrase>crane</jbophrase></entry>
+            <entry>in front (of)</entry>
+            <entry>forward</entry>
+          </row>
+          <row>
+            <entry><jbophrase>ti'a</jbophrase></entry>
+            <entry><jbophrase>trixe</jbophrase></entry>
+            <entry>behind</entry>
+            <entry>backward</entry>
+          </row>
+          <row>
+            <entry><jbophrase>zu'a</jbophrase></entry>
+            <entry><jbophrase>zunle</jbophrase></entry>
+            <entry>on the left (of)</entry>
+            <entry>leftward</entry>
+          </row>
+          <row>
+            <entry><jbophrase>ga'u</jbophrase></entry>
+            <entry><jbophrase>gapru</jbophrase></entry>
+            <entry>above</entry>
+            <entry>upward(ly)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>ni'a</jbophrase></entry>
+            <entry><jbophrase>cnita</jbophrase></entry>
+            <entry>below</entry>
+            <entry>downward(ly)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>ne'i</jbophrase></entry>
+            <entry><jbophrase>nenri</jbophrase></entry>
+            <entry>within</entry>
+            <entry>into</entry>
+          </row>
+          <row>
+            <entry><jbophrase>ru'u</jbophrase></entry>
+            <entry><jbophrase>sruri</jbophrase></entry>
+            <entry>surrounding</entry>
+            <entry>orbiting</entry>
+          </row>
+          <row>
+            <entry><jbophrase>pa'o</jbophrase></entry>
+            <entry><jbophrase>pagre</jbophrase></entry>
+            <entry>transfixing</entry>
+            <entry>passing through</entry>
+          </row>
+          <row>
+            <entry><jbophrase>ne'a</jbophrase></entry>
+            <entry><para/></entry>
+            <entry>next to</entry>
+            <entry>moving while next to </entry>
+          </row>
+          <row>
+            <entry><jbophrase>te'e</jbophrase></entry>
+            <entry><para/></entry>
+            <entry>bordering</entry>
+            <entry>moving along the border (of)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>re'o</jbophrase></entry>
+            <entry><para/></entry>
+            <entry>adjacent (to)</entry>
+            <entry>along</entry>
+          </row>
+          <row>
+            <entry><jbophrase>fa'a</jbophrase></entry>
+            <entry><jbophrase>farna</jbophrase></entry>
+            <entry>towards</entry>
+            <entry>arriving at</entry>
+          </row>
+          <row>
+            <entry><jbophrase>to'o</jbophrase></entry>
+            <entry><para/></entry>
+            <entry>away from</entry>
+            <entry>departing from</entry>
+          </row>
+          <row>
+            <entry><jbophrase>zo'i</jbophrase></entry>
+            <entry><para/></entry>
+            <entry>inward (from)</entry>
+            <entry>approaching</entry>
+          </row>
+          <row>
+            <entry><jbophrase>ze'o</jbophrase></entry>
+            <entry><para/></entry>
+            <entry>outward (from)</entry>
+            <entry>receding from</entry>
+          </row>
+          <row>
+            <entry><jbophrase>zo'a</jbophrase></entry>
+            <entry><para/></entry>
+            <entry>tangential (to)</entry>
+            <entry>passing (by)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>be'a</jbophrase></entry>
+            <entry><jbophrase>berti</jbophrase></entry>
+            <entry>north (of)</entry>
+            <entry>northward(ly)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>ne'u</jbophrase></entry>
+            <entry><jbophrase>snanu</jbophrase></entry>
+            <entry>south (of)</entry>
+            <entry>southward(ly)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>du'a</jbophrase></entry>
+            <entry><jbophrase>stuna</jbophrase></entry>
+            <entry>east (of)</entry>
+            <entry>eastward(ly)</entry>
+          </row>
+          <row>
+            <entry><jbophrase>vu'a</jbophrase></entry>
+            <entry><para/></entry>
+            <entry>west (of)</entry>
+            <entry>westward(ly)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>    
     <para> <indexterm type="general-imported"><primary>ze'o</primary><secondary>special note on direction orientation</secondary></indexterm>  <indexterm type="general-imported"><primary>zo'i</primary><secondary>special note on direction orientation</secondary></indexterm>  <indexterm type="general-imported"><primary>to'o</primary><secondary>special note on direction orientation</secondary></indexterm>  <indexterm type="general-imported"><primary>fa'a</primary><secondary>special note on direction orientation</secondary></indexterm> Special note on 
     <jbophrase>fa'a</jbophrase>, 
-    
     <jbophrase>to'o</jbophrase>, 
-    
     <jbophrase>zo'i</jbophrase>, and 
-    
     <jbophrase>ze'o</jbophrase>:</para>
-    
     <para>
     <jbophrase>zo'i</jbophrase> and 
-    
     <jbophrase>ze'o</jbophrase> refer to direction towards or away from the speaker's location, or whatever the origin is.</para>
-    
     <para>
     <jbophrase>fa'a</jbophrase> and 
-    
     <jbophrase>to'o</jbophrase> refer to direction towards or away from some other point.</para>
-    
   </section>
 </chapter>
