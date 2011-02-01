@@ -1,6 +1,6 @@
 <chapter xml:id="chapter-tenses">
   <title>Imaginary Journeys: The Lojban Space/Time Tense System</title>
-  <section xml:id="cll_chapter10-section1">
+  <section xml:id="section-introduction">
     <title>Introductory</title>
     <para> <indexterm type="general-imported"><primary>tense</primary><secondary>explanation of presentation method</secondary></indexterm> This chapter attempts to document and explain the space/time tense system of Lojban. It does not attempt to answer all questions of the form 
     
@@ -10,15 +10,12 @@
     <para> <indexterm type="general-imported"><primary>temporal tense</primary><secondary>Lojban contrasted with English in necessity</secondary></indexterm>  <indexterm type="general-imported"><primary>temporal tense</primary><secondary>as mandatory in English</secondary></indexterm>  <indexterm type="general-imported"><primary>temporal tense</primary><secondary>real relationship to time in English</secondary></indexterm>  <indexterm type="general-imported"><primary>temporal tense</primary><secondary>historical definition</secondary></indexterm> What is 
     <quote>tense</quote>? Historically, 
     <quote>tense</quote> is the attribute of verbs in English and related languages that expresses the time of the action. In English, three tenses are traditionally recognized, conventionally called the past, the present, and the future. There are also a variety of compound tenses used in English. However, there is no simple relationship between the form of an English tense and the time actually expressed:</para>
-    
-    <programlisting xml:space="preserve">
-       I go to London tomorrow.
+    <!-- FIXME: should these be in an <example>? if so, will any random id work? -->
+    <para>I go to London tomorrow.</para>
 
-       I will go to London tomorrow.
+    <para>I will go to London tomorrow.</para>
 
-       I am going to London tomorrow.
-
-</programlisting>
+    <para>I am going to London tomorrow.</para>
     <para>all mean the same thing, even though the first sentence uses the present tense; the second, the future tense; and the third, a compound tense usually called 
     
     
@@ -32,21 +29,20 @@
       </title>
       <interlinear-gloss>
         <jbo>mi klama le zarci</jbo>
-        <en>I go-to the market.</en>
+        <gloss>I go-to the market.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>go to market</primary><secondary>example</secondary></indexterm> can be understood as:</para>
-    <programlisting xml:space="preserve">
-      I went to the market.
-      I am going to the market.
-      I have gone to the market.
-      I will go to the market.
-      I continually go to the market.
-</programlisting>
+    <!-- FIXME: should these be in an <example>? if so, will any random id work? -->
+    <para>I went to the market.</para>
+    <para>I am going to the market.</para>
+    <para>I have gone to the market.</para>
+    <para>I will go to the market.</para>
+    <para>I continually go to the market.</para>
     <para>as well as many other possibilities: context resolves which is correct.</para>
     <para> <indexterm type="lojban-word-imported"><primary>cu</primary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>effect of tense specification</secondary></indexterm>  <indexterm type="general-imported"><primary>tense specification</primary><secondary>effect on elidability of terminators</secondary></indexterm>  <indexterm type="general-imported"><primary>tense specification</primary><secondary>effect on &quot;cu&quot;</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>position of in sentence</secondary></indexterm> The placement of a tense construct within a Lojban bridi is easy: right before the selbri. It goes immediately after the 
-    <quote>cu</quote>, and can in fact always replace the 
-    <quote>cu</quote> (although in very complex sentences the rules for eliding terminators may be changed as a result). In the following examples, 
+    <jbophrase>cu</jbophrase>, and can in fact always replace the 
+    <jbophrase>cu</jbophrase> (although in very complex sentences the rules for eliding terminators may be changed as a result). In the following examples, 
     <jbophrase>pu</jbophrase> is the tense marker for 
     <quote>past time</quote>:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-nFgv">
@@ -54,15 +50,14 @@
         <anchor xml:id="c10e1d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi cu pu klama le zarci</jbo>
-        <gloss>mi pu klama le zarci</gloss>
+        <jbo>mi cu pu klama le zarci mi pu klama le zarci</jbo>
         <gloss>I in-the-past go-to the market.</gloss>
         <en>I went to the market.</en>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>ku</primary></indexterm>  <indexterm type="general-imported"><primary>ku</primary><secondary>with tense</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>with ku</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>position in sentence alternative</secondary></indexterm> It is also possible to put the tense somewhere else in the bridi by adding 
-    <quote>ku</quote> after it. This 
-    <quote>ku</quote> is an elidable terminator, but it's almost never possible to actually elide it except at the end of the bridi:</para>
+    <jbophrase>ku</jbophrase> after it. This 
+    <jbophrase>ku</jbophrase> is an elidable terminator, but it's almost never possible to actually elide it except at the end of the bridi:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-5V3Y">
       <title>
         <anchor xml:id="c10e1d3"/>
@@ -100,7 +95,7 @@
     <xref linkend="example-random-id-0f11"/> exhibit, adds emphasis to the words that have been moved; in this case, the tense cmavo 
     <jbophrase>pu</jbophrase>. Words at either end of the sentence tend to be more noticeable.</para>
   </section>
-  <section xml:id="cll_chapter10-section2">
+  <section xml:id="section-spatial-tenses">
     <title>Spatial tenses: FAhA and VA</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -157,13 +152,13 @@
       </cmavo-entry>
     </cmavo-list>
     <para>(The complete list of FAhA cmavo can be found in 
-    <xref linkend="cll_chapter10-section27"/>.)</para>
+    <xref linkend="section-summary"/>.)</para>
     <para>Why is this section about spatial tenses rather than the more familiar time tenses of 
     
-    <xref linkend="cll_chapter10-section1"/>, asks the reader? Because the model to be used in explaining both will be easier to grasp for space than for time. The explanation of time tenses will resume in 
+    <xref linkend="section-introduction"/>, asks the reader? Because the model to be used in explaining both will be easier to grasp for space than for time. The explanation of time tenses will resume in 
     
     
-    <xref linkend="cll_chapter10-section4"/>.</para>
+    <xref linkend="section-temporal-tenses"/>.</para>
     <para> <indexterm type="general-imported"><primary>temporal tense elision</primary><secondary>compared with spatial tense elision in meaning</secondary></indexterm>  <indexterm type="general-imported"><primary>temporal tense</primary><secondary>compared with spatial tense in elidability</secondary></indexterm>  <indexterm type="general-imported"><primary>spatial tense</primary><secondary>compared with temporal tense in elidability</secondary></indexterm>  <indexterm type="general-imported"><primary>spatial tense</primary><secondary>as optional in English</secondary></indexterm> English doesn't have mandatory spatial tenses. Although there are plenty of ways in English of showing where an event happens, there is absolutely no need to do so. Considering this fact may give the reader a feel for what the optional Lojban time tenses are like. From the Lojban point of view, space and time are interchangeable, although they are not treated identically.</para>
     
     <para> <indexterm type="lojban-word-imported"><primary>VA selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>FAhA selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>spatial tense</primary><secondary>distance</secondary></indexterm>  <indexterm type="general-imported"><primary>distance</primary><secondary>specification with VA</secondary></indexterm>  <indexterm type="general-imported"><primary>VA selma'o</primary><secondary>and distance</secondary></indexterm>  <indexterm type="general-imported"><primary>spatial tense</primary><secondary>as an imaginary journey</secondary></indexterm>  <indexterm type="general-imported"><primary>imaginary journey</primary><secondary>and spatial tense</secondary></indexterm>  <indexterm type="general-imported"><primary>spatial tense</primary><secondary>definition</secondary></indexterm> Lojban specifies the spatial tense of a bridi (the place at which it occurs) by using words from selma'o FAhA and VA to describe an imaginary journey from the speaker to the place referred to. FAhA cmavo specify the direction taken in the journey, whereas VA cmavo specify the distance gone. For example:</para>
@@ -195,7 +190,7 @@
     </example>
     <para>Here the imaginary journey is again from the speaker's location to the location of the bridi, but it is now performed by going to the left (in the speaker's reference frame) for an unspecified distance. So a reasonable translation is:</para>
     
-    <programlisting xml:space="preserve">
+    <programlisting>
        To my left, the man bites the dog.
 </programlisting>
     <para>The 
@@ -225,8 +220,8 @@
       </interlinear-gloss>
     </example>
     <para>As explained in 
-    <xref linkend="cll_chapter10-section1"/>, it would be perfectly correct to use 
-    <quote>ku</quote> to move this tense to the beginning or the end of the sentence to emphasize it:</para>
+    <xref linkend="section-introduction"/>, it would be perfectly correct to use 
+    <jbophrase>ku</jbophrase> to move this tense to the beginning or the end of the sentence to emphasize it:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-uCGa">
       <title>
         <anchor xml:id="c10e2d4"/>
@@ -238,7 +233,7 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter10-section3">
+  <section xml:id="section-compound-spatial-tenses">
     <title>Compound spatial tenses</title>
     <para> <indexterm type="general-imported"><primary>compound tense</primary><secondary>definition</secondary></indexterm> Humph, says the reader: this talk of 
     <quote>imaginary journeys</quote> is all very well, but what's the point of it? - 
@@ -260,7 +255,7 @@
     </example>
     <para> <indexterm type="example-imported"><primary>manhole</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>imaginary journey</primary><secondary>stages of in compound tenses</secondary></indexterm>  <indexterm type="general-imported"><primary>compound spatial tense</primary><secondary>explanation of</secondary></indexterm> The proper interpretation of 
     <xref linkend="example-random-id-rWtP"/> is that the imaginary journey has two stages: first move from the speaker's location upward, and then to the left. A translation might read:</para>
-    <programlisting xml:space="preserve">
+    <programlisting>
        Left of a place above me, the man bites the dog.
 </programlisting>
     <para>(Perhaps the speaker is at the bottom of a manhole, and the dog-biting is going on at the edge of the street.)</para>
@@ -325,7 +320,7 @@
     <para>Whew! It's a good thing tense constructs are optional: having to say all that could certainly be painful. Note, however, how much shorter the Lojban version of 
     <xref linkend="example-random-id-mqTU"/> is than the English version.</para>
   </section>
-  <section xml:id="cll_chapter10-section4">
+  <section xml:id="section-temporal-tenses">
     <title>Temporal tenses: PU and ZI</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -381,13 +376,13 @@
     <jbophrase>purci</jbophrase>, 
     <jbophrase>cabna</jbophrase>, and 
     <jbophrase>balvi</jbophrase>. See 
-    <xref linkend="cll_chapter10-section23"/> for an explanation of the exact relationship between the cmavo and the gismu.) There are many more spatial directions, since there are FAhA cmavo for both absolute and relative directions as well as 
+    <xref linkend="section-tenses-vs-modals"/> for an explanation of the exact relationship between the cmavo and the gismu.) There are many more spatial directions, since there are FAhA cmavo for both absolute and relative directions as well as 
     
     <quote>direction-like relationships</quote> like 
     <quote>surrounding</quote>, 
     <quote>within</quote>, 
     <quote>touching</quote>, etc. (See 
-    <xref linkend="cll_chapter10-section27"/> for a complete list.) But there are really only two directions in time: forward and backward, toward the future and toward the past. Why, then, are there three cmavo of selma'o PU?</para>
+    <xref linkend="section-summary"/> for a complete list.) But there are really only two directions in time: forward and backward, toward the future and toward the past. Why, then, are there three cmavo of selma'o PU?</para>
     <para> <indexterm type="lojban-word-imported"><primary>bu'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ca</primary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>as subjective perception</secondary></indexterm>  <indexterm type="general-imported"><primary>bu'u</primary><secondary>compared with ca</secondary></indexterm>  <indexterm type="general-imported"><primary>ca</primary><secondary>compared with bu'u</secondary></indexterm>  <indexterm type="general-imported"><primary>ca</primary><secondary>rational for</secondary></indexterm> The reason is that tense is subjective: human beings perceive space and time in a way that does not necessarily agree with objective measurements. We have a sense of 
     
     <quote>now</quote> which includes part of the objective past and part of the objective future, and so we naturally segment the time line into three parts. The Lojban design recognizes this human reality by providing a separate time-direction cmavo for the 
@@ -493,7 +488,7 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter10-section5">
+  <section xml:id="section-interval-sizes">
     <title>Interval sizes: VEhA and ZEhA</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -655,11 +650,11 @@
     </example>
     <para>Here the space interval occupied by the fish extends from a point on my right to another point in front of the first point.</para>
   </section>
-  <section xml:id="cll_chapter10-section6">
+  <section xml:id="section-vagueness">
     <title>Vague intervals and non-specific tenses</title>
     <para> <indexterm type="general-imported"><primary>interval size</primary><secondary>vague</secondary></indexterm>  <indexterm type="general-imported"><primary>interval size</primary><secondary>unspecified</secondary></indexterm> What is the significance of failing to specify an interval size of the type discussed in 
     
-    <xref linkend="cll_chapter10-section5"/>? The Lojban rule is that if no interval size is given, the size of the space or time interval is left vague by the speaker. For example:</para>
+    <xref linkend="section-interval-sizes"/>? The Lojban rule is that if no interval size is given, the size of the space or time interval is left vague by the speaker. For example:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-naft">
       <title>
@@ -667,11 +662,11 @@
       </title>
       <interlinear-gloss>
         <jbo>mi pu klama le zarci</jbo>
-        <en>I [past] go-to the market.</en>
+        <gloss>I [past] go-to the market.</gloss>
       </interlinear-gloss>
     </example>
     <para>really means:</para>
-    <programlisting xml:space="preserve">
+    <programlisting>
        At a moment in the past, and possibly other moments as
        well, the event 
 <quote>I went to the market</quote> was in progress.
@@ -697,12 +692,12 @@
     </example>
     <para> <indexterm type="general-imported"><primary>future event</primary><secondary>possible extension into present</secondary></indexterm> does not imply (as the colloquial English translation does) that the tree is not green now. The vague interval throughout which the tree is, in fact, green may have already started.</para>
     <para>This general principle does not mean that Lojban has no way of indicating that a tree will be green but is not yet green. Indeed, there are several ways of expressing that concept: see 
-    <xref linkend="cll_chapter10-section10"/> (event contours) and 
+    <xref linkend="section-event-contours"/> (event contours) and 
     
     
-    <xref linkend="cll_chapter10-section20"/> (logical connection between tenses).</para>
+    <xref linkend="section-connected-tenses"/> (logical connection between tenses).</para>
   </section>
-  <section xml:id="cll_chapter10-section7">
+  <section xml:id="section-dimensionality">
     <title>Dimensionality: VIhA</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -770,7 +765,7 @@
     <jbophrase>vi'e</jbophrase> interval, the resulting tense may be self-contradictory.</para>
     
   </section>
-  <section xml:id="cll_chapter10-section8">
+  <section xml:id="section-movement">
     <title>Movement in space: MOhI</title>
     <para>The following cmavo is discussed in this section:</para>
     <cmavo-list>
@@ -782,7 +777,7 @@
     </cmavo-list>
     <para> <indexterm type="lojban-word-imported"><primary>MOhI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>mo'i</primary></indexterm>  <indexterm type="general-imported"><primary>movement specification</primary><secondary>interaction with direction in tenses</secondary></indexterm>  <indexterm type="general-imported"><primary>direction</primary><secondary>interaction with movement specification in tenses</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>expressing movement in</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>static contrasted with moving</secondary></indexterm> All the information carried by the tense constructs so far presented has been presumed to be static: the bridi is occurring somewhere or other in space and time, more or less remote from the speaker. Suppose the truth of the bridi itself depends on the result of a movement, or represents an action being done while the speaker is moving? This too can be represented by the tense system, using the cmavo 
     
-    <quote>mo'i</quote> (of selma'o MOhI) plus a spatial direction and optional distance; the direction now refers to a direction of motion rather than a static direction from the speaker.</para>
+    <jbophrase>mo'i</jbophrase> (of selma'o MOhI) plus a spatial direction and optional distance; the direction now refers to a direction of motion rather than a static direction from the speaker.</para>
 <para> <indexterm type="example-imported"><primary>toward my right</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>on right</primary><secondary>contrasted with toward right</secondary></indexterm>  <indexterm type="general-imported"><primary>toward right</primary><secondary>contrasted with on right</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-d8yP">
       <title>
@@ -830,8 +825,8 @@
     <xref linkend="chapter-sumti-tcita"/>), and allows specifying a reference frame.</para>
     
     <para> <indexterm type="general-imported"><primary>tense</primary><secondary>order of movement specification in</secondary></indexterm>  <indexterm type="general-imported"><primary>movement</primary><secondary>order in tense constructs</secondary></indexterm> Both a regular and a 
-    <quote>mo'i</quote>-flagged spatial tense can be combined, with the 
-    <quote>mo'i</quote> construct coming last:</para>
+    <jbophrase>mo'i</jbophrase>-flagged spatial tense can be combined, with the 
+    <jbophrase>mo'i</jbophrase> construct coming last:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-fusc">
       <title>
         <anchor xml:id="c10e8d4"/>
@@ -845,7 +840,7 @@
     </example>
     <para> <indexterm type="general-imported"><primary>movement</primary><secondary>with multiple directions</secondary></indexterm>  <indexterm type="general-imported"><primary>directions</primary><secondary>multiple with movement</secondary></indexterm>  <indexterm type="general-imported"><primary>complex movements</primary><secondary>expressing</secondary></indexterm> It is not grammatical to use multiple directions like 
     <jbophrase>zu'a ca'u</jbophrase> after 
-    <quote>mo'i</quote>, but complex movements can be expressed in a separate bridi.</para>
+    <jbophrase>mo'i</jbophrase>, but complex movements can be expressed in a separate bridi.</para>
     
     <para>Here is an example of a movement tense on a bridi not inherently involving movement:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Avnq">
@@ -862,12 +857,12 @@
     <para> <indexterm type="general-imported"><primary>time travel</primary></indexterm>  <indexterm type="general-imported"><primary>movement</primary><secondary>time</secondary></indexterm> There is no parallel facility in Lojban at present for expressing movement in time - time travel - but one could be added easily if it ever becomes useful.</para>
     
   </section>
-  <section xml:id="cll_chapter10-section9">
+  <section xml:id="section-interval-properties">
     <title>Interval properties: TAhE and 
-    <quote>roi</quote></title>
+    <jbophrase>roi</jbophrase></title>
     
     <para>The following cmavo are discussed in this section:</para>
-    <programlisting xml:space="preserve">
+    <programlisting>
      di'i    TAhE                regularly
 
      na'o    TAhE                typically
@@ -957,7 +952,7 @@
     <para> <indexterm type="lojban-word-imported"><primary>nai</primary></indexterm>  <indexterm type="example-imported"><primary>intermittently</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>interval spread</primary><secondary>expressing English &quot;intermittently&quot;</secondary></indexterm> 
     <quote>Intermittently</quote> is the polar opposite notion to 
     <quote>continuously</quote>, and is expressed not with its own cmavo, but by adding the negation suffix 
-    <quote>-nai</quote> (which belongs to selma'o NAI) to 
+    <jbophrase>-nai</jbophrase> (which belongs to selma'o NAI) to 
     <jbophrase>ru'i</jbophrase>. For example:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-mvdN">
@@ -972,11 +967,11 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>interval spread</primary><secondary>negation with nai</secondary></indexterm> As shown in the cmavo table above, all the cmavo of TAhE may be negated with 
-    <quote>-nai</quote>; 
+    <jbophrase>-nai</jbophrase>; 
     <jbophrase>ru'inai</jbophrase> and 
     <jbophrase>di'inai</jbophrase> are probably the most useful.</para>
     <para> <indexterm type="lojban-word-imported"><primary>ROI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>roi</primary></indexterm>  <indexterm type="example-imported"><primary>once</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>quantified</secondary></indexterm>  <indexterm type="general-imported"><primary>quantified temporal tense</primary><secondary>definition</secondary></indexterm> An intermittent event can also be specified by counting the number of times during the interval that it takes place. The cmavo 
-    <quote>roi</quote> (which belongs to selma'o ROI) can be appended to a number to make a quantified tense. Quantified tenses are common in English, but not so commonly named: they are exemplified by the adverbs 
+    <jbophrase>roi</jbophrase> (which belongs to selma'o ROI) can be appended to a number to make a quantified tense. Quantified tenses are common in English, but not so commonly named: they are exemplified by the adverbs 
     
     
     <quote>never</quote>, 
@@ -987,7 +982,7 @@
     <quote>many times</quote>, 
     <quote>a few times</quote>, 
     <quote>too many times</quote>, and so on. All of these are handled in Lojban by a number plus 
-    <quote>-roi</quote>:</para>
+    <jbophrase>-roi</jbophrase>:</para>
     
     <example xml:id="example-random-id-qdW2" role="interlinear-gloss-example">
       <title>
@@ -1022,8 +1017,8 @@
     </example>
     <para> <indexterm type="general-imported"><primary>quantified temporal tense with direction</primary><secondary>Lojban contrasted with English in implications</secondary></indexterm> The English is slightly over-specific here: it entails that both goings-to-the-market were in the past, which may or may not be true in the Lojban sentence, since the implied interval is vague. Therefore, the interval may start in the past but extend into the present or even the future.</para>
     <para> <indexterm type="general-imported"><primary>quantified temporal tense</primary><secondary>negating with nai</secondary></indexterm> Adding 
-    <quote>-nai</quote> to 
-    <quote>roi</quote> is also permitted, and has the meaning 
+    <jbophrase>-nai</jbophrase> to 
+    <jbophrase>roi</jbophrase> is also permitted, and has the meaning 
     
     <quote>other than (the number specified)</quote>:</para>
 <para> <indexterm type="example-imported"><primary>rat eats cheese</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
@@ -1054,7 +1049,7 @@
       <interlinear-gloss>
         <jbo>mi ze'e paroi klama le zarci</jbo>
         
-        <en>I [whole interval] [once] go-to the market.</en>
+        <gloss>I [whole interval] [once] go-to the market.</gloss>
       </interlinear-gloss>
     </example>
     <para>Since specifying no ZEhA leaves the interval vague, 
@@ -1091,11 +1086,11 @@
     <jbophrase>ve'e</jbophrase>, and it can be used in the same way with a quantified space tense: see 
     
     
-    <xref linkend="cll_chapter10-section11"/> for an explanation of space interval modifiers.</para>
+    <xref linkend="section-fehe"/> for an explanation of space interval modifiers.</para>
   </section>
-  <section xml:id="cll_chapter10-section10">
+  <section xml:id="section-event-contours">
     <title>Event contours: ZAhO and 
-    <quote>re'u</quote></title>
+    <jbophrase>re'u</jbophrase></title>
     
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -1212,7 +1207,7 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>finished</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>continues</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>on verge</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>tense direction</primary><secondary>contrasted with event contours in implication of extent</secondary></indexterm>  <indexterm type="general-imported"><primary>event contours</primary><secondary>contrasted with tense direction in implication of extent</secondary></indexterm>  <indexterm type="general-imported"><primary>event contours</primary><secondary>implications on scope of event</secondary></indexterm>  <indexterm type="general-imported"><primary>event contours</primary><secondary>perfective</secondary></indexterm>  <indexterm type="general-imported"><primary>event contours</primary><secondary>continuitive</secondary></indexterm>  <indexterm type="general-imported"><primary>event contours</primary><secondary>inchoative</secondary></indexterm> As discussed in 
-    <xref linkend="cll_chapter10-section6"/>, the simple PU cmavo make no assumptions about whether the scope of a past, present, or future event extends into one of the other tenses as well. 
+    <xref linkend="section-vagueness"/>, the simple PU cmavo make no assumptions about whether the scope of a past, present, or future event extends into one of the other tenses as well. 
     
     <xref linkend="example-random-id-qdwz"/> through 
     <xref linkend="example-random-id-qdxB"/> illustrate that these ZAhO cmavo do make such assumptions possible: the event in 10.1 has not yet begun, definitively; likewise, the event in 10.3 is definitely over.</para>
@@ -1360,7 +1355,7 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>ROI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>re'u</primary></indexterm>  <indexterm type="general-imported"><primary>cycles</primary></indexterm>  <indexterm type="general-imported"><primary>ordinal tense</primary></indexterm> Finally, since an activity is cyclical, an individual cycle can be referred to using a number followed by 
-    <quote>re'u</quote>, which is the other cmavo of selma'o ROI:</para>
+    <jbophrase>re'u</jbophrase>, which is the other cmavo of selma'o ROI:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-msrS">
       <title>
@@ -1395,7 +1390,7 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter10-section11">
+  <section xml:id="section-fehe">
     <title>Space interval modifiers: FEhE</title>
     <para>The following cmavo is discussed in this section:</para>
     <cmavo-list>
@@ -1408,7 +1403,7 @@
     <para> <indexterm type="lojban-word-imported"><primary>FEhE selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>fe'e</primary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>order of spatial interval modifiers in </secondary></indexterm>  <indexterm type="general-imported"><primary>spatial interval modifiers</primary><secondary>order in tense</secondary></indexterm>  <indexterm type="general-imported"><primary>spatial intervals</primary><secondary>expressing degree of continuity over</secondary></indexterm>  <indexterm type="general-imported"><primary>space intervals</primary><secondary>compared with time intervals in continuity</secondary></indexterm> Like time intervals, space intervals can also be continuous, discontinuous, or repetitive. Rather than having a whole separate set of selma'o for space interval properties, we instead prefix the flag 
     
     
-    <quote>fe'e</quote> to the cmavo used for time interval properties. A space interval property would be placed just after the space interval size and/or dimensionality cmavo:</para>
+    <jbophrase>fe'e</jbophrase> to the cmavo used for time interval properties. A space interval property would be placed just after the space interval size and/or dimensionality cmavo:</para>
     
     
     
@@ -1453,7 +1448,7 @@
     <xref linkend="example-random-id-qE1z"/>, when a tense comes first in a bridi, rather than in its normal position before the selbri (in this case 
     <jbophrase>du</jbophrase>), it is emphasized.</para>
     <para> <indexterm type="lojban-word-imported"><primary>be'a</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ZAhO selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>fe'e</primary></indexterm>  <indexterm type="general-imported"><primary>spatial contours</primary><secondary>expressing</secondary></indexterm> The 
-    <quote>fe'e</quote> marker can also be used for the same purpose before members of ZAhO. (The cmavo 
+    <jbophrase>fe'e</jbophrase> marker can also be used for the same purpose before members of ZAhO. (The cmavo 
     <jbophrase>be'a</jbophrase> belongs to selma'o FAhA; it is the space direction meaning 
     
     <quote>north of</quote>.)</para>
@@ -1475,7 +1470,7 @@
     <jbophrase>co'a</jbophrase> is transferred from 
     <quote>beginning in time</quote> to 
     <quote>beginning in space</quote> under the influence of the 
-    <quote>fe'e</quote> flag. Space is not inherently oriented, unlike time, which flows from past to future: therefore, some indication of orientation is necessary, and the 
+    <jbophrase>fe'e</jbophrase> flag. Space is not inherently oriented, unlike time, which flows from past to future: therefore, some indication of orientation is necessary, and the 
     <jbophrase>ve'abe'a</jbophrase> provides an orientation in which the south face is the 
     
     <quote>beginning</quote> and the north face is the 
@@ -1483,12 +1478,12 @@
     <para> <indexterm type="general-imported"><primary>FAhA selma'o</primary><secondary>use in specifying space/time mapping direction</secondary></indexterm>  <indexterm type="general-imported"><primary>space/time metaphor</primary><secondary>expressing direction mapping for</secondary></indexterm>  <indexterm type="general-imported"><primary>space</primary><secondary>as time-based metaphor</secondary></indexterm>  <indexterm type="general-imported"><primary>time</primary><secondary>as space-based metaphor</secondary></indexterm> Many natural languages represent time by a space-based metaphor: in English, what is past is said to be 
     <quote>behind us</quote>. In other languages, the metaphor is reversed. Here, Lojban is representing space (or space interval modifiers) by a time-based metaphor: the choice of a FAhA cmavo following a VEhA cmavo indicates which direction is mapped onto the future. (The choice of future rather than past is arbitrary, but convenient for English-speakers.)</para>
     <para> <indexterm type="general-imported"><primary>fe'e</primary><secondary>effect of TAhE/ROI with ZAhO on</secondary></indexterm>  <indexterm type="general-imported"><primary>ZAhO selma'o</primary><secondary>effect on fe'e flag for TAhE and ROI</secondary></indexterm>  <indexterm type="general-imported"><primary>ROI selma'o</primary><secondary>effect of ZAhO on fe'e flag</secondary></indexterm>  <indexterm type="general-imported"><primary>TAhE selma'o</primary><secondary>effect of ZAhO on fe'e flag</secondary></indexterm> If both a TAhE (or ROI) and a ZAhO are present as space interval modifiers, the 
-    <quote>fe'e</quote> flag must be prefixed to each.</para>
+    <jbophrase>fe'e</jbophrase> flag must be prefixed to each.</para>
   </section>
-  <section xml:id="cll_chapter10-section12">
+  <section xml:id="section-tcita">
     <title>Tenses as sumti tcita</title>
     <para> <indexterm type="general-imported"><primary>argument tags</primary><secondary>based on tenses (see also sumti tcita)</secondary></indexterm>  <indexterm type="general-imported"><primary>sumti tcita</primary><secondary>based on tenses</secondary></indexterm>  <indexterm type="general-imported"><primary>temporal information</primary><secondary>adding to a sentence with tense sumti tcita</secondary></indexterm>  <indexterm type="general-imported"><primary>spatial information</primary><secondary>adding to a sentence with tense sumti tcita</secondary></indexterm>  <indexterm type="general-imported"><primary>tenses</primary><secondary>use as sumti tcita</secondary></indexterm> So far, we have seen tenses only just before the selbri, or (equivalently in meaning) floating about the bridi with 
-    <quote>ku</quote>. There is another major use for tenses in Lojban: as sumti tcita, or argument tags. A tense may be used to add spatial or temporal information to a bridi as, in effect, an additional place:</para>
+    <jbophrase>ku</jbophrase>. There is another major use for tenses in Lojban: as sumti tcita, or argument tags. A tense may be used to add spatial or temporal information to a bridi as, in effect, an additional place:</para>
     
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-v761">
@@ -1503,8 +1498,8 @@
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>ca</primary></indexterm>  <indexterm type="general-imported"><primary>sumti tcita</primary><secondary>based on tense direction</secondary></indexterm>  <indexterm type="general-imported"><primary>tense direction</primary><secondary>as sumti tcita</secondary></indexterm>  <indexterm type="general-imported"><primary>ca</primary><secondary>meaning as a sumti tcita</secondary></indexterm> Here 
     <jbophrase>ca</jbophrase> does not appear before the selbri, nor with 
-    <quote>ku</quote>; instead, it governs the following sumti, the 
-    <quote>le nu</quote> construct. What 
+    <jbophrase>ku</jbophrase>; instead, it governs the following sumti, the 
+    <jbophrase>le nu</jbophrase> construct. What 
     <xref linkend="example-random-id-v761"/> asserts is that the action of the main bridi is happening at the same time as the event mentioned by that sumti. So 
     <jbophrase>ca</jbophrase>, which means 
     <quote>now</quote> when used with a selbri, means 
@@ -1516,7 +1511,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi klama le zarci pu le nu do pu klama le zdani</jbo>
-        <en>I go-to the market [past] the event-of you [past] go-to the house.</en>
+        <gloss>I go-to the market [past] the event-of you [past] go-to the house.</gloss>
       </interlinear-gloss>
     </example>
     <para>The second 
@@ -1525,7 +1520,7 @@
     <para> <indexterm type="general-imported"><primary>imaginary journey</primary><secondary>starting at a different point</secondary></indexterm>  <indexterm type="general-imported"><primary>imaginary journey</primary><secondary>starting point</secondary></indexterm> All of our imaginary journeys so far have started at the speaker's location in space and time. Now we are specifying an imaginary journey that starts at a different location, namely at the event of your going to the house. 
     <xref linkend="example-random-id-4aPT"/> then says that my going to the market is in the past, relative not to the speaker's present moment, but instead relative to the moment when you went to the house. 
     <xref linkend="example-random-id-4aPT"/> can therefore be translated:</para>
-    <programlisting xml:space="preserve">
+    <programlisting>
        I had gone to the market before you went to the house.
 </programlisting>
     <para> <indexterm type="general-imported"><primary>sumti tcita</primary><secondary>based on tense distance</secondary></indexterm>  <indexterm type="general-imported"><primary>tense distance</primary><secondary>as sumti tcita</secondary></indexterm>  <indexterm type="general-imported"><primary>spatial tenses</primary><secondary>as sumti tcita</secondary></indexterm> (Other translations are possible, depending on the ever-present context.) Spatial direction and distance sumti tcita are exactly analogous:</para>
@@ -1563,7 +1558,7 @@
     <para> <indexterm type="lojban-word-imported"><primary>fe'e</primary></indexterm>  <indexterm type="example-imported"><primary>rat eats cheese</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>near the park</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>sumti tcita based on event contours</primary><secondary>relation of main bridi to sumti process in</secondary></indexterm>  <indexterm type="general-imported"><primary>sumti tcita</primary><secondary>event contours contrasted with direction/distance as basis for</secondary></indexterm>  <indexterm type="general-imported"><primary>tense direction/distance as sumti tcita</primary><secondary>contrasted with event contours</secondary></indexterm>  <indexterm type="general-imported"><primary>event contours as sumti tcita</primary><secondary>contrasted with direction and distance</secondary></indexterm>  <indexterm type="general-imported"><primary>ZAhO selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>sumti tcita</primary><secondary>based on spatial contours</secondary></indexterm>  <indexterm type="general-imported"><primary>spatial contours</primary><secondary>as sumti tcita</secondary></indexterm>  <indexterm type="general-imported"><primary>sumti tcita</primary><secondary>based on event contours</secondary></indexterm>  <indexterm type="general-imported"><primary>event contours</primary><secondary>as sumti tcita</secondary></indexterm> The event contours of selma'o ZAhO (and their space equivalents, prefixed with 
     
     
-    <quote>fe'e</quote>) are also useful as sumti tcita. The interpretation of ZAhO tcita differs from that of FAhA, VA, PU, and ZI tcita, however. The event described in the sumti is viewed as a process, and the action of the main bridi occurs at the phase of the process which the ZAhO specifies, or at least some part of that phase. The action of the main bridi itself is seen as a point event, so that there is no issue about which phase of the main bridi is intended. For example:</para>
+    <jbophrase>fe'e</jbophrase>) are also useful as sumti tcita. The interpretation of ZAhO tcita differs from that of FAhA, VA, PU, and ZI tcita, however. The event described in the sumti is viewed as a process, and the action of the main bridi occurs at the phase of the process which the ZAhO specifies, or at least some part of that phase. The action of the main bridi itself is seen as a point event, so that there is no issue about which phase of the main bridi is intended. For example:</para>
 <para> <indexterm type="example-imported"><primary>in the aftermath</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>die after living</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Y2Kb">
       <title>
@@ -1584,11 +1579,11 @@
       </title>
       <interlinear-gloss>
         <jbo>mi morsi ba le nu mi jmive</jbo>
-        <en>I am-dead [future] the event-of I live.</en>
+        <gloss>I am-dead [future] the event-of I live.</gloss>
       </interlinear-gloss>
     </example>
     <para>As explained in 
-    <xref linkend="cll_chapter10-section6"/>, 
+    <xref linkend="section-vagueness"/>, 
     <xref linkend="example-random-id-18dT"/> does not exclude the possibility that I died before I ceased to live!</para>
     <para>Likewise, we might say:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-jJzr">
@@ -1597,7 +1592,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi klama le zarci pu'o le nu mi citka</jbo>
-        <en>I go-to the store [inchoative] the event-of I eat</en>
+        <gloss>I go-to the store [inchoative] the event-of I eat</gloss>
       </interlinear-gloss>
     </example>
     <para>which indicates that before my eating begins, I go to the store, whereas</para>
@@ -1607,7 +1602,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi klama le zarci ba'o le nu mi citka</jbo>
-        <en>I go-to the store [perfective] the event-of I eat</en>
+        <gloss>I go-to the store [perfective] the event-of I eat</gloss>
       </interlinear-gloss>
     </example>
     <para>would indicate that I go to the store after I am finished eating.</para>
@@ -1675,7 +1670,7 @@
     <para>claims that during some part of the winter, which is long as winters go, snow falls.</para>
     
   </section>
-  <section xml:id="cll_chapter10-section13">
+  <section xml:id="section-sticky-tenses">
     <title>Sticky and multiple tenses: KI</title>
     
     <para>The following cmavo is discussed in this section:</para>
@@ -1706,7 +1701,7 @@
     <jbophrase>puki</jbophrase> rather than just 
     <jbophrase>pu</jbophrase> ensures that the tense will affect the next sentence as well. Otherwise, since the second sentence is tenseless, there would be no way of determining its tense; the event of the second sentence might happen before, after, or simultaneously with that of the first sentence.</para>
     <para>(The last statement does not apply when the two sentences form part of a narrative. See 
-    <xref linkend="cll_chapter10-section14"/> for an explanation of 
+    <xref linkend="section-story-time"/> for an explanation of 
     <quote>story time</quote>, which employs a different set of conventions.)</para>
     
     <para>What if the second sentence has a tense anyway?</para>
@@ -1717,7 +1712,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi puki klama le zarci .i le nanmu pu batci le gerku</jbo>
-        <en>I [past] [sticky] go-to the market. The man [past] bites the dog.</en>
+        <gloss>I [past] [sticky] go-to the market. The man [past] bites the dog.</gloss>
       </interlinear-gloss>
     </example>
     <para>Here the second 
@@ -1739,7 +1734,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi pu klama le zarci .i le nanmu pupu batci le gerku</jbo>
-        <en>I [past] go-to the market. The man [past] [past] bites the dog.</en>
+        <gloss>I [past] go-to the market. The man [past] [past] bites the dog.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>compound tense</primary><secondary>compared with multiple tenses in sentence</secondary></indexterm>  <indexterm type="general-imported"><primary>tenses</primary><secondary>multiple in sentence compared with compound tense</secondary></indexterm>  <indexterm type="general-imported"><primary>tenses</primary><secondary>multiple in sentence</secondary></indexterm> The point has not been discussed so far, but it is perfectly grammatical to have more than one tense construct in a sentence:</para>
@@ -1804,7 +1799,7 @@
       </title>
       <interlinear-gloss>
         <jbo>pukiku mi ba klama le zarci .i le nanmu cu batci le gerku</jbo>
-        <en>[past] [sticky] I [future] go-to the market. The man bites the dog.</en>
+        <gloss>[past] [sticky] I [future] go-to the market. The man bites the dog.</gloss>
       </interlinear-gloss>
     </example>
     <para>What is the implied tense of the second sentence? Not 
@@ -1812,7 +1807,7 @@
     <jbophrase>pu</jbophrase>, since only 
     <jbophrase>pu</jbophrase> was made sticky with 
     <jbophrase>ki</jbophrase>. So the translation is:</para>
-    <programlisting xml:space="preserve">
+    <programlisting>
        I was going to go to the market. The man bit the dog.
 </programlisting>
     <para> <indexterm type="general-imported"><primary>sumti with tense</primary><secondary>effect of main bridi tense on</secondary></indexterm>  <indexterm type="general-imported"><primary>embedded bridi tenses</primary><secondary>effect of main bridi tense on</secondary></indexterm>  <indexterm type="general-imported"><primary>tense on main bridi</primary><secondary>effect on embedded sumti with tenses</secondary></indexterm>  <indexterm type="general-imported"><primary>tense on main bridi</primary><secondary>effect on embedded bridi tenses</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>on embedded bridi</secondary></indexterm> Lojban has several ways of embedding a bridi within another bridi: descriptions, abstractors, relative clauses. (Technically, descriptions contain selbri rather than bridi.) Any of the selbri of these subordinate bridi may have tenses attached. These tenses are interpreted relative to the tense of the main bridi:</para>
@@ -1858,10 +1853,10 @@
     <jbophrase>kixipa</jbophrase> as a tense by itself. In the case of written expression, the writer's here-and-now is often different from the reader's, and a pair of subscripted 
     <jbophrase>ki</jbophrase> tenses could be used to distinguish the two.</para>
   </section>
-  <section xml:id="cll_chapter10-section14">
+  <section xml:id="section-story-time">
     <title>Story time</title>
     <para> <indexterm type="general-imported"><primary>stories</primary><secondary>flow of time in</secondary></indexterm>  <indexterm type="general-imported"><primary>story time</primary><secondary>rationale for</secondary></indexterm>  <indexterm type="general-imported"><primary>story time</primary><secondary>definition</secondary></indexterm> Making strict use of the conventions explained in 
-    <xref linkend="cll_chapter10-section13"/> would be intolerably awkward when a story is being told. The time at which a story is told by the narrator is usually unimportant to the story. What matters is the flow of time within the story itself. The term 
+    <xref linkend="section-sticky-tenses"/> would be intolerably awkward when a story is being told. The time at which a story is told by the narrator is usually unimportant to the story. What matters is the flow of time within the story itself. The term 
     <quote>story</quote> in this section refers to any series of statements related in more-or-less time-sequential order, not just a fictional one.</para>
     <para> <indexterm type="general-imported"><primary>story time</primary><secondary>tenseless sentences in</secondary></indexterm>  <indexterm type="general-imported"><primary>tenseless sentences in story time</primary></indexterm>  <indexterm type="general-imported"><primary>story time</primary><secondary>as a convention for inferring tense</secondary></indexterm> Lojban speakers use a different set of conventions, commonly called 
     <quote>story time</quote>, for inferring tense within a story. It is presumed that the event described by each sentence takes place some time more or less after the previous ones. Therefore, tenseless sentences are implicitly tensed as 
@@ -1949,7 +1944,7 @@
     <xref linkend="example-random-id-qE94"/> sets both the time (long ago) and the place (in a cave) using 
     
     <jbophrase>ki</jbophrase>, just like the sentence sequences in 
-    <xref linkend="cll_chapter10-section13"/>. No further space cmavo are used in the rest of the story, so the place is assumed to remain unchanged. The English translation of 
+    <xref linkend="section-sticky-tenses"/>. No further space cmavo are used in the rest of the story, so the place is assumed to remain unchanged. The English translation of 
     <xref linkend="example-random-id-qE94"/> is marked for past tense also, as the conventions of English storytelling require: consequently, all other English translation sentences are also in the past tense. (We don't notice how strange this is; even stories about the future are written in past tense!) This conventional use of past tense is not used in Lojban narratives.</para>
     
     <para>
@@ -1982,7 +1977,7 @@
     
     
   </section>
-  <section xml:id="cll_chapter10-section15">
+  <section xml:id="section-sub-bridi-tenses">
     <title>Tenses in subordinate bridi</title>
     <para> <indexterm type="general-imported"><primary>subordinate clauses</primary><secondary>tense usage rules in English</secondary></indexterm> English has a set of rules, formally known as 
     <quote>sequence of tense rules</quote>, for determining what tense should be used in a subordinate clause, depending on the tense used in the main sentence. Here are some examples:</para>
@@ -2042,7 +2037,7 @@
       </title>
       <interlinear-gloss>
         <jbo>la djan. ca cusku le se du'u la djordj. ca klama le zarci</jbo>
-        <en>John [present] says the statement-that George [present] goes-to the market.</en>
+        <gloss>John [present] says the statement-that George [present] goes-to the market.</gloss>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qeGL" role="interlinear-gloss-example">
@@ -2051,7 +2046,7 @@
       </title>
       <interlinear-gloss>
         <jbo>la djan. ca cusku le se du'u la djordj. pu klama le zarci</jbo>
-        <en>John [present] says the statement-that George [past] goes-to the market.</en>
+        <gloss>John [present] says the statement-that George [past] goes-to the market.</gloss>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qEGL" role="interlinear-gloss-example">
@@ -2060,7 +2055,7 @@
       </title>
       <interlinear-gloss>
         <jbo>la djan. pu cusku le se du'u la djordj. ca klama le zarci</jbo>
-        <en>John [past] says the statement-that George [present] goes-to the market.</en>
+        <gloss>John [past] says the statement-that George [present] goes-to the market.</gloss>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qegV" role="interlinear-gloss-example">
@@ -2069,7 +2064,7 @@
       </title>
       <interlinear-gloss>
         <jbo>la djan. pu cusku le se du'u la djordj. pu klama le zarci</jbo>
-        <en>John [past] says the statement-that George [past] goes-to the market.</en>
+        <gloss>John [past] says the statement-that George [past] goes-to the market.</gloss>
       </interlinear-gloss>
     </example>
     <para>Probably the most counterintuitive of the Lojban examples is 
@@ -2079,7 +2074,7 @@
     <jbophrase>ca</jbophrase> with respect to a reference point specified by the outer 
     <jbophrase>pu</jbophrase>. This behavior is the same as the additive behavior of multiple tenses in the same bridi, as explained in 
     
-    <xref linkend="cll_chapter10-section13"/>.</para>
+    <xref linkend="section-sticky-tenses"/>.</para>
     <para> <indexterm type="lojban-word-imported"><primary>CUhE selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>nau</primary></indexterm>  <indexterm type="general-imported"><primary>nau</primary><secondary>syntax</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>overriding to speaker's current</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>speaker's current</secondary></indexterm> There is a special cmavo 
     <jbophrase>nau</jbophrase> (of selma'o CUhE) which can be used to override these rules and get to the speaker's current reference point. (Yes, it sounds like English 
     
@@ -2087,7 +2082,7 @@
     <jbophrase>nau</jbophrase> with any other cmavo in a tense, except by way of a logical or non-logical connection (see 
     
     
-    <xref linkend="cll_chapter10-section20"/>). Here is a convoluted sentence with several nested bridi which uses 
+    <xref linkend="section-connected-tenses"/>). Here is a convoluted sentence with several nested bridi which uses 
     <jbophrase>nau</jbophrase> at the lowest level:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-Yjop">
@@ -2108,10 +2103,10 @@
     <jbophrase>nau</jbophrase> does not affect sticky tenses.</para>
     
   </section>
-  <section xml:id="cll_chapter10-section16">
+  <section xml:id="section-tense-connection">
     <title>Tense relations between sentences</title>
     <para> <indexterm type="general-imported"><primary>tense with sumti tcita</primary><secondary>asymmetry of</secondary></indexterm> The sumti tcita method, explained in 
-    <xref linkend="cll_chapter10-section12"/>, of asserting a tense relationship between two events suffers from asymmetry. Specifically,</para>
+    <xref linkend="section-tcita"/>, of asserting a tense relationship between two events suffers from asymmetry. Specifically,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-vreo">
       <title>
         <anchor xml:id="c10e16d1"/>
@@ -2123,7 +2118,7 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>bo</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>.i</primary></indexterm>  <indexterm type="general-imported"><primary>sentences</primary><secondary>connecting with tense</secondary></indexterm>  <indexterm type="general-imported"><primary>tense</primary><secondary>connecting sentences in with</secondary></indexterm> which specifies an imaginary journey leftward from the man biting the dog to the child walking on the ice, claims only that the child walks on the ice. By the nature of 
-    <quote>le nu</quote>, the man's biting the dog is merely referred to without being claimed. If it seems desirable to claim both, each event can be expressed as a main sentence bridi, with a special form of 
+    <jbophrase>le nu</jbophrase>, the man's biting the dog is merely referred to without being claimed. If it seems desirable to claim both, each event can be expressed as a main sentence bridi, with a special form of 
     <jbophrase>.i</jbophrase> connecting them:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-9Q0x">
       <title>
@@ -2139,7 +2134,7 @@
     <jbophrase>.izu'abo</jbophrase> is a compound cmavo: the 
     <jbophrase>.i</jbophrase> separates the sentences and the 
     <jbophrase>zu'a</jbophrase> is the tense. The 
-    <quote>bo</quote> is required to prevent the 
+    <jbophrase>bo</jbophrase> is required to prevent the 
     <jbophrase>zu'a</jbophrase> from gobbling up the following sumti, namely 
     <jbophrase>le verba</jbophrase>.</para>
     <para> <indexterm type="general-imported"><primary>tense</primary><secondary>sumti tcita form contrasted with connected sentences</secondary></indexterm>  <indexterm type="general-imported"><primary>tense connection of sentences</primary><secondary>contrasted with sumti tcita form</secondary></indexterm>  <indexterm type="general-imported"><primary>imaginary journey</primary><secondary>origin of in tense-connected sentences</secondary></indexterm>  <indexterm type="general-imported"><primary>tense connection of sentences</primary><secondary>order of</secondary></indexterm> Note that the bridi in 
@@ -2163,7 +2158,7 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>tense connected sentences</primary><secondary>importance of bo in</secondary></indexterm> If the 
-    <quote>bo</quote> is omitted in 
+    <jbophrase>bo</jbophrase> is omitted in 
     <xref linkend="example-random-id-9Q0x"/>, the meaning changes:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-jThf">
       <title>
@@ -2205,8 +2200,8 @@
     
     
     <para> <indexterm type="lojban-word-imported"><primary>gi</primary></indexterm>  <indexterm type="general-imported"><primary>imaginary journey</primary><secondary>origin in tense forethought sentence connection</secondary></indexterm>  <indexterm type="general-imported"><primary>sentences</primary><secondary>forethought tense connection of</secondary></indexterm>  <indexterm type="general-imported"><primary>forethought tense connection of sentences</primary><secondary>order of</secondary></indexterm> The origin sentence is placed first, preceded by a tense plus 
-    <quote>gi</quote>. Another 
-    <quote>gi</quote> is used to separate the sentences:</para>
+    <jbophrase>gi</jbophrase>. Another 
+    <jbophrase>gi</jbophrase> is used to separate the sentences:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-9cXU">
       <title>
         <anchor xml:id="c10e16d6"/>
@@ -2225,7 +2220,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi klama pugi le zarci gi le zdani</jbo>
-        <en>I go-to [past] the market [,] the house.</en>
+        <gloss>I go-to [past] the market [,] the house.</gloss>
       </interlinear-gloss>
     </example>
     <para>Because English does not have any direct way of expressing a tense-like relationship between nouns, 
@@ -2255,13 +2250,13 @@
     <jbophrase>mi klama le zarci</jbophrase> and 
     <jbophrase>mi klama le zdani</jbophrase> are not claimed; only the relationship in time between them is claimed.</para>
     <para> <indexterm type="general-imported"><primary>tense afterthought connection forms</primary><secondary>selma'o allowed</secondary></indexterm>  <indexterm type="general-imported"><primary>tense forethought connection forms</primary><secondary>selma'o allowed</secondary></indexterm>  <indexterm type="general-imported"><primary>tense connection</primary><secondary>expansions of</secondary></indexterm>  <indexterm type="general-imported"><primary>tense connection</primary><secondary>equivalent meanings</secondary></indexterm> Both the forethought and the afterthought forms are appropriate with PU, ZI, FAhA, VA, and ZAhO tenses. In all cases, the equivalent forms are (where X and Y stand for sentences, and TENSE for a tense cmavo):</para>
-    <programlisting xml:space="preserve">
+    <programlisting>
       subordinate:               X TENSE le nu Y
       afterthought coordinate:   Y .i+TENSE+bo X
       forethought coordinate:    TENSE+gi X gi Y
 </programlisting>
   </section>
-  <section xml:id="cll_chapter10-section17">
+  <section xml:id="section-tense-logical-connection">
     <title>Tensed logical connectives</title>
     <para> <indexterm type="general-imported"><primary>tensed logical connectives</primary></indexterm>  <indexterm type="general-imported"><primary>logical connectives</primary><secondary>tensed</secondary></indexterm> The Lojban tense system interacts with the Lojban logical connective system. That system is a separate topic, explained in 
     
@@ -2296,7 +2291,7 @@
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>bo</primary></indexterm>  <indexterm type="example-imported"><primary>stoke cat then rabbit</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>and then</primary><secondary>example</secondary></indexterm> Suppose we wish to add a tense relationship to the logical connective 
     <quote>and</quote>? To say that Terry strokes the cat and later strokes the rabbit, we can combine a logical connective with a tense connective by placing the logical connective first, then the tense, and then the cmavo 
-    <quote>bo</quote>, thus:</para>
+    <jbophrase>bo</jbophrase>, thus:</para>
     <example xml:id="example-random-id-qEiY" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c10e17d4"/>
@@ -2329,20 +2324,20 @@
     <xref linkend="example-random-id-qEiY"/> through 17.6 are equivalent in meaning. They are also analogous to 
     <xref linkend="example-random-id-qehB"/> through 
     <xref linkend="example-random-id-qEIm"/> respectively. The 
-    <quote>bo</quote> is required for the same reason as in 
+    <jbophrase>bo</jbophrase> is required for the same reason as in 
     <xref linkend="example-random-id-9Q0x"/>: to prevent the 
     <jbophrase>ba</jbophrase> from functioning as a sumti tcita for the following sumti (or, in 
     <xref linkend="example-random-id-qEjn"/>, from being attached to the following selbri).</para>
     <para> <indexterm type="general-imported"><primary>tensed logical connectives</primary><secondary>with tu'e…tu'u</secondary></indexterm>  <indexterm type="general-imported"><primary>tensed logical connectives</primary><secondary>with ke…ke'e</secondary></indexterm> In addition to the 
-    <quote>bo</quote> construction of 
+    <jbophrase>bo</jbophrase> construction of 
     <xref linkend="example-random-id-qEiY"/> through 
     <xref linkend="example-random-id-qEKa"/>, there is also a form of tensed logical connective with 
     
     
     
     
-    <quote>ke ... ke'e</quote> ( 
-    <quote>tu'e ... tu'u</quote> for sentences). The logical connective system makes 
+    <jbophrase>ke ... ke'e</jbophrase> ( 
+    <jbophrase>tu'e ... tu'u</jbophrase> for sentences). The logical connective system makes 
     <xref linkend="example-random-id-qeL4"/> through 
     <xref linkend="example-random-id-qeLv"/> equivalent in meaning:</para>
     <example xml:id="example-random-id-qeL4" role="interlinear-gloss-example">
@@ -2419,10 +2414,10 @@
     <xref linkend="example-random-id-qeL4"/> through 
     <xref linkend="example-random-id-qeLv"/> respectively.</para>
   </section>
-  <section xml:id="cll_chapter10-section18">
+  <section xml:id="section-tense-negation">
     <title>Tense negation</title>
     <para> <indexterm type="lojban-word-imported"><primary>nai</primary></indexterm>  <indexterm type="general-imported"><primary>ZAhO selma'o</primary><secondary>contradictory negation of</secondary></indexterm>  <indexterm type="general-imported"><primary>FAhA selma'o</primary><secondary>contradictory negation of</secondary></indexterm>  <indexterm type="general-imported"><primary>PU selma'o</primary><secondary>contradictory negation of</secondary></indexterm>  <indexterm type="general-imported"><primary>negation</primary><secondary>of tenses</secondary></indexterm>  <indexterm type="general-imported"><primary>tenses</primary><secondary>negating</secondary></indexterm> Any bridi which involves tenses of selma'o PU, FAhA, or ZAhO can be contradicted by a 
-    <quote>-nai</quote> suffixed to the tense cmavo. Some examples:</para>
+    <jbophrase>-nai</jbophrase> suffixed to the tense cmavo. Some examples:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-qXWF">
       <title>
         <anchor xml:id="c10e18d1"/>
@@ -2435,7 +2430,7 @@
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>nai</primary></indexterm>  <indexterm type="general-imported"><primary>negation of tenses</primary><secondary>meaning of</secondary></indexterm>  <indexterm type="general-imported"><primary>tenses</primary><secondary>contradictory negation of with nai</secondary></indexterm> As a contradictory negation, 
     <xref linkend="example-random-id-qXWF"/> implies that the bridi as a whole is false without saying anything about what is true. When the negated tense is a sumti tcita, 
-    <quote>-nai</quote> negation indicates that the stated relationship does not hold:</para>
+    <jbophrase>-nai</jbophrase> negation indicates that the stated relationship does not hold:</para>
     <example xml:id="example-random-id-qEnq" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c10e18d2"/>
@@ -2510,7 +2505,7 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>FAhA selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>PU selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>scalar negation of tenses</primary><secondary>selma'o allowed with</secondary></indexterm>  <indexterm type="general-imported"><primary>contradictory negation of tenses</primary><secondary>selma'o allowed with</secondary></indexterm> Unlike 
-    <quote>-nai</quote> contradictory negation, scalar negation of tenses is not limited to PU and FAhA:</para>
+    <jbophrase>-nai</jbophrase> contradictory negation, scalar negation of tenses is not limited to PU and FAhA:</para>
     
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-THJJ">
@@ -2524,10 +2519,10 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>ROI selma'o</primary><secondary>scalar negation of</secondary></indexterm>  <indexterm type="general-imported"><primary>TAhE selma'o</primary><secondary>scalar negation of</secondary></indexterm> The use of 
-    <quote>-nai</quote> on cmavo of TAhE and ROI has already been discussed in 
-    <xref linkend="cll_chapter10-section9"/>; this use is also a scalar negation.</para>
+    <jbophrase>-nai</jbophrase> on cmavo of TAhE and ROI has already been discussed in 
+    <xref linkend="section-interval-properties"/>; this use is also a scalar negation.</para>
   </section>
-  <section xml:id="cll_chapter10-section19">
+  <section xml:id="section-caha">
     <title>Actuality, potentiality, capability: CAhA</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -2723,7 +2718,7 @@
       </title>
       <interlinear-gloss>
         <jbo>ta jelca</jbo>
-        <en>That burns/is-burning/might-burn/will-burn.</en>
+        <gloss>That burns/is-burning/might-burn/will-burn.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>inflammable</primary><secondary>example</secondary></indexterm> with no CAhA specified can translate the two very different English sentences 
@@ -2769,7 +2764,7 @@
     <para>the prudent Lojbanist will assume the meaning 
     <quote>Fire!</quote></para>
   </section>
-  <section xml:id="cll_chapter10-section20">
+  <section xml:id="section-connected-tenses">
     <title>Logical and non-logical connections between tenses</title>
     <para>Like many things in Lojban, tenses may be logically connected; logical connection is explained in more detail in 
     <xref linkend="chapter-connectives"/>. Some of the terminology in this section will be clear only if you already understand logical connectives.</para>
@@ -2814,7 +2809,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi ba klama le zarci</jbo>
-        <en>I [future] go-to the market.</en>
+        <gloss>I [future] go-to the market.</gloss>
       </interlinear-gloss>
     </example>
     <para>which only says that I will go, without claiming anything about my past or present. 
@@ -2860,9 +2855,9 @@
     </example>
     <para>(It is to be hoped that I have a long life ahead of me.)</para>
     <para>One additional use of non-logical connectives within tenses is discussed in 
-    <xref linkend="cll_chapter10-section21"/>. Other uses will probably be identified in future.</para>
+    <xref linkend="section-sub-events"/>. Other uses will probably be identified in future.</para>
   </section>
-  <section xml:id="cll_chapter10-section21">
+  <section xml:id="section-sub-events">
     <title>Sub-events</title>
     <para> <indexterm type="example-imported"><primary>six-shooter</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>tenses</primary><secondary>non-logical connection of for sub-events</secondary></indexterm> Another application of non-logical tense connection is to talk about sub-events of events. Consider a six-shooter: a gun which can fire six bullets in succession before reloading. If I fire off the entire magazine twice, I can express the fact in Lojban thus:</para>
     
@@ -2913,7 +2908,7 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter10-section22">
+  <section xml:id="section-jai">
     <title>Conversion of sumti tcita: JAI</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -2936,7 +2931,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi cu klama le zarci</jbo>
-        <en>I go-to the market.</en>
+        <gloss>I go-to the market.</gloss>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qEu9" role="interlinear-gloss-example">
@@ -2945,11 +2940,11 @@
       </title>
       <interlinear-gloss>
         <jbo>le zarci cu se klama mi</jbo>
-        <en>The market is-gone-to by-me.</en>
+        <gloss>The market is-gone-to by-me.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>jai</primary></indexterm>  <indexterm type="general-imported"><primary>jai with tense</primary><secondary>as equivalent of SE in grammar</secondary></indexterm>  <indexterm type="general-imported"><primary>tense conversion</primary><secondary>accessing tense of bridi with jai</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>accessing tense of bridi with jai</secondary></indexterm> It is also possible to bring a place that is specified by a sumti tcita (for the purposes of this chapter, a tense sumti tcita) to the front, by using 
-    <quote>jai</quote> plus the tense as the grammatical equivalent of SE:</para>
+    <jbophrase>jai</jbophrase> plus the tense as the grammatical equivalent of SE:</para>
     <example xml:id="example-random-id-qEvD" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c10e22d3"/>
@@ -3012,7 +3007,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi viska le jai vi citka be le cirla</jbo>
-        <en>I saw the place-of eating the cheese.</en>
+        <gloss>I saw the place-of eating the cheese.</gloss>
       </interlinear-gloss>
     </example>
     <para>Here the eater of the cheese is elided, so no 
@@ -3032,7 +3027,7 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter10-section23">
+  <section xml:id="section-tenses-vs-modals">
     <title>Tenses versus modals</title>
     <para> <indexterm type="general-imported"><primary>modals</primary><secondary>contrasted with tenses in semantics</secondary></indexterm>  <indexterm type="general-imported"><primary>tenses</primary><secondary>contrasted with modals in semantics</secondary></indexterm>  <indexterm type="general-imported"><primary>modals</primary><secondary>compared with tenses in syntax</secondary></indexterm>  <indexterm type="general-imported"><primary>tenses</primary><secondary>compared with modals in syntax</secondary></indexterm> Grammatically, every use of tenses seen so far is exactly paralleled by some use of modals as explained in 
     <xref linkend="chapter-sumti-tcita"/>. Modals and tenses alike can be followed by sumti, can appear before the selbri, can be used in pure and mixed connections, can participate in JAI conversions. The parallelism is perfect. However, there is a deep difference in the semantics of tense constructs and modal constructs, grounded in historical differences between the two forms. Originally, modals and tenses were utterly different things in earlier versions of Loglan; only in Lojban have they become grammatically interchangeable. And even now, differences in semantics continue to be maintained.</para>
@@ -3049,7 +3044,7 @@
       </interlinear-gloss>
     </example>
     <para>places the 
-    <quote>le nu</quote> sumti in the x1 place of the gismu 
+    <jbophrase>le nu</jbophrase> sumti in the x1 place of the gismu 
     <jbophrase>mukti</jbophrase> (which underlies the modal 
     <jbophrase>mu'i</jbophrase>), namely the motivating event, the tensed bridi</para>
     
@@ -3064,7 +3059,7 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>tenses</primary><secondary>importance of 2nd sumti place for sumti tcita use</secondary></indexterm> places the 
-    <quote>le nu</quote> sumti in the x2 place of the gismu 
+    <jbophrase>le nu</jbophrase> sumti in the x2 place of the gismu 
     <jbophrase>balvi</jbophrase> (which underlies the tense 
     <jbophrase>ba</jbophrase>), namely the point of reference for the future tense. Paraphrases of 
     <xref linkend="example-random-id-YLmV"/> and 
@@ -3151,20 +3146,20 @@
     </example>
     <para>respectively.</para>
     <para> <indexterm type="general-imported"><primary>modal sentence connection</primary><secondary>table of equivalent schemata</secondary></indexterm> The following modal sentence schemata (where X and Y represent sentences) all have the same meaning:</para>
-    <programlisting xml:space="preserve">
+    <programlisting>
        X .i BAI bo Y
        BAI gi Y gi X
        X BAI le nu Y
 </programlisting>
     <para> <indexterm type="general-imported"><primary>tense sentence connection</primary><secondary>table of equivalent schemata</secondary></indexterm> whereas the following tensed sentence schemata also have the same meaning:</para>
-    <programlisting xml:space="preserve">
+    <programlisting>
        X .i TENSE bo Y
        TENSE gi X gi Y
        Y TENSE le nu X
 </programlisting>
     <para>neglecting the question of what is claimed. In the modal sentence schemata, the modal tag is always followed by Y, the sentence representing the event in the x1 place of the gismu that underlies the BAI. In the tensed sentences, no such simple rule exists.</para>
   </section>
-  <section xml:id="cll_chapter10-section24">
+  <section xml:id="section-tense-questions">
     <title>Tense questions: 
     <jbophrase>cu'e</jbophrase></title>
     <para>The following cmavo is discussed in this section:</para>
@@ -3265,7 +3260,7 @@
       </title>
       <interlinear-gloss>
         <jbo>seka'a le briju</jbo>
-        <en>With-destination the office.</en>
+        <gloss>With-destination the office.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>modal-or-tense questions</primary><secondary>pre-specifying some information</secondary></indexterm>  <indexterm type="general-imported"><primary>tense-or-modal questions</primary><secondary>pre-specifying some information</secondary></indexterm>  <indexterm type="general-imported"><primary>cu'e</primary><secondary>combining with other tense cmavo</secondary></indexterm> The only way to combine 
@@ -3304,7 +3299,7 @@
     <jbophrase>jenai</jbophrase> meaning 
     <quote>the former</quote>.</para>
   </section>
-  <section xml:id="cll_chapter10-section25">
+  <section xml:id="section-explicit-magnitudes">
     <title>Explicit magnitudes</title>
     <para>It is a limitation of the VA and ZI system of specifying magnitudes that they can only prescribe vague magnitudes: small, medium, or large. In order to express both an origin point and an exact distance, the Lojban construction called a 
     <quote>termset</quote> is employed. (Termsets are explained further in 
@@ -3323,9 +3318,9 @@
       </interlinear-gloss>
     </example>
     <para>Here the termset extends from the 
-    <quote>nu'i</quote> to the implicit 
-    <quote>nu'u</quote> at the end of the sentence, and includes the terms 
-    <quote>la djordj.</quote>, which is the unmarked origin point, and the tagged sumti 
+    <jbophrase>nu'i</jbophrase> to the implicit 
+    <jbophrase>nu'u</jbophrase> at the end of the sentence, and includes the terms 
+    <jbophrase>la djordj.</jbophrase>, which is the unmarked origin point, and the tagged sumti 
     <jbophrase>lo mitre be li mu</jbophrase>, which the cmavo 
     <jbophrase>la'u</jbophrase> (of selma'o BAI, and meaning 
     <quote>with quantity</quote>; see 
@@ -3350,7 +3345,7 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter10-section26">
+  <section xml:id="section-exercise">
     <title>Finally (an exercise for the much-tried reader)</title>
     <example role="interlinear-gloss-example" xml:id="example-random-id-NxGB">
       <title>
@@ -3363,11 +3358,11 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter10-section27">
+  <section xml:id="section-summary">
     <title>Summary of tense selma'o</title>
 <para> <indexterm type="general-imported"><primary>tense selma'o</primary><secondary>summary of</secondary></indexterm> FIXME: TAG SPOT</para>
     
-    <programlisting xml:space="preserve">
+    <programlisting>
       PU    temporal direction
 
 
@@ -3395,11 +3390,11 @@
 
 
             see 
-<xref linkend="cll_chapter10-section10"/>
+<xref linkend="section-event-contours"/>
 
       FAhA  spatial direction
             see 
-<xref linkend="cll_chapter10-section28"/>
+<xref linkend="section-direction-cmavo"/>
 
       VA    spatial distance
             vi = short, va = medium, vu = long
@@ -3421,7 +3416,7 @@
 
       MOhI  spatial movement flag
             mo'i = motion; see 
-<xref linkend="cll_chapter10-section28"/>
+<xref linkend="section-direction-cmavo"/>
 
       KI    set or reset sticky tense
             tense+
@@ -3438,12 +3433,12 @@
             jaica = the time of, jaivi = the place of, etc.
 </programlisting>
   </section>
-  <section xml:id="cll_chapter10-section28">
+  <section xml:id="section-direction-cmavo">
     <title>List of spatial directions and direction-like relations</title>
     
     <para> <indexterm type="general-imported"><primary>spatial directions</primary><secondary>list of</secondary></indexterm> The following list of FAhA cmavo gives rough English glosses for the cmavo, first when used without 
-    <quote>mo'i</quote> to express a direction, and then when used with 
-    <quote>mo'i</quote> to express movement in the direction. When possible, the gismu from which the cmavo is derived is also listed.</para>
+    <jbophrase>mo'i</jbophrase> to express a direction, and then when used with 
+    <jbophrase>mo'i</jbophrase> to express movement in the direction. When possible, the gismu from which the cmavo is derived is also listed.</para>
     <cmavo-list>ca'u crane in front (of) forwardti'a trixe behind backwardzu'a zunle on the left (of) leftwardga'u gapru above upward(ly)ni'a cnita below downward(ly)ne'i nenri within intoru'u sruri surrounding orbitingpa'o pagre transfixing passing throughne'a next to moving while next to 
     <cmavo-entry>
       <cmavo>te'e</cmavo>
