@@ -11,83 +11,67 @@
     <para>In natural languages, especially those of Indo-European grammar, we have sentences composed of two parts which are typically called 
     <quote>subject</quote> and 
     <quote>predicate</quote>. In the statement</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-vrXe">
+    <example xml:id="example-random-id-vrXe">
       <title>
         <anchor xml:id="c15e1d1"/>
       </title>
-      <interlinear-gloss>
-        <jbo>John goes to the store</jbo>
-      </interlinear-gloss>
+        <para>John goes to the store</para>
     </example>
     <para>
     <quote>John</quote> is the subject, and 
     <quote>goes to the store</quote> is the predicate. Negating 
     <xref linkend="example-random-id-vrXe"/> to produce</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-gm3I">
+    <example xml:id="example-random-id-gm3I">
       <title>
         <anchor xml:id="c15e1d2"/>
       </title>
-      <interlinear-gloss>
-        <jbo>John doesn't go to the store.</jbo>
-      </interlinear-gloss>
+        <para>John doesn't go to the store.</para>
     </example>
     <para>has the effect of declaring that the predicate does not hold for the subject. 
     <xref linkend="example-random-id-gm3I"/> says nothing about whether John goes somewhere else, or whether someone else besides John goes to the store.</para>
     <para>We will call this kind of negation 
     <quote>natural language negation</quote>. This kind of negation is difficult to manipulate by the tools of logic, because it doesn't always follow the rules of logic. Logical negation is bi-polar: either a statement is true, or it is false. If a statement is false, then its negation must be true. Such negation is termed contradictory negation.</para>
     <para>Let's look at some examples of how natural language negation can violate the rules of contradictory negation.</para>
-    <example xml:id="example-random-id-qGWR" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qGWR">
       <title>
         <anchor xml:id="c15e1d3"/>
       </title>
-      <interlinear-gloss>
-        <jbo>Some animals are not white.</jbo>
-      </interlinear-gloss>
+        <para>Some animals are not white.</para>
     </example>
-    <example xml:id="example-random-id-qgXI" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qgXI">
       <title>
         <anchor xml:id="c15e1d4"/>
       </title>
-      <interlinear-gloss>
-        <jbo>Some animals are white.</jbo>
-      </interlinear-gloss>
+        <para>Some animals are white.</para>
     </example>
     <para>Both of these statements are true; yet one is apparently the negation of the other. Another example:</para>
-    <example xml:id="example-random-id-qgxL" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qgxL">
       <title>
         <anchor xml:id="c15e1d5"/>
       </title>
-      <interlinear-gloss>
-        <jbo>I mustn't go to the dance.</jbo>
-      </interlinear-gloss>
+        <para>I mustn't go to the dance.</para>
     </example>
-    <example xml:id="example-random-id-qGXL" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qGXL">
       <title>
         <anchor xml:id="c15e1d6"/>
       </title>
-      <interlinear-gloss>
-        <jbo>I must go to the dance.</jbo>
-      </interlinear-gloss>
+        <para>I must go to the dance.</para>
     </example>
     <para>At first thought, 
     <xref linkend="example-random-id-qgxL"/> negates 
     <xref linkend="example-random-id-qGXL"/>. Thinking further, we realize that there is an intermediate state wherein I am permitted to go to the dance, but not obligated to do so. Thus, it is possible that both statements are false.</para>
     <para>Sometimes order is significant:</para>
-    <example xml:id="example-random-id-qgyb" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qgyb">
       <title>
         <anchor xml:id="c15e1d7"/>
       </title>
-      <interlinear-gloss>
-        <jbo>The falling rock didn't kill Sam.</jbo>
-      </interlinear-gloss>
+        <para>The falling rock didn't kill Sam.</para>
     </example>
-    <example xml:id="example-random-id-qGYX" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qGYX">
       <title>
         <anchor xml:id="c15e1d8"/>
       </title>
-      <interlinear-gloss>
-        <jbo>Sam wasn't killed by the falling rock.</jbo>
-      </interlinear-gloss>
+        <para>Sam wasn't killed by the falling rock.</para>
     </example>
     <para>Our minds play tricks on us with this one. Because 
     <xref linkend="example-random-id-qgyb"/> is written in what is called the 
@@ -101,21 +85,17 @@
     <para>
     <xref linkend="example-random-id-qGYX"/> also helps us focus on the fact that there are at least two questionable facts implicit in this sentence: whether Sam was killed, and if so, whether the falling rock killed him. If Sam wasn't killed, the question of what killed him is moot.</para>
     <para>This type of problem becomes more evident when the subject of the sentence turns out not to exist:</para>
-    <example xml:id="example-random-id-qgzq" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qgzq">
       <title>
         <anchor xml:id="c15e1d9"/>
       </title>
-      <interlinear-gloss>
-        <jbo>The King of Mexico didn't come to dinner.</jbo>
-      </interlinear-gloss>
+        <para>The King of Mexico didn't come to dinner.</para>
     </example>
-    <example xml:id="example-random-id-qgzv" role="interlinear-gloss-example">
+    <example xml:id="example-random-id-qgzv">
       <title>
         <anchor xml:id="c15e1d10"/>
       </title>
-      <interlinear-gloss>
-        <jbo>The King of Mexico did come to dinner.</jbo>
-      </interlinear-gloss>
+        <para>The King of Mexico did come to dinner.</para>
     </example>
     <para>In the natural languages, we would be inclined to say that both of these statements are false, since there is no King of Mexico.</para>
     <para>The rest of this chapter is designed to explain the Lojban model of negation.</para>
@@ -128,27 +108,23 @@
     <quote>It isn't true that I have stopped beating my wife.</quote> Since Lojban uses bridi as smaller components of complex sentences, bridi negation is permitted in these components as well at the sentence level.</para>
     <para>For the bridi negation of a sentence to be true, the sentence being negated must be false. A major use of bridi negation is in making a negative response to a yes/no question; such responses are usually contradictory, denying the truth of the entire sentence. A negative answer to</para>
     
-    <example role="interlinear-gloss-example" xml:id="example-random-id-sCNE">
+    <example xml:id="example-random-id-sCNE">
       <title>
         <anchor xml:id="c15e2d1"/>
       </title>
-      <interlinear-gloss>
-        <jbo>Did you go to the store?</jbo>
-      </interlinear-gloss>
+        <para>Did you go to the store?</para>
     </example>
     <para>is taken as a negation of the entire sentence, equivalent to</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-vFYC">
+    <example xml:id="example-random-id-vFYC">
       <title>
         <anchor xml:id="c15e2d2"/>
       </title>
-      <interlinear-gloss>
-        <jbo>No, I didn't go to the store.</jbo>
-      </interlinear-gloss>
+        <para>No, I didn't go to the store.</para>
     </example>
     <para>The most important rule about bridi negation is that if a bridi is true, its negation is false, and vice versa.</para>
     <para>The simplest way to express a bridi negation is to use the cmavo 
     <jbophrase>na</jbophrase> of selma'o NA before the selbri of the affirmative form of the bridi (but after the 
-    <quote>cu</quote>, if there is one):</para>
+    <jbophrase>cu</jbophrase>, if there is one):</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7nrv">
       <title>
         <anchor xml:id="c15e2d3"/>
@@ -366,7 +342,7 @@
       </interlinear-gloss>
     </example>
     <para>It is possible that someone will want to incorporate bridi negations into lujvo. For this reason, the rafsi 
-    <quote>-nar-</quote> has been reserved for 
+    <jbophrase role="rafsi">-nar-</jbophrase> has been reserved for 
     <jbophrase>na</jbophrase>. However, before using this rafsi, make sure that you intend the contradictory bridi negation, and not the scalar negation described in 
     <xref linkend="cll_chapter15-section3"/>, which will be much more common in tanru and lujvo.</para>
   </section>
@@ -574,8 +550,8 @@
     <title>selbri and tanru negation</title>
     <para>All the scalar negations illustrated in 
     <xref linkend="cll_chapter15-section3"/> are expressed in Lojban using the cmavo 
-    <quote>na'e</quote> (of selma'o NAhE). The most common use of 
-    <quote>na'e</quote> is as a prefix to the selbri:</para>
+    <jbophrase>na'e</jbophrase> (of selma'o NAhE). The most common use of 
+    <jbophrase>na'e</jbophrase> is as a prefix to the selbri:</para>
     <example xml:id="example-random-id-qh42" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c15e4d1"/>
@@ -600,12 +576,12 @@
     
     
     <xref linkend="example-random-id-qH4n"/> is 
-    <quote>na'e</quote>. But what exactly does 
-    <quote>na'e</quote> negate? Does the negation include only the gismu 
+    <jbophrase>na'e</jbophrase>. But what exactly does 
+    <jbophrase>na'e</jbophrase> negate? Does the negation include only the gismu 
     <jbophrase>klama</jbophrase>, which is the entire selbri in this case, or does it include the 
     <jbophrase>le zarci</jbophrase> as well? In Lojban, the answer is unambiguously 
     <quote>only the gismu</quote>. The cmavo 
-    <quote>na'e</quote> always applies only to what follows it.</para>
+    <jbophrase>na'e</jbophrase> always applies only to what follows it.</para>
     <para>
     <xref linkend="example-random-id-qH4n"/> looks as if it were parallel to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-tqX1">
@@ -619,11 +595,11 @@
     </example>
     <para>but in fact there is no real parallelism at all. A negation using 
     <jbophrase>na</jbophrase> denies the truth of a relationship, but a selbri negation with 
-    <quote>na'e</quote> asserts that a relationship exists other than that stated, one which specifically involves the sumti identified in the statement. The grammar allotted to 
-    <quote>na'e</quote> allows us to unambiguously express scalar negations in terms of scope, scale, and range within the scale. Before we explain the scalar aspects, let us show how the scope of 
-    <quote>na'e</quote> is determined.</para>
+    <jbophrase>na'e</jbophrase> asserts that a relationship exists other than that stated, one which specifically involves the sumti identified in the statement. The grammar allotted to 
+    <jbophrase>na'e</jbophrase> allows us to unambiguously express scalar negations in terms of scope, scale, and range within the scale. Before we explain the scalar aspects, let us show how the scope of 
+    <jbophrase>na'e</jbophrase> is determined.</para>
     <para>In tanru, we may wish to negate an individual element before combining it with another to form the tanru. We in effect need a shorter-than-selbri-scope negation, for which we can use 
-    <quote>na'e</quote> as well. The positive sentence</para>
+    <jbophrase>na'e</jbophrase> as well. The positive sentence</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-ETuV">
       <title>
         <anchor xml:id="c15e4d4"/>
@@ -653,14 +629,14 @@
       </interlinear-gloss>
     </example>
     <para>These negations show the default scope of 
-    <quote>na'e</quote> is close-binding on an individual brivla in a tanru. 
+    <jbophrase>na'e</jbophrase> is close-binding on an individual brivla in a tanru. 
     
     <xref linkend="example-random-id-qh4w"/> says that I am going to the market, but in some kind of a non-walking manner. (As with most tanru, there are a few other possible interpretations, but we'll assume this one - see 
     <xref linkend="chapter-selbri"/> for a discussion of tanru meaning).</para>
     <para>In neither 
     <xref linkend="example-random-id-qh4w"/> nor 
     <xref linkend="example-random-id-qH6w"/> does the 
-    <quote>na'e</quote> negate the entire selbri. While both sentences contain negations that deny a particular relationship between the sumti, they also have a component which makes a positive claim about such a relationship. This is clearer in 
+    <jbophrase>na'e</jbophrase> negate the entire selbri. While both sentences contain negations that deny a particular relationship between the sumti, they also have a component which makes a positive claim about such a relationship. This is clearer in 
     <xref linkend="example-random-id-qh4w"/>, which says that I am going, but in a non-walking manner. In 
     <xref linkend="example-random-id-qH6w"/>, we have claimed that the relationship between me and the market in some way involves walking, but is not one of 
     <quote>going to</quote> (perhaps we are walking around the market, or walking-in-place while at the market).</para>
@@ -669,7 +645,7 @@
     <quote>set</quote>, implied in Lojban tanru negations is anything which plausibly can be substituted into the tanru. (Plausibility here is interpreted in the same way that answers to a 
     <jbophrase>mo</jbophrase> question must be plausible - the result must not only have the right number of places and have sumti values appropriate to the place structure, it must also be appropriate or relevant to the context.) This minimal condition allows a speaker to be intentionally vague, while still communicating meaningful information. The speaker who uses selbri negation is denying one relationship, while minimally asserting a different relationship.</para>
     <para>We also need a scalar negation form that has a scope longer than a single brivla. There exists such a longer-scope selbri negation form, as exemplified by (each Lojban sentence in the next several examples is given twice, with parentheses in the second copy showing the scope of the 
-    <quote>na'e</quote>):</para>
+    <jbophrase>na'e</jbophrase>):</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-t20b">
       <title>
         <anchor xml:id="c15e4d7"/>
@@ -681,11 +657,11 @@
       </interlinear-gloss>
     </example>
     <para>This negation uses the same 
-    <quote>ke</quote> and 
-    <quote>ke'e</quote> delimiters (the 
-    <quote>ke'e</quote> is always elidable at the end of a selbri) that are used in tanru. The sentence clearly negates the entire selbri. The 
-    <quote>ke'e</quote>, whether elided or not, reminds us that the negation does not include the trailing sumti. While the trailing-sumti place-structure is defined as that of the final brivla, the trailing sumti themselves are not part of the selbri and are thus not negated by 
-    <quote>na'e</quote>.</para>
+    <jbophrase>ke</jbophrase> and 
+    <jbophrase>ke'e</jbophrase> delimiters (the 
+    <jbophrase>ke'e</jbophrase> is always elidable at the end of a selbri) that are used in tanru. The sentence clearly negates the entire selbri. The 
+    <jbophrase>ke'e</jbophrase>, whether elided or not, reminds us that the negation does not include the trailing sumti. While the trailing-sumti place-structure is defined as that of the final brivla, the trailing sumti themselves are not part of the selbri and are thus not negated by 
+    <jbophrase>na'e</jbophrase>.</para>
     <para>Negations of just part of the selbri are also permitted:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-PVct">
       <title>
@@ -701,10 +677,10 @@
     <xref linkend="example-random-id-PVct"/>, only the 
     <jbophrase>sutra cadzu</jbophrase> tanru is negated, so the speaker is indeed going to the market, but not by walking quickly.</para>
     <para>Negations made with 
-    <quote>na'e</quote> or 
-    <quote>na'eke</quote> also include within their scope any sumti attached to the brivla or tanru with 
-    <quote>be</quote> or 
-    <quote>bei</quote>. Such attached sumti are considered part of the brivla or tanru:</para>
+    <jbophrase>na'e</jbophrase> or 
+    <jbophrase>na'eke</jbophrase> also include within their scope any sumti attached to the brivla or tanru with 
+    <jbophrase>be</jbophrase> or 
+    <jbophrase>bei</jbophrase>. Such attached sumti are considered part of the brivla or tanru:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-MYYa">
       <title>
         <anchor xml:id="c15e4d9"/>
@@ -741,22 +717,22 @@
     <xref linkend="example-random-id-qh7T"/> is more restricted in scope; i.e. less of the sentence is negated with respect to x1 ( 
     <jbophrase>mi</jbophrase>).</para>
     <para>Logical scope being an important factor in Lojban's claims to be unambiguous, let us indicate the relative precedence of 
-    <quote>na'e</quote> as an operator. Grouping with 
-    <quote>ke</quote> and 
-    <quote>ke'e</quote>, of course, has an overt scope, which is its advantage. 
-    <quote>na'e</quote> is very close binding to its brivla. Internal binding of tanru, with 
-    <quote>bo</quote>, is not as tightly bound as 
-    <quote>na'e</quote>. 
-    <quote>co</quote>, the tanru inversion operator has a scope that is longer than all other tanru constructs.</para>
+    <jbophrase>na'e</jbophrase> as an operator. Grouping with 
+    <jbophrase>ke</jbophrase> and 
+    <jbophrase>ke'e</jbophrase>, of course, has an overt scope, which is its advantage. 
+    <jbophrase>na'e</jbophrase> is very close binding to its brivla. Internal binding of tanru, with 
+    <jbophrase>bo</jbophrase>, is not as tightly bound as 
+    <jbophrase>na'e</jbophrase>. 
+    <jbophrase>co</jbophrase>, the tanru inversion operator has a scope that is longer than all other tanru constructs.</para>
     
     <para>In short, 
-    <quote>na'e</quote> and 
-    <quote>na'eke</quote> define a type of negation, which is shorter in scope than bridi negation, and which affects all or part of a selbri. The result of 
-    <quote>na'e</quote> negation remains an assertion of some specific truth and not merely a denial of another claim.</para>
+    <jbophrase>na'e</jbophrase> and 
+    <jbophrase>na'eke</jbophrase> define a type of negation, which is shorter in scope than bridi negation, and which affects all or part of a selbri. The result of 
+    <jbophrase>na'e</jbophrase> negation remains an assertion of some specific truth and not merely a denial of another claim.</para>
     <para>The similarity becomes striking when it is noticed that the rafsi 
-    <quote>-nal-</quote>, representing 
-    <quote>na'e</quote> when a tanru is condensed into a lujvo, forms an exact parallel to the English usage of 
-    <quote>non-</quote>. Turning a series of related negations into lujvo gives:</para>
+    <jbophrase role="rafsi">-nal-</jbophrase>, representing 
+    <jbophrase>na'e</jbophrase> when a tanru is condensed into a lujvo, forms an exact parallel to the English usage of 
+    <jbophrase>non-</jbophrase>. Turning a series of related negations into lujvo gives:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2buq">
       <title>
         <anchor xml:id="c15e4d12"/>
@@ -769,23 +745,23 @@
       </interlinear-gloss>
     </example>
     <para>Note: 
-    <quote>-kem-</quote> is the rafsi for 
-    <quote>ke</quote>, but it is omitted in the final lujvo as superfluous - 
-    <quote>ke'e</quote> is its own rafsi, and its inclusion in the lujvo implies a 
+    <jbophrase role="rafsi">-kem-</jbophrase> is the rafsi for 
+    <jbophrase>ke</jbophrase>, but it is omitted in the final lujvo as superfluous - 
+    <jbophrase>ke'e</jbophrase> is its own rafsi, and its inclusion in the lujvo implies a 
     
-    <quote>ke</quote> after the 
-    <quote>-nal-</quote>, since it needs to close something; only a 
-    <quote>ke</quote> immediately after the negation would make the 
-    <quote>ke'e</quote> meaningful in the tanru expressed in this lujvo.</para>
+    <jbophrase>ke</jbophrase> after the 
+    <jbophrase role="rafsi">-nal-</jbophrase>, since it needs to close something; only a 
+    <jbophrase>ke</jbophrase> immediately after the negation would make the 
+    <jbophrase>ke'e</jbophrase> meaningful in the tanru expressed in this lujvo.</para>
     <para>In a lujvo, it is probably clearest to translate 
-    <quote>-nal-</quote> as 
+    <jbophrase role="rafsi">-nal-</jbophrase> as 
     <quote>non-</quote>, to match the English combining forms, except when the 
-    <quote>na'e</quote> has single word scope and English uses 
+    <jbophrase>na'e</jbophrase> has single word scope and English uses 
     <quote>un-</quote> or 
     <quote>im-</quote> to negate that single word. Translation style should determine the use of 
     <quote>other than</quote>, 
     <quote>non-</quote>, or another negator for 
-    <quote>na'e</quote> in tanru; the translator must render the Lojban into English so it is clear in context. Let's go back to our simplest example:</para>
+    <jbophrase>na'e</jbophrase> in tanru; the translator must render the Lojban into English so it is clear in context. Let's go back to our simplest example:</para>
     <example xml:id="example-random-id-qh9c" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c15e4d13"/>
@@ -821,7 +797,7 @@
     </example>
     <para>The selbri 
     <jbophrase>krecau</jbophrase> negates with 
-    <quote>na'e</quote> as:</para>
+    <jbophrase>na'e</jbophrase> as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2maY">
       <title>
         <anchor xml:id="c15e4d16"/>
@@ -846,9 +822,9 @@
     <para>
     <xref linkend="example-random-id-2maY"/> and 
     <xref linkend="example-random-id-wGXL"/> express the predicate negation forms using a negation word ( 
-    <quote>na'e</quote>) or rafsi ( 
-    <quote>-nal-</quote>); yet they make positive assertions about the current King of France; ie., that he is other-than-bald or non-bald. This follows from the close binding of 
-    <quote>na'e</quote> to the brivla. The lujvo form makes this overt by absorbing the negative marker into the word.</para>
+    <jbophrase>na'e</jbophrase>) or rafsi ( 
+    <jbophrase>-nal-</jbophrase>); yet they make positive assertions about the current King of France; ie., that he is other-than-bald or non-bald. This follows from the close binding of 
+    <jbophrase>na'e</jbophrase> to the brivla. The lujvo form makes this overt by absorbing the negative marker into the word.</para>
     
     
     
@@ -867,10 +843,10 @@
       </interlinear-gloss>
     </example>
     <para>Note: 
-    <quote>lo</quote> is used in these sentences because negation relates to truth conditions. To meaningfully talk about truth conditions in sentences carrying a description, it must be clear that the description actually applies to the referent. A sentence using 
-    <quote>le</quote> instead of 
-    <quote>lo</quote> can be true even if there is no current king of France, as long as the speaker and the listener agree to describe something as the current king of France. (See the explanations of 
-    <quote>le</quote> in 
+    <jbophrase>lo</jbophrase> is used in these sentences because negation relates to truth conditions. To meaningfully talk about truth conditions in sentences carrying a description, it must be clear that the description actually applies to the referent. A sentence using 
+    <jbophrase>le</jbophrase> instead of 
+    <jbophrase>lo</jbophrase> can be true even if there is no current king of France, as long as the speaker and the listener agree to describe something as the current king of France. (See the explanations of 
+    <jbophrase>le</jbophrase> in 
     <xref linkend="chapter-sumti"/>.)</para>
   </section>
   <section xml:id="cll_chapter15-section5">
@@ -916,7 +892,7 @@
     
     <quote>on a scale of X</quote>, where 
     <quote>X</quote> is the sumti. For maximal clarity, the tagged sumti can be bound into the negated selbri with 
-    <quote>be</quote>. To clarify 
+    <jbophrase>be</jbophrase>. To clarify 
     <xref linkend="example-random-id-yWSC"/>, we might say:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-a8S1">
       <title>
@@ -967,9 +943,9 @@
     <para>which is minimally different in meaning from 
     <xref linkend="example-random-id-Rj71"/>.</para>
     <para>The cmavo 
-    <quote>na'e</quote> is not the only member of selma'o NAhE. If we want to express a scalar negation which is a polar opposite, we use the cmavo 
-    <quote>to'e</quote>, which is grammatically equivalent to 
-    <quote>na'e</quote>:</para>
+    <jbophrase>na'e</jbophrase> is not the only member of selma'o NAhE. If we want to express a scalar negation which is a polar opposite, we use the cmavo 
+    <jbophrase>to'e</jbophrase>, which is grammatically equivalent to 
+    <jbophrase>na'e</jbophrase>:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-RuvP">
       <title>
         <anchor xml:id="c15e5d8"/>
@@ -981,11 +957,11 @@
       </interlinear-gloss>
     </example>
     <para>Likewise, the midpoint of a scale can be expressed with the cmavo 
-    <quote>no'e</quote>, also grammatically equivalent to 
-    <quote>na'e</quote>. Here are some parallel examples of 
-    <quote>na'e</quote>, 
-    <quote>no'e</quote>, and 
-    <quote>to'e</quote>:</para>
+    <jbophrase>no'e</jbophrase>, also grammatically equivalent to 
+    <jbophrase>na'e</jbophrase>. Here are some parallel examples of 
+    <jbophrase>na'e</jbophrase>, 
+    <jbophrase>no'e</jbophrase>, and 
+    <jbophrase>to'e</jbophrase>:</para>
     <example xml:id="example-random-id-qH9T" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c15e5d9"/>
@@ -1027,12 +1003,12 @@
       </interlinear-gloss>
     </example>
     <para>The cmavo 
-    <quote>to'e</quote> has the assigned rafsi 
-    <quote>-tol-</quote> and 
-    <quote>-to'e-</quote>; the cmavo 
-    <quote>no'e</quote> has the assigned rafsi 
-    <quote>-nor-</quote> and 
-    <quote>-no'e-</quote>. The selbri in 
+    <jbophrase>to'e</jbophrase> has the assigned rafsi 
+    <jbophrase role="rafsi">-tol-</jbophrase> and 
+    <jbophrase>-to'e-</jbophrase>; the cmavo 
+    <jbophrase>no'e</jbophrase> has the assigned rafsi 
+    <jbophrase role="rafsi">-nor-</jbophrase> and 
+    <jbophrase role="rafsi">-no'e-</jbophrase>. The selbri in 
     <xref linkend="example-random-id-qh9U"/> through 
     <xref linkend="example-random-id-qHAV"/> could be replaced by the lujvo 
     <jbophrase>nalmle</jbophrase>, 
@@ -1043,16 +1019,16 @@
     <quote>ultimately beautiful</quote>. Other scales, like temperature, are open at one end and closed at the other: there is a minimum temperature (so-called 
     <quote>absolute zero</quote>) but no maximum temperature. Still other scales are closed at both ends.</para>
     <para>Correspondingly, some selbri have no obvious 
-    <quote>to'e</quote>- what is the opposite of a dog? - while others have more than one, and need 
+    <jbophrase>to'e</jbophrase>- what is the opposite of a dog? - while others have more than one, and need 
     <jbophrase>ci'u</jbophrase> to specify which opposite is meant.</para>
     
   </section>
   <section xml:id="cll_chapter15-section6">
     <title>sumti negation</title>
     <para>There are two ways of negating sumti in Lojban. We have the choice of quantifying the sumti with zero, or of applying the sumti-negator 
-    <quote>na'ebo</quote> before the sumti. It turns out that a zero quantification serves for contradictory negation. As the cmavo we use implies, 
+    <jbophrase>na'ebo</jbophrase> before the sumti. It turns out that a zero quantification serves for contradictory negation. As the cmavo we use implies, 
     
-    <quote>na'ebo</quote> forms a scalar negation.</para>
+    <jbophrase>na'ebo</jbophrase> forms a scalar negation.</para>
     
     <para>Let us show examples of each.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-PL1E">
@@ -1068,7 +1044,7 @@
     <para>Is 
     <xref linkend="example-random-id-PL1E"/> true? Yes, because it merely claims that of the current Kings of France, however many there may be, none are bald, which is plainly true, since there are no such current Kings of France.</para>
     <para>Now let us look at the same sentence using 
-    <quote>na'ebo</quote> negation:</para>
+    <jbophrase>na'ebo</jbophrase> negation:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-LebJ">
       <title>
@@ -1085,10 +1061,10 @@
     <xref linkend="example-random-id-LebJ"/> is true provided that something reasonably describable as 
     <quote>other than a current King of France</quote>, such as the King of Saudi Arabia, or a former King of France, is in fact bald.</para>
     <para>In place of 
-    <quote>na'ebo</quote>, you may also use 
+    <jbophrase>na'ebo</jbophrase>, you may also use 
     
-    <quote>no'ebo</quote> and 
-    <quote>to'ebo</quote>, to be more specific about the sumti which would be appropriate in place of the stated sumti. Good examples are hard to come by, but here's a valiant try:</para>
+    <jbophrase>no'ebo</jbophrase> and 
+    <jbophrase>to'ebo</jbophrase>, to be more specific about the sumti which would be appropriate in place of the stated sumti. Good examples are hard to come by, but here's a valiant try:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-S4AU">
       <title>
         <anchor xml:id="c15e6d3"/>
@@ -1101,8 +1077,8 @@
     </example>
     <para>(Boston and Perth are nearly, but not quite, antipodal cities. In a purely United States context, San Francisco might be a better 
     <quote>opposite</quote>.) Coming up with good examples is difficult, because attaching 
-    <quote>to'ebo</quote> to a description sumti is usually the same as attaching 
-    <quote>to'e</quote> to the selbri of the description.</para>
+    <jbophrase>to'ebo</jbophrase> to a description sumti is usually the same as attaching 
+    <jbophrase>to'e</jbophrase> to the selbri of the description.</para>
     <para>It is not possible to transform sumti negations of either type into bridi negations or scalar selbri negations. Negations of sumti will be used in Lojban conversation. The inability to manipulate these negations logically will, it is hoped, prevent the logical errors that result when natural languages attempt corresponding manipulations.</para>
   </section>
   <section xml:id="cll_chapter15-section7">
@@ -1145,7 +1121,7 @@
     <jbophrase>punai je ca</jbophrase> means the same thing as 
     <jbophrase>pu naje ca</jbophrase>.</para>
     <para>As a special case, a 
-    <quote>-nai</quote> attached to the interval modifiers of selma'o TAhE, ROI, or ZAhO (explained in 
+    <jbophrase>-nai</jbophrase> attached to the interval modifiers of selma'o TAhE, ROI, or ZAhO (explained in 
     <xref linkend="chapter-tenses"/>) signals a scalar negation:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-4YYQ">
       <title>
@@ -1183,8 +1159,8 @@
     <jbophrase>nai</jbophrase>, he or she can presume it is a negative acknowledgement and repeat transmission or otherwise respond accordingly. 
     <xref linkend="chapter-attitudinals"/> provides more detail on this topic.</para>
     <para>The abstractors of selma'o NU follow the pattern of the tenses and modals. NU allows negative abstractions, especially in compound abstractions connected by logical connectives: 
-    <quote>su'ujeninai</quote>, which corresponds to 
-    <quote>su'u jenai ni</quote> just as 
+    <jbophrase>su'ujeninai</jbophrase>, which corresponds to 
+    <jbophrase>su'u jenai ni</jbophrase> just as 
     <jbophrase>punai je ca</jbophrase> corresponds to 
     <jbophrase>pu naje ca</jbophrase>. It is not clear how much use logically connected abstractors will be: see 
     <xref linkend="chapter-attitudinals"/>.</para>
@@ -1211,7 +1187,7 @@
     <para>The straightforward negative answer is grammatically equivalent to the expanded sentence with the 
     
     <jbophrase>na</jbophrase> immediately after the 
-    <quote>cu</quote> (and before any tense/modal):</para>
+    <jbophrase>cu</jbophrase> (and before any tense/modal):</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-DMAd">
       <title>
         <anchor xml:id="c15e8d2"/>
@@ -1280,8 +1256,8 @@
     <xref linkend="example-random-id-Fn2c"/> and 
     <xref linkend="example-random-id-2SK0"/> appear to be semantically identical, but that subtle semantic distinctions may eventually be found.</para>
     <para>You can also use a scalar negation with 
-    <quote>na'e</quote>, in which case, it is equivalent to putting a 
-    <quote>na'eke</quote> immediately after any tense:</para>
+    <jbophrase>na'e</jbophrase>, in which case, it is equivalent to putting a 
+    <jbophrase>na'eke</jbophrase> immediately after any tense:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-q70h">
       <title>
         <anchor xml:id="c15e8d8"/>
@@ -1304,14 +1280,14 @@
       </interlinear-gloss>
     </example>
     <para>He might have telephoned the two cities instead of going there. The unnecessary 
-    <quote>ke</quote> and 
-    <quote>ke'e</quote> would have been essential if the selbri had been a tanru.</para>
+    <jbophrase>ke</jbophrase> and 
+    <jbophrase>ke'e</jbophrase> would have been essential if the selbri had been a tanru.</para>
   </section>
   <section xml:id="cll_chapter15-section9">
     <title>Affirmations</title>
     <para>There is an explicit positive form for both selma'o NA ( 
     <jbophrase>ja'a</jbophrase>) and selma'o NAhE ( 
-    <quote>je'a</quote>), each of which would supplant the corresponding negator in the grammatical position used, allowing one to assert the positive in response to a negative question or statement without confusion. Assuming the same context as in 
+    <jbophrase>je'a</jbophrase>), each of which would supplant the corresponding negator in the grammatical position used, allowing one to assert the positive in response to a negative question or statement without confusion. Assuming the same context as in 
     <xref linkend="cll_chapter15-section8"/>:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-KhoH">
       <title>
@@ -1389,8 +1365,8 @@
       </interlinear-gloss>
     </example>
     <para>
-    <quote>je'a</quote> can replace 
-    <quote>na'e</quote> in exactly the same way, stating that scalar negation does not apply, and that the relation indeed holds as stated. In the absence of a negation context, it emphasizes the positive:</para>
+    <jbophrase>je'a</jbophrase> can replace 
+    <jbophrase>na'e</jbophrase> in exactly the same way, stating that scalar negation does not apply, and that the relation indeed holds as stated. In the absence of a negation context, it emphasizes the positive:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-toQK">
       <title>
         <anchor xml:id="c15e9d7"/>
@@ -1551,7 +1527,7 @@
     <quote>false</quote> don't really apply.</para>
     <para>Because one can metalinguistically negate a true statement intending a non-contradictory correction (say, a spelling error); we need a way (or ways) to metalinguistically negate a statement which is independent of our logical negation schemes using 
     <jbophrase>na</jbophrase>, 
-    <quote>na'e</quote> and kin. The cmavo 
+    <jbophrase>na'e</jbophrase> and kin. The cmavo 
     <jbophrase>na'i</jbophrase> is assigned this function. If it is present in a statement, it indicates metalinguistically that something in the statement is incorrect. This metalinguistic negation must override any evaluation of the logic of the statement. It is equally allowed in both positive and negative statements.</para>
     <para>Since 
     <jbophrase>na'i</jbophrase> is not a logical operator, multiple occurrences of 
@@ -1563,11 +1539,11 @@
     <para>Let us briefly indicate how the above-mentioned metalinguistic errors can be identified. Other metalinguistic problems can then be marked by devising analogies to these examples:</para>
     <para>Existential failure can be marked by attaching 
     <jbophrase>na'i</jbophrase> to the descriptor 
-    <quote>lo</quote> or the 
-    <quote>poi</quote> in a 
-    <quote>da poi</quote>-form sumti. (See Chapter 6 and 
+    <jbophrase>lo</jbophrase> or the 
+    <jbophrase>poi</jbophrase> in a 
+    <jbophrase>da poi</jbophrase>-form sumti. (See Chapter 6 and 
     <xref linkend="chapter-quantifiers"/> for details on these constructions.) Remember that if a 
-    <quote>le</quote> sumti seems to refer to a non-existent referent, you may not understand what the speaker has in mind - the appropriate response is then 
+    <jbophrase>le</jbophrase> sumti seems to refer to a non-existent referent, you may not understand what the speaker has in mind - the appropriate response is then 
     <jbophrase>ki'a</jbophrase>, asking for clarification.</para>
     <para>Presupposition failure can be marked directly if the presupposition is overt; if not, one can insert a 
     <quote>mock presupposition</quote> to question with the sumti tcita (selma'o BAI) word 
