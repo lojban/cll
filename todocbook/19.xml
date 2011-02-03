@@ -163,7 +163,12 @@
         <anchor xml:id="c19e4d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>zhe</jbo>
+        <foreign xml:lang="zh">
+          zhe<superscript>4</superscript> xiao<superscript>1</superscript>xi<superscript>2</superscript>   wo<superscript>3</superscript> zhi<superscript>1</superscript>dao le
+        </foreign> <!-- FIXME: instead of three spaces, why not a colon? -->
+        <gloss>this news   I know [perfective]</gloss>
+        <gloss>As for this news, I knew it.</gloss>
+        <en>I've heard this news already.</en>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>ZOhU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>zo'u</primary></indexterm>  <indexterm type="example-imported"><primary>news</primary><secondary>example</secondary></indexterm> The wide space in the first two versions of 
@@ -216,7 +221,10 @@
       <title>
         <anchor xml:id="c19e4d6"/>
       </title>
-      <foreign xml:lang="zh">yu</foreign>
+      <interlinear-gloss>
+        <foreign xml:lang="zh">yu<superscript>2</superscript> chi<superscript>1</superscript></foreign>
+        <gloss>fish  eat</gloss> <!-- FIXME: instead of three spaces, why not a colon? -->
+      </interlinear-gloss>
     </example>
     <para>which is vague in exactly the same way.</para>
     <para>Grammatically, it is possible to have more than one sumti before 
@@ -738,8 +746,7 @@
       <interlinear-gloss>
         <jbo>li xy.boixipa du li xy.boixire su'i xy.boixici</jbo>
         <gloss>The-number x-sub-1 equals the-number x-sub-2 plus x-sub-3</gloss>
-        
-        <en>x</en>
+        <math>x<subscript>1</subscript> = x<subscript>2</subscript> + x<subscript>3</subscript></math>
       </interlinear-gloss>
     </example>
     <para>and can be used to extend the number of pro-sumti as well, since lerfu strings outside mathematical contexts are grammatically and semantically equivalent to pro-sumti of the ko'a-series. (In 
@@ -754,7 +761,7 @@
       <interlinear-gloss>
         <jbo>la djan. xipa cusku lu mi'enai do li'u la djan. xire</jbo>
         
-        <gloss>John<subscript>1</subscript> expresses ``I-am-not you'' to John<subscript>2</subscript>.</gloss>
+        <gloss>John<subscript>1</subscript> expresses <quote>I-am-not you</quote> to John<subscript>2</subscript>.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>subscripts</primary><secondary>and tense</secondary></indexterm> Subscripts on tenses allow talking about more than one time or place that is described by the same general cmavo. For example, 
@@ -1067,7 +1074,7 @@
       </title>
       <interlinear-gloss>
         <jbo>la tcarlis. cusku lo'u le ninmu cu morsi le'u .iku'i ri jmive</jbo>
-        <gloss>Charlie says [quote] le ninmu cu morsi [unquote]. However, the-last-mentioned is-alive.</gloss>
+        <gloss>Charlie says [quote] <jbophrase>le ninmu cu morsi</jbophrase> [unquote]. However, the-last-mentioned is-alive.</gloss>
         <en>Charlie says <jbophrase>le ninmu cu morsi</jbophrase>, but he is alive.</en>
       </interlinear-gloss>
     </example>
@@ -1236,9 +1243,9 @@
       </title>
       <interlinear-gloss>
         <jbo>zo .bab. cmene la'e zo .bab.</jbo>
-        <en>The-word 
+        <gloss>The-word 
         <quote>Bob</quote> is-the-name-of the-referent-of the-word 
-        <quote>Bob</quote>.</en>
+        <quote>Bob</quote>.</gloss>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qiTd" role="interlinear-gloss-example">
@@ -1259,7 +1266,7 @@
         <anchor xml:id="c19e10d9"/>
       </title>
       <interlinear-gloss>
-        <jbo>la bab. cmene la bab.</jbo>
+        <jbo valid="iffy">la bab. cmene la bab.</jbo>
         <en>Bob is the name of Bob.</en>
       </interlinear-gloss>
     </example>
@@ -1352,7 +1359,7 @@
         <jbo>mi viska la ba'e .djordj.</jbo>
         <gloss>I saw the-one-named [emphasis] 
         <quote>George</quote>.</gloss>
-        <en>I saw</en>
+        <en>I saw <emphasis>George</emphasis>.</en>
       </interlinear-gloss>
     </example>
     <para>Note the pause before the name 
@@ -1369,7 +1376,7 @@
         <jbo>mi viska ba'e la djordj.</jbo>
         <gloss>I saw [emphasis] the-one-named 
         <quote>George</quote>.</gloss>
-        <en>I saw</en>
+        <en>I saw <emphasis>George</emphasis>.</en>
       </interlinear-gloss>
     </example>
     <para>Marking a word with a cmavo of BAhE does not change the word's grammar in any way. Any word in a bridi can receive contrastive emphasis marking:</para>
@@ -1401,7 +1408,7 @@
         <anchor xml:id="c19e11d8"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi klama la za'e. .albeinias</jbo>
+        <jbo>mi klama la za'e .albeinias.</jbo>
         
         <gloss>I go-to so-called Albania</gloss>
         
@@ -1547,8 +1554,8 @@
       </title>
       <interlinear-gloss>
         <jbo>la djan. cusku lu mi klama le zarci li'u</jbo>
-        <en>John expresses 
-        <quote>I go to-the store</quote>.</en>
+        <gloss>John expresses 
+        <quote>I go to-the store</quote>.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>said John</primary><secondary>example</secondary></indexterm> which literally claims that John uttered the quoted text. If the central claim is that John made the utterance, as is likely in conversation, this style is the most sensible. However, in written text which quotes a conversation, you don't want the 
@@ -1655,9 +1662,9 @@
       </title>
       <interlinear-gloss>
         <jbo>zo .bab. se cmene zo si si si la bab.</jbo>
-        <en>The-word 
+        <gloss>The-word 
         <quote>Bob</quote> is-the-name-of the word 
-        <jbophrase>si</jbophrase>, er, er, Bob.</en>
+        <jbophrase>si</jbophrase>, er, er, Bob.</gloss>
       </interlinear-gloss>
     </example>
     <para>The first use of 
@@ -1675,16 +1682,16 @@
       </title>
       <interlinear-gloss>
         <jbo>mi tavla fo la .esperanto si si .esperanton.</jbo>
-        <en>I talk in-language that-named 
+        <gloss>I talk in-language that-named 
         <quote>and</quote>
-        <quote>speranto</quote>, er, er, Esperanto.</en>
+        <quote>speranto</quote>, er, er, Esperanto.</gloss>
       </interlinear-gloss>
     </example>
     <para>The Lojbanized spelling 
-    <quote>.esperanto</quote> breaks up, as a consequence of the Lojban morphology rules (see 
+    <jbophrase valid="iffy">.esperanto</jbophrase> breaks up, as a consequence of the Lojban morphology rules (see 
     <xref linkend="chapter-morphology"/>) into two Lojban words, the cmavo 
     <jbophrase>.e</jbophrase> and the undefined fu'ivla 
-    <quote>speranto</quote>. Therefore, two 
+    <jbophrase>speranto</jbophrase>. Therefore, two 
     <jbophrase>si</jbophrase> cmavo are needed to erase them. Of course, 
     <jbophrase>.e speranto</jbophrase> is not grammatical after 
     <jbophrase>la</jbophrase>, but recognition of 
@@ -1697,9 +1704,9 @@
       </title>
       <interlinear-gloss>
         <jbo>mi cusku zoi fy. gy. .fy. si si si si zo .djan</jbo>
-        <en>I express [foreign] [quote] 
+        <gloss>I express [foreign] [quote] 
         <jbophrase>gy</jbophrase> [unquote], er, er, er, er, 
-        <quote>John</quote>.</en>
+        <quote>John</quote>.</gloss>
       </interlinear-gloss>
     </example>
     <para>In 
@@ -1726,13 +1733,13 @@
       </title>
       <interlinear-gloss>
         <jbo>mi se cmene zo .djan. si si zo .djordj.</jbo>
-        <en>I am-named-by the-word 
+        <gloss>I am-named-by the-word 
         <quote>John</quote>, er, er, the-word 
-        <quote>George</quote>.</en>
+        <quote>George</quote>.</gloss>
       </interlinear-gloss>
     </example>
     <para>The parser will reject 
-    <jbophrase>zo .djan. si .djordj.</jbophrase>, because in that context 
+    <jbophrase valid="false">zo .djan. si .djordj.</jbophrase>, because in that context 
     <jbophrase>djordj.</jbophrase> is a name (of selma'o CMENE) rather than a quoted word.</para>
     <para>Note: The current machine parser does not implement 
     <jbophrase>si</jbophrase> erasure.</para>
@@ -1751,8 +1758,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi viska le sa .i mi cusku zo .djan.</jbo>
-        <en>I see the ... I say the-word 
-        <quote>John</quote>.</en>
+        <gloss>I see the ... I say the-word <quote>John</quote>.</gloss>
       </interlinear-gloss>
     </example>
     <para>Since the word following 
@@ -1775,7 +1781,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi viska le blanu zdan. sa le xekri zdani</jbo>
-        <en>I see the blue hou ... the black house.</en>
+        <gloss>I see the blue hou ... the black house.</gloss>
       </interlinear-gloss>
     </example>
     <para>In 
@@ -1857,36 +1863,43 @@
     <itemizedlist>
       <listitem>
         <para>
-        <jbophrase>zo</jbophrase> quotes the following word, no matter what it is.</para>
+          <jbophrase>zo</jbophrase> quotes the following word, no matter what it is.
+        </para>
       </listitem>
       <listitem>
         <para>
           <jbophrase>si</jbophrase> erases the preceding word unless it is a 
-        <jbophrase>zo</jbophrase>.</para>
+          <jbophrase>zo</jbophrase>.
+        </para>
       </listitem>
       <listitem>
         <para>
           <jbophrase>sa</jbophrase> erases the preceding word and other words, unless the preceding word is a 
-        <jbophrase>zo</jbophrase>.</para>
+          <jbophrase>zo</jbophrase>.
+        </para>
       </listitem>
       <listitem>
         <para>
           <jbophrase>su</jbophrase> is the same as 
-        <jbophrase>sa</jbophrase>, but erases more words.</para>
+          <jbophrase>sa</jbophrase>, but erases more words.
+        </para>
       </listitem>
       <listitem>
         <para>
           <jbophrase>lo'u</jbophrase> quotes all following words up to a 
           <jbophrase>le'u</jbophrase> (but not a 
-        <jbophrase>zo le'u</jbophrase>).</para>
+          <jbophrase>zo le'u</jbophrase>).
+        </para>
       </listitem>
       <listitem>
         <para>
-        <jbophrase>le'u</jbophrase> is ungrammatical except at the end of a “lo'u quotation.</para>
+          <jbophrase>le'u</jbophrase> is ungrammatical except at the end of a “lo'u quotation.
+        </para>
       </listitem>
       <listitem>
         <para>ZOI cmavo use the following word as a delimiting word, no matter what it is, but using 
-        <jbophrase>le'u</jbophrase> may create difficulties.</para>
+        <jbophrase>le'u</jbophrase> may create difficulties.
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -1898,14 +1911,16 @@
           <jbophrase>lo'u</jbophrase>, ZOI cmavo, 
           <jbophrase>fa'o</jbophrase>, and 
           
-        <jbophrase>zei</jbophrase>.</para>
+          <jbophrase>zei</jbophrase>.
+        </para>
       </listitem>
       <listitem>
         <para>BAhE cmavo mark the following word, unless it is 
         <jbophrase>si</jbophrase>, 
         <jbophrase>sa</jbophrase>, or 
         <jbophrase>su</jbophrase>, or unless it is preceded by 
-        <jbophrase>zo</jbophrase>. Multiple BAhE cmavo may be used in succession.</para>
+        <jbophrase>zo</jbophrase>. Multiple BAhE cmavo may be used in succession.
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -1919,7 +1934,8 @@
           
           <jbophrase>zei</jbophrase>, BAhE cmavo, and 
           <jbophrase>bu</jbophrase>. Multiple 
-        <jbophrase>bu</jbophrase> cmavo may be used in succession.</para>
+          <jbophrase>bu</jbophrase> cmavo may be used in succession.
+        </para>
       </listitem>
       <listitem>
         <para>UI and CAI cmavo mark the previous word, except for 
@@ -1932,7 +1948,8 @@
         
         <jbophrase>zei</jbophrase>, BAhE cmavo, and 
         <jbophrase>bu</jbophrase>. Multiple UI cmavo may be used in succession. A following 
-        <jbophrase>nai</jbophrase> is made part of the UI.</para>
+        <jbophrase>nai</jbophrase> is made part of the UI.
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -1943,14 +1960,15 @@
           
           <jbophrase>fu'o</jbophrase> are the same as UI, but do not absorb a following 
           
-        <jbophrase>nai</jbophrase>.</para>
+          <jbophrase>nai</jbophrase>.
+        </para>
       </listitem>
     </itemizedlist>
   </section>
   <section xml:id="section-elidable-terminators">
     <title>List of Elidable Terminators</title>
     <para>The following list shows all the elidable terminators of Lojban. The first column is the terminator, the second column is the selma'o that starts the corresponding construction, and the third column states what kinds of grammatical constructs are terminated. Each terminator is the only cmavo of its selma'o, which naturally has the same name as the cmavo.</para>
-    
+      <!-- These "selmaho" are anomalous in that they're the selmaho of the cmavo that the <cmavo> cmavo terminates, not the selmaho of <cmavo> cmavo. -->
     <cmavo-list>
       <cmavo-entry>
         <cmavo>be'o</cmavo>

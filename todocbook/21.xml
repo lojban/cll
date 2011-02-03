@@ -9,7 +9,7 @@
     <para>/* The Lojban machine parsing algorithm is a multi-step process. The YACC machine grammar presented here is an amalgam of those steps, concatenated so as to allow YACC to verify the syntactic ambiguity of the grammar. YACC is used to generate a parser for a portion of the grammar, which is LALR1 (the type of grammar that YACC is designed to identify and process successfully), but most of the rest of the grammar must be parsed using some language-coded processing.</para>
     
     <bridgehead>Step 1 – Lexing</bridgehead>
-    <para>From phonemes, stress, and pause, it is possible to resolve Lojban unambiguously into a stream of words. Any machine processing of speech will have to have some way to deal with ’non-Lojban’ failures of fluent speech, of course. The resolved words can be expressed as a text file using Lojban’s phonetic spelling rules.</para>
+    <para>From phonemes, stress, and pause, it is possible to resolve Lojban unambiguously into a stream of words. Any machine processing of speech will have to have some way to deal with <quote>non-Lojban</quote> failures of fluent speech, of course. The resolved words can be expressed as a text file using Lojban's phonetic spelling rules.</para>
     <para>The following steps assume that there is the possibility of non-Lojban text within the Lojban text (delimited appropriately). Such non-Lojban text may not be reducible from speech phonetically. However, step 2 allows the filtering of a phonetically transcribed text stream, to recognize such portions of non-Lojban text where properly delimited, without interference with the parsing algorithm.</para>
     
     <bridgehead>Step 2 – Filtering</bridgehead>
@@ -17,16 +17,16 @@
     <orderedlist numeration="lowerroman">
       <listitem>
         <para>If the Lojban word <jbophrase>zoi</jbophrase> (selma'o ZOI) is identified, take the following Lojban word (which should be end delimited with a pause for separation from the following non-Lojban text) as an opening delimiter. Treat all text following that delimiter, until that delimiter recurs 
-        <emphasis>after a pause</emphasis>, as grammatically a single token (labelled ’ 
-        <xref linkend="cll_yacc-699"/>’ in this grammar). There is no need for processing within this text except as necessary to find the closing delimiter.</para>
+        <emphasis>after a pause</emphasis>, as grammatically a single token (labelled <quote> 
+        <xref linkend="cll_yacc-699"/></quote> in this grammar). There is no need for processing within this text except as necessary to find the closing delimiter.</para>
       </listitem>
       <listitem>
-        <para>If the Lojban word <jbophrase>zo</jbophrase> (selma'o ZO) is identified, treat the following Lojban word as a token labelled ’ 
-        <xref linkend="cll_yacc-698"/>’, instead of lexing it by its normal grammatical function.</para>
+        <para>If the Lojban word <jbophrase>zo</jbophrase> (selma'o ZO) is identified, treat the following Lojban word as a token labelled <quote> 
+        <xref linkend="cll_yacc-698"/></quote>, instead of lexing it by its normal grammatical function.</para>
       </listitem>
       <listitem>
-        <para>If the Lojban word <jbophrase>lo'u</jbophrase> (selma'o LOhU) is identified, search for the closing delimiter <jbophrase>le'u</jbophrase> (selma'o LEhU), ignoring any such closing delimiters absorbed by the previous two steps. The text between the delimiters should be treated as the single token ’ 
-        <xref linkend="cll_yacc-697"/>’.</para>
+        <para>If the Lojban word <jbophrase>lo'u</jbophrase> (selma'o LOhU) is identified, search for the closing delimiter <jbophrase>le'u</jbophrase> (selma'o LEhU), ignoring any such closing delimiters absorbed by the previous two steps. The text between the delimiters should be treated as the single token <quote> 
+        <xref linkend="cll_yacc-697"/></quote>.</para>
       </listitem>
       <listitem>
         <para>Categorize all remaining words into their Lojban selma'o category, including the various delimiters mentioned in the previous steps. In all steps after step 2, only the selma'o token type is significant for each word.</para>
@@ -38,7 +38,7 @@
         <para>If the word <jbophrase>sa</jbophrase> (selma'o SA) is identified, erase it and all preceding text as far back as necessary to make what follows attach to what precedes. (This rule is hard to formalize and may receive further definition later.)</para>
       </listitem>
       <listitem>
-        <para>If the word <jbophrase>su</jbophrase> (selma'o SU) is identified, erase it and all preceding text back to and including the first preceding token word which is in one of the selma'o: NIhO, LU, TUhE, and TO. However, if speaker identification is available, a SU shall only erase to the beginning of a speaker’s discourse, unless it occurs at the beginning of a speaker’s discourse. (Thus, if the speaker has said something, two adjacent uses of <jbophrase>su</jbophrase> are required to erase the entire conversation.</para>
+        <para>If the word <jbophrase>su</jbophrase> (selma'o SU) is identified, erase it and all preceding text back to and including the first preceding token word which is in one of the selma'o: NIhO, LU, TUhE, and TO. However, if speaker identification is available, a SU shall only erase to the beginning of a speaker's discourse, unless it occurs at the beginning of a speaker's discourse. (Thus, if the speaker has said something, two adjacent uses of <jbophrase>su</jbophrase> are required to erase the entire conversation.</para>
       </listitem>
     </orderedlist>
     <bridgehead>Step 3 – Termination</bridgehead>
@@ -47,7 +47,7 @@
     <para>In a new pass, perform the following absorptions (absorption means that the token is removed from the grammar for processing in following steps, and optionally reinserted, grouped with the absorbing token after parsing is completed).</para>
     <orderedlist numeration="lowerroman">
       <listitem>
-        <para>Token sequences of the form any – (ZEI – any) ..., where there may be any number of ZEIs, are merged into a single token of selma'o BRIVLA.</para>
+        <para>Token sequences of the form any - (ZEI - any) ..., where there may be any number of ZEIs, are merged into a single token of selma'o BRIVLA.</para>
       </listitem>
       <listitem>
         <para>Absorb all selma'o BAhE tokens into the following token. If they occur at the end of text, leave them alone (they are errors).</para>
@@ -59,14 +59,14 @@
         <para>If selma'o NAI occurs immediately following any of tokens UI or CAI, absorb the NAI into the previous token.</para>
       </listitem>
       <listitem>
-        <para>Absorb all members of selma'o DAhO, FUhO, FUhE, UI, Y, and CAI into the previous token. All of these null grammar tokens are permitted following any word of the grammar, without interfering with that word’s grammatical function, or causing any effect on the grammatical interpretation of any other token in the text. Indicators at the beginning of text are explicitly handled by the grammar.</para>
+        <para>Absorb all members of selma'o DAhO, FUhO, FUhE, UI, Y, and CAI into the previous token. All of these null grammar tokens are permitted following any word of the grammar, without interfering with that word's grammatical function, or causing any effect on the grammatical interpretation of any other token in the text. Indicators at the beginning of text are explicitly handled by the grammar.</para>
       </listitem>
     </orderedlist>
     <bridgehead>Step 5 – Insertion of Lexer Lexemes</bridgehead>
     <para>Lojban is not in itself LALR1. There are words whose grammatical function is determined by following tokens. As a result, parsing of the YACC grammar must take place in two steps. In the first step, certain strings of tokens with defined grammars are identified, and either</para>
     <orderedlist numeration="lowerroman">
       <listitem>
-        <para>are replaced by a single specified ’lexer token’ for step 6, or</para>
+        <para>are replaced by a single specified <quote>lexer token</quote> for step 6, or</para>
       </listitem>
       <listitem>
         <para>the lexer token is inserted in front of the token string to identify it uniquely.</para>
@@ -193,7 +193,7 @@
 <anchor xreflabel="YACC rule #528" xml:id="cll_yacc-528"/> FAhA_528         /* superdirections in space */
 %token 
 <anchor xml:id="y529"/>
-<anchor xreflabel="YACC rule #529" xml:id="cll_yacc-529"/> FAhO_529         /* normally elided ’done pause’ to indicate end
+<anchor xreflabel="YACC rule #529" xml:id="cll_yacc-529"/> FAhO_529         /* normally elided <quote>done pause</quote> to indicate end
                                    of utterance string */
 %token 
 <anchor xml:id="y530"/>
@@ -693,7 +693,7 @@ the 900 series rules are found in the lexer.  */
     and at the start of text(_0), will survive the lexer; all other valid ones
     will be absorbed.  The only strings for which indicators generate a
     potential ambiguity are those which contain NAI.  An indicator cannot be
-    inserted in between a token and its negating NAI, else you can’t tell
+    inserted in between a token and its negating NAI, else you can't tell
     whether it is the indicator or the original token being negated. */
                         |  /* empty */
   /* An empty text is legal; formerly this was handled by the explicit
@@ -1927,7 +1927,7 @@ the 900 series rules are found in the lexer.  */
 <xref linkend="cll_yacc-698"/>
                         ;
 
-/* ’pause’ is morphemic, represented by <jbophrase role="letteral">.</jbophrase> The lexer assembles 
+/* <quote>pause</quote> is morphemic, represented by <jbophrase role="letteral">.</jbophrase> The lexer assembles 
 <xref linkend="cll_yacc-699"/> */
 
 <anchor xml:id="y435"/>
@@ -1936,7 +1936,7 @@ the 900 series rules are found in the lexer.  */
 <xref linkend="cll_yacc-698"/>
                         ;
 
-/* ’word’ may not be a compound; but it can be any valid Lojban selma'o value,
+/* <quote>word</quote> may not be a compound; but it can be any valid Lojban selma'o value,
    including ZO, ZOI, SI, SA, SU. The preparser will not lex the word per its
    normal selma'o. */
 
@@ -1947,7 +1947,7 @@ the 900 series rules are found in the lexer.  */
 <xref linkend="cll_yacc-565"/>
                         ;
 
-/* ’words’ may be any Lojban words, with no claim of grammaticality; the
+/* <quote>words</quote> may be any Lojban words, with no claim of grammaticality; the
    preparser will not lex the individual words per their normal selma'o;
    used to quote ungrammatical Lojban, equivalent to the * or ? writing
    convention for such text.  */
@@ -1962,22 +1962,22 @@ the 900 series rules are found in the lexer.  */
    the ZO rule, before testing for LOhU.  This is obviously not the
    standard usage for ZO, which would otherwise cause the result to be a
    sumti.  But, since the result will be part of an unparsed string anyway,
-   it doesn’t matter.  */
+   it doesn't matter.  */
 
 /* It may be seen that any of the ZO/ZOI/LOhU trio of quotation markers
    may contain the powerful metalinguistic erasers.  Since these quotations
 
    are not parsed internally, these operators are ignored within the quote.
-   To erase a ZO, then, two SI’s are needed after giving a quoted word of
-   any type.  ZOI takes four SI’s, with the ENTIRE BODY OF THE QUOTE
-   treated as a single ’word’ since it is one selma'o.  Thus one for the
+   To erase a ZO, then, two SI's are needed after giving a quoted word of
+   any type.  ZOI takes four SI's, with the ENTIRE BODY OF THE QUOTE
+   treated as a single <quote>word</quote> since it is one selma'o.  Thus one for the
    quote body, two for the single word delimiters, and one for the ZOI.  In
-   LOhU, the entire body is treated as a single word, so three SI’s can
+   LOhU, the entire body is treated as a single word, so three SI's can
    erase it.  */
 
-/* All rule terminator names with ’gap’ in them are potentially
+/* All rule terminator names with <quote>gap</quote> in them are potentially
    elidable, where such elision does not cause an ambiguity.  This is
-   implemented through use of the YACC ’error’ token, which effectively
+   implemented through use of the YACC <quote>error</quote> token, which effectively
    recovers from an elision.  */
 
 <anchor xml:id="y437"/>
@@ -3080,8 +3080,8 @@ the 900 series rules are found in the lexer.  */
 /* puca'a = actually was */
 /* baca'a = actually will be */
 /* bapu'i = can and will have */
-/* banu'o = can, but won’t have yet */
-/* canu'ojebapu'i = can, hasn’t yet, but will */
+/* banu'o = can, but won't have yet */
+/* canu'ojebapu'i = can, hasn't yet, but will */
 
 <anchor xml:id="y979"/>
 <anchor xreflabel="YACC rule #979" xml:id="cll_yacc-979"/> tense_C_979             :  
@@ -3487,7 +3487,7 @@ the 900 series rules are found in the lexer.  */
    lexer/Preparser will actually prevent these from being passed thru to
    the parse routine.  (Otherwise we have to put unacceptably fancy code in
    the PreParser to determine just when these can be passed thru, and when
-   they can’t.)  Constructs in this category include quotes and indicators
+   they can't.)  Constructs in this category include quotes and indicators
    as defined above.  (The above grammar handles utterance scope
    (free_modifier) and clause scope (gap) applications of the latter,
    however, and indicators should be allowed to be absorbed into almost any
@@ -3565,7 +3565,7 @@ the 900 series rules are found in the lexer.  */
                         |  possibly unparsable text  (PAUSE)  
 <xref linkend="cll_yacc-603"/>
                            erases back to start of text which is the
-                           beginning of a speaker’s statement,
+                           beginning of a speaker's statement,
                            a parenthesis (TO/TOI), a LU/LIhU quote,
                            or a TUhE/TUhU utterance string.
                         ;
