@@ -1,6 +1,6 @@
 <chapter xml:id="chapter-grammars">
   <title>Formal Grammars</title>
-  <section xml:id="cll_chapter21-section1">
+  <section xml:id="section-YACC">
     <title>YACC Grammar of Lojban</title>
     <para>The following two listings constitute the formal grammar of Lojban. The first version is written in the YACC language, which is used to describe parsers, and has been used to create a parser for Lojban texts. This parser is available from the Logical Language Group. The second listing is in Extended Backus-Naur Form (EBNF) and represents the same grammar in a more human-readable form. (In case of discrepancies, the YACC version is official.) There is a cross-reference listing for each format that shows, for each selma'o and rule, which rules refer to it.</para>
     
@@ -14,18 +14,18 @@
     
     <bridgehead>Step 2 - Filtering</bridgehead>
     <para>From start to end, performing the following filtering and lexing tasks using the given order of precedence in case of conflict:</para>
-    <para>a. If the Lojban word “zoi” (selma'o ZOI) is identified, take the following Lojban word (which should be end delimited with a pause for separation from the following non-Lojban text) as an opening delimiter. Treat all text following that delimiter, until that delimiter recurs 
+    <para>a. If the Lojban word <jbophrase>zoi</jbophrase> (selma'o ZOI) is identified, take the following Lojban word (which should be end delimited with a pause for separation from the following non-Lojban text) as an opening delimiter. Treat all text following that delimiter, until that delimiter recurs 
     
     <emphasis>after a pause</emphasis>, as grammatically a single token (labelled ’ 
     <xref linkend="cll_yacc-699"/>’ in this grammar). There is no need for processing within this text except as necessary to find the closing delimiter.</para>
-    <para>b. If the Lojban word “zo” (selma'o ZO) is identified, treat the following Lojban word as a token labelled ’ 
+    <para>b. If the Lojban word <jbophrase>zo</jbophrase> (selma'o ZO) is identified, treat the following Lojban word as a token labelled ’ 
     <xref linkend="cll_yacc-698"/>’, instead of lexing it by its normal grammatical function.</para>
-    <para>c. If the Lojban word “lo'u” (selma'o LOhU) is identified, search for the closing delimiter “le'u” (selma'o LEhU), ignoring any such closing delimiters absorbed by the previous two steps. The text between the delimiters should be treated as the single token ’ 
+    <para>c. If the Lojban word <jbophrase>lo'u</jbophrase> (selma'o LOhU) is identified, search for the closing delimiter <jbophrase>le'u</jbophrase> (selma'o LEhU), ignoring any such closing delimiters absorbed by the previous two steps. The text between the delimiters should be treated as the single token ’ 
     <xref linkend="cll_yacc-697"/>’.</para>
     <para>d. Categorize all remaining words into their Lojban selma'o category, including the various delimiters mentioned in the previous steps. In all steps after step 2, only the selma'o token type is significant for each word.</para>
-    <para>e. If the word “si” (selma'o SI) is identified, erase it and the previous word (or token, if the previous text has been condensed into a single token by one of the above rules).</para>
-    <para>f. If the word “sa” (selma'o SA) is identified, erase it and all preceding text as far back as necessary to make what follows attach to what precedes. (This rule is hard to formalize and may receive further definition later.)</para>
-    <para>g. If the word ’su’ (selma'o SU) is identified, erase it and all preceding text back to and including the first preceding token word which is in one of the selma'o: NIhO, LU, TUhE, and TO. However, if speaker identification is available, a SU shall only erase to the beginning of a speaker’s discourse, unless it occurs at the beginning of a speaker’s discourse. (Thus, if the speaker has said something, two adjacent uses of “su” are required to erase the entire conversation.</para>
+    <para>e. If the word <jbophrase>si</jbophrase> (selma'o SI) is identified, erase it and the previous word (or token, if the previous text has been condensed into a single token by one of the above rules).</para>
+    <para>f. If the word <jbophrase>sa</jbophrase> (selma'o SA) is identified, erase it and all preceding text as far back as necessary to make what follows attach to what precedes. (This rule is hard to formalize and may receive further definition later.)</para>
+    <para>g. If the word ’su’ (selma'o SU) is identified, erase it and all preceding text back to and including the first preceding token word which is in one of the selma'o: NIhO, LU, TUhE, and TO. However, if speaker identification is available, a SU shall only erase to the beginning of a speaker’s discourse, unless it occurs at the beginning of a speaker’s discourse. (Thus, if the speaker has said something, two adjacent uses of <jbophrase>su</jbophrase> are required to erase the entire conversation.</para>
     <bridgehead>Step 3 - Termination</bridgehead>
     <para>If the text contains a FAhO, treat that as the end-of-text and ignore everything that follows it.</para>
     <bridgehead>Step 4 - Absorption of Grammar-Free Tokens</bridgehead>
@@ -1385,7 +1385,7 @@ the 900 series rules are found in the lexer.  */
 
 /*  Entry point for MEX used after LI; no parens needed, but LI now has an
     elidable terminator. (This allows us to express the difference between
-    “the expression a + b” and “the expression (a + b)” )   */
+    <quote>the expression a + b</quote> and <quote>the expression (a + b)</quote> )   */
 
 /*  This rule supports left-grouping infix expressions and reverse Polish
 
@@ -3419,7 +3419,7 @@ the 900 series rules are found in the lexer.  */
    /* paroiku'avi = once upon a time here */
 
 
-/* The following are “Lexer-only rules”, covered by steps 1-4 described
+/* The following are <quote>Lexer-only rules</quote>, covered by steps 1-4 described
    at the beginning.  The grammar of these constructs is nonexistent,
    except possibly in cases where they interact with each other.  Even
    there, however, the effects are semantic rather than grammatical.  Where
@@ -6954,14 +6954,14 @@ the 900 series rules are found in the lexer.  */
       </varlistentry>
     </variablelist>
   </section>
-  <section xml:id="cll_chapter21-section2">
+  <section xml:id="section-EBNF">
     <title>EBNF Grammar of Lojban</title>
     <para>Lojban Machine Grammar, EBNF Version, Final Baseline</para>
     <para>This EBNF document is explicitly dedicated to the public domain by its author, The Logical Language Group, Inc. Contact that organization at: 2904 Beau Lane, Fairfax VA 22031 USA 703-385-0273 (intl: +1 703 385 0273)</para>
     <para>Explanation of notation: All rules have the form:</para>
     <para>name 
     <subscript>number</subscript>= bnf-expression</para>
-    <para>which means that the grammatical construct “name” is defined by “bnf-expression”. The number cross-references this grammar with the rule numbers in the YACC grammar. The names are the same as those in the YACC grammar, except that subrules are labeled with A, B, C, ... in the YACC grammar and with 1, 2, 3, ... in this grammar. In addition, rule 971 is “simple_tag” in the YACC grammar but “stag” in this grammar, because of its frequent appearance.</para>
+    <para>which means that the grammatical construct <quote>name</quote> is defined by <quote>bnf-expression</quote>. The number cross-references this grammar with the rule numbers in the YACC grammar. The names are the same as those in the YACC grammar, except that subrules are labeled with A, B, C, ... in the YACC grammar and with 1, 2, 3, ... in this grammar. In addition, rule 971 is <quote>simple_tag</quote> in the YACC grammar but <quote>stag</quote> in this grammar, because of its frequent appearance.</para>
     
     <orderedlist>
       <listitem>
@@ -6980,16 +6980,16 @@ the 900 series rules are found in the lexer.  */
         <para>[] represents an optional element.</para>
       </listitem>
       <listitem>
-        <para>&amp; represents and/or (“A &amp; B” is the same as “A | B | A B”).</para>
+        <para>&amp; represents and/or (<quote>A &amp; B</quote> is the same as <quote>A | B | A B</quote>).</para>
       </listitem>
       <listitem>
-        <para>... represents optional repetition of the construct to the left. Left-grouping is implied; right-grouping is shown by explicit self-referential recursion with no “...”</para>
+        <para>... represents optional repetition of the construct to the left. Left-grouping is implied; right-grouping is shown by explicit self-referential recursion with no <quote>...</quote></para>
       </listitem>
       <listitem>
-        <para>() serves to indicate the grouping of the other operators. Otherwise, “...” binds closer than &amp;, which binds closer than |.</para>
+        <para>() serves to indicate the grouping of the other operators. Otherwise, <quote>...</quote> binds closer than &amp;, which binds closer than |.</para>
       </listitem>
       <listitem>
-        <para># is shorthand for “[free ...]”, a construct which appears in many places.</para>
+        <para># is shorthand for <quote>[free ...]</quote>, a construct which appears in many places.</para>
       </listitem>
       <listitem>
         <para>// encloses an elidable terminator, which may be omitted (without change of meaning) if no grammatical ambiguity results.</para>
@@ -7895,13 +7895,13 @@ the 900 series rules are found in the lexer.  */
       <varlistentry>
         <term>any-word =</term>
         <listitem>
-          <para>“any single word (no compound cmavo)”</para>
+          <para><quote>any single word (no compound cmavo)</quote></para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>anything =</term>
         <listitem>
-          <para>“any text at all, whether Lojban or not” 
+          <para><quote>any text at all, whether Lojban or not</quote> 
           <anchor xml:id="b1101"/>
           <anchor xreflabel="BNF rule #1101" xml:id="cll_bnf-1101"/>
           <xref linkend="cll_yacc-1101"/></para>
@@ -7917,7 +7917,7 @@ the 900 series rules are found in the lexer.  */
     </variablelist>
     <para>FAhO is a universal terminator and signals the end of parsable input.</para>
   </section>
-  <section xml:id="cll_chapter21-section3">
+  <section xml:id="section-cross-reference">
     <title>EBNF Cross-Reference</title>
     <variablelist>
       <varlistentry>
