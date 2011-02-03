@@ -309,7 +309,8 @@
       <interlinear-gloss>
         <jbo>le nanmu ca'uvi ni'ava ri'uvu ne'i batci le gerku</jbo>
         <gloss>The man [front] [short] [down] [medium] [right] [long] [within] bites the dog.</gloss>
-        <en>Within a place a long distance to the right of a place which is a medium distance downward from a place a short distance in front of me, the man bites the dog.</en> </interlinear-gloss>
+        <en>Within a place a long distance to the right of a place which is a medium distance downward from a place a short distance in front of me, the man bites the dog.</en>
+      </interlinear-gloss>
     </example>
     <para>Whew! It's a good thing tense constructs are optional: having to say all that could certainly be painful. Note, however, how much shorter the Lojban version of 
     <xref linkend="example-random-id-mqTU"/> is than the English version.</para>
@@ -566,7 +567,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi ca ze'ica cusku dei</jbo>
-        <gloss>I [present] [short time interval – present] express this-utterance.</gloss>
+        <gloss>I [present] [short time interval - present] express this-utterance.</gloss>
         <en>I am now saying this sentence.</en>
       </interlinear-gloss>
     </example>
@@ -582,7 +583,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi ca ze'ipu cusku dei</jbo>
-        <gloss>I [present] [short time interval – past] express this-utterance.</gloss>
+        <gloss>I [present] [short time interval - past] express this-utterance.</gloss>
         <en>I have just been saying this sentence.</en>
       </interlinear-gloss>
     </example>
@@ -594,7 +595,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi pu ze'aba citka le mi sanmi</jbo>
-        <gloss>I [past] [medium time interval – future] eat my meal.</gloss>
+        <gloss>I [past] [medium time interval - future] eat my meal.</gloss>
         <gloss>For a medium time afterward, I ate my meal.</gloss>
         <en>I ate my meal for a while.</en>
       </interlinear-gloss>
@@ -610,7 +611,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi pu ze'aca citka le mi sanmi</jbo>
-        <gloss>I [past] [medium time interval – present] eat my meal.</gloss>
+        <gloss>I [past] [medium time interval - present] eat my meal.</gloss>
         <gloss>For a medium time before and afterward, I ate my meal.</gloss>
         <en>I ate my meal for a while.</en>
       </interlinear-gloss>
@@ -638,7 +639,7 @@
       </title>
       <interlinear-gloss>
         <jbo>ta ri'u ve'ica'u finpe</jbo>
-        <gloss>That-there [right] [short space interval – front] is-a-fish.</gloss>
+        <gloss>That-there [right] [short space interval - front] is-a-fish.</gloss>
         <en>That thing on my right extending forwards is a fish.</en>
       </interlinear-gloss>
     </example>
@@ -1492,7 +1493,7 @@
       </title>
       <interlinear-gloss>
         <jbo>tu ve'abe'a fe'e co'a rokci</jbo>
-        <gloss>That-yonder [medium space interval – north] [space] [initiative] is-a-rock.</gloss>
+        <gloss>That-yonder [medium space interval - north] [space] [initiative] is-a-rock.</gloss>
         <gloss>That is the beginning of a rock extending to my north.</gloss>
         <en>That is the south face of a rock.</en>
         
@@ -2258,15 +2259,15 @@
     <variablelist>
       <varlistentry>
         <term>subordinate:</term>
-        <listitem><para>X TENSE le nu Y</para></listitem>
+        <listitem><compound-syntax>X TENSE le nu Y</compound-syntax></listitem>
       </varlistentry>
       <varlistentry>
         <term>afterthought coordinate:</term>
-        <listitem><para>Y .i+TENSE+bo X</para></listitem>
+        <listitem><compound-syntax>Y .i+TENSE+bo X</compound-syntax></listitem>
       </varlistentry>
       <varlistentry>
         <term>forethought coordinate:</term>
-        <listitem><para>TENSE+gi X gi Y</para></listitem>
+        <listitem><compound-syntax>TENSE+gi X gi Y</compound-syntax></listitem>
       </varlistentry>
     </variablelist>
   </section>
@@ -3157,17 +3158,17 @@
     </example>
     <para>respectively.</para>
     <para> <indexterm type="general-imported"><primary>modal sentence connection</primary><secondary>table of equivalent schemata</secondary></indexterm> The following modal sentence schemata (where X and Y represent sentences) all have the same meaning:</para>
-    <place-structure>
+    <compound-syntax>
        X .i BAI bo Y
        BAI gi Y gi X
        X BAI le nu Y
-    </place-structure>
+    </compound-syntax>
     <para> <indexterm type="general-imported"><primary>tense sentence connection</primary><secondary>table of equivalent schemata</secondary></indexterm> whereas the following tensed sentence schemata also have the same meaning:</para>
-    <place-structure>
+    <compound-syntax>
        X .i TENSE bo Y
        TENSE gi X gi Y
        Y TENSE le nu X
-    </place-structure>
+    </compound-syntax>
     <para>neglecting the question of what is claimed. In the modal sentence schemata, the modal tag is always followed by Y, the sentence representing the event in the x1 place of the gismu that underlies the BAI. In the tensed sentences, no such simple rule exists.</para>
   </section>
   <section xml:id="section-tense-questions">
