@@ -1474,101 +1474,92 @@
   </section>
   <section xml:id="section-summary">
     <title>Table of abstractors</title>
-    <para>The following table gives each abstractor, an English gloss for it, a Lojban gismu which is connected with it (more or less remotely: the associations between abstractors and gismu are meant more as memory hooks than for any kind of inference), the rafsi associated with it, and (on the following line) its place structure.</para>
-    <informaltable>
-      <tgroup cols="5">
-        <colspec colnum="1" colname="col1"/>
-        <colspec colnum="2" colname="col2"/>
-        <colspec colnum="3" colname="col3"/>
-        <colspec colnum="4" colname="col4"/>
-        <colspec colnum="5" colname="col5"/>
-        <tbody>
-          <row>
-            <entry><jbophrase>nu</jbophrase></entry>
-            <entry>event of</entry>
-            <entry><jbophrase>fasnu</jbophrase></entry>
-            <entry><jbophrase>nun</jbophrase></entry>
-            <entry>x1 is an event of (the bridi)</entry>
-          </row>
-          <row>
-            <entry><jbophrase>ka</jbophrase></entry>
-            <entry>property of</entry>
-            <entry><jbophrase>ckaji</jbophrase></entry>
-            <entry><jbophrase role="rafsi">kam</jbophrase></entry>
-            <entry>x1 is a property of (the bridi)</entry>
-          </row>
-          <row>
-            <entry><jbophrase>ni</jbophrase></entry>
-            <entry>amount of</entry>
-            <entry><jbophrase>klani</jbophrase></entry>
-            <entry><jbophrase role="rafsi">nil</jbophrase></entry>
-            <entry>x1 is an amount of (the bridi) measured on scale x2</entry>
-          </row>
-          <row>
-            <entry><jbophrase>jei</jbophrase></entry>
-            <entry>truth-value of</entry>
-            <entry><jbophrase>jetnu</jbophrase></entry>
-            <entry><jbophrase role="rafsi">jez</jbophrase></entry>
-            <entry>x1 is a truth-value of (the bridi) under epistemology x2</entry>
-          </row>
-          <row>
-            <entry><jbophrase>li'i</jbophrase></entry>
-            <entry>experience of</entry>
-            <entry><jbophrase>lifri</jbophrase></entry>
-            <entry><jbophrase role="rafsi">liz</jbophrase></entry>
-            <entry>x1 is an experience of (the bridi) to experiencer x2</entry>
-          </row>
-          <row>
-            <entry><jbophrase>si'o</jbophrase></entry>
-            <entry>idea of</entry>
-            <entry><jbophrase>sidbo</jbophrase></entry>
-            <entry><jbophrase role="rafsi">siz</jbophrase></entry>
-            <entry>x1 is an idea/concept of (the bridi) in the mind of x2</entry>
-          </row>
-          <row>
-            <entry><jbophrase>du'u</jbophrase></entry>
-            <entry>predication of</entry>
-            <entry>-----</entry>
-            <entry><jbophrase role="rafsi">dum</jbophrase></entry>
-            <entry>x1 is the bridi (the bridi) expressed by sentence x2</entry>
-          </row>
-          <row>
-            <entry><jbophrase>su'u</jbophrase></entry>
-            <entry>abstraction of</entry>
-            <entry><jbophrase>sucta</jbophrase></entry>
-            <entry><jbophrase role="rafsi">sus</jbophrase></entry>
-            <entry>x1 is an abstract nature of (the bridi)</entry>
-          </row>
-          <row>
-            <entry><jbophrase>za'i</jbophrase></entry>
-            <entry>state of</entry>
-            <entry><jbophrase>zasti</jbophrase></entry>
-            <entry><jbophrase role="rafsi">zam</jbophrase></entry>
-            <entry>x1 is a state of (the bridi)</entry>
-          </row>
-          <row>
-            <entry><jbophrase>zu'o</jbophrase></entry>
-            <entry>activity of</entry>
-            <entry><jbophrase>zukte</jbophrase></entry>
-            <entry><jbophrase role="rafsi">zum</jbophrase></entry>
-            <entry>x1 is an activity of (the bridi)</entry>
-          </row>
-          <row>
-            <entry><jbophrase>pu'u</jbophrase></entry>
-            <entry>process of</entry>
-            <entry><jbophrase>pruce</jbophrase></entry>
-            <entry><jbophrase role="rafsi">pup</jbophrase></entry>
-            <entry>x1 is a process of (the bridi)</entry>
-          </row>
-          <row>
-            <entry><jbophrase>mu'e</jbophrase></entry>
-            <entry>point-event of</entry>
-            <entry><jbophrase>mulno</jbophrase></entry>
-            <entry><jbophrase role="rafsi">mub</jbophrase></entry>
-            <entry>x1 is a point-event/achievement of (the bridi)</entry>
-          </row>
-        </tbody>
-      </tgroup>
-    </informaltable>
+    <para>The following table gives each abstractor, an English gloss for it, a Lojban gismu which is connected with it (more or less remotely: the associations between abstractors and gismu are meant more as memory hooks than for any kind of inference), the rafsi associated with it, and (on the following line) its place structure.</para> <!-- WILL the place structure be on the following line? -->
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>nu</cmavo>
+        <description>event of</description>
+        <gismu>fasnu</gismu>
+        <rafsi>nun</rafsi>
+        <description role="place-structure">x1 is an event of (the bridi)</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ka</cmavo>
+        <description>property of</description>
+        <gismu>ckaji</gismu>
+        <rafsi>kam</rafsi>
+        <description role="place-structure">x1 is a property of (the bridi)</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ni</cmavo>
+        <description>amount of</description>
+        <gismu>klani</gismu>
+        <rafsi>nil</rafsi>
+        <description role="place-structure">x1 is an amount of (the bridi) measured on scale x2</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>jei</cmavo>
+        <description>truth-value of</description>
+        <gismu>jetnu</gismu>
+        <rafsi>jez</rafsi>
+        <description role="place-structure">x1 is a truth-value of (the bridi) under epistemology x2</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>li'i</cmavo>
+        <description>experience of</description>
+        <gismu>lifri</gismu>
+        <rafsi>liz</rafsi>
+        <description role="place-structure">x1 is an experience of (the bridi) to experiencer x2</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>si'o</cmavo>
+        <description>idea of</description>
+        <gismu>sidbo</gismu>
+        <rafsi>siz</rafsi>
+        <description role="place-structure">x1 is an idea/concept of (the bridi) in the mind of x2</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>du'u</cmavo>
+        <description>predication of</description>
+        <gismu glossary="false">-----</gismu>
+        <rafsi>dum</rafsi>
+        <description role="place-structure">x1 is the bridi (the bridi) expressed by sentence x2</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>su'u</cmavo>
+        <description>abstraction of</description>
+        <gismu>sucta</gismu>
+        <rafsi>sus</rafsi>
+        <description role="place-structure">x1 is an abstract nature of (the bridi)</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>za'i</cmavo>
+        <description>state of</description>
+        <gismu>zasti</gismu>
+        <rafsi>zam</rafsi>
+        <description role="place-structure">x1 is a state of (the bridi)</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>zu'o</cmavo>
+        <description>activity of</description>
+        <gismu>zukte</gismu>
+        <rafsi>zum</rafsi>
+        <description role="place-structure">x1 is an activity of (the bridi)</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>pu'u</cmavo>
+        <description>process of</description>
+        <gismu>pruce</gismu>
+        <rafsi>pup</rafsi>
+        <description role="place-structure">x1 is a process of (the bridi)</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mu'e</cmavo>
+        <description>point-event of</description>
+        <gismu>mulno</gismu>
+        <rafsi>mub</rafsi>
+        <description role="place-structure">x1 is a point-event/achievement of (the bridi)</description>
+      </cmavo-entry>
+    </cmavo-list>
   </section>
 </chapter>
