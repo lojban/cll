@@ -1,6 +1,6 @@
 <chapter xml:id="chapter-mekso">
   <title>lojbau mekso: Mathematical Expressions in Lojban</title>
-  <section xml:id="cll_chapter18-section1">
+  <section xml:id="section-introduction">
     <title>Introductory</title>
     <para>lojbau mekso ( 
     <quote>Lojbanic mathematical-expression</quote>) is the part of the Lojban language that is tailored for expressing statements of a mathematical character, or for adding numerical information to non-mathematical statements. Its formal design goals include:</para>
@@ -39,7 +39,7 @@
     
     <para> <indexterm type="general-imported"><primary>mekso chapter</primary><secondary>completeness</secondary></indexterm>  <indexterm type="general-imported"><primary>mekso chapter</primary><secondary>table notation convention</secondary></indexterm> The remainder of this chapter explains (in as much detail as is currently possible) the mekso system. This chapter is by intention complete as regards mekso components, but only suggestive about uses of those components - as of now, there has been no really comprehensive use made of mekso facilities, and many matters must await the test of usage to be fully clarified.</para>
   </section>
-  <section xml:id="cll_chapter18-section2">
+  <section xml:id="section-numbers">
     <title>Lojban numbers</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -102,7 +102,7 @@
       <interlinear-gloss>
         <jbo>pa re ci</jbo>
         <gloss>one two three</gloss>
-        <math>123 ignore</math> <!-- okely dokely -->
+        <math>123 ignore</math> <!-- ok -->
         <en>one hundred and twenty three</en>
         
       </interlinear-gloss>
@@ -147,7 +147,7 @@
     <jbophrase role="letteral">o</jbophrase> respectively. None of the digit cmavo begin with the same consonant, to make them easy to tell apart in noisy environments.</para>
     
   </section>
-  <section xml:id="cll_chapter18-section3">
+  <section xml:id="section-signs-punctuation">
     <title>Signs and numerical punctuation</title>
     <para> <indexterm type="lojban-word-imported"><primary>PA selma'o</primary></indexterm> The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -212,7 +212,7 @@
     <para> <indexterm type="lojban-word-imported"><primary>pa</primary></indexterm>  <indexterm type="example-imported"><primary>-1</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>signs on numbers</primary><secondary>grammar</secondary></indexterm> Grammatically, the signs are part of the number to which they are attached. It is also possible to use 
     <jbophrase>ma'u</jbophrase> and 
     <jbophrase>ni'u</jbophrase> by themselves as numbers; the meaning of these numbers is explained in 
-    <xref linkend="cll_chapter18-section8"/>.</para>
+    <xref linkend="section-indefinite-numbers"/>.</para>
     <para> <indexterm type="general-imported"><primary>decimal point</primary><secondary>as numerical punctuation</secondary></indexterm>  <indexterm type="general-imported"><primary>punctuation</primary><secondary>in numbers</secondary></indexterm>  <indexterm type="general-imported"><primary>numerical punctuation</primary></indexterm> Various numerical punctuation marks are likewise expressed by cmavo, as illustrated in the following examples:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-Ust4">
@@ -339,7 +339,7 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter18-section4">
+  <section xml:id="section-constants">
     <title>Special numbers</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -456,10 +456,10 @@
     <para>It is possible, of course, that some of these 
     <quote>oddities</quote> do have a meaningful use in some restricted area of mathematics. A mathematician appropriating these structures for specialized use needs to consider whether some other branch of mathematics would use the structure differently.</para>
     <para>More information on numbers may be found in 
-    <xref linkend="cll_chapter18-section8"/> to 
-    <xref linkend="cll_chapter18-section12"/>.</para>
+    <xref linkend="section-indefinite-numbers"/> to 
+    <xref linkend="section-number-questions"/>.</para>
   </section>
-  <section xml:id="cll_chapter18-section5">
+  <section xml:id="section-simple-infix">
     <title>Simple infix expressions and equations</title>
     
     <para>The following cmavo are discussed in this section:</para>
@@ -646,7 +646,7 @@
     
     <para> <indexterm type="general-imported"><primary>operator precedence in other languages</primary></indexterm>  <indexterm type="general-imported"><primary>operator precedence</primary><secondary>rationale for default left-grouping</secondary></indexterm> (Why not hard-wire the precedences into the grammar, as is done in computer programming languages? Essentially because there are too many operators, known and unknown, with levels of precedence that vary according to usage. The programming language 'C' has 13 levels of precedence, and its list of operators is not even extensible. For Lojban this approach is just not practical. In addition, hard-wired precedence could not be overridden in mathematical systems such as spreadsheets where the conventions are different.)</para>
     <para> <indexterm type="general-imported"><primary>operator precedence</primary><secondary>generalized explicit specification</secondary></indexterm> The second solution is to use explicit means to specify the precedence of operators. This approach is fully general, but clumsy, and will be explained in 
-    <xref linkend="cll_chapter18-section20"/>.</para>
+    <xref linkend="section-explicit-operator-precedence"/>.</para>
     <para> <indexterm type="lojban-word-imported"><primary>BIhE selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>bi'e</primary></indexterm>  <indexterm type="general-imported"><primary>bi'e</primary><secondary>effect on following operator</secondary></indexterm>  <indexterm type="general-imported"><primary>operator precedence</primary><secondary>scope modification with bi'e</secondary></indexterm> The third solution is simple but not very general. When an operator is prefixed with the cmavo 
     <jbophrase>bi'e</jbophrase> (of selma'o BIhE), it becomes automatically of higher precedence than other operators not so prefixed. Thus,</para>
     
@@ -707,7 +707,7 @@
     
     
   </section>
-  <section xml:id="cll_chapter18-section6">
+  <section xml:id="section-forethought">
     <title>Forethought operators (Polish notation, functions)</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -844,7 +844,7 @@
     <jbophrase>boi</jbophrase> is required because otherwise the 
     <jbophrase>xy.</jbophrase> would look like part of the operator name. (The use of 
     <jbophrase>ma'o</jbophrase> can be generalized from lerfu strings to any mekso operand: see 
-    <xref linkend="cll_chapter18-section21"/>.)</para>
+    <xref linkend="section-miscellany"/>.)</para>
     <para>When using forethought mekso, the optional marker 
     <jbophrase>pe'o</jbophrase> may be placed in front of the operator. This usage can help avoid confusion by providing clearly marked 
     
@@ -889,7 +889,7 @@
     <jbophrase>ve'o</jbophrase>. An earlier version of the complex 
     <xref linkend="example-random-id-k36J"/> came to grief because I forgot this rule.</para>
   </section>
-  <section xml:id="cll_chapter18-section7">
+  <section xml:id="section-useful-selbri">
     <title>Other useful selbri for mekso bridi</title>
     <para>So far our examples have been isolated mekso (it is legal to have a bare mekso as a sentence in Lojban) and equation bridi involving 
     <jbophrase>du</jbophrase>. What about inequalities such as 
@@ -996,7 +996,7 @@
     </example>
     <para>As usual in Lojban, negated bridi say what is false, and do not say anything about what might be true.</para>
   </section>
-  <section xml:id="cll_chapter18-section8">
+  <section xml:id="section-indefinite-numbers">
     <title>Indefinite numbers</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -1269,7 +1269,7 @@
     <quote>itself</quote> is, indeed, the 
     <quote>other</quote> rat.)</para>
     <para> <indexterm type="lojban-word-imported"><primary>ni'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ma'u</primary></indexterm>  <indexterm type="general-imported"><primary>ni'u</primary><secondary>with elided number</secondary></indexterm>  <indexterm type="general-imported"><primary>ma'u</primary><secondary>with elided number</secondary></indexterm> As mentioned in 
-    <xref linkend="cll_chapter18-section3"/>, 
+    <xref linkend="section-signs-punctuation"/>, 
     <jbophrase>ma'u</jbophrase> and 
     <jbophrase>ni'u</jbophrase> are also legal numbers, and they mean 
     <quote>some positive number</quote> and 
@@ -1364,7 +1364,7 @@
     <xref linkend="example-random-id-qIBi"/> assumes a mostly monogamous culture by stating that three is 
     <quote>many</quote>.</para>
   </section>
-  <section xml:id="cll_chapter18-section9">
+  <section xml:id="section-approximation">
     <title>Approximation and inexact numbers</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -1540,7 +1540,7 @@
     </example>
     <para>is a meaningful claim.</para>
     <para> <indexterm type="lojban-word-imported"><primary>pi</primary></indexterm>  <indexterm type="general-imported"><primary>inexact portions with bounds</primary></indexterm> Like the numbers in 
-    <xref linkend="cll_chapter18-section8"/>, all of these cmavo may be preceded by 
+    <xref linkend="section-indefinite-numbers"/>, all of these cmavo may be preceded by 
     <jbophrase>pi</jbophrase> to make the corresponding quantifiers for part of a whole. For example, 
     <jbophrase>pisu'o</jbophrase> means 
     
@@ -1552,7 +1552,7 @@
     
     <xref linkend="chapter-sumti"/>. Descriptions in general are outside the scope of this chapter.</para>
   </section>
-  <section xml:id="cll_chapter18-section10">
+  <section xml:id="section-radixen">
     <title>Non-decimal and compound bases</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -1746,7 +1746,7 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter18-section11">
+  <section xml:id="section-mekso-selbri">
     <title>Special mekso selbri</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -1837,7 +1837,7 @@
     <quote>the mass consisting of me</quote>. Personal pronouns are vague between masses, sets, and individuals.</para>
     <para>However, when the number expressed before 
     <jbophrase role="rafsi">-mei</jbophrase> is an objective indefinite number of the kind explained in 
-    <xref linkend="cll_chapter18-section8"/>, a slightly different place structure is required:</para>
+    <xref linkend="section-indefinite-numbers"/>, a slightly different place structure is required:</para>
     <para> <indexterm type="general-imported"><primary>individuals of set</primary><secondary>expressing measurement standard for indefinites</secondary></indexterm>  <indexterm type="general-imported"><primary>set</primary><secondary>expressing measurement standard for indefinites</secondary></indexterm>  <indexterm type="general-imported"><primary>mass</primary><secondary>expressing measurement standard for indefinites</secondary></indexterm>  <indexterm type="general-imported"><primary>mei</primary><secondary>place structure formed for objective indefinites</secondary></indexterm> FIXME: TAG SPOT</para>
     <place-structure>
       x1 is a mass formed from a set x2 of n members, one or more of which is/are x3, measured relative to the set x4.
@@ -2067,7 +2067,7 @@
     <jbophrase>pa</jbophrase> and 
     <jbophrase>moi</jbophrase> from joining into a compound.</para>
   </section>
-  <section xml:id="cll_chapter18-section12">
+  <section xml:id="section-number-questions">
     <title>Number questions</title>
     <para>The following cmavo is discussed in this section:</para>
     <cmavo-list>
@@ -2121,7 +2121,7 @@
     <jbophrase>xo</jbophrase> questions. (Another use, obviously, is for counting off physical objects one by one.)</para>
     
   </section>
-  <section xml:id="cll_chapter18-section13">
+  <section xml:id="section-subscripts">
     <title>Subscripts</title>
     <para>The following cmavo is discussed in this section:</para>
     <cmavo-list>
@@ -2193,7 +2193,7 @@
     <para>More information on the uses of subscripts may be found in 
     <xref linkend="chapter-structure"/>.</para>
   </section>
-  <section xml:id="cll_chapter18-section14">
+  <section xml:id="section-infix-again">
     <title>Infix operators revisited</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -2287,7 +2287,7 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter18-section15">
+  <section xml:id="section-vectors-matrices">
     <title>Vectors and matrices</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -2381,7 +2381,7 @@
     <jbophrase>sa'i</jbophrase>.</para>
     
   </section>
-  <section xml:id="cll_chapter18-section16">
+  <section xml:id="section-reverse-polish-notation">
     <title>Reverse Polish notation</title>
     <para>The following cmavo is discussed in this section:</para>
     <cmavo-list>
@@ -2397,7 +2397,7 @@
     <quote>f</quote> they appear as the usual functional notation. Now comes a sharp break. Reverse Polish (RP) notation represents something completely different; even mathematicians don't use it much. (The only common uses of RP, in fact, are in some kinds of calculators and in the implementation of some programming languages.)</para>
     
     <para> <indexterm type="lojban-word-imported"><primary>fu'a</primary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>terminator</secondary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>marker</secondary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>use of parentheses in</secondary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>definition</secondary></indexterm> In RP notation, the operator follows the operands. (Polish notation, where the operator precedes its operands, is another name for forethought mekso of the kind explained in 
-    <xref linkend="cll_chapter18-section6"/>.) The number of operands per operator is always fixed. No parentheses are required or permitted. In Lojban, RP notation is always explicitly marked by a 
+    <xref linkend="section-forethought"/>.) The number of operands per operator is always fixed. No parentheses are required or permitted. In Lojban, RP notation is always explicitly marked by a 
     <jbophrase>fu'a</jbophrase> at the beginning of the expression; there is no terminator. Here is a simple example:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-V4xe">
@@ -2476,7 +2476,7 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter18-section17">
+  <section xml:id="section-connectives-within-mekso">
     <title>Logical and non-logical connectives within mekso</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -2691,7 +2691,7 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter18-section18">
+  <section xml:id="section-lojban-within-mekso">
     <title>Using Lojban resources within mekso</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -2795,7 +2795,7 @@
       </interlinear-gloss>
     </example>
   </section>
-  <section xml:id="cll_chapter18-section19">
+  <section xml:id="section-other-mekso-uses">
     <title>Other uses of mekso</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -3001,7 +3001,7 @@
     <para> <indexterm type="lojban-word-imported"><primary>boi</primary></indexterm>  <indexterm type="general-imported"><primary>numerical tenses</primary><secondary>effect on use of boi</secondary></indexterm>  <indexterm type="general-imported"><primary>boi</primary><secondary>exception before ROI</secondary></indexterm>  <indexterm type="general-imported"><primary>boi</primary><secondary>exception before MAI</secondary></indexterm>  <indexterm type="general-imported"><primary>MAI selma'o</primary><secondary>exception on use of boi before</secondary></indexterm>  <indexterm type="general-imported"><primary>ROI selma'o</primary><secondary>exception on use of boi before</secondary></indexterm> Note: the elidable terminator 
     <jbophrase>boi</jbophrase> is not used between a number and a member of MAI or ROI.</para>
   </section>
-  <section xml:id="cll_chapter18-section20">
+  <section xml:id="section-explicit-operator-precedence">
     <title>Explicit operator precedence</title>
     
     <para>As mentioned earlier, Lojban does provide a way for the precedences of operators to be explicitly declared, although current parsers do not understand these declarations.</para>
@@ -3021,7 +3021,7 @@
     <jbophrase>ti'o</jbophrase> declaration) that would match mathematical intuition: times higher than plus, and so on.</para>
     
   </section>
-  <section xml:id="cll_chapter18-section21">
+  <section xml:id="section-miscellany">
     <title>Miscellany</title>
     <para>A few other points:</para>
     <para> <indexterm type="lojban-word-imported"><primary>se</primary></indexterm>  <indexterm type="general-imported"><primary>se</primary><secondary>use with operators</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>of operator places</secondary></indexterm> 
@@ -3150,7 +3150,7 @@
     <jbophrase>fy.</jbophrase> is already in use as a variable: it comes to mean 
     <quote>the function whose value is always ‘f'</quote>. However, mathematicians do not normally use the same lerfu words or strings as both functions and variables, so this case should not arise in practice.</para>
   </section>
-  <section xml:id="cll_chapter18-section22">
+  <section xml:id="section-four-score-and-seven">
     <title>Four score and seven: a mekso problem</title>
     
     <para> <indexterm type="example-imported"><primary>Four score and seven</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Gettysburg Address</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>mekso</primary><secondary>and literary translation</secondary></indexterm> Abraham Lincoln's Gettysburg Address begins with the words 
@@ -3228,7 +3228,7 @@
     <xref linkend="example-random-id-HNyL"/> are too simple, and 
     <xref linkend="example-random-id-2C3I"/> is too tricky. Nevertheless, all four examples are good Lojban. Pedagogically, these examples illustrate the richness of lojbau mekso: anything that can be said at all, can probably be said in more than one way.</para>
   </section>
-  <section xml:id="cll_chapter18-section23">
+  <section xml:id="section-selmaho-summary">
     <title>mekso selma'o summary</title>
     <para>Except as noted, each selma'o has only one cmavo.</para>
     <place-structure>
@@ -3259,7 +3259,7 @@
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>LI</selmaho>
-        <description>mekso articles (li and me'o)</description>
+        <description>mekso articles (<jbophrase>li</jbophrase> and <jbophrase>me'o</jbophrase>)</description>
       </cmavo-entry>
 
       <cmavo-entry>
@@ -3268,7 +3268,7 @@
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>MOI</selmaho>
-        <description>creates mekso selbri (moi, mei, si'e, and cu'o, see <xref linkend="cll_chapter18-section11"/>)</description>
+        <description>creates mekso selbri (<jbophrase>moi</jbophrase>, <jbophrase>mei</jbophrase>, <jbophrase>si'e</jbophrase>, and <jbophrase>cu'o</jbophrase>, see <xref linkend="section-mekso-selbri"/>)</description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>MOhE</selmaho>
@@ -3288,7 +3288,7 @@
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>PA</selmaho>
-        <description>numbers (see <xref linkend="cll_chapter18-section25"/>)</description>
+        <description>numbers (see <xref linkend="section-pa"/>)</description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>PEhO</selmaho>
@@ -3308,7 +3308,7 @@
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>VUhU</selmaho>
-        <description>operators (see <xref linkend="cll_chapter18-section24"/>)</description>
+        <description>operators (see <xref linkend="section-vuhu"/>)</description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>XI</selmaho>
@@ -3316,318 +3316,316 @@
       </cmavo-entry>
     </place-structure>
   </section>
-  <section xml:id="cll_chapter18-section24">
+  <section xml:id="section-vuhu">
     <title>Complete table of VUhU cmavo, with operand structures</title>
     <para>The operand structures specify what various operands (labeled a, b, c, ...) mean. The implied context is forethought, since only forethought operators can have a variable number of operands; however, the same rules apply to infix and RP uses of VUhU.</para>
     <para> <indexterm type="general-imported"><primary>operators</primary><secondary>list of simple</secondary></indexterm> FIXME: TAG SPOT</para>
+    <!-- FIXME: use actual equations for integral, derivative, etc. -->
     <place-structure>
       <cmavo-entry>
         <selmaho>su'i</selmaho>
-        <description>plus                                 </description>
+        <description>plus</description>
         <math-description><inlineequation><mathphrase>(((a + b) + c) + ...)</mathphrase></inlineequation></math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>pi'i</selmaho>
-        <description>times                                </description>
+        <description>times</description>
         <math-description><inlineequation><mathphrase>(((a × b) × c) × ...)</mathphrase></inlineequation></math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>vu'u</selmaho>
-        <description>minus                                </description>
+        <description>minus</description>
         <math-description><inlineequation><mathphrase>(((a − b) − c) − ...)</mathphrase></inlineequation></math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>fe'i</selmaho>
-        <description>divided by                           </description>
+        <description>divided by</description>
         <math-description><inlineequation><mathphrase>(((a / b) / c) / ...)</mathphrase></inlineequation></math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>ju'u</selmaho>
-        <description>number base                          </description>
+        <description>number base</description>
         <math-description>numeral string <varname>a</varname> interpreted in the base <varname>b</varname></math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>pa'i</selmaho>
-        <description>ratio                                </description>
-        <math-description>the ratio of a to b, a:b</math-description>
+        <description>ratio</description>
+        <math-description>the ratio of <varname>a</varname> to <varname>b</varname>  a:b</math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>fa'i</selmaho>
-        <description>reciprocal of/multiplicative inverse </description>
-        <math-description>1 / <varname>a</varname></math-description>
+        <description>reciprocal of/multiplicative inverse</description>
+        <math-description><inlineequation><mathphrase>1 / a</mathphrase></inlineequation></math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>gei</selmaho>
-        <description>scientific notation                  </description>
+        <description>scientific notation</description>
         <math-description>b × (c [default 10] to the <varname>a</varname> power)</math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>ge'a</selmaho>
-        <description>null operator                        </description>
+        <description>null operator</description>
         <math-description>(no operands)</math-description>
       </cmavo-entry>
 
       <cmavo-entry>
         <selmaho>de'o</selmaho>
-        <description>logarithm                            </description>
+        <description>logarithm</description>
         <math-description>log <varname>a</varname> to base <varname>b</varname> (default 10 or <varname>e</varname> as appropriate)</math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>te'a</selmaho>
-        <description>to the power/exponential             </description>
+        <description>to the power/exponential</description>
         <math-description><varname>a</varname> to the <varname>b</varname> power</math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>fe'a</selmaho>
-        <description>nth root of/inverse power            </description>
+        <description>nth root of/inverse power</description>
         <math-description>b<superscript>th</superscript> root of a (default square root: b = 2)</math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>cu'a</selmaho>
-        <description>absolute value/norm                  </description>
-        <math-description>| a |</math-description>
+        <description>absolute value/norm</description>
+        <math-description><inlineequation><mathphrase>| a |</mathphrase></inlineequation></math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>ne'o</selmaho>
-        <description>factorial                            </description>
+        <description>factorial</description>
         <math-description>a!</math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>pi'a</selmaho>
-        <description>matrix row vector combiner           </description>
+        <description>matrix row vector combiner</description>
         <math-description>(all operands are row vectors)</math-description>
       </cmavo-entry>
 
       <cmavo-entry>
         <selmaho>sa'i</selmaho>
-        <description>matrix column vector combiner        </description>
+        <description>matrix column vector combiner</description>
         <math-description>(all operands are column vectors)</math-description>
       </cmavo-entry>
 
       <cmavo-entry>
         <selmaho>ri'o</selmaho>
-        <description>integral                             </description>
-        <math-description>integral of a with respect to b over range c</math-description>
+        <description>integral</description>
+        <math-description>integral of a with respect to b over range c</math-description> <!-- FIXME: ? -->
       </cmavo-entry>
 
       <cmavo-entry>
         <selmaho>sa'o</selmaho>
-        <description>derivative                           </description>
+        <description>derivative</description>
         <math-description>derivative of a with respect to b of degree c (default 1)</math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>fu'u</selmaho>
-        <description>non-specific operator                </description>
+        <description>non-specific operator</description>
         <math-description>(variable)</math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>si'i</selmaho>
-        <description>sigma (Σ) summation                  </description>
+        <description>sigma (Σ) summation</description>
         <math-description>summation of a using variable b over range c</math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>va'a</selmaho>
-        <description>negation of/additive inverse         </description>
+        <description>negation of/additive inverse</description>
         <math-description>-a</math-description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>re'a</selmaho>
-        <description>matrix transpose/dual                </description>
-        <math-description>a<superscript>*</superscript></math-description>
+        <description>matrix transpose/dual</description>
+        <math-description><inlineequation><mathphrase>a<superscript>*</superscript></mathphrase></inlineequation></math-description>
       </cmavo-entry>
     </place-structure>
   </section>
-  <section xml:id="cll_chapter18-section25">
+  <section xml:id="section-pa">
     <title>Complete table of PA cmavo: digits, punctuation, and other numbers.</title>
     <itemizedlist>
       <listitem>
         <para> <indexterm type="general-imported"><primary>digits</primary><secondary>list of decimal</secondary></indexterm> Decimal digits:</para>
-        <informaltable orient="land">
-          <tgroup cols="10">
-            <colspec colnum="1" colname="col1"/>
-            <colspec colnum="2" colname="col2"/>
-            <colspec colnum="3" colname="col3"/>
-            <colspec colnum="4" colname="col4"/>
-            <colspec colnum="5" colname="col5"/>
-            <colspec colnum="6" colname="col6"/>
-            <colspec colnum="7" colname="col7"/>
-            <colspec colnum="8" colname="col8"/>
-            <colspec colnum="9" colname="col9"/>
-            <colspec colnum="10" colname="col10"/>
-            <thead>
-              <row>
-                <entry/>
-                <entry/>
-                <entry>rafsi</entry>
-              </row>
-            </thead>
-            <tbody>
-              <row>
-                <entry><jbophrase>no</jbophrase></entry>
-                <entry><jbophrase>pa</jbophrase></entry>
-                <entry><jbophrase>re</jbophrase></entry>
-                <entry><jbophrase>ci</jbophrase></entry>
-                <entry><jbophrase>vo</jbophrase></entry>
-                <entry><jbophrase>mu</jbophrase></entry>
-                <entry><jbophrase>xa</jbophrase></entry>
-                <entry><jbophrase>ze</jbophrase></entry>
-                <entry><jbophrase>bi</jbophrase></entry>
-                <entry><jbophrase>so</jbophrase></entry>
-              </row>
-              <row>
-                <entry>0</entry>
-                <entry>1</entry>
-                <entry>2</entry>
-                <entry>3</entry>
-                <entry>4</entry>
-                <entry>5</entry>
-                <entry>6</entry>
-                <entry>7</entry>
-                <entry>8</entry>
-                <entry>9</entry>
-              </row>
-              <row>
-                <entry><jbophrase role="rafsi">non</jbophrase></entry>
-                <entry><jbophrase role="rafsi">pav</jbophrase></entry>
-                <entry><jbophrase role="rafsi">rel</jbophrase></entry>
-                <entry><jbophrase role="rafsi">cib</jbophrase></entry>
-                <entry><jbophrase role="rafsi">von</jbophrase></entry>
-                <entry><jbophrase role="rafsi">mum</jbophrase></entry>
-                <entry><jbophrase role="rafsi">xav</jbophrase></entry>
-                <entry><jbophrase role="rafsi">zel</jbophrase></entry>
-                <entry><jbophrase role="rafsi">biv</jbophrase></entry>
-                <entry><jbophrase role="rafsi">soz</jbophrase></entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
+        <cmavo-list>
+          <cmavo-entry>
+            <cmavo><jbophrase>no</jbophrase></cmavo>
+            <rafsi><jbophrase role="rafsi">non</jbophrase></rafsi>
+            <math-description>0</math-description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo><jbophrase>pa</jbophrase></cmavo>
+            <rafsi><jbophrase role="rafsi">pav</jbophrase></rafsi>
+            <math-description>1</math-description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo><jbophrase>re</jbophrase></cmavo>
+            <rafsi><jbophrase role="rafsi">rel</jbophrase></rafsi>
+            <math-description>2</math-description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo><jbophrase>ci</jbophrase></cmavo>
+            <rafsi><jbophrase role="rafsi">cib</jbophrase></rafsi>
+            <math-description>3</math-description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo><jbophrase>vo</jbophrase></cmavo>
+            <rafsi><jbophrase role="rafsi">von</jbophrase></rafsi>
+            <math-description>4</math-description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo><jbophrase>mu</jbophrase></cmavo>
+            <rafsi><jbophrase role="rafsi">mum</jbophrase></rafsi>
+            <math-description>5</math-description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo><jbophrase>xa</jbophrase></cmavo>
+            <rafsi><jbophrase role="rafsi">xav</jbophrase></rafsi>
+            <math-description>6</math-description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo><jbophrase>ze</jbophrase></cmavo>
+            <rafsi><jbophrase role="rafsi">zel</jbophrase></rafsi>
+            <math-description>7</math-description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo><jbophrase>bi</jbophrase></cmavo>
+            <rafsi><jbophrase role="rafsi">biv</jbophrase></rafsi>
+            <math-description>8</math-description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo><jbophrase>so</jbophrase></cmavo>
+            <rafsi><jbophrase role="rafsi">soz</jbophrase></rafsi>
+            <math-description>9</math-description>
+          </cmavo-entry>
+        </cmavo-list>
       </listitem>
       <listitem>
         <para> <indexterm type="general-imported"><primary>digits</primary><secondary>list of hexadecimal</secondary></indexterm> Hexadecimal digits:</para>
-        <informaltable orient="land">
-          <tgroup cols="6">
-            <colspec colnum="1" colname="col1"/>
-            <colspec colnum="2" colname="col2"/>
-            <colspec colnum="3" colname="col3"/>
-            <colspec colnum="4" colname="col4"/>
-            <colspec colnum="5" colname="col5"/>
-            <colspec colnum="6" colname="col6"/>
-            <tbody>
-              <row>
-                <entry><jbophrase>dau</jbophrase></entry>
-                <entry><jbophrase>fei</jbophrase></entry>
-                <entry><jbophrase>gai</jbophrase></entry>
-                <entry><jbophrase>jau</jbophrase></entry>
-                <entry><jbophrase>rei</jbophrase></entry>
-                <entry><jbophrase>vai</jbophrase></entry>
-              </row>
-              <row>
-                <entry>A/10</entry>
-                <entry>B/11</entry>
-                <entry>C/12</entry>
-                <entry>D/13</entry>
-                <entry>E/14</entry>
-                <entry>F/15</entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
+        <cmavo-list>
+          <cmavo-entry>
+            <cmavo><jbophrase>dau</jbophrase></cmavo>
+            <math-description>A/10</math-description>
+            </cmavo-entry><cmavo-entry>
+            <cmavo><jbophrase>fei</jbophrase></cmavo>
+            <math-description>B/11</math-description>
+            </cmavo-entry><cmavo-entry>
+            <cmavo><jbophrase>gai</jbophrase></cmavo>
+            <math-description>C/12</math-description>
+            </cmavo-entry><cmavo-entry>
+            <cmavo><jbophrase>jau</jbophrase></cmavo>
+            <math-description>D/13</math-description>
+            </cmavo-entry><cmavo-entry>
+            <cmavo><jbophrase>rei</jbophrase></cmavo>
+            <math-description>E/14</math-description>
+            </cmavo-entry><cmavo-entry>
+            <cmavo><jbophrase>vai</jbophrase></cmavo>
+            <math-description>F/15</math-description>
+          </cmavo-entry>
+        </cmavo-list>
       </listitem>
       <listitem>
         <para> <indexterm type="general-imported"><primary>numbers</primary><secondary>list of special</secondary></indexterm> Special numbers:</para>
-        <informaltable orient="land">
-          <tgroup cols="3">
-            <colspec colnum="1" colname="col1"/>
-            <colspec colnum="2" colname="col2"/>
-            <colspec colnum="3" colname="col3"/>
-            <colspec colnum="4" colname="col4"/>
-            <tbody>
-              <row>
-                <entry>pai</entry>
-                <entry>ka'o</entry>
-                <entry>te'o</entry>
-                <entry>ci'i</entry>
-              </row>
-              <row>
-                <entry>π</entry>
-                <entry>imaginary i</entry>
-                <entry>exponential e</entry>
-                <entry>infinity (∞)</entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
+        <cmavo-list>
+          <cmavo-entry>
+            <cmavo>pai</cmavo>
+            <math-description>π</math-description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>ka'o</cmavo>
+            <math-description>imaginary i</math-description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>te'o</cmavo>
+            <math-description>exponential e</math-description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>ci'i</cmavo>
+            <math-description>infinity (∞)</math-description>
+          </cmavo-entry>
+        </cmavo-list>
       </listitem>
       <listitem>
         <para> <indexterm type="general-imported"><primary>punctuation</primary><secondary>list of numerical</secondary></indexterm> Number punctuation:</para>
-        <informaltable orient="land">
-          <tgroup cols="3">
-            <colspec colnum="1" colname="col1"/>
-            <colspec colnum="2" colname="col2"/>
-            <colspec colnum="3" colname="col3"/>
-            <tbody>
-              <row>
-                <entry>pi</entry>
-                <entry>ce'i</entry>
-                <entry>fi'u</entry>
-              </row>
-              <row>
-                <entry>decimal point</entry>
-                <entry>percentage</entry>
-                <entry>fraction (not division)</entry>
-              </row>
-              <row>
-                <entry>piz</entry>
-                <entry>cez</entry>
-                <entry>fi'u (from frinu; see <xref linkend="cll_chapter18-section20"/>)</entry>
-              </row>
-              <row>
-                <entry>pi'e</entry>
-                <entry>ma'u</entry>
-                <entry>ni'u</entry>
-              </row>
-              <row>
-                <entry>mixed-base point</entry>
-                <entry>plus sign (not addition)</entry>
-                <entry>minus sign (not subtraction)</entry>
-              </row>
-              <row>
-                <entry>ki'o</entry>
-                <entry>ra'e</entry>
-              </row>
-              <row>
-                <entry>thousands comma</entry>
-                <entry>repeating-decimal indicator</entry>
-              </row>
-              <row>
-                <entry>ji'i</entry>
-                <entry>ka'o</entry>
-              </row>
-              <row>
-                <entry>approximation sign</entry>
-                <entry>complex number separator</entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </informaltable>
+        <cmavo-list>
+          <cmavo-entry>
+            <cmavo>pi</cmavo>
+            <rafsi>piz</rafsi>
+            <description>decimal point</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>ce'i</cmavo>
+            <rafsi>cez</rafsi>
+            <description>percentage</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>fi'u</cmavo>
+            <rafsi>fi'u (from frinu; see <xref linkend="section-explicit-operator-precedence"/>)</rafsi>
+            <description>fraction (not division)</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>pi'e</cmavo>
+            <description>mixed-base point</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>ma'u</cmavo>
+            <description>plus sign (not addition)</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>ni'u</cmavo>
+            <description>minus sign (not subtraction)</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>ki'o</cmavo>
+            <description>thousands comma</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>ra'e</cmavo>
+            <description>repeating-decimal indicator</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>ji'i</cmavo>
+            <description>approximation sign</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>ka'o</cmavo>
+            <description>complex number separator</description>
+          </cmavo-entry>
+        </cmavo-list>
       </listitem>
       <listitem>
         <para> <indexterm type="general-imported"><primary>numbers</primary><secondary>list of indefinite</secondary></indexterm> Indefinite numbers:</para>
         <cmavo-list>
           <cmavo-entry>
-            <cmavo>ro, so'a, so'e, so'i, so'o,</cmavo>
-            <selmaho>so'u,</selmaho>
-            <description>da'a</description>
+            <cmavo>ro</cmavo>
+            <description>all</description>
+            <rafsi>rol</rafsi>
           </cmavo-entry>
           <cmavo-entry>
-            <cmavo>all, almost all, most, many, several,</cmavo>
-            <selmaho>few,</selmaho>
+            <cmavo>so'a</cmavo>
+            <rafsi>soj</rafsi>
+            <description>almost all</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>so'e</cmavo>
+            <rafsi>sop</rafsi>
+            <description>most</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>so'i</cmavo>
+            <description>many</description>
+            <rafsi>sor or so'i</rafsi>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>so'o</cmavo>
+            <rafsi>sos</rafsi>
+            <description>several</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>so'u</cmavo>
+            <rafsi>sot</rafsi>
+            <description>few</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>da'a</cmavo>
+            <rafsi>daz</rafsi>
             <description>all but</description>
-          </cmavo-entry>
-          <cmavo-entry>
-            <cmavo>rafsi: rol, soj, sor or so'i, sos,</cmavo>
-            <selmaho>sot,</selmaho>
-            <description>daz</description>
           </cmavo-entry>
         </cmavo-list>
       </listitem>
@@ -3635,37 +3633,62 @@
         <para>Subjective numbers:</para>
         <cmavo-list>
           <cmavo-entry>
-            <cmavo>rau,</cmavo>
-            <selmaho>du'e,</selmaho>
-            <description>mo'a</description>
-        </cmavo-entry> enough, too many, too few</cmavo-list>
+            <cmavo>rau</cmavo>
+            <description>enough</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>du'e</cmavo>
+            <description>too few</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>mo'a</cmavo>
+            <description>too many</description>
+          </cmavo-entry>
+        </cmavo-list>
       </listitem>
       <listitem>
         <para>Miscellaneous:</para>
-        <place-structure>
-          xo,                 tu'o
-          number question,    null operand
-        </place-structure>
+        <cmavo-list>
+          <cmavo-entry>
+            <cmavo>xo</cmavo>
+            <description>number question</description>
+          </cmavo-entry>
+          <cmavo-entry>
+            <cmavo>tu'o</cmavo>
+            <description>null operand</description>
+          </cmavo-entry>
+        </cmavo-list>
       </listitem>
     </itemizedlist>
   </section>
-  <section xml:id="cll_chapter18-section26">
+  <section xml:id="section-moi">
     <title>Table of MOI cmavo, with associated rafsi and place structures</title>
-    <place-structure>
-      mei     x1 is a mass formed from a set x2 of n members, one or more of
-      which is/are x3, [measured relative to the set x4/by standard x4]
-      rafsi:  mem, mei
-      moi     x1 is the (n)th member of set x2 when ordered by rule x3
-      [by standard x4]
-      rafsi:  mom, moi
-      si'e    x1 is an (n)th portion of mass x2 [by standard x3]
-      rafsi:  none
-      cu'o    event x1 has probability (n) of occurring under conditions x2
-      [by standard x3]
-      rafsi:  cu'o (borrowed from cunso; see <xref linkend="cll_chapter18-section20"/>)
-      va'e    x1 is at scale position (n) on the scale x2
-      [by standard x3]
-      rafsi:  none
-    </place-structure>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>mei</cmavo>
+        <rafsi>mem, mei</rafsi>
+        <description>x1 is a mass formed from a set x2 of n members, one or more of which is/are x3, [measured relative to the set x4/by standard x4]</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>moi</cmavo>
+        <rafsi>mom, moi</rafsi>
+        <description>x1 is the (n)th member of set x2 when ordered by rule x3 [by standard x4]</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>si'e</cmavo>
+        <rafsi>none</rafsi>
+        <description>x1 is an (n)th portion of mass x2 [by standard x3]</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>cu'o</cmavo>
+        <rafsi>cu'o (borrowed from <jbophrase>cunso</jbophrase>; see <xref linkend="section-explicit-operator-precedence"/>)</rafsi>
+        <description>event x1 has probability (n) of occurring under conditions x2 [by standard x3]</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>va'e</cmavo>
+        <rafsi>none</rafsi>
+        <description>x1 is at scale position (n) on the scale x2 [by standard x3]</description>
+      </cmavo-entry>
+    </cmavo-list>
   </section>
 </chapter>
