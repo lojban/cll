@@ -1,6 +1,6 @@
 <chapter xml:id="chapter-sumti-tcita">
   <title>To Boston Via The Road Go I, With An Excursion Into The Land Of Modals</title>
-  <section xml:id="cll_chapter9-section1">
+  <section xml:id="section-sumti-tcita-introduction">
     <title>Introductory</title>
     <para> <indexterm type="general-imported"><primary>relationship</primary><secondary>objects of</secondary></indexterm>  <indexterm type="general-imported"><primary>relationship</primary><secondary>as basis of sentence</secondary></indexterm>  <indexterm type="general-imported"><primary>sentence</primary><secondary>basic Lojban</secondary></indexterm>  <indexterm type="general-imported"><primary>selbri</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>sumti</primary><secondary>definition</secondary></indexterm> The basic type of Lojban sentence is the bridi: a claim by the speaker that certain objects are related in a certain way. The objects are expressed by Lojban grammatical forms called 
     <jbophrase>sumti</jbophrase>; the relationship is expressed by the Lojban grammatical form called a 
@@ -9,20 +9,19 @@
     <quote>place structure</quote> of the selbri. This chapter describes the various ways in which the place structure of Lojban bridi is expressed and by which it can be manipulated. The place structure of a selbri is a sequence of empty slots into which the sumti associated with that selbri are placed. The sumti are said to occupy the places of the selbri.</para>
     <para> <indexterm type="general-imported"><primary>place structure of selbri</primary><secondary>determining</secondary></indexterm> For our present purposes, every selbri is assumed to have a well-known place structure. If the selbri is a brivla, the place structure can be looked up in a dictionary (or, if the brivla is a lujvo not in any dictionary, inferred from the principles of lujvo construction as explained in 
     <xref linkend="chapter-lujvo"/>); if the selbri is a tanru, the place structure is the same as that of the final component in the tanru.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>klama</primary></indexterm>  <indexterm type="example-imported"><primary>go</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>x1</primary><secondary>in place structure notation</secondary></indexterm>  <indexterm type="general-imported"><primary>place structure</primary><secondary>notation conventions</secondary></indexterm>  <indexterm type="general-imported"><primary>klama</primary><secondary>place structure of</secondary></indexterm> The stock example of a place structure is that of the gismu 
+    <para><indexterm type="example-imported"><primary>go</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>x1</primary><secondary>in place structure notation</secondary></indexterm>  <indexterm type="general-imported"><primary>place structure</primary><secondary>notation conventions</secondary></indexterm>  <indexterm type="general-imported"><primary>klama</primary><secondary>place structure of</secondary></indexterm> The stock example of a place structure is that of the gismu 
     <jbophrase>klama</jbophrase>:</para>
-    <programlisting xml:space="preserve">
-       klama: x1 comes/goes to destination x2 from origin x3 via route x4
-            employing means of transport x5.
-</programlisting>
+    <place-structure>
+      <jbophrase>klama</jbophrase>: x1 comes/goes to destination x2 from origin x3 via route x4 employing means of transport x5.
+    </place-structure>
     <para>The 
     <quote>x1 ... x5</quote> indicates that 
     <jbophrase>klama</jbophrase> is a five-place predicate, and show the natural order (as assigned by the language engineers) of those places: agent, destination, origin, route, means.</para>
     <para> <indexterm type="general-imported"><primary>place structure</primary><secondary>instability of</secondary></indexterm> The place structures of brivla are not absolutely stable aspects of the language. The work done so far has attempted to establish a basic place structure on which all users can, at first, agree. In the light of actual experience with the individual selbri of the language, there will inevitably be some degree of change to the brivla place structures.</para>
   </section>
-  <section xml:id="cll_chapter9-section2">
+  <section xml:id="section-cu">
     <title>Standard bridi form: 
-    <quote>cu</quote></title>
+    <jbophrase>cu</jbophrase></title>
     <para>The following cmavo is discussed in this section:</para>
     <cmavo-list>
       <cmavo-entry>
@@ -34,24 +33,51 @@
     </cmavo-list>
     <para> <indexterm type="general-imported"><primary>bridi</primary><secondary>building from selbri and sumti</secondary></indexterm> The most usual way of constructing a bridi from a selbri such as 
     <jbophrase>klama</jbophrase> and an appropriate number of sumti is to place the sumti intended for the x1 place before the selbri, and all the other sumti in order after the selbri, thus:</para>
-<para> <indexterm type="example-imported"><primary>go to Boston from Atlanta</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Boston from Atlanta</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="example-imported"><primary>go to Boston from Atlanta</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Boston from Atlanta</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Ji94">
       <title>
         <anchor xml:id="c9e2d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi cu klama la bastn. la .atlantas. le dargu le karce</jbo>
-        <en>I go to-Boston from-Atlanta via-the road using-the car.</en>
+        <gloss>I go to-Boston from-Atlanta via-the road using-the car.</gloss>
       </interlinear-gloss>
     </example>
     <para>Here the sumti are assigned to the places as follows:</para>
-    <programlisting xml:space="preserve">
-       x1  agent         mi
-       x2  destination   la bastn.
-       x3  origin        la .atlantas.
-       x4  route         le dargu
-       x5  means         le karce
-</programlisting>
+    <informaltable>
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/> 
+        <tbody>
+          <row>
+            <entry>x1</entry>
+            <entry>agent</entry>
+            <entry><jbophrase>mi</jbophrase></entry>
+          </row>
+          <row>
+            <entry>x2</entry>
+            <entry>destination</entry>
+            <entry><jbophrase>la bastn.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>x3</entry>
+            <entry>origin</entry>
+            <entry><jbophrase>la .atlantas.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>x4</entry>
+            <entry>route</entry>
+            <entry><jbophrase>le dargu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>x5</entry>
+            <entry>means</entry>
+            <entry><jbophrase>le karce</jbophrase></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
     <para>(Note: Many of the examples in the rest of this chapter will turn out to have the same meaning as 
     <xref linkend="example-random-id-Ji94"/>; this fact will not be reiterated.)</para>
     <para> <indexterm type="general-imported"><primary>bridi</primary><secondary>non-standard form</secondary></indexterm>  <indexterm type="general-imported"><primary>standard bridi form</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>bridi</primary><secondary>standard form of</secondary></indexterm> This ordering, with the x1 place before the selbri and all other places in natural order after the selbri, is called 
@@ -64,7 +90,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi la bastn. la .atlantas. le dargu le karce cu klama</jbo>
-        <en>I, to-Boston from-Atlanta via-the road using-the car, go.</en>
+        <gloss>I, to-Boston from-Atlanta via-the road using-the car, go.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>bridi</primary><secondary>effect of alternate form on sumti order</secondary></indexterm> Here the selbri is at the end; all the sumti are placed before it. However, the same order is maintained.</para>
@@ -75,16 +101,16 @@
       </title>
       <interlinear-gloss>
         <jbo>mi la bastn. cu klama la .atlantas. le dargu le karce</jbo>
-        <en>I to-Boston go from-Atlanta via-the road using-the car.</en>
+        <gloss>I to-Boston go from-Atlanta via-the road using-the car.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>emphasis</primary><secondary>changing by using non-standard form of bridi</secondary></indexterm>  <indexterm type="general-imported"><primary>bridi</primary><secondary>effect of using non-standard form</secondary></indexterm> All of the variant forms in this section and following sections can be used to place emphasis on the part or parts which have been moved out of their standard places. Thus, 
     <xref linkend="example-random-id-yLqT"/> places emphasis on the selbri (because it is at the end); 
     <xref linkend="example-random-id-vzNY"/> emphasizes 
     <jbophrase>la bastn.</jbophrase>, because it has been moved before the selbri. Moving more than one component may dilute this emphasis. It is permitted, but no stylistic significance has yet been established for drastic reordering.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>CU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>cu</primary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>effect on elidable terminators</secondary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>usefulness of</secondary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>necessity of</secondary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>as selbri separator</secondary></indexterm> In all these examples, the cmavo 
-    <quote>cu</quote> (belonging to selma'o CU) is used to separate the selbri from any preceding sumti. It is never absolutely necessary to use 
-    <quote>cu</quote>. However, providing it helps the reader or listener to locate the selbri quickly, and may make it possible to place a complex sumti just before the selbri, allowing the speaker to omit elidable terminators, possibly a whole stream of them, that would otherwise be necessary.</para>
+    <para> <indexterm type="lojban-word-imported"><primary>CU selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>effect on elidable terminators</secondary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>usefulness of</secondary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>necessity of</secondary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>as selbri separator</secondary></indexterm> In all these examples, the cmavo 
+    <jbophrase>cu</jbophrase> (belonging to selma'o CU) is used to separate the selbri from any preceding sumti. It is never absolutely necessary to use 
+    <jbophrase>cu</jbophrase>. However, providing it helps the reader or listener to locate the selbri quickly, and may make it possible to place a complex sumti just before the selbri, allowing the speaker to omit elidable terminators, possibly a whole stream of them, that would otherwise be necessary.</para>
     
     <para> <indexterm type="general-imported"><primary>bridi</primary><secondary>selbri-first as exceptional</secondary></indexterm>  <indexterm type="general-imported"><primary>selbri-first bridi</primary><secondary>effect on sumti places</secondary></indexterm>  <indexterm type="general-imported"><primary>sumti</primary><secondary>omitted first place in selbri-first bridi</secondary></indexterm>  <indexterm type="general-imported"><primary>sumti</primary><secondary>order in selbri-first bridi</secondary></indexterm>  <indexterm type="general-imported"><primary>sumti</primary><secondary>order in selbri</secondary></indexterm> The general rule, then, is that the selbri may occur anywhere in the bridi as long as the sumti maintain their order. The only exception (and it is an important one) is that if the selbri appears first, the x1 sumti is taken to have been omitted:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-aQtM">
@@ -119,7 +145,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi klama la bastn. la .atlantas.</jbo>
-        <en>I go to-Boston from-Atlanta (via an unspecified route, using an unspecified means).</en>
+        <gloss>I go to-Boston from-Atlanta (via an unspecified route, using an unspecified means).</gloss>
         
       </interlinear-gloss>
     </example>
@@ -131,17 +157,15 @@
       </title>
       <interlinear-gloss>
         <jbo>mi klama la bastn. la .atlantas. le karce</jbo>
-        <en>I go to-Boston from-Atlanta via-the car.</en>
+        <gloss>I go to-Boston from-Atlanta via-the car.</gloss>
       </interlinear-gloss>
     </example>
     <para>
-    <jbophrase>le karce</jbophrase> occupies the x4 place, and therefore 
+      <jbophrase>le karce</jbophrase> occupies the x4 place, and therefore 
     <xref linkend="example-random-id-jh7T"/> means:</para>
-    <programlisting xml:space="preserve">
-       I go to Boston from Atlanta, using the car as a route.
-
-
-</programlisting>
+    <place-structure>
+      I go to Boston from Atlanta, using the car as a route.
+    </place-structure>
     <para>This is nonsense, since a car cannot be a route. What the speaker presumably meant is expressed by:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-tqoQ">
       <title>
@@ -149,15 +173,15 @@
       </title>
       <interlinear-gloss>
         <jbo>mi klama la bastn. la .atlantas. zo'e le karce</jbo>
-        <en>I go to-Boston from-Atlanta via-something-unspecified using-the car.</en>
+        <gloss>I go to-Boston from-Atlanta via-something-unspecified using-the car.</gloss>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>zo'e</primary></indexterm>  <indexterm type="general-imported"><primary>place structures</primary><secondary>omitting places with zo'e</secondary></indexterm>  <indexterm type="general-imported"><primary>place structure</primary><secondary>leaving a sumti place unspecified in with zo'e</secondary></indexterm>  <indexterm type="general-imported"><primary>bridi</primary><secondary>leaving a sumti place unspecified in with zo'e</secondary></indexterm>  <indexterm type="general-imported"><primary>zo'e</primary><secondary>as place-holder for unspecified sumti</secondary></indexterm>  <indexterm type="general-imported"><primary>unspecified sumti</primary><secondary>using zo'e as place-holder for</secondary></indexterm> Here the sumti cmavo 
+    <para><indexterm type="general-imported"><primary>place structures</primary><secondary>omitting places with zo'e</secondary></indexterm>  <indexterm type="general-imported"><primary>place structure</primary><secondary>leaving a sumti place unspecified in with zo'e</secondary></indexterm>  <indexterm type="general-imported"><primary>bridi</primary><secondary>leaving a sumti place unspecified in with zo'e</secondary></indexterm>  <indexterm type="general-imported"><primary>zo'e</primary><secondary>as place-holder for unspecified sumti</secondary></indexterm>  <indexterm type="general-imported"><primary>unspecified sumti</primary><secondary>using zo'e as place-holder for</secondary></indexterm> Here the sumti cmavo 
     <jbophrase>zo'e</jbophrase> is used to explicitly fill the x4 place; 
     <jbophrase>zo'e</jbophrase> means 
     <quote>the unspecified thing</quote> and has the same meaning as leaving the place empty: the listener must infer the correct meaning from context.</para>
   </section>
-  <section xml:id="cll_chapter9-section3">
+  <section xml:id="section-FA">
     <title>Tagging places: FA</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -193,7 +217,7 @@
         <description>place structure question</description>
       </cmavo-entry>
     </cmavo-list>
-    <para> <indexterm type="lojban-word-imported"><primary>fu</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>fo</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>fi</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>fe</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>fa</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>FA selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>FA selma'o</primary><secondary>syntax of</secondary></indexterm> In sentences like 
+    <para><indexterm type="lojban-word-imported"><primary>FA selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>FA selma'o</primary><secondary>syntax of</secondary></indexterm> In sentences like 
     <xref linkend="example-random-id-Ji94"/>, it is easy to get lost and forget which sumti falls in which place, especially if the sumti are more complicated than simple names or descriptions. The place structure tags of selma'o FA may be used to help clarify place structures. The five cmavo 
     <jbophrase>fa</jbophrase>, 
     <jbophrase>fe</jbophrase>, 
@@ -229,19 +253,46 @@
       </title>
       <interlinear-gloss>
         <jbo>fa mi klama fe le zdani be mi be'o poi nurma vau fi la nu,IORK.</jbo>
-        <en>x1= I go x2= (the house of me) which is-rural x3= New York.</en>
+        <gloss>x1= I go x2= (the house of me) which is-rural x3= New York.</gloss>
       </interlinear-gloss>
     </example>
     <para>In 
     <xref linkend="example-random-id-3CPJ"/>, the place structure of 
     <jbophrase>klama</jbophrase> is as follows:</para>
-    <programlisting xml:space="preserve">
-       x1  agent         mi
-       x2  destination   le zdani be mi be'o poi nurma vau
-       x3  origin        la nu,IORK.
-       x4  route         (empty)
-       x5  means         (empty)
-</programlisting>
+    <informaltable>
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="2" colname="col3"/> 
+        <tbody> 
+          <row>
+            <entry>x1</entry>
+            <entry>agent</entry>
+            <entry><jbophrase>mi</jbophrase></entry>
+          </row>
+          <row>
+            <entry>x2</entry>
+            <entry>destination</entry>
+            <entry><jbophrase>le zdani be mi be'o poi nurma vau</jbophrase></entry>
+          </row>
+          <row>
+            <entry>x3</entry>
+            <entry>origin</entry>
+            <entry><jbophrase>la nu,IORK.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>x4</entry>
+            <entry>route</entry>
+            <entry>(empty)</entry>
+          </row>
+          <row>
+            <entry>x5</entry>
+            <entry>means</entry>
+            <entry>(empty)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
     <para> <indexterm type="general-imported"><primary>FA selma'o</primary><secondary>as a reminder of place in place structure</secondary></indexterm> The 
     <jbophrase>fi</jbophrase> tag serves to remind the hearer that what follows is in the x3 place of 
     <jbophrase>klama</jbophrase>; after listening to the complex sumti occupying the x2 place, it's easy to get lost.</para>
@@ -256,10 +307,10 @@
         <en>Go I from Atlanta using the car to Boston via the road.</en>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>cu</primary></indexterm>  <indexterm type="general-imported"><primary>selbri-first bridi</primary><secondary>effect on use of cu</secondary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>effect of selbri-first bridi on</secondary></indexterm> Note that no 
-    <quote>cu</quote> is permitted before the selbri in 
+    <para><indexterm type="general-imported"><primary>selbri-first bridi</primary><secondary>effect on use of cu</secondary></indexterm>  <indexterm type="general-imported"><primary>cu</primary><secondary>effect of selbri-first bridi on</secondary></indexterm> Note that no 
+    <jbophrase>cu</jbophrase> is permitted before the selbri in 
     <xref linkend="example-random-id-YmN2"/>, because 
-    <quote>cu</quote> separates the selbri from any preceding sumti, and 
+    <jbophrase>cu</jbophrase> separates the selbri from any preceding sumti, and 
     <xref linkend="example-random-id-YmN2"/> has no such sumti.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-fG8R">
       <title>
@@ -272,9 +323,9 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-fG8R"/> exhibits the reverse of the standard bridi form seen in 
-    
-    <xref linkend="example-random-id-Ji94"/> and 
+      <xref linkend="example-random-id-fG8R"/> exhibits the reverse of the standard bridi form seen in 
+      
+      <xref linkend="example-random-id-Ji94"/> and 
     <xref linkend="example-random-id-yLop"/>, but still means exactly the same thing. If the FA tags were left out, however, producing:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-j7Nu">
       <title>
@@ -348,12 +399,12 @@
       </title>
       <interlinear-gloss>
         <jbo>[fa] la rik. fa la djein. klama [fe] le skina fe le zdani fe le zarci</jbo>
-        <en>[x1=] Rick x1= Jane goes-to x2= the movie x2= the house x2= the office</en>
+        <gloss>[x1=] Rick x1= Jane goes-to [x2=] the movie x2= the house x2= the office</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>to movie</primary><secondary>house</secondary><tertiary>office: example</tertiary></indexterm>  <indexterm type="general-imported"><primary>multiple sumti in one place</primary><secondary>avoiding</secondary></indexterm> may be taken to say that both Rick and Jane go to the movie, the house, and the office, merging six claims into one. More likely, however, it will simply confuse the listener. There are better ways, involving logical connectives (explained in 
     <xref linkend="chapter-connectives"/>), to say such things in Lojban. In fact, putting more than one sumti into a place is odd enough that it can only be done by explicit FA usage: this is the motivation for the proviso above, that already-occupied places are skipped. In this way, no sumti can be forced into a place already occupied unless it has an explicit FA cmavo tagging it.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>fi'a</primary></indexterm>  <indexterm type="example-imported"><primary>give or receive</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>questions</primary><secondary>place structure position</secondary></indexterm>  <indexterm type="general-imported"><primary>place structure questions</primary></indexterm> The cmavo 
+    <para><indexterm type="example-imported"><primary>give or receive</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>questions</primary><secondary>place structure position</secondary></indexterm>  <indexterm type="general-imported"><primary>place structure questions</primary></indexterm> The cmavo 
     <jbophrase>fi'a</jbophrase> also belongs to selma'o FA, and allows Lojban users to ask questions about place structures. A bridi containing 
     
     <jbophrase>fi'a</jbophrase> is a question, asking the listener to supply the appropriate other member of FA which will make the bridi a true statement:</para>
@@ -373,9 +424,9 @@
     <para>In 
     <xref linkend="example-random-id-GnTu"/>, the speaker uses the selbri 
     <jbophrase>dunda</jbophrase>, whose place structure is:</para>
-    <programlisting xml:space="preserve">
-       dunda: x1 gives x2 to x3
-</programlisting>
+    <place-structure>
+      <jbophrase>dunda</jbophrase>: x1 gives x2 to x3
+    </place-structure>
     <para> <indexterm type="general-imported"><primary>answers</primary><secondary>to place structure questions</secondary></indexterm> The tagged sumti 
     <jbophrase>fi'a do</jbophrase> indicates that the speaker wishes to know whether the sumti 
     
@@ -391,9 +442,9 @@
     <jbophrase>le vi rozgu</jbophrase> would necessarily be in the x2 place even if no tag were present, because it immediately follows the selbri.</para>
     <para>There is also another member of FA, namely 
     <jbophrase>fai</jbophrase>, which is discussed in 
-    <xref linkend="cll_chapter9-section12"/>.</para>
+    <xref linkend="section-modal-jai"/>.</para>
   </section>
-  <section xml:id="cll_chapter9-section4">
+  <section xml:id="section-SE">
     <title>Conversion: SE</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -418,34 +469,32 @@
         <description>5th place conversion</description>
       </cmavo-entry>
     </cmavo-list>
-    <para> <indexterm type="lojban-word-imported"><primary>se</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>SE selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>SE selma'o</primary><secondary>for converting place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>SE selma'o</primary><secondary>effect on selbri place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>converted selbri</primary><secondary>as different selbri from unconverted</secondary></indexterm>  <indexterm type="general-imported"><primary>converted selbri</primary><secondary>place structure of</secondary></indexterm>  <indexterm type="general-imported"><primary>converted selbri</primary><secondary>forming with SE</secondary></indexterm>  <indexterm type="general-imported"><primary>converted selbri</primary><secondary>definition</secondary></indexterm> So far we have seen ways to move sumti around within a bridi, but the actual place structure of the selbri has always remained untouched. The conversion cmavo of selma'o SE are incorporated within the selbri itself, and produce a new selbri (called a converted selbri) with a different place structure. In particular, after the application of any SE cmavo, the number and purposes of the places remain the same, but two of them have been exchanged, the x1 place and another. Which place has been exchanged with x1 depends on the cmavo chosen. Thus, for example, when 
+    <para><indexterm type="lojban-word-imported"><primary>SE selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>SE selma'o</primary><secondary>for converting place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>SE selma'o</primary><secondary>effect on selbri place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>converted selbri</primary><secondary>as different selbri from unconverted</secondary></indexterm>  <indexterm type="general-imported"><primary>converted selbri</primary><secondary>place structure of</secondary></indexterm>  <indexterm type="general-imported"><primary>converted selbri</primary><secondary>forming with SE</secondary></indexterm>  <indexterm type="general-imported"><primary>converted selbri</primary><secondary>definition</secondary></indexterm> So far we have seen ways to move sumti around within a bridi, but the actual place structure of the selbri has always remained untouched. The conversion cmavo of selma'o SE are incorporated within the selbri itself, and produce a new selbri (called a converted selbri) with a different place structure. In particular, after the application of any SE cmavo, the number and purposes of the places remain the same, but two of them have been exchanged, the x1 place and another. Which place has been exchanged with x1 depends on the cmavo chosen. Thus, for example, when 
     
-    <quote>se</quote> is used, the x1 place is swapped with the x2 place.</para>
+    <jbophrase>se</jbophrase> is used, the x1 place is swapped with the x2 place.</para>
     <para> <indexterm type="general-imported"><primary>SE selma'o</primary><secondary>word formation of cmavo in</secondary></indexterm>  <indexterm type="general-imported"><primary>SE selma'o</primary><secondary>rationale for no 1st place conversion</secondary></indexterm> Note that the cmavo of SE begin with consecutive consonants in alphabetical order. There is no 
     <quote>1st place conversion</quote> cmavo, because exchanging the x1 place with itself is a pointless maneuver.</para>
     <para> <indexterm type="general-imported"><primary>se klama</primary><secondary>place structure of</secondary></indexterm> Here are the place structures of 
     <jbophrase>se klama</jbophrase>:</para>
-    <programlisting xml:space="preserve">
-       x1 is the destination of x2's going from x3 via x4 using x5
-
-</programlisting>
+    <place-structure>
+      x1 is the destination of x2's going from x3 via x4 using x5
+    </place-structure>
     <para> <indexterm type="lojban-word-imported"><primary>te</primary></indexterm> and 
     <jbophrase>te klama</jbophrase>:</para>
-    <programlisting xml:space="preserve">
-       x1 is the origin and x2 the destination of x3 going via x4 using x5
-
-</programlisting>
+    <place-structure>
+      x1 is the origin and x2 the destination of x3 going via x4 using x5
+    </place-structure>
     <para> <indexterm type="lojban-word-imported"><primary>ve</primary></indexterm> and 
     <jbophrase>ve klama</jbophrase>:</para>
     
-    <programlisting xml:space="preserve">
-       x1 is the route to x2 from x3 used by x4 going via x5
-</programlisting>
+    <place-structure>
+      x1 is the route to x2 from x3 used by x4 going via x5
+    </place-structure>
     <para> <indexterm type="lojban-word-imported"><primary>xe</primary></indexterm> and 
     <jbophrase>xe klama</jbophrase>:</para>
-    <programlisting xml:space="preserve">
-       x1 is the means in going to x2 from x3 via x4 employed by x5
-</programlisting>
+    <place-structure>
+      x1 is the means in going to x2 from x3 via x4 employed by x5
+    </place-structure>
     <para> <indexterm type="general-imported"><primary>SE selma'o</primary><secondary>effect on place structure numbering</secondary></indexterm> Note that the place structure numbers in each case continue to be listed in the usual order, x1 to x5.</para>
     <para>Consider the following pair of examples:</para>
     <example xml:id="example-random-id-qmHh" role="interlinear-gloss-example">
@@ -490,14 +539,14 @@
       </title>
       <interlinear-gloss>
         <jbo>le klama</jbo>
-        <en>the go-er, the one who goes</en>
+        <gloss>the go-er, the one who goes</gloss>
         
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>the go-er</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>converted selbri</primary><secondary>to access non-first place in description</secondary></indexterm>  <indexterm type="general-imported"><primary>descriptions</primary><secondary>use of SE in</secondary></indexterm>  <indexterm type="general-imported"><primary>descriptions</primary><secondary>as based on first place of following selbri</secondary></indexterm> In every case, the description is about something which fits into the x1 place of the selbri. In order to get a description of a destination (that is, something fitting the x2 place of 
     <jbophrase>klama</jbophrase>), we must convert the selbri to 
     <jbophrase>se klama</jbophrase>, whose x1 place is a destination. The result is</para>
-<para> <indexterm type="example-imported"><primary>the destination</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="example-imported"><primary>the destination</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-brDN">
       <title>
         <anchor xml:id="c9e4d4"/>
@@ -554,63 +603,63 @@
     
     <para> <indexterm type="lojban-word-imported"><primary>ke'e</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ke</primary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>extending scope of</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>scope of</secondary></indexterm>  <indexterm type="general-imported"><primary>SE selma'o</primary><secondary>extending scope of</secondary></indexterm>  <indexterm type="general-imported"><primary>SE selma'o</primary><secondary>scope of</secondary></indexterm> When converting selbri that are more complex than a single brivla, it is important to realize that the scope of a SE cmavo is only the following brivla (or equivalent unit). In order to convert an entire tanru, it is necessary to enclose the tanru in 
     
-    <quote>ke ... ke'e</quote> brackets:</para>
-<para> <indexterm type="example-imported"><primary>blue house</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
+    <jbophrase>ke ... ke'e</jbophrase> brackets:</para>
+    <para> <indexterm type="example-imported"><primary>blue house</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-wQbB">
       <title>
         <anchor xml:id="c9e4d8"/>
       </title>
       <interlinear-gloss>
         <jbo>mi se ke blanu zdani [ke'e] ti</jbo>
-        <en>I [2nd conversion] blue house this-thing</en>
+        <gloss>I [2nd conversion] blue house this-thing</gloss>
       </interlinear-gloss>
     </example>
     <para>The place structure of 
     <jbophrase>blanu zdani</jbophrase> (blue house) is the same as that of 
     <jbophrase>zdani</jbophrase>, by the rule given in 
-    <xref linkend="cll_chapter9-section1"/>. The place structure of 
+    <xref linkend="section-sumti-tcita-introduction"/>. The place structure of 
     <jbophrase>zdani</jbophrase> is:</para>
-    <programlisting xml:space="preserve">
-       zdani: x1 is a house/nest/lair/den for inhabitant x2
-</programlisting>
+    <place-structure>
+      zdani: x1 is a house/nest/lair/den for inhabitant x2
+    </place-structure>
     <para>The place structure of 
-    <quote>se ke blanu zdani [ke'e]</quote> is therefore:</para>
-    <programlisting xml:space="preserve">
-       x1 is the inhabitant of the blue house (etc.) x2
-</programlisting>
+    <jbophrase>se ke blanu zdani [ke'e]</jbophrase> is therefore:</para>
+    <place-structure>
+      x1 is the inhabitant of the blue house (etc.) x2
+    </place-structure>
     <para>Consequently, 
     <xref linkend="example-random-id-wQbB"/> means:</para>
-    <programlisting xml:space="preserve">
-       I am the inhabitant of the blue house which is this thing.
-</programlisting>
+    <place-structure>
+      I am the inhabitant of the blue house which is this thing.
+    </place-structure>
     <para>Conversion applied to only part of a tanru has subtler effects which are explained in 
-    <xref linkend="chapter-selbri"/>.</para>
+    <xref linkend="section-place-conversion"/>.</para>
     <para> <indexterm type="general-imported"><primary>multiple conversion</primary><secondary>effect of ordering</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>effect of multiple on a selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>multiple SE</primary><secondary>effect of ordering</secondary></indexterm>  <indexterm type="general-imported"><primary>SE selma'o</primary><secondary>effect of multiple on a selbri</secondary></indexterm> It is grammatical to convert a selbri more than once with SE; later (inner) conversions are applied before earlier (outer) ones. For example, the place structure of 
     <jbophrase>se te klama</jbophrase> is achieved by exchanging the x1 and x2 place of 
     
     <jbophrase>te klama</jbophrase>, producing:</para>
-<para> <indexterm type="lojban-word-imported"><primary>se te</primary></indexterm> FIXME: TAG SPOT</para>
-    <programlisting xml:space="preserve">
-       x1 is the destination and x2 is the origin of x3 going via x4 using x5
+    <para> <indexterm type="lojban-word-imported"><primary>se te</primary></indexterm> FIXME: TAG SPOT</para>
+    <place-structure>
+      x1 is the destination and x2 is the origin of x3 going via x4 using x5
 
-</programlisting>
+    </place-structure>
     <para>On the other hand, 
     <jbophrase>te se klama</jbophrase> has a place structure derived from swapping the x1 and x3 places of 
     <jbophrase>se klama</jbophrase>:</para>
-    <programlisting xml:space="preserve">
-       x1 is the origin of x2's going to x3 via x4 using x5
-</programlisting>
+    <place-structure>
+      x1 is the origin of x2's going to x3 via x4 using x5
+    </place-structure>
     <para> <indexterm type="general-imported"><primary>multiple conversion</primary><secondary>avoiding</secondary></indexterm> which is quite different. However, multiple conversions like this are never necessary. Arbitrary scrambling of places can be achieved more easily and far more intelligibly with FA tags, and only a single conversion is ever needed in a description.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>setese</primary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>swapping non-first places</secondary></indexterm> (Although no one has made any real use of it, it is perhaps worth noting that compound conversions of the form 
-    <quote>setese</quote>, where the first and third cmavo are the same, effectively swap the two given places while leaving the others, including x1, alone: 
+    <para><indexterm type="general-imported"><primary>conversion</primary><secondary>swapping non-first places</secondary></indexterm> (Although no one has made any real use of it, it is perhaps worth noting that compound conversions of the form 
+    <jbophrase>setese</jbophrase>, where the first and third cmavo are the same, effectively swap the two given places while leaving the others, including x1, alone: 
     
-    <quote>setese</quote> (or equivalently 
+    <jbophrase>setese</jbophrase> (or equivalently 
     
-    <quote>tesete</quote>) swap the x2 and x3 places, whereas 
-    <quote>texete</quote> (or 
-    <quote>xetexe</quote>) swap the x3 and x5 places.)</para>
+    <jbophrase>tesete</jbophrase>) swap the x2 and x3 places, whereas 
+    <jbophrase>texete</jbophrase> (or 
+    <jbophrase>xetexe</jbophrase>) swap the x3 and x5 places.)</para>
   </section>
-  <section xml:id="cll_chapter9-section5">
+  <section xml:id="section-selbri-modals">
     <title>Modal places: FIhO, FEhU</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -627,10 +676,9 @@
     </cmavo-list>
     <para>Sometimes the place structures engineered into Lojban are inadequate to meet the needs of actual speech. Consider the gismu 
     <jbophrase>viska</jbophrase>, whose place structure is:</para>
-<para> <indexterm type="lojban-word-imported"><primary>viska</primary></indexterm> FIXME: TAG SPOT</para>
-    <programlisting xml:space="preserve">
-       viska: x1 sees x2 under conditions x3
-</programlisting>
+    <place-structure>
+      viska: x1 sees x2 under conditions x3
+    </place-structure>
     <para>Seeing is a threefold relationship, involving an agent (le viska), an object of sight (le se viska), and an environment that makes seeing possible (le te viska). Seeing is done with one or more eyes, of course; in general, the eyes belong to the entity in the x1 place.</para>
     <para> <indexterm type="lojban-word-imported"><primary>FEhU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>fe'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>FIhO selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>fi'o</primary></indexterm>  <indexterm type="example-imported"><primary>see with left eye</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>fi'o</primary><secondary>use in adding places to place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>place structure</primary><secondary>adding new places to with modal sumti</secondary></indexterm>  <indexterm type="general-imported"><primary>fi'o</primary><secondary>as modal tag</secondary></indexterm> Suppose, however, that you are blind in one eye and are talking to someone who doesn't know that. You might want to say, 
     <quote>I see you with the left eye.</quote> There is no place in the place structure of 
@@ -648,27 +696,27 @@
     </example>
     <para> <indexterm type="general-imported"><primary>fi'o with selbri</primary><secondary>meaning of</secondary></indexterm>  <indexterm type="general-imported"><primary>modal tag</primary><secondary>fi'o with selbri as</secondary></indexterm>  <indexterm type="general-imported"><primary>fi'o</primary><secondary>effect on following selbri</secondary></indexterm> The three-place relation 
     <jbophrase>viska</jbophrase> has now acquired a fourth place specifying the eye used for seeing. The combination of the cmavo 
-    <quote>fi'o</quote> (of selma'o FIhO) followed by a selbri, in this case the gismu 
+    <jbophrase>fi'o</jbophrase> (of selma'o FIhO) followed by a selbri, in this case the gismu 
     <jbophrase>kanla</jbophrase>, forms a tag which is prefixed to the sumti filling the new place, namely 
     <jbophrase>le zunle</jbophrase>. The semantics of 
     <jbophrase>fi'o kanla le zunle</jbophrase> is that 
     <jbophrase>le zunle</jbophrase> fills the x1 place of 
     <jbophrase>kanla</jbophrase>, whose place structure is</para>
-    <programlisting xml:space="preserve">
-       kanla: x1 is an/the eye of body x2
-</programlisting>
+    <place-structure>
+      kanla: x1 is an/the eye of body x2
+    </place-structure>
     <para> <indexterm type="general-imported"><primary>modal sumti</primary><secondary>as first place of modal tag selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>modal place relation</primary><secondary>importance of first place in</secondary></indexterm>  <indexterm type="general-imported"><primary>fi'o tag</primary><secondary>relation of modal sumti following to selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>modal place</primary><secondary>relation of to selbri</secondary></indexterm> Thus 
     <jbophrase>le zunle</jbophrase> is an eye. The x2 place of 
     <jbophrase>kanla</jbophrase> is unspecified and must be inferred from the context. It is important to remember that even though 
     <jbophrase>le zunle</jbophrase> is placed following 
     <jbophrase>fi'o kanla</jbophrase>, semantically it belongs in the x1 place of 
     <jbophrase>kanla</jbophrase>. The selbri may be terminated with 
-    <quote>fe'u</quote> (of selma'o FEhU), an elidable terminator which is rarely required unless a non-logical connective follows the tag (omitting 
-    <quote>fe'u</quote> in that case would make the connective affect the selbri).</para>
+    <jbophrase>fe'u</jbophrase> (of selma'o FEhU), an elidable terminator which is rarely required unless a non-logical connective follows the tag (omitting 
+    <jbophrase>fe'u</jbophrase> in that case would make the connective affect the selbri).</para>
     <para> <indexterm type="general-imported"><primary>modal sumti</primary><secondary>and FA marking</secondary></indexterm>  <indexterm type="general-imported"><primary>modal sumti</primary><secondary>effect on place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>modal sumti</primary><secondary>position in bridi</secondary></indexterm>  <indexterm type="general-imported"><primary>seltcita sumti</primary><secondary>definition (see also modal sumti)</secondary></indexterm>  <indexterm type="general-imported"><primary>sumti tcita</primary><secondary>definition (see also modal tag)</secondary></indexterm>  <indexterm type="general-imported"><primary>modal sumti</primary><secondary>definition (see also seltcita sumti)</secondary></indexterm>  <indexterm type="general-imported"><primary>modal tag</primary><secondary>definition (see also sumti tcita)</secondary></indexterm>  <indexterm type="general-imported"><primary>modal place</primary><secondary>rationale for term name</secondary></indexterm>  <indexterm type="general-imported"><primary>modal place</primary><secondary>definition</secondary></indexterm> The term for such an added place is a 
     <quote>modal place</quote>, as distinguished from the regular numbered places. (This use of the word 
     <quote>modal</quote> is specific to the Loglan Project, and does not agree with the standard uses in either logic or linguistics, but is now too entrenched to change easily.) The 
-    <quote>fi'o</quote> construction marking a modal place is called a 
+    <jbophrase>fi'o</jbophrase> construction marking a modal place is called a 
     <quote>modal tag</quote>, and the sumti which follows it a 
     <quote>modal sumti</quote>; the purely Lojban terms 
     
@@ -679,9 +727,9 @@
     <para>Consider 
     <xref linkend="example-random-id-BSAc"/> again. Another way to view the situation is to consider the speaker's left eye as a tool, a tool for seeing. The relevant selbri then becomes 
     <jbophrase>pilno</jbophrase>, whose place structure is</para>
-    <programlisting xml:space="preserve">
-       pilno: x1 uses x2 as a tool for purpose x3
-</programlisting>
+    <place-structure>
+      pilno: x1 uses x2 as a tool for purpose x3
+    </place-structure>
     <para>and we can rewrite 
     <xref linkend="example-random-id-BSAc"/> as</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Lu15">
@@ -706,25 +754,25 @@
     <jbophrase>fi'o pilno</jbophrase> would mean 
     <quote>with tool user</quote>, leaving the tool unspecified.</para>
   </section>
-  <section xml:id="cll_chapter9-section6">
+  <section xml:id="section-BAI">
     <title>Modal tags: BAI</title>
     <para>There are certain selbri which seem particularly useful in constructing modal tags. In particular, 
     <jbophrase>pilno</jbophrase> is one of them. The place structure of 
     <jbophrase>pilno</jbophrase> is:</para>
-    <programlisting xml:space="preserve">
-       pilno: x1 uses x2 as a tool for purpose x3
-</programlisting>
-    <para> <indexterm type="lojban-word-imported"><primary>sepi'o</primary></indexterm>  <indexterm type="general-imported"><primary>BAI modal tags</primary><secondary>rationale for</secondary></indexterm> and almost any selbri which represents an action may need to specify a tool. Having to say 
+    <place-structure>
+      pilno: x1 uses x2 as a tool for purpose x3
+    </place-structure>
+    <para><indexterm type="general-imported"><primary>BAI modal tags</primary><secondary>rationale for</secondary></indexterm> and almost any selbri which represents an action may need to specify a tool. Having to say 
     <jbophrase>fi'o se pilno</jbophrase> frequently would make many Lojban sentences unnecessarily verbose and clunky, so an abbreviation is provided in the language design: the compound cmavo 
     <jbophrase>sepi'o</jbophrase>.</para>
     
-    <para> <indexterm type="lojban-word-imported"><primary>SE selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>BAI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>pi'o</primary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>of BAI cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>modal tags</primary><secondary>short forms as BAI cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>fi'o constructs</primary><secondary>short forms as BAI cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>BAI selma'o</primary><secondary>as short forms for fi'o constructs</secondary></indexterm> Here 
-    <quote>se</quote> is used before a cmavo, namely 
+    <para> <indexterm type="lojban-word-imported"><primary>SE selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>BAI selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>of BAI cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>modal tags</primary><secondary>short forms as BAI cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>fi'o constructs</primary><secondary>short forms as BAI cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>BAI selma'o</primary><secondary>as short forms for fi'o constructs</secondary></indexterm> Here 
+    <jbophrase>se</jbophrase> is used before a cmavo, namely 
     <jbophrase>pi'o</jbophrase>, rather than before a brivla. The meaning of this cmavo, which belongs to selma'o BAI, is exactly the same as that of 
     
     <jbophrase>fi'o pilno fe'u</jbophrase>. Since what we want is a tag based on 
     <jbophrase>se pilno</jbophrase> rather than 
-    <jbophrase>pilno</jbophrase>- the tool, not the tool user - the grammar allows a BAI cmavo to be converted using a SE cmavo. 
+    <jbophrase>pilno-</jbophrase> the tool, not the tool user – the grammar allows a BAI cmavo to be converted using a SE cmavo. 
     <xref linkend="example-random-id-Lu15"/> may therefore be rewritten as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-N32m">
       <title>
@@ -740,26 +788,41 @@
     <para>The compound cmavo 
     <jbophrase>sepi'o</jbophrase> is much shorter than 
     
-    <quote>fi'o se pilno [fe'u]</quote> and can be thought of as a single word meaning 
+    <jbophrase>fi'o se pilno [fe'u]</jbophrase> and can be thought of as a single word meaning 
     <quote>with-tool</quote>. The modal tag 
     <jbophrase>pi'o</jbophrase>, with no 
     
-    <quote>se</quote>, similarly means 
+    <jbophrase>se</jbophrase>, similarly means 
     <quote>with-tool-user</quote>, probably a less useful concept. Nevertheless, the parallelism with the place structure of 
     <jbophrase>pilno</jbophrase> makes the additional syllable worthwhile.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>ka'a</primary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>effect on BAI</secondary></indexterm>  <indexterm type="general-imported"><primary>BAI selma'o</primary><secondary>effect of conversion on</secondary></indexterm> Some BAI cmavo make sense with as well as without a SE cmavo; for example, 
+    <para><indexterm type="general-imported"><primary>conversion</primary><secondary>effect on BAI</secondary></indexterm>  <indexterm type="general-imported"><primary>BAI selma'o</primary><secondary>effect of conversion on</secondary></indexterm> Some BAI cmavo make sense with as well as without a SE cmavo; for example, 
     <jbophrase>ka'a</jbophrase>, the BAI corresponding to the gismu 
     
     <jbophrase>klama</jbophrase>, has five usable forms corresponding to the five places of 
     <jbophrase>klama</jbophrase> respectively:</para>
-    <programlisting xml:space="preserve">
-       ka'a        with-goer
+    <variablelist>
+      <varlistentry>
+        <term><jbophrase>ka'a</jbophrase></term>
+        <listitem><para>with-goer</para></listitem>
+      </varlistentry>
 
-       seka'a      with-destination
-       teka'a      with-origin
-       veka'a      with-route
-       xeka'a      with-means-of-transport
-</programlisting>
+      <varlistentry>
+        <term><jbophrase>seka'a</jbophrase></term>
+        <listitem><para>with-destination</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase>teka'a</jbophrase></term>
+        <listitem><para>with-origin</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase>veka'a</jbophrase></term>
+        <listitem><para>with-route</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase>xeka'a</jbophrase></term>
+        <listitem><para>with-means-of-transport</para></listitem>
+      </varlistentry>
+    </variablelist>
     <para>Any of these tags may be used to provide modal places for bridi, as in the following examples:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-r0QA">
       <title>
@@ -817,22 +880,13 @@
         <en>I eat in the airplane.</en>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="general-imported"><primary>English prepositions</primary><secondary>contrasted with modal tags in preciseness</secondary></indexterm>  <indexterm type="general-imported"><primary>modal tags</primary><secondary>contrasted with English prepositions in preciseness</secondary></indexterm>  <indexterm type="general-imported"><primary>BAI cmavo</primary><secondary>rationale for selection</secondary></indexterm> There are sixty-odd cmavo of selma'o BAI, based on selected gismu that seemed useful in a variety of settings. The list is somewhat biased toward English, because many of the cmavo were selected on the basis of corresponding English prepositions and preposition compounds such as 
-    
-    
-    
-    
-    
-    <quote>with</quote>, 
+    <para> <indexterm type="general-imported"><primary>English prepositions</primary><secondary>contrasted with modal tags in preciseness</secondary></indexterm>  <indexterm type="general-imported"><primary>modal tags</primary><secondary>contrasted with English prepositions in preciseness</secondary></indexterm>  <indexterm type="general-imported"><primary>BAI cmavo</primary><secondary>rationale for selection</secondary></indexterm> There are sixty-odd cmavo of selma'o BAI, based on selected gismu that seemed useful in a variety of settings. The list is somewhat biased toward English, because many of the cmavo were selected on the basis of corresponding English prepositions and preposition compounds such as <quote>with</quote>, 
     <quote>without</quote>, and 
     <quote>by means of</quote>. The BAI cmavo, however, are far more precise than English prepositions, because their meanings are fixed by the place structures of the corresponding gismu.</para>
     
-    
-    
-    
     <para> <indexterm type="general-imported"><primary>BAI selma'o</primary><secondary>form of cmavo in</secondary></indexterm> All BAI cmavo have the form CV'V or CVV. Most of them are CV'V, where the C is the first consonant of the corresponding gismu and the two Vs are the two vowels of the gismu. The table in 
-    <xref linkend="cll_chapter9-section16"/> shows the exceptions.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>do'e</primary></indexterm>  <indexterm type="general-imported"><primary>vague relationship</primary><secondary>modal tag for</secondary></indexterm>  <indexterm type="general-imported"><primary>modal tag</primary><secondary>for vague relationship</secondary></indexterm> There is one additional BAI cmavo that is not derived from a gismu: 
+    <xref linkend="section-irregular-BAI"/> shows the exceptions.</para>
+    <para><indexterm type="general-imported"><primary>vague relationship</primary><secondary>modal tag for</secondary></indexterm>  <indexterm type="general-imported"><primary>modal tag</primary><secondary>for vague relationship</secondary></indexterm> There is one additional BAI cmavo that is not derived from a gismu: 
     <jbophrase>do'e</jbophrase>. This cmavo is used when an extra place is needed, but it seems useful to be vague about the semantic implications of the extra place:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-2vMd">
@@ -846,20 +900,20 @@
         <en>A man of the north came to the city.</en>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>be</primary></indexterm>  <indexterm type="general-imported"><primary>modal place</primary><secondary>on description selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>&quot;of&quot;</primary><secondary>in English</secondary><tertiary>compared with do'e</tertiary></indexterm>  <indexterm type="general-imported"><primary>do'e</primary><secondary>compared with English &quot;of&quot;</secondary></indexterm> Here 
+    <para><!-- FIXME: what to do with these &quot;s? --><indexterm type="general-imported"><primary>modal place</primary><secondary>on description selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>&quot;of&quot;</primary><secondary>in English</secondary><tertiary>compared with do'e</tertiary></indexterm>  <indexterm type="general-imported"><primary>do'e</primary><secondary>compared with English &quot;of&quot;</secondary></indexterm> Here 
     <jbophrase>le berti</jbophrase> is provided as a modal place of the selbri 
     <jbophrase>nanmu</jbophrase>, but its exact significance is vague, and is paralleled in the colloquial translation by the vague English preposition 
     <quote>of</quote>. 
     <xref linkend="example-random-id-2vMd"/> also illustrates a modal place bound into a selbri with 
-    <quote>be</quote>. This construction is useful when the selbri of a description requires a modal place; this and other uses of 
-    <quote>be</quote> are more fully explained in 
-    <xref linkend="chapter-selbri"/>.</para>
+    <jbophrase>be</jbophrase>. This construction is useful when the selbri of a description requires a modal place; this and other uses of 
+    <jbophrase>be</jbophrase> are more fully explained in 
+    <xref linkend="section-be-sumti"/>.</para>
   </section>
-  <section xml:id="cll_chapter9-section7">
+  <section xml:id="section-causals">
     <title>Modal sentence connection: the causals</title>
     
     <para>The following cmavo are discussed in this section:</para>
-<para> <indexterm type="lojban-word-imported"><primary>ni'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>mu'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ki'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ri'a</primary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="lojban-word-imported"><primary>ni'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>mu'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ki'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ri'a</primary></indexterm> FIXME: TAG SPOT</para>
     <cmavo-list>
       <cmavo-entry>
         <cmavo>ri'a</cmavo>
@@ -901,12 +955,24 @@
     
     <para> <indexterm type="general-imported"><primary>causals</primary><secondary>gismu</secondary></indexterm> There are four causal gismu in Lojban, distinguishing different versions of the relationships lumped in English as 
     <quote>causal</quote>:</para>
-    <programlisting xml:space="preserve">
-       rinka: event x1 physically causes event x2
-       krinu: event x1 is the justification for event x2
-       mukti: event x1 is the (human) motive for event x2
-       nibli: event x1 logically entails event x2
-</programlisting>
+    <variablelist>
+      <varlistentry>
+        <term><jbophrase>rinka</jbophrase></term>
+        <listitem><place-structure>>event x1 physically causes event x2</place-structure></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase>krinu</jbophrase></term>
+        <listitem><place-structure>>event x1 is the justification for event x2</place-structure></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase>mukti</jbophrase></term>
+        <listitem><place-structure>>event x1 is the (human) motive for event x2</place-structure></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase>nibli</jbophrase></term>
+        <listitem><place-structure>>event x1 logically entails event x2</place-structure></listitem>
+      </varlistentry>
+    </variablelist>
     <para> <indexterm type="general-imported"><primary>modal causals</primary><secondary>implication differences</secondary></indexterm>  <indexterm type="general-imported"><primary>causals</primary><secondary>modal</secondary></indexterm>  <indexterm type="general-imported"><primary>modals</primary><secondary>for causal gismu</secondary></indexterm> Each of these gismu has a related modal: 
     <jbophrase>ri'a</jbophrase>, 
     <jbophrase>ki'u</jbophrase>, 
@@ -989,12 +1055,9 @@
         <anchor xml:id="c9e7d6"/>
       </title>
       <interlinear-gloss>
-        <jbo>le nu do djacu dunda fi le spati cu rinka</jbo>
-        <gloss>le nu le spati cu banro</gloss>
-        <gloss>The event-of (you water-give to the plant) causes</gloss>
-        <gloss>the event-of (the plant grows).</gloss>
-        <gloss>Your watering the plant causes its growth.</gloss>
-        <en>If you water the plant, then it grows.</en>
+        <jbo>le nu do djacu dunda fi le spati cu rinka le nu le spati cu banro</jbo>
+        <gloss>The event-of (you water-give to the plant) causes the event-of (the plant grows).</gloss>
+        <en>Your watering the plant causes its growth. If you water the plant, then it grows.</en>
       </interlinear-gloss>
     </example>
     <para>does not claim either event, but asserts only the causal relationship between them. So in 
@@ -1014,7 +1077,7 @@
         <en>The plant grows because you water it.</en>
       </interlinear-gloss>
     </example>
-<para> <indexterm type="lojban-word-imported"><primary>bo</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>.i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>.iri'abo</primary></indexterm>  <indexterm type="general-imported"><primary>modal sentence connection</primary></indexterm> FIXME: TAG SPOT</para>
+    <para><indexterm type="general-imported"><primary>modal sentence connection</primary></indexterm> FIXME: TAG SPOT</para>
     <example xml:id="example-random-id-qMPn" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c9e7d8"/>
@@ -1030,9 +1093,9 @@
     
     <jbophrase>.iseri'abo</jbophrase> serve to connect two bridi, as the initial 
     <jbophrase>.i</jbophrase> indicates. The final 
-    <quote>bo</quote> is necessary to prevent the modal from 
+    <jbophrase>bo</jbophrase> is necessary to prevent the modal from 
     <quote>taking over</quote> the following sumti. If the 
-    <quote>bo</quote> were omitted from 
+    <jbophrase>bo</jbophrase> were omitted from 
     <xref linkend="example-random-id-qMnX"/> we would have:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Wo6K">
       <title>
@@ -1061,18 +1124,17 @@
     <jbophrase>.ibaubo</jbophrase> is perfectly grammatical, but it is hard to imagine any two sentences which could be connected by an 
     <quote>in-language</quote> modal. This is because a sentence describes an event, and an event can be a cause or an effect, but not a language.</para>
   </section>
-  <section xml:id="cll_chapter9-section8">
+  <section xml:id="section-modal-connectives">
     <title>Other modal connections</title>
     <para>Like many Lojban grammatical constructions, sentence modal connection has both forethought and afterthought forms. (See 
     <xref linkend="chapter-connectives"/> for a more detailed discussion of Lojban connectives.) 
-    <xref linkend="cll_chapter9-section7"/> exemplifies only afterthought modal connection, illustrated here by:</para>
+    <xref linkend="section-causals"/> exemplifies only afterthought modal connection, illustrated here by:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2D4c">
       <title>
         <anchor xml:id="c9e8d1"/>
       </title>
       <interlinear-gloss>
         <jbo>mi jgari lei djacu .iri'abo mi jgari le kabri</jbo>
-        
         <gloss>I grasp the-mass-of water with-physical-cause I grasp the cup.</gloss>
         <gloss>Causing the mass of water to be grasped by me, I grasped the cup.</gloss>
         <en>I grasp the water because I grasp the cup.</en>
@@ -1084,9 +1146,9 @@
     <quote>and</quote> in the first half of this sentence represents a forethought connection (though not a modal one).</para>
     
     
-    <para> <indexterm type="lojban-word-imported"><primary>gi</primary></indexterm>  <indexterm type="general-imported"><primary>modal sentence connection</primary><secondary>forethought</secondary></indexterm>  <indexterm type="general-imported"><primary>forethought modal sentence connection</primary></indexterm> To make forethought modal sentence connections in Lojban, place the modal plus 
-    <quote>gi</quote> before the first bridi, and 
-    <quote>gi</quote> between the two. No 
+    <para><indexterm type="general-imported"><primary>modal sentence connection</primary><secondary>forethought</secondary></indexterm>  <indexterm type="general-imported"><primary>forethought modal sentence connection</primary></indexterm> To make forethought modal sentence connections in Lojban, place the modal plus 
+    <jbophrase>gi</jbophrase> before the first bridi, and 
+    <jbophrase>gi</jbophrase> between the two. No 
     <jbophrase>.i</jbophrase> is used within the construct. The forethought equivalent of 
     <xref linkend="example-random-id-2D4c"/> is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-d2b9">
@@ -1108,15 +1170,15 @@
       </title>
       <interlinear-gloss>
         <jbo>seri'agi mi jgari lei djacu gi mi jgari le kabri</jbo>
-        <en>With-physical-effect I grasp the-mass-of water, I grasp the cup.</en>
+        <gloss>With-physical-effect I grasp the-mass-of water, I grasp the cup.</gloss>
       </interlinear-gloss>
     </example>
     <para>In English, the sentence 
-    <quote>*Therefore I grasp the water, I grasp the cup</quote> is ungrammatical, because 
+    <quote>Therefore I grasp the water, I grasp the cup</quote> is ungrammatical, because 
     <quote>therefore</quote> is not grammatically equivalent to 
     <quote>because</quote>. In Lojban, 
-    <quote>seri'agi</quote> can be used just like 
-    <quote>ri'agi</quote>.</para>
+    <jbophrase>seri'agi</jbophrase> can be used just like 
+    <jbophrase>ri'agi</jbophrase>.</para>
     <para> <indexterm type="general-imported"><primary>modal sentence connection</primary><secondary>condensing</secondary></indexterm> When the two bridi joined by a modal connection have one or more elements (selbri or sumti or both) in common, there are various condensed forms that can be used in place of full modal sentence connection with both bridi completely stated.</para>
     
     <para> <indexterm type="general-imported"><primary>sumti modal connection</primary></indexterm>  <indexterm type="general-imported"><primary>modal sumti connection</primary></indexterm> When the bridi are the same except for a single sumti, as in Examples 8.1 through 8.3, then a sumti modal connection may be employed:</para>
@@ -1127,15 +1189,15 @@
       </title>
       <interlinear-gloss>
         <jbo>mi jgari ri'agi le kabri gi lei djacu</jbo>
-        <en>I grasp because the cup, the-mass-of water.</en>
+        <gloss>I grasp because the cup, the-mass-of water.</gloss>
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-o7FG"/> means exactly the same as 
-    <xref linkend="example-random-id-2D4c"/> through 
+      <xref linkend="example-random-id-o7FG"/> means exactly the same as 
+      <xref linkend="example-random-id-2D4c"/> through 
     <xref linkend="example-random-id-rQ77"/>, but there is no idiomatic English translation that will distinguish it from them.</para>
     <para> <indexterm type="general-imported"><primary>termset modal connection</primary></indexterm>  <indexterm type="general-imported"><primary>modals</primary><secondary>termset connection</secondary></indexterm> If the two connected bridi are different in more than one sumti, then a termset may be employed. Termsets are explained more fully in 
-    <xref linkend="chapter-connectives"/>, but are essentially a mechanism for creating connections between multiple sumti simultaneously.</para>
+    <xref linkend="section-termsets"/>, but are essentially a mechanism for creating connections between multiple sumti simultaneously.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-LetE">
       <title>
         <anchor xml:id="c9e8d5"/>
@@ -1147,20 +1209,20 @@
       </interlinear-gloss>
     </example>
     <para>means the same as:</para>
-<para> <indexterm type="lojban-word-imported"><primary>nu'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>nu'i</primary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="lojban-word-imported"><primary>nu'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>nu'i</primary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-tFSC">
       <title>
         <anchor xml:id="c9e8d6"/>
       </title>
       <interlinear-gloss>
-        <jbo>nu'i mu'igi mi le cukta la djan. gi la djan. lei jdini mi nu'u dunda</jbo>
-        <en>[start] because I, the book, John; John, the-mass-of money, me [end] gives.</en>
+        <jbo>nu'i mu'igi la djan. lei jdini mi gi mi le cukta la djan. nu'u dunda</jbo>
+        <gloss>[start] because John, the-mass-of money, me; I, the book, John [end] gives.</gloss>
       </interlinear-gloss>
     </example>
     <para>Here there are three sumti in each half of the termset, because the two bridi share only their selbri.</para>
     <para> <indexterm type="general-imported"><primary>bridi-tail modal connection</primary></indexterm>  <indexterm type="general-imported"><primary>modal bridi-tail connection</primary></indexterm>  <indexterm type="general-imported"><primary>modal connection of selbri</primary><secondary>using bridi-tail modal connection</secondary></indexterm> There is no modal connection between selbri as such: bridi which differ only in the selbri can be modally connected using bridi-tail modal connection. The bridi-tail construct is more fully explained in 
     
-    <xref linkend="chapter-connectives"/>, but essentially it consists of a selbri with optional sumti following it. 
+    <xref linkend="section-compound-bridi"/>, but essentially it consists of a selbri with optional sumti following it. 
     <xref linkend="example-random-id-qMN7"/> is suitable for bridi-tail connection, and could be shortened to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Do9b">
       <title>
@@ -1168,7 +1230,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi mu'igi viska le cukta gi lebna le cukta</jbo>
-        <en>I, because saw the book, took the book.</en>
+        <gloss>I, because saw the book, took the book.</gloss>
       </interlinear-gloss>
     </example>
     <para>Again, no straightforward English translation exists. It is even possible to shorten 
@@ -1179,13 +1241,13 @@
       </title>
       <interlinear-gloss>
         <jbo>mi mu'igi viska gi lebna vau le cukta</jbo>
-        <en>I because saw, therefore took, the book.</en>
+        <gloss>I because saw, therefore took, the book.</gloss>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>vau</primary></indexterm> where 
+    <para>where 
     <jbophrase>le cukta</jbophrase> is set off by the non-elidable 
-    <quote>vau</quote> and is made to belong to both bridi-tails - see 
-    <xref linkend="chapter-connectives"/> for more explanations.</para>
+    <jbophrase>vau</jbophrase> and is made to belong to both bridi-tails – see 
+    <xref linkend="section-compound-bridi"/> for more explanations.</para>
     <para> <indexterm type="general-imported"><primary>shared bridi-tail sumti</primary><secondary>avoiding</secondary></indexterm>  <indexterm type="general-imported"><primary>vau for shared bridi-tail sumti</primary><secondary>avoiding</secondary></indexterm> Since this is a chapter on rearranging sumti, it is worth pointing out that 
     <xref linkend="example-random-id-YXps"/> can be further rearranged to:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Pxca">
@@ -1194,20 +1256,19 @@
       </title>
       <interlinear-gloss>
         <jbo>mi le cukta mu'igi viska gi lebna</jbo>
-        <en>I, the book, because saw, therefore took.</en>
+        <gloss>I, the book, because saw, therefore took.</gloss>
       </interlinear-gloss>
     </example>
     <para>which doesn't require the extra 
-    <quote>vau</quote>; all sumti before a conjunction of bridi-tails are shared.</para>
+    <jbophrase>vau</jbophrase>; all sumti before a conjunction of bridi-tails are shared.</para>
     <para> <indexterm type="general-imported"><primary>operand modal connection</primary></indexterm>  <indexterm type="general-imported"><primary>modal operand connection</primary></indexterm> Finally, mathematical operands can be modally connected.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-J2T5">
       <title>
         <anchor xml:id="c9e8d10"/>
       </title>
       <interlinear-gloss>
-        <jbo>li ny. du li vo</jbo>
-        <gloss>.ini'ibo li ny. du li re su'i re</gloss>
-        <en>the number</en>
+        <jbo>li ny. du li vo .ini'ibo li ny. du li re su'i re</jbo>
+        <gloss>the number n = the-number 4. Entailed-by the-number n = the-number 2 + 2.</gloss>
       </interlinear-gloss>
     </example>
     <para>can be reduced to:</para>
@@ -1217,26 +1278,23 @@
       </title>
       <interlinear-gloss>
         <jbo>li ny. du li ni'igi vei re su'i re [ve'o] gi vo</jbo>
-        <en>the-number</en>
-      </interlinear-gloss>
-      <interlinear-gloss>
-        <jbo>= the-number because ( 2 + 2 ) therefore 4.</jbo>
+        <gloss>the-number = the-number because ( 2 + 2 ) therefore 4.</gloss>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>ve'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>vei</primary></indexterm> The cmavo 
-    <quote>vei</quote> and 
-    <quote>ve'o</quote> represent mathematical parentheses, and are required so that 
-    <quote>ni'igi</quote> affects more than just the immediately following operand, namely the first 
+    <para>The cmavo 
+    <jbophrase>vei</jbophrase> and 
+    <jbophrase>ve'o</jbophrase> represent mathematical parentheses, and are required so that 
+    <jbophrase>ni'igi</jbophrase> affects more than just the immediately following operand, namely the first 
     <jbophrase>re</jbophrase>. (The right parenthesis, 
-    <quote>ve'o</quote>, is an elidable terminator.) As usual, no English translation does 
+    <jbophrase>ve'o</jbophrase>, is an elidable terminator.) As usual, no English translation does 
     <xref linkend="example-random-id-Mfe4"/> justice.</para>
     <para> <indexterm type="general-imported"><primary>modal connectives</primary><secondary>fi'o prohibited in</secondary></indexterm>  <indexterm type="general-imported"><primary>fi'o</primary><secondary>restriction on use</secondary></indexterm> Note: Due to restrictions on the Lojban parsing algorithm, it is not possible to form modal connectives using the 
     
-    <quote>fi'o</quote>-plus-selbri form of modal. Only the predefined modals of selma'o BAI can be compounded as shown in 
-    <xref linkend="cll_chapter9-section7"/> and 
-    <xref linkend="cll_chapter9-section8"/>.</para>
+    <jbophrase>fi'o-</jbophrase>plus-selbri form of modal. Only the predefined modals of selma'o BAI can be compounded as shown in 
+    <xref linkend="section-causals"/> and 
+    <xref linkend="section-modal-connectives"/>.</para>
   </section>
-  <section xml:id="cll_chapter9-section9">
+  <section xml:id="section-modal-selbri">
     <title>Modal selbri</title>
     <para>Consider the example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-bT4c">
@@ -1257,19 +1315,18 @@
     <jbophrase>bau</jbophrase> and 
     <jbophrase>bai</jbophrase>. Suppose we wanted to specify the language explicitly but be vague about who's doing the compelling. We can simplify 
     <xref linkend="example-random-id-bT4c"/> to:</para>
-<para> <indexterm type="lojban-word-imported"><primary>ku</primary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-dbSy">
       <title>
         <anchor xml:id="c9e9d2"/>
       </title>
       <interlinear-gloss>
         <jbo>mi tavla bau la lojban. bai [ku].</jbo>
-        <en>I speak in-language Lojban under-compulsion.</en>
+        <gloss>I speak in-language Lojban under-compulsion.</gloss>
       </interlinear-gloss>
     </example>
     <para>In 
     <xref linkend="example-random-id-dbSy"/>, the elidable terminator 
-    <quote>ku</quote> has taken the place of the sumti which would normally follow 
+    <jbophrase>ku</jbophrase> has taken the place of the sumti which would normally follow 
     <jbophrase>bai</jbophrase>. Alternatively, we could specify the one who compels but keep the language vague:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Qc8w">
       <title>
@@ -1277,32 +1334,32 @@
       </title>
       <interlinear-gloss>
         <jbo>mi tavla bau [ku] bai tu'a la frank.</jbo>
-        <en>I speak in-some-language under-compulsion-by some-act-by Frank.</en>
+        <gloss>I speak in-some-language under-compulsion-by some-act-by Frank.</gloss>
       </interlinear-gloss>
     </example>
     <para>We are also free to move the modal-plus- 
-    <quote>ku</quote> around the bridi:</para>
+    <jbophrase>ku</jbophrase> around the bridi:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2utY">
       <title>
         <anchor xml:id="c9e9d4"/>
       </title>
       <interlinear-gloss>
         <jbo>bau [ku] bai ku mi tavla</jbo>
-        <en>In-some-language under-compulsion I speak.</en>
+        <gloss>In-some-language under-compulsion I speak.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>modal followed by selbri</primary><secondary>effect on eliding cu</secondary></indexterm> An alternative to using 
-    <quote>ku</quote> is to place the modal cmavo right before the selbri, following the 
+    <jbophrase>ku</jbophrase> is to place the modal cmavo right before the selbri, following the 
     
-    <quote>cu</quote> which often appears there. When a modal is present, the 
-    <quote>cu</quote> is almost never necessary.</para>
+    <jbophrase>cu</jbophrase> which often appears there. When a modal is present, the 
+    <jbophrase>cu</jbophrase> is almost never necessary.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-613h">
       <title>
         <anchor xml:id="c9e9d5"/>
       </title>
       <interlinear-gloss>
         <jbo>mi bai tavla bau la lojban.</jbo>
-        <en>I compelledly speak in-language Lojban.</en>
+        <gloss>I compelledly speak in-language Lojban.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>modal followed by selbri</primary><secondary>contrasted with tanru modification in grammar</secondary></indexterm>  <indexterm type="general-imported"><primary>modal followed by selbri</primary><secondary>compared with tanru modification in meaning</secondary></indexterm> In this use, the modal is like a tanru modifier semantically, although grammatically it is quite distinct. 
@@ -1313,18 +1370,18 @@
       </title>
       <interlinear-gloss>
         <jbo>mi se bapli tavla bau la lojban.</jbo>
-        <en>I compelledly-speak in-language Lojban.</en>
+        <gloss>I compelledly-speak in-language Lojban.</gloss>
       </interlinear-gloss>
     </example>
     <para>The 
-    <quote>se</quote> conversion is needed because 
+    <jbophrase>se</jbophrase> conversion is needed because 
     <jbophrase>bapli tavla</jbophrase> would be a 
     <quote>compeller type of speaker</quote> rather than a 
     <quote>compelled (by someone) type of speaker</quote>, which is what a 
     <jbophrase>bai tavla</jbophrase> is.</para>
     <para> <indexterm type="general-imported"><primary>fi'o modal followed by selbri</primary><secondary>effect on eliding fe'u</secondary></indexterm> If the modal preceding a selbri is constructed using 
-    <quote>fi'o</quote>, then 
-    <quote>fe'u</quote> is required to prevent the main selbri and the modal selbri from colliding:</para>
+    <jbophrase>fi'o</jbophrase>, then 
+    <jbophrase>fe'u</jbophrase> is required to prevent the main selbri and the modal selbri from colliding:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-SfwV">
       <title>
         <anchor xml:id="c9e9d7"/>
@@ -1352,27 +1409,27 @@
     <jbophrase>bai</jbophrase> is spread over both 
     <jbophrase>klama le zarci</jbophrase> and 
     <jbophrase>cadzu le bisli</jbophrase>, and the 
-    <quote>ge ... gi</quote> represents the logical connection 
+    <jbophrase>ge ... gi</jbophrase> represents the logical connection 
     <quote>both-and</quote> between the two.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>tu'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>tu'e</primary></indexterm>  <indexterm type="general-imported"><primary>modals</primary><secondary>expanding scope over multiple sentences with tu'e…tu'u</secondary></indexterm> Similarly, a modal can be attached to multiple sentences that have been combined with 
-    <quote>tu'e</quote> and 
-    <quote>tu'u</quote>, which are explained in more detail in 
-    <xref linkend="chapter-structure"/>:</para>
+    <para><indexterm type="general-imported"><primary>modals</primary><secondary>expanding scope over multiple sentences with tu'e…tu'u</secondary></indexterm> Similarly, a modal can be attached to multiple sentences that have been combined with 
+    <jbophrase>tu'e</jbophrase> and 
+    <jbophrase>tu'u</jbophrase>, which are explained in more detail in 
+    <xref linkend="section-i"/>:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-boYr">
       <title>
         <anchor xml:id="c9e9d9"/>
       </title>
       <interlinear-gloss>
         <jbo>bai tu'e mi klama le zarci .i mi cadzu le bisli [tu'u]</jbo>
-        <en>Under-compulsion [start] I go to-the market. I walk on-the ice [end].</en>
+        <gloss>Under-compulsion [start] I go to-the market. I walk on-the ice [end].</gloss>
       </interlinear-gloss>
     </example>
     <para>means the same thing as 
     <xref linkend="example-random-id-vCzL"/>.</para>
     <para>Note: Either BAI modals or 
-    <quote>fi'o</quote>-plus-selbri modals may correctly be used in any of the constructions discussed in this section.</para>
+    <jbophrase>fi'o-</jbophrase>plus-selbri modals may correctly be used in any of the constructions discussed in this section.</para>
   </section>
-  <section xml:id="cll_chapter9-section10">
+  <section xml:id="section-modal-relative-phrases">
     <title>Modal relative phrases; Comparison</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -1407,7 +1464,7 @@
       </title>
       <interlinear-gloss>
         <jbo>la .apasionatas. poi se cusku la .artr. rubnstain. cu se nelci mi</jbo>
-        <en>The Appassionata which is-expressed-by Arthur Rubinstein is-liked-by me.</en>
+        <gloss>The Appassionata which is-expressed-by Arthur Rubinstein is-liked-by me.</gloss>
         
       </interlinear-gloss>
     </example>
@@ -1417,27 +1474,27 @@
       </title>
       <interlinear-gloss>
         <jbo>la .apasionatas. noi se finti la betovn. cu se nelci mi</jbo>
-        <en>The Appassionata, which is-created-by Beethoven, is-liked-by me.</en>
+        <gloss>The Appassionata, which is-created-by Beethoven, is-liked-by me.</gloss>
         
         
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>poi</primary></indexterm>  <indexterm type="example-imported"><primary>Beethoven</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Artur Rubenstein</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Appassionata</primary><secondary>example</secondary></indexterm> In 
+    <para><indexterm type="example-imported"><primary>Beethoven</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Artur Rubenstein</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Appassionata</primary><secondary>example</secondary></indexterm> In 
     <xref linkend="example-random-id-qmPP"/>, 
     <jbophrase>la .apasionatas.</jbophrase> refers to a particular performance of the sonata, namely the one performed by Rubinstein. Therefore, the relative clause 
     <jbophrase>poi se cusku</jbophrase> uses the cmavo 
-    <quote>poi</quote> (of selma'o NOI) to restrict the meaning of 
+    <jbophrase>poi</jbophrase> (of selma'o NOI) to restrict the meaning of 
     <jbophrase>la .apasionatas</jbophrase> to the performance in question.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>noi</primary></indexterm> In 
+    <para>In 
     <xref linkend="example-random-id-qmPr"/>, however, 
     <jbophrase>la .apasionatas.</jbophrase> refers to the sonata as a whole, and the information that it was composed by Beethoven is merely incidental. The cmavo 
     
-    <quote>noi</quote> (also of selma'o NOI) expresses the incidental nature of this relationship.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>ne</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>pe</primary></indexterm> The cmavo 
-    <quote>pe</quote> and 
-    <quote>ne</quote> (of selma'o GOI) are roughly equivalent to 
-    <quote>poi</quote> and 
-    <quote>noi</quote> respectively, but are followed by sumti rather than full bridi. We can abbreviate 
+    <jbophrase>noi</jbophrase> (also of selma'o NOI) expresses the incidental nature of this relationship.</para>
+    <para>The cmavo 
+    <jbophrase>pe</jbophrase> and 
+    <jbophrase>ne</jbophrase> (of selma'o GOI) are roughly equivalent to 
+    <jbophrase>poi</jbophrase> and 
+    <jbophrase>noi</jbophrase> respectively, but are followed by sumti rather than full bridi. We can abbreviate 
     <xref linkend="example-random-id-qmPP"/> and 
     <xref linkend="example-random-id-qmPr"/> to:</para>
     <example xml:id="example-random-id-qMq1" role="interlinear-gloss-example">
@@ -1445,8 +1502,8 @@
         <anchor xml:id="c9e10d3"/>
       </title>
       <interlinear-gloss>
-        <jbo>la .apasionatas pe la .artr. rubnstain. se nelci mi</jbo>
-        <en>The Appassionata of Arthur Rubinstein is-liked-by me.</en>
+        <jbo>la .apasionatas. pe la .artr. rubnstain. se nelci mi</jbo>
+        <gloss>The Appassionata of Arthur Rubinstein is-liked-by me.</gloss>
         
       </interlinear-gloss>
     </example>
@@ -1455,8 +1512,8 @@
         <anchor xml:id="c9e10d4"/>
       </title>
       <interlinear-gloss>
-        <jbo>la .apasionatas ne la betovn. se nelci mi</jbo>
-        <en>The Appassionata, which is of Beethoven, is-liked-by me.</en>
+        <jbo>la .apasionatas. ne la betovn. se nelci mi</jbo>
+        <gloss>The Appassionata, which is of Beethoven, is-liked-by me.</gloss>
         
         
       </interlinear-gloss>
@@ -1466,7 +1523,7 @@
     <xref linkend="example-random-id-qMq1"/>) and Beethoven (in 
     
     <xref linkend="example-random-id-qMQ1"/>), and that the relationships are respectively restrictive and incidental.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>fi'e</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>cu'u</primary></indexterm> It happens that both 
+    <para>It happens that both 
     <jbophrase>cusku</jbophrase> and 
     <jbophrase>finti</jbophrase> have BAI cmavo, namely 
     <jbophrase>cu'u</jbophrase> and 
@@ -1482,7 +1539,7 @@
       <interlinear-gloss>
         <jbo>la .apasionatas pe cu'u la .artr. rubnstain. cu se nelci mi</jbo>
         
-        <en>The Appassionata expressed-by Arthur Rubinstein is-liked-by me.</en>
+        <gloss>The Appassionata expressed-by Arthur Rubinstein is-liked-by me.</gloss>
         
       </interlinear-gloss>
     </example>
@@ -1493,7 +1550,7 @@
       <interlinear-gloss>
         <jbo>la .apasionatas ne fi'e la betovn. cu se nelci mi</jbo>
         
-        <en>The Appassionata, invented-by Beethoven, is-liked-by me.</en>
+        <gloss>The Appassionata, invented-by Beethoven, is-liked-by me.</gloss>
         
         
       </interlinear-gloss>
@@ -1503,17 +1560,23 @@
     <xref linkend="example-random-id-qmqy"/> have the full semantic content of 
     <xref linkend="example-random-id-qmPP"/> and 
     <xref linkend="example-random-id-qmPr"/> respectively.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>me'a</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>mau</primary></indexterm>  <indexterm type="general-imported"><primary>&quot;less&quot;</primary><secondary>English word</secondary><tertiary>expressing with relative phrases</tertiary></indexterm>  <indexterm type="general-imported"><primary>&quot;more&quot;</primary><secondary>English word</secondary><tertiary>expressing with relative phrases</tertiary></indexterm> Modal relative phrases are often used with the BAI cmavo 
+    <para> <!-- FIXME: what to do with these &quot;s? --><indexterm type="general-imported"><primary>&quot;less&quot;</primary><secondary>English word</secondary><tertiary>expressing with relative phrases</tertiary></indexterm>  <indexterm type="general-imported"><primary>&quot;more&quot;</primary><secondary>English word</secondary><tertiary>expressing with relative phrases</tertiary></indexterm> Modal relative phrases are often used with the BAI cmavo 
     <jbophrase>mau</jbophrase> and 
     
     <jbophrase>me'a</jbophrase>, which are based on the comparative gismu 
     
     <jbophrase>zmadu</jbophrase> (more than) and 
     <jbophrase>mleca</jbophrase> (less than) respectively. The place structures are:</para>
-    <programlisting xml:space="preserve">
-       zmadu: x1 is more than x2 in property/quantity x3 by amount x4
-       mleca: x1 is less than x2 in property/quantity x3 by amount x4
-</programlisting>
+    <variablelist>
+      <varlistentry>
+        <term><jbophrase>zmadu</jbophrase>:</term>
+        <listitem><place-structure>>x1 is more than x2 in property/quantity x3 by amount x4</place-structure></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase>mleca</jbophrase>:</term>
+        <listitem><place-structure>>x1 is less than x2 in property/quantity x3 by amount x4</place-structure></listitem>
+      </varlistentry>
+    </variablelist>
     <para>Here are some examples:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Jr4V">
       <title>
@@ -1555,9 +1618,9 @@
     
     <jbophrase>me'a</jbophrase> are more useful when converted with 
     
-    <quote>se</quote>.</para>
-    <para> <indexterm type="general-imported"><primary>&quot;less&quot;</primary><secondary>English word</secondary><tertiary>importance of relative phrase to</tertiary></indexterm>  <indexterm type="general-imported"><primary>&quot;more&quot;</primary><secondary>English word</secondary><tertiary>importance of relative phrase to</tertiary></indexterm> If the 
-    <quote>ne</quote> were omitted in 
+    <jbophrase>se</jbophrase>.</para>
+    <para> <!-- FIXME: what to do with these &quot;s? --><indexterm type="general-imported"><primary>&quot;less&quot;</primary><secondary>English word</secondary><tertiary>importance of relative phrase to</tertiary></indexterm>  <indexterm type="general-imported"><primary>&quot;more&quot;</primary><secondary>English word</secondary><tertiary>importance of relative phrase to</tertiary></indexterm> If the 
+    <jbophrase>ne</jbophrase> were omitted in 
     <xref linkend="example-random-id-Jr4V"/> and 
     <xref linkend="example-random-id-ecf1"/>, the modal sumti ( 
     
@@ -1583,13 +1646,11 @@
         <anchor xml:id="c9e10d10"/>
       </title>
       <interlinear-gloss>
-        <jbo>le ni la frank. nelci la betis. cu zmadu</jbo>
-        <gloss>le ni la frank. nelci la meiris.</gloss>
-        <gloss>The quantity-of Frank's liking Betty is-more-than</gloss>
-        <en>the quantity-of Frank's liking Mary.</en>
+        <jbo>le ni la frank. nelci la betis. cu zmadu le ni la frank. nelci la meiris.</jbo>
+        <gloss>The quantity-of Frank's liking Betty is-more-than the quantity-of Frank's liking Mary.</gloss>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>du'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>de'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ci'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>seba'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>seme'a</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>semau</primary></indexterm>  <indexterm type="general-imported"><primary>modals often attached with relative phrases</primary><secondary>list</secondary></indexterm> The mechanisms explained in this section are appropriate to many modals other than 
+    <para><indexterm type="general-imported"><primary>modals often attached with relative phrases</primary><secondary>list</secondary></indexterm> The mechanisms explained in this section are appropriate to many modals other than 
     <jbophrase>semau</jbophrase> and 
     <jbophrase>seme'a</jbophrase>. Some other modals that are often associated with relative phrases are: 
     <jbophrase>seba'i</jbophrase> ( 
@@ -1605,9 +1666,9 @@
     
     <quote>as much as</quote>). Some BAI tags can be used equally well in relative phrases or attached to bridi; others seem useful only attached to bridi. But it is also possible that the usefulness of particular BAI modals is an English-speaker bias, and that speakers of other languages may find other BAIs useful in divergent ways.</para>
     <para> <indexterm type="general-imported"><primary>fi'o modals</primary><secondary>usage in relative phrases</secondary></indexterm> Note: The uses of modals discussed in this section are applicable both to BAI modals and to 
-    <quote>fi'o</quote>-plus-selbri modals.</para>
+    <jbophrase>fi'o-</jbophrase>plus-selbri modals.</para>
   </section>
-  <section xml:id="cll_chapter9-section11">
+  <section xml:id="section-mixed-connection">
     <title>Mixed modal connection</title>
     <para>It is possible to mix logical connection (explained in 
     <xref linkend="chapter-connectives"/>) with modal connection, in a way that simultaneously asserts the logical connection and the modal relationship. Consider the sentences:</para>
@@ -1617,7 +1678,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi nelci do .ije mi nelci la djein.</jbo>
-        <en>I like you. And I like Jane.</en>
+        <gloss>I like you. And I like Jane.</gloss>
       </interlinear-gloss>
     </example>
     <para>which is a logical connection, and</para>
@@ -1627,7 +1688,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi nelci do .iki'ubo mi nelci la djein.</jbo>
-        <en>I like you. Justified-by I like Jane.</en>
+        <gloss>I like you. Justified-by I like Jane.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>mixed modal connection</primary><secondary>of sentences</secondary></indexterm>  <indexterm type="general-imported"><primary>modal connection</primary><secondary>simultaneous with logical</secondary></indexterm>  <indexterm type="general-imported"><primary>connection</primary><secondary>simultaneously modal and logical</secondary></indexterm> The meanings of 
@@ -1639,7 +1700,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi nelci do .ijeki'ubo mi nelci la djein.</jbo>
-        <en>I like you. And justified-by I like Jane.</en>
+        <gloss>I like you. And justified-by I like Jane.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>mixed modal connection</primary><secondary>definition</secondary></indexterm> Here the two sentences 
@@ -1681,12 +1742,9 @@
         <anchor xml:id="c9e11d6"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi bevri le dakli</jbo>
-        <gloss>.ijeseri'abo tu'e mi bevri le gerku .ijadu'ibo mi bevri le mlatu [tu'u]</gloss>
-        <gloss>I carry the sack.</gloss>
-        <gloss>And [effect] (I carry the dog. And/or [equal] I carry the cat.)</gloss>
-        <gloss>I carry the sack.</gloss>
-        <en>As a result I carry the dog or I carry the cat, equally.</en>
+        <jbo>mi bevri le dakli .ijeseri'abo tu'e mi bevri le gerku .ijadu'ibo mi bevri le mlatu [tu'u]</jbo>
+        <gloss>I carry the sack. And [effect] (I carry the dog. And/or [equal] I carry the cat.)</gloss>
+        <en>I carry the sack. As a result I carry the dog or I carry the cat, equally.</en>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qmRL" role="interlinear-gloss-example">
@@ -1694,10 +1752,8 @@
         <anchor xml:id="c9e11d7"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi bevri le dakli</jbo>
-        <gloss>gi'eseri'ake bevri le gerku gi'adu'ibo bevri le mlatu [ke'e]</gloss>
-        <gloss>I carry the sack</gloss>
-        <gloss>and [effect] (carry the dog and/or [equal] carry the cat).</gloss>
+        <jbo>mi bevri le dakli gi'eseri'ake bevri le gerku gi'adu'ibo bevri le mlatu [ke'e]</jbo>
+        <gloss>I carry the sack and [effect] (carry the dog and/or [equal] carry the cat).</gloss>
         <en>I carry the sack and as a result carry the dog or carry the cat equally.</en>
       </interlinear-gloss>
     </example>
@@ -1706,30 +1762,28 @@
         <anchor xml:id="c9e11d8"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi bevri le dakli</jbo>
-        <gloss>.eseri'ake le gerku .adu'ibo le mlatu [ke'e]</gloss>
-        <gloss>I carry the sack</gloss>
-        <gloss>and [effect] (the cat and/or [equal] the dog).</gloss>
+        <jbo>mi bevri le dakli .eseri'ake le gerku .adu'ibo le mlatu [ke'e]</jbo>
+        <gloss>I carry the sack and [effect] (the cat and/or [equal] the dog).</gloss>
         <en>I carry the sack, and as a result the cat or the dog equally.</en>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>ke'e</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ke</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>tu'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>tu'e</primary></indexterm>  <indexterm type="example-imported"><primary>carry sack</primary><secondary>example</secondary></indexterm> In 
     <xref linkend="example-random-id-qMRB"/>, the 
-    <quote>tu'e ... tu'u</quote> brackets are the equivalent of the 
-    <quote>ke ... ke'e</quote> brackets in 
+    <jbophrase>tu'e ... tu'u</jbophrase> brackets are the equivalent of the 
+    <jbophrase>ke ... ke'e</jbophrase> brackets in 
     <xref linkend="example-random-id-qmRL"/> and 
     <xref linkend="example-random-id-qMSb"/>, because 
-    <quote>ke ... ke'e</quote> cannot extend across more than one sentence. It would also be possible to change the 
+    <jbophrase>ke ... ke'e</jbophrase> cannot extend across more than one sentence. It would also be possible to change the 
     <jbophrase>.ijeseri'abo</jbophrase> to 
     <jbophrase>.ije seri'a</jbophrase>, which would show that the 
-    <quote>tu'e ... tu'u</quote> portion was an effect, but would not pin down the 
+    <jbophrase>tu'e ... tu'u</jbophrase> portion was an effect, but would not pin down the 
     <jbophrase>mi bevri le dakli</jbophrase> portion as the cause. It is legal for a modal (or a tense; see 
     <xref linkend="chapter-tenses"/>) to modify the whole of a 
-    <quote>tu'e ... tu'u</quote> construct.</para>
+    <jbophrase>tu'e ... tu'u</jbophrase> construct.</para>
     <para> <indexterm type="general-imported"><primary>fi'o</primary><secondary>mixed modal connection with</secondary></indexterm> Note: The uses of modals discussed in this section are applicable both to BAI modals and to 
-    <quote>fi'o</quote>-plus-selbri modals.</para>
+    <jbophrase>fi'o-</jbophrase>plus-selbri modals.</para>
   </section>
-  <section xml:id="cll_chapter9-section12">
+  <section xml:id="section-modal-jai">
     <title>Modal conversion: JAI</title>
     <para>The following cmavo are discussed in this section:</para>
     <cmavo-list>
@@ -1752,15 +1806,15 @@
       </title>
       <interlinear-gloss>
         <jbo>mi cusku bau la lojban.</jbo>
-        <en>I express [something] in-language Lojban.</en>
+        <gloss>I express [something] in-language Lojban.</gloss>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>FA selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>fai</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>JAI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>jai</primary></indexterm>  <indexterm type="general-imported"><primary>place structure</primary><secondary>effect of modal conversion on</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>modal</secondary></indexterm>  <indexterm type="general-imported"><primary>modal conversion</primary><secondary>place structure of</secondary></indexterm>  <indexterm type="general-imported"><primary>modal conversion</primary><secondary>grammar of</secondary></indexterm> has an explicit x1 place occupied by 
+    <para> <indexterm type="lojban-word-imported"><primary>FA selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>fai</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>JAI selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>place structure</primary><secondary>effect of modal conversion on</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>modal</secondary></indexterm>  <indexterm type="general-imported"><primary>modal conversion</primary><secondary>place structure of</secondary></indexterm>  <indexterm type="general-imported"><primary>modal conversion</primary><secondary>grammar of</secondary></indexterm> has an explicit x1 place occupied by 
     <jbophrase>mi</jbophrase> and an explicit 
     <jbophrase>bau</jbophrase> place occupied by 
     <jbophrase>la lojban.</jbophrase> To exchange these two, we use a modal conversion operator consisting of 
     
-    <quote>jai</quote> (of selma'o JAI) followed by the modal cmavo. Thus, the modal conversion of 
+    <jbophrase>jai</jbophrase> (of selma'o JAI) followed by the modal cmavo. Thus, the modal conversion of 
     
     
     <xref linkend="example-random-id-KMMX"/> is:</para>
@@ -1770,7 +1824,7 @@
       </title>
       <interlinear-gloss>
         <jbo>la lojban. jai bau cusku fai mi</jbo>
-        <en>Lojban is-the-language-of-expression used-by me.</en>
+        <gloss>Lojban is-the-language-of-expression used-by me.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>fai</primary><secondary>as allowing access to original first place in modal conversion</secondary></indexterm>  <indexterm type="general-imported"><primary>modal conversion</primary><secondary>access to original first place with fai</secondary></indexterm> In 
@@ -1787,10 +1841,10 @@
     <quote>the language of an expression</quote> as 
     <jbophrase>le jai bau cusku</jbophrase>, for example.</para>
     <para> <indexterm type="general-imported"><primary>modal conversion</primary><secondary>with no modal specified</secondary></indexterm>  <indexterm type="general-imported"><primary>jai without modal</primary><secondary>meaning</secondary></indexterm> In addition, it is grammatical to use 
-    <quote>jai</quote> without a following modal. This usage is not related to modals, but is explained here for completeness. The effect of 
-    <quote>jai</quote> by itself is to send the x1 place, which should be an abstraction, into the 
+    <jbophrase>jai</jbophrase> without a following modal. This usage is not related to modals, but is explained here for completeness. The effect of 
+    <jbophrase>jai</jbophrase> by itself is to send the x1 place, which should be an abstraction, into the 
     <jbophrase>fai</jbophrase> position, and to raise one of the sumti from the abstract sub-bridi into the x1 place of the main bridi. This feature is discussed in more detail in 
-    <xref linkend="chapter-abstractions"/>. The following two examples mean the same thing:</para>
+    <xref linkend="section-sumti-raising"/>. The following two examples mean the same thing:</para>
     <example xml:id="example-random-id-qMsd" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c9e12d3"/>
@@ -1806,10 +1860,8 @@
         <anchor xml:id="c9e12d4"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi jai se krinu le nu mi viska le cukta kei</jbo>
-        <gloss>[fai le nu mi lebna le cukta]</gloss>
-        <gloss>I am-justified by the event-of (I see the book)</gloss>
-        <gloss>[namely, the event-of (I take the book)]</gloss>
+        <jbo>mi jai se krinu le nu mi viska le cukta kei [fai le nu mi lebna le cukta]</jbo>
+        <gloss>I am-justified by the event-of (I see the book) [namely, the event-of (I take the book)]</gloss>
         <en>I am justified in taking the book by seeing the book.</en>
       </interlinear-gloss>
     </example>
@@ -1817,17 +1869,17 @@
     <xref linkend="example-random-id-qMse"/>, with the bracketed part omitted, allows us to say that 
     <quote>I am justified</quote> whereas in fact it is my action that is justified. This construction is vague, but useful in representing natural-language methods of expression.</para>
     <para> <indexterm type="general-imported"><primary>fi'o</primary><secondary>and modal conversion</secondary></indexterm>  <indexterm type="general-imported"><primary>modal conversion with fi'o</primary></indexterm> Note: The uses of modals discussed in this section are applicable both to BAI modals and to 
-    <quote>fi'o</quote>-plus-selbri modals.</para>
+    <jbophrase>fi'o-</jbophrase>plus-selbri modals.</para>
   </section>
-  <section xml:id="cll_chapter9-section13">
+  <section xml:id="section-negation">
     <title>Modal negation</title>
     <para> <indexterm type="general-imported"><primary>modals</primary><secondary>negation of</secondary></indexterm>  <indexterm type="general-imported"><primary>negation of modals</primary></indexterm> Negation is explained in detail in 
     <xref linkend="chapter-negation"/>. There are two forms of negation in Lojban: contradictory and scalar negation. Contradictory negation expresses what is false, whereas scalar negation says that some alternative to what has been stated is true. A simple example is the difference between 
     <quote>John didn't go to Paris</quote> (contradictory negation) and 
     <quote>John went to (somewhere) other than Paris</quote> (scalar negation).</para>
-    <para> <indexterm type="lojban-word-imported"><primary>nai</primary></indexterm>  <indexterm type="general-imported"><primary>modals</primary><secondary>contradictory negation of</secondary></indexterm>  <indexterm type="general-imported"><primary>negation of modals</primary><secondary>contradictory</secondary></indexterm> Contradictory negation involving BAI cmavo is performed by appending 
-    <quote>-nai</quote> (of selma'o NAI) to the BAI. A common use of modals with 
-    <quote>-nai</quote> is to deny a causal relationship:</para>
+    <para><indexterm type="general-imported"><primary>modals</primary><secondary>contradictory negation of</secondary></indexterm>  <indexterm type="general-imported"><primary>negation of modals</primary><secondary>contradictory</secondary></indexterm> Contradictory negation involving BAI cmavo is performed by appending 
+    <jbophrase>-nai</jbophrase> (of selma'o NAI) to the BAI. A common use of modals with 
+    <jbophrase>-nai</jbophrase> is to deny a causal relationship:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-ej84">
       <title>
         <anchor xml:id="c9e13d1"/>
@@ -1839,17 +1891,15 @@
     </example>
     <para> <indexterm type="general-imported"><primary>contradictory negation of modals</primary><secondary>explanation of meaning</secondary></indexterm> 
     <xref linkend="example-random-id-ej84"/> denies that the relationship between my liking you (which is asserted) and your liking me (which is not asserted) is one of motivation. Nothing is said about whether you like me or not, merely that that hypothetical liking is not the motivation for my liking you.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>na'e</primary></indexterm>  <indexterm type="general-imported"><primary>modals</primary><secondary>scalar negation of</secondary></indexterm>  <indexterm type="general-imported"><primary>negation of modals</primary><secondary>scalar</secondary></indexterm> Scalar negation is achieved by prefixing 
-    <quote>na'e</quote> (of selma'o NAhE), or any of the other cmavo of NAhE, to the BAI cmavo.</para>
+    <para><indexterm type="general-imported"><primary>modals</primary><secondary>scalar negation of</secondary></indexterm>  <indexterm type="general-imported"><primary>negation of modals</primary><secondary>scalar</secondary></indexterm> Scalar negation is achieved by prefixing 
+    <jbophrase>na'e</jbophrase> (of selma'o NAhE), or any of the other cmavo of NAhE, to the BAI cmavo.</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-9WC5">
       <title>
         <anchor xml:id="c9e13d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>le spati cu banro na'emu'i le nu</jbo>
-        <gloss>do djacu dunda fi le spati</gloss>
-        <gloss>The plant grows other-than-motivated-by the event-of</gloss>
-        <en>you water-give to the plant.</en>
+        <jbo>le spati cu banro na'emu'i le nu do djacu dunda fi le spati</jbo>
+        <gloss>The plant grows other-than-motivated-by the event-of you water-give to the plant.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>plant grows</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>scalar negation of modals</primary><secondary>explanation of meaning</secondary></indexterm> 
@@ -1858,9 +1908,9 @@
     <xref linkend="example-random-id-9WC5"/> doesn't say what it is (presumably 
     <jbophrase>ri'a</jbophrase>).</para>
     <para> <indexterm type="general-imported"><primary>fi'o modals</primary><secondary>negation of by negating selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>negation of fi'o modals</primary><secondary>by negating selbri</secondary></indexterm> Note: Modals made with 
-    <quote>fi'o</quote> plus a selbri cannot be negated directly. The selbri can itself be negated either with contradictory or with scalar negation, however.</para>
+    <jbophrase>fi'o</jbophrase> plus a selbri cannot be negated directly. The selbri can itself be negated either with contradictory or with scalar negation, however.</para>
   </section>
-  <section xml:id="cll_chapter9-section14">
+  <section xml:id="section-sticky-modals">
     <title>Sticky modals</title>
     <para>The following cmavo is discussed in this section:</para>
     <cmavo-list>
@@ -1870,7 +1920,7 @@
         <description>stickiness flag</description>
       </cmavo-entry>
     </cmavo-list>
-    <para> <indexterm type="lojban-word-imported"><primary>ki</primary></indexterm>  <indexterm type="general-imported"><primary>modals</primary><secondary>making sticky</secondary></indexterm>  <indexterm type="general-imported"><primary>modals</primary><secondary>making long-scope</secondary></indexterm>  <indexterm type="general-imported"><primary>sticky modals</primary><secondary>definition</secondary></indexterm> Like tenses, modals can be made persistent from the bridi in which they appear to all following bridi. The effect of this 
+    <para><indexterm type="general-imported"><primary>modals</primary><secondary>making sticky</secondary></indexterm>  <indexterm type="general-imported"><primary>modals</primary><secondary>making long-scope</secondary></indexterm>  <indexterm type="general-imported"><primary>sticky modals</primary><secondary>definition</secondary></indexterm> Like tenses, modals can be made persistent from the bridi in which they appear to all following bridi. The effect of this 
     <quote>stickiness</quote> is to make the modal, along with its following sumti, act as if it appeared in every successive bridi. Stickiness is put into effect by following the modal (but not any following sumti) with the cmavo 
     <jbophrase>ki</jbophrase> of selma'o KI. For example,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-1UGf">
@@ -1878,24 +1928,18 @@
         <anchor xml:id="c9e14d1"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi tavla bau la lojban. bai ki tu'a la frank.</jbo>
-        <gloss>.ibabo mi tavla bau la gliban.</gloss>
-        <gloss>I speak in-language Lojban compelled-by some-property-of Frank.</gloss>
-        <en>Afterward, I speak in-language English.</en>
+        <jbo>mi tavla bau la lojban. bai ki tu'a la frank. .ibabo mi tavla bau la gliban.</jbo>
+        <gloss>I speak in-language Lojban compelled-by some-property-of Frank. Afterward, I speak in-language English.</gloss>
       </interlinear-gloss>
-    </example>
-    <para>means the same as:</para>
+    </example>        
+    means the same as:
     <example role="interlinear-gloss-example" xml:id="example-random-id-txFr">
       <title>
         <anchor xml:id="c9e14d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi tavla bau la lojban. bai tu'a la frank.</jbo>
-        <gloss>.ibabo mi tavla bau la gliban.</gloss>
-        <gloss>bai tu'a la frank.</gloss>
-        <gloss>I speak in-language Lojban compelled-by some-property-of Frank.</gloss>
-        <gloss>Afterward, I speak in-language English</gloss>
-        <en>compelled-by some-property-of Frank.</en>
+        <jbo>mi tavla bau la lojban. bai tu'a la frank. .ibabo mi tavla bau la gliban. bai tu'a la frank.</jbo>
+        <gloss>I speak in-language Lojban compelled-by some-property-of Frank. Afterward, I speak in-language English compelled-by some-property-of Frank.</gloss>
       </interlinear-gloss>
     </example>
     <para>In 
@@ -1903,7 +1947,7 @@
     <jbophrase>bai</jbophrase> is made sticky, and so Frank's compelling is made applicable to every following bridi. 
     <jbophrase>bau</jbophrase> is not sticky, and so the language may vary from bridi to bridi, and if not specified in a particular bridi, no assumption can safely be made about its value.</para>
     <para> <indexterm type="general-imported"><primary>sticky modals</primary><secondary>canceling</secondary></indexterm> To cancel stickiness, use the form 
-    <quote>BAI ki ku</quote>, which stops any modal value for the specified BAI from being passed to the next bridi. To cancel stickiness for all modals simultaneously, and also for any sticky tenses that exist ( 
+    <jbophrase>BAI ki ku</jbophrase>, which stops any modal value for the specified BAI from being passed to the next bridi. To cancel stickiness for all modals simultaneously, and also for any sticky tenses that exist ( 
     <jbophrase>ki</jbophrase> is used for both modals and tenses), use 
     <jbophrase>ki</jbophrase> by itself, either before the selbri or (in the form 
     <jbophrase>ki ku</jbophrase>) anywhere in the bridi:</para>
@@ -1917,9 +1961,9 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>fi'o</primary><secondary>proscribed for sticky modals</secondary></indexterm>  <indexterm type="general-imported"><primary>sticky modals</primary><secondary>fi'o proscribed from</secondary></indexterm> Note: Modals made with 
-    <quote>fi'o</quote>-plus-selbri cannot be made sticky. This is an unfortunate, but unavoidable, restriction.</para>
+    <jbophrase>fi'o</jbophrase>-plus-selbri cannot be made sticky. This is an unfortunate, but unavoidable, restriction.</para>
   </section>
-  <section xml:id="cll_chapter9-section15">
+  <section xml:id="section-connected-modals">
     <title>Logical and non-logical connection of modals</title>
     
     <para> <indexterm type="general-imported"><primary>non-logical connection</primary><secondary>of modals</secondary></indexterm>  <indexterm type="general-imported"><primary>logical connection</primary><secondary>of modals</secondary></indexterm> Logical and non-logical connectives are explained in detail in 
@@ -1946,208 +1990,638 @@
         <en>Frank runs to and from the house.</en>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>ce'e</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>je</primary></indexterm> Neither example implies whether a single act, or two acts, of running is referred to. To compel the sentence to refer to a single act of running, you can use the form:</para>
+    <para><indexterm type="lojban-word-imported"><primary>je</primary></indexterm> Neither example implies whether a single act, or two acts, of running is referred to. To compel the sentence to refer to a single act of running, you can use the form:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-b0LW">
       <title>
         <anchor xml:id="c9e15d3"/>
       </title>
       <interlinear-gloss>
         <jbo>la frank. bajra seka'a le zdani ce'e teka'a le zdani</jbo>
-        <en>Frank runs with-destination the house [joined-to] with-origin the-house.</en>
+        <gloss>Frank runs with-destination the house [joined-to] with-origin the-house.</gloss>
       </interlinear-gloss>
     </example>
     <para>The cmavo 
-    <quote>ce'e</quote> creates a termset containing two terms (termsets are explained in 
+    <jbophrase>ce'e</jbophrase> creates a termset containing two terms (termsets are explained in 
     <xref linkend="chapter-connectives"/> and 
     <xref linkend="chapter-quantifiers"/>). When a termset contains more than one modal tag derived from a single BAI, the convention is that the two tags are derived from a common event.</para>
   </section>
-  <section xml:id="cll_chapter9-section16">
+  <section xml:id="section-irregular-BAI">
     <title>CV'V cmavo of selma'o BAI with irregular forms</title>
     <para> <indexterm type="general-imported"><primary>modal cmavo</primary><secondary>regular form for derivation</secondary></indexterm> There are 65 cmavo of selma'o BAI, of which all but one ( 
     <jbophrase>do'e</jbophrase>, discussed in 
     
-    <xref linkend="cll_chapter9-section6"/>), are derived directly from selected gismu. Of these 64 cmavo, 36 are entirely regular and have the form CV'V, where C is the first consonant of the corresponding gismu, and the Vs are the two vowels of the gismu. The remaining BAI cmavo, which are irregular in one way or another, are listed in the table below. The table is divided into sub-tables according to the nature of the exception; some cmavo appear in more than one sub-table, and are so noted.</para>
-    <programlisting xml:space="preserve">
-   cmavo    gismu        comments
+    <xref linkend="section-BAI"/>), are derived directly from selected gismu. Of these 64 cmavo, 36 are entirely regular and have the form CV'V, where C is the first consonant of the corresponding gismu, and the Vs are the two vowels of the gismu. The remaining BAI cmavo, which are irregular in one way or another, are listed in the table below. The table is divided into sub-tables according to the nature of the exception; some cmavo appear in more than one sub-table, and are so noted.</para>
+    <cmavo-list>
+      <cmavo-list-head>
+        <entry>cmavo</entry>
+        <entry>gismu</entry>
+        <entry>comments</entry>
+      </cmavo-list-head>
+      <title>Monosyllables of the form CVV:</title>
+      <cmavo-entry>
+        <cmavo>bai</cmavo>
+        <gismu>bapli</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>bau</cmavo>
+        <gismu>bangu</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>cau</cmavo>
+        <gismu>claxu</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>fau</cmavo>
+        <gismu>fasnu</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>gau</cmavo>
+        <gismu>gasnu</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>kai</cmavo>
+        <gismu>ckaji</gismu>
+        <description>uses 2nd consonant of gismu</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mau</cmavo>
+        <gismu>zmadu</gismu>
+        <description>uses 2nd consonant of gismu</description>
+      </cmavo-entry>
 
-    Monosyllables of the form CVV:
+      <cmavo-entry>
+        <cmavo>koi</cmavo>
+        <gismu>korbi</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>rai</cmavo>
+        <gismu>traji</gismu>
+        <description>uses 2nd consonant of gismu</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>sau</cmavo>
+        <gismu>sarcu</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>tai</cmavo>
+        <gismu>tamsmi</gismu>
+        <description>based on lujvo, not gismu</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>zau</cmavo>
+        <gismu>zanru</gismu>
+      </cmavo-entry>
+    </cmavo-list>
+    <cmavo-list>
+      <title>Second consonant of the gismu as the C: (the gismu is always of the form CCVCV)</title>
+      <cmavo-entry>
+        <cmavo>ga'a</cmavo>
+        <gismu>zgana</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>kai</cmavo>
+        <gismu>ckaji</gismu>
+        <description>has CVV form (monosyllable)</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ki'i</cmavo>
+        <gismu>ckini</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>la'u</cmavo>
+        <gismu>klani</gismu>
+        <description>has irregular 2nd V</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>le'a</cmavo>
+        <gismu>klesi</gismu>
+        <description>has irregular 2nd V</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mau</cmavo>
+        <gismu>zmadu</gismu>
+        <description>has CVV form (monosyllable)</description>
+      </cmavo-entry>
 
-    bai     bapli
-    bau     bangu
-    cau     claxu
-    fau     fasnu
-    gau     gasnu
-    kai     ckaji        uses 2nd consonant of gismu
-    mau     zmadu        uses 2nd consonant of gismu
+      <cmavo-entry>
+        <cmavo>me'e</cmavo>
+        <gismu>cmene</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ra'a</cmavo>
+        <gismu>srana</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ra'i</cmavo>
+        <gismu>krasi</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>rai</cmavo>
+        <gismu>traji</gismu>
+        <description>has CVV form (monosyllable)</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ti'i</cmavo>
+        <gismu>stidi</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>tu'i</cmavo>
+        <gismu>stuzi</gismu>
+      </cmavo-entry>
+    </cmavo-list>
+    <cmavo-list>
+      <title>Irregular 2nd V:</title>
+      <cmavo-entry>
+        <cmavo>fi'e</cmavo>
+        <gismu>finti</gismu>
+      </cmavo-entry>
 
-    koi     korbi
-    rai     traji        uses 2nd consonant of gismu
-    sau     sarcu
-    tai     tamsmi       based on lujvo, not gismu
-    zau     zanru
+      <cmavo-entry>
+        <cmavo>la'u</cmavo>
+        <gismu>klani</gismu>
+        <description>uses 2nd consonant of gismu</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>le'a</cmavo>
+        <gismu>klesi</gismu>
+        <description>uses 2nd consonant of gismu</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ma'e</cmavo>
+        <gismu>marji</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mu'u</cmavo>
+        <gismu>mupli</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ti'u</cmavo>
+        <gismu>tcika</gismu>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>va'o</cmavo>
+        <gismu>vanbi</gismu>
+      </cmavo-entry>
+    </cmavo-list>
+    <cmavo-list>
+      <title>Special cases:</title>
+      <cmavo-entry>
+        <cmavo>ri'i</cmavo>
+        <gismu>lifri</gismu>
+        <description>uses 3rd consonant of gismu</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>tai</cmavo>
+        <gismu>tamsmi</gismu>
+        <description>based on lujvo, not gismu</description>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>va'u</cmavo>
+        <gismu>xamgu</gismu>
+        <description>CV'V cmavo can't begin with <jbophrase role="letteral">x</jbophrase></description>
+      </cmavo-entry>
+    </cmavo-list>
 
-    Second consonant of the gismu as the C:
-        (the gismu is always of the form CCVCV)
-
-    ga'a    zgana
-    kai     ckaji        has CVV form (monosyllable)
-    ki'i    ckini
-    la'u    klani        has irregular 2nd V
-    le'a    klesi        has irregular 2nd V
-    mau     zmadu        has CVV form (monosyllable)
-
-    me'e    cmene
-    ra'a    srana
-    ra'i    krasi
-    rai     traji        has CVV form (monosyllable)
-    ti'i    stidi
-    tu'i    stuzi
-
-    Irregular 2nd V:
-
-    fi'e    finti
-
-    la'u    klani        uses 2nd consonant of gismu
-    le'a    klesi        uses 2nd consonant of gismu
-    ma'e    marji
-    mu'u    mupli
-    ti'u    tcika
-    va'o    vanbi
-
-    Special cases:
-
-    ri'i    lifri        uses 3rd consonant of gismu
-    tai     tamsmi       based on lujvo, not gismu
-    va'u    xamgu        CV'V cmavo can't begin with 
-<quote>x</quote>
-</programlisting>
   </section>
-  <section xml:id="cll_chapter9-section17">
+  <section xml:id="section-all-BAI">
     <title>Complete table of BAI cmavo with rough English equivalents</title>
     <para> <indexterm type="general-imported"><primary>modal cmavo table</primary><secondary>format of</secondary></indexterm>  <indexterm type="general-imported"><primary>modal cmavo</primary><secondary>table with English equivalents</secondary></indexterm> The following table shows all the cmavo belonging to selma'o BAI, and has five columns. The first column is the cmavo itself; the second column is the gismu linked to it. The third column gives an English phrase which indicates the meaning of the cmavo; and the fourth column indicates its meaning when preceded by 
-    <quote>se</quote>.</para>
+    <jbophrase>se</jbophrase>.</para>
     <para>For those cmavo with meaningful 
-    <quote>te</quote>, 
-    <quote>ve</quote>, and even 
-    <quote>xe</quote> conversions (depending on the number of places of the underlying gismu), the meanings of these are shown on one or two extra rows following the primary row for that cmavo.</para>
+    <jbophrase>te</jbophrase>, 
+    <jbophrase>ve</jbophrase>, and even 
+    <jbophrase>xe</jbophrase> conversions (depending on the number of places of the underlying gismu), the meanings of these are shown on one or two extra rows following the primary row for that cmavo.</para>
     <para> <indexterm type="general-imported"><primary>modal cmavo</primary><secondary>basis in gismu place structure</secondary></indexterm> It should be emphasized that the place structures of the gismu control the meanings of the BAI cmavo. The English phrases shown here are only suggestive, and are often too broad or too narrow to correctly specify what the acceptable range of uses for the modal tag are.</para>
-    <programlisting xml:space="preserve">
-    ba'i    basti   replaced by                    instead of 
-<!-- skip cmavo list automation -->
-    bai     bapli   compelled by                   compelling
-    bau     bangu   in language                    in language of
-    be'i    benji   sent by                        transmitting
-                    te=sent to                     ve=with transmit origin
-                    xe=transmitted via
-    ca'i    catni   by authority of                with authority over
-    cau     claxu   lacked by                      without
-    ci'e    ciste   in system                      with system function
-                    te=of system components
-    ci'o    cinmo   felt by                        feeling emotion
-    ci'u    ckilu   on the scale                   on scale measuring
-
-    cu'u    cusku   as said by                     expressing
-
-                    te=as told to                  ve=expressed in medium
-    de'i    detri   dated                          on the same date as
-
-    di'o    diklo   at the locus of                at specific locus
-    do'e    -----   vaguely related to
-
-    du'i    dunli   as much as                     equal to
-
-
-    du'o    djuno   according to                   knowing facts
-                    te=knowing about
-                    ve=under epistemology
-    fa'e    fatne   reverse of                     in reversal of
-    fau     fasnu   in the event of
-    fi'e    finti   created by                     creating work
-
-                    te=created                     for purpose
-    ga'a    zgana   to observer                    observing
-                    te=observed                    by means
-                    ve=observed under conditions
-    gau     gasnu   with agent                     as agent in doing
-    ja'e    jalge   resulting in                   results because of
-    ja'i    javni   by rule                        by rule prescribing
-    ji'e    jimte   up to limit                    as a limit of
-    ji'o    jitro   under direction                controlling
-    ji'u    jicmu   based on                       supporting
-    ka'a    klama   gone to by                     with destination
-
-                    te=with origin                 ve=via route
-                    xe=by transport mode
-    ka'i    krati   represented by                 on behalf of
-    kai     ckaji   characterizing                 with property
-    ki'i    ckini   as relation of                 related to
-                    te=with relation
-    ki'u    krinu   justified by                   with justified result
-
-    koi     korbi   bounded by                     as boundary of
-                    te=bordering
-    ku'u    kulnu   in culture                     in culture of
-    la'u    klani   as quantity of                 in quantity
-    le'a    klesi   in category                    as category of
-                    te=defined by quality
-    li'e    lidne   led by                         leading
-    ma'e    marji   of material                    made from material
-                    te=in material form of
-    ma'i    manri   in reference frame             as a standard for
-
-
-    mau     zmadu   exceeded by                    more than
-
-    me'a    mleca   undercut by                    less than
-
-    me'e    cmene   with name                      as a name for
-                    te=as a name to
-    mu'i    mukti   motivated by                   motive therefore
-
-    mu'u    mupli   exemplified by                 as an example of
-    ni'i    nibli   entailed by                    entails
-
-    pa'a    panra   in addition to                 similar to
-                    te=similar in pattern
-                    ve=similar by standard
-    pa'u    pagbu   with component                 as a part of
-    pi'o    pilno   used by                        using tool
-
-    po'i    porsi   in the sequence                sequenced by rule
-    pu'a    pluka   pleased by                     in order to please
-    pu'e    pruce   by process                     processing from
-                    te=processing into
-                    ve=passing through stages
-    ra'a    srana   pertained to by concerning
-    ra'i    krasi   from source as an origin of
-    rai     traji   with superlative               superlative in
-                    te=at extreme                  ve=superlative among
-    ri'a    rinka   caused by                      causing
-    ri'i    lifri   experienced by                 experiencing
-
-    sau     sarcu   requiring                      necessarily for
-                    te=necessarily under conditions
-    si'u    sidju   aided by                       assisting in
-    ta'i    tadji   by method                      as a method for
-    tai     tamsmi  as a form of                   in form
-                    te=in form similar to
-    ti'i    stidi   suggested by                   suggesting
-                    te=suggested to
-    ti'u    tcika   with time                      at the time of
-    tu'i    stuzi   with site                      as location of
-    va'o    vanbi   under conditions               as conditions for
-    va'u    xamgu   benefiting from                with beneficiary
-    zau     zanru   approved by                    approving
-    zu'e    zukte   with actor                     with means to goal
-                    te=with goal
-</programlisting>
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>ba'i</cmavo>
+        <gismu>basti</gismu>
+        <modal-place>replaced by</modal-place>
+        <modal-place se="se">instead of</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>bai</cmavo>
+        <gismu>bapli</gismu>
+        <modal-place>compelled by</modal-place>
+        <modal-place se="se">compelling</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>bau</cmavo>
+        <gismu>bangu</gismu>
+        <modal-place>in language</modal-place>
+        <modal-place se="se">in language of</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>be'i</cmavo>
+        <gismu>benji</gismu>
+        <modal-place>sent by</modal-place>
+        <modal-place se="se">transmitting</modal-place>
+        <modal-place se="te">sent to</modal-place>
+        <modal-place se="ve">with transmit origin</modal-place>
+        <modal-place se="xe">transmitted via</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ca'i</cmavo>
+        <gismu>catni</gismu>
+        <modal-place>by authority of</modal-place>
+        <modal-place se="se">with authority over</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>cau</cmavo>
+        <gismu>claxu</gismu>
+        <modal-place>lacked by</modal-place>
+        <modal-place se="se">without</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ci'e</cmavo>
+        <gismu>ciste</gismu>
+        <modal-place>in system</modal-place>
+        <modal-place se="se">with system function</modal-place>
+        <modal-place se="te">of system components</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ci'o</cmavo>
+        <gismu>cinmo</gismu>
+        <modal-place>felt by</modal-place>
+        <modal-place se="se">feeling emotion</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ci'u</cmavo>
+        <gismu>ckilu</gismu>
+        <modal-place>on the scale</modal-place>
+        <modal-place se="se">on scale measuring</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>cu'u</cmavo>
+        <gismu>cusku</gismu>
+        <modal-place>as said by</modal-place>
+        <modal-place se="se">expressing</modal-place>
+        <modal-place se="te">as told to</modal-place>
+        <modal-place se="ve">expressed in medium</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>de'i</cmavo>
+        <gismu>detri</gismu>
+        <modal-place>dated</modal-place>
+        <modal-place se="se">on the same date</modal-place>
+        <entry>as</entry>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>di'o</cmavo>
+        <gismu>diklo</gismu>
+        <modal-place>at the locus of</modal-place>
+        <modal-place se="se">at specific locus</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo><jbophrase>do'e</jbophrase></cmavo>
+        <gismu>-----</gismu>
+        <modal-place>vaguely related to</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>du'i</cmavo>
+        <gismu>dunli</gismu>
+        <modal-place>as much as</modal-place>
+        <modal-place se="se">equal to</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>du'o</cmavo>
+        <gismu>djuno</gismu>
+        <modal-place>according to</modal-place>
+        <modal-place se="se">knowing facts</modal-place>
+        <modal-place se="te">knowing about</modal-place>
+        <modal-place se="ve">under epistemology</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>fa'e</cmavo>
+        <gismu>fatne</gismu>
+        <modal-place>reverse of</modal-place>
+        <modal-place se="se">in reversal of</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <entry><jbophrase>fau</jbophrase></entry>
+        <entry><jbophrase>fasnu</jbophrase></entry>
+        <entry>in the event of</entry>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>fi'e</cmavo>
+        <gismu>finti</gismu>
+        <modal-place>created by</modal-place>
+        <modal-place se="se">creating work</modal-place>
+        <modal-place se="te">created for purpose</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ga'a</cmavo>
+        <gismu>zgana</gismu>
+        <modal-place>to observer</modal-place>
+        <modal-place se="se">observing</modal-place>
+        <modal-place se="te">observed by means</modal-place>
+        <modal-place se="ve">observed under conditions</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>gau</cmavo>
+        <gismu>gasnu</gismu>
+        <modal-place>with agent</modal-place>
+        <modal-place se="se">as agent in doing</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ja'e</cmavo>
+        <gismu>jalge</gismu>
+        <modal-place>resulting in</modal-place>
+        <modal-place se="se">results because of</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ja'i</cmavo>
+        <gismu>javni</gismu>
+        <modal-place>by rule</modal-place>
+        <modal-place se="se">by rule prescribing</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ji'e</cmavo>
+        <gismu>jimte</gismu>
+        <modal-place>up to limit</modal-place>
+        <modal-place se="se">as a</modal-place>
+        <entry>limit of</entry>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ji'o</cmavo>
+        <gismu>jitro</gismu>
+        <modal-place>under direction</modal-place>
+        <modal-place se="se">controlling</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ji'u</cmavo>
+        <gismu>jicmu</gismu>
+        <modal-place>based on</modal-place>
+        <modal-place se="se">supporting</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ka'a</cmavo>
+        <gismu>klama</gismu>
+        <modal-place>gone to by</modal-place>
+        <modal-place se="se">with destination</modal-place>
+        <modal-place se="te">with origin</modal-place>
+        <modal-place se="ve">via route</modal-place>
+        <modal-place se="xe">by transport mode</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ka'i</cmavo>
+        <gismu>krati</gismu>
+        <modal-place>represented by</modal-place>
+        <modal-place se="se">on behalf of</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>kai</cmavo>
+        <gismu>ckaji</gismu>
+        <modal-place>characterizing</modal-place>
+        <modal-place se="se">with</modal-place>
+        <entry>property</entry>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ki'i</cmavo>
+        <gismu>ckini</gismu>
+        <modal-place>as relation of</modal-place>
+        <modal-place se="se">related to</modal-place>
+        <modal-place se="te">with relation</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ki'u</cmavo>
+        <gismu>krinu</gismu>
+        <modal-place>justified by</modal-place>
+        <modal-place se="se">with justified result</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>koi</cmavo>
+        <gismu>korbi</gismu>
+        <modal-place>bounded by</modal-place>
+        <modal-place se="se">as boundary of</modal-place>
+        <modal-place se="te">bordering</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ku'u</cmavo>
+        <gismu>kulnu</gismu>
+        <modal-place>in culture</modal-place>
+        <modal-place se="se">in culture of</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>la'u</cmavo>
+        <gismu>klani</gismu>
+        <modal-place>as quantity of</modal-place>
+        <modal-place se="se">in quantity</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>le'a</cmavo>
+        <gismu>klesi</gismu>
+        <modal-place>in category</modal-place>
+        <modal-place se="se">as category of</modal-place>
+        <modal-place se="te">defined by quality</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>li'e</cmavo>
+        <gismu>lidne</gismu>
+        <modal-place>led by</modal-place>
+        <modal-place se="se">leading</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ma'e</cmavo>
+        <gismu>marji</gismu>
+        <modal-place>of material</modal-place>
+        <modal-place se="se">made from material</modal-place>
+        <modal-place se="te">in material form of</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ma'i</cmavo>
+        <gismu>manri</gismu>
+        <modal-place>in reference frame</modal-place>
+        <modal-place se="se">as a</modal-place>
+        <entry>standard for</entry>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mau</cmavo>
+        <gismu>zmadu</gismu>
+        <modal-place>exceeded by</modal-place>
+        <modal-place se="se">more than</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>me'a</cmavo>
+        <gismu>mleca</gismu>
+        <modal-place>undercut by</modal-place>
+        <modal-place se="se">less than</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>me'e</cmavo>
+        <gismu>cmene</gismu>
+        <modal-place>with name</modal-place>
+        <modal-place se="se">as a name for</modal-place>
+        <modal-place se="te">as a name to</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mu'i</cmavo>
+        <gismu>mukti</gismu>
+        <modal-place>motivated by</modal-place>
+        <modal-place se="se">motive therefore</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>mu'u</cmavo>
+        <gismu>mupli</gismu>
+        <modal-place>exemplified by</modal-place>
+        <modal-place se="se">as an example of</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ni'i</cmavo>
+        <gismu>nibli</gismu>
+        <modal-place>entailed by</modal-place>
+        <modal-place se="se">entails</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>pa'a</cmavo>
+        <gismu>panra</gismu>
+        <modal-place>in addition to</modal-place>
+        <modal-place se="se">similar to</modal-place>
+        <modal-place se="te">similar in pattern</modal-place>
+        <modal-place se="ve">similar by standard</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>pa'u</cmavo>
+        <gismu>pagbu</gismu>
+        <modal-place>with component</modal-place>
+        <modal-place se="se">as a</modal-place>
+        <entry>part of</entry>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>pi'o</cmavo>
+        <gismu>pilno</gismu>
+        <modal-place>used by</modal-place>
+        <modal-place se="se">using tool</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>po'i</cmavo>
+        <gismu>porsi</gismu>
+        <modal-place>in the sequence</modal-place>
+        <modal-place se="se">sequenced by rule</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>pu'a</cmavo>
+        <gismu>pluka</gismu>
+        <modal-place>pleased by</modal-place>
+        <modal-place se="se">in order to please</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>pu'e</cmavo>
+        <gismu>pruce</gismu>
+        <modal-place>by process</modal-place>
+        <modal-place se="se">processing from</modal-place>
+        <modal-place se="te">processing into</modal-place>
+        <modal-place se="ve">passing through stages</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <entry><jbophrase>ra'a</jbophrase></entry>
+        <entry><jbophrase>srana</jbophrase></entry>
+        <entry>pertained to by concerning</entry>
+      </cmavo-entry>
+      <cmavo-entry>
+        <entry><jbophrase>ra'i</jbophrase></entry>
+        <entry><jbophrase>krasi</jbophrase></entry>
+        <entry>from source as an origin of</entry>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>rai</cmavo>
+        <gismu>traji</gismu>
+        <modal-place>with superlative</modal-place>
+        <modal-place se="se">superlative in</modal-place>
+        <modal-place se="te">at extreme</modal-place>
+        <modal-place se="ve">superlative among</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ri'a</cmavo>
+        <gismu>rinka</gismu>
+        <modal-place>caused by</modal-place>
+        <modal-place se="se">causing</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ri'i</cmavo>
+        <gismu>lifri</gismu>
+        <modal-place>experienced by</modal-place>
+        <modal-place se="se">experiencing</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>sau</cmavo>
+        <gismu>sarcu</gismu>
+        <modal-place>requiring</modal-place>
+        <modal-place se="se">necessarily for</modal-place>
+        <modal-place se="te">necessarily under conditions</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>si'u</cmavo>
+        <gismu>sidju</gismu>
+        <modal-place>aided by</modal-place>
+        <modal-place se="se">assisting in</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ta'i</cmavo>
+        <gismu>tadji</gismu>
+        <modal-place>by method</modal-place>
+        <modal-place se="se">as a</modal-place>
+        <entry>method for</entry>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>tai</cmavo>
+        <gismu>tamsmi</gismu>
+        <modal-place>as a form of</modal-place>
+        <modal-place se="se">in form</modal-place>
+        <modal-place se="te">in form similar to</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ti'i</cmavo>
+        <gismu>stidi</gismu>
+        <modal-place>suggested by</modal-place>
+        <modal-place se="se">suggesting</modal-place>
+        <modal-place se="te">suggested to</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>ti'u</cmavo>
+        <gismu>tcika</gismu>
+        <modal-place>with time</modal-place>
+        <modal-place se="se">at the time of</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>tu'i</cmavo>
+        <gismu>stuzi</gismu>
+        <modal-place>with site</modal-place>
+        <modal-place se="se">as location of</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>va'o</cmavo>
+        <gismu>vanbi</gismu>
+        <modal-place>under conditions</modal-place>
+        <modal-place se="se">as conditions for</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>va'u</cmavo>
+        <gismu>xamgu</gismu>
+        <modal-place>benefiting from</modal-place>
+        <modal-place se="se">with beneficiary</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>zau</cmavo>
+        <gismu>zanru</gismu>
+        <modal-place>approved by</modal-place>
+        <modal-place se="se">approving</modal-place>
+      </cmavo-entry>
+      <cmavo-entry>
+        <cmavo>zu'e</cmavo>
+        <gismu>zukte</gismu>
+        <modal-place>with actor</modal-place>
+        <modal-place se="se">with means to goal</modal-place>
+        <modal-place se="te">with goal</modal-place>
+      </cmavo-entry>
+    </cmavo-list> 
     <para>The lujvo 
     <jbophrase>tamsmi</jbophrase> on which 
     <jbophrase>tai</jbophrase> is based is derived from the tanru 
     <jbophrase>tarmi simsa</jbophrase> and has the place structure:</para>
-    <programlisting xml:space="preserve">
-       tamsmi: x1 has form x2, similar in form to x3 in property/quality x4
-</programlisting>
+    <place-structure>
+      tamsmi: x1 has form x2, similar in form to x3 in property/quality x4
+    </place-structure>
     <para>This lujvo is employed because 
     <jbophrase>tarmi</jbophrase> does not have a place structure useful for the modal's purpose.</para>
   </section>

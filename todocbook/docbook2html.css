@@ -14,7 +14,6 @@ body {
         border-radius: 2.5px;
         -moz-border-radius: 2.5px;
         margin: 0.5em 2em;
- 
 }
 
 .programlisting {
@@ -73,7 +72,12 @@ em[lang=jbo] {
 }
 */
 
-td
-{
-    padding:15px;
+div.informaltable table {
+        border-style: none;
+        border-collapse: collapse;
+}
+
+div.informaltable td {
+        padding: 15px;
+        border: 1px solid #000;
 }

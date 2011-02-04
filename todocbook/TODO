@@ -383,7 +383,8 @@ actually is; you'll get used to it.
     (like index work).
 
 Robin Powell: 5.1, 5.2, 5.3
-Zort: Chapter 3 except index work and examples
+Zort: All chapters except 20 & 21 excepting index stuff (plenty of FIXMEs, though)
+Matthew Walton: 3
 
  ------
 
@@ -405,47 +406,13 @@ If you have any trouble, add a FIXME comment, like so:
 
  ------
 
-Fix the chapter name so it's just the second part, i.e.
-
-    <title>Chapter 5
-      <quote>Pretty Little Girls' School</quote>: The Structure Of Lojban selbri</title>
-
-becomes:
-
-    <title><quote>Pretty Little Girls' School</quote>: The Structure Of Lojban selbri</title>
-
-Make sure the <interlinear-gloss> bits look right (which is why the
-columns are so spaced out).
+Make sure the <interlinear-gloss> bits look right in the output (which
+is why the columns are so spaced out).
 
  ------
 
-Fix IDs/tags.  A command like the following should do the trick:
-
-  sed -i 's/"cll_chapter5"/"chapter-selbri"/g' [0-9]*.xml
-
-BUT FIRST: check that it doesn't already exist:
-
-  grep '"chapter-selbri"' [0-9]*.xml
-
-because duplicates would really suck.
-
-Please run "git diff" afterwards to make sure it did what you
-expected.  Check in as often as you like (to make the diffs
-manageable).
-
-We want short and meaningful; these are used to make file names and
-so on.  If multi-word, please make a slug (see
-http://en.wikipedia.org/wiki/Slug_%28web_publishing%29 ); we are
-using - based slugs rather than _ based, so drop all special
-characters, lowercase, replace space with -.
-
-Make sure that the ids for chapters have "chapter-" at the start,
-"section-" for the sections, and "example-" for the examples; we
-might need them for auto-processing.
-
-Do this for all sections.  Feel free to do it for examples too if an
-example has an obvious title, but it's much less important there, so
-not worth spending time on for the first pass.
+References to examples in the text should be changed to <xref>s, using
+the random id of the example in question, e.g. <xref linkend="example-random-id-qjmr"/>
 
 The important thing here is that *NOTHING* mentions a fixed number!
 *NOWHERE* in the docbook should *ANYTHING* be aware that it is in
@@ -476,14 +443,14 @@ annoying.
 If you see a <quote>...</quote> around Lojban text, replace it with
 <jbophrase>...</jbophrase>.  There are lots of these.
 
-Also, use <jbophrase valid="false">...</jbophrase> for na gendra and
-<jbophrase valid="iffy">...</jbophrase> for na smudra
+Also, use <jbophrase valid="false">...</jbophrase> for purposeful na
+gendra and <jbophrase valid="iffy">...</jbophrase> for na smudra
 
-Turn letterals, like <quote>l</quote>, into <jbophrase
-role="letteral">l</jbophrase>
+Turn letters, like <quote>l</quote>, into <jbophrase
+role="letteral">l</jbophrase> (including ",", ".", and "'").
 
-Similarily we have role="morphology", role="diphthong", and
-role="rafsi"
+Similarily we have role="morphology" (consonant clusters),
+role="diphthong", and role="rafsi".
 
  ------
 
@@ -497,11 +464,18 @@ If an example/interlinear-gloss consists solely of English, replace
 the <interlinear-gloss>...</interlinear-gloss> with <para>...</para>
 
  ------
+
+Make sure all the components of <example>s are appropriately wrapped in
+<jbo>, <gloss>, <en>, <ipa>, <math>, or <foreign> (if it doesn't fit
+one of those, make up a tag).
+
+ ------
  
 Entries like <indexterm type="lojban-word-imported"> (NOTE the type)
 probably need to be destroyed; there should be a bit of Lojban near
 them that can be wrapped in <jbophrase>, to exactly the same effect
-as the <indexterm> entry.  If you can't find such a correspondance,
+as the <indexterm> entry, UNLESS said Lojban text is part of a bigger
+Lojban phrase; leave those for now. If you can't find such a correspondance,
 add a FIXME comment.
 
  ------
@@ -524,14 +498,25 @@ All such indexterm entries should end up in the example itself, like so:
 
  ------
 
-
 ==================
   Data
 ==================
-- Need some sort of structure for the per-section cmavo lists.
+- The per-section cmavo lists should be like this:
+   <cmavo-list>
+     <cmavo-entry>
+       <cmavo>ke</cmavo>
+       <selmaho>KE</selmaho>
+       <description>start grouping</description>
+     </cmavo-entry>
+   ...
+   </cmavo-list>
   - also need to wrap the lojban words there in a way that does
     indexing, and ideally auto-generation of the cmavo-per-selmaho
     lists we want for chapter 20
+      - does the <cmavo-list> structure achieve this?
+- It seems that there is a problem with the cmavo lists at the
+  beginning of sections having missing entries; in particular, ones
+  wwith + in the selma'o, maybe?; they need to be manually checked
 - lojban words, lojban phrases, terms of art ("abstraction"),
   others?... should each have their own index
 - cll_chapter5-section1 should be content-words-brivla or so ; those
@@ -539,6 +524,12 @@ All such indexterm entries should end up in the example itself, like so:
 - list the members of each selma'o in chapter 20
 - make sure the examples that aren't interlinear glosses don't have
   that as their role
+   - so far there's
+      - pronunciation-example
+      - compound-cmavo-example
+      - lujvo-making-example
+      - lojbanization-example
+      - lujvo-example
 - <phrase role="IPA">∞</phrase> is *not* IPA
 - <@xalbo> I do think having distinct structures for quoted correct
   lojban and for intentionally incorrect lojban (if there's any, but
@@ -548,14 +539,11 @@ All such indexterm entries should end up in the example itself, like so:
   lojban, invalid lojban, and something in between ({lo nanmu
   bajra}, for instance; maybe worth flagging with a "this isn't what
   you think it is" type of thing
-  - use <jbophrase valid="false">...</jbophrase> for na gendra and
-    <jbophrase valid="iffy">...</jbophrase> for na smudra
+  - use <jbophrase valid="false">...</jbophrase> for purposeful na
+      gendra and <jbophrase valid="iffy">...</jbophrase> for na smudra
 - In the mediaobjects in chapter 1, can we do better than <alt>The
   picture for chapter 20</alt> in terms of non-numerical cross
   referencing?
-- It seems that there is a problem with the cmavo lists at the
-  beginning of sections having missing entries; in particular, ones
-  wwith + in the selma'o, maybe?; they need to be manually checked
 - Replace chapter xrefs with section xrefs
 - Fix all FIXMEs; in particular the output of:
   grep 'FIXME:' [0-9]*.xml | grep -v 'TAG SPOT'

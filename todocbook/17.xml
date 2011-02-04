@@ -1,21 +1,19 @@
 <chapter xml:id="chapter-letterals">
   <title>As Easy As A-B-C? The Lojban Letteral System And Its Uses</title>
-  <section xml:id="cll_chapter17-section1">
+  <section xml:id="section-letterals-introduction">
     <title>What's a letteral, anyway?</title>
     <para> <indexterm type="general-imported"><primary>letter</primary><secondary>alphabet</secondary></indexterm>  <indexterm type="general-imported"><primary>letteral</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>Brown</primary><secondary>James Cooke</secondary><tertiary>and &quot;letteral&quot;</tertiary></indexterm> James Cooke Brown, the founder of the Loglan Project, coined the word 
     
     <quote>letteral</quote> (by analogy with 
     <quote>numeral</quote>) to mean a letter of the alphabet, such as 
     <quote>f</quote> or 
-    <jbophrase>z</jbophrase>. A typical example of its use might be</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-tvHm">
+    <quote>z</quote>. A typical example of its use might be</para>
+    <example xml:id="example-random-id-tvHm">
       <title>
         <anchor xml:id="c17e1d1"/>
       </title>
-      <interlinear-gloss>
-        <jbo>There are fourteen occurrences of the letteral 
-        <jbophrase>e</jbophrase> in this sentence.</jbo>
-      </interlinear-gloss>
+      <para>There are fourteen occurrences of the letteral 
+      <quote>e</quote> in this sentence.</para>
     </example>
     <para> <indexterm type="example-imported"><primary>fourteen &quot;e&quot;s</primary></indexterm>  <indexterm type="general-imported"><primary>lerfu</primary><secondary>definition</secondary></indexterm> (Don't forget the one within quotation marks.) Using the word 
     <quote>letteral</quote> avoids confusion with 
@@ -31,7 +29,7 @@
     <quote>phi</quote> as 
     <quote>fye</quote>, whereas 
     <quote>fee</quote> would more nearly represent the name used by Greek-speakers. Still, not all English-speakers know these English names.) Lojban, in order to be culturally neutral, needs a more comprehensive system that can handle, at least potentially, all of the world's alphabets and other writing systems.</para>
-    <para>Letterals have several uses in Lojban: in forming acronyms and abbreviations, as mathematical symbols, and as pro-sumti - the equivalent of English pronouns.</para>
+    <para>Letterals have several uses in Lojban: in forming acronyms and abbreviations, as mathematical symbols, and as pro-sumti – the equivalent of English pronouns.</para>
     
     <para> <indexterm type="general-imported"><primary>letter</primary><secondary>contrasted with word for the letter</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu word</primary><secondary>contrasted with lerfu</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu</primary><secondary>contrasted with lerfu word</secondary></indexterm> In earlier writings about Lojban, there has been a tendency to use the word 
     <jbophrase>lerfu</jbophrase> for both the letterals themselves and for the Lojban words which represent them. In this chapter, that tendency will be ruthlessly suppressed, and the term 
@@ -39,79 +37,126 @@
     <jbophrase>lerfu valsi</jbophrase> or 
     <jbophrase>lervla</jbophrase>.</para>
   </section>
-  <section xml:id="cll_chapter17-section2">
+  <section xml:id="section-lerfu-liste">
     <title>A to Z in Lojban, plus one</title>
     <para> <indexterm type="general-imported"><primary>lerfu words</primary><secondary>Lojban coverage requirement</secondary></indexterm> The first requirement of a system of lerfu words for any language is that they must represent the lerfu used to write the language. The lerfu words for English are a motley crew: the relationship between 
     <quote>doubleyou</quote> and 
     <quote>w</quote> is strictly historical in nature; 
     <quote>aitch</quote> represents 
     <quote>h</quote> but has no clear relationship to it at all; and 
-    <jbophrase>z</jbophrase> has two distinct lerfu words, 
+    <quote>z</quote> has two distinct lerfu words, 
     <quote>zee</quote> and 
     <quote>zed</quote>, depending on the dialect of English in question.</para>
     <para> <indexterm type="lojban-word-imported"><primary>BY selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>lerfu word</primary><secondary>for &quot;'&quot;</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>for consonants</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>for vowels</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>formation rules</secondary></indexterm> All of Lojban's basic lerfu words are made by one of three rules:</para>
     <itemizedlist>
       <listitem>
         <para>to get a lerfu word for a vowel, add 
-        <quote>bu</quote>;</para>
+        <jbophrase>bu</jbophrase>;</para>
       </listitem>
       <listitem>
         <para>to get a lerfu word for a consonant, add 
-        <jbophrase>y</jbophrase>;</para>
+        <jbophrase role="letteral">y</jbophrase>;</para>
       </listitem>
       <listitem>
         <para>the lerfu word for 
-        <quote>'</quote> is 
+        <jbophrase role="letteral">'</jbophrase> is 
         <jbophrase>.y'y</jbophrase>.</para>
       </listitem>
     </itemizedlist>
     <para> <indexterm type="general-imported"><primary>lerfu words</primary><secondary>table of Lojban</secondary></indexterm> Therefore, the following table represents the basic Lojban alphabet:</para>
-    
-    <cmavo-list>
-    <cmavo-entry>
-      <cmavo>' a b c</cmavo>
-      <selmaho>d</selmaho>
-      <description>e</description>
-    </cmavo-entry>.y'y. .abu by. cy. dy. .ebu 
-    <cmavo-entry>
-      <cmavo>f g i j</cmavo>
-      <selmaho>k</selmaho>
-      <description>l</description>
-    </cmavo-entry>
-    <cmavo-entry>
-      <cmavo>fy. gy. .ibu jy.</cmavo>
-      <selmaho>ky.</selmaho>
-      <description>ly.</description>
-    </cmavo-entry>
-    <cmavo-entry>
-      <cmavo>m n o p</cmavo>
-      <selmaho>r</selmaho>
-      <description>s</description>
-    </cmavo-entry>
-    <cmavo-entry>
-      <cmavo>my. ny. .obu py.</cmavo>
-      <selmaho>ry.</selmaho>
-      <description>sy.</description>
-    </cmavo-entry>
-    <cmavo-entry>
-      <cmavo>t u v x</cmavo>
-      <selmaho>y</selmaho>
-      <description>z</description>
-    </cmavo-entry>
-    <cmavo-entry>
-      <cmavo>ty. .ubu vy.</cmavo>
-      <selmaho>xy.</selmaho>
-      <description>.ybu zy.</description>
-    </cmavo-entry></cmavo-list>
+    <!-- FIXME: should this list be displayed more like this:
+         '   a   b   c   d   e
+         .y'y.   .abu    by. cy. dy. .ebu
+
+f   g   i   j   k   l
+fy. gy. .ibu    jy. ky. ly.
+
+m   n   o   p   r   s
+my. ny. .obu    py. ry. sy.
+
+t   u   v   x   y   z
+ty. .ubu    vy. xy. .ybu    zy.
+    -->
+    <variablelist>
+      <varlistentry>
+        <term><jbophrase role="letteral">'</jbophrase></term><listitem><para><jbophrase>.y'y.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">a</jbophrase></term><listitem><para><jbophrase>.abu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">b</jbophrase></term><listitem><para><jbophrase>by.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">c</jbophrase></term><listitem><para><jbophrase>cy.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">d</jbophrase></term><listitem><para><jbophrase>dy.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">e</jbophrase></term><listitem><para><jbophrase>.ebu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">f</jbophrase></term><listitem><para><jbophrase>fy.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">g</jbophrase></term><listitem><para><jbophrase>gy.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">i</jbophrase></term><listitem><para><jbophrase>.ibu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">j</jbophrase></term><listitem><para><jbophrase>jy.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">k</jbophrase></term><listitem><para><jbophrase>ky.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">l</jbophrase></term><listitem><para><jbophrase>ly.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">m</jbophrase></term><listitem><para><jbophrase>my.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">n</jbophrase></term><listitem><para><jbophrase>ny.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">o</jbophrase></term><listitem><para><jbophrase>.obu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">p</jbophrase></term><listitem><para><jbophrase>py.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">r</jbophrase></term><listitem><para><jbophrase>ry.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">s</jbophrase></term><listitem><para><jbophrase>sy.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">t</jbophrase></term><listitem><para><jbophrase>ty.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">u</jbophrase></term><listitem><para><jbophrase>.ubu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">v</jbophrase></term><listitem><para><jbophrase>vy.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">x</jbophrase></term><listitem><para><jbophrase>xy.</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">y</jbophrase></term><listitem><para><jbophrase>.ybu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase role="letteral">z</jbophrase></term><listitem><para><jbophrase>zy.</jbophrase></para></listitem>
+      </varlistentry>
+    </variablelist>
     <para> <indexterm type="lojban-word-imported"><primary>BU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>bu</primary></indexterm>  <indexterm type="general-imported"><primary>bu</primary><secondary>effect on preceding word</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>composed of compound cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>composed of single cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>vowel words contrasted with consonant words</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>consonant words contrasted with vowel words</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words for vowels</primary><secondary>pause requirement before</secondary></indexterm> There are several things to note about this table. The consonant lerfu words are a single syllable, whereas the vowel and 
-    <quote>'</quote> lerfu words are two syllables and must be preceded by pause (since they all begin with a vowel). Another fact, not evident from the table but important nonetheless, is that 
+    <jbophrase role="letteral">'</jbophrase> lerfu words are two syllables and must be preceded by pause (since they all begin with a vowel). Another fact, not evident from the table but important nonetheless, is that 
     <jbophrase>by</jbophrase> and its like are single cmavo of selma'o BY, as is 
     <jbophrase>.y'y</jbophrase>. The vowel lerfu words, on the other hand, are compound cmavo, made from a single vowel cmavo plus the cmavo 
-    <quote>bu</quote> (which belongs to its own selma'o, BU). All of the vowel cmavo have other meanings in Lojban (logical connectives, sentence separator, hesitation noise), but those meanings are irrelevant when 
-    
-    
-    
-    <quote>bu</quote> follows.</para>
+    <jbophrase>bu</jbophrase> (which belongs to its own selma'o, BU). All of the vowel cmavo have other meanings in Lojban (logical connectives, sentence separator, hesitation noise), but those meanings are irrelevant when 
+    <jbophrase>bu</jbophrase> follows.</para>
     <para>Here are some illustrations of common Lojban words spelled out using the alphabet above:</para>
     <example xml:id="example-random-id-qHRb" role="interlinear-gloss-example">
       <title>
@@ -146,12 +191,12 @@
     <quote>fail</quote> and 
     <quote>vale</quote> sound similar, but just hearing the first lerfu word of either, namely 
     <quote>eff</quote> or 
-    <quote>vee</quote>, is enough to discriminate easily between them - and even if the first lerfu word were somehow confused, neither 
+    <quote>vee</quote>, is enough to discriminate easily between them – and even if the first lerfu word were somehow confused, neither 
     <quote>vail</quote> nor 
     <quote>fale</quote> is a word of ordinary English, so the rest of the spelling determines which word is meant. Still, the capability of spelling out words does exist in Lojban.</para>
     
     <para> <indexterm type="general-imported"><primary>lerfu words ending with &quot;y&quot;</primary><secondary>pause after</secondary><tertiary>rationale</tertiary></indexterm> Note that the lerfu words ending in 
-    <jbophrase>y</jbophrase> were written (in 
+    <jbophrase role="letteral">y</jbophrase> were written (in 
     <xref linkend="example-random-id-qHRb"/> and 
     <xref linkend="example-random-id-qhrx"/>) with pauses after them. It is not strictly necessary to pause after such lerfu words, but failure to do so can in some cases lead to ambiguities:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-6dMS">
@@ -179,10 +224,10 @@
       </interlinear-gloss>
     </example>
     <para>A safe guideline is to pause after any cmavo ending in 
-    <jbophrase>y</jbophrase> unless the next word is also a cmavo ending in 
-    <jbophrase>y</jbophrase>. The safest and easiest guideline is to pause after all of them.</para>
+    <jbophrase role="letteral">y</jbophrase> unless the next word is also a cmavo ending in 
+    <jbophrase role="letteral">y</jbophrase>. The safest and easiest guideline is to pause after all of them.</para>
   </section>
-  <section xml:id="cll_chapter17-section3">
+  <section xml:id="section-upper-case">
     <title>Upper and lower cases</title>
     <para> <indexterm type="general-imported"><primary>lower case letters</primary><secondary>use in Lojban</secondary></indexterm>  <indexterm type="general-imported"><primary>capital letters</primary><secondary>use in Lojban</secondary></indexterm>  <indexterm type="general-imported"><primary>stress</primary><secondary>irregular marked with upper-case</secondary></indexterm>  <indexterm type="general-imported"><primary>lower-case letters</primary><secondary>English usage contrasted with Lojban</secondary></indexterm>  <indexterm type="general-imported"><primary>lower-case letters</primary><secondary>Lojban usage contrasted with English</secondary></indexterm>  <indexterm type="general-imported"><primary>upper-case letters</primary><secondary>English usage contrasted with Lojban</secondary></indexterm>  <indexterm type="general-imported"><primary>upper-case letters</primary><secondary>Lojban usage contrasted with English</secondary></indexterm> Lojban doesn't use lower-case (small) letters and upper-case (capital) letters in the same way that English does; sentences do not begin with an upper-case letter, nor do names. However, upper-case letters are used in Lojban to mark irregular stress within names, thus:</para>
     
@@ -223,17 +268,17 @@
         <jbo>.ibu ga'e vy. .abu ny. to'a</jbo>
         
         
-        <en>i [upper] V A N [lower]</en>
+        <gloss>i [upper] V A N [lower]</gloss>
       </interlinear-gloss>
     </example>
     <para>The cmavo and compound cmavo of this type will be called 
     <quote>shift words</quote>.</para>
     <para> <indexterm type="general-imported"><primary>shift word</primary><secondary>scope</secondary></indexterm> How long does a shift word last? Theoretically, until the next shift word that contradicts it or until the end of text. In practice, it is common to presume that a shift word is only in effect until the next word other than a lerfu word is found.</para>
     <para> <indexterm type="lojban-word-imported"><primary>LAU selma'o</primary></indexterm>  <indexterm type="general-imported"><primary>shift</primary><secondary>single-letter</secondary><tertiary>grammar of</tertiary></indexterm>  <indexterm type="general-imported"><primary>shift word</primary><secondary>for single letter</secondary></indexterm> It is often convenient to shift just a single letter to upper case. The cmavo 
-    <quote>tau</quote>, of selma'o LAU, is useful for the purpose. A LAU cmavo must always be immediately followed by a BY cmavo or its equivalent: the combination is grammatically equivalent to a single BY. (See 
-    <xref linkend="cll_chapter17-section14"/> for details.)</para>
+    <jbophrase>tau</jbophrase>, of selma'o LAU, is useful for the purpose. A LAU cmavo must always be immediately followed by a BY cmavo or its equivalent: the combination is grammatically equivalent to a single BY. (See 
+    <xref linkend="section-lerfu-cmavo-summary"/> for details.)</para>
     <para> <indexterm type="general-imported"><primary>chemical elements</primary><secondary>use of single-letter shift for</secondary></indexterm> A likely use of 
-    <quote>tau</quote> is in the internationally standardized symbols for the chemical elements. Each element is represented using either a single upper-case lerfu or one upper-case lerfu followed by one lower-case lerfu:</para>
+    <jbophrase>tau</jbophrase> is in the internationally standardized symbols for the chemical elements. Each element is represented using either a single upper-case lerfu or one upper-case lerfu followed by one lower-case lerfu:</para>
     
     
     
@@ -261,32 +306,32 @@
     </example>
     <para> <indexterm type="general-imported"><primary>single-letter shift</primary><secondary>as toggle</secondary></indexterm> If a shift to upper-case is in effect when 
     
-    <quote>tau</quote> appears, it shifts the next lerfu word only to lower case, reversing its usual effect.</para>
+    <jbophrase>tau</jbophrase> appears, it shifts the next lerfu word only to lower case, reversing its usual effect.</para>
   </section>
-  <section xml:id="cll_chapter17-section4">
+  <section xml:id="section-bu">
     <title>The universal 
-    <quote>bu</quote></title>
+    <jbophrase>bu</jbophrase></title>
     <para> <indexterm type="general-imported"><primary>lerfu word set extension</primary><secondary>with bu</secondary></indexterm>  <indexterm type="general-imported"><primary>bu</primary><secondary>for extension of lerfu word set</secondary></indexterm> So far we have seen 
-    <quote>bu</quote> only as a suffix to vowel cmavo to produce vowel lerfu words. Originally, this was the only use of 
-    <quote>bu</quote>. In developing the lerfu word system, however, it proved to be useful to allow 
-    <quote>bu</quote> to be attached to any word whatsoever, in order to allow arbitrary extensions of the basic lerfu word set.</para>
+    <jbophrase>bu</jbophrase> only as a suffix to vowel cmavo to produce vowel lerfu words. Originally, this was the only use of 
+    <jbophrase>bu</jbophrase>. In developing the lerfu word system, however, it proved to be useful to allow 
+    <jbophrase>bu</jbophrase> to be attached to any word whatsoever, in order to allow arbitrary extensions of the basic lerfu word set.</para>
     <para> <indexterm type="lojban-word-imported"><primary>fa'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>su</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>sa</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>si</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>lo'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>la'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>zoi</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>zo</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>zei</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>za'e</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ba'e</primary></indexterm>  <indexterm type="general-imported"><primary>fa'o</primary><secondary>interaction with bu</secondary></indexterm>  <indexterm type="general-imported"><primary>su</primary><secondary>interaction with bu</secondary></indexterm>  <indexterm type="general-imported"><primary>sa</primary><secondary>interaction with bu</secondary></indexterm>  <indexterm type="general-imported"><primary>si</primary><secondary>interaction with bu</secondary></indexterm>  <indexterm type="general-imported"><primary>lo'u</primary><secondary>interaction with bu</secondary></indexterm>  <indexterm type="general-imported"><primary>la'o</primary><secondary>interaction with bu</secondary></indexterm>  <indexterm type="general-imported"><primary>zoi</primary><secondary>interaction with bu</secondary></indexterm>  <indexterm type="general-imported"><primary>zo</primary><secondary>interaction with bu</secondary></indexterm>  <indexterm type="general-imported"><primary>zei</primary><secondary>interaction with bu</secondary></indexterm>  <indexterm type="general-imported"><primary>za'e</primary><secondary>interaction with bu</secondary></indexterm>  <indexterm type="general-imported"><primary>ba'e</primary><secondary>interaction with bu</secondary></indexterm>  <indexterm type="general-imported"><primary>bu</primary><secondary>interaction with ba'e</secondary></indexterm>  <indexterm type="general-imported"><primary>bu</primary><secondary>and compound cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>bu</primary><secondary>grammar of</secondary></indexterm> Formally, 
-    <quote>bu</quote> may be attached to any single Lojban word. Compound cmavo do not count as words for this purpose. The special cmavo 
-    <quote>ba'e</quote>, 
-    <quote>za'e</quote>, 
+    <jbophrase>bu</jbophrase> may be attached to any single Lojban word. Compound cmavo do not count as words for this purpose. The special cmavo 
+    <jbophrase>ba'e</jbophrase>, 
+    <jbophrase>za'e</jbophrase>, 
     
-    <quote>zei</quote>, 
-    <quote>zo</quote>, 
-    <quote>zoi</quote>, 
-    <quote>la'o</quote>, 
-    <quote>lo'u</quote>, 
+    <jbophrase>zei</jbophrase>, 
+    <jbophrase>zo</jbophrase>, 
+    <jbophrase>zoi</jbophrase>, 
+    <jbophrase>la'o</jbophrase>, 
+    <jbophrase>lo'u</jbophrase>, 
     <jbophrase>si</jbophrase>, 
-    <quote>sa</quote>, 
+    <jbophrase>sa</jbophrase>, 
     <jbophrase>su</jbophrase>, and 
     <jbophrase>fa'o</jbophrase> may not have 
     
-    <quote>bu</quote> attached, because they are interpreted before 
-    <quote>bu</quote> detection is done; in particular,</para>
+    <jbophrase>bu</jbophrase> attached, because they are interpreted before 
+    <jbophrase>bu</jbophrase> detection is done; in particular,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-WvFu">
       <title>
         <anchor xml:id="c17e4d1"/>
@@ -298,20 +343,20 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>bubu</primary></indexterm>  <indexterm type="example-imported"><primary>word &quot;bu&quot;</primary></indexterm>  <indexterm type="general-imported"><primary>names</primary><secondary>pause requirement in lerfu words</secondary></indexterm>  <indexterm type="general-imported"><primary>bu</primary><secondary>effect of multiple</secondary></indexterm> is needed when discussing 
-    <quote>bu</quote> in Lojban. It is also illegal to attach 
-    <quote>bu</quote> to itself, but more than one 
-    <quote>bu</quote> may be attached to a word; thus 
+    <jbophrase>bu</jbophrase> in Lojban. It is also illegal to attach 
+    <jbophrase>bu</jbophrase> to itself, but more than one 
+    <jbophrase>bu</jbophrase> may be attached to a word; thus 
     <jbophrase>.abubu</jbophrase> is legal, if ugly. (Its meaning is not defined, but it is presumably different from 
     <jbophrase>.abu</jbophrase>.) It does not matter if the word is a cmavo, a cmene, or a brivla. All such words suffixed by 
-    <quote>bu</quote> are treated grammatically as if they were cmavo belonging to selma'o BY. However, if the word is a cmene it is always necessary to precede and follow it by a pause, because otherwise the cmene may absorb preceding or following words.</para>
+    <jbophrase>bu</jbophrase> are treated grammatically as if they were cmavo belonging to selma'o BY. However, if the word is a cmene it is always necessary to precede and follow it by a pause, because otherwise the cmene may absorb preceding or following words.</para>
     <para> <indexterm type="example-imported"><primary>happy face</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>smiley face</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>logograms</primary><secondary>words for</secondary></indexterm>  <indexterm type="general-imported"><primary>smiley face</primary><secondary>word for</secondary></indexterm>  <indexterm type="general-imported"><primary>unusual characters</primary><secondary>words for</secondary></indexterm> The ability to attach 
-    <quote>bu</quote> to words has been used primarily to make names for various logograms and other unusual characters. For example, the Lojban name for the 
+    <jbophrase>bu</jbophrase> to words has been used primarily to make names for various logograms and other unusual characters. For example, the Lojban name for the 
     
     
     <quote>happy face</quote> is 
     
     <jbophrase>.uibu</jbophrase>, based on the attitudinal 
-    <jbophrase>.ui</jbophrase> that means 
+    <jbophrase role="diphthong">.ui</jbophrase> that means 
     <quote>happiness</quote>. Likewise, the 
     
     <quote>smiley face</quote>, written 
@@ -328,8 +373,8 @@
     <jbophrase>joi</jbophrase> meaning 
     <quote>mixed and</quote>. Many more such lerfu words will probably be invented in future.</para>
     <para> <indexterm type="general-imported"><primary>&quot;</primary><secondary>&quot;</secondary><tertiary>word for</tertiary></indexterm>  <indexterm type="general-imported"><primary>&quot;.&quot;</primary><secondary>word for</secondary></indexterm>  <indexterm type="general-imported"><primary>syllable break</primary><secondary>word for</secondary></indexterm>  <indexterm type="general-imported"><primary>pause</primary><secondary>word for</secondary></indexterm>  <indexterm type="general-imported"><primary>syllable break</primary><secondary>symbol for</secondary></indexterm>  <indexterm type="general-imported"><primary>pause</primary><secondary>symbol for</secondary></indexterm> The 
-    <quote>.</quote> and 
-    <quote>,</quote> characters used in Lojbanic writing to represent pause and syllable break respectively have been assigned the lerfu words 
+    <jbophrase role="letteral">.</jbophrase> and 
+    <jbophrase role="letteral">,</jbophrase> characters used in Lojbanic writing to represent pause and syllable break respectively have been assigned the lerfu words 
     
     <jbophrase>denpa bu</jbophrase> (literally, 
     <quote>pause bu</quote>) and 
@@ -341,31 +386,37 @@
     <jbophrase glossary="false">denPAbu</jbophrase>. No pause is required between 
     <jbophrase>denpa</jbophrase> (or 
     <jbophrase>slaka</jbophrase>) and 
-    <quote>bu</quote>, though.</para>
+    <jbophrase>bu</jbophrase>, though.</para>
   </section>
-  <section xml:id="cll_chapter17-section5">
+  <section xml:id="section-alien-alphabets">
     <title>Alien alphabets</title>
     <para>As stated in 
-    <xref linkend="cll_chapter17-section1"/>, Lojban's goal of cultural neutrality demands a standard set of lerfu words for the lerfu of as many other writing systems as possible. When we meet these lerfu in written text (particularly, though not exclusively, mathematical text), we need a standard Lojbanic way to pronounce them.</para>
+    <xref linkend="section-letterals-introduction"/>, Lojban's goal of cultural neutrality demands a standard set of lerfu words for the lerfu of as many other writing systems as possible. When we meet these lerfu in written text (particularly, though not exclusively, mathematical text), we need a standard Lojbanic way to pronounce them.</para>
     <para>There are certainly hundreds of alphabets and other writing systems in use around the world, and it is probably an unachievable goal to create a single system which can express all of them, but if perfection is not demanded, a usable system can be created from the raw material which Lojban provides.</para>
     <para> <indexterm type="example-imported"><primary>alpha</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>letters</primary><secondary>non-Lojban</secondary><tertiary>representation with names</tertiary></indexterm> One possibility would be to use the lerfu word associated with the language itself, Lojbanized and with 
-    <quote>bu</quote> added. Indeed, an isolated Greek 
+    <jbophrase>bu</jbophrase> added. Indeed, an isolated Greek 
     <quote>alpha</quote> in running Lojban text is probably most easily handled by calling it 
     
     <jbophrase>.alfas. bu</jbophrase>. Here the Greek lerfu word has been made into a Lojbanized name by adding 
-    <quote>s</quote> and then into a Lojban lerfu word by adding 
-    <quote>bu</quote>. Note that the pause after 
+    <jbophrase role="letteral">s</jbophrase> and then into a Lojban lerfu word by adding 
+    <jbophrase>bu</jbophrase>. Note that the pause after 
     <jbophrase>.alfas.</jbophrase> is still needed.</para>
     <para> <indexterm type="general-imported"><primary>letters</primary><secondary>non-Lojban</secondary><tertiary>representation with consonant-word + bu</tertiary></indexterm> Likewise, the easiest way to handle the Latin letters 
     <quote>h</quote>, 
     <quote>q</quote>, and 
     <quote>w</quote> that are not used in Lojban is by a consonant lerfu word with 
-    <quote>bu</quote> attached. The following assignments have been made:</para>
-    <programlisting xml:space="preserve">
-        .y'y.bu     h
-        ky.bu       q
-        vy.bu       w
-</programlisting>
+    <jbophrase>bu</jbophrase> attached. The following assignments have been made:</para>
+    <variablelist>
+      <varlistentry>
+        <term><jbophrase>.y'y.bu</jbophrase></term><listitem><para>h</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase>ky.bu</jbophrase></term><listitem><para>q</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase>vy.bu</jbophrase></term><listitem><para>w</para></listitem>
+      </varlistentry>
+    </variablelist>
     <para> <indexterm type="example-imported"><primary>quack</primary><secondary>example</secondary></indexterm> As an example, the English word 
     <quote>quack</quote> would be spelled in Lojban thus:</para>
     
@@ -386,18 +437,22 @@
     </example>
     <para> <indexterm type="general-imported"><primary>letters</primary><secondary>symbol contrasted with sound for spelling</secondary></indexterm>  <indexterm type="general-imported"><primary>letters</primary><secondary>sound contrasted with symbol for spelling</secondary></indexterm> Note that the fact that the letter 
     <quote>c</quote> in this word has nothing to do with the sound of the Lojban letter 
-    <quote>c</quote> is irrelevant; we are spelling an English word and English rules control the choice of letters, but we are speaking Lojban and Lojban rules control the pronunciations of those letters.</para>
+    <jbophrase role="letteral">c</jbophrase> is irrelevant; we are spelling an English word and English rules control the choice of letters, but we are speaking Lojban and Lojban rules control the pronunciations of those letters.</para>
     
     <para>A few more possibilities for Latin-alphabet letters used in languages other than English:</para>
-    <programlisting xml:space="preserve">
-        ty.bu       þ (thorn)
-        dy.bu       ð (edh)
-</programlisting>
+    <variablelist>
+      <varlistentry>
+        <term><jbophrase>ty.bu</jbophrase></term><listitem><para>þ (thorn)</para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term><jbophrase>dy.bu</jbophrase></term><listitem><para>ð (edh)</para></listitem>
+      </varlistentry>
+    </variablelist>
     <para>However, this system is not ideal for all purposes. For one thing, it is verbose. The native lerfu words are often quite long, and with 
-    <quote>bu</quote> added they become even longer: the worst-case Greek lerfu word would be 
+    <jbophrase>bu</jbophrase> added they become even longer: the worst-case Greek lerfu word would be 
     <jbophrase>.Omikron. bu</jbophrase>, with four syllables and two mandatory pauses. In addition, alphabets that are used by many languages have separate sets of lerfu words for each language, and which set is Lojban to choose?</para>
     <para> <indexterm type="general-imported"><primary>letters</primary><secondary>non-Lojban</secondary><tertiary>representation with language-shift</tertiary></indexterm>  <indexterm type="general-imported"><primary>language shift</primary><secondary>choice of Lojban-lerfu-word counterpart</secondary></indexterm>  <indexterm type="general-imported"><primary>language shift</primary><secondary>effect on following words</secondary></indexterm>  <indexterm type="general-imported"><primary>language shift</primary><secondary>rationale for</secondary></indexterm>  <indexterm type="general-imported"><primary>letters</primary><secondary>non-Lojban</secondary><tertiary>representation with consonant-word + bu, drawback</tertiary></indexterm> The alternative plan, therefore, is to use a shift word similar to those introduced in 
-    <xref linkend="cll_chapter17-section3"/>. After the appearance of such a shift word, the regular lerfu words are re-interpreted to represent the lerfu of the alphabet now in use. After a shift to the Greek alphabet, for example, the lerfu word 
+    <xref linkend="section-upper-case"/>. After the appearance of such a shift word, the regular lerfu words are re-interpreted to represent the lerfu of the alphabet now in use. After a shift to the Greek alphabet, for example, the lerfu word 
     
     <jbophrase>ty</jbophrase> would represent not Latin 
     <quote>t</quote> but Greek 
@@ -408,28 +463,38 @@
     <quote>phi</quote> or even 
     <quote>omega</quote>, but such an arbitrary relationship would be extremely hard to remember.</para>
     <para> <indexterm type="general-imported"><primary>bu</primary><secondary>interaction with language shift</secondary></indexterm>  <indexterm type="general-imported"><primary>language shift</primary><secondary>interaction with bu</secondary></indexterm> Where no obvious closest counterpart exists, some more or less arbitrary choice must be made. Some alien lerfu may simply not have any shifted equivalent, forcing the speaker to fall back on a 
-    <quote>bu</quote> form. Since a 
-    <quote>bu</quote> form may mean different things in different alphabets, it is safest to employ a shift word even when 
-    <quote>bu</quote> forms are in use.</para>
+    <jbophrase>bu</jbophrase> form. Since a 
+    <jbophrase>bu</jbophrase> form may mean different things in different alphabets, it is safest to employ a shift word even when 
+    <jbophrase>bu</jbophrase> forms are in use.</para>
     <para>Shifts for several alphabets have been assigned cmavo of selma'o BY:</para>
-    <programlisting xml:space="preserve">
-    lo'a    Latin/Roman/Lojban alphabet
+    <variablelist>
+      <varlistentry>
+        <term><jbophrase>lo'a</jbophrase></term><listitem><para>Latin/Roman/Lojban alphabet</para></listitem>
+      </varlistentry>
 
 
 
-    ge'o    Greek alphabet
+      <varlistentry>
+        <term><jbophrase>ge'o</jbophrase></term><listitem><para>Greek alphabet</para></listitem>
+      </varlistentry>
 
-    je'o    Hebrew alphabet
+      <varlistentry>
+        <term><jbophrase>je'o</jbophrase></term><listitem><para>Hebrew alphabet</para></listitem>
+      </varlistentry>
 
-    jo'o    Arabic alphabet
+      <varlistentry>
+        <term><jbophrase>jo'o</jbophrase></term><listitem><para>Arabic alphabet</para></listitem>
+      </varlistentry>
 
-    ru'o    Cyrillic alphabet
+      <varlistentry>
+        <term><jbophrase>ru'o</jbophrase></term><listitem><para>Cyrillic alphabet</para></listitem>
+      </varlistentry>
 
-</programlisting>
+    </variablelist>
     <para> <indexterm type="lojban-word-imported"><primary>LAU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>zai</primary></indexterm>  <indexterm type="general-imported"><primary>language shift</primary><secondary>based on name + bu</secondary></indexterm>  <indexterm type="general-imported"><primary>language shift</primary><secondary>compound</secondary></indexterm>  <indexterm type="general-imported"><primary>language shift</primary><secondary>formation of shift alphabet name</secondary></indexterm>  <indexterm type="general-imported"><primary>Cyrillic alphabet</primary><secondary>language shift word for</secondary></indexterm>  <indexterm type="general-imported"><primary>Arabic alphabet</primary><secondary>language shift word for</secondary></indexterm>  <indexterm type="general-imported"><primary>Hebrew alphabet</primary><secondary>language shift word for</secondary></indexterm>  <indexterm type="general-imported"><primary>Greek alphabet</primary><secondary>language shift word for</secondary></indexterm>  <indexterm type="general-imported"><primary>Latin alphabet</primary><secondary>language shift word for</secondary></indexterm> The cmavo 
-    <quote>zai</quote> (of selma'o LAU) is used to create shift words to still other alphabets. The BY word which must follow any LAU cmavo would typically be a name representing the alphabet with 
+    <jbophrase>zai</jbophrase> (of selma'o LAU) is used to create shift words to still other alphabets. The BY word which must follow any LAU cmavo would typically be a name representing the alphabet with 
     
-    <quote>bu</quote> suffixed:</para>
+    <jbophrase>bu</jbophrase> suffixed:</para>
     <example xml:id="example-random-id-qHT3" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c17e5d2"/>
@@ -471,12 +536,12 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>Japanese hiragana</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>hiragana</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Japanese katakana</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>katakana</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Devanagari</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>language shift</primary><secondary>standardization of</secondary></indexterm> Unlike the cmavo above, these shift words have not been standardized and probably will not be until someone actually has a need for them. (Note the 
-    <quote>.</quote> characters marking leading and following pauses.)</para>
+    <jbophrase role="letteral">.</jbophrase> characters marking leading and following pauses.)</para>
     <para> <indexterm type="lojban-word-imported"><primary>LAU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ce'a</primary></indexterm>  <indexterm type="example-imported"><primary>bold</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>italic</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>shift words</primary><secondary>for face</secondary></indexterm>  <indexterm type="general-imported"><primary>shift words</primary><secondary>for font</secondary></indexterm>  <indexterm type="general-imported"><primary>face</primary><secondary>specifying for letters</secondary></indexterm>  <indexterm type="general-imported"><primary>font</primary><secondary>specifying for letters</secondary></indexterm> In addition, there may be multiple visible representations within a single alphabet for a given letter: roman vs. italics, handwriting vs. print, Bodoni vs. Helvetica. These traditional 
     
     <quote>font and face</quote> distinctions are also represented by shift words, indicated with the cmavo 
     
-    <quote>ce'a</quote> (of selma'o LAU) and a following BY word:</para>
+    <jbophrase>ce'a</jbophrase> (of selma'o LAU) and a following BY word:</para>
     
     <example xml:id="example-random-id-qhV0" role="interlinear-gloss-example">
       <title>
@@ -508,7 +573,7 @@
       <interlinear-gloss>
         <jbo>ce'a .pavrel. bu</jbo>
         
-        <en>12-point font size</en>
+        <gloss>12-point font size</gloss>
         
       </interlinear-gloss>
     </example>
@@ -523,7 +588,7 @@
     
     <para>Several sections at the end of this chapter contain tables of proposed lerfu word assignments for various languages.</para>
   </section>
-  <section xml:id="cll_chapter17-section6">
+  <section xml:id="section-accents">
     <title>Accent marks and compound lerfu words</title>
     <para> <indexterm type="example-imported"><primary>tilde</primary><secondary>a diacritical mark</secondary></indexterm>  <indexterm type="example-imported"><primary>cedilla</primary><secondary>a diacritical mark</secondary></indexterm>  <indexterm type="example-imported"><primary>circumflex</primary><secondary>a diacritical mark</secondary></indexterm>  <indexterm type="example-imported"><primary>umlaut</primary><secondary>a diacritical mark</secondary></indexterm>  <indexterm type="example-imported"><primary>accent mark</primary><secondary>a diacritical mark</secondary></indexterm>  <indexterm type="general-imported"><primary>letters</primary><secondary>non-Lojban</secondary><tertiary>representation of diacritical marks on</tertiary></indexterm>  <indexterm type="general-imported"><primary>diacritical marks</primary><secondary>as lerfu</secondary></indexterm> Many languages that make use of the Latin alphabet add special marks to some of the lerfu they use. French, for example, uses three accent marks above vowels, called (in English) 
     
@@ -541,11 +606,11 @@
     <quote>umlaut a</quote>).</para>
     
     <para> <indexterm type="lojban-word-imported"><primary>FOI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>TEI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>foi</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>tei</primary></indexterm>  <indexterm type="general-imported"><primary>diacritical marks</primary><secondary>specifying with tei…foi</secondary></indexterm> Lojban cannot settle this question by fiat. Either it must be left up to default interpretation depending on the language in question, or the lerfu-word compounding cmavo 
-    <quote>tei</quote> (of selma'o TEI) and 
-    <quote>foi</quote> (of selma'o FOI) must be used. These cmavo are always used in pairs; any number of lerfu words may appear between them, and the whole is treated as a single compound lerfu word. The French word 
+    <jbophrase>tei</jbophrase> (of selma'o TEI) and 
+    <jbophrase>foi</jbophrase> (of selma'o FOI) must be used. These cmavo are always used in pairs; any number of lerfu words may appear between them, and the whole is treated as a single compound lerfu word. The French word 
     <quote>été</quote>, with acute accent marks on both 
     
-    <jbophrase>e</jbophrase> lerfu, could be spelled as:</para>
+    <quote>e</quote> lerfu, could be spelled as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-NQgb">
       <title>
         <anchor xml:id="c17e6d1"/>
@@ -553,60 +618,60 @@
       <interlinear-gloss>
         <jbo>tei .ebu .akut. bu foi ty. tei .akut. bu .ebu foi</jbo>
         <en>( 
-        <jbophrase>e</jbophrase> acute ) 
+        <quote>e</quote> acute ) 
         <quote>t</quote> ( acute 
-        <jbophrase>e</jbophrase>)</en>
+        <quote>e</quote>)</en>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>ete</primary></indexterm>  <indexterm type="example-imported"><primary>accent mark</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>diacritical marks</primary><secondary>order of specification within tei…foi</secondary></indexterm> and it does not matter whether 
     <jbophrase>akut. bu</jbophrase> appears before or after 
     <jbophrase>.ebu</jbophrase>; the 
-    <quote>tei ... foi</quote> grouping guarantees that the acute accent is associated with the correct lerfu. Of course, the level of precision represented by 
+    <jbophrase>tei ... foi</jbophrase> grouping guarantees that the acute accent is associated with the correct lerfu. Of course, the level of precision represented by 
     <xref linkend="example-random-id-NQgb"/> would rarely be required: it might be needed by a Lojban-speaker when spelling out a French word for exact transcription by another Lojban-speaker who did not know French.</para>
     <para> <indexterm type="general-imported"><primary>diacritical marks</primary><secondary>problem with multiple on one lerfu</secondary></indexterm> This system breaks down in languages which use more than one accent mark on a single lerfu; some other convention must be used for showing which accent marks are written where in that case. The obvious convention is to represent the mark nearest the basic lerfu by the lerfu word closest to the word representing the basic lerfu. Any remaining ambiguities must be resolved by further conventions not yet established.</para>
     
     
     <para> <indexterm type="example-imported"><primary>Spanish ch</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Spanish ll</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>compound letters</primary><secondary>native language</secondary><tertiary>representing as distinct letters</tertiary></indexterm>  <indexterm type="general-imported"><primary>accented letters</primary><secondary>considered as distinct from unaccented</secondary></indexterm>  <indexterm type="general-imported"><primary>diacritical marks</primary><secondary>considered as forming distinct letters</secondary></indexterm> Some languages, like Swedish and Finnish, consider certain accented lerfu to be completely distinct from their unaccented equivalents, but Lojban does not make a formal distinction, since the printed characters look the same whether they are reckoned as separate letters or not. In addition, some languages consider certain 2-letter combinations (like 
-    <quote>ll</quote> and 
-    <quote>ch</quote> in Spanish) to be letters; this may be represented by enclosing the combination in 
-    <quote>tei ... foi</quote>.</para>
+    <quote xml:lang="es">ll</quote> and 
+    <quote xml:lang="es">ch</quote> in Spanish) to be letters; this may be represented by enclosing the combination in 
+    <jbophrase>tei ... foi</jbophrase>.</para>
     <para> <indexterm type="general-imported"><primary>lerfu words</primary><secondary>forming new for non-Lojban letters using bu</secondary></indexterm> In addition, when discussing a specific language, it is permissible to make up new lerfu words, as long as they are either explained locally or well understood from context: thus Spanish 
-    <quote>ll</quote> or Croatian 
-    <quote>lj</quote> could be called 
+    <quote xml:lang="es">ll</quote> or Croatian 
+    <quote xml:lang="hr">lj</quote> could be called 
     <jbophrase>libu</jbophrase>, but that usage would not necessarily be universally understood.</para>
     <para>
-    <xref linkend="cll_chapter17-section19"/> contains a table of proposed lerfu words for some common accent marks.</para>
+    <xref linkend="section-accents-multiple-letters"/> contains a table of proposed lerfu words for some common accent marks.</para>
     
   </section>
-  <section xml:id="cll_chapter17-section7">
+  <section xml:id="section-punctuation">
     <title>Punctuation marks</title>
     <para> <indexterm type="lojban-word-imported"><primary>LAU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>lau</primary></indexterm>  <indexterm type="general-imported"><primary>lau</primary><secondary>effect on following lerfu word</secondary></indexterm>  <indexterm type="general-imported"><primary>punctuation lerfu words</primary><secondary>mechanism for creating</secondary></indexterm> Lojban does not have punctuation marks as such: the denpa bu and the slaka bu are really a part of the alphabet. Other languages, however, use punctuation marks extensively. As yet, Lojban does not have any words for these punctuation marks, but a mechanism exists for devising them: the cmavo 
     
-    <quote>lau</quote> of selma'o LAU. 
+    <jbophrase>lau</jbophrase> of selma'o LAU. 
     
-    <quote>lau</quote> must always be followed by a BY word; the interpretation of the BY word is changed from a lerfu to a punctuation mark. Typically, this BY word would be a name or brivla with a 
+    <jbophrase>lau</jbophrase> must always be followed by a BY word; the interpretation of the BY word is changed from a lerfu to a punctuation mark. Typically, this BY word would be a name or brivla with a 
     
-    <quote>bu</quote> suffix.</para>
+    <jbophrase>bu</jbophrase> suffix.</para>
     <para> <indexterm type="general-imported"><primary>punctuation lerfu words</primary><secondary>rationale for lau</secondary></indexterm> Why is 
-    <quote>lau</quote> necessary at all? Why not just use a 
+    <jbophrase>lau</jbophrase> necessary at all? Why not just use a 
     
-    <quote>bu</quote>-marked word and announce that it is always to be interpreted as a punctuation mark? Primarily to avoid ambiguity. The 
-    <quote>bu</quote> mechanism is extremely open-ended, and it is easy for Lojban users to make up 
-    <quote>bu</quote> words without bothering to explain what they mean. Using the 
-    <quote>lau</quote> cmavo flags at least the most important of such nonce lerfu words as having a special function: punctuation. (Exactly the same argument applies to the use of 
+    <jbophrase>bu</jbophrase>-marked word and announce that it is always to be interpreted as a punctuation mark? Primarily to avoid ambiguity. The 
+    <jbophrase>bu</jbophrase> mechanism is extremely open-ended, and it is easy for Lojban users to make up 
+    <jbophrase>bu</jbophrase> words without bothering to explain what they mean. Using the 
+    <jbophrase>lau</jbophrase> cmavo flags at least the most important of such nonce lerfu words as having a special function: punctuation. (Exactly the same argument applies to the use of 
     
-    <quote>zai</quote> to signal an alphabet shift or 
+    <jbophrase>zai</jbophrase> to signal an alphabet shift or 
     
-    <quote>ce'a</quote> to signal a font shift.)</para>
+    <jbophrase>ce'a</jbophrase> to signal a font shift.)</para>
     
     
     <para> <indexterm type="general-imported"><primary>punctuation lerfu words</primary><secondary>interaction with different alphabet systems</secondary></indexterm> Since different alphabets require different punctuation marks, the interpretation of a 
     
-    <quote>lau</quote>-marked lerfu word is affected by the current alphabet shift and the current font shift.</para>
+    <jbophrase>lau</jbophrase>-marked lerfu word is affected by the current alphabet shift and the current font shift.</para>
     
     
   </section>
-  <section xml:id="cll_chapter17-section8">
+  <section xml:id="section-chinese-characters">
     <title>What about Chinese characters?</title>
     
     
@@ -619,19 +684,6 @@
     <superscript>4</superscript> zi 
     <superscript>4</superscript></quote> in Chinese, 
     <jbophrase>kanji</jbophrase> in Japanese) represent an entirely different approach to writing from alphabets or syllabaries. (A syllabary, such as Japanese hiragana or Amharic writing, has one lerfu for each syllable of the spoken language.) Very roughly, Chinese characters represent single elements of meaning; also very roughly, they represent single syllables of spoken Chinese. There is in principle no limit to the number of Chinese characters that can exist, and many thousands are in regular use.</para>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <para>It is hopeless for Lojban, with its limited lerfu and shift words, to create an alphabet which will match this diversity. However, there are various possible ways around the problem.</para>
     <para> <indexterm type="general-imported"><primary>romaji</primary><secondary>as a basis for kanji characters in Lojban lerfu words</secondary></indexterm>  <indexterm type="general-imported"><primary>pinyin</primary><secondary>as a basis for Chinese characters in Lojban lerfu words</secondary></indexterm>  <indexterm type="general-imported"><primary>kanji</primary><secondary>representing based on romaji spelling</secondary></indexterm>  <indexterm type="general-imported"><primary>Chinese characters</primary><secondary>representing based on pinyin spelling</secondary></indexterm> First, both Chinese and Japanese have standard Latin-alphabet representations, known as 
     <quote>pinyin</quote> for Chinese and 
@@ -648,18 +700,21 @@
       <interlinear-gloss>
         <jbo>.y'y.bu .abu ny. vo zy. .ibu vo</jbo>
         <en>
-        <quote>h</quote>
-        <quote>a</quote>
-        <quote>n</quote> 4 
-        <jbophrase>z</jbophrase>
-        <jbophrase>i</jbophrase> 4</en>
+          <quote>h</quote>
+          <quote>a</quote>
+          <quote>n</quote>
+          <superscript>4</superscript>
+          <quote>z</quote>
+          <quote>i</quote>
+          <superscript>4</superscript>
+        </en>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>han^{4}zi^{4}</primary></indexterm>  <indexterm type="general-imported"><primary>lerfu words with numeric digits</primary><secondary>grammar considerations</secondary></indexterm>  <indexterm type="general-imported"><primary>numeric digits in lerfu words</primary><secondary>grammar considerations</secondary></indexterm> The cmavo 
     <jbophrase>vo</jbophrase> is the Lojban digit 
     <quote>4</quote>. It is grammatical to intersperse digits (of selma'o PA) into a string of lerfu words; as long as the first cmavo is a lerfu word, the whole will be interpreted as a string of lerfu words. In Chinese, the digits can be used to represent tones. Pinyin is more usually written using accent marks, the mechanism for which was explained in 
     
-    <xref linkend="cll_chapter17-section6"/>.</para>
+    <xref linkend="section-accents"/>.</para>
     <para>The Japanese company named 
     <quote>Mitsubishi</quote> in English is spelled the same way in romaji, and could be spelled out in Lojban thus:</para>
     
@@ -672,15 +727,15 @@
         <jbo>my. .ibu ty. sy. .ubu by. .ibu sy. .y'y.bu .ibu</jbo>
         <en>
           <quote>m</quote>
-          <jbophrase>i</jbophrase>
+          <quote>i</quote>
           <quote>t</quote>
           <quote>s</quote>
           <quote>u</quote>
           <quote>b</quote>
-          <jbophrase>i</jbophrase>
+          <quote>i</quote>
           <quote>s</quote>
           <quote>h</quote>
-          <jbophrase>i</jbophrase>
+          <quote>i</quote>
         </en>
       </interlinear-gloss>
     </example>
@@ -688,10 +743,10 @@
     
     
     
-    <quote>tei</quote>, the stroke lerfu words in the order of writing (which is standardized for each character), and a 
-    <quote>foi</quote>. No one has as yet attempted this project.</para>
+    <jbophrase>tei</jbophrase>, the stroke lerfu words in the order of writing (which is standardized for each character), and a 
+    <jbophrase>foi</jbophrase>. No one has as yet attempted this project.</para>
   </section>
-  <section xml:id="cll_chapter17-section9">
+  <section xml:id="section-lerfu-pro-sumti">
     <title>lerfu words as pro-sumti</title>
     <para> <indexterm type="general-imported"><primary>lerfu string</primary><secondary>definition</secondary></indexterm> So far, lerfu words have only appeared in Lojban text when spelling out words. There are several other grammatical uses of lerfu words within Lojban. In each case, a single lerfu word or more than one may be used. Therefore, the term 
     
@@ -700,7 +755,7 @@
     <para> <indexterm type="general-imported"><primary>lerfu string</primary><secondary>as pro-sumti</secondary></indexterm> A lerfu string may be used as a pro-sumti (a sumti which refers to some previous sumti), just like the pro-sumti 
     <jbophrase>ko'a</jbophrase>, 
     <jbophrase>ko'e</jbophrase>, and so on:</para>
-<para> <indexterm type="example-imported"><primary>A loves B</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="example-imported"><primary>A loves B</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2wo8">
       <title>
         <anchor xml:id="c17e9d1"/>
@@ -716,7 +771,7 @@
     <jbophrase>.abu</jbophrase> and 
     <jbophrase>by.</jbophrase> represent specific sumti, but which sumti they represent must be inferred from context.</para>
     <para> <indexterm type="lojban-word-imported"><primary>goi</primary></indexterm>  <indexterm type="general-imported"><primary>lerfu string</primary><secondary>as pro-sumti assigned by goi</secondary></indexterm> Alternatively, lerfu strings may be assigned by 
-    <quote>goi</quote>, the regular pro-sumti assignment cmavo:</para>
+    <jbophrase>goi</jbophrase>, the regular pro-sumti assignment cmavo:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-i7Ny">
       <title>
@@ -742,24 +797,23 @@
     <quote>D</quote> for 
     <quote>dog</quote> instead.)</para>
     <para>Here is an example using two names and longer lerfu strings:</para>
-<para> <indexterm type="example-imported"><primary>Alexander Pavlovitch Kuznetsov</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Steven Mark Jones</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="example-imported"><primary>Alexander Pavlovitch Kuznetsov</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>Steven Mark Jones</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-uAAF">
       <title>
         <anchor xml:id="c17e9d4"/>
       </title>
       <interlinear-gloss>
-        <jbo>la stivn. mark. djonz. merko .i la .aleksandr. paliitc. kuzNIETsyf. rusko</jbo>
-        <gloss>.i symyjy. tavla .abupyky. bau la lojban.</gloss>
+        <jbo>la stivn. mark. djonz. merko .i la .aleksandr. paliitc. kuzNIETsyf. rusko .i symyjy. tavla .abupyky. bau la lojban.</jbo>
         <gloss>Steven Mark Jones is-American. Alexander Pavlovitch Kuznetsov is-Russian.</gloss>
         
         
-        <en>SMJ talks-to APK in Lojban.</en>
+        <gloss>SMJ talks-to APK in Lojban.</gloss>
       </interlinear-gloss>
     </example>
     <para>Perhaps Alexander's name should be given as 
     <jbophrase>ru'o.abupyky</jbophrase> instead.</para>
     <para> <indexterm type="general-imported"><primary>lerfu strings</primary><secondary>as pro-sumti</secondary><tertiary>for multiple sumti separated by boi</tertiary></indexterm> What about</para>
-<para> <indexterm type="example-imported"><primary>A gives BC</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="example-imported"><primary>A gives BC</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-gJFz">
       <title>
         <anchor xml:id="c17e9d5"/>
@@ -773,8 +827,8 @@
     
     <jbophrase>by. cy.</jbophrase> is a single lerfu string, although written as two words, and represents a single pro-sumti. The true interpretation is that A gives BC to someone unspecified. To solve this problem, we need to introduce the elidable terminator 
     
-    <quote>boi</quote> (of selma'o BOI). This cmavo is used to terminate lerfu strings and also strings of numerals; it is required when two of these appear in a row, as here. (The other reason to use 
-    <quote>boi</quote> is to attach a free modifier - subscript, parenthesis, or what have you - to a lerfu string.) The correct version is:</para>
+    <jbophrase>boi</jbophrase> (of selma'o BOI). This cmavo is used to terminate lerfu strings and also strings of numerals; it is required when two of these appear in a row, as here. (The other reason to use 
+    <jbophrase>boi</jbophrase> is to attach a free modifier – subscript, parenthesis, or what have you – to a lerfu string.) The correct version is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Hdwz">
       <title>
         <anchor xml:id="c17e9d6"/>
@@ -786,7 +840,7 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>A gives B to C</primary><secondary>example</secondary></indexterm> where the two occurrences of 
-    <quote>boi</quote> in brackets are elidable, but the remaining occurrence is not. Likewise:</para>
+    <jbophrase>boi</jbophrase> in brackets are elidable, but the remaining occurrence is not. Likewise:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-L9op">
       <title>
         <anchor xml:id="c17e9d7"/>
@@ -799,29 +853,29 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>pro-sumti</primary><secondary>lerfu strings</secondary><tertiary>interaction with quantifiers and boi</tertiary></indexterm>  <indexterm type="general-imported"><primary>boi</primary><secondary>required between pro-sumti lerfu string and quantifier</secondary></indexterm> requires the first 
-    <quote>boi</quote> to separate the lerfu string 
+    <jbophrase>boi</jbophrase> to separate the lerfu string 
     <jbophrase>xy.</jbophrase> from the digit string 
     
     <jbophrase>ro</jbophrase>.</para>
   </section>
-  <section xml:id="cll_chapter17-section10">
+  <section xml:id="section-meho">
     <title>References to lerfu</title>
     <para> <indexterm type="general-imported"><primary>pro-sumti</primary><secondary>lerfu string</secondary><tertiary>effect on reference to lerfu itself</tertiary></indexterm>  <indexterm type="general-imported"><primary>lerfu</primary><secondary>reference to</secondary></indexterm> The rules of 
-    <xref linkend="cll_chapter17-section9"/> make it impossible to use unmarked lerfu words to refer to lerfu themselves. In the sentence:</para>
+    <xref linkend="section-lerfu-pro-sumti"/> make it impossible to use unmarked lerfu words to refer to lerfu themselves. In the sentence:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-CYny">
       <title>
         <anchor xml:id="c17e10d1"/>
       </title>
       <interlinear-gloss>
         <jbo>.abu. cu lerfu</jbo>
-        <en>A is-a-letteral.</en>
+        <gloss>A is-a-letteral.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>LI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>me'o</primary></indexterm>  <indexterm type="general-imported"><primary>lerfu</primary><secondary>referring to with me'o</secondary></indexterm> the hearer would try to find what previous sumti 
     <jbophrase>.abu</jbophrase> refers to. The solution to this problem makes use of the cmavo 
-    <quote>me'o</quote> of selma'o LI, which makes a lerfu string into a sumti representing that very string of lerfu. This use of 
-    <quote>me'o</quote> is a special case of its mathematical use, which is to introduce a mathematical expression used literally rather than for its value.</para>
-<para> <indexterm type="example-imported"><primary>&quot;a&quot; is letteral</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
+    <jbophrase>me'o</jbophrase> of selma'o LI, which makes a lerfu string into a sumti representing that very string of lerfu. This use of 
+    <jbophrase>me'o</jbophrase> is a special case of its mathematical use, which is to introduce a mathematical expression used literally rather than for its value.</para>
+    <para> <indexterm type="example-imported"><primary>&quot;a&quot; is letteral</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Yy32">
       <title>
         <anchor xml:id="c17e10d2"/>
@@ -834,50 +888,45 @@
     </example>
     <para>Now we can translate 
     <xref linkend="example-random-id-tvHm"/> into Lojban:</para>
-<para> <indexterm type="example-imported"><primary>four &quot;e&quot;s</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="example-imported"><primary>four &quot;e&quot;s</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-UT1J">
       <title>
         <anchor xml:id="c17e10d3"/>
       </title>
       <interlinear-gloss>
-        <jbo>dei vasru vo lerfu</jbo>
-        <gloss>po'u me'o .ebu</gloss>
-        <gloss>this-sentence contains four letterals</gloss>
-        <gloss>which-are the-expression 
-        <jbophrase>e</jbophrase>.</gloss>
+        <jbo>dei vasru vo lerfu po'u me'o .ebu</jbo>
+        <gloss>this-sentence contains four letterals which-are the-expression <quote>e</quote>.</gloss>
         <en>This sentence contains four 
-        <jbophrase>e</jbophrase> s.</en>
+        <quote>e</quote> s.</en>
       </interlinear-gloss>
     </example>
     <para>Since the Lojban sentence has only four 
-    <jbophrase>e</jbophrase> lerfu rather than fourteen, the translation is not a literal one - but 
+    <jbophrase role="letteral">e</jbophrase> lerfu rather than fourteen, the translation is not a literal one – but 
     <xref linkend="example-random-id-pbDf"/> is a Lojban truth just as 
     <xref linkend="example-random-id-tvHm"/> is an English truth. Coincidentally, the colloquial English translation of 
     <xref linkend="example-random-id-pbDf"/> is also true!</para>
     <para> <indexterm type="lojban-word-imported"><primary>la'e</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>lu</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>me'o</primary></indexterm>  <indexterm type="general-imported"><primary>la'e lu</primary><secondary>compared with me'o</secondary></indexterm>  <indexterm type="general-imported"><primary>me'o</primary><secondary>compared with la'e lu</secondary></indexterm>  <indexterm type="general-imported"><primary>representing lerfu</primary><secondary>lu contrasted with me'o</secondary></indexterm>  <indexterm type="general-imported"><primary>lu</primary><secondary>contrasted with me'o for representing lerfu</secondary></indexterm>  <indexterm type="general-imported"><primary>me'o</primary><secondary>contrasted with lu…li'u for representing lerfu</secondary></indexterm>  <indexterm type="general-imported"><primary>me'o</primary><secondary>contrasted with quotation for representing lerfu</secondary></indexterm>  <indexterm type="general-imported"><primary>quotation</primary><secondary>contrasted with me'o for representing lerfu</secondary></indexterm> The reader might be tempted to use quotation with 
-    <quote>lu ... li'u</quote> instead of 
-    <quote>me'o</quote>, producing:</para>
+    <jbophrase>lu ... li'u</jbophrase> instead of 
+    <jbophrase>me'o</jbophrase>, producing:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-pbDf">
       <title>
         <anchor xml:id="c17e10d4"/>
       </title>
       <interlinear-gloss>
         <jbo>lu .abu li'u cu lerfu</jbo>
-        <en>[quote] .abu [unquote] is-a-letteral.</en>
+        <gloss>[quote] .abu [unquote] is-a-letteral.</gloss>
       </interlinear-gloss>
     </example>
     <para>(The single-word quote 
-    <quote>zo</quote> cannot be used, because 
+    <jbophrase>zo</jbophrase> cannot be used, because 
     <jbophrase>.abu</jbophrase> is a compound cmavo.) But 
     <xref linkend="example-random-id-pbDf"/> is false, because it says:</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-P8Ag">
+    <example xml:id="example-random-id-P8Ag">
       <title>
         <anchor xml:id="c17e10d5"/>
       </title>
-      <interlinear-gloss>
-        <jbo>The word 
-        <jbophrase>.abu</jbophrase> is a letteral</jbo>
-      </interlinear-gloss>
+      <para>The word 
+      <jbophrase>.abu</jbophrase> is a letteral</para>
     </example>
     <para> <indexterm type="example-imported"><primary>word &quot;abu&quot;</primary><secondary>example</secondary></indexterm> which is not the case; rather, the thing symbolized by the word 
     <jbophrase>.abu</jbophrase> is a letteral. In Lojban, that would be:</para>
@@ -888,12 +937,12 @@
       <interlinear-gloss>
         <jbo>la'e lu .abu li'u cu lerfu</jbo>
         
-        <en>The-referent-of [quote] .abu [unquote] is-a-letteral.</en>
+        <gloss>The-referent-of [quote] .abu [unquote] is-a-letteral.</gloss>
       </interlinear-gloss>
     </example>
     <para>which is correct.</para>
   </section>
-  <section xml:id="cll_chapter17-section11">
+  <section xml:id="section-math">
     <title>Mathematical uses of lerfu strings</title>
     <para> <indexterm type="general-imported"><primary>lerfu strings</primary><secondary>uses in mathematics</secondary></indexterm>  <indexterm type="general-imported"><primary>mathematics</primary><secondary>use of lerfu strings in</secondary></indexterm> This chapter is not about Lojban mathematics, which is explained in 
     <xref linkend="chapter-mekso"/>, so the mathematical uses of lerfu strings will be listed and exemplified but not explained.</para>
@@ -916,10 +965,10 @@
       <listitem>
         <para> <indexterm type="general-imported"><primary>function name</primary><secondary>lerfu string as</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu string</primary><secondary>as function name</secondary></indexterm> A lerfu string as function name (preceded by 
         
-        <quote>ma'o</quote> of selma'o MAhO):</para>
+        <jbophrase>ma'o</jbophrase> of selma'o MAhO):</para>
       </listitem>
     </itemizedlist>
-<para> <indexterm type="example-imported"><primary>function f of x</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
+    <para> <indexterm type="example-imported"><primary>function f of x</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-H0SM">
       <title>
         <anchor xml:id="c17e11d2"/>
@@ -928,11 +977,11 @@
         <jbo>li .y.bu du li ma'o fy. boi xy.</jbo>
         <gloss>the-number y equals the number the-function f of x</gloss>
         
-        <en>y = f(x)</en>
+        <math>y = f(x)</math>
       </interlinear-gloss>
     </example>
     <para>Note the 
-    <quote>boi</quote> here to separate the lerfu strings 
+    <jbophrase>boi</jbophrase> here to separate the lerfu strings 
     <jbophrase>fy</jbophrase> and 
     <jbophrase>xy</jbophrase>.</para>
     <itemizedlist>
@@ -970,7 +1019,7 @@
     <itemizedlist>
       <listitem>
         <para> <indexterm type="example-imported"><primary>Nthly</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>subscripts</primary><secondary>lerfu string as</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu string</primary><secondary>as subscript</secondary></indexterm> A lerfu string as subscript (preceded by 
-        <quote>xi</quote> of selma'o XI):</para>
+        <jbophrase>xi</jbophrase> of selma'o XI):</para>
       </listitem>
     </itemizedlist>
     <example role="interlinear-gloss-example" xml:id="example-random-id-oTgS">
@@ -979,13 +1028,13 @@
       </title>
       <interlinear-gloss>
         <jbo>xy. xi ky.</jbo>
-        <en>x sub k</en>
+        <gloss>x sub k</gloss>
       </interlinear-gloss>
     </example>
     <itemizedlist>
       <listitem>
         <para> <indexterm type="example-imported"><primary>x sub k</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>quantifier</primary><secondary>lerfu string as</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu string</primary><secondary>as quantifier</secondary></indexterm> A lerfu string as quantifier (enclosed in 
-        <quote>vei ... ve'o</quote> parentheses):</para>
+        <jbophrase>vei ... ve'o</jbophrase> parentheses):</para>
       </listitem>
     </itemizedlist>
     <example role="interlinear-gloss-example" xml:id="example-random-id-bbnL">
@@ -994,29 +1043,29 @@
       </title>
       <interlinear-gloss>
         <jbo>vei ny. [ve'o] lo prenu</jbo>
-        <en>( 
-        <quote>n</quote>) persons</en>
+        <gloss>( 
+        <quote>n</quote>) persons</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>vei</primary></indexterm>  <indexterm type="example-imported"><primary>n people</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu strings</primary><secondary>as quantifiers</secondary><tertiary>avoiding interaction with sumti quantified</tertiary></indexterm> The parentheses are required because 
     <jbophrase>ny. lo prenu</jbophrase> would be two separate sumti, 
     <jbophrase>ny.</jbophrase> and 
     <jbophrase>lo prenu</jbophrase>. In general, any mathematical expression other than a simple number must be in parentheses when used as a quantifier; the right parenthesis mark, the cmavo 
-    <quote>ve'o</quote>, can usually be elided.</para>
+    <jbophrase>ve'o</jbophrase>, can usually be elided.</para>
     <para> <indexterm type="general-imported"><primary>lerfu juxtaposition interpretation</primary><secondary>contrasted with mathematical interpretation</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu string</primary><secondary>interpretation</secondary><tertiary>contrasted with mathematical interpretation</tertiary></indexterm> All the examples above have exhibited single lerfu words rather than lerfu strings, in accordance with the conventions of ordinary mathematics. A longer lerfu string would still be treated as a single variable or function name: in Lojban, 
     
     <jbophrase>.abu by. cy.</jbophrase> is not the multiplication 
     
-    <quote>a × b × c</quote> but is the variable 
-    <quote>abc</quote>. (Of course, a local convention could be employed that made the value of a variable like 
-    <quote>abc</quote>, with a multi-lerfu-word name, equal to the values of the variables 
-    <quote>a</quote>, 
-    <quote>b</quote>, and 
-    <quote>c</quote> multiplied together.)</para>
+    <quote><inlineequation><mathphrase>a × b × c</mathphrase></inlineequation></quote> but is the variable 
+    <varname>abc</varname>. (Of course, a local convention could be employed that made the value of a variable like 
+    <varname>abc</varname>, with a multi-lerfu-word name, equal to the values of the variables 
+    <varname>a</varname>, 
+    <varname>b</varname>, and 
+    <varname>c</varname> multiplied together.)</para>
     <para> <indexterm type="general-imported"><primary>lerfu shift scope</primary><secondary>exception for mathematical texts</secondary></indexterm>  <indexterm type="general-imported"><primary>mathematical texts</primary><secondary>effect on lerfu shift scope</secondary></indexterm> There is a special rule about shift words in mathematical text: shifts within mathematical expressions do not affect lerfu words appearing outside mathematical expressions, and vice versa.</para>
     
   </section>
-  <section xml:id="cll_chapter17-section12">
+  <section xml:id="section-acronyms">
     <title>Acronyms</title>
     <para> <indexterm type="general-imported"><primary>acronym</primary><secondary>definition</secondary></indexterm> An acronym is a name constructed of lerfu. English examples are 
     
@@ -1039,22 +1088,14 @@
     <quote>sequel</quote>.</para>
     <para> <indexterm type="general-imported"><primary>lerfu words</primary><secondary>as a basis for acronym names</secondary></indexterm>  <indexterm type="general-imported"><primary>acronyms</primary><secondary>using names based on lerfu words</secondary></indexterm> In Lojban, a name can be almost any sequence of sounds that ends in a consonant and is followed by a pause. The easiest way to Lojbanize acronym names is to glue the lerfu words together, using 
     
-    <quote>'</quote> wherever two vowels would come together (pauses are illegal in names) and adding a final consonant:</para>
+    <jbophrase role="letteral">'</jbophrase> wherever two vowels would come together (pauses are illegal in names) and adding a final consonant:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-736i">
       <title>
         <anchor xml:id="c17e12d1"/>
       </title>
       <interlinear-gloss>
-        <jbo>la dyny'abub. .i la ny'abuty'obub.</jbo>
-        <gloss>.i la cy'ibu'abub. .i la sykybulyl.</gloss>
-        <gloss>.i la .ibubymym. .i la ny'ybucyc.</gloss>
-        <gloss>DNA. NATO.</gloss>
-        
-        
-        <gloss>CIA. SQL.</gloss>
-        
-        
-        <en>IBM. NYC.</en>
+        <jbo>la dyny'abub. .i la ny'abuty'obub. .i la cy'ibu'abub. .i la sykybulyl. .i la .ibubymym. .i la ny'ybucyc.</jbo>
+        <en>DNA. NATO. CIA. SQL. IBM. NYC.</en>
         
         
       </interlinear-gloss>
@@ -1062,58 +1103,42 @@
     <para> <indexterm type="example-imported"><primary>NYC</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>SQL</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>NATO</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>IBM</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>CIA</primary><secondary>example</secondary></indexterm>  <indexterm type="example-imported"><primary>DNA</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>acronym names from lerfu words</primary><secondary>assigning final consonant</secondary></indexterm> There is no fixed convention for assigning the final consonant. In 
     <xref linkend="example-random-id-736i"/>, the last consonant of the lerfu string has been replicated into final position.</para>
     <para> <indexterm type="general-imported"><primary>bu</primary><secondary>omitting in acronyms names based on lerfu words</secondary></indexterm>  <indexterm type="general-imported"><primary>acronyms names based on lerfu words</primary><secondary>omitting bu</secondary></indexterm> Some compression can be done by leaving out 
-    <quote>bu</quote> after vowel lerfu words (except for 
+    <jbophrase>bu</jbophrase> after vowel lerfu words (except for 
     <jbophrase>.y.bu</jbophrase>, wherein the 
-    <quote>bu</quote> cannot be omitted without ambiguity). Compression is moderately important because it's hard to say long names without introducing an involuntary (and illegal) pause:</para>
+    <jbophrase>bu</jbophrase> cannot be omitted without ambiguity). Compression is moderately important because it's hard to say long names without introducing an involuntary (and illegal) pause:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-0sin">
       <title>
         <anchor xml:id="c17e12d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>la dyny'am. .i la ny'aty'om.</jbo>
-        <gloss>.i la cy'i'am. .i la sykybulym.</gloss>
-        <gloss>.i la .ibymym. .i la ny'ybucym.</gloss>
-        <gloss>DNA. NATO.</gloss>
-        
-        
-        <gloss>CIA. SQL.</gloss>
-        
-        
-        <en>IBM. NYC.</en>
+        <jbo>la dyny'am. .i la ny'aty'om. .i la cy'i'am. .i la sykybulym. .i la .ibymym. .i la ny'ybucym.</jbo>
+        <en>DNA. NATO. CIA. SQL. IBM. NYC.</en>
         
         
       </interlinear-gloss>
     </example>
     <para>In 
     <xref linkend="example-random-id-0sin"/>, the final consonant 
-    <quote>m</quote> stands for 
+    <jbophrase role="letteral">m</jbophrase> stands for 
     <jbophrase>merko</jbophrase>, indicating the source culture of these acronyms.</para>
     
     <para> <indexterm type="general-imported"><primary>&quot;z&quot; instead of &quot;'&quot;</primary><secondary>in acronyms names based on lerfu words</secondary></indexterm>  <indexterm type="general-imported"><primary>acronyms names based on lerfu words</primary><secondary>using &quot;z&quot; instead of &quot;'&quot; in</secondary></indexterm> Another approach, which some may find easier to say and which is compatible with older versions of the language that did not have a 
-    <quote>'</quote> character, is to use the consonant 
-    <jbophrase>z</jbophrase> instead of 
-    <quote>'</quote>:</para>
+    <jbophrase role="letteral">'</jbophrase> character, is to use the consonant 
+    <jbophrase role="letteral">z</jbophrase> instead of 
+    <jbophrase role="letteral">'</jbophrase>:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Js6m">
       <title>
         <anchor xml:id="c17e12d3"/>
       </title>
       <interlinear-gloss>
-        <jbo>la dynyzaz. .i la nyzatyzoz.</jbo>
-        <gloss>.i la cyzizaz. .i la sykybulyz.</gloss>
-        <gloss>.i la .ibymyz. .i la nyzybucyz.</gloss>
-        <gloss>DNA. NATO.</gloss>
-        
-        
-        <gloss>CIA. SQL.</gloss>
-        
-        
-        <en>IBM. NYC.</en>
+        <jbo>la dynyzaz. .i la nyzatyzoz. .i la cyzizaz. .i la sykybulyz. .i la .ibymyz. .i la nyzybucyz.</jbo>
+        <en>DNA. NATO. CIA. SQL. IBM. NYC.</en>
         
         
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>me</primary></indexterm>  <indexterm type="general-imported"><primary>acronyms</primary><secondary>as lerfu strings using &quot;me&quot;</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu strings</primary><secondary>as acronyms using &quot;me&quot;</secondary></indexterm> One more alternative to these lengthy names is to use the lerfu string itself prefixed with 
-    <quote>me</quote>, the cmavo that makes sumti into selbri:</para>
+    <jbophrase>me</jbophrase>, the cmavo that makes sumti into selbri:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-iMRB">
       <title>
@@ -1128,7 +1153,7 @@
       </interlinear-gloss>
     </example>
     <para>This works because 
-    <quote>la</quote>, the cmavo that normally introduces names used as sumti, may also be used before a predicate to indicate that the predicate is a (meaningful) name:</para>
+    <jbophrase>la</jbophrase>, the cmavo that normally introduces names used as sumti, may also be used before a predicate to indicate that the predicate is a (meaningful) name:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7KLi">
       <title>
         <anchor xml:id="c17e12d5"/>
@@ -1141,14 +1166,14 @@
       </interlinear-gloss>
     </example>
     <para>
-    <xref linkend="example-random-id-7KLi"/> does not of course refer to a bear ( 
-    <jbophrase>le cribe</jbophrase> or 
-    <jbophrase>lo cribe</jbophrase>) but to something else, probably a person, named 
-    <quote>Bear</quote>. Similarly, 
+      <xref linkend="example-random-id-7KLi"/> does not of course refer to a bear ( 
+      <jbophrase>le cribe</jbophrase> or 
+      <jbophrase>lo cribe</jbophrase>) but to something else, probably a person, named 
+      <quote>Bear</quote>. Similarly, 
     <jbophrase>me dy ny. .abu</jbophrase> is a predicate which can be used as a name, producing a kind of acronym which can have pauses between the individual lerfu words.</para>
     
   </section>
-  <section xml:id="cll_chapter17-section13">
+  <section xml:id="section-character-codes">
     <title>Computerized character codes</title>
     
     <para> <indexterm type="lojban-word-imported"><primary>BY selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>se'e</primary></indexterm>  <indexterm type="general-imported"><primary>letter encoding schemes</primary><secondary>application to lerfu words</secondary></indexterm>  <indexterm type="general-imported"><primary>character encoding schemes</primary><secondary>application to lerfu words</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>using computer encoding schemes with se'e</secondary></indexterm>  <indexterm type="general-imported"><primary>characters</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>character codes</primary><secondary>definition</secondary></indexterm> Since the first application of computers to non-numerical information, character sets have existed, mapping numbers (called 
@@ -1165,12 +1190,9 @@
         <anchor xml:id="c17e13d1"/>
       </title>
       <interlinear-gloss>
-        <jbo>me'o se'ecixa cu lerfu la .asycy'i'is.</jbo>
-        <gloss>loi merko rupnu</gloss>
-        <gloss>The-expression [code] 36 is-a-letteral in-set ASCII</gloss>
-        
-        <gloss>for-the-mass-of American currency-units.</gloss>
-        <gloss>The character code 36 in ASCII represents American dollars.</gloss>
+        <jbo>me'o se'ecixa cu lerfu la .asycy'i'is. loi merko rupnu</jbo>
+        <gloss>The-expression [code] 36 is-a-letteral in-set ASCII for-the-mass-of American currency-units.</gloss>
+        <en>The character code 36 in ASCII represents American dollars.</en>
         
         
         <en>
@@ -1192,14 +1214,14 @@
       </title>
       <interlinear-gloss>
         <jbo>me'o se'erexarerei sinxa le ka panpi</jbo>
-        <en>the-expression [code] 262E is-a-sign-of the quality-of being-at-peace</en>
+        <gloss>the-expression [code] 262E is-a-sign-of the quality-of being-at-peace</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>se'e</primary><secondary>and number base convention</secondary></indexterm> When a 
     <jbophrase>se'e</jbophrase> string appears in running discourse, some metalinguistic convention must specify whether the number is base 10 or some other base, and which character set is in use.</para>
     
   </section>
-  <section xml:id="cll_chapter17-section14">
+  <section xml:id="section-lerfu-cmavo-summary">
     <title>List of all auxiliary lerfu-word cmavo</title>
     <cmavo-list>
       <cmavo-entry>
@@ -1300,173 +1322,607 @@
     </cmavo-list>
     <para> <indexterm type="general-imported"><primary>LAU selma'o</primary><secondary>grammar of following BY cmavo</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu word cmavo</primary><secondary>list of auxiliary</secondary></indexterm> Note that LAU cmavo must be followed by a BY cmavo or the equivalent, where 
     <quote>equivalent</quote> means: either any Lojban word followed by 
-    <quote>bu</quote>, another LAU cmavo (and its required sequel), or a 
-    <quote>tei ... foi</quote> compound cmavo.</para>
+    <jbophrase>bu</jbophrase>, another LAU cmavo (and its required sequel), or a 
+    <jbophrase>tei ... foi</jbophrase> compound cmavo.</para>
   </section>
-  <section xml:id="cll_chapter17-section15">
-    <title>Proposed lerfu words - introduction</title>
+  <section xml:id="section-proposed-lerfu-words">
+    <title>Proposed lerfu words – introduction</title>
     <para> <indexterm type="general-imported"><primary>lerfu words</primary><secondary>list of proposed</secondary><tertiary>notation convention</tertiary></indexterm> The following sections contain tables of proposed lerfu words for some of the standard alphabets supported by the Lojban lerfu system. The first column of each list is the lerfu (actually, a Latin-alphabet name sufficient to identify it). The second column is the proposed name-based lerfu word, and the third column is the proposed lerfu word in the system based on using the cmavo of selma'o BY with a shift word.</para>
     <para> <indexterm type="general-imported"><primary>proposed lerfu words</primary><secondary>as working basis</secondary></indexterm> These tables are not meant to be authoritative (several authorities within the Lojban community have niggled over them extensively, disagreeing with each other and sometimes with themselves). They provide a working basis until actual usage is available, rather than a final resolution of lerfu word problems. Probably the system presented here will evolve somewhat before settling down into a final, conventional form.</para>
     
     <para>For Latin-alphabet lerfu words, see 
-    <xref linkend="cll_chapter17-section2"/> (for Lojban) and 
-    <xref linkend="cll_chapter17-section5"/> (for non-Lojban Latin-alphabet lerfu).</para>
+    <xref linkend="section-lerfu-liste"/> (for Lojban) and 
+    <xref linkend="section-alien-alphabets"/> (for non-Lojban Latin-alphabet lerfu).</para>
   </section>
-  <section xml:id="cll_chapter17-section16">
+  <section xml:id="section-greek">
     <title>Proposed lerfu words for the Greek alphabet</title>
     
-    <programlisting xml:space="preserve">
-     alpha       .alfas. bu      .abu 
+    <informaltable>
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>alpha</entry>
+            <entry><jbophrase>.alfas. bu</jbophrase></entry>
+            <entry><jbophrase>.abu</jbophrase></entry>
+          </row>
 
-<!-- skip cmavo list automation -->
-     beta        .betas. bu      by
-     gamma       .gamas. bu      gy
-     delta       .deltas. bu     dy
-     epsilon     .Epsilon. bu    .ebu
-     zeta        .zetas. bu      zy
-     eta         .etas. bu       .e'ebu
-     theta       .tetas. bu      ty. bu
-     iota        .iotas. bu      .ibu
-     kappa       .kapas. bu      ky
-     lambda      .lymdas. bu     ly
-     mu          .mus. bu        my
-     nu          .nus. bu        ny
-     xi          .ksis. bu       ksis. bu
-     omicron     .Omikron. bu    .obu
-     pi          .pis. bu        py
-     rho         .ros. bu        ry
-     sigma       .sigmas. bu     sy
-     tau         .taus. bu       ty
-     upsilon     .Upsilon. bu    .ubu
-     phi         .fis. bu        py. bu
-     chi         .xis. bu        ky. bu
-     psi         .psis. bu       psis. bu
-     omega       .omegas. bu     .o'obu
-     rough       .dasei,as. bu   .y'y
-     smooth      .psiles. bu     xutla bu
-</programlisting>
+          <row>
+            <entry>beta</entry>
+            <entry><jbophrase>.betas. bu</jbophrase></entry>
+            <entry><jbophrase>by</jbophrase></entry>
+          </row>
+          <row>
+            <entry>gamma</entry>
+            <entry><jbophrase>.gamas. bu</jbophrase></entry>
+            <entry><jbophrase>gy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>delta</entry>
+            <entry><jbophrase>.deltas. bu</jbophrase></entry>
+            <entry><jbophrase>dy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>epsilon</entry>
+            <entry><jbophrase>.Epsilon. bu</jbophrase></entry>
+            <entry><jbophrase>.ebu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>zeta</entry>
+            <entry><jbophrase>.zetas. bu</jbophrase></entry>
+            <entry><jbophrase>zy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>eta</entry>
+            <entry><jbophrase>.etas. bu</jbophrase></entry>
+            <entry><jbophrase>.e'ebu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>theta</entry>
+            <entry><jbophrase>.tetas. bu</jbophrase></entry>
+            <entry><jbophrase>ty. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>iota</entry>
+            <entry><jbophrase>.iotas. bu</jbophrase></entry>
+            <entry><jbophrase>.ibu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>kappa</entry>
+            <entry><jbophrase>.kapas. bu</jbophrase></entry>
+            <entry><jbophrase>ky</jbophrase></entry>
+          </row>
+          <row>
+            <entry>lambda</entry>
+            <entry><jbophrase>.lymdas. bu</jbophrase></entry>
+            <entry><jbophrase>ly</jbophrase></entry>
+          </row>
+          <row>
+            <entry>mu</entry>
+            <entry><jbophrase>.mus. bu</jbophrase></entry>
+            <entry><jbophrase>my</jbophrase></entry>
+          </row>
+          <row>
+            <entry>nu</entry>
+            <entry><jbophrase>.nus. bu</jbophrase></entry>
+            <entry><jbophrase>ny</jbophrase></entry>
+          </row>
+          <row>
+            <entry>xi</entry>
+            <entry><jbophrase>.ksis. bu</jbophrase></entry>
+            <entry><jbophrase>ksis. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>omicron</entry>
+            <entry><jbophrase>.Omikron. bu</jbophrase></entry>
+            <entry><jbophrase>.obu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>pi</entry>
+            <entry><jbophrase>.pis. bu</jbophrase></entry>
+            <entry><jbophrase>py</jbophrase></entry>
+          </row>
+          <row>
+            <entry>rho</entry>
+            <entry><jbophrase>.ros. bu</jbophrase></entry>
+            <entry><jbophrase>ry</jbophrase></entry>
+          </row>
+          <row>
+            <entry>sigma</entry>
+            <entry><jbophrase>.sigmas. bu</jbophrase></entry>
+            <entry><jbophrase>sy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>tau</entry>
+            <entry><jbophrase>.taus. bu</jbophrase></entry>
+            <entry><jbophrase>ty</jbophrase></entry>
+          </row>
+          <row>
+            <entry>upsilon</entry>
+            <entry><jbophrase>.Upsilon. bu</jbophrase></entry>
+            <entry><jbophrase>.ubu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>phi</entry>
+            <entry><jbophrase>.fis. bu</jbophrase></entry>
+            <entry><jbophrase>py. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>chi</entry>
+            <entry><jbophrase>.xis. bu</jbophrase></entry>
+            <entry><jbophrase>ky. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>psi</entry>
+            <entry><jbophrase>.psis. bu</jbophrase></entry>
+            <entry><jbophrase>psis. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>omega</entry>
+            <entry><jbophrase>.omegas. bu</jbophrase></entry>
+            <entry><jbophrase>.o'obu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>rough</entry>
+            <entry><jbophrase>.dasei,as. bu</jbophrase></entry>
+            <entry><jbophrase>.y'y</jbophrase></entry>
+          </row>
+          <row>
+            <entry>smooth</entry>
+            <entry><jbophrase>.psiles. bu</jbophrase></entry>
+            <entry><jbophrase>xutla bu</jbophrase></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
   </section>
-  <section xml:id="cll_chapter17-section17">
+  <section xml:id="section-cyrillic">
     <title>Proposed lerfu words for the Cyrillic alphabet</title>
     
     <para> <indexterm type="general-imported"><primary>Cyrillic alphabet</primary><secondary>proposed lerfu words for</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>proposed for Cyrillic alphabet</secondary></indexterm> The second column in this listing is based on the historical names of the letters in Old Church Slavonic. Only those letters used in Russian are shown; other languages require more letters which can be devised as needed.</para>
-    <programlisting xml:space="preserve">
-     a           .azys. bu         .abu 
-<!-- skip cmavo list automation -->
-     b           .bukys. bu        by
-     v           .vedis. bu        vy
-     g           .glagolis. bu     gy
-     d           .dobros. bu       dy
-     e           .iestys. bu       .ebu
-     zh          .jivet. bu        jy
-     z           .zemlias. bu      zy
-     i           .ije,is. bu       .ibu
-     short i     .itord. bu        .itord. bu
-     k           .kakos. bu        ky
-     l           .liudi,ies. bu    ly
-     m           .myslites. bu     my
-     n           .naciys. bu       ny
-     o           .onys. bu         .obu
-     p           .pokois. bu       py
-     r           .riytsis. bu      ry
-     s           .slovos. bu       sy
-     t           .tyvriydos. bu    ty
-     u           .ukys. bu         .ubu
-     f           .friytys. bu      fy
-     kh          .xerys. bu        xy
-     ts          .tsis. bu         tsys. bu
-     ch          .tcriyviys. bu    tcys. bu
-     sh          .cas. bu          cy
-     shch        .ctas. bu         ctcys. bu
-     hard sign   .ier. bu          jdari bu
-     yeri        .ierys. bu        .y.bu
-     soft sign   .ieriys. bu       ranti bu
-     reversed e  .ecarn. bu        .ecarn. bu
-     yu          .ius. bu          .iubu
-     ya          .ias. bu          .iabu
-</programlisting>
+    <informaltable>
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>a</entry>
+            <entry><jbophrase>.azys. bu</jbophrase></entry>
+            <entry><jbophrase>.abu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>b</entry>
+            <entry><jbophrase>.bukys. bu</jbophrase></entry>
+            <entry><jbophrase>by</jbophrase></entry>
+          </row>
+          <row>
+            <entry>v</entry>
+            <entry><jbophrase>.vedis. bu</jbophrase></entry>
+            <entry><jbophrase>vy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>g</entry>
+            <entry><jbophrase>.glagolis. bu</jbophrase></entry>
+            <entry><jbophrase>gy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>d</entry>
+            <entry><jbophrase>.dobros. bu</jbophrase></entry>
+            <entry><jbophrase>dy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>e</entry>
+            <entry><jbophrase>.iestys. bu</jbophrase></entry>
+            <entry><jbophrase>.ebu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>zh</entry>
+            <entry><jbophrase>.jivet. bu</jbophrase></entry>
+            <entry><jbophrase>jy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>z</entry>
+            <entry><jbophrase>.zemlias. bu</jbophrase></entry>
+            <entry><jbophrase>zy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>i</entry>
+            <entry><jbophrase>.ije,is. bu</jbophrase></entry>
+            <entry><jbophrase>.ibu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>short i</entry>
+            <entry><jbophrase>.itord. bu</jbophrase></entry>
+            <entry><jbophrase>.itord. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>k</entry>
+            <entry><jbophrase>.kakos. bu</jbophrase></entry>
+            <entry><jbophrase>ky</jbophrase></entry>
+          </row>
+          <row>
+            <entry>l</entry>
+            <entry><jbophrase>.liudi,ies. bu</jbophrase></entry>
+            <entry><jbophrase>ly</jbophrase></entry>
+          </row>
+          <row>
+            <entry>m</entry>
+            <entry><jbophrase>.myslites. bu</jbophrase></entry>
+            <entry><jbophrase>my</jbophrase></entry>
+          </row>
+          <row>
+            <entry>n</entry>
+            <entry><jbophrase>.naciys. bu</jbophrase></entry>
+            <entry><jbophrase>ny</jbophrase></entry>
+          </row>
+          <row>
+            <entry>o</entry>
+            <entry><jbophrase>.onys. bu</jbophrase></entry>
+            <entry><jbophrase>.obu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>p</entry>
+            <entry><jbophrase>.pokois. bu</jbophrase></entry>
+            <entry><jbophrase>py</jbophrase></entry>
+          </row>
+          <row>
+            <entry>r</entry>
+            <entry><jbophrase>.riytsis. bu</jbophrase></entry>
+            <entry><jbophrase>ry</jbophrase></entry>
+          </row>
+          <row>
+            <entry>s</entry>
+            <entry><jbophrase>.slovos. bu</jbophrase></entry>
+            <entry><jbophrase>sy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>t</entry>
+            <entry><jbophrase>.tyvriydos. bu</jbophrase></entry>
+            <entry><jbophrase>ty</jbophrase></entry>
+          </row>
+          <row>
+            <entry>u</entry>
+            <entry><jbophrase>.ukys. bu</jbophrase></entry>
+            <entry><jbophrase>.ubu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>f</entry>
+            <entry><jbophrase>.friytys. bu</jbophrase></entry>
+            <entry><jbophrase>fy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>kh</entry>
+            <entry><jbophrase>.xerys. bu</jbophrase></entry>
+            <entry><jbophrase>xy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>ts</entry>
+            <entry><jbophrase>.tsis. bu</jbophrase></entry>
+            <entry><jbophrase>tsys. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>ch</entry>
+            <entry><jbophrase>.tcriyviys. bu</jbophrase></entry>
+            <entry><jbophrase>tcys. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>sh</entry>
+            <entry><jbophrase>.cas. bu</jbophrase></entry>
+            <entry><jbophrase>cy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>shch</entry>
+            <entry><jbophrase>.ctas. bu</jbophrase></entry>
+            <entry><jbophrase>ctcys. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>hard sign</entry>
+            <entry><jbophrase>.ier. bu</jbophrase></entry>
+            <entry><jbophrase>jdari bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>yeri</entry>
+            <entry><jbophrase>.ierys. bu</jbophrase></entry>
+            <entry><jbophrase>.y.bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>soft sign</entry>
+            <entry><jbophrase>.ieriys. bu</jbophrase></entry>
+            <entry><jbophrase>ranti bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>reversed e</entry>
+            <entry><jbophrase>.ecarn. bu</jbophrase></entry>
+            <entry><jbophrase>.ecarn. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>yu</entry>
+            <entry><jbophrase>.ius. bu</jbophrase></entry>
+            <entry><jbophrase>.iubu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>ya</entry>
+            <entry><jbophrase>.ias. bu</jbophrase></entry>
+            <entry><jbophrase>.iabu</jbophrase></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
   </section>
-  <section xml:id="cll_chapter17-section18">
+  <section xml:id="section-hebrew">
     <title>Proposed lerfu words for the Hebrew alphabet</title>
     
-    <programlisting xml:space="preserve">
-     aleph       .alef. bu       .alef. bu 
-<!-- skip cmavo list automation -->
-     bet         .bet. bu        by
-     gimel       .gimel. bu      gy
-     daled       .daled. bu      dy
-     he          .xex. bu        .y'y
-     vav         .vav. bu        vy
-     zayin       .zai,in. bu     zy
+    <informaltable>
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>aleph</entry>
+            <entry><jbophrase>.alef. bu</jbophrase></entry>
+            <entry><jbophrase>.alef. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>bet</entry>
+            <entry><jbophrase>.bet. bu</jbophrase></entry>
+            <entry><jbophrase>by</jbophrase></entry>
+          </row>
+          <row>
+            <entry>gimel</entry>
+            <entry><jbophrase>.gimel. bu</jbophrase></entry>
+            <entry><jbophrase>gy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>daled</entry>
+            <entry><jbophrase>.daled. bu</jbophrase></entry>
+            <entry><jbophrase>dy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>he</entry>
+            <entry><jbophrase>.xex. bu</jbophrase></entry>
+            <entry><jbophrase>.y'y</jbophrase></entry>
+          </row>
+          <row>
+            <entry>vav</entry>
+            <entry><jbophrase>.vav. bu</jbophrase></entry>
+            <entry><jbophrase>vy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>zayin</entry>
+            <entry><jbophrase>.zai,in. bu</jbophrase></entry>
+            <entry><jbophrase>zy</jbophrase></entry>
+          </row>
 
-     khet        .xet. bu        xy. bu
-     tet         .tet. bu        ty. bu
-     yud         .iud. bu        .iud. bu
-     kaf         .kaf. bu        ky
-     lamed       .LYmed. bu      ly
-     mem         .mem. bu        my
-     nun         .nun. bu        ny
-     samekh      .samex. bu      samex. bu
-     ayin        .ai,in. bu      .ai,in bu
-     pe          .pex. bu        py
-     tzadi       .tsadik. bu     tsadik. bu
-     quf         .kuf. bu        ky. bu
-     resh        .rec. bu        ry
-     shin        .cin. bu        cy
-     sin         .sin. bu        sy
-     taf         .taf. bu        ty.
-     dagesh      .daGEC. bu      daGEC. bu
-     hiriq       .xirik. bu      .ibu
-     tzeirekh    .tseirex. bu    .eibu
-     segol       .seGOL. bu      .ebu
-     qubbutz     .kubuts. bu     .ubu
-     qamatz      .kamats. bu     .abu
-     patach      .patax. bu      .a'abu
-     sheva       .cyVAS. bu      .y.bu
-     kholem      .xolem. bu      .obu
-     shuruq      .curuk. bu      .u'ubu
-</programlisting>
+          <row>
+            <entry>khet</entry>
+            <entry><jbophrase>.xet. bu</jbophrase></entry>
+            <entry><jbophrase>xy. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>tet</entry>
+            <entry><jbophrase>.tet. bu</jbophrase></entry>
+            <entry><jbophrase>ty. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>yud</entry>
+            <entry><jbophrase>.iud. bu</jbophrase></entry>
+            <entry><jbophrase>.iud. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>kaf</entry>
+            <entry><jbophrase>.kaf. bu</jbophrase></entry>
+            <entry><jbophrase>ky</jbophrase></entry>
+          </row>
+          <row>
+            <entry>lamed</entry>
+            <entry><jbophrase>.LYmed. bu</jbophrase></entry>
+            <entry><jbophrase>ly</jbophrase></entry>
+          </row>
+          <row>
+            <entry>mem</entry>
+            <entry><jbophrase>.mem. bu</jbophrase></entry>
+            <entry><jbophrase>my</jbophrase></entry>
+          </row>
+          <row>
+            <entry>nun</entry>
+            <entry><jbophrase>.nun. bu</jbophrase></entry>
+            <entry><jbophrase>ny</jbophrase></entry>
+          </row>
+          <row>
+            <entry>samekh</entry>
+            <entry><jbophrase>.samex. bu</jbophrase></entry>
+            <entry><jbophrase>samex. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>ayin</entry>
+            <entry><jbophrase>.ai,in. bu</jbophrase></entry>
+            <entry><jbophrase>.ai,in bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>pe</entry>
+            <entry><jbophrase>.pex. bu</jbophrase></entry>
+            <entry><jbophrase>py</jbophrase></entry>
+          </row>
+          <row>
+            <entry>tzadi</entry>
+            <entry><jbophrase>.tsadik. bu</jbophrase></entry>
+            <entry><jbophrase>tsadik. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>quf</entry>
+            <entry><jbophrase>.kuf. bu</jbophrase></entry>
+            <entry><jbophrase>ky. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>resh</entry>
+            <entry><jbophrase>.rec. bu</jbophrase></entry>
+            <entry><jbophrase>ry</jbophrase></entry>
+          </row>
+          <row>
+            <entry>shin</entry>
+            <entry><jbophrase>.cin. bu</jbophrase></entry>
+            <entry><jbophrase>cy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>sin</entry>
+            <entry><jbophrase>.sin. bu</jbophrase></entry>
+            <entry><jbophrase>sy</jbophrase></entry>
+          </row>
+          <row>
+            <entry>taf</entry>
+            <entry><jbophrase>.taf. bu</jbophrase></entry>
+            <entry><jbophrase>ty.</jbophrase></entry>
+          </row>
+          <row>
+            <entry>dagesh</entry>
+            <entry><jbophrase>.daGEC. bu</jbophrase></entry>
+            <entry><jbophrase>daGEC. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>hiriq</entry>
+            <entry><jbophrase>.xirik. bu</jbophrase></entry>
+            <entry><jbophrase>.ibu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>tzeirekh</entry>
+            <entry><jbophrase>.tseirex. bu</jbophrase></entry>
+            <entry><jbophrase>.eibu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>segol</entry>
+            <entry><jbophrase>.seGOL. bu</jbophrase></entry>
+            <entry><jbophrase>.ebu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>qubbutz</entry>
+            <entry><jbophrase>.kubuts. bu</jbophrase></entry>
+            <entry><jbophrase>.ubu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>qamatz</entry>
+            <entry><jbophrase>.kamats. bu</jbophrase></entry>
+            <entry><jbophrase>.abu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>patach</entry>
+            <entry><jbophrase>.patax. bu</jbophrase></entry>
+            <entry><jbophrase>.a'abu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>sheva</entry>
+            <entry><jbophrase>.cyVAS. bu</jbophrase></entry>
+            <entry><jbophrase>.y.bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>kholem</entry>
+            <entry><jbophrase>.xolem. bu</jbophrase></entry>
+            <entry><jbophrase>.obu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>shuruq</entry>
+            <entry><jbophrase>.curuk. bu</jbophrase></entry>
+            <entry><jbophrase>.u'ubu</jbophrase></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
   </section>
-  <section xml:id="cll_chapter17-section19">
+  <section xml:id="section-accents-multiple-letters">
     <title>Proposed lerfu words for some accent marks and multiple letters</title>
     
     
     <para> <indexterm type="general-imported"><primary>multiple letters</primary><secondary>proposed lerfu words for</secondary></indexterm>  <indexterm type="general-imported"><primary>diacritic marks</primary><secondary>proposed lerfu words for</secondary></indexterm>  <indexterm type="general-imported"><primary>accent marks</primary><secondary>proposed lerfu words for</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>proposed for multiple letters</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>proposed for diacritic marks</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>proposed for accent marks</secondary></indexterm> This list is intended to be suggestive, not complete: there are lerfu such as Polish 
     <quote>dark</quote> l and Maltese h-bar that do not yet have symbols.</para>
-    <programlisting xml:space="preserve">
-     acute              .akut. bu 
-<!-- skip cmavo list automation -->
-                  or    .pritygal. bu          [pritu galtu]
-     grave              .grav. bu
-                  or    .zulgal. bu            [zunle galtu]
-     circumflex         .cirkumfleks. bu
+    <informaltable>
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>acute</entry>
+            <entry><jbophrase>.akut. bu</jbophrase>  or  <jbophrase>.pritygal. bu</jbophrase> [<jbophrase>pritu</jbophrase> <jbophrase>galtu</jbophrase>]</entry>
+          </row>
+          <row>
+            <entry>grave</entry>
+            <entry><jbophrase>.grav. bu</jbophrase>  or  <jbophrase>.zulgal. bu</jbophrase> [<jbophrase>zunle</jbophrase> <jbophrase>galtu</jbophrase>]</entry>
+          </row>
+          <row>
+            <entry>circumflex</entry>
+            <entry><jbophrase>.cirkumfleks. bu</jbophrase> or  <jbophrase>.midgal. bu</jbophrase> [<jbophrase>midju</jbophrase> <jbophrase>galtu</jbophrase>]</entry>
+          </row>
+          <row>
+            <entry>tilde</entry>
+            <entry><jbophrase>.tildes. bu</jbophrase></entry>
+          </row>
 
-                  or    .midgal. bu            [midju galtu]
-     tilde              .tildes. bu
+          <row>
+            <entry>macron</entry>
+            <entry><jbophrase>.makron. bu</jbophrase></entry>
+          </row>
 
-     macron             .makron. bu
+          <row>
+            <entry>breve</entry>
+            <entry><jbophrase>.brevis. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>over-dot</entry>
+            <entry><jbophrase>.gapmoc. bu</jbophrase> [<jbophrase>gapru</jbophrase> <jbophrase>mokca</jbophrase>]</entry>
+          </row>
 
-     breve              .brevis. bu
-     over-dot           .gapmoc. bu            [gapru mokca]
+          <row>
+            <entry>umlaut/trema</entry>
+            <entry><jbophrase>.relmoc. bu</jbophrase> [<jbophrase>re</jbophrase> <jbophrase>mokca</jbophrase>]</entry>
+          </row>
 
-     umlaut/trema       .relmoc. bu             [re mokca]
+          <row>
+            <entry>over-ring</entry>
+            <entry><jbophrase>.gapyjin. bu</jbophrase> [<jbophrase>gapru</jbophrase> <jbophrase>djine</jbophrase>]</entry>
+          </row>
 
-     over-ring          .gapyjin. bu            [gapru djine]
+          <row>
+            <entry>cedilla</entry>
+            <entry><jbophrase>.seDIlys. bu</jbophrase></entry>
+          </row>
 
-     cedilla            .seDIlys. bu
+          <row>
+            <entry>double-acute</entry>
+            <entry><jbophrase>.re'akut. bu  [re akut.]</jbophrase></entry>
+          </row>
+          <row>
+            <entry>ogonek</entry>
+            <entry><jbophrase>.ogoniek. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>hacek</entry>
+            <entry><jbophrase>.xatcek. bu</jbophrase></entry>
+          </row>
+          <row>
+            <entry>ligatured fi fi</entry>
+            <entry><jbophrase>tei fy. ibu foi</jbophrase></entry>
+          </row>
 
-     double-acute       .re'akut. bu           [re akut.]
-     ogonek             .ogoniek. bu
-     hacek              .xatcek. bu
-     ligatured fi       tei fy. ibu foi
+          <row>
+            <entry>Danish/Latin ae ae</entry>
+            <entry><jbophrase>tei .abu .ebu foi</jbophrase></entry>
+          </row>
+          <row>
+            <entry>Dutch ij ij</entry>
+            <entry><jbophrase>tei .ibu jy. foi</jbophrase></entry>
+          </row>
 
-     Danish/Latin ae    tei .abu .ebu foi
-     Dutch ij           tei .ibu jy. foi
-
-     German es-zed      tei sy. zy. foi
-</programlisting>
+          <row>
+            <entry>German es-zed es-zed</entry>
+            <entry><jbophrase>tei sy. zy. foi</jbophrase></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
   </section>
-  <section xml:id="cll_chapter17-section20">
+  <section xml:id="section-ICAO-alphabet">
     <title>Proposed lerfu words for radio communication</title>
     
     <para> <indexterm type="general-imported"><primary>Phonetic Alphabet</primary><secondary>proposed lerfu words for</secondary></indexterm>  <indexterm type="general-imported"><primary>ICAO Phonetic Alphabet</primary><secondary>proposed lerfu words for</secondary></indexterm>  <indexterm type="general-imported"><primary>noisy environments</primary><secondary>proposed lerfu words for</secondary></indexterm>  <indexterm type="general-imported"><primary>radio communication</primary><secondary>proposed lerfu words for</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>proposed for radio communication</secondary></indexterm>  <indexterm type="general-imported"><primary>lerfu words</primary><secondary>proposed for noisy environments</secondary></indexterm> There is a set of English words which are used, by international agreement, as lerfu words (for the English alphabet) over the radio, or in noisy situations where the utmost clarity is required. Formally they are known as the 
@@ -1475,35 +1931,112 @@
     <para>This table presents the standard English spellings and proposed Lojban versions. The Lojbanizations are not straightforward renderings of the English sounds, but make some concessions both to the English spellings of the words and to the Lojban pronunciations of the lerfu (thus 
     <jbophrase>carlis. bu</jbophrase>, not 
     <jbophrase>tcarlis. bu</jbophrase>).</para>
-    <programlisting xml:space="preserve">
-     Alfa        .alfas. bu 
-<!-- skip cmavo list automation -->
-     Bravo       .bravos. bu
-     Charlie     .carlis. bu
-     Delta       .deltas. bu
-     Echo        .ekos. bu
-     Foxtrot     .fokstrot. bu
-     Golf        .golf. bu
-     Hotel       .xoTEL. bu
-     India       .indias. bu
-     Juliet      .juliet. bu
-     Kilo        .kilos. bu
-     Lima        .limas. bu
-     Mike        .maik. bu
-     November    .novembr. bu
-     Oscar       .oskar. bu
-     Papa        .paPAS. bu
-     Quebec      .keBEK. bu
-     Romeo       .romios. bu
-     Sierra      .sieras. bu
-     Tango       .tangos. bu
-     Uniform     .Uniform. bu
-     Victor      .viktas. bu
-     Whiskey     .uiskis. bu
-     X-ray       .eksreis. bu
+    <variablelist>
+      <varlistentry>
+        <term>Alfa</term>
+        <listitem><para><jbophrase>.alfas. bu</jbophrase></para></listitem>
+      </varlistentry> 
+      <varlistentry>
+        <term>Bravo</term>
+        <listitem><para><jbophrase>.bravos. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Charlie</term>
+        <listitem><para><jbophrase>.carlis. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Delta</term>
+        <listitem><para><jbophrase>.deltas. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Echo</term>
+        <listitem><para><jbophrase>.ekos. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Foxtrot</term>
+        <listitem><para><jbophrase>.fokstrot. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Golf</term>
+        <listitem><para><jbophrase>.golf. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Hotel</term>
+        <listitem><para><jbophrase>.xoTEL. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>India</term>
+        <listitem><para><jbophrase>.indias. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Juliet</term>
+        <listitem><para><jbophrase>.juliet. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Kilo</term>
+        <listitem><para><jbophrase>.kilos. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Lima</term>
+        <listitem><para><jbophrase>.limas. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Mike</term>
+        <listitem><para><jbophrase>.maik. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>November</term>
+        <listitem><para><jbophrase>.novembr. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Oscar</term>
+        <listitem><para><jbophrase>.oskar. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Papa</term>
+        <listitem><para><jbophrase>.paPAS. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Quebec</term>
+        <listitem><para><jbophrase>.keBEK. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Romeo</term>
+        <listitem><para><jbophrase>.romios. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Sierra</term>
+        <listitem><para><jbophrase>.sieras. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Tango</term>
+        <listitem><para><jbophrase>.tangos. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Uniform</term>
+        <listitem><para><jbophrase>.Uniform. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Victor</term>
+        <listitem><para><jbophrase>.viktas. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Whiskey</term>
+        <listitem><para><jbophrase>.uiskis. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>X-ray</term>
+        <listitem><para><jbophrase>.eksreis. bu</jbophrase></para></listitem>
+      </varlistentry>
 
-     Yankee      .iankis. bu
-     Zulu        .zulus. bu
-</programlisting>
+      <varlistentry>
+        <term>Yankee</term>
+        <listitem><para><jbophrase>.iankis. bu</jbophrase></para></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>Zulu</term>
+        <listitem><para><jbophrase>.zulus. bu</jbophrase></para></listitem>
+      </varlistentry>
+    </variablelist>
   </section>
 </chapter>

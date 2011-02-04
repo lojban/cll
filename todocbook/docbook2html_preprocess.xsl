@@ -56,10 +56,11 @@
   <xsl:template match="cmavo-list">
     <informaltable>
       <tgroup cols="3">
+        <xsl:apply-templates select="cmavo-list-head"/>  
         <tbody>
           <xsl:for-each select=".//cmavo-entry">
             <row>
-              <xsl:for-each select="cmavo|selmaho|description">
+              <xsl:for-each select="cmavo|selmaho|description|gismu|rafsi|attitudinal-scale|modal-place">
                 <entry><xsl:value-of select="."/></entry>
               </xsl:for-each>
             </row>
@@ -69,6 +70,16 @@
     </informaltable>
   </xsl:template>
 
+  <xsl:template match="cmavo-list-head">
+    <thead>
+      <row>
+        <xsl:for-each select="entry">
+          <xsl:copy-of select="."/>
+        </xsl:for-each>
+      </row>
+    </thead>
+  </xsl:template>
+  
   <!-- Turn interlinear-gloss nodes into tables.
 
         Such a node must have at least one jbo entry and at least one en entry.
@@ -183,6 +194,15 @@
     </simplelist>
   </xsl:template>
 
+  <xsl:template match="veljvo">
+    <xsl:copy>
+      <xsl:text>from </xsl:text>
+      <jbophrase> <!-- will this get matched by the jbophrase template? -->
+        <xsl:value-of select="."/>
+      </jbophrase>
+    </xsl:copy>
+  </xsl:template>
+  
   <!-- turn a string into a lowercase & dashes slug -->
   <xsl:template name="make_slug">
     <xsl:param name="input" select="''"/>
@@ -195,7 +215,7 @@
       <xsl:value-of select='translate( $slug1, &#x27;&#x22;&#x27;, "" )'/>
     </xsl:variable>
     <xsl:variable name="slug3">
-      <xsl:value-of select="translate( $slug2, '@#$%^*()?+/=[]{}!', '' )"/>
+      <xsl:value-of select="translate( $slug2, '@#$%^*()?+/=[]{}!,', '' )"/>
     </xsl:variable>
     <xsl:variable name="slug4">
       <xsl:value-of select="normalize-space($slug3)"/>
