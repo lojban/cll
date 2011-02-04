@@ -1,4 +1,5 @@
 
+
 We have a variety of local-use-only tags and roles that get converted into
 docbook XML as part of the processing.
 
@@ -60,3 +61,14 @@ generate_glossary.xsl:  <xsl:template match="//text()">
 not(@glossary) or @glossary != 'false') and ( not(@role) or ( @role !=
 'morphology' and @role != 'rafsi' and @role != 'diphthong' and @role !=
 'letteral' ) ) ]">
+
+
+  ;<rafsi>\1</rafsi>;g' [0-9]*
+  ;<letteral>\1</letteral>;g' [0-9]*
+  ;<diphthong>\1</diphthong>;g' [0-9]*
+  ;<morphology>\1</morphology>;g' [0-9]*
+
+<pronunciation>
+  <jbo>.i,ai,i,ai,on.</jbo>
+  <ipa>[ʔi jaj ji jaj jonʔ]</ipa>
+</pronunciation>
