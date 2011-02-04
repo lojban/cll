@@ -1,4 +1,27 @@
 
+        BASIC <jbophrase> theory.
+
+  We don't *actually* want to index every use of a Lojban word.
+
+  So, <jbophrase> does nothing at all.
+
+  All the *other* tags to index generation.
+
+  The primary one is <valsi>; it's still called that even if it
+  wraps a cmavo compound.  Any cmavo compound weird enough to have a
+  seperate meaning should be wrapped in <valsi>.  Any others can
+  just be handled by having adjacent <valsi> bits.
+
+  We need more of these.  Lots of them, in fact.  And we need to
+  allow them in lots of places.
+
+  All <jbophrase> have been converted to <oldjbophrase>, which marks
+  up badly (FIXME: todo)
+
+  Almost everything with glossary="false", valid="false", valid="iffy"
+  should simply be <jbophrase>; I can't see any use to keeping that
+  stuff around.
+
 
 We have a variety of local-use-only tags and roles that get converted into
 docbook XML as part of the processing.

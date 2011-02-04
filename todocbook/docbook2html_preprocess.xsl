@@ -265,7 +265,61 @@
     </glossterm>
   </xsl:template>
 
-  <!-- lojban phrases and/or unglossed words -->
+  <xsl:template match="jbophrase">
+    <foreignphrase xml:lang="jbo">
+      <xsl:value-of select="text()"/>
+    </foreignphrase>
+  </xsl:template>
+
+  <xsl:template match="morphology">
+    <foreignphrase xml:lang="jbo" role="morphology">
+      <xsl:value-of select="text()"/>
+    </foreignphrase>
+  </xsl:template>
+
+  <xsl:template match="letteral">
+    <foreignphrase xml:lang="jbo" role="letteral">
+      <xsl:value-of select="text()"/>
+    </foreignphrase>
+  </xsl:template>
+
+  <xsl:template match="rafsi">
+    <foreignphrase xml:lang="jbo" role="rafsi">
+      <xsl:value-of select="text()"/>
+    </foreignphrase>
+  </xsl:template>
+
+  <xsl:template match="diphthong">
+    <foreignphrase xml:lang="jbo" role="diphthong">
+      <xsl:value-of select="text()"/>
+    </foreignphrase>
+  </xsl:template>
+
+  <xsl:template match="oldjbophrase">
+    <phrase role="oldjbophrase">
+      <xsl:value-of select="text()"/>
+    </phrase>
+  </xsl:template>
+
+  <xsl:template match="valsi">
+    <xsl:variable name="slug">
+      <xsl:call-template name="make_slug">
+        <xsl:with-param name="input" select="text()"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <foreignphrase xml:lang="jbo">
+      <indexterm type="lojban-words">
+        <primary><xsl:value-of select="text()"/></primary>
+      </indexterm>
+      <xsl:value-of select="text()"/>
+    </foreignphrase>
+  </xsl:template>
+
+  <!--
+       Needs to be cannibalized to make <valsi>; <jbophrase. and
+       <oldjbophrase> do not much at all
+
+  <!- - lojban phrases and/or unglossed words - ->
   <xsl:template match="jbophrase"
     priority="1">
     <xsl:variable name="wordsnum">
@@ -276,9 +330,9 @@
         <xsl:with-param name="input" select="text()"/>
       </xsl:call-template>
     </xsl:variable>
-    <!-- FIXME: the role is currently only used by the chapter2
+    <!- - FIXME: the role is currently only used by the chapter2
          markup stuff, which still needs to be implemented
-    -->
+    - ->
     <foreignphrase xml:lang="jbo">
       <xsl:if test="boolean(@role)">
         <xsl:attribute name="role">
@@ -297,5 +351,6 @@
       <xsl:value-of select="text()"/>
     </foreignphrase>
   </xsl:template>
+  -->
 
 </xsl:stylesheet>

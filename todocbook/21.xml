@@ -16,29 +16,29 @@
     <para>From start to end, performing the following filtering and lexing tasks using the given order of precedence in case of conflict:</para>
     <orderedlist numeration="lowerroman">
       <listitem>
-        <para>If the Lojban word <jbophrase>zoi</jbophrase> (selma'o ZOI) is identified, take the following Lojban word (which should be end delimited with a pause for separation from the following non-Lojban text) as an opening delimiter. Treat all text following that delimiter, until that delimiter recurs 
+        <para>If the Lojban word <valsi>zoi</valsi> (selma'o ZOI) is identified, take the following Lojban word (which should be end delimited with a pause for separation from the following non-Lojban text) as an opening delimiter. Treat all text following that delimiter, until that delimiter recurs 
         <emphasis>after a pause</emphasis>, as grammatically a single token (labelled <quote> 
         <xref linkend="cll_yacc-699"/></quote> in this grammar). There is no need for processing within this text except as necessary to find the closing delimiter.</para>
       </listitem>
       <listitem>
-        <para>If the Lojban word <jbophrase>zo</jbophrase> (selma'o ZO) is identified, treat the following Lojban word as a token labelled <quote> 
+        <para>If the Lojban word <valsi>zo</valsi> (selma'o ZO) is identified, treat the following Lojban word as a token labelled <quote> 
         <xref linkend="cll_yacc-698"/></quote>, instead of lexing it by its normal grammatical function.</para>
       </listitem>
       <listitem>
-        <para>If the Lojban word <jbophrase>lo'u</jbophrase> (selma'o LOhU) is identified, search for the closing delimiter <jbophrase>le'u</jbophrase> (selma'o LEhU), ignoring any such closing delimiters absorbed by the previous two steps. The text between the delimiters should be treated as the single token <quote> 
+        <para>If the Lojban word <valsi>lo'u</valsi> (selma'o LOhU) is identified, search for the closing delimiter <valsi>le'u</valsi> (selma'o LEhU), ignoring any such closing delimiters absorbed by the previous two steps. The text between the delimiters should be treated as the single token <quote> 
         <xref linkend="cll_yacc-697"/></quote>.</para>
       </listitem>
       <listitem>
         <para>Categorize all remaining words into their Lojban selma'o category, including the various delimiters mentioned in the previous steps. In all steps after step 2, only the selma'o token type is significant for each word.</para>
       </listitem>
       <listitem>
-        <para>If the word <jbophrase>si</jbophrase> (selma'o SI) is identified, erase it and the previous word (or token, if the previous text has been condensed into a single token by one of the above rules).</para>
+        <para>If the word <valsi>si</valsi> (selma'o SI) is identified, erase it and the previous word (or token, if the previous text has been condensed into a single token by one of the above rules).</para>
       </listitem>
       <listitem>
-        <para>If the word <jbophrase>sa</jbophrase> (selma'o SA) is identified, erase it and all preceding text as far back as necessary to make what follows attach to what precedes. (This rule is hard to formalize and may receive further definition later.)</para>
+        <para>If the word <valsi>sa</valsi> (selma'o SA) is identified, erase it and all preceding text as far back as necessary to make what follows attach to what precedes. (This rule is hard to formalize and may receive further definition later.)</para>
       </listitem>
       <listitem>
-        <para>If the word <jbophrase>su</jbophrase> (selma'o SU) is identified, erase it and all preceding text back to and including the first preceding token word which is in one of the selma'o: NIhO, LU, TUhE, and TO. However, if speaker identification is available, a SU shall only erase to the beginning of a speaker's discourse, unless it occurs at the beginning of a speaker's discourse. (Thus, if the speaker has said something, two adjacent uses of <jbophrase>su</jbophrase> are required to erase the entire conversation.</para>
+        <para>If the word <valsi>su</valsi> (selma'o SU) is identified, erase it and all preceding text back to and including the first preceding token word which is in one of the selma'o: NIhO, LU, TUhE, and TO. However, if speaker identification is available, a SU shall only erase to the beginning of a speaker's discourse, unless it occurs at the beginning of a speaker's discourse. (Thus, if the speaker has said something, two adjacent uses of <valsi>su</valsi> are required to erase the entire conversation.</para>
       </listitem>
     </orderedlist>
     <bridgehead>Step 3 – Termination</bridgehead>

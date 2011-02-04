@@ -12,6 +12,11 @@
   <xsl:param name="index.on.role" select="1"/>
   <xsl:param name="index.links.to.section" select="0"/>
 
+  <!-- temporary -->
+  <xsl:template match="phrase[@role='oldjbophrase']" mode="class.value">
+    <xsl:value-of select="'oldjbophrase'"/>
+  </xsl:template>
+
   <xsl:template match="itemizedlist[@role='word_spacing_list']" mode="class.value">
     <xsl:value-of select="'word_spacing_list'"/>
   </xsl:template>
