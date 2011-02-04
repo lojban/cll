@@ -1,0 +1,62 @@
+
+We have a variety of local-use-only tags and roles that get converted into
+docbook XML as part of the processing.
+
+  <example> roles
+
+  <interlinear-gloss>
+
+This is to only be used for 
+
+  <jbophrase>
+
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>bo</cmavo>
+        <selmaho>BO</selmaho>
+        <description>closest scope grouping</description>
+      </cmavo-entry>
+    </cmavo-list>
+
+
+    <example role="interlinear-gloss-example" xml:id="example-do-mamta-mi">
+      <title>
+        <anchor xml:id="c5e1d1"/>
+      </title>
+      <interlinear-gloss>
+        <jbo>do mamta mi</jbo>
+        <gloss>You are-a-mother-of me</gloss>
+        <en>You are my mother</en>
+      </interlinear-gloss>
+    </example>
+
+    <example role="pronunciation-example" xml:id="example-random-id-k2B4">
+      <title>
+        <anchor xml:id="c3e3d1"/>
+      </title>
+      <pronunciation>
+        <jbo>.i.ai.i.ai.o</jbo>
+        <ipa><phrase role="IPA">[ʔi ʔaj ʔi ʔaj ʔo]</phrase></ipa>
+        <en>Ee! Eye! Ee! Eye! Oh!</en>
+      </pronunciation>
+    </example>
+
+<phrase role="logical-vowel">A</phrase>,
+
+docbook2html_preprocess.xsl:  <xsl:template match="compound-cmavo">
+docbook2html_preprocess.xsl:  <xsl:template match="jbophrase[count(str:tokenize(text())) = 1 and ( not(@glossary) or @glossary != 'false')
+docbook2html_preprocess.xsl:  <xsl:template match="jbophrase"
+
+  <xsl:template match="jbophrase[count(str:tokenize(text())) = 1 and (
+not(@glossary) or @glossary != 'false') and ( not(@role) or ( @role !=
+'morphology' and @role != 'rafsi' and @role != 'diphthong' and @role !=
+'letteral' ) ) ]" priority="2">
+
+generate_glossary.xsl:  <xsl:template name="make_slug">
+generate_glossary.xsl:  <xsl:template match="//jbophrase[count(str:tokenize(text())) = 1 and ( not(@glossary) or @glossary != 'false')
+generate_glossary.xsl:  <xsl:template match="//text()">
+
+  <xsl:template match="//jbophrase[count(str:tokenize(text())) = 1 and (
+not(@glossary) or @glossary != 'false') and ( not(@role) or ( @role !=
+'morphology' and @role != 'rafsi' and @role != 'diphthong' and @role !=
+'letteral' ) ) ]">

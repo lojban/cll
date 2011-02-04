@@ -1,4 +1,376 @@
 
+All the imported/manual indexterm entries for single words or selma'o need
+removing.  Might be nice to re-apply * cb87291250fa978bcb67f965bfb880601ce9f367
+Chapter 6 lojban-word-importeds. for this.
+
+How about we split <jbophrase> into <jboword>, <jbophrase>, and
+<jbofragment>?  (is fragment quite right?  pseudojbo?  For things
+that are lojbanic in structure, but not actual words; ktraile or
+rafsi or similar).  Basically all are Lojbanic to some extent;
+<jbophrase> are valid unless marked otherwise but have no
+definition because phrasal; <jboword> are valid unless marked
+otherwise and have a definition unless marked otherwise; <pseudojbo>
+is never valid nor has a definition.
+
+  There should, however, be a way to mark that morphology fragments
+  are valid or not; consider <jbophrase role="morphology"
+  valid="false">cc</jbophrase>
+
+  What about cmevla?  Maybe do <cmene>, <valsi>, ... ?
+
+<!-- FIXME: non-lojban-non-english component of example <jbo>자모
+(from Korean)</jbo> ; how do we mark this? <nonen>? <foreign>? -->
+(from 4.xml): make <en> into <natlang>
+
+zort-: So for things like "<jbo>spageti (Lojbanize)</jbo>", what do you think of <jbo>spageti
+<comment>(Lojbanize)</comment></jbo> or something?
+I was thinking <commentary>, but that seems a bit pointlessly bulky.
+Oh, actually, without the parens at that point; they can get added back in later if we want them.
+By the code.
+
+Replace ’ with '
+
+Replace – with &mdash;
+
+WRT rafsi:  <rafsi type="prefix">man</rafsi> seems best
+
+  Will that suck for <member><jbophrase role="rafsi">ger</jbophrase><jbophrase role="rafsi">-zda</jbophrase></member> ?
+
+  Let alone       <member><jbophrase
+  role="rafsi">logj</jbophrase><jbophrase
+  role="rafsi">-bang</jbophrase><jbophrase
+  role="rafsi">-girz</jbophrase></member>
+
+<jbophrase role="letteral">r-</jbophrase>hyphen -- just wrong
+
+Drop all the damned gismu definition tables in favour of cross references
+
+Handling chapter 2: why don't we just require that the number of sub-entries matches?
+  Also: maybe rename jbo/gloss for this purpose, or introduce roles.
+
+2.xml:
+
+
+6.xml:
+  remove "This stuff was here before, not sure what it means - zort"
+
+3.xml:
+  <phrase xml:lang="art"> becomes 
+  <phrase xml:lang="qya"> (an actual ISO code:
+  http://en.wikipedia.org/wiki/ISO_639:q ), as do most (all?) of the
+  <quote xml:lang="art">
+
+4.xml:
+
+  <jbophrase>'</jbophrase> and friends: look for any single letter
+  that does't have a letteral role
+
+  <jbophrase role="letteral">r</jbophrase>- hyphen or -- lose
+  the space after -
+
+  <entry>-<jbophrase role="rafsi" valid="false">ska-<
+  BUNCH MORE LIKE THIS
+  <entry>-<jbophrase role="rafsi" valid="false">kli-< -- move the
+  first hyphen, or something
+
+  <jbophrase>cc</jbophrase> needs a role
+
+  First para starts with <para><jbophrase role="letteral">,</jbophrase> for no apparent reason?
+
+  <entry>(-<jbophrase role="rafsi">sarji</jbophrase>-)</entry> 
+  <entry>(-<jbophrase role="rafsi">zbasu</jbophrase>-)</entry>
+  -- extraneous trailing -
+
+  Turn the metric prefix lists into 3 column tables; split on the /
+
+    <xref linkend="chapter-lujvo"/>).</para> <!-- erratum: no such list anywhere --> -- FIXME
+
+  <jbo>djan. smif.</jbo> -- smif?  *Really*?
+
+5.xml:
+  <indexterm type="example-imported"><primary>Preem Palver</primary><secondary>example</secondary></indexterm>
+  is in the wrong place
+
+  Karaitpic should be Karaitic
+
+  <entry>Skt = emperor</entry>
+  ... a number of others; search on ' = '
+  <entry>Qab = group of people</entry> -- should split into fourth
+  column on the =, like others?  Or not, but should be consistent.
+  Especially given <entry>dog for working sheep</entry>, which is
+  curretnly in the languages column.  -_-  Maybe name tho columns,
+  too?
+
+        <!-- these sentences should be broken up to make them easier to read, or at least less intimidating  --> -- FIXME
+
+6.xml:
+  <jbophrase>James</jbophrase>
+
+  <en>I say <jbophrase>li mi</jbophrase>.</en> -- needs a quote?
+
+  Why <jbophrase>pi</jbophrase>? -- needs a - after the pi to match the red book
+
+7.xml:
+
+  <jbo>mi bajykla ti ta soi vo'e mi bajykla ti ta soi vo'e vo'i soi vo'e vo'i mi bajykla ti ta</jbo> -- needs to be 2
+  
+  <en>I runningly-go to this from that and vice versa.</en|          <en>I run to this from that and vice versa.</en> 
+  -- that's a change; not on the errata list
+
+    <place-structure>t1 talks to you about subject t3 in langua
+  ge t4</place-structure>
+    <para>since <varname>t2</varname> (the addressee) is alread
+  y known to be
+
+      <place-structure>c1 is a second person pronoun in language
+  c4</place-structure>
+    <para>since both the <varname>c2</varname> place (the gramm
+  atical class) and the <varname>c3</varname> place (the meaning)
+ are obvious from the context
+
+  -- used to be examples!  That's bad!
+
+  <xref linkend="chapter-abstractions-"/> -- bad
+
+8.xml
+
+      <jbophrase>ko'e</jbophrase> (explained in Chapter
+    <xref linkend="chapter-anaphoric-cmavo-section-koha-broda-s
+  eries"/>).</para>
+  
+  -- double chapter
+
+9.xml
+
+  <gloss>the-number = the-number because ( 2 + 2 ) theref ore 4.</gloss> -- needs an "n" before the =
+
+  Do we want to auto-generate the BAI list at the end of Chapter 9
+  from jbovlaste?  Probably not for v1.1; for v2 maybe just say
+  "read the dict"?
+
+  <entry>with</entry>
+  <entry>property</entry>
+
+  <entry>as a</entry>
+  <entry>standard for</entry>
+
+  <entry>as a</entry>
+  <entry>part of</entry>
+
+  <entry>as a</entry>
+  <entry>limit of</entry>
+
+  <entry>as a</entry>
+  <entry>method for</entry>
+
+  <entry>on the same date</entry>
+  <entry>as</entry> -- one entry
+
+  <entry>from source as an origin of</entry>
+  <entry>pertained to by concerning</entry> -- should almost
+  certainly be two entries; check and add to errata
+
+  <gloss>For-every X: X is-a-goer-to the store if-and-onl y-if is-a-walker-on the field.</gloss>
+  -- should be: "For-every X: X is-a-goer-to the store if-and-only-if it is-a-walker-on the field." (but check errata page)
+
+@@ -1463,7 +1463,7 @@
+         <anchor xml:id="c9e10d1"/>
+       </title>
+       <interlinear-gloss>
+-        <jbo>la .apasionatas. poi se cusku la .artr. rubnstain. cu se nelci mi</jbo>
++        <jbo>la .apasionatas. ku poi se cusku la .artr. rubnstain. cu se nelci mi</jbo>
+         <gloss>The Appassionata which is-expressed-by Arthur Rubinstein is-liked-by me.</gloss>
+
+       </interlinear-gloss>
+@@ -1473,7 +1473,7 @@
+         <anchor xml:id="c9e10d2"/>
+       </title>
+       <interlinear-gloss>
+-        <jbo>la .apasionatas. noi se finti la betovn. cu se nelci mi</jbo>
++        <jbo>la .apasionatas. ku noi se finti la betovn. cu se nelci mi</jbo>
+         <gloss>The Appassionata, which is-created-by Beethoven, is-liked-by me.</gloss>
+
+
+@@ -1502,7 +1502,7 @@
+         <anchor xml:id="c9e10d3"/>
+       </title>
+       <interlinear-gloss>
+-        <jbo>la .apasionatas pe la .artr. rubnstain. se nelci mi</jbo>
++        <jbo>la .apasionatas. ku pe la .artr. rubnstain. se nelci mi</jbo>
+         <gloss>The Appassionata of Arthur Rubinstein is-liked-by me.</gloss>
+
+       </interlinear-gloss>
+@@ -1512,7 +1512,7 @@
+         <anchor xml:id="c9e10d4"/>
+       </title>
+       <interlinear-gloss>
+-        <jbo>la .apasionatas ne la betovn. se nelci mi</jbo>
++        <jbo>la .apasionatas. ku ne la betovn. se nelci mi</jbo>
+         <gloss>The Appassionata, which is of Beethoven, is-liked-by me.</gloss>
+
+-- and others
+
+10.xml
+
+  <jbo>mi cu pu klama le zarci mi pu klama le zarci</jbo> --
+  doubled up
+
+  <place-structure>
+    Left of a place above me, the man bites the dog.
+  </place-structure>
+  [snip others]
+  <place-structure>
+     To my left, the man bites the dog.
+  </place-structure>
+  -- not really, no.
+
+  <jbo>ze'e roroi ve'e fe'e roroi ku li re su'i re du li vo [whole time] [all times] [whole space] [space:] [all places] </jbo>
+  -- needs a gloss section
+
+  <listitem><para>once</para></listitem>
+  <para>...</para>
+  <term><jbophrase>roroi</jbophrase></term>
+  <listitem><para>always</para></listitem>
+  <para>etc.</para>
+  <term><jbophrase>pare'u</jbophrase></term>
+  <listitem><para>the first time</para></listitem>
+  <term><jbophrase>rere'u</jbophrase></term>
+  <listitem><para>the second time</para></listitem>
+  <para>etc.</para>
+  -- disconnected para, that were seperated by commas inside the
+  text
+
+12.xml
+
+          <para>kl1 goes to car kl2=ka1 which carries ka2 propell
+          ed by ka3 from origin kl3</para>
+                  <para>via route kl4 by means of kl5</para>
+
+          <para>kl1 goes to destination kl2 from origin kl3 via r
+          oute kl4</para>
+                  <para>by means of car kl5=ka1 carrying ka2
+                  propelled by
+                   ka3.</para>
+
+
+        <jbophrase>dzukla</jbophrase>: c1=k1 walks to k2 from k
+    3 via route k4 using limbs k5=c3</gloss>
+        <para>on surface c2</para>
+
+  -- needs merge
+
+13.xml
+
+  <cmavo-entry>
+        <cmavo>ro'i</cmavo>
+        <attitudinal-scale point="sai">emotional</attitudinal-s cale>
+        <attitudinal-scale point="cu'i">denying</attitudinal-sc ale>
+        <attitudinal-scale point="nai">emotion</attitudinal-sca le>
+      </cmavo-entry>
+
+ <cmavo-entry>
+   <cmavo>ro'o</cmavo>
+   <attitudinal-scale point="sai">physical</attitudinal-sc
+
+   <attitudinal-scale point="cu'i">denying</attitudinal-sc
+
+   <attitudinal-scale point="nai">physical</attitudinal-sc
+
+ </cmavo-entry>
+
+  <cmavo-entry>
+    <cmavo>ro'u</cmavo>
+    <attitudinal-scale point="sai">sexual</attitudinal-scal
+
+    <attitudinal-scale point="cu'i">sexual</attitudinal-sca
+
+    <attitudinal-scale point="nai">abstinence</attitudinal-
+  </cmavo-entry>
+
+  -- needs merge
+
+    <attitudinal-scale point="sai">hauteur</attitudinal-sca
+
+    <attitudinal-scale point="sai">rank</attitudinal-scale>
+  -- hwat the hell is hauteur rank?  and theoretically needs merge
+
+  STuff under <source-gismu>[frili]</source-gismu> needs merge
+
+  obviously -- needs to go in li'a
+
+  <attitudinal-scale point="cu'i">omitting ex.</attitudin -- shouldn't be abbreviated
+
+14.xml:
+        <foreign xml:lang="zh">ni<superscript>3</superscript> z
+  ou<superscript>3</superscript> hai<superscript>2</superscript>s
+  hi pao</foreign> -- needs a 3 for the last
+
+  [se] JOI  [nai] GI [se] BIhI [nai] GI GAhO [se] BIhI [nai] GAhO GI
+  [se] JOI  [nai] [se] BIhI [nai] GAhO [se] BIhI [nai] GAhO -- need splitting
+
+  <jbo gloss="iffy">
+
+15.xml
+
+        <para>(inaccurate quantity; the difference from the pre
+  vious example is that</para>
+        <para>someone who has held four jobs has also held thre
+  e jobs)</para> 
+
+        <para>(undue quantity negation indicating that the valu
+  e on a</para>
+        <para>scale for measuring the predicate is incorrect)</
+  para>
+
+  -- bad break
+
+      <xref linkend="chapter-tenses"/>), the <!-- also see chapter-modals? --> -- FIXME
+
+17.xml:
+
+  <entry>ligatured fi fi</entry> -- and several followig -- doubled
+
+  <quote>h</quote>
+  <quote>a</quote>
+  <quote>n</quote>
+  <superscript>4</superscript>
+  -- should not be superscript
+
+18.xml:
+
+  <math>123 ignore</math> <!-- okely dokely --> -- heh
+
+  <math>300,000,000 = 3 × 10</math>
+  <math>10</math>
+  <math>.1010</math>
+  <math>30,000,000 = 3 × 10</math>
+  <math>(n + 1)(n + 1) = n</math> -- misisng bits
+
+  <quote>the function whose value is always <quote>f</quote> -- needs varname
+
+19.xml:
+
+  <gloss>As for this news, I knew it.</gloss> -- en
+
+20.xml:
+
+  <xref linkend="chapter-attitudinals-section-intensity-scale -- and friends do not agree with the chapter
+
+   <xref linkend="chapter-vuho"/> -- should be chapter-relative-clauses-section-vuho
+
+21.xml:
+
+  <jbophrase role="letteral">.</jbophrase> -- should be <quote>
+
+TODO
+
+  move all commenst about jbophrase and such into README-tags, have
+  README and TODO reference README-tags
+
+All
+  
+  At least one TAG SPOT para is stil there but not in use.
+
 ==================
   Instructions For Helpers
 ==================
