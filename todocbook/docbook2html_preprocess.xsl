@@ -55,7 +55,7 @@
   <!-- Turn cmavo-list nodes into tables. -->
   <xsl:template match="cmavo-list">
     <informaltable>
-      <tgroup cols="3">
+      <tgroup cols="8">
         <xsl:apply-templates select="cmavo-list-head"/>  
         <tbody>
           <xsl:for-each select=".//cmavo-entry">
