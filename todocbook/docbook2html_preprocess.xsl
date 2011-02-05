@@ -295,10 +295,75 @@
     </foreignphrase>
   </xsl:template>
 
-  <xsl:template match="oldjbophrase">
+  <xsl:template match="grammar-template[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
+    <blockquote role="grammar-template">
+      <para>
+        <xsl:value-of select="text()"/>
+      </para>
+    </blockquote>
+  </xsl:template>
+
+  <xsl:template match="grammar-template" priority="1">
+    <phrase role="grammar-template">
+      <xsl:value-of select="text()"/>
+    </phrase>
+  </xsl:template>
+
+  <xsl:template match="oldjbophrase[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
+    <blockquote role="oldjbophrase">
+      <para>
+        <xsl:value-of select="text()"/>
+      </para>
+    </blockquote>
+  </xsl:template>
+
+  <xsl:template match="oldjbophrase" priority="1">
     <phrase role="oldjbophrase">
       <xsl:value-of select="text()"/>
     </phrase>
+  </xsl:template>
+
+  <xsl:template match="place-structure[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
+    <blockquote role="place-structure">
+      <para>
+        <xsl:value-of select="text()"/>
+      </para>
+    </blockquote>
+  </xsl:template>
+
+  <xsl:template match="place-structure" priority="1">
+    <phrase>
+      <xsl:value-of select="text()"/>
+    </phrase>
+  </xsl:template>
+
+  <xsl:template match="inlinemath" priority="1">
+    <inlineequation><mathphrase>
+        <xsl:value-of select="text()"/>
+    </mathphrase></inlineequation>
+  </xsl:template>
+
+  <xsl:template match="math" priority="1">
+    <informalequation><mathphrase>
+        <xsl:value-of select="text()"/>
+    </mathphrase></informalequation>
+  </xsl:template>
+
+  <xsl:template match="lojbanization">
+    <informaltable>
+      <tgroup cols="2">
+        <xsl:for-each select="jbo">
+          <entry>
+            <xsl:value-of select="text()"/>
+          </entry>
+          <xsl:if test="boolean(comment)">
+            <entry>
+              <xsl:value-of select="comment/text()"/>
+            </entry>
+          </xsl:if>
+        </xsl:for-each>
+      </tgroup>
+    </informaltable>
   </xsl:template>
 
   <xsl:template match="valsi">

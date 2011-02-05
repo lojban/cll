@@ -2259,15 +2259,15 @@
     <variablelist>
       <varlistentry>
         <term>subordinate:</term>
-        <listitem><compound-syntax>X TENSE le nu Y</compound-syntax></listitem>
+        <listitem><grammar-template>X TENSE le nu Y</grammar-template></listitem>
       </varlistentry>
       <varlistentry>
         <term>afterthought coordinate:</term>
-        <listitem><compound-syntax>Y .i+TENSE+bo X</compound-syntax></listitem>
+        <listitem><grammar-template>Y .i+TENSE+bo X</grammar-template></listitem>
       </varlistentry>
       <varlistentry>
         <term>forethought coordinate:</term>
-        <listitem><compound-syntax>TENSE+gi X gi Y</compound-syntax></listitem>
+        <listitem><grammar-template>TENSE+gi X gi Y</grammar-template></listitem>
       </varlistentry>
     </variablelist>
   </section>
@@ -3158,17 +3158,29 @@
     </example>
     <para>respectively.</para>
     <para> <indexterm type="general-imported"><primary>modal sentence connection</primary><secondary>table of equivalent schemata</secondary></indexterm> The following modal sentence schemata (where X and Y represent sentences) all have the same meaning:</para>
-    <compound-syntax>
-       X .i BAI bo Y
-       BAI gi Y gi X
-       X BAI le nu Y
-    </compound-syntax>
+    <simplelist>
+      <member><grammar-template>
+          X .i BAI bo Y
+      </grammar-template></member>
+      <member><grammar-template>
+          BAI gi Y gi X
+      </grammar-template></member>
+      <member><grammar-template>
+          X BAI le nu Y
+      </grammar-template></member>
+    </simplelist>
     <para> <indexterm type="general-imported"><primary>tense sentence connection</primary><secondary>table of equivalent schemata</secondary></indexterm> whereas the following tensed sentence schemata also have the same meaning:</para>
-    <compound-syntax>
-       X .i TENSE bo Y
-       TENSE gi X gi Y
-       Y TENSE le nu X
-    </compound-syntax>
+    <simplelist>
+      <member><grammar-template>
+          X .i TENSE bo Y
+      </grammar-template></member>
+      <member><grammar-template>
+          TENSE gi X gi Y
+      </grammar-template></member>
+      <member><grammar-template>
+          Y TENSE le nu X
+      </grammar-template></member>
+    </simplelist>
     <para>neglecting the question of what is claimed. In the modal sentence schemata, the modal tag is always followed by Y, the sentence representing the event in the x1 place of the gismu that underlies the BAI. In the tensed sentences, no such simple rule exists.</para>
   </section>
   <section xml:id="section-tense-questions">
