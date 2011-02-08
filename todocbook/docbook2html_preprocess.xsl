@@ -160,14 +160,14 @@
         <xsl:for-each select=".//jbo">
           <listitem role="pronunciation-jbo">
             <para>
-              <xsl:value-of select=".//text()"/>
+              <xsl:apply-templates select="node()|text()"/>
             </para>
           </listitem>
         </xsl:for-each>
         <xsl:for-each select=".//ipa">
           <listitem role="pronunciation-ipa">
             <para>
-              <xsl:value-of select=".//text()"/>
+              <xsl:apply-templates select="node()|text()"/>
             </para>
           </listitem>
         </xsl:for-each>
@@ -179,7 +179,7 @@
   <!-- <en> tags that arn't in <interlinear-gloss> tags -->
   <xsl:template match="example/en[not(boolean(ancestor::interlinear-gloss))]">
     <para>
-      <xsl:value-of select='.//text()'/>
+      <xsl:apply-templates select="node()|text()"/>
     </para>
   </xsl:template>
 
@@ -188,7 +188,7 @@
     <simplelist>
       <xsl:for-each select=".//jbo">
         <member>
-          <xsl:value-of select=".//text()"/>
+          <xsl:apply-templates select="node()|text()"/>
         </member>
       </xsl:for-each>
     </simplelist>
@@ -258,110 +258,142 @@
         </xsl:if>
         <indexterm>
           <xsl:attribute name="type">lojban-words</xsl:attribute>
-          <primary><xsl:value-of select="text()"/></primary>
+          <primary>
+            <xsl:apply-templates select="node()|text()"/>
+          </primary>
         </indexterm>
-        <xsl:value-of select="text()"/>
+        <xsl:apply-templates select="node()|text()"/>
       </foreignphrase>
     </glossterm>
   </xsl:template>
 
   <xsl:template match="jbophrase">
     <foreignphrase xml:lang="jbo">
-      <xsl:value-of select="text()"/>
+      <xsl:apply-templates select="node()|text()"/>
     </foreignphrase>
   </xsl:template>
 
   <xsl:template match="morphology">
     <foreignphrase xml:lang="jbo" role="morphology">
-      <xsl:value-of select="text()"/>
+      <xsl:apply-templates select="node()|text()"/>
     </foreignphrase>
   </xsl:template>
 
   <xsl:template match="letteral">
     <foreignphrase xml:lang="jbo" role="letteral">
-      <xsl:value-of select="text()"/>
+      <xsl:apply-templates select="node()|text()"/>
     </foreignphrase>
   </xsl:template>
 
   <xsl:template match="rafsi">
     <foreignphrase xml:lang="jbo" role="rafsi">
-      <xsl:value-of select="text()"/>
+      <xsl:apply-templates select="node()|text()"/>
     </foreignphrase>
   </xsl:template>
 
   <xsl:template match="diphthong">
     <foreignphrase xml:lang="jbo" role="diphthong">
-      <xsl:value-of select="text()"/>
+      <xsl:apply-templates select="node()|text()"/>
     </foreignphrase>
   </xsl:template>
 
   <xsl:template match="grammar-template[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
     <blockquote role="grammar-template">
       <para>
-        <xsl:value-of select="text()"/>
+        <xsl:apply-templates select="node()|text()"/>
       </para>
     </blockquote>
   </xsl:template>
 
   <xsl:template match="grammar-template" priority="1">
     <phrase role="grammar-template">
-      <xsl:value-of select="text()"/>
+      <xsl:apply-templates select="node()|text()"/>
     </phrase>
   </xsl:template>
 
   <xsl:template match="oldjbophrase[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
     <blockquote role="oldjbophrase">
       <para>
-        <xsl:value-of select="text()"/>
+        <xsl:apply-templates select="node()|text()"/>
       </para>
     </blockquote>
   </xsl:template>
 
   <xsl:template match="oldjbophrase" priority="1">
     <phrase role="oldjbophrase">
-      <xsl:value-of select="text()"/>
+      <xsl:apply-templates select="node()|text()"/>
     </phrase>
   </xsl:template>
 
   <xsl:template match="place-structure[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
     <blockquote role="place-structure">
       <para>
-        <xsl:value-of select="text()"/>
+        <xsl:apply-templates select="node()|text()"/>
       </para>
     </blockquote>
   </xsl:template>
 
   <xsl:template match="place-structure" priority="1">
     <phrase>
-      <xsl:value-of select="text()"/>
+      <xsl:apply-templates select="node()|text()"/>
     </phrase>
   </xsl:template>
 
   <xsl:template match="inlinemath" priority="1">
     <inlineequation><mathphrase>
-        <xsl:value-of select="text()"/>
+        <xsl:apply-templates select="node()|text()"/>
     </mathphrase></inlineequation>
   </xsl:template>
 
   <xsl:template match="math" priority="1">
     <informalequation><mathphrase>
-        <xsl:value-of select="text()"/>
+        <xsl:apply-templates select="node()|text()"/>
     </mathphrase></informalequation>
+  </xsl:template>
+
+  <xsl:template match="lujvo-making">
+    <informaltable>
+      <tgroup cols="3">
+        <tbody>
+          <row>
+            <xsl:for-each select="jbo">
+              <entry>
+                <xsl:apply-templates select="node()|text()"/>
+              </entry>
+            </xsl:for-each>
+            <xsl:for-each select="rafsi">
+              <entry>
+                <xsl:apply-templates select="node()|text()"/>
+              </entry>
+            </xsl:for-each>
+            <xsl:for-each select="score">
+              <entry>
+                <xsl:apply-templates select="node()|text()"/>
+              </entry>
+            </xsl:for-each>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
   </xsl:template>
 
   <xsl:template match="lojbanization">
     <informaltable>
       <tgroup cols="2">
-        <xsl:for-each select="jbo">
-          <entry>
-            <xsl:value-of select="text()"/>
-          </entry>
-          <xsl:if test="boolean(comment)">
-            <entry>
-              <xsl:value-of select="comment/text()"/>
-            </entry>
-          </xsl:if>
-        </xsl:for-each>
+        <tbody>
+          <row>
+            <xsl:for-each select="jbo">
+              <entry>
+                <xsl:value-of select="text()"/>
+              </entry>
+              <xsl:if test="boolean(comment)">
+                <entry>
+                  <xsl:value-of select="comment/text()"/>
+                </entry>
+              </xsl:if>
+            </xsl:for-each>
+          </row>
+        </tbody>
       </tgroup>
     </informaltable>
   </xsl:template>

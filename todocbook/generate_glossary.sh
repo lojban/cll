@@ -12,11 +12,16 @@ definitions.  These definitions are here simply as a quick reference.
 
 EOF
 
+TMPFILE="/tmp/generate_glossary.tmp"
+
 IFS='
 '
 initial=''
 indiv=''
-for line in $(xsltproc --nonet --path . --novalid generate_glossary.xsl cll_preglossary.xml | grep -P '\t' | sort | uniq)
+
+xsltproc --nonet --path . --novalid generate_glossary.xsl cll_preglossary.xml | grep -P '\t' | sort | uniq >$TMPFILE
+
+for line in $(cat $TMPFILE)
 do
   slug=$(echo $line | awk -F'\t' '{ print $1 }')
   word=$(echo $line | awk -F'\t' '{ print $2 }' | sed 's/\.//g')
@@ -39,9 +44,12 @@ do
   then
     echo "jbovlaste file is old; refetching." 1>&2
     wget 'http://jbovlaste.lojban.org/export/xml-export.html?lang=en' -O jbovlaste.xml
+    grep '^<valsi word=' jbovlaste.xml | \
+      sed 's/^<valsi word="\([^"]*\)" /\1 &/' | sort >jbovlaste2.xml
   fi
   
-  definition=$(grep -E "^<valsi word=\"$word\" " jbovlaste.xml | \
+  definition=$(look "$word" jbovlaste2.xml | \
+      sed -e 's/^[^ ]* //' | \
       sed -e 's/.*<definition>//' -e 's;</definition>.*;;' | \
       sed -e 's/\&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' | \
       sed 's/\s\s*/ /g')
@@ -68,3 +76,5 @@ cat <<EOF
 </glossary>
 
 EOF
+
+rm >$TMPFILE
