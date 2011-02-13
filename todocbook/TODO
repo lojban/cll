@@ -15,30 +15,7 @@ WRT rafsi:  <rafsi type="prefix">man</rafsi> seems best
 Handling chapter 2: why don't we just require that the number of sub-entries matches?
   Also: maybe rename jbo/gloss for this purpose, or introduce roles.
 
-2.xml:
-
-
-6.xml:
-  remove "This stuff was here before, not sure what it means - zort"
-
-3.xml:
-  <phrase xml:lang="art"> becomes 
-  <phrase xml:lang="qya"> (an actual ISO code:
-  http://en.wikipedia.org/wiki/ISO_639:q ), as do most (all?) of the
-  <quote xml:lang="art">
-
 4.xml:
-
-  <jbophrase>'</jbophrase> and friends: look for any single letter
-  that does't have a letteral role
-
-  <jbophrase role="letteral">r</jbophrase>- hyphen or -- lose
-  the space after -
-
-  <entry>-<jbophrase role="rafsi" valid="false">ska-<
-  BUNCH MORE LIKE THIS
-  <entry>-<jbophrase role="rafsi" valid="false">kli-< -- move the
-  first hyphen, or something
 
   <jbophrase>cc</jbophrase> needs a role
 
