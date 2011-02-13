@@ -8,11 +8,11 @@
     <para>grammar.300 */</para>
     <para>/* The Lojban machine parsing algorithm is a multi-step process. The YACC machine grammar presented here is an amalgam of those steps, concatenated so as to allow YACC to verify the syntactic ambiguity of the grammar. YACC is used to generate a parser for a portion of the grammar, which is LALR1 (the type of grammar that YACC is designed to identify and process successfully), but most of the rest of the grammar must be parsed using some language-coded processing.</para>
     
-    <bridgehead>Step 1 – Lexing</bridgehead>
+    <bridgehead>Step 1 &ndash; Lexing</bridgehead>
     <para>From phonemes, stress, and pause, it is possible to resolve Lojban unambiguously into a stream of words. Any machine processing of speech will have to have some way to deal with <quote>non-Lojban</quote> failures of fluent speech, of course. The resolved words can be expressed as a text file using Lojban's phonetic spelling rules.</para>
     <para>The following steps assume that there is the possibility of non-Lojban text within the Lojban text (delimited appropriately). Such non-Lojban text may not be reducible from speech phonetically. However, step 2 allows the filtering of a phonetically transcribed text stream, to recognize such portions of non-Lojban text where properly delimited, without interference with the parsing algorithm.</para>
     
-    <bridgehead>Step 2 – Filtering</bridgehead>
+    <bridgehead>Step 2 &ndash; Filtering</bridgehead>
     <para>From start to end, performing the following filtering and lexing tasks using the given order of precedence in case of conflict:</para>
     <orderedlist numeration="lowerroman">
       <listitem>
@@ -41,9 +41,9 @@
         <para>If the word <valsi>su</valsi> (selma'o SU) is identified, erase it and all preceding text back to and including the first preceding token word which is in one of the selma'o: NIhO, LU, TUhE, and TO. However, if speaker identification is available, a SU shall only erase to the beginning of a speaker's discourse, unless it occurs at the beginning of a speaker's discourse. (Thus, if the speaker has said something, two adjacent uses of <valsi>su</valsi> are required to erase the entire conversation.</para>
       </listitem>
     </orderedlist>
-    <bridgehead>Step 3 – Termination</bridgehead>
+    <bridgehead>Step 3 &ndash; Termination</bridgehead>
     <para>If the text contains a FAhO, treat that as the end-of-text and ignore everything that follows it.</para>
-    <bridgehead>Step 4 – Absorption of Grammar-Free Tokens</bridgehead>
+    <bridgehead>Step 4 &ndash; Absorption of Grammar-Free Tokens</bridgehead>
     <para>In a new pass, perform the following absorptions (absorption means that the token is removed from the grammar for processing in following steps, and optionally reinserted, grouped with the absorbing token after parsing is completed).</para>
     <orderedlist numeration="lowerroman">
       <listitem>
@@ -62,7 +62,7 @@
         <para>Absorb all members of selma'o DAhO, FUhO, FUhE, UI, Y, and CAI into the previous token. All of these null grammar tokens are permitted following any word of the grammar, without interfering with that word's grammatical function, or causing any effect on the grammatical interpretation of any other token in the text. Indicators at the beginning of text are explicitly handled by the grammar.</para>
       </listitem>
     </orderedlist>
-    <bridgehead>Step 5 – Insertion of Lexer Lexemes</bridgehead>
+    <bridgehead>Step 5 &ndash; Insertion of Lexer Lexemes</bridgehead>
     <para>Lojban is not in itself LALR1. There are words whose grammatical function is determined by following tokens. As a result, parsing of the YACC grammar must take place in two steps. In the first step, certain strings of tokens with defined grammars are identified, and either</para>
     <orderedlist numeration="lowerroman">
       <listitem>
@@ -105,7 +105,7 @@
       <member>Q</member>
     </simplelist>
     . This ensures that the longest rules will be processed first; a PA+MAI will not be seen as a PA with a dangling MAI at the end, for example. </para>
-    <bridgehead>Step 6 – YACC Parsing</bridgehead>
+    <bridgehead>Step 6 &ndash; YACC Parsing</bridgehead>
     <para>YACC should now be able to parse the Lojban text in accordance with the rule terminals labelled from 1 to 899 under option 5a, or 1 to 1099 under option 5b. Comment out the rules beyond 900 if option 5a is used, and comment out the 700-series of lexer-tokens, while restoring the series of lexer tokens numbered from 900 up.</para>
     <para>*/</para>
     <programlisting xml:space="preserve">
@@ -423,7 +423,7 @@
 
 %token 
 <anchor xml:id="y621"/>
-<anchor xreflabel="YACC rule #621" xml:id="cll_yacc-621"/> ZAhO_621         /* event properties – inchoative, etc. */
+<anchor xreflabel="YACC rule #621" xml:id="cll_yacc-621"/> ZAhO_621         /* event properties &ndash; inchoative, etc. */
 %token 
 <anchor xml:id="y622"/>
 <anchor xreflabel="YACC rule #622" xml:id="cll_yacc-622"/> ZEhA_622         /* time interval size tense */
@@ -1637,17 +1637,17 @@ the 900 series rules are found in the lexer.  */
                         |  
 <xref linkend="cll_yacc-817"/>
 <xref linkend="cll_yacc-461"/>
-   /* lerfu string as operand – classic math variable */
+   /* lerfu string as operand &ndash; classic math variable */
                         |  
 <xref linkend="cll_yacc-428"/>
 <xref linkend="cll_yacc-130"/>
 <xref linkend="cll_yacc-473"/>
-   /* quantifies a bridi – inverse of -MOI */
+   /* quantifies a bridi &ndash; inverse of -MOI */
                         |  
 <xref linkend="cll_yacc-427"/>
 <xref linkend="cll_yacc-90"/>
 <xref linkend="cll_yacc-473"/>
-   /* quantifies a sumti – inverse of LI */
+   /* quantifies a sumti &ndash; inverse of LI */
                         |  
 <xref linkend="cll_yacc-431"/>
 <xref linkend="cll_yacc-313"/>
@@ -1953,7 +1953,7 @@ the 900 series rules are found in the lexer.  */
    convention for such text.  */
 
 /* The preparser needs one bit of sophistication for this rule.  A
-   quoted string should be able to contain other quoted strings – this is
+   quoted string should be able to contain other quoted strings &ndash; this is
    only a problem for a LOhU quote itself, since the LEhU clossing this
    quote would otherwise close the outer quotes, which is incorrect.  For
    this purpose, we will cheat on the use of ZO in such a quote (since this
@@ -3097,7 +3097,7 @@ the 900 series rules are found in the lexer.  */
                         |  
 <xref linkend="cll_yacc-1030"/>
 <xref linkend="cll_yacc-1040"/>
-   /* time and space – If 
+   /* time and space &ndash; If 
 <xref linkend="cll_yacc-1040"/> is marked with
    VIhA for space-time the tense may be self-contradictory */
    /* interval prop before space_time is for time distribution */

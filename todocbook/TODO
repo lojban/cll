@@ -3,35 +3,6 @@ All the imported/manual indexterm entries for single words or selma'o need
 removing.  Might be nice to re-apply * cb87291250fa978bcb67f965bfb880601ce9f367
 Chapter 6 lojban-word-importeds. for this.
 
-How about we split <jbophrase> into <jboword>, <jbophrase>, and
-<jbofragment>?  (is fragment quite right?  pseudojbo?  For things
-that are lojbanic in structure, but not actual words; ktraile or
-rafsi or similar).  Basically all are Lojbanic to some extent;
-<jbophrase> are valid unless marked otherwise but have no
-definition because phrasal; <jboword> are valid unless marked
-otherwise and have a definition unless marked otherwise; <pseudojbo>
-is never valid nor has a definition.
-
-  There should, however, be a way to mark that morphology fragments
-  are valid or not; consider <jbophrase role="morphology"
-  valid="false">cc</jbophrase>
-
-  What about cmevla?  Maybe do <cmene>, <valsi>, ... ?
-
-<!-- FIXME: non-lojban-non-english component of example <jbo>자모
-(from Korean)</jbo> ; how do we mark this? <nonen>? <foreign>? -->
-(from 4.xml): make <en> into <natlang>
-
-zort-: So for things like "<jbo>spageti (Lojbanize)</jbo>", what do you think of <jbo>spageti
-<comment>(Lojbanize)</comment></jbo> or something?
-I was thinking <commentary>, but that seems a bit pointlessly bulky.
-Oh, actually, without the parens at that point; they can get added back in later if we want them.
-By the code.
-
-Replace ’ with '
-
-Replace – with &mdash;
-
 WRT rafsi:  <rafsi type="prefix">man</rafsi> seems best
 
   Will that suck for <member><jbophrase role="rafsi">ger</jbophrase><jbophrase role="rafsi">-zda</jbophrase></member> ?
@@ -446,7 +417,7 @@ If you see a <quote>...</quote> around Lojban text, replace it with
 Also, use <jbophrase valid="false">...</jbophrase> for purposeful na
 gendra and <jbophrase valid="iffy">...</jbophrase> for na smudra
 
-Turn letters, like <quote>l</quote>, into <jbophrase
+Turn Lojban letters, like <quote>l</quote>, into <jbophrase
 role="letteral">l</jbophrase> (including ",", ".", and "'").
 
 Similarily we have role="morphology" (consonant clusters),
@@ -516,7 +487,7 @@ All such indexterm entries should end up in the example itself, like so:
       - does the <cmavo-list> structure achieve this?
 - It seems that there is a problem with the cmavo lists at the
   beginning of sections having missing entries; in particular, ones
-  wwith + in the selma'o, maybe?; they need to be manually checked
+  wwith +/* in the selma'o, maybe?; they need to be manually checked
 - lojban words, lojban phrases, terms of art ("abstraction"),
   others?... should each have their own index
 - cll_chapter5-section1 should be content-words-brivla or so ; those
@@ -567,3 +538,4 @@ All such indexterm entries should end up in the example itself, like so:
     production.
 - Similarily, generate more-readable anchors based on current
   section number and such
+��5:q!
