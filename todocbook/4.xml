@@ -3,7 +3,7 @@
   
   <section xml:id="section-morphology-introduction">
     <title>Introductory</title>
-    <para><letteral>,</letteral> <indexterm type="general-imported"><primary>word forms</primary><secondary>in Lojban (see also morphology)</secondary></indexterm>  <indexterm type="general-imported"><primary>morphology</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>morphology</primary><secondary>simplicity of</secondary></indexterm> Morphology is the part of grammar that deals with the form of words. Lojban's morphology is fairly simple compared to that of many languages, because Lojban words don't change form depending on how they are used. English has only a small number of such changes compared to languages like Russian, but it does have changes like 
+    <para><indexterm type="general-imported"><primary>word forms</primary><secondary>in Lojban (see also morphology)</secondary></indexterm>  <indexterm type="general-imported"><primary>morphology</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>morphology</primary><secondary>simplicity of</secondary></indexterm> Morphology is the part of grammar that deals with the form of words. Lojban's morphology is fairly simple compared to that of many languages, because Lojban words don't change form depending on how they are used. English has only a small number of such changes compared to languages like Russian, but it does have changes like 
     <quote>boys</quote> as the plural of 
     
     <quote>boy</quote>, or 
@@ -1499,12 +1499,12 @@
     <example role="lojbanization-example" xml:id="example-random-id-43uP">
       <title>
         <!-- FIXME: these two indexterms match two different examples; should they go in both or just the first? -->
-        <indexterm type="example-imported"><primary>John Smith</primary><secondary>example</secondary></indexterm>
-        <indexterm type="example-imported"><primary>Smith</primary><secondary>John</secondary><tertiary>example</tertiary></indexterm>
+        <indexterm type="example-imported"><primary>John Brown</primary><secondary>example</secondary></indexterm>
+        <indexterm type="example-imported"><primary>Brown</primary><secondary>John</secondary><tertiary>example</tertiary></indexterm>
         <anchor xml:id="c4e8d9"/>
       </title>
       <lojbanization>
-        <jbo>djan. smif.</jbo>
+        <jbo>djan. braun.</jbo>
       </lojbanization>
     </example>
     <para>and</para>
@@ -1513,11 +1513,11 @@
         <anchor xml:id="c4e8d10"/>
       </title>
       <lojbanization>
-        <jbo>djansmif.</jbo>
+        <jbo>djanbraun.</jbo>
       </lojbanization>
     </example>
     <para>are both valid Lojbanizations of 
-    <quote>John Smith</quote>.</para>
+    <quote>John Brown</quote>.</para>
     
     <para> <indexterm type="general-imported"><primary>names</primary><secondary>authority for</secondary></indexterm>  <indexterm type="general-imported"><primary>cmene</primary><secondary>authority for</secondary></indexterm> The final arbiter of the correct form of a name is the person doing the naming, although most cultures grant people the right to determine how they want their own name to be spelled and pronounced. The English name 
     <quote>Mary</quote> can thus be Lojbanized as 
@@ -1667,7 +1667,7 @@
     <orderedlist>
       <listitem>
         <para>Change double consonants other than 
-        <oldjbophrase>cc</oldjbophrase> to single consonants.</para>
+        <morphology>cc</morphology> to single consonants.</para>
       </listitem>
       <listitem>
         <para>Change 
@@ -2055,7 +2055,7 @@
               <tbody>
                 <row>
                   <entry>CVC/CV (final)</entry>
-                  <entry>(<rafsi>-sarji-</rafsi>)</entry>
+                  <entry>(<rafsi>-sarji</rafsi>)</entry>
                   <entry>1</entry>
                 </row>
                 <row>
@@ -2065,7 +2065,7 @@
                 </row>
                 <row>
                   <entry>CCVCV (final)</entry>
-                  <entry>(<rafsi>-zbasu-</rafsi>)</entry>
+                  <entry>(<rafsi>-zbasu</rafsi>)</entry>
                   <entry>3</entry>
                 </row>
                 <row>
@@ -2636,91 +2636,125 @@
     <valsi>lujvo</valsi> were made up from parts of other gismu, they are now full-fledged gismu used in exactly the same way as all other gismu, both in grammar and in word formation.</para>
     <para>The following three groups of gismu represent concepts drawn from the international language of science and mathematics. They are used for concepts that are represented in most languages by a root which is recognized internationally.</para>
     <para>Small metric prefixes (values less than 1):</para>
-    <variablelist>
-      <varlistentry>
-        <term><valsi>decti</valsi></term>
-        <listitem><para>.1/deci</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>centi</valsi></term>
-        <listitem><para>.01/centi</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>milti</valsi></term>
-        <listitem><para>.001/milli</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>mikri</valsi></term>
-        <listitem><para><inlinemath>10<superscript>-6</superscript></inlinemath>/micro</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>nanvi</valsi></term>
-        <listitem><para><inlinemath>10<superscript>-9</superscript></inlinemath>/nano</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>picti</valsi></term>
-        <listitem><para><inlinemath>10<superscript>-12</superscript></inlinemath>/pico</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>femti</valsi></term>
-        <listitem><para><inlinemath>10<superscript>-15</superscript></inlinemath>/femto</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>xatsi</valsi></term>
-        <listitem><para><inlinemath>10<superscript>-18</superscript></inlinemath>/atto</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>zepti</valsi></term>
-        <listitem><para><inlinemath>10<superscript>-21</superscript></inlinemath>/zepto</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>gocti</valsi></term>
-        <listitem><para><inlinemath>10<superscript>-24</superscript></inlinemath>/yocto</para></listitem>
-      </varlistentry>
-    </variablelist>
+    <informaltable>
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><valsi>decti</valsi></entry>
+            <entry>.1</entry>
+            <entry>deci</entry>
+          </row>
+          <row>
+            <entry><valsi>centi</valsi></entry>
+            <entry>.01</entry>
+            <entry>centi</entry>
+          </row>
+          <row>
+            <entry><valsi>milti</valsi></entry>
+            <entry>.001</entry>
+            <entry>milli</entry>
+          </row>
+          <row>
+            <entry><valsi>mikri</valsi></entry>
+            <entry><inlinemath>10<superscript>-6</superscript></inlinemath></entry>
+            <entry>micro</entry>
+          </row>
+          <row>
+            <entry><valsi>nanvi</valsi></entry>
+            <entry><inlinemath>10<superscript>-9</superscript></inlinemath></entry>
+            <entry>nano</entry>
+          </row>
+          <row>
+            <entry><valsi>picti</valsi></entry>
+            <entry><inlinemath>10<superscript>-12</superscript></inlinemath></entry>
+            <entry>pico</entry>
+          </row>
+          <row>
+            <entry><valsi>femti</valsi></entry>
+            <entry><inlinemath>10<superscript>-15</superscript></inlinemath></entry>
+            <entry>femto</entry>
+          </row>
+          <row>
+            <entry><valsi>xatsi</valsi></entry>
+            <entry><inlinemath>10<superscript>-18</superscript></inlinemath></entry>
+            <entry>atto</entry>
+          </row>
+          <row>
+            <entry><valsi>zepti</valsi></entry>
+            <entry><inlinemath>10<superscript>-21</superscript></inlinemath></entry>
+            <entry>zepto</entry>
+          </row>
+          <row>
+            <entry><valsi>gocti</valsi></entry>
+            <entry><inlinemath>10<superscript>-24</superscript></inlinemath></entry>
+            <entry>yocto</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
     <para>Large metric prefixes (values greater than 1):</para>
-    <variablelist>
-      <varlistentry>
-        <term><valsi>dekto</valsi></term>
-        <listitem><para>10/deka</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>xecto</valsi></term>
-        <listitem><para>100/hecto</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>kilto</valsi></term>
-        <listitem><para>1000/kilo</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>megdo</valsi></term>
-        <listitem><para><inlinemath>10<superscript>6</superscript></inlinemath>/mega</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>gigdo</valsi></term>
-        <listitem><para><inlinemath>10<superscript>9</superscript></inlinemath>/giga</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>terto</valsi></term>
-        <listitem><para><inlinemath>10<superscript>12</superscript></inlinemath>/tera</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>petso</valsi></term>
-        <listitem><para><inlinemath>10<superscript>15</superscript></inlinemath>/peta</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>xexso</valsi></term>
-        <listitem><para><inlinemath>10<superscript>18</superscript></inlinemath>/exa</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>zetro</valsi></term>
-        <listitem><para><inlinemath>10<superscript>21</superscript></inlinemath>/zetta</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>gotro</valsi></term>
-        <listitem><para><inlinemath>10<superscript>24</superscript></inlinemath>/yotta</para></listitem>
-      </varlistentry>
-    </variablelist>
+    <informaltable>
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><valsi>dekto</valsi></entry>
+            <entry>10</entry>
+            <entry>deka</entry>
+          </row>
+          <row>
+            <entry><valsi>xecto</valsi></entry>
+            <entry>100</entry>
+            <entry>hecto</entry>
+          </row>
+          <row>
+            <entry><valsi>kilto</valsi></entry>
+            <entry>1000</entry>
+            <entry>kilo</entry>
+          </row>
+          <row>
+            <entry><valsi>megdo</valsi></entry>
+            <entry><inlinemath>10<superscript>6</superscript></inlinemath></entry>
+            <entry>mega</entry>
+          </row>
+          <row>
+            <entry><valsi>gigdo</valsi></entry>
+            <entry><inlinemath>10<superscript>9</superscript></inlinemath></entry>
+            <entry>giga</entry>
+          </row>
+          <row>
+            <entry><valsi>terto</valsi></entry>
+            <entry><inlinemath>10<superscript>12</superscript></inlinemath></entry>
+            <entry>tera</entry>
+          </row>
+          <row>
+            <entry><valsi>petso</valsi></entry>
+            <entry><inlinemath>10<superscript>15</superscript></inlinemath></entry>
+            <entry>peta</entry>
+          </row>
+          <row>
+            <entry><valsi>xexso</valsi></entry>
+            <entry><inlinemath>10<superscript>18</superscript></inlinemath></entry>
+            <entry>exa</entry>
+          </row>
+          <row>
+            <entry><valsi>zetro</valsi></entry>
+            <entry><inlinemath>10<superscript>21</superscript></inlinemath></entry>
+            <entry>zetta</entry>
+          </row>
+          <row>
+            <entry><valsi>gotro</valsi></entry>
+            <entry><inlinemath>10<superscript>24</superscript></inlinemath></entry>
+            <entry>yotta</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
     <para> <indexterm type="general-imported"><primary>gismu</primary><secondary>cultural</secondary></indexterm> Other scientific or mathematical terms:</para>
     <variablelist>
       <varlistentry>
