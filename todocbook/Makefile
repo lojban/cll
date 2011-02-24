@@ -1,8 +1,8 @@
 
 web: html/index.html
 	cp docbook2html.css html/
-	rm -rf ~/www/public_media/docbook-cll-test
-	cp -pr html ~/www/public_media/docbook-cll-test
+	rm -rf ~/www/media/public/tmp/docbook-cll-test
+	cp -pr html ~/www/media/public/tmp/docbook-cll-test
 
 html/index.html: cll.xml
 	xsltproc --nonet --path . --novalid docbook2html_preprocess.xsl cll.xml > cll_processed.xml
