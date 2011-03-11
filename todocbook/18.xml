@@ -102,7 +102,7 @@
       <interlinear-gloss>
         <jbo>pa re ci</jbo>
         <gloss>one two three</gloss>
-        <math>123 ignore</math> <!-- ok -->
+        <math>123</math>
         <en>one hundred and twenty three</en>
         
       </interlinear-gloss>
@@ -2234,8 +2234,6 @@
       </title>
       <interlinear-gloss>
         <jbo>li tu'o va'a ny. du li no vu'u ny.</jbo>
-        
-        
         <gloss>The-number (null) additive-inverse n equals the-number zero minus n.</gloss>
         <math>-n = 0 − n</math>
       </interlinear-gloss>
@@ -2256,7 +2254,7 @@
       <interlinear-gloss>
         <jbo>li cinonoki'oki'o du li bi gei ci</jbo>
         <gloss>The-number three-zero-zero-comma-comma equals the-number eight scientific three.</gloss>
-        <math>300,000,000 = 3 × 10</math>
+        <math>300,000,000 = 3 × 10<superscript>8</superscript></math>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>3 ( 10^8</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>gei</primary><secondary>rationale for order of places</secondary></indexterm>  <indexterm type="general-imported"><primary>scientific notation</primary><secondary>rationale for order of places</secondary></indexterm> Why are the arguments to 
@@ -2269,7 +2267,7 @@
       <interlinear-gloss>
         <jbo>gei reno</jbo>
         <gloss>(scientific) two-zero</gloss>
-        <math>10</math>
+        <math>10 <superscript>20</superscript></math>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="example-imported"><primary>10^20</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>floating point numbers</primary><secondary>expressing</secondary></indexterm>  <indexterm type="general-imported"><primary>exponential notation</primary><secondary>with base other than 10</secondary></indexterm>  <indexterm type="general-imported"><primary>gei</primary><secondary>as a ternary operator</secondary></indexterm>  <indexterm type="general-imported"><primary>operands</primary><secondary>too many for infix operation</secondary></indexterm>  <indexterm type="general-imported"><primary>null operator</primary><secondary>for infix operations with too many operands</secondary></indexterm>  <indexterm type="general-imported"><primary>ge'a</primary><secondary>for infix operations with too many operands</secondary></indexterm> Note, however, that although 10 is far and away the most common exponent base, it is not the only possible one. The third operand of 
@@ -2283,7 +2281,7 @@
       <interlinear-gloss>
         <jbo>papano bi'eju'u re gei pipanopano bi'eju'u re ge'a re</jbo>
         <gloss>(one-one-zero base 2) scientific (point-one-zero-one-zero base 2) with-base 2</gloss>
-        <math>.1010</math>
+        <math>.1010<subscript>2</subscript> x 2<superscript>110<subscript>2</subscript></superscript></math>
       </interlinear-gloss>
     </example>
   </section>
@@ -3131,7 +3129,7 @@
     <para> <indexterm type="general-imported"><primary>ma'o</primary><secondary>potential ambiguity caveat</secondary></indexterm> There is a potential semantic ambiguity in 
     <oldjbophrase>ma'o fy. [te'u]</oldjbophrase> if 
     <oldjbophrase>fy.</oldjbophrase> is already in use as a variable: it comes to mean 
-    <quote>the function whose value is always <quote>f</quote></quote>. However, mathematicians do not normally use the same lerfu words or strings as both functions and variables, so this case should not arise in practice.</para>
+    <quote>the function whose value is always <varname>f</varname></quote>. However, mathematicians do not normally use the same lerfu words or strings as both functions and variables, so this case should not arise in practice.</para>
   </section>
   <section xml:id="section-four-score-and-seven">
     <title>Four score and seven: a mekso problem</title>
