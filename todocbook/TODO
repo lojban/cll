@@ -15,83 +15,16 @@ WRT rafsi:  <rafsi type="prefix">man</rafsi> seems best
 Handling chapter 2: why don't we just require that the number of sub-entries matches?
   Also: maybe rename jbo/gloss for this purpose, or introduce roles.
 
-10.xml
+From IRC:
 
-  <jbo>ze'e roroi ve'e fe'e roroi ku li re su'i re du li vo [whole time] [all times] [whole space] [space:] [all places] </jbo>
-  -- needs a gloss section
-
-  <listitem><para>once</para></listitem>
-  <para>...</para>
-  <term><jbophrase>roroi</jbophrase></term>
-  <listitem><para>always</para></listitem>
-  <para>etc.</para>
-  <term><jbophrase>pare'u</jbophrase></term>
-  <listitem><para>the first time</para></listitem>
-  <term><jbophrase>rere'u</jbophrase></term>
-  <listitem><para>the second time</para></listitem>
-  <para>etc.</para>
-  -- disconnected para, that were seperated by commas inside the
-  text
-
-12.xml
-
-          <para>kl1 goes to car kl2=ka1 which carries ka2 propell
-          ed by ka3 from origin kl3</para>
-                  <para>via route kl4 by means of kl5</para>
-
-          <para>kl1 goes to destination kl2 from origin kl3 via r
-          oute kl4</para>
-                  <para>by means of car kl5=ka1 carrying ka2
-                  propelled by
-                   ka3.</para>
-
-
-        <jbophrase>dzukla</jbophrase>: c1=k1 walks to k2 from k
-    3 via route k4 using limbs k5=c3</gloss>
-        <para>on surface c2</para>
-
-  -- needs merge
-
-13.xml
-
-  <cmavo-entry>
-        <cmavo>ro'i</cmavo>
-        <attitudinal-scale point="sai">emotional</attitudinal-s cale>
-        <attitudinal-scale point="cu'i">denying</attitudinal-sc ale>
-        <attitudinal-scale point="nai">emotion</attitudinal-sca le>
-      </cmavo-entry>
-
- <cmavo-entry>
-   <cmavo>ro'o</cmavo>
-   <attitudinal-scale point="sai">physical</attitudinal-sc
-
-   <attitudinal-scale point="cu'i">denying</attitudinal-sc
-
-   <attitudinal-scale point="nai">physical</attitudinal-sc
-
- </cmavo-entry>
-
-  <cmavo-entry>
-    <cmavo>ro'u</cmavo>
-    <attitudinal-scale point="sai">sexual</attitudinal-scal
-
-    <attitudinal-scale point="cu'i">sexual</attitudinal-sca
-
-    <attitudinal-scale point="nai">abstinence</attitudinal-
-  </cmavo-entry>
-
-  -- needs merge
-
-    <attitudinal-scale point="sai">hauteur</attitudinal-sca
-
-    <attitudinal-scale point="sai">rank</attitudinal-scale>
-  -- hwat the hell is hauteur rank?  and theoretically needs merge
-
-  STuff under <source-gismu>[frili]</source-gismu> needs merge
-
-  obviously -- needs to go in li'a
-
-  <attitudinal-scale point="cu'i">omitting ex.</attitudin -- shouldn't be abbreviated
+< vensa> rlpowell: are you aware of the TYPO at the bottm of this CLL page? http://dag.github.com/cll/10/16/
+< rlpowell> Heh.  I get an internal server error. :)
+< rlpowell> Can you paste?
+< vensa> subordinate:               X TENSE le nu Y    -- that's the proper part
+< vensa> forethought coordinate:    TENSE+gi X gi Y   -- thats the bad part pe'i
+< rlpowell> What do you think the problem is?
+< kebukebu> (They are said to be equivalent)
+< vensa> (should be TENSE+gi *Y* gi *X*)
 
 14.xml:
         <foreign xml:lang="zh">ni<superscript>3</superscript> z
@@ -351,6 +284,20 @@ All such indexterm entries should end up in the example itself, like so:
   section 2 of chapter 5
 - print: Add a header or footer to the left or the right page that
   has the number of the chapter you're in.
+
+- for chapter 13, needs code changes to handle things like this:
+
+      <cmavo-entry>
+        <cmavo>fu'i</cmavo>
+        <gismu>[frili]</gismu>
+        <attitudinal-scale point="sai">with help</attitudinal-scale>
+        <attitudinal-scale point="sai">easily</attitudinal-scale>
+        <attitudinal-scale point="cu'i">without help</attitudinal-scale>
+        <attitudinal-scale point="nai">with opposition</attitudinal-scale>
+        <attitudinal-scale point="nai">with difficulty</attitudinal-scale>
+      </cmavo-entry>
+
+  the way the red book does
 
 ==================
   Both/Other
