@@ -11,9 +11,9 @@
     <xref linkend="chapter-lujvo"/>); if the selbri is a tanru, the place structure is the same as that of the final component in the tanru.</para>
     <para><indexterm type="example-imported"><primary>go</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>x1</primary><secondary>in place structure notation</secondary></indexterm>  <indexterm type="general-imported"><primary>place structure</primary><secondary>notation conventions</secondary></indexterm>  <indexterm type="general-imported"><primary>klama</primary><secondary>place structure of</secondary></indexterm> The stock example of a place structure is that of the gismu 
     <valsi>klama</valsi>:</para>
-    <place-structure>
+    <definition>
       <valsi>klama</valsi>: x1 comes/goes to destination x2 from origin x3 via route x4 employing means of transport x5.
-    </place-structure>
+    </definition>
     <para>The 
     <quote>x1 ... x5</quote> indicates that 
     <valsi>klama</valsi> is a five-place predicate, and show the natural order (as assigned by the language engineers) of those places: agent, destination, origin, route, means.</para>
@@ -163,9 +163,9 @@
     <para>
       <oldjbophrase>le karce</oldjbophrase> occupies the x4 place, and therefore 
     <xref linkend="example-random-id-jh7T"/> means:</para>
-    <place-structure>
+    <definition>
       I go to Boston from Atlanta, using the car as a route.
-    </place-structure>
+    </definition>
     <para>This is nonsense, since a car cannot be a route. What the speaker presumably meant is expressed by:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-tqoQ">
       <title>
@@ -424,9 +424,9 @@
     <para>In 
     <xref linkend="example-random-id-GnTu"/>, the speaker uses the selbri 
     <valsi>dunda</valsi>, whose place structure is:</para>
-    <place-structure>
+    <definition>
       <valsi>dunda</valsi>: x1 gives x2 to x3
-    </place-structure>
+    </definition>
     <para> <indexterm type="general-imported"><primary>answers</primary><secondary>to place structure questions</secondary></indexterm> The tagged sumti 
     <oldjbophrase>fi'a do</oldjbophrase> indicates that the speaker wishes to know whether the sumti 
     
@@ -476,25 +476,25 @@
     <quote>1st place conversion</quote> cmavo, because exchanging the x1 place with itself is a pointless maneuver.</para>
     <para> <indexterm type="general-imported"><primary>se klama</primary><secondary>place structure of</secondary></indexterm> Here are the place structures of 
     <oldjbophrase>se klama</oldjbophrase>:</para>
-    <place-structure>
+    <definition>
       x1 is the destination of x2's going from x3 via x4 using x5
-    </place-structure>
+    </definition>
     <para> <indexterm type="lojban-word-imported"><primary>te</primary></indexterm> and 
     <oldjbophrase>te klama</oldjbophrase>:</para>
-    <place-structure>
+    <definition>
       x1 is the origin and x2 the destination of x3 going via x4 using x5
-    </place-structure>
+    </definition>
     <para> <indexterm type="lojban-word-imported"><primary>ve</primary></indexterm> and 
     <oldjbophrase>ve klama</oldjbophrase>:</para>
     
-    <place-structure>
+    <definition>
       x1 is the route to x2 from x3 used by x4 going via x5
-    </place-structure>
+    </definition>
     <para> <indexterm type="lojban-word-imported"><primary>xe</primary></indexterm> and 
     <oldjbophrase>xe klama</oldjbophrase>:</para>
-    <place-structure>
+    <definition>
       x1 is the means in going to x2 from x3 via x4 employed by x5
-    </place-structure>
+    </definition>
     <para> <indexterm type="general-imported"><primary>SE selma'o</primary><secondary>effect on place structure numbering</secondary></indexterm> Note that the place structure numbers in each case continue to be listed in the usual order, x1 to x5.</para>
     <para>Consider the following pair of examples:</para>
     <example xml:id="example-random-id-qmHh" role="interlinear-gloss-example">
@@ -619,19 +619,19 @@
     <valsi>zdani</valsi>, by the rule given in 
     <xref linkend="section-sumti-tcita-introduction"/>. The place structure of 
     <valsi>zdani</valsi> is:</para>
-    <place-structure>
+    <definition>
       zdani: x1 is a house/nest/lair/den for inhabitant x2
-    </place-structure>
+    </definition>
     <para>The place structure of 
     <oldjbophrase>se ke blanu zdani [ke'e]</oldjbophrase> is therefore:</para>
-    <place-structure>
+    <definition>
       x1 is the inhabitant of the blue house (etc.) x2
-    </place-structure>
+    </definition>
     <para>Consequently, 
     <xref linkend="example-random-id-wQbB"/> means:</para>
-    <place-structure>
+    <definition>
       I am the inhabitant of the blue house which is this thing.
-    </place-structure>
+    </definition>
     <para>Conversion applied to only part of a tanru has subtler effects which are explained in 
     <xref linkend="section-place-conversion"/>.</para>
     <para> <indexterm type="general-imported"><primary>multiple conversion</primary><secondary>effect of ordering</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion</primary><secondary>effect of multiple on a selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>multiple SE</primary><secondary>effect of ordering</secondary></indexterm>  <indexterm type="general-imported"><primary>SE selma'o</primary><secondary>effect of multiple on a selbri</secondary></indexterm> It is grammatical to convert a selbri more than once with SE; later (inner) conversions are applied before earlier (outer) ones. For example, the place structure of 
@@ -639,16 +639,16 @@
     
     <oldjbophrase>te klama</oldjbophrase>, producing:</para>
     <para> <indexterm type="lojban-word-imported"><primary>se te</primary></indexterm> FIXME: TAG SPOT</para>
-    <place-structure>
+    <definition>
       x1 is the destination and x2 is the origin of x3 going via x4 using x5
 
-    </place-structure>
+    </definition>
     <para>On the other hand, 
     <oldjbophrase>te se klama</oldjbophrase> has a place structure derived from swapping the x1 and x3 places of 
     <oldjbophrase>se klama</oldjbophrase>:</para>
-    <place-structure>
+    <definition>
       x1 is the origin of x2's going to x3 via x4 using x5
-    </place-structure>
+    </definition>
     <para> <indexterm type="general-imported"><primary>multiple conversion</primary><secondary>avoiding</secondary></indexterm> which is quite different. However, multiple conversions like this are never necessary. Arbitrary scrambling of places can be achieved more easily and far more intelligibly with FA tags, and only a single conversion is ever needed in a description.</para>
     <para><indexterm type="general-imported"><primary>conversion</primary><secondary>swapping non-first places</secondary></indexterm> (Although no one has made any real use of it, it is perhaps worth noting that compound conversions of the form 
     <oldjbophrase>setese</oldjbophrase>, where the first and third cmavo are the same, effectively swap the two given places while leaving the others, including x1, alone: 
@@ -676,9 +676,9 @@
     </cmavo-list>
     <para>Sometimes the place structures engineered into Lojban are inadequate to meet the needs of actual speech. Consider the gismu 
     <valsi>viska</valsi>, whose place structure is:</para>
-    <place-structure>
+    <definition>
       viska: x1 sees x2 under conditions x3
-    </place-structure>
+    </definition>
     <para>Seeing is a threefold relationship, involving an agent (le viska), an object of sight (le se viska), and an environment that makes seeing possible (le te viska). Seeing is done with one or more eyes, of course; in general, the eyes belong to the entity in the x1 place.</para>
     <para> <indexterm type="lojban-word-imported"><primary>FEhU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>fe'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>FIhO selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>fi'o</primary></indexterm>  <indexterm type="example-imported"><primary>see with left eye</primary><secondary>example</secondary></indexterm>  <indexterm type="general-imported"><primary>fi'o</primary><secondary>use in adding places to place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>place structure</primary><secondary>adding new places to with modal sumti</secondary></indexterm>  <indexterm type="general-imported"><primary>fi'o</primary><secondary>as modal tag</secondary></indexterm> Suppose, however, that you are blind in one eye and are talking to someone who doesn't know that. You might want to say, 
     <quote>I see you with the left eye.</quote> There is no place in the place structure of 
@@ -702,9 +702,9 @@
     <oldjbophrase>fi'o kanla le zunle</oldjbophrase> is that 
     <oldjbophrase>le zunle</oldjbophrase> fills the x1 place of 
     <valsi>kanla</valsi>, whose place structure is</para>
-    <place-structure>
+    <definition>
       kanla: x1 is an/the eye of body x2
-    </place-structure>
+    </definition>
     <para> <indexterm type="general-imported"><primary>modal sumti</primary><secondary>as first place of modal tag selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>modal place relation</primary><secondary>importance of first place in</secondary></indexterm>  <indexterm type="general-imported"><primary>fi'o tag</primary><secondary>relation of modal sumti following to selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>modal place</primary><secondary>relation of to selbri</secondary></indexterm> Thus 
     <oldjbophrase>le zunle</oldjbophrase> is an eye. The x2 place of 
     <valsi>kanla</valsi> is unspecified and must be inferred from the context. It is important to remember that even though 
@@ -727,9 +727,9 @@
     <para>Consider 
     <xref linkend="example-random-id-BSAc"/> again. Another way to view the situation is to consider the speaker's left eye as a tool, a tool for seeing. The relevant selbri then becomes 
     <valsi>pilno</valsi>, whose place structure is</para>
-    <place-structure>
+    <definition>
       pilno: x1 uses x2 as a tool for purpose x3
-    </place-structure>
+    </definition>
     <para>and we can rewrite 
     <xref linkend="example-random-id-BSAc"/> as</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Lu15">
@@ -759,9 +759,9 @@
     <para>There are certain selbri which seem particularly useful in constructing modal tags. In particular, 
     <valsi>pilno</valsi> is one of them. The place structure of 
     <valsi>pilno</valsi> is:</para>
-    <place-structure>
+    <definition>
       pilno: x1 uses x2 as a tool for purpose x3
-    </place-structure>
+    </definition>
     <para><indexterm type="general-imported"><primary>BAI modal tags</primary><secondary>rationale for</secondary></indexterm> and almost any selbri which represents an action may need to specify a tool. Having to say 
     <oldjbophrase>fi'o se pilno</oldjbophrase> frequently would make many Lojban sentences unnecessarily verbose and clunky, so an abbreviation is provided in the language design: the compound cmavo 
     <oldjbophrase>sepi'o</oldjbophrase>.</para>
@@ -958,19 +958,19 @@
     <variablelist>
       <varlistentry>
         <term><valsi>rinka</valsi></term>
-        <listitem><place-structure>>event x1 physically causes event x2</place-structure></listitem>
+        <listitem><definition>>event x1 physically causes event x2</definition></listitem>
       </varlistentry>
       <varlistentry>
         <term><valsi>krinu</valsi></term>
-        <listitem><place-structure>>event x1 is the justification for event x2</place-structure></listitem>
+        <listitem><definition>>event x1 is the justification for event x2</definition></listitem>
       </varlistentry>
       <varlistentry>
         <term><valsi>mukti</valsi></term>
-        <listitem><place-structure>>event x1 is the (human) motive for event x2</place-structure></listitem>
+        <listitem><definition>>event x1 is the (human) motive for event x2</definition></listitem>
       </varlistentry>
       <varlistentry>
         <term><valsi>nibli</valsi></term>
-        <listitem><place-structure>>event x1 logically entails event x2</place-structure></listitem>
+        <listitem><definition>>event x1 logically entails event x2</definition></listitem>
       </varlistentry>
     </variablelist>
     <para> <indexterm type="general-imported"><primary>modal causals</primary><secondary>implication differences</secondary></indexterm>  <indexterm type="general-imported"><primary>causals</primary><secondary>modal</secondary></indexterm>  <indexterm type="general-imported"><primary>modals</primary><secondary>for causal gismu</secondary></indexterm> Each of these gismu has a related modal: 
@@ -1572,11 +1572,11 @@
     <variablelist>
       <varlistentry>
         <term><valsi>zmadu</valsi>:</term>
-        <listitem><place-structure>>x1 is more than x2 in property/quantity x3 by amount x4</place-structure></listitem>
+        <listitem><definition>>x1 is more than x2 in property/quantity x3 by amount x4</definition></listitem>
       </varlistentry>
       <varlistentry>
         <term><valsi>mleca</valsi>:</term>
-        <listitem><place-structure>>x1 is less than x2 in property/quantity x3 by amount x4</place-structure></listitem>
+        <listitem><definition>>x1 is less than x2 in property/quantity x3 by amount x4</definition></listitem>
       </varlistentry>
     </variablelist>
     <para>Here are some examples:</para>
@@ -2618,9 +2618,9 @@
     <oldjbophrase>tamsmi</oldjbophrase> on which 
     <valsi>tai</valsi> is based is derived from the tanru 
     <oldjbophrase>tarmi simsa</oldjbophrase> and has the place structure:</para>
-    <place-structure>
+    <definition>
       tamsmi: x1 has form x2, similar in form to x3 in property/quality x4
-    </place-structure>
+    </definition>
     <para>This lujvo is employed because 
     <valsi>tarmi</valsi> does not have a place structure useful for the modal's purpose.</para>
   </section>
