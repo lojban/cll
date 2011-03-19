@@ -40,7 +40,7 @@
               </xsl:for-each>
             </row>
           </xsl:for-each>
-          <xsl:for-each select="$items/en">
+          <xsl:for-each select="$items/natlang">
             <xsl:variable name="startcol" select="concat('col',1)" />
             <xsl:variable name="endcol" select="concat('col',count(str:tokenize($maximal)))" />
             <row>
@@ -82,7 +82,7 @@
   
   <!-- Turn interlinear-gloss nodes into tables.
 
-        Such a node must have at least one jbo entry and at least one en entry.
+        Such a node must have at least one jbo entry and at least one natlang entry.
   -->
   <xsl:template match="interlinear-gloss">
     <xsl:choose>
@@ -100,10 +100,10 @@
         </xsl:text>
         <xsl:copy/>
       </xsl:when>
-      <xsl:when test="count(.//en) &lt; 1">
-        <xsl:message>interlinear-gloss needs at least one en line; look for "ERROR" in the output</xsl:message>
+      <xsl:when test="count(.//natlang) &lt; 1">
+        <xsl:message>interlinear-gloss needs at least one natlang line; look for "ERROR" in the output</xsl:message>
         <xsl:text>
-          ERROR: The following interlinear-gloss needs at least one en line:
+          ERROR: The following interlinear-gloss needs at least one natlang line:
         </xsl:text>
         <xsl:copy/>
       </xsl:when>
@@ -147,10 +147,10 @@
         </xsl:text>
         <xsl:copy/>
       </xsl:when>
-      <xsl:when test="count(.//en) &lt; 1">
-        <xsl:message>interlinear-gloss needs at least one en line; look for "ERROR" in the output</xsl:message>
+      <xsl:when test="count(.//natlang) &lt; 1">
+        <xsl:message>interlinear-gloss needs at least one natlang line; look for "ERROR" in the output</xsl:message>
         <xsl:text>
-          ERROR: The following interlinear-gloss needs at least one en line:
+          ERROR: The following interlinear-gloss needs at least one natlang line:
         </xsl:text>
         <xsl:copy/>
       </xsl:when>
@@ -176,8 +176,8 @@
     </xsl:choose>
   </xsl:template>
 
-  <!-- <en> tags that arn't in <interlinear-gloss> tags -->
-  <xsl:template match="example/en[not(boolean(ancestor::interlinear-gloss))]">
+  <!-- <natlang> tags that arn't in <interlinear-gloss> tags -->
+  <xsl:template match="example/natlang[not(boolean(ancestor::interlinear-gloss))]">
     <para>
       <xsl:apply-templates select="node()|text()"/>
     </para>
