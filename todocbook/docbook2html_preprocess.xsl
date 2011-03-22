@@ -60,7 +60,7 @@
         <tbody>
           <xsl:for-each select=".//cmavo-entry">
             <row>
-              <xsl:for-each select="cmavo|selmaho|description|gismu|rafsi|attitudinal-scale|modal-place">
+              <xsl:for-each select="cmavo|pseudo-cmavo|selmaho|description|gismu|rafsi|attitudinal-scale|modal-place">
                 <entry><xsl:value-of select="."/></entry>
               </xsl:for-each>
             </row>
@@ -325,15 +325,15 @@
     </phrase>
   </xsl:template>
 
-  <xsl:template match="place-structure[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
-    <blockquote role="place-structure">
+  <xsl:template match="definition[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
+    <blockquote role="definition">
       <para>
         <xsl:apply-templates select="node()|text()"/>
       </para>
     </blockquote>
   </xsl:template>
 
-  <xsl:template match="place-structure" priority="1">
+  <xsl:template match="definition" priority="1">
     <phrase>
       <xsl:apply-templates select="node()|text()"/>
     </phrase>
