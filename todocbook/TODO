@@ -47,18 +47,27 @@ They have been seperated out by blank lines to make it easier.
 
 Especially things like this:
 
-  <para> <indexterm type="example-imported"><primary>lemon tree</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
+  <para> <indexterm type="example-imported"><primary>John is coming</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
 
 which are artificial paragraphs solely for index importing.
 
 All such indexterm entries should end up in the example itself, like so:
 
-  <title>
-    <indexterm type="example"><primary>lemon tree</primary><secondary>example</secondary></indexterm>
-    <anchor xml:id="c5e2d1"/>
-  </title>
+    <example xml:id="example-random-id-qfgA" role="interlinear-gloss-example">
+      <title>
+        <anchor xml:id="c13e1d6"/>
+        <indexterm type="example"><primary>John is coming</primary><secondary>example</secondary></indexterm>
+      </title>
+      <interlinear-gloss>
+        <jbo>.ianai la djan klama</jbo>
+
+        <gloss>[Nonsense!] John is coming.</gloss>
+      </interlinear-gloss>
+    </example>
 
 NOTE THE CHANGE OF TYPE on the indexterm.
+
+If there are several examples that obviously apply, feel free to copy it around.
 
  ------
 
