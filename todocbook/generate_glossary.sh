@@ -77,4 +77,4 @@ cat <<EOF
 
 EOF
 
-rm >$TMPFILE
+rm $TMPFILE
