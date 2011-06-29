@@ -1,6 +1,7 @@
 
 web: html/index.html
 	cp docbook2html.css html/
+	mkdir -p ~/www/media/public/tmp
 	rm -rf ~/www/media/public/tmp/docbook-cll-test
 	cp -pr html ~/www/media/public/tmp/docbook-cll-test
 
