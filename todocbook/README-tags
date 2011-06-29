@@ -71,6 +71,9 @@ This is used for a single Lojban word when it is referenced in the
 text (that is, when discussing the word, not when using its actual
 meaning).  This results in a link from the Lojban glossary.
 
+NB: This means that anything wrapped in valsi must be findable in
+jbovlaste.
+
 A special case here is compound cmavo.  Where the compound has its
 own meaning that isn't necessarily composable from the parts, use a
 single tag, like so:
@@ -80,7 +83,19 @@ single tag, like so:
 Where it is decomposable, use two adjacent, like so:
 
   <valse>je</valsi><valsi>nai</valsi>
+
+  valsi validity
+  --------------
+
+<valsi valid="false">ro'irre'o</valsi> should be used where an
+example morphologically illegal word is given, as in that example.
   
+  cmevla
+  ------
+
+Like "valsi" (including validity) but with no expectation that it
+can be found in a dictionary.
+
   diphthong
   ---------
 
@@ -321,3 +336,4 @@ or U vowels associated with Lojbanic logic operations.
   <rafsi>zba + sai</rafsi>
   <score><inlinemath>(1000 * 6) - (500 * 0) + (100 * 0) - (10 * 15) - 3 = 5847</inlinemath></score>
 </lujvo-making>
+
