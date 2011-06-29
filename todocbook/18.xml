@@ -870,12 +870,12 @@
     <para>Again, no parentheses are used. The construct 
     <oldjbophrase>ma'o fy.boi</oldjbophrase> is the equivalent of an operator, and appears in forethought here (although it could also be used as a regular infix operator). In mathematics, letters sometimes mean functions and sometimes mean variables, with only the context to tell which. Lojban chooses to accept the variable interpretation as the default, and uses the special flag 
     <valsi>ma'o</valsi> to mark a lerfu string as an operator. The cmavo 
-    <oldjbophrase>xy.</oldjbophrase> and 
-    <oldjbophrase>zy.</oldjbophrase> are variables, but 
-    <oldjbophrase>fy.</oldjbophrase> is an operator (a function) because 
+    <valsi>xy.</valsi> and 
+    <valsi>zy.</valsi> are variables, but 
+    <valsi>fy.</valsi> is an operator (a function) because 
     <valsi>ma'o</valsi> marks it as such. The 
     <valsi>boi</valsi> is required because otherwise the 
-    <oldjbophrase>xy.</oldjbophrase> would look like part of the operator name. (The use of 
+    <valsi>xy.</valsi> would look like part of the operator name. (The use of 
     <valsi>ma'o</valsi> can be generalized from lerfu strings to any mekso operand: see 
     <xref linkend="section-miscellany"/>.)</para>
     <para>When using forethought mekso, the optional marker 
@@ -3280,12 +3280,12 @@
     
     <para> <indexterm type="lojban-word-imported"><primary>te'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ma'o</primary></indexterm>  <indexterm type="general-imported"><primary>operator</primary><secondary>converting from operand</secondary></indexterm>  <indexterm type="general-imported"><primary>operand</primary><secondary>converting into operator</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion of operand into operator</primary></indexterm> To change an operand into an operator, we use the cmavo 
     <valsi>ma'o</valsi>, already introduced as a means of changing a lerfu string such as 
-    <oldjbophrase>fy.</oldjbophrase> into an operator. In fact, 
+    <valsi>fy.</valsi> into an operator. In fact, 
     <valsi>ma'o</valsi> can be followed by any mekso operand, using the elidable terminator 
     <valsi>te'u</valsi> if necessary.</para>
     <para> <indexterm type="general-imported"><primary>ma'o</primary><secondary>potential ambiguity caveat</secondary></indexterm> There is a potential semantic ambiguity in 
     <oldjbophrase>ma'o fy. [te'u]</oldjbophrase> if 
-    <oldjbophrase>fy.</oldjbophrase> is already in use as a variable: it comes to mean 
+    <valsi>fy.</valsi> is already in use as a variable: it comes to mean 
     <quote>the function whose value is always <varname>f</varname></quote>. However, mathematicians do not normally use the same lerfu words or strings as both functions and variables, so this case should not arise in practice.</para>
   </section>
   <section xml:id="section-four-score-and-seven">
