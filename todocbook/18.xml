@@ -628,8 +628,8 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>conversion into sumti from mekso</primary></indexterm>  <indexterm type="general-imported"><primary>conversion of mekso into sumti</primary></indexterm>  <indexterm type="general-imported"><primary>li</primary><secondary>as converter of mekso into sumti</secondary></indexterm>  <indexterm type="general-imported"><primary>general sumti</primary><secondary>contrasted with operands</secondary></indexterm>  <indexterm type="general-imported"><primary>operands</primary><secondary>contrasted with general sumti</secondary></indexterm>  <indexterm type="general-imported"><primary>VUhU operands</primary></indexterm>  <indexterm type="general-imported"><primary>operators of VUhU</primary><secondary>grammar of operands</secondary></indexterm>  <indexterm type="general-imported"><primary>du</primary><secondary>with complex mekso on both sides</secondary></indexterm> Why don't we say 
-    <oldjbophrase>li mu su'i li pa</oldjbophrase> rather than just 
-    <oldjbophrase>li mu su'i pa</oldjbophrase>? The answer is that VUhU operators connect mekso operands (numbers, in 
+    <jbophrase>li mu su'i li pa</jbophrase> rather than just 
+    <jbophrase>li mu su'i pa</jbophrase>? The answer is that VUhU operators connect mekso operands (numbers, in 
     <xref linkend="example-random-id-d6bM"/>), not general sumti. 
     
     <valsi>li</valsi> is used to make the entire mekso into a sumti, which then plays the roles applicable to other sumti: in 
@@ -670,7 +670,7 @@
     </example>
     <para> <indexterm type="general-imported"><primary>default operator precedence</primary><secondary>contrasted with mekso goal</secondary></indexterm> Here we calculate 3 + 4 first, giving 7, and then calculate 7 × 5 second, leading to the result 35. While possessing the advantage of simplicity, this result violates the design goal of matching the standards of mathematics. What can be done?</para>
     <para> <indexterm type="general-imported"><primary>operator precedence</primary><secondary>effect of pragmatic convention</secondary></indexterm>  <indexterm type="general-imported"><primary>operator precedence</primary><secondary>and mathematical notation</secondary></indexterm>  <indexterm type="general-imported"><primary>mathematical notation</primary><secondary>and operator precedence</secondary></indexterm> There are three solutions, all of which will probably be used to some degree. The first solution is to ignore the problem. People will say 
-    <oldjbophrase>li ci su'i vo pi'i mu</oldjbophrase> and mean 23 by it, because the notion that multiplication takes precedence over addition is too deeply ingrained to be eradicated by Lojban parsing, which totally ignores semantics. This convention essentially allows semantics to dominate syntax in this one area.</para>
+    <jbophrase>li ci su'i vo pi'i mu</jbophrase> and mean 23 by it, because the notion that multiplication takes precedence over addition is too deeply ingrained to be eradicated by Lojban parsing, which totally ignores semantics. This convention essentially allows semantics to dominate syntax in this one area.</para>
     
     <para> <indexterm type="general-imported"><primary>operator precedence in other languages</primary></indexterm>  <indexterm type="general-imported"><primary>operator precedence</primary><secondary>rationale for default left-grouping</secondary></indexterm> (Why not hard-wire the precedences into the grammar, as is done in computer programming languages? Essentially because there are too many operators, known and unknown, with levels of precedence that vary according to usage. The programming language 'C' has 13 levels of precedence, and its list of operators is not even extensible. For Lojban this approach is just not practical. In addition, hard-wired precedence could not be overridden in mathematical systems such as spreadsheets where the conventions are different.)</para>
     <para> <indexterm type="general-imported"><primary>operator precedence</primary><secondary>generalized explicit specification</secondary></indexterm> The second solution is to use explicit means to specify the precedence of operators. This approach is fully general, but clumsy, and will be explained in 
@@ -808,7 +808,7 @@
     <valsi>boi</valsi> is required after 
     <valsi>pa</valsi> and 
     <valsi>re</valsi> because otherwise the reading would be 
-    <oldjbophrase>pareci</oldjbophrase>= 123. It is not required after 
+    <jbophrase>pareci</jbophrase>= 123. It is not required after 
     <valsi>ci</valsi> but is inserted here in brackets for the sake of symmetry. The only time 
     <valsi>boi</valsi> is required is, as in 
     <xref linkend="example-random-id-I0Bm"/>, when there are two consecutive numbers or lerfu strings.</para>
@@ -848,10 +848,10 @@
     <valsi>vei</valsi> and 
     <valsi>ve'o</valsi> are NOT used for this purpose.) If the 
     <valsi>ku'e</valsi> were omitted, the 
-    <oldjbophrase>su'i zy</oldjbophrase> would be swallowed up by the 
+    <jbophrase>su'i zy</jbophrase> would be swallowed up by the 
     <valsi>va'a</valsi> forethought operator, which would then appear to have two operands, 
     <valsi>ny</valsi> and 
-    <oldjbophrase>su'i zy.</oldjbophrase>, where the latter is also a forethought expression.</para>
+    <jbophrase>su'i zy.</jbophrase>, where the latter is also a forethought expression.</para>
     <para>Forethought mekso is also useful for matching standard functional notation. How do we represent 
     
     <quote>z = f(x)</quote>? The answer is:</para>
@@ -868,7 +868,7 @@
       </interlinear-gloss>
     </example>
     <para>Again, no parentheses are used. The construct 
-    <oldjbophrase>ma'o fy.boi</oldjbophrase> is the equivalent of an operator, and appears in forethought here (although it could also be used as a regular infix operator). In mathematics, letters sometimes mean functions and sometimes mean variables, with only the context to tell which. Lojban chooses to accept the variable interpretation as the default, and uses the special flag 
+    <jbophrase>ma'o fy.boi</jbophrase> is the equivalent of an operator, and appears in forethought here (although it could also be used as a regular infix operator). In mathematics, letters sometimes mean functions and sometimes mean variables, with only the context to tell which. Lojban chooses to accept the variable interpretation as the default, and uses the special flag 
     <valsi>ma'o</valsi> to mark a lerfu string as an operator. The cmavo 
     <valsi>xy.</valsi> and 
     <valsi>zy.</valsi> are variables, but 
@@ -957,20 +957,20 @@
         <listitem><definition>x1 is greater than x2</definition></listitem>
       </varlistentry>
       <varlistentry>
-        <term><oldjbophrase>dubjavme'a</oldjbophrase></term>
+        <term><valsi>dubjavme'a</valsi></term>
         <listitem><definition>x1 is less than or equal to x2 [<valsi>du</valsi> <valsi>ja</valsi> <valsi>mleca</valsi>, equal or less]</definition></listitem>
       </varlistentry>
       <varlistentry>
-        <term><oldjbophrase>dubjavmau</oldjbophrase></term>
+        <term><valsi>dubjavmau</valsi></term>
         <listitem><definition>x1 is greater than or equal to x2 [<valsi>du</valsi> <valsi>ja</valsi> <valsi>zmadu</valsi>, equal or greater]</definition></listitem>
       </varlistentry>
       <varlistentry>
-        <term><oldjbophrase>tamdu'i</oldjbophrase></term>
+        <term><valsi>tamdu'i</valsi></term>
         <listitem><definition>x1 is similar to x2 [<valsi>tarmi</valsi> <valsi>dunli</valsi>, shape-equal]</definition></listitem>
       </varlistentry>
 
       <varlistentry>
-        <term><oldjbophrase>turdu'i</oldjbophrase></term>
+        <term><valsi>turdu'i</valsi></term>
         <listitem><definition>x1 is isomorphic to x2 [<valsi>stura</valsi> <valsi>dunli</valsi>, structure-equal]</definition></listitem>
       </varlistentry>
 
@@ -979,15 +979,15 @@
         <listitem><definition>x1 is a member of set x2</definition></listitem>
       </varlistentry>
       <varlistentry>
-        <term><oldjbophrase>gripau</oldjbophrase></term>
+        <term><valsi>gripau</valsi></term>
         <listitem><definition>x1 is a subset of set x2 [<valsi>girzu</valsi> <valsi>pagbu</valsi>, set-part]</definition></listitem>
       </varlistentry>
       <varlistentry>
-        <term><oldjbophrase>na'ujbi</oldjbophrase></term>
+        <term><valsi>na'ujbi</valsi></term>
         <listitem><definition>x1 is approximately equal to x2 [<valsi>namcu</valsi> <valsi>jibni</valsi>, number-near]</definition></listitem>
       </varlistentry>
       <varlistentry>
-        <term><oldjbophrase>terci'e</oldjbophrase></term>
+        <term><valsi>terci'e</valsi></term>
         <listitem><definition>x1 is a component with function x2 of system x3</definition></listitem>
       </varlistentry>
     </variablelist>
@@ -1102,7 +1102,7 @@
     <valsi>ro</valsi> means 
     <quote>all</quote> or 
     <quote>each</quote>. This number does not have a definite value in the abstract: 
-    <oldjbophrase>li ro</oldjbophrase> is undefined. But when used to count or quantify something, the parallel between 
+    <jbophrase>li ro</jbophrase> is undefined. But when used to count or quantify something, the parallel between 
     <valsi>ro</valsi> and 
     <valsi>pa</valsi> is clearer:</para>
     <example xml:id="example-random-id-qI27" role="interlinear-gloss-example">
@@ -1229,7 +1229,7 @@
     
     <quote>the typical value</quote>, and 
     
-    <oldjbophrase>pino'o</oldjbophrase>, meaning 
+    <jbophrase>pino'o</jbophrase>, meaning 
     <quote>the typical portion</quote>: Sometimes 
     <valsi>no'o</valsi> can be translated 
     
@@ -1339,10 +1339,10 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="lojban-word-imported"><primary>mo'a</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>du'e</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>rau</primary></indexterm>  <indexterm type="general-imported"><primary>indefinite values</primary><secondary>subjective</secondary></indexterm>  <indexterm type="general-imported"><primary>subjective amounts</primary><secondary>expressing</secondary></indexterm> All of the numbers discussed so far are objective, even if indefinite. If there are exactly six superpowers ( 
-    <oldjbophrase>rairgugde</oldjbophrase>, 
+    <valsi>rairgugde</valsi>, 
     <quote>superlative-states</quote>) in the world, then 
-    <oldjbophrase>ro rairgugde</oldjbophrase> means the same as 
-    <oldjbophrase>xa rairgugde</oldjbophrase>. It is often useful, however, to express subjective indefinite values. The cmavo 
+    <jbophrase>ro rairgugde</jbophrase> means the same as 
+    <jbophrase>xa rairgugde</jbophrase>. It is often useful, however, to express subjective indefinite values. The cmavo 
     
     <valsi>rau</valsi> (enough), 
     
@@ -1375,7 +1375,7 @@
     <valsi>mo'a</valsi> can be preceded by 
     
     <valsi>pi</valsi>; for example, 
-    <oldjbophrase>pirau</oldjbophrase> means 
+    <jbophrase>pirau</jbophrase> means 
     <quote>a sufficient part of.</quote></para>
     <para> <indexterm type="general-imported"><primary>definite numbers</primary><secondary>combined with indefinite</secondary></indexterm>  <indexterm type="general-imported"><primary>indefinite numbers</primary><secondary>combined with definite</secondary></indexterm> Another possibility is that of combining definite and indefinite numbers into a single number. This usage implies that the two kinds of numbers have the same value in the given context:</para>
     
@@ -1588,11 +1588,11 @@
     <xref linkend="example-random-id-qIfM"/> requires three persons or more. Likewise, 
     <xref linkend="example-random-id-qidi"/> refers to zero, one, or two; 
     <xref linkend="example-random-id-qIe7"/> to zero or one. (Of course, when the context allows numbers other than non-negative integers, 
-    <oldjbophrase>me'i re</oldjbophrase> can be any number less than 2, and likewise with the other cases.) The exact quantifier, 
+    <jbophrase>me'i re</jbophrase> can be any number less than 2, and likewise with the other cases.) The exact quantifier, 
     
     <quote>exactly 2, neither more nor less</quote> is just 
     <valsi>re</valsi>. Note that 
-    <oldjbophrase>su'ore</oldjbophrase> is the exact Lojban equivalent of English plurals.</para>
+    <jbophrase>su'ore</jbophrase> is the exact Lojban equivalent of English plurals.</para>
     <para> <indexterm type="general-imported"><primary>za'u</primary><secondary>with elided number</secondary></indexterm>  <indexterm type="general-imported"><primary>me'i</primary><secondary>with elided number</secondary></indexterm>  <indexterm type="general-imported"><primary>su'o</primary><secondary>with elided number</secondary></indexterm>  <indexterm type="general-imported"><primary>su'e</primary><secondary>with elided number</secondary></indexterm> If no number follows one of these cmavo, 
     <valsi>pa</valsi> is understood: therefore,</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-brir">
@@ -1678,7 +1678,7 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>base</primary><secondary>changing permanently</secondary></indexterm>  <indexterm type="general-imported"><primary>base</primary><secondary>assumed</secondary></indexterm> Here, the final 
-    <oldjbophrase>pa no</oldjbophrase> is assumed to be base 10, as usual; so is the base specification. (The base may also be changed permanently by a metalinguistic specification; no standard way of doing so has as yet been worked out.)</para>
+    <jbophrase>pa no</jbophrase> is assumed to be base 10, as usual; so is the base specification. (The base may also be changed permanently by a metalinguistic specification; no standard way of doing so has as yet been worked out.)</para>
     <para> <indexterm type="general-imported"><primary>hexadecimal system</primary><secondary>specifying numbers in (see also base)</secondary></indexterm>  <indexterm type="general-imported"><primary>digits</primary><secondary>rationale for having 16</secondary></indexterm> Lojban has digits for representing bases up to 16, because 16 is a base often used in computer applications. In English, it is customary to use the letters A-F as the base 16 digits equivalent to the numbers ten through fifteen. In Lojban, this ambiguity is avoided:</para>
     <example xml:id="example-random-id-qIgb" role="interlinear-gloss-example">
       <title>
@@ -1940,7 +1940,7 @@
 
       <indexterm type="general-imported"><primary>lo'i</primary><secondary>with elided quantifiers</secondary></indexterm> In 
     <xref linkend="example-random-id-GJsg"/>, the x2 and x3 places are vacant, and the x4 place is filled by 
-    <oldjbophrase>lo'i ratcu</oldjbophrase>, which (because no quantifiers are explicitly given) means 
+    <jbophrase>lo'i ratcu</jbophrase>, which (because no quantifiers are explicitly given) means 
     <quote>the whole of the set of all those things which are rats</quote>, or simply 
     <quote>the set of all rats.</quote></para>
     
@@ -2060,7 +2060,7 @@
     </definition>
     <para> <indexterm type="general-imported"><primary>unreduced fractions</primary><secondary>use in granular scales</secondary></indexterm>  <indexterm type="general-imported"><primary>scale</primary><secondary>granular contrasted with continuous</secondary></indexterm> If the scale is granular rather than continuous, a form like 
     
-    <oldjbophrase>cifi'uxa</oldjbophrase> (3/6) may be used; in this case, 3/6 is not the same as 1/2, because the third position on a scale of six positions is not the same as the first position on a scale of two positions. Here is an example:</para>
+    <jbophrase>cifi'uxa</jbophrase> (3/6) may be used; in this case, 3/6 is not the same as 1/2, because the third position on a scale of six positions is not the same as the first position on a scale of two positions. Here is an example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-XiTd">
       <title>
         <anchor xml:id="c18e11d10"/>
@@ -2098,13 +2098,13 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>subjective numbers</primary><secondary>rationale for effect on place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>too many rats</primary><secondary>example</secondary></indexterm> The extra place (which for 
-    <oldjbophrase>-mei</oldjbophrase> is the x4 place labeled by 
+    <jbophrase>-mei</jbophrase> is the x4 place labeled by 
     <valsi>fo</valsi>) is provided rather than using a BAI tag such as 
     <valsi>ma'i</valsi> because a specification of the standard for judgment is essential to the meaning of subjective words like 
     
     <quote>enough</quote>.</para>
     <para> <indexterm type="general-imported"><primary>subjective numbers</primary><secondary>specifying standard for</secondary></indexterm>  <indexterm type="general-imported"><primary>standard for subjective numbers</primary><secondary>specifying</secondary></indexterm> This place is not normally explicit when using one of the subjective numbers directly as a number. Therefore, 
-    <oldjbophrase>du'e ratcu</oldjbophrase> means 
+    <jbophrase>du'e ratcu</jbophrase> means 
     
     <quote>too many rats</quote> without specifying any standard.</para>
     
@@ -2140,10 +2140,10 @@
       </interlinear-gloss>
     </example>
     <para>Here the mekso 
-    <oldjbophrase>ny. su'i pa</oldjbophrase> is made into a sumti (with 
+    <jbophrase>ny. su'i pa</jbophrase> is made into a sumti (with 
     <valsi>li</valsi>) and then changed into a mekso selbri with 
     <valsi>me</valsi> and 
-    <oldjbophrase>me'u moi</oldjbophrase>. The elidable terminator 
+    <jbophrase>me'u moi</jbophrase>. The elidable terminator 
     <valsi>me'u</valsi> is required here in order to keep the 
     <valsi>pa</valsi> and the 
     <valsi>moi</valsi> separate; otherwise, the parser will combine them into the compound 
@@ -2568,8 +2568,8 @@
     <valsi>mu</valsi> (with 
     <valsi>boi</valsi> inserted where needed), and the operands of the 
     <valsi>su'i</valsi> are 
-    <oldjbophrase>reboi ci pi'i</oldjbophrase>, or 6, and 
-    <oldjbophrase>voboi mu pi'i</oldjbophrase>, or 20. As you can see, it is easy to get lost in the world of reverse Polish notation; on the other hand, it is especially easy for a mechanical listener (who has a deep mental stack and doesn't get lost) to comprehend.</para>
+    <jbophrase>reboi ci pi'i</jbophrase>, or 6, and 
+    <jbophrase>voboi mu pi'i</jbophrase>, or 20. As you can see, it is easy to get lost in the world of reverse Polish notation; on the other hand, it is especially easy for a mechanical listener (who has a deep mental stack and doesn't get lost) to comprehend.</para>
     
     
     <para> <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>parentheses in operands of</secondary></indexterm>  <indexterm type="general-imported"><primary>reverse Polish notation</primary><secondary>operands of</secondary></indexterm> The operands of an RP operator can be any legal mekso operand, including parenthesized mekso that can contain any valid syntax, whether more RP or something more conventional.</para>
@@ -2580,13 +2580,13 @@
     
     <valsi>ge'a</valsi> provide a simple solution. A one-operand operator like 
     <valsi>va'a</valsi> always appears in a reverse Polish context as 
-    <oldjbophrase>tu'o va'a</oldjbophrase>. The 
+    <jbophrase>tu'o va'a</jbophrase>. The 
     
     
     <valsi>tu'o</valsi> provides the second operand, which is semantically ignored but grammatically necessary. Likewise, the three-operand version of 
     
     <valsi>gei</valsi> appears in reverse Polish as 
-    <oldjbophrase>ge'a gei</oldjbophrase>, where the 
+    <jbophrase>ge'a gei</jbophrase>, where the 
     
     <valsi>ge'a</valsi> effectively merges the 2nd and 3rd operands into a single operand. Here are some examples:</para>
     <example xml:id="example-random-id-qiJp" role="interlinear-gloss-example">
@@ -2989,8 +2989,8 @@
     <quote>4</quote> are not the same. The relationship between 
     <valsi>li</valsi> and 
     <valsi>me'o</valsi> is related to that between 
-    <oldjbophrase>la djan.</oldjbophrase>, the person named John, and 
-    <oldjbophrase>zo .djan.</oldjbophrase>, the name 
+    <jbophrase>la djan.</jbophrase>, the person named John, and 
+    <jbophrase>zo .djan.</jbophrase>, the name 
     <quote>John</quote></para>
     <para> <indexterm type="lojban-word-imported"><primary>nu'a</primary></indexterm>  <indexterm type="general-imported"><primary>selbri</primary><secondary>place structure of converted operator</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion of operator into selbri</primary></indexterm>  <indexterm type="general-imported"><primary>operator</primary><secondary>converting into selbri</secondary></indexterm>  <indexterm type="general-imported"><primary>selbri</primary><secondary>converting operator into</secondary></indexterm> The cmavo 
     <valsi>nu'a</valsi> is the inverse of 
@@ -3037,7 +3037,7 @@
     </example>
     <para>In 
     <xref linkend="example-random-id-qIKp"/>, 
-    <oldjbophrase>na'u mo</oldjbophrase> is an operator question, because 
+    <jbophrase>na'u mo</jbophrase> is an operator question, because 
     <valsi>mo</valsi> is the selbri question cmavo and 
     <valsi>na'u</valsi> makes the selbri into an operator. 
     <xref linkend="example-random-id-qILi"/> makes the true answer 
@@ -3055,7 +3055,7 @@
       </interlinear-gloss>
     </example>
     <para>where the 
-    <oldjbophrase>na'u nu'a</oldjbophrase> cancels out, leaving a truthful bridi</para>
+    <jbophrase>na'u nu'a</jbophrase> cancels out, leaving a truthful bridi</para>
     <para> <indexterm type="lojban-word-imported"><primary>MAI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>mai</primary></indexterm>  
 
 
@@ -3226,7 +3226,7 @@
       </interlinear-gloss>
     </example>
     <para>Of course, there is no guarantee that the name 
-    <oldjbophrase>zel.</oldjbophrase> is connected with the number rafsi: an alternative which cannot be misconstrued is:</para>
+    <cmevla>zel.</cmevla> is connected with the number rafsi: an alternative which cannot be misconstrued is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-pf3n">
       <title>
         <anchor xml:id="c18e21d6"/>
@@ -3276,7 +3276,7 @@
     <para> <indexterm type="lojban-word-imported"><primary>ni'enu'a</primary></indexterm>  <indexterm type="general-imported"><primary>operand</primary><secondary>converting from operator</secondary></indexterm>  <indexterm type="general-imported"><primary>operator</primary><secondary>converting into operand</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion of operator into operand</primary></indexterm>  <indexterm type="general-imported"><primary>algebra of functions</primary><secondary>operator and operand distinction in</secondary></indexterm>  <indexterm type="general-imported"><primary>lambda calculus</primary><secondary>operator and operand distinction in</secondary></indexterm> The grammar of mekso as described so far imposes a rigid distinction between operators and operands. Some flavors of mathematics (lambda calculus, algebra of functions) blur this distinction, and Lojban must have a method of doing the same. An operator can be changed into an operand with 
     
     
-    <oldjbophrase>ni'enu'a</oldjbophrase>, which transforms the operator into a matching selbri and then the selbri into an operand.</para>
+    <jbophrase>ni'enu'a</jbophrase>, which transforms the operator into a matching selbri and then the selbri into an operand.</para>
     
     <para> <indexterm type="lojban-word-imported"><primary>te'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ma'o</primary></indexterm>  <indexterm type="general-imported"><primary>operator</primary><secondary>converting from operand</secondary></indexterm>  <indexterm type="general-imported"><primary>operand</primary><secondary>converting into operator</secondary></indexterm>  <indexterm type="general-imported"><primary>conversion of operand into operator</primary></indexterm> To change an operand into an operator, we use the cmavo 
     <valsi>ma'o</valsi>, already introduced as a means of changing a lerfu string such as 
@@ -3284,7 +3284,7 @@
     <valsi>ma'o</valsi> can be followed by any mekso operand, using the elidable terminator 
     <valsi>te'u</valsi> if necessary.</para>
     <para> <indexterm type="general-imported"><primary>ma'o</primary><secondary>potential ambiguity caveat</secondary></indexterm> There is a potential semantic ambiguity in 
-    <oldjbophrase>ma'o fy. [te'u]</oldjbophrase> if 
+    <jbophrase>ma'o fy. [te'u]</jbophrase> if 
     <valsi>fy.</valsi> is already in use as a variable: it comes to mean 
     <quote>the function whose value is always <varname>f</varname></quote>. However, mathematicians do not normally use the same lerfu words or strings as both functions and variables, so this case should not arise in practice.</para>
   </section>
@@ -3343,7 +3343,7 @@
     </example>
     <para>In 
     <xref linkend="example-random-id-iwba"/>, 
-    <oldjbophrase>voboi renomei</oldjbophrase> is a sumti signifying four things each of which are groups of twenty; the 
+    <jbophrase>voboi renomei</jbophrase> is a sumti signifying four things each of which are groups of twenty; the 
     <valsi>mo'e</valsi> and 
     
     <valsi>te'u</valsi> then make this sumti into a number in order to allow it to be the operand of 
