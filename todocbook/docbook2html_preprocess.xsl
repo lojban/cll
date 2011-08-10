@@ -229,50 +229,6 @@
     <xsl:value-of select="$slug"/>
   </xsl:template>
 
-  <!-- turn <jbophrase> elements with single lojban words into
-       glossary and indexed elements
-       -->
-  <!-- If you change the match here, also change it in
-       generate_glossary.xsl ; search for LOJBAN WORDS MATCH
-       -->
-  <xsl:template match="jbophrase[count(str:tokenize(text())) = 1 and ( not(@glossary) or @glossary != 'false')
-    and ( not(@role) or ( @role != 'morphology' and @role != 'rafsi' and @role != 'diphthong' and @role != 'letteral' ) ) ]"
-    priority="2">
-    <xsl:variable name="wordsnum">
-      <xsl:value-of select="count(str:tokenize(text()))"/>
-    </xsl:variable>
-    <xsl:variable name="slug">
-      <xsl:call-template name="make_slug">
-        <xsl:with-param name="input" select="text()"/>
-      </xsl:call-template>
-    </xsl:variable>
-    <!-- FIXME: the role is currently only used by the chapter2
-         markup stuff, which still needs to be implemented
-    -->
-    <glossterm linkend='jbogloss-{$slug}'>
-      <foreignphrase xml:lang="jbo">
-        <xsl:if test="boolean(@role)">
-          <xsl:attribute name="role">
-            <xsl:value-of select="@role"/>
-          </xsl:attribute>
-        </xsl:if>
-        <indexterm>
-          <xsl:attribute name="type">lojban-words</xsl:attribute>
-          <primary>
-            <xsl:apply-templates select="node()|text()"/>
-          </primary>
-        </indexterm>
-        <xsl:apply-templates select="node()|text()"/>
-      </foreignphrase>
-    </glossterm>
-  </xsl:template>
-
-  <xsl:template match="jbophrase">
-    <foreignphrase xml:lang="jbo">
-      <xsl:apply-templates select="node()|text()"/>
-    </foreignphrase>
-  </xsl:template>
-
   <xsl:template match="morphology">
     <foreignphrase xml:lang="jbo" role="morphology">
       <xsl:apply-templates select="node()|text()"/>
@@ -404,11 +360,27 @@
         <xsl:with-param name="input" select="text()"/>
       </xsl:call-template>
     </xsl:variable>
+    <glossterm linkend='valsi-{$slug}'>
+      <foreignphrase xml:lang="jbo">
+        <indexterm type="lojban-words">
+          <primary>
+            <xsl:apply-templates select="node()|text()"/>
+          </primary>
+        </indexterm>
+        <xsl:apply-templates select="node()|text()"/>
+      </foreignphrase>
+    </glossterm>
+  </xsl:template>
+
+  <!-- For now, jbophrase makes an *index* but not a *glossary* -->
+  <xsl:template match="jbophrase">
     <foreignphrase xml:lang="jbo">
-      <indexterm type="lojban-words">
-        <primary><xsl:value-of select="text()"/></primary>
+      <indexterm type="lojban-phrases">
+        <primary>
+          <xsl:apply-templates select="node()|text()"/>
+        </primary>
       </indexterm>
-      <xsl:value-of select="text()"/>
+      <xsl:apply-templates select="node()|text()"/>
     </foreignphrase>
   </xsl:template>
 
@@ -448,6 +420,45 @@
       <xsl:value-of select="text()"/>
     </foreignphrase>
   </xsl:template>
+
+  <!- - turn <jbophrase> elements with single lojban words into
+       glossary and indexed elements
+       - ->
+  <!- - If you change the match here, also change it in
+       generate_glossary.xsl ; search for LOJBAN WORDS MATCH
+       - ->
+  <xsl:template match="jbophrase[count(str:tokenize(text())) = 1 and ( not(@glossary) or @glossary != 'false')
+    and ( not(@role) or ( @role != 'morphology' and @role != 'rafsi' and @role != 'diphthong' and @role != 'letteral' ) ) ]"
+    priority="2">
+    <xsl:variable name="wordsnum">
+      <xsl:value-of select="count(str:tokenize(text()))"/>
+    </xsl:variable>
+    <xsl:variable name="slug">
+      <xsl:call-template name="make_slug">
+        <xsl:with-param name="input" select="text()"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <!- - FIXME: the role is currently only used by the chapter2
+         markup stuff, which still needs to be implemented
+    - ->
+    <glossterm linkend='jbogloss-{$slug}'>
+      <foreignphrase xml:lang="jbo">
+        <xsl:if test="boolean(@role)">
+          <xsl:attribute name="role">
+            <xsl:value-of select="@role"/>
+          </xsl:attribute>
+        </xsl:if>
+        <indexterm>
+          <xsl:attribute name="type">lojban-words</xsl:attribute>
+          <primary>
+            <xsl:apply-templates select="node()|text()"/>
+          </primary>
+        </indexterm>
+        <xsl:apply-templates select="node()|text()"/>
+      </foreignphrase>
+    </glossterm>
+  </xsl:template>
+
   -->
 
 </xsl:stylesheet>

@@ -61,7 +61,7 @@ do
   fi
 
   cat <<EOF
-<glossentry xml:id="jbogloss-$slug">
+<glossentry xml:id="valsi-$slug">
 <glossterm>$word</glossterm>
 <glossdef>
   <para>$definition</para>
