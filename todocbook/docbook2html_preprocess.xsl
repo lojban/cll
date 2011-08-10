@@ -235,6 +235,12 @@
     </foreignphrase>
   </xsl:template>
 
+  <xsl:template match="cmevla">
+    <foreignphrase xml:lang="jbo" role="cmevla">
+      <xsl:apply-templates select="node()|text()"/>
+    </foreignphrase>
+  </xsl:template>
+
   <xsl:template match="letteral">
     <foreignphrase xml:lang="jbo" role="letteral">
       <xsl:apply-templates select="node()|text()"/>
