@@ -28,64 +28,18 @@ change, and I will hunt you down and bad things will occur.
   Non-Visual Issues
 ==================
 
-Deal with all the <oldjbophrase> crap.  This is probably the single
-biggest remaining chunk of work.
-
- ------
-
 The <definition> tags within tables have their <valsi> component in another column of the table.  We need to decide whether is this is
 satisfactory, or if something else should be done with them.
 
  ------
  
---This section should now be complete; leaving this here for now just in case
-
-Entries like <indexterm type="example-imported"> (NOTE the type)
-need to be moved into examples.
-
-They have been seperated out by blank lines to make it easier.
-
-Especially things like this:
-
-  <para> <indexterm type="example-imported"><primary>John is coming</primary><secondary>example</secondary></indexterm> FIXME: TAG SPOT</para>
-
-which are artificial paragraphs solely for index importing.
-
-All such indexterm entries should end up in the example itself, like so:
-
-    <example xml:id="example-random-id-qfgA" role="interlinear-gloss-example">
-      <title>
-        <anchor xml:id="c13e1d6"/>
-        <indexterm type="example"><primary>John is coming</primary><secondary>example</secondary></indexterm>
-      </title>
-      <interlinear-gloss>
-        <jbo>.ianai la djan klama</jbo>
-
-        <gloss>[Nonsense!] John is coming.</gloss>
-      </interlinear-gloss>
-    </example>
-
-NOTE THE CHANGE OF TYPE on the indexterm.
-
-If there are several examples that obviously apply, feel free to copy it around.
-
- ------
-
-The per-section cmavo lists should be like this:
-   <cmavo-list>
-     <cmavo-entry>
-       <cmavo>ke</cmavo>
-       <selmaho>KE</selmaho>
-       <description>start grouping</description>
-     </cmavo-entry>
-   ...
-   </cmavo-list>
-
 All the imported/manual indexterm entries for single words or
 selma'o need to be checked; they should be covered adequately by
 nearby <cmavo-list> or <valsi> entries, both of which create index
 entries.  If you don't know how to search for only the relevant
 entries in your particular text editor, come on #jbopre and ask.
+
+ ------
 
 Clean up the "FIXME: TAG SPOT" bits.  Those were put there as part
 of the semi-automated index insertion project.  If there's an
@@ -93,11 +47,15 @@ of the semi-automated index insertion project.  If there's an
 look around nearby and make sure that obvious <valsi> tags and
 similar are in use.
 
+ ------
+
 Similarily, entries like <indexterm type="lojban-word-imported">
 (NOTE the type) probably need to be destroyed; there should be a bit
 of Lojban near them that can be wrapped in <valsi>, to exactly the
 same effect as the <indexterm> entry.  If you can't find such a
 correspondance, add a FIXME comment.
+
+ ------
 
 Hunt down all FIXME:s and <!-- ... --> with todo type comments.
 That's all going to be advanced shit, though.
