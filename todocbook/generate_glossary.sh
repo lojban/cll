@@ -48,9 +48,9 @@ do
   
   rm jbovlaste2.xml
   grep '^<valsi word=' jbovlaste.xml | \
-    sed 's/^<valsi word="\([^"]*\)" /\1 &/' | sort >jbovlaste2.xml
+    sed 's/^<valsi word="\([^"]*\)" /###\1### &/' >jbovlaste2.xml
 
-  definition=$(look -d "$word" jbovlaste2.xml | \
+  definition=$(grep -F "###$word### " jbovlaste2.xml | \
       sed -e 's/^[^ ]* //' | \
       sed -e 's/.*<definition>//' -e 's;</definition>.*;;' | \
       sed -e 's/\&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' | \
