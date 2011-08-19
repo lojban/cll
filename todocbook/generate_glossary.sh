@@ -12,7 +12,7 @@ definitions.  These definitions are here simply as a quick reference.
 
 EOF
 
-TMPFILE="/tmp/generate_glossary.tmp"
+TMPFILE="/tmp/generate_glossary.tmp.$$"
 
 IFS='
 '
