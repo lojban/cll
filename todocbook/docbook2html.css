@@ -1,85 +1,39 @@
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
+
+
 body {
-         font-family: luxi sans,sans-serif;
+  font-family: 'EB Garamond', serif;
+  font-size: 130%;
+  line-height: 170%;
+  color: #222;
+  margin: 1em auto;
+  width: 600px;
 }
 
-.screen {
-        font-family: monospace;
-        font-size: 1em;
-        display: block;
-        padding: 10px;
-        border: 1px solid #bbb;
-        background-color: #eee;
-        color: #000;   
-        overflow: auto;
-        border-radius: 2.5px;
-        -moz-border-radius: 2.5px;
-        margin: 0.5em 2em;
+
+a {
+  color: #0B486B;
+  text-decoration: none;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
 }
 
-.programlisting {
-        font-family: monospace;
-        font-size: 1em;
-        display: block;
-        padding: 10px;
-        border: 1px solid #bbb;
-        /* programlisting *bad* for CLL; make it obvious */
-        background-color: #000;   
-        color: #000;   
-        /*
-        background-color: #ddd;
-        color: #000;   
-        */
-        overflow: auto;
-        border-radius: 2.5px;
-        -moz-border-radius: 2.5px;
-        margin: 0.5em 2em;
+
+hr {
+  width: 30%;
+  border: none;
+  border-bottom: 5px dotted #222;
 }
 
-.example {
-        font-family: monospace;
-        font-size: 1em;
-        display: block;
-        padding: 10px;
-        border: 1px solid #bbb;
-        background-color: #ddd;
-        color: #000;   
-        overflow: auto;
-        border-radius: 2.5px;
-        -moz-border-radius: 2.5px;
-        margin: 0.5em 2em;
+
+.informaltable table {
+  empty-cells: hide;
+  border: none;
 }
 
-em[lang=jbo] {
-  font-style: normal;
-  font-family: monospace;
+.informaltable td {
+  background: #E8EBEF;
+  border: .5em solid #fff;
+  padding: .5em;
+  text-align: center;
 }
-
-/*
-.example-lojban {
-  font-family: monospace;
-  font-size: 1em;
-  font-weight: bold;
-}
-
-.example-literalistic {
-  font-style: italic;
-  font-size: 1em;
-}
-
-.example-final {
-  font-size: 1em;
-  font-weight: bold;
-}
-*/
-
-div.informaltable table {
-        border-style: none;
-        border-collapse: collapse;
-}
-
-div.informaltable td {
-        padding: 15px;
-        border: 1px solid #000;
-}
-
-I'm broken!!!!
