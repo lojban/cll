@@ -2,7 +2,7 @@
 
 echo '<?xml version="1.0"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V5.0//EN" "dtd/docbook-5.0.dtd" [
-  <!ENTITY % iso-pub-ent SYSTEM "iso-pub.ent">
+  <!ENTITY % iso-pub-ent SYSTEM "xml/iso-pub.ent">
   %iso-pub-ent;
 ]>
 

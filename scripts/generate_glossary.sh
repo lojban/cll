@@ -19,7 +19,7 @@ IFS='
 initial=''
 indiv=''
 
-xsltproc --nonet --path . --novalid generate_glossary.xsl cll_preglossary.xml | grep -P '\t' | sort | uniq >$TMPFILE
+xsltproc --nonet --path . --novalid xml/generate_glossary.xsl cll_preglossary.xml | grep -P '\t' | sort | uniq >$TMPFILE
 
 for line in $(cat $TMPFILE)
 do
