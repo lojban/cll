@@ -5,7 +5,7 @@
     <para>The purpose of the feature of Lojban known as 
     <quote>abstraction</quote> is to provide a means for taking whole bridi and packaging them up, as it were, into simple selbri. Syntactically, abstractions are very simple and uniform; semantically, they are rich and complex, with few features in common between one variety of abstraction and another. We will begin by discussing syntax without regard to semantics; as a result, the notion of abstraction may seem unmotivated at first. Bear with this difficulty until 
     <xref linkend="section-events"/>.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>KEI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>kei</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>NU selma'o</primary></indexterm> An abstraction selbri is formed by taking a full bridi and preceding it by any cmavo of selma'o NU. There are twelve such cmavo; they are known as 
+    <para> An abstraction selbri is formed by taking a full bridi and preceding it by any cmavo of selma'o NU. There are twelve such cmavo; they are known as 
     <quote>abstractors</quote>. The bridi is closed by the elidable terminator 
     <valsi>kei</valsi>, of selma'o KEI. Thus, to change the bridi</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-6EI1">
@@ -84,7 +84,7 @@
         <description>event abstractor</description>
       </cmavo-entry>
     </cmavo-list>
-    <para> <indexterm type="lojban-word-imported"><primary>NU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>nu</primary></indexterm>  <indexterm type="general-imported"><primary>le nu</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>nu</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>common abstractor</primary></indexterm> The examples in 
+    <para> <indexterm type="general-imported"><primary>le nu</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>nu</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>common abstractor</primary></indexterm> The examples in 
     <xref linkend="section-syntax"/> made use of 
     <valsi>nu</valsi> as the abstractor, and it is certainly the most common abstractor in Lojban text. Its purpose is to capture the event or state of the bridi considered as a whole. Do not confuse the 
     
@@ -221,9 +221,9 @@
       </interlinear-gloss>
     </example>
     <para>which in this context means</para>
-    <definition>
-      My swimming happens often.
-    </definition>
+    <blockquote>
+      <para>My swimming happens often.</para>
+    </blockquote>
     <para>Event descriptions with 
     <jbophrase>le nu</jbophrase> are commonly used to fill the 
     <quote>under conditions...</quote> places, among others, of gismu and lujvo place structures:</para>
@@ -242,14 +242,12 @@
     <quote>when</quote> of the English would also be appropriate for a construction involving a Lojban tense, but the Lojban sentence says more than that the studying is concurrent with the ease.)</para>
     <para> <indexterm type="general-imported"><primary>nu</primary><secondary>place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>events</primary><secondary>place structure</secondary></indexterm> The place structure of a 
     <valsi>nu</valsi> abstraction selbri is simply:</para>
-    <definition>
-      x1 is an event of (the bridi)
-    </definition>
+    <definition><content>x1 is an event of (the bridi)</content></definition>
   </section>
   <section xml:id="section-event-types">
     <title>Types of event abstractions</title>
     
-    <para> <indexterm type="lojban-word-imported"><primary>NU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>za'i</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>zu'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>pu'u</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>mu'e</primary></indexterm>  <indexterm type="general-imported"><primary>event abstractions</primary><secondary>types</secondary></indexterm> The following cmavo are discussed in this section:</para>
+    <para> <indexterm type="general-imported"><primary>event abstractions</primary><secondary>types</secondary></indexterm> The following cmavo are discussed in this section:</para>
     <cmavo-list>
       <cmavo-entry>
         <cmavo>mu'e</cmavo>
@@ -282,7 +280,7 @@
     </cmavo-list>
     <para>Event abstractions with 
     <valsi>nu</valsi> suffice to express all kinds of events, whether long, short, unique, repetitive, or whatever. Lojban also has more finely discriminating machinery for talking about events, however. There are four other abstractors of selma'o NU for talking about four specific types of events, or four ways of looking at the same event.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>mu'e</primary></indexterm>  <indexterm type="general-imported"><primary>achievement abstractions</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>point-event abstractions</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>achievement</secondary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>point-event</secondary></indexterm>  <indexterm type="general-imported"><primary>triumph</primary></indexterm>  <indexterm type="general-imported"><primary>point-event abstractor</primary></indexterm> An event considered as a point in time is called a 
+    <para> <indexterm type="general-imported"><primary>achievement abstractions</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>point-event abstractions</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>achievement</secondary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>point-event</secondary></indexterm>  <indexterm type="general-imported"><primary>triumph</primary></indexterm>  <indexterm type="general-imported"><primary>point-event abstractor</primary></indexterm> An event considered as a point in time is called a 
     <quote>point-event</quote>, or sometimes an 
     <quote>achievement</quote>. (This latter word should be divorced, in this context, from all connotations of success or triumph.) A point-event can be extended in duration, but it is still a point-event if it is thought of as unitary, having no internal structure. The abstractor 
     
@@ -300,7 +298,7 @@
         <natlang>John's killing Jim (considered as a point in time) is a crime.</natlang>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>pu'u</primary></indexterm>  
+    <para> 
   <indexterm type="general-imported"><primary>abstractions</primary><secondary>process</secondary></indexterm>  <indexterm type="general-imported"><primary>process abstractions</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>process abstractor</primary></indexterm>  <indexterm type="general-imported"><primary>killing Jim</primary></indexterm> An event considered as extended in time, and structured with a beginning, a middle containing one or more stages, and an end, is called a 
     <quote>process</quote>. The abstractor 
     <valsi>pu'u</valsi> means 
@@ -318,7 +316,7 @@
         <natlang>During the fall of the Roman Empire, many Emperors were killed.</natlang>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>zu'o</primary></indexterm>  
+    <para> 
   <indexterm type="general-imported"><primary>abstractions</primary><secondary>activity</secondary></indexterm>  <indexterm type="general-imported"><primary>activity abstractions</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>activity abstractor</primary></indexterm>  <indexterm type="general-imported"><primary>Roman Empire</primary></indexterm> An event considered as extended in time and cyclic or repetitive is called an 
     <quote>activity</quote>. The abstractor 
     <valsi>zu'o</valsi> means 
@@ -335,7 +333,7 @@
         <natlang>I am tired because I jump.</natlang>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>za'i</primary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>state</secondary></indexterm>  <indexterm type="general-imported"><primary>state abstractions</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>state abstractor</primary></indexterm> An event considered as something that is either happening or not happening, with sharp boundaries, is called a 
+    <para> <indexterm type="general-imported"><primary>abstractions</primary><secondary>state</secondary></indexterm>  <indexterm type="general-imported"><primary>state abstractions</primary><secondary>definition</secondary></indexterm>  <indexterm type="general-imported"><primary>state abstractor</primary></indexterm> An event considered as something that is either happening or not happening, with sharp boundaries, is called a 
     <quote>state</quote>. The abstractor 
     <valsi>za'i</valsi> means 
     
@@ -414,7 +412,7 @@
 
       -->
 
-      <valsi>mu'e</valsi>: x1 is a point event of (the bridi)
+      <valsi>mu'e</valsi> <content>x1 is a point event of (the bridi)</content>
 
       
       <valsi>pu'u</valsi>: x1 is a process of (the bridi) with stages x2
@@ -562,7 +560,7 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general-imported"><primary>property abstractions</primary><secondary>specifying determining place with ce'u</secondary></indexterm> 
-      <indexterm type="lojban-word-imported"><primary>KOhA selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>ce'u</primary></indexterm>  
+      
       The <quote>X</quote> used in the glosses of 
     <xref linkend="example-random-id-qfAM"/> through 
     <xref linkend="example-random-id-qfav"/> as a place-holder cannot be represented only by ellipsis in Lojban, because ellipsis means that there must be a specific value that can fill the ellipsis, as mentioned in 
@@ -637,14 +635,13 @@
     <quote>package up</quote> a complex relationship for future use; such an abstraction can be translated back into a selbri by placing it in the x2 place of the selbri 
     <valsi>bridi</valsi>, whose place structure is:</para>
     <definition>
-      
-      <valsi>bridi</valsi>: x1 is a predicate relationship with relation
-      x2 (abstraction) among arguments (sequence/set) x3
+      <valsi>bridi</valsi> <content>x1 is a predicate relationship with relation
+      x2 (abstraction) among arguments (sequence/set) x3</content>
     </definition>
     <para> <indexterm type="general-imported"><primary>properties</primary><secondary>place structure</secondary></indexterm> The place structure of 
     <valsi>ka</valsi> abstraction selbri is simply:</para>
     <definition>
-      <valsi>ka</valsi>: x1 is a property of (the bridi)
+      <valsi>ka</valsi> <content>x1 is a property of (the bridi)</content>
     </definition>
   </section>
   <section xml:id="section-amounts">
@@ -735,7 +732,7 @@
     <para>Whenever we talk of measurement of an amount, there is some sort of scale, and so the place structure of 
     <valsi>ni</valsi> abstraction selbri is:</para>
     <definition>
-      ni: x1 is the amount of (the bridi) on scale x2
+      <valsi>ni</valsi> <content>x1 is the amount of (the bridi) on scale x2</content>
     </definition>
     <para>Note: the best way to express the x2 places of abstract sumti is to use something like 
     <jbophrase>le ni ... kei be</jbophrase>. See 
@@ -796,7 +793,7 @@
     <valsi>jei</valsi> requires an x2 place analogous to that of 
     <valsi>ni</valsi>:</para>
     <definition>
-      jei: x1 is the truth value of (the bridi) under epistemology x2
+      <valsi>jei</valsi> <content>x1 is the truth value of (the bridi) under epistemology x2</content>
     </definition>
     <para> <indexterm type="general-imported"><primary>fuzzy logic and truth-value abstraction</primary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>truth-value and fuzzy logic</secondary></indexterm> Abstractions using 
     <valsi>jei</valsi> are the mechanism for fuzzy logic in Lojban; the 
@@ -859,7 +856,6 @@
     <xref linkend="example-random-id-oCgP"/> says that I know whether or not Frank is a fool, but doesn't say that he is one, as 
     
     <xref linkend="example-random-id-7N2q"/> does. To catch that nuance, we must say:</para>
-    <para> <indexterm type="lojban-word-imported"><primary>NU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>du'u</primary></indexterm> FIXME: TAG SPOT</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-6p1K">
       <title>
         <anchor xml:id="c11e7d4"/>
@@ -906,7 +902,7 @@
     <para> <indexterm type="general-imported"><primary>truth-value abstractions</primary><secondary>place structure</secondary></indexterm> As a matter of convenience rather than logical necessity, 
     <valsi>du'u</valsi> has been given an x2 place, which is a sentence (piece of language) expressing the bridi:</para>
     <definition>
-      du'u: x1 is the predication (the bridi), expressed in sentence x2
+      <valsi>du'u</valsi> <content>x1 is the predication (the bridi), expressed in sentence x2</content>
     </definition>
     <para> <indexterm type="general-imported"><primary>abstractions</primary><secondary>speaking</secondary><tertiary>writing, etc.</tertiary></indexterm>  <indexterm type="general-imported"><primary>se du'u</primary></indexterm>  <indexterm type="general-imported"><primary>linguistic behavior</primary></indexterm> and 
     <jbophrase>le se du'u ...</jbophrase> is very useful in filling places of selbri which refer to speaking, writing, or other linguistic behavior regarding bridi:</para>
@@ -937,7 +933,7 @@
     <para>because 
     <xref linkend="example-random-id-AX2I"/> claims that John actually said the quoted words, whereas 
     <xref linkend="example-random-id-hzd8"/> claims only that he said some words or other which were to the same purpose.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>lu'e</primary></indexterm> 
+    <para> 
     <jbophrase>le se du'u</jbophrase> is much the same as 
     <jbophrase>lu'e le du'u</jbophrase>, a symbol for the predication, but 
     <jbophrase>se du'u</jbophrase> can be used as a selbri, whereas 
@@ -957,7 +953,7 @@
         
       </cmavo-entry>
     </cmavo-list>
-    <para> <indexterm type="lojban-word-imported"><primary>du'u</primary></indexterm> There is an alternative type of sentence involving 
+    <para> There is an alternative type of sentence involving 
     <valsi>du'u</valsi> and a selbri expressing a propositional attitude. In addition to sentences like</para>
     <example xml:id="example-random-id-Fpid">
       <title>
@@ -981,7 +977,7 @@
     <xref linkend="example-random-id-N4Ja"/> is claiming to know the answer to this question. Indirect questions can occur with many other English verbs as well: I can wonder, or doubt, or see, or hear, as well as know who went to the store.</para>
     
     
-    <para> <indexterm type="lojban-word-imported"><primary>UI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>kau</primary></indexterm> To express indirect questions in Lojban, we use a 
+    <para> To express indirect questions in Lojban, we use a 
     
     
     <jbophrase>le du'u</jbophrase> abstraction, but rather than using a question word like 
@@ -1103,7 +1099,7 @@
         <description>general abstractor</description>
       </cmavo-entry>
     </cmavo-list>
-    <para> <indexterm type="lojban-word-imported"><primary>li'i</primary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>experience</secondary></indexterm>  <indexterm type="general-imported"><primary>experience abstraction</primary></indexterm>  <indexterm type="general-imported"><primary>experience abstractor</primary></indexterm> There are three more abstractors in Lojban, all of them little used so far. The abstractor 
+    <para> <indexterm type="general-imported"><primary>abstractions</primary><secondary>experience</secondary></indexterm>  <indexterm type="general-imported"><primary>experience abstraction</primary></indexterm>  <indexterm type="general-imported"><primary>experience abstractor</primary></indexterm> There are three more abstractors in Lojban, all of them little used so far. The abstractor 
     <valsi>li'i</valsi> expresses experience:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-FS6r">
@@ -1116,7 +1112,7 @@
         <gloss>I remember the experience-of (my being-a-child)</gloss>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>si'o</primary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>concept</secondary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>idea</secondary></indexterm>  <indexterm type="general-imported"><primary>concept abstraction</primary></indexterm>  <indexterm type="general-imported"><primary>idea abstraction</primary></indexterm>  <indexterm type="general-imported"><primary>concept abstractor</primary></indexterm> The abstractor 
+    <para> <indexterm type="general-imported"><primary>abstractions</primary><secondary>concept</secondary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>idea</secondary></indexterm>  <indexterm type="general-imported"><primary>concept abstraction</primary></indexterm>  <indexterm type="general-imported"><primary>idea abstraction</primary></indexterm>  <indexterm type="general-imported"><primary>concept abstractor</primary></indexterm> The abstractor 
     <valsi>si'o</valsi> expresses a mental image, a concept, an idea:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Yh42">
       <title>
@@ -1127,7 +1123,7 @@
         <gloss>I enjoy the concept-of Lojban being-complete.</gloss>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>su'u</primary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>vague</secondary></indexterm>  <indexterm type="general-imported"><primary>vague abstraction</primary></indexterm>  <indexterm type="general-imported"><primary>vague abstractor</primary></indexterm> Finally, the abstractor 
+    <para> <indexterm type="general-imported"><primary>abstractions</primary><secondary>vague</secondary></indexterm>  <indexterm type="general-imported"><primary>vague abstraction</primary></indexterm>  <indexterm type="general-imported"><primary>vague abstractor</primary></indexterm> Finally, the abstractor 
     <valsi>su'u</valsi> is a vague abstractor, whose meaning must be grasped from context:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-ycKt">
@@ -1146,19 +1142,17 @@
     <valsi>li'i</valsi> is:</para>
     
     <definition>
-      <valsi>li'i</valsi>: x1 is the experience of (the bridi) as experienced by x2
-
-
+      <valsi>li'i</valsi> <content>x1 is the experience of (the bridi) as experienced by x2</content>
     </definition>
     <para> <indexterm type="general-imported"><primary>idea abstractions</primary><secondary>place structure</secondary></indexterm>  <indexterm type="general-imported"><primary>concept abstractions</primary><secondary>place structure</secondary></indexterm> Similarly, an idea requires a mind to hold it, so the place structure of 
     <valsi>si'o</valsi> is:</para>
     <definition>
-      <valsi>si'o</valsi>: x1 is the idea/concept of (the bridi) in the mind of x2
+      <valsi>si'o</valsi> <content>x1 is the idea/concept of (the bridi) in the mind of x2</content>
     </definition>
     <para> <indexterm type="general-imported"><primary>vague abstractions</primary><secondary>place structure</secondary></indexterm> Finally, there needs to be some way of specifying just what sort of abstraction 
     <valsi>su'u</valsi> is representing, so its place structure is:</para>
     <definition>
-      <valsi>su'u</valsi>: x1 is an abstract nature of (the bridi) of type x2
+      <valsi>su'u</valsi> <content>x1 is an abstract nature of (the bridi) of type x2</content>
     </definition>
     <para> <indexterm type="general-imported"><primary>abstractions</primary><secondary>creating new types</secondary></indexterm>  <indexterm type="general-imported"><primary>template</primary></indexterm> The x2 place of 
     <valsi>su'u</valsi> allows it to serve as a substitute for any of the other abstractors, or as a template for creating new ones. For example,</para>
@@ -1207,7 +1201,7 @@
   <section xml:id="section-sumti-raising">
     <title>Lojban sumti raising</title>
     
-    <para> <indexterm type="lojban-word-imported"><primary>LAhE selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>JAI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>jai</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>tu'a</primary></indexterm>  <indexterm type="general-imported"><primary>abstraction conversion</primary></indexterm> The following cmavo are discussed in this section:</para>
+    <para> <indexterm type="general-imported"><primary>abstraction conversion</primary></indexterm> The following cmavo are discussed in this section:</para>
     <cmavo-list>
       <cmavo-entry>
         <cmavo>tu'a</cmavo>
@@ -1250,7 +1244,7 @@
       </title>
       <para>I try the door.</para>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>LAhE selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>tu'a</primary></indexterm>  
+    <para> 
   <indexterm type="general-imported"><primary>abstractions</primary><secondary>simplification to sumti with tu'a</secondary></indexterm> where it is understood that what I try is actually not the door itself, but the act of opening it. The same simplification can be done in Lojban, but it must be marked explicitly using a cmavo. The relevant cmavo is 
     <valsi>tu'a</valsi>, which belongs to selma'o LAhE. The Lojban equivalent of 
     <xref linkend="example-random-id-K14X"/> is:</para>
@@ -1281,7 +1275,7 @@
         <gloss>something-to-do-with the door [terminator] [confusion!]</gloss>
       </interlinear-gloss>
     </example>
-    <para> <indexterm type="lojban-word-imported"><primary>LUhU selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>lu'u</primary></indexterm> which indicates that 
+    <para> which indicates that 
     <jbophrase>tu'a le vorme</jbophrase> cannot be understood. (The terminator for 
     <valsi>tu'a</valsi> is 
     <valsi>lu'u</valsi>, and is used in 
@@ -1302,7 +1296,7 @@
     <xref linkend="example-random-id-9S5B"/> would mean that John considered as an event frequently occurs &ndash; in other words, that John has some sort of on-and-off existence! Normally we do not think of people as events in English, but the x1 place of 
     <valsi>cafne</valsi> is an event, and if something that does not seem to be an event is put there, the Lojbanic listener will attempt to construe it as one. (Of course, this analysis assumes that 
     <cmevla>djan.</cmevla> is the name of a person, and not the name of some event.)</para>
-    <para> <indexterm type="lojban-word-imported"><primary>JAI selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>jai</primary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>simplification to sumti with jai</secondary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>making concrete</secondary></indexterm> Logically, a counterpart of some sort is needed to 
+    <para> <indexterm type="general-imported"><primary>abstractions</primary><secondary>simplification to sumti with jai</secondary></indexterm>  <indexterm type="general-imported"><primary>abstractions</primary><secondary>making concrete</secondary></indexterm> Logically, a counterpart of some sort is needed to 
     <valsi>tu'a</valsi> which transposes an abstract sumti into a concrete one. This is achieved at the selbri level by the cmavo 
     <valsi>jai</valsi> (of selma'o JAI). This cmavo has more than one function, discussed in 
     <xref linkend="section-modal-jai"/> and 
@@ -1366,7 +1360,7 @@
     <title>Event-type abstractors and event contour tenses</title>
     <para>This section is a logical continuation of 
     <xref linkend="section-event-types"/>.</para>
-    <para> <indexterm type="lojban-word-imported"><primary>ZAhO selma'o</primary></indexterm>  <indexterm type="lojban-word-imported"><primary>NU selma'o</primary></indexterm> There exists a relationship between the four types of events explained in 
+    <para> <indexterm type="lojban-word-imported"><primary>NU selma'o</primary></indexterm> There exists a relationship between the four types of events explained in 
     <xref linkend="section-event-types"/> and the event contour tense cmavo of selma'o ZAhO. The specific cmavo of NU and of ZAhO are mutually interdefining; the ZAhO contours were chosen to fit the needs of the NU event types and vice versa. Event contours are explained in full in 
     
     <xref linkend="section-event-contours"/>, and only summarized here.</para>
@@ -1410,10 +1404,10 @@
         
       </listitem>
     </itemizedlist>
-    <para> <indexterm type="lojban-word-imported"><primary>pu'u</primary></indexterm> All these cmavo are applicable to events seen as processes and abstracted with 
+    <para> All these cmavo are applicable to events seen as processes and abstracted with 
     <valsi>pu'u</valsi>. Only processes have enough internal structure to make all these points and spans of time meaningful.</para>
     
-    <para> <indexterm type="lojban-word-imported"><primary>za'i</primary></indexterm>  <indexterm type="general-imported"><primary>state abstractions</primary><secondary>related tense contours</secondary></indexterm> For events seen as states and abstracted with 
+    <para> <indexterm type="general-imported"><primary>state abstractions</primary><secondary>related tense contours</secondary></indexterm> For events seen as states and abstracted with 
     <valsi>za'i</valsi>, the meaningful event contours are the spans 
     
     
@@ -1425,7 +1419,7 @@
     <valsi>co'u</valsi>, and the achievement contour 
     <valsi>co'i</valsi>. States do not have natural endings distinct from their actual endings. (It is an open question whether states can be stopped and resumed.)</para>
     
-    <para> <indexterm type="lojban-word-imported"><primary>zu'o</primary></indexterm>  <indexterm type="general-imported"><primary>activity abstractions</primary><secondary>related tense contours</secondary></indexterm> For events seen as activities and abstracted with 
+    <para> <indexterm type="general-imported"><primary>activity abstractions</primary><secondary>related tense contours</secondary></indexterm> For events seen as activities and abstracted with 
     <valsi>zu'o</valsi>, the meaningful event contours are the spans 
     
     

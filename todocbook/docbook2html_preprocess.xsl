@@ -301,6 +301,12 @@
     </phrase>
   </xsl:template>
 
+  <xsl:template match="content" priority="1">
+    <phrase role="definition-content">
+      <xsl:apply-templates select="node()|text()"/>
+    </phrase>
+  </xsl:template>
+
   <xsl:template match="inlinemath" priority="1">
     <inlineequation><mathphrase>
         <xsl:apply-templates select="node()|text()"/>
