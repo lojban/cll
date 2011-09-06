@@ -7,7 +7,7 @@ all: web
 
 .PHONY: clean
 clean:
-	rm -rf cll.xml cll_processed.xml html/
+	-rm -rf cll.xml cll_processed.xml cll_preglossary.xml html/ jbovlaste.xml jbovlaste2.xml
 
 
 .PHONY: web
