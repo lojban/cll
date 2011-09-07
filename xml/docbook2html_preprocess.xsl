@@ -28,9 +28,16 @@
         <tbody>
           <xsl:for-each select="$items/jbo">
             <row>
-              <xsl:for-each select="str:tokenize(.)">
-                <entry><xsl:value-of select="."/></entry>
-              </xsl:for-each>
+              <xsl:choose>
+              <xsl:when test="count(child::sumti) &gt;= 1 or count(child::selbri) &gt;= 1 or count(child::elidable) &gt;= 1">
+                <xsl:apply-templates select="node()|text()"/>
+              </xsl:when>
+              <xsl:otherwise>
+              	<xsl:for-each select="str:tokenize(.)">
+                  <entry><xsl:value-of select="."/></entry>
+                </xsl:for-each>
+              </xsl:otherwise>
+              </xsl:choose>
             </row>
           </xsl:for-each>
           <xsl:for-each select="$items/gloss">
@@ -257,6 +264,38 @@
     <foreignphrase xml:lang="jbo" role="diphthong">
       <xsl:apply-templates select="node()|text()"/>
     </foreignphrase>
+  </xsl:template>
+
+  <xsl:template match="cmavo">
+    <entry>
+      <emphasis role="cmavo">
+        <xsl:value-of select="."/>
+      </emphasis>
+    </entry>
+  </xsl:template>
+
+  <xsl:template match="elidable">
+    <entry>
+      <emphasis role="elidable">
+        <xsl:value-of select="."/>
+      </emphasis>
+    </entry>
+  </xsl:template>
+
+  <xsl:template match="selbri">
+    <entry>
+      <emphasis role="selbri">
+        <xsl:value-of select="."/>
+      </emphasis>
+    </entry>
+  </xsl:template>
+
+  <xsl:template match="sumti">
+    <entry>
+      <emphasis role="sumti">
+        <xsl:value-of select="."/>
+      </emphasis>
+    </entry>
   </xsl:template>
 
   <xsl:template match="grammar-template[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
