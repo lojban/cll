@@ -13,6 +13,8 @@
   <xsl:param name="index.links.to.section" select="0"/>
   <xsl:param name="emphasis.propagates.style" select="1"/>
 
+  <xsl:param name="xref.with.number.and.title" select="0"/>
+
   <!-- temporary -->
   <xsl:template match="phrase[@role='oldjbophrase']" mode="class.value">
     <xsl:value-of select="'oldjbophrase'"/>
