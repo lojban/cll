@@ -29,14 +29,14 @@
           <xsl:for-each select="$items/jbo">
             <row>
               <xsl:choose>
-              <xsl:when test="count(child::sumti) &gt;= 1 or count(child::selbri) &gt;= 1 or count(child::elidable) &gt;= 1">
-                <xsl:apply-templates select="node()|text()"/>
-              </xsl:when>
-              <xsl:otherwise>
-              	<xsl:for-each select="str:tokenize(.)">
-                  <entry><xsl:value-of select="."/></entry>
-                </xsl:for-each>
-              </xsl:otherwise>
+                <xsl:when test="count(child::sumti) &gt;= 1 or count(child::selbri) &gt;= 1 or count(child::elidable) &gt;= 1">
+                  <xsl:apply-templates select="node()|text()"/>
+                </xsl:when>
+                <xsl:otherwise>
+                	<xsl:for-each select="str:tokenize(.)">
+                    <entry><xsl:value-of select="."/></entry>
+                  </xsl:for-each>
+                </xsl:otherwise>
               </xsl:choose>
             </row>
           </xsl:for-each>
