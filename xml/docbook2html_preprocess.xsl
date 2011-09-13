@@ -62,7 +62,17 @@
   <!-- Turn cmavo-list nodes into tables. -->
   <xsl:template match="cmavo-list">
     <informaltable>
-      <tgroup cols="8">
+      <tgroup>
+        <xsl:attribute name="cols">
+          <xsl:value-of select="count(./cmavo-entry[1]/*)"/>
+        </xsl:attribute>
+        <xsl:for-each select="./cmavo-entry[1]/*">
+          <colspec>
+            <xsl:attribute name="colname">
+              <xsl:value-of select="concat('col',position())"/>
+            </xsl:attribute>
+          </colspec>
+        </xsl:for-each>
         <xsl:apply-templates select="cmavo-list-head"/>  
         <tbody>
           <xsl:for-each select=".//cmavo-entry">
