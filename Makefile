@@ -1,4 +1,4 @@
-chapters = chapters/*.xml
+chapters = chapters/{1..21}.xml
 
 
 .PHONY: all
