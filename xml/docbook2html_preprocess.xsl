@@ -16,9 +16,9 @@
     <informaltable>
       <tgroup>
         <xsl:attribute name="cols">
-          <xsl:value-of select="count(str:tokenize($maximal))"/>
+          <xsl:value-of select="count($maximal)"/>
         </xsl:attribute>
-        <xsl:for-each select="str:tokenize($maximal)">
+        <xsl:for-each select="$maximal">
           <colspec>
             <xsl:attribute name="colname">
               <xsl:value-of select="concat('col',position())"/>
@@ -42,14 +42,14 @@
           </xsl:for-each>
           <xsl:for-each select="$items/gloss">
             <row>
-              <xsl:for-each select="str:tokenize(.)">
+              <xsl:for-each select="./*">
                 <entry><xsl:value-of select="."/></entry>
               </xsl:for-each>
             </row>
           </xsl:for-each>
           <xsl:for-each select="$items/natlang">
             <xsl:variable name="startcol" select="concat('col',1)" />
-            <xsl:variable name="endcol" select="concat('col',count(str:tokenize($maximal)))" />
+            <xsl:variable name="endcol" select="concat('col',count($maximal))" />
             <row>
               <entry namest="{$startcol}" nameend="{$endcol}"><xsl:value-of select="."/></entry>
             </row>
@@ -135,10 +135,10 @@
              the top one and use it to call the table builder.
         -->
         <xsl:for-each select=".//jbo|.//gloss">
-          <xsl:sort select="count(str:tokenize(.))" order="descending"/>
+          <xsl:sort select="count(./*)" order="descending"/>
           <xsl:if test="position()=1">
             <xsl:call-template name="counted_table">
-              <xsl:with-param name="maximal" select="."/>
+              <xsl:with-param name="maximal" select="./*"/>
               <xsl:with-param name="items" select="$items"/>
             </xsl:call-template>
           </xsl:if>
