@@ -17,9 +17,9 @@
     <informaltable>
       <tgroup>
         <xsl:attribute name="cols">
-          <xsl:value-of select="count(str:tokenize($maximal))"/>
+          <xsl:value-of select="count($maximal)"/>
         </xsl:attribute>
-        <xsl:for-each select="str:tokenize($maximal)">
+        <xsl:for-each select="$maximal">
           <colspec>
             <xsl:attribute name="colname">
               <xsl:value-of select="concat('col',position())"/>
@@ -29,21 +29,28 @@
         <tbody>
           <xsl:for-each select="$items/jbo">
             <row>
-              <xsl:for-each select="str:tokenize(.)">
-                <entry><xsl:value-of select="."/></entry>
-              </xsl:for-each>
+              <xsl:choose>
+                <xsl:when test="count(child::sumti) &gt;= 1 or count(child::selbri) &gt;= 1 or count(child::elidable) &gt;= 1">
+                  <xsl:apply-templates select="node()|text()"/>
+                </xsl:when>
+                <xsl:otherwise>
+                	<xsl:for-each select="str:tokenize(.)">
+                    <entry><xsl:value-of select="."/></entry>
+                  </xsl:for-each>
+                </xsl:otherwise>
+              </xsl:choose>
             </row>
           </xsl:for-each>
           <xsl:for-each select="$items/gloss">
             <row>
-              <xsl:for-each select="str:tokenize(.)">
+              <xsl:for-each select="./*">
                 <entry><xsl:value-of select="."/></entry>
               </xsl:for-each>
             </row>
           </xsl:for-each>
           <xsl:for-each select="$items/natlang">
             <xsl:variable name="startcol" select="concat('col',1)" />
-            <xsl:variable name="endcol" select="concat('col',count(str:tokenize($maximal)))" />
+            <xsl:variable name="endcol" select="concat('col',count($maximal))" />
             <row>
               <entry namest="{$startcol}" nameend="{$endcol}"><xsl:value-of select="."/></entry>
             </row>
@@ -57,7 +64,17 @@
   <!-- Turn cmavo-list nodes into tables. - ->
   <xsl:template match="cmavo-list">
     <informaltable>
-      <tgroup cols="8">
+      <tgroup>
+        <xsl:attribute name="cols">
+          <xsl:value-of select="count(./cmavo-entry[1]/*)"/>
+        </xsl:attribute>
+        <xsl:for-each select="./cmavo-entry[1]/*">
+          <colspec>
+            <xsl:attribute name="colname">
+              <xsl:value-of select="concat('col',position())"/>
+            </xsl:attribute>
+          </colspec>
+        </xsl:for-each>
         <xsl:apply-templates select="cmavo-list-head"/>  
         <tbody>
           <xsl:for-each select=".//cmavo-entry">
@@ -121,10 +138,10 @@
              the top one and use it to call the table builder.
         - ->
         <xsl:for-each select=".//jbo|.//gloss">
-          <xsl:sort select="count(str:tokenize(.))" order="descending"/>
+          <xsl:sort select="count(./*)" order="descending"/>
           <xsl:if test="position()=1">
             <xsl:call-template name="counted_table">
-              <xsl:with-param name="maximal" select="."/>
+              <xsl:with-param name="maximal" select="./*"/>
               <xsl:with-param name="items" select="$items"/>
             </xsl:call-template>
           </xsl:if>
@@ -343,6 +360,38 @@
     <foreignphrase xml:lang="jbo" role="diphthong">
       <xsl:apply-templates select="node()|text()"/>
     </foreignphrase>
+  </xsl:template>
+
+  <xsl:template match="cmavo">
+    <entry>
+      <emphasis role="cmavo">
+        <xsl:value-of select="."/>
+      </emphasis>
+    </entry>
+  </xsl:template>
+
+  <xsl:template match="elidable">
+    <entry>
+      <emphasis role="elidable">
+        <xsl:value-of select="."/>
+      </emphasis>
+    </entry>
+  </xsl:template>
+
+  <xsl:template match="selbri">
+    <entry>
+      <emphasis role="selbri">
+        <xsl:value-of select="."/>
+      </emphasis>
+    </entry>
+  </xsl:template>
+
+  <xsl:template match="sumti">
+    <entry>
+      <emphasis role="sumti">
+        <xsl:value-of select="."/>
+      </emphasis>
+    </entry>
   </xsl:template>
 
   <xsl:template match="grammar-template[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
