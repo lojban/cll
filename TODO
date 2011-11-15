@@ -1,4 +1,24 @@
 ==================
+  New Tool Note
+==================
+
+Calibre, which exists in yum:
+
+rlpowell@vrici> sudo yum whatprovides '*ebook-convert*'                
+Loaded plugins: langpacks, presto, refresh-packagekit
+calibre-0.7.56-1.fc15.x86_64 : E-book converter and library management
+Repo        : fedora
+Matched from:
+Filename    : /usr/share/man/man1/ebook-convert.1.gz
+Filename    : /usr/bin/ebook-convert
+Filename    : /usr/share/calibre/ebook-convert-complete.pickle
+
+has an ebook conversion tool that *takes HTML*:
+
+http://manual.calibre-ebook.com/cli/ebook-convert-4.html#html-input-to-pdf-output
+
+
+==================
   Instructions For Helpers
 ==================
 

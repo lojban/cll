@@ -10,6 +10,7 @@
 
   <xsl:output method="xml" doctype-system="dtd/docbook-5.0.dtd" doctype-public="-//OASIS//DTD DocBook XML V5.0//EN" />
 
+  <!--
   <xsl:template name="counted_table">
     <xsl:param name="maximal" select="''"/>
     <xsl:param name="items" select="''"/>
@@ -51,8 +52,9 @@
       </tgroup>
     </informaltable>
   </xsl:template>
+  -->
 
-  <!-- Turn cmavo-list nodes into tables. -->
+  <!-- Turn cmavo-list nodes into tables. - ->
   <xsl:template match="cmavo-list">
     <informaltable>
       <tgroup cols="8">
@@ -79,16 +81,17 @@
       </row>
     </thead>
   </xsl:template>
+  -->
   
   <!-- Turn interlinear-gloss nodes into tables.
 
         Such a node must have at least one jbo entry and at least one natlang entry.
-  -->
+  - ->
   <xsl:template match="interlinear-gloss">
     <xsl:choose>
       <xsl:when test="false">
       </xsl:when>
-      <!-- FIXME: We should enforce these at some point.  It's going
+      <!- - FIXME: We should enforce these at some point.  It's going
            to take a fair bit of manual labour, though; there are a
            bunch of examples that are just one line of English, for
            example.
@@ -107,16 +110,16 @@
         </xsl:text>
         <xsl:copy/>
       </xsl:when>
-      -->
+      - ->
       <xsl:otherwise>
-        <!-- here is the BEGIN actual table conversion -->
+        <!- - here is the BEGIN actual table conversion - ->
 
         <xsl:variable name="items" select="." />
 
-        <!-- We need to find the longest tokenized string, to size
+        <!- - We need to find the longest tokenized string, to size
              the table, so we sort by tokenized size and then pick
              the top one and use it to call the table builder.
-        -->
+        - ->
         <xsl:for-each select=".//jbo|.//gloss">
           <xsl:sort select="count(str:tokenize(.))" order="descending"/>
           <xsl:if test="position()=1">
@@ -127,9 +130,92 @@
           </xsl:if>
         </xsl:for-each>
 
-        <!-- END actual table conversion -->
+        <!- - END actual table conversion - ->
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+  -->
+
+  <xsl:template match="selbri">
+    <td class="selbri">
+      <xsl:apply-templates select="node()|text()"/>
+    </td>
+  </xsl:template>
+
+  <xsl:template match="sumti">
+    <td class="sumti">
+      <xsl:apply-templates select="node()|text()"/>
+    </td>
+  </xsl:template>
+
+  <xsl:template match="elidable">
+    <td class="elidable">
+      <xsl:apply-templates select="node()|text()"/>
+    </td>
+  </xsl:template>
+
+  <xsl:template match="comment">
+    <td class="comment">
+      <xsl:apply-templates select="node()|text()"/>
+    </td>
+  </xsl:template>
+
+  <xsl:template match="interlinear-gloss">
+    <informaltable>
+        <xsl:for-each select=".//jbo|.//gloss">
+          <tr>
+              <xsl:apply-templates select="node()|text()"/>
+          </tr>
+        </xsl:for-each>
+      </informaltable>
+        <xsl:for-each select=".//natlang">
+        <para role="natlag">
+              <xsl:apply-templates select="node()|text()"/>
+        </para>
+        </xsl:for-each>
+  </xsl:template>
+
+  <xsl:template match="cmavo">
+    <td class="cmavo">
+      <xsl:apply-templates select="node()|text()"/>
+    </td>
+  </xsl:template>
+
+  <xsl:template match="pseudo-cmavo">
+    <td class="cmavo">
+      <xsl:apply-templates select="node()|text()"/>
+    </td>
+  </xsl:template>
+
+  <xsl:template match="description">
+    <td class="description">
+      <xsl:apply-templates select="node()|text()"/>
+    </td>
+  </xsl:template>
+
+  <xsl:template match="attitudinal-scale">
+    <td>
+      <xsl:if test="@point='sai'">
+        <xsl:attribute name="class">attitudinal-scale-sai</xsl:attribute>
+      </xsl:if>
+      <xsl:if test="@point='nai'">
+        <xsl:attribute name="class">attitudinal-scale-nai</xsl:attribute>
+      </xsl:if>
+      <xsl:if test='@point="cu&#39;i"'>
+        <xsl:attribute name="class">attitudinal-scale-cuhi</xsl:attribute>
+      </xsl:if>
+      <xsl:apply-templates select="node()|text()"/>
+    </td>
+  </xsl:template>
+
+  <xsl:template match="cmavo-list">
+    <informaltable>
+        <xsl:for-each select="./cmavo-entry">
+          <tr>
+              <xsl:apply-templates select="node()|text()"/>
+          </tr>
+        </xsl:for-each>
+      </informaltable>
   </xsl:template>
 
   <!-- Deal with pronunciation nodes
