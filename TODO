@@ -35,11 +35,14 @@ change, and I will hunt you down and bad things will occur.
 3. Tengwar table should be made multi-column to save vertical space
 4. Example 4.4 is formatted differently from other nearby and similar examples
 4. Examples 4.24, 4.26-4.38, 4.52-4.70 are missing content
+	- The content in question gets deleted by xml/docbook2html_preprocess.xsl
 4. Examples 4.46-4.51 are broken, and 4.51 is not present in the red book
 4. Broken HTML character codes on the last line of page 79 of the red book
+	- This is from the <quote xml:lang="el"/> tag not being handled properly in the docbook->html conversion
 5. Table of language acronyms in section 14 could use reformatting to save space
 6. Section 12 has a table in which "(American pronunciation)" should be moved into its own row
 7. Section cmavo lists are missing series information
+	- This seems to be due to the <series> tag not being handled by the xml->docbook conversion
 7. Example 7.39 is hella ugly.  Like, seriously
 7. Example 7.62, line 3, differs from the red book
 8. Example 8.45, line 3, is missing quotes around a word
