@@ -1,5 +1,13 @@
 #!/bin/sh
 
+testing=""
+if [ "$1" = "-t" ]
+then
+  testing=1
+  shift
+  echo "Entering testing mode: no actual definition work will be done." >&2
+fi
+
 cat <<EOF
 <glossary xmlns='http://docbook.org/ns/docbook'>
 <title>Lojban Word Glossary</title>
@@ -25,7 +33,7 @@ for line in $(cat $TMPFILE)
 do
   slug=$(echo $line | awk -F'\t' '{ print $1 }')
   word=$(echo $line | awk -F'\t' '{ print $2 }' | sed 's/\.//g')
-#  echo "$slug--$word"
+  #  echo "$slug--$word"
   newinitial=$(echo $word | cut -c 1)
 
   if [ "$initial" != "$newinitial" ]
@@ -40,26 +48,31 @@ do
     initial=$newinitial
   fi
 
-  if [ ! -f jbovlaste.xml -o "$(find jbovlaste.xml -mtime +1)" ]
+  if [ "$testing" ]
   then
-    echo "jbovlaste file is old; refetching." 1>&2
-    wget 'http://jbovlaste.lojban.org/export/xml-export.html?lang=en' -O jbovlaste.xml
-  fi
-  
-  rm jbovlaste2.xml
-  grep '^<valsi word=' jbovlaste.xml | \
-    sed 's/^<valsi word="\([^"]*\)" /###\1### &/' >jbovlaste2.xml
+    definition="placeholder definition"
+  else
+    if [ ! -f jbovlaste.xml -o "$(find jbovlaste.xml -mtime +1)" ]
+    then
+      echo "jbovlaste file is old; refetching." 1>&2
+      wget 'http://jbovlaste.lojban.org/export/xml-export.html?lang=en' -O jbovlaste.xml
+    fi
 
-  definition=$(grep -F "###$word### " jbovlaste2.xml | \
-      sed -e 's/^[^ ]* //' | \
-      sed -e 's/.*<definition>//' -e 's;</definition>.*;;' | \
-      sed -e 's/\&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' | \
-      sed 's/\s\s*/ /g')
+    rm jbovlaste2.xml
+    grep '^<valsi word=' jbovlaste.xml | \
+      sed 's/^<valsi word="\([^"]*\)" /###\1### &/' >jbovlaste2.xml
 
-  if [ ! "$(echo $definition | sed 's/\s*//g')" ]
-  then
-    definition="NO JBOVLASTE DEFINITION FOR \"$word\" FOUND!"
-    echo $definition 1>&2
+    definition=$(grep -F "###$word### " jbovlaste2.xml | \
+        sed -e 's/^[^ ]* //' | \
+        sed -e 's/.*<definition>//' -e 's;</definition>.*;;' | \
+        sed -e 's/\&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' | \
+        sed 's/\s\s*/ /g')
+
+    if [ ! "$(echo $definition | sed 's/\s*//g')" ]
+    then
+      definition="NO JBOVLASTE DEFINITION FOR \"$word\" FOUND!"
+      echo $definition 1>&2
+    fi
   fi
 
   cat <<EOF

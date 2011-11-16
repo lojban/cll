@@ -44,7 +44,12 @@ cp cll.xml cll_preglossary.xml
 
 echo '</book>' >>cll_preglossary.xml
 
-scripts/generate_glossary.sh >>cll.xml
+if [ "$testing" ]
+then
+  scripts/generate_glossary.sh -t >>cll.xml
+else
+  scripts/generate_glossary.sh >>cll.xml
+fi
 
 #rm cll_preglossary.xml
 
