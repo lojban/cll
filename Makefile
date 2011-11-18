@@ -1,5 +1,6 @@
 chapters = $(if $(CHAPTERS), $(CHAPTERS), chapters/{1..21}.xml)
 nochunks =
+ispdf = "no"
 
 .PHONY: all
 all: xhtml_web xhtml_nochunks_web pdf_web epub_web mobi_web
@@ -16,7 +17,7 @@ cll.xml:
 	scripts/merge.sh $(chapters)
 
 cll_processed.xml: cll.xml
-	xsltproc --nonet --path . --novalid xml/docbook2html_preprocess.xsl cll.xml > cll_processed.xml
+	xsltproc --stringparam pdf $(ispdf) --nonet --path . --novalid xml/docbook2html_preprocess.xsl cll.xml > cll_processed.xml
 
 #*******
 # Many xhtml files
@@ -30,7 +31,9 @@ xhtml_web: xhtml
 .PHONY: xhtml
 xhtml: cll_processed.xml
 	mkdir -p xhtml
-	ln -fs $(PWD)/docbook2html.css html
+	ln -fs $(PWD)/docbook2html.css xhtml$(nochunks)
+	# FIXME: Consider doing something like this: -x /usr/share/sgml/docbook/xsl-ns-stylesheets-1.76.1/fo/docbook.xsl
+	# So we know exactly what stylesheets we're getting
 	xmlto -m xml/docbook2html_config.xsl -o xhtml$(nochunks)/ xhtml$(nochunks) cll_processed.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 
 #*******
@@ -44,11 +47,13 @@ xhtml_nochunks: xhtml
 xhtml_nochunks_web: nochunks = "-nochunks"
 xhtml_nochunks_web: xhtml
 	mkdir -p ~/www/media/public/tmp
-	cp xhtml-nochunks/cll_processed.html ~/www/media/public/tmp/docbook-cll-test-nochunks.html
+	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/docbook2html.css
+	cp $(PWD)/xhtml-nochunks/cll_processed.html ~/www/media/public/tmp/docbook-cll-test-nochunks.html
 
 #*******
 # PDF
 #*******
+pdf: ispdf = "yes"
 pdf: cll_processed.xml
 	dblatex cll_processed.xml 2>&1 | grep -v 'default template used in programlisting or screen'
 
