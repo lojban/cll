@@ -281,17 +281,17 @@
       </xsl:when>
       -->
       <xsl:otherwise>
-        <itemizedlist class="pronunciation">
+        <itemizedlist role="pronunciation">
         <xsl:for-each select=".//jbo">
-          <listitem class="pronunciation-jbo">
-            <para>
+          <listitem role="pronunciation-jbo">
+            <para role="pronunciation-jbo">
               <xsl:apply-templates select="node()|text()"/>
             </para>
           </listitem>
         </xsl:for-each>
         <xsl:for-each select=".//ipa">
-          <listitem class="pronunciation-ipa">
-            <para>
+          <listitem role="pronunciation-ipa">
+            <para role="pronunciation-ipa">
               <xsl:apply-templates select="node()|text()"/>
             </para>
           </listitem>
