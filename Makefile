@@ -7,7 +7,11 @@ all: xhtml_web xhtml_nochunks_web pdf_web epub_web mobi_web
 
 .PHONY: clean
 clean:
-	-rm -rf cll.xml cll_processed.xml cll_preglossary.xml xhtml/ jbovlaste.xml jbovlaste2.xml
+	-rm -rf cll.xml cll_processed.xml cll_preglossary.xml xhtml/ xhtml-nochunks/
+
+.PHONY: realclean
+realclean: clean
+	-rm -rf jbovlaste.xml jbovlaste2.xml
 
 #*******
 # Basic prep
