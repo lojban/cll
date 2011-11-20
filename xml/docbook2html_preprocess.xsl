@@ -10,7 +10,7 @@
 
   <xsl:output method="xml" doctype-system="dtd/docbook-5.0.dtd" doctype-public="-//OASIS//DTD DocBook XML V5.0//EN" />
 
-    <xsl:param name="pdf"/>
+    <xsl:param name="format"/>
 
   <xsl:template name="counted_table">
     <xsl:param name="maximal" select="''"/>
@@ -203,58 +203,130 @@
        value.
   -->
   <xsl:template match="interlinear-gloss-itemized">
-  <xsl:if test="$pdf = 'no'">
-    <xsl:choose>
-      <xsl:when test="count(./jbo) &gt; 0">
-        <informaltable class="interlinear-gloss-itemized-outer"> <colgroup/> <tr> <td>
-              <xsl:call-template name="interlinear-gloss-itemized-table">
-                <xsl:with-param name="width" select="count(./jbo[1]/*)"/>
-                <xsl:with-param name="starter" select="."/>
-                <xsl:with-param name="count" select="1"/>
-              </xsl:call-template>
-        </td> </tr> </informaltable>
-        <xsl:apply-templates select="./natlang|./comment"/>
-      </xsl:when>
-      <xsl:when test="count(./gloss) &gt; 0">
-        <informaltable class="interlinear-gloss-itemized-outer"> <colgroup/> <tr> <td>
-              <xsl:call-template name="interlinear-gloss-itemized-table">
-                <xsl:with-param name="width" select="count(./gloss[1]/*)"/>
-                <xsl:with-param name="starter" select="."/>
-                <xsl:with-param name="count" select="1"/>
-              </xsl:call-template>
-        </td> </tr> </informaltable>
-      <xsl:for-each select="./natlang">
-        <xsl:apply-templates select="node()|text()"/>
-      </xsl:for-each>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:message>
-          <xsl:text>No jbo or gloss in interlinear-gloss-itemized&#xA;</xsl:text>
-        </xsl:message>
-      </xsl:otherwise>
-    </xsl:choose>
-    <!-- debug message
+    <xsl:if test="$format = 'xhtml'">
+      <xsl:choose>
+        <xsl:when test="count(./jbo) &gt; 0">
+          <informaltable class="interlinear-gloss-itemized-outer"> <colgroup/> <tr> <td>
+                <xsl:call-template name="interlinear-gloss-itemized-table">
+                  <xsl:with-param name="width" select="count(./jbo[1]/*)"/>
+                  <xsl:with-param name="starter" select="."/>
+                  <xsl:with-param name="count" select="1"/>
+                </xsl:call-template>
+          </td> </tr> </informaltable>
+          <xsl:apply-templates select="./natlang|./comment"/>
+        </xsl:when>
+        <xsl:when test="count(./gloss) &gt; 0">
+          <informaltable class="interlinear-gloss-itemized-outer"> <colgroup/> <tr> <td>
+                <xsl:call-template name="interlinear-gloss-itemized-table">
+                  <xsl:with-param name="width" select="count(./gloss[1]/*)"/>
+                  <xsl:with-param name="starter" select="."/>
+                  <xsl:with-param name="count" select="1"/>
+                </xsl:call-template>
+          </td> </tr> </informaltable>
+          <xsl:for-each select="./natlang">
+            <xsl:apply-templates select="node()|text()"/>
+          </xsl:for-each>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:message>
+            <xsl:text>No jbo or gloss in interlinear-gloss-itemized&#xA;</xsl:text>
+          </xsl:message>
+        </xsl:otherwise>
+      </xsl:choose>
+      <!-- debug message
     <xsl:message>
       <xsl:text>&#xA;stuff:</xsl:text>
       <xsl:copy-of select="./jbo[1]/*"/>
     </xsl:message>
     -->
-</xsl:if>
-  <xsl:if test="$pdf = 'yes'">
-    <emphasis role="underline">foo</emphasis>
-    <emphasis role="bold">foo</emphasis>
-    <informaltable class="interlinear-gloss-itemized-table" align="left" width="100%">
-      <?dblatex table-width="autowidth.all"?>
-      <xsl:for-each select="./jbo|./gloss">
-      <colgroup width="0*" align="left"/>
-    </xsl:for-each>
-      <xsl:for-each select="./jbo|./gloss">
-    <tr>
-              <xsl:apply-templates select="node()|text()"/>
-      </tr>
-    </xsl:for-each>
-    </informaltable>
-</xsl:if>
+    </xsl:if>
+    <xsl:if test="$format = 'pdf'">
+      <latex-verbatim>
+        <!-- LaTeX table setup -->
+        <xsl:text>
+          % see longtable docs for these next lines
+          \setlength\LTleft\parindent
+          \setlength\LTright\fill
+          \begin{longtable}{</xsl:text>
+        <!-- LaTeX table width -->
+        <xsl:for-each select="./*[1]/*">
+          <xsl:text>l</xsl:text>
+        </xsl:for-each>
+        <xsl:text>}&#10;</xsl:text>
+        <!-- for each node group -->
+        <xsl:for-each select="./jbo|./gloss">
+          <!-- for each subnode -->
+          <xsl:for-each select="./*">
+            <!-- per-node-type markup start -->
+            <xsl:choose>
+              <xsl:when test="name(.) = 'sumti'">
+                <xsl:text>\underline{</xsl:text>
+              </xsl:when>
+              <xsl:when test="name(.) = 'selbri'">
+                <xsl:text>\bf{</xsl:text>
+              </xsl:when>
+            </xsl:choose>
+            <!-- the actual text -->
+            <xsl:value-of select="text()"/>
+            <!-- per-node-type markup end -->
+            <xsl:choose>
+              <xsl:when test="name(.) = 'sumti'">
+                <xsl:text>}</xsl:text>
+              </xsl:when>
+              <xsl:when test="name(.) = 'selbri'">
+                <xsl:text>}</xsl:text>
+              </xsl:when>
+            </xsl:choose>
+            <!-- column terminator if not last -->
+            <xsl:if test="position() != last()">
+              <xsl:text>&amp;&#10;</xsl:text>
+            </xsl:if>
+          </xsl:for-each>
+          <!-- end of row -->
+          <xsl:text>\tabularnewline&#10;</xsl:text>
+        </xsl:for-each>
+        <xsl:text>\end{longtable}</xsl:text>
+      </latex-verbatim>
+    </xsl:if>
+  </xsl:template>
+
+  <!--  (c) David Carlisle
+      replace all occurences of the character(s) `from'
+      by the string `to' in the string `string'.
+
+      Modified by RLP to use copy-of for $to so it could take whole structures
+  -->
+  <xsl:template name="string-char-replace" >
+    <xsl:param name="string"/>
+    <xsl:param name="from"/>
+    <xsl:param name="to"/>
+    <xsl:choose>
+      <xsl:when test="contains($string,$from)">
+        <xsl:value-of select="substring-before($string,$from)"/>
+        <xsl:copy-of select="$to"/>
+        <xsl:call-template name="string-char-replace">
+          <xsl:with-param name="string" select="substring-after($string,$from)"/>
+          <xsl:with-param name="from" select="$from"/>
+          <xsl:with-param name="to" select="$to"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$string"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- backticks appear in chapter 3, and this upsets LaTeX a bit;
+       fix it.
+       -->
+  <xsl:template match="phrase[@role='X-SAMPA']/text()">
+    <xsl:if test="$format = 'pdf'">
+      <xsl:call-template name="string-char-replace">
+        <xsl:with-param name="string" select="."/>
+        <xsl:with-param name="from">`</xsl:with-param>
+        <xsl:with-param name="to"><latex-verbatim>\textasciigrave</latex-verbatim></xsl:with-param>
+      </xsl:call-template>
+    </xsl:if>
   </xsl:template>
 
   <!-- Deal with pronunciation nodes
@@ -282,13 +354,13 @@
       -->
       <xsl:otherwise>
         <itemizedlist role="pronunciation">
-        <xsl:for-each select=".//jbo">
-          <listitem role="pronunciation-jbo">
-            <para role="pronunciation-jbo">
-              <xsl:apply-templates select="node()|text()"/>
-            </para>
-          </listitem>
-        </xsl:for-each>
+          <xsl:for-each select=".//jbo">
+            <listitem role="pronunciation-jbo">
+              <para role="pronunciation-jbo">
+                <xsl:apply-templates select="node()|text()"/>
+              </para>
+            </listitem>
+          </xsl:for-each>
         <xsl:for-each select=".//ipa">
           <listitem role="pronunciation-ipa">
             <para role="pronunciation-ipa">
