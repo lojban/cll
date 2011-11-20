@@ -12,25 +12,34 @@
 
     <xsl:param name="format"/>
 
+    <xsl:template match="text()">
+        <xsl:call-template name="string-char-replace">
+          <xsl:with-param name="string" select="."/>
+          <xsl:with-param name="from">$</xsl:with-param>
+          <xsl:with-param name="to"><latex-verbatim>\textdollar</latex-verbatim></xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+
+
   <xsl:template name="counted_table">
     <xsl:param name="maximal" select="''"/>
     <xsl:param name="items" select="''"/>
     <informaltable class="counted_table">
       <colgroup/>
-          <xsl:for-each select="$items/jbo|$items/gloss">
-            <tr>
-              <xsl:choose>
-                <xsl:when test="count(child::sumti) &gt;= 1 or count(child::selbri) &gt;= 1 or count(child::elidable) &gt;= 1">
-                  <xsl:apply-templates select="node()|text()"/>
-                </xsl:when>
-                <xsl:otherwise>
-                	<xsl:for-each select="str:tokenize(.)">
-                    <td><xsl:value-of select="."/></td>
-                  </xsl:for-each>
-                </xsl:otherwise>
-              </xsl:choose>
-            </tr>
-          </xsl:for-each>
+      <xsl:for-each select="$items/jbo|$items/gloss">
+        <tr>
+          <xsl:choose>
+            <xsl:when test="count(child::sumti) &gt;= 1 or count(child::selbri) &gt;= 1 or count(child::elidable) &gt;= 1">
+              <xsl:apply-templates select="node()|text()"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:for-each select="str:tokenize(.)">
+                <td><xsl:apply-templates select="node()|text()"/></td>
+              </xsl:for-each>
+            </xsl:otherwise>
+          </xsl:choose>
+        </tr>
+      </xsl:for-each>
 <!--
           <xsl:for-each select="$items/gloss">
             <tr>
@@ -45,7 +54,7 @@
             <xsl:variable name="endcol" select="concat('col',$maximal)" />
             <xsl:variable name="numcol" select="$maximal" />
             <tr>
-              <td colspan="{$numcol}"><xsl:value-of select="."/></td>
+              <td colspan="{$numcol}"><xsl:apply-templates select="node()|text()"/></td>
             </tr>
           </xsl:for-each>
     </informaltable>
