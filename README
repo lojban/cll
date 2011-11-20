@@ -11,7 +11,34 @@ testing:
 Requirements
 ------------
 
+Getting this all working is actually a pretty huge undertaking;
+you're almost certainly better off asking Robin Lee Powell for an
+account on the appropriate server.
+
+  General
+  --------------
+
   xsltproc
 
   xmlto
+
+  PDF Generation
+  --------------
+
+  dblatex
+
+  xetex, with a recent version of texlive.  For Fedora, this means
+  following the instructions at
+  http://fedoraproject.org/wiki/Features/TeXLive to get the TeXLive
+  2011-2 repo or later, then:
+    
+    sudo yum install texlive-xetex
+    sudo yum install texlive-dejavu-fedora-fonts texlive-dejavu texlive-multirow texlive-subfigure texlive-appendix texlive-changebar texlive-overpic texlive-collection-langcjk
+
+  MOBI / EPUB
+  -----------
+
+  ebook-convert (from the calibre package)
+
+  Xvfb and xvfb-run (fake X for calibre)
 
