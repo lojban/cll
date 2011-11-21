@@ -12,12 +12,40 @@
 
     <xsl:param name="format"/>
 
+      <xsl:template match="math/text()|inlinemath/text()|mathphrase/text()" priority="1">
+      <xsl:choose>
+        <xsl:when test="$format = 'pdf'">
+          <xsl:call-template name="string-char-replace">
+            <xsl:with-param name="from">&#x2135;</xsl:with-param>
+            <xsl:with-param name="to"><latex-verbatim>\aleph</latex-verbatim></xsl:with-param>
+            <xsl:with-param name="string">
+              <xsl:call-template name="string-char-replace">
+                <xsl:with-param name="from">&#x03C0;</xsl:with-param>
+                <xsl:with-param name="to"><latex-verbatim>\pi</latex-verbatim></xsl:with-param>
+                <xsl:with-param name="string" select="."/>
+              </xsl:call-template>
+            </xsl:with-param>
+          </xsl:call-template>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:copy-of select="."/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:template>
+
     <xsl:template match="text()">
-        <xsl:call-template name="string-char-replace">
-          <xsl:with-param name="string" select="."/>
-          <xsl:with-param name="from">$</xsl:with-param>
-          <xsl:with-param name="to"><latex-verbatim>\textdollar</latex-verbatim></xsl:with-param>
-        </xsl:call-template>
+      <xsl:choose>
+        <xsl:when test="$format = 'pdf'">
+          <xsl:call-template name="string-char-replace">
+            <xsl:with-param name="from">$</xsl:with-param>
+            <xsl:with-param name="to"><latex-verbatim>\textdollar</latex-verbatim></xsl:with-param>
+            <xsl:with-param name="string" select="."/>
+          </xsl:call-template>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:copy-of select="."/>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:template>
 
 
@@ -304,6 +332,8 @@
       by the string `to' in the string `string'.
 
       Modified by RLP to use copy-of for $to so it could take whole structures
+
+      http://home.online.no/~pjacklam/latex/textcomp.pdf is likely to be helpful here
   -->
   <xsl:template name="string-char-replace" >
     <xsl:param name="string"/>
@@ -533,16 +563,64 @@
     </phrase>
   </xsl:template>
 
-  <xsl:template match="inlinemath" priority="1">
-    <inlineequation><mathphrase>
+  <xsl:template match="math/subscript|inlinemath/subscript" priority="1">
+    <xsl:choose>
+      <xsl:when test="$format = 'pdf'">
+          <xsl:text>_{</xsl:text>
+          <xsl:apply-templates select="node()|text()"/>
+          <xsl:text>}</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
         <xsl:apply-templates select="node()|text()"/>
-    </mathphrase></inlineequation>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template match="math/superscript|inlinemath/superscript" priority="1">
+    <xsl:choose>
+      <xsl:when test="$format = 'pdf'">
+          <xsl:text>^{</xsl:text>
+          <xsl:apply-templates select="node()|text()"/>
+          <xsl:text>}</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates select="node()|text()"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template match="inlinemath" priority="1">
+    <xsl:choose>
+      <xsl:when test="$format = 'pdf'">
+        <latex-verbatim>
+          <xsl:text>$</xsl:text>
+          <xsl:apply-templates select="node()|text()"/>
+          <xsl:text>$</xsl:text>
+        </latex-verbatim>
+      </xsl:when>
+      <xsl:otherwise>
+        <inlineequation><mathphrase>
+            <xsl:apply-templates select="node()|text()"/>
+        </mathphrase></inlineequation>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="math" priority="1">
-    <informalequation><mathphrase>
-        <xsl:apply-templates select="node()|text()"/>
-    </mathphrase></informalequation>
+    <xsl:choose>
+      <xsl:when test="$format = 'pdf'">
+        <latex-verbatim>
+          <xsl:text>\[</xsl:text>
+          <xsl:apply-templates select="node()|text()"/>
+          <xsl:text>\]</xsl:text>
+        </latex-verbatim>
+      </xsl:when>
+      <xsl:otherwise>
+        <informalequation><mathphrase>
+            <xsl:apply-templates select="node()|text()"/>
+        </mathphrase></informalequation>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="lujvo-making">
