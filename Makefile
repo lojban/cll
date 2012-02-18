@@ -66,7 +66,7 @@ xhtml-nochunks.done: cll_processed.xml
 #*******
 pdf: format = "pdf"
 pdf: cll_processed.xml
-	dblatex -b xetex -p xml/dblatex_config.xsl cll_processed.xml 2>&1 | grep -v 'default template used in programlisting or screen'
+	dblatex -b xetex -p xml/dblatex_config.xsl -r post_process_latex.pl cll_processed.xml 2>&1 | grep -v 'default template used in programlisting or screen'
 
 pdf_web: pdf
 	cp cll_processed.pdf ~/www/media/public/tmp/docbook-cll-test-dblatex.pdf
