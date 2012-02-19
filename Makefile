@@ -5,7 +5,7 @@ all: xhtml_web xhtml_nochunks_web pdf_web epub_web mobi_web
 
 .PHONY: clean
 clean:
-	-rm -rf cll.xml cll_preglossary.xml xhtml/ xhtml-nochunks/
+	-rm -rf cll* xhtml/ xhtml.done xhtml-nochunks/ xhtml-nochunks.done
 
 .PHONY: realclean
 realclean: clean
@@ -87,7 +87,7 @@ mobi_web: mobi
 # other utf-8 issues
 #*******
 pdf: cll.pdf
-cll.pdf: cll_processed_pdf.xml
+cll.pdf: cll_processed_pdf.xml xml/dblatex_config.xsl
 	dblatex -o cll.pdf -b xetex -p xml/dblatex_config.xsl -r post_process_latex.pl cll_processed_pdf.xml 2>&1 | grep -v 'default template used in programlisting or screen'
 
 pdf_web: pdf
