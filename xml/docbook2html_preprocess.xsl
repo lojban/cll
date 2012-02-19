@@ -35,7 +35,10 @@
 
     <xsl:template match="text()">
       <xsl:choose>
-        <xsl:when test="$format = 'pdf'">
+        <!-- glossary entries are pulled from jbovlaste, which means
+         they're already in LaTeX format; keep them that way
+         -->
+        <xsl:when test="$format = 'pdf' and not(boolean(ancestor::latex-verbatim)) and not(boolean(ancestor::glossdef))">
           <xsl:call-template name="string-char-replace">
             <xsl:with-param name="from">$</xsl:with-param>
             <xsl:with-param name="to"><latex-verbatim>\textdollar</latex-verbatim></xsl:with-param>

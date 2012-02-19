@@ -22,7 +22,7 @@ do
   if [ ! "$initial" ]
   then
     cat <<EOF
-<glossary xmlns='http://docbook.org/ns/docbook'>
+<glossary>
 <title>Lojban Word Glossary</title>
 <para>All definitions in this glossary are brief and unofficial.
 Only the published dictionary is a truly official reference for word
