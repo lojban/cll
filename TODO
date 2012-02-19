@@ -1,4 +1,35 @@
 ==================
+PDF Visual Issues
+==================
+18-17:36 < tsani> rlpowell: why sans serif fonts for the titles? Wouldn't serif look nicer?
+18-17:38 < tsani> rlpowell: also, chapter 2's title is hyphenated? Not very aesthetic
+18-17:39 < tsani> Also, I like the glossary at the end
+18-17:40 < tsani> that was definitely missing in the first version
+18-17:40 < tsani> but, the brivla definitions are messed up, as in they look like << $X_{1}$ is
+                  high/up/upward... >>
+18-17:41 < tsani> additionally, I think that it would look better if the glossary looked a bit
+                  more dictionary-like, with columns, and maybe a smaller font.
+18-17:42 < lunra> Personally Serif fonts annoy me.
+18-17:42 < lunra> I love nice clean smooth Sans fonts. Then again I love monospace.
+18-17:42 < tsani> :P
+18-17:42 < tsani> everyone loves monospace, but not for a book, pe'i
+18-17:44 < tsani> rlpowell: I think that having the glossary split into [cmavo], [brivla], and
+          [cmene] sections might be worth while
+18-17:44 < lunra> ^
+18-17:44 -!- Amie_ [~Amie@117.192.246.12] has joined #lojban
+18-17:44 < tsani> rlpowell: where the cmavo definitions say in which section the cmavo is
+          discussed
+18-17:46 -!- zugz [~zugz@bas8-hamilton14-3096449902.dsl.bell.ca] has joined #lojban
+18-17:46 < tsani> rlpowell: the x/780 for the page numbers is weird, I find. Simply x is enough,
+          I think.
+18-17:47 -!- Amie [~Amie@117.192.248.3] has quit [Ping timeout: 248 seconds]
+18-17:47 < tsani> rlpowell: Also, there seems to be a large space between "Example x.y" and the
+          box for the example proper.
+18-17:49 < tsani> I think that shading the example boxes would be nice as well.
+18-17:49 < tsani> Ah, some of the examples, for example on page 56, are tables with some empty
+                  cells. It definitely looks silly.
+
+==================
   New Tool Note
 ==================
 
@@ -101,6 +132,11 @@ change, and I will hunt you down and bad things will occur.
 ==================
   Non-Visual Issues
 ==================
+
+We need chunked html at both the chapter and section level, for ease
+of use.
+
+ ------
 
 The <definition> tags within tables have their <valsi> component in another column of the table.  We need to decide whether is this is
 satisfactory, or if something else should be done with them.
