@@ -35,7 +35,7 @@ xhtml_web: xhtml.done
 	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/cll-xhtml/docbook2html.css
 
 xhtml: xhtml.done
-xhtml.done: cll_processed_xhtml.xml
+xhtml.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 	rm -rf xhtml
 	mkdir xhtml
 	# FIXME: Consider doing something like this: -x /usr/share/sgml/docbook/xsl-ns-stylesheets-1.76.1/fo/docbook.xsl
@@ -53,7 +53,7 @@ xhtml_nochunks_web: xhtml-nochunks.done
 	cp $(PWD)/xhtml-nochunks/cll_processed_xhtml.html ~/www/media/public/tmp/cll-xhtml-nochunks.html
 
 xhtml_nochunks: xhtml-nochunks.done
-xhtml-nochunks.done: cll_processed_xhtml.xml
+xhtml-nochunks.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 	rm -rf xhtml-nochunks
 	mkdir xhtml-nochunks
 	ln -fs $(PWD)/docbook2html.css xhtml-nochunks/
