@@ -8,128 +8,61 @@
   <!-- Import the identity transformation. -->
   <xsl:import href="identity.xsl"/>
 
+  <!-- Import string replacement -->
+  <xsl:import href="string_char_replace.xsl"/>
+
   <xsl:output method="xml" doctype-system="dtd/docbook-5.0.dtd" doctype-public="-//OASIS//DTD DocBook XML V5.0//EN" />
 
-    <xsl:param name="format"/>
+  <!--
+       BEGIN: table helpers
 
-      <xsl:template match="math/text()|inlinemath/text()|mathphrase/text()" priority="1">
-      <xsl:choose>
-        <xsl:when test="$format = 'pdf'">
-          <xsl:call-template name="string-char-replace">
-            <xsl:with-param name="from">&#x2135;</xsl:with-param>
-            <xsl:with-param name="to"><latex-verbatim>\aleph</latex-verbatim></xsl:with-param>
-            <xsl:with-param name="string">
-              <xsl:call-template name="string-char-replace">
-                <xsl:with-param name="from">&#x03C0;</xsl:with-param>
-                <xsl:with-param name="to"><latex-verbatim>\pi</latex-verbatim></xsl:with-param>
-                <xsl:with-param name="string" select="."/>
-              </xsl:call-template>
-            </xsl:with-param>
-          </xsl:call-template>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:copy-of select="."/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:template>
+       #1 tokenizes by spaces (i.e. jbo and gloss fields)
+       
+       #2 generates a full spanning tr/td for a single element (i.e. natlang fields)
 
-    <xsl:template match="text()">
-      <xsl:choose>
-        <!-- glossary entries are pulled from jbovlaste, which means
-         they're already in LaTeX format; keep them that way
-         -->
-        <xsl:when test="$format = 'pdf' and not(boolean(ancestor::latex-verbatim)) and not(boolean(ancestor::glossdef))">
-          <xsl:call-template name="string-char-replace">
-            <xsl:with-param name="from">$</xsl:with-param>
-            <xsl:with-param name="to"><latex-verbatim>\textdollar</latex-verbatim></xsl:with-param>
-            <xsl:with-param name="string" select="."/>
-          </xsl:call-template>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:copy-of select="."/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:template>
+       #3 generates simple tr/td for all sub elements
+  -->
 
-
-  <xsl:template name="counted_table">
-    <xsl:param name="maximal" select="''"/>
+  <xsl:template name="tokenized_table_section">
     <xsl:param name="items" select="''"/>
-    <informaltable class="counted_table">
-      <colgroup/>
-      <xsl:for-each select="$items/jbo|$items/gloss">
-        <tr>
-          <xsl:choose>
-            <xsl:when test="count(child::sumti) &gt;= 1 or count(child::selbri) &gt;= 1 or count(child::elidable) &gt;= 1">
-              <xsl:apply-templates select="node()|text()"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:for-each select="str:tokenize(.)">
-                <td><xsl:apply-templates select="node()|text()"/></td>
-              </xsl:for-each>
-            </xsl:otherwise>
-          </xsl:choose>
-        </tr>
-      </xsl:for-each>
-<!--
-          <xsl:for-each select="$items/gloss">
-            <tr>
-              <xsl:for-each select="node()|text()">
-                <td><xsl:value-of select="."/></td>
-              </xsl:for-each>
-            </tr>
-          </xsl:for-each>
--->
-          <xsl:for-each select="$items/natlang">
-            <xsl:variable name="startcol" select="concat('col',1)" />
-            <xsl:variable name="endcol" select="concat('col',$maximal)" />
-            <xsl:variable name="numcol" select="$maximal" />
-            <tr>
-              <td colspan="{$numcol}"><xsl:apply-templates select="node()|text()"/></td>
-            </tr>
-          </xsl:for-each>
-    </informaltable>
+    <xsl:for-each select="$items/node()">
+      <tr>
+        <xsl:for-each select="str:tokenize(.)">
+          <td><xsl:apply-templates select="node()|text()"/></td>
+        </xsl:for-each>
+      </tr>
+    </xsl:for-each>
   </xsl:template>
 
-  <!-- Turn cmavo-list nodes into tables. -->
-  <xsl:template match="cmavo-list">
-    <informaltable class="cmavo-list">
-      <tgroup>
-        <xsl:attribute name="cols">
-          <xsl:value-of select="count(./cmavo-entry[1]/*)"/>
-        </xsl:attribute>
-        <xsl:for-each select="./cmavo-entry[1]/*">
-          <colspec>
-            <xsl:attribute name="colname">
-              <xsl:value-of select="concat('col',position())"/>
-            </xsl:attribute>
-          </colspec>
-        </xsl:for-each>
-        <xsl:apply-templates select="cmavo-list-head"/>  
-        <tbody>
-          <xsl:for-each select=".//cmavo-entry">
-            <row>
-              <xsl:for-each select="cmavo|pseudo-cmavo|selmaho|description|gismu|rafsi|attitudinal-scale|modal-place">
-                <entry><xsl:value-of select="."/></entry>
-              </xsl:for-each>
-            </row>
-          </xsl:for-each>
-        </tbody>
-      </tgroup>
-    </informaltable>
+  <xsl:template name="flat_table_section">
+    <xsl:param name="items" select="''"/>
+    <xsl:for-each select="$items">
+      <tr>
+        <td colspan="0"><xsl:apply-templates select="node()|text()"/></td>
+      </tr>
+    </xsl:for-each>
   </xsl:template>
 
-  <xsl:template match="cmavo-list-head">
-    <thead>
-      <row>
-        <xsl:for-each select="entry">
-          <xsl:copy-of select="."/>
+  <xsl:template name="regular_table_section">
+    <xsl:param name="items" select="''"/>
+    <xsl:for-each select="$items">
+      <tr>
+        <xsl:for-each select="*">
+          <td><xsl:apply-templates select="."/></td>
         </xsl:for-each>
-      </row>
-    </thead>
+      </tr>
+    </xsl:for-each>
   </xsl:template>
-  
-  <!-- Turn interlinear-gloss nodes into tables.
+
+  <!--
+       END: table helpers
+  -->
+
+
+  <!-- 
+       BEGIN: interlinear-gloss
+
+       Turn interlinear-gloss nodes into tables.
 
         Such a node must have at least one jbo entry and at least one natlang entry.
   -->
@@ -158,30 +91,97 @@
       </xsl:when>
       -->
       <xsl:otherwise>
-        <!-- here is the BEGIN actual table conversion -->
-
-        <xsl:variable name="items" select="." />
-
-        <!-- We need to find the longest tokenized string, to size
-             the table, so we sort by tokenized size and then pick
-             the top one and use it to call the table builder.
-        -->
-        <xsl:for-each select=".//jbo|.//gloss">
-          <xsl:sort select="count(str:tokenize(.))" order="descending"/>
-          <xsl:if test="position()=1">
-            <xsl:call-template name="counted_table">
-              <xsl:with-param name="maximal" select="count(str:tokenize(.))"/>
-              <xsl:with-param name="items" select="$items"/>
-            </xsl:call-template>
-          </xsl:if>
-        </xsl:for-each>
-
-        <!-- END actual table conversion -->
+        <informaltable class="interlinear-gloss">
+          <colgroup/>
+          <xsl:call-template name="tokenized_table_section">  <xsl:with-param name="items" select="./jbo|./gloss"/>   </xsl:call-template>
+          <xsl:call-template name="flat_table_section">       <xsl:with-param name="items" select="./natlang"/>       </xsl:call-template>
+        </informaltable>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
 
-  <!-- This gets a bit complicated as we're essentially walking an
+  <!-- 
+       END: interlinear-gloss
+
+       -->
+
+  <!-- 
+       BEGIN: Turn cmavo-list nodes into tables.
+       
+       -->
+  <xsl:template match="cmavo-list">
+    <informaltable class="cmavo-list">
+      <colgroup/>
+      <xsl:apply-templates select="cmavo-list-head"/>  
+      <xsl:call-template name="regular_table_section">  <xsl:with-param name="items" select=".//cmavo-entry"/>   </xsl:call-template>
+    </informaltable>
+  </xsl:template>
+
+<!--
+    <cmavo-list>
+      <cmavo-entry>
+        <cmavo>nu</cmavo>
+        <description>event of</description>
+        <gismu>fasnu</gismu>
+        <rafsi>nun</rafsi>
+        <description role="place-structure">x1 is an event of (the bridi)</description>
+      </cmavo-entry>
+
+-->
+
+        <xsl:template match="cmavo">
+          <emphasis role="cmavo">
+            <xsl:value-of select="."/>
+          </emphasis>
+        </xsl:template>
+
+        <!-- FIXME: <description role="place-structure"> should get
+             passed through
+             -->
+        <xsl:template match="description">
+          <para role="description">
+            <xsl:value-of select="."/>
+          </para>
+        </xsl:template>
+
+        <xsl:template match="gismu">
+          <para role="gismu">
+            <xsl:value-of select="."/>
+          </para>
+        </xsl:template>
+
+        <xsl:template match="selmaho">
+          <para role="selmaho">
+            <xsl:value-of select="."/>
+          </para>
+        </xsl:template>
+
+        <xsl:template match="rafsi">
+          <para role="rafsi">
+            <xsl:value-of select="."/>
+          </para>
+        </xsl:template>
+
+        <xsl:template match="cmavo-list-head">
+          <xsl:for-each select="entry">
+            <th><xsl:copy-of select="."/></th>
+          </xsl:for-each>
+        </xsl:template>
+
+        <!-- 
+       END: Turn cmavo-list nodes into tables.
+  --> 
+
+  <!-- 
+       WTF was I doing here?
+
+       Was this intended to be able to do two-color alternating?
+       Probably.  To work around some bullshit in dblatex?  Also
+       probably.  Is it needed anymore?  Probably not.
+
+
+
+       This gets a bit complicated as we're essentially walking an
        xml table column-wise.
 
        Given:
@@ -195,7 +195,6 @@
        We do this by starting with a count of 1, finding the [1]
        subelements, then calling self with an incremented count.
 
-  -->
   <xsl:template name="interlinear-gloss-itemized-table">
     <xsl:param name="width" select="''"/>
     <xsl:param name="starter" select="''"/>
@@ -203,176 +202,134 @@
     <xsl:variable name="any">
       <xsl:value-of select="count($starter/jbo/*[$count]|$starter/gloss/*[$count])"/>
     </xsl:variable>
-    <!-- debug message
+    <!- - debug message
     <xsl:message>
       <xsl:text>&#xA;width:</xsl:text>
       <xsl:copy-of select="$width"/>
       <xsl:text>&#xA;moo:</xsl:text>
       <xsl:copy-of select="($starter/jbo/*[$count]|$starter/gloss/*[$count])"/>
     </xsl:message>
-    -->
+    - ->
     <xsl:if test="boolean($any)">
-    <informaltable class="interlinear-gloss-itemized-table-inner">
-      <colgroup/>
-      <xsl:for-each select="($starter/jbo/*[$count]|$starter/gloss/*[$count]|$starter/comment/*[$count])">
-    <xsl:variable name="mixer">
-      <xsl:value-of select="(position() + $count) mod 2"/>
-    </xsl:variable>
-    <tr class="interlinear-gloss-itemized-table-color-{$mixer}">
-      <td class="{name(.)}">
+      <informaltable class="interlinear-gloss-itemized-table-inner">
+        <colgroup/>
+        <xsl:for-each select="($starter/jbo/*[$count]|$starter/gloss/*[$count]|$starter/comment/*[$count])">
+          <xsl:variable name="mixer">
+            <xsl:value-of select="(position() + $count) mod 2"/>
+          </xsl:variable>
+          <tr class="interlinear-gloss-itemized-table-color-{$mixer}">
+            <td class="{name(.)}">
               <xsl:apply-templates select="node()|text()"/>
             </td>
-      </tr>
-    </xsl:for-each>
-    </informaltable>
-  </xsl:if>
+          </tr>
+        </xsl:for-each>
+      </informaltable>
+    </xsl:if>
     <xsl:if test="boolean($count &lt; $width)">
-        <xsl:call-template name="interlinear-gloss-itemized-table">
-          <xsl:with-param name="width" select="$width"/>
-          <xsl:with-param name="starter" select="."/>
-          <xsl:with-param name="count" select="$count + 1"/>
-        </xsl:call-template>
-      </xsl:if>
+      <xsl:call-template name="interlinear-gloss-itemized-table">
+        <xsl:with-param name="width" select="$width"/>
+        <xsl:with-param name="starter" select="."/>
+        <xsl:with-param name="count" select="$count + 1"/>
+      </xsl:call-template>
+    </xsl:if>
   </xsl:template>
 
-  <!-- Template for interlinear-gloss-itemized
+  <!- - Template for interlinear-gloss-itemized
 
        This picks, as a table (-ish) width marker, either the first
        ./jbo or first ./gloss, counts the numebr of sub-elements,
        and then calls interlinear-gloss-itemized-table with that
        value.
-  -->
+  - ->
   <xsl:template match="interlinear-gloss-itemized">
-    <xsl:if test="$format = 'xhtml'">
-      <xsl:choose>
-        <xsl:when test="count(./jbo) &gt; 0">
-          <informaltable class="interlinear-gloss-itemized-outer"> <colgroup/> <tr> <td>
-                <xsl:call-template name="interlinear-gloss-itemized-table">
-                  <xsl:with-param name="width" select="count(./jbo[1]/*)"/>
-                  <xsl:with-param name="starter" select="."/>
-                  <xsl:with-param name="count" select="1"/>
-                </xsl:call-template>
-          </td> </tr> </informaltable>
-          <xsl:apply-templates select="./natlang|./comment"/>
-        </xsl:when>
-        <xsl:when test="count(./gloss) &gt; 0">
-          <informaltable class="interlinear-gloss-itemized-outer"> <colgroup/> <tr> <td>
-                <xsl:call-template name="interlinear-gloss-itemized-table">
-                  <xsl:with-param name="width" select="count(./gloss[1]/*)"/>
-                  <xsl:with-param name="starter" select="."/>
-                  <xsl:with-param name="count" select="1"/>
-                </xsl:call-template>
-          </td> </tr> </informaltable>
-          <xsl:for-each select="./natlang">
-            <xsl:apply-templates select="node()|text()"/>
-          </xsl:for-each>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:message>
-            <xsl:text>No jbo or gloss in interlinear-gloss-itemized&#xA;</xsl:text>
-          </xsl:message>
-        </xsl:otherwise>
-      </xsl:choose>
-      <!-- debug message
+    <xsl:choose>
+      <xsl:when test="count(./jbo) &gt; 0">
+        <informaltable class="interlinear-gloss-itemized-outer"> <colgroup/> <tr> <td>
+              <xsl:call-template name="interlinear-gloss-itemized-table">
+                <xsl:with-param name="width" select="count(./jbo[1]/*)"/>
+                <xsl:with-param name="starter" select="."/>
+                <xsl:with-param name="count" select="1"/>
+              </xsl:call-template>
+        </td> </tr> </informaltable>
+        <xsl:apply-templates select="./natlang|./comment"/>
+      </xsl:when>
+      <xsl:when test="count(./gloss) &gt; 0">
+        <informaltable class="interlinear-gloss-itemized-outer"> <colgroup/> <tr> <td>
+              <xsl:call-template name="interlinear-gloss-itemized-table">
+                <xsl:with-param name="width" select="count(./gloss[1]/*)"/>
+                <xsl:with-param name="starter" select="."/>
+                <xsl:with-param name="count" select="1"/>
+              </xsl:call-template>
+        </td> </tr> </informaltable>
+        <xsl:for-each select="./natlang">
+          <xsl:apply-templates select="node()|text()"/>
+        </xsl:for-each>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:message>
+          <xsl:text>No jbo or gloss in interlinear-gloss-itemized&#xA;</xsl:text>
+        </xsl:message>
+      </xsl:otherwise>
+    </xsl:choose>
+    <!- - debug message
     <xsl:message>
       <xsl:text>&#xA;stuff:</xsl:text>
       <xsl:copy-of select="./jbo[1]/*"/>
     </xsl:message>
+    - ->
+  </xsl:template>
+  -->
+
+<!--
+
+    BEGIN: handle interlinear-gloss-itemized
+
+      <interlinear-gloss-itemized>
+        <jbo>
+          <sumti>mi</sumti>
+          <elidable>cu</elidable>
+          <selbri>vecnu</selbri>
+          <sumti>ti</sumti>
+          <sumti>ta</sumti>
+          <sumti>zo'e</sumti>
+        </jbo>
+-->
+
+        <xsl:template match="selbri">
+          <para role="selbri">
+            <xsl:value-of select="."/>
+          </para>
+        </xsl:template>
+
+        <xsl:template match="sumti">
+          <para role="sumti">
+            <xsl:value-of select="."/>
+          </para>
+        </xsl:template>
+
+        <xsl:template match="elidable">
+          <para role="elidable">
+            <xsl:value-of select="."/>
+          </para>
+        </xsl:template>
+
+        <!-- main handling here -->
+
+        <xsl:template match="interlinear-gloss-itemized">
+          <informaltable class="interlinear-gloss-itemized">
+            <colgroup/>
+            <xsl:call-template name="regular_table_section">  <xsl:with-param name="items" select="./jbo|./gloss"/>   </xsl:call-template>
+            <xsl:call-template name="flat_table_section">       <xsl:with-param name="items" select="./natlang"/>       </xsl:call-template>
+          </informaltable>
+        </xsl:template>
+
+<!--
+
+    END: handle interlinear-gloss-itemized
+
     -->
-    </xsl:if>
-    <xsl:if test="$format = 'pdf'">
-      <latex-verbatim>
-        <!-- LaTeX table setup -->
-        <xsl:text>
-          % see longtable docs for these next lines
-          \setlength\LTleft\parindent
-          \setlength\LTright\fill
-          \begin{longtable}{</xsl:text>
-        <!-- LaTeX table width -->
-        <xsl:for-each select="./*[1]/*">
-          <xsl:text>l</xsl:text>
-        </xsl:for-each>
-        <xsl:text>}&#10;</xsl:text>
-        <!-- for each node group -->
-        <xsl:for-each select="./jbo|./gloss">
-          <!-- for each subnode -->
-          <xsl:for-each select="./*">
-            <!-- per-node-type markup start -->
-            <xsl:choose>
-              <xsl:when test="name(.) = 'sumti'">
-                <xsl:text>\underline{</xsl:text>
-              </xsl:when>
-              <xsl:when test="name(.) = 'selbri'">
-                <xsl:text>\bf{</xsl:text>
-              </xsl:when>
-            </xsl:choose>
-            <!-- the actual text -->
-            <xsl:value-of select="text()"/>
-            <!-- per-node-type markup end -->
-            <xsl:choose>
-              <xsl:when test="name(.) = 'sumti'">
-                <xsl:text>}</xsl:text>
-              </xsl:when>
-              <xsl:when test="name(.) = 'selbri'">
-                <xsl:text>}</xsl:text>
-              </xsl:when>
-            </xsl:choose>
-            <!-- column terminator if not last -->
-            <xsl:if test="position() != last()">
-              <xsl:text>&amp;&#10;</xsl:text>
-            </xsl:if>
-          </xsl:for-each>
-          <!-- end of row -->
-          <xsl:text>\tabularnewline&#10;</xsl:text>
-        </xsl:for-each>
-        <xsl:text>\end{longtable}</xsl:text>
-      </latex-verbatim>
-    </xsl:if>
-  </xsl:template>
 
-  <!--  (c) David Carlisle
-      replace all occurences of the character(s) `from'
-      by the string `to' in the string `string'.
-
-      Modified by RLP to use copy-of for $to so it could take whole structures
-
-      http://home.online.no/~pjacklam/latex/textcomp.pdf is likely to be helpful here
-  -->
-  <xsl:template name="string-char-replace" >
-    <xsl:param name="string"/>
-    <xsl:param name="from"/>
-    <xsl:param name="to"/>
-    <xsl:choose>
-      <xsl:when test="contains($string,$from)">
-        <xsl:value-of select="substring-before($string,$from)"/>
-        <xsl:copy-of select="$to"/>
-        <xsl:call-template name="string-char-replace">
-          <xsl:with-param name="string" select="substring-after($string,$from)"/>
-          <xsl:with-param name="from" select="$from"/>
-          <xsl:with-param name="to" select="$to"/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="$string"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <!-- backticks appear in chapter 3, and this upsets LaTeX a bit;
-       fix it.
-       -->
-  <xsl:template match="phrase[@role='X-SAMPA']/text()">
-    <xsl:if test="$format = 'pdf'">
-      <xsl:call-template name="string-char-replace">
-        <xsl:with-param name="string" select="."/>
-        <xsl:with-param name="from">`</xsl:with-param>
-        <xsl:with-param name="to"><latex-verbatim>\textasciigrave</latex-verbatim></xsl:with-param>
-      </xsl:call-template>
-    </xsl:if>
-  </xsl:template>
-
-  <!-- Deal with pronunciation nodes
-  -->
+  <!-- Deal with pronunciation nodes -->
   <xsl:template match="pronunciation">
     <xsl:choose>
       <xsl:when test="false">
@@ -403,19 +360,19 @@
               </para>
             </listitem>
           </xsl:for-each>
-        <xsl:for-each select=".//ipa">
-          <listitem role="pronunciation-ipa">
-            <para role="pronunciation-ipa">
-              <xsl:apply-templates select="node()|text()"/>
-            </para>
-          </listitem>
-        </xsl:for-each>
+          <xsl:for-each select=".//ipa">
+            <listitem role="pronunciation-ipa">
+              <para role="pronunciation-ipa">
+                <xsl:apply-templates select="node()|text()"/>
+              </para>
+            </listitem>
+          </xsl:for-each>
         </itemizedlist>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
 
-  <!-- <natlang> tags that arn't in <interlinear-gloss> tags -->
+  <!-- natlang tags that arn't in interlinear-gloss tags -->
   <xsl:template match="example/natlang[not(boolean(ancestor::interlinear-gloss))]">
     <para>
       <xsl:apply-templates select="node()|text()"/>
@@ -423,361 +380,195 @@
   </xsl:template>
 
   <!-- <compound-cmavo> tags; placeholder -->
-  <xsl:template match="compound-cmavo">
-    <simplelist>
-      <xsl:for-each select=".//jbo">
-        <member>
-          <xsl:apply-templates select="node()|text()"/>
-        </member>
-      </xsl:for-each>
-    </simplelist>
-  </xsl:template>
-
-  <xsl:template match="veljvo">
-    <xsl:copy>
-      <xsl:text>from </xsl:text>
-      <jbophrase> <!-- will this get matched by the jbophrase template? -->
-        <xsl:value-of select="."/>
-      </jbophrase>
-    </xsl:copy>
-  </xsl:template>
-  
-  <!-- turn a string into a lowercase & dashes slug -->
-  <xsl:template name="make_slug">
-    <xsl:param name="input" select="''"/>
-    <!-- This bit below just replaces ' with h-->
-    <xsl:variable name="slug1">
-      <xsl:value-of select="translate( $input, &#x22;&#x27;&#x22;, 'h' )"/>
-    </xsl:variable>
-    <!-- This bit below just deletes " -->
-    <xsl:variable name="slug2">
-      <xsl:value-of select='translate( $slug1, &#x27;&#x22;&#x27;, "" )'/>
-    </xsl:variable>
-    <xsl:variable name="slug3">
-      <xsl:value-of select="translate( $slug2, '@#$%^*()?+/=[]{}!,', '' )"/>
-    </xsl:variable>
-    <xsl:variable name="slug4">
-      <xsl:value-of select="normalize-space($slug3)"/>
-    </xsl:variable>
-    <!-- lowercase, and replace space with - -->
-    <xsl:variable name="slug">
-      <xsl:value-of select="translate( $slug4,
-        '&#x20;&#x9;&#xD;&#xA;ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-        '----abcdefghijklmnopqrstuvwxyz' )"/>
-    </xsl:variable>
-    <xsl:value-of select="$slug"/>
-  </xsl:template>
-
-  <xsl:template match="morphology">
-    <foreignphrase xml:lang="jbo" role="morphology">
-      <xsl:apply-templates select="node()|text()"/>
-    </foreignphrase>
-  </xsl:template>
-
-  <xsl:template match="cmevla">
-    <foreignphrase xml:lang="jbo" role="cmevla">
-      <xsl:apply-templates select="node()|text()"/>
-    </foreignphrase>
-  </xsl:template>
-
-  <xsl:template match="letteral">
-    <foreignphrase xml:lang="jbo" role="letteral">
-      <xsl:apply-templates select="node()|text()"/>
-    </foreignphrase>
-  </xsl:template>
-
-  <xsl:template match="rafsi">
-    <foreignphrase xml:lang="jbo" role="rafsi">
-      <xsl:apply-templates select="node()|text()"/>
-    </foreignphrase>
-  </xsl:template>
-
-  <xsl:template match="diphthong">
-    <foreignphrase xml:lang="jbo" role="diphthong">
-      <xsl:apply-templates select="node()|text()"/>
-    </foreignphrase>
-  </xsl:template>
-
-  <xsl:template match="cmavo">
-    <td>
-      <emphasis class="cmavo">
-        <xsl:value-of select="."/>
-      </emphasis>
-    </td>
-  </xsl:template>
-
-  <xsl:template match="comment">
-    <para role="comment">
-      <xsl:value-of select="."/>
-    </para>
-  </xsl:template>
-
-  <xsl:template match="natlang">
-    <para role="natlang">
-      <xsl:value-of select="."/>
-    </para>
-  </xsl:template>
-
-  <xsl:template match="grammar-template[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
-    <blockquote role="grammar-template">
-      <para>
-        <xsl:apply-templates select="node()|text()"/>
-      </para>
-    </blockquote>
-  </xsl:template>
-
-  <xsl:template match="grammar-template" priority="1">
-    <phrase role="grammar-template">
-      <xsl:apply-templates select="node()|text()"/>
-    </phrase>
-  </xsl:template>
-
-  <xsl:template match="oldjbophrase[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
-    <blockquote role="oldjbophrase">
-      <para>
-        <xsl:apply-templates select="node()|text()"/>
-      </para>
-    </blockquote>
-  </xsl:template>
-
-  <xsl:template match="oldjbophrase" priority="1">
-    <phrase role="oldjbophrase">
-      <xsl:apply-templates select="node()|text()"/>
-    </phrase>
-  </xsl:template>
-
-  <xsl:template match="definition[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
-    <blockquote role="definition">
-      <para>
-        <xsl:apply-templates select="node()|text()"/>
-      </para>
-    </blockquote>
-  </xsl:template>
-
-  <xsl:template match="definition" priority="1">
-    <phrase role="definition">
-      <xsl:apply-templates select="node()|text()"/>
-    </phrase>
-  </xsl:template>
-
-  <xsl:template match="content" priority="1">
-    <phrase role="definition-content">
-      <xsl:apply-templates select="node()|text()"/>
-    </phrase>
-  </xsl:template>
-
-  <xsl:template match="math/subscript|inlinemath/subscript" priority="1">
-    <xsl:choose>
-      <xsl:when test="$format = 'pdf'">
-          <xsl:text>_{</xsl:text>
-          <xsl:apply-templates select="node()|text()"/>
-          <xsl:text>}</xsl:text>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:apply-templates select="node()|text()"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match="math/superscript|inlinemath/superscript" priority="1">
-    <xsl:choose>
-      <xsl:when test="$format = 'pdf'">
-          <xsl:text>^{</xsl:text>
-          <xsl:apply-templates select="node()|text()"/>
-          <xsl:text>}</xsl:text>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:apply-templates select="node()|text()"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match="inlinemath" priority="1">
-    <xsl:choose>
-      <xsl:when test="$format = 'pdf'">
-        <latex-verbatim>
-          <xsl:text>$</xsl:text>
-          <xsl:apply-templates select="node()|text()"/>
-          <xsl:text>$</xsl:text>
-        </latex-verbatim>
-      </xsl:when>
-      <xsl:otherwise>
-        <inlineequation><mathphrase>
+    <xsl:template match="compound-cmavo">
+      <simplelist>
+        <xsl:for-each select=".//jbo">
+          <member>
             <xsl:apply-templates select="node()|text()"/>
-        </mathphrase></inlineequation>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
+          </member>
+        </xsl:for-each>
+      </simplelist>
+    </xsl:template>
 
-  <xsl:template match="math" priority="1">
-    <xsl:choose>
-      <xsl:when test="$format = 'pdf'">
-        <latex-verbatim>
-          <xsl:text>\[</xsl:text>
+    <xsl:template match="veljvo">
+      <xsl:copy>
+        <xsl:text>from </xsl:text>
+        <jbophrase> <!-- FIXME: will this get matched by the jbophrase template? It should be. -->
+          <xsl:value-of select="."/>
+        </jbophrase>
+      </xsl:copy>
+    </xsl:template>
+
+    <!-- turn a string into a lowercase & dashes slug -->
+    <xsl:template name="make_slug">
+      <xsl:param name="input" select="''"/>
+      <!-- This bit below just replaces ' with h-->
+      <xsl:variable name="slug1">
+        <xsl:value-of select="translate( $input, &#x22;&#x27;&#x22;, 'h' )"/>
+      </xsl:variable>
+      <!-- This bit below just deletes " -->
+      <xsl:variable name="slug2">
+        <xsl:value-of select='translate( $slug1, &#x27;&#x22;&#x27;, "" )'/>
+      </xsl:variable>
+      <xsl:variable name="slug3">
+        <xsl:value-of select="translate( $slug2, '@#$%^*()?+/=[]{}!,', '' )"/>
+      </xsl:variable>
+      <xsl:variable name="slug4">
+        <xsl:value-of select="normalize-space($slug3)"/>
+      </xsl:variable>
+      <!-- lowercase, and replace space with - -->
+      <xsl:variable name="slug">
+        <xsl:value-of select="translate( $slug4,
+          '&#x20;&#x9;&#xD;&#xA;ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+          '----abcdefghijklmnopqrstuvwxyz' )"/>
+      </xsl:variable>
+      <xsl:value-of select="$slug"/>
+    </xsl:template>
+
+    <xsl:template match="morphology">
+      <foreignphrase xml:lang="jbo" role="morphology">
+        <xsl:apply-templates select="node()|text()"/>
+      </foreignphrase>
+    </xsl:template>
+
+    <xsl:template match="cmevla">
+      <foreignphrase xml:lang="jbo" role="cmevla">
+        <xsl:apply-templates select="node()|text()"/>
+      </foreignphrase>
+    </xsl:template>
+
+    <xsl:template match="letteral">
+      <foreignphrase xml:lang="jbo" role="letteral">
+        <xsl:apply-templates select="node()|text()"/>
+      </foreignphrase>
+    </xsl:template>
+
+    <xsl:template match="rafsi">
+      <foreignphrase xml:lang="jbo" role="rafsi">
+        <xsl:apply-templates select="node()|text()"/>
+      </foreignphrase>
+    </xsl:template>
+
+    <xsl:template match="diphthong">
+      <foreignphrase xml:lang="jbo" role="diphthong">
+        <xsl:apply-templates select="node()|text()"/>
+      </foreignphrase>
+    </xsl:template>
+
+    <xsl:template match="natlang">
+      <para role="natlang">
+        <xsl:value-of select="."/>
+      </para>
+    </xsl:template>
+
+    <xsl:template match="grammar-template[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
+      <blockquote role="grammar-template">
+        <para>
           <xsl:apply-templates select="node()|text()"/>
-          <xsl:text>\]</xsl:text>
-        </latex-verbatim>
-      </xsl:when>
-      <xsl:otherwise>
-        <informalequation><mathphrase>
-            <xsl:apply-templates select="node()|text()"/>
-        </mathphrase></informalequation>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
+        </para>
+      </blockquote>
+    </xsl:template>
 
-  <xsl:template match="lujvo-making">
-    <informaltable class="lujvo-making">
-      <tgroup cols="3">
-        <tbody>
-          <row>
-            <xsl:for-each select="jbo">
-              <entry>
-                <xsl:apply-templates select="node()|text()"/>
-              </entry>
-            </xsl:for-each>
-            <xsl:for-each select="rafsi">
-              <entry>
-                <xsl:apply-templates select="node()|text()"/>
-              </entry>
-            </xsl:for-each>
-            <xsl:for-each select="score">
-              <entry>
-                <xsl:apply-templates select="node()|text()"/>
-              </entry>
-            </xsl:for-each>
-          </row>
-        </tbody>
-      </tgroup>
-    </informaltable>
-  </xsl:template>
+    <xsl:template match="grammar-template" priority="1">
+      <phrase role="grammar-template">
+        <xsl:apply-templates select="node()|text()"/>
+      </phrase>
+    </xsl:template>
 
-  <xsl:template match="lojbanization">
-    <informaltable class="lojbanization">
-      <tgroup cols="2">
-        <tbody>
-          <row>
-            <xsl:for-each select="jbo">
-              <entry>
-                <xsl:value-of select="text()"/>
-              </entry>
-              <xsl:if test="boolean(comment)">
-                <entry>
-                  <xsl:value-of select="comment/text()"/>
-                </entry>
-              </xsl:if>
-            </xsl:for-each>
-          </row>
-        </tbody>
-      </tgroup>
-    </informaltable>
-  </xsl:template>
+    <xsl:template match="oldjbophrase[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
+      <blockquote role="oldjbophrase">
+        <para>
+          <xsl:apply-templates select="node()|text()"/>
+        </para>
+      </blockquote>
+    </xsl:template>
 
-  <xsl:template match="valsi">
-    <xsl:variable name="slug">
-      <xsl:call-template name="make_slug">
-        <xsl:with-param name="input" select="text()"/>
-      </xsl:call-template>
-    </xsl:variable>
-    <glossterm linkend='valsi-{$slug}'>
+    <xsl:template match="oldjbophrase" priority="1">
+      <phrase role="oldjbophrase">
+        <xsl:apply-templates select="node()|text()"/>
+      </phrase>
+    </xsl:template>
+
+    <xsl:template match="definition[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
+      <blockquote role="definition">
+        <para>
+          <xsl:apply-templates select="node()|text()"/>
+        </para>
+      </blockquote>
+    </xsl:template>
+
+    <xsl:template match="comment">
+      <para role="comment">
+        <xsl:value-of select="."/>
+      </para>
+    </xsl:template>
+
+    <xsl:template match="definition" priority="1">
+      <phrase role="definition">
+        <xsl:apply-templates select="node()|text()"/>
+      </phrase>
+    </xsl:template>
+
+    <xsl:template match="content" priority="1">
+      <phrase role="definition-content">
+        <xsl:apply-templates select="node()|text()"/>
+      </phrase>
+    </xsl:template>
+
+    <xsl:template match="inlinemath" priority="1">
+      <inlineequation><mathphrase>
+          <xsl:apply-templates select="node()|text()"/>
+      </mathphrase></inlineequation>
+    </xsl:template>
+
+    <xsl:template match="math" priority="1">
+      <informalequation><mathphrase>
+          <xsl:apply-templates select="node()|text()"/>
+      </mathphrase></informalequation>
+    </xsl:template>
+
+    <xsl:template match="lujvo-making">
+        <informaltable class="lujvo-making">
+          <colgroup/>
+          <xsl:call-template name="flat_table_section">       <xsl:with-param name="items" select="./*"/>       </xsl:call-template>
+        </informaltable>
+    </xsl:template>
+
+    <xsl:template match="lojbanization">
+        <informaltable class="lojbanization">
+          <colgroup/>
+          <xsl:call-template name="flat_table_section">       <xsl:with-param name="items" select="./*"/>       </xsl:call-template>
+        </informaltable>
+    </xsl:template>
+
+    <xsl:template match="valsi">
+      <xsl:variable name="slug">
+        <xsl:call-template name="make_slug">
+          <xsl:with-param name="input" select="text()"/>
+        </xsl:call-template>
+      </xsl:variable>
+      <glossterm linkend='valsi-{$slug}'>
+        <foreignphrase xml:lang="jbo">
+          <indexterm type="lojban-words">
+            <primary>
+              <xsl:apply-templates select="node()|text()"/>
+            </primary>
+          </indexterm>
+          <xsl:apply-templates select="node()|text()"/>
+        </foreignphrase>
+      </glossterm>
+    </xsl:template>
+
+    <!-- For now, jbophrase makes an *index* but not a *glossary* -->
+    <xsl:template match="jbophrase">
       <foreignphrase xml:lang="jbo">
-        <indexterm type="lojban-words">
+        <indexterm type="lojban-phrases">
           <primary>
             <xsl:apply-templates select="node()|text()"/>
           </primary>
         </indexterm>
         <xsl:apply-templates select="node()|text()"/>
       </foreignphrase>
-    </glossterm>
-  </xsl:template>
+    </xsl:template>
 
-  <!-- For now, jbophrase makes an *index* but not a *glossary* -->
-  <xsl:template match="jbophrase">
-    <foreignphrase xml:lang="jbo">
-      <indexterm type="lojban-phrases">
-        <primary>
-          <xsl:apply-templates select="node()|text()"/>
-        </primary>
-      </indexterm>
-      <xsl:apply-templates select="node()|text()"/>
-    </foreignphrase>
-  </xsl:template>
-
-  <!--
-       Needs to be cannibalized to make <valsi>; <jbophrase. and
-       <oldjbophrase> do not much at all
-
-  <!- - lojban phrases and/or unglossed words - ->
-  <xsl:template match="jbophrase"
-    priority="1">
-    <xsl:variable name="wordsnum">
-      <xsl:value-of select="count(str:tokenize(text()))"/>
-    </xsl:variable>
-    <xsl:variable name="slug">
-      <xsl:call-template name="make_slug">
-        <xsl:with-param name="input" select="text()"/>
-      </xsl:call-template>
-    </xsl:variable>
-    <!- - FIXME: the class is currently only used by the chapter2
-         markup stuff, which still needs to be implemented
-    - ->
-    <foreignphrase xml:lang="jbo">
-      <xsl:if test="boolean(@class)">
-        <xsl:attribute name="class">
-          <xsl:value-of select="@class"/>
-        </xsl:attribute>
-      </xsl:if>
-      <indexterm>
-        <xsl:if test="boolean($wordsnum > 1)">
-          <xsl:attribute name="type">lojban-phrases</xsl:attribute>
-        </xsl:if>
-        <xsl:if test="boolean($wordsnum = 1)">
-          <xsl:attribute name="type">lojban-words</xsl:attribute>
-        </xsl:if>
-        <primary><xsl:value-of select="text()"/></primary>
-      </indexterm>
-      <xsl:value-of select="text()"/>
-    </foreignphrase>
-  </xsl:template>
-
-  <!- - turn <jbophrase> elements with single lojban words into
-       glossary and indexed elements
-       - ->
-  <!- - If you change the match here, also change it in
-       generate_glossary.xsl ; search for LOJBAN WORDS MATCH
-       - ->
-  <xsl:template match="jbophrase[count(str:tokenize(text())) = 1 and ( not(@glossary) or @glossary != 'false')
-    and ( not(@class) or ( @class != 'morphology' and @class != 'rafsi' and @class != 'diphthong' and @class != 'letteral' ) ) ]"
-    priority="2">
-    <xsl:variable name="wordsnum">
-      <xsl:value-of select="count(str:tokenize(text()))"/>
-    </xsl:variable>
-    <xsl:variable name="slug">
-      <xsl:call-template name="make_slug">
-        <xsl:with-param name="input" select="text()"/>
-      </xsl:call-template>
-    </xsl:variable>
-    <!- - FIXME: the class is currently only used by the chapter2
-         markup stuff, which still needs to be implemented
-    - ->
-    <glossterm linkend='jbogloss-{$slug}'>
-      <foreignphrase xml:lang="jbo">
-        <xsl:if test="boolean(@class)">
-          <xsl:attribute name="class">
-            <xsl:value-of select="@class"/>
-          </xsl:attribute>
-        </xsl:if>
-        <indexterm>
-          <xsl:attribute name="type">lojban-words</xsl:attribute>
-          <primary>
-            <xsl:apply-templates select="node()|text()"/>
-          </primary>
-        </indexterm>
-        <xsl:apply-templates select="node()|text()"/>
-      </foreignphrase>
-    </glossterm>
-  </xsl:template>
-
-  -->
-
-</xsl:stylesheet>
+  </xsl:stylesheet>
