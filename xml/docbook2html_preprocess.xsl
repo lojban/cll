@@ -17,7 +17,7 @@
        BEGIN: table helpers
 
        #1 tokenizes by spaces (i.e. jbo and gloss fields)
-       
+
        #2 generates a full spanning tr/td for a single element (i.e. natlang fields)
 
        #3 generates simple tr/td for all sub elements
@@ -25,10 +25,27 @@
 
   <xsl:template name="tokenized_table_section">
     <xsl:param name="items" select="''"/>
-    <xsl:for-each select="$items/node()">
+    <!-- The reason this gets complicated is things like:
+
+         <gloss>The-one-named <quote>bear</quote> [past] creates the story.</gloss>
+
+         We want to break up all the bits except the quote, and still keep it all in one row.
+
+      -->
+
+    <xsl:for-each select="$items">
       <tr>
-        <xsl:for-each select="str:tokenize(.)">
-          <td><xsl:apply-templates select="node()|text()"/></td>
+        <xsl:for-each select="node()">
+          <xsl:choose>
+            <xsl:when test="self::text()">
+              <xsl:for-each select="str:tokenize(.)">
+                <td> <xsl:apply-templates select="."/> </td>
+              </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+              <td> <xsl:apply-templates select="."/> </td>
+            </xsl:otherwise>
+          </xsl:choose>
         </xsl:for-each>
       </tr>
     </xsl:for-each>
@@ -125,6 +142,18 @@
         <gismu>fasnu</gismu>
         <rafsi>nun</rafsi>
         <description role="place-structure">x1 is an event of (the bridi)</description>
+
+other options:
+
+        <modal-place>as said by</modal-place>
+        <modal-place se="se">expressing</modal-place>
+
+        <series>mi-series</series>
+
+        <pseudo-cmavo>[N]roi</pseudo-cmavo>
+
+        <attitudinal-scale point="sai">discovery</attitudinal-scale>
+
       </cmavo-entry>
 
 -->
@@ -158,6 +187,48 @@
 
         <xsl:template match="rafsi">
           <para role="rafsi">
+            <xsl:value-of select="."/>
+          </para>
+        </xsl:template>
+
+        <!-- <compound>nairu'e</compound> -->
+        <xsl:template match="compound">
+          <para role="cmavo-compound">
+            <xsl:value-of select="."/>
+          </para>
+        </xsl:template>
+
+        <!-- <attitudinal-scale point="sai">discovery</attitudinal-scale> -->
+        <xsl:template match="attitudinal-scale">
+          <xsl:variable name="point">
+            <xsl:value-of select="@point"/>
+          </xsl:variable>
+          <para role="attitudinal-scale-{$point}">
+            <xsl:value-of select="."/>
+          </para>
+        </xsl:template>
+
+        <!-- <series>mi-series</series> -->
+        <xsl:template match="series">
+          <para role="cmavo-series">
+            <xsl:value-of select="."/>
+          </para>
+        </xsl:template>
+
+        <!-- <pseudo-cmavo>[N]roi</pseudo-cmavo> -->
+        <xsl:template match="pseudo-cmavo">
+          <para role="pseudo-cmavo">
+            <xsl:value-of select="."/>
+          </para>
+        </xsl:template>
+
+        <!-- <modal-place>as said by</modal-place> -->
+        <!-- <modal-place se="se">expressing</modal-place> -->
+        <xsl:template match="modal-place">
+          <xsl:variable name="se_word">
+            <xsl:value-of select="@se"/>
+          </xsl:variable>
+          <para role="modal-place-{$se_word}">
             <xsl:value-of select="."/>
           </para>
         </xsl:template>

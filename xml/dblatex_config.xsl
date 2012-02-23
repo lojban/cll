@@ -38,11 +38,26 @@
 <!-- The way this works is that xml/docbook2html_preprocess.xsl
      wraps things in <latex-verbatim> tags for special latex stuff,
      and we unwrap them into their raw text here
+
+     In addition, there can be non-verbatim elements inside that
+     will do complete dblatex expansion, so that we don't have to
+     redo everything by hand in the middle of our tables.
      -->
 <xsl:template match="latex-verbatim">
-  <xsl:value-of select="text()">
-    <xsl:apply-templates mode="latex.verbatim"/>
-  </xsl:value-of>
+  <xsl:for-each select="node()|text()">
+    <xsl:choose>
+      <!-- If it's a text node, just pass it -->
+      <xsl:when test="self::text()">
+        <xsl:value-of select=".">
+          <xsl:apply-templates mode="latex.verbatim"/>
+        </xsl:value-of>
+      </xsl:when>
+      <!-- If it's a non-verbatim element, process it -->
+      <xsl:when test="self::non-verbatim">
+        <xsl:apply-templates select="./node()|./text()"/>
+      </xsl:when>
+    </xsl:choose>
+  </xsl:for-each>
 </xsl:template>
 
 </xsl:stylesheet>
