@@ -239,20 +239,14 @@
     <para> <indexterm type="general-imported"><primary>names</primary><secondary>quick-tour version</secondary></indexterm> Names may also be used as sumti, provided they are preceded with the word 
     <valsi>la</valsi>:</para>
     <informaltable>
-      <tgroup cols="2">
-        <colspec colnum="1" colname="col1"/>
-        <colspec colnum="2" colname="col2"/>
-        <tbody>
-          <row>
-            <entry><jbophrase>la meris.</jbophrase></entry>
-            <entry>the one/ones named Mary</entry>
-          </row>
-          <row>
-            <entry><jbophrase>la djan.</jbophrase></entry>
-            <entry>the one/ones named John</entry>
-          </row>
-        </tbody>
-      </tgroup>
+          <tr>
+            <td><jbophrase>la meris.</jbophrase></td>
+            <td>the one/ones named Mary</td>
+          </tr>
+          <tr>
+            <td><jbophrase>la djan.</jbophrase></td>
+            <td>the one/ones named John</td>
+          </tr>
     </informaltable>
     <para>Other Lojban spelling versions are possible for names from other languages, and there are restrictions on which letters may appear in Lojban names: see 
     <xref linkend="section-names"/> for more information.</para>
@@ -265,71 +259,72 @@
            (1) these definitions come from nowhere and go to nowhere
            (2) in the end, we should probably drop the whole thing in favor of the user just using the glossary
            (3) needs table replacement; see TODO
-           -->
-      <tgroup cols="2">
-        <colspec colnum="1" colname="col1"/>
-        <colspec colnum="2" colname="col2"/>
-        <tbody>
-          <row>
-            <entry><valsi>vecnu</valsi></entry>
-            <entry><definition><content>x1 (seller) sells x2 (goods) to x3 (buyer) for x4 (price)</content></definition></entry>
-          </row>
-          <row>
-            <entry><valsi>tavla</valsi></entry>
-            <entry><definition><content>x1 (talker) talks to x2 (audience) about x3 (topic) in language x4</content></definition></entry>
-          </row>
-          <row>
-            <entry><valsi>sutra</valsi></entry>
-            <entry><definition><content>x1 (agent) is fast at doing x2 (action)</content></definition></entry>
-          </row>
-          <row>
-            <entry><valsi>blari'o</valsi></entry>
-            <entry><definition><content>x1 (object/light source) is blue-green</content></definition></entry>
-          </row>
-          <row>
-            <entry><valsi>melbi</valsi></entry>
-            <entry><definition><content>x1 (object/idea) is beautiful to x2 (observer) by standard x3</content></definition></entry>
-          </row>
-          <row>
-            <entry><valsi>cutci</valsi></entry>
-            <entry><definition><content>x1 is a shoe/boot for x2 (foot) made of x3 (material)</content></definition></entry>
-          </row>
-          <row>
-            <entry><valsi>bajra</valsi></entry>
-            <entry><definition><content>x1 runs on x2 (surface) using x3 (limbs) in manner x4 (gait)</content></definition></entry>
-          </row>
-          <row>
-            <entry><valsi>klama</valsi></entry>
-            <entry><definition><content>x1 goes/comes to x2 (destination) from x3 (origin point) via x4 (route) using x5 (means of transportation)</content></definition></entry>
-          </row>
-          <row>
-            <entry><valsi>pluka</valsi></entry>
-            <entry><definition><content>x1 pleases/is pleasing to x2 (experiencer) under conditions x3</content></definition></entry>
-          </row>
 
-          <row>
-            <entry><valsi>gerku</valsi></entry>
-            <entry><definition><content>x1 is a dog of breed x2</content></definition></entry>
-          </row>
-          <row>
-            <entry><valsi>kurji</valsi></entry>
-            <entry><definition><content>x1 takes care of x2</content></definition></entry>
-          </row>
-          <row>
-            <entry><valsi>kanro</valsi></entry>
-            <entry><definition><content>x1 is healthy by standard x2</content></definition></entry>
-          </row>
+           It used to have some other bits:
 
-          <row>
-            <entry><valsi>stali</valsi></entry>
-            <entry><definition><content>x1 stays/remains with x2</content></definition></entry>
-          </row>
-          <row>
-            <entry><valsi>zarci</valsi></entry>
-            <entry><definition><content>x1 is a market/store/shop selling x2 (products) operated by x3 (storekeeper)</content></definition></entry>
-          </row>
-        </tbody>
-      </tgroup>
+            <td><definition><content>x1 (seller) sells x2 (goods) to x3 (buyer) for x4 (price)</content></definition></td>
+
+           But they upset LaTeX and added no value.
+
+      -->
+          <tr>
+            <td><valsi>vecnu</valsi></td>
+            <td>x1 (seller) sells x2 (goods) to x3 (buyer) for x4 (price)</td>
+          </tr>
+          <tr>
+            <td><valsi>tavla</valsi></td>
+            <td>x1 (talker) talks to x2 (audience) about x3 (topic) in language x4</td>
+          </tr>
+          <tr>
+            <td><valsi>sutra</valsi></td>
+            <td>x1 (agent) is fast at doing x2 (action)</td>
+          </tr>
+          <tr>
+            <td><valsi>blari'o</valsi></td>
+            <td>x1 (object/light source) is blue-green</td>
+          </tr>
+          <tr>
+            <td><valsi>melbi</valsi></td>
+            <td>x1 (object/idea) is beautiful to x2 (observer) by standard x3</td>
+          </tr>
+          <tr>
+            <td><valsi>cutci</valsi></td>
+            <td>x1 is a shoe/boot for x2 (foot) made of x3 (material)</td>
+          </tr>
+          <tr>
+            <td><valsi>bajra</valsi></td>
+            <td>x1 runs on x2 (surface) using x3 (limbs) in manner x4 (gait)</td>
+          </tr>
+          <tr>
+            <td><valsi>klama</valsi></td>
+            <td>x1 goes/comes to x2 (destination) from x3 (origin point) via x4 (route) using x5 (means of transportation)</td>
+          </tr>
+          <tr>
+            <td><valsi>pluka</valsi></td>
+            <td>x1 pleases/is pleasing to x2 (experiencer) under conditions x3</td>
+          </tr>
+
+          <tr>
+            <td><valsi>gerku</valsi></td>
+            <td>x1 is a dog of breed x2</td>
+          </tr>
+          <tr>
+            <td><valsi>kurji</valsi></td>
+            <td>x1 takes care of x2</td>
+          </tr>
+          <tr>
+            <td><valsi>kanro</valsi></td>
+            <td>x1 is healthy by standard x2</td>
+          </tr>
+
+          <tr>
+            <td><valsi>stali</valsi></td>
+            <td>x1 stays/remains with x2</td>
+          </tr>
+          <tr>
+            <td><valsi>zarci</valsi></td>
+            <td>x1 is a market/store/shop selling x2 (products) operated by x3 (storekeeper)</td>
+          </tr>
     </informaltable>
     <para> <indexterm type="general-imported"><primary>x1</primary><secondary>notation convention</secondary><tertiary>quick-tour version</tertiary></indexterm> Each selbri (relation) has a specific rule that defines the role of each sumti in the bridi, based on its position. In the table above, that order was expressed by labeling the sumti positions as x1, x2, x3, x4, and x5.</para>
     <para> <indexterm type="general-imported"><primary>words not in the dictionary</primary></indexterm> Like the table in 
