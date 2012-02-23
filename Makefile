@@ -1,3 +1,4 @@
+test = 
 chapters = $(if $(CHAPTERS), $(CHAPTERS), chapters/1.xml chapters/2.xml chapters/3.xml chapters/4.xml chapters/5.xml chapters/6.xml chapters/7.xml chapters/8.xml chapters/9.xml chapters/10.xml chapters/11.xml chapters/12.xml chapters/13.xml chapters/14.xml chapters/15.xml chapters/16.xml chapters/17.xml chapters/18.xml chapters/19.xml chapters/20.xml chapters/21.xml)
 
 .PHONY: all
@@ -15,11 +16,11 @@ realclean: clean
 # Basic prep
 #*******
 
-cll.xml:
-	scripts/merge.sh $(chapters)
+cll.xml: $(chapters)
+	scripts/merge.sh $(test) $(chapters)
 
-cll_processed_pdf.xml: cll.xml xml/docbook2html_preprocess.xsl
-	xsltproc --stringparam format pdf --nonet --path . --novalid xml/docbook2html_preprocess.xsl cll.xml > cll_processed_pdf.xml
+cll_processed_pdf.xml: cll_processed_xhtml.xml xml/latex_preprocess.xsl
+	xsltproc --nonet --path . --novalid xml/latex_preprocess.xsl cll_processed_xhtml.xml > cll_processed_pdf.xml
 
 cll_processed_xhtml.xml: cll.xml xml/docbook2html_preprocess.xsl
 	xsltproc --stringparam format xhtml --nonet --path . --novalid xml/docbook2html_preprocess.xsl cll.xml > cll_processed_xhtml.xml
@@ -34,6 +35,7 @@ xhtml_web: xhtml.done
 	cp -pr xhtml ~/www/media/public/tmp/cll-xhtml
 	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/cll-xhtml/docbook2html.css
 
+.PHONY: xhtml
 xhtml: xhtml.done
 xhtml.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 	rm -rf xhtml
@@ -52,6 +54,7 @@ xhtml_nochunks_web: xhtml-nochunks.done
 	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/docbook2html.css
 	cp $(PWD)/xhtml-nochunks/cll_processed_xhtml.html ~/www/media/public/tmp/cll-xhtml-nochunks.html
 
+.PHONY: xhtml_nochunks
 xhtml_nochunks: xhtml-nochunks.done
 xhtml-nochunks.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 	rm -rf xhtml-nochunks
@@ -65,18 +68,24 @@ xhtml-nochunks.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 #*******
 # EPUB
 #*******
+.PHONY: epub
 epub: cll.epub
 cll.epub: xhtml.done
 	xvfb-run ebook-convert xhtml/index.html cll.epub
+
+.PHONY: epub_web
 epub_web: epub
 	cp cll.epub ~/www/media/public/tmp/cll.epub
 
 #*******
 # MOBI
 #*******
+.PHONY: mobi
 mobi: cll.mobi
 cll.mobi: xhtml.done
 	xvfb-run ebook-convert xhtml/index.html cll.mobi
+
+.PHONY: mobi_web
 mobi_web: mobi
 	cp cll.mobi ~/www/media/public/tmp/cll.mobi
 
@@ -86,10 +95,12 @@ mobi_web: mobi
 # We actually do need xetex (aka xalatex) here, for the IPA and
 # other utf-8 issues
 #*******
+.PHONY: pdf
 pdf: cll.pdf
 cll.pdf: cll_processed_pdf.xml xml/dblatex_config.xsl
 	dblatex -o cll.pdf -b xetex -p xml/dblatex_config.xsl -r post_process_latex.pl cll_processed_pdf.xml 2>&1 | grep -v 'default template used in programlisting or screen'
 
+.PHONY: pdf_web
 pdf_web: pdf
 	cp cll.pdf ~/www/media/public/tmp/cll.pdf
 
