@@ -50,40 +50,33 @@
     
     <quote>or</quote>:</para>
     <informaltable>
-      <tgroup cols="3">
-        <colspec colnum="1" colname="col1"/>
-        <colspec colnum="2" colname="col2"/>
-        <colspec colnum="3" colname="col3"/>
         <thead>
-          <row>
-            <entry>first</entry>
-            <entry>second</entry>
-            <entry>result</entry>
-          </row>
+          <tr>
+            <td>first</td>
+            <td>second</td>
+            <td>result</td>
+          </tr>
         </thead>
-        <tbody>
-          <row>
-            <entry>True</entry>
-            <entry>True</entry>
-            <entry>True</entry>
-          </row>
-          <row>
-            <entry>True</entry>
-            <entry>False</entry>
-            <entry>True</entry>
-          </row>
-          <row>
-            <entry>False</entry>
-            <entry>True</entry>
-            <entry>True</entry>
-          </row>
-          <row>
-            <entry>False</entry>
-            <entry>False</entry>
-            <entry>False</entry>
-          </row>
-        </tbody>
-      </tgroup>
+          <tr>
+            <td>True</td>
+            <td>True</td>
+            <td>True</td>
+          </tr>
+          <tr>
+            <td>True</td>
+            <td>False</td>
+            <td>True</td>
+          </tr>
+          <tr>
+            <td>False</td>
+            <td>True</td>
+            <td>True</td>
+          </tr>
+          <tr>
+            <td>False</td>
+            <td>False</td>
+            <td>False</td>
+          </tr>
     </informaltable>
     <para>This table means that if the first sentence stated is true, and the second sentence stated is true, then the result of the truth function is also true. The same is true for every other possible combination of truth values except the one where both the first and the second sentences are false, in which case the truth value of the result is also false.</para>
     <para>Suppose that 
@@ -116,61 +109,55 @@
     <quote>second</quote> to the second sentence):</para>
     <para> <indexterm type="general-imported"><primary>truth tables</primary><secondary>list of 16 in abbreviated form</secondary></indexterm> FIXME: TAG SPOT</para>
     <informaltable>
-      <tgroup cols="2">
-        <colspec colnum="1" colname="col1"/>
-        <colspec colnum="2" colname="col2"/>
-        <tbody>
-          <row>
-            <entry>TTTT</entry><entry>(always true)</entry>
-          </row>
-          <row>
-            <entry>TTTF</entry><entry>first is true and/or second is true.</entry>
-          </row>
-          <row>
-            <entry>TTFT</entry><entry>first is true if second is true.</entry>
-          </row>
-          <row>
-            <entry>TTFF</entry><entry>first is true whether or not second is true.</entry>
-          </row>
-          <row>
-            <entry>TFTT</entry><entry>first is true only if second is true.</entry>
-          </row>
-          <row>
-            <entry>TFTF</entry><entry>whether or not first is true, second is true.</entry>
-          </row>
-          <row>
-            <entry>TFFT</entry><entry>first is true if and only if second is true.</entry>
-          </row>
-          <row>
-            <entry>TFFF</entry><entry>first is true and second is true</entry>
-          </row>
+          <tr>
+            <td>TTTT</td><td>(always true)</td>
+          </tr>
+          <tr>
+            <td>TTTF</td><td>first is true and/or second is true.</td>
+          </tr>
+          <tr>
+            <td>TTFT</td><td>first is true if second is true.</td>
+          </tr>
+          <tr>
+            <td>TTFF</td><td>first is true whether or not second is true.</td>
+          </tr>
+          <tr>
+            <td>TFTT</td><td>first is true only if second is true.</td>
+          </tr>
+          <tr>
+            <td>TFTF</td><td>whether or not first is true, second is true.</td>
+          </tr>
+          <tr>
+            <td>TFFT</td><td>first is true if and only if second is true.</td>
+          </tr>
+          <tr>
+            <td>TFFF</td><td>first is true and second is true</td>
+          </tr>
 
-          <row>
-            <entry>FTTT</entry><entry>first and second are not both true.</entry>
-          </row>
-          <row>
-            <entry>FTTF</entry><entry>first or second is true, but not both.</entry>
-          </row>
-          <row>
-            <entry>FTFT</entry><entry>whether or not first is true, second is false.</entry>
-          </row>
-          <row>
-            <entry>FTFF</entry><entry>first is true, but second is false.</entry>
-          </row>
-          <row>
-            <entry>FFTT</entry><entry>first is false whether or not second is true.</entry>
-          </row>
-          <row>
-            <entry>FFTF</entry><entry>first is false, but second is true.</entry>
-          </row>
-          <row>
-            <entry>FFFT</entry><entry>neither first nor second is true.</entry>
-          </row>
-          <row>
-            <entry>FFFF</entry><entry>(always false)</entry>
-          </row>
-        </tbody>
-      </tgroup>
+          <tr>
+            <td>FTTT</td><td>first and second are not both true.</td>
+          </tr>
+          <tr>
+            <td>FTTF</td><td>first or second is true, but not both.</td>
+          </tr>
+          <tr>
+            <td>FTFT</td><td>whether or not first is true, second is false.</td>
+          </tr>
+          <tr>
+            <td>FTFF</td><td>first is true, but second is false.</td>
+          </tr>
+          <tr>
+            <td>FFTT</td><td>first is false whether or not second is true.</td>
+          </tr>
+          <tr>
+            <td>FFTF</td><td>first is false, but second is true.</td>
+          </tr>
+          <tr>
+            <td>FFFT</td><td>neither first nor second is true.</td>
+          </tr>
+          <tr>
+            <td>FFFF</td><td>(always false)</td>
+          </tr>
     </informaltable>
     <para>Skeptics may work out the detailed truth tables for themselves.</para>
     
@@ -185,36 +172,29 @@
     
     <para> <indexterm type="general-imported"><primary>fancy U</primary><secondary>notation convention</secondary></indexterm>  <indexterm type="general-imported"><primary>fancy O</primary><secondary>notation convention</secondary></indexterm>  <indexterm type="general-imported"><primary>fancy E</primary><secondary>notation convention</secondary></indexterm>  <indexterm type="general-imported"><primary>fancy A</primary><secondary>notation convention</secondary></indexterm>  <indexterm type="general-imported"><primary>truth tables</primary><secondary>for 4 fundamental Lojban truth functions</secondary></indexterm> FIXME: TAG SPOT</para>
     <informaltable>
-      <tgroup cols="3">
-        <colspec colnum="1" colname="col1"/>
-        <colspec colnum="2" colname="col2"/>
-        <colspec colnum="3" colname="col3"/>
-        <tbody>
-          <row>
-            <entry><phrase role="logical-vowel">A</phrase></entry>
-            <entry>TTTF</entry>
-            <entry>or, and/or</entry>
-          </row>
+          <tr>
+            <td><phrase role="logical-vowel">A</phrase></td>
+            <td>TTTF</td>
+            <td>or, and/or</td>
+          </tr>
           
-          <row>
-            <entry><phrase role="logical-vowel">E</phrase></entry>
-            <entry>TFFF</entry>
-            <entry>and</entry>
-          </row>
+          <tr>
+            <td><phrase role="logical-vowel">E</phrase></td>
+            <td>TFFF</td>
+            <td>and</td>
+          </tr>
           
-          <row>
-            <entry><phrase role="logical-vowel">O</phrase></entry>
-            <entry>TFFT</entry>
-            <entry>if and only if</entry>
-          </row>
+          <tr>
+            <td><phrase role="logical-vowel">O</phrase></td>
+            <td>TFFT</td>
+            <td>if and only if</td>
+          </tr>
           
-          <row>
-            <entry><phrase role="logical-vowel">U</phrase></entry>
-            <entry>TTFF</entry>
-            <entry>whether or not</entry>
-          </row>
-        </tbody>
-      </tgroup>
+          <tr>
+            <td><phrase role="logical-vowel">U</phrase></td>
+            <td>TTFF</td>
+            <td>whether or not</td>
+          </tr>
     </informaltable>
     <para>More precisely:</para>
     <simplelist>
@@ -228,55 +208,49 @@
     </simplelist>
     <para> <indexterm type="general-imported"><primary>truth functions</primary><secondary>creating all 16 with Lojban's basic set</secondary></indexterm> With the four vowels, the ability to negate either sentence, and the ability to exchange the sentences, as if their order had been reversed, we can create all of the 16 possible truth functions except TTTT and FFFF, which are fairly useless anyway. The following table illustrates how to create each of the 14 remaining truth functions:</para>
     <informaltable>
-      <tgroup cols="2">
-        <colspec colnum="1" colname="col1"/>
-        <colspec colnum="2" colname="col2"/>
-        <tbody>
-          <row>
-            <entry>TTTF</entry><entry><phrase role="logical-vowel">A</phrase></entry>
-          </row>
-          <row>
-            <entry>TTFT</entry><entry><phrase role="logical-vowel">A</phrase> with second sentence negated</entry>
-          </row>
-          <row>
-            <entry>TTFF</entry><entry><phrase role="logical-vowel">U</phrase></entry>
-          </row>
-          <row>
-            <entry>TFTT</entry><entry><phrase role="logical-vowel">A</phrase> with first sentence negated</entry>
-          </row>
-          <row>
-            <entry>TFTF</entry><entry><phrase role="logical-vowel">U</phrase> with sentences exchanged</entry>
-          </row>
-          <row>
-            <entry>TFFT</entry><entry><phrase role="logical-vowel">O</phrase></entry>
-          </row>
-          <row>
-            <entry>TFFF</entry><entry><phrase role="logical-vowel">E</phrase></entry>
-          </row>
+          <tr>
+            <td>TTTF</td><td><phrase role="logical-vowel">A</phrase></td>
+          </tr>
+          <tr>
+            <td>TTFT</td><td><phrase role="logical-vowel">A</phrase> with second sentence negated</td>
+          </tr>
+          <tr>
+            <td>TTFF</td><td><phrase role="logical-vowel">U</phrase></td>
+          </tr>
+          <tr>
+            <td>TFTT</td><td><phrase role="logical-vowel">A</phrase> with first sentence negated</td>
+          </tr>
+          <tr>
+            <td>TFTF</td><td><phrase role="logical-vowel">U</phrase> with sentences exchanged</td>
+          </tr>
+          <tr>
+            <td>TFFT</td><td><phrase role="logical-vowel">O</phrase></td>
+          </tr>
+          <tr>
+            <td>TFFF</td><td><phrase role="logical-vowel">E</phrase></td>
+          </tr>
 
-          <row>
-            <entry>FTTT</entry><entry><phrase role="logical-vowel">A</phrase> with both sentences negated</entry>
-          </row>
-          <row>
-            <entry>FTTF</entry><entry><phrase role="logical-vowel">O</phrase> with either first or second negated (not both)</entry>
-          </row>
-          <row>
-            <entry>FTFT</entry><entry><phrase role="logical-vowel">U</phrase> with sentences exchanged and then second negated</entry>
-          </row>
-          <row>
-            <entry>FTFF</entry><entry><phrase role="logical-vowel">E</phrase> with second sentence negated</entry>
-          </row>
-          <row>
-            <entry>FFTT</entry><entry><phrase role="logical-vowel">U</phrase> with first sentence negated</entry>
-          </row>
-          <row>
-            <entry>FFTF</entry><entry><phrase role="logical-vowel">E</phrase> with first sentence negated</entry>
-          </row>
-          <row>
-            <entry>FFFT</entry><entry><phrase role="logical-vowel">E</phrase> with both sentences negated</entry>
-          </row>
-        </tbody>
-      </tgroup>
+          <tr>
+            <td>FTTT</td><td><phrase role="logical-vowel">A</phrase> with both sentences negated</td>
+          </tr>
+          <tr>
+            <td>FTTF</td><td><phrase role="logical-vowel">O</phrase> with either first or second negated (not both)</td>
+          </tr>
+          <tr>
+            <td>FTFT</td><td><phrase role="logical-vowel">U</phrase> with sentences exchanged and then second negated</td>
+          </tr>
+          <tr>
+            <td>FTFF</td><td><phrase role="logical-vowel">E</phrase> with second sentence negated</td>
+          </tr>
+          <tr>
+            <td>FFTT</td><td><phrase role="logical-vowel">U</phrase> with first sentence negated</td>
+          </tr>
+          <tr>
+            <td>FFTF</td><td><phrase role="logical-vowel">E</phrase> with first sentence negated</td>
+          </tr>
+          <tr>
+            <td>FFFT</td><td><phrase role="logical-vowel">E</phrase> with both sentences negated</td>
+          </tr>
     </informaltable>
     <para> <indexterm type="general-imported"><primary>truth functions</primary><secondary>commutative</secondary></indexterm>  <indexterm type="general-imported"><primary>commutative truth functions</primary></indexterm> Note that exchanging the sentences is only necessary with 
     <phrase role="logical-vowel">U</phrase>. The three other basic truth functions are commutative; that is, they mean the same thing regardless of the order of the component sentences. There are other ways of getting some of these truth tables; these just happen to be the methods usually employed.</para>
@@ -2016,56 +1990,50 @@
     <jbophrase>blanu zdani</jbophrase> may be so even though not every part of it is blue.)</para>
     <para>There are several other cmavo in selma'o JOI which can be used in the same grammatical constructions. Not all of them are well-defined as yet in all contexts. All have clear definitions as sumti connectives; those definitions are shown in the following table:</para>
     <informaltable>
-      <tgroup cols="2">
-        <colspec colnum="1" colname="col1"/>
-        <colspec colnum="2" colname="col2"/>
-        <tbody>
-          <row>
-            <entry>A <valsi>joi</valsi> B</entry>
-            <entry>the mass with components A and B</entry>
-          </row>
-          <row>
-            <entry>A <valsi>ce</valsi> B</entry>
-            <entry>the set with elements A and B</entry>
-          </row>
-          <row>
-            <entry>A <valsi>ce'o</valsi> B</entry>
-            <entry>the sequence with elements A and B in order</entry>
-          </row>
-          <row>
-            <entry>A <valsi>se</valsi><valsi>ce'o</valsi> B</entry>
-            <entry>the sequence with elements B and A in order</entry>
-          </row>
-          <row>
-            <entry>A <valsi>jo'u</valsi> B</entry>
-            <entry>A and B considered jointly</entry>
-          </row>
-          <row>
-            <entry>A <valsi>fa'u</valsi> B</entry>
-            <entry>A and B respectively</entry>
-          </row>
-          <row>
-            <entry>A <valsi>se</valsi><valsi>fa'u</valsi> B</entry>
-            <entry>B and A respectively</entry>
-          </row>
-          <row>
-            <entry>A <valsi>jo'e</valsi> B</entry>
-            <entry>the union of sets A and B</entry>
-          </row>
-          <row>
-            <entry>A <valsi>ku'a</valsi> B</entry>
-            <entry>the intersection of sets A and B</entry>
-          </row>
-          <row>
-            <entry>A <valsi>pi'u</valsi> B</entry>
-            <entry>the cross product of sets A and B</entry>
-          </row>
-          <row>
-            <entry>A <valsi>se</valsi><valsi>pi'u</valsi> B</entry>
-            <entry>the cross product of sets B and A</entry>
-          </row>
-        </tbody>
-      </tgroup>
+          <tr>
+            <td>A <valsi>joi</valsi> B</td>
+            <td>the mass with components A and B</td>
+          </tr>
+          <tr>
+            <td>A <valsi>ce</valsi> B</td>
+            <td>the set with elements A and B</td>
+          </tr>
+          <tr>
+            <td>A <valsi>ce'o</valsi> B</td>
+            <td>the sequence with elements A and B in order</td>
+          </tr>
+          <tr>
+            <td>A <valsi>se</valsi><valsi>ce'o</valsi> B</td>
+            <td>the sequence with elements B and A in order</td>
+          </tr>
+          <tr>
+            <td>A <valsi>jo'u</valsi> B</td>
+            <td>A and B considered jointly</td>
+          </tr>
+          <tr>
+            <td>A <valsi>fa'u</valsi> B</td>
+            <td>A and B respectively</td>
+          </tr>
+          <tr>
+            <td>A <valsi>se</valsi><valsi>fa'u</valsi> B</td>
+            <td>B and A respectively</td>
+          </tr>
+          <tr>
+            <td>A <valsi>jo'e</valsi> B</td>
+            <td>the union of sets A and B</td>
+          </tr>
+          <tr>
+            <td>A <valsi>ku'a</valsi> B</td>
+            <td>the intersection of sets A and B</td>
+          </tr>
+          <tr>
+            <td>A <valsi>pi'u</valsi> B</td>
+            <td>the cross product of sets A and B</td>
+          </tr>
+          <tr>
+            <td>A <valsi>se</valsi><valsi>pi'u</valsi> B</td>
+            <td>the cross product of sets B and A</td>
+          </tr>
     </informaltable>
     <para> <indexterm type="general-imported"><primary>joiks</primary><secondary>use of &quot;se&quot; in</secondary></indexterm>  <indexterm type="general-imported"><primary>se</primary><secondary>as grammatical in JOI compounds</secondary></indexterm> The cmavo 
     <valsi>se</valsi> is grammatical before any JOI cmavo, but only useful with those that have inherent order. Here are some examples of joiks:</para>
@@ -3173,87 +3141,78 @@ Note that the
     <para> <indexterm type="general-imported"><primary>connectives</primary><secondary>table by constructs connected</secondary></indexterm> The following table specifies, for each kind of construct that can be logically or non-logically connected in Lojban, what kind of connective is required for both afterthought and (when possible) forethought modes. An asterisk (*) indicates that tensed connection is permitted.</para>
     <para>A dash indicates that connection of the specified type is not possible.</para>
     <informaltable>
-      <tgroup cols="5">
-        <colspec colnum="1" colname="col1"/>
-        <colspec colnum="2" colname="col2"/>
-        <colspec colnum="3" colname="col3"/>
-        <colspec colnum="4" colname="col4"/>
-        <colspec colnum="5" colname="col5"/>
         <thead>
-          <row>
-            <entry>construct</entry>
-            <entry>afterthought logical</entry>
-            <entry>forethought logical</entry>
-            <entry>afterthought non-logical</entry>
-            <entry>forethought non-logical</entry>
-          </row>
+          <tr>
+            <td>construct</td>
+            <td>afterthought logical</td>
+            <td>forethought logical</td>
+            <td>afterthought non-logical</td>
+            <td>forethought non-logical</td>
+          </tr>
         </thead>
-        <tbody>
-          <row>
-            <entry>bridi</entry>
-            <entry><link linkend="section-bridi-connection">ijek*</link></entry>
-            <entry><link linkend="section-forethought-bridi-connection">gek</link></entry>
-            <entry><link linkend="section-non-logical-continued">ijoik*</link></entry>
-            <entry><link linkend="section-non-logical-continued-continued">joigik</link></entry>
-          </row>
-          <row>
-            <entry>sumti</entry>
-            <entry><link linkend="section-sumti-connection">ek*</link></entry>
-            <entry><link linkend="section-sumti-connection">gek</link></entry>
-            <entry><link linkend="section-non-logical-connectives">joik*</link></entry>
-            <entry><link linkend="section-non-logical-continued-continued">joigik</link></entry>
-          </row>
-          <row>
-            <entry>bridi-tails</entry>
-            <entry><link linkend="section-compound-bridi">gihek*</link></entry>
-            <entry><link linkend="section-multiple-compound-bridi">gek</link></entry>
-            <entry>-</entry>
-            <entry><link linkend="section-non-logical-continued-continued">joigik</link></entry>
-          </row>
-          <row>
-            <entry>termsets</entry>
-            <entry><link linkend="section-termsets">ek*</link></entry>
-            <entry><link linkend="section-termsets">gek</link></entry>
-            <entry><link linkend="section-termsets">joik*</link></entry>
-            <entry><link linkend="section-termsets">joigik</link></entry>
-          </row>
-          <row>
-            <entry>tanru parts</entry>
-            <entry><link linkend="section-tanru">jek</link></entry>
-            <entry><link linkend="section-tanru">guhek</link></entry>
-            <entry><link linkend="section-tanru">joik*</link></entry>
-            <entry>-</entry>
-          </row>
-          <row>
-            <entry>operands</entry>
-            <entry><link linkend="section-mekso-connections">ek*</link></entry>
-            <entry><link linkend="section-mekso-connections">gek</link></entry>
-            <entry><link linkend="section-mekso-connections">joik*</link></entry>
-            <entry><link linkend="section-mekso-connections">joigik</link></entry>
-          </row>
-          <row>
-            <entry>operators</entry>
-            <entry><link linkend="section-mekso-connections">jek</link></entry>
-            <entry><link linkend="section-mekso-connections">guhek</link></entry>
-            <entry><link linkend="section-mekso-connections">joik</link></entry>
-            <entry>-</entry>
-          </row>
-          <row>
-            <entry>tenses/modals</entry>
-            <entry><link linkend="section-sumtcita">jek</link></entry>
-            <entry>-</entry>
-            <entry><link linkend="section-sumtcita">joik</link></entry>
-            <entry>-</entry>
-          </row>
-          <row>
-            <entry>abstractors</entry>
-            <entry><link linkend="section-abstractors">jek</link></entry>
-            <entry>-</entry>
-            <entry><link linkend="section-abstractors">joik</link></entry>
-            <entry>-</entry>
-          </row>
-        </tbody>
-      </tgroup>
+          <tr>
+            <td>bridi</td>
+            <td><link linkend="section-bridi-connection">ijek*</link></td>
+            <td><link linkend="section-forethought-bridi-connection">gek</link></td>
+            <td><link linkend="section-non-logical-continued">ijoik*</link></td>
+            <td><link linkend="section-non-logical-continued-continued">joigik</link></td>
+          </tr>
+          <tr>
+            <td>sumti</td>
+            <td><link linkend="section-sumti-connection">ek*</link></td>
+            <td><link linkend="section-sumti-connection">gek</link></td>
+            <td><link linkend="section-non-logical-connectives">joik*</link></td>
+            <td><link linkend="section-non-logical-continued-continued">joigik</link></td>
+          </tr>
+          <tr>
+            <td>bridi-tails</td>
+            <td><link linkend="section-compound-bridi">gihek*</link></td>
+            <td><link linkend="section-multiple-compound-bridi">gek</link></td>
+            <td>-</td>
+            <td><link linkend="section-non-logical-continued-continued">joigik</link></td>
+          </tr>
+          <tr>
+            <td>termsets</td>
+            <td><link linkend="section-termsets">ek*</link></td>
+            <td><link linkend="section-termsets">gek</link></td>
+            <td><link linkend="section-termsets">joik*</link></td>
+            <td><link linkend="section-termsets">joigik</link></td>
+          </tr>
+          <tr>
+            <td>tanru parts</td>
+            <td><link linkend="section-tanru">jek</link></td>
+            <td><link linkend="section-tanru">guhek</link></td>
+            <td><link linkend="section-tanru">joik*</link></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>operands</td>
+            <td><link linkend="section-mekso-connections">ek*</link></td>
+            <td><link linkend="section-mekso-connections">gek</link></td>
+            <td><link linkend="section-mekso-connections">joik*</link></td>
+            <td><link linkend="section-mekso-connections">joigik</link></td>
+          </tr>
+          <tr>
+            <td>operators</td>
+            <td><link linkend="section-mekso-connections">jek</link></td>
+            <td><link linkend="section-mekso-connections">guhek</link></td>
+            <td><link linkend="section-mekso-connections">joik</link></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>tenses/modals</td>
+            <td><link linkend="section-sumtcita">jek</link></td>
+            <td>-</td>
+            <td><link linkend="section-sumtcita">joik</link></td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>abstractors</td>
+            <td><link linkend="section-abstractors">jek</link></td>
+            <td>-</td>
+            <td><link linkend="section-abstractors">joik</link></td>
+            <td>-</td>
+          </tr>
     </informaltable>
   </section>
   <section xml:id="section-truth-functions-summary">
@@ -3262,138 +3221,128 @@ Note that the
     <valsi>se</valsi><valsi>.a</valsi> means the same as 
     <valsi>a</valsi>, and could be used instead.)</para>
     <informaltable>
-      <tgroup cols="6">
-        <colspec colnum="1" colname="col1"/>
-        <colspec colnum="2" colname="col2"/>
-        <colspec colnum="3" colname="col3"/>
-        <colspec colnum="4" colname="col4"/>
-        <colspec colnum="5" colname="col5"/>
-        <colspec colnum="6" colname="col6"/>
         <thead>
-          <row>
-            <entry>truth</entry>
-            <entry>ek</entry>
-            <entry>jek</entry>
-            <entry>gihek</entry>
-            <entry>gek-gik</entry>
-            <entry>guhek-gik</entry>
-          </row>
+          <tr>
+            <td>truth</td>
+            <td>ek</td>
+            <td>jek</td>
+            <td>gihek</td>
+            <td>gek-gik</td>
+            <td>guhek-gik</td>
+          </tr>
         </thead>
-        <tbody>
-          <row>
-            <entry>TTTF</entry>
-            <entry><valsi>a</valsi></entry>
-            <entry><valsi>ja</valsi></entry>
-            <entry><valsi>gi'a</valsi></entry>
-            <entry><valsi>ga</valsi>-<valsi>gi</valsi></entry>
-            <entry><valsi>gu'a</valsi>-<valsi>gi</valsi></entry>
-          </row>
-          <row>
-            <entry>TTFT</entry>
-            <entry><valsi>.a</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>ja</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>gi'a</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>ga</valsi>-<valsi>gi</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>gu'a</valsi>-<valsi>gi</valsi><valsi>nai</valsi></entry>
-          </row>
-          <row>
-            <entry>TTFF</entry>
-            <entry><valsi>u</valsi></entry>
-            <entry><valsi>ju</valsi></entry>
-            <entry><valsi>gi'u</valsi></entry>
-            <entry><valsi>gu</valsi>-<valsi>gi</valsi></entry>
-            <entry><valsi>gu'u</valsi>-<valsi>gi</valsi></entry>
-          </row>
-          <row>
-            <entry>TFTT</entry>
-            <entry><valsi>na</valsi><valsi>.a</valsi></entry>
-            <entry><valsi>na</valsi><valsi>ja</valsi></entry>
-            <entry><valsi>na</valsi><valsi>gi'a</valsi></entry>
-            <entry><valsi>ga</valsi><valsi>nai</valsi>-<valsi>gi</valsi></entry>
-            <entry><valsi>gu'a</valsi><valsi>nai</valsi>-<valsi>gi</valsi></entry>
-          </row>
-          <row>
-            <entry>TFTF</entry>
-            <entry><valsi>se.u</valsi></entry>
-            <entry><valsi>seju</valsi></entry>
-            <entry><valsi>segi'u</valsi></entry>
-            <entry><valsi>segu</valsi>-<valsi>gi</valsi></entry>
-            <entry><valsi>segu'u</valsi>-<valsi>gi</valsi></entry>
-          </row>
-          <row>
-            <entry>TFFT</entry>
-            <entry><valsi>o</valsi></entry>
-            <entry><valsi>jo</valsi></entry>
-            <entry><valsi>gi'o</valsi></entry>
-            <entry><valsi>go</valsi>-<valsi>gi</valsi></entry>
-            <entry><valsi>gu'o</valsi>-<valsi>gi</valsi></entry>
-          </row>
-          <row>
-            <entry>TFFF</entry>
-            <entry><valsi>e</valsi></entry>
-            <entry><valsi>je</valsi></entry>
-            <entry><valsi>gi'e</valsi></entry>
-            <entry><valsi>ge</valsi>-<valsi>gi</valsi></entry>
-            <entry><valsi>gu'e</valsi>-<valsi>gi</valsi></entry>
-          </row>
-          <row>
-            <entry>FTTT</entry>
-            <entry><valsi>na</valsi><valsi>.a</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>na</valsi><valsi>ja</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>na</valsi><valsi>gi'a</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>ga</valsi><valsi>nai</valsi>-<valsi>gi</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>gu'a</valsi><valsi>nai</valsi>-<valsi>gi</valsi><valsi>nai</valsi></entry>
-          </row>
-          <row>
-            <entry>FTTF</entry>
-            <entry><valsi>.o</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>jo</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>gi'o</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>go</valsi>-<valsi>gi</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>gu'o</valsi>-<valsi>gi</valsi><valsi>nai</valsi></entry>
-          </row>
-          <row>
-            <entry>FTFT</entry>
-            <entry><valsi>se.u</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>seju</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>segi'u</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>segu</valsi>-<valsi>gi</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>segu'u</valsi>-<valsi>gi</valsi><valsi>nai</valsi></entry>
-          </row>
-          <row>
-            <entry>FTFF</entry>
-            <entry><valsi>.e</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>je</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>gi'e</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>ge</valsi>-<valsi>gi</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>gu'e</valsi>-<valsi>gi</valsi><valsi>nai</valsi></entry>
-          </row>
-          <row>
-            <entry>FFTT</entry>
-            <entry><valsi>na</valsi><valsi>.u</valsi></entry>
-            <entry><valsi>na</valsi><valsi>ju</valsi></entry>
-            <entry><valsi>na</valsi><valsi>gi'u</valsi></entry>
-            <entry><valsi>gu</valsi><valsi>nai</valsi>-<valsi>gi</valsi></entry>
-            <entry><valsi>gu'u</valsi><valsi>nai</valsi>-<valsi>gi</valsi></entry>
-          </row>
-          <row>
-            <entry>FFTF</entry>
-            <entry><valsi>na</valsi><valsi>.e</valsi></entry>
-            <entry><valsi>na</valsi><valsi>je</valsi></entry>
-            <entry><valsi>na</valsi><valsi>gi'e</valsi></entry>
-            <entry><valsi>ge</valsi><valsi>nai</valsi>-<valsi>gi</valsi></entry>
-            <entry><valsi>gu'e</valsi><valsi>nai</valsi>-<valsi>gi</valsi></entry>
-          </row>
-          <row>
-            <entry>FFFT</entry>
-            <entry><valsi>na</valsi><valsi>.e</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>na</valsi><valsi>je</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>na</valsi><valsi>gi'e</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>ge</valsi><valsi>nai</valsi>-<valsi>gi</valsi><valsi>nai</valsi></entry>
-            <entry><valsi>gu'e</valsi><valsi>nai</valsi>-<valsi>gi</valsi><valsi>nai</valsi></entry>
-          </row>
-        </tbody>
-      </tgroup>
+          <tr>
+            <td>TTTF</td>
+            <td><valsi>a</valsi></td>
+            <td><valsi>ja</valsi></td>
+            <td><valsi>gi'a</valsi></td>
+            <td><valsi>ga</valsi>-<valsi>gi</valsi></td>
+            <td><valsi>gu'a</valsi>-<valsi>gi</valsi></td>
+          </tr>
+          <tr>
+            <td>TTFT</td>
+            <td><valsi>.a</valsi><valsi>nai</valsi></td>
+            <td><valsi>ja</valsi><valsi>nai</valsi></td>
+            <td><valsi>gi'a</valsi><valsi>nai</valsi></td>
+            <td><valsi>ga</valsi>-<valsi>gi</valsi><valsi>nai</valsi></td>
+            <td><valsi>gu'a</valsi>-<valsi>gi</valsi><valsi>nai</valsi></td>
+          </tr>
+          <tr>
+            <td>TTFF</td>
+            <td><valsi>u</valsi></td>
+            <td><valsi>ju</valsi></td>
+            <td><valsi>gi'u</valsi></td>
+            <td><valsi>gu</valsi>-<valsi>gi</valsi></td>
+            <td><valsi>gu'u</valsi>-<valsi>gi</valsi></td>
+          </tr>
+          <tr>
+            <td>TFTT</td>
+            <td><valsi>na</valsi><valsi>.a</valsi></td>
+            <td><valsi>na</valsi><valsi>ja</valsi></td>
+            <td><valsi>na</valsi><valsi>gi'a</valsi></td>
+            <td><valsi>ga</valsi><valsi>nai</valsi>-<valsi>gi</valsi></td>
+            <td><valsi>gu'a</valsi><valsi>nai</valsi>-<valsi>gi</valsi></td>
+          </tr>
+          <tr>
+            <td>TFTF</td>
+            <td><valsi>se.u</valsi></td>
+            <td><valsi>seju</valsi></td>
+            <td><valsi>segi'u</valsi></td>
+            <td><valsi>segu</valsi>-<valsi>gi</valsi></td>
+            <td><valsi>segu'u</valsi>-<valsi>gi</valsi></td>
+          </tr>
+          <tr>
+            <td>TFFT</td>
+            <td><valsi>o</valsi></td>
+            <td><valsi>jo</valsi></td>
+            <td><valsi>gi'o</valsi></td>
+            <td><valsi>go</valsi>-<valsi>gi</valsi></td>
+            <td><valsi>gu'o</valsi>-<valsi>gi</valsi></td>
+          </tr>
+          <tr>
+            <td>TFFF</td>
+            <td><valsi>e</valsi></td>
+            <td><valsi>je</valsi></td>
+            <td><valsi>gi'e</valsi></td>
+            <td><valsi>ge</valsi>-<valsi>gi</valsi></td>
+            <td><valsi>gu'e</valsi>-<valsi>gi</valsi></td>
+          </tr>
+          <tr>
+            <td>FTTT</td>
+            <td><valsi>na</valsi><valsi>.a</valsi><valsi>nai</valsi></td>
+            <td><valsi>na</valsi><valsi>ja</valsi><valsi>nai</valsi></td>
+            <td><valsi>na</valsi><valsi>gi'a</valsi><valsi>nai</valsi></td>
+            <td><valsi>ga</valsi><valsi>nai</valsi>-<valsi>gi</valsi><valsi>nai</valsi></td>
+            <td><valsi>gu'a</valsi><valsi>nai</valsi>-<valsi>gi</valsi><valsi>nai</valsi></td>
+          </tr>
+          <tr>
+            <td>FTTF</td>
+            <td><valsi>.o</valsi><valsi>nai</valsi></td>
+            <td><valsi>jo</valsi><valsi>nai</valsi></td>
+            <td><valsi>gi'o</valsi><valsi>nai</valsi></td>
+            <td><valsi>go</valsi>-<valsi>gi</valsi><valsi>nai</valsi></td>
+            <td><valsi>gu'o</valsi>-<valsi>gi</valsi><valsi>nai</valsi></td>
+          </tr>
+          <tr>
+            <td>FTFT</td>
+            <td><valsi>se.u</valsi><valsi>nai</valsi></td>
+            <td><valsi>seju</valsi><valsi>nai</valsi></td>
+            <td><valsi>segi'u</valsi><valsi>nai</valsi></td>
+            <td><valsi>segu</valsi>-<valsi>gi</valsi><valsi>nai</valsi></td>
+            <td><valsi>segu'u</valsi>-<valsi>gi</valsi><valsi>nai</valsi></td>
+          </tr>
+          <tr>
+            <td>FTFF</td>
+            <td><valsi>.e</valsi><valsi>nai</valsi></td>
+            <td><valsi>je</valsi><valsi>nai</valsi></td>
+            <td><valsi>gi'e</valsi><valsi>nai</valsi></td>
+            <td><valsi>ge</valsi>-<valsi>gi</valsi><valsi>nai</valsi></td>
+            <td><valsi>gu'e</valsi>-<valsi>gi</valsi><valsi>nai</valsi></td>
+          </tr>
+          <tr>
+            <td>FFTT</td>
+            <td><valsi>na</valsi><valsi>.u</valsi></td>
+            <td><valsi>na</valsi><valsi>ju</valsi></td>
+            <td><valsi>na</valsi><valsi>gi'u</valsi></td>
+            <td><valsi>gu</valsi><valsi>nai</valsi>-<valsi>gi</valsi></td>
+            <td><valsi>gu'u</valsi><valsi>nai</valsi>-<valsi>gi</valsi></td>
+          </tr>
+          <tr>
+            <td>FFTF</td>
+            <td><valsi>na</valsi><valsi>.e</valsi></td>
+            <td><valsi>na</valsi><valsi>je</valsi></td>
+            <td><valsi>na</valsi><valsi>gi'e</valsi></td>
+            <td><valsi>ge</valsi><valsi>nai</valsi>-<valsi>gi</valsi></td>
+            <td><valsi>gu'e</valsi><valsi>nai</valsi>-<valsi>gi</valsi></td>
+          </tr>
+          <tr>
+            <td>FFFT</td>
+            <td><valsi>na</valsi><valsi>.e</valsi><valsi>nai</valsi></td>
+            <td><valsi>na</valsi><valsi>je</valsi><valsi>nai</valsi></td>
+            <td><valsi>na</valsi><valsi>gi'e</valsi><valsi>nai</valsi></td>
+            <td><valsi>ge</valsi><valsi>nai</valsi>-<valsi>gi</valsi><valsi>nai</valsi></td>
+            <td><valsi>gu'e</valsi><valsi>nai</valsi>-<valsi>gi</valsi><valsi>nai</valsi></td>
+          </tr>
     </informaltable>
     <para>Note: ijeks are exactly the same as the corresponding jeks, except for the prefixed
     <valsi>i</valsi>.</para>
