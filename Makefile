@@ -46,6 +46,26 @@ xhtml.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 	touch xhtml.done
 
 #*******
+# Chapter xhtml files
+#*******
+.PHONY: xhtml_web_chapters
+xhtml_web_chapters: xhtml_chapters.done
+	mkdir -p ~/www/media/public/tmp
+	rm -rf ~/www/media/public/tmp/cll-xhtml
+	cp -pr xhtml ~/www/media/public/tmp/cll-xhtml
+	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/cll-xhtml/docbook2html.css
+
+.PHONY: xhtml_chapters
+xhtml_chapters: xhtml_chapters.done
+xhtml_chapters.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
+	rm -rf xhtml
+	mkdir xhtml
+	# FIXME: Consider doing something like this: -x /usr/share/sgml/docbook/xsl-ns-stylesheets-1.76.1/fo/docbook.xsl
+	# So we know exactly what stylesheets we're getting
+	xmlto -m xml/docbook2html_config.xsl -o xhtml/ --stringparam chunk.section.depth=8 --stringparam chunk.first.sections=1 xhtml cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
+	touch xhtml.done
+
+#*******
 # One XHTML file
 #*******
 .PHONY: xhtml_nochunks_web
