@@ -46,24 +46,24 @@ xhtml.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 	touch xhtml.done
 
 #*******
-# Chapter xhtml files
+# Section xhtml files
 #*******
 .PHONY: xhtml_web_chapters
-xhtml_web_chapters: xhtml_chapters.done
+xhtml_web_sections: xhtml_sections.done
 	mkdir -p ~/www/media/public/tmp
-	rm -rf ~/www/media/public/tmp/cll-xhtml-chapters
-	cp -pr xhtml_chapters ~/www/media/public/tmp/cll-xhtml-chapters
-	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/cll-xhtml-chapters/docbook2html.css
+	rm -rf ~/www/media/public/tmp/cll-xhtml-sections
+	cp -pr xhtml_sections ~/www/media/public/tmp/cll-xhtml-sections
+	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/cll-xhtml-sections/docbook2html.css
 
-.PHONY: xhtml_chapters
-xhtml_chapters: xhtml_chapters.done
+.PHONY: xhtml_sections
+xhtml_chapters: xhtml_sections.done
 xhtml_chapters.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
-	rm -rf xhtml_chapters
-	mkdir xhtml_chapters
+	rm -rf xhtml_sections
+	mkdir xhtml_sections
 	# FIXME: Consider doing something like this: -x /usr/share/sgml/docbook/xsl-ns-stylesheets-1.76.1/fo/docbook.xsl
 	# So we know exactly what stylesheets we're getting
-	xmlto -m xml/docbook2html_config.xsl -o xhtml_chapters/ --stringparam chunk.section.depth=0 --stringparam chunk.first.sections=1 xhtml cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
-	touch xhtml_chapters.done
+	xmlto -m xml/docbook2html_config.xsl -o xhtml_sections/ --stringparam chunk.section.depth=1 --stringparam chunk.first.sections=1 xhtml cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
+	touch xhtml_sections.done
 
 #*******
 # One XHTML file
