@@ -48,16 +48,16 @@ xhtml.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 #*******
 # Section xhtml files
 #*******
-.PHONY: xhtml_web_chapters
-xhtml_web_sections: xhtml_sections.done
+.PHONY: xhtml_sections_web
+xhtml_sections_web: xhtml_sections.done
 	mkdir -p ~/www/media/public/tmp
 	rm -rf ~/www/media/public/tmp/cll-xhtml-sections
 	cp -pr xhtml_sections ~/www/media/public/tmp/cll-xhtml-sections
 	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/cll-xhtml-sections/docbook2html.css
 
 .PHONY: xhtml_sections
-xhtml_chapters: xhtml_sections.done
-xhtml_chapters.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
+xhtml_sections: xhtml_sections.done
+xhtml_sections.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 	rm -rf xhtml_sections
 	mkdir xhtml_sections
 	# FIXME: Consider doing something like this: -x /usr/share/sgml/docbook/xsl-ns-stylesheets-1.76.1/fo/docbook.xsl
