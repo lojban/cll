@@ -144,8 +144,11 @@ change, and I will hunt you down and bad things will occur.
   Non-Visual Issues
 ==================
 
-We need chunked html at both the chapter and section level, for ease
-of use.
+The section level chunking has no per-chapter toc, which means the
+chapter header chunks look awful; see
+http://vrici.lojban.org/~rlpowell/media/public/tmp/cll-xhtml-sections/chapter-phonology.html
+; we should give those pages the chapter toc, which means changing
+<xsl:param name="generate.toc"> (see xml/docbook2html_config.xsl  )
 
  ------
 
