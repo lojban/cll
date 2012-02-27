@@ -4,8 +4,6 @@
   xmlns:docbook="http://docbook.org/ns/docbook"
   version="1.0">
   <xsl:param name="use.id.as.filename" select="'1'"/>
-  <xsl:param name="admon.graphics" select="'1'"/>
-  <xsl:param name="admon.graphics.path"></xsl:param>
   <xsl:param name="chunk.section.depth" select="0"></xsl:param>
   <xsl:param name="html.stylesheet" select="'docbook2html.css'"/>
   <xsl:param name="index.on.type" select="1"/>
@@ -20,7 +18,7 @@
     article/appendix  nop
     article   toc,title
     book      toc,title,figure,table,equation
-    chapter   toc,title
+    chapter   title
     part      toc,title
     preface   toc,title
     qandadiv  toc
@@ -36,6 +34,12 @@
   </xsl:param>
 
   <xsl:param name="xref.with.number.and.title" select="0"/>
+
+  <!-- FIXME: do we even use admonitions? (see
+       http://newbiedoc.sourceforge.net/tutorials/docbook-guide/admon-docbook-guide.html.en for what those are).  Why are these set?
+       -->
+  <xsl:param name="admon.graphics" select="'1'"/>
+  <xsl:param name="admon.graphics.path"></xsl:param>
 
   <!-- deal with colspan=0, which doesn't actually work properly in
        the HTML output from docbook; we turn it into 100% here.
