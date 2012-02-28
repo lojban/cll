@@ -62,7 +62,7 @@ xhtml_sections.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 	mkdir xhtml_sections
 	# FIXME: Consider doing something like this: -x /usr/share/sgml/docbook/xsl-ns-stylesheets-1.76.1/fo/docbook.xsl
 	# So we know exactly what stylesheets we're getting
-	xmlto -m xml/docbook2html_config.xsl -o xhtml_sections/ --stringparam chunk.section.depth=1 --stringparam chunk.first.sections=1 xhtml cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
+	xmlto -m xml/docbook2html_config_sections.xsl -o xhtml_sections/ --stringparam chunk.section.depth=1 --stringparam chunk.first.sections=1 xhtml cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 	touch xhtml_sections.done
 
 #*******
