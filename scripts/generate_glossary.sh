@@ -69,7 +69,22 @@ EOF
         sed -e 's/^[^ ]* //' | \
         sed -e 's/.*<definition>//' -e 's;</definition>.*;;' | \
         sed -e 's/\&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' | \
-        sed 's/\s\s*/ /g')
+        sed 's/\s\s*/ /g' | \
+        # This LaTeX handling is pretty horrible; should probably write a real loop in Perl or something.
+        # Turn LaTeX stuff into xml: $1*10^{-2}$]
+        sed 's;\$\(1\*\)\?10^{\?\([^}$]*\)}\?\$;<inlinemath>\110<superscript>\2</superscript></inlinemath>;g' | \
+        # Turn LaTeX stuff into xml: $x_{1}$
+        sed 's;\$\([a-z][a-z]*\)_{\?\(.\)}\?\$;<inlinemath>\1<subscript>\2</subscript></inlinemath>;g' | \
+        # Turn LaTeX stuff into xml: $x_2=b_1$ 
+        sed 's;\$\([a-z][a-z]*\)_{\?\(.\)}\?=\([a-z][a-z]*\)_{\?\(.\)}\?\$;<inlinemath>\1<subscript>\2</subscript>=\3<subscript>\4</subscript></inlinemath>;g' | \
+        # Turn LaTeX stuff into xml: $x_2=b_1=t_2$
+        sed 's;\$\([a-z][a-z]*\)_{\?\(.\)}\?=\([a-z][a-z]*\)_{\?\(.\)}\?=\([a-z][a-z]*\)_{\?\(.\)}\?\$;<inlinemath>\1<subscript>\2</subscript>=\3<subscript>\4</subscript></inlinemath>;g'
+      )
+
+    if [ "$(echo $definition | grep -E '(\$|\\)')" ]
+    then
+      echo "UNHANDLED LATEX in definiton for $word: $definition"
+    fi
 
     if [ ! "$(echo $definition | sed 's/\s*//g')" ]
     then
