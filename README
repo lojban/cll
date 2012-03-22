@@ -15,6 +15,9 @@ There are many possible sub-targets as well, such as:
 
   make test="-t" pdf_web
 
+Also, -t there makes internal links break and strips out the
+glossary; -s only does the former.
+
 
 Requirements
 ------------
@@ -46,7 +49,7 @@ account on the appropriate server.
   MOBI / EPUB
   -----------
 
-  ebook-convert (from the calibre package)
+  ebook-convert (from the yum/rpm calibre package)
 
   Xvfb and xvfb-run (fake X for calibre)
 
