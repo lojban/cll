@@ -31,9 +31,15 @@ echo '<?xml version="1.0"?>
 testing=""
 if [ "$1" = "-t" ]
 then
-  testing=1
+  testing="both"
   shift
-  echo "Entering testing mode: will replace all external xrefs in each chapter."
+  echo "Entering testing mode: will replace all external xrefs in each chapter and turn off the glossary."
+fi
+if [ "$1" = "-s" ]
+then
+  testing="solo"
+  shift
+  echo "Entering solo mode: will replace all external xrefs in each chapter."
 fi
 #<chapter xml:id="chapter-selbri">
 #<section xml:id="section-brivla">
@@ -60,7 +66,7 @@ cp cll.xml cll_preglossary.xml
 
 echo '</book>' >>cll_preglossary.xml
 
-if [ "$testing" ]
+if [ "$testing" != "solo" ]
 then
   scripts/generate_glossary.sh -t >>cll.xml
 else
