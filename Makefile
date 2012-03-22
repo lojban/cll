@@ -118,7 +118,7 @@ mobi_web: mobi
 .PHONY: pdf
 pdf: cll.pdf
 cll.pdf: cll_processed_pdf.xml xml/dblatex_config.xsl
-	dblatex -o cll.pdf -b xetex -p xml/dblatex_config.xsl -r post_process_latex.pl cll_processed_pdf.xml 2>&1 | grep -v 'default template used in programlisting or screen'
+	dblatex -T simple -o cll.pdf -b xetex -p xml/dblatex_config.xsl -r post_process_latex.pl cll_processed_pdf.xml 2>&1 | grep -v 'default template used in programlisting or screen'
 
 .PHONY: pdf_web
 pdf_web: pdf

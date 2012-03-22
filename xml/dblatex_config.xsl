@@ -30,6 +30,9 @@
 <!-- drop the collaboraters list -->
 <xsl:param name="doc.collab.show">0</xsl:param>
 
+<xsl:param name="latex.class.book">book</xsl:param>
+<xsl:param name="latex.class.options">letterpaper,10pt,twoside,openright</xsl:param>
+
 <!-- default is:
   <xsl:param name="doc.lot.show">figure,table</xsl:param>
   to show examples add ,examples, but we almost certainly don't want that
