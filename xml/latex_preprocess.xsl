@@ -31,11 +31,8 @@
           <xsl:with-param name="string" select="."/>
         </xsl:call-template>
       </xsl:when>
-      <xsl:when test="boolean(ancestor::latex-verbatim)">
-        <xsl:copy-of select="."/>
-      </xsl:when>
       <xsl:otherwise>
-        <xsl:text>!@#$\$@#$ > ERROR bad text substitution</xsl:text>
+        <xsl:copy-of select="."/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
