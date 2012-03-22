@@ -6,7 +6,7 @@
     article/appendix  nop
     article   toc,title
     book      toc,title,figure,table,equation
-    chapter   toc,title
+    chapter   title
     part      toc,title
     preface   toc,title
     qandadiv  toc
