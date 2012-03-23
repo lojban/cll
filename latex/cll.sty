@@ -1,0 +1,102 @@
+
+%%
+%% This is a DocBook LaTeX style example
+%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{dbsimple}[2003/04/11 Simple DocBook Style]
+
+% The defined options
+\DeclareOption{hyperlink}{ \def\DBKhyperlink{yes} }
+\DeclareOption{nohyperlink}{ \def\DBKhyperlink{no} }
+
+% Default values
+\ExecuteOptions{nohyperlink}
+
+% If defined, process the options
+\ProcessOptions\relax
+
+% Needed packages
+\usepackage{float}
+\usepackage{dbk_core}
+
+\usepackage{savesym}
+\savesymbol{c@lofdepth}   % tocloft conflicts with subfigure.sty
+\savesymbol{c@lotdepth}   % tocloft conflicts with subfigure.sty
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{2em}
+\addtolength{\cftchapnumwidth}{0.5em}
+% Two-column glossaries and other such things
+\usepackage{multicol}
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{description}{\begin{multicols}{2}}\AfterEndEnvironment{description}{\end{multicols}}
+\usepackage{fullpage}
+
+%%   % LaTeX <othercredit> commands to define
+%%   %
+%%   % #1: mapped to <contrib>
+%%   % #2: mapped to <firstname> <surname>
+%%   %
+%%   \def\DBKinditem#1#2{
+%%     #2  & #1 \tabularnewline
+%%     \hline
+%%   }
+%%   
+%%   \newenvironment{DBKindtable}{
+%%     \begin{tabular}{ |l|l| }
+%%     \hline
+%%     \emph{Collaborator} & \emph{Contribution}
+%%     \hline
+%%   }{
+%%     \end{tabular}
+%%   }
+%%   
+%%   %
+%%   % Latex <revhistory> table
+%%   %
+%%   \newenvironment{DBKrevtable}{
+%%     \begin{longtable}{ |l|l|l|l| }
+%%     \hline
+%%     Revision number & Date & Release Info & Author \tabularnewline
+%%     \hline
+%%     \endhead
+%%   }{
+%%     \end{longtable}
+%%   }
+%%   
+%%   %
+%%   % <legalnotice> environment skip the information
+%%   %
+%%   \newenvironment{DBKlegalnotice}{
+%%   }{
+%%   }
+
+%
+% These floats must be defined to map <example> and <equation>
+%
+\usepackage{float}
+
+\floatstyle{ruled}
+\newfloat{example}{ht}{loe}[section]
+\floatname{example}{Example}
+
+\floatstyle{plain}
+\newfloat{dbequation}{ht}{loe}[section]
+\floatname{dbequation}{{\scshape Equation }}
+
+%%   %
+%%   % Nothing special for <note>, <caution>, <warning>
+%%   %
+%%   \newenvironment{DBKadmonition}[2] {
+%%   }{
+%%   }
+%%   
+%%   %
+%%   % <sidebar> environment
+%%   %
+%%   \newenvironment{sidebar}[1][\textwidth]{
+%%     \hspace{0mm}\newline%
+%%     \noindent\begin{Sbox}\begin{minipage}{#1}
+%%   }{
+%%     \end{minipage}\end{Sbox}\shadowbox{\TheSbox}%
+%%   }
+%%   

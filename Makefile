@@ -34,6 +34,8 @@ xhtml_web: xhtml.done
 	rm -rf ~/www/media/public/tmp/cll-xhtml
 	cp -pr xhtml ~/www/media/public/tmp/cll-xhtml
 	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/cll-xhtml/docbook2html.css
+	mkdir -p ~/www/media/public/tmp/cll-xhtml/media
+	cp $(PWD)/media/chapter-2-diagram.png ~/www/media/public/tmp/cll-xhtml/media/chapter-2-diagram.png
 
 .PHONY: xhtml
 xhtml: xhtml.done
@@ -54,6 +56,8 @@ xhtml_sections_web: xhtml_sections.done
 	rm -rf ~/www/media/public/tmp/cll-xhtml-sections
 	cp -pr xhtml_sections ~/www/media/public/tmp/cll-xhtml-sections
 	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/cll-xhtml-sections/docbook2html.css
+	mkdir -p ~/www/media/public/tmp/cll-xhtml-sections/media
+	cp $(PWD)/media/chapter-2-diagram.png ~/www/media/public/tmp/cll-xhtml/sections/media/chapter-2-diagram.png
 
 .PHONY: xhtml_sections
 xhtml_sections: xhtml_sections.done
@@ -70,9 +74,10 @@ xhtml_sections.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 #*******
 .PHONY: xhtml_nochunks_web
 xhtml_nochunks_web: xhtml-nochunks.done
-	mkdir -p ~/www/media/public/tmp
+	mkdir -p ~/www/media/public/tmp/media
 	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/docbook2html.css
 	cp $(PWD)/xhtml-nochunks/cll_processed_xhtml.html ~/www/media/public/tmp/cll-xhtml-nochunks.html
+	cp $(PWD)/media/chapter-2-diagram.png ~/www/media/public/tmp/media/chapter-2-diagram.png
 
 .PHONY: xhtml_nochunks
 xhtml_nochunks: xhtml-nochunks.done
@@ -118,7 +123,7 @@ mobi_web: mobi
 .PHONY: pdf
 pdf: cll.pdf
 cll.pdf: cll_processed_pdf.xml xml/dblatex_config.xsl
-	dblatex -T simple -o cll.pdf -b xetex -p xml/dblatex_config.xsl -r post_process_latex.pl cll_processed_pdf.xml 2>&1 | grep -v 'default template used in programlisting or screen'
+	dblatex -T latex/cll -o cll.pdf -b xetex -p xml/dblatex_config.xsl cll_processed_pdf.xml 2>&1 | grep -v 'default template used in programlisting or screen'
 
 .PHONY: pdf_web
 pdf_web: pdf
