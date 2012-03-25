@@ -35,7 +35,7 @@ xhtml_web: xhtml.done
 	cp -pr xhtml ~/www/media/public/tmp/cll-xhtml
 	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/cll-xhtml/docbook2html.css
 	mkdir -p ~/www/media/public/tmp/cll-xhtml/media
-	cp $(PWD)/media/chapter-2-diagram.png ~/www/media/public/tmp/cll-xhtml/media/chapter-2-diagram.png
+	cp $(PWD)/media/chapter-2-diagram.png ~/www/media/public/tmp/cll-xhtml/chapter-2-diagram.png
 
 .PHONY: xhtml
 xhtml: xhtml.done
@@ -57,7 +57,7 @@ xhtml_sections_web: xhtml_sections.done
 	cp -pr xhtml_sections ~/www/media/public/tmp/cll-xhtml-sections
 	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/cll-xhtml-sections/docbook2html.css
 	mkdir -p ~/www/media/public/tmp/cll-xhtml-sections/media
-	cp $(PWD)/media/chapter-2-diagram.png ~/www/media/public/tmp/cll-xhtml/sections/media/chapter-2-diagram.png
+	cp $(PWD)/media/chapter-2-diagram.png ~/www/media/public/tmp/cll-xhtml-sections/chapter-2-diagram.png
 
 .PHONY: xhtml_sections
 xhtml_sections: xhtml_sections.done
@@ -77,7 +77,7 @@ xhtml_nochunks_web: xhtml-nochunks.done
 	mkdir -p ~/www/media/public/tmp/media
 	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/docbook2html.css
 	cp $(PWD)/xhtml-nochunks/cll_processed_xhtml.html ~/www/media/public/tmp/cll-xhtml-nochunks.html
-	cp $(PWD)/media/chapter-2-diagram.png ~/www/media/public/tmp/media/chapter-2-diagram.png
+	cp $(PWD)/media/chapter-2-diagram.png ~/www/media/public/tmp/chapter-2-diagram.png
 
 .PHONY: xhtml_nochunks
 xhtml_nochunks: xhtml-nochunks.done
