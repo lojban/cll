@@ -20,18 +20,30 @@
 % Needed packages
 \usepackage{float}
 \usepackage{dbk_core}
+\usepackage{multicol}
+\usepackage{etoolbox}
+\usepackage{tabulary}
+\usepackage{soul}
 
+% Deal with the width provided for ToC numbers
 \usepackage{savesym}
 \savesymbol{c@lofdepth}   % tocloft conflicts with subfigure.sty
 \savesymbol{c@lotdepth}   % tocloft conflicts with subfigure.sty
 \usepackage{tocloft}
 \addtolength{\cftsecnumwidth}{2em}
 \addtolength{\cftchapnumwidth}{0.5em}
+
 % Two-column glossaries and other such things
-\usepackage{multicol}
-\usepackage{etoolbox}
 \BeforeBeginEnvironment{description}{\begin{multicols}{2}}\AfterEndEnvironment{description}{\end{multicols}}
 \usepackage{fullpage}
+
+% Shaded examples
+\usepackage{framed,color}
+\definecolor{shadecolor}{gray}{0.9}
+\BeforeBeginEnvironment{example}{\begin{snugshade}}\AfterEndEnvironment{example}{\end{snugshade}}
+
+% Less vertical space at the top of examples
+\AtBeginEnvironment{example}{\vspace*{-1em}}
 
 %%   % LaTeX <othercredit> commands to define
 %%   %

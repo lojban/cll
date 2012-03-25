@@ -1,63 +1,4 @@
 ==================
-PDF Visual Issues
-==================
-
-Maybe add an interlinear-gloss-manual? for manual grouping that
-isn't chapter 2 style; otherwise it's hard to see how to make
-something like this work:
-
-    le    se nelci      cu   cafne
-    The   liked-thing   is-frequent.
-
-18-17:36 < tsani> rlpowell: why sans serif fonts for the titles? Wouldn't serif look nicer?
-18-17:38 < tsani> rlpowell: also, chapter 2's title is hyphenated? Not very aesthetic
-18-17:39 < tsani> Also, I like the glossary at the end
-18-17:40 < tsani> that was definitely missing in the first version
-18-17:40 < tsani> but, the brivla definitions are messed up, as in they look like << $X_{1}$ is
-                  high/up/upward... >>
-18-17:41 < tsani> additionally, I think that it would look better if the glossary looked a bit
-                  more dictionary-like, with columns, and maybe a smaller font.
-18-17:42 < lunra> Personally Serif fonts annoy me.
-18-17:42 < lunra> I love nice clean smooth Sans fonts. Then again I love monospace.
-18-17:42 < tsani> :P
-18-17:42 < tsani> everyone loves monospace, but not for a book, pe'i
-18-17:44 < tsani> rlpowell: I think that having the glossary split into [cmavo], [brivla], and
-          [cmene] sections might be worth while
-18-17:44 < lunra> ^
-18-17:44 -!- Amie_ [~Amie@117.192.246.12] has joined #lojban
-18-17:44 < tsani> rlpowell: where the cmavo definitions say in which section the cmavo is
-          discussed
-18-17:46 -!- zugz [~zugz@bas8-hamilton14-3096449902.dsl.bell.ca] has joined #lojban
-18-17:46 < tsani> rlpowell: the x/780 for the page numbers is weird, I find. Simply x is enough,
-          I think.
-18-17:47 -!- Amie [~Amie@117.192.248.3] has quit [Ping timeout: 248 seconds]
-18-17:47 < tsani> rlpowell: Also, there seems to be a large space between "Example x.y" and the
-          box for the example proper.
-18-17:49 < tsani> I think that shading the example boxes would be nice as well.
-18-17:49 < tsani> Ah, some of the examples, for example on page 56, are tables with some empty
-                  cells. It definitely looks silly.
-
-==================
-  New Tool Note
-==================
-
-Calibre, which exists in yum:
-
-rlpowell@vrici> sudo yum whatprovides '*ebook-convert*'                
-Loaded plugins: langpacks, presto, refresh-packagekit
-calibre-0.7.56-1.fc15.x86_64 : E-book converter and library management
-Repo        : fedora
-Matched from:
-Filename    : /usr/share/man/man1/ebook-convert.1.gz
-Filename    : /usr/bin/ebook-convert
-Filename    : /usr/share/calibre/ebook-convert-complete.pickle
-
-has an ebook conversion tool that *takes HTML*:
-
-http://manual.calibre-ebook.com/cli/ebook-convert-4.html#html-input-to-pdf-output
-
-
-==================
   Instructions For Helpers
 ==================
 
@@ -84,13 +25,43 @@ change, and I will hunt you down and bad things will occur.
  ------
 
 ==================
+PDF Visual Issues
+==================
+
+Maybe add an interlinear-gloss-manual? for manual grouping that
+isn't chapter 2 style; otherwise it's hard to see how to make
+something like this work:
+
+    le    se nelci      cu   cafne
+    The   liked-thing   is-frequent.
+
+18-17:44 < tsani> rlpowell: I think that having the glossary split into [cmavo], [brivla], and
+          [cmene] sections might be worth while
+18-17:44 < tsani> rlpowell: where the cmavo definitions say in which section the cmavo is
+          discussed
+
+==================
+I Don't Even
+==================
+24-22:44 < rlpowell> *Neat*.
+24-22:45 < rlpowell> The HTML and the LaTeX number the examples differently.
+24-22:45 < rlpowell> *THAT'S* gonna need to change.
+
+==================
+  Random Visual Issues (numbered by chapter)
+==================
+2. "sumti selbri sumti (argument)" below example 2.3 looks weird;
+compare red book.
+2. NOT FIRST PASS, but section 2.4 should be dropped eventually.
+2. S1.11: "gismu:" as a line by itself looks pretty lame.
+
+==================
   Issues noticed during the proofread
 ==================
 
 1. Captions to Pictures section is broken
-2. Bridi diagram is broken
 2. Description of formatting for interlinear-gloss needs to be fixed to match the formatting changes
-2. Example 2.9 could do with some re-formatting
+2. Example 2.9 could do with some re-formatting (compare 5.3 in http://dag.github.com/cll/2/5/ )
 3. Tengwar table should be made multi-column to save vertical space
 4. Example 4.4 is formatted differently from other nearby and similar examples
 4. Examples 4.24, 4.26-4.38, 4.52-4.70 are missing content

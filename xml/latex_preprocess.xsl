@@ -48,7 +48,7 @@
 
   <xsl:template match="para[@role='sumti' and ancestor::informaltable]">
     <latex-verbatim>
-      <xsl:text>\underline{</xsl:text>
+      <xsl:text>\ul{</xsl:text>
       <xsl:apply-templates select="node()|text()"/>
       <xsl:text>}</xsl:text>
     </latex-verbatim>
@@ -86,12 +86,10 @@
       <!-- LaTeX table setup -->
       <xsl:text>
         % see longtable docs for these next lines
-        \setlength\LTleft\parindent
-        \setlength\LTright\fill
-        \begin{longtable}{</xsl:text>
+        \begin{tabulary}{\linewidth}{</xsl:text>
       <!-- LaTeX table width -->
       <xsl:for-each select="$maximal/td">
-        <xsl:text>l</xsl:text>
+        <xsl:text>L</xsl:text>
       </xsl:for-each>
       <xsl:text>}&#10;</xsl:text>
       <xsl:for-each select="$items/tr">
@@ -129,7 +127,7 @@
         <!-- end of row -->
         <xsl:text>\tabularnewline&#10;</xsl:text>
       </xsl:for-each>
-      <xsl:text>\end{longtable}</xsl:text>
+      <xsl:text>\end{tabulary}</xsl:text>
     </latex-verbatim>
   </xsl:template>
 
