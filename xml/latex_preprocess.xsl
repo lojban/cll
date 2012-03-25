@@ -150,4 +150,17 @@
     </xsl:call-template>
   </xsl:template>
 
+
+  <xsl:template match="para[starts-with(@role,'columnar-')]">
+    <latex-verbatim>
+      <xsl:text>\begin{multicols}{</xsl:text>
+      <xsl:value-of select="substring(@role,10,1)"/>
+      <xsl:text>}</xsl:text>
+    </latex-verbatim>
+    <xsl:apply-templates select="node()|text()"/>
+    <latex-verbatim>
+      <xsl:text>\end{multicols}</xsl:text>
+    </latex-verbatim>
+  </xsl:template>
+
 </xsl:stylesheet>
