@@ -84,9 +84,7 @@
     <xsl:param name="items" select="''"/>
     <latex-verbatim>
       <!-- LaTeX table setup -->
-      <xsl:text>
-        % see longtable docs for these next lines
-        \begin{tabulary}{\linewidth}{</xsl:text>
+      <xsl:text>&#10;\begin{tabulary}{\linewidth}{</xsl:text>
       <!-- LaTeX table width -->
       <xsl:for-each select="$maximal/td">
         <xsl:text>L</xsl:text>
@@ -127,7 +125,7 @@
         <!-- end of row -->
         <xsl:text>\tabularnewline&#10;</xsl:text>
       </xsl:for-each>
-      <xsl:text>\end{tabulary}</xsl:text>
+      <xsl:text>\end{tabulary}&#10;</xsl:text>
     </latex-verbatim>
   </xsl:template>
 
