@@ -25,44 +25,10 @@ change, and I will hunt you down and bad things will occur.
  ------
 
 ==================
-PDF Visual Issues
+  Uncategorized Issues By Chapter
 ==================
-
-Maybe add an interlinear-gloss-manual? for manual grouping that
-isn't chapter 2 style; otherwise it's hard to see how to make
-something like this work:
-
-    le    se nelci      cu   cafne
-    The   liked-thing   is-frequent.
-
-18-17:44 < tsani> rlpowell: I think that having the glossary split into [cmavo], [brivla], and
-          [cmene] sections might be worth while
-18-17:44 < tsani> rlpowell: where the cmavo definitions say in which section the cmavo is
-          discussed
-
-==================
-I Don't Even
-==================
-24-22:44 < rlpowell> *Neat*.
-24-22:45 < rlpowell> The HTML and the LaTeX number the examples differently.
-24-22:45 < rlpowell> *THAT'S* gonna need to change.
-
-==================
-  Random Visual Issues (numbered by chapter)
-==================
-2. "sumti selbri sumti (argument)" below example 2.3 looks weird;
-compare red book.
-2. NOT FIRST PASS, but section 2.4 should be dropped eventually.
-2. S1.11: "gismu:" as a line by itself looks pretty lame.
-
-==================
-  Issues noticed during the proofread
-==================
-
-1. Captions to Pictures section is broken
-2. Description of formatting for interlinear-gloss needs to be fixed to match the formatting changes
+2. S11: "gismu:" as a line by itself looks pretty lame.
 2. Example 2.9 could do with some re-formatting (compare 5.3 in http://dag.github.com/cll/2/5/ )
-3. Tengwar table should be made multi-column to save vertical space
 4. Example 4.4 is formatted differently from other nearby and similar examples
 4. Examples 4.24, 4.26-4.38, 4.52-4.70 are missing content
 	- The content in question gets deleted by xml/docbook2html_preprocess.xsl
@@ -109,17 +75,26 @@ compare red book.
  ------
 
 ==================
+I Don't Even
+==================
+24-22:44 < rlpowell> *Neat*.
+24-22:45 < rlpowell> The HTML and the LaTeX number the examples differently.
+24-22:45 < rlpowell> *THAT'S* gonna need to change.
+[change that *AFTER* handling all the proofread stuff, or it's going to suck)
+
+==================
   Non-Visual Issues
 ==================
 
-The section level chunking has no per-chapter toc, which means the
-chapter header chunks look awful; see
-http://vrici.lojban.org/~rlpowell/media/public/tmp/cll-xhtml-sections/chapter-phonology.html
-; we should give those pages the chapter toc, which means changing
-<xsl:param name="generate.toc"> (see xml/docbook2html_config.xsl  )
+Maybe add an interlinear-gloss-manual? for manual grouping that
+isn't chapter 2 style; otherwise it's hard to see how to make
+something like this work:
+
+    le    se nelci      cu   cafne
+    The   liked-thing   is-frequent.
 
  ------
-
+ 
 The <definition> tags within tables have their <valsi> component in another column of the table.  We need to decide whether is this is
 satisfactory, or if something else should be done with them.
 
@@ -188,6 +163,11 @@ is why the columns are so spaced out).
 - Fix all FIXMEs; in particular the output of:
   grep 'FIXME:' [0-9]*.xml | grep -v 'TAG SPOT'
 
+18-17:44 < tsani> rlpowell: I think that having the glossary split into [cmavo], [brivla], and
+          [cmene] sections might be worth while
+18-17:44 < tsani> rlpowell: where the cmavo definitions say in which section the cmavo is
+          discussed
+
 ==================
   Display
 ==================
@@ -221,3 +201,12 @@ is why the columns are so spaced out).
     production.
 - Similarily, generate more-readable anchors based on current
   section number and such
+
+==================
+Content Issues That Need Fixing
+==================
+
+DON'T TOUCH THESE.  The timing on these should be handled very carefully
+
+2. Description of formatting for interlinear-gloss needs to be fixed to match the formatting changes
+2. section 2.4 should be dropped eventually.
