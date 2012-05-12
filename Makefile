@@ -126,31 +126,3 @@ cll.pdf: cll_processed_pdf.xml xml/dblatex_config.xsl
 .PHONY: pdf_web
 pdf_web: pdf
 	cp cll.pdf ~/www/media/public/tmp/cll.pdf
-
-#*********************
-# Faster testing versions go here; lots of copy and paste; lame
-#*********************
-
-.PHONY: test
-test: chapters = -t chapters/1.xml chapters/2.xml chapters/10.xml chapters/21.xml
-test: xhtml_web xhtml_nochunks_web pdf_web epub_web mobi_web
-
-.PHONY: xhtml_web_test
-xhtml_web_test: chapters = -t chapters/1.xml chapters/2.xml chapters/10.xml chapters/21.xml
-xhtml_web_test: xhtml_web
-
-.PHONY: pdf_web_test
-pdf_web_test: chapters = -t chapters/1.xml chapters/2.xml chapters/10.xml chapters/21.xml
-pdf_web_test: pdf_web
-
-.PHONY: epub_web_test
-epub_web_test: chapters = -t chapters/1.xml chapters/2.xml chapters/10.xml chapters/21.xml
-epub_web_test: epub_web
-
-.PHONY: mobi_web_test
-mobi_web_test: chapters = -t chapters/1.xml chapters/2.xml chapters/10.xml chapters/21.xml
-mobi_web_test: mobi_web
-
-.PHONY: xhtml_nochunks_web_test
-xhtml_nochunks_web_test: chapters = -t chapters/1.xml chapters/2.xml chapters/10.xml chapters/21.xml
-xhtml_nochunks_web_test: xhtml_nochunks_web
