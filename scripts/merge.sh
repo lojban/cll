@@ -66,7 +66,7 @@ cp cll.xml cll_preglossary.xml
 
 echo '</book>' >>cll_preglossary.xml
 
-if [ "$testing" != "solo" ]
+if [ "$testing" -a "$testing" != "solo" ]
 then
   scripts/generate_glossary.sh -t >>cll.xml
 else
