@@ -6,7 +6,7 @@ all: xhtml_web xhtml_sections_web xhtml_nochunks_web pdf_web epub_web mobi_web
 
 .PHONY: clean
 clean:
-	-rm -rf cll* xhtml/ xhtml.done xhtml-nochunks/ xhtml-nochunks.done
+	-rm -rf cll* xhtml/ xhtml.done xhtml-nochunks/ xhtml-nochunks.done xhtml_chapters/ xhtml_chapters.done xhtml_sections/ xhtml_sections.done
 
 .PHONY: realclean
 realclean: clean
