@@ -1,43 +1,23 @@
 To make the XHTML version (ends up in a dir named html/):
 
-  make
+  scripts/build
 
 This takes quite a while.  To do it for just one chapter for faster
 testing:
 
-  make test="-t" chapters="chapters/5.xml"
+  scripts/build -t chapters/05.xml 
 
 This does the whole book but is also much faster:
 
-  make test="-t"
+  scripts/build -t
 
 There are many possible sub-targets as well, such as:
 
-  make test="-t" pdf_web
+  scripts/build -t pdf_web
 
-Also, -t there makes internal links break and strips out the
-glossary; -s only does the former.
+You can get a complete list of targets via:
 
-Here's a list of all the make targets you care about, as of May
-2012:
-
-  all (default)
-  clean
-  realclean
-  xhtml_web
-  xhtml
-  xhtml_sections_web
-  xhtml_sections
-  xhtml_nochunks_web
-  xhtml_nochunks
-  epub
-  epub_web
-  mobi
-  mobi_web
-  pdf
-  pdf_web
-
-They all have _test versions as well.
+  scripts/build -h
 
 Requirements
 ------------

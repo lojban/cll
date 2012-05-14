@@ -1,0 +1,75 @@
+#!/bin/bash
+
+usage() {
+  echo "
+
+Usage: $0 [-s] [-t] [-T target] [chapters]
+
+-s: Replaces external xrefs in each chapter, so each chapter works standalone.
+
+-t: Does what -s does, but also prevents most glossary processing so the glossary building goes much faster.
+
+-T target: Specifies the make target.  Most of them are obvious.  The _web targets copy stuff into your ~/public_html/ web space.  Complete list:
+
+$(grep '^[a-z][a-z_]*:' build/Makefile | sed 's/:.*//' | sed 's/^/    /')
+
+[chapters]: defaults to all chapters; if you specify less than all chapters, you must use -s or -t
+"
+  exit 1
+}
+
+optlist=""
+target="all"
+
+while getopts "sthT" opt
+do
+  case "$opt" in
+    s)    optlist="$optlist -s";;
+    t)    optlist="$optlist -t";;
+    T)    target="$OPTARG";;
+    [?h]) usage;;
+  esac
+done
+
+if [ $OPTIND -gt 1 ]
+then
+  shift $(expr $OPTIND - 1)
+fi
+
+chapters="$*"
+
+if [ "$chapters" -a ! "$optlist" ]
+then
+  echo "
+
+Since you specified chapters, you need to specify -s or -t.  -t is faster.
+
+"
+
+  usage
+fi
+
+# Set up defaults
+if [ ! "$chapters" ]
+then
+  chapters="$(ls chapters/* | tr '\012' ' ')"
+fi
+
+echo "chapters: $chapters"
+echo "optlist: $optlist"
+
+# See if we need to delete the cll.xml before we run make
+echo "$optlist $chapters" >build/chapter-list.new
+if [ ! -f build/chapter-list ]
+then
+  touch build/chapter-list
+fi
+
+if [ "$(diff -q build/chapter-list build/chapter-list.new)" ]
+then
+  cp build/chapter-list.new build/chapter-list
+  echo -e "\nChapter list differences found; forcing a re-merge.\n"
+  rm -f cll.xml
+fi
+
+make -f build/Makefile test="$optlist" chapters="$chapters" $target
