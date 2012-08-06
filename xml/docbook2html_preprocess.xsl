@@ -527,20 +527,6 @@ other options:
       </phrase>
     </xsl:template>
 
-    <xsl:template match="oldjbophrase[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
-      <blockquote role="oldjbophrase">
-        <para>
-          <xsl:apply-templates select="node()|text()"/>
-        </para>
-      </blockquote>
-    </xsl:template>
-
-    <xsl:template match="oldjbophrase" priority="1">
-      <phrase role="oldjbophrase">
-        <xsl:apply-templates select="node()|text()"/>
-      </phrase>
-    </xsl:template>
-
     <xsl:template match="definition[not(boolean(parent::title)) and not(boolean(parent::term)) and not(boolean(parent::member)) and not(boolean(parent::secondary))]" priority="100">
       <blockquote role="definition">
         <para>
