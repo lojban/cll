@@ -21,7 +21,7 @@ $(grep '^[a-z][a-z_]*:' build/Makefile | sed 's/:.*//' | sed 's/^/    /')
 optlist=""
 target="all"
 
-while getopts "sthT" opt
+while getopts "sthT:" opt
 do
   case "$opt" in
     s)    optlist="$optlist -s";;
@@ -57,6 +57,7 @@ fi
 
 echo "chapters: $chapters"
 echo "optlist: $optlist"
+echo "target: $target"
 
 # See if we need to delete the cll.xml before we run make
 echo "$optlist $chapters" >build/chapter-list.new
