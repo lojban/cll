@@ -30,11 +30,11 @@ cll_processed_xhtml.xml: cll.xml xml/docbook2html_preprocess.xsl
 #*******
 .PHONY: xhtml_web
 xhtml_web: xhtml.done
-	mkdir -p ~/www/media/public/tmp
-	rm -rf ~/www/media/public/tmp/cll-xhtml
-	cp -pr xhtml ~/www/media/public/tmp/cll-xhtml
-	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/cll-xhtml/docbook2html.css
-	cp -pr $(PWD)/media ~/www/media/public/tmp/cll-xhtml/
+	mkdir -p ~/public_html/media/public/tmp
+	rm -rf ~/public_html/media/public/tmp/cll-xhtml
+	cp -pr xhtml ~/public_html/media/public/tmp/cll-xhtml
+	cp $(PWD)/docbook2html.css  ~/public_html/media/public/tmp/cll-xhtml/docbook2html.css
+	cp -pr $(PWD)/media ~/public_html/media/public/tmp/cll-xhtml/
 
 .PHONY: xhtml
 xhtml: xhtml.done
@@ -51,11 +51,11 @@ xhtml.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 #*******
 .PHONY: xhtml_sections_web
 xhtml_sections_web: xhtml_sections.done
-	mkdir -p ~/www/media/public/tmp
-	rm -rf ~/www/media/public/tmp/cll-xhtml-sections
-	cp -pr xhtml_sections ~/www/media/public/tmp/cll-xhtml-sections
-	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/cll-xhtml-sections/docbook2html.css
-	cp -pr $(PWD)/media ~/www/media/public/tmp/cll-xhtml-sections/media
+	mkdir -p ~/public_html/media/public/tmp
+	rm -rf ~/public_html/media/public/tmp/cll-xhtml-sections
+	cp -pr xhtml_sections ~/public_html/media/public/tmp/cll-xhtml-sections
+	cp $(PWD)/docbook2html.css  ~/public_html/media/public/tmp/cll-xhtml-sections/docbook2html.css
+	cp -pr $(PWD)/media ~/public_html/media/public/tmp/cll-xhtml-sections/media
 
 .PHONY: xhtml_sections
 xhtml_sections: xhtml_sections.done
@@ -72,10 +72,10 @@ xhtml_sections.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 #*******
 .PHONY: xhtml_nochunks_web
 xhtml_nochunks_web: xhtml-nochunks.done
-	mkdir -p ~/www/media/public/tmp/media
-	cp $(PWD)/docbook2html.css  ~/www/media/public/tmp/docbook2html.css
-	cp $(PWD)/xhtml-nochunks/cll_processed_xhtml.html ~/www/media/public/tmp/cll-xhtml-nochunks.html
-	cp -pr $(PWD)/media ~/www/media/public/tmp/
+	mkdir -p ~/public_html/media/public/tmp/media
+	cp $(PWD)/docbook2html.css  ~/public_html/media/public/tmp/docbook2html.css
+	cp $(PWD)/xhtml-nochunks/cll_processed_xhtml.html ~/public_html/media/public/tmp/cll-xhtml-nochunks.html
+	cp -pr $(PWD)/media ~/public_html/media/public/tmp/
 
 .PHONY: xhtml_nochunks
 xhtml_nochunks: xhtml-nochunks.done
@@ -98,7 +98,7 @@ cll.epub: xhtml.done
 
 .PHONY: epub_web
 epub_web: epub
-	cp cll.epub ~/www/media/public/tmp/cll.epub
+	cp cll.epub ~/public_html/media/public/tmp/cll.epub
 
 #*******
 # MOBI
@@ -110,7 +110,7 @@ cll.mobi: xhtml.done
 
 .PHONY: mobi_web
 mobi_web: mobi
-	cp cll.mobi ~/www/media/public/tmp/cll.mobi
+	cp cll.mobi ~/public_html/media/public/tmp/cll.mobi
 
 #*******
 # PDF
@@ -125,4 +125,4 @@ cll.pdf: cll_processed_pdf.xml xml/dblatex_config.xsl
 
 .PHONY: pdf_web
 pdf_web: pdf
-	cp cll.pdf ~/www/media/public/tmp/cll.pdf
+	cp cll.pdf ~/public_html/media/public/tmp/cll.pdf
