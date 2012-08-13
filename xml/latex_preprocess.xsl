@@ -79,6 +79,42 @@
     </xsl:for-each>
   </xsl:template>
 
+  <xsl:template name="counted_table_row">
+    <xsl:param name="row" select="''"/>
+    <xsl:param name="maximal" select="''"/>
+    <xsl:for-each select="./td">
+      <xsl:choose>
+        <!-- Deal with full width columns -->
+        <xsl:when test="@colspan='0'">
+          <xsl:text>\multicolumn{</xsl:text>
+          <xsl:value-of select="count($maximal/*)"/>
+          <xsl:text>}{l}{</xsl:text>
+          <non-verbatim>
+            <xsl:apply-templates select="node()|text()"/>
+          </non-verbatim>
+          <xsl:text>}</xsl:text>
+        </xsl:when>
+        <!-- If there are sub-elements, extract out the text or otherwise process, otherwise just copy everything -->
+        <xsl:when test="./*">
+          <!-- Do expansion, and mark as non-verbatim so dblatex expansion will also occur -->
+          <xsl:text>{}</xsl:text>
+          <non-verbatim>
+            <xsl:apply-templates select="node()|text()"/>
+          </non-verbatim>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates select="node()|text()"/>
+        </xsl:otherwise>
+      </xsl:choose>
+      <!-- column terminator if not last -->
+      <xsl:if test="position() != last()">
+        <xsl:text>&amp;&#10;</xsl:text>
+      </xsl:if>
+    </xsl:for-each>
+    <!-- end of row -->
+    <xsl:text>\tabularnewline&#10;</xsl:text>
+  </xsl:template>
+
   <xsl:template name="counted_table">
     <xsl:param name="maximal" select="''"/>
     <xsl:param name="items" select="''"/>
@@ -90,40 +126,20 @@
         <xsl:text>L</xsl:text>
       </xsl:for-each>
       <xsl:text>}&#10;</xsl:text>
-      <xsl:for-each select="$items/tr">
-        <xsl:for-each select="./td">
-          <xsl:choose>
-            <!-- Deal with full width columns -->
-            <xsl:when test="@colspan='0'">
-              <xsl:text>\multicolumn{</xsl:text>
-              <xsl:value-of select="count($maximal/*)"/>
-              <xsl:text>}{l}{</xsl:text>
-              <non-verbatim>
-                <xsl:apply-templates select="node()|text()"/>
-              </non-verbatim>
-              <xsl:text>}</xsl:text>
-            </xsl:when>
-            <!-- If there are sub-elements, extract out the text or
-               otherwise process, otherwise just copy everything
-               -->
-            <xsl:when test="./*">
-              <!-- Do expansion, and mark as non-verbatim so dblatex expansion will also occur -->
-              <xsl:text>{}</xsl:text>
-              <non-verbatim>
-                <xsl:apply-templates select="node()|text()"/>
-              </non-verbatim>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:apply-templates select="node()|text()"/>
-            </xsl:otherwise>
-          </xsl:choose>
-          <!-- column terminator if not last -->
-          <xsl:if test="position() != last()">
-            <xsl:text>&amp;&#10;</xsl:text>
-          </xsl:if>
+      <xsl:if test="$items/thead">
+        <xsl:for-each select="$items/thead/tr">
+          <xsl:call-template name="counted_table_row">
+            <xsl:with-param name="row" select="."/>
+            <xsl:with-param name="maximal" select="$maximal"/>
+          </xsl:call-template>
         </xsl:for-each>
-        <!-- end of row -->
-        <xsl:text>\tabularnewline&#10;</xsl:text>
+        <xsl:text>\hline&#10;</xsl:text>
+      </xsl:if>
+      <xsl:for-each select="$items/tr">
+        <xsl:call-template name="counted_table_row">
+          <xsl:with-param name="row" select="."/>
+            <xsl:with-param name="maximal" select="$maximal"/>
+        </xsl:call-template>
       </xsl:for-each>
       <xsl:text>\end{tabulary}&#10;</xsl:text>
     </latex-verbatim>
