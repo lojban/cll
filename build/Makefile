@@ -94,7 +94,7 @@ xhtml-nochunks.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 .PHONY: epub
 epub: cll.epub
 cll.epub: xhtml.done
-	xvfb-run ebook-convert xhtml/index.html cll.epub
+	xvfb-run -a ebook-convert xhtml/index.html cll.epub
 
 .PHONY: epub_web
 epub_web: epub
@@ -106,7 +106,7 @@ epub_web: epub
 .PHONY: mobi
 mobi: cll.mobi
 cll.mobi: xhtml.done
-	xvfb-run ebook-convert xhtml/index.html cll.mobi
+	xvfb-run -a ebook-convert xhtml/index.html cll.mobi
 
 .PHONY: mobi_web
 mobi_web: mobi
