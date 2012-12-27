@@ -8,6 +8,13 @@ all: xhtml_web xhtml_sections_web xhtml_nochunks_web pdf_web epub_web mobi_web
 clean:
 	-rm -rf cll* xhtml/ xhtml.done xhtml-nochunks/ xhtml-nochunks.done xhtml_chapters/ xhtml_chapters.done xhtml_sections/ xhtml_sections.done
 
+# check whether X server is available
+ifeq (,$(DISPLAY))
+	XPREFIX:=xvfb-run
+else
+	XPREFIX:=
+endif
+
 .PHONY: realclean
 realclean: clean
 	-rm -rf jbovlaste.xml jbovlaste2.xml
@@ -94,7 +101,7 @@ xhtml-nochunks.done: cll_processed_xhtml.xml xml/docbook2html_config.xsl
 .PHONY: epub
 epub: cll.epub
 cll.epub: xhtml.done
-	xvfb-run ebook-convert xhtml/index.html cll.epub
+	$(XPREFIX) ebook-convert xhtml/index.html cll.epub
 
 .PHONY: epub_web
 epub_web: epub
@@ -106,7 +113,7 @@ epub_web: epub
 .PHONY: mobi
 mobi: cll.mobi
 cll.mobi: xhtml.done
-	xvfb-run ebook-convert xhtml/index.html cll.mobi
+	$(XPREFIX) ebook-convert xhtml/index.html cll.mobi
 
 .PHONY: mobi_web
 mobi_web: mobi
