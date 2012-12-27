@@ -115,7 +115,7 @@ mobi_web: mobi
 #*******
 # PDF
 #
-# We actually do need xetex (aka xalatex) here, for the IPA and
+# We actually do need xetex (aka xelatex) here, for the IPA and
 # other utf-8 issues
 #*******
 .PHONY: pdf
