@@ -39,13 +39,13 @@ account on the appropriate server.
 
   dblatex
 
-  xetex, with a recent version of texlive.  For Fedora, this means
-  following the instructions at
-  http://fedoraproject.org/wiki/Features/TeXLive to get the TeXLive
-  2011-2 repo or later, then:
+  xetex, with a recent version of texlive.  For Fedora, this
+  upgrading to F19.  Then install these packages; this may not be a
+  complete list, but it should be pretty close:
     
-    sudo yum install texlive-xetex
-    sudo yum install texlive-dejavu-fedora-fonts texlive-dejavu texlive-multirow texlive-subfigure texlive-appendix texlive-changebar texlive-overpic texlive-collection-langcjk
+    sudo yum install texlive-xetex texlive-dejavu texlive-multirow texlive-subfigure texlive-appendix texlive-changebar texlive-overpic dejavu-fonts-common dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts texlive-cjkutils-bin texlive-collection-xetex texlive-dvipdfm-bin texlive-jfontmaps-bin texlive-ptex-bin texlive-release texlive-ttfutils-bin texlive-xetex-bin xmltex tex-texlive-common-doc tex-texlive-en-doc tex-texlive-msg-translations tex-texlive-scripts tex-texlive texlive-subfigure texlive-appendix texlive-multirow texlive-multirow texlive-listings texlive-overpic texlive-overpic texlive-changebar texlive-tabulary texlive-savesym texlive-tocloft texlive-framed
+
+  Yes, that's a lot of packages.
 
   MOBI / EPUB
   -----------
