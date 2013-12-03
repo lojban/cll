@@ -58,7 +58,7 @@ EOF
     if [ ! -f jbovlaste.xml -o "$(find jbovlaste.xml -mtime +1)" ]
     then
       echo "jbovlaste file is old; refetching." 1>&2
-      wget 'http://jbovlaste.lojban.org/export/xml-export.html?lang=en' -O jbovlaste.xml
+      wget 'http://jbovlaste.lojban.org/export/xml-export.html?lang=en&bot_key=z2BsnKYJhAB0VNsl' -O jbovlaste.xml
     fi
 
     rm jbovlaste2.xml
@@ -75,7 +75,7 @@ EOF
         sed 's;\$\(1\*\)\?10^{\?\([^}$]*\)}\?\$;<inlinemath>\110<superscript>\2</superscript></inlinemath>;g' | \
         # Turn LaTeX stuff into xml: $x_{1}$
         sed 's;\$\([a-z][a-z]*\)_{\?\(.\)}\?\$;<inlinemath>\1<subscript>\2</subscript></inlinemath>;g' | \
-        # Turn LaTeX stuff into xml: $x_2=b_1$ 
+        # Turn LaTeX stuff into xml: $x_2=b_1$
         sed 's;\$\([a-z][a-z]*\)_{\?\(.\)}\?=\([a-z][a-z]*\)_{\?\(.\)}\?\$;<inlinemath>\1<subscript>\2</subscript>=\3<subscript>\4</subscript></inlinemath>;g' | \
         # Turn LaTeX stuff into xml: $x_2=b_1=t_2$
         sed 's;\$\([a-z][a-z]*\)_{\?\(.\)}\?=\([a-z][a-z]*\)_{\?\(.\)}\?=\([a-z][a-z]*\)_{\?\(.\)}\?\$;<inlinemath>\1<subscript>\2</subscript>=\3<subscript>\4</subscript></inlinemath>;g'
