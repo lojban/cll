@@ -3,15 +3,17 @@
 usage() {
   echo "
 
-Usage: $0 [-s] [-t] [-T target] [chapters]
+Usage: $0 [-c] [-s] [-t] [-T target] [chapters]
 
 -s: Replaces external xrefs in each chapter, so each chapter works standalone.
 
 -t: Does what -s does, but also prevents most glossary processing so the glossary building goes much faster.
 
+-c: Coverage mode.  Instead of using the normal chapter data, runs a special small file that is designed to do everything we ever do, but runs very quickly.
+
 -T target: Specifies the make target.  Most of them are obvious.  The _web targets copy stuff into your ~/public_html/ web space.  Complete list:
 
-$(grep '^[a-z][a-z_]*:' build/Makefile | sed 's/:.*//' | sed 's/^/    /')
+$(grep '^[a-z][a-z_]*:' scripts/Makefile | sed 's/:.*//' | sed 's/^/    /')
 
 [chapters]: defaults to all chapters; if you specify less than all chapters, you must use -s or -t
 "
@@ -19,11 +21,15 @@ $(grep '^[a-z][a-z_]*:' build/Makefile | sed 's/:.*//' | sed 's/^/    /')
 }
 
 optlist=""
+coverage=""
+builddir="$(pwd)/build" 
 target="all"
 
-while getopts "sthT:" opt
+while getopts "csthT:" opt
 do
   case "$opt" in
+    c)    coverage="true"
+          ;;
     s)    optlist="$optlist -s";;
     t)    optlist="$optlist -t";;
     T)    target="$OPTARG";;
@@ -37,6 +43,17 @@ then
 fi
 
 chapters="$*"
+
+if [ "$target" = "coverage" -a "$optlist" ]
+then
+  echo "
+
+Coverage is special; give no other options.
+
+"
+
+  usage
+fi
 
 if [ "$chapters" -a ! "$optlist" ]
 then
@@ -53,6 +70,14 @@ fi
 if [ ! "$chapters" ]
 then
   chapters="$(ls chapters/* | tr '\012' ' ')"
+fi
+
+if [ "$coverage" ]
+then
+  target="coverage"
+  test=""
+  chapters="coverage/coverage.xml"
+  builddir="$(pwd)/coverage/build"
 fi
 
 echo "chapters: $chapters"
@@ -73,4 +98,4 @@ then
   rm -f cll.xml
 fi
 
-make -f build/Makefile test="$optlist" chapters="$chapters" $target
+make -f scripts/Makefile builddir="$builddir" test="$optlist" chapters="$chapters" $target

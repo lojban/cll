@@ -3,7 +3,7 @@
 IFS='
 '
 
-for line in $(cat origcllindex.txt | grep -v '^\s*#')
+for line in $(cat scripts/origcllindex.txt | grep -v '^\s*#')
 do
   item=$(echo $line | sed 's/[(,:].*//' | sed 's/^\s*//' | sed 's/\\/\\\\/g')
 #  echo "line: $line"

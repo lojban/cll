@@ -1,12 +1,33 @@
 #!/bin/sh
 
+# A POSIX variable
+OPTIND=1         # Reset in case getopts has been used previously in the shell.
+
+# Initialize our own variables:
 testing=""
-if [ "$1" = "-t" ]
-then
-  testing=1
-  shift
-  echo "Entering testing mode: no actual definition work will be done." >&2
-fi
+BUILDDIR="build/"
+
+while getopts "h?tb:" opt; do
+    case "$opt" in
+    h|\?)
+        echo "-t is testing mode: will replace all external xrefs in each chapter and turn off the glossary."
+        echo "-b [name] is the build dir"
+        exit 0
+        ;;
+    t)  testing="both"
+        ;;
+    s)  testing="solo"
+        ;;
+    b)  BUILDDIR="$OPTARG"
+        ;;
+    esac
+done
+
+shift $((OPTIND-1))
+
+[ "$1" = "--" ] && shift
+
+# echo "Arg Leftovers: $@"
 
 TMPFILE="/tmp/generate_glossary.tmp.$$"
 
@@ -15,7 +36,7 @@ IFS='
 initial=''
 indiv=''
 
-xsltproc --nonet --path . --novalid xml/generate_glossary.xsl cll_preglossary.xml | grep -P '\t' | sort | uniq >$TMPFILE
+xsltproc --nonet --path . --novalid xml/generate_glossary.xsl $BUILDDIR/cll_preglossary.xml | grep -P '\t' | sort | uniq >$TMPFILE
 
 for line in $(cat $TMPFILE)
 do
@@ -55,17 +76,17 @@ EOF
   then
     definition="placeholder definition"
   else
-    if [ ! -f jbovlaste.xml -o "$(find jbovlaste.xml -mtime +1)" ]
+    if [ ! -f $BUILDDIR/jbovlaste.xml -o "$(find $BUILDDIR/jbovlaste.xml -mtime +1)" ]
     then
       echo "jbovlaste file is old; refetching." 1>&2
-      wget 'http://jbovlaste.lojban.org/export/xml-export.html?lang=en&bot_key=z2BsnKYJhAB0VNsl' -O jbovlaste.xml
+      wget 'http://jbovlaste.lojban.org/export/xml-export.html?lang=en&bot_key=z2BsnKYJhAB0VNsl' -O $BUILDDIR/jbovlaste.xml
     fi
 
-    rm jbovlaste2.xml
-    grep '^<valsi word=' jbovlaste.xml | \
-      sed 's/^<valsi word="\([^"]*\)" /###\1### &/' >jbovlaste2.xml
+    rm $BUILDDIR/jbovlaste2.xml
+    grep '^<valsi word=' $BUILDDIR/jbovlaste.xml | \
+      sed 's/^<valsi word="\([^"]*\)" /###\1### &/' >$BUILDDIR/jbovlaste2.xml
 
-    definition=$(grep -F "###$word### " jbovlaste2.xml | \
+    definition=$(grep -F "###$word### " $BUILDDIR/jbovlaste2.xml | \
         sed -e 's/^[^ ]* //' | \
         sed -e 's/.*<definition>//' -e 's;</definition>.*;;' | \
         sed -e 's/\&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' | \

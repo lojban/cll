@@ -1,24 +1,24 @@
 To make the XHTML version (ends up in a dir named html/):
 
-  scripts/build
+  ./cll_build
 
 This takes quite a while.  To do it for just one chapter for faster
 testing:
 
-  scripts/build -t chapters/05.xml 
+  ./cll_build -t chapters/05.xml 
 
 This does the whole book but is also much faster:
 
-  scripts/build -t
+  ./cll_build -t
 
 There are many possible sub-targets as well, which are specified
 with -T, such as:
 
-  scripts/build -t -T pdf_web
+  ./cll_build -t -T pdf_web
 
 You can get a complete list of targets via:
 
-  scripts/build -h
+  ./cll_build -h
 
 Requirements
 ------------

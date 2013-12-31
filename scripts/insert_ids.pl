@@ -9,7 +9,7 @@ my $num=$ARGV[2];
 
 open( my $fhin, '<', $filein ) or die $!;
 open( my $fhout, '>', $fileout ) or die $!;
-open( my $rands, '<', 'random-ids' ) or die $!;
+open( my $rands, '<', 'scripts/random-ids' ) or die $!;
 
 my $randnum=0;
 

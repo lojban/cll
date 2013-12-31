@@ -3,7 +3,7 @@
 IFS='
 '
 
-for line in $(cat lojban_quotes)
+for line in $(cat scripts/lojban_quotes)
 do
   echo "line: $line"
   fixed=$(echo $line | sed 's/\./\\./g')
