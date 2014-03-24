@@ -9,7 +9,9 @@ Usage: $0 [-c] [-s] [-t] [-T target] [chapters]
 
 -t: Does what -s does, but also prevents most glossary processing so the glossary building goes much faster.
 
--c: Coverage mode.  Instead of using the normal chapter data, runs a special small file that is designed to do everything we ever do, but runs very quickly.
+-c: Coverage mode.  Instead of using the normal chapter data, runs a special small file that is designed to do everything we ever do, but runs very quickly.  In this case, the 'chapters' argument is one or more coverage types to run.  Possible coverage types:
+
+$(ls $(pwd)/coverage/*.xml | xargs -n 1 basename | sed 's/^coverage_//' | sed 's/\.xml$//')
 
 -T target: Specifies the make target.  Most of them are obvious.  The _web targets copy stuff into your ~/public_html/ web space.  Complete list:
 
@@ -21,6 +23,7 @@ $(grep '^[a-z][a-z_]*:' scripts/Makefile | sed 's/:.*//' | sed 's/^/    /')
 }
 
 optlist=""
+run_chapters=""
 coverage=""
 builddir="$(pwd)/build" 
 target="all"
@@ -29,9 +32,14 @@ while getopts "csthT:" opt
 do
   case "$opt" in
     c)    coverage="true"
+          run_chapters="true"
           ;;
-    s)    optlist="$optlist -s";;
-    t)    optlist="$optlist -t";;
+    s)    optlist="$optlist -s"
+          run_chapters="true"
+          ;;
+    t)    optlist="$optlist -t"
+          run_chapters="true"
+          ;;
     T)    target="$OPTARG";;
     [?h]) usage;;
   esac
@@ -55,7 +63,7 @@ Coverage is special; give no other options.
   usage
 fi
 
-if [ "$chapters" -a ! "$optlist" ]
+if [ "$chapters" -a ! "$run_chapters" ]
 then
   echo "
 
@@ -76,7 +84,19 @@ if [ "$coverage" ]
 then
   target="coverage"
   test=""
-  chapters="coverage/coverage.xml"
+  new_chapters=""
+  for chapter in $chapters
+  do
+    chap="coverage/coverage_$chapter.xml"
+    if [ -f "$chap" ]
+    then
+      new_chapters="$new_chapters $chap"
+    else
+      echo "$chapter is not a valid coverage type"
+      exit 1
+    fi
+  done
+  chapters=$new_chapters
   builddir="$(pwd)/coverage/build"
 fi
 
