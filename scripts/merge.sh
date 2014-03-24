@@ -41,16 +41,16 @@ echo '<?xml version="1.0"?>
 <book xmlns:xlink="http://www.w3.org/1999/xlink">
 
 <info>
-<title>Test Title</title>
+<title>The Complete Lojban Language</title>
 <subtitle>Test Subtitle</subtitle>
 <copyright>
-<year>2011</year>
+<year>Test Copyright Year 2014</year>
 <holder>Test Copyright Holder</holder>
 </copyright>
 <author>
 <personname>
-<firstname>Test</firstname>
-<surname>Author</surname>
+<firstname>AuthorFirstName</firstname>
+<surname>AuthorSurName</surname>
 </personname>
 <email>test@email.com</email>
 </author>
