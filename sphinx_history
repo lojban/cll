@@ -1,0 +1,300 @@
+28067  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null | less
+28068  fg
+28069  ruby ~/scratch/nokogiri_cll.rb |^ less
+28070  ruby ~/scratch/nokogiri_cll.rb |& less
+28071  fg
+28072  ruby ~/scratch/nokogiri_cll.rb |& less
+28073  fg
+28074  ruby ~/scratch/nokogiri_cll.rb |& less
+28075  fg
+28076  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null | less
+28077  fg
+28078  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null | less
+28079  ruby ~/scratch/nokogiri_cll.rb 
+28080  fg
+28081  ruby ~/scratch/nokogiri_cll.rb 
+28082  fg
+28083  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null | less
+28084  fg
+28085  irb
+28086  fg
+28087  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null | less
+28088  ruby ~/scratch/nokogiri_cll.rb 
+28089  fg
+28090  ruby ~/scratch/nokogiri_cll.rb 
+28091  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null | less
+28092  fg
+28093  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null | less
+28094  fg
+28095  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null | less
+28096  fg
+28097  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null | less
+28098  fg
+28099  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null | less
+28100  sudo yum whatprovides '*bin/sphinx-build'
+28101  sudo yum install python-sphinx
+28102  rehash
+28103  sphinx-quickstart
+28104  less sphinx/source/index.rst
+28105  fg
+28106  less sphinx/source/index.rst
+28107  fg
+28108  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null | less
+28109  fg
+28110  less sphinx/source/index.rst
+28111  mv sphinx/source/index.rst sphinx/source/index.rst.orig
+28112  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null >sphinx/source/index.rst 
+28113  sphinx-build -h
+28114  sphinx-build sphinx
+28115  ls sphinx
+28116  find sphinx -name conf.py
+28117  sphinx-build sphinx/source sphinx/build
+28118  fg
+28119  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null >sphinx/source/index.rst 
+28120  sphinx-build sphinx/source sphinx/build
+28121  fg
+28122  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null >sphinx/source/index.rst 
+28123  sphinx-build sphinx/source sphinx/build
+28124  sphinx-build -h
+28125  sphinx-build -a sphinx/source sphinx/build
+28126  find sphinx/build
+28127  w3m sphinx/build
+28128  cp -pr sphinx/build ~/www/media/public/cll_sphinx
+28129  fg
+28130  sphinx-build -a sphinx/source sphinx/build -h
+28131  sphinx-build -h -a sphinx/source sphinx/build 
+28132  sphinx-build -b pdf -a sphinx/source sphinx/build ; cp -pr sphinx/build ~/www/media/public/cll_sphinx
+28133  man sphinx-build
+28134  sphinx-build -b latex -a sphinx/source sphinx/build 
+28135  find sphinx/build
+28136  less sphinx/build/cll.tex
+28137  a 'cll Docu' sphinx
+28138  vim sphinx/source/conf.py
+28139  fg
+28140  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null >sphinx/source/index.rst 
+28141  sphinx-build -b latex -a sphinx/source sphinx/build 
+28142  less sphinx/build/cll.tex
+28143  less sphinx/source/index.rst
+28144  fg
+28145  fg
+28146  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null | less
+28147  ruby ~/scratch/nokogiri_cll.rb 2>/dev/null >sphinx/source/index.rst 
+28148  less sphinx/source/index.rst
+28149  ruby ~/scratch/nokogiri_cll.rb >sphinx/source/index.rst  2>/dev/null
+28150  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28151  less sphinx/source/index.rst
+28152  sphinx-build -b latex -a sphinx/source sphinx/build 
+28153  less sphinx/build/cll.tex
+28154  fg
+28155  fg
+28156  a subtitle
+28157  vim scripts/merge.sh
+28158  fg
+28159  ./cll_build -c small_1
+28160  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28161  fg
+28162  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28163  less sphinx/source/index.rst
+28164  fg
+28165  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28166  less sphinx/source/index.rst
+28167  ruby ~/scratch/nokogiri_cll.rb 
+28168  fg
+28169  ruby ~/scratch/nokogiri_cll.rb 
+28170  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28171  less sphinx/source/index.rst
+28172  fg
+28173  less sphinx/source/index.rst
+28174  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28175  less sphinx/source/index.rst
+28176  less sphinx/build/cll.tex
+28177  sphinx-build -b latex -a sphinx/source sphinx/build 
+28178  less sphinx/build/cll.tex
+28179  cd sphinx/build
+28180  xelatex cll.tex
+28181  sudo yum whatprovides '*threeparttable.sty'
+28182  sudo yum install texlive-threeparttable
+28183  xelatex cll.tex
+28184  df -h
+28185  sudo du -xk / >/tmp/dus
+28186  sort -rn /tmp/dus| head -n 50
+28187  ls /usr/share/doc
+28188  ls /usr/lib64/ghc-7.4.2
+28189  which ghc
+28190  /bin/ghc -h
+28191  /bin/ghc --help
+28192  /bin/ghc --version
+28193  ls -l /bin/ghc
+28194  ls -l /bin/ghc-7.4.2
+28195  df -h
+28196  sort -rn /tmp/dus| head -n 50
+28197  ls /var/cache/yum/x86_64/19
+28198  /clean
+28199  sudo yum clean all
+28200  sudo rm -rf /var/tmp/yum-cowan-yBIbKD
+28201  df -h
+28202  sudo du -sh /var/cache/yum
+28203  sudo rm -rf /root/.cabal
+28204  sudo du -sh /root
+28205  df -h
+28206  ls /var/log/audi
+28207  /var/log/audit
+28208  ls /var/log/audit
+28209  sudo -i
+28210  df -h
+28211  fg
+28212  xelatex cll.tex
+28213  sudo yum whatprovides '*wrapfig.sty'
+28214  sudo yum install texlive-wrapfig
+28215  xelatex cll.tex
+28216  cp cll.pdf ~/www/media/public/cll_sphinx
+28217  xelatex cll.tex
+28218  cp cll.pdf ~/www/media/public/cll_sphinx
+28219  xelatex cll.tex
+28220  cp cll.pdf ~/www/media/public/cll_sphinx
+28221  makeindex cll.tex
+28222  xelatex cll.tex
+28223  cp cll.pdf ~/www/media/public/cll_sphinx
+28224  xelatex cll.tex
+28225  cp cll.pdf ~/www/media/public/cll_sphinx
+28226  vim cll.tex
+28227  vim ../../TODO
+28228  jobs
+28229  fg %1
+28230  a tertiary
+28231  a tertiary ..
+28232  fg
+28233  cd ../..
+28234  ls
+28235  ./cll_build -c small_1
+28236  jobs
+28237  cd -
+28238  cd -
+28239  fg
+28240  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28241  less sphinx/source/index.rst 
+28242  fg
+28243  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28244  less sphinx/source/index.rst 
+28245  ruby ~/scratch/nokogiri_cll.rb 
+28246  fg
+28247  ruby ~/scratch/nokogiri_cll.rb 
+28248  fg
+28249  ruby ~/scratch/nokogiri_cll.rb 
+28250  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28251  less sphinx/source/index.rst 
+28252  sphinx-build -b latex -a sphinx/source sphinx/build 
+28253  pwd
+28254  cd -
+28255  cd -
+28256  sphinx-build -b latex -a sphinx/source sphinx/build  ; ( cd sphinx/build ; xelatex cll.tex ; makeindex cll.tex ; xelatex cll.tex  )
+28257  find sphinx/build
+28258  sphinx-build -b latex -a sphinx/source sphinx/build  ; ( cd sphinx/build ; xelatex cll.tex ; makeindex cll.tex ; xelatex cll.tex ; cp sphinx/build/cll.pdf ~/public_html/media/public/cll_sphinx_pdf/ )
+28259  mkdir ~/public_html/media/public/cll_sphinx_pdf/
+28260  sphinx-build -b latex -a sphinx/source sphinx/build  ; ( cd sphinx/build ; xelatex cll.tex ; makeindex cll.tex ; xelatex cll.tex ; cp sphinx/build/cll.pdf ~/public_html/media/public/cll_sphinx_pdf/ )
+28261  sphinx-build -b latex -a sphinx/source sphinx/build  ; ( cd sphinx/build ; xelatex cll.tex ; makeindex cll.tex ; xelatex cll.tex ; cp cll.pdf ~/public_html/media/public/cll_sphinx_pdf/ )
+28262  less sphinx/source/index.rst 
+28263  less sphinx/build/cll.tex
+28264  less sphinx/build/cll.ind
+28265  cd sphinx/build
+28266  makeindex cll.tex
+28267  man makeindex
+28268  makeindex cll.idx
+28269  cd -
+28270  sphinx-build -b latex -a sphinx/source sphinx/build  ; ( cd sphinx/build ; xelatex cll.tex ; makeindex cll.idx ; xelatex cll.tex ; cp cll.pdf ~/public_html/media/public/cll_sphinx_pdf/ )
+28271  git status
+28272  ls sphinx
+28273  find sphinx/source
+28274  cat sphinx/Makefile
+28275  less sphinx/Makefile
+28276  ls
+28277  history
+28278  history 100
+28279  jobs
+28280  jobs
+28281  fg %3
+28282  jobs
+28283  gd
+28284  history
+28285  history 100
+28286  jobs
+28287  ruby ~/scratch/nokogiri_cll.rb  2>&1 | less
+28288  history -100
+28289  less sphinx/source/index.rst
+28290  jobs
+28291  fg %1
+28292  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28293  history -100
+28294  sphinx-build -b latex -a sphinx/source sphinx/build  ; ( cd sphinx/build ; xelatex cll.tex ; makeindex cll.idx ; xelatex cll.tex ; cp cll.pdf ~/public_html/media/public/cll_sphinx_pdf/ )
+28295  jobs
+28296  ls
+28297  fg
+28298  history -100
+28299  ./cll_build -c small_1
+28300  find coverage
+28301  vim coverage/coverage_small_1.xml
+28302  less sphinx/source/index.rst
+28303  vim sphinx/source/index.rst
+28304  history -100
+28305  sphinx-build -b latex -a sphinx/source sphinx/build  ; ( cd sphinx/build ; xelatex cll.tex ; makeindex cll.idx ; xelatex cll.tex ; cp cll.pdf ~/public_html/media/public/cll_sphinx_pdf/ )
+28306  fg
+28307  find coverage
+28308  less coverage/coverage_small_1.xml
+28309  less coverage/coverage_small_1.xml
+28310  fg
+28311  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28312  less sphinx/source/index.rst
+28313  fg
+28314  less sphinx/source/index.rst
+28315  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28316  less sphinx/source/index.rst
+28317  ruby ~/scratch/nokogiri_cll.rb 
+28318  ./cll_build -c small_1
+28319  sphinx-build -b latex -a sphinx/source sphinx/build  ; ( cd sphinx/build ; xelatex cll.tex ; makeindex cll.idx ; xelatex cll.tex ; cp cll.pdf ~/public_html/media/public/cll_sphinx_pdf/ )
+28320  less sphinx/source/index.rst
+28321  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28322  less sphinx/source/index.rst
+28323  fg
+28324  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28325  less sphinx/source/index.rst
+28326  fg
+28327  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28328  less sphinx/source/index.rst
+28329  ruby ~/scratch/nokogiri_cll.rb 
+28330  fg
+28331  ruby ~/scratch/nokogiri_cll.rb 
+28332  fg
+28333  fg
+28334  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28335  less sphinx/source/index.rst
+28336  fg
+28337  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28338  less sphinx/source/index.rst
+28339  less coverage/build/cll.xml
+28340  less sphinx/source/index.rst
+28341  less coverage/build/cll.xml
+28342  fg
+28343  ruby ~/scratch/nokogiri_cll.rb >\!sphinx/source/index.rst  2>/dev/null
+28344  less coverage/build/cll.xml
+28345  less sphinx/source/index.rst
+28346  gd
+28347  vim TODO
+28348  jobs
+28349  fg %3
+28350  jobs
+28351  fg %1
+28352  cat ~/scratch/nokogiri_cll.rb | gist
+28353  cat ~/scratch/nokogiri_cll.rb 
+28354  jobs
+28355  ls
+28356  fg
+28357  cp ~/scratch/nokogiri_cll.rb .
+28358  fg
+28359  jobs
+28360  fg
+28361  gs
+28362  gd
+28363  gs
+28364  gd cll_build
+28365  history | wc -l
+28366  history -300 | wc -l
