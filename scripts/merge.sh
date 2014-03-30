@@ -87,14 +87,14 @@ echo '</book>' >>$BUILDDIR/cll_preglossary.xml
 
 if [ "$testing" -a "$testing" != "solo" ]
 then
-  rb/generate_glossary.rb -b "$BUILDDIR" -t >>"$ofile"
+  scripts/generate_glossary.rb -b "$BUILDDIR" -t >>"$ofile"
   if [ "$?" -ne 0 ]
   then
     echo "Glossary generation failed."
     exit 1
   fi
 else
-  rb/generate_glossary.rb -b "$BUILDDIR" >>"$ofile"
+  scripts/generate_glossary.rb -b "$BUILDDIR" >>"$ofile"
   if [ "$?" -ne 0 ]
   then
     echo "Glossary generation failed."
