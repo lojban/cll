@@ -1,0 +1,158 @@
+=======================================================================
+    BEGIN ISSUES THAT STILL MATTER AFTER THE CONVERSION IS DONE
+=======================================================================
+
+Everything here should be moved to other documentation at some point.
+
+In:
+
+  <example role="interlinear-gloss-example" xml:id="random-id-jig0">
+
+the id is a random string to be used for anchors only, i.e. not for
+humans.  It should never be changed or removed.  It should follow
+the example around forever (unless the example itself is removed, of
+course).
+
+==================================================================
+    END ISSUES THAT STILL MATTER AFTER THE CONVERSION IS DONE
+==================================================================
+
+This directory is used to turn the old HTML many-files stuff into
+dockbook/xml.  It's not ever intended to be re-run once it's all
+working properly; the scripts and stuff are still here in case
+something is found that's easier to fix in the HTML and propogate
+through.
+
+Anyways, that's why these instructions on how to build everything
+aren't in a makefile or something.
+
+First pass was done like this:
+
+  superglom.sh
+
+  merge.sh
+
+  xmlto -o html/ html cll.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
+
+This resulted in a bunch of files named N.xml, where N is a chapter
+number, and cll.xml as the whole, and html/ with the html version
+thereof (which also proves that it validates).
+
+For the second pass these files were moved to N.xml.orig.  The .orig
+files were tweaked by hand somewhat, but most of the processing was
+automatically done by
+
+  massage.sh
+
+and its various sub-scripts.  This did quote handling, turned the
+<programlisting> example bits into the real example structure we're
+going to use, and gave them random id tags for future use.
+
+massage.sh relies on:
+
+       identity.xsl
+       insert_ids.pl
+       make_examples.xsl
+       massage.sh
+       random-ids
+
+There is now a
+  
+  Makefile 
+  
+to do all the steps to turn the N.xml files into html/.  There is
+actually an extra XSLT preprocessing step now.  The makefile relies
+on:
+
+       docbook2html.css
+       docbook2html_config.xsl
+       docbook2html_preprocess.xsl
+       identity.xsl
+
+The third pass was pretty limited, and was basically just:
+
+       make_cmavo.pl
+       massage2.sh
+
+(with the .orig trick as above).  It create the <cmavo-list>
+entries.
+
+The fourth pass was similarily limited, and was just about the
+index:
+
+      make_index.sh
+      origcllindex.txt
+      TODO-index
+
+There were various other ad-hoc conversion passes, and manual work.
+The next major conversion pass was to fix the last few non-<example>
+examples and split the examples so that there was one <example> for
+each anchor set.  This used:
+
+      breakup_examples.xsl
+      fix_still_broken_examples.xsl
+
+Used to find empty elements to delete:
+
+      find_empty.xsl
+
+Used to convert examples to using the random ids instead of the
+sectional numbered ones:
+
+      find_example_ids.xsl
+      fix_numbered_example_ids.sh
+
+- ----------------------
+
+The next major bit of "automation" actually required a great deal of
+manual labour by Robin Lee Powell, but this is believed to be less
+labour that it would have taken to accomplish the same task entirely
+by hand, which is to recreate all of the index entries.
+
+The main script was:
+
+  automated_index.pl
+
+which runs through through
+
+  orig/catdoc.out.indexing
+
+(which contains dozens upon dozens of by-hand modifications) and the
+[0-9]*.xml files (also modified in some places to support his
+process), using fuzzy logic (lots of regex massaging + a levenshtein
+distance check) to match each paragraph in the catdoc to each
+paragraph in the master source.  It then uses that information to
+transfer <cx>, <lx>, and <ex> entries from the former to the latter.
+
+The script
+
+  fix_cx.pl
+
+was used to make automated changes to the <cx>, <lx>, and <ex>
+entries in orig/catdoc.out.indexing
+
+As part of this process,
+
+  drop_indexterms.xsl
+
+was used to remove the bits that make_index.sh added earlier.
+
+- ----------------------
+
+Then there was some automated conversion of <quote> to <jbophrase>,
+for parseable Lojban stuff.
+
+The script:
+
+  prep_jbophrase.sh
+
+was used to create:
+
+  lojban_quotes
+
+which had a list of apparently-valid Lojban quotes, which was used
+by:
+
+  make_jbophrase.sh
+
+to do the actual conversion.

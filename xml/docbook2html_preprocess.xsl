@@ -439,7 +439,7 @@ other options:
         <xsl:value-of select='translate( $slug1, &#x27;&#x22;&#x27;, "" )'/>
       </xsl:variable>
       <xsl:variable name="slug3">
-        <xsl:value-of select="translate( $slug2, '@#$%^*()?+/=[]{}!,', '' )"/>
+        <xsl:value-of select="translate( $slug2, '.@#$%^*()?+/=[]{}!,', '' )"/>
       </xsl:variable>
       <xsl:variable name="slug4">
         <xsl:value-of select="normalize-space($slug3)"/>
@@ -597,13 +597,7 @@ other options:
         </informaltable>
     </xsl:template>
 
-    <xsl:template match="valsi">
-      <xsl:variable name="slug">
-        <xsl:call-template name="make_slug">
-          <xsl:with-param name="input" select="text()"/>
-        </xsl:call-template>
-      </xsl:variable>
-      <glossterm linkend='valsi-{$slug}'>
+    <xsl:template name="basic-valsi-bits">
         <foreignphrase xml:lang="jbo">
           <indexterm type="lojban-words">
             <primary>
@@ -612,8 +606,23 @@ other options:
           </indexterm>
           <xsl:apply-templates select="node()|text()"/>
         </foreignphrase>
+    </xsl:template>
+
+    <xsl:template match="valsi[not(boolean(@valid = 'false'))]">
+      <xsl:variable name="slug">
+        <xsl:call-template name="make_slug">
+          <xsl:with-param name="input" select="text()"/>
+        </xsl:call-template>
+      </xsl:variable>
+      <glossterm linkend='valsi-{$slug}'>
+        <xsl:call-template name="basic-valsi-bits"/>
       </glossterm>
     </xsl:template>
+
+    <xsl:template match="valsi[boolean(@valid = 'false')]">
+      <xsl:call-template name="basic-valsi-bits"/>
+    </xsl:template>
+
 
     <!-- For now, jbophrase makes an *index* but not a *glossary* -->
     <xsl:template match="jbophrase">

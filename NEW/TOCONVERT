@@ -1,0 +1,14 @@
+rlpowell@vrici> ack xsltproc
+
+scripts/Makefile
+29:     xsltproc --stringparam format xhtml --nonet --path . --novalid xml/docbook2html_preprocess.xsl $(builddir)/cll.xml > $(builddir)/cll_processed_xhtml.xml
+32:     xsltproc --nonet --path . --novalid xml/latex_preprocess.xsl $(builddir)/cll_processed_xhtml.xml > $(builddir)/cll_processed_pdf.xml
+
+
+rlpowell@vrici> ack xmlto
+
+scripts/Makefile
+52:     xmlto -m xml/docbook2html_config_no-sections.xsl -o $(builddir)/xhtml/ xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
+73:     xmlto -m xml/docbook2html_config_sections.xsl -o $(builddir)/xhtml_sections/ --stringparam chunk.section.depth=1 --stringparam chunk.first.sections=1 xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
+94:     xmlto -m xml/docbook2html_config.xsl -o $(builddir)/xhtml-nochunks/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
+

@@ -127,6 +127,7 @@ mobi_web: mobi
 .PHONY: pdf
 pdf: $(builddir)/cll.pdf
 $(builddir)/cll.pdf: $(builddir)/cll_processed_pdf.xml xml/dblatex_config.xsl
+	dblatex -V -T latex/cll -o $(builddir)/cll.tex -t tex -b xetex -p xml/dblatex_config.xsl $(builddir)/cll_processed_pdf.xml 2>&1 | grep -v 'default template used in programlisting or screen'
 	dblatex -V -T latex/cll -o $(builddir)/cll.pdf -b xetex -p xml/dblatex_config.xsl $(builddir)/cll_processed_pdf.xml 2>&1 | grep -v 'default template used in programlisting or screen'
 
 .PHONY: pdf_web
