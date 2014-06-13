@@ -1,103 +1,13 @@
-<?xml version="1.0"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Dog House And White House: Determining lujvo Place Structures - The Lojban Reference Grammar</title>
-<link rel="stylesheet" type="text/css" href="../../cll.css" />
-<meta content="text/html; charset=utf-8" http-equiv="content-type" />
-</head>
-<body>
-<div class="nav">
-<div class="nav-prev">
-<div class="nav-section-link-prev"><a href="../../12/12/">Previous</a></div>
-<div class="nav-section-name">Abstract lujvo</div>
-</div>
-<div class="nav-next">
-<div class="nav-section-link-next"><a href="../../12/14/">Next</a></div>
-<div class="nav-section-name">Anomalous lujvo</div>
-</div>
-<div class="nav-title">
-<div class="nav-title-title">Dog House And White House: Determining lujvo Place Structures</div>
-<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
-</div>
-</div>
-<hr />
-<h3>13. Implicit-abstraction lujvo</h3>
-<p>Eliding NU rafsi involves the same restrictions as eliding SE rafsi, plus additional ones. In general, NU rafsi should not be elided from the tertau, since that changes the kind of thing the lujvo is talking about from an abstraction to a concrete sumti. However, they may be elided from the seltau if no reasonable ambiguity would result.</p>
-<p>A major difference, however, between SE elision and NU elision is that the former is a rather sparse process, providing a few convenient shortenings. Eliding “nu”, however, is extremely important in producing a class of lujvo called “implicit-abstraction lujvo”.</p>
-<p>Let us make a detailed analysis of the lujvo “nunctikezgau”, meaning “to feed”. (If you think this lujvo is excessively longwinded, be patient.) The veljvo of “nunctikezgau” is “nu citka kei gasnu”. The relevant place structures are:</p>
-<pre>
-<a id="e1" name="e1">13.1)</a>  “nu”: n1 is an event
-       “citka”: c1 eats c2
-       “gasnu”: g1 does action/is the agent of event g2
-</pre>
-<p>In accordance with the procedure for analyzing three-part lujvo given in <a href="../8/">Section 8</a>, we will first create an intermediate lujvo, “nuncti”, whose veljvo is “nu citka [kei]”. By the rules given in <a href="../12/">Section 12</a>, “nuncti” has the place structure</p>
-<pre>
-<a id="e2" name="e2">13.2)</a>  n1 is the event of c1 eating c2
-</pre>
-<p>Now we can transform the veljvo of “nunctikezgau” into “nuncti gasnu”. The g2 place (what is brought about by the actor g1) obviously denotes the same thing as n1 (the event of eating). So we can eliminate g2 as redundant, leaving us with a tentative place structure of</p>
-<pre>
-<a id="e3" name="e3">13.3)</a>  g1 is the actor in the event n1=g2 of c1 eating c2
-</pre>
-<p>But it is also possible to omit the n1 place itself! The n1 place describes the event brought about; an event in Lojban is described as a bridi, by a selbri and its sumti; the selbri is already known (it’s the seltau), and the sumti are also already known (they’re in the lujvo place structure). So n1 would not give us any information we didn’t already know. In fact, the n1=g2 place is dependent on c1 and c2 jointly — it does not depend on either c1 or c2 by itself. Being dependent and derived from the seltau, it is omissible. So the final place structure of “nunctikezgau” is:</p>
-<pre>
-<a id="e4" name="e4">13.4)</a>  g1 is the actor in the event of c1 eating c2
-</pre>
-<p>There is one further step that can be taken. As we have already seen with “balsoi” in <a href="../5/">Section 5</a>, the interpretation of lujvo is constrained by the semantics of gismu and of their sumti places. Now, any asymmetrical lujvo with “gasnu” as its tertau will involve an event abstraction either implicitly or explicitly, since that is how the g2 place of “gasnu” is defined.</p>
-<p>Therefore, if we assume that “nu” is the type of abstraction one would expect to be a “se gasnu”, then the rafsi “nun” and “kez” in “nunctikezgau” are only telling us what we would already have guessed — that the seltau of a “gasnu” lujvo is an event. If we drop these rafsi out, and use instead the shorter lujvo “ctigau”, rejecting its symmetrical interpretation (“someone who both does and eats”; “an eating doer”), we can still deduce that the seltau refers to an event.</p>
-<p>(You can’t “do an eater”/“gasnu lo citka”, with the meaning of “do” as “bring about an event”; so the seltau must refer to an event, “nu citka”. The English slang meanings of “do someone”, namely “socialize with someone” and “have sex with someone”, are not relevant to “gasnu”.)</p>
-<p>So we can simply use “ctigau” with the same place structure as “nunctikezgau”:</p>
-<pre>
-<a id="e5" name="e5">13.5)</a>  agent g1 causes c1 to eat c2
-       g1 feeds c2 to c1.
-</pre>
-<p>This particular kind of asymmetrical lujvo, in which the seltau serves as the selbri of an abstraction which is a place of the tertau, is called an implicit-abstraction lujvo, because one deduces the presence of an abstraction which is unexpressed (implicit).</p>
-<p>To give another example: the gismu “basti”, whose place structure is</p>
-<pre>
-<a id="e6" name="e6">13.6)</a>  b1 replaces b2 in circumstances b3
-</pre>
-can form the lujvo “basygau”, with the place structure:
-<pre>
-<a id="e7" name="e7">13.7)</a>  g1 (agent) replaces b1 with b2 in circumstances b3
-</pre>
-where both “basti” and “basygau” are translated “replace” in English, but represent different relations: “basti” may be used with no mention of any agent doing the replacing.
-<p>In addition, “gasnu”-based lujvo can be built from what we would consider nouns or adjectives in English. In Lojban, everything is a predicate, so adjectives, nouns and verbs are all treated in the same way. This is consistent with the use of similar causative affixes in other languages. For example, the gismu “litki”, meaning “liquid”, with the place structure</p>
-<pre>
-<a id="e8" name="e8">13.8)</a>  l1 is a quantity of liquid of composition l2 under conditions l3
-</pre>
-can give “likygau”, meaning “to liquefy”:
-<pre>
-<a id="e9" name="e9">13.9)</a>  g1 (agent) causes l1 to be a quantity of liquid of composition l2
-            under conditions l3.
-</pre>
-<p>While “likygau” correctly represents “causes to be a liquid”, a different lujvo based on “galfi” (meaning “modify”) may be more appropriate for “causes to become a liquid”. On the other hand, “fetsygau” is potentially confusing, because it could mean “agent in the event of something becoming female” (the implicit-abstraction interpretation) or simply “female agent” (the parallel interpretation), so using implicit-abstraction lujvo is always accompanied with some risk of being misunderstood.</p>
-<p>Many other Lojban gismu have places for event abstractions, and therefore are good candidates for the tertau of an implicit-abstraction lujvo. For example, lujvo based on “rinka”, with its place structure</p>
-<pre>
-<a id="e10" name="e10">13.10)</a> event r1 causes event r2 to occur
-</pre>
-are closely related to those based on “gasnu”. However, “rinka” is less generally useful than “gasnu”, because its r1 place is another event rather than a person: “lo rinka” is a cause, not a causer. Thus the place structure of “likyri'a”, a lujvo analogous to “likygau”, is
-<pre>
-<a id="e11" name="e11">13.11)</a> event r1 causes l1 to be a quantity of liquid
-        of composition l2 under conditions l3
-</pre>
-and would be useful in translating sentences like “The heat of the sun liquefied the block of ice.”
-<p>Implicit-abstraction lujvo are a powerful means in the language of rendering quite verbose bridi into succinct and manageable concepts, and increasing the expressive power of the language.</p>
-<hr />
-<div class="nav">
-<div class="nav-prev">
-<div class="nav-section-link-prev"><a href="../../12/12/">Previous</a></div>
-<div class="nav-section-name">Abstract lujvo</div>
-</div>
-<div class="nav-next">
-<div class="nav-section-link-next"><a href="../../12/14/">Next</a></div>
-<div class="nav-section-name">Anomalous lujvo</div>
-</div>
-<div class="nav-title">
-<div class="nav-title-title">Dog House And White House: Determining lujvo Place Structures</div>
-<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
-</div>
-</div>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=http://lojban.github.io/cll/12/13/index.html">
+    <link rel="canonical" href="http://lojban.github.io/cll/12/13/index.html" />
+    <title>The Lojban Reference Grammar</title>
+  </head>
+  <body>
+    The Lojban Reference Grammar has moved to <a href="http://lojban.github.io/cll">http://lojban.github.io/cll</a>.
+    This page has moved to <a href="http://lojban.github.io/cll/12/13/index.html">http://lojban.github.io/cll/12/13/index.html</a>.
+  </body>
 </html>

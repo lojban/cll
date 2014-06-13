@@ -1,110 +1,13 @@
-<?xml version="1.0"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>If Wishes Were Horses: The Lojban Connective System - The Lojban Reference Grammar</title>
-<link rel="stylesheet" type="text/css" href="../../cll.css" />
-<meta content="text/html; charset=utf-8" http-equiv="content-type" />
-</head>
-<body>
-<div class="nav">
-<div class="nav-prev">
-<div class="nav-section-link-prev"><a href="../../14/8/">Previous</a></div>
-<div class="nav-section-name">Grouping of afterthought connectives</div>
-</div>
-<div class="nav-next">
-<div class="nav-section-link-next"><a href="../../14/10/">Next</a></div>
-<div class="nav-section-name">Multiple compound bridi</div>
-</div>
-<div class="nav-title">
-<div class="nav-title-title">If Wishes Were Horses: The Lojban Connective System</div>
-<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
-</div>
-</div>
-<hr />
-<h3>9. Compound bridi</h3>
-<p>So far we have seen how to handle two sentences that need have no similarity at all (bridi connection) and sentences that are identical except for a difference in one sumti (sumti connection). It would seem natural to ask how to logically connect sentences that are identical except for having different selbri.</p>
-<p>Surprise! Lojban provides no logical connective that is designed to handle selbri and nothing else. Instead, selbri connection is provided as part of a more general-purpose mechanism called “compound bridi”. Compound bridi result from logically connecting sentences that differ in their selbri and possibly some of their sumti.</p>
-<p>The simplest cases result when the x1 sumti is the only common point:</p>
-<pre>
-<a id="e1" name="e1">9.1)</a>   mi klama le zarci .ije mi nelci la djan.
-       I go to the market, and I like John.
-</pre>
-is equivalent in meaning to the compound bridi:
-<pre>
-<a id="e2" name="e2">9.2)</a>   mi klama le zarci gi'e nelci la djan.
-       I go-to the market and like John.
-</pre>
-<p>As <a href="../9/#e2">Example 9.2</a> indicates, giheks are used in afterthought to create compound bridi; “gi'e” is the gihek corresponding to “and”. The actual phrases “klama le zarci” and “nelci la djan.” that the gihek connects are known as “bridi-tails”, because they represent (in this use) the “tail end” of a bridi, including the selbri and any following sumti, but excluding any sumti that precede the selbri:</p>
-<pre>
-<a id="e3" name="e3">9.3)</a>   mi ricfu gi'e klama le zarci
-       I am-rich and go-to the market.
-</pre>
-<p>In <a href="../9/#e3">Example 9.3</a>, the first bridi-tail is “ricfu”, a simple selbri, and the second bridi-tail is “klama le zarci”, a selbri with one following sumti.</p>
-<p>Suppose that more than a single sumti is identical between the two sentences:</p>
-<pre>
-<a id="e4" name="e4">9.4)</a>   mi dunda le cukta do .ije mi lebna lo rupnu do
-       I give the book to-you, and I take some currency-units from-you.
-</pre>
-In <a href="../9/#e4">Example 9.4</a>, the first and last sumti of each bridi are identical; the selbri and the second sumti are different. By moving the final sumti to the beginning, a form analogous to <a href="../9/#e2">Example 9.2</a> can be achieved:
-<pre>
-<a id="e5" name="e5">9.5)</a>   fi do fa mi dunda le cukta gi'e lebna lo rupnu
-       to/from you I give the book and take some currency-units.
-</pre>
-where the “fi” does not have an exact English translation because it merely places “do” in the third place of both “lebna” and “dunda”. However, a form that preserves natural sumti order also exists in Lojban. Giheks connect two bridi-tails, but also allow sumti to be added following the bridi-tail. These sumti are known as tail-terms, and apply to both bridi. The straightforward gihek version of <a href="../9/#e4">Example 9.4</a> therefore is:
-<pre>
-<a id="e6" name="e6">9.6)</a>   mi dunda le cukta gi'e lebna lo rupnu vau do
-       I (give the book) and (take some currency-units) to/from you.
-</pre>
-<p>The “vau” (of selma'o VAU) serves to separate the bridi-tail from the tail-terms. Every bridi-tail is terminated by an elidable “vau”, but only in connection with compound bridi is it ever necessary to express this “vau”. Thus:</p>
-<pre>
-<a id="e7" name="e7">9.7)</a>   mi klama le zarci [vau]
-       I go-to the market.
-</pre>
-has a single elided “vau”, and <a href="../9/#e2">Example 9.2</a> is equivalent to:
-<pre>
-<a id="e8" name="e8">9.8)</a>   mi klama le zarci [vau] gi'e nelci la djan. [vau] [vau]
-</pre>
-where the double “vau” at the end of <a href="../9/#e8">Example 9.8</a> terminates both the right-hand bridi-tail and the unexpressed tail-terms.
-<p>A final use of giheks is to combine bridi-tails used as complete sentences, the Lojban observative:</p>
-<pre>
-<a id="e9" name="e9">9.9)</a>   klama le zarci gi'e dzukla le briju
-       A goer to-the market and a walker to-the office.
-</pre>
-Since x1 is omitted in both of the bridi underlying <a href="../9/#e9">Example 9.9</a>, this compound bridi does not necessarily imply that the goer and the walker are the same. Only the presence of an explicit x1 (other than “zo'e”, which is equivalent to omission) can force the goer and the walker to be identical.
-<p>A strong argument for this convention is provided by analysis of the following example:</p>
-<pre>
-<a id="e10" name="e10">9.10)</a>  klama la nu,IORK. la finyks. gi'e klama la nu,IORK. la rom.
-       A goer to-New York from-Phoenix and a goer to-New York from-Rome.
-</pre>
-If the rule were that the x1 places of the two underlying bridi were considered identical, then (since there is nothing special about x1), the unspecified x4 (route) and x5 (means) places would also have to be the same, leading to the absurd result that the route from Phoenix to New York is the same as the route from Rome to New York. Inserting “da”, meaning roughly “something”, into the x1 place cures the problem:
-<pre>
-<a id="e11" name="e11">9.11)</a>  da klama la nu,IORK. la finyks.
-            gi'e klama la nu,IORK. la rom.
-       Something is-a-goer to-New York from-Phoenix
-           and is-a-goer to-New York from-Rome.
-</pre>
-<p>The syntax of giheks is:</p>
-<pre>
-      [na] [se] GIhA [nai]
-</pre>
-which is exactly parallel to the syntax of eks.
-<hr />
-<div class="nav">
-<div class="nav-prev">
-<div class="nav-section-link-prev"><a href="../../14/8/">Previous</a></div>
-<div class="nav-section-name">Grouping of afterthought connectives</div>
-</div>
-<div class="nav-next">
-<div class="nav-section-link-next"><a href="../../14/10/">Next</a></div>
-<div class="nav-section-name">Multiple compound bridi</div>
-</div>
-<div class="nav-title">
-<div class="nav-title-title">If Wishes Were Horses: The Lojban Connective System</div>
-<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
-</div>
-</div>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=http://lojban.github.io/cll/14/9/index.html">
+    <link rel="canonical" href="http://lojban.github.io/cll/14/9/index.html" />
+    <title>The Lojban Reference Grammar</title>
+  </head>
+  <body>
+    The Lojban Reference Grammar has moved to <a href="http://lojban.github.io/cll">http://lojban.github.io/cll</a>.
+    This page has moved to <a href="http://lojban.github.io/cll/14/9/index.html">http://lojban.github.io/cll/14/9/index.html</a>.
+  </body>
 </html>

@@ -1,103 +1,13 @@
-<?xml version="1.0"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Putting It All Together: Notes on the Structure of Lojban Texts - The Lojban Reference Grammar</title>
-<link rel="stylesheet" type="text/css" href="../../cll.css" />
-<meta content="text/html; charset=utf-8" http-equiv="content-type" />
-</head>
-<body>
-<div class="nav">
-<div class="nav-prev">
-<div class="nav-section-link-prev"><a href="../../19/12/">Previous</a></div>
-<div class="nav-section-name">Parenthesis and metalinguistic commentary: TO, TOI, SEI</div>
-</div>
-<div class="nav-next">
-<div class="nav-section-link-next"><a href="../../19/14/">Next</a></div>
-<div class="nav-section-name">Hesitation: Y</div>
-</div>
-<div class="nav-title">
-<div class="nav-title-title">Putting It All Together: Notes on the Structure of Lojban Texts</div>
-<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
-</div>
-</div>
-<hr />
-<h3>13. Erasure: SI, SA, SU</h3>
-<p>The following cmavo are discussed in this section:</p>
-<pre>
-     si      SI      erase word
-     sa      SA      erase phrase
-     su      SU      erase discourse
-</pre>
-<p>The cmavo “si” (of selma'o SI) is a metalinguistic operator that erases the preceding word, as if it had never been spoken:</p>
-<pre>
-<a id="e1" name="e1">13.1)</a>  ti gerku si mlatu
-       This is-a-dog, er, is-a-cat.
-</pre>
-means the same thing as “ti mlatu”. Multiple “si” cmavo in succession erase the appropriate number of words:
-<pre>
-<a id="e2" name="e2">13.2)</a>  ta blanu zdani si si xekri zdani
-       That is-a-blue house, er, er, is-a-black house.
-</pre>
-In order to erase the word “zo”, it is necessary to use three “si” cmavo in a row:
-<pre>
-<a id="e3" name="e3">13.3)</a>  zo .bab. se cmene zo si si si la bab.
-       The-word “Bob” is-the-name-of the word “si”, er, er, Bob.
-</pre>
-The first use of “si” does not erase anything, but completes the “zo” quotation. Two more “si” cmavo are then necessary to erase the first “si” and the “zo”.
-<p>Incorrect names can likewise cause trouble with “si”:</p>
-<pre>
-<a id="e4" name="e4">13.4)</a>  mi tavla fo la .esperanto si si .esperanton.
-       I talk in-language that-named “and” “speranto”, er, er, Esperanto.
-</pre>
-The Lojbanized spelling “.esperanto” breaks up, as a consequence of the Lojban morphology rules (see <a href="../../4/1/">Chapter 4</a>) into two Lojban words, the cmavo “.e” and the undefined fu'ivla “speranto”. Therefore, two “si” cmavo are needed to erase them. Of course, “.e speranto” is not grammatical after “la”, but recognition of “si” is done before grammatical analysis.
-<p>Even more messy is the result of an incorrect “zoi”:</p>
-<pre>
-<a id="e5" name="e5">13.5)</a>  mi cusku zoi fy. gy. .fy.  si si si si zo .djan
-       I express [foreign] [quote] “gy” [unquote], er, er, er, er, “John”.
-</pre>
-In <a href="../13/#e5">Example 13.5</a>, the first “fy” is taken to be the delimiting word. The next word must be different from the delimiting word, and “gy.”, the Lojban name for the letter “g”, was chosen arbitrarily. Then the delimiting word must be repeated. For purposes of “si” erasure, the entire quoted text is taken to be a word, so four words have been uttered, and four more “si” cmavo are needed to erase them altogether. Similarly, a stray “lo'u” quotation mark must be erased with “fy. le'u si si si”, by completing the quotation and then erasing it all with three “si” cmavo.
-<p>What if less than the entire “zo” or “zoi” construct is erased? The result is something which has a loose “zo” or “zoi” in it, without its expected sequels, and which is incurably ungrammatical. Thus, to erase just the word quoted by “zo”, it turns out to be necessary to erase the “zo” as well:</p>
-<pre>
-<a id="e6" name="e6">13.6)</a>  mi se cmene zo .djan.  si si zo .djordj.
-       I am-named-by the-word “John”, er, er, the-word “George”.
-</pre>
-The parser will reject “zo .djan. si .djordj.”, because in that context “djordj.” is a name (of selma'o CMENE) rather than a quoted word.
-<p>Note: The current machine parser does not implement “si” erasure.</p>
-<p>As the above examples plainly show, precise erasures with “si” can be extremely hard to get right. Therefore, the cmavo “sa” (of selma'o SA) is provided for erasing more than one word. The cmavo following “sa” should be the starting marker of some grammatical construct. The effect of the “sa” is to erase back to and including the last starting marker of the same kind. For example:</p>
-<pre>
-<a id="e7" name="e7">13.7)</a>  mi viska le sa .i mi cusku zo .djan.
-       I see the  ...  I say the-word “John”.
-</pre>
-Since the word following “sa” is “.i”, the sentence separator, its effect is to erase the preceding sentence. So <a href="../13/#e7">Example 13.7</a> is equivalent to:
-<pre>
-<a id="e8" name="e8">13.8)</a>  mi cusku zo .djan.
-</pre>
-Another example, erasing a partial description rather than a partial sentence:
-<pre>
-<a id="e9" name="e9">13.9)</a>  mi viska le blanu zdan. sa le xekri zdani
-       I see the blue hou ...  the black house.
-</pre>
-In <a href="../13/#e9">Example 13.9</a>, “le blanu zdan.” is ungrammatical, but clearly reflects the speaker’s original intention to say “le blanu zdani”. However, the “zdani” was cut off before the end and changed into a name. The entire ungrammatical “le” construct is erased and replaced by “le xekri zdani”.
-<p>Note: The current machine parser does not implement “sa” erasure. Getting “sa” right is even more difficult (for a computer) than getting “si” right, as the behavior of “si” is defined in terms of words rather than in terms of grammatical constructs (possibly incorrect ones) and words are conceptually simpler entities. On the other hand, “sa” is generally easier for human beings, because the rules for using it correctly are less finicky.</p>
-<p>The cmavo “su” (of selma'o SU) is yet another metalinguistic operator that erases the entire text. However, if the text involves multiple speakers, then “su” will only erase the remarks made by the one who said it, unless that speaker has said nothing. Therefore “susu” is needed to eradicate a whole discussion in conversation.</p>
-<p>Note: The current machine parser does not implement either “su” or “susu” erasure.</p>
-<hr />
-<div class="nav">
-<div class="nav-prev">
-<div class="nav-section-link-prev"><a href="../../19/12/">Previous</a></div>
-<div class="nav-section-name">Parenthesis and metalinguistic commentary: TO, TOI, SEI</div>
-</div>
-<div class="nav-next">
-<div class="nav-section-link-next"><a href="../../19/14/">Next</a></div>
-<div class="nav-section-name">Hesitation: Y</div>
-</div>
-<div class="nav-title">
-<div class="nav-title-title">Putting It All Together: Notes on the Structure of Lojban Texts</div>
-<div class="nav-title-link"><a href="../../">The Lojban Reference Grammar</a></div>
-</div>
-</div>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=http://lojban.github.io/cll/19/13/index.html">
+    <link rel="canonical" href="http://lojban.github.io/cll/19/13/index.html" />
+    <title>The Lojban Reference Grammar</title>
+  </head>
+  <body>
+    The Lojban Reference Grammar has moved to <a href="http://lojban.github.io/cll">http://lojban.github.io/cll</a>.
+    This page has moved to <a href="http://lojban.github.io/cll/19/13/index.html">http://lojban.github.io/cll/19/13/index.html</a>.
+  </body>
 </html>
