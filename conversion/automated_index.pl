@@ -238,7 +238,7 @@ while( 1 ) {
 #FIXME: TODO: also output example titles for future processing; see "Clean out the ex/XE bits" above
     foreach my $cx ($cdline =~ m{<cx\s+"([^"]*)">}g) {
       print "cx: $cx\n";
-      my $indexterm=qq{<indexterm type="general-imported">};
+      my $indexterm=qq{<indexterm type="general">};
       my $type='primary';
 
       foreach my $cxpart (split( /\s*[:,]\s*/, $cx, 3 ) ) {
@@ -276,7 +276,7 @@ while( 1 ) {
     }
     foreach my $lx ($cdline =~ m{<lx\s+"([^"]*)">}g) {
       print "lx: $lx\n";
-      my $indexterm=qq{<indexterm type="lojban-word-imported">};
+      my $indexterm=qq{<indexterm type="lojban-word">};
       my $type='primary';
 
       foreach my $lxpart (split( /\s*[:,]\s*/, $lx, 3 ) ) {
