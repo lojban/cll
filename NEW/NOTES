@@ -1,0 +1,25 @@
+PUT IN BUILD SCRIPT:
+
+TO SEE WHAT'S NOT DONE:
+
+ruby NEW/nokogiri_cll.rb html NEW/source_small_1_coverage.xml 2>&1 >\!~/www/media/public/tmp/sc1.html  | grep '^DEF'
+ruby NEW/nokogiri_cll.rb latex NEW/source_small_1_coverage.xml 2>&1 >\!build/sc1.tex | grep '^DEF'  ; cd build/ ; xelatex sc1.tex ; xelatex sc1.tex ; xelatex sc1.tex ; cp sc1.pdf ~/www/media/public/tmp
+
+DOCUMENT targets:
+
+NEW/target_small_1_coverage_latex.tex
+NEW/target_small_1_coverage_nochunks_xhtml.html
+
+ruby ../NEW/nokogiri_cll.rb latex ../NEW/source_small_1_coverage.xml >\!sc1.tex ; xelatex sc1.tex ; xelatex sc1.tex ; xelatex sc1.tex ; cp sc1.pdf ~/www/media/public/tmp
+ruby ../NEW/nokogiri_cll.rb html ../NEW/source_small_1_coverage.xml >\!~/www/media/public/tmp/sc1.html
+
+<valsi>bridi</valsi> links to glossary entries
+
+OBVIOUS IMPROVEMENT:
+
+  Move the converters.rb files into YAML!  Use .send or whatever to
+  call functions.
+
+LaTeX packages:
+
+texlive-imakeidx

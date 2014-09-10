@@ -85,8 +85,13 @@ definitions.  These definitions are here simply as a quick reference.
     definition="placeholder definition"
   else
     definition=jbovlaste_tree.xpath(%Q{//valsi[@word="#{word}"]}).xpath(".//definition").text.strip.gsub(%r{\s+}, ' ')
+
+    # Fix non-xml chars, *before* we add a bunch
+    definition = coder.encode(definition, :basic)
+
     # Turn LaTeX stuff into xml: $1*10^{-2}$]
     definition.gsub!(%r(\$(1\*)?10\^{?([^}$]*)}?\$)){"<inlinemath>#{$1}10<superscript>#{$2}</superscript></inlinemath>"}
+
     # Turn LaTeX stuff into xml: $x_{1}= ; then we stop, and repeat
     # this until there's no matches
     olddef=''
@@ -94,11 +99,9 @@ definitions.  These definitions are here simply as a quick reference.
       olddef = definition.clone
       definition.gsub!(%r(\$([a-z]+)_{?([0-9]+)}?(=?)), '<inlinemath>\1<subscript>\2</subscript></inlinemath>\3$')
     end
+
     # Clean out the remains of the process above
     definition.gsub!(%r{\$\$},'')
-
-    # Fix non-xml chars
-    definition = coder.encode(definition, :basic)
 
     # puts "#{word}, #{definition}"
 
