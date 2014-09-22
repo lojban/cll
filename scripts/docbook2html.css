@@ -1,33 +1,28 @@
-@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
-@import url(http://fonts.googleapis.com/css?family=Cousine);
+html {
+  /* Modern Georgia-based serif stack, from http://css-tricks.com/snippets/css/font-stacks/ */
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-size: 9pt;
+} 
 
-
-* {
-  font-family: 'EB Garamond', serif;
+h1 {
+  text-align: center;
 }
 
-
-pre, .informaltable td {
-  font-family: 'Cousine', monospace;
-  font-size: medium;
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-body {
-  font-size: 130%;
-  color: #222;
-  margin: 2em;
-  width: 600px;
+.example-contents {
+  margin-left: 1em;
 }
 
-
-a {
-  color: #0B486B;
-  text-decoration: none;
-  border-bottom-style: dashed;
-  border-bottom-width: 1px;
+dl p, dl span {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
 }
-
 
 hr {
   width: 30%;
@@ -35,129 +30,84 @@ hr {
   border-bottom: 5px dotted #222;
 }
 
-/*
-
-  Example final generated interlinear-gloss-itemized structure
-
-  FIXME: Does it actually need to be this complicated?  Maybe, for future proofing?
-
-  <table class="interlinear-gloss-itemized-outer" id="id471125">
-    <colgroup/>
-    <tr>
-      <td>
-        <table class="interlinear-gloss-itemized-table-inner" id="id471131">
-          <colgroup/>
-          <tr class="interlinear-gloss-itemized-table-color-0">
-            <td class="sumti">x1</td>
-          </tr>
-        </table>
-        <table class="interlinear-gloss-itemized-table-inner" id="id471149">
-          <colgroup/>
-          <tr class="interlinear-gloss-itemized-table-color-1">
-            <td class="elidable">cu</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-
- */
-
-.interlinear-gloss-itemized-outer table {
+table {
   empty-cells: hide;
   border: none;
+  border-collapse: collapse;
+}
+table p, table span {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+td {
+  padding: 0.2em;
+  padding-right: 1em;
+}
+
+.interlinear-gloss-itemized-outer table, .cmavo-list table, .interlinear-gloss-itemized table, .interlinear-gloss table, .informaltable table, .lujvo-making table, .lojbanization table {
+  /*
+  empty-cells: hide;
+  border: none;
+  */
 }
 
 .interlinear-gloss-itemized-table-inner tr {
+  /*
   background: #E8EBEF;
   border: .5em solid #fff;
   padding: .5em;
   empty-cells: hide;
   border: none;
   margin-bottom: 1em;
+  */
 }
 
 .interlinear-gloss-itemized-table-inner td {
+  /*
   text-align: left;
   margin-bottom: 1em;
+  */
 }
 
-.cmavo-list table {
-  empty-cells: hide;
-  border: none;
-}
+  /*
+   *
+   * td stuff
+   *
+  border: .5em solid #fff;
+  padding: .5em;
+  text-align: left;
+  */
 
 .cmavo-list td {
   /* TESTING ONLY: red */
   background: #FF4848;
-  border: .5em solid #fff;
-  padding: .5em;
-  text-align: left;
-}
-
-.interlinear-gloss-itemized table {
-  empty-cells: hide;
-  border: none;
 }
 
 .interlinear-gloss-itemized td {
   /* TESTING ONLY: purple */
   background: #B000B0;
-  border: .5em solid #fff;
-  padding: .5em;
-  text-align: left;
-}
-
-.interlinear-gloss table {
-  empty-cells: hide;
-  border: none;
 }
 
 .interlinear-gloss td {
   /* TESTING ONLY: blue */
   background: #6966D6;
-  border: .5em solid #fff;
-  padding: .5em;
-  text-align: left;
 }
 
-.informaltable table {
-  empty-cells: hide;
-  border: none;
-}
 
 .informaltable td {
   /* TESTING ONLY: green */
   background: #01F33E;
-  border: .5em solid #fff;
-  padding: .5em;
-  text-align: left;
-}
-
-.lujvo-making table {
-  empty-cells: hide;
-  border: none;
 }
 
 .lujvo-making td {
   /* TESTING ONLY: yellow */
   background: #DFDF00;
-  border: .5em solid #fff;
-  padding: .5em;
-  text-align: left;
-}
-
-.lojbanization table {
-  empty-cells: hide;
-  border: none;
 }
 
 .lojbanization td {
   /* TESTING ONLY: brown */
   background: #B05F3C;
-  border: .5em solid #fff;
-  padding: .5em;
-  text-align: left;
 }
 
 .elidable:after {
@@ -173,24 +123,19 @@ hr {
 }
 
 .sumti {
-  text-decoration: underline;
+  border-bottom: 2px solid black;
 }
 
-table {
-  float: left;
-}
-
-p {
-  clear: left;
-  float: none;
-}
-
+/*
 p.natlang {
   margin-left: 1em;
   font-weight: bold;
 }
+*/
 
-p.comment {
-  margin-left: 1em;
+.lojbanization span.comment::before {
+  content: "("
 }
-
+.lojbanization span.comment::after {
+  content: ")"
+}

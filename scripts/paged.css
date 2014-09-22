@@ -1,0 +1,192 @@
+/********************
+ * NB:
+ *
+ * Everything that happens here, including the import below, happens
+ * *AFTER* /usr/local/lib/prince/style/xhtml.css
+********************/
+
+@import url("docbook2html.css");
+
+/*********
+anchors/xrefs
+{{{
+*********/
+div.toc a::after {
+    content: leader('.') target-counter(attr(href), page);
+}
+
+a.xref::after {
+    content: " on page " target-counter(attr(href), page);
+}
+
+/* TESTING: show non-handled a links in PURPLE */
+a {
+  color: #00FF00;
+  background: #FF00FF;
+  text-decoration: none;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+}
+
+div.toc a {
+  color: black;
+  background: white;
+  text-decoration: none;
+  border-bottom-style: none;
+}
+
+a.link, a.xref, a.glossterm {
+  color: black;
+  background: white;
+  text-decoration: none;
+  border-bottom-style: none;
+}
+/****
+}}}
+****/
+
+/*********
+examples
+{{{
+*/
+div.example {
+  page-break-inside: avoid;
+}
+/*
+}}}
+*/
+
+/*********
+glossaries / indices
+{{{
+*/
+div.glossary {
+  column-count: 2;
+  font-size: 0.9em;
+}
+
+div.whole-index {
+  column-count: 2;
+  font-size: 0.9em;
+}
+
+.whole-index a.indexterm {
+  content: target-counter(attr(href), page);
+  color: black;
+  background: white;
+  text-decoration: none;
+  border-bottom-style: none;
+}
+
+
+/* The index/glossary title spans the whole page, as does any preliminary verbiage */
+.whole-index .titlepage * {
+  column-span: all;
+}
+.whole-index > p {
+  column-span: all;
+}
+
+.glossary .titlepage * {
+  column-span: all;
+}
+.glossary > p {
+  column-span: all;
+}
+
+.whole-index dd, .whole-index dt {
+  font-weight: normal;
+}
+/*
+.whole-index dd::after, .whole-index dt::after {
+  content: ":"
+}
+*/
+.whole-index h3, .glossary h3 {
+  content: ""
+}
+
+
+/* Allow flow of indexes; see http://www.princexml.com/forum/topic/2798/bad-page-breaks?p=1#13093 */
+dt { page-break-after: auto !important }
+dt + dd { page-break-before: avoid }
+
+/*
+}}}
+*/
+
+/* div.frontcover, div.halftitlepage, div.titlepage { page-break-before: right } */
+div.imprint { page-break-before: always }
+div.dedication, div.foreword, div.toc, div.preface, div.chapter, div.reference, 
+div.appendix, div.bibliography, div.glossary, div.whole-index, div.colophon { 
+  page-break-before: always 
+}
+div.backcover { page-break-before: left }
+
+/* Page structure, title pages, etc */
+div.chapter, div.glossary, div.whole-index {
+  page: chapter;
+}
+
+h1 {
+  page-break-before: right;
+  page-break-after: avoid;
+  string-set: header content();
+  prince-page-group: start;
+}
+h2 { string-set: header content();}
+
+@page {
+  /* COPY OF body above; update both */
+  margin: 13mm 13mm 13mm 13mm;
+  size: 156mm 234mm;
+}
+
+
+/* define default page and names pages: cover, blank, frontmatter */
+
+@page chapter :left {
+  @top-left {
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: bold;
+    content: "The Complete Lojban Language";
+    vertical-align: bottom;
+    padding-top: .1em;
+    padding-bottom: .5em;
+  }
+
+  @bottom-left {
+    font-size: 1.1em;
+    content: counter(page);
+    vertical-align: top;
+    padding-bottom: .1em;
+    padding-top: .5em;
+  }
+}
+
+@page chapter :right {
+  @top-right {
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: bold;
+    content: string(header, first); 
+    vertical-align: bottom;
+    padding-top: .1em;
+    padding-bottom: .5em;
+  }
+
+  @bottom-right {
+    font-size: 1.1em;
+    content: counter(page);
+    text-align: right;
+    vertical-align: top;
+    padding-bottom: .1em;
+    padding-top: .5em;
+  }
+}
+
+@page chapter:first {
+  @top-right { content: normal }
+  @bottom-right { content: normal }
+}
