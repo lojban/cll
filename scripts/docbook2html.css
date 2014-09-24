@@ -2,6 +2,7 @@ html {
   /* Modern Georgia-based serif stack, from http://css-tricks.com/snippets/css/font-stacks/ */
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   font-size: 9pt;
+  text-align: justify;
 } 
 
 h1 {
@@ -28,6 +29,31 @@ hr {
   width: 30%;
   border: none;
   border-bottom: 5px dotted #222;
+}
+
+.book > .titlepage div {
+  width: 100%;
+}
+
+.book > .titlepage .title {
+  font-size: 52pt;
+  text-align: center;
+  width: 100%;
+}
+
+.book > .titlepage .author {
+  font-size: 16pt;
+  text-align: center;
+  width: 100%;
+  margin-top: 5em;
+}
+
+.book > .titlepage hr {
+  display: none;
+}
+
+br.example-break {
+  display: none;
 }
 
 table {
