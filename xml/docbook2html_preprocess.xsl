@@ -351,40 +351,41 @@ other options:
       </xsl:when>
       -->
       <xsl:otherwise>
-        <itemizedlist role="pronunciation">
-          <xsl:for-each select="*">
-            <xsl:choose>
-              <xsl:when test="self::jbo">
-                <listitem role="pronunciation-jbo">
-                  <para role="pronunciation-jbo">
-                    <xsl:apply-templates select="node()|text()"/>
-                  </para>
-                </listitem>
-              </xsl:when>
-              <xsl:when test="self::ipa">
-                <listitem role="pronunciation-ipa">
-                  <para role="pronunciation-ipa">
-                    <xsl:apply-templates select="node()|text()"/>
-                  </para>
-                </listitem>
-              </xsl:when>
-              <xsl:when test="self::natlang">
-                <listitem role="pronunciation-natlang">
-                  <para role="pronunciation-natlang">
-                    <xsl:apply-templates select="node()|text()"/>
-                  </para>
-                </listitem>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:message>pronunciation has unhandled elements</xsl:message>
-                <xsl:text>
-                  ERROR: The following pronunciation has unhandled elements:
-                </xsl:text>
-                <xsl:copy/>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:for-each>
-        </itemizedlist>
+        <para role="pronunciation"> </para>
+          <itemizedlist>
+            <xsl:for-each select="*">
+              <xsl:choose>
+                <xsl:when test="self::jbo">
+                  <listitem role="pronunciation-jbo">
+                    <para role="pronunciation-jbo">
+                      <xsl:apply-templates select="node()|text()"/>
+                    </para>
+                  </listitem>
+                </xsl:when>
+                <xsl:when test="self::ipa">
+                  <listitem role="pronunciation-ipa">
+                    <para role="pronunciation-ipa">
+                      <xsl:apply-templates select="node()|text()"/>
+                    </para>
+                  </listitem>
+                </xsl:when>
+                <xsl:when test="self::natlang">
+                  <listitem role="pronunciation-natlang">
+                    <para role="pronunciation-natlang">
+                      <xsl:apply-templates select="node()|text()"/>
+                    </para>
+                  </listitem>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:message>pronunciation has unhandled elements</xsl:message>
+                  <xsl:text>
+                    ERROR: The following pronunciation has unhandled elements:
+                  </xsl:text>
+                  <xsl:copy/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:for-each>
+          </itemizedlist>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>

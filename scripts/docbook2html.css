@@ -25,6 +25,18 @@ dl p, dl span {
   text-align: left;
 }
 
+/* Very bare lists except in special cases */
+ul {
+  list-style-type: none;
+  padding: 0em;
+  margin: 0em 0em 0em 1em;
+}
+ul * {
+  list-style-type: none;
+  padding: 0em;
+  margin: 0em 0em 0em 0em;
+}
+
 hr {
   width: 30%;
   border: none;
