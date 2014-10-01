@@ -509,6 +509,9 @@ other options:
 
     <xsl:template match="natlang">
       <para role="natlang">
+        <xsl:attribute name="xml:lang">
+          <xsl:value-of select="@xml:lang" />
+        </xsl:attribute>
         <xsl:apply-templates select="node()|text()"/>
       </para>
     </xsl:template>

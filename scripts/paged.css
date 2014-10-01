@@ -8,6 +8,27 @@
 @import url("docbook2html.css");
 
 /*********
+special glyphs
+{{{
+*********/
+p[lang="ko"] {
+  font-family: Unifont;
+}
+
+p[lang="math"] {
+  font-family: "DejaVu Sans";
+}
+
+/* Make sure that comments *inside* the special glyph natlang look normal */
+span.comment {
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-size: 9pt;
+}
+/****
+}}}
+****/
+
+/*********
 anchors/xrefs
 {{{
 *********/
