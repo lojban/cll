@@ -216,6 +216,15 @@ that's neither here nor there).  These come in a few set patterns,
 which we've codified.  Each of these comes with a bunch of sub-tags,
 as well, that are only valid inside examples.
 
+VERY IMPORTANT:
+
+  <example role="interlinear-gloss-example" xml:id="random-id-jig0">
+
+the id is a random string to be used for anchors only, i.e. not for
+humans.  It should never be changed or removed.  It should follow
+the example around forever (unless the example itself is removed, of
+course).
+
 Note that the <jbo> tags here can also take valid="false" and
 valid="iffy", like <jbophrase>.
 
