@@ -25,11 +25,12 @@ $(builddir)/cll.xml: $(chapters) builddir
 	ln -sf $(PWD)/dtd $(builddir)/dtd
 	scripts/merge.sh -b "$(builddir)" $(test) $(chapters)
 
-$(builddir)/cll_processed_xhtml.xml: $(builddir)/cll.xml xml/docbook2html_preprocess.xsl
-	xsltproc --stringparam format xhtml --nonet --path . --novalid xml/docbook2html_preprocess.xsl $(builddir)/cll.xml > $(builddir)/cll_processed_xhtml.xml
+$(builddir)/cll_processed_xhtml.xml: $(builddir)/cll.xml scripts/xml_preprocess.rb
+	ruby scripts/xml_preprocess.rb $(builddir)/cll.xml >$(builddir)/cll_processed_xhtml.xml 2>/dev/null
+	# xsltproc --stringparam format xhtml --nonet --path . --novalid xml/docbook2html_preprocess.xsl $(builddir)/cll.xml > $(builddir)/cll_processed_xhtml.xml
 
-$(builddir)/cll_processed_pdf.xml: $(builddir)/cll_processed_xhtml.xml xml/latex_preprocess.xsl
-	xsltproc --nonet --path . --novalid xml/latex_preprocess.xsl $(builddir)/cll_processed_xhtml.xml > $(builddir)/cll_processed_pdf.xml
+# $(builddir)/cll_processed_pdf.xml: $(builddir)/cll_processed_xhtml.xml xml/latex_preprocess.xsl
+# 	xsltproc --nonet --path . --novalid xml/latex_preprocess.xsl $(builddir)/cll_processed_xhtml.xml > $(builddir)/cll_processed_pdf.xml
 
 #*******
 # Chapter xhtml files
