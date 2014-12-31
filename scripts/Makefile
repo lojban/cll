@@ -3,7 +3,7 @@ chapters = $(if $(CHAPTERS), $(CHAPTERS), chapters/1.xml chapters/2.xml chapters
 builddir = $(if $(BUILDDIR), $(BUILDDIR), $(PWD)/build)
 
 .PHONY: all
-all: xhtml_web xhtml_sections_web xhtml_nochunks_web pdf_web epub_web mobi_web
+all: xhtml_chapters_web xhtml_sections_web xhtml_nochunks_web prince_pdf_web epub_web mobi_web
 
 .PHONY: clean
 clean:
@@ -26,11 +26,7 @@ $(builddir)/cll.xml: $(chapters) builddir
 	scripts/merge.sh -b "$(builddir)" $(test) $(chapters)
 
 $(builddir)/cll_processed_xhtml.xml: $(builddir)/cll.xml scripts/xml_preprocess.rb
-	ruby scripts/xml_preprocess.rb $(builddir)/cll.xml >$(builddir)/cll_processed_xhtml.xml 2>/dev/null
-	# xsltproc --stringparam format xhtml --nonet --path . --novalid xml/docbook2html_preprocess.xsl $(builddir)/cll.xml > $(builddir)/cll_processed_xhtml.xml
-
-# $(builddir)/cll_processed_pdf.xml: $(builddir)/cll_processed_xhtml.xml xml/latex_preprocess.xsl
-# 	xsltproc --nonet --path . --novalid xml/latex_preprocess.xsl $(builddir)/cll_processed_xhtml.xml > $(builddir)/cll_processed_pdf.xml
+	ruby scripts/xml_preprocess.rb $(builddir)/cll.xml >$(builddir)/cll_processed_xhtml.xml 2>/tmp/xml_preprocess.out
 
 #*******
 # Chapter xhtml files
@@ -50,8 +46,6 @@ xhtml_chapters: $(builddir)/xhtml_chapters.done
 $(builddir)/xhtml_chapters.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_chapter-chunks.xsl
 	rm -rf $(builddir)/xhtml-chapters
 	mkdir $(builddir)/xhtml-chapters
-	# FIXME: Consider doing something like this: -x /usr/share/sgml/docbook/xsl-ns-stylesheets-1.76.1/fo/docbook.xsl
-	# So we know exactly what stylesheets we're getting
 	xmlto -m xml/docbook2html_config_chapter-chunks.xsl -o $(builddir)/xhtml-chapters/ xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 	touch $(builddir)/xhtml_chapters.done
 
@@ -73,8 +67,6 @@ xhtml_sections: $(builddir)/xhtml_sections.done
 $(builddir)/xhtml_sections.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_section-chunks.xsl
 	rm -rf $(builddir)/xhtml_sections
 	mkdir $(builddir)/xhtml_sections
-	# FIXME: Consider doing something like this: -x /usr/share/sgml/docbook/xsl-ns-stylesheets-1.76.1/fo/docbook.xsl
-	# So we know exactly what stylesheets we're getting
 	xmlto -m xml/docbook2html_config_section-chunks.xsl -o $(builddir)/xhtml_sections/ --stringparam chunk.section.depth=1 --stringparam chunk.first.sections=1 xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 	touch $(builddir)/xhtml_sections.done
 
@@ -96,8 +88,6 @@ xhtml_nochunks: $(builddir)/xhtml-nochunks.done
 $(builddir)/xhtml-nochunks.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_no-chunks.xsl
 	rm -rf $(builddir)/xhtml-nochunks
 	mkdir $(builddir)/xhtml-nochunks
-	# FIXME: Consider doing something like this: -x /usr/share/sgml/docbook/xsl-ns-stylesheets-1.76.1/fo/docbook.xsl
-	# So we know exactly what stylesheets we're getting
 	xmlto -m xml/docbook2html_config_no-chunks.xsl -o $(builddir)/xhtml-nochunks/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 	touch $(builddir)/xhtml-nochunks.done
 
@@ -137,8 +127,6 @@ $(builddir)/prince_pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2htm
 	ln -sf $(PWD)/scripts/paged.css $(builddir)/prince_pdf/
 	ln -sf paged.css $(builddir)/prince_pdf/final.css
 	ln -sf $(PWD)/media $(builddir)/prince_pdf/
-	# FIXME: Consider doing something like this: -x /usr/share/sgml/docbook/xsl-ns-stylesheets-1.76.1/fo/docbook.xsl
-	# So we know exactly what stylesheets we're getting
 	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/prince_pdf/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 	cd $(builddir)/prince_pdf/
 	#********************************
@@ -163,22 +151,6 @@ $(builddir)/prince_pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2htm
 .PHONY: prince_pdf_web
 prince_pdf_web: prince_pdf
 	cp $(builddir)/cll_prince.pdf ~/public_html/media/public/cll_build/cll_prince.pdf
-
-#*******
-# PDF
-#
-# We actually do need xetex (aka xalatex) here, for the IPA and
-# other utf-8 issues
-#*******
-.PHONY: pdf
-pdf: $(builddir)/cll.pdf
-$(builddir)/cll.pdf: $(builddir)/cll_processed_pdf.xml xml/dblatex_config.xsl
-	dblatex -V -T latex/cll -o $(builddir)/cll.tex -t tex -b xetex -p xml/dblatex_config.xsl $(builddir)/cll_processed_pdf.xml 2>&1 | grep -v 'default template used in programlisting or screen'
-	dblatex -V -T latex/cll -o $(builddir)/cll.pdf -b xetex -p xml/dblatex_config.xsl $(builddir)/cll_processed_pdf.xml 2>&1 | grep -v 'default template used in programlisting or screen'
-
-.PHONY: pdf_web
-pdf_web: pdf
-	cp $(builddir)/cll.pdf ~/public_html/media/public/cll_build/cll.pdf
 
 #*******
 # Testing
