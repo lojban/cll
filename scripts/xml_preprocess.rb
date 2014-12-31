@@ -84,7 +84,7 @@ def indexify name, node, indextype, newname, lang
     $stderr.puts newnode.to_xhtml
     return newnode
   else
-    return false
+    return node
   end
 end
 
@@ -208,11 +208,8 @@ $document.traverse do |node|
   #       
   #     </interlinear-gloss>
   if node.name == 'interlinear-gloss'
-    if node.xpath('jbo').length < 1
-      abort "Found a interlinear-gloss element with no jbo sub-elements: #{node.to_xhtml}"
-    end
-    if node.xpath('natlang').length < 1
-      abort "Found a interlinear-gloss element with no natlang sub-elements: #{node.to_xhtml}"
+    unless node.xpath('jbo').length > 0 and (node.xpath('natlang').length > 0 or node.xpath('gloss').length > 0 or node.xpath('informalequation').length > 0)
+      abort "Found a bad interlinear-gloss element; it must have one jbo sub-element and at least one gloss or natlang sub-element: #{node.to_xhtml}"
     end
 
     node.children.each do |child|
@@ -345,13 +342,6 @@ $document.traverse do |node|
 
   # Deal with pronunciation nodes
   if node.name == 'pronunciation'
-    if node.xpath('jbo').length < 1
-      abort "Found a pronunciation element with no jbo sub-elements: #{node.to_xhtml}"
-    end
-    if node.xpath('natlang').length < 1
-      abort "Found a pronunciation element with no natlang sub-elements: #{node.to_xhtml}"
-    end
-
     node.children.each do |child|
       unless child.element?
         next
@@ -405,7 +395,12 @@ $document.traverse do |node|
   end
 
   # For now, jbophrase makes an *index* but not a *glossary*
-  indexify 'jbophrase', node, 'lojban-phrase', 'foreignphrase', 'jbo'
+  node = indexify 'jbophrase', node, 'lojban-phrase', 'foreignphrase', 'jbo'
+  if node and node.name == 'foreignphrase'
+    if node.parent.name == 'example'
+      wrap_up 'foreignphrase', node, { name: 'para', role: 'jbophrase' }, node.children
+    end
+  end
 
   # Same treatment for veljvo
   indexify 'veljvo', node, 'lojban-phrase', 'foreignphrase', 'jbo'
