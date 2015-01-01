@@ -31,7 +31,7 @@ require "#{mydir}/util.rb"
 def wrap_up name, node, spec, children, replace = true
   if node.name == name
     $stderr.puts "************* Node matches #{name}"
-    $stderr.puts node.to_xhtml
+    $stderr.puts node.to_xml
     newname = spec[:name]
     partspec = spec.tap { |x| x.delete(:name) }
     newnode = Nokogiri::XML::Node.new( newname, $document )
@@ -43,7 +43,7 @@ def wrap_up name, node, spec, children, replace = true
       end
     end
     newnode.children = children
-    $stderr.puts newnode.to_xhtml
+    $stderr.puts newnode.to_xml
 
     if replace
       node.replace newnode
@@ -81,7 +81,7 @@ def indexify name, node, indextype, newname, lang
     indexbits.children = innerbit
     newnode = wrap_up name, node, { name: newname, mylang: lang }, indexbits
     newnode.add_child node.children
-    $stderr.puts newnode.to_xhtml
+    $stderr.puts newnode.to_xml
     return newnode
   else
     return node
@@ -209,7 +209,7 @@ $document.traverse do |node|
   #     </interlinear-gloss>
   if node.name == 'interlinear-gloss'
     unless node.xpath('jbo').length > 0 and (node.xpath('natlang').length > 0 or node.xpath('gloss').length > 0 or node.xpath('informalequation').length > 0)
-      abort "Found a bad interlinear-gloss element; it must have one jbo sub-element and at least one gloss or natlang sub-element: #{node.to_xhtml}"
+      abort "Found a bad interlinear-gloss element; it must have one jbo sub-element and at least one gloss or natlang sub-element: #{node.to_xml}"
     end
 
     node.children.each do |child|
@@ -294,7 +294,7 @@ $document.traverse do |node|
 
         table_row_by_children child
       else
-        abort "Bad node in cmavo-list: #{child.to_xhtml}"
+        abort "Bad node in cmavo-list: #{child.to_xml}"
       end
 
     end
@@ -378,7 +378,7 @@ $document.traverse do |node|
       origtext = node.text
       node = indexify 'valsi', node, 'lojban-words', 'foreignphrase', 'jbo'
       node = glossify node, origtext
-      $stderr.puts node.to_xhtml
+      $stderr.puts node.to_xml
     end
   end
 
@@ -464,9 +464,7 @@ $document.traverse do |node|
   end
 end
 
-doc = $document.to_xhtml
-# Deal with xml:lang vs. lang ; https://github.com/sparklemotion/nokogiri/issues/1215
-doc = doc.gsub( %r{xml:lang="([^"]*)"\s*([^>]*) lang="\1"}, 'xml:lang="\1" \2' )
+doc = $document.to_xml
 # Put in our own header
 doc = doc.gsub( %r{^.*<book [^>]*>$}m, '<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V5.0//EN" "dtd/docbook-5.0.dtd"[
@@ -474,7 +472,7 @@ doc = doc.gsub( %r{^.*<book [^>]*>$}m, '<?xml version="1.0" encoding="utf-8"?>
 %allent;
 ]>
 <book xmlns:xlink="http://www.w3.org/1999/xlink">
-               ' )
+' )
 
 puts doc
 

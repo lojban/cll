@@ -127,24 +127,10 @@ $(builddir)/prince_pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2htm
 	ln -sf $(PWD)/scripts/paged.css $(builddir)/prince_pdf/
 	ln -sf paged.css $(builddir)/prince_pdf/final.css
 	ln -sf $(PWD)/media $(builddir)/prince_pdf/
+	
 	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/prince_pdf/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
-	cd $(builddir)/prince_pdf/
-	#********************************
-	# FIXME:
-	#
-	# These sed statements are horrible hacks.  Do some nokogiri
-	# or something FFS.
-	#
-	# They're pretty self-explanatory except the CHAPBR ones,
-	# which puts a <br/> tag into chapter titles; it works with
-	# the xml/docbook2html_config_prince.xsl customization
-	#********************************
-	cat $(builddir)/prince_pdf/cll_processed_xhtml.html | \
-	sed 's;<a id="\([^"]*\)"></a><p class="title">;<p class="title"><a id="\1"></a>;' | \
-	sed 's;<div class="index"><div class="titlepage">;<div class="whole-index"><div class="titlepage">;' | \
-	sed 's;href="docbook2html.css";href="prince.css";' | \
-	sed -r 's;title="Chapter [0-9]+--CHAPBR--;title=";g' | \
-	sed 's;--CHAPBR--;<br/>;g' >$(builddir)/prince_pdf/cll_processed_xhtml_prince.html
+	ruby scripts/xml_prince_postprocess.rb $(builddir)/prince_pdf/cll_processed_xhtml.html >$(builddir)/prince_pdf/cll_processed_xhtml_prince.html 2>/tmp/xml_prince_postprocess.out
+	
 	prince -vvv $(builddir)/prince_pdf/cll_processed_xhtml_prince.html $(builddir)/cll_prince.pdf
 	touch $(builddir)/prince_pdf.done
 
