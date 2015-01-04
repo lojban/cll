@@ -7,11 +7,12 @@ all: xhtml_chapters_web xhtml_sections_web xhtml_nochunks_web prince_pdf_web epu
 
 .PHONY: clean
 clean:
-	find $(builddir)/ \! -name 'jbovlaste*.xml' -type f | xargs rm -f
+	find $(PWD)/build/ $(PWD)/coverage/build/ $(builddir)/ \! -name 'jbovlaste*.xml' -type f | xargs -n 1 rm -f
 
 .PHONY: realclean
 realclean: clean
-	-rm -rf $(builddir)/*
+	find $(PWD)/build/ $(PWD)/coverage/build/ $(builddir)/ -type f | xargs -n 1 rm -f
+	find $(PWD)/build/ $(PWD)/coverage/build/ $(builddir)/ -depth -type d -empty -exec rmdir {} \;
 
 #*******
 # Basic prep
