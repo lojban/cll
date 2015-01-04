@@ -105,6 +105,7 @@ echo "optlist: $optlist"
 echo "target: $target"
 
 # See if we need to delete the cll.xml before we run make
+mkdir build
 echo "$optlist $chapters" >build/chapter-list.new
 if [ ! -f build/chapter-list ]
 then

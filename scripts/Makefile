@@ -46,7 +46,7 @@ xhtml_chapters_web: $(builddir)/xhtml_chapters.done
 xhtml_chapters: $(builddir)/xhtml_chapters.done
 $(builddir)/xhtml_chapters.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_chapter-chunks.xsl
 	rm -rf $(builddir)/xhtml-chapters
-	mkdir $(builddir)/xhtml-chapters
+	mkdir -p $(builddir)/xhtml-chapters
 	xmlto -m xml/docbook2html_config_chapter-chunks.xsl -o $(builddir)/xhtml-chapters/ xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 	touch $(builddir)/xhtml_chapters.done
 
@@ -67,7 +67,7 @@ xhtml_sections_web: $(builddir)/xhtml_sections.done
 xhtml_sections: $(builddir)/xhtml_sections.done
 $(builddir)/xhtml_sections.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_section-chunks.xsl
 	rm -rf $(builddir)/xhtml_sections
-	mkdir $(builddir)/xhtml_sections
+	mkdir -p $(builddir)/xhtml_sections
 	xmlto -m xml/docbook2html_config_section-chunks.xsl -o $(builddir)/xhtml_sections/ --stringparam chunk.section.depth=1 --stringparam chunk.first.sections=1 xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 	touch $(builddir)/xhtml_sections.done
 
@@ -88,7 +88,7 @@ xhtml_nochunks_web: $(builddir)/xhtml-nochunks.done
 xhtml_nochunks: $(builddir)/xhtml-nochunks.done
 $(builddir)/xhtml-nochunks.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_no-chunks.xsl
 	rm -rf $(builddir)/xhtml-nochunks
-	mkdir $(builddir)/xhtml-nochunks
+	mkdir -p $(builddir)/xhtml-nochunks
 	xmlto -m xml/docbook2html_config_no-chunks.xsl -o $(builddir)/xhtml-nochunks/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 	touch $(builddir)/xhtml-nochunks.done
 
@@ -123,7 +123,7 @@ mobi_web: mobi
 prince_pdf: $(builddir)/prince_pdf.done
 $(builddir)/prince_pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_prince.xsl
 	rm -rf $(builddir)/prince_pdf
-	mkdir $(builddir)/prince_pdf
+	mkdir -p $(builddir)/prince_pdf
 	ln -sf $(PWD)/scripts/docbook2html.css $(builddir)/prince_pdf/
 	ln -sf $(PWD)/scripts/paged.css $(builddir)/prince_pdf/
 	ln -sf paged.css $(builddir)/prince_pdf/final.css
