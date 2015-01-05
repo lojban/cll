@@ -22,7 +22,7 @@
        http://docbook.sourceforge.net/release/xsl/1.76.1/doc/html/generate.toc.html
        -->
   <xsl:param name="generate.toc">
-    book      toc,title,figure,table,equation
+    book      toc,title,figure,equation
     chapter   title
     section   title
   </xsl:param>
