@@ -76,6 +76,7 @@ do
     sectiontag=$(grep '<section ' $file | head -n 1 | sed 's/.*xml:id="//' | sed 's/".*//')
 
     cat $file | \
+      sed "s/<link linkend=\"chapter-[^\"]*\"/<link linkend=\"$chaptertag\"/g" | \
       sed "s/<xref linkend=\"chapter-[^\"]*\"/<xref linkend=\"$chaptertag\"/g" | \
       sed "s/<xref linkend=\"cll_chapter[^\"]*\"/<xref linkend=\"$chaptertag\"/g" | \
       sed "s/<xref linkend=\"section-[^\"]*\"/<xref linkend=\"$sectiontag\"/g" >>"$ofile"
