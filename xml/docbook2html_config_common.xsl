@@ -57,4 +57,8 @@
     </xsl:if>
   </xsl:template>
 
+  <xsl:template match="itemizedlist[@role='bullets']" mode="class.value">
+    <xsl:value-of select="'bullets'"/>
+  </xsl:template>
+
 </xsl:stylesheet>
