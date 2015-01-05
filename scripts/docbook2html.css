@@ -26,12 +26,21 @@ dl p, dl span {
 }
 
 /* Very bare lists except in special cases */
-ul {
+ul.bullets {
+  list-style-type: disc;
+  padding: 0em;
+  margin: 1em 0em 1em 3em;
+}
+ul.bullets * {
+  padding: 0em;
+  margin: 0em 0em 0em 0em;
+}
+ul.itemizedlist {
   list-style-type: none;
   padding: 0em;
-  margin: 0em 0em 0em 1em;
+  margin: 1em 0em 1em 1em;
 }
-ul * {
+ul.itemizedlist * {
   list-style-type: none;
   padding: 0em;
   margin: 0em 0em 0em 0em;
@@ -119,33 +128,45 @@ td {
 
 .cmavo-list td {
   /* TESTING ONLY: red */
+  /*
   background: #FF4848;
+  */
 }
 
 .interlinear-gloss-itemized td {
   /* TESTING ONLY: purple */
+  /*
   background: #B000B0;
+  */
 }
 
 .interlinear-gloss td {
   /* TESTING ONLY: blue */
+  /*
   background: #6966D6;
+  */
 }
 
 
 .informaltable td {
   /* TESTING ONLY: green */
+  /*
   background: #01F33E;
+  */
 }
 
 .lujvo-making td {
   /* TESTING ONLY: yellow */
+  /*
   background: #DFDF00;
+  */
 }
 
 .lojbanization td {
   /* TESTING ONLY: brown */
+  /*
   background: #B05F3C;
+  */
 }
 
 .elidable:after {

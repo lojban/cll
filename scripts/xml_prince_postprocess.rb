@@ -18,9 +18,11 @@ end
 
 # Fix the fact that there are two things named "index" at totally
 # different levels.
-$document.css('div.index').each do |node|
-  if node.children[0].name == 'div' and node.children[0][:class] == 'titlepage'
-    node[:class] = 'whole-index'
+if $document.css('div.index')
+  $document.css('div.index').each do |node|
+    if node.children[0] and node.children[0].name == 'div' and node.children[0][:class] == 'titlepage'
+      node[:class] = 'whole-index'
+    end
   end
 end
 

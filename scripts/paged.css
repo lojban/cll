@@ -37,16 +37,22 @@ div.toc a::after {
 }
 
 a.xref::after {
-    content: " on page " target-counter(attr(href), page);
+    content: " (p. " target-counter(attr(href), page) ") ";
 }
 
-/* TESTING: show non-handled a links in PURPLE */
+/* Make links for printing look like normal text. */
 a {
-  color: #00FF00;
+  color: black !important;
+  text-decoration: none !important;
+  /*
+  TESTING: show non-handled a links in PURPLE
   background: #FF00FF;
+  */
+  /*
   text-decoration: none;
   border-bottom-style: dashed;
   border-bottom-width: 1px;
+  */
 }
 
 div.toc a {
@@ -72,6 +78,9 @@ examples
 */
 div.example {
   page-break-inside: avoid;
+  font-family: "DejaVu Sans";
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 /*
 }}}
@@ -136,6 +145,51 @@ dt + dd { page-break-before: avoid }
 }}}
 */
 
+/*********
+basic paragraph
+{{{
+*/
+p {
+    display: block;
+    margin-top: .1em;
+    margin-bottom: .1em;
+}
+div.section > p {
+    text-indent: 2em;
+}
+/*
+}}}
+*/
+
+/*********
+h[12345] elements
+{{{
+*/
+h1 {
+  page-break-before: right;
+  page-break-after: avoid;
+  string-set: header content();
+  prince-page-group: start;
+  font-size: 16pt;
+  margin: 10pt   0;
+}
+h2 {
+  string-set: header content();
+  font-size: 11pt;
+  margin: 10pt   0;
+}
+/* Yes, absolute padding.  If you can think of something better to
+ * put this stuff at the bottom of the page... */
+h3.othercredit { padding-top: 180pt; }
+/*
+}}}
+*/
+
+/*********
+Page structure, title pages, etc
+{{{
+*/
+
 /* div.frontcover, div.halftitlepage, div.titlepage { page-break-before: right } */
 div.imprint { page-break-before: always }
 div.dedication, div.foreword, div.toc, div.preface, div.chapter, div.reference, 
@@ -144,18 +198,9 @@ div.appendix, div.bibliography, div.glossary, div.whole-index, div.colophon {
 }
 div.backcover { page-break-before: left }
 
-/* Page structure, title pages, etc */
 div.chapter, div.glossary, div.whole-index {
   page: chapter;
 }
-
-h1 {
-  page-break-before: right;
-  page-break-after: avoid;
-  string-set: header content();
-  prince-page-group: start;
-}
-h2 { string-set: header content();}
 
 @page {
   margin: 13mm 13mm 13mm 13mm;
@@ -167,7 +212,7 @@ h2 { string-set: header content();}
 
 @page chapter :left {
   @top-left {
-    font-size: 1.1em;
+    font-size: 11pt;
     text-align: center;
     font-weight: bold;
     content: "The Complete Lojban Language";
@@ -177,7 +222,7 @@ h2 { string-set: header content();}
   }
 
   @bottom-left {
-    font-size: 1.1em;
+    font-size: 11pt;
     content: counter(page);
     vertical-align: top;
     padding-bottom: .1em;
@@ -187,7 +232,7 @@ h2 { string-set: header content();}
 
 @page chapter :right {
   @top-right {
-    font-size: 1.1em;
+    font-size: 11pt;
     text-align: center;
     font-weight: bold;
     content: string(header, first); 
@@ -197,7 +242,7 @@ h2 { string-set: header content();}
   }
 
   @bottom-right {
-    font-size: 1.1em;
+    font-size: 11pt;
     content: counter(page);
     text-align: right;
     vertical-align: top;
@@ -209,4 +254,20 @@ h2 { string-set: header content();}
 @page chapter:first {
   @top-right { content: normal }
   @bottom-right { content: normal }
+}
+
+/*
+}}}
+*/
+
+table {
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+dl {
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
