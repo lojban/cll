@@ -6,6 +6,7 @@
       <imagedata fileref="media/chapter-grammars.gif"/>
     </imageobject>
   </mediaobject>
+  <!--
   <section xml:id="section-YACC">
     <title>YACC Grammar of Lojban</title>
     <para>The following two listings constitute the formal grammar of Lojban. The first version is written in the YACC language, which is used to describe parsers, and has been used to create a parser for Lojban texts. This parser is available from the Logical Language Group. The second listing is in Extended Backus-Naur Form (EBNF) and represents the same grammar in a more human-readable form. (In case of discrepancies, the YACC version is official.) There is a cross-reference listing for each format that shows, for each selma'o and rule, which rules refer to it.</para>
@@ -83,7 +84,7 @@
     <emphasis>without</emphasis> the strings of defining tokens. Two sets of lexer tokens are defined in the token set so as to be compatible with either option.</para>
     <para>In this step, the strings must be labelled with the appropriate lexer tokens. Order of inserting lexer tokens 
     <emphasis>IS</emphasis> significant, since some shorter strings that would be marked with a lexer token may be found inside longer strings. If the tokens are inserted before or in place of the shorter strings, the longer strings cannot be identified.</para>
-    <para>If option a. is chosen, the following order of insertion works correctly (it is not the only possible order): <!-- xref instead of "option a."? -->
+    <para>If option a. is chosen, the following order of insertion works correctly (it is not the only possible order): <!- - xref instead of "option a."? - ->
     <simplelist type="inline">
       <member>A</member>
       <member>C</member>
@@ -1705,7 +1706,7 @@ the 900 series rules are found in the lexer.  */
                         |  
 <xref linkend="cll_yacc-405"/>
 <xref linkend="cll_yacc-518"/>  /* pause*/
-/* multiple CMENE are identified morphologically (by the lexer) -- separated by
+/* multiple CMENE are identified morphologically (by the lexer) - - separated by
    consonant &amp; pause */
                         ;
 
@@ -7019,6 +7020,7 @@ the 900 series rules are found in the lexer.  */
       </varlistentry>
     </variablelist>
   </section>
+  -->
   <section xml:id="section-EBNF">
     <title>EBNF Grammar of Lojban</title>
     <para>Lojban Machine Grammar, EBNF Version, Final Baseline</para>
@@ -7065,13 +7067,13 @@ the 900 series rules are found in the lexer.  */
         <term>
         <anchor xml:id="b0"/>
         <anchor xreflabel="BNF rule #0" xml:id="cll_bnf-0"/>
-        <xref linkend="cll_yacc-0"/> text 
+        <!-- <xref linkend="cll_yacc-0"/> --> text 
         <subscript>0</subscript>=</term>
         <listitem>
           <para>[NAI ...] [CMENE ... # | (indicators &amp; free ...)] [joik-jek] text-1 
           <anchor xml:id="b2"/>
           <anchor xreflabel="BNF rule #2" xml:id="cll_bnf-2"/>
-          <xref linkend="cll_yacc-2"/></para>
+          <!-- <xref linkend="cll_yacc-2"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7081,7 +7083,7 @@ the 900 series rules are found in the lexer.  */
           <para>[(I [jek | joik] [[stag] BO] #) ... | NIhO ... #] [paragraphs] 
           <anchor xml:id="b4"/>
           <anchor xreflabel="BNF rule #4" xml:id="cll_bnf-4"/>
-          <xref linkend="cll_yacc-4"/></para>
+          <!-- <xref linkend="cll_yacc-4"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7091,7 +7093,7 @@ the 900 series rules are found in the lexer.  */
           <para>paragraph [NIhO ... # paragraphs] 
           <anchor xml:id="b10"/>
           <anchor xreflabel="BNF rule #10" xml:id="cll_bnf-10"/>
-          <xref linkend="cll_yacc-10"/></para>
+          <!-- <xref linkend="cll_yacc-10"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7101,7 +7103,7 @@ the 900 series rules are found in the lexer.  */
           <para>(statement | fragment) [I # [statement | fragment]] ... 
           <anchor xml:id="b11"/>
           <anchor xreflabel="BNF rule #11" xml:id="cll_bnf-11"/>
-          <xref linkend="cll_yacc-11"/></para>
+          <!-- <xref linkend="cll_yacc-11"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7111,7 +7113,7 @@ the 900 series rules are found in the lexer.  */
           <para>statement-1 | prenex statement 
           <anchor xml:id="b12"/>
           <anchor xreflabel="BNF rule #12" xml:id="cll_bnf-12"/>
-          <xref linkend="cll_yacc-12"/></para>
+          <!-- <xref linkend="cll_yacc-12"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7121,7 +7123,7 @@ the 900 series rules are found in the lexer.  */
           <para>statement-2 [I joik-jek [statement-2]] ... 
           <anchor xml:id="b13"/>
           <anchor xreflabel="BNF rule #13" xml:id="cll_bnf-13"/>
-          <xref linkend="cll_yacc-13"/></para>
+          <!-- <xref linkend="cll_yacc-13"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7131,7 +7133,7 @@ the 900 series rules are found in the lexer.  */
           <para>statement-3 [I [jek | joik] [stag] BO # [statement-2]] 
           <anchor xml:id="b14"/>
           <anchor xreflabel="BNF rule #14" xml:id="cll_bnf-14"/>
-          <xref linkend="cll_yacc-14"/></para>
+          <!-- <xref linkend="cll_yacc-14"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7141,7 +7143,7 @@ the 900 series rules are found in the lexer.  */
           <para>sentence | [tag] TUhE # text-1 /TUhU#/ 
           <anchor xml:id="b20"/>
           <anchor xreflabel="BNF rule #20" xml:id="cll_bnf-20"/>
-          <xref linkend="cll_yacc-20"/></para>
+          <!-- <xref linkend="cll_yacc-20"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7151,7 +7153,7 @@ the 900 series rules are found in the lexer.  */
           <para>ek # | gihek # | quantifier | NA # | terms /VAU#/ | prenex | relative-clauses | links | linkargs 
           <anchor xml:id="b30"/>
           <anchor xreflabel="BNF rule #30" xml:id="cll_bnf-30"/>
-          <xref linkend="cll_yacc-30"/></para>
+          <!-- <xref linkend="cll_yacc-30"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7161,7 +7163,7 @@ the 900 series rules are found in the lexer.  */
           <para>terms ZOhU # 
           <anchor xml:id="b40"/>
           <anchor xreflabel="BNF rule #40" xml:id="cll_bnf-40"/>
-          <xref linkend="cll_yacc-40"/></para>
+          <!-- <xref linkend="cll_yacc-40"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7171,7 +7173,7 @@ the 900 series rules are found in the lexer.  */
           <para>[terms [CU #]] bridi-tail 
           <anchor xml:id="b41"/>
           <anchor xreflabel="BNF rule #41" xml:id="cll_bnf-41"/>
-          <xref linkend="cll_yacc-41"/></para>
+          <!-- <xref linkend="cll_yacc-41"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7181,7 +7183,7 @@ the 900 series rules are found in the lexer.  */
           <para>sentence | prenex subsentence 
           <anchor xml:id="b50"/>
           <anchor xreflabel="BNF rule #50" xml:id="cll_bnf-50"/>
-          <xref linkend="cll_yacc-50"/></para>
+          <!-- <xref linkend="cll_yacc-50"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7191,7 +7193,7 @@ the 900 series rules are found in the lexer.  */
           <para>bridi-tail-1 [gihek [stag] KE # bridi-tail /KEhE#/ tail-terms] 
           <anchor xml:id="b51"/>
           <anchor xreflabel="BNF rule #51" xml:id="cll_bnf-51"/>
-          <xref linkend="cll_yacc-51"/></para>
+          <!-- <xref linkend="cll_yacc-51"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7201,7 +7203,7 @@ the 900 series rules are found in the lexer.  */
           <para>bridi-tail-2 [gihek # bridi-tail-2 tail-terms] ... 
           <anchor xml:id="b52"/>
           <anchor xreflabel="BNF rule #52" xml:id="cll_bnf-52"/>
-          <xref linkend="cll_yacc-52"/></para>
+          <!-- <xref linkend="cll_yacc-52"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7211,7 +7213,7 @@ the 900 series rules are found in the lexer.  */
           <para>bridi-tail-3 [gihek [stag] BO # bridi-tail-2 tail-terms] 
           <anchor xml:id="b53"/>
           <anchor xreflabel="BNF rule #53" xml:id="cll_bnf-53"/>
-          <xref linkend="cll_yacc-53"/></para>
+          <!-- <xref linkend="cll_yacc-53"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7221,7 +7223,7 @@ the 900 series rules are found in the lexer.  */
           <para>selbri tail-terms | gek-sentence 
           <anchor xml:id="b54"/>
           <anchor xreflabel="BNF rule #54" xml:id="cll_bnf-54"/>
-          <xref linkend="cll_yacc-54"/></para>
+          <!-- <xref linkend="cll_yacc-54"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7231,7 +7233,7 @@ the 900 series rules are found in the lexer.  */
           <para>gek subsentence gik subsentence tail-terms | [tag] KE # gek-sentence /KEhE#/ | NA # gek-sentence 
           <anchor xml:id="b71"/>
           <anchor xreflabel="BNF rule #71" xml:id="cll_bnf-71"/>
-          <xref linkend="cll_yacc-71"/></para>
+          <!-- <xref linkend="cll_yacc-71"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7241,7 +7243,7 @@ the 900 series rules are found in the lexer.  */
           <para>[terms] /VAU#/ 
           <anchor xml:id="b80"/>
           <anchor xreflabel="BNF rule #80" xml:id="cll_bnf-80"/>
-          <xref linkend="cll_yacc-80"/></para>
+          <!-- <xref linkend="cll_yacc-80"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7251,7 +7253,7 @@ the 900 series rules are found in the lexer.  */
           <para>terms-1 ... 
           <anchor xml:id="b81"/>
           <anchor xreflabel="BNF rule #81" xml:id="cll_bnf-81"/>
-          <xref linkend="cll_yacc-81"/></para>
+          <!-- <xref linkend="cll_yacc-81"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7261,7 +7263,7 @@ the 900 series rules are found in the lexer.  */
           <para>terms-2 [PEhE # joik-jek terms-2] ... 
           <anchor xml:id="b82"/>
           <anchor xreflabel="BNF rule #82" xml:id="cll_bnf-82"/>
-          <xref linkend="cll_yacc-82"/></para>
+          <!-- <xref linkend="cll_yacc-82"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7271,7 +7273,7 @@ the 900 series rules are found in the lexer.  */
           <para>term [CEhE # term] ... 
           <anchor xml:id="b83"/>
           <anchor xreflabel="BNF rule #83" xml:id="cll_bnf-83"/>
-          <xref linkend="cll_yacc-83"/></para>
+          <!-- <xref linkend="cll_yacc-83"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7281,7 +7283,7 @@ the 900 series rules are found in the lexer.  */
           <para>sumti | (tag | FA #) (sumti | /KU#/) | termset | NA KU # 
           <anchor xml:id="b85"/>
           <anchor xreflabel="BNF rule #85" xml:id="cll_bnf-85"/>
-          <xref linkend="cll_yacc-85"/></para>
+          <!-- <xref linkend="cll_yacc-85"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7291,7 +7293,7 @@ the 900 series rules are found in the lexer.  */
           <para>NUhI # gek terms /NUhU#/ gik terms /NUhU#/ | NUhI # terms /NUhU#/ 
           <anchor xml:id="b90"/>
           <anchor xreflabel="BNF rule #90" xml:id="cll_bnf-90"/>
-          <xref linkend="cll_yacc-90"/></para>
+          <!-- <xref linkend="cll_yacc-90"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7301,7 +7303,7 @@ the 900 series rules are found in the lexer.  */
           <para>sumti-1 [VUhO # relative-clauses] 
           <anchor xml:id="b91"/>
           <anchor xreflabel="BNF rule #91" xml:id="cll_bnf-91"/>
-          <xref linkend="cll_yacc-91"/></para>
+          <!-- <xref linkend="cll_yacc-91"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7311,7 +7313,7 @@ the 900 series rules are found in the lexer.  */
           <para>sumti-2 [(ek | joik) [stag] KE # sumti /KEhE#/] 
           <anchor xml:id="b92"/>
           <anchor xreflabel="BNF rule #92" xml:id="cll_bnf-92"/>
-          <xref linkend="cll_yacc-92"/></para>
+          <!-- <xref linkend="cll_yacc-92"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7321,7 +7323,7 @@ the 900 series rules are found in the lexer.  */
           <para>sumti-3 [joik-ek sumti-3] ... 
           <anchor xml:id="b93"/>
           <anchor xreflabel="BNF rule #93" xml:id="cll_bnf-93"/>
-          <xref linkend="cll_yacc-93"/></para>
+          <!-- <xref linkend="cll_yacc-93"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7331,7 +7333,7 @@ the 900 series rules are found in the lexer.  */
           <para>sumti-4 [(ek | joik) [stag] BO # sumti-3] 
           <anchor xml:id="b94"/>
           <anchor xreflabel="BNF rule #94" xml:id="cll_bnf-94"/>
-          <xref linkend="cll_yacc-94"/></para>
+          <!-- <xref linkend="cll_yacc-94"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7341,7 +7343,7 @@ the 900 series rules are found in the lexer.  */
           <para>sumti-5 | gek sumti gik sumti-4 
           <anchor xml:id="b95"/>
           <anchor xreflabel="BNF rule #95" xml:id="cll_bnf-95"/>
-          <xref linkend="cll_yacc-95"/></para>
+          <!-- <xref linkend="cll_yacc-95"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7351,7 +7353,7 @@ the 900 series rules are found in the lexer.  */
           <para>[quantifier] sumti-6 [relative-clauses] | quantifier selbri /KU#/ [relative-clauses] 
           <anchor xml:id="b97"/>
           <anchor xreflabel="BNF rule #97" xml:id="cll_bnf-97"/>
-          <xref linkend="cll_yacc-97"/></para>
+          <!-- <xref linkend="cll_yacc-97"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7361,7 +7363,7 @@ the 900 series rules are found in the lexer.  */
           <para>(LAhE # | NAhE BO #) [relative-clauses] sumti /LUhU#/ | KOhA # | lerfu-string /BOI#/ | LA # [relative-clauses] CMENE ... # | (LA | LE) # sumti-tail /KU#/ | LI # mex /LOhO#/ | ZO any-word # | LU text /LIhU#/ | LOhU any-word ... LEhU # | ZOI any-word anything any-word # 
           <anchor xml:id="b111"/>
           <anchor xreflabel="BNF rule #111" xml:id="cll_bnf-111"/>
-          <xref linkend="cll_yacc-111"/></para>
+          <!-- <xref linkend="cll_yacc-111"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7371,7 +7373,7 @@ the 900 series rules are found in the lexer.  */
           <para>[sumti-6 [relative-clauses]] sumti-tail-1 | relative-clauses sumti-tail-1 
           <anchor xml:id="b112"/>
           <anchor xreflabel="BNF rule #112" xml:id="cll_bnf-112"/>
-          <xref linkend="cll_yacc-112"/></para>
+          <!-- <xref linkend="cll_yacc-112"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7381,7 +7383,7 @@ the 900 series rules are found in the lexer.  */
           <para>[quantifier] selbri [relative-clauses] | quantifier sumti 
           <anchor xml:id="b121"/>
           <anchor xreflabel="BNF rule #121" xml:id="cll_bnf-121"/>
-          <xref linkend="cll_yacc-121"/></para>
+          <!-- <xref linkend="cll_yacc-121"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7391,7 +7393,7 @@ the 900 series rules are found in the lexer.  */
           <para>relative-clause [ZIhE # relative-clause] ... 
           <anchor xml:id="b122"/>
           <anchor xreflabel="BNF rule #122" xml:id="cll_bnf-122"/>
-          <xref linkend="cll_yacc-122"/></para>
+          <!-- <xref linkend="cll_yacc-122"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7401,7 +7403,7 @@ the 900 series rules are found in the lexer.  */
           <para>GOI # term /GEhU#/ | NOI # subsentence /KUhO#/ 
           <anchor xml:id="b130"/>
           <anchor xreflabel="BNF rule #130" xml:id="cll_bnf-130"/>
-          <xref linkend="cll_yacc-130"/></para>
+          <!-- <xref linkend="cll_yacc-130"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7411,7 +7413,7 @@ the 900 series rules are found in the lexer.  */
           <para>[tag] selbri-1 
           <anchor xml:id="b131"/>
           <anchor xreflabel="BNF rule #131" xml:id="cll_bnf-131"/>
-          <xref linkend="cll_yacc-131"/></para>
+          <!-- <xref linkend="cll_yacc-131"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7421,7 +7423,7 @@ the 900 series rules are found in the lexer.  */
           <para>selbri-2 | NA # selbri 
           <anchor xml:id="b132"/>
           <anchor xreflabel="BNF rule #132" xml:id="cll_bnf-132"/>
-          <xref linkend="cll_yacc-132"/></para>
+          <!-- <xref linkend="cll_yacc-132"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7431,7 +7433,7 @@ the 900 series rules are found in the lexer.  */
           <para>selbri-3 [CO # selbri-2] 
           <anchor xml:id="b133"/>
           <anchor xreflabel="BNF rule #133" xml:id="cll_bnf-133"/>
-          <xref linkend="cll_yacc-133"/></para>
+          <!-- <xref linkend="cll_yacc-133"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7441,7 +7443,7 @@ the 900 series rules are found in the lexer.  */
           <para>selbri-4 ... 
           <anchor xml:id="b134"/>
           <anchor xreflabel="BNF rule #134" xml:id="cll_bnf-134"/>
-          <xref linkend="cll_yacc-134"/></para>
+          <!-- <xref linkend="cll_yacc-134"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7451,7 +7453,7 @@ the 900 series rules are found in the lexer.  */
           <para>selbri-5 [joik-jek selbri-5 | joik [stag] KE # selbri-3 /KEhE#/] ... 
           <anchor xml:id="b135"/>
           <anchor xreflabel="BNF rule #135" xml:id="cll_bnf-135"/>
-          <xref linkend="cll_yacc-135"/></para>
+          <!-- <xref linkend="cll_yacc-135"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7461,7 +7463,7 @@ the 900 series rules are found in the lexer.  */
           <para>selbri-6 [(jek | joik) [stag] BO # selbri-5] 
           <anchor xml:id="b136"/>
           <anchor xreflabel="BNF rule #136" xml:id="cll_bnf-136"/>
-          <xref linkend="cll_yacc-136"/></para>
+          <!-- <xref linkend="cll_yacc-136"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7472,7 +7474,7 @@ the 900 series rules are found in the lexer.  */
           
           <anchor xml:id="b150"/>
           <anchor xreflabel="BNF rule #150" xml:id="cll_bnf-150"/>
-          <xref linkend="cll_yacc-150"/></para>
+          <!-- <xref linkend="cll_yacc-150"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7482,7 +7484,7 @@ the 900 series rules are found in the lexer.  */
           <para>tanru-unit-1 [CEI # tanru-unit-1] ... 
           <anchor xml:id="b151"/>
           <anchor xreflabel="BNF rule #151" xml:id="cll_bnf-151"/>
-          <xref linkend="cll_yacc-151"/></para>
+          <!-- <xref linkend="cll_yacc-151"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7492,7 +7494,7 @@ the 900 series rules are found in the lexer.  */
           <para>tanru-unit-2 [linkargs] 
           <anchor xml:id="b152"/>
           <anchor xreflabel="BNF rule #152" xml:id="cll_bnf-152"/>
-          <xref linkend="cll_yacc-152"/></para>
+          <!-- <xref linkend="cll_yacc-152"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7502,7 +7504,7 @@ the 900 series rules are found in the lexer.  */
           <para>BRIVLA # | GOhA [RAhO] # | KE # selbri-3 /KEhE#/ | ME # sumti /MEhU#/ [MOI #] | (number | lerfu-string) MOI # | NUhA # mex-operator | SE # tanru-unit-2 | JAI # [tag] tanru-unit-2 | any-word (ZEI any-word) ... | NAhE # tanru-unit-2 | NU [NAI] # [joik-jek NU [NAI] #] ... subsentence /KEI#/ 
           <anchor xml:id="b160"/>
           <anchor xreflabel="BNF rule #160" xml:id="cll_bnf-160"/>
-          <xref linkend="cll_yacc-160"/></para>
+          <!-- <xref linkend="cll_yacc-160"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7512,7 +7514,7 @@ the 900 series rules are found in the lexer.  */
           <para>BE # term [links] /BEhO#/ 
           <anchor xml:id="b161"/>
           <anchor xreflabel="BNF rule #161" xml:id="cll_bnf-161"/>
-          <xref linkend="cll_yacc-161"/></para>
+          <!-- <xref linkend="cll_yacc-161"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7522,7 +7524,7 @@ the 900 series rules are found in the lexer.  */
           <para>BEI # term [links] 
           <anchor xml:id="b300"/>
           <anchor xreflabel="BNF rule #300" xml:id="cll_bnf-300"/>
-          <xref linkend="cll_yacc-300"/></para>
+          <!-- <xref linkend="cll_yacc-300"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7532,7 +7534,7 @@ the 900 series rules are found in the lexer.  */
           <para>number /BOI#/ | VEI # mex /VEhO#/ 
           <anchor xml:id="b310"/>
           <anchor xreflabel="BNF rule #310" xml:id="cll_bnf-310"/>
-          <xref linkend="cll_yacc-310"/></para>
+          <!-- <xref linkend="cll_yacc-310"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7542,7 +7544,7 @@ the 900 series rules are found in the lexer.  */
           <para>mex-1 [operator mex-1] ... | FUhA # rp-expression 
           <anchor xml:id="b311"/>
           <anchor xreflabel="BNF rule #311" xml:id="cll_bnf-311"/>
-          <xref linkend="cll_yacc-311"/></para>
+          <!-- <xref linkend="cll_yacc-311"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7552,7 +7554,7 @@ the 900 series rules are found in the lexer.  */
           <para>mex-2 [BIhE # operator mex-1] 
           <anchor xml:id="b312"/>
           <anchor xreflabel="BNF rule #312" xml:id="cll_bnf-312"/>
-          <xref linkend="cll_yacc-312"/></para>
+          <!-- <xref linkend="cll_yacc-312"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7562,7 +7564,7 @@ the 900 series rules are found in the lexer.  */
           <para>operand | [PEhO #] operator mex-2 ... /KUhE#/ 
           <anchor xml:id="b330"/>
           <anchor xreflabel="BNF rule #330" xml:id="cll_bnf-330"/>
-          <xref linkend="cll_yacc-330"/></para>
+          <!-- <xref linkend="cll_yacc-330"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7572,7 +7574,7 @@ the 900 series rules are found in the lexer.  */
           <para>rp-operand rp-operand operator 
           <anchor xml:id="b332"/>
           <anchor xreflabel="BNF rule #332" xml:id="cll_bnf-332"/>
-          <xref linkend="cll_yacc-332"/></para>
+          <!-- <xref linkend="cll_yacc-332"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7582,7 +7584,7 @@ the 900 series rules are found in the lexer.  */
           <para>operand | rp-expression 
           <anchor xml:id="b370"/>
           <anchor xreflabel="BNF rule #370" xml:id="cll_bnf-370"/>
-          <xref linkend="cll_yacc-370"/></para>
+          <!-- <xref linkend="cll_yacc-370"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7592,7 +7594,7 @@ the 900 series rules are found in the lexer.  */
           <para>operator-1 [joik-jek operator-1 | joik [stag] KE # operator /KEhE#/] ... 
           <anchor xml:id="b371"/>
           <anchor xreflabel="BNF rule #371" xml:id="cll_bnf-371"/>
-          <xref linkend="cll_yacc-371"/></para>
+          <!-- <xref linkend="cll_yacc-371"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7603,7 +7605,7 @@ the 900 series rules are found in the lexer.  */
           
           <anchor xml:id="b372"/>
           <anchor xreflabel="BNF rule #372" xml:id="cll_bnf-372"/>
-          <xref linkend="cll_yacc-372"/></para>
+          <!-- <xref linkend="cll_yacc-372"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7613,7 +7615,7 @@ the 900 series rules are found in the lexer.  */
           <para>mex-operator | KE # operator /KEhE#/ 
           <anchor xml:id="b374"/>
           <anchor xreflabel="BNF rule #374" xml:id="cll_bnf-374"/>
-          <xref linkend="cll_yacc-374"/></para>
+          <!-- <xref linkend="cll_yacc-374"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7623,7 +7625,7 @@ the 900 series rules are found in the lexer.  */
           <para>SE # mex-operator | NAhE # mex-operator | MAhO # mex /TEhU#/ | NAhU # selbri /TEhU#/ | VUhU # 
           <anchor xml:id="b381"/>
           <anchor xreflabel="BNF rule #381" xml:id="cll_bnf-381"/>
-          <xref linkend="cll_yacc-381"/></para>
+          <!-- <xref linkend="cll_yacc-381"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7633,7 +7635,7 @@ the 900 series rules are found in the lexer.  */
           <para>operand-1 [(ek | joik) [stag] KE # operand /KEhE#/] 
           <anchor xml:id="b382"/>
           <anchor xreflabel="BNF rule #382" xml:id="cll_bnf-382"/>
-          <xref linkend="cll_yacc-382"/></para>
+          <!-- <xref linkend="cll_yacc-382"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7643,7 +7645,7 @@ the 900 series rules are found in the lexer.  */
           <para>operand-2 [joik-ek operand-2] ... 
           <anchor xml:id="b383"/>
           <anchor xreflabel="BNF rule #383" xml:id="cll_bnf-383"/>
-          <xref linkend="cll_yacc-383"/></para>
+          <!-- <xref linkend="cll_yacc-383"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7653,7 +7655,7 @@ the 900 series rules are found in the lexer.  */
           <para>operand-3 [(ek | joik) [stag] BO # operand-2] 
           <anchor xml:id="b385"/>
           <anchor xreflabel="BNF rule #385" xml:id="cll_bnf-385"/>
-          <xref linkend="cll_yacc-385"/></para>
+          <!-- <xref linkend="cll_yacc-385"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7663,7 +7665,7 @@ the 900 series rules are found in the lexer.  */
           <para>quantifier | lerfu-string /BOI#/ | NIhE # selbri /TEhU#/ | MOhE # sumti /TEhU#/ | JOhI # mex-2 ... /TEhU#/ | gek operand gik operand-3 | (LAhE # | NAhE BO #) operand /LUhU#/ 
           <anchor xml:id="b812"/>
           <anchor xreflabel="BNF rule #812" xml:id="cll_bnf-812"/>
-          <xref linkend="cll_yacc-812"/></para>
+          <!-- <xref linkend="cll_yacc-812"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7673,7 +7675,7 @@ the 900 series rules are found in the lexer.  */
           <para>PA [PA | lerfu-word] ... 
           <anchor xml:id="b817"/>
           <anchor xreflabel="BNF rule #817" xml:id="cll_bnf-817"/>
-          <xref linkend="cll_yacc-817"/></para>
+          <!-- <xref linkend="cll_yacc-817"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7683,7 +7685,7 @@ the 900 series rules are found in the lexer.  */
           <para>lerfu-word [PA | lerfu-word] ... 
           <anchor xml:id="b987"/>
           <anchor xreflabel="BNF rule #987" xml:id="cll_bnf-987"/>
-          <xref linkend="cll_yacc-987"/></para>
+          <!-- <xref linkend="cll_yacc-987"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7693,7 +7695,7 @@ the 900 series rules are found in the lexer.  */
           <para>BY | any-word BU | LAU lerfu-word | TEI lerfu-string FOI 
           <anchor xml:id="b802"/>
           <anchor xreflabel="BNF rule #802" xml:id="cll_bnf-802"/>
-          <xref linkend="cll_yacc-802"/></para>
+          <!-- <xref linkend="cll_yacc-802"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7703,7 +7705,7 @@ the 900 series rules are found in the lexer.  */
           <para>[NA] [SE] A [NAI] 
           <anchor xml:id="b818"/>
           <anchor xreflabel="BNF rule #818" xml:id="cll_bnf-818"/>
-          <xref linkend="cll_yacc-818"/></para>
+          <!-- <xref linkend="cll_yacc-818"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7713,7 +7715,7 @@ the 900 series rules are found in the lexer.  */
           <para>[NA] [SE] GIhA [NAI] 
           <anchor xml:id="b805"/>
           <anchor xreflabel="BNF rule #805" xml:id="cll_bnf-805"/>
-          <xref linkend="cll_yacc-805"/></para>
+          <!-- <xref linkend="cll_yacc-805"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7723,7 +7725,7 @@ the 900 series rules are found in the lexer.  */
           <para>[NA] [SE] JA [NAI] 
           <anchor xml:id="b806"/>
           <anchor xreflabel="BNF rule #806" xml:id="cll_bnf-806"/>
-          <xref linkend="cll_yacc-806"/></para>
+          <!-- <xref linkend="cll_yacc-806"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7733,7 +7735,7 @@ the 900 series rules are found in the lexer.  */
           <para>[SE] JOI [NAI] | interval | GAhO interval GAhO 
           <anchor xml:id="b932"/>
           <anchor xreflabel="BNF rule #932" xml:id="cll_bnf-932"/>
-          <xref linkend="cll_yacc-932"/></para>
+          <!-- <xref linkend="cll_yacc-932"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7743,7 +7745,7 @@ the 900 series rules are found in the lexer.  */
           <para>[SE] BIhI [NAI] 
           <anchor xml:id="b421"/>
           <anchor xreflabel="BNF rule #421" xml:id="cll_bnf-421"/>
-          <xref linkend="cll_yacc-421"/></para>
+          <!-- <xref linkend="cll_yacc-421"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7753,7 +7755,7 @@ the 900 series rules are found in the lexer.  */
           <para>joik # | ek # 
           <anchor xml:id="b422"/>
           <anchor xreflabel="BNF rule #422" xml:id="cll_bnf-422"/>
-          <xref linkend="cll_yacc-422"/></para>
+          <!-- <xref linkend="cll_yacc-422"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7763,7 +7765,7 @@ the 900 series rules are found in the lexer.  */
           <para>joik # | jek # 
           <anchor xml:id="b807"/>
           <anchor xreflabel="BNF rule #807" xml:id="cll_bnf-807"/>
-          <xref linkend="cll_yacc-807"/></para>
+          <!-- <xref linkend="cll_yacc-807"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7773,7 +7775,7 @@ the 900 series rules are found in the lexer.  */
           <para>[SE] GA [NAI] # | joik GI # | stag gik 
           <anchor xml:id="b808"/>
           <anchor xreflabel="BNF rule #808" xml:id="cll_bnf-808"/>
-          <xref linkend="cll_yacc-808"/></para>
+          <!-- <xref linkend="cll_yacc-808"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7784,7 +7786,7 @@ the 900 series rules are found in the lexer.  */
           <para>[SE] GUhA [NAI] # 
           <anchor xml:id="b816"/>
           <anchor xreflabel="BNF rule #816" xml:id="cll_bnf-816"/>
-          <xref linkend="cll_yacc-816"/></para>
+          <!-- <xref linkend="cll_yacc-816"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7794,7 +7796,7 @@ the 900 series rules are found in the lexer.  */
           <para>GI [NAI] # 
           <anchor xml:id="b491"/>
           <anchor xreflabel="BNF rule #491" xml:id="cll_bnf-491"/>
-          <xref linkend="cll_yacc-491"/></para>
+          <!-- <xref linkend="cll_yacc-491"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7804,7 +7806,7 @@ the 900 series rules are found in the lexer.  */
           <para>tense-modal [joik-jek tense-modal] ... 
           <anchor xml:id="b971"/>
           <anchor xreflabel="BNF rule #971" xml:id="cll_bnf-971"/>
-          <xref linkend="cll_yacc-971"/></para>
+          <!-- <xref linkend="cll_yacc-971"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7814,7 +7816,7 @@ the 900 series rules are found in the lexer.  */
           <para>simple-tense-modal [(jek | joik) simple-tense-modal] ... 
           <anchor xml:id="b815"/>
           <anchor xreflabel="BNF rule #815" xml:id="cll_bnf-815"/>
-          <xref linkend="cll_yacc-815"/></para>
+          <!-- <xref linkend="cll_yacc-815"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7824,7 +7826,7 @@ the 900 series rules are found in the lexer.  */
           <para>simple-tense-modal # | FIhO # selbri /FEhU#/ 
           <anchor xml:id="b972"/>
           <anchor xreflabel="BNF rule #972" xml:id="cll_bnf-972"/>
-          <xref linkend="cll_yacc-972"/></para>
+          <!-- <xref linkend="cll_yacc-972"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7834,7 +7836,7 @@ the 900 series rules are found in the lexer.  */
           <para>[NAhE] [SE] BAI [NAI] [KI] | [NAhE] (time [space] | space [time]) &amp; CAhA [KI] | KI | CUhE 
           <anchor xml:id="b1030"/>
           <anchor xreflabel="BNF rule #1030" xml:id="cll_bnf-1030"/>
-          <xref linkend="cll_yacc-1030"/></para>
+          <!-- <xref linkend="cll_yacc-1030"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7844,7 +7846,7 @@ the 900 series rules are found in the lexer.  */
           <para>ZI &amp; time-offset ... &amp; ZEhA [PU [NAI]] &amp; interval-property ... 
           <anchor xml:id="b1033"/>
           <anchor xreflabel="BNF rule #1033" xml:id="cll_bnf-1033"/>
-          <xref linkend="cll_yacc-1033"/></para>
+          <!-- <xref linkend="cll_yacc-1033"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7854,7 +7856,7 @@ the 900 series rules are found in the lexer.  */
           <para>PU [NAI] [ZI] 
           <anchor xml:id="b1040"/>
           <anchor xreflabel="BNF rule #1040" xml:id="cll_bnf-1040"/>
-          <xref linkend="cll_yacc-1040"/></para>
+          <!-- <xref linkend="cll_yacc-1040"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7864,7 +7866,7 @@ the 900 series rules are found in the lexer.  */
           <para>VA &amp; space-offset ... &amp; space-interval &amp; (MOhI space-offset) 
           <anchor xml:id="b1045"/>
           <anchor xreflabel="BNF rule #1045" xml:id="cll_bnf-1045"/>
-          <xref linkend="cll_yacc-1045"/></para>
+          <!-- <xref linkend="cll_yacc-1045"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7874,7 +7876,7 @@ the 900 series rules are found in the lexer.  */
           <para>FAhA [NAI] [VA] 
           <anchor xml:id="b1046"/>
           <anchor xreflabel="BNF rule #1046" xml:id="cll_bnf-1046"/>
-          <xref linkend="cll_yacc-1046"/></para>
+          <!-- <xref linkend="cll_yacc-1046"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7884,7 +7886,7 @@ the 900 series rules are found in the lexer.  */
           <para>((VEhA &amp; VIhA) [FAhA [NAI]]) &amp; space-int-props 
           <anchor xml:id="b1049"/>
           <anchor xreflabel="BNF rule #1049" xml:id="cll_bnf-1049"/>
-          <xref linkend="cll_yacc-1049"/></para>
+          <!-- <xref linkend="cll_yacc-1049"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7894,7 +7896,7 @@ the 900 series rules are found in the lexer.  */
           <para>(FEhE interval-property) ... 
           <anchor xml:id="b1051"/>
           <anchor xreflabel="BNF rule #1051" xml:id="cll_bnf-1051"/>
-          <xref linkend="cll_yacc-1051"/></para>
+          <!-- <xref linkend="cll_yacc-1051"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7904,7 +7906,7 @@ the 900 series rules are found in the lexer.  */
           <para>number ROI [NAI] | TAhE [NAI] | ZAhO [NAI] 
           <anchor xml:id="b32"/>
           <anchor xreflabel="BNF rule #32" xml:id="cll_bnf-32"/>
-          <xref linkend="cll_yacc-32"/></para>
+          <!-- <xref linkend="cll_yacc-32"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7914,7 +7916,7 @@ the 900 series rules are found in the lexer.  */
           <para>SEI # [terms [CU #]] selbri /SEhU/ | SOI # sumti [sumti] /SEhU/ | vocative [relative-clauses] selbri [relative-clauses] /DOhU/ | vocative [relative-clauses] CMENE ... # [relative-clauses] /DOhU/ | vocative [sumti] /DOhU/ | (number | lerfu-string) MAI | TO text /TOI/ | XI # (number | lerfu-string) /BOI/ | XI # VEI # mex /VEhO/ 
           <anchor xml:id="b415"/>
           <anchor xreflabel="BNF rule #415" xml:id="cll_bnf-415"/>
-          <xref linkend="cll_yacc-415"/></para>
+          <!-- <xref linkend="cll_yacc-415"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7924,7 +7926,7 @@ the 900 series rules are found in the lexer.  */
           <para>(COI [NAI]) ... &amp; DOI 
           <anchor xml:id="b411"/>
           <anchor xreflabel="BNF rule #411" xml:id="cll_bnf-411"/>
-          <xref linkend="cll_yacc-411"/></para>
+          <!-- <xref linkend="cll_yacc-411"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7934,7 +7936,7 @@ the 900 series rules are found in the lexer.  */
           <para>[FUhE] indicator ... 
           <anchor xml:id="b413"/>
           <anchor xreflabel="BNF rule #413" xml:id="cll_bnf-413"/>
-          <xref linkend="cll_yacc-413"/></para>
+          <!-- <xref linkend="cll_yacc-413"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
@@ -7951,7 +7953,7 @@ the 900 series rules are found in the lexer.  */
         <term>
         <anchor xml:id="b1100"/>
         <anchor xreflabel="BNF rule #1100" xml:id="cll_bnf-1100"/>
-        <xref linkend="cll_yacc-1100"/> word 
+        <!-- <xref linkend="cll_yacc-1100"/> --> word 
         <subscript>1100</subscript>=</term>
         <listitem>
           <para>[BAhE] any-word [indicators]</para>
@@ -7969,7 +7971,7 @@ the 900 series rules are found in the lexer.  */
           <para><quote>any text at all, whether Lojban or not</quote> 
           <anchor xml:id="b1101"/>
           <anchor xreflabel="BNF rule #1101" xml:id="cll_bnf-1101"/>
-          <xref linkend="cll_yacc-1101"/></para>
+          <!-- <xref linkend="cll_yacc-1101"/> --></para>
         </listitem>
       </varlistentry>
       <varlistentry>
