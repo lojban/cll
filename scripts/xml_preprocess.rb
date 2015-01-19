@@ -10,7 +10,8 @@ require "#{mydir}/util.rb"
 #**************************************************
 
 # Takes a node in the XML tree and and replaces it with a node we
-# specify using a simple hash.
+# specify using a simple hash.  Copies all attributes to the new
+# node.
 #
 # @param name [String] The name of the new node to make.
 #
@@ -40,6 +41,21 @@ def wrap_up name, node, spec, children, replace = true
         newnode[:'xml:lang'] = partspec[:mylang]
       else
         newnode[key] = partspec[key]
+      end
+    end
+    # Copy attributes
+    if not node.attributes.empty?
+      node.attribute_nodes.each do |attr|
+        # drop our custom attributes that are handled elsewhere
+        if [ 'valid', 'glossary', 'point', 'se', 'elidable', 'delineated' ].include? attr.name
+          next
+        end
+        # This is basically all about xml:lang
+        if attr.namespace
+          newnode["#{attr.namespace.prefix}:#{attr.name}"] = attr.value
+        else
+          newnode[attr.name] = attr.value
+        end
       end
     end
     newnode.children = children
@@ -156,11 +172,15 @@ end
 
 # Wrap node in a glossary entry
 def glossify node, text
-  glossterm = Nokogiri::XML::Node.new( 'glossterm', $document )
-  glossterm[:linkend] = "valsi-#{slugify(text)}"
-  glossterm.children = node.clone
-  newnode = node.replace glossterm
-  return newnode
+  if node['glossary'] == 'false'
+    return node
+  else
+    glossterm = Nokogiri::XML::Node.new( 'glossterm', $document )
+    glossterm[:linkend] = "valsi-#{slugify(text)}"
+    glossterm.children = node.clone
+    newnode = node.replace glossterm
+    return newnode
+  end
 end
 
 # Makes something into an informal table with one colgroup
@@ -181,7 +201,7 @@ def tableify node
   node.children.each { |child| child.name == 'colgroup' and newchildren << child }
   node.children.each { |child| child.name != 'caption' and child.name != 'colgroup' and newchildren << child }
   node.children = Nokogiri::XML::NodeSet.new( $document, newchildren )
-  
+
   return node
 end
 
@@ -327,6 +347,11 @@ $document.traverse do |node|
           end
 
           convert grandchild.name, grandchild, 'para'
+          #origtext = node.text
+          #node = convert grandchild.name, grandchild, 'para'
+          #if child.name == 'jbo'
+          #  node = glossify node, origtext
+          #end
         end
 
         table_row_by_children child
