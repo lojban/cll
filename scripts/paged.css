@@ -124,16 +124,40 @@ div.whole-index {
   column-span: all;
 }
 
-.whole-index dd, .whole-index dt {
+.glossary dl {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.glossary dt {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.glossary dd {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 2em;
+}
+
+.whole-index dl {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.whole-index dt{
   font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
-/*
-.whole-index dd::after, .whole-index dt::after {
-  content: ":"
+.whole-index dd {
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0.8em;
 }
-*/
+
 .whole-index h3, .glossary h3 {
-  content: ""
+  display: none;
 }
 
 
