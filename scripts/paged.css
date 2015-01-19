@@ -16,12 +16,12 @@ p[lang="ko"] {
 }
 
 p[lang="math"] {
-  font-family: "DejaVu Sans";
+  font-family: 'Linux Biolinum', 'Biolinum', 'DejaVu Sans';
 }
 
 /* Make sure that comments *inside* the special glyph natlang look normal */
 span.comment {
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-family: 'Linux Libertine', Libertine, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   font-size: 9pt;
 }
 /****
@@ -37,7 +37,7 @@ div.toc a::after {
 }
 
 a.xref::after {
-    content: " (p. " target-counter(attr(href), page) ") ";
+    content: " (p. " target-counter(attr(href), page) ")";
 }
 
 /* Make links for printing look like normal text. */
@@ -78,7 +78,7 @@ examples
 */
 div.example {
   page-break-inside: avoid;
-  font-family: "DejaVu Sans";
+  font-family: 'Linux Biolinum', 'Biolinum', 'DejaVu Sans';
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -204,7 +204,7 @@ div.chapter, div.glossary, div.whole-index {
 
 @page {
   margin: 13mm 13mm 13mm 13mm;
-  size: 156mm 234mm;
+  size: 159mm 240mm;
 }
 
 
