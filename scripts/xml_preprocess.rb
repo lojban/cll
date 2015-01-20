@@ -1,6 +1,6 @@
 require 'nokogiri'
 require 'yaml'
-require 'debugger'
+require 'byebug'
 
 mydir=File.expand_path(File.dirname(__FILE__))
 require "#{mydir}/util.rb"
