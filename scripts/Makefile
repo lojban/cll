@@ -132,7 +132,7 @@ $(builddir)/prince_pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2htm
 	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/prince_pdf/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 	ruby scripts/xml_prince_postprocess.rb $(builddir)/prince_pdf/cll_processed_xhtml.html >$(builddir)/prince_pdf/cll_processed_xhtml_prince.html 2>/tmp/xml_prince_postprocess.out
 	
-	prince -vvv $(builddir)/prince_pdf/cll_processed_xhtml_prince.html $(builddir)/cll_prince.pdf
+	prince -vvv --script=scripts/prince_check_margins.js $(builddir)/prince_pdf/cll_processed_xhtml_prince.html $(builddir)/cll_prince.pdf
 	touch $(builddir)/prince_pdf.done
 
 .PHONY: prince_pdf_web
