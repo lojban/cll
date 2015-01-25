@@ -293,6 +293,50 @@ $document.traverse do |node|
       elsif child.name == 'title'
         # do nothing
       elsif child.name == 'cmavo-entry'
+#         <cmavo>ju'i</cmavo>
+#         <gismu>[jundi]</gismu>
+#         <attitudinal-scale point="sai">attention</attitudinal-scale>
+#         <attitudinal-scale point="cu'i">at ease</attitudinal-scale>
+#         <attitudinal-scale point="nai">ignore me/us</attitudinal-scale>
+#         <description role="long">
+# 
+#           <quote>Attention/Lo/Hark/Behold/Hey!/Listen, X</quote>; indicates an important communication that the listener should listen to.
+#         </description>
+
+        if child.xpath('./cmavo').length > 0 and child.xpath('./description').length > 0
+          newchildren = []
+
+          td = Nokogiri::XML::Node.new( 'td', $document )
+          td.content = child.xpath('./cmavo').first.text
+          newchildren << td
+
+          td = Nokogiri::XML::Node.new( 'td', $document )
+          td.content = child.xpath('./gismu').first ? child.xpath('./gismu').first.text : ''
+          newchildren << td
+
+          td = Nokogiri::XML::Node.new( 'td', $document )
+          td.content = child.xpath('./attitudinal-scale[@point="sai"]').map { |x| x.text }.join(' ; ')
+          newchildren << td
+
+          td = Nokogiri::XML::Node.new( 'td', $document )
+          td.content = child.xpath("./attitudinal-scale[@point=\"cu'i\"]").map { |x| x.text }.join(' ; ')
+          newchildren << td
+
+          td = Nokogiri::XML::Node.new( 'td', $document )
+          td.content = child.xpath('./attitudinal-scale[@point="nai"]').map { |x| x.text }.join(' ; ')
+          newchildren << td
+
+          tr1 = Nokogiri::XML::Node.new( 'tr', $document )
+          tr1.children = Nokogiri::XML::NodeSet.new( $document, newchildren )
+          tr1[:class] = 'cmavo-entry-line-1'
+
+          tr2 = flat_table_row ( convert 'description', child.xpath('./description').first, 'para' )
+          tr2[:class] = 'cmavo-entry-line-2'
+
+          group = Nokogiri::XML::NodeSet.new( $document, [ tr1, tr2 ] )
+
+          child = child.replace group
+        else
         child.children.each do |grandchild|
           unless grandchild.element?
             next
@@ -306,13 +350,14 @@ $document.traverse do |node|
           elsif grandchild.name == 'modal-place'
             role="modal-place-#{grandchild[:se]}"
           elsif grandchild.name == 'attitudinal-scale'
-            role="modal-place-#{grandchild[:point]}"
+            role="attitudinal-scale-#{grandchild[:point]}"
           end
 
           wrap_up grandchild.name, grandchild, { name: 'para', role: role }, grandchild.children
         end
 
-        table_row_by_children child
+          table_row_by_children child
+        end
       else
         abort "Bad node in cmavo-list: #{child.to_xml}"
       end
@@ -452,8 +497,11 @@ $document.traverse do |node|
 
   convert_and_wrap 'math', node, 'mathphrase', 'informalequation'
 
-  convert 'cmavo', node, 'emphasis'
-  convert 'gismu', node, 'para'
+  if (not node.parent) or node.parent.name != 'cmavo-entry'
+    convert 'cmavo', node, 'emphasis'
+    convert 'gismu', node, 'para'
+  end
+
   convert 'selmaho', node, 'para'
 
   convert 'comment', node, 'emphasis'
