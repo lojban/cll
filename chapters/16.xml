@@ -476,8 +476,12 @@
         <anchor xml:id="c16e5d3"/>
       </title>
       <interlinear-gloss>
-        <jbo>ro da poi prenu ku'o de poi gerku ku'o zo'u de batci da</jbo>
-        <gloss>For-every X which is-a-person, there-is-a-Y which is-a-dog: Y bites X.</gloss>
+        <jbo>ro da poi prenu ku'o de</jbo>
+        <gloss>For-every X which is-a-person, - there-is-a-Y</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… poi gerku ku'o zo'u de batci da</jbo>
+        <gloss>… which is-a-dog - : Y bites X.</gloss>
       </interlinear-gloss>
     </example>
     <para>The prenex of 
@@ -917,8 +921,16 @@
         <anchor xml:id="c16e8d8"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi nitcu lo nu da zo'u da se ponse mi gi'e tanxe gi'e bramau ti</jbo>
-        <gloss>I need an event-of there-being an-X such-that : X is-possessed-by me and is-a-box and is-bigger-than this-thing.</gloss>
+        <jbo>mi nitcu lo nu da zo'u</jbo>
+        <gloss>I need an event-of there-being-an-X such-that:</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… da se ponse mi</jbo>
+        <gloss>… X - is-possessed-by me</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… gi'e tanxe gi'e bramau ti</jbo>
+        <gloss>… and is-a-box and is-bigger-than this-thing.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general"><primary>logical variables</primary><secondary>explicitly placing in outer prenex</secondary></indexterm>  <indexterm type="general"><primary>logical variables</primary><secondary>implicit placement in smallest enclosing bridi prenex</secondary></indexterm>  <indexterm type="general"><primary>prenex</primary><secondary>internal to a bridi</secondary></indexterm> So we see that a prenex can be attached to a bridi that is within a sentence. By default, a variable always behaves as if it is bound in the prenex which (notionally) is attached to the smallest enclosing bridi, and its scope does not extend beyond that bridi. However, the variable may be placed in an outer prenex explicitly:</para>
@@ -927,8 +939,12 @@
         <anchor xml:id="c16e8d9"/>
       </title>
       <interlinear-gloss>
-        <jbo>da poi tanxe gi'e bramau ti zo'u mi nitcu le nu mi ponse da</jbo>
-        <gloss>There-is-an-X which is-a-box and is-bigger-than this-one such-that : I need the event-of my possessing X.</gloss>
+        <jbo>da poi tanxe gi'e bramau ti zo'u</jbo>
+        <gloss>There-is-an-X which is-a-box and is-bigger-than this-one such-that:</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… mi nitcu le nu mi ponse da</jbo>
+        <gloss>… I need the event-of my possessing X.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general"><primary>existential variable</primary><secondary>in main bridi contrasted with in abstraction</secondary></indexterm>  <indexterm type="general"><primary>existential variable</primary><secondary>in abstraction contrasted with in main bridi</secondary></indexterm> But what are the implications of 
@@ -1059,9 +1075,8 @@
       </title>
       <interlinear-gloss>
         <jbo>naku roda su'ode zo'u da prami de</jbo>
-        <gloss>It is false that: for every X, there is a Y, such that: X loves Y.</gloss>
-        
-        <gloss>It is false that: everybody loves at least one thing.</gloss>
+        <gloss>It-is-false-that: for-every-X, there-is-a-Y, such-that: X loves Y.</gloss>
+        <natlang>It is false that: everybody loves at least one thing.</natlang>
         <natlang>(At least) someone doesn't love anything.</natlang>
       </interlinear-gloss>
     </example>
@@ -1072,10 +1087,9 @@
         <anchor xml:id="c16e9d8"/>
       </title>
       <interlinear-gloss>
-        <jbo>naku su'ode roda zo'u da prami de</jbo>
-        <gloss>It is false that: there is a Y such that for each X, X loves Y.</gloss>
-        
-        <gloss>It is false that: there is at least one thing that is loved by everybody.</gloss>
+        <jbo>naku su'ode - roda zo'u da prami de</jbo>
+        <gloss>It-is-false-that: there-is-a-Y such-that for-each-X -, X loves Y.</gloss>
+        <natlang>It is false that: there is at least one thing that is loved by everybody.</natlang>
         <natlang>There isn't any one thing that everybody loves.</natlang>
       </interlinear-gloss>
     </example>
@@ -1093,8 +1107,7 @@
       </title>
       <interlinear-gloss>
         <jbo>su'oda naku su'ode zo'u da prami de</jbo>
-        <gloss>For some X, it is false that: there is a Y such that: X loves Y.</gloss>
-        
+        <gloss>For-some-X, it-is-false-that: there-is-a-Y such-that: X loves Y.</gloss>
         <natlang>There is somebody who doesn't love anything.</natlang>
       </interlinear-gloss>
     </example>
@@ -1105,7 +1118,7 @@
       </title>
       <interlinear-gloss>
         <jbo>rode naku roda zo'u da prami de</jbo>
-        <gloss>For every Y, it is false that: for every X, X loves Y.</gloss>
+        <gloss>For-every-Y, it-is-false-that: for-every-X -, X loves Y.</gloss>
         <natlang>For each thing, it is not true that everybody loves it.</natlang>
       </interlinear-gloss>
     </example>
@@ -1115,8 +1128,8 @@
         <anchor xml:id="c16e9d11"/>
       </title>
       <interlinear-gloss>
-        <jbo>su'oda rode naku zo'u da prami de</jbo>
-        <gloss>There is an X such that, for every Y, it is false that X loves Y.</gloss>
+        <jbo>su'oda - rode naku zo'u da prami de</jbo>
+        <gloss>There-is-an-X such-that, for-every-Y, it-is-false-that - X loves Y.</gloss>
         <natlang>There is someone who, for each thing, doesn't love that thing.</natlang>
       </interlinear-gloss>
     </example>
@@ -1127,7 +1140,7 @@
       </title>
       <interlinear-gloss>
         <jbo>rode su'oda naku zo'u da prami de</jbo>
-        <gloss>For every Y, there is an X, such that it is false that: X loves Y.</gloss>
+        <gloss>For-every-Y, there-is-an-X, such-that-it-is-false that: X loves Y.</gloss>
         <natlang>For each thing there is someone who doesn't love it.</natlang>
       </interlinear-gloss>
     </example>
@@ -1144,8 +1157,7 @@
       </title>
       <interlinear-gloss>
         <jbo>noda rode zo'u da prami de</jbo>
-        
-        <gloss>There is no X, for every Y, such that X loves Y.</gloss>
+        <gloss>There-is-no-X, for-every-Y, such-that X loves Y.</gloss>
         <natlang>Nobody loves everything.</natlang>
       </interlinear-gloss>
     </example>
@@ -1156,8 +1168,7 @@
       </title>
       <interlinear-gloss>
         <jbo>naku noda rode zo'u da prami de</jbo>
-        
-        <gloss>It is false that: there is no X that, for every Y, X loves Y.</gloss>
+        <gloss>It-is-false-that: there-is-no-X-that, for-every-Y, - X loves Y.</gloss>
         <natlang>It is false that there is nobody who loves everything.</natlang>
       </interlinear-gloss>
     </example>
@@ -1318,8 +1329,12 @@
         <anchor xml:id="c16e10d6"/>
       </title>
       <interlinear-gloss>
-        <jbo>su'oda zo'u mi prami da .ije naku zo'u do prami da</jbo>
-        <gloss>For at least one thing: I love that thing. And it is false that: you love that (same) thing.</gloss>
+        <jbo>su'oda zo'u mi prami da</jbo>
+        <gloss>For-at-least-one-thing : I love that-thing.</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… .ije naku zo'u do prami da</jbo>
+        <gloss>… And it-is-false-that : you love that-(same)-thing.</gloss>
         <natlang>There is something that I love that you don't.</natlang>
       </interlinear-gloss>
     </example>
@@ -1355,8 +1370,12 @@
         <anchor xml:id="c16e11d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>su'oda poi verba na klama su'ode poi ckule</jbo>
-        <gloss>At-least-one X which-are child(ren) [false] go-to at-least-one Y which-are school(s).</gloss>
+        <jbo>su'oda poi verba</jbo>
+        <gloss>At-least-one-X which-are child(ren)</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… na klama su'ode poi ckule</jbo>
+        <gloss>… [false] go-to at-least-one-Y which-are school(s).</gloss>
       </interlinear-gloss>
     </example>
     <para>when converted to the external negation form produces:</para>
@@ -1365,8 +1384,12 @@
         <anchor xml:id="c16e11d3"/>
       </title>
       <interlinear-gloss>
-        <jbo>naku zo'u su'oda poi verba cu klama su'ode poi ckule</jbo>
-        <gloss>It is false that some which are children go-to some which are schools.</gloss>
+        <jbo>naku zo'u su'oda poi verba cu</jbo>
+        <gloss>It-is-false that some-which are children -</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… klama su'ode poi ckule</jbo>
+        <gloss>… go-to some-which are schools.</gloss>
         <natlang>All children don't go to some school (not just some children).</natlang>
       </interlinear-gloss>
     </example>
@@ -1474,9 +1497,12 @@
         <anchor xml:id="c16e11d10"/>
       </title>
       <interlinear-gloss>
-        <jbo>su'oda poi verba ku'o naku su'ode poi ckule zo'u da klama de</jbo>
-        <gloss>For some X which is a child, it is not the case that there is a Y which is a school such that: X goes to Y.</gloss>
-        
+        <jbo>su'oda poi verba ku'o naku</jbo>
+        <gloss>For-some-X which is-a-child, - it-is-not-the-case-that</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… su'ode poi ckule zo'u da klama de</jbo>
+        <gloss>… there-is-a-Y which is-a-school such-that: X goes to Y.</gloss>
       </interlinear-gloss>
     </example>
     <para>We can now move the 
@@ -1487,9 +1513,12 @@
         <anchor xml:id="c16e11d11"/>
       </title>
       <interlinear-gloss>
-        <jbo>naku roda poi verba su'ode poi ckule zo'u da klama de</jbo>
-        <gloss>It is not the case that for all X's which are children, there is a Y which is a school such that: X goes to Y.</gloss>
-        
+        <jbo>naku roda poi verba</jbo>
+        <gloss>It-is-not-the-case-that for-all-X's which-are children,</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… su'ode poi ckule zo'u da klama de</jbo>
+        <gloss>… there-is-a-Y which-is a-school such-that: X goes-to Y.</gloss>
       </interlinear-gloss>
     </example>
     <para>from which we can restore the quantified variables to the sentence, giving:</para>
@@ -1521,9 +1550,12 @@
         <anchor xml:id="c16e11d14"/>
       </title>
       <interlinear-gloss>
-        <jbo>roda poi verba su'ode poi ckule zo'u de na se klama da</jbo>
-        <gloss>It is not the case that for all X's which are children, there is a Y which is a school such that: Y is gone to by X.</gloss>
-        
+        <jbo>- roda poi verba su'ode</jbo>
+        <gloss>It-is-not-the-case-that for-all-X's which-are children, there-is-a-Y</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… poi ckule zo'u de na se klama da</jbo>
+        <gloss>… which is-a-school such-that: Y - - is-gone-to-by X.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general"><primary>multiple quantification</primary><secondary>effect on selbri placement among sumti</secondary></indexterm>  <indexterm type="general"><primary>selbri placement among sumti</primary><secondary>effect of multiple quantification on</secondary></indexterm> While you can't freely convert with 
@@ -1634,8 +1666,12 @@
         <anchor xml:id="c16e12d3"/>
       </title>
       <interlinear-gloss>
-        <jbo>ge la djan. la paris. na klama gi la djan. la rom. na klama</jbo>
-        <gloss>[It is true that] both John, to-Paris, [false] goes, and John, to-Rome, [false] goes.</gloss>
+        <jbo>- ge la djan. la paris. na klama</jbo>
+        <gloss>[It-is-true-that] both - John, - to-Paris, [false] goes,</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… gi la djan. la rom. na klama</jbo>
+        <gloss>… and - John, - to-Rome, [false] goes.</gloss>
       </interlinear-gloss>
     </example>
     <para>The 
@@ -1690,8 +1726,12 @@
         <anchor xml:id="c16e12d7"/>
       </title>
       <interlinear-gloss>
-        <jbo>naku zo'u ge la djein. le zarci cu dzukla gi la djein. le zarci cu bajrykla</jbo>
-        <gloss>It-is-false-that: both (Jane to-the market walks) and (Jane to-the market runs).</gloss>
+        <jbo>naku zo'u ge la djein. le zarci cu dzukla</jbo>
+        <gloss>It-is-false that: both (- Jane to-the market - walks)</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… gi la djein. le zarci cu bajrykla</jbo>
+        <gloss>… and (- Jane to-the market - runs).</gloss>
       </interlinear-gloss>
     </example>
     <para>is the result.</para>
@@ -1701,8 +1741,12 @@
         <anchor xml:id="c16e12d8"/>
       </title>
       <interlinear-gloss>
-        <jbo>ga la djein. le zarci na dzukla gi la djein. le zarci na bajrykla</jbo>
-        <gloss>Either Jane to-the market [false] walks, or Jane to-the market [false] runs.</gloss>
+        <jbo>ga la djein. le zarci na dzukla</jbo>
+        <gloss>Either - Jane to-the market [false] walks,</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… gi la djein. le zarci na bajrykla</jbo>
+        <gloss>… or - Jane to-the market [false] runs.</gloss>
       </interlinear-gloss>
     </example>
     <para>which is the same as</para>
@@ -1711,8 +1755,12 @@
         <anchor xml:id="c16e12d9"/>
       </title>
       <interlinear-gloss>
-        <jbo>ganai la djein. le zarci cu dzukla ginai la djein. le zarci cu bajrykla</jbo>
-        <gloss>If Jane to-the market walks, then Jane to-the market [false] runs.</gloss>
+        <jbo>ganai la djein. le zarci cu dzukla</jbo>
+        <gloss>If - Jane to-the market - walks,</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… ginai la djein. le zarci cu - bajrykla</jbo>
+        <gloss>… then - Jane to-the market - [false] runs.</gloss>
         <natlang>If Jane walks to the market, then she doesn't run.</natlang>
       </interlinear-gloss>
     </example>
