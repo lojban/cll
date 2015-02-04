@@ -116,7 +116,7 @@ def table_row_by_words node
   newchildren = []
   node.children.each do |child|
     if child.text?
-      child.text.split( %r{\s+} ).each do |word|
+      child.text.gsub('--',"\u00A0").split( %r{\s+} ).each do |word|
         unless word =~ %r{^\s*$}
           td = Nokogiri::XML::Node.new( 'td', $document )
           td.content = word
