@@ -114,12 +114,24 @@ end
 #
 def table_row_by_words node
   newchildren = []
-  node.children.each do |child|
+  children = node.children.to_a
+  children.each_index do |child_index|
+    child = children[child_index]
+    sibling = (child_index+1 == children.length) ? nil : children[child_index+1]
+    if not child
+        next
+    end
     if child.text?
-      child.text.split( %r{\s+} ).each do |word|
+      words = child.text.gsub('--',"\u00A0").split( %r{\s+} )
+      words.each_index do |word_index|
+        word = words[word_index]
         unless word =~ %r{^\s*$}
           td = Nokogiri::XML::Node.new( 'td', $document )
           td.content = word
+          if word_index == words.length-1 && sibling && !(sibling.text?) && sibling.element? && sibling.name == 'quote'
+              td << sibling.dup
+              children[child_index+1] = nil
+          end
           newchildren << td
         end
       end

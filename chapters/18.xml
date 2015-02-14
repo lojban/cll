@@ -578,7 +578,7 @@
       </title>
       <interlinear-gloss>
         <jbo>levi sfani cu grake li ci</jbo>
-        <gloss>This fly masses-in-grams the-number three.</gloss>
+        <gloss>This fly - masses-in-grams the-number three.</gloss>
         <natlang>This fly has a mass of 3 grams.</natlang>
       </interlinear-gloss>
     </example>
@@ -688,7 +688,7 @@
       <interlinear-gloss>
         <jbo>li ci su'i vo bi'e pi'i mu du li reci</jbo>
         
-        <gloss>The-number three plus four-times-five equals the-number two-three.</gloss>
+        <gloss>The-number three plus four times five equals the-number two-three.</gloss>
         <math>3 + 4 × 5 = 23</math>
       </interlinear-gloss>
     </example>
@@ -718,8 +718,7 @@
       <interlinear-gloss>
         <jbo>… su'i re bi'e pi'i ny. su'i pa</jbo>
         <gloss>… plus two - times <varname>n</varname> plus 1.</gloss>
-        <!-- FIXME: broken math, not the only one -->
-        <math>(n + 1)(n + 1) = n FIXME THIS IS WRONG</math>
+        <!-- not broken math, it says (n=1)(n+1) = n^2 + 2n + 1 -->
       </interlinear-gloss>
     </example>
     <para> 
@@ -829,12 +828,15 @@
         <anchor xml:id="c18e6d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>li py. su'i va'a ny. ku'e su'i zy du li xy.</jbo>
+        <jbo>li py. su'i va'a ny. ku'e su'i zy du</jbo>
         <gloss>The-number 
         <quote>p</quote> plus negative-of( 
         <quote>n</quote>) plus 
-        <quote>z</quote> equals the-number 
-        <quote>x</quote>.</gloss>
+        <quote>z</quote> equals</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… li xy.</jbo>
+        <gloss>… the-number <quote>x</quote>.</gloss>
         <math>p + -n + z = x</math>
       </interlinear-gloss>
     </example>
@@ -1317,7 +1319,7 @@
       </title>
       <interlinear-gloss>
         <jbo>li ci vu'u re du li ma'u</jbo>
-        <gloss>the-number 3 − 2 = some-positive-number</gloss>
+        <gloss>the-number 3 − 2 = - some-positive-number</gloss>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qiAq" role="interlinear-gloss-example">
@@ -1326,7 +1328,7 @@
       </title>
       <interlinear-gloss>
         <jbo>li ci vu'u vo du li ni'u</jbo>
-        <gloss>the-number 3 − 4 = some-negative-number</gloss>
+        <gloss>the-number 3 − 4 = - some-negative-number</gloss>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qiAR" role="interlinear-gloss-example">
@@ -1601,7 +1603,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi catlu su'o prenu</jbo>
-        <gloss>I look-at at-least [one] person</gloss>
+        <gloss>I look-at at-least-[one] person</gloss>
       </interlinear-gloss>
     </example>
     <para>is a meaningful claim.</para>
@@ -1673,8 +1675,8 @@
         <anchor xml:id="c18e10d1"/>
       </title>
       <interlinear-gloss>
-        <jbo>li pa no pa no ju'u re du li pa no</jbo>
-        <gloss>The-number 1010 base 2 equals the-number 10.</gloss>
+        <jbo>li panopano ju'u re du li pano</jbo>
+        <gloss>The-number 1010 base 2 equals the-number 1 0.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general"><primary>base</primary><secondary>changing permanently</secondary></indexterm>  <indexterm type="general"><primary>base</primary><secondary>assumed</secondary></indexterm> Here, the final 
@@ -1717,7 +1719,7 @@
       </title>
       <interlinear-gloss>
         <jbo>li vai pi bi ju'u paxa du li pamu pi mu</jbo>
-        <gloss>The-number F.8 base 16 equals the-number 15.5.</gloss>
+        <gloss>The-number F . 8 base 16 equals the-number 15 . 5.</gloss>
         
       </interlinear-gloss>
     </example>
@@ -1776,7 +1778,7 @@
       </title>
       <interlinear-gloss>
         <jbo>li pa pi'e re pi'e ci ju'u reno du li vovoci</jbo>
-        <gloss>the-number 1;2;3 base 20 equals the-number 443</gloss>
+        <gloss>the-number 1 ; 2 ; 3 base 20 equals the-number 443</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general"><primary>base greater than 16</primary><secondary>two digits contrasted with compound single-digits</secondary></indexterm>  <indexterm type="general"><primary>base greater than 16</primary><secondary>compound single-digits contrasted with two digits</secondary></indexterm> Carefully note the difference between:</para>
@@ -1895,7 +1897,7 @@
       </title>
       <interlinear-gloss>
         <jbo>lei mi ratcu cu cimei</jbo>
-        <gloss>Those-I-describe-as-the-mass-of my rats are-a-threesome.</gloss>
+        <gloss>Those-I-describe-as-the-mass-of my rats - are-a-threesome.</gloss>
         <gloss>My rats are three.</gloss>
         <natlang>I have three rats.</natlang>
         
@@ -1912,7 +1914,7 @@
       </title>
       <interlinear-gloss>
         <jbo>mi poi pamei cu cusku dei</jbo>
-        <gloss>I who am-an-individual express this-sentence.</gloss>
+        <gloss>I who am-an-individual - express this-sentence.</gloss>
       </interlinear-gloss>
     </example>
     <para>In 
@@ -1933,9 +1935,12 @@
         <indexterm type="example"><primary>set of all rats</primary></indexterm>
       </title>
       <interlinear-gloss>
-        <jbo>lei ratcu poi zvati le panka cu so'umei lo'i ratcu</jbo>
-        <gloss>The-mass-of rats which are-in the park are a-fewsome with-respect-to the-set-of rats.</gloss>
-        
+        <jbo>lei ratcu poi zvati le panka</jbo>
+        <gloss>The-mass-of rats which are-in the park</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… cu so'umei lo'i ratcu</jbo>
+        <gloss>… - are-a-fewsome-with-respect-to the-set-of rats.</gloss>
         <natlang>The rats in the park are a small number of all the rats there are.</natlang>
       </interlinear-gloss>
     </example>
@@ -1955,7 +1960,7 @@
       </title>
       <interlinear-gloss>
         <jbo>le'i ratcu poi zvati le panka cu se so'imei</jbo>
-        <gloss>The-set-of rats which-are in the park is-a manysome.</gloss>
+        <gloss>The-set-of rats which-are in the park - is-a manysome.</gloss>
         
         <natlang>There are many rats in the park.</natlang>
       </interlinear-gloss>
@@ -1979,7 +1984,7 @@
       </title>
       <interlinear-gloss>
         <jbo>ti pamoi le'i mi ratcu</jbo>
-        <gloss>This-one is the first-of the rats associated-with me.</gloss>
+        <gloss>This-one is-the-first-of the associated-with-me rats.</gloss>
         <natlang>This is my first rat.</natlang>
         
       </interlinear-gloss>
@@ -1991,7 +1996,7 @@
       </title>
       <interlinear-gloss>
         <jbo>ta romoi le'i mi ratcu</jbo>
-        <gloss>That is-the-allth-of the rats associated-with me.</gloss>
+        <gloss>That is-the-allth-of the associated-with-me rats.</gloss>
         <natlang>That is my last rat.</natlang>
       </interlinear-gloss>
     </example>
@@ -2003,9 +2008,7 @@
       <interlinear-gloss>
         <jbo>mi raumoi le velskina porsi</jbo>
         <gloss>I am-enough-th-in the movie-audience sequence</gloss>
-        
-        <gloss>I am enough-th in the movie line.</gloss>
-        
+        <natlang>I am enough-th in the movie line.</natlang>
       </interlinear-gloss>
     </example>
     <para> 
@@ -2024,7 +2027,7 @@
       </title>
       <interlinear-gloss>
         <jbo>levi sanmi cu fi'ucisi'e lei mi djedi cidja</jbo>
-        <gloss>This-here meal is-a-slash-three-portion-of my day-food.</gloss>
+        <gloss>This-here meal - is-a-slash-three-portion-of - my day food.</gloss>
         <natlang>This meal is one-third of my daily food.</natlang>
       </interlinear-gloss>
     </example>
@@ -2042,7 +2045,7 @@
       </title>
       <interlinear-gloss>
         <jbo>le nu lo sicni cu sedja'o cu pimucu'o</jbo>
-        <gloss>The event of a coin being a head-displayer has probability .5.</gloss>
+        <gloss>The event of-a coin being-a-head-displayer has probability .5.</gloss>
         
       </interlinear-gloss>
     </example>
@@ -2064,8 +2067,8 @@
         <indexterm type="example"><primary>9 out of ten</primary></indexterm>  
       </title>
       <interlinear-gloss>
-        <jbo>le vi rozgu cu sofi'upanova'e xunre</jbo>
-        <gloss>This rose is 9/10-scale red.</gloss>
+        <jbo>levi rozgu cu sofi'upanova'e xunre</jbo>
+        <gloss>This-here rose - is-9/10-scale red.</gloss>
         <natlang>This rose is 9 out of 10 on the scale of redness.</natlang>
         <natlang>This rose is very red.</natlang>
       </interlinear-gloss>
@@ -2087,7 +2090,7 @@
       </title>
       <interlinear-gloss>
         <jbo>lei ratcu poi zvati le panka cu du'emei fo mi</jbo>
-        <gloss>The-mass-of rats which-are in the park are too-many by-standard me.</gloss>
+        <gloss>The-mass-of rats which-are in the park - are-too-many by-standard me.</gloss>
         <natlang>There are too many rats in the park for me.</natlang>
         
       </interlinear-gloss>
@@ -2111,7 +2114,7 @@
       </title>
       <interlinear-gloss>
         <jbo>ta ny.moi le'i mi ratcu</jbo>
-        <gloss>That is-nth-of the-set-of my rats.</gloss>
+        <gloss>That is-nth-of the-set-of associated-with-me rats.</gloss>
         <natlang>That is my nth rat.</natlang>
       </interlinear-gloss>
     </example>
@@ -2129,9 +2132,13 @@
         <indexterm type="example"><primary>(n+1)-th rat</primary></indexterm>
       </title>
       <interlinear-gloss>
-        <jbo>ta me li ny. su'i pa me'u moi le'i mi ratcu</jbo>
-        <gloss>That is the-number n plus one-th-of the-set-of my rats.</gloss>
-        <gloss>That is my (n+1)-th rat.</gloss>
+        <jbo>ta me li ny. su'i pa me'u moi</jbo>
+        <gloss>That is the-number n plus one - -th-of</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… le'i mi ratcu</jbo>
+        <gloss>… the-set-of associated-with-me rats.</gloss>
+        <natlang>That is my (n+1)-th rat.</natlang>
       </interlinear-gloss>
     </example>
     <para>Here the mekso 
@@ -2203,7 +2210,7 @@
       </title>
       <interlinear-gloss>
         <jbo>le xomoi prenu cu darxi do</jbo>
-        <gloss>The what-number-th person hit you?</gloss>
+        <gloss>The what-number-th person - hit you?</gloss>
         <gloss>Which person [as in a police lineup] hit you?</gloss>
         
       </interlinear-gloss>
@@ -2616,7 +2623,7 @@
       <interlinear-gloss>
         <jbo>… li fu'a biboi ciboi panoboi ge'a gei</jbo>
         <gloss>… the-number (RP!) 8, (3, 10, null-op), exponential-notation.</gloss>
-        <math>30,000,000 = 3 × 10</math>
+        <math>30,000,000 = 3 × 10 ^ 8</math>
       </interlinear-gloss>
     </example>
   </section>
@@ -2665,7 +2672,7 @@
       </title>
       <interlinear-gloss>
         <jbo>vei ci .a vo ve'o prenu cu klama le zarci</jbo>
-        <gloss>( Three or four ) people go-to the market.</gloss>
+        <gloss>( Three or four ) people - go to-the market.</gloss>
       </interlinear-gloss>
     </example>
     <para> 
@@ -2681,7 +2688,7 @@
       </title>
       <interlinear-gloss>
         <jbo>vei ga ci gi vo ve'o prenu cu klama le zarci</jbo>
-        <gloss>( Either 3 or 4 ) people go-to the market.</gloss>
+        <gloss>( Either 3 or 4 ) people - go to-the market.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general"><primary>parentheses</primary><secondary>for complex mekso used as quantifier</secondary></indexterm>  <indexterm type="general"><primary>mekso</primary><secondary>complex used as quantifier</secondary></indexterm> Note that the mekso here are being used as quantifiers. Lojban requires that any mekso other than a simple number be enclosed in parentheses when used as a quantifier. This rule prevents ambiguities that do not exist when using 
@@ -2761,8 +2768,7 @@
       <interlinear-gloss>
         <jbo>… ve'o [ku'e] ve'o fe'i re bi'epi'i .abu</jbo>
         <gloss>… ) - ] divided-by two times <quote>a</quote></gloss>
-        <!-- FIXME: THIS IS BROKEN -->
-        <natlang>Iff ax <superscript>2</superscript>  + bx + c = 0, then x = -b ± √ <!--sqrt-->(b <superscript>2</superscript>  − 4ac) <!-- fraction bar --> 2a FIXME: THIS IS BROKEN</natlang>
+        <natlang>Iff ax <superscript>2</superscript>  + bx + c = 0, then x = (-b ± √ <!--sqrt-->(b <superscript>2</superscript>  − 4ac))/(2a)</natlang>
       </interlinear-gloss>
     </example>
     <para> 
@@ -2801,8 +2807,8 @@
       </title>
       <interlinear-gloss>
         <jbo>li pimu ga'o mi'i ke'i pimu</jbo>
-        
-        <gloss>the-number 0.5 ± 0.5</gloss>
+        <!-- used to be: <gloss>the-number 0.5 ± 0.5</gloss> -->
+        <gloss>the-number 0.5 (inclusive) centered-with-range (exclusive) 0.5</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general"><primary>closed interval</primary><secondary>expressed with mi'i</secondary></indexterm>  <indexterm type="general"><primary>open interval</primary><secondary>expressed with mi'i</secondary></indexterm> which expresses the same interval as 
@@ -2881,7 +2887,7 @@
 
         <jbo>li na'u tanjo te'u vei pai fe'i re [ve'o] du li ci'i</jbo>
 
-        <gloss>The-number the-operator tangent (π / 2 ) = the-number infinity.</gloss>
+        <gloss>The-number the-operator tangent [end-operator] ( π / 2 ) = the-number infinity.</gloss>
 
         <math>tan(π/2) = ∞</math>
       </interlinear-gloss>
@@ -2963,7 +2969,7 @@
       <interlinear-gloss>
         <jbo>mi viska vei mo'e lo'e lanzu ve'o cinfo</jbo>
         
-        <gloss>I see ( the-typical family )-number-of lions.</gloss>
+        <gloss>I see ( - the-typical family )-number-of lions.</gloss>
         <natlang>I see a pride of lions.</natlang>
         
       </interlinear-gloss>
@@ -3051,7 +3057,7 @@
       </title>
       <interlinear-gloss>
         <jbo>li ni'umu cu nu'a va'a li ma'umu</jbo>
-        <gloss>The-number -5 is-the-negation-of the-number +5.</gloss>
+        <gloss>The-number -5 - is-the-operator negation-of the-number +5.</gloss>
       </interlinear-gloss>
     </example>
     <para>uses 
@@ -3068,7 +3074,7 @@
       </title>
       <interlinear-gloss>
         <jbo>li re na'u mo re du li vo</jbo>
-        <gloss>The-number two what-operator? two equals the-number four.</gloss>
+        <gloss>The-number two applied-to-selbri which-selbri? two equals the-number four.</gloss>
         <math>2 ? 2 = 4</math>
       </interlinear-gloss>
     </example>
@@ -3224,7 +3230,7 @@
       </title>
       <interlinear-gloss>
         <jbo>li ci na'e su'i vo du li pare</jbo>
-        <gloss>The-number 3 non-plus 4 equals the-number 12.</gloss>
+        <gloss>The-number 3 non- plus 4 equals the-number 12.</gloss>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qiqd" role="interlinear-gloss-example">
@@ -3234,7 +3240,7 @@
       </title>
       <interlinear-gloss>
         <jbo>li ci to'e vu'u re du li mu</jbo>
-        <gloss>The-number 3 opposite-of-minus 2 equals the-number 5.</gloss>
+        <gloss>The-number 3 opposite-of- minus 2 equals the-number 5.</gloss>
         
       </interlinear-gloss>
     </example>
@@ -3252,7 +3258,7 @@
       <interlinear-gloss>
         <jbo>li re su'i re du li na'ebo mu</jbo>
         
-        <gloss>The-number 2 plus 2 equals the-number non-5.</gloss>
+        <gloss>The-number 2 plus 2 equals the-number non- 5.</gloss>
         <natlang>2 + 2 = something other than 5.</natlang>
       </interlinear-gloss>
     </example>
@@ -3275,7 +3281,7 @@
       </title>
       <interlinear-gloss>
         <jbo>la zemei poi gunta la tebes. pu nanmu</jbo>
-        <gloss>Those-named-the Sevensome who attack Thebes [past] are-men.</gloss>
+        <gloss>Those-named-the Sevensome who attack that-named Thebes [past] are-men.</gloss>
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general"><primary>rafsi</primary><secondary>conventional meaning for frinu</secondary></indexterm>  <indexterm type="general"><primary>PA selma'o</primary><secondary>members with rafsi</secondary></indexterm> Certain other members of PA also have assigned rafsi: 
@@ -3362,7 +3368,7 @@
       </title>
       <interlinear-gloss>
         <jbo>li vo pi'i reno su'i ze</jbo>
-        <gloss>four times twenty plus seven</gloss>
+        <gloss>the-number four times twenty plus seven</gloss>
         <math>4 × 20 + 7</math>
       </interlinear-gloss>
     </example>
@@ -3380,7 +3386,7 @@
       <interlinear-gloss>
         <jbo>li mo'e voboi renomei te'u su'i ze</jbo>
         
-        <gloss>the-number-of four twentysomes plus seven</gloss>
+        <gloss>the-number [sumti-to-mex] four twentysomes [end-sumti-to-mex] plus seven</gloss>
       </interlinear-gloss>
     </example>
     <para>In 
@@ -3403,7 +3409,7 @@
       </title>
       <interlinear-gloss>
         <jbo>li vo pi'e ze ju'u reno</jbo>
-        <gloss>four ; seven base 20</gloss>
+        <gloss>the\number four ; seven base 20</gloss>
         <math>47</math>
       </interlinear-gloss>
     </example>
