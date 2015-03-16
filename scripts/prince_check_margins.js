@@ -11,7 +11,7 @@ function check()
 
         for (var j = 0; j < bs.length; ++j)
         {
-            if (bs[j].w > 5.1*72)
+            if (bs[j].w > 5.1*73)
             {
                 console.log("table is too wide on page "+bs[j].pageNum);
             }
