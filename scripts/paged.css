@@ -227,7 +227,9 @@ div.chapter, div.glossary, div.whole-index {
 }
 
 @page {
-  margin: 13mm 13mm 13mm 13mm;
+  margin: 13mm;
+  margin-top: 17mm;
+  margin-bottom: 17mm;
   size: 159mm 240mm;
   /* For overflow testing
    * border: 1px solid red;
@@ -244,16 +246,14 @@ div.chapter, div.glossary, div.whole-index {
     font-weight: bold;
     content: "The Complete Lojban Language";
     vertical-align: bottom;
-    padding-top: .1em;
-    padding-bottom: .5em;
+    margin-top: 13mm;
   }
 
   @bottom-left {
     font-size: 10pt;
     content: counter(page);
     vertical-align: top;
-    padding-bottom: .1em;
-    padding-top: .5em;
+    margin-bottom: 13mm;
   }
 }
 
@@ -264,8 +264,7 @@ div.chapter, div.glossary, div.whole-index {
     font-weight: bold;
     content: string(header, first); 
     vertical-align: bottom;
-    padding-top: .1em;
-    padding-bottom: .5em;
+    margin-top: 13mm;
   }
 
   @bottom-right {
@@ -273,8 +272,7 @@ div.chapter, div.glossary, div.whole-index {
     content: counter(page);
     text-align: right;
     vertical-align: top;
-    padding-bottom: .1em;
-    padding-top: .5em;
+    margin-bottom: 13mm;
   }
 }
 
