@@ -98,7 +98,7 @@ $(builddir)/xhtml-nochunks.done: $(builddir)/cll_processed_xhtml.xml xml/docbook
 .PHONY: epub
 epub: $(builddir)/cll.epub
 $(builddir)/cll.epub: $(builddir)/xhtml.done
-	xvfb-run ebook-convert $(builddir)/xhtml/index.html $(builddir)/cll.epub
+	xvfb-run -a ebook-convert $(builddir)/xhtml/index.html $(builddir)/cll.epub
 
 .PHONY: epub_web
 epub_web: epub
@@ -110,7 +110,7 @@ epub_web: epub
 .PHONY: mobi
 mobi: $(builddir)/cll.mobi
 $(builddir)/cll.mobi: $(builddir)/xhtml.done
-	xvfb-run ebook-convert $(builddir)/xhtml/index.html $(builddir)/cll.mobi
+	xvfb-run -a ebook-convert $(builddir)/xhtml/index.html $(builddir)/cll.mobi
 
 .PHONY: mobi_web
 mobi_web: mobi
