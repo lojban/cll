@@ -9,6 +9,13 @@ all: xhtml_chapters_web xhtml_sections_web xhtml_nochunks_web prince_pdf_web epu
 clean:
 	find $(PWD)/build/ $(PWD)/coverage/build/ $(builddir)/ \! -name 'jbovlaste*.xml' -type f | xargs -n 1 rm -f
 
+# check whether X server is available
+ifeq (,$(DISPLAY))
+	XPREFIX:=xvfb-run
+else
+	XPREFIX:=
+endif
+
 .PHONY: realclean
 realclean: clean
 	find $(PWD)/build/ $(PWD)/coverage/build/ $(builddir)/ -type f | xargs -n 1 rm -f
@@ -98,7 +105,7 @@ $(builddir)/xhtml-nochunks.done: $(builddir)/cll_processed_xhtml.xml xml/docbook
 .PHONY: epub
 epub: $(builddir)/cll.epub
 $(builddir)/cll.epub: $(builddir)/xhtml.done
-	xvfb-run -a ebook-convert $(builddir)/xhtml/index.html $(builddir)/cll.epub
+	$(XPREFIX) -a ebook-convert $(builddir)/xhtml/index.html $(builddir)/cll.epub
 
 .PHONY: epub_web
 epub_web: epub
@@ -110,7 +117,7 @@ epub_web: epub
 .PHONY: mobi
 mobi: $(builddir)/cll.mobi
 $(builddir)/cll.mobi: $(builddir)/xhtml.done
-	xvfb-run -a ebook-convert $(builddir)/xhtml/index.html $(builddir)/cll.mobi
+	$(XPREFIX) -a ebook-convert $(builddir)/xhtml/index.html $(builddir)/cll.mobi
 
 .PHONY: mobi_web
 mobi_web: mobi
