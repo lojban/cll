@@ -1,5 +1,5 @@
 ==================
-  Instructions For Helpers
+Instructions For Helpers
 ==================
 
 Ok, things are a lot more miscellaneous now, and require a lot more
@@ -24,182 +24,17 @@ change, and I will hunt you down and bad things will occur.
 
  ------
 
-==================
-  Uncategorized Issues By Chapter
-==================
-2. S11: "gismu:" as a line by itself looks pretty lame.
-2. Example 2.9 could do with some re-formatting (compare 5.3 in http://dag.github.com/cll/2/5/ )
-4. Example 4.4 is formatted differently from other nearby and similar examples
-4. Examples 4.24, 4.26-4.38, 4.52-4.70 are missing content
-	- The content in question gets deleted by xml/docbook2html_preprocess.xsl
-4. Examples 4.46-4.51 are broken, and 4.51 is not present in the red book
-4. Broken HTML character codes on the last line of page 79 of the red book
-	- This is from the <quote xml:lang="el"/> tag not being handled properly in the docbook->html conversion
-5. Table of language acronyms in section 14 could use reformatting to save space
-7. Section cmavo lists are missing series information
-	- This seems to be due to the <series> tag not being handled by the xml->docbook conversion
-7. Example 7.39 is hella ugly.  Like, seriously
-7. Example 7.62, line 3, differs from the red book
-8. Example 8.45, line 3, is missing quotes around a word
-8. Extraneous spaces in the () parts after Example 8.49
-9. Example 9.40 has the last two lines on one line
-9. BAI tables at end of chapter are poorly formatted compared to the red book
-10. pg. 223 of red book: duplicate notes on section content due to the new form for x-refs
-10. Example 10.84 does not fit in with the rest of the examples
-10. Example 10.147's fourth line should be at the end of the third
-10. MANY examples run off the right hand side of the page
-11. pg. 259 of the red book, definitions list is super ugly
-12. pg. 288, extra space after a (
-13. pg. 385, attitudinal scale cmavo table is missing a *lot*
-13. Various examples have the last two lines on one line
-13. Section 7: table has values flowing into extra columns instead of rows
-13. Vocatives table puts the large paragraphs explaining the vocatives onto the existing table rows
-14. Logical group letters are merely capitals; they need to stand out much better
-14. Example 14.106 is missing a row
-15. Diagram on pg. 375 could use some work
-16. After Example 16.93: plurals with spaces between the valsi and the "s"
-17. Letters table is ridiculously tall
-18. MANY examples run off the right hand side of the page
-18. Examples are missing numeric rows
-18. Section 6 cmavo list: mo'o is in the wrong row
-18. Section 8 cmavo list is missing every PA+PA row
-18. Section 22, the Examples have a leading 'li' that the red book does not have
-18. Section 23's selma'o table has xrefs that are not showing up
-18. Section 24 is ridiculously tall
-19. Examples 4.2 and 4.6 have their rows out of order
-19. Example 19.33 is missing a row
-19. Examples 19.52-19.54, 19.67, 19.71-19.74, 19.77, 19.81 are missing quotes
-19. Examples 19.61, 19.62 are missing emphasis
-20. All the examples are using different markup
-20. xrefs here can be a little verbose
+All todos now live in the [GitHub issue tracker][1]. These are to be
+tackled in the following order in general:
 
- ------
+1. "Markup issues"
+2. "Data issues"
+3. "Output tweaks"
+   (used to be filed under the "Display" heading in this file)
+4. "Visual issues"
+5. "Errata & content issues"
 
-==================
-  Non-Visual Issues
-==================
+Look at the [milestones page][2] for more details.
 
-Maybe add an interlinear-gloss-manual? for manual grouping that
-isn't chapter 2 style; otherwise it's hard to see how to make
-something like this work:
-
-    le    se nelci      cu   cafne
-    The   liked-thing   is-frequent.
-
- ------
- 
-The <definition> tags within tables have their <valsi> component in another column of the table.  We need to decide whether is this is
-satisfactory, or if something else should be done with them.
-
- ------
- 
-<lojbanization> tables are shit
-
- ------
- 
-All the imported/manual indexterm entries for single words or
-selma'o need to be checked; they should be covered adequately by
-nearby <cmavo-list> or <valsi> entries, both of which create index
-entries.  If you don't know how to search for only the relevant
-entries in your particular text editor, come on #jbopre and ask.
-
- ------
-
-Clean up the "FIXME: TAG SPOT" bits.  Those were put there as part
-of the semi-automated index insertion project.  If there's an
-<indexterm> next to them, great; kill it.  If there isn't, maybe
-look around nearby and make sure that obvious <valsi> tags and
-similar are in use.
-
- ------
-
-Similarily, entries like <indexterm type="lojban-word">
-(NOTE the type) probably need to be destroyed; there should be a bit
-of Lojban near them that can be wrapped in <valsi>, to exactly the
-same effect as the <indexterm> entry.  If you can't find such a
-correspondance, add a FIXME comment.
-
- ------
-
-Hunt down all FIXME:s and <!-- ... --> with todo type comments.
-That's all going to be advanced shit, though.
-
-==================
-  Visual Issues
-==================
-
-After we're done with all that, we need to actually make it look
-nice.  That's going to be quite a bit of work, and mostly on the
-XSLT end of things, but here are some things you can do to maybe
-help (you're certainly free to hack the XSLT if you know how,
-though).
-
-Make sure the <interlinear-gloss> bits look right in the output (which
-is why the columns are so spaced out).
-
-==================
-  Data
-==================
-- It seems that there is a problem with the cmavo lists at the
-  beginning of sections having missing entries; in particular, ones
-  wwith +/* in the selma'o, maybe?; they need to be manually checked
-- lojban words, lojban phrases, terms of art ("abstraction"),
-  others?... should each have their own index
-- list the members of each selma'o in chapter 20
-- <phrase role="IPA">∞</phrase> is *not* IPA
-- In the mediaobjects in chapter 1, can we do better than <alt>The
-  picture for chapter 20</alt> in terms of non-numerical cross
-  referencing?
-- there's a bunch of problems in 18.xml ; a lot of math stuff has
-  gotten truncated in the final form.  they basically all need to be
-  checked; having a CLL to hand would help
-- Fix all FIXMEs; in particular the output of:
-  grep 'FIXME:' [0-9]*.xml | grep -v 'TAG SPOT'
-
-18-17:44 < tsani> rlpowell: I think that having the glossary split into [cmavo], [brivla], and
-          [cmene] sections might be worth while
-18-17:44 < tsani> rlpowell: where the cmavo definitions say in which section the cmavo is
-          discussed
-
-==================
-  Display
-==================
-- links to examples should *say* "example N"; easy to test from the
-  index
-- links to sections should say the number of section and chapter
-- examples should be 5.2.1 rather than 5.6 for the first example in
-  section 2 of chapter 5
-- print: Add a header or footer to the left or the right page that
-  has the number of the chapter you're in.
-
-- for chapter 13, needs code changes to handle things like this:
-
-      <cmavo-entry>
-        <cmavo>fu'i</cmavo>
-        <gismu>[frili]</gismu>
-        <attitudinal-scale point="sai">with help</attitudinal-scale>
-        <attitudinal-scale point="sai">easily</attitudinal-scale>
-        <attitudinal-scale point="cu'i">without help</attitudinal-scale>
-        <attitudinal-scale point="nai">with opposition</attitudinal-scale>
-        <attitudinal-scale point="nai">with difficulty</attitudinal-scale>
-      </cmavo-entry>
-
-  the way the red book does
-
-==================
-  Both/Other
-==================
-- make sure backwards-compatible anchors exist
-  - Ideally, make sure they are autogenerated as part of the HTML
-    production.
-- Similarily, generate more-readable anchors based on current
-  section number and such
-
-==================
-Content Issues That Need Fixing
-==================
-
-DON'T TOUCH THESE.  The timing on these should be handled very carefully
-
-2. Description of formatting for interlinear-gloss needs to be fixed to match the formatting changes
-2. section 2.4 should be dropped eventually.
+ [1]: https://github.com/lojban/cll/issues
+ [2]: https://github.com/lojban/cll/milestones

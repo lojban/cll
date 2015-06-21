@@ -16,12 +16,18 @@
     <para> <indexterm type="general"><primary>temporal tense</primary><secondary>Lojban contrasted with English in necessity</secondary></indexterm>  <indexterm type="general"><primary>temporal tense</primary><secondary>as mandatory in English</secondary></indexterm>  <indexterm type="general"><primary>temporal tense</primary><secondary>real relationship to time in English</secondary></indexterm>  <indexterm type="general"><primary>temporal tense</primary><secondary>historical definition</secondary></indexterm> What is 
     <quote>tense</quote>? Historically, 
     <quote>tense</quote> is the attribute of verbs in English and related languages that expresses the time of the action. In English, three tenses are traditionally recognized, conventionally called the past, the present, and the future. There are also a variety of compound tenses used in English. However, there is no simple relationship between the form of an English tense and the time actually expressed:</para>
-    <!-- FIXME: should these be in an <example>? if so, will any random id work? -->
-    <para>I go to London tomorrow.</para>
+    <itemizedlist>
+      <listitem>
+        <para>I go to London tomorrow.</para>
+      </listitem>
+      <listitem>
+        <para>I will go to London tomorrow.</para>
+      </listitem>
+      <listitem>
+        <para>I am going to London tomorrow.</para>
+      </listitem>
+    </itemizedlist>
 
-    <para>I will go to London tomorrow.</para>
-
-    <para>I am going to London tomorrow.</para>
     <para>all mean the same thing, even though the first sentence uses the present tense; the second, the future tense; and the third, a compound tense usually called 
     
     
@@ -40,13 +46,23 @@
         </interlinear-gloss>
       </example>
       <para> can be understood as:</para>
-      <simplelist>
-        <member>I went to the market.</member>
-        <member>I am going to the market.</member>
-        <member>I have gone to the market.</member>
-        <member>I will go to the market.</member>
-        <member>I continually go to the market.</member>
-      </simplelist>
+      <itemizedlist>
+        <listitem>
+          <para>I went to the market.</para>
+        </listitem>
+        <listitem>
+          <para>I am going to the market.</para>
+        </listitem>
+        <listitem>
+          <para>I have gone to the market.</para>
+        </listitem>
+        <listitem>
+          <para>I will go to the market.</para>
+        </listitem>
+        <listitem>
+          <para>I continually go to the market.</para>
+        </listitem>
+      </itemizedlist>
       <para>as well as many other possibilities: context resolves which is correct.</para>
       <para> <indexterm type="general"><primary>cu</primary><secondary>effect of tense specification</secondary></indexterm>  <indexterm type="general"><primary>tense specification</primary><secondary>effect on elidability of terminators</secondary></indexterm>  <indexterm type="general"><primary>tense specification</primary><secondary>effect on &quot;cu&quot;</secondary></indexterm>  <indexterm type="general"><primary>tense</primary><secondary>position of in sentence</secondary></indexterm> The placement of a tense construct within a Lojban bridi is easy: right before the selbri. It goes immediately after the 
       <valsi>cu</valsi>, and can in fact always replace the 
@@ -1285,7 +1301,9 @@
     <xref linkend="section-vagueness"/>, the simple PU cmavo make no assumptions about whether the scope of a past, present, or future event extends into one of the other tenses as well. 
 
     <xref linkend="example-random-id-qdwz"/> through 
-    <xref linkend="example-random-id-qdxB"/> illustrate that these ZAhO cmavo do make such assumptions possible: the event in 10.1 has not yet begun, definitively; likewise, the event in 10.3 is definitely over.</para>
+    <xref linkend="example-random-id-qdxB"/> illustrate that these ZAhO cmavo do make such assumptions possible: the event in 
+    <xref linkend="example-random-id-qdwz"/> has not yet begun, definitively; likewise, the event in 
+    <xref linkend="example-random-id-qdxB"/> is definitely over.</para>
   <para> <indexterm type="general"><primary>ba'o</primary><secondary>as futureward of event</secondary></indexterm>  <indexterm type="general"><primary>pu'o</primary><secondary>as pastward of event</secondary></indexterm>  <indexterm type="general"><primary>ba'o</primary><secondary>explanation of derivation</secondary></indexterm>  <indexterm type="general"><primary>pu'o</primary><secondary>explanation of derivation</secondary></indexterm> Note that in 
     <xref linkend="example-random-id-qdwz"/> and 
     <xref linkend="example-random-id-qdxB"/>, 
@@ -2426,7 +2444,8 @@
     <para> <indexterm type="general"><primary>tensed logical connectives</primary></indexterm>  <indexterm type="general"><primary>logical connectives</primary><secondary>tensed</secondary></indexterm> The Lojban tense system interacts with the Lojban logical connective system. That system is a separate topic, explained in 
     
     <xref linkend="chapter-connectives"/> and touched on only in summary here. By the rules of the logical connective system, 
-    <xref linkend="example-random-id-qehB"/> through 17.3 are equivalent in meaning:</para>
+    <xref linkend="example-random-id-qehB"/> through 
+    <xref linkend="example-random-id-qEIm"/> are equivalent in meaning:</para>
     <example xml:id="example-random-id-qehB" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c10e17d1"/>
@@ -2493,7 +2512,8 @@
       </interlinear-gloss>
     </example>
     <para> <indexterm type="general"><primary>tensed logically connected sumti</primary></indexterm>  <indexterm type="general"><primary>tensed logically connected bridi-tails</primary></indexterm>  <indexterm type="general"><primary>tensed logically connected sentences</primary></indexterm> 
-    <xref linkend="example-random-id-qEiY"/> through 17.6 are equivalent in meaning. They are also analogous to 
+    <xref linkend="example-random-id-qEiY"/> through 
+    <xref linkend="example-random-id-qEKa"/> are equivalent in meaning. They are also analogous to 
     <xref linkend="example-random-id-qehB"/> through 
     <xref linkend="example-random-id-qEIm"/> respectively. The 
     <valsi>bo</valsi> is required for the same reason as in 
@@ -2952,7 +2972,7 @@
         <jbo>ta ka'e jelca</jbo>
         
         <gloss>That [capable] burns.</gloss>
-        <gloss>That is capable of burning.</gloss>
+        <natlang>That is capable of burning.</natlang>
         <natlang>That is inflammable.</natlang>
         
       </interlinear-gloss>
@@ -3233,9 +3253,8 @@
         <anchor xml:id="c10e22d9"/>
       </title>
       <interlinear-gloss>
-        <jbo>mi djuno fi le jai--ca morsi be fai la djan.</jbo>
-        <gloss>I know about the time-of is-dead - of that-named 
-        <quote>John</quote>.</gloss>
+        <jbo>mi djuno fi le jai ca morsi be fai la djan.</jbo>
+        <gloss>I know about the - [present] is-dead - of that-named <quote>John</quote>.</gloss>
         <natlang>I know the time of John's death.</natlang>
         <natlang>I know when John died.</natlang>
       </interlinear-gloss>
