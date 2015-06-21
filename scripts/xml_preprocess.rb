@@ -128,7 +128,7 @@ def table_row_by_words node
         unless word =~ %r{^\s*$}
           td = Nokogiri::XML::Node.new( 'td', $document )
           td.content = word
-          if word_index == words.length-1 && sibling && !(sibling.text?) && sibling.element? && sibling.name == 'quote'
+          if word_index == words.length-1 && word[-1] == "-" && sibling && !(sibling.text?) && sibling.element? && sibling.name == 'quote'
               td << sibling.dup
               children[child_index+1] = nil
           end
