@@ -22,7 +22,7 @@
       </title>
       <para>John goes to the store</para>
     </example>
-    <para>
+    <para role="noindent">
       <quote>John</quote> is the subject, and 
       <quote>goes to the store</quote> is the predicate. Negating 
     <xref linkend="example-random-id-vrXe"/> to produce</para>
@@ -32,7 +32,7 @@
       </title>
       <para>John doesn't go to the store.</para>
     </example>
-    <para>has the effect of declaring that the predicate does not hold for the subject. 
+    <para role="noindent">has the effect of declaring that the predicate does not hold for the subject. 
     <xref linkend="example-random-id-gm3I"/> says nothing about whether John goes somewhere else, or whether someone else besides John goes to the store.</para>
     <para>We will call this kind of negation 
     <quote>natural language negation</quote>. This kind of negation is difficult to manipulate by the tools of logic, because it doesn't always follow the rules of logic. Logical negation is bi-polar: either a statement is true, or it is false. If a statement is false, then its negation must be true. Such negation is termed contradictory negation.</para>
@@ -49,7 +49,7 @@
       </title>
       <para>Some animals are white.</para>
     </example>
-    <para>Both of these statements are true; yet one is apparently the negation of the other. Another example:</para>
+    <para role="indent">Both of these statements are true; yet one is apparently the negation of the other. Another example:</para>
     <example xml:id="example-random-id-qgxL">
       <title>
         <anchor xml:id="c15e1d5"/>
@@ -62,7 +62,7 @@
       </title>
       <para>I must go to the dance.</para>
     </example>
-    <para>At first thought, 
+    <para role="indent">At first thought, 
     <xref linkend="example-random-id-qgxL"/> negates 
     <xref linkend="example-random-id-qGXL"/>. Thinking further, we realize that there is an intermediate state wherein I am permitted to go to the dance, but not obligated to do so. Thus, it is possible that both statements are false.</para>
     <para>Sometimes order is significant:</para>
@@ -78,7 +78,7 @@
       </title>
       <para>Sam wasn't killed by the falling rock.</para>
     </example>
-    <para>Our minds play tricks on us with this one. Because 
+    <para role="indent">Our minds play tricks on us with this one. Because 
     <xref linkend="example-random-id-qgyb"/> is written in what is called the 
     <quote>active voice</quote>, we immediately get confused about whether 
     <quote>the falling rock</quote> is a suitable subject for the predicate 
@@ -102,7 +102,7 @@
       </title>
       <para>The King of Mexico did come to dinner.</para>
     </example>
-    <para>In the natural languages, we would be inclined to say that both of these statements are false, since there is no King of Mexico.</para>
+    <para role="indent">In the natural languages, we would be inclined to say that both of these statements are false, since there is no King of Mexico.</para>
     <para>The rest of this chapter is designed to explain the Lojban model of negation.</para>
   </section>
   <section xml:id="section-bridi-negation">
@@ -119,14 +119,14 @@
       </title>
       <para>Did you go to the store?</para>
     </example>
-    <para>is taken as a negation of the entire sentence, equivalent to</para>
+    <para role="noindent">is taken as a negation of the entire sentence, equivalent to</para>
     <example xml:id="example-random-id-vFYC">
       <title>
         <anchor xml:id="c15e2d2"/>
       </title>
       <para>No, I didn't go to the store.</para>
     </example>
-    <para>The most important rule about bridi negation is that if a bridi is true, its negation is false, and vice versa.</para>
+    <para role="indent">The most important rule about bridi negation is that if a bridi is true, its negation is false, and vice versa.</para>
     <para>The simplest way to express a bridi negation is to use the cmavo 
     <valsi>na</valsi> of selma'o NA before the selbri of the affirmative form of the bridi (but after the 
     <valsi>cu</valsi>, if there is one):</para>
@@ -139,7 +139,7 @@
         <gloss>I go-to the store.</gloss>
       </interlinear-gloss>
     </example>
-    <para>when negated becomes:</para>
+    <para role="noindent">when negated becomes:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-bV3b">
       <title>
         <anchor xml:id="c15e2d4"/>
@@ -149,7 +149,7 @@
         <gloss>I [false] go-to the store.</gloss>
       </interlinear-gloss>
     </example>
-    <para>Note that we have used a special convention to show in the English that a bridi negation is present. We would like to use the word 
+    <para role="indent">Note that we have used a special convention to show in the English that a bridi negation is present. We would like to use the word 
     <quote>not</quote>, because this highlights the naturalness of putting the negation marker just before the selbri, and makes the form easier to learn. But there is a major difference between Lojban's bridi negation with 
     <valsi>na</valsi> and natural language negation with 
     <quote>not</quote>. In English, the word 
@@ -190,7 +190,7 @@
         
       </interlinear-gloss>
     </example>
-    <para>Although there is this fundamental difference between Lojban's internal bridi negation and English negation, we note that in many cases, especially when there are no existential or quantified variables (the cmavo 
+    <para role="indent">Although there is this fundamental difference between Lojban's internal bridi negation and English negation, we note that in many cases, especially when there are no existential or quantified variables (the cmavo 
     
     
     <valsi>da</valsi>, 
@@ -219,7 +219,7 @@
         <natlang>I am not happy about not going to the dance.</natlang>
       </interlinear-gloss>
     </example>
-    <para>In the previous example, we used internal negations in abstraction bridi; bridi negation may also be found in descriptions within sumti. For example:</para>
+    <para role="indent">In the previous example, we used internal negations in abstraction bridi; bridi negation may also be found in descriptions within sumti. For example:</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-N65f">
       <title>
@@ -231,7 +231,7 @@
         <natlang>I am fond of the one who isn't beautiful.</natlang>
       </interlinear-gloss>
     </example>
-    <para>A more extreme (and more indefinite) example is:</para>
+    <para role="indent">A more extreme (and more indefinite) example is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-eQaI">
       <title>
         <anchor xml:id="c15e2d10"/>
@@ -242,7 +242,7 @@
         <natlang>I am fond of one who isn't the current king of France.</natlang>
       </interlinear-gloss>
     </example>
-    <para>The claim of 
+    <para role="indent">The claim of 
     <xref linkend="example-random-id-eQaI"/> could apply to anyone except a person who is fond of no one at all, since the relation within the description is false for everyone. You cannot readily express these situations in colloquial English.</para>
     
     <para>Negation with 
@@ -261,7 +261,7 @@
         
       </interlinear-gloss>
     </example>
-    <para>which is the same as:</para>
+    <para role="noindent">which is the same as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2UpW">
       <title>
         <anchor xml:id="c15e2d12"/>
@@ -271,7 +271,7 @@
         <gloss>This is-a-big person that is-(beautiful-to me).</gloss>
       </interlinear-gloss>
     </example>
-    <para>When a selbri is tagged with a tense or a modal, negation with 
+    <para role="indent">When a selbri is tagged with a tense or a modal, negation with 
     <valsi>na</valsi> is permitted in two positions: before or after the tag. No semantic difference between these forms has yet been defined, but this is not finally determined, since the interactions between tenses/modals and bridi negation have not been fully explored. In particular, it remains to be seen whether sentences using less familiar tenses, such as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-fgmv">
       <title>
@@ -283,7 +283,7 @@
         <gloss>I - habitually go-to the market.</gloss>
       </interlinear-gloss>
     </example>
-    <para>mean the same thing with 
+    <para role="noindent">mean the same thing with 
     <valsi>na</valsi> before the 
     <valsi>ta'e</valsi>, as when the negation occurs afterwards; we'll let future, Lojban-speaking, logicians decide on how they relate to each other.</para>
     
@@ -295,7 +295,7 @@
       </title>
       <para>I do not go to the market because the car is broken.</para>
     </example>
-    <para>as:</para>
+    <para role="noindent">as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-q8su">
       <title>
         <anchor xml:id="c15e2d15"/>
@@ -310,7 +310,7 @@
         <natlang>It is false that: I go to the market because the car is broken.</natlang>
       </interlinear-gloss>
     </example>
-    <para>you end up negating too much.</para>
+    <para role="noindent">you end up negating too much.</para>
     <para>Such mistranslations result from the ambiguity of English compounded by the messiness of natural language negation. A correct translation of the normal interpretation of 
     <xref linkend="example-random-id-hEa7"/> is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-R3GU">
@@ -327,7 +327,7 @@
         <natlang>My not going to the market is because the car is broken.</natlang>
       </interlinear-gloss>
     </example>
-    <para>In 
+    <para role="indent">In 
     <xref linkend="example-random-id-R3GU"/>, the negation is clearly confined to the event abstraction in the x1 sumti, and does not extend to the whole sentence. The English could also have been expressed by two separate sentences joined by a causal connective (which we'll not go into here).</para>
     
     <para>The problem is not confined to obvious causals. In the English:</para>
@@ -338,14 +338,14 @@
       </title>
       <para>I was not conscripted into the Army with the help of my uncle the Senator.</para>
     </example>
-    <para>we do not intend the uncle's help to be part of the negation. We must thus move the negation into an event clause or use two separate sentences. The event-clause version would look like:</para>
+    <para role="noindent">we do not intend the uncle's help to be part of the negation. We must thus move the negation into an event clause or use two separate sentences. The event-clause version would look like:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-NILi">
       <title>
         <anchor xml:id="c15e2d18"/>
       </title>
       <para>The event-of (my [false] being-conscripted-into the Army) was aided by my uncle the Senator.</para>
     </example>
-    <para>It is possible that someone will want to incorporate bridi negations into lujvo. For this reason, the rafsi 
+    <para role="indent">It is possible that someone will want to incorporate bridi negations into lujvo. For this reason, the rafsi 
     <rafsi>-nar-</rafsi> has been reserved for 
     <valsi>na</valsi>. However, before using this rafsi, make sure that you intend the contradictory bridi negation, and not the scalar negation described in 
     <xref linkend="section-scalar-negation"/>, which will be much more common in tanru and lujvo.</para>
@@ -359,14 +359,14 @@
       </title>
       <para>The chair is not brown.</para>
     </example>
-    <para>we make a positive inference &ndash; that the chair is some other color. Thus, it is legitimate to respond:</para>
+    <para role="noindent">we make a positive inference &ndash; that the chair is some other color. Thus, it is legitimate to respond:</para>
     <example xml:id="example-random-id-DDN8">
       <title>
         <anchor xml:id="c15e3d2"/>
       </title>
       <para>It is green.</para>
     </example>
-    <para>Whether we agree that the chair is brown or not, the fact that the statement refers to color has significant effect on how we interpret some responses. If we hear the following exchange:</para>
+    <para role="indent">Whether we agree that the chair is brown or not, the fact that the statement refers to color has significant effect on how we interpret some responses. If we hear the following exchange:</para>
     <example xml:id="example-random-id-muQB">
       <title>
         <anchor xml:id="c15e3d3"/>
@@ -374,7 +374,7 @@
       <para>The chair is not brown.</para>
       <para>Correct. The chair is wooden.</para>
     </example>
-    <para>we immediately start to wonder about the unusual wood that isn't brown. If we hear the exchange:</para>
+    <para role="noindent">we immediately start to wonder about the unusual wood that isn't brown. If we hear the exchange:</para>
     <example xml:id="example-random-id-MxWM">
       <title>
         <anchor xml:id="c15e3d4"/>
@@ -382,7 +382,7 @@
       <para>Is the chair green?</para>
       <para>No, it is in the kitchen.</para>
     </example>
-    <para>we are unsettled because the response seems to be a non-sequitur. But since it might be true and it is a statement about the chair, one can't say it is entirely irrelevant!</para>
+    <para role="noindent">we are unsettled because the response seems to be a non-sequitur. But since it might be true and it is a statement about the chair, one can't say it is entirely irrelevant!</para>
     
     <para>What is going on in these statements is something called 
     <quote>scalar negation</quote>. As the name suggests, scalar negation presumes an implied scale. A negation of this type not only states that one scalar value is false, but implies that another value on the scale must be true. This can easily lead to complications. The following exchange seems reasonably natural (a little suspension of disbelief in such inane conversation will help):</para>
@@ -393,7 +393,7 @@
       <para>That isn't a blue house.</para>
       <para>Right! That is a green house.</para>
     </example>
-    <para>We have acknowledged a scalar negation by providing a correct value which is another color in the set of colors permissible for houses. While a little less likely, the following exchange is also natural:</para>
+    <para role="indent">We have acknowledged a scalar negation by providing a correct value which is another color in the set of colors permissible for houses. While a little less likely, the following exchange is also natural:</para>
     <example xml:id="example-random-id-M472">
       <title>
         <anchor xml:id="c15e3d6"/>
@@ -401,7 +401,7 @@
       <para>That isn't a blue house.</para>
       <para>Right! That is a blue car.</para>
     </example>
-    <para>Again, we have acknowledged a scalar negation, and substituted a different object in the universe of discourse of things that can be blue.</para>
+    <para role="indent">Again, we have acknowledged a scalar negation, and substituted a different object in the universe of discourse of things that can be blue.</para>
     <para>Now, if the following exchange occurs:</para>
     <example xml:id="example-random-id-sq36">
       <title>
@@ -410,7 +410,7 @@
       <para>That isn't a blue house.</para>
       <para>Right! That is a green car.</para>
     </example>
-    <para>we find the result unsettling. This is because it seems that two corrections have been applied when there is only one negation. Yet out of context, 
+    <para role="noindent">we find the result unsettling. This is because it seems that two corrections have been applied when there is only one negation. Yet out of context, 
     <quote>blue house</quote> and 
     <quote>green car</quote> seem to be reasonably equivalent units that should be mutually replaceable in a sentence. It's just that we don't have a clear way in English to say:</para>
     <example xml:id="example-random-id-hd0I">
@@ -420,7 +420,7 @@
       <para>That isn't a 
       <quote>blue-house</quote>.</para>
     </example>
-    <para>aloud so as to clearly imply that the scalar negation is affecting the pair of words as a single unit.</para>
+    <para role="noindent">aloud so as to clearly imply that the scalar negation is affecting the pair of words as a single unit.</para>
     <para>Another even more confusing example of scalar negation is to the sentence:</para>
     <example xml:id="example-random-id-JTrd">
       <title>
@@ -428,7 +428,7 @@
       </title>
       <para>John didn't go to Paris from Rome.</para>
     </example>
-    <para>Might 
+    <para role="indent">Might 
     <xref linkend="example-random-id-JTrd"/> imply that John went to Paris from somewhere else? Or did he go somewhere else from Rome? Or perhaps he didn't go anywhere at all: maybe someone else did, or maybe there was no event of going whatsoever. One can devise circumstances where any one, two or all three of these statements might be inferred by a listener.</para>
     <para>In English, we have a clear way of distinguishing scalar negation from predicate negation that can be used in many situations. We can use the partial word 
     <quote>non-</quote> as a prefix. But this is not always considered good usage, even though it would render many statements much clearer. For example, we can clearly distinguish</para>
@@ -438,14 +438,14 @@
       </title>
       <para>That is a non-blue house.</para>
     </example>
-    <para>from the related sentence</para>
+    <para role="noindent">from the related sentence</para>
     <example xml:id="example-random-id-GtQC">
       <title>
         <anchor xml:id="c15e3d11"/>
       </title>
       <para>That is a blue non-house.</para>
     </example>
-    <para>
+    <para role="indent">
       <xref linkend="example-random-id-gN3C"/> and 
     <xref linkend="example-random-id-GtQC"/> have the advantage that, while they contain a negative indication, they are in fact positive assertions. They say what is true by excluding the false; they do not say what is false.</para>
     <para>We can't always use 
@@ -456,14 +456,14 @@
       </title>
       <para>John went to non-Paris from Rome.</para>
     </example>
-    <para>or</para>
+    <para role="noindent">or</para>
     <example xml:id="example-random-id-sn2I">
       <title>
         <anchor xml:id="c15e3d13"/>
       </title>
       <para>John went to Paris from non-Rome.</para>
     </example>
-    <para>although these would clarify the vague negation. Another circumlocution for English scalar negation is 
+    <para role="noindent">although these would clarify the vague negation. Another circumlocution for English scalar negation is 
     <quote>other than</quote>, which works where 
     <quote>non-</quote> does not, but is wordier.</para>
     <para>Finally, we have natural language negations that are called polar negations, or opposites:</para>
@@ -479,7 +479,7 @@
       </title>
       <para>John is immoral</para>
     </example>
-    <para>To be immoral is much more than to just be not moral: it implies the opposite condition. Statements like 
+    <para role="indent">To be immoral is much more than to just be not moral: it implies the opposite condition. Statements like 
     <xref linkend="example-random-id-qh3s"/> are strong negations which not only deny the truth of a statement, but assert its opposite. Since, 
     <quote>opposite</quote> implies a scale, polar negations are a special variety of scalar negations.</para>
     <para>To examine this concept more closely, let us draw a linear scale, showing two examples of how the scale is used:</para>
@@ -538,7 +538,7 @@
         <gloss>I (other-than go-to) the market.</gloss>
       </interlinear-gloss>
     </example>
-    <para>Comparing these two, we see that the negation operator being used in 
+    <para role="indent">Comparing these two, we see that the negation operator being used in 
     
     
     
@@ -561,7 +561,7 @@
         <gloss>I [false] go-to the market.</gloss>
       </interlinear-gloss>
     </example>
-    <para>but in fact there is no real parallelism at all. A negation using 
+    <para role="noindent">but in fact there is no real parallelism at all. A negation using 
     <valsi>na</valsi> denies the truth of a relationship, but a selbri negation with 
     <valsi>na'e</valsi> asserts that a relationship exists other than that stated, one which specifically involves the sumti identified in the statement. The grammar allotted to 
     <valsi>na'e</valsi> allows us to unambiguously express scalar negations in terms of scope, scale, and range within the scale. Before we explain the scalar aspects, let us show how the scope of 
@@ -577,7 +577,7 @@
         <gloss>I walking-ly go-to the market.</gloss>
       </interlinear-gloss>
     </example>
-    <para>can be subjected to selbri negation in several ways. Two are:</para>
+    <para role="noindent">can be subjected to selbri negation in several ways. Two are:</para>
     <example xml:id="example-random-id-qh4w" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c15e4d5"/>
@@ -596,7 +596,7 @@
         <gloss>I walkingly (other-than go-to) the market.</gloss>
       </interlinear-gloss>
     </example>
-    <para>These negations show the default scope of 
+    <para role="indent">These negations show the default scope of 
     <valsi>na'e</valsi> is close-binding on an individual brivla in a tanru. 
     
     <xref linkend="example-random-id-qh4w"/> says that I am going to the market, but in some kind of a non-walking manner. (As with most tanru, there are a few other possible interpretations, but we'll assume this one &ndash; see 
@@ -624,7 +624,7 @@
         <gloss>I other-than ( walkingly go-to ) the market.</gloss>
       </interlinear-gloss>
     </example>
-    <para>This negation uses the same 
+    <para role="indent">This negation uses the same 
     <valsi>ke</valsi> and 
     <valsi>ke'e</valsi> delimiters (the 
     <valsi>ke'e</valsi> is always elidable at the end of a selbri) that are used in tanru. The sentence clearly negates the entire selbri. The 
@@ -641,7 +641,7 @@
         <gloss>I other-than ( quickly walkingly ) go-to the market.</gloss>
       </interlinear-gloss>
     </example>
-    <para>In 
+    <para role="indent">In 
     <xref linkend="example-random-id-PVct"/>, only the 
     <jbophrase>sutra cadzu</jbophrase> tanru is negated, so the speaker is indeed going to the market, but not by walking quickly.</para>
     <para>Negations made with 
@@ -662,7 +662,7 @@
         <gloss>… ) go-to the market.</gloss>
       </interlinear-gloss>
     </example>
-    <para>Note that 
+    <para role="indent">Note that 
     <xref linkend="example-random-id-qh7T"/> and 
     <xref linkend="example-random-id-qH8J"/> do not express the same thing:</para>
     <example xml:id="example-random-id-qh7T" role="interlinear-gloss-example">
@@ -685,7 +685,7 @@
         <gloss>I other-than ( quickly walk on my arms ).</gloss>
       </interlinear-gloss>
     </example>
-    <para>The translations show that the negation in 
+    <para role="indent">The translations show that the negation in 
     <xref linkend="example-random-id-qh7T"/> is more restricted in scope; i.e. less of the sentence is negated with respect to x1 (
     <valsi>mi</valsi>).</para>
     <para>Logical scope being an important factor in Lojban's claims to be unambiguous, let us indicate the relative precedence of 
@@ -716,7 +716,7 @@
         <listitem><para>nake sutra cadzu ke'e klama becomes nalsu'adzuke'ekla</para></listitem>
       </itemizedlist>
     </example>
-    <para>Note: 
+    <para role="indent">Note: 
     <rafsi>-kem-</rafsi> is the rafsi for 
     <valsi>ke</valsi>, but it is omitted in the final lujvo as superfluous &ndash; 
     <valsi>ke'e</valsi> is its own rafsi, and its inclusion in the lujvo implies a 
@@ -753,7 +753,7 @@
         <gloss>I am-a-non-go-er-to the market.</gloss>
       </interlinear-gloss>
     </example>
-    <para>Note that to compare with the English translation form using 
+    <para role="indent">Note that to compare with the English translation form using 
     <quote>non-</quote>, we've translated the Lojban as if the selbri were a noun. Since Lojban 
     <valsi>klama</valsi> is indifferently a noun, verb, or adjective, the difference is purely a translation change, not a true change in meaning. The English difference seems significant, though, due to the strongly different English grammatical forms and the ambiguity of English negation.</para>
     <para>Consider the following highly problematic sentence:</para>
@@ -767,7 +767,7 @@
         <natlang>The current King of France is bald.</natlang>
       </interlinear-gloss>
     </example>
-    <para>The selbri 
+    <para role="indent">The selbri 
     <valsi>krecau</valsi> negates with 
     <valsi>na'e</valsi> as:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2maY">
@@ -780,7 +780,7 @@
         <natlang>The current King of France is other-than-bald.</natlang>
       </interlinear-gloss>
     </example>
-    <para>or, as a lujvo:</para>
+    <para role="noindent">or, as a lujvo:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-wGXL">
       <title>
         <anchor xml:id="c15e4d17"/>
@@ -791,7 +791,7 @@
         <natlang>The current King of France is a non-bald-one.</natlang>
       </interlinear-gloss>
     </example>
-    <para>
+    <para role="indent">
       <xref linkend="example-random-id-2maY"/> and 
       <xref linkend="example-random-id-wGXL"/> express the predicate negation forms using a negation word (
       <valsi>na'e</valsi>) or rafsi (
@@ -814,7 +814,7 @@
         <natlang>It is false that the current King of France is bald.</natlang>
       </interlinear-gloss>
     </example>
-    <para>Note: 
+    <para role="indent">Note: 
     <valsi>lo</valsi> is used in these sentences because negation relates to truth conditions. To meaningfully talk about truth conditions in sentences carrying a description, it must be clear that the description actually applies to the referent. A sentence using 
     <valsi>le</valsi> instead of 
     <valsi>lo</valsi> can be true even if there is no current king of France, as long as the speaker and the listener agree to describe something as the current king of France. (See the explanations of 
@@ -834,7 +834,7 @@
         <gloss>The chair - is-a-non- (red-thing).</gloss>
       </interlinear-gloss>
     </example>
-    <para>the pragmatic interpretation is that we mean a different color and not</para>
+    <para role="noindent">the pragmatic interpretation is that we mean a different color and not</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7iMz">
       <title>
         <anchor xml:id="c15e5d2"/>
@@ -844,7 +844,7 @@
         <gloss>The chair - walkingly-goes to the market.</gloss>
       </interlinear-gloss>
     </example>
-    <para>However, if we have reason to be more explicit (an obtuse or contrary listener, or simply an overt logical analysis), we can clarify that we are referring to a color by saying:</para>
+    <para role="indent">However, if we have reason to be more explicit (an obtuse or contrary listener, or simply an overt logical analysis), we can clarify that we are referring to a color by saying:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-yWSC">
       <title>
         <anchor xml:id="c15e5d3"/>
@@ -854,7 +854,7 @@
         <gloss>The chair - (is-of-a-non red) color.</gloss>
       </interlinear-gloss>
     </example>
-    <para>We might also have reduced the pragmatic ambiguity by making the two trailing sumti values explicit (the 
+    <para role="indent">We might also have reduced the pragmatic ambiguity by making the two trailing sumti values explicit (the 
     <quote>as perceived by</quote> and 
     <quote>under conditions</quote> places have been added to the place structure of 
     <valsi>xunre</valsi>). But assume we have a really stubborn listener (an artificially semi-intelligent computer?) who will find a way to misinterpret 
@@ -875,7 +875,7 @@
         <gloss>The chair - is-non (red on a-scale-of a-property color-ness).</gloss>
       </interlinear-gloss>
     </example>
-    <para>We can alternately use the sumti tcita 
+    <para role="indent">We can alternately use the sumti tcita 
     <valsi>teci'e</valsi>, based on 
     <valsi>ciste</valsi>, which translates roughly as 
     <quote>of a system of components X</quote>, for universes of discourse; in this case, we would express 
@@ -893,7 +893,7 @@
         <gloss>… of a-system with-components-the colors)-thing.</gloss>
       </interlinear-gloss>
     </example>
-    <para>Other places of 
+    <para role="indent">Other places of 
     <valsi>ciste</valsi> can be brought out using the grammar of selma'o BAI modals, allowing slightly different forms of expression, thus:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Rj71">
       <title>
@@ -908,7 +908,7 @@
         <gloss>… of a-system which-is-the-set-of colors)-thing.</gloss>
       </interlinear-gloss>
     </example>
-    <para>The cmavo 
+    <para role="indent">The cmavo 
     <valsi>le'a</valsi>, also in selma'o BAI, can be used to specify a category:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-5ibb">
       <title>
@@ -923,7 +923,7 @@
         <gloss>… of a-category which-is-the-set-of colors)-thing.</gloss>
       </interlinear-gloss>
     </example>
-    <para>which is minimally different in meaning from 
+    <para role="noindent">which is minimally different in meaning from 
     <xref linkend="example-random-id-Rj71"/>.</para>
     <para>The cmavo 
     <valsi>na'e</valsi> is not the only member of selma'o NAhE. If we want to express a scalar negation which is a polar opposite, we use the cmavo 
@@ -939,7 +939,7 @@
         <gloss>The chair - is-a-(opposite-of red) on scale a-property-of color-ness.</gloss>
       </interlinear-gloss>
     </example>
-    <para>Likewise, the midpoint of a scale can be expressed with the cmavo 
+    <para role="indent">Likewise, the midpoint of a scale can be expressed with the cmavo 
     <valsi>no'e</valsi>, also grammatically equivalent to 
     <valsi>na'e</valsi>. Here are some parallel examples of 
     <valsi>na'e</valsi>, 
@@ -984,7 +984,7 @@
         <natlang>That is ugly/very ugly/repulsive.</natlang>
       </interlinear-gloss>
     </example>
-    <para>The cmavo 
+    <para role="indent">The cmavo 
     <valsi>to'e</valsi> has the assigned rafsi 
     <rafsi>-tol-</rafsi> and 
     <jbophrase>-to'e-</jbophrase>; the cmavo 
@@ -1027,7 +1027,7 @@
         <natlang>No current king of France is bald.</natlang>
       </interlinear-gloss>
     </example>
-    <para>Is 
+    <para role="indent">Is 
     <xref linkend="example-random-id-PL1E"/> true? Yes, because it merely claims that of the current Kings of France, however many there may be, none are bald, which is plainly true, since there are no such current Kings of France.</para>
     <para>Now let us look at the same sentence using 
     <jbophrase>na'ebo</jbophrase> negation:</para>
@@ -1043,7 +1043,7 @@
         <natlang>Something other than the current King of France is bald.</natlang>
       </interlinear-gloss>
     </example>
-    <para>
+    <para role="indent">
       <xref linkend="example-random-id-LebJ"/> is true provided that something reasonably describable as 
     <quote>other than a current King of France</quote>, such as the King of Saudi Arabia, or a former King of France, is in fact bald.</para>
     <para>In place of 
@@ -1061,7 +1061,7 @@
         <natlang>I go to Perth.</natlang>
       </interlinear-gloss>
     </example>
-    <para>(Boston and Perth are nearly, but not quite, antipodal cities. In a purely United States context, San Francisco might be a better 
+    <para role="noindent">(Boston and Perth are nearly, but not quite, antipodal cities. In a purely United States context, San Francisco might be a better 
     <quote>opposite</quote>.) Coming up with good examples is difficult, because attaching 
     <jbophrase>to'ebo</jbophrase> to a description sumti is usually the same as attaching 
     <valsi>to'e</valsi> to the selbri of the description.</para>
@@ -1091,7 +1091,7 @@
         <natlang>I didn't go to the store.</natlang>
       </interlinear-gloss>
     </example>
-    <para>and</para>
+    <para role="noindent">and</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-0hv2">
       <title>
         <anchor xml:id="c15e7d2"/>
@@ -1102,7 +1102,7 @@
         <natlang>I didn't go to the store.</natlang>
       </interlinear-gloss>
     </example>
-    <para>mean exactly the same thing, although there may be a difference of emphasis.</para>
+    <para role="noindent">mean exactly the same thing, although there may be a difference of emphasis.</para>
     <para>Tenses and modals can be logically connected, with the logical connectives containing contradictory negations; this allows negated tenses and modals to be expressed positively using logical connectives. Thus 
     <jbophrase>punai je ca</jbophrase> means the same thing as 
     <jbophrase>pu naje ca</jbophrase>.</para>
@@ -1118,7 +1118,7 @@
         <gloss>I [once]-[not] dance-on the ice</gloss>
       </interlinear-gloss>
     </example>
-    <para>means that I dance on the ice either zero or else two or more times within the relevant time interval described by the bridi. 
+    <para role="noindent">means that I dance on the ice either zero or else two or more times within the relevant time interval described by the bridi. 
     <xref linkend="example-random-id-4YYQ"/> is very different from the English use of 
     <quote>not once</quote>, which is an emphatic way of saying 
     <quote>never</quote> &ndash; that is, exactly zero times.</para>
@@ -1173,7 +1173,7 @@
         <gloss>… that-named Paris and that-named Rome.)</gloss>
       </interlinear-gloss>
     </example>
-    <para>You can now use each of the several kinds of negation we've discussed in answer to this (presuming the same question and context for each answer).</para>
+    <para role="indent">You can now use each of the several kinds of negation we've discussed in answer to this (presuming the same question and context for each answer).</para>
     <para>The straightforward negative answer is grammatically equivalent to the expanded sentence with the 
     
     <valsi>na</valsi> immediately after the 
@@ -1188,7 +1188,7 @@
         <natlang>No.</natlang>
       </interlinear-gloss>
     </example>
-    <para>which means</para>
+    <para role="noindent">which means</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-mQSJ">
       <title>
         <anchor xml:id="c15e8d3"/>
@@ -1203,7 +1203,7 @@
         <natlang>It's not true that John went to Paris and Rome.</natlang>
       </interlinear-gloss>
     </example>
-    <para>The respondent can change the tense, putting the 
+    <para role="indent">The respondent can change the tense, putting the 
     <valsi>na</valsi> in either before or after the new tense:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-rii2">
       <title>
@@ -1214,7 +1214,7 @@
         <gloss>[false] [future] [repeat-previous]</gloss>
       </interlinear-gloss>
     </example>
-    <para>meaning</para>
+    <para role="noindent">meaning</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Fn2c">
       <title>
         <anchor xml:id="c15e8d5"/>
@@ -1229,7 +1229,7 @@
         <natlang>It is false that John will go to Paris and Rome.</natlang>
       </interlinear-gloss>
     </example>
-    <para>or alternatively</para>
+    <para role="noindent">or alternatively</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-acM9">
       <title>
         <anchor xml:id="c15e8d6"/>
@@ -1239,7 +1239,7 @@
         <gloss>[future] [false] [repeat-previous]</gloss>
       </interlinear-gloss>
     </example>
-    <para>meaning</para>
+    <para role="noindent">meaning</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-2SK0">
       <title>
         <anchor xml:id="c15e8d7"/>
@@ -1253,7 +1253,7 @@
         <gloss>… go-to that-named Paris and that-named Rome.</gloss>
       </interlinear-gloss>
     </example>
-    <para>We stated in 
+    <para role="indent">We stated in 
     <xref linkend="section-scalar-negation"/> that sentences like 
     <xref linkend="example-random-id-Fn2c"/> and 
     <xref linkend="example-random-id-2SK0"/> appear to be semantically identical, but that subtle semantic distinctions may eventually be found.</para>
@@ -1269,7 +1269,7 @@
         <gloss>other-than [repeat-previous]</gloss>
       </interlinear-gloss>
     </example>
-    <para>which means</para>
+    <para role="noindent">which means</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-nQRQ">
       <title>
         <anchor xml:id="c15e8d9"/>
@@ -1283,7 +1283,7 @@
         <gloss>… that-named Paris and that-named Rome.</gloss>
       </interlinear-gloss>
     </example>
-    <para>He might have telephoned the two cities instead of going there. The unnecessary 
+    <para role="indent">He might have telephoned the two cities instead of going there. The unnecessary 
     <valsi>ke</valsi> and 
     <valsi>ke'e</valsi> would have been essential if the selbri had been a tanru.</para>
   </section>
@@ -1302,7 +1302,7 @@
         <gloss>Is-it-true-that [false] [repeat-previous]?</gloss>
       </interlinear-gloss>
     </example>
-    <para>or equivalently</para>
+    <para role="noindent">or equivalently</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-8VCt">
       <title>
         <anchor xml:id="c15e9d2"/>
@@ -1316,7 +1316,7 @@
         <gloss>… went-to that-name Paris and that-named Rome.</gloss>
       </interlinear-gloss>
     </example>
-    <para>The obvious, but incorrect, positive response to this negative question is:</para>
+    <para role="indent">The obvious, but incorrect, positive response to this negative question is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-F3LE">
       <title>
         <anchor xml:id="c15e9d3"/>
@@ -1326,7 +1326,7 @@
         <natlang>[repeat-previous]</natlang>
       </interlinear-gloss>
     </example>
-    <para>A plain 
+    <para role="indent">A plain 
     <valsi>go'i</valsi> does not mean 
     <quote>Yes it is</quote>; it merely abbreviates repeating the previous statement unmodified, including any negators present; and 
     <xref linkend="example-random-id-F3LE"/> actually states that it is false that John went to both Paris and Rome.</para>
@@ -1340,7 +1340,7 @@
         <gloss>[false] [repeat-previous]</gloss>
       </interlinear-gloss>
     </example>
-    <para>as a response to a negative question like 
+    <para role="noindent">as a response to a negative question like 
     <xref linkend="example-random-id-8VCt"/>, Lojban designers had to choose between two equally plausible interpretations with opposite effects. Does 
     <xref linkend="example-random-id-Pgrw"/> create a double negative in the sentence by adding a new 
     <valsi>na</valsi> to the one already there (forming a double negative and hence a positive statement), or does the 
@@ -1359,7 +1359,7 @@
         <natlang>John did go to Paris and Rome.</natlang>
       </interlinear-gloss>
     </example>
-    <para>
+    <para role="noindent">
       <valsi>ja'a</valsi> can replace 
     <valsi>na</valsi> in a similar manner wherever the latter is used:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-mrtu">
@@ -1372,7 +1372,7 @@
         <natlang>I indeed go to the store.</natlang>
       </interlinear-gloss>
     </example>
-    <para>
+    <para role="noindent">
       <valsi>je'a</valsi> can replace 
     <valsi>na'e</valsi> in exactly the same way, stating that scalar negation does not apply, and that the relation indeed holds as stated. In the absence of a negation context, it emphasizes the positive:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-toQK">
@@ -1394,7 +1394,7 @@
       </title>
       <para>I have not stopped beating my wife.</para>
     </example>
-    <para>If I never started such a heinous activity, then this sentence is neither true nor false. Such a negation simply says that something is wrong with the non-negated statement. Generally, we then use either tone of voice or else a correction to express a preferred true claim: 
+    <para role="indent">If I never started such a heinous activity, then this sentence is neither true nor false. Such a negation simply says that something is wrong with the non-negated statement. Generally, we then use either tone of voice or else a correction to express a preferred true claim: 
     
     <quote>I never have beaten my wife.</quote></para>
     <para>Negations which follow such a pattern are called 
@@ -1500,7 +1500,7 @@
       <para>Not only was it a sheep, it was a black sheep.</para>
       <para>(non-contradictory correction)</para>
     </example>
-    <para>The set of possible metalinguistic errors is open-ended.</para>
+    <para role="indent">The set of possible metalinguistic errors is open-ended.</para>
     <para>Many of these forms have a counterpart in the various examples that we've discussed under logical negation. Metalinguistic negation doesn't claim that the sentence is false or true, though. Rather, it claims that, due to some error in the statement, 
     <quote>true</quote> and 
     <quote>false</quote> don't really apply.</para>
@@ -1579,7 +1579,7 @@
         <natlang>Have you stopped beating your wife?</natlang>
       </interlinear-gloss>
     </example>
-    <para>Responses could include:</para>
+    <para role="indent">Responses could include:</para>
     <example xml:id="example-random-id-qHJJ" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c15e10d16"/>
@@ -1600,7 +1600,7 @@
         <natlang>The selbri (<valsi>sisti</valsi>) is inappropriate in some way.</natlang>
       </interlinear-gloss>
     </example>
-    <para>One can also specifically qualify the metalinguistic negation, by explicitly repeating the erroneous portion of the bridi to be metalinguistically negated, or adding on of the selma'o BAI qualifiers mentioned above:</para>
+    <para role="indent">One can also specifically qualify the metalinguistic negation, by explicitly repeating the erroneous portion of the bridi to be metalinguistically negated, or adding on of the selma'o BAI qualifiers mentioned above:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-ANpd">
       <title>
         <anchor xml:id="c15e10d18"/>
@@ -1611,7 +1611,7 @@
         <natlang>Some presupposition is wrong with the previous bridi.</natlang>
       </interlinear-gloss>
     </example>
-    <para>Finally, one may metalinguistically affirm a bridi with 
+    <para role="indent">Finally, one may metalinguistically affirm a bridi with 
     <valsi>jo'a</valsi>, another cmavo of selma'o UI. A common use for 
     
     <valsi>jo'a</valsi> might be to affirm that a particular construction, though unusual or counterintuitive, is in fact correct; another usage would be to disagree with &ndash; by overriding &ndash; a respondent's metalinguistic negation.</para>
