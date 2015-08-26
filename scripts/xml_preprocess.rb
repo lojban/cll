@@ -13,7 +13,9 @@ require "#{mydir}/util.rb"
 # specify using a simple hash.  Copies all attributes to the new
 # node.
 #
-# @param name [String] The name of the new node to make.
+# @param name [String] The name of the note we're replacing; if this
+#       doesn't match, just return false.  Used to save a bunch of
+#       "if" statements.
 #
 # @param node [Nokogiri::XML::Element] The node we're replacing.
 #
@@ -95,7 +97,7 @@ def indexify name, node, indextype, newname, lang
     indexbits = Nokogiri::XML::Node.new( 'indexterm', $document )
     indexbits[:type] = indextype
     indexbits.children = innerbit
-    newnode = wrap_up name, node, { name: newname, mylang: lang }, indexbits
+    newnode = wrap_up name, node, { name: newname, mylang: lang, role: name }, indexbits
     newnode.add_child node.children
     $stderr.puts newnode.to_xml
     return newnode
@@ -564,6 +566,19 @@ $document.traverse do |node|
     end
   end
 
+  # Turn it into an informaltable with one column per row
+  if node.name == 'lujvo-making'
+    # Make things into rows
+    node.css("jbo,natlang,gloss").each { |e| e['role'] = e.name ; e.name = 'para' ; e.replace("<tr><td>#{e}</td></tr>") }
+
+    # Things that have already been converted, we wrap
+    node.xpath('./foreignphrase[@role="veljvo"]').each { |e| e.replace("<tr><td>from #{e}</tr></td>") }
+    node.xpath('./foreignphrase[@role="rafsi"]').each { |e| e.replace("<tr><td>#{e}</td></tr>") }
+    node.xpath('./para[@role="lujvo-score"]').each { |e| e.replace("<tr><td>#{e}</td></tr>") }
+
+    tableify node
+  end
+
   # For now, jbophrase makes an *index* but not a *glossary*
   node = indexify 'jbophrase', node, 'lojban-phrase', 'foreignphrase', 'jbo'
   if node and node.name == 'foreignphrase'
@@ -605,20 +620,6 @@ $document.traverse do |node|
   convert 'comment', node, 'emphasis'
 
   wrap_up 'content', node, { name: 'phrase', role: 'definition-content' }, node.children
-
-  # Turn it into an informaltable with maximally wide rows
-  if node.name == 'lujvo-making'
-    node.children.each do |child|
-      unless child.element?
-        next
-      end
-
-      child = convert child.name, child, 'para'
-
-      flat_table_row child
-    end
-    tableify node
-  end
 
   # Turn it into an informaltable with maximally wide rows
   if node.name == 'lojbanization'
