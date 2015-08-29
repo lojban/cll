@@ -125,6 +125,8 @@ def table_row_by_words node
     end
     if child.text?
       words = child.text.gsub('--',"\u00A0").split( %r{\s+} )
+      # Hide ellipses for now
+      words.delete('…')
       words.each_index do |word_index|
         word = words[word_index]
         unless word =~ %r{^\s*$}
@@ -243,6 +245,22 @@ def tableify node
     node.name = 'table'
   else
     node.name = 'informaltable'
+  end
+
+  # If there are natlang lines, turn it into *two* tables
+  if node.css('[role="natlang"]').length > 0 and node.css('[role="natlang"]').length != node.children.length
+    newnode = node.clone
+    newnode.children.each do |child|
+      if child.css('[role="natlang"]').length == 0
+        child.remove
+      end
+    end
+    node.children.each do |child|
+      if child.css('[role="natlang"]').length > 0
+        child.remove
+      end
+    end
+    node.add_next_sibling newnode
   end
 
   return node
