@@ -180,6 +180,11 @@ end
 # Converts a node's name and sets the role (to the old name by
 # default), with an optional language
 def convert!( node:, newname:, role: nil, lang: nil )
+  # Drop attributes that docbook doesn't recognize
+  node.xpath('//@glossary').remove
+  node.xpath('//@delineated').remove
+  node.xpath('//@elidable').remove
+
   unless role
     role = node.name
   end
@@ -315,6 +320,13 @@ $document.css('interlinear-gloss-itemized').each do |node|
   handle_children( node: node, allowed_children_names: [ 'jbo', 'gloss', 'natlang', 'sumti', 'selbri', 'elidable', 'comment' ] ) do |child|
     if child.name == 'jbo' or child.name == 'gloss'
       handle_children( node: child, allowed_children_names: [ 'sumti', 'selbri', 'elidable', 'cmavo', 'comment' ] ) do |grandchild|
+        if grandchild.name == 'elidable'
+          if grandchild.text == ''
+            grandchild.content = '-'
+          else
+            grandchild.content = "[#{grandchild.content}]"
+          end
+        end
         convert!( node: grandchild, newname: 'para' )
       end
 
