@@ -164,16 +164,55 @@ def flat_table_row node
   return newnode
 end
 
+#**************************************************
+# NEW-STYLE FUNCTIONS
+#**************************************************
+# Add index information ; put the index entry element as the first
+# child of this node
+def indexify!( node:, indextype:, role: nil )
+  if role == nil
+    role = node.name
+  end
+  node.children.first.add_previous_sibling %Q{<indexterm type="#{indextype}"><primary role="#{role}">#{node.text}</primary></indexterm>}
+  return node
+end
+
+# Converts a node's name and sets the role (to the old name by
+# default), with an optional language
+def convert!( node:, newname:, role: nil, lang: nil )
+  unless role
+    role = node.name
+  end
+  if lang
+    node['xml:lang'] = lang
+  end
+  node['role'] = role
+  node.name = newname
+  node
+end
+
+# Loops over the children of a node, complaining if a bad child is
+# found and handling non-element children.
+def handle_children( node:, allowed_children_names:, &proc )
+  node.children.each do |child|
+    unless child.element?
+      next
+    end
+
+    if ! allowed_children_names.include? child.name 
+      abort "Found a bad element, #{child.name}, as a child of #{node.name}.  Context: #{node.to_xml}"
+    end
+    
+    yield child
+  end
+end
+
 # Wrap node in a glossary entry
 def glossify node, text
   if node['glossary'] == 'false'
     return node
   else
-    glossterm = Nokogiri::XML::Node.new( 'glossterm', $document )
-    glossterm[:linkend] = "valsi-#{slugify(text)}"
-    glossterm.children = node.clone
-    newnode = node.replace glossterm
-    return newnode
+    node.replace(%Q{<glossterm linkend="valsi-#{slugify(text)}">#{node}</glossterm>})
   end
 end
 
@@ -211,27 +250,12 @@ $document = Nokogiri::XML(File.open ARGV[0]) do |config|
   config.default_xml.noblanks
 end
 
-# Add index information ; put the index entry element as the first
-# child of this node
-def indexify!( node:, indextype: )
-  node.children.first.add_previous_sibling %Q{<indexterm type="#{indextype}"><primary role="#{node.name}">#{node.text}</primary></indexterm>}
-  return node
-end
-
-# Converts a node's name and sets the role (to the old name by
-# default), with an optional language
-def convert!( node:, newname:, role: nil, lang: nil )
-  unless role
-    role = node.name
-  end
-  if lang
-    node['xml:lang'] = lang
-  end
-  node['role'] = role
-  node.name = newname
-  node
-end
-
+##      <lujvo-making>
+##        <jbo>bralo'i</jbo>
+##        <gloss><quote>big-boat</quote></gloss>
+##        <natlang>ship</natlang>
+##      </lujvo-making>
+#
 # Turn lujvo-making into an informaltable with one column per row
 $document.css('lujvo-making').each do |node|
   # Convert children into docbook elements
@@ -258,14 +282,10 @@ end
 #     </interlinear-gloss>
 $document.css('interlinear-gloss').each do |node|
   unless node.xpath('jbo').length > 0 and (node.xpath('natlang').length > 0 or node.xpath('gloss').length > 0 or node.xpath('math').length > 0)
-    abort "Found a bad interlinear-gloss element; it must have one jbo sub-element and at least one gloss or natlang or math sub-element: #{node.to_xml}"
+    abort "Found a bad interlinear-gloss element; it must have one jbo sub-element and at least one gloss or natlang or math sub-element.  Context: #{node.to_xml}"
   end
 
-  node.children.each do |child|
-    unless child.element?
-      next
-    end
-
+  handle_children( node: node, allowed_children_names: [ 'jbo', 'gloss', 'math', 'natlang', 'para' ] ) do |child|
     if child.name == 'jbo' or child.name == 'gloss'
       table_row_by_words child
     elsif child.name == 'math'
@@ -292,17 +312,9 @@ end
 #     </jbo>
 #     ...
 $document.css('interlinear-gloss-itemized').each do |node|
-  node.children.each do |child|
-    unless child.element?
-      next
-    end
-
+  handle_children( node: node, allowed_children_names: [ 'jbo', 'gloss', 'natlang', 'sumti', 'selbri', 'elidable', 'comment' ] ) do |child|
     if child.name == 'jbo' or child.name == 'gloss'
-      child.children.each do |grandchild|
-        unless grandchild.element?
-          next
-        end
-
+      handle_children( node: child, allowed_children_names: [ 'sumti', 'selbri', 'elidable', 'cmavo', 'comment' ] ) do |grandchild|
         convert!( node: grandchild, newname: 'para' )
       end
 
@@ -321,9 +333,52 @@ end
 
 
 # Math
+## <natlang>Both <inlinemath>2 + 2 = 4</inlinemath> and <inlinemath>2 x 2 = 4</inlinemath>.</natlang>
 $document.css('inlinemath').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<inlineequation role='inlinemath'>#{e}</inlineequation>" ) }
 
+## <math>3:22:40 + 0:3:33 = 3:26:13</math>
 $document.css('math').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<informalequation role='math'>#{e}</informalequation>" ) }
+
+##       <pronunciation>
+##         <jbo>.e'o ko ko kurji</jbo>
+##         <jbo role="pronunciation">.E'o ko ko KURji</jbo>
+##       </pronunciation>
+$document.css('pronunciation').each do |node|
+  handle_children( node: node, allowed_children_names: [ 'jbo', 'ipa', 'natlang', 'comment' ] ) do |child|
+    role = "pronunciation-#{child.name}"
+    convert!( node: child, newname: 'para', role: role )
+    child.replace(%Q{<listitem role="#{role}">#{child}</listitem>}) 
+  end
+
+  convert!( node: node, newname: 'itemizedlist' )
+end
+
+##       <compound-cmavo>
+##         <jbo>.iseci'i</jbo>
+##         <jbo>.i se ci'i</jbo>
+##       </compound-cmavo>
+$document.css('compound-cmavo').each do |node|
+  handle_children( node: node, allowed_children_names: [ 'jbo' ] ) do |child|
+    convert!( node: child, newname: 'member' )
+  end
+
+  convert!( node: node, newname: 'simplelist' )
+end
+
+## <valsi>risnyjelca</valsi> (heart burn) might have a place structure like:</para>
+$document.css('valsi').each do |node|
+  # We make a glossary entry unless it's marked valid=false
+  if node[:valid] == 'false'
+    convert!( node: node, newname: 'foreignphrase' )
+  else
+    origrole = node.name
+    convert!( node: node, newname: 'foreignphrase', lang: 'jbo' )
+    origtext = node.text
+    indexify!( node: node, indextype: 'lojban-words', role: origrole )
+    node = glossify node, origtext
+    $stderr.puts node.to_xml
+  end
+end
 
 $document.traverse do |node|
   unless node.element?
@@ -536,48 +591,6 @@ $document.traverse do |node|
     tableify node
   end
 
-  # Deal with pronunciation nodes
-  if node.name == 'pronunciation'
-    node.children.each do |child|
-      unless child.element?
-        next
-      end
-
-      role = "pronunciation-#{child.name}"
-      child = wrap_up child.name, child, { name: 'para', role: role }, child.children
-      child = wrap_up 'para', child, { name: 'listitem', role: role }, child.clone
-    end
-
-    convert 'pronunciation', node, 'itemizedlist'
-  end
-
-  if node.name == 'compound-cmavo'
-    node.children.each do |child|
-      unless child.element?
-        next
-      end
-
-      if child.name == 'jbo'
-        convert 'jbo', child, 'member'
-      else
-        abort "Unhandled compound-cmavo element #{child.name}"
-      end
-    end
-
-    node = convert 'compound-cmavo', node, 'simplelist'
-  end
-
-  if node.name == 'valsi'
-    if node[:valid] == 'false'
-      convert 'valsi', node, 'foreignphrase'
-    else
-      origtext = node.text
-      node = indexify 'valsi', node, 'lojban-words', 'foreignphrase', 'jbo'
-      node = glossify node, origtext
-      $stderr.puts node.to_xml
-    end
-  end
-
   wrap_up 'compound', node, { name: 'para', role: 'cmavo-compound' }, node.children
 
   if node.name == 'grammar-template'
@@ -598,9 +611,6 @@ $document.traverse do |node|
     end
   end
 
-  # Same treatment for veljvo
-  indexify 'veljvo', node, 'lojban-phrase', 'foreignphrase', 'jbo'
-
   if node.name == 'definition'
     if [ 'title', 'term', 'member', 'secondary' ].include? node.parent.name
       # Phrasal version
@@ -616,8 +626,6 @@ $document.traverse do |node|
   wrap_up 'letteral', node, { name: 'foreignphrase', mylang: 'jbo', role: node.name }, node.children
   wrap_up 'cmevla', node, { name: 'foreignphrase', mylang: 'jbo', role: node.name }, node.children
   wrap_up 'morphology', node, { name: 'foreignphrase', mylang: 'jbo', role: node.name }, node.children
-
-  wrap_up 'score', node, { name: 'para', role: 'lujvo-score' }, node.children
 
   if (not node.parent) or node.parent.name != 'cmavo-entry'
     convert 'cmavo', node, 'emphasis'
