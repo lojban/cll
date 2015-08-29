@@ -184,6 +184,7 @@ def convert!( node:, newname:, role: nil, lang: nil )
   node.xpath('//@glossary').remove
   node.xpath('//@delineated').remove
   node.xpath('//@elidable').remove
+  node.xpath('//@valid').remove
 
   unless role
     role = node.name
