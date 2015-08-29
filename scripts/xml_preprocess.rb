@@ -151,26 +151,6 @@ def table_row_by_words node
   return newnode
 end
 
-# Splits a node's children into table columns
-def table_row_by_children node
-  newchildren = []
-  node.children.each do |child|
-    unless child.element?
-      next
-    end
-
-    td = Nokogiri::XML::Node.new( 'td', $document )
-    td.children = child.clone
-    newchildren << td
-  end
-  tr = Nokogiri::XML::Node.new( 'tr', $document )
-  tr.children = Nokogiri::XML::NodeSet.new( $document, newchildren )
-  tr[:class] = node.name
-
-  newnode = node.replace tr
-  return newnode
-end
-
 # Turns a node into a maximally wide table row.
 def flat_table_row node
   td = Nokogiri::XML::Node.new( 'td', $document )
@@ -298,6 +278,47 @@ $document.css('interlinear-gloss').each do |node|
 
   tableify node
 end
+
+# handle interlinear-gloss-itemized
+#
+#   <interlinear-gloss-itemized>
+#     <jbo>
+#       <sumti>mi</sumti>
+#       <elidable>cu</elidable>
+#       <selbri>vecnu</selbri>
+#       <sumti>ti</sumti>
+#       <sumti>ta</sumti>
+#       <sumti>zo'e</sumti>
+#     </jbo>
+#     ...
+$document.css('interlinear-gloss-itemized').each do |node|
+  node.children.each do |child|
+    unless child.element?
+      next
+    end
+
+    if child.name == 'jbo' or child.name == 'gloss'
+      child.children.each do |grandchild|
+        unless grandchild.element?
+          next
+        end
+
+        convert!( node: grandchild, newname: 'para' )
+      end
+
+      child.children.each { |e| e.replace("<td>#{e}</td>") }
+      child['class'] = child.name
+      child.name = 'tr'
+    else
+      convert!( node: child, newname: 'para' )
+
+      child.replace("<tr class='para'><td colspan='0'>#{child}</td></tr>")
+    end
+  end
+
+  tableify node
+end
+
 
 # Math
 $document.css('inlinemath').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<inlineequation role='inlinemath'>#{e}</inlineequation>" ) }
@@ -502,55 +523,14 @@ $document.traverse do |node|
             wrap_up grandchild.name, grandchild, { name: 'para', role: role }, grandchild.children
           end
 
-          table_row_by_children child
+          child.children.each { |e| e.replace("<td>#{e}</td>") }
+          child['class'] = child.name
+          child.name = 'tr'
         end
       else
         abort "Bad node in cmavo-list: #{child.to_xml}"
       end
 
-    end
-
-    tableify node
-  end
-
-  # handle interlinear-gloss-itemized
-  #
-  #   <interlinear-gloss-itemized>
-  #     <jbo>
-  #       <sumti>mi</sumti>
-  #       <elidable>cu</elidable>
-  #       <selbri>vecnu</selbri>
-  #       <sumti>ti</sumti>
-  #       <sumti>ta</sumti>
-  #       <sumti>zo'e</sumti>
-  #     </jbo>
-  #     ...
-  if node.name == 'interlinear-gloss-itemized'
-    node.children.each do |child|
-      unless child.element?
-        next
-      end
-
-      if child.name == 'jbo' or child.name == 'gloss'
-        child.children.each do |grandchild|
-          unless grandchild.element?
-            next
-          end
-
-          convert grandchild.name, grandchild, 'para'
-          #origtext = node.text
-          #node = convert grandchild.name, grandchild, 'para'
-          #if child.name == 'jbo'
-          #  node = glossify node, origtext
-          #end
-        end
-
-        table_row_by_children child
-      else
-        child = convert child.name, child, 'para'
-
-        flat_table_row child
-      end
     end
 
     tableify node
