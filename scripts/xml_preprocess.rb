@@ -233,24 +233,14 @@ end
 
 # Add index information ; put the index entry element as the first
 # child of this node
-def indexify2( node:, indextype: )
+def indexify!( node:, indextype: )
   node.children.first.add_previous_sibling %Q{<indexterm type="#{indextype}"><primary role="#{node.name}">#{node.text}</primary></indexterm>}
   return node
 end
 
-# Used to turn a node into two nested nodes (this comes up
-# frequently).
-def convert_and_wrap2( node:, inner_newname:, outer_newname: )
-  rolename = node.name
-  node['role'] = rolename
-  node.name = inner_newname
-  node.replace %Q{<#{outer_newname} role="#{rolename}">\n#{node}\n</#{outer_newname}>}
-  node
-end
-
 # Converts a node's name and sets the role (to the old name by
 # default), with an optional language
-def convert2( node:, newname:, role: nil, lang: nil )
+def convert!( node:, newname:, role: nil, lang: nil )
   unless role
     role = node.name
   end
@@ -262,14 +252,14 @@ def convert2( node:, newname:, role: nil, lang: nil )
   node
 end
 
-# Turn it into an informaltable with one column per row
+# Turn lujvo-making into an informaltable with one column per row
 $document.css('lujvo-making').each do |node|
   # Convert children into docbook elements
-  node.css("jbo,natlang,gloss").each { |e| convert2( node: e, newname: 'para' ) }
-  node.css("score").each { |e| convert2( node: e, newname: 'para', role: 'lujvo-score' ) }
-  node.css("inlinemath").each { |e| convert_and_wrap2( node: e, inner_newname: 'mathphrase', outer_newname: 'inlineequation' ) }
-  node.css("rafsi").each { |e| convert2( node: e, newname: 'foreignphrase', lang: 'jbo' ) }
-  node.css("veljvo").each { |e| convert2( node: e, newname: 'foreignphrase', lang: 'jbo' ) ; indexify2(node: e, indextype: 'lojban-phrase') ; e.replace("<para>from #{e}</para>") }
+  node.css('jbo,natlang,gloss').each { |e| convert!( node: e, newname: 'para' ) }
+  node.css('score').each { |e| convert!( node: e, newname: 'para', role: 'lujvo-score' ) }
+  node.css('inlinemath').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<inlineequation role='inlinemath'>#{e}</inlineequation>" ) }
+  node.css('rafsi').each { |e| convert!( node: e, newname: 'foreignphrase', lang: 'jbo' ) }
+  node.css('veljvo').each { |e| convert!( node: e, newname: 'foreignphrase', lang: 'jbo' ) ; indexify!(node: e, indextype: 'lojban-phrase') ; e.replace("<para>from #{e}</para>") }
 
   # Make things into rows
   node.children.each { |e| e.replace("<tr><td>#{e}</td></tr>") }
@@ -277,42 +267,46 @@ $document.css('lujvo-making').each do |node|
   tableify node
 end
 
+# Handle interlinear-gloss, making word-by-word tables.
+#
+#     <interlinear-gloss>
+#       <jbo>pa re ci vo mu xa ze bi so no</jbo>
+#       <gloss>one two three four five six seven eight nine zero</gloss>
+#       <math>1234567890</math>
+#       <natlang>one billion, two hundred and thirty-four million, five hundred and sixty-seven thousand, eight hundred and ninety.</natlang>
+#       
+#     </interlinear-gloss>
+$document.css('interlinear-gloss').each do |node|
+  unless node.xpath('jbo').length > 0 and (node.xpath('natlang').length > 0 or node.xpath('gloss').length > 0 or node.xpath('math').length > 0)
+    abort "Found a bad interlinear-gloss element; it must have one jbo sub-element and at least one gloss or natlang or math sub-element: #{node.to_xml}"
+  end
+
+  node.children.each do |child|
+    unless child.element?
+      next
+    end
+
+    if child.name == 'jbo' or child.name == 'gloss'
+      table_row_by_words child
+    elsif child.name == 'math'
+      child.replace("<tr class='informalequation'><td colspan='0'>#{child}</td></tr>")
+    else
+      convert!( node: child, newname: 'para' )
+      child.replace("<tr class='para'><td colspan='0'>#{child}</td></tr>")
+    end
+  end
+
+  tableify node
+end
+
+# Math
+$document.css('inlinemath').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<inlineequation role='inlinemath'>#{e}</inlineequation>" ) }
+
+$document.css('math').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<informalequation role='math'>#{e}</informalequation>" ) }
+
 $document.traverse do |node|
   unless node.element?
     next
-  end
-
-  # Handle interlinear-gloss, making word-by-word tables.
-  #
-  #     <interlinear-gloss>
-  #       <jbo>pa re ci vo mu xa ze bi so no</jbo>
-  #       <gloss>one two three four five six seven eight nine zero</gloss>
-  #       <math>1234567890</math>
-  #       <natlang>one billion, two hundred and thirty-four million, five hundred and sixty-seven thousand, eight hundred and ninety.</natlang>
-  #       
-  #     </interlinear-gloss>
-  if node.name == 'interlinear-gloss'
-    unless node.xpath('jbo').length > 0 and (node.xpath('natlang').length > 0 or node.xpath('gloss').length > 0 or node.xpath('informalequation').length > 0)
-      abort "Found a bad interlinear-gloss element; it must have one jbo sub-element and at least one gloss or natlang sub-element: #{node.to_xml}"
-    end
-
-    node.children.each do |child|
-      unless child.element?
-        next
-      end
-
-      if child.name == 'jbo' or child.name == 'gloss'
-        table_row_by_words child
-      elsif child.name == 'informalequation'
-        flat_table_row child
-      else
-        child = convert child.name, child, 'para'
-
-        flat_table_row child
-      end
-    end
-
-    tableify node
   end
 
   #     Handle cmavo-list
@@ -644,10 +638,6 @@ $document.traverse do |node|
   wrap_up 'morphology', node, { name: 'foreignphrase', mylang: 'jbo', role: node.name }, node.children
 
   wrap_up 'score', node, { name: 'para', role: 'lujvo-score' }, node.children
-
-  convert_and_wrap 'inlinemath', node, 'mathphrase', 'inlineequation'
-
-  convert_and_wrap 'math', node, 'mathphrase', 'informalequation'
 
   if (not node.parent) or node.parent.name != 'cmavo-entry'
     convert 'cmavo', node, 'emphasis'
