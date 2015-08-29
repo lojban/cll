@@ -2,10 +2,13 @@
  * NB:
  *
  * Everything that happens here, including the import below, happens
- * *AFTER* /usr/local/lib/prince/style/xhtml.css
+ * *AFTER* /usr/lib/prince/style/xhtml.css
 ********************/
 
 @import url("docbook2html.css");
+
+// Avoid ligatures per http://www.princexml.com/forum/topic/1821/how-to-avoid-or-turn-off-ligatures
+p { font-variant: prince-opentype(ccmp) }
 
 /*********
 special glyphs
@@ -79,8 +82,8 @@ examples
 div.example {
   page-break-inside: avoid;
   font-family: 'Linux Biolinum', 'Biolinum', 'DejaVu Sans';
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 0pt;
+  margin-bottom: 0pt;
 }
 /*
 }}}
@@ -179,7 +182,7 @@ p {
     margin-bottom: .1em;
 }
 div.section > p {
-    text-indent: 2em;
+    text-indent: 1em;
 }
 /*
 }}}
@@ -194,13 +197,14 @@ h1 {
   page-break-after: avoid;
   string-set: header content();
   prince-page-group: start;
-  font-size: 16pt;
+  font-size: 14pt;
   margin: 10pt   0;
 }
 h2 {
   string-set: header content();
   font-size: 11pt;
-  margin: 10pt   0;
+  margin: 0pt;
+  margin-top: 10pt;
 }
 /* Yes, absolute padding.  If you can think of something better to
  * put this stuff at the bottom of the page... */
@@ -227,7 +231,9 @@ div.chapter, div.glossary, div.whole-index {
 }
 
 @page {
-  margin: 13mm 13mm 13mm 13mm;
+  margin: 13mm;
+  margin-top: 17mm;
+  margin-bottom: 17mm;
   size: 159mm 240mm;
   /* For overflow testing
    * border: 1px solid red;
@@ -239,33 +245,30 @@ div.chapter, div.glossary, div.whole-index {
 
 @page chapter :left {
   @top-left {
-    font-size: 10pt;
+    font-size: 9pt;
     text-align: center;
-    font-weight: bold;
     content: "The Complete Lojban Language";
     vertical-align: bottom;
-    padding-top: .1em;
-    padding-bottom: .5em;
+    margin-top: 13mm;
+    padding-bottom: 2mm;
   }
 
   @bottom-left {
     font-size: 10pt;
     content: counter(page);
     vertical-align: top;
-    padding-bottom: .1em;
-    padding-top: .5em;
+    margin-bottom: 13mm;
   }
 }
 
 @page chapter :right {
   @top-right {
-    font-size: 10pt;
+    font-size: 9pt;
     text-align: center;
-    font-weight: bold;
     content: string(header, first); 
     vertical-align: bottom;
-    padding-top: .1em;
-    padding-bottom: .5em;
+    margin-top: 13mm;
+    padding-bottom: 2mm;
   }
 
   @bottom-right {
@@ -273,8 +276,7 @@ div.chapter, div.glossary, div.whole-index {
     content: counter(page);
     text-align: right;
     vertical-align: top;
-    padding-bottom: .1em;
-    padding-top: .5em;
+    margin-bottom: 13mm;
   }
 }
 
@@ -287,14 +289,55 @@ div.chapter, div.glossary, div.whole-index {
 }}}
 */
 
-table {
-  margin-left: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
+/*********
+Whitespace managament, mostly reductions.
+{{{
+*/
+div.example, table.cmavo-list, ul.itemizedlist, blockquote {
+  margin: 0pt;
+  margin-left: 2em;
+  border-spacing: 0pt;
+  border: 0pt;
+  padding: 0pt;
+}
+
+div.example, table.cmavo-list {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+table, tr, ul, ol {
+  margin: 0pt;
+  border-spacing: 0pt;
+  border: 0pt;
+  padding: 0pt;
+}
+
+td, li {
+  margin: 0pt;
+  border: 0pt;
+  padding-top: 0pt;
+  padding-bottom: 0pt;
 }
 
 dl {
-  margin-left: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 0pt;
 }
+.example-contents {
+  margin-left: 0pt;
+}
+dd {
+    margin-bottom: 0pt;
+}
+
+/*
+br.example-break + p, div.informaltable + p, div.titlepage + p, div.itemizedlist + p {
+  text-indent: 0pt !important;
+}
+*/
+div.titlepage + p, p.noindent {
+  text-indent: 0pt !important;
+}
+/*
+}}}
+*/

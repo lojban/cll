@@ -1,5 +1,5 @@
 test = 
-chapters = $(if $(CHAPTERS), $(CHAPTERS), chapters/1.xml chapters/2.xml chapters/3.xml chapters/4.xml chapters/5.xml chapters/6.xml chapters/7.xml chapters/8.xml chapters/9.xml chapters/10.xml chapters/11.xml chapters/12.xml chapters/13.xml chapters/14.xml chapters/15.xml chapters/16.xml chapters/17.xml chapters/18.xml chapters/19.xml chapters/20.xml chapters/21.xml)
+chapters = $(if $(CHAPTERS), $(CHAPTERS), chapters/01.xml chapters/02.xml chapters/03.xml chapters/04.xml chapters/05.xml chapters/06.xml chapters/07.xml chapters/08.xml chapters/09.xml chapters/10.xml chapters/11.xml chapters/12.xml chapters/13.xml chapters/14.xml chapters/15.xml chapters/16.xml chapters/17.xml chapters/18.xml chapters/19.xml chapters/20.xml chapters/21.xml)
 builddir = $(if $(BUILDDIR), $(BUILDDIR), $(PWD)/build)
 
 .PHONY: all
@@ -8,6 +8,13 @@ all: xhtml_chapters_web xhtml_sections_web xhtml_nochunks_web prince_pdf_web epu
 .PHONY: clean
 clean:
 	find $(PWD)/build/ $(PWD)/coverage/build/ $(builddir)/ \! -name 'jbovlaste*.xml' -type f | xargs -n 1 rm -f
+
+# check whether X server is available
+ifeq (,$(DISPLAY))
+	XPREFIX:=xvfb-run
+else
+	XPREFIX:=
+endif
 
 .PHONY: realclean
 realclean: clean
@@ -98,7 +105,7 @@ $(builddir)/xhtml-nochunks.done: $(builddir)/cll_processed_xhtml.xml xml/docbook
 .PHONY: epub
 epub: $(builddir)/cll.epub
 $(builddir)/cll.epub: $(builddir)/xhtml.done
-	xvfb-run ebook-convert $(builddir)/xhtml/index.html $(builddir)/cll.epub
+	$(XPREFIX) -a ebook-convert $(builddir)/xhtml/index.html $(builddir)/cll.epub
 
 .PHONY: epub_web
 epub_web: epub
@@ -110,7 +117,7 @@ epub_web: epub
 .PHONY: mobi
 mobi: $(builddir)/cll.mobi
 $(builddir)/cll.mobi: $(builddir)/xhtml.done
-	xvfb-run ebook-convert $(builddir)/xhtml/index.html $(builddir)/cll.mobi
+	$(XPREFIX) -a ebook-convert $(builddir)/xhtml/index.html $(builddir)/cll.mobi
 
 .PHONY: mobi_web
 mobi_web: mobi

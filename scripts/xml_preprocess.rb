@@ -13,7 +13,9 @@ require "#{mydir}/util.rb"
 # specify using a simple hash.  Copies all attributes to the new
 # node.
 #
-# @param name [String] The name of the new node to make.
+# @param name [String] The name of the note we're replacing; if this
+#       doesn't match, just return false.  Used to save a bunch of
+#       "if" statements.
 #
 # @param node [Nokogiri::XML::Element] The node we're replacing.
 #
@@ -95,7 +97,7 @@ def indexify name, node, indextype, newname, lang
     indexbits = Nokogiri::XML::Node.new( 'indexterm', $document )
     indexbits[:type] = indextype
     indexbits.children = innerbit
-    newnode = wrap_up name, node, { name: newname, mylang: lang }, indexbits
+    newnode = wrap_up name, node, { name: newname, mylang: lang, role: name }, indexbits
     newnode.add_child node.children
     $stderr.puts newnode.to_xml
     return newnode
@@ -114,12 +116,24 @@ end
 #
 def table_row_by_words node
   newchildren = []
-  node.children.each do |child|
+  children = node.children.to_a
+  children.each_index do |child_index|
+    child = children[child_index]
+    sibling = (child_index+1 == children.length) ? nil : children[child_index+1]
+    if not child
+        next
+    end
     if child.text?
-      child.text.split( %r{\s+} ).each do |word|
+      words = child.text.gsub('--',"\u00A0").split( %r{\s+} )
+      words.each_index do |word_index|
+        word = words[word_index]
         unless word =~ %r{^\s*$}
           td = Nokogiri::XML::Node.new( 'td', $document )
           td.content = word
+          if word_index == words.length-1 && word[-1] == "-" && sibling && !(sibling.text?) && sibling.element? && sibling.name == 'quote'
+              td << sibling.dup
+              children[child_index+1] = nil
+          end
           newchildren << td
         end
       end
@@ -264,6 +278,16 @@ $document.traverse do |node|
   #         <cmavo>nu</cmavo>
   #         <description>event of</description>
   #       </cmavo-entry>
+  #
+  #       More:
+  #
+  #      <cmavo-entry>
+  #        <cmavo>pu'u</cmavo>
+  #        <description>process of</description>
+  #        <gismu>pruce</gismu>
+  #        <rafsi>pup</rafsi>
+  #        <description role="place-structure">x1 is a process of (the bridi)</description>
+  #      </cmavo-entry>
   #       <cmavo-entry>
   #         <gismu>fasnu</gismu>
   #         <rafsi>nun</rafsi>
@@ -305,56 +329,134 @@ $document.traverse do |node|
 
         if child.xpath('./cmavo').length > 0 and child.xpath('./description').length > 0
           newchildren = []
+          oldchild = child.clone
 
-          td = Nokogiri::XML::Node.new( 'td', $document )
-          td.content = child.xpath('./cmavo').first.text
-          newchildren << td
+          child.xpath('.//comment()').remove
 
-          td = Nokogiri::XML::Node.new( 'td', $document )
-          td.content = child.xpath('./gismu').first ? child.xpath('./gismu').first.text : ''
-          newchildren << td
+          child.xpath('./cmavo').each do |cmavo|
+            td = Nokogiri::XML::Node.new( 'td', $document )
+            td.content = cmavo.text
+            newchildren << td
+            cmavo.remove
+          end
 
-          td = Nokogiri::XML::Node.new( 'td', $document )
-          td.content = child.xpath('./attitudinal-scale[@point="sai"]').map { |x| x.text }.join(' ; ')
-          newchildren << td
+          if child.xpath('./gismu').length > 0
+            child.xpath('./gismu').each do |gismu|
+              td = Nokogiri::XML::Node.new( 'td', $document )
+              td.content = gismu.text
+              newchildren << td
+              gismu.remove
+            end
+          end
 
-          td = Nokogiri::XML::Node.new( 'td', $document )
-          td.content = child.xpath("./attitudinal-scale[@point=\"cu'i\"]").map { |x| x.text }.join(' ; ')
-          newchildren << td
+          if child.xpath('./selmaho').length > 0
+            child.xpath('./selmaho').each do |selmaho|
+              td = Nokogiri::XML::Node.new( 'td', $document )
+              td.content = selmaho.text
+              newchildren << td
+              selmaho.remove
+            end
+          end
 
-          td = Nokogiri::XML::Node.new( 'td', $document )
-          td.content = child.xpath('./attitudinal-scale[@point="nai"]').map { |x| x.text }.join(' ; ')
-          newchildren << td
+          if child.xpath('./series').length > 0
+            child.xpath('./series').each do |series|
+              td = Nokogiri::XML::Node.new( 'td', $document )
+              td.content = series.text
+              newchildren << td
+              series.remove
+            end
+          end
+
+          if child.xpath('./foreignphrase[@role="rafsi"]').length > 0
+            child.xpath('./foreignphrase[@role="rafsi"]').each do |rafsi|
+              td = Nokogiri::XML::Node.new( 'td', $document )
+              td.content = rafsi.text
+              newchildren << td
+              rafsi.remove
+            end
+          end
+
+          if child.xpath('./attitudinal-scale[@point="sai"]').length > 0
+            td = Nokogiri::XML::Node.new( 'td', $document )
+            td.content = child.xpath('./attitudinal-scale[@point="sai"]').map { |x| x.text }.join(' ; ')
+            newchildren << td
+            child.xpath('./attitudinal-scale[@point="sai"]').remove
+          end
+
+          if child.xpath("./attitudinal-scale[@point=\"cu'i\"]").length > 0
+            td = Nokogiri::XML::Node.new( 'td', $document )
+            td.content = child.xpath("./attitudinal-scale[@point=\"cu'i\"]").map { |x| x.text }.join(' ; ')
+            newchildren << td
+            child.xpath("./attitudinal-scale[@point=\"cu'i\"]").remove
+          end
+
+          if child.xpath('./attitudinal-scale[@point="nai"]').length > 0
+            td = Nokogiri::XML::Node.new( 'td', $document )
+            td.content = child.xpath('./attitudinal-scale[@point="nai"]').map { |x| x.text }.join(' ; ')
+            newchildren << td
+            child.xpath('./attitudinal-scale[@point="nai"]').remove
+          end
+
+          descs=child.xpath('./description')
+
+          # Check if we missed something (we have if there's
+          # anything left except descriptions)
+          if descs.length != child.children.length
+            abort "Unhandled node in cmavo-list.  #{descs.length} != #{child.children.length} I'm afraid you'll have to look at the code to see which one.  Here's the whole thing: #{oldchild.to_xml}\n\nhere's what we have left: #{child.to_xml}\n\nand here's what we have so far: #{Nokogiri::XML::NodeSet.new( $document, newchildren ).to_xml}"
+          end
+
+          short_descs=[]
+          long_descs=[]
+          descs.each do |desc|
+            if desc.attributes['role'] and (desc.attributes['role'].value == 'place-structure' or desc.attributes['role'].value == 'long')
+              long_descs << desc
+            else
+              short_descs << desc
+            end
+          end
+
+          short_descs.each do |desc|
+            td = Nokogiri::XML::Node.new( 'td', $document )
+            td.content = desc.text
+            newchildren << td
+          end
+
+          trs = []
 
           tr1 = Nokogiri::XML::Node.new( 'tr', $document )
           tr1.children = Nokogiri::XML::NodeSet.new( $document, newchildren )
-          tr1[:class] = 'cmavo-entry-line-1'
+          tr1[:class] = 'cmavo-entry-main'
 
-          tr2 = flat_table_row ( convert 'description', child.xpath('./description').first, 'para' )
-          tr2[:class] = 'cmavo-entry-line-2'
+          trs << tr1
 
-          group = Nokogiri::XML::NodeSet.new( $document, [ tr1, tr2 ] )
+          long_descs.each do |desc|
+            tr2 = flat_table_row ( convert 'description', desc, 'para' )
+            tr2[:class] = 'cmavo-entry-long-desc'
+            trs << tr2
+          end
+
+          group = Nokogiri::XML::NodeSet.new( $document, trs )
 
           child = child.replace group
         else
-        child.children.each do |grandchild|
-          unless grandchild.element?
-            next
-          end
+          child.children.each do |grandchild|
+            unless grandchild.element?
+              next
+            end
 
-          role=grandchild.name
-          if grandchild[:role]
-            role=grandchild[:role]
-          elsif grandchild.name == 'series'
-            role='cmavo-series'
-          elsif grandchild.name == 'modal-place'
-            role="modal-place-#{grandchild[:se]}"
-          elsif grandchild.name == 'attitudinal-scale'
-            role="attitudinal-scale-#{grandchild[:point]}"
-          end
+            role=grandchild.name
+            if grandchild[:role]
+              role=grandchild[:role]
+            elsif grandchild.name == 'series'
+              role='cmavo-series'
+            elsif grandchild.name == 'modal-place'
+              role="modal-place-#{grandchild[:se]}"
+            elsif grandchild.name == 'attitudinal-scale'
+              role="attitudinal-scale-#{grandchild[:point]}"
+            end
 
-          wrap_up grandchild.name, grandchild, { name: 'para', role: role }, grandchild.children
-        end
+            wrap_up grandchild.name, grandchild, { name: 'para', role: role }, grandchild.children
+          end
 
           table_row_by_children child
         end
@@ -464,6 +566,19 @@ $document.traverse do |node|
     end
   end
 
+  # Turn it into an informaltable with one column per row
+  if node.name == 'lujvo-making'
+    # Make things into rows
+    node.css("jbo,natlang,gloss").each { |e| e['role'] = e.name ; e.name = 'para' ; e.replace("<tr><td>#{e}</td></tr>") }
+
+    # Things that have already been converted, we wrap
+    node.xpath('./foreignphrase[@role="veljvo"]').each { |e| e.replace("<tr><td>from #{e}</tr></td>") }
+    node.xpath('./foreignphrase[@role="rafsi"]').each { |e| e.replace("<tr><td>#{e}</td></tr>") }
+    node.xpath('./para[@role="lujvo-score"]').each { |e| e.replace("<tr><td>#{e}</td></tr>") }
+
+    tableify node
+  end
+
   # For now, jbophrase makes an *index* but not a *glossary*
   node = indexify 'jbophrase', node, 'lojban-phrase', 'foreignphrase', 'jbo'
   if node and node.name == 'foreignphrase'
@@ -502,25 +617,9 @@ $document.traverse do |node|
     convert 'gismu', node, 'para'
   end
 
-  convert 'selmaho', node, 'para'
-
   convert 'comment', node, 'emphasis'
 
   wrap_up 'content', node, { name: 'phrase', role: 'definition-content' }, node.children
-
-  # Turn it into an informaltable with maximally wide rows
-  if node.name == 'lujvo-making'
-    node.children.each do |child|
-      unless child.element?
-        next
-      end
-
-      child = convert child.name, child, 'para'
-
-      flat_table_row child
-    end
-    tableify node
-  end
 
   # Turn it into an informaltable with maximally wide rows
   if node.name == 'lojbanization'
