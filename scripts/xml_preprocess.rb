@@ -197,24 +197,28 @@ def glossify node, text
   end
 end
 
-# Makes something into an informal table with one colgroup
+# Makes something into a table/informaltable with one colgroup
 def tableify node
-  if node.xpath('title').length > 0
-    colgroup = Nokogiri::XML::Node.new( 'colgroup', $document )
-    node = wrap_up node.name, node, { name: 'table', role: node.name, class: node.name }, Nokogiri::XML::NodeSet.new( $document, [ colgroup, node.children ].flatten )
-  else
-    colgroup = Nokogiri::XML::Node.new( 'colgroup', $document )
-    node = wrap_up node.name, node, { name: 'informaltable', role: node.name, class: node.name }, Nokogiri::XML::NodeSet.new( $document, [ colgroup, node.children ].flatten )
-  end
 
   # Convert title to caption (see
-  # http://www.sagehill.net/docbookxsl/Tables.html ) and re-order things
-  newchildren = []
-  node.children.each { |child| child.name == 'title' and convert 'title', child, 'caption' }
-  node.children.each { |child| child.name == 'caption' and newchildren << child }
-  node.children.each { |child| child.name == 'colgroup' and newchildren << child }
-  node.children.each { |child| child.name != 'caption' and child.name != 'colgroup' and newchildren << child }
-  node.children = Nokogiri::XML::NodeSet.new( $document, newchildren )
+  # http://www.sagehill.net/docbookxsl/Tables.html )
+  node.css("title").each { |e| convert 'title', e, 'caption' }
+  caption = node.css('caption')
+  node.css('caption').remove
+
+  # Add a colgroup and caption as the first children, to make docbook happy
+  node.children.first.add_previous_sibling "#{caption}<colgroup/>"
+
+  # Save the old name
+  node['role'] = node.name
+  node['class'] = node.name
+
+  # Turn it into a table
+  if node.css('caption').length > 0
+    node.name = 'table'
+  else
+    node.name = 'informaltable'
+  end
 
   return node
 end
@@ -225,6 +229,52 @@ end
 
 $document = Nokogiri::XML(File.open ARGV[0]) do |config|
   config.default_xml.noblanks
+end
+
+# Add index information ; put the index entry element as the first
+# child of this node
+def indexify2( node:, indextype: )
+  node.children.first.add_previous_sibling %Q{<indexterm type="#{indextype}"><primary role="#{node.name}">#{node.text}</primary></indexterm>}
+  return node
+end
+
+# Used to turn a node into two nested nodes (this comes up
+# frequently).
+def convert_and_wrap2( node:, inner_newname:, outer_newname: )
+  rolename = node.name
+  node['role'] = rolename
+  node.name = inner_newname
+  node.replace %Q{<#{outer_newname} role="#{rolename}">\n#{node}\n</#{outer_newname}>}
+  node
+end
+
+# Converts a node's name and sets the role (to the old name by
+# default), with an optional language
+def convert2( node:, newname:, role: nil, lang: nil )
+  unless role
+    role = node.name
+  end
+  if lang
+    node['xml:lang'] = lang
+  end
+  node['role'] = role
+  node.name = newname
+  node
+end
+
+# Turn it into an informaltable with one column per row
+$document.css('lujvo-making').each do |node|
+  # Convert children into docbook elements
+  node.css("jbo,natlang,gloss").each { |e| convert2( node: e, newname: 'para' ) }
+  node.css("score").each { |e| convert2( node: e, newname: 'para', role: 'lujvo-score' ) }
+  node.css("inlinemath").each { |e| convert_and_wrap2( node: e, inner_newname: 'mathphrase', outer_newname: 'inlineequation' ) }
+  node.css("rafsi").each { |e| convert2( node: e, newname: 'foreignphrase', lang: 'jbo' ) }
+  node.css("veljvo").each { |e| convert2( node: e, newname: 'foreignphrase', lang: 'jbo' ) ; indexify2(node: e, indextype: 'lojban-phrase') ; e.replace("<para>from #{e}</para>") }
+
+  # Make things into rows
+  node.children.each { |e| e.replace("<tr><td>#{e}</td></tr>") }
+
+  tableify node
 end
 
 $document.traverse do |node|
@@ -564,19 +614,6 @@ $document.traverse do |node|
     else
       convert_and_wrap 'grammar-template', node, 'para', 'blockquote'
     end
-  end
-
-  # Turn it into an informaltable with one column per row
-  if node.name == 'lujvo-making'
-    # Make things into rows
-    node.css("jbo,natlang,gloss").each { |e| e['role'] = e.name ; e.name = 'para' ; e.replace("<tr><td>#{e}</td></tr>") }
-
-    # Things that have already been converted, we wrap
-    node.xpath('./foreignphrase[@role="veljvo"]').each { |e| e.replace("<tr><td>from #{e}</tr></td>") }
-    node.xpath('./foreignphrase[@role="rafsi"]').each { |e| e.replace("<tr><td>#{e}</td></tr>") }
-    node.xpath('./para[@role="lujvo-score"]').each { |e| e.replace("<tr><td>#{e}</td></tr>") }
-
-    tableify node
   end
 
   # For now, jbophrase makes an *index* but not a *glossary*
