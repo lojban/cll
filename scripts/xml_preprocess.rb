@@ -380,6 +380,43 @@ $document.css('valsi').each do |node|
   end
 end
 
+##    <simplelist>
+##      <member><grammar-template>
+##          X .i BAI bo Y
+##      </grammar-template></member>
+$document.css('grammar-template').each do |node|
+  # Phrasal version
+  if [ 'title', 'term', 'member', 'secondary' ].include? node.parent.name
+    convert!( node: node, newname: 'phrase' )
+  else
+    # Block version
+    convert!( node: node, newname: 'para' )
+    node.replace("<blockquote role='grammar-template'>#{node}</blockquote>")
+  end
+end
+
+## <para><definition><content>x1 is a nest/house/lair/den for inhabitant x2</content></definition></para>
+$document.css('definition').each do |node|
+  if [ 'title', 'term', 'member', 'secondary' ].include? node.parent.name
+    # Phrasal version
+    convert!( node: node, newname: 'phrase' )
+  else
+    # Block version
+    convert!( node: node, newname: 'para' )
+    node.replace("<blockquote role='definition'>#{node}</blockquote>")
+  end
+end
+
+# Turn it into an informaltable with maximally wide rows
+$document.css('lojbanization').each do |node|
+  handle_children( node: node, allowed_children_names: [ 'jbo', 'natlang' ] ) do |child|
+    origname=child.name
+    convert!( node: child, newname: 'para', role: child['role'] )
+    child.replace("<tr class='#{origname}'><td colspan='0'>#{child}</td></tr>")
+  end
+  tableify node
+end
+
 $document.traverse do |node|
   unless node.element?
     next
@@ -550,9 +587,8 @@ $document.traverse do |node|
           trs << tr1
 
           long_descs.each do |desc|
-            tr2 = flat_table_row ( convert 'description', desc, 'para' )
-            tr2[:class] = 'cmavo-entry-long-desc'
-            trs << tr2
+            convert!( node: desc, newname: 'para', role: desc['role'] )
+            trs << $document.parse("<tr class='cmavo-entry-long-desc'><td colspan='0'>#{desc}</td></tr>").first
           end
 
           group = Nokogiri::XML::NodeSet.new( $document, trs )
@@ -593,31 +629,11 @@ $document.traverse do |node|
 
   wrap_up 'compound', node, { name: 'para', role: 'cmavo-compound' }, node.children
 
-  if node.name == 'grammar-template'
-    # Phrasal version
-    if [ 'title', 'term', 'member', 'secondary' ].include? node.parent.name
-      convert 'grammar-template', node, 'phrase'
-      # Block version
-    else
-      convert_and_wrap 'grammar-template', node, 'para', 'blockquote'
-    end
-  end
-
   # For now, jbophrase makes an *index* but not a *glossary*
   node = indexify 'jbophrase', node, 'lojban-phrase', 'foreignphrase', 'jbo'
   if node and node.name == 'foreignphrase'
     if node.parent.name == 'example'
       wrap_up 'foreignphrase', node, { name: 'para', role: 'jbophrase' }, node.children
-    end
-  end
-
-  if node.name == 'definition'
-    if [ 'title', 'term', 'member', 'secondary' ].include? node.parent.name
-      # Phrasal version
-      convert 'definition', node, 'phrase'
-    else
-      # Block version
-      convert_and_wrap 'definition', node, 'para', 'blockquote'
     end
   end
 
@@ -636,19 +652,6 @@ $document.traverse do |node|
 
   wrap_up 'content', node, { name: 'phrase', role: 'definition-content' }, node.children
 
-  # Turn it into an informaltable with maximally wide rows
-  if node.name == 'lojbanization'
-    node.children.each do |child|
-      unless child.element?
-        next
-      end
-
-      child = convert child.name, child, 'para'
-
-      flat_table_row child
-    end
-    tableify node
-  end
 end
 
 doc = $document.to_xml
