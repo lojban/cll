@@ -417,6 +417,16 @@ $document.css('lojbanization').each do |node|
   tableify node
 end
 
+$document.css('jbophrase').each do |node|
+  # For now, jbophrase makes an *index* but not a *glossary*
+  indexify!( node: node, indextype: 'lojban-phrase' )
+  convert!( node: node, newname: 'foreignphrase', lang: 'jbo' )
+
+  if node.parent.name == 'example'
+    convert!( node: node, newname: 'para', role: 'jbophrase' )
+  end
+end
+
 $document.traverse do |node|
   unless node.element?
     next
@@ -628,14 +638,6 @@ $document.traverse do |node|
   end
 
   wrap_up 'compound', node, { name: 'para', role: 'cmavo-compound' }, node.children
-
-  # For now, jbophrase makes an *index* but not a *glossary*
-  node = indexify 'jbophrase', node, 'lojban-phrase', 'foreignphrase', 'jbo'
-  if node and node.name == 'foreignphrase'
-    if node.parent.name == 'example'
-      wrap_up 'foreignphrase', node, { name: 'para', role: 'jbophrase' }, node.children
-    end
-  end
 
   wrap_up 'diphthong', node, { name: 'foreignphrase', mylang: 'jbo', role: node.name }, node.children
   wrap_up 'rafsi', node, { name: 'foreignphrase', mylang: 'jbo', role: node.name }, node.children
