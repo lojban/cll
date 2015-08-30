@@ -242,23 +242,28 @@ def tableify node
     node.name = 'informaltable'
   end
 
-  # If there are natlang lines, turn it into *two* tables
-  if node.css('[role="natlang"]').length > 0 and node.css('[role="natlang"]').length != node.children.length
+  return node
+end
+
+# Break a table into two tables; anything that matches css_string
+# goes into the second table, preserving order
+def table_split( node, css_string )
+  if node['split'] != 'false' && node.css(css_string).length > 0 && node.css(css_string).length != node.children.length
     newnode = node.clone
     newnode.children.each do |child|
-      if child.css('[role="natlang"]').length == 0
+      if child.css(css_string).length == 0
         child.remove
       end
     end
     node.children.each do |child|
-      if child.css('[role="natlang"]').length > 0
+      if child.css(css_string).length > 0
         child.remove
       end
     end
     node.add_next_sibling newnode
   end
 
-  return node
+  node
 end
 
 #**************************************************
@@ -316,6 +321,9 @@ $document.css('interlinear-gloss').each do |node|
   end
 
   tableify node
+
+  # If there are natlang, comment or para lines, turn it into *two* tables
+  table_split( node, 'td[colspan="0"] [role=natlang],td[colspan="0"] [role=comment],td[colspan="0"] [role=para]' )
 end
 
 # handle interlinear-gloss-itemized
@@ -355,6 +363,9 @@ $document.css('interlinear-gloss-itemized').each do |node|
   end
 
   tableify node
+
+  # If there are natlang, comment or para lines, turn it into *two* tables
+  table_split( node, 'td[colspan="0"] [role=natlang],td[colspan="0"] [role=comment],td[colspan="0"] [role=para]' )
 end
 
 
@@ -397,11 +408,11 @@ $document.css('valsi').each do |node|
   if node[:valid] == 'false'
     convert!( node: node, newname: 'foreignphrase' )
   else
-    orignode = node.clone
+    orignode = node.dup
     convert!( node: node, newname: 'foreignphrase', lang: 'jbo' )
-    indexify!( node: node, indextype: 'lojban-words', role: orignode['role'] )
+    indexify!( node: node, indextype: 'lojban-words', role: orignode.name )
     node = glossify node, orignode
-    $stderr.puts node.to_xml
+    $stderr.puts "valsi: #{node.to_xml}"
   end
 end
 
@@ -686,10 +697,11 @@ $document.xpath('//@glossary').remove
 $document.xpath('//@delineated').remove
 $document.xpath('//@elidable').remove
 $document.xpath('//@valid').remove
+$document.xpath('//@split').remove
 
 doc = $document.to_xml
 # Put in our own header
-doc = doc.gsub( %r{^.*<book [^>]*>$}m, '<?xml version="1.0" encoding="utf-8"?>
+doc = doc.gsub( %r{^.*<book [^>]*>}m, '<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V5.0//EN" "dtd/docbook-5.0.dtd"[
 <!ENTITY % allent SYSTEM "xml/iso-pub.ent">
 %allent;
