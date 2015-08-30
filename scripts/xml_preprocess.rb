@@ -182,12 +182,6 @@ end
 # Converts a node's name and sets the role (to the old name by
 # default), with an optional language
 def convert!( node:, newname:, role: nil, lang: nil )
-  # Drop attributes that docbook doesn't recognize
-  node.xpath('//@glossary').remove
-  node.xpath('//@delineated').remove
-  node.xpath('//@elidable').remove
-  node.xpath('//@valid').remove
-
   unless role
     role = node.name
   end
@@ -216,11 +210,12 @@ def handle_children( node:, allowed_children_names:, &proc )
 end
 
 # Wrap node in a glossary entry
-def glossify node, text
-  if node['glossary'] == 'false'
+def glossify node, orignode
+  $stderr.puts "glosscheck: #{orignode} -- #{orignode['glossary']} -- #{orignode['valid']}"
+  if orignode['glossary'] == 'false' or orignode['valid'] == 'false'
     return node
   else
-    node.replace(%Q{<glossterm linkend="valsi-#{slugify(text)}">#{node}</glossterm>})
+    node.replace(%Q{<glossterm linkend="valsi-#{slugify(orignode.text)}">#{node}</glossterm>})
   end
 end
 
@@ -402,11 +397,10 @@ $document.css('valsi').each do |node|
   if node[:valid] == 'false'
     convert!( node: node, newname: 'foreignphrase' )
   else
-    origrole = node.name
+    orignode = node.clone
     convert!( node: node, newname: 'foreignphrase', lang: 'jbo' )
-    origtext = node.text
-    indexify!( node: node, indextype: 'lojban-words', role: origrole )
-    node = glossify node, origtext
+    indexify!( node: node, indextype: 'lojban-words', role: orignode['role'] )
+    node = glossify node, orignode
     $stderr.puts node.to_xml
   end
 end
@@ -686,6 +680,12 @@ $document.traverse do |node|
   wrap_up 'content', node, { name: 'phrase', role: 'definition-content' }, node.children
 
 end
+
+# Drop attributes that docbook doesn't recognize
+$document.xpath('//@glossary').remove
+$document.xpath('//@delineated').remove
+$document.xpath('//@elidable').remove
+$document.xpath('//@valid').remove
 
 doc = $document.to_xml
 # Put in our own header
