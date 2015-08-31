@@ -33,14 +33,14 @@ def table_row_by_words node
           # Handle word-hyphen-quote, i.e.: lerfu-<quote>c</quote>,
           # which should stay together
           if word_index == words.length-1 && word[-1] == "-" && child.next && !(child.next.text?) && child.next.element? && child.next.name == 'quote'
-              td << child.next.dup
-              # Skip processing the quote since we just included it
-              child.next.content = ''
+            td << child.next.dup
+            # Skip processing the quote since we just included it
+            child.next['skip'] = 'true'
           end
           newchildren << td
         end
       end
-    elsif child.element? and child.text.length > 0
+    elsif child.element? and child['skip'] != 'true'
       newchildren << $document.parse("<td>#{child}</td>").first
     end
   end
