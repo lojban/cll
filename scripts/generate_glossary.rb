@@ -46,8 +46,8 @@ unless opts[:testing]
       $stderr.puts "jbovlaste file is old; refetching."
       $stderr.puts %x{wget 'http://jbovlaste.lojban.org/export/xml-export.html?lang=en&bot_key=z2BsnKYJhAB0VNsl' -O "#{builddir}/jbovlaste.xml"}
     end
+    jbovlaste_tree=Nokogiri::XML(open "#{builddir}/jbovlaste.xml")
 end
-jbovlaste_tree=Nokogiri::XML(open "#{builddir}/jbovlaste.xml")
 
 coder = HTMLEntities.new
 
