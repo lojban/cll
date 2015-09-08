@@ -194,11 +194,11 @@ end
 #       
 #     </interlinear-gloss>
 $document.css('interlinear-gloss').each do |node|
-  unless node.xpath('jbo').length > 0 and (node.xpath('natlang').length > 0 or node.xpath('gloss').length > 0 or node.xpath('math').length > 0)
-    abort "Found a bad interlinear-gloss element; it must have one jbo sub-element and at least one gloss or natlang or math sub-element.  Context: #{node.to_xml}"
+  unless (node.xpath('jbo').length > 0 or node.xpath('jbophrase').length > 0) and (node.xpath('natlang').length > 0 or node.xpath('gloss').length > 0 or node.xpath('math').length > 0)
+    abort "Found a bad interlinear-gloss element; it must have one jbo or jbophrase sub-element and at least one gloss or natlang or math sub-element.  Context: #{node.to_xml}"
   end
 
-  handle_children( node: node, allowed_children_names: [ 'jbo', 'gloss', 'math', 'natlang', 'para' ] ) do |child|
+  handle_children( node: node, allowed_children_names: [ 'jbo', 'jbophrase', 'gloss', 'math', 'natlang', 'para' ] ) do |child|
     if child.name == 'jbo' or child.name == 'gloss'
       table_row_by_words child
     elsif child.name == 'math'
