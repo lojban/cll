@@ -83,7 +83,7 @@
         <quote>Please!</quote> to the reader.</natlang>
       </interlinear-gloss>
     </example>
-    <para role="indent"> <!-- FIXME: these three indexterms aren't tagged alone --><indexterm type="lojban-word"><primary>le</primary></indexterm>  <indexterm type="lojban-word"><primary>li'u</primary></indexterm>  <indexterm type="lojban-word"><primary>lu</primary></indexterm>  
+    <para role="indent"><indexterm type="lojban-word"><primary>le</primary></indexterm>  <indexterm type="lojban-word"><primary>li'u</primary></indexterm>  <indexterm type="lojban-word"><primary>lu</primary></indexterm>  
     <xref linkend="example-random-id-v1mS"/> exhibits 
     <valsi>mi</valsi>, a pro-sumti; 
     <jbophrase>lu e'osai li'u</jbophrase>, a quotation; and 
@@ -98,7 +98,7 @@
         <natlang>This is three meters long.</natlang>
       </interlinear-gloss>
     </example>
-    <para role="indent"> <!-- FIXME: this indexterm isn't tagged alone --><indexterm type="lojban-word"><primary>li</primary></indexterm>  
+    <para role="indent"><indexterm type="lojban-word"><primary>li</primary></indexterm>  
     <xref linkend="example-random-id-0YaH"/> exhibits 
     <valsi>ti</valsi>, a pro-sumti; and 
     <jbophrase>li ci</jbophrase>, a number.</para>
@@ -596,10 +596,11 @@
         <natlang>Rats are small.</natlang>
       </interlinear-gloss>
     </example>
-    <para role="noindent"><indexterm type="general"><primary>lo'i</primary><secondary>contrasted with lo and loi</secondary></indexterm>  <indexterm type="general"><primary>loi</primary><secondary>contrasted with lo and lo'i</secondary></indexterm>  <indexterm type="general"><primary>lo</primary><secondary>contrasted with loi and lo'i</secondary></indexterm></para>
+    <para role="noindent">
     <example xml:id="example-random-id-qL3V" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c6e4d3"/>
+        <indexterm type="general"><primary>lo'i</primary><secondary>contrasted with lo and loi</secondary></indexterm>  <indexterm type="general"><primary>loi</primary><secondary>contrasted with lo and lo'i</secondary></indexterm>  <indexterm type="general"><primary>lo</primary><secondary>contrasted with loi and lo'i</secondary></indexterm>
       </title>
       <interlinear-gloss>
         <jbo>lo'i ratcu cu barda</jbo>
@@ -607,6 +608,7 @@
         <natlang>There are a lot of rats.</natlang>
       </interlinear-gloss>
     </example>
+  </para>
     <para role="indent">The mass of rats is small because at least one rat is small; the mass of rats is also large; the set of rats, though, is unquestionably large &ndash; it has billions of members. The mass of rats is also brown, since some of its components are; but it would be incorrect to call the set of rats brown &ndash; brown-ness is not the sort of property that sets possess.</para>
     
     <para> <indexterm type="general"><primary>sets</primary><secondary>use in Lojban place structure</secondary></indexterm> Lojban speakers should generally think twice before employing the set descriptors. However, certain predicates have places that require set sumti to fill them. For example, the place structure of 
@@ -882,8 +884,7 @@
     <quote>at least once</quote>. (See 
     <xref linkend="example-random-id-gLpy"/> for the use of 
     <valsi>su'o</valsi> with an ordinary number). Therefore, the explicitly quantified version of 
-    <xref linkend="example-random-id-3eMo"/> is</para>
-    <para> <indexterm type="general"><primary>implicit quantifier</primary><secondary>for quotations</secondary></indexterm>  <indexterm type="general"><primary>quotations</primary><secondary>implicit quantifier for</secondary></indexterm>  <indexterm type="general"><primary>su'o</primary><secondary>as implicit quantifier for quotations</secondary></indexterm></para>
+    <xref linkend="example-random-id-3eMo"/> is<indexterm type="general"><primary>implicit quantifier</primary><secondary>for quotations</secondary></indexterm>  <indexterm type="general"><primary>quotations</primary><secondary>implicit quantifier for</secondary></indexterm>  <indexterm type="general"><primary>su'o</primary><secondary>as implicit quantifier for quotations</secondary></indexterm></para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-P558">
       <title>
         <anchor xml:id="c6e6d7"/>
@@ -1272,8 +1273,7 @@
   </section>
   <section xml:id="section-sumti-qualifiers">
     <title>sumti qualifiers</title>
-    <para>The following cmavo are discussed in this section:</para>
-    <para> <indexterm type="general"><primary>sumti qualifiers</primary><secondary>list of</secondary></indexterm></para>
+    <para>The following cmavo are discussed in this section:<indexterm type="general"><primary>sumti qualifiers</primary><secondary>list of</secondary></indexterm></para>
     <cmavo-list>
       <cmavo-entry>
         <cmavo>la'e</cmavo>
@@ -1349,12 +1349,12 @@
     
     <quote>The Red Pony</quote> is the title of a book. How about:</para>
     
-    <para><indexterm type="general"><primary>unqualified sumti</primary><secondary>contrasted with qualified sumti</secondary></indexterm>  <indexterm type="general"><primary>qualified sumti</primary><secondary>contrasted with unqualified sumti</secondary></indexterm></para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-6W3v">
       <title>    
         
 
 <indexterm type="example"><primary>Red Pony</primary></indexterm>
+<indexterm type="general"><primary>unqualified sumti</primary><secondary>contrasted with qualified sumti</secondary></indexterm>  <indexterm type="general"><primary>qualified sumti</primary><secondary>contrasted with unqualified sumti</secondary></indexterm>
 
 
         <anchor xml:id="c6e10d1"/>
@@ -1410,8 +1410,7 @@
     <valsi>la'e</valsi> dereferences a pointer.)</para>
     <para>By introducing a sumti qualifier, we correct a false sentence (<xref linkend="example-random-id-6W3v"/>), which too closely resembles its literal English equivalent, into a true sentence (<xref linkend="example-random-id-Ajty"/>), without having to change it overmuch; in particular, the structure remains the same. Most of the uses of sumti qualifiers are of this general kind.</para>
     <para><indexterm type="general"><primary>symbol</primary><secondary>referring to with lu'e</secondary></indexterm>  <indexterm type="general"><primary>lu'e</primary><secondary>effect of on meaning</secondary></indexterm> The sumti qualifier 
-    <valsi>lu'e</valsi> provides the converse operation: it can be prefixed to a sumti referring to some thing to produce a sumti referring to a sign or symbol for the thing. For example,</para>
-    <para><indexterm type="general"><primary>lu'e</primary><secondary>as short for <jbophrase>le sinxa be</jbophrase></secondary></indexterm></para>
+    <valsi>lu'e</valsi> provides the converse operation: it can be prefixed to a sumti referring to some thing to produce a sumti referring to a sign or symbol for the thing. For example,<indexterm type="general"><primary>lu'e</primary><secondary>as short for "le sinxa be"</secondary></indexterm></para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7ytm">
       <title>
         
@@ -1602,10 +1601,10 @@
     <para role="indent"> <indexterm type="general"><primary>vocative word</primary><secondary>phrase following</secondary></indexterm> In these cases, the person being addressed is obvious from the context. However, a vocative word (more precisely, one or more cmavo of COI, possibly followed by 
     <valsi>doi</valsi>, or else just 
     <valsi>doi</valsi> by itself) can be followed by one of several kinds of phrases, all of which are intended to indicate the addressee. The most common case is a name:</para>
-    <para> <!-- FIXME: this indexterm isn't tagged alone --><indexterm type="lojban-word"><primary>coi</primary></indexterm></para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Bega">
       <title>
         <anchor xml:id="c6e11d3"/>
+    <indexterm type="lojban-word"><primary>coi</primary></indexterm>
       </title>
       <interlinear-gloss>
         <jbo>coi. djan.</jbo>
@@ -1852,40 +1851,45 @@
     <valsi>dai</valsi>. Here are a few examples:</para>
     
   <para>
-<indexterm type="example"><primary>Doyle</primary></indexterm>
+    <example role="interlinear-gloss-example" xml:id="example-random-id-cw4p">
+      <title>
+        <anchor xml:id="c6e12d6-2"/>
 
-<indexterm type="example"><primary>Lyra</primary></indexterm>  
-<indexterm type="example"><primary>Lottie</primary></indexterm>  
-    <informaltable>
-          <tr>
-            <td>Doyle</td>
-            <td><cmevla valid="false">*doi,l</cmevla></td>
-            <td><cmevla>do'il</cmevla> or <cmevla>dai,l</cmevla></td>
-            
-          </tr>
-          <tr>
-            <td>Lyra</td>
-            <td><cmevla valid="false">*lairas</cmevla></td>
-            <td><cmevla>ly'iras</cmevla></td>
-          </tr>
-          <tr>
-            <td>Lottie</td>
-            <td><cmevla valid="false">*latis</cmevla></td>
-            <td><cmevla>LYtis.</cmevla> or <cmevla>lotis.</cmevla></td>
-          </tr>
-          <tr>
-            <td>(American pronunciation)</td>
-          </tr>
-    </informaltable>
+        <indexterm type="example"><primary>Doyle</primary></indexterm>
+        <indexterm type="example"><primary>Lyra</primary></indexterm>  
+        <indexterm type="example"><primary>Lottie</primary></indexterm>  
+      </title>
+      <informaltable>
+        <tr>
+          <td>Doyle</td>
+          <td><cmevla valid="false">*doi,l</cmevla></td>
+          <td><cmevla>do'il</cmevla> or <cmevla>dai,l</cmevla></td>
+
+        </tr>
+        <tr>
+          <td>Lyra</td>
+          <td><cmevla valid="false">*lairas</cmevla></td>
+          <td><cmevla>ly'iras</cmevla></td>
+        </tr>
+        <tr>
+          <td>Lottie</td>
+          <td><cmevla valid="false">*latis</cmevla></td>
+          <td><cmevla>LYtis.</cmevla> or <cmevla>lotis.</cmevla></td>
+        </tr>
+        <tr>
+          <td>(American pronunciation)</td>
+        </tr>
+      </informaltable>
+    </example>
   </para>
-    <para>
+  <para>
 
-<indexterm type="general"><primary>names</primary><secondary>using rafsi</secondary></indexterm> Names may be borrowed from other languages or created arbitrarily. Another common practice is to use one or more rafsi, arranged to end with a consonant, to form a name: thus the rafsi 
+    <indexterm type="general"><primary>names</primary><secondary>using rafsi</secondary></indexterm> Names may be borrowed from other languages or created arbitrarily. Another common practice is to use one or more rafsi, arranged to end with a consonant, to form a name: thus the rafsi 
     <rafsi>loj-</rafsi> for 
     <valsi>logji</valsi> (logical) and 
     <rafsi>ban-</rafsi> for 
     <valsi>bangu</valsi> (language) unite to form the name of this language:</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-uXAY">
+  <example role="interlinear-gloss-example" xml:id="example-random-id-uXAY">
       <title>
         <anchor xml:id="c6e12d7"/>
       </title>
@@ -2136,10 +2140,10 @@
       </interlinear-gloss>
     </example>
     <para role="indent"> <indexterm type="general"><primary>word quotation</primary><secondary>internal grammar of</secondary></indexterm>  <indexterm type="general"><primary>word quotation</primary><secondary>as morphologically valid</secondary></indexterm> Words quotations are quotations of one or more Lojban words. The words need not mean anything, but they must be morphologically valid so that the end of the quotation can be discerned.</para>
-    <para> <!-- FIXME: these indexterms aren't tagged alone --><indexterm type="lojban-word"><primary>le'u</primary></indexterm>  <indexterm type="lojban-word"><primary>lo'u</primary></indexterm></para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-UMDQ">
       <title>
         <anchor xml:id="c6e14d2"/>
+      <indexterm type="lojban-word"><primary>le'u</primary></indexterm>  <indexterm type="lojban-word"><primary>lo'u</primary></indexterm>
       </title>
       <interlinear-gloss>
         <jbo>mi cusku lo'u li--mi le'u</jbo>
