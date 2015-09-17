@@ -269,26 +269,19 @@ $document.css('math').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.
 ##         <jbo>.e'o ko ko kurji</jbo>
 ##         <jbo role="pronunciation">.E'o ko ko KURji</jbo>
 ##       </pronunciation>
-$document.css('pronunciation').each do |node|
+##
+##       <compound-cmavo>
+##         <jbo>.iseci'i</jbo>
+##         <jbo>.i se ci'i</jbo>
+##       </compound-cmavo>
+$document.css('pronunciation, compound-cmavo').each do |node|
   handle_children( node: node, allowed_children_names: [ 'jbo', 'ipa', 'natlang', 'comment' ] ) do |child|
-    role = "pronunciation-#{child.name}"
+    role = "#{node.name}-#{child.name}"
     convert!( node: child, newname: 'para', role: role )
     child.replace(%Q{<listitem role="#{role}">#{child}</listitem>}) 
   end
 
   convert!( node: node, newname: 'itemizedlist' )
-end
-
-##       <compound-cmavo>
-##         <jbo>.iseci'i</jbo>
-##         <jbo>.i se ci'i</jbo>
-##       </compound-cmavo>
-$document.css('compound-cmavo').each do |node|
-  handle_children( node: node, allowed_children_names: [ 'jbo' ] ) do |child|
-    convert!( node: child, newname: 'member' )
-  end
-
-  convert!( node: node, newname: 'simplelist' )
 end
 
 ## <valsi>risnyjelca</valsi> (heart burn) might have a place structure like:</para>
