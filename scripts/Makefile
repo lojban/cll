@@ -44,9 +44,7 @@ xhtml_chapters_web: $(builddir)/xhtml_chapters.done
 	mkdir -p ~/public_html/media/public/cll_build
 	rm -rf ~/public_html/media/public/cll_build/cll-xhtml-chapters
 	cp -pr $(builddir)/xhtml-chapters ~/public_html/media/public/cll_build/cll-xhtml-chapters
-	cp $(PWD)/scripts/docbook2html.css  ~/public_html/media/public/cll_build/cll-xhtml-chapters/docbook2html.css
-	cp $(PWD)/scripts/display.css  ~/public_html/media/public/cll_build/cll-xhtml-chapters/display.css
-	ln -sf display.css ~/public_html/media/public/cll_build/cll-xhtml-chapters/final.css
+	cp $(PWD)/scripts/master.css  ~/public_html/media/public/cll_build/cll-xhtml-chapters/final.css
 	cp -pr $(PWD)/media ~/public_html/media/public/cll_build/cll-xhtml-chapters/
 
 .PHONY: xhtml_chapters
@@ -65,9 +63,7 @@ xhtml_sections_web: $(builddir)/xhtml_sections.done
 	mkdir -p ~/public_html/media/public/cll_build
 	rm -rf ~/public_html/media/public/cll_build/cll-xhtml-sections
 	cp -pr $(builddir)/xhtml_sections ~/public_html/media/public/cll_build/cll-xhtml-sections
-	cp $(PWD)/scripts/docbook2html.css  ~/public_html/media/public/cll_build/cll-xhtml-sections/docbook2html.css
-	cp $(PWD)/scripts/display.css  ~/public_html/media/public/cll_build/cll-xhtml-sections/display.css
-	ln -sf display.css ~/public_html/media/public/cll_build/cll-xhtml-sections/final.css
+	cp $(PWD)/scripts/master.css  ~/public_html/media/public/cll_build/cll-xhtml-sections/final.css
 	cp -pr $(PWD)/media ~/public_html/media/public/cll_build/cll-xhtml-sections/media
 
 .PHONY: xhtml_sections
@@ -85,9 +81,7 @@ $(builddir)/xhtml_sections.done: $(builddir)/cll_processed_xhtml.xml xml/docbook
 xhtml_nochunks_web: $(builddir)/xhtml-nochunks.done
 	rm -rf ~/public_html/media/public/cll_build/cll-xhtml-nochunks/
 	mkdir -p ~/public_html/media/public/cll_build/cll-xhtml-nochunks/
-	cp $(PWD)/scripts/docbook2html.css  ~/public_html/media/public/cll_build/cll-xhtml-nochunks/docbook2html.css
-	cp $(PWD)/scripts/display.css  ~/public_html/media/public/cll_build/cll-xhtml-nochunks/display.css
-	ln -sf display.css ~/public_html/media/public/cll_build/cll-xhtml-nochunks/final.css
+	cp $(PWD)/scripts/master.css  ~/public_html/media/public/cll_build/cll-xhtml-nochunks/final.css
 	cp $(builddir)/xhtml-nochunks/cll_processed_xhtml.html ~/public_html/media/public/cll_build/cll-xhtml-nochunks/cll-xhtml-nochunks.html
 	cp -pr $(PWD)/media ~/public_html/media/public/cll_build/cll-xhtml-nochunks/
 
@@ -131,9 +125,7 @@ prince_pdf: $(builddir)/prince_pdf.done
 $(builddir)/prince_pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_prince.xsl
 	rm -rf $(builddir)/prince_pdf
 	mkdir -p $(builddir)/prince_pdf
-	ln -sf $(PWD)/scripts/docbook2html.css $(builddir)/prince_pdf/
-	ln -sf $(PWD)/scripts/paged.css $(builddir)/prince_pdf/
-	ln -sf paged.css $(builddir)/prince_pdf/final.css
+	ln -sf $(PWD)/scripts/master.css $(builddir)/prince_pdf/final.css
 	ln -sf $(PWD)/media $(builddir)/prince_pdf/
 	
 	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/prince_pdf/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
@@ -153,8 +145,6 @@ prince_pdf_web: prince_pdf
 coverage: clean builddir xhtml_nochunks prince_pdf
 	mkdir -p ~/public_html/media/public/cll_coverage/cll-xhtml-nochunks/
 	cp $(builddir)/cll_prince.pdf ~/public_html/media/public/cll_coverage/cll_prince.pdf
-	cp $(PWD)/scripts/docbook2html.css  ~/public_html/media/public/cll_coverage/cll-xhtml-nochunks/docbook2html.css
-	cp $(PWD)/scripts/display.css  ~/public_html/media/public/cll_coverage/cll-xhtml-nochunks/display.css
-	ln -sf display.css ~/public_html/media/public/cll_coverage/cll-xhtml-nochunks/final.css
+	cp $(PWD)/scripts/master.css  ~/public_html/media/public/cll_coverage/cll-xhtml-nochunks/final.css
 	cp $(builddir)/xhtml-nochunks/cll_processed_xhtml.html ~/public_html/media/public/cll_coverage/cll-xhtml-nochunks/cll-xhtml-nochunks.html
 	cp -pr $(PWD)/media ~/public_html/media/public/cll_coverage/cll-xhtml-nochunks/
