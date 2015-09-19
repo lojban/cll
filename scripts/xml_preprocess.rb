@@ -424,7 +424,7 @@ $document.css('cmavo-list').each do |node|
           gc.remove
         end
 
-        [ 'sai', 'nai', "cu'i" ].each do |point|
+        [ 'sai', "cu'i", 'nai' ].each do |point|
           scale_bits = child.xpath("./attitudinal-scale[@point=\"#{point}\"]")
           if scale_bits.length > 0
             new = scale_bits.first.clone
