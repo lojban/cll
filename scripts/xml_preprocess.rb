@@ -292,7 +292,7 @@ $document.css('valsi').each do |node|
   else
     orignode = node.dup
     convert!( node: node, newname: 'foreignphrase', lang: 'jbo' )
-    indexify!( node: node, indextype: 'lojban-words', role: orignode.name )
+    indexify!( node: node, indextype: 'lojban-word', role: orignode.name )
     node = glossify node, orignode
     $stderr.puts "valsi: #{node.to_xml}"
   end
