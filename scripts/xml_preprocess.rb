@@ -535,13 +535,8 @@ $document.xpath('//@point').remove
 
 doc = $document.to_xml
 # Put in our own header
-doc = doc.gsub( %r{^.*<book [^>]*>}m, '<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V5.0//EN" "dtd/docbook-5.0.dtd"[
-<!ENTITY % allent SYSTEM "xml/iso-pub.ent">
-%allent;
-]>
-<book xmlns:xlink="http://www.w3.org/1999/xlink">
-' )
+header = File.open( 'scripts/header.xml', 'r' ) { |f| f.read }
+doc = doc.gsub( %r{^.*<book [^>]*>}m, header )
 
 puts doc
 
