@@ -6,5 +6,6 @@
   version="1.0">
 
   <xsl:import href="docbook2html_config_common.xsl"/>
+  <xsl:import href="docbook2html_config_not-prince.xsl"/>
 
 </xsl:stylesheet>

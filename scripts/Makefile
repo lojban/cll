@@ -53,6 +53,7 @@ $(builddir)/xhtml_chapters.done: $(builddir)/cll_processed_xhtml.xml xml/docbook
 	rm -rf $(builddir)/xhtml-chapters
 	mkdir -p $(builddir)/xhtml-chapters
 	xmlto -m xml/docbook2html_config_chapter-chunks.xsl -o $(builddir)/xhtml-chapters/ xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
+	find $(builddir)/xhtml-chapters | xargs grep -l '<html xmlns=' | xargs sed -i 's;<html xmlns=;<html xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns=;'
 	touch $(builddir)/xhtml_chapters.done
 
 #*******
@@ -72,6 +73,7 @@ $(builddir)/xhtml_sections.done: $(builddir)/cll_processed_xhtml.xml xml/docbook
 	rm -rf $(builddir)/xhtml_sections
 	mkdir -p $(builddir)/xhtml_sections
 	xmlto -m xml/docbook2html_config_section-chunks.xsl -o $(builddir)/xhtml_sections/ --stringparam chunk.section.depth=1 --stringparam chunk.first.sections=1 xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
+	find $(builddir)/xhtml_sections | xargs grep -l '<html xmlns=' | xargs sed -i 's;<html xmlns=;<html xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns=;'
 	touch $(builddir)/xhtml_sections.done
 
 #*******
@@ -91,6 +93,7 @@ $(builddir)/xhtml-nochunks.done: $(builddir)/cll_processed_xhtml.xml xml/docbook
 	rm -rf $(builddir)/xhtml-nochunks
 	mkdir -p $(builddir)/xhtml-nochunks
 	xmlto -m xml/docbook2html_config_no-chunks.xsl -o $(builddir)/xhtml-nochunks/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
+	find $(builddir)/xhtml-nochunks | xargs grep -l '<html xmlns=' | xargs sed -i 's;<html xmlns=;<html xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns=;'
 	touch $(builddir)/xhtml-nochunks.done
 
 #*******

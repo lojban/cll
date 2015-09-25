@@ -24,24 +24,48 @@
       </listitem>
     </orderedlist>
     <para> <indexterm type="general"><primary>reverse Polish notation</primary><secondary>and mekso goals</secondary></indexterm>  <indexterm type="general"><primary>Polish notation</primary><secondary>and mekso goals</secondary></indexterm>  <indexterm type="general"><primary>mekso goals</primary><secondary>mathematical notation form</secondary></indexterm> Goal 1 requires that mekso not be constrained to a single notation such as Polish notation or reverse Polish notation, but make provision for all forms, with the most commonly used forms the most easily used.</para>
-    
+
     <para> <indexterm type="general"><primary>mekso goals</primary><secondary>and non-mathematical expression</secondary></indexterm> Goal 2 requires the provision of several conversion mechanisms, so that the boundary between mekso and full Lojban can be crossed from either side at many points.</para>
     <para> <indexterm type="general"><primary>mathematical notation</primary><secondary>international uniqueness of</secondary></indexterm>  <indexterm type="general"><primary>mekso goals</primary><secondary>and ambiguity</secondary></indexterm> Goal 3 is the most subtle. Written mathematical expression is culturally unambiguous, in the sense that mathematicians in all parts of the world understand the same written texts to have the same meanings. However, international mathematical notation does not prescribe unique forms. For example, the expression</para>
-    
-    
+
+
     <example xml:id="example-random-id-dGcT">
       <title>
         <anchor xml:id="c18e1d1"/>
       </title>
-      <math>3x + 2y</math>
+      <mmlmath>
+        <mml:mrow>
+          <mml:mn>3</mml:mn>
+          <mml:mo>&InvisibleTimes;</mml:mo>
+          <mml:mi>x</mml:mi>
+          <mml:mo>+</mml:mo>
+          <mml:mn>2</mml:mn>
+          <mml:mo>&InvisibleTimes;</mml:mo>
+          <mml:mi>y</mml:mi>
+        </mml:mrow>
+      </mmlmath>
     </example>
     <para role="noindent"> <indexterm type="general"><primary>mathematical notation</primary><secondary>and omitted operators</secondary></indexterm> contains omitted multiplication operators, but there are other possible interpretations for the strings 
-    
-    <quote>3x</quote> and 
-    <quote>2y</quote> than as mathematical multiplication. Therefore, the Lojban verbal (spoken and written) form of 
-    
-    <xref linkend="example-random-id-dGcT"/> must not omit the multiplication operators.</para>
-    
+
+      <mmlinlinemath>
+        <mml:mrow>
+          <mml:mn>3</mml:mn>
+          <mml:mo>&InvisibleTimes;</mml:mo>
+          <mml:mi>x</mml:mi>
+        </mml:mrow>
+      </mmlinlinemath>
+      and
+      <mmlinlinemath>
+        <mml:mrow>
+          <mml:mn>2</mml:mn>
+          <mml:mo>&InvisibleTimes;</mml:mo>
+          <mml:mi>y</mml:mi>
+        </mml:mrow>
+      </mmlinlinemath>
+      than as mathematical multiplication. Therefore, the Lojban verbal (spoken and written) form of 
+
+      <xref linkend="example-random-id-dGcT"/> must not omit the multiplication operators.</para>
+
     <para> <indexterm type="general"><primary>mekso chapter</primary><secondary>completeness</secondary></indexterm>  <indexterm type="general"><primary>mekso chapter</primary><secondary>table notation convention</secondary></indexterm> The remainder of this chapter explains (in as much detail as is currently possible) the mekso system. This chapter is by intention complete as regards mekso components, but only suggestive about uses of those components &ndash; as of now, there has been no really comprehensive use made of mekso facilities, and many matters must await the test of usage to be fully clarified.</para>
   </section>
   <section xml:id="section-mekso-numbers">
@@ -108,7 +132,7 @@
       <interlinear-gloss>
         <jbo>pa re ci</jbo>
         <gloss>one two three</gloss>
-        <math>123</math>
+        <dbmath>123</dbmath>
         <natlang>one hundred and twenty three</natlang>
         
       </interlinear-gloss>
@@ -120,7 +144,7 @@
       <interlinear-gloss>
         <jbo>pa no</jbo>
         <gloss>one zero</gloss>
-        <math>10</math>
+        <dbmath>10</dbmath>
         <natlang>ten</natlang>
       </interlinear-gloss>
     </example>
@@ -131,7 +155,7 @@
       <interlinear-gloss>
         <jbo>pa re ci vo mu xa ze bi so no</jbo>
         <gloss>one two three four five six seven eight nine zero</gloss>
-        <math>1234567890</math>
+        <dbmath>1234567890</dbmath>
         <natlang>one billion, two hundred and thirty-four million, five hundred and sixty-seven thousand, eight hundred and ninety.</natlang>
         
       </interlinear-gloss>
@@ -217,7 +241,7 @@
       <interlinear-gloss>
         <jbo>ni'u pa</jbo>
         <gloss>negative-sign 1</gloss>
-        <math>-1</math>
+        <dbmath>-1</dbmath>
       </interlinear-gloss>
     </example>
     <para role="noindent">
@@ -237,7 +261,7 @@
       <interlinear-gloss>
         <jbo>ci pi pa vo pa mu</jbo>
         <gloss>three point one four one five</gloss>
-        <math>3.1415</math>
+        <dbmath>3.1415</dbmath>
       </interlinear-gloss>
     </example>
     <para role="noindent"> 
@@ -257,7 +281,12 @@
         <jbo>re fi'u ze</jbo>
         
         <gloss>two fraction seven</gloss>
-        <math>2/7</math>
+        <mmlmath>
+          <mml:mfrac>
+            <mml:mn>2</mml:mn>
+            <mml:mn>7</mml:mn>
+          </mml:mfrac>
+        </mmlmath>
       </interlinear-gloss>
     </example>
     <para role="noindent">
@@ -275,7 +304,12 @@
         <jbo>fi'u ze</jbo>
         
         <gloss>fraction seven</gloss>
-        <math>1/7</math>
+        <mmlmath>
+          <mml:mfrac>
+            <mml:mn>1</mml:mn>
+            <mml:mn>7</mml:mn>
+          </mml:mfrac>
+        </mmlmath>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qhVs" role="interlinear-gloss-example">
@@ -286,7 +320,7 @@
         <jbo>pi ci mu ra'e pa vo re bi mu ze</jbo>
         
         <gloss>point three five repeating one four two eight five seven</gloss>
-        <math>.35142857142857...</math>
+        <dbmath>.35142857142857...</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> <indexterm type="general"><primary>repeating decimals</primary><secondary>marking start of repeating portion</secondary></indexterm>  <indexterm type="general"><primary>repeating decimals</primary><secondary>expressing with numerical punctuation</secondary></indexterm> Note that the 
@@ -303,7 +337,7 @@
         
         <gloss>three five percent</gloss>
         
-        <math>35%</math>
+        <dbmath>35%</dbmath>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qhwM" role="interlinear-gloss-example">
@@ -314,7 +348,7 @@
         <jbo>pa ki'o re ci vo ki'o mu xa ze</jbo>
         
         <gloss>one comma two three four comma five six seven</gloss>
-        <math>1,234,567</math>
+        <dbmath>1,234,567</dbmath>
       </interlinear-gloss>
     </example>
     <para role="noindent">
@@ -333,7 +367,7 @@
         <jbo>pa ki'o re ci ki'o vo</jbo>
         
         <gloss>one comma two three comma four</gloss>
-        <math>1,023,004</math>
+        <dbmath>1,023,004</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent">In the same way, 
@@ -349,7 +383,7 @@
         <jbo>pi ki'o re re</jbo>
         
         <gloss>point comma two two</gloss>
-        <math>.022</math>
+        <dbmath>.022</dbmath>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qhxp" role="interlinear-gloss-example">
@@ -360,7 +394,7 @@
         <jbo>pi pa ki'o pa re ki'o pa</jbo>
         
         <gloss>point one comma one two comma one</gloss>
-        <math>.001012001</math>
+        <dbmath>.001012001</dbmath>
       </interlinear-gloss>
     </example>
   </section>
@@ -378,23 +412,23 @@
       <cmavo-entry>
         <cmavo>ka'o</cmavo>
         <selmaho>PA</selmaho>
-        <description>imaginary <inlinemath>i</inlinemath>, sqrt(-1)</description>
+        <description>imaginary <dbinlinemath>i</dbinlinemath>, sqrt(-1)</description>
       </cmavo-entry>
 
       <cmavo-entry>
         <cmavo>pai</cmavo>
         <selmaho>PA</selmaho>
-        <description>π, <inlinemath>pi</inlinemath> (approx 3.14159...)</description>
+        <description>π, <dbinlinemath>pi</dbinlinemath> (approx 3.14159...)</description>
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>te'o</cmavo>
         <selmaho>PA</selmaho>
-        <description>exponential <inlinemath>e</inlinemath> (approx 2.71828...)</description>
+        <description>exponential <dbinlinemath>e</dbinlinemath> (approx 2.71828...)</description>
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>fi'u</cmavo>
         <selmaho>PA</selmaho>
-        <description>golden ratio, <inlinemath>Φ</inlinemath>, phi, <inlinemath>(1 + sqrt(5))/2</inlinemath> (approx. 1.61803...)</description>
+        <description>golden ratio, <dbinlinemath>Φ</dbinlinemath>, phi, <dbinlinemath>(1 + sqrt(5))/2</dbinlinemath> (approx. 1.61803...)</description>
       </cmavo-entry>
     </cmavo-list>
     <para role="indent"> <indexterm type="general"><primary>fraction</primary><secondary>meaning with elided numerator and denominator</secondary></indexterm>  <indexterm type="general"><primary>numbers</primary><secondary>special</secondary></indexterm> The last cmavo is the same as the fraction sign cmavo: a fraction sign with neither numerator nor denominator represents the golden ratio.</para>
@@ -406,7 +440,7 @@
       </title>
       <interlinear-gloss>
         <jbo>ma'u ci'i</jbo>
-        <math>+∞</math>
+        <dbmath>+∞</dbmath>
       </interlinear-gloss>
     </example>
     <example role="interlinear-gloss-example" xml:id="example-random-id-k2VC">
@@ -415,7 +449,7 @@
       </title>
       <interlinear-gloss>
         <jbo>ci ka'o re</jbo>
-        <natlang>3i2 (a complex number equivalent to <inlinemath>3 + 2i</inlinemath>) </natlang>
+        <natlang>3i2 (a complex number equivalent to <dbinlinemath>3 + 2i</dbinlinemath>) </natlang>
       </interlinear-gloss>
     </example>
     <para role="indent">
@@ -434,7 +468,7 @@
       <interlinear-gloss>
         <jbo>ci'i no</jbo>
         <natlang>infinity zero</natlang>
-        <natlang xml:lang="math"><inlinemath>&#x2135;<subscript>0</subscript></inlinemath> <comment>(a transfinite cardinal)</comment> </natlang>
+        <natlang xml:lang="math"><dbinlinemath>&#x2135;<subscript>0</subscript></dbinlinemath> <comment>(a transfinite cardinal)</comment> </natlang>
       </interlinear-gloss>
 
     </example>
@@ -447,7 +481,7 @@
       </title>
       <interlinear-gloss>
         <jbo>pai</jbo>
-        <natlang>pi, <inlinemath>π</inlinemath> </natlang>
+        <natlang>pi, <dbinlinemath>π</dbinlinemath> </natlang>
       </interlinear-gloss>
     </example>
     <example role="interlinear-gloss-example" xml:id="example-random-id-k36i">
@@ -456,7 +490,7 @@
       </title>
       <interlinear-gloss>
         <jbo>te'o</jbo>
-        <natlang><inlinemath>e</inlinemath></natlang>
+        <natlang><dbinlinemath>e</dbinlinemath></natlang>
       </interlinear-gloss>
     </example>
     <para role="indent"> <indexterm type="general"><primary>numerical punctuation</primary><secondary>undefined</secondary></indexterm> However, many combinations are as yet undefined:</para>
@@ -466,7 +500,7 @@
       </title>
       <interlinear-gloss>
         <jbo>pa pi re pi ci</jbo>
-        <natlang><inlinemath>1.2.3</inlinemath></natlang>
+        <natlang><dbinlinemath>1.2.3</dbinlinemath></natlang>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qHya" role="interlinear-gloss-example">
@@ -546,7 +580,7 @@
       <interlinear-gloss>
         <jbo>li pa su'i pa du li re</jbo>
         <gloss>The-number one plus one equals the-number two.</gloss>
-        <math>1 + 1 = 2</math>
+        <dbmath>1 + 1 = 2</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> <indexterm type="general"><primary>du</primary><secondary>grammar of</secondary></indexterm>  <indexterm type="general"><primary>mathematical equality</primary><secondary>expressing</secondary></indexterm> 
@@ -623,7 +657,7 @@
       <interlinear-gloss>
         <jbo>… ni'u pa du li no</jbo>
         <gloss>… negative-sign one equals the-number zero.</gloss>
-        <math>+1 + -1 = 0</math>
+        <dbmath>+1 + -1 = 0</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent">Of course, it is legal to have complex mekso on both sides of 
@@ -635,7 +669,7 @@
       <interlinear-gloss>
         <jbo>li mu su'i pa du li ci su'i ci</jbo>
         <gloss>The-number five plus one equals the-number three plus three.</gloss>
-        <math>5 + 1 = 3 + 3</math>
+        <dbmath>5 + 1 = 3 + 3</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> <indexterm type="general"><primary>conversion into sumti from mekso</primary></indexterm>  <indexterm type="general"><primary>conversion of mekso into sumti</primary></indexterm>  <indexterm type="general"><primary>li</primary><secondary>as converter of mekso into sumti</secondary></indexterm>  <indexterm type="general"><primary>general sumti</primary><secondary>contrasted with operands</secondary></indexterm>  <indexterm type="general"><primary>operands</primary><secondary>contrasted with general sumti</secondary></indexterm>  <indexterm type="general"><primary>VUhU operands</primary></indexterm>  <indexterm type="general"><primary>operators of VUhU</primary><secondary>grammar of operands</secondary></indexterm>  <indexterm type="general"><primary>du</primary><secondary>with complex mekso on both sides</secondary></indexterm> Why don't we say 
@@ -659,7 +693,7 @@
       <interlinear-gloss>
         <jbo>li ci su'i vo pi'i mu du li reci</jbo>
         <gloss>The-number three plus four times five equals the-number two-three.</gloss>
-        <math>3 + 4 × 5 = 23</math>
+        <dbmath>3 + 4 × 5 = 23</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent">Is the Lojban version of 
@@ -675,7 +709,7 @@
       <interlinear-gloss>
         <jbo>li ci su'i vo pi'i mu du li cimu</jbo>
         <gloss>The-number three plus four times five equals the-number three-five.</gloss>
-        <math>3 + 4 × 5 = 35</math>
+        <dbmath>3 + 4 × 5 = 35</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> <indexterm type="general"><primary>default operator precedence</primary><secondary>contrasted with mekso goal</secondary></indexterm> Here we calculate 3 + 4 first, giving 7, and then calculate 7 × 5 second, leading to the result 35. While possessing the advantage of simplicity, this result violates the design goal of matching the standards of mathematics. What can be done?</para>
@@ -696,7 +730,7 @@
         <jbo>li ci su'i vo bi'e pi'i mu du li reci</jbo>
         
         <gloss>The-number three plus four times five equals the-number two-three.</gloss>
-        <math>3 + 4 × 5 = 23</math>
+        <dbmath>3 + 4 × 5 = 23</dbmath>
       </interlinear-gloss>
     </example>
     <para role="noindent">is a truthful Lojban bridi. If more than one operator has a 
@@ -725,7 +759,7 @@
       <interlinear-gloss>
         <jbo>… su'i re bi'e pi'i ny. su'i pa</jbo>
         <gloss>… plus two - times <varname>n</varname> plus 1.</gloss>
-        <!-- not broken math, it says (n=1)(n+1) = n^2 + 2n + 1 -->
+        <dbmath>(n+1)(n+1) = n<superscript>2</superscript> + 2n + 1</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> 
@@ -815,7 +849,7 @@
       <interlinear-gloss>
         <jbo>li su'i paboi reboi ci[boi] du li xa</jbo>
         <gloss>The-number the-sum-of one two three equals the-number six.</gloss>
-        <math>sum(1,2,3) = 6</math>
+        <dbmath>sum(1,2,3) = 6</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent">Note that the normally elidable number terminator 
@@ -842,7 +876,7 @@
       <interlinear-gloss>
         <jbo>… li xy.</jbo>
         <gloss>… the-number <quote>x</quote>.</gloss>
-        <math>p + -n + z = x</math>
+        <dbmath>p + -n + z = x</dbmath>
       </interlinear-gloss>
     </example>
     <para role="noindent">where we know that 
@@ -879,7 +913,7 @@
       <interlinear-gloss>
         <jbo>li zy du li ma'o fy.boi xy.</jbo>
         <gloss>The-number z equals the-number the-operator f x.</gloss>
-        <math>z = f(x)</math>
+        <dbmath>z = f(x)</dbmath>
         
       </interlinear-gloss>
     </example>
@@ -1015,7 +1049,7 @@
           <quote>p</quote> is-identical-to 
           <quote>x</quote>
         <quote>z</quote></gloss>
-        <math>p = x = z</math>
+        <dbmath>p = x = z</dbmath>
         
       </interlinear-gloss>
     </example>
@@ -1031,7 +1065,7 @@
       <interlinear-gloss>
         <jbo>li re su'i re na du li mu</jbo>
         <gloss>the-number 2 + 2 is-not equal-to the-number 5.</gloss>
-        <math>2 + 2 ≠ 5</math>
+        <dbmath>2 + 2 ≠ 5</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent">As usual in Lojban, negated bridi say what is false, and do not say anything about what might be true.</para>
@@ -1796,7 +1830,7 @@
       </title>
       <interlinear-gloss>
         <jbo>ci pi'e rere pi'e vono</jbo>
-        <math>3:22:40</math>
+        <dbmath>3:22:40</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> <indexterm type="general"><primary>compound base</primary><secondary>expressing digits in</secondary></indexterm> Each digit sequence separated by instances of 
@@ -1812,7 +1846,7 @@
       <interlinear-gloss>
         <jbo>… du li ci pi'e rexa pi'e paci</jbo>
         <gloss>… equals the-number 3 : 26 : 13.</gloss>
-        <math>3:22:40 + 0:3:33 = 3:26:13</math>
+        <dbmath>3:22:40 + 0:3:33 = 3:26:13</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent">Of course, only context tells you that the first part of the numbers in 
@@ -2117,12 +2151,13 @@
       <title>
         <anchor xml:id="c18e11d10"/>
         <indexterm type="example"><primary>scale of redness</primary></indexterm>
-        <indexterm type="example"><primary>9 out of ten</primary></indexterm>  
+        <indexterm type="example"><primary>8 out of 10</primary></indexterm>  
+        <indexterm type="example"><primary>eight out of ten</primary></indexterm>  
       </title>
       <interlinear-gloss>
         <jbo>levi rozgu cu sofi'upanova'e xunre</jbo>
-        <gloss>This-here rose - is-9/10-scale red.</gloss>
-        <natlang>This rose is 9 out of 10 on the scale of redness.</natlang>
+        <gloss>This-here rose - is-8/10-scale red.</gloss>
+        <natlang>This rose is 8 out of 10 on the scale of redness.</natlang>
         <natlang>This rose is very red.</natlang>
       </interlinear-gloss>
     </example>
@@ -2307,7 +2342,7 @@
         <jbo>li xy.boixici du li xy.boixipa su'i xy.boixire</jbo>
         <gloss>The-number x-sub-3 equals the-number x-sub-1 plus x-sub-2.</gloss>
         
-        <math>x<subscript>3</subscript> = x<subscript>1</subscript> + x<subscript>2</subscript></math>
+        <dbmath>x<subscript>3</subscript> = x<subscript>1</subscript> + x<subscript>2</subscript></dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> 
@@ -2322,7 +2357,7 @@
       </title>
       <interlinear-gloss>
         <jbo>xy.boixino</jbo>
-        <math>x<subscript>0</subscript></math>
+        <dbmath>x<subscript>0</subscript></dbmath>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qIJ6" role="interlinear-gloss-example">
@@ -2331,7 +2366,7 @@
       </title>
       <interlinear-gloss>
         <jbo>xy.boixiny.</jbo>
-        <math>x<subscript>n</subscript></math>
+        <dbmath>x<subscript>n</subscript></dbmath>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qIjf" role="interlinear-gloss-example">
@@ -2340,7 +2375,7 @@
       </title>
       <interlinear-gloss>
         <jbo>xy.boixi vei ny. su'i pa [ve'o]</jbo>
-        <math>x<subscript>(n+1)</subscript></math>
+        <dbmath>x<subscript>(n+1)</subscript></dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> <indexterm type="general"><primary>free modifiers</primary><secondary>effects on elidability of terminators</secondary></indexterm>  <indexterm type="general"><primary>subscripts</primary><secondary>effects on elidability of terminators</secondary></indexterm>  <indexterm type="general"><primary>subscripts on lerfu words</primary><secondary>effect on elidability of boi</secondary></indexterm> Note that subscripts attached directly to lerfu words (variables) generally need a 
@@ -2355,7 +2390,7 @@
       </title>
       <interlinear-gloss>
         <jbo>xy.boi xi by.boi xi vo</jbo>
-        <math>x<subscript>b<subscript>4</subscript></subscript></math>
+        <dbmath>x<subscript>b<subscript>4</subscript></subscript></dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent">See 
@@ -2405,7 +2440,7 @@
       <interlinear-gloss>
         <jbo>li tu'o va'a ny. du li no vu'u ny.</jbo>
         <gloss>The-number (null) additive-inverse n equals the-number zero minus n.</gloss>
-        <math>-n = 0 − n</math>
+        <dbmath>-n = 0 − n</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> <indexterm type="general"><primary>operands</primary><secondary>too few for infix operation</secondary></indexterm>  <indexterm type="general"><primary>null operand</primary><secondary>for infix operations with too few operands</secondary></indexterm>  <indexterm type="general"><primary>tu'o</primary><secondary>for infix operations with too few operands</secondary></indexterm> The 
@@ -2429,7 +2464,7 @@
       <interlinear-gloss>
         <jbo>… li bi gei ci</jbo>
         <gloss>… the-number eight scientific three.</gloss>
-        <math>300,000,000 = 3 × 10<superscript>8</superscript></math>
+        <dbmath>300,000,000 = 3 × 10<superscript>8</superscript></dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> 
@@ -2446,7 +2481,7 @@
       <interlinear-gloss>
         <jbo>gei reno</jbo>
         <gloss>(scientific) two-zero</gloss>
-        <math>10 <superscript>20</superscript></math>
+        <dbmath>10 <superscript>20</superscript></dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> 
@@ -2467,7 +2502,7 @@
       <interlinear-gloss>
         <jbo>… pipanopano bi'eju'u re ge'a re</jbo>
         <gloss>… (point-one-zero-one-zero base 2) with-base 2</gloss>
-        <math>.1010<subscript>2</subscript> x 2<superscript>110<subscript>2</subscript></superscript></math>
+        <dbmath>.1010<subscript>2</subscript> x 2<superscript>110<subscript>2</subscript></superscript></dbmath>
       </interlinear-gloss>
     </example>
   </section>
@@ -2514,7 +2549,7 @@
       <interlinear-gloss>
         <jbo>… du li jo'i voboi xaboi</jbo>
         <gloss>… equals the-number array (four, six).</gloss>
-        <math>(1,2) + (3,4) = (4,6)</math>
+        <dbmath>(1,2) + (3,4) = (4,6)</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> <indexterm type="general"><primary>matrix</primary><secondary>with ge'a for more than 2 rows/columns</secondary></indexterm>  <indexterm type="general"><primary>matrix</primary><secondary>as combination of vectors</secondary></indexterm>  <indexterm type="general"><primary>matrix column operator</primary></indexterm>  <indexterm type="general"><primary>matrix row operator</primary></indexterm> Vectors can be combined into matrices using either 
@@ -2673,7 +2708,7 @@
       <interlinear-gloss>
         <jbo>… du li fu'a reboi tu'o va'a</jbo>
         <gloss>… equals the-number (RP!) two, null, negative-of.</gloss>
-        <math>3 − 5 = -2</math>
+        <dbmath>3 − 5 = -2</dbmath>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qijY" role="interlinear-gloss-example">
@@ -2687,7 +2722,7 @@
       <interlinear-gloss>
         <jbo>… li fu'a biboi ciboi panoboi ge'a gei</jbo>
         <gloss>… the-number (RP!) 8, (3, 10, null-op), exponential-notation.</gloss>
-        <math>30,000,000 = 3 × 10 ^ 8</math>
+        <dbmath>30,000,000 = 3 × 10 ^ 8</dbmath>
       </interlinear-gloss>
     </example>
   </section>
@@ -2788,7 +2823,7 @@
       <interlinear-gloss>
         <jbo>li re su'i je pi'i re du li vo</jbo>
         <gloss>The-number two plus and times two equals the-number four.</gloss>
-        <math>2 + 2 = 4 and 2 × 2 = 4.</math>
+        <dbmath>2 + 2 = 4 and 2 × 2 = 4.</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent">The forethought-connection form of 
@@ -2800,7 +2835,7 @@
       <interlinear-gloss>
         <jbo>li re ge su'i gi pi'i re du li vo</jbo>
         <gloss>the-number two both plus and times two equals the-number four.</gloss>
-        <math>Both 2 + 2 = 4 and 2 × 2 = 4.</math>
+        <dbmath>Both 2 + 2 = 4 and 2 × 2 = 4.</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent">Here is a classic example of operand logical connection:</para>
@@ -2832,7 +2867,58 @@
       <interlinear-gloss>
         <jbo>… ve'o [ku'e] ve'o fe'i re bi'epi'i .abu</jbo>
         <gloss>… ) - ] divided-by two times <quote>a</quote></gloss>
-        <natlang>Iff ax <superscript>2</superscript>  + bx + c = 0, then x = (-b ± √ <!--sqrt-->(b <superscript>2</superscript>  − 4ac))/(2a)</natlang>
+        <mmlmath>
+            <mml:mrow>
+              <mml:mo>Iff </mml:mo>
+              <mml:mi>a</mml:mi>
+              <mml:mo>&InvisibleTimes;</mml:mo>
+              <mml:msup>
+                <mml:mi>x</mml:mi>
+                <mml:mn>2</mml:mn>
+              </mml:msup>
+              <mml:mo>+</mml:mo>
+              <mml:mi>b</mml:mi>
+              <mml:mo>&InvisibleTimes;</mml:mo>
+              <mml:mi>x</mml:mi>
+              <mml:mo>+</mml:mo>
+              <mml:mi>c</mml:mi>
+              <mml:mo>=</mml:mo>
+              <mml:mn>0</mml:mn>
+              <mml:mo>, then </mml:mo>
+              <mml:mi>x</mml:mi>
+              <mml:mo>=</mml:mo>
+              <mml:mfrac>
+                <mml:mrow>
+                  <mml:mrow>
+                    <mml:mo>-</mml:mo>
+                    <mml:mi>b</mml:mi>
+                  </mml:mrow>
+                  <mml:mo>±</mml:mo>
+                  <mml:msqrt>
+                    <mml:mrow>
+                      <mml:msup>
+                        <mml:mi>b</mml:mi>
+                        <mml:mn>2</mml:mn>
+                      </mml:msup>
+                      <mml:mo>-</mml:mo>
+                      <mml:mrow>
+                        <mml:mn>4</mml:mn>
+                        <mml:mo>&InvisibleTimes;</mml:mo>
+                        <mml:mi>a</mml:mi>
+                        <mml:mo>&InvisibleTimes;</mml:mo>
+                        <mml:mi>c</mml:mi>
+                      </mml:mrow>
+                    </mml:mrow>
+                  </mml:msqrt>
+                </mml:mrow>
+                <mml:mrow>
+                  <mml:mn>2</mml:mn>
+                  <mml:mo>&InvisibleTimes;</mml:mo>
+                  <mml:mi>a</mml:mi>
+                </mml:mrow>
+              </mml:mfrac>
+            </mml:mrow>
+        </mmlmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> 
@@ -2857,7 +2943,7 @@
       <interlinear-gloss>
         <jbo>li no ga'o bi'o ke'i pa</jbo>
         <gloss>the-number zero (inclusive) from-to (exclusive) one</gloss>
-        <math>[0,1)</math>
+        <dbmath>[0,1)</dbmath>
         <natlang>the numbers from zero to one, including zero but not including one</natlang>
         
       </interlinear-gloss>
@@ -2871,7 +2957,6 @@
       </title>
       <interlinear-gloss>
         <jbo>li pimu ga'o mi'i ke'i pimu</jbo>
-        <!-- used to be: <gloss>the-number 0.5 ± 0.5</gloss> -->
         <gloss>the-number 0.5 (inclusive) centered-with-range (exclusive) 0.5</gloss>
       </interlinear-gloss>
     </example>
@@ -2884,8 +2969,8 @@
         <anchor xml:id="c18e17d9"/>
       </title>
       <interlinear-gloss>
-        <jbo>li pimu su'i ni'upimu bi'o ma'upimu</jbo>
-        <gloss>the-number 0.5 plus [-0.5 from-to +0.5]</gloss>
+        <jbo>li pimu su'i ni'upimu bi'o ke'i ma'upimu</jbo>
+        <gloss>the-number 0.5 plus [-0.5 from-to (exclusive) +0.5]</gloss>
       </interlinear-gloss>
     </example>
     <para role="indent"> <indexterm type="general"><primary>connection of operands</primary><secondary>precedence over operator</secondary></indexterm> Here we have the sum of a number and an interval, which produces another interval centered on the number. As 
@@ -2905,7 +2990,7 @@
         <gloss>
           <quote>x</quote> sub (<quote>b</quote> sequence 
         <quote>d</quote>)</gloss>
-        <math>x<subscript>b,d</subscript></math>
+        <dbmath>x<subscript>b,d</subscript></dbmath>
       </interlinear-gloss>
     </example>
   </section>
@@ -2953,7 +3038,7 @@
       <interlinear-gloss>
         <jbo>… vei pai fe'i re [ve'o] du li ci'i</jbo>
         <gloss>… ( π / 2 ) = the-number infinity.</gloss>
-        <math>tan(π/2) = ∞</math>
+        <dbmath>tan(π/2) = ∞</dbmath>
       </interlinear-gloss>
     </example>
     <para role="noindent"> 
@@ -2990,7 +3075,7 @@
       <interlinear-gloss>
         <jbo>… du li ni'e ni canlu</jbo>
         <gloss>… equals the-number - quantity-of volume.</gloss>
-        <math>Length × Width × Depth = Volume</math>
+        <dbmath>Length × Width × Depth = Volume</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> 
@@ -3014,7 +3099,7 @@
       <interlinear-gloss>
         <jbo>… du li mo'e vo danlu</jbo>
         <gloss>… equals the-number - four animals.</gloss>
-        <math>2 rats + 2 rabbits = 4 animals.</math>
+        <dbmath>2 rats + 2 rabbits = 4 animals.</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> 
@@ -3088,7 +3173,7 @@
       <interlinear-gloss>
         <jbo>li re su'i re du li vo</jbo>
         <gloss>The-number two plus two equals the-number four.</gloss>
-        <math>2 + 2 = 4</math>
+        <dbmath>2 + 2 = 4</dbmath>
       </interlinear-gloss>
     </example>
     <para role="noindent">but false that:</para>
@@ -3139,7 +3224,7 @@
       <interlinear-gloss>
         <jbo>li re na'u mo re du li vo</jbo>
         <gloss>The-number two applied-to-selbri which-selbri? two equals the-number four.</gloss>
-        <math>2 ? 2 = 4</math>
+        <dbmath>2 ? 2 = 4</dbmath>
       </interlinear-gloss>
     </example>
     <example xml:id="example-random-id-qILi" role="interlinear-gloss-example">
@@ -3227,6 +3312,7 @@
       <interlinear-gloss>
         <jbo>pasomo'o</jbo>
         <natlang>nineteenthly (higher order)</natlang>
+        <natlang>Section 19</natlang>
       </interlinear-gloss>
     </example>
     <para role="indent"> 
@@ -3421,7 +3507,7 @@
       <interlinear-gloss>
         <jbo>li bize</jbo>
         <gloss>eight seven</gloss>
-        <math>87</math>
+        <dbmath>87</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent">
@@ -3433,7 +3519,7 @@
       <interlinear-gloss>
         <jbo>li vo pi'i reno su'i ze</jbo>
         <gloss>the-number four times twenty plus seven</gloss>
-        <math>4 × 20 + 7</math>
+        <dbmath>4 × 20 + 7</dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent"> <indexterm type="general"><primary>score</primary><secondary>as 20-year span</secondary></indexterm> 
@@ -3474,7 +3560,7 @@
       <interlinear-gloss>
         <jbo>li vo pi'e ze ju'u reno</jbo>
         <gloss>the-number four ; seven base 20</gloss>
-        <math>47<subscript>20</subscript></math>
+        <dbmath>47<subscript>20</subscript></dbmath>
       </interlinear-gloss>
     </example>
     <para role="indent">Overall, 
@@ -3578,22 +3664,22 @@
       <cmavo-entry>
         <selmaho>su'i</selmaho>
         <description>plus</description>
-        <description role="long"><inlinemath>(((a + b) + c) + ...)</inlinemath></description>
+        <description role="long"><dbinlinemath>(((a + b) + c) + ...)</dbinlinemath></description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>pi'i</selmaho>
         <description>times</description>
-        <description role="long"><inlinemath>(((a × b) × c) × ...)</inlinemath></description>
+        <description role="long"><dbinlinemath>(((a × b) × c) × ...)</dbinlinemath></description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>vu'u</selmaho>
         <description>minus</description>
-        <description role="long"><inlinemath>(((a − b) − c) − ...)</inlinemath></description>
+        <description role="long"><dbinlinemath>(((a − b) − c) − ...)</dbinlinemath></description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>fe'i</selmaho>
         <description>divided by</description>
-        <description role="long"><inlinemath>(((a / b) / c) / ...)</inlinemath></description>
+        <description role="long"><dbinlinemath>(((a / b) / c) / ...)</dbinlinemath></description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>ju'u</selmaho>
@@ -3608,7 +3694,7 @@
       <cmavo-entry>
         <selmaho>fa'i</selmaho>
         <description>reciprocal of/multiplicative inverse</description>
-        <description role="long"><inlinemath>1 / a</inlinemath></description>
+        <description role="long"><dbinlinemath>1 / a</dbinlinemath></description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>gei</selmaho>
@@ -3639,7 +3725,7 @@
       <cmavo-entry>
         <selmaho>cu'a</selmaho>
         <description>absolute value/norm</description>
-        <description role="long"><inlinemath>| a |</inlinemath></description>
+        <description role="long"><dbinlinemath>| a |</dbinlinemath></description>
       </cmavo-entry>
       <cmavo-entry>
         <selmaho>ne'o</selmaho>
@@ -3687,7 +3773,7 @@
       <cmavo-entry>
         <selmaho>re'a</selmaho>
         <description>matrix transpose/dual</description>
-        <description role="long"><inlinemath>a<superscript>*</superscript></inlinemath></description>
+        <description role="long"><dbinlinemath>a<superscript>*</superscript></dbinlinemath></description>
       </cmavo-entry>
     </cmavo-list>
   </section>

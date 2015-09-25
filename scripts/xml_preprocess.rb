@@ -174,7 +174,7 @@ $document.css('lujvo-making').each do |node|
   # Convert children into docbook elements
   node.css('jbo,natlang,gloss').each { |e| convert!( node: e, newname: 'para' ) }
   node.css('score').each { |e| convert!( node: e, newname: 'para', role: 'lujvo-score' ) }
-  node.css('inlinemath').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<inlineequation role='inlinemath'>#{e}</inlineequation>" ) }
+  node.css('dbinlinemath').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<inlineequation role='dbinlinemath'>#{e}</inlineequation>" ) }
   node.css('rafsi').each { |e| convert!( node: e, newname: 'foreignphrase', lang: 'jbo' ) }
   node.css('veljvo').each { |e| convert!( node: e, newname: 'foreignphrase', lang: 'jbo' ) ; indexify!(node: e, indextype: 'lojban-phrase') ; e.replace("<para>from #{e}</para>") }
 
@@ -184,28 +184,40 @@ $document.css('lujvo-making').each do |node|
   tableify node
 end
 
+def mml_wrapper( node, xml )
+  # This is a special case to handle our MathML ("mml:math" and
+  # so on) namespaced items; without this, the prefix is lost.
+  # This code was copied from
+  # https://github.com/sparklemotion/nokogiri/blob/master/lib/nokogiri/xml/document_fragment.rb
+  # , and is the same process as node.replace("somestring")
+  # except that a different root is used
+  node.replace(Nokogiri::XML::Document.parse("<root xmlns:mml='http://www.w3.org/1998/Math/MathML'>#{xml}</root>").xpath("/root/node()"))
+end
+
 # Handle interlinear-gloss, making word-by-word tables.
 #
 #     <interlinear-gloss>
 #       <jbo>pa re ci vo mu xa ze bi so no</jbo>
 #       <gloss>one two three four five six seven eight nine zero</gloss>
-#       <math>1234567890</math>
+#       <dbmath>1234567890</dbmath>
 #       <natlang>one billion, two hundred and thirty-four million, five hundred and sixty-seven thousand, eight hundred and ninety.</natlang>
 #       
 #     </interlinear-gloss>
 $document.css('interlinear-gloss').each do |node|
-  unless (node.xpath('jbo').length > 0 or node.xpath('jbophrase').length > 0) and (node.xpath('natlang').length > 0 or node.xpath('gloss').length > 0 or node.xpath('math').length > 0)
-    abort "Found a bad interlinear-gloss element; it must have one jbo or jbophrase sub-element and at least one gloss or natlang or math sub-element.  Context: #{node.to_xml}"
+  unless (node.xpath('jbo').length > 0 or node.xpath('jbophrase').length > 0) and (node.xpath('natlang').length > 0 or node.xpath('gloss').length > 0 or node.xpath('dbmath').length > 0 or node.xpath('mmlmath').length > 0)
+    abort "Found a bad interlinear-gloss element; it must have one jbo or jbophrase sub-element and at least one gloss or natlang or dbmath/mmlmath sub-element.  Context: #{node.to_xml}"
   end
 
-  handle_children( node: node, allowed_children_names: [ 'jbo', 'jbophrase', 'gloss', 'math', 'natlang', 'para' ] ) do |child|
+  handle_children( node: node, allowed_children_names: [ 'jbo', 'jbophrase', 'gloss', 'dbmath', 'mmlmath', 'natlang', 'para' ] ) do |child|
     if child.name == 'jbo' or child.name == 'gloss'
       table_row_by_words child
-    elsif child.name == 'math'
+    elsif child.name == 'dbmath'
       child.replace("<tr class='informalequation'><td colspan='0'>#{child}</td></tr>")
+    elsif child.name == 'mmlmath'
+      mml_wrapper( child, "<tr class='informalequation'><td colspan='0'>#{child}</td></tr>" )
     else
       convert!( node: child, newname: 'para' )
-      child.replace("<tr class='para'><td colspan='0'>#{child}</td></tr>")
+      mml_wrapper( child, "<tr class='para'><td colspan='0'>#{child}</td></tr>" )
     end
   end
 
@@ -259,11 +271,13 @@ end
 
 
 # Math
-## <natlang>Both <inlinemath>2 + 2 = 4</inlinemath> and <inlinemath>2 x 2 = 4</inlinemath>.</natlang>
-$document.css('inlinemath').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<inlineequation role='inlinemath'>#{e}</inlineequation>" ) }
+## <natlang>Both <dbinlinemath>2 + 2 = 4</dbinlinemath> and <dbinlinemath>2 x 2 = 4</dbinlinemath>.</natlang>
+$document.css('dbinlinemath').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<inlineequation role='dbinlinemath'>#{e}</inlineequation>" ) }
+$document.css('mmlinlinemath').each { |e| mml_wrapper( e, "<inlineequation role='mmlinlinemath'><mml:math>#{e.children.to_xml}</mml:math></inlineequation>" ) }
 
-## <math>3:22:40 + 0:3:33 = 3:26:13</math>
-$document.css('math').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<informalequation role='math'>#{e}</informalequation>" ) }
+## <dbmath>3:22:40 + 0:3:33 = 3:26:13</dbmath>
+$document.css('dbmath').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<informalequation role='dbmath'>#{e}</informalequation>" ) }
+$document.css('mmlmath').each { |e| mml_wrapper( e, "<informalequation role='mmlmath'><mml:math>#{e.children.to_xml}</mml:math></informalequation>" ) }
 
 ##       <pronunciation>
 ##         <jbo>.e'o ko ko kurji</jbo>
