@@ -76,7 +76,7 @@ $(builddir)/xhtml_sections.done: $(builddir)/cll_processed_xhtml.xml xml/docbook
 xhtml_nochunks_web: $(builddir)/xhtml-nochunks.done
 	rm -rf ~/public_html/media/public/cll_build/cll-xhtml-nochunks/
 	mkdir -p ~/public_html/media/public/cll_build/cll-xhtml-nochunks/
-	cp $(builddir)/xhtml-nochunks ~/public_html/media/public/cll_build/cll-xhtml-nochunks
+	cp -pr $(builddir)/xhtml-nochunks ~/public_html/media/public/cll_build/cll-xhtml-nochunks
 
 .PHONY: xhtml_nochunks
 xhtml_nochunks: $(builddir)/xhtml-nochunks.done
@@ -85,8 +85,8 @@ $(builddir)/xhtml-nochunks.done: $(builddir)/cll_processed_xhtml.xml xml/docbook
 	mkdir -p $(builddir)/xhtml-nochunks
 	xmlto -m xml/docbook2html_config_no-chunks.xsl -o $(builddir)/xhtml-nochunks/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 	find $(builddir)/xhtml-nochunks | xargs grep -l '<html xmlns=' | xargs sed -i 's;<html xmlns=;<html xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns=;'
-	cp $(PWD)/scripts/master.css $(builddir)/xhtml-nochunks/final.css
 	mv $(builddir)/xhtml-nochunks/cll_processed_xhtml.html $(builddir)/xhtml-nochunks/index.html
+	cp $(PWD)/scripts/master.css $(builddir)/xhtml-nochunks/final.css
 	cp -pr $(PWD)/media $(builddir)/xhtml-nochunks/
 	touch $(builddir)/xhtml-nochunks.done
 
