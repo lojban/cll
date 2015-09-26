@@ -90,14 +90,14 @@ definitions.  These definitions are here simply as a quick reference.
     definition = coder.encode(definition, :basic)
 
     # Turn LaTeX stuff into xml: $1*10^{-2}$]
-    definition.gsub!(%r(\$(1\*)?10\^{?([^}$]*)}?\$)){"<inlinemath>#{$1}10<superscript>#{$2}</superscript></inlinemath>"}
+    definition.gsub!(%r(\$(1\*)?10\^{?([^}$]*)}?\$)){"<dbinlinemath>#{$1}10<superscript>#{$2}</superscript></dbinlinemath>"}
 
     # Turn LaTeX stuff into xml: $x_{1}= ; then we stop, and repeat
     # this until there's no matches
     olddef=''
     while olddef != definition
       olddef = definition.clone
-      definition.gsub!(%r(\$([a-z]+)_{?([0-9]+)}?(=?)), '<inlinemath>\1<subscript>\2</subscript></inlinemath>\3$')
+      definition.gsub!(%r(\$([a-z]+)_{?([0-9]+)}?(=?)), '<dbinlinemath>\1<subscript>\2</subscript></dbinlinemath>\3$')
     end
 
     # Clean out the remains of the process above
