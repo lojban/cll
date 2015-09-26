@@ -1,4 +1,5 @@
-To make the XHTML version (ends up in a dir named html/):
+To make all the versions (which it will try to install into
+~/public_html/media/public/cll_build/ ) do:
 
   ./cll_build
 
@@ -14,7 +15,7 @@ This does the whole book but is also much faster:
 There are many possible sub-targets as well, which are specified
 with -T, such as:
 
-  ./cll_build -t -T pdf_web
+  ./cll_build -t -T prince_pdf
 
 You can get a complete list of targets via:
 
@@ -27,30 +28,42 @@ Getting this all working is actually a pretty huge undertaking;
 you're almost certainly better off asking Robin Lee Powell for an
 account on the appropriate server.
 
-  General
-  --------------
+  General/HTML
+  ------------
 
-  xsltproc
+    xsltproc
 
-  xmlto
+    xmlto
+
+    Normal linux tools probably like tar.  You definitely need wget,
+    in particular.
+
+    The actual docbook packages (i.e. the docbook 5.0 XSLT stuff)
+
+    Ruby
+
+    All the Ruby gems mentioned in Gemfile; in fact the normal way to
+    do this sort of thing is:
+
+      $ gem install bundler
+      $ bundle install
+
+    and that should get all the dependencies for you (although I
+    (rlpowell) don't do it that way myself, so this is untested by me
+    and you might have to do "bundle exec ..." with your build
+    commands or something; regardless, there's only like 3 gem
+    dependencies).
 
   PDF Generation
   --------------
 
-  dblatex
+    prince ( http://www.princexml.com/ )
 
-  xetex, with a recent version of texlive.  For Fedora, this
-  upgrading to F19.  Then install these packages; this may not be a
-  complete list, but it should be pretty close:
-    
-    sudo yum install texlive-xetex texlive-dejavu texlive-multirow texlive-subfigure texlive-appendix texlive-changebar texlive-overpic dejavu-fonts-common dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts texlive-cjkutils-bin texlive-collection-xetex texlive-dvipdfm-bin texlive-jfontmaps-bin texlive-ptex-bin texlive-release texlive-ttfutils-bin texlive-xetex-bin xmltex tex-texlive-common-doc tex-texlive-en-doc tex-texlive-msg-translations tex-texlive-scripts tex-texlive texlive-subfigure texlive-appendix texlive-multirow texlive-multirow texlive-listings texlive-overpic texlive-overpic texlive-changebar texlive-tabulary texlive-savesym texlive-tocloft texlive-framed
-
-  Yes, that's a lot of packages.
 
   MOBI / EPUB
   -----------
 
-  ebook-convert (from the yum/rpm calibre package)
+    ebook-convert (from the yum/rpm calibre package)
 
-  Xvfb and xvfb-run (fake X for calibre) or a running X server session
-
+    Xvfb and xvfb-run (fake X for calibre) or a running X server
+    session -- MAYBE NOT ACTUALLY NEEDED
