@@ -76,7 +76,7 @@ $(builddir)/xhtml_sections.done: $(builddir)/cll_processed_xhtml.xml xml/docbook
 xhtml_nochunks_web: $(builddir)/xhtml-nochunks.done
 	rm -rf ~/public_html/media/public/cll_build/cll-xhtml-nochunks/
 	mkdir -p ~/public_html/media/public/cll_build/cll-xhtml-nochunks/
-	cp -pr $(builddir)/xhtml-nochunks ~/public_html/media/public/cll_build/cll-xhtml-nochunks
+	rsync -a $(builddir)/xhtml-nochunks/ ~/public_html/media/public/cll_build/cll-xhtml-nochunks/
 
 .PHONY: xhtml_nochunks
 xhtml_nochunks: $(builddir)/xhtml-nochunks.done

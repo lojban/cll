@@ -1,0 +1,47 @@
+
+This is about the <anchor.../> tags in the text, which (except for
+bits in chapters 20 and 21) are SOLELY A BACKWARDS COMPATIBILITY
+MEASURE.
+
+As such, the <anchor.../> tags should NEVER be updated, even when
+things are moved.
+
+The below is how our anchors used to work, and how they map to the
+new system, and was originally copied from https://github.com/lojban/cll/issues/82
+
+- ---------
+
+Old CLL html Chapter 5 Example 2.3 is:
+
+    http://www.lojban.org/publications/reference_grammar/chapter5.html#e2d3
+
+github.io/dag-cll Chapter 5 Example 2.3 is:
+
+    https://lojban.github.io/cll/5/2/#e3
+
+These are both terrible as they rely on the chunking behaviour selected! That is: if the file is one big chunk, neither of these methods can possibly work.
+
+I don't know what that means in terms of our ability to generate such anchors.
+
+Section URLs:
+
+    old: http://www.lojban.org/publications/reference_grammar/chapter5.html#s2
+    dag-cll: https://lojban.github.io/cll/5/2/
+
+So the thing is that pre-CLLv1.1 URLs are reliably convertible to CLLv1.1 URLs, just not at the anchor level. In particular, this:
+
+    http://vrici.lojban.org/~rlpowell/media/public/cll_build/cll-xhtml-nochunks/#c5e2d3
+
+is the equivalent of both of the example URLs above, and this:
+
+    http://vrici.lojban.org/~rlpowell/media/public/cll_build/cll-xhtml-nochunks/#c5s2
+
+Notice that these conversions can easily be achieved by Apache mod_rewrite, but there is no sane/obvious way to do it at any other level.
+
+If, for some reason, it is really important to make it so that, say, the chapter-chunked output of CLLv1.1 responds to [url]/chapter5.html#e2d3 , this could be done by:
+
+    1. cp or mv chapter-selbri.html to chapter5.html
+
+    2. Something like: sed -r -i 's;a id="c5e([0-9]+)d([0-9]+)">;&\n;' (untested)
+
+I don't see baking that replacement into the build process as adding significant value, much easier to have whatever system is hosting CLLv1.1's output do it at the mod rewrite level.
