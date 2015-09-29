@@ -421,102 +421,25 @@ $document.css('cmavo-list').each do |node|
       #           <quote>Attention/Lo/Hark/Behold/Hey!/Listen, X</quote>; indicates an important communication that the listener should listen to.
       #         </description>
 
-      if child.xpath('./cmavo').length > 0 and child.xpath('./description').length > 0
-
-        # Deal with various grandchildren, removing them so we can
-        # be sure we got everything
-
-        newchildren = []
-        oldchild = child.clone
-
-        child.xpath('.//comment()').remove
-
-        handle_children( node: child, allowed_children_names: [ 'gismu', 'cmavo', 'selmaho', 'series', 'rafsi', 'compound' ], ignore_others: true ) do |gc|
-          new = gc.clone
-          convert!( node: new, newname: 'td' )
-          newchildren << new
-          gc.remove
+      handle_children( node: child, allowed_children_names: [ 'gismu', 'cmavo', 'selmaho', 'series', 'rafsi', 'compound', 'modal-place', 'attitudinal-scale', 'pseudo-cmavo', 'description' ] ) do |grandchild|
+        role=grandchild.name
+        if grandchild[:role]
+          role=grandchild[:role]
+        elsif grandchild.name == 'series'
+          role='cmavo-series'
+        elsif grandchild.name == 'compound'
+          role='cmavo-compound'
+        elsif grandchild.name == 'modal-place'
+          role="modal-place-#{grandchild[:se]}"
+        elsif grandchild.name == 'attitudinal-scale'
+          role="attitudinal-scale-#{grandchild[:point]}".gsub("'",'h')
         end
 
-        [ 'sai', "cu'i", 'nai' ].each do |point|
-          scale_bits = child.xpath("./attitudinal-scale[@point=\"#{point}\"]")
-          if scale_bits.length > 0
-            new = scale_bits.first.clone
-            convert!( node: new, newname: 'td' )
-            new.content = scale_bits.map { |x| x.text }.join(' ; ')
-            new['class'] = "attitudinal-scale-#{point}".gsub("'",'h')
-            new.attributes['point'].remove
-            newchildren << new
-            scale_bits.remove
-          end
-        end
-
-        descs=child.xpath('./description')
-
-        # Check if we missed something (we have if there's
-        # anything left except descriptions)
-        if descs.length != child.children.length
-          abort "Unhandled node in cmavo-list.  #{descs.length} != #{child.children.length} I'm afraid you'll have to look at the code to see which one.  Here's the whole thing: #{oldchild.to_xml}\n\nhere's what we have left: #{child.to_xml}\n\nand here's what we have so far: #{Nokogiri::XML::NodeSet.new( $document, newchildren ).to_xml}"
-        end
-
-        # Make new rows for the longer description elements
-        short_descs=[]
-        long_descs=[]
-        descs.each do |desc|
-          $stderr.puts "desc info: #{desc['role']} -- #{desc}"
-          if desc['role'] and (desc['role'] == 'place-structure' or desc['role'] == 'long')
-            long_descs << desc
-          else
-            short_descs << desc
-          end
-        end
-
-        short_descs.each do |desc|
-          new = desc.clone
-          convert!( node: new, newname: 'td', role: desc['role'] )
-          # No "role" for td
-          if new['role']
-            new['class'] = new['role']
-            new.attributes['role'].remove
-          end
-          newchildren << new
-        end
-
-        trs = []
-
-        newchildrengroup = Nokogiri::XML::NodeSet.new( $document, newchildren )
-        tr1 = $document.parse("<tr class='cmavo-entry-main'>#{newchildrengroup}</tr>").first
-
-        trs << tr1
-
-        long_descs.each do |desc|
-          convert!( node: desc, newname: 'para', role: desc['role'] )
-          trs << $document.parse("<tr class='cmavo-entry-long-desc'><td colspan='0'>#{desc}</td></tr>").first
-        end
-
-        group = Nokogiri::XML::NodeSet.new( $document, trs )
-        child = child.replace group
-      else
-        handle_children( node: child, allowed_children_names: [ 'gismu', 'cmavo', 'selmaho', 'series', 'rafsi', 'compound', 'modal-place', 'attitudinal-scale', 'pseudo-cmavo', 'description' ] ) do |grandchild|
-          role=grandchild.name
-          if grandchild[:role]
-            role=grandchild[:role]
-          elsif grandchild.name == 'series'
-            role='cmavo-series'
-          elsif grandchild.name == 'compound'
-            role='cmavo-compound'
-          elsif grandchild.name == 'modal-place'
-            role="modal-place-#{grandchild[:se]}"
-          elsif grandchild.name == 'attitudinal-scale'
-            role="attitudinal-scale-#{grandchild[:point]}".gsub("'",'h')
-          end
-
-          convert!( node: grandchild, newname: 'para', role: role )
-        end
-
-        child.children.each { |e| e.replace("<td class='#{e['role']}'>#{e}</td>") }
-        convert!( node: child, newname: 'tr' )
+        convert!( node: grandchild, newname: 'para', role: role )
       end
+
+      child.children.each { |e| e.replace("<td class='#{e['role']}'>#{e}</td>") }
+      convert!( node: child, newname: 'tr' )
     else
       abort "Bad node in cmavo-list: #{child.to_xml}"
     end
