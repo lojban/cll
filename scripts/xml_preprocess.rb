@@ -318,7 +318,7 @@ end
 ##      </grammar-template></member>
 $document.css('grammar-template').each do |node|
   # Phrasal version
-  if [ 'title', 'term', 'member', 'secondary' ].include? node.parent.name
+  if [ 'title', 'term', 'member', 'secondary', 'td' ].include? node.parent.name
     convert!( node: node, newname: 'phrase' )
   else
     # Block version
@@ -332,7 +332,7 @@ $document.css('definition').each do |node|
   node.css('content').each do |child|
     convert!( node: child, newname: 'phrase', role: 'definition-content' )
   end
-  if [ 'title', 'term', 'member', 'secondary' ].include? node.parent.name
+  if [ 'title', 'term', 'member', 'secondary', 'td' ].include? node.parent.name
     # Phrasal version
     convert!( node: node, newname: 'phrase' )
   else
