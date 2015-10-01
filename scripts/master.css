@@ -374,6 +374,13 @@ dd {
   margin-bottom: 0pt;
 }
 
+pre {
+  border-spacing: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
 div.titlepage + p, p.noindent {
   text-indent: 0pt !important;
 }
@@ -402,6 +409,14 @@ table td, table th {
   border-right: 1px dotted grey;
   padding-right: 0.4em;
   padding-left: 0.4em;
+  vertical-align: top;
+}
+table.vertsep tr {
+  margin-bottom: 0.4em;
+  border-bottom: 1px dotted grey;
+}
+table.vertsep tr:last-child {
+  border-bottom: 0;
 }
 table tr td:first-child,
 table tr th:first-child {
@@ -517,4 +532,8 @@ p.twocolumn div.variablelist {
 .varname {
   font-size: 8pt;
   font-weight: bold;
+}
+
+br.table-break {
+  display: none;
 }

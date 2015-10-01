@@ -70,7 +70,7 @@
     
     <letteral>r</letteral> the first IPA symbol shown represents the preferred pronunciation; for 
     <letteral>r</letteral>, all of the variations (and any other rhotic sound) are equally acceptable.</para>
-    <informaltable>
+    <informaltable class="vertsep">
         <thead>
           <tr>
             <td>Letter</td>
@@ -413,7 +413,7 @@
     <para> <indexterm type="general"><primary>diphthongs</primary><secondary>list of</secondary></indexterm>  <indexterm type="general"><primary>diphthongs</primary><secondary>IPA for</secondary></indexterm> The Lojban diphthongs are shown in the table below. (Variant pronunciations have been omitted, but are much as one would expect based on the variant pronunciations of the separate vowel letters: 
     <diphthong>ai</diphthong> may be pronounced 
     <phrase role="IPA">[ɑj]</phrase>, for example.)</para>
-    <informaltable>
+    <informaltable class="vertsep">
         <thead>
           <tr>
             <td>Letters</td>
@@ -652,7 +652,7 @@
     <para> <indexterm type="general"><primary>consonant</primary><secondary>effect on syllable count</secondary></indexterm>  <indexterm type="general"><primary>consonant</primary><secondary>definition</secondary></indexterm> A consonant sound is a relatively brief speech-sound that precedes or follows a vowel sound in a syllable; its presence either preceding or following does not add to the count of syllables, nor is a consonant required in either position for any syllable. Lojban has seventeen consonants: for the purposes of this section, the apostrophe is not counted as a consonant.</para>
     <para> <indexterm type="general"><primary>consonants</primary><secondary>voicing of</secondary></indexterm>  <indexterm type="general"><primary>consonants</primary><secondary>voiced/unvoiced equivalents</secondary></indexterm> An important distinction dividing Lojban consonants is that of voicing. The following table shows the unvoiced consonants and the corresponding voiced ones:</para>
     
-    <informaltable>
+    <informaltable class="vertsep">
         <thead>
           <tr>
             <td>UNVOICED</td>
@@ -1384,45 +1384,37 @@
     
     
     
-    <variablelist>
-      <varlistentry>
-        <term><phrase role="IPA">[ˈ]</phrase></term>
-        <listitem>
-          <para>An IPA indicator of primary stress; the syllable which follows 
-          <phrase role="IPA">[ˈ]</phrase> receives primary stress.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ʔ]</phrase></term>
-        <listitem>
-          <para>An allowed variant of Lojban 
+    <informaltable class="vertsep">
+      <colgroup/>
+      <tr><td><phrase role="IPA">[ˈ]</phrase></td>
+        <td>
+          An IPA indicator of primary stress; the syllable which follows 
+          <phrase role="IPA">[ˈ]</phrase> receives primary stress.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ʔ]</phrase></td>
+        <td>
+          An allowed variant of Lojban 
           <letteral>.</letteral>. This sound is not usually considered part of English. It is the catch in your throat that sometimes occurs prior to the beginning of a word (and sometimes a syllable) which starts with a vowel. In some dialects, like Cockney and some kinds of American English, it is used between vowels instead of 
           <quote>t</quote>: 
           <quote>bottle</quote>
           <phrase role="IPA">[boʔl̩]</phrase>. The English interjection 
-          <quote>uh-oh!</quote> almost always has it between the syllables.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ː]</phrase></term>
-        <listitem>
-          <para>A symbol indicating that the previous vowel is to be spoken for a longer time than usual. Lojban vowels can be pronounced long in order to make a greater contrast with buffer vowels.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[a]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>uh-oh!</quote> almost always has it between the syllables.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ː]</phrase></td>
+        <td>
+          A symbol indicating that the previous vowel is to be spoken for a longer time than usual. Lojban vowels can be pronounced long in order to make a greater contrast with buffer vowels.
+      </td></tr>
+      <tr><td><phrase role="IPA">[a]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>a</letteral>. This sound doesn't occur in GA, but sounds somewhat like the 
           <quote>ar</quote> of 
           <quote>park</quote>, as spoken in RP or New England American. It is pronounced further forward in the mouth than 
-          <phrase role="IPA">[ɑ]</phrase>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ɑ]</phrase></term>
-        <listitem>
-          <para>An allowed variant of Lojban 
+          <phrase role="IPA">[ɑ]</phrase>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ɑ]</phrase></td>
+        <td>
+          An allowed variant of Lojban 
           <letteral>a</letteral>. The 
           <quote>a</quote> of GA 
           <quote>father</quote>. The sound 
@@ -1437,245 +1429,195 @@
           <phrase role="IPA">[sfofa]</phrase> or 
           <phrase role="IPA">[sfofɑ]</phrase> but never 
           <phrase role="IPA">[sfofə]</phrase> which would be the non-word 
-          <valsi valid="false">sfofy</valsi>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[æ]</phrase></term>
-        <listitem>
-          <para>Not a Lojban sound. The 
+          <valsi valid="false">sfofy</valsi>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[æ]</phrase></td>
+        <td>
+          Not a Lojban sound. The 
           <quote>a</quote> of English 
-          <quote>cat</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[b]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>cat</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[b]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>b</letteral>. As in English 
           <quote>boy</quote>, 
           <quote>sober</quote>, or 
-          <quote>job</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[β]</phrase></term>
-        <listitem>
-          <para>An allowed variant of Lojban 
+          <quote>job</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[β]</phrase></td>
+        <td>
+          An allowed variant of Lojban 
           <letteral>v</letteral>. Not an English sound; the Spanish 
           <quote xml:lang="es">b</quote> or 
           <quote xml:lang="es">v</quote> between vowels. This sound should not be used for Lojban 
-          <letteral>b</letteral>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[d]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <letteral>b</letteral>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[d]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>d</letteral>. As in English 
           <quote>dog</quote>, 
           <quote>soda</quote>, or 
-          <quote>mad</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ɛ]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>mad</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ɛ]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>e</letteral>. The 
           <quote>e</quote> of English 
-          <quote>met</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[e]</phrase></term>
-        <listitem>
-          <para>An allowed variant of Lojban 
+          <quote>met</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[e]</phrase></td>
+        <td>
+          An allowed variant of Lojban 
           <letteral>e</letteral>. This sound is not found in English, but is the Spanish 
           <quote xml:lang="es">e</quote>, or the tense 
           <quote xml:lang="it">e</quote> of Italian. The vowel of English 
-          <quote>say</quote> is similar except for the off-glide: you can learn to make this sound by holding your tongue steady while saying the first part of the English vowel.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ə]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>say</quote> is similar except for the off-glide: you can learn to make this sound by holding your tongue steady while saying the first part of the English vowel.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ə]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>y</letteral>. As in the 
           <quote>a</quote> of English 
           <quote>sofa</quote> or 
-          <quote>about</quote>. Schwa is generally unstressed in Lojban, as it is in English. It is a totally relaxed sound made with the tongue in the middle of the mouth.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[f]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>about</quote>. Schwa is generally unstressed in Lojban, as it is in English. It is a totally relaxed sound made with the tongue in the middle of the mouth.
+      </td></tr>
+      <tr><td><phrase role="IPA">[f]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>f</letteral>. As in 
           <quote>fee</quote>, 
           <quote>loafer</quote>, or 
-          <quote>chef</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ɸ]</phrase></term>
-        <listitem>
-          <para>An allowed variant of Lojban 
+          <quote>chef</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ɸ]</phrase></td>
+        <td>
+          An allowed variant of Lojban 
           <letteral>f</letteral>. Not an English sound; the Japanese 
           <!-- if you put xml:lang="ja" here, it tries to render f
                as a japanese character; this does not work well -->
-          <quote>f</quote> sound.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[g]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>f</quote> sound.
+      </td></tr>
+      <tr><td><phrase role="IPA">[g]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>g</letteral>. As in English 
           <quote>go</quote>, 
           <quote>eagle</quote>, or 
-          <quote>dog</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[h]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of the Lojban apostrophe sound. As in English 
+          <quote>dog</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[h]</phrase></td>
+        <td>
+          The preferred pronunciation of the Lojban apostrophe sound. As in English 
           <quote>aha</quote> or the second "h" in 
-          <quote>oh, hello</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[i]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>oh, hello</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[i]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>i</letteral>. Essentially like the English vowel of 
           <quote>pizza</quote> or 
-          <quote>machine</quote>, although the English vowel is sometimes pronounced with an off-glide, which should not be present in Lojban.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ɪ]</phrase></term>
-        <listitem>
-          <para>A possible Lojban buffer vowel. The 
-          
+          <quote>machine</quote>, although the English vowel is sometimes pronounced with an off-glide, which should not be present in Lojban.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ɪ]</phrase></td>
+        <td>
+          A possible Lojban buffer vowel. The 
+
           <quote>i</quote> of English 
-          <quote>bit</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ɨ]</phrase></term>
-        <listitem>
-          <para>A possible Lojban buffer vowel. The 
-          
+          <quote>bit</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ɨ]</phrase></td>
+        <td>
+          A possible Lojban buffer vowel. The 
+
           <quote>u</quote> of 
           <quote>just</quote> in some varieties of GA, those which make the word sound more or less like 
           <quote>jist</quote>. Also Russian 
           <quote xml:lang="ru">y</quote> as in 
           <quote xml:lang="ru">byt'</quote> (to be); like a schwa 
-          <phrase role="IPA">[ə]</phrase>, but higher in the mouth.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[j]</phrase></term>
-        <listitem>
-          <para>Used in Lojban diphthongs beginning or ending with 
+          <phrase role="IPA">[ə]</phrase>, but higher in the mouth.
+      </td></tr>
+      <tr><td><phrase role="IPA">[j]</phrase></td>
+        <td>
+          Used in Lojban diphthongs beginning or ending with 
           <letteral>i</letteral>. Like the 
           <quote>y</quote> in English 
           <quote>yard</quote> or 
-          <quote>say</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[k]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>say</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[k]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>k</letteral>. As in English 
           <quote>kill</quote>, 
           <quote>token</quote>, or 
-          <quote>flak</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[l]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>flak</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[l]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>l</letteral>. As in English 
           <quote>low</quote>, 
           <quote>nylon</quote>, or 
-          <quote>excel</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>[l̩]</term>
-        <listitem>
-          <para>The syllabic version of Lojban 
+          <quote>excel</quote>.
+      </td></tr>
+      <tr><td>[l̩]</td>
+        <td>
+          The syllabic version of Lojban 
           <letteral>l</letteral>, as in English 
           <quote>bottle</quote> or 
-          <quote>middle</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[m]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>middle</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[m]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>m</letteral>. As in English 
           <quote>me</quote>, 
           <quote>humor</quote>, or 
-          <quote>ham</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>[m̩]</term>
-        <listitem>
-          <para>The syllabic version of Lojban 
+          <quote>ham</quote>.
+      </td></tr>
+      <tr><td>[m̩]</td>
+        <td>
+          The syllabic version of Lojban 
           <letteral>m</letteral>. As in English 
           <quote>catch 'em</quote> or 
-          <quote>bottom</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[n]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>bottom</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[n]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>n</letteral>. As in English 
           <valsi>no</valsi>, 
           <quote>honor</quote>, or 
-          <quote>son</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>[n̩]</term>
-        <listitem>
-          <para>The syllabic version of Lojban 
+          <quote>son</quote>.
+      </td></tr>
+      <tr><td>[n̩]</td>
+        <td>
+          The syllabic version of Lojban 
           <letteral>n</letteral>. As in English 
-          <quote>button</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ŋ]</phrase></term>
-        <listitem>
-          <para>An allowed variant of Lojban 
+          <quote>button</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ŋ]</phrase></td>
+        <td>
+          An allowed variant of Lojban 
           <letteral>n</letteral>, especially in Lojbanized names and before 
           <letteral>g</letteral> or 
           <letteral>k</letteral>. As in English 
           <quote>sing</quote> or 
           <quote>singer</quote> (but not 
           <quote>finger</quote> or 
-          <quote>danger</quote>).</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>[ŋ̍]</term>
-        <listitem>
-          <para>An allowed variant of Lojban syllabic 
-          <letteral>n</letteral>, especially in Lojbanized names.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[o]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>danger</quote>).
+      </td></tr>
+      <tr><td>[ŋ̍]</td>
+        <td>
+          An allowed variant of Lojban syllabic 
+          <letteral>n</letteral>, especially in Lojbanized names.
+      </td></tr>
+      <tr><td><phrase role="IPA">[o]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>o</letteral>. As in the French 
           <quote xml:lang="fr">haute (cuisine)</quote> or Spanish 
           <quote xml:lang="es">como</quote>. There is no exact English equivalent of this sound. The nearest GA equivalent is the 
@@ -1684,13 +1626,11 @@
           <quote>joke</quote>, but it is essential that the off-glide (a 
           <phrase role="IPA">[w]</phrase>-like sound) at the end of the vowel is not pronounced when speaking Lojban. The RP sound in these words is 
           <phrase role="IPA">[əw]</phrase> in IPA terms, and has no 
-          <phrase role="IPA">[o]</phrase> in it at all; unless you can speak with a Scots, Irish, or American accent, you may have trouble with this sound.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ɔ]</phrase></term>
-        <listitem>
-          <para>An allowed variant of Lojban 
+          <phrase role="IPA">[o]</phrase> in it at all; unless you can speak with a Scots, Irish, or American accent, you may have trouble with this sound.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ɔ]</phrase></td>
+        <td>
+          An allowed variant of Lojban 
           <letteral>o</letteral>, especially before 
           <letteral>r</letteral>. This sound is a shortened form of the 
           <quote>aw</quote> in GA 
@@ -1698,203 +1638,166 @@
           <quote>dawn</quote> and 
           <quote>Don</quote> alike; if you do, you may have trouble with this sound). In RP, but not GA, it is the 
           <quote>o</quote> of 
-          <quote>hot</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[p]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
+          <quote>hot</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[p]</phrase></td>
+        <td>
+          The preferred pronunciation of Lojban 
           <letteral>p</letteral>. As in English 
           <quote>pay</quote>, 
           <quote>super</quote>, or 
-          <quote>up</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[r]</phrase></term>
-        <listitem>
-          <para>One version of Lojban 
+          <quote>up</quote>.
+      </td></tr>
+      <tr><td><phrase role="IPA">[r]</phrase></td>
+        <td>
+          One version of Lojban 
           <letteral>r</letteral>. Not an English sound. The Spanish 
           <quote xml:lang="es">rr</quote> and the Scots 
-          <quote>r</quote>, a tongue-tip trill.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ɹ]</phrase></term>
-        <listitem>
-          <para>One version of Lojban 
+          <quote>r</quote>, a tongue-tip trill.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ɹ]</phrase></td>
+        <td>
+          One version of Lojban 
           <letteral>r</letteral>. As in GA 
           <quote>right</quote>, 
           <quote>baron</quote>, or 
-          <quote>car</quote>. Not found in RP.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ɾ]</phrase></term>
-        <listitem>
-          <para>One version of Lojban 
+          <quote>car</quote>. Not found in RP.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ɾ]</phrase></td>
+        <td>
+          One version of Lojban 
           <letteral>r</letteral>. In GA, appears as a variant of 
           <quote>t</quote> or 
           <quote>d</quote> in the words 
           <quote>metal</quote> and 
-          <quote>medal</quote> respectively. A tongue-tip flap.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ʀ]</phrase></term>
-        <listitem>
-          <para>One version of Lojban 
+          <quote>medal</quote> respectively. A tongue-tip flap.
+      </td></tr>
+      <tr><td><phrase role="IPA">[ʀ]</phrase></td>
+        <td>
+          One version of Lojban 
           <letteral>r</letteral>. Not an English sound. The French or German 
           <phrase xml:lang="de"><quote xml:lang="fr">r</quote></phrase> in <!--not sure how else to designate two languages at once-->
           <quote xml:lang="fr">reine</quote> or 
-          <quote xml:lang="de">rot</quote> respectively. A uvular trill.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term>
-          <phrase role="IPA">[r̩]</phrase>, 
-          <phrase role="IPA">[ɹ̩]</phrase>, 
-          <phrase role="IPA">[ɾ̩]</phrase>, 
-        <phrase role="IPA">[ʀ̩]</phrase></term>
-        <listitem>
-          <para>Syllabic versions of the above.
-          <phrase role="IPA">[ɹ̩]</phrase> appears in the GA (but not RP) pronunciation of 
-          <quote>bird</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[s]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
-          <letteral>s</letteral>. As in English 
-          <quote>so</quote>, 
-          <quote>basin</quote>, or 
-          <quote>yes</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ʃ]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
-          <letteral>c</letteral>. The 
-          <quote>sh</quote> of English 
-          <quote>ship</quote>, 
-          <quote>ashen</quote>, or 
-          <quote>dish</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ʂ]</phrase></term>
-        <listitem>
-          <para>An allowed variant of Lojban 
-          <letteral>s</letteral>. Not an English sound. The Hindi retroflex 
-          <quote xml:lang="hi">s</quote> with dot below, or Klingon 
-          <quote xml:lang="tlh">S</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[t]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
-          <letteral>t</letteral>. As in English 
-          <quote>tea</quote>, 
-          <quote>later</quote>, or 
-          <quote>not</quote>. It is important to avoid the GA habit of pronouncing the 
-          <quote>t</quote> between vowels as 
-          <phrase role="IPA">[d]</phrase> or 
-          <phrase role="IPA">[ɾ]</phrase>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[θ]</phrase></term>
-        <listitem>
-          <para>Not normally a Lojban sound, but a possible variant of Lojban 
-          <letteral>'</letteral>. The 
-          <quote>th</quote> of English 
-          <quote>thin</quote> (but not 
-          <quote>then</quote>).</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[v]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
-          <letteral>v</letteral>. As in English 
-          <quote>voice</quote>, 
-          <quote>savor</quote>, or 
-          <quote>live</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[w]</phrase></term>
-        <listitem>
-          <para>Used in Lojban diphthongs beginning or ending with 
-          <letteral>u</letteral>. Like the 
-          <quote>w</quote> in English 
-          <quote>wet</quote>
-          <phrase role="IPA">[wɛt]</phrase> or 
-          <quote>cow</quote>
-          <phrase role="IPA">[kɑw]</phrase>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[x]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
-          <letteral>x</letteral>. Not normally an English sound, but used in some pronunciations of 
-          <quote>loch</quote> and 
-          <quote>Bach</quote>; 
-          <quote>gh</quote> in Scots 
-          <quote>might</quote> and 
-          <quote>night</quote>. The German 
-          <quote xml:lang="de">Ach-Laut</quote>. To pronounce 
-          <phrase role="IPA">[x]</phrase>, force air through your throat without vibrating your vocal chords; there should be lots of scrape.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ʏ]</phrase></term>
-        <listitem>
-          <para>A possible Lojban buffer vowel. Not an English sound: the 
-          
-          <quote xml:lang="de">ü</quote> of German 
-          <quote xml:lang="de">hübsch</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[z]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
-          <letteral>z</letteral>. As in English 
-          <quote>zoo</quote>, 
-          <quote>hazard</quote>, or 
-          <quote>fizz</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ʒ]</phrase></term>
-        <listitem>
-          <para>The preferred pronunciation of Lojban 
-          <letteral>j</letteral>. The 
-          <quote>si</quote> of English 
-          <quote>vision</quote>, or the consonant at the end of GA 
-          <quote>garage</quote>.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><phrase role="IPA">[ʐ]</phrase></term>
-        <listitem>
-          <para>An allowed variant of Lojban 
-          <letteral>z</letteral>. Not an English sound. The voiced version of 
-          <phrase role="IPA">[ʂ]</phrase>.</para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
+          <quote xml:lang="de">rot</quote> respectively. A uvular trill.
+      </td></tr>
+      <tr><td>
+        <phrase role="IPA">[r̩]</phrase>, 
+        <phrase role="IPA">[ɹ̩]</phrase>, 
+        <phrase role="IPA">[ɾ̩]</phrase>, 
+        <phrase role="IPA">[ʀ̩]</phrase></td>
+      <td>
+        Syllabic versions of the above.
+        <phrase role="IPA">[ɹ̩]</phrase> appears in the GA (but not RP) pronunciation of 
+        <quote>bird</quote>.
+    </td></tr>
+    <tr><td><phrase role="IPA">[s]</phrase></td>
+      <td>
+        The preferred pronunciation of Lojban 
+        <letteral>s</letteral>. As in English 
+        <quote>so</quote>, 
+        <quote>basin</quote>, or 
+        <quote>yes</quote>.
+    </td></tr>
+    <tr><td><phrase role="IPA">[ʃ]</phrase></td>
+      <td>
+        The preferred pronunciation of Lojban 
+        <letteral>c</letteral>. The 
+        <quote>sh</quote> of English 
+        <quote>ship</quote>, 
+        <quote>ashen</quote>, or 
+        <quote>dish</quote>.
+    </td></tr>
+    <tr><td><phrase role="IPA">[ʂ]</phrase></td>
+      <td>
+        An allowed variant of Lojban 
+        <letteral>s</letteral>. Not an English sound. The Hindi retroflex 
+        <quote xml:lang="hi">s</quote> with dot below, or Klingon 
+        <quote xml:lang="tlh">S</quote>.
+    </td></tr>
+    <tr><td><phrase role="IPA">[t]</phrase></td>
+      <td>
+        The preferred pronunciation of Lojban 
+        <letteral>t</letteral>. As in English 
+        <quote>tea</quote>, 
+        <quote>later</quote>, or 
+        <quote>not</quote>. It is important to avoid the GA habit of pronouncing the 
+        <quote>t</quote> between vowels as 
+        <phrase role="IPA">[d]</phrase> or 
+        <phrase role="IPA">[ɾ]</phrase>.
+    </td></tr>
+    <tr><td><phrase role="IPA">[θ]</phrase></td>
+      <td>
+        Not normally a Lojban sound, but a possible variant of Lojban 
+        <letteral>'</letteral>. The 
+        <quote>th</quote> of English 
+        <quote>thin</quote> (but not 
+        <quote>then</quote>).
+    </td></tr>
+    <tr><td><phrase role="IPA">[v]</phrase></td>
+      <td>
+        The preferred pronunciation of Lojban 
+        <letteral>v</letteral>. As in English 
+        <quote>voice</quote>, 
+        <quote>savor</quote>, or 
+        <quote>live</quote>.
+    </td></tr>
+    <tr><td><phrase role="IPA">[w]</phrase></td>
+      <td>
+        Used in Lojban diphthongs beginning or ending with 
+        <letteral>u</letteral>. Like the 
+        <quote>w</quote> in English 
+        <quote>wet</quote>
+        <phrase role="IPA">[wɛt]</phrase> or 
+        <quote>cow</quote>
+        <phrase role="IPA">[kɑw]</phrase>.
+    </td></tr>
+    <tr><td><phrase role="IPA">[x]</phrase></td>
+      <td>
+        The preferred pronunciation of Lojban 
+        <letteral>x</letteral>. Not normally an English sound, but used in some pronunciations of 
+        <quote>loch</quote> and 
+        <quote>Bach</quote>; 
+        <quote>gh</quote> in Scots 
+        <quote>might</quote> and 
+        <quote>night</quote>. The German 
+        <quote xml:lang="de">Ach-Laut</quote>. To pronounce 
+        <phrase role="IPA">[x]</phrase>, force air through your throat without vibrating your vocal chords; there should be lots of scrape.
+    </td></tr>
+    <tr><td><phrase role="IPA">[ʏ]</phrase></td>
+      <td>
+        A possible Lojban buffer vowel. Not an English sound: the 
+
+        <quote xml:lang="de">ü</quote> of German 
+        <quote xml:lang="de">hübsch</quote>.
+    </td></tr>
+    <tr><td><phrase role="IPA">[z]</phrase></td>
+      <td>
+        The preferred pronunciation of Lojban 
+        <letteral>z</letteral>. As in English 
+        <quote>zoo</quote>, 
+        <quote>hazard</quote>, or 
+        <quote>fizz</quote>.
+    </td></tr>
+    <tr><td><phrase role="IPA">[ʒ]</phrase></td>
+      <td>
+        The preferred pronunciation of Lojban 
+        <letteral>j</letteral>. The 
+        <quote>si</quote> of English 
+        <quote>vision</quote>, or the consonant at the end of GA 
+        <quote>garage</quote>.
+    </td></tr>
+    <tr><td><phrase role="IPA">[ʐ]</phrase></td>
+      <td>
+        An allowed variant of Lojban 
+        <letteral>z</letteral>. Not an English sound. The voiced version of 
+        <phrase role="IPA">[ʂ]</phrase>.
+    </td></tr>
+  </informaltable>
   </section>
   <section xml:id="section-anglophone-diphthongs">
     <title><anchor xml:id="c3s11"/>English Analogues For Lojban Diphthongs</title>
     <para> <indexterm type="general"><primary>diphthongs</primary><secondary>English analogues of</secondary></indexterm> Here is a list of English words that contain diphthongs that are similar to the Lojban diphthongs. This list does not constitute an official pronunciation guide; it is intended as a help to English-speakers.</para>
-    <informaltable>
+    <informaltable class="vertsep">
         <thead>
           <tr>
             <td>Lojban</td>

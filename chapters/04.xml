@@ -2631,7 +2631,7 @@ This section contains examples of making and scoring lujvo. First, we will start
       <listitem>
         <para>Any gismu forms that conflicted with existing gismu were removed. Obviously, being identical with an existing gismu constitutes a conflict. In addition, a proposed gismu that was identical to an existing gismu except for the final vowel was considered a conflict, since two such gismu would have identical 4-letter rafsi.</para>
         <para> <indexterm type="general"><primary>gismu</primary><secondary>creation</secondary><tertiary>and transcription blunders</tertiary></indexterm> More subtly: If the proposed gismu was identical to an existing gismu except for a single consonant, and the consonant was "too similar” based on the following table, then the proposed gismu was rejected.</para>
-        <informaltable>
+        <informaltable class="vertsep">
             <thead>
               <tr>
                 <td>proposed gismu</td>
@@ -2772,44 +2772,18 @@ This section contains examples of making and scoring lujvo. First, we will start
     <rafsi>brod-</rafsi>, they all end in the letter 
     <letteral>o</letteral>, which is otherwise a rare letter in Lojban gismu.</para>
     <para> <indexterm type="general"><primary>gismu</primary><secondary>scientific-mathematical</secondary></indexterm> The following gismu represent concepts that are sufficiently unique to Lojban that they were either coined from combining forms of other gismu, or else made up out of whole cloth. These gismu are thus conceptually similar to lujvo even though they are only five letters long; however, unlike lujvo, they have rafsi assigned to them for use in building more complex lujvo. Assigning gismu to these concepts helps to keep the resulting lujvo reasonably short.</para>
-    <variablelist>
-      <varlistentry>
-        <term><valsi>broda</valsi></term>
-        <listitem><para>1st assignable predicate</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>brode</valsi></term>
-        <listitem><para>2nd assignable predicate</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>brodi</valsi></term>
-        <listitem><para>3rd assignable predicate</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>brodo</valsi></term>
-        <listitem><para>4th assignable predicate</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>brodu</valsi></term>
-        <listitem><para>5th assignable predicate</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>cmavo</valsi></term>
-        <listitem><para>structure word (from <jbophrase>cmalu valsi</jbophrase>)</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>lojbo</valsi></term>
-        <listitem><para>Lojbanic (from <jbophrase>logji bangu</jbophrase>)</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>lujvo</valsi></term>
-        <listitem><para>compound word (from <jbophrase>pluja valsi</jbophrase>)</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>mekso</valsi></term>
-        <listitem><para>Mathematical EXpression</para></listitem>
-      </varlistentry>
-    </variablelist>
+    <informaltable>
+      <colgroup/>
+        <tr><td><valsi>broda</valsi></td><td><para>1st assignable predicate</para></td></tr>
+        <tr><td><valsi>brode</valsi></td><td><para>2nd assignable predicate</para></td></tr>
+        <tr><td><valsi>brodi</valsi></td><td><para>3rd assignable predicate</para></td></tr>
+        <tr><td><valsi>brodo</valsi></td><td><para>4th assignable predicate</para></td></tr>
+        <tr><td><valsi>brodu</valsi></td><td><para>5th assignable predicate</para></td></tr>
+        <tr><td><valsi>cmavo</valsi></td><td><para>structure word (from <jbophrase>cmalu valsi</jbophrase>)</para></td></tr>
+        <tr><td><valsi>lojbo</valsi></td><td><para>Lojbanic (from <jbophrase>logji bangu</jbophrase>)</para></td></tr>
+        <tr><td><valsi>lujvo</valsi></td><td><para>compound word (from <jbophrase>pluja valsi</jbophrase>)</para></td></tr>
+        <tr><td><valsi>mekso</valsi></td><td><para>Mathematical EXpression</para></td></tr>
+    </informaltable>
     <para>It is important to understand that even though 
     <valsi>cmavo</valsi>, 
     <valsi>lojbo</valsi>, and 
@@ -2922,103 +2896,43 @@ This section contains examples of making and scoring lujvo. First, we will start
           </tr>
     </informaltable>
     <para> <indexterm type="general"><primary>gismu</primary><secondary>cultural</secondary></indexterm> Other scientific or mathematical terms:</para>
-    <variablelist>
-      <varlistentry>
-        <term><valsi>delno</valsi></term>
-        <listitem><para>candela</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>kelvo</valsi></term>
-        <listitem><para>kelvin</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>molro</valsi></term>
-        <listitem><para>mole</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>radno</valsi></term>
-        <listitem><para>radian</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>sinso</valsi></term>
-        <listitem><para>sine</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>stero</valsi></term>
-        <listitem><para>steradian</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>tanjo</valsi></term>
-        <listitem><para>tangent</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>xampo</valsi></term>
-        <listitem><para>ampere</para></listitem>
-      </varlistentry>
-    </variablelist>
+    <informaltable>
+      <colgroup/>
+        <tr><td><valsi>delno</valsi></td><td><para>candela</para></td></tr>
+        <tr><td><valsi>kelvo</valsi></td><td><para>kelvin</para></td></tr>
+        <tr><td><valsi>molro</valsi></td><td><para>mole</para></td></tr>
+        <tr><td><valsi>radno</valsi></td><td><para>radian</para></td></tr>
+        <tr><td><valsi>sinso</valsi></td><td><para>sine</para></td></tr>
+        <tr><td><valsi>stero</valsi></td><td><para>steradian</para></td></tr>
+        <tr><td><valsi>tanjo</valsi></td><td><para>tangent</para></td></tr>
+        <tr><td><valsi>xampo</valsi></td><td><para>ampere</para></td></tr>
+    </informaltable>
     <para> <indexterm type="general"><primary>gismu</primary><secondary>for Lojban source languages</secondary></indexterm>  <indexterm type="general"><primary>gismu</primary><secondary>for languages</secondary></indexterm> The gismu 
     <valsi>sinso</valsi> and 
     <valsi>tanjo</valsi> were only made non-algorithmically because they were identical (having been borrowed from a common source) in all the dictionaries that had translations. The other terms in this group are units in the international metric system; some metric units, however, were made by the ordinary process (usually because they are different in Chinese).</para>
     <para>Finally, there are the cultural gismu, which are also borrowed, but by modifying a word from one particular language, instead of using the multi-lingual gismu creation algorithm. Cultural gismu are used for words that have local importance to a particular culture; other cultures or languages may have no word for the concept at all, or may borrow the word from its home culture, just as Lojban does. In such a case, the gismu algorithm, which uses weighted averages, doesn't accurately represent the frequency of usage of the individual concept. Cultural gismu are not even required to be based on the six major languages.</para>
     <para>The six Lojban source languages:</para>
 
-    <variablelist>
-      <varlistentry>
-        <term><valsi>jungo</valsi></term>
-        <listitem><para>Chinese (from <quote xml:lang="zh">Zhong <superscript>1</superscript> guo <superscript>2</superscript></quote>)</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>glico</valsi></term>
-        <listitem><para>English</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>xindo</valsi></term>
-        <listitem><para>Hindi</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>spano</valsi></term>
-        <listitem><para>Spanish</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>rusko</valsi></term>
-        <listitem><para>Russian</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>xrabo</valsi></term>
-        <listitem><para>Arabic</para></listitem>
-      </varlistentry>
-    </variablelist>
+    <informaltable>
+      <colgroup/>
+        <tr><td><valsi>jungo</valsi></td><td><para>Chinese (from <quote xml:lang="zh">Zhong <superscript>1</superscript> guo <superscript>2</superscript></quote>)</para></td></tr>
+        <tr><td><valsi>glico</valsi></td><td><para>English</para></td></tr>
+        <tr><td><valsi>xindo</valsi></td><td><para>Hindi</para></td></tr>
+        <tr><td><valsi>spano</valsi></td><td><para>Spanish</para></td></tr>
+        <tr><td><valsi>rusko</valsi></td><td><para>Russian</para></td></tr>
+        <tr><td><valsi>xrabo</valsi></td><td><para>Arabic</para></td></tr>
+    </informaltable>
     <para> <indexterm type="general"><primary>gismu</primary><secondary>for countries</secondary></indexterm> Seven other widely spoken languages that were on the list of candidates for gismu-making, but weren't used:</para>
-    <variablelist>
-      <varlistentry>
-        <term><valsi>bengo</valsi></term>
-        <listitem><para>Bengali</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>porto</valsi></term>
-        <listitem><para>Portuguese</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>baxso</valsi></term>
-        <listitem><para>Bahasa Melayu/Bahasa Indonesia</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>ponjo</valsi></term>
-        <listitem><para>Japanese (from <quote>Nippon</quote>)</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>dotco</valsi></term>
-        <listitem><para>German (from <quote xml:lang="de">Deutsch</quote>)</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>fraso</valsi></term>
-        <listitem><para>French (from <quote xml:lang="fr">Français</quote>)</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>xurdo</valsi></term>
-        <listitem><para>Urdu</para></listitem>
-      </varlistentry>
-    </variablelist>
+    <informaltable>
+      <colgroup/>
+        <tr><td><valsi>bengo</valsi></td><td><para>Bengali</para></td></tr>
+        <tr><td><valsi>porto</valsi></td><td><para>Portuguese</para></td></tr>
+        <tr><td><valsi>baxso</valsi></td><td><para>Bahasa Melayu/Bahasa Indonesia</para></td></tr>
+        <tr><td><valsi>ponjo</valsi></td><td><para>Japanese (from <quote>Nippon</quote>)</para></td></tr>
+        <tr><td><valsi>dotco</valsi></td><td><para>German (from <quote xml:lang="de">Deutsch</quote>)</para></td></tr>
+        <tr><td><valsi>fraso</valsi></td><td><para>French (from <quote xml:lang="fr">Français</quote>)</para></td></tr>
+        <tr><td><valsi>xurdo</valsi></td><td><para>Urdu</para></td></tr>
+    </informaltable>
     <para> <indexterm type="general"><primary>continents</primary><secondary>gismu for</secondary></indexterm>  <indexterm type="general"><primary>gismu</primary><secondary>geographical</secondary></indexterm> (Urdu and Hindi began as the same language with different writing systems, but have now become somewhat different, principally in borrowed vocabulary. Urdu-speakers were counted along with Hindi-speakers when weights were assigned for gismu-making purposes.)</para>
     <para> <indexterm type="general"><primary>gismu</primary><secondary>ethnic</secondary></indexterm> Countries with a large number of speakers of any of the above languages (where the meaning of <quote>large</quote> is dependent on the specific language):</para>
     <para>
@@ -3138,93 +3052,40 @@ This section contains examples of making and scoring lujvo. First, we will start
       </para>
     <para> <indexterm type="general"><primary>gismu</primary><secondary>religious</secondary></indexterm> The continents (and oceanic regions) of the Earth:</para>
 
-    <variablelist>
-      <varlistentry>
-        <term><valsi>bemro</valsi></term>
-        <listitem><para>North American (from <jbophrase>berti merko</jbophrase>)</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>dzipo</valsi></term>
-        <listitem><para>Antarctican (from <jbophrase>cadzu cipni</jbophrase>)</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>ketco</valsi></term>
-        <listitem><para>South American (from <quote xml:lang="qu">Quechua</quote>)</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>friko</valsi></term>
-        <listitem><para>African</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>polno</valsi></term>
-        <listitem><para>Polynesian/Oceanic</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>ropno</valsi></term>
-        <listitem><para>European</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>xazdo</valsi></term>
-        <listitem><para>Asiatic</para></listitem>
-      </varlistentry>
-    </variablelist>
+    <informaltable>
+      <colgroup/>
+        <tr><td><valsi>bemro</valsi></td><td><para>North American (from <jbophrase>berti merko</jbophrase>)</para></td></tr>
+        <tr><td><valsi>dzipo</valsi></td><td><para>Antarctican (from <jbophrase>cadzu cipni</jbophrase>)</para></td></tr>
+        <tr><td><valsi>ketco</valsi></td><td><para>South American (from <quote xml:lang="qu">Quechua</quote>)</para></td></tr>
+        <tr><td><valsi>friko</valsi></td><td><para>African</para></td></tr>
+        <tr><td><valsi>polno</valsi></td><td><para>Polynesian/Oceanic</para></td></tr>
+        <tr><td><valsi>ropno</valsi></td><td><para>European</para></td></tr>
+        <tr><td><valsi>xazdo</valsi></td><td><para>Asiatic</para></td></tr>
+    </informaltable>
     <para>A few smaller but historically important cultures:</para>
-    <variablelist>
-      <varlistentry>
-        <term><valsi>latmo</valsi></term>
-        <listitem><para>Latin/Roman</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>srito</valsi></term>
-        <listitem><para>Sanskrit</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>xebro</valsi></term>
-        <listitem><para>Hebrew/Israeli/Jewish</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>xelso</valsi></term>
-        <listitem><para>Greek (from <quote xml:lang="el">Hellas</quote>)</para></listitem>
-      </varlistentry>
-    </variablelist>
+    <informaltable>
+      <colgroup/>
+        <tr><td><valsi>latmo</valsi></td><td><para>Latin/Roman</para></td></tr>
+        <tr><td><valsi>srito</valsi></td><td><para>Sanskrit</para></td></tr>
+        <tr><td><valsi>xebro</valsi></td><td><para>Hebrew/Israeli/Jewish</para></td></tr>
+        <tr><td><valsi>xelso</valsi></td><td><para>Greek (from <quote xml:lang="el">Hellas</quote>)</para></td></tr>
+    </informaltable>
     <para> <indexterm type="general"><primary>cultural words</primary><secondary>rafsi fu'ivla proposal for</secondary></indexterm>  <indexterm type="general"><primary>rafsi fu'ivla</primary></indexterm> Major world religions:</para>
-    <variablelist>
-      <varlistentry>
-        <term><valsi>budjo</valsi></term>
-        <listitem><para>Buddhist</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>dadjo</valsi></term>
-        <listitem><para>Taoist</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>muslo</valsi></term>
-        <listitem><para>Islamic/Moslem</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>xriso</valsi></term>
-        <listitem><para>Christian</para></listitem>
-      </varlistentry>
-    </variablelist>
+    <informaltable>
+      <colgroup/>
+        <tr><td><valsi>budjo</valsi></td><td><para>Buddhist</para></td></tr>
+        <tr><td><valsi>dadjo</valsi></td><td><para>Taoist</para></td></tr>
+        <tr><td><valsi>muslo</valsi></td><td><para>Islamic/Moslem</para></td></tr>
+        <tr><td><valsi>xriso</valsi></td><td><para>Christian</para></td></tr>
+    </informaltable>
     <para> <indexterm type="general"><primary>fu'ivla</primary><secondary>form for rafsi fu'ivla proposal</secondary></indexterm>  <indexterm type="general"><primary>CCVVCV fu'ivla</primary><secondary>and rafsi fu'ivla proposal</secondary></indexterm> A few terms that cover multiple groups of the above:</para>
-    <variablelist>
-      <varlistentry>
-        <term><valsi>jegvo</valsi></term>
-        <listitem><para>Jehovist (Judeo-Christian-Moslem)</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>semto</valsi></term>
-        <listitem><para>Semitic</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>slovo</valsi></term>
-        <listitem><para>Slavic</para></listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><valsi>xispo</valsi></term>
-        <listitem><para>Hispanic (New World Spanish)</para></listitem>
-      </varlistentry>
-    </variablelist>
+    <informaltable>
+      <colgroup/>
+        <tr><td><valsi>jegvo</valsi></td><td><para>Jehovist (Judeo-Christian-Moslem)</para></td></tr>
+        <tr><td><valsi>semto</valsi></td><td><para>Semitic</para></td></tr>
+        <tr><td><valsi>slovo</valsi></td><td><para>Slavic</para></td></tr>
+        <tr><td><valsi>xispo</valsi></td><td><para>Hispanic (New World Spanish)</para></td></tr>
+    </informaltable>
   </section>
   <section xml:id="section-rafsi-fuhivla">
     <title><anchor xml:id="c4s16"/>rafsi fu'ivla: a proposal</title>
