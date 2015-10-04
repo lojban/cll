@@ -399,6 +399,15 @@ table {
   border-collapse: collapse;
   page-break-inside: avoid;
 }
+
+/* Spacing between adjacent tables */
+.informaltable + .informaltable,
+.table + .informaltable,
+.informaltable + .table,
+.table + .table {
+  margin-top: 0.4em;
+}
+
 table p, table span {
   margin: 0px;
   padding: 0px;
@@ -406,7 +415,6 @@ table p, table span {
 }
 
 table td, table th {
-  padding: 0.2em;
   border-left: 1px dotted grey;
   border-right: 1px dotted grey;
   padding-right: 0.4em;
