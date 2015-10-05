@@ -428,9 +428,11 @@ table td, table th {
 table.vertsep > tr {
   margin-bottom: 0.4em;
   border-bottom: 1px dotted grey;
+  page-break-inside: avoid;
 }
 table.vertsep > tr:last-child {
   border-bottom: 0;
+  page-break-inside: avoid;
 }
 table tr td:first-child,
 table tr th:first-child {
