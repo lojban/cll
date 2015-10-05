@@ -400,6 +400,10 @@ table {
   page-break-inside: avoid;
 }
 
+table.allowbreaks {
+  page-break-inside: auto;
+}
+
 /* Spacing between adjacent tables */
 .informaltable + .informaltable,
 .table + .informaltable,
@@ -421,11 +425,11 @@ table td, table th {
   padding-left: 0.4em;
   vertical-align: top;
 }
-table.vertsep tr {
+table.vertsep > tr {
   margin-bottom: 0.4em;
   border-bottom: 1px dotted grey;
 }
-table.vertsep tr:last-child {
+table.vertsep > tr:last-child {
   border-bottom: 0;
 }
 table tr td:first-child,
