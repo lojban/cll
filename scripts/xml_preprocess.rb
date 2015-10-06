@@ -28,7 +28,14 @@ def table_row_by_words node
         word = words[word_index]
         unless word =~ %r{^\s*$}
           td = $document.parse("<td></td>").first
-          td.content = word
+          # Handle dashes
+          if word == '[-]'
+            td.content = '-'
+          elsif word == '-'
+            td.content = ''
+          else
+            td.content = word
+          end
 
           # Handle word-hyphen-quote, i.e.: lerfu-<quote>c</quote>,
           # which should stay together
