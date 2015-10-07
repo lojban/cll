@@ -40,6 +40,8 @@ end
 # $opts_where=((opts[:where].is_a? String) ? opts[:where].chomp : false)
 # $opts_search=((opts[:search].is_a? String) ? opts[:search].chomp : false)
 
+$stderr.puts "Generating glossary entries; this might take a while."
+
 unless opts[:testing]
     size=File.size?("#{builddir}/jbovlaste.xml")
     if ! size or size < 100 or %x{find "#{builddir}/jbovlaste.xml" -mtime +1}.length > 1
@@ -52,7 +54,8 @@ end
 coder = HTMLEntities.new
 
 tree=Nokogiri::XML(open "#{builddir}/cll_preglossary.xml")
-find_lojban_words( tree ).sort { |a,b| slugify(a.text.to_s).downcase <=> slugify(b.text.to_s).downcase }.map { |x| x.text.to_s.gsub( %r{\.}, '' ) }.uniq.each do |word|
+find_lojban_words( tree ).select { |x| x.attributes['valid'].to_s != 'maybe' }.sort { |a,b| slugify(a.text.to_s).downcase <=> slugify(b.text.to_s).downcase }.map { |x| x.text.to_s.gsub( %r{\.}, '' ) }.uniq.each do |word|
+  $stderr.print "#{word} "
   if ! initial_letter
     puts %q{
 <glossary>
@@ -110,11 +113,13 @@ definitions.  These definitions are here simply as a quick reference.
     end
 
     if definition =~ %r{^\s*$}
-      definition=%Q{NO JBOVLASTE DEFINITION FOR "#{word}" FOUND!}
-      $stderr.puts definition
+      definition=nil
+      $stderr.puts %Q{NO JBOVLASTE DEFINITION FOR "#{word}" FOUND!}
     end
   end
-  puts %Q{
+
+  if definition
+    puts %Q{
 <glossentry xml:id="valsi-#{slug}">
 <glossterm>#{word}</glossterm>
 <glossdef>
@@ -122,6 +127,12 @@ definitions.  These definitions are here simply as a quick reference.
 </glossdef>
 </glossentry>
 }
+  end
+end
+$stderr.puts
+
+find_lojban_words( tree ).select { |x| x.attributes['valid'].to_s == 'maybe' }.sort { |a,b| slugify(a.text.to_s).downcase <=> slugify(b.text.to_s).downcase }.map { |x| x.text.to_s.gsub( %r{\.}, '' ) }.uniq.each do |word|
+  $stderr.puts "valid='maybe' found for word #{word}"
 end
 
 if initial_letter

@@ -108,7 +108,7 @@ end
 # Wrap node in a glossary entry
 def glossify node, orignode
   $stderr.puts "glosscheck: #{orignode} -- #{orignode['glossary']} -- #{orignode['valid']}"
-  if orignode['glossary'] == 'false' or orignode['valid'] == 'false'
+  if orignode['glossary'] == 'false' or orignode['valid'] == 'false' or orignode['valid'] == 'maybe'
     return node
   else
     node.replace(%Q{<glossterm linkend="valsi-#{slugify(orignode.text)}">#{node}</glossterm>})
@@ -308,7 +308,7 @@ end
 ## <valsi>risnyjelca</valsi> (heart burn) might have a place structure like:</para>
 $document.css('valsi').each do |node|
   # We make a glossary entry unless it's marked valid=false
-  if node[:valid] == 'false'
+  if node[:valid] == 'false' or node[:valid] == 'maybe'
     convert!( node: node, newname: 'foreignphrase' )
   else
     orignode = node.dup
