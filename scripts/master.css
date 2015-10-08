@@ -532,11 +532,10 @@ hr {
 /* See https://sourceforge.net/p/docbook/bugs/1366/ for why the + is
  * there
  */
-p.twocolumn + div.variablelist,
-p.twocolumn div.variablelist {
-  -webkit-column-count: 3; /* Chrome, Safari, Opera */
-  -moz-column-count: 3; /* Firefox */
-  column-count: 3;
+p.twocolumn + div {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
   margin-top: .5em;
   margin-bottom: .5em;
 }
