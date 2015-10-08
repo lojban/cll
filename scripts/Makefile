@@ -101,6 +101,8 @@ $(builddir)/cll.epub: $(builddir)/xhtml-nochunks.done
 
 .PHONY: epub_web
 epub_web: epub
+	mkdir -p ~/public_html/media/public/cll_build
+	rm -rf ~/public_html/media/public/cll_build/cll.epub
 	cp $(builddir)/cll.epub ~/public_html/media/public/cll_build/cll.epub
 
 #*******
@@ -114,6 +116,8 @@ $(builddir)/cll.mobi: $(builddir)/xhtml-nochunks.done
 
 .PHONY: mobi_web
 mobi_web: mobi
+	mkdir -p ~/public_html/media/public/cll_build
+	rm -rf ~/public_html/media/public/cll_build/cll.mobi
 	cp $(builddir)/cll.mobi ~/public_html/media/public/cll_build/cll.mobi
 
 #*******
@@ -135,6 +139,8 @@ $(builddir)/prince_pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2htm
 
 .PHONY: prince_pdf_web
 prince_pdf_web: prince_pdf
+	mkdir -p ~/public_html/media/public/cll_build
+	rm -rf ~/public_html/media/public/cll_build/cll_prince.pdf
 	cp $(builddir)/cll_prince.pdf ~/public_html/media/public/cll_build/cll_prince.pdf
 
 #*******
