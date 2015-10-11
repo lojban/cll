@@ -374,7 +374,7 @@ dd {
   margin-bottom: 0pt;
 }
 
-pre {
+pre, blockquote {
   border-spacing: 0;
   margin: 0;
   border: 0;
@@ -397,10 +397,32 @@ table {
   empty-cells: hide;
   border: none;
   border-collapse: collapse;
+}
+/* Keep tables with their titles */
+div.table, div.informaltable {
   page-break-inside: avoid;
 }
 
-table.allowbreaks {
+/* So the issue here is:
+ *
+ * docbook allows you to specify styling info in the source, like
+ * <table role="nobreaks"> or whatever.
+ *
+ * But.
+ *
+ * THe HTML is <div class="table"><table class="nobreaks">, which is
+ * fine, except that the tables *title* is inside the div, not the
+ * table.
+ *
+ * So if you watn to do things to a table *and* its title, well,
+ * sucks to be you.  I'm handlign it by <para
+ * role="nobreaks"><table>... and then in the css it's .nobreaks +
+ * div.table {...
+ *
+ * WHich is freaking lame, but seems to work fine.
+ *
+ */
+.allowbreaks, div.allowbreaks, .allowbreaks + div.table, .allowbreaks + div.informaltable, .allowbreaks + div.example {
   page-break-inside: auto;
 }
 
@@ -452,7 +474,6 @@ table.rotated table {
   padding: 0;
   border: 0;
   margin: 0;
-  page-break-inside: avoid;
 }
 
 .selbri {

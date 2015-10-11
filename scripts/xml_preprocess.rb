@@ -128,8 +128,12 @@ def tableify node
   node.children.first.add_previous_sibling "#{caption}<colgroup/>"
 
   # Save the old name
-  node['role'] = node.name
-  node['class'] = node.name
+  if ! node['role']
+    node['role'] = node.name
+  end
+  if ! node['class']
+    node['class'] = node.name
+  end
 
   # Turn it into a table
   if node.css('caption').length > 0
