@@ -151,11 +151,19 @@ def table_split( node, css_string )
   if node['split'] != 'false' && node.css(css_string).length > 0 && node.css(css_string).length != node.children.length
     newnode = node.clone
     newnode.children.each do |child|
+      unless child.element?
+        next
+      end
+
       if child.css(css_string).length == 0
         child.remove
       end
     end
     node.children.each do |child|
+      unless child.element?
+        next
+      end
+
       if child.css(css_string).length > 0
         child.remove
       end
@@ -172,6 +180,8 @@ end
 
 $document = Nokogiri::XML(File.open ARGV[0]) do |config|
   config.default_xml.noblanks
+  config.strict
+  config.options = Nokogiri::XML::ParseOptions::DTDLOAD   # Needed for the external DTD to be loaded
 end
 
 ##      <lujvo-making>
@@ -190,7 +200,7 @@ $document.css('lujvo-making').each do |node|
   node.css('veljvo').each { |e| convert!( node: e, newname: 'foreignphrase', lang: 'jbo' ) ; indexify!(node: e, indextype: 'lojban-phrase') ; e.replace("<para>from #{e}</para>") }
 
   # Make things into rows
-  node.children.each { |e| e.replace("<tr><td>#{e}</td></tr>") }
+  node.children.each { |e| e.element? && e.replace("<tr><td>#{e}</td></tr>") }
 
   tableify node
 end
@@ -215,7 +225,7 @@ end
 #       
 #     </interlinear-gloss>
 $document.css('interlinear-gloss').each do |node|
-  unless (node.xpath('jbo').length > 0 or node.xpath('jbophrase').length > 0) and (node.xpath('natlang').length > 0 or node.xpath('gloss').length > 0 or node.xpath('dbmath').length > 0 or node.xpath('mmlmath').length > 0)
+  unless (node.css('jbo').length > 0 or node.css('jbophrase').length > 0) and (node.css('natlang').length > 0 or node.css('gloss').length > 0 or node.css('dbmath').length > 0 or node.css('mmlmath').length > 0)
     abort "Found a bad interlinear-gloss element; it must have one jbo or jbophrase sub-element and at least one gloss or natlang or dbmath/mmlmath sub-element.  Context: #{node.to_xml}"
   end
 
@@ -264,7 +274,7 @@ $document.css('interlinear-gloss-itemized').each do |node|
         convert!( node: grandchild, newname: 'para' )
       end
 
-      child.children.each { |e| e.replace("<td>#{e}</td>") }
+      child.children.each { |e| e.element? && e.replace("<td>#{e}</td>") }
       child['class'] = child.name
       child.name = 'tr'
     else
@@ -449,7 +459,7 @@ $document.css('cmavo-list').each do |node|
         convert!( node: grandchild, newname: 'para', role: role )
       end
 
-      child.children.each { |e| e.replace("<td class='#{e['role']}'>#{e}</td>") }
+      child.children.each { |e| e.element? && e.replace("<td class='#{e['role']}'>#{e}</td>") }
       convert!( node: child, newname: 'tr' )
     else
       abort "Bad node in cmavo-list: #{child.to_xml}"
