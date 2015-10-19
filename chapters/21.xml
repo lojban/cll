@@ -164,7 +164,7 @@
 <anchor xreflabel="YACC rule #517" xml:id="cll_yacc-517"/> CEhE_517         /* afterthought term list connective */
 %token 
 <anchor xml:id="y518"/>
-<anchor xreflabel="YACC rule #518" xml:id="cll_yacc-518"/> CMENE_518        /* names; require consonant end, then pause no
+<anchor xreflabel="YACC rule #518" xml:id="cll_yacc-518"/> CMEVLA_518        /* names; require consonant end, then pause no
                                    LA or DOI selma'o embedded, pause before if
 
                                    vowel initial and preceded by a vowel */
@@ -694,9 +694,8 @@ the 900 series rules are found in the lexer.  */
 <anchor xreflabel="YACC rule #3" xml:id="cll_yacc-3"/> text_C_3                :  
 <xref linkend="cll_yacc-4"/>
    /* Only indicators which follow certain selma'o:
-    cmene, 
 <xref linkend="cll_yacc-607"/>, 
-<xref linkend="cll_yacc-571"/>, and the lexer_K and lexer_S I_roots and compounds,
+<xref linkend="cll_yacc-571"/>, and also cmevla, the lexer_K and lexer_S I_roots and compounds,
     and at the start of text(_0), will survive the lexer; all other valid ones
     will be absorbed.  The only strings for which indicators generate a
     potential ambiguity are those which contain NAI.  An indicator cannot be
@@ -1693,7 +1692,7 @@ the 900 series rules are found in the lexer.  */
 
 
 <anchor xml:id="y404"/>
-<anchor xreflabel="YACC rule #404" xml:id="cll_yacc-404"/> cmene_404               :  
+<anchor xreflabel="YACC rule #404" xml:id="cll_yacc-404"/> cmevla_404               :  
 <xref linkend="cll_yacc-405"/>
                         |  
 <xref linkend="cll_yacc-405"/>
@@ -1701,12 +1700,12 @@ the 900 series rules are found in the lexer.  */
                         ;
 
 <anchor xml:id="y405"/>
-<anchor xreflabel="YACC rule #405" xml:id="cll_yacc-405"/> cmene_A_405             :  
+<anchor xreflabel="YACC rule #405" xml:id="cll_yacc-405"/> cmevla_A_405             :  
 <xref linkend="cll_yacc-518"/>  /* pause */
                         |  
 <xref linkend="cll_yacc-405"/>
 <xref linkend="cll_yacc-518"/>  /* pause*/
-/* multiple CMENE are identified morphologically (by the lexer) - - separated by
+/* multiple CMEVLA are identified morphologically (by the lexer) - - separated by
    consonant &amp; pause */
                         ;
 
@@ -3872,7 +3871,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>cmene_404</term>
+        <term>cmevla_404</term>
         <listitem>
           <para>
           <xref linkend="cll_yacc-97"/>, 
@@ -3881,7 +3880,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>CMENE_518</term>
+        <term>CMEVLA_518</term>
         <listitem>
           <para>
             <xref linkend="cll_yacc-405"/>
@@ -3889,7 +3888,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>cmene_A_405</term>
+        <term>cmevla_A_405</term>
         <listitem>
           <para>
           <xref linkend="cll_yacc-404"/>, 
@@ -7070,7 +7069,7 @@ the 900 series rules are found in the lexer.  */
         <!-- <xref linkend="cll_yacc-0"/> --> text 
         <subscript>0</subscript>=</term>
         <listitem>
-          <para>[NAI ...] [CMENE ... # | (indicators &amp; free ...)] [joik-jek] text-1 
+          <para>[NAI ...] [CMEVLA ... # | (indicators &amp; free ...)] [joik-jek] text-1 
           <anchor xml:id="b2"/>
           <anchor xreflabel="BNF rule #2" xml:id="cll_bnf-2"/>
           <!-- <xref linkend="cll_yacc-2"/> --></para>
@@ -7360,7 +7359,7 @@ the 900 series rules are found in the lexer.  */
         <term>sumti-6 
         <subscript>97</subscript>=</term>
         <listitem>
-          <para>(LAhE # | NAhE BO #) [relative-clauses] sumti /LUhU#/ | KOhA # | lerfu-string /BOI#/ | LA # [relative-clauses] CMENE ... # | (LA | LE) # sumti-tail /KU#/ | LI # mex /LOhO#/ | ZO any-word # | LU text /LIhU#/ | LOhU any-word ... LEhU # | ZOI any-word anything any-word # 
+          <para>(LAhE # | NAhE BO #) [relative-clauses] sumti /LUhU#/ | KOhA # | lerfu-string /BOI#/ | LA # [relative-clauses] CMEVLA ... # | (LA | LE) # sumti-tail /KU#/ | LI # mex /LOhO#/ | ZO any-word # | LU text /LIhU#/ | LOhU any-word ... LEhU # | ZOI any-word anything any-word # 
           <anchor xml:id="b111"/>
           <anchor xreflabel="BNF rule #111" xml:id="cll_bnf-111"/>
           <!-- <xref linkend="cll_yacc-111"/> --></para>
@@ -7913,7 +7912,7 @@ the 900 series rules are found in the lexer.  */
         <term>free 
         <subscript>32</subscript>=</term>
         <listitem>
-          <para>SEI # [terms [CU #]] selbri /SEhU/ | SOI # sumti [sumti] /SEhU/ | vocative [relative-clauses] selbri [relative-clauses] /DOhU/ | vocative [relative-clauses] CMENE ... # [relative-clauses] /DOhU/ | vocative [sumti] /DOhU/ | (number | lerfu-string) MAI | TO text /TOI/ | XI # (number | lerfu-string) /BOI/ | XI # VEI # mex /VEhO/ 
+          <para>SEI # [terms [CU #]] selbri /SEhU/ | SOI # sumti [sumti] /SEhU/ | vocative [relative-clauses] selbri [relative-clauses] /DOhU/ | vocative [relative-clauses] CMEVLA ... # [relative-clauses] /DOhU/ | vocative [sumti] /DOhU/ | (number | lerfu-string) MAI | TO text /TOI/ | XI # (number | lerfu-string) /BOI/ | XI # VEI # mex /VEhO/ 
           <anchor xml:id="b415"/>
           <anchor xreflabel="BNF rule #415" xml:id="cll_bnf-415"/>
           <!-- <xref linkend="cll_yacc-415"/> --></para>
@@ -8163,7 +8162,7 @@ the 900 series rules are found in the lexer.  */
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>CMENE</term>
+        <term>CMEVLA</term>
         <listitem>
           <para>
           <xref linkend="cll_bnf-32"/>
