@@ -19,7 +19,7 @@
     <quote>derivational morphology</quote>: the capability of building new words from old words. In addition, the form of words tells us something about their grammatical uses, and sometimes about the means by which they entered the language. Lojban has very orderly rules for the formation of words of various types, both the words that already exist and new words yet to be created by speakers and writers.</para>
     
     <para> <indexterm type="general"><primary>morphology</primary><secondary>conventions for</secondary></indexterm> A stream of Lojban sounds can be uniquely broken up into its component words according to specific rules. These so-called 
-    <quote>morphology rules</quote> are summarized in this chapter. (However, a detailed algorithm for breaking sounds into words has not yet been fully debugged, and so is not presented in this book.) First, here are some conventions used to talk about groups of Lojban letters, including vowels and consonants.</para>
+    <quote>morphology rules</quote> are summarized in this chapter. (A detailed algorithm for breaking sounds into words is part of the PEG grammar at the end of the book.) First, here are some conventions used to talk about groups of Lojban letters, including vowels and consonants.</para>
     
     <orderedlist>
       <listitem>
@@ -280,7 +280,7 @@
             <td>VV-form</td>
             <td><valsi>.au</valsi></td>
             <td><valsi>.ei</valsi></td>
-            <td><valsi>.ia</valsi></td>
+            <td><valsi>ia</valsi></td>
             <td><valsi>o'u</valsi></td>
             <td><valsi>u'e</valsi></td>
           </tr>
@@ -308,17 +308,17 @@
     
     <xref linkend="section-morphology-introduction"/>, but also the following ten additional diphthongs:</para>
     <simplelist type="horiz" columns="5">
-      <member><valsi>.ia</valsi></member>
-      <member><valsi>.ie</valsi></member>
-      <member><valsi>.ii</valsi></member>
-      <member><valsi>.io</valsi></member>
-      <member><valsi>.iu</valsi></member>
+      <member><valsi>ia</valsi></member>
+      <member><valsi>ie</valsi></member>
+      <member><valsi>ii</valsi></member>
+      <member><valsi>io</valsi></member>
+      <member><valsi>iu</valsi></member>
       
-      <member><valsi>.ua</valsi></member>
-      <member><valsi>.ue</valsi></member>
-      <member><valsi>.ui</valsi></member>
-      <member><valsi>.uo</valsi></member>
-      <member><valsi>.uu</valsi></member>
+      <member><valsi>ua</valsi></member>
+      <member><valsi>ue</valsi></member>
+      <member><valsi>ui</valsi></member>
+      <member><valsi>uo</valsi></member>
+      <member><valsi>uu</valsi></member>
     </simplelist>
     <para>In addition, cmavo can have the form 
     <morphology>Cy</morphology>, a consonant followed by the letter 
@@ -475,7 +475,7 @@
     </orderedlist>
     <para> <indexterm type="general"><primary>cmevla form</primary><secondary>contrasted with brivla form</secondary></indexterm>  <indexterm type="general"><primary>cmavo form</primary><secondary>contrasted with brivla form</secondary></indexterm>  <indexterm type="general"><primary>brivla form</primary><secondary>contrasted with cmevla form</secondary></indexterm>  <indexterm type="general"><primary>brivla form</primary><secondary>contrasted with cmavo form</secondary></indexterm>  <indexterm type="general"><primary>brivla</primary><secondary>recognition of</secondary></indexterm> The presence of a consonant pair distinguishes brivla from cmavo and their compounds. The final vowel distinguishes brivla from cmevla, which always end in a consonant. Thus 
     <jbophrase>da'amei</jbophrase> must be a compound cmavo because it lacks a consonant pair; 
-    <valsi>lojban.</valsi> must be a name because it lacks a final vowel.</para>
+    <valsi>.lojban.</valsi> must be a name because it lacks a final vowel.</para>
     <para> <indexterm type="general"><primary>consonant pairs</primary><secondary>letter y within</secondary></indexterm>  <indexterm type="general"><primary>y</primary><secondary>letter</secondary><tertiary>between letters of consonant pair</tertiary></indexterm>  <indexterm type="general"><primary>consonant pairs</primary><secondary>in brivla</secondary></indexterm>  <indexterm type="general"><primary>brivla</primary><secondary>consonant pairs in</secondary></indexterm> Thus, 
     <valsi valid='maybe'>bisycla</valsi> has the consonant pair 
     <morphology>sc</morphology> in the first five non- 
@@ -1114,7 +1114,7 @@ There is also a different way of building lujvo, or rather phrases which are gra
         <anchor xml:id="c4e6d14"/>
       </title>
       <lujvo-making>
-        <jbo>kulnr,farsi zei lolgai</jbo>
+        <jbo>kulnrfarsi zei lolgai</jbo>
         <gloss><quote>Farsi floor-cover</quote></gloss>
         <natlang>Persian rug</natlang>
       </lujvo-making>
@@ -1210,7 +1210,7 @@ There is also a different way of building lujvo, or rather phrases which are gra
       <title>
         <anchor xml:id="c4e7d2"/>
       </title>
-      <jbophrase>me la spagetis.</jbophrase>
+      <jbophrase>me la .spagetis.</jbophrase>
     </example>
     <para role="indent">One of these expedients is often quite sufficient when you need a word quickly in conversation. (This can make it easier to get by when you do not yet have full command of the Lojban vocabulary, provided you are talking to someone who will recognize the borrowing.)</para>
     
@@ -1270,7 +1270,7 @@ There is also a different way of building lujvo, or rather phrases which are gra
       </listitem>
       <listitem>
         <para> <indexterm type="general"><primary>fu'ivla categorizer</primary><secondary>selection consideration for</secondary></indexterm>  <indexterm type="general"><primary>l-hyphen</primary><secondary>use of</secondary></indexterm> Prefix the result of steps 1-5 with a 4-letter rafsi that categorizes the fu'ivla into a 
-        <quote>topic area</quote>. It is only safe to use a 4-letter rafsi; short rafsi sometimes produce invalid fu'ivla. Hyphenate the rafsi to the rest of the fu'ivla with an 
+        <quote>topic area</quote>. It is only safe to use a single 4-letter or CVC-form rafsi; other rafsi sometimes produce invalid fu'ivla. Hyphenate the rafsi to the rest of the fu'ivla with an 
         r-hyphen; if that would produce a double 
         <letteral>r</letteral>, use an 
         n-hyphen instead; if the rafsi ends in 
@@ -1278,14 +1278,13 @@ There is also a different way of building lujvo, or rather phrases which are gra
         <letteral>n</letteral> (or vice versa), or if the rafsi ends in "r" and the rest of the fu'ivla begins with "tc", "ts", "dj", or "dz" (using "n" would result in a phonotactically impermissible cluster), use an 
         l-hyphen. (This is the only use of 
         l-hyphen in Lojban.)</para>
-        <para>Alternatively, if a CVC-form short rafsi is available it can be used instead of the long rafsi.</para>
         
       </listitem>
       <listitem>
         <para>Remember that the stress necessarily appears on the penultimate (next-to-the-last) syllable.</para>
       </listitem>
     </orderedlist>
-    <para>  In this section, the hyphen is set off with commas in the examples, but these commas are not required in writing, and the hyphen need not be pronounced as a separate syllable.</para>
+    <para>  In this section, the hyphen syllable is set off with commas in the examples, but these commas are not required in writing.</para>
     <para>Here are a few examples:</para>
     <example role="lojbanization-example" xml:id="example-random-id-ufin">
       <title>
@@ -1369,7 +1368,7 @@ There is also a different way of building lujvo, or rather phrases which are gra
         <natlang>brie <comment>(from French)</comment></natlang>
         
         <jbo>bri <comment>(Lojbanize)</comment></jbo>
-        <jbo>cirl,r,bri <comment>(prefix rafsi)</comment></jbo>
+        <jbo>cir,lr,bri <comment>(prefix rafsi)</comment></jbo>
       </lojbanization>
     </example>
     <para role="noindent">  where 
@@ -1390,7 +1389,7 @@ There is also a different way of building lujvo, or rather phrases which are gra
         <natlang>cobra</natlang>
         
         <jbo>kobra <comment>(Lojbanize)</comment></jbo>
-        <jbo>sinc,r,kobra <comment>(prefix rafsi)</comment></jbo>
+        <jbo>sin,cr,kobra <comment>(prefix rafsi)</comment></jbo>
       </lojbanization>
     </example>
     <para role="noindent">  where 
@@ -1410,16 +1409,15 @@ There is also a different way of building lujvo, or rather phrases which are gra
       <lojbanization>
         <natlang>quark</natlang>
         
-        <jbo>kuark <comment>(Lojbanize)</comment></jbo>
-        <jbo>kuarka <comment>(add final vowel)</comment></jbo>
-        <jbo>sask,r,kuarka <comment>(prefix rafsi)</comment></jbo>
+        <jbo>ku'ark <comment>(Lojbanize)</comment></jbo>
+        <jbo>ku'arka <comment>(add final vowel)</comment></jbo>
+        <jbo>sas,kr,ku'arka <comment>(prefix rafsi)</comment></jbo>
       </lojbanization>
     </example>
     <para role="noindent"> <indexterm type="general"><primary>allowable diphthongs</primary><secondary>in gismu and lujvo contrasted with in fu'ivla</secondary></indexterm>  <indexterm type="general"><primary>allowable diphthongs</primary><secondary>in fu'ivla contrasted with in gismu and lujvo</secondary></indexterm>  <indexterm type="general"><primary>diphthongs</primary><secondary>in fu'ivla</secondary></indexterm>  <indexterm type="general"><primary>fu'ivla</primary><secondary>diphthongs in</secondary></indexterm> where 
     <rafsi>sask-</rafsi> represents 
     <valsi>saske</valsi> (<quote>science</quote>). Note the extra vowel 
-    <letteral>a</letteral> added to the end of the word, and the diphthong 
-    <diphthong>ua</diphthong>, which never appears in gismu or lujvo, but may appear in fu'ivla.</para>
+    <letteral>a</letteral> added to the end of the word.</para>
     <example role="lojbanization-example" xml:id="example-random-id-FTfQ">
       <title>
         <indexterm type="example"><primary>syllabic pronunciations of consonants</primary><secondary>in fu'ivla category attachment</secondary></indexterm> 
@@ -1429,8 +1427,8 @@ There is also a different way of building lujvo, or rather phrases which are gra
       <lojbanization>
         <natlang xml:lang="ko">자모 <comment>(from Korean)</comment></natlang>
         <jbo>djamo <comment>(Lojbanize)</comment></jbo>
-        <jbo>lerf,r,djamo <comment>(prefix rafsi)</comment></jbo>
-        <jbo>ler,l,djamo <comment>(prefix rafsi)</comment></jbo>
+        <jbo>ler,fr,djamo <comment>(prefix rafsi)</comment></jbo>
+        <jbo>le,rl,djamo <comment>(prefix rafsi)</comment></jbo>
       </lojbanization>
     </example>
     <para role="noindent">where 
@@ -1439,7 +1437,7 @@ There is also a different way of building lujvo, or rather phrases which are gra
     
     <para> <indexterm type="general"><primary>fu'ivla categorizer</primary><secondary>for distinguishing fu'ivla form</secondary></indexterm>  <indexterm type="general"><primary>fu'ivla</primary><secondary>disambiguation of</secondary></indexterm> The use of the prefix helps distinguish among the many possible meanings of the borrowed word, depending on the field. As it happens, 
     <valsi>spageti</valsi> and 
-    <valsi>kuarka</valsi> are valid Stage 4 fu'ivla, but 
+    <valsi>ku'arka</valsi> are valid Stage 4 fu'ivla, but 
     <valsi valid="false">xaceru</valsi> looks like a compound cmavo, and 
     <valsi valid="false">kobra</valsi> like a gismu.</para>
     <para> <indexterm type="general"><primary>fu'ivla categorizer</primary><secondary>for distinguishing specialized meanings</secondary></indexterm> For another example, 
@@ -1479,7 +1477,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e7d9"/>
       </title>
       <lojbanization>
-        <jbo role="pronunciation">bang,r,blgaria</jbo>
+        <jbo role="pronunciation">ban,gr,blgara</jbo>
         <natlang>Bulgarian <comment>(in language)</comment></natlang>
         
       </lojbanization>
@@ -1492,7 +1490,7 @@ The prefix method would render the mathematical concept as
 <indexterm type="example"><primary>Bulgarian</primary></indexterm>
       </title>
       <lojbanization>
-        <jbo role="pronunciation">kuln,r,blgaria</jbo>
+        <jbo role="pronunciation">kul,nr,blgara</jbo>
         <natlang>Bulgarian <comment>(in culture)</comment></natlang>
         
       </lojbanization>
@@ -1509,7 +1507,7 @@ The prefix method would render the mathematical concept as
 <indexterm type="example"><primary>syllabic pronunciations of consonants</primary><secondary>in fu'ivla</secondary></indexterm>  
       </title>
       <lojbanization>
-        <jbo role="pronunciation">gugd,r,blgaria</jbo>
+        <jbo role="pronunciation">gug,dr,blgara</jbo>
         <natlang>Bulgaria <comment>(the country)</comment></natlang>
       </lojbanization>
     </example>
@@ -1521,7 +1519,7 @@ The prefix method would render the mathematical concept as
 <indexterm type="example"><primary>syllabic pronunciations of consonants</primary><secondary>in fu'ivla</secondary></indexterm>  
       </title>
       <lojbanization>
-        <jbo role="pronunciation">bang,r,kore,a</jbo>
+        <jbo role="pronunciation">ban,gr,kore'a</jbo>
         <natlang>Korean <comment>(the language)</comment></natlang>
         
       </lojbanization>
@@ -1538,7 +1536,7 @@ The prefix method would render the mathematical concept as
 <indexterm type="example"><primary>syllabic pronunciations of consonants</primary><secondary>in fu'ivla</secondary></indexterm>  
       </title>
       <lojbanization>
-        <jbo role="pronunciation">kuln,r,kore,a</jbo>
+        <jbo role="pronunciation">kul,nr,kore'a</jbo>
         <natlang>Korean <comment>(the culture)</comment></natlang>
         
       </lojbanization>
@@ -1547,7 +1545,7 @@ The prefix method would render the mathematical concept as
 
 <indexterm type="general"><primary>Navajo</primary><secondary>example</secondary></indexterm>
 
-      <indexterm type="general"><primary>fu'ivla</primary><secondary>considerations for choosing basis word</secondary></indexterm>  <indexterm type="general"><primary>fu'ivla</primary><secondary>with invalid diphthongs</secondary></indexterm>  <indexterm type="general"><primary>invalid diphthongs</primary><secondary>in fu'ivla</secondary></indexterm> Note the commas in 
+      <indexterm type="general"><primary>fu'ivla</primary><secondary>considerations for choosing basis word</secondary></indexterm>  <indexterm type="general"><primary>fu'ivla</primary><secondary>with invalid diphthongs</secondary></indexterm>  <indexterm type="general"><primary>invalid diphthongs</primary><secondary>in fu'ivla</secondary></indexterm> Note the apostrophes in 
     <xref linkend="example-random-id-qJGv"/> and 
     <xref linkend="example-random-id-qjh0"/>, used because 
     <diphthong>ea</diphthong> is not a valid diphthong in Lojban. Arguably, some form of the native name 
@@ -1574,7 +1572,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e8d1"/>
       </title>
       <lojbanization>
-        <jbo>djim.</jbo>
+        <jbo>.djim.</jbo>
         <natlang>Jim</natlang>
       </lojbanization>
     </example>
@@ -1588,7 +1586,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e8d2"/>
       </title>
       <lojbanization>
-        <jbo>djein.</jbo>
+        <jbo>.djein.</jbo>
         <natlang>Jane</natlang>
       </lojbanization>
     </example>
@@ -1617,7 +1615,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e8d4"/>
       </title>
       <lojbanization>
-        <jbo>pit.</jbo>
+        <jbo>.pit.</jbo>
         <natlang>Pete</natlang>
         
       </lojbanization>
@@ -1632,7 +1630,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e8d5"/>
       </title>
       <lojbanization>
-        <jbo>katrinas.</jbo>
+        <jbo>.katrinas.</jbo>
         <natlang>Katrina</natlang>
         
       </lojbanization>
@@ -1668,7 +1666,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e8d7"/>
       </title>
       <lojbanization>
-        <jbo>katis.</jbo>
+        <jbo>.katis.</jbo>
         <natlang>Cathy</natlang>
         
       </lojbanization>
@@ -1683,7 +1681,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e8d8"/>
       </title>
       <lojbanization>
-        <jbo>keit.</jbo>
+        <jbo>.keit.</jbo>
         <natlang>Kate</natlang>
         
       </lojbanization>
@@ -1697,7 +1695,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e8d9"/>
       </title>
       <lojbanization>
-        <jbo>djan. braun.</jbo>
+        <jbo>.djan. braun.</jbo>
       </lojbanization>
     </example>
     <para role="noindent">and</para>
@@ -1708,7 +1706,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e8d10"/>
       </title>
       <lojbanization>
-        <jbo>djanbraun.</jbo>
+        <jbo>.djanbraun.</jbo>
       </lojbanization>
     </example>
     <para role="noindent">are both valid Lojbanizations of 
@@ -1716,11 +1714,11 @@ The prefix method would render the mathematical concept as
     
     <para> <indexterm type="general"><primary>names</primary><secondary>authority for</secondary></indexterm>  <indexterm type="general"><primary>cmevla</primary><secondary>authority for</secondary></indexterm> The final arbiter of the correct form of a name is the person doing the naming, although most cultures grant people the right to determine how they want their own name to be spelled and pronounced. The English name 
     <quote>Mary</quote> can thus be Lojbanized as 
-    <cmevla>meris.</cmevla>, 
-    <cmevla>maris.</cmevla>, 
-    <cmevla>meiris.</cmevla>, 
-    <cmevla>merix.</cmevla>, or even 
-    <cmevla>marys.</cmevla>. The last alternative is not pronounced much like its English equivalent, but may be desirable to someone who values spelling over pronunciation. The final consonant need not be an 
+    <cmevla>.meris.</cmevla>, 
+    <cmevla>.maris.</cmevla>, 
+    <cmevla>.meiris.</cmevla>, 
+    <cmevla>.merix.</cmevla>, or even 
+    <cmevla>.marys.</cmevla>. The last alternative is not pronounced much like its English equivalent, but may be desirable to someone who values spelling over pronunciation. The final consonant need not be an 
     <letteral>s</letteral>; there must, however, be some Lojban consonant at the end.</para>
     <para> <indexterm type="general"><primary>names</primary><secondary>restrictions on form of</secondary></indexterm>  <indexterm type="general"><primary>cmevla</primary><secondary>restrictions on form of</secondary></indexterm> Names are not permitted to have the sequences 
     <valsi>la</valsi>, 
@@ -1729,22 +1727,6 @@ The prefix method would render the mathematical concept as
     <valsi>la</valsi>, or whatever, ended in a consonant without pause, which is impossible.</para>
     <para> 
 
-<indexterm type="general"><primary>Nederlands</primary><secondary>example</secondary></indexterm>
-
-  <indexterm type="general"><primary>Laplace</primary><secondary>example</secondary></indexterm> For example, the invalid name 
-    <cmevla>laplas.</cmevla> would look like the Lojban words 
-    <jbophrase>la plas.</jbophrase>, and 
-    <cmevla>ilanas.</cmevla> would be misunderstood as 
-    <jbophrase>.i la nas.</jbophrase>. However, 
-    <jbophrase>NEderlants.</jbophrase> cannot be misheard as 
-    <jbophrase>NEder lants.</jbophrase>, because 
-    <jbophrase>NEder</jbophrase> with no following pause is not a possible Lojban word.</para>
-    <para> <indexterm type="general"><primary>names</primary><secondary>alternatives for restricted sequences in</secondary></indexterm>  <indexterm type="general"><primary>cmevla</primary><secondary>alternatives for restricted sequences in</secondary></indexterm> There are close alternatives to these forbidden sequences that can be used in Lojbanizing names, such as 
-    <valsi>ly</valsi>, 
-    <valsi>lei</valsi>, and 
-    <valsi>dai</valsi> or 
-    
-    <valsi>do'i</valsi>, that do not cause these problems.</para>
     <para> <indexterm type="general"><primary>cmevla</primary><secondary>rules for</secondary></indexterm>  <indexterm type="general"><primary>names</primary><secondary>rules for</secondary></indexterm> Lojban cmevla are identifiable as word forms by the following characteristics:</para>
     
     <orderedlist>
@@ -1752,12 +1734,7 @@ The prefix method would render the mathematical concept as
         <para> <indexterm type="general"><primary>cmevla</primary><secondary>consonant clusters permitted in</secondary></indexterm>  <indexterm type="general"><primary>cmevla</primary><secondary>final letter in</secondary></indexterm> They must end in one or more consonants. There are no rules about how many consonants may appear in a cluster in cmevla, provided that each consonant pair (whether standing by itself, or as part of a larger cluster) is a permissible pair.</para>
       </listitem>
       <listitem>
-        <para> <indexterm type="general"><primary>diphthongs</primary><secondary>specific to cmevla</secondary></indexterm>  <indexterm type="general"><primary>diphthongs</primary><secondary>specific to names</secondary></indexterm>  <indexterm type="general"><primary>uy diphthong</primary><secondary>in cmevla</secondary></indexterm>  <indexterm type="general"><primary>iy diphthong</primary><secondary>in cmevla</secondary></indexterm> They may contain the letter y as a normal, non-hyphenating vowel. They are the only kind of Lojban word that may contain the two diphthongs 
-        <diphthong>iy</diphthong> and 
-        <diphthong>uy</diphthong>.</para>
-      </listitem>
-      <listitem>
-        <para> <indexterm type="general"><primary>names</primary><secondary>requirement for pause after</secondary></indexterm>  <indexterm type="general"><primary>cmevla</primary><secondary>requirement for pause after</secondary></indexterm> They are always followed in speech by a pause after the final consonant, written as 
+        <para> <indexterm type="general"><primary>names</primary><secondary>requirement for pause before and after</secondary></indexterm>  <indexterm type="general"><primary>cmevla</primary><secondary>requirement for pause before and after</secondary></indexterm> They are always preceded and followed in speech by pauses, written as 
         <letteral>.</letteral>.</para>
       </listitem>
       <listitem>
@@ -1772,7 +1749,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e8d11"/>
       </title>
       <interlinear-gloss>
-        <jbo>pav.</jbo>
+        <jbo>.pav.</jbo>
         <natlang>the One</natlang>
       </interlinear-gloss>
     <para>from the cmavo <valsi>pa</valsi>, with rafsi <rafsi>pav</rafsi>, meaning <quote>one</quote></para>
@@ -1783,7 +1760,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e8d12"/>
       </title>
       <interlinear-gloss>
-        <jbo>sol.</jbo>
+        <jbo>.sol.</jbo>
         <natlang>the Sun</natlang>
       </interlinear-gloss>
     <para>from the gismu <valsi>solri</valsi>, meaning <quote>solar</quote>, or actually <quote>pertaining to the Sun</quote></para>
@@ -1798,7 +1775,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e8d13"/>
       </title>
       <interlinear-gloss>
-        <jbo>ralj.</jbo>
+        <jbo>.ral.</jbo>
         <natlang>Chief <comment>(as a title)</comment></natlang>
       </interlinear-gloss>
     <para>from the gismu <valsi>ralju</valsi>, meaning <quote>principal</quote>.</para>
@@ -1818,7 +1795,7 @@ The prefix method would render the mathematical concept as
         <anchor xml:id="c4e8d14"/>
       </title>
       <interlinear-gloss>
-        <jbo>nol.</jbo>
+        <jbo>.nol.</jbo>
         <natlang>Lord/Lady</natlang>
       </interlinear-gloss>
     <para>from the gismu <valsi>nobli</valsi>, with rafsi <rafsi>nol</rafsi>, meaning <quote>noble</quote>.</para>
@@ -1983,22 +1960,22 @@ The prefix method would render the mathematical concept as
           <tr>
             <td>English</td>
             <td><quote>Mary</quote></td>
-            <td><cmevla>meris.</cmevla> or <cmevla>meiris.</cmevla></td>
+            <td><cmevla>.meris.</cmevla> or <cmevla>.meiris.</cmevla></td>
           </tr>
           <tr>
             <td>English</td>
             <td><quote>Smith</quote></td>
-            <td><cmevla>smit.</cmevla></td>
+            <td><cmevla>.smit.</cmevla></td>
           </tr>
           <tr>
             <td>English</td>
             <td><quote>Jones</quote></td>
-            <td><cmevla>djonz.</cmevla></td>
+            <td><cmevla>.djonz.</cmevla></td>
           </tr>
           <tr>
             <td>English</td>
             <td><quote>John</quote></td>
-            <td><cmevla>djan.</cmevla> or <cmevla>jan.</cmevla> (American) or <cmevla>djon.</cmevla> or <cmevla>jon.</cmevla> (British)</td>
+            <td><cmevla>.djan.</cmevla> or <cmevla>.jan.</cmevla> (American) or <cmevla>.djon.</cmevla> or <cmevla>.jon.</cmevla> (British)</td>
           </tr>
           <tr>
             <td>English</td>
@@ -2013,77 +1990,77 @@ The prefix method would render the mathematical concept as
           <tr>
             <td>English</td>
             <td><quote>Johnson</quote></td>
-            <td><cmevla>djansn.</cmevla></td>
+            <td><cmevla>.djansn.</cmevla></td>
           </tr>
           <tr>
             <td>English</td>
             <td><quote>William</quote></td>
-            <td><cmevla>.uiliam.</cmevla> or <cmevla>.uil,iam.</cmevla></td>
+            <td><cmevla>.uiliiam.</cmevla> or <cmevla>.uili'am.</cmevla></td>
           </tr>
           <tr>
             <td>English</td>
             <td><quote>Brown</quote></td>
-            <td><cmevla>braun.</cmevla></td>
+            <td><cmevla>.braun.</cmevla></td>
           </tr>
           <tr>
             <td>English</td>
             <td><quote>Charles</quote></td>
-            <td><cmevla>tcarlz.</cmevla></td>
+            <td><cmevla>.tcarlz.</cmevla></td>
           </tr>
           <tr>
             <td>French</td>
             <td><quote>Charles</quote></td>
-            <td><cmevla>carl.</cmevla></td>
+            <td><cmevla>.carl.</cmevla></td>
           </tr>
           <tr>
             <td>French</td>
             <td><quote>De Gaulle</quote></td>
-            <td><cmevla>dyGOL.</cmevla></td>
+            <td><cmevla>.dyGOL.</cmevla></td>
           </tr>
           <tr>
             <td>German</td>
             <td><quote>Heinrich</quote></td>
-            <td><cmevla>xainrix.</cmevla></td>
+            <td><cmevla>.xainrix.</cmevla></td>
           </tr>
           <tr>
             <td>Spanish</td>
             <td><quote>Joaquin</quote></td>
-            <td><cmevla>xuaKIN.</cmevla></td>
+            <td><cmevla>.xouaKIN.</cmevla></td>
           </tr>
           <tr>
             <td>Russian</td>
             <td><quote>Svetlana</quote></td>
-            <td><cmevla>sfietlanys.</cmevla></td>
+            <td><cmevla>.sfetlanys.</cmevla></td>
           </tr>
           <tr>
             <td>Russian</td>
             <td><quote>Khrushchev</quote></td>
-            <td><cmevla>xrucTCOF.</cmevla></td>
+            <td><cmevla>.xrucTCOF.</cmevla></td>
           </tr>
           <tr>
             <td>Hindi</td>
             <td><quote>Krishna</quote></td>
-            <td><cmevla>kricnas.</cmevla></td>
+            <td><cmevla>.kricnas.</cmevla></td>
           </tr>
           <tr>
             <td>Polish</td>
             <td><quote>Lech Walesa</quote></td>
-            <td><cmevla>lex. va,uensas.</cmevla></td>
+            <td><cmevla>.lex. vauensas.</cmevla></td>
           </tr>
           <tr>
             <td>Spanish</td>
             <td><quote>Don Quixote</quote></td>
-            <td><cmevla>don. kicotes.</cmevla> or modern Spanish: <cmevla>don. kixotes.</cmevla> or Mexican dialect: <cmevla>don. ki'otes.</cmevla></td>
+            <td><cmevla>.don. kicotes.</cmevla> or modern Spanish: <cmevla>.don. kixotes.</cmevla> or Mexican dialect: <cmevla>.don. ki'otes.</cmevla></td>
           </tr>
           <tr>
             <td>Chinese</td>
             <td><quote>Mao Zedong</quote></td>
-            <td><cmevla>maudzydyn.</cmevla></td>
+            <td><cmevla>.maudzydun.</cmevla></td>
           </tr>
           <tr>
             <td>Japanese</td>
             <td><quote>Fujiko</quote></td>
-            <td><cmevla>fudjikos.</cmevla> or <cmevla>fujikos.</cmevla></td>
+            <td><cmevla>.fudjikos.</cmevla> or <cmevla>.fujikos.</cmevla></td>
           </tr>
     </informaltable>
   </section>
@@ -2173,7 +2150,7 @@ The prefix method would render the mathematical concept as
     <para>Join the resulting string of rafsi, initially without hyphens.</para>
   </listitem>
   <listitem>
-    <para> <indexterm type="general"><primary>hyphens in lujvo</primary><secondary>proscribed where not required</secondary></indexterm> Add hyphen letters where necessary. It is illegal to add a hyphen at a place that is not required by this algorithm. Right-to-left tests are recommended, for reasons discussed below.</para>
+    <para> Add hyphen letters where necessary. Right-to-left tests are recommended, for reasons discussed below.</para>
     <orderedlist>
       <listitem>
         <para>If there are more than two words in the tanru, put an 
@@ -2560,7 +2537,7 @@ This section contains examples of making and scoring lujvo. First, we will start
     <valsi valid='maybe'>lojbangri</valsi> and 
     <valsi>lojbaugri</valsi>, of which the latter has a slightly lower score: 8827 versus 8796, respectively. However, for the name of the organization, we chose to make sure the name of the language was embedded in it, and to use the clearer long-form rafsi for 
     <valsi>girzu</valsi>, producing 
-    <cmevla>lojbangirz.</cmevla></para>
+    <cmevla>.lojbangirz.</cmevla></para>
     <para>Finally, here is a four-part lujvo with a cmavo in it, based on the tanru 
     <jbophrase>nakni ke cinse ctuca</jbophrase> or 
     <quote>male (sexual teacher)</quote>. The 
