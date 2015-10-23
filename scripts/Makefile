@@ -44,9 +44,9 @@ $(builddir)/xhtml_chapters.done: $(builddir)/cll_processed_xhtml.xml xml/docbook
 	rm -rf $(builddir)/xhtml_chapters
 	mkdir -p $(builddir)/xhtml_chapters
 	xmlto -m xml/docbook2html_config_chapter-chunks.xsl -o $(builddir)/xhtml_chapters/ xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
-	find $(builddir)/xhtml_chapters | xargs grep -l '<html xmlns=' | xargs sed -i 's;<html xmlns=;<html xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns=;'
 	cp $(PWD)/scripts/master.css $(builddir)/xhtml_chapters/final.css
 	cp -pr $(PWD)/media $(builddir)/xhtml_chapters/
+	scripts/xhtml_postprocess.sh $(builddir)/xhtml_chapters
 	touch $(builddir)/xhtml_chapters.done
 
 #*******
@@ -64,9 +64,9 @@ $(builddir)/xhtml_sections.done: $(builddir)/cll_processed_xhtml.xml xml/docbook
 	rm -rf $(builddir)/xhtml_sections
 	mkdir -p $(builddir)/xhtml_sections
 	xmlto -m xml/docbook2html_config_section-chunks.xsl -o $(builddir)/xhtml_sections/ --stringparam chunk.section.depth=1 --stringparam chunk.first.sections=1 xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
-	find $(builddir)/xhtml_sections | xargs grep -l '<html xmlns=' | xargs sed -i 's;<html xmlns=;<html xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns=;'
 	cp $(PWD)/scripts/master.css $(builddir)/xhtml_sections/final.css
 	cp -pr $(PWD)/media $(builddir)/xhtml_sections/
+	scripts/xhtml_postprocess.sh $(builddir)/xhtml_sections
 	touch $(builddir)/xhtml_sections.done
 
 #*******
@@ -83,11 +83,11 @@ xhtml_nochunks: $(builddir)/xhtml_nochunks.done
 $(builddir)/xhtml_nochunks.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_no-chunks.xsl
 	rm -rf $(builddir)/xhtml_nochunks
 	mkdir -p $(builddir)/xhtml_nochunks
-	xmlto -m xml/docbook2html_config_no-chunks.xsl -o $(builddir)/xhtml_nochunks/ xhtml_nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
-	find $(builddir)/xhtml_nochunks | xargs grep -l '<html xmlns=' | xargs sed -i 's;<html xmlns=;<html xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns=;'
+	xmlto -m xml/docbook2html_config_no-chunks.xsl -o $(builddir)/xhtml_nochunks/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 	mv $(builddir)/xhtml_nochunks/cll_processed_xhtml.html $(builddir)/xhtml_nochunks/index.html
 	cp $(PWD)/scripts/master.css $(builddir)/xhtml_nochunks/final.css
 	cp -pr $(PWD)/media $(builddir)/xhtml_nochunks/
+	scripts/xhtml_postprocess.sh $(builddir)/xhtml_nochunks
 	touch $(builddir)/xhtml_nochunks.done
 
 #*******
