@@ -268,7 +268,9 @@ $document.css('interlinear-gloss-itemized').each do |node|
           if grandchild.text == ''
             grandchild.content = '-'
           else
-            grandchild.content = "[#{grandchild.content}]"
+            if grandchild[:elidable] != 'false'
+              grandchild.content = "[#{grandchild.content}]"
+            end
           end
         end
         convert!( node: grandchild, newname: 'para' )
