@@ -131,7 +131,7 @@ $(builddir)/prince_pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2htm
 	ln -sf $(PWD)/scripts/master.css $(builddir)/prince_pdf/final.css
 	ln -sf $(PWD)/media $(builddir)/prince_pdf/
 	
-	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/prince_pdf/ xhtml_nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
+	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/prince_pdf/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
 	ruby scripts/xml_prince_postprocess.rb $(builddir)/prince_pdf/cll_processed_xhtml.html >$(builddir)/prince_pdf/cll_processed_xhtml_prince.html 2>$(builddir)/xml_prince_postprocess.out
 	
 	prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $(builddir)/prince_pdf/cll_processed_xhtml_prince.html $(builddir)/cll_prince.pdf
