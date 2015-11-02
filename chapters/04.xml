@@ -32,14 +32,17 @@
         <letteral>u</letteral>.</para>
       </listitem>
       <listitem>
-        <para> <indexterm type="general"><primary>VV string</primary><secondary>as a symbol for a double vowel</secondary></indexterm> VV represents either a diphthong, one of the following:
+        <para> <indexterm type="general"><primary>VV string</primary><secondary>as a symbol for a diphthong</secondary></indexterm> VV represents a (falling) diphthong, one of the following:
         <simplelist type="horiz" columns="4">
           <member><diphthong>ai</diphthong></member>
           <member><diphthong>ei</diphthong></member>
           <member><diphthong>oi</diphthong></member>
           <member><diphthong>au</diphthong></member>
         </simplelist>
-        or a two-syllable vowel pair with an apostrophe separating the vowels, one of the following:
+        </para>
+      </listitem>
+      <listitem>
+        <para> <indexterm type="general"><primary>V'V string</primary><secondary>as a symbol for a double vowel</secondary></indexterm> V'V represents a two-syllable vowel pair with an apostrophe separating the vowels, one of the following:
         <simplelist type="horiz" columns="5">
           <member><morphology>a'a</morphology></member>
           <member><morphology>a'e</morphology></member>
@@ -94,7 +97,15 @@
           <member><letteral>x</letteral></member>
           <member> or <letteral>z</letteral></member>
         </simplelist>
-        . Syllabic <letteral>l</letteral>, <letteral>m</letteral>, <letteral>n</letteral>, and <letteral>r</letteral> always count as consonants for the purposes of this chapter.
+        . Syllabic <letteral>l</letteral>, <letteral>m</letteral>, <letteral>n</letteral>, and <letteral>r</letteral> count as consonants for the purposes of this chapter.
+        </para>
+      </listitem>
+      <listitem>
+        <para> <indexterm type="general"><primary>G string</primary><secondary>as a symbol for an on-glide</secondary></indexterm> C represents a single Lojban on-glide, one of
+        <simplelist type="inline">
+          <member><letteral>i</letteral></member>
+          <member> or <letteral>u</letteral></member>
+        </simplelist>.
         </para>
       </listitem>
       <listitem>
@@ -228,6 +239,66 @@
         </informaltable>
       </listitem>
       <listitem>
+        <para> <indexterm type="general"><primary>CCC string</primary><secondary>as a symbol for a permissible initial consonant triple</secondary></indexterm> <indexterm type="general"><primary>onset</primary><secondary>of a syllable</secondary></indexterm>An onset is a single C or G, a CC string as shown above, or a permissible initial consonant triple (CCC string), one of:</para>
+    <informaltable class="noborder">
+          <tr>
+            <td><morphology>cfr</morphology></td>
+            <td><morphology>cfl</morphology></td>
+            <td><morphology>sfr</morphology></td>
+            <td><morphology>sfl</morphology></td>
+            <td/>
+            <td><morphology>jvr</morphology></td>
+            <td><morphology>jvl</morphology></td>
+            <td><morphology>zvr</morphology></td>
+            <td><morphology>zvl</morphology></td>
+          </tr>
+          <tr>
+            <td><morphology>cpr</morphology></td>
+            <td><morphology>cpl</morphology></td>
+            <td><morphology>spr</morphology></td>
+            <td><morphology>spl</morphology></td>
+            <td/>
+            <td><morphology>jbr</morphology></td>
+            <td><morphology>jbl</morphology></td>
+            <td><morphology>zbr</morphology></td>
+            <td><morphology>zbl</morphology></td>
+          </tr>
+          <tr>
+            <td><morphology>ctr</morphology></td>
+            <td/>
+            <td><morphology>str</morphology></td>
+            <td/>
+            <td/>
+            <td><morphology>jdr</morphology></td>
+            <td/>
+            <td><morphology>zdr</morphology></td>
+            <td/>
+          </tr>
+          <tr>
+            <td><morphology>ckr</morphology></td>
+            <td><morphology>ckl</morphology></td>
+            <td><morphology>skr</morphology></td>
+            <td><morphology>skl</morphology></td>
+            <td/>
+            <td><morphology>jgr</morphology></td>
+            <td><morphology>jgl</morphology></td>
+            <td><morphology>zgr</morphology></td>
+            <td><morphology>zgl</morphology></td>
+          </tr>
+          <tr>
+            <td><morphology>cmr</morphology></td>
+            <td><morphology>cml</morphology></td>
+            <td><morphology>smr</morphology></td>
+            <td><morphology>sml</morphology></td>
+            <td/>
+            <td><morphology>jmr</morphology></td>
+            <td><morphology>jml</morphology></td>
+            <td><morphology>zmr</morphology></td>
+            <td><morphology>zml</morphology></td>
+          </tr>
+        </informaltable>
+      </listitem>
+      <listitem>
         <para> <indexterm type="general"><primary>C/C string</primary><secondary>as a symbol for a permissible consonant pair</secondary></indexterm> C/C represents two adjacent consonants which constitute one of the permissible consonant pairs (not necessarily a permissible initial consonant pair). The permissible consonant pairs are explained in <xref linkend="section-clusters"/>. In brief, any consonant pair is permissible unless it: contains two identical letters, contains both a voiced (excluding <letteral>r</letteral>, <letteral>l</letteral>, <letteral>m</letteral>, <letteral>n</letteral>) and an unvoiced consonant, or is one of certain specified forbidden pairs.
         </para>
       </listitem>
@@ -258,7 +329,7 @@
     <xref linkend="chapter-selbri"/> to 
     <xref linkend="chapter-structure"/> and summarized in 
     <xref linkend="chapter-catalogue"/>.</para>
-    <para> <indexterm type="general"><primary>cmavo</primary><secondary>structure of</secondary></indexterm> Standard cmavo occur in four forms defined by their word structure. Here are some examples of the various forms:</para>
+    <para> <indexterm type="general"><primary>cmavo</primary><secondary>structure of</secondary></indexterm> Standard cmavo occur in seven forms defined by their word structure. Here are some examples of the various forms:</para>
     <informaltable>
           <tr>
             <td>V-form</td>
@@ -279,54 +350,71 @@
           <tr>
             <td>VV-form</td>
             <td><valsi>.au</valsi></td>
+            <td><valsi>.ai</valsi></td>
             <td><valsi>.ei</valsi></td>
+            <td><valsi>.oi</valsi></td>
+          </tr>
+          <tr>
+            <td>GV-form</td>
             <td><valsi>ia</valsi></td>
-            <td><valsi>o'u</valsi></td>
-            <td><valsi>u'e</valsi></td>
+            <td><valsi>ue</valsi></td>
+            <td><valsi>ii</valsi></td>
+            <td><valsi>uo</valsi></td>
+            <td><valsi>iu</valsi></td>
+          </tr>
+          <tr>
+            <td>V'V-form</td>
+            <td><valsi>.a'a</valsi></td>
+            <td><valsi>.o'u</valsi></td>
+            <td><valsi>.u'e</valsi></td>
+            <td><valsi>.u'u</valsi></td>
+          </tr>
+          <tr>
+            <td>CVV-form</td>
+            <td><valsi>pei</valsi></td>
+            <td><valsi>coi</valsi></td>
+            <td><valsi>fau</valsi></td>
+            <td><valsi>sai</valsi></td>
           </tr>
           <tr>
             <td>CVV-form</td>
             <td><valsi>ki'a</valsi></td>
-            <td><valsi>pei</valsi></td>
             <td><valsi>mi'o</valsi></td>
-            <td><valsi>coi</valsi></td>
             <td><valsi>cu'u</valsi></td>
+            <td><valsi>ba'e</valsi></td>
+          </tr>
+          <tr>
+            <td>Cy-form</td>
+            <td><valsi>by.</valsi></td>
+            <td><valsi>cy.</valsi></td>
+            <td><valsi>dy.</valsi></td>
+            <td><valsi>fy.</valsi></td>
           </tr>
     </informaltable>
-    <para>In addition, there is the cmavo 
-    <valsi>.y.</valsi> (remember that 
-    <letteral>y</letteral> is not a V), which must have pauses before and after it.</para>
-    <para> <indexterm type="general"><primary>cmavo</primary><secondary>lack of relation of form to grammatical use</secondary></indexterm>  <indexterm type="general"><primary>experimental cmavo</primary><secondary>forms for</secondary></indexterm>  <indexterm type="general"><primary>cmavo</primary><secondary>for experimental use</secondary></indexterm>  <indexterm type="general"><primary>cmavo</primary><secondary>simple</secondary></indexterm> A simple cmavo thus has the property of having only one or two vowels, or of having a single consonant followed by one or two vowels. Words consisting of three or more vowels in a row, or a single consonant followed by three or more vowels, are also of cmavo form, but are reserved for experimental use: a few examples are 
-    <jbophrase>ku'a'e</jbophrase>, 
+    <para>In addition, there are the cmavo 
+    <valsi>.y</valsi> and <valsi>.ybu</valsi>.</para>
+    <para> <indexterm type="general"><primary>cmavo</primary><secondary>lack of relation of form to grammatical use</secondary></indexterm>  <indexterm type="general"><primary>experimental cmavo</primary><secondary>forms for</secondary></indexterm>  <indexterm type="general"><primary>cmavo</primary><secondary>for experimental use</secondary></indexterm> A cmavo is thus composed of a vowel, diphthong, or <letteral>y</letteral>, with optionally a consonant or glide before it and any number of 'V, 'VV, or 'y syllables after it. Words that fit this rule but don't fall into any of the forms above are of cmavo form, but are reserved for experimental use: a few examples are 
+    <jbophrase>li'i'e</jbophrase>, 
     
-    <jbophrase>sau'e</jbophrase>, and 
-    <jbophrase>bai'ai</jbophrase>. All CVV cmavo beginning with the letter 
+    <jbophrase>fau'u</jbophrase>, and 
+    <jbophrase>iau</jbophrase>. All CVV and CV'V cmavo beginning with the letter 
     <letteral>x</letteral> are also reserved for experimental use. In general, though, the form of a cmavo tells you little or nothing about its grammatical use.</para>
     <para> <indexterm type="general"><primary>experimental cmavo</primary><secondary>definition</secondary></indexterm>  <indexterm type="general"><primary>cmavo</primary><secondary>experimental</secondary></indexterm> 
-    <quote>Experimental use</quote> means that the language designers will not assign any standard meaning or usage to these words, and words and usages coined by Lojban speakers will not appear in official dictionaries for the indefinite future. Experimental-use words provide an escape hatch for adding grammatical mechanisms (as opposed to semantic concepts) the need for which was not foreseen.</para>
-    <para> <indexterm type="general"><primary>cmavo</primary><secondary>diphthongs in</secondary></indexterm> The cmavo of VV-form include not only the diphthongs and vowel pairs listed in 
-    
-    <xref linkend="section-morphology-introduction"/>, but also the following ten additional diphthongs:</para>
-    <simplelist type="horiz" columns="5">
-      <member><valsi>ia</valsi></member>
-      <member><valsi>ie</valsi></member>
-      <member><valsi>ii</valsi></member>
-      <member><valsi>io</valsi></member>
-      <member><valsi>iu</valsi></member>
-      
-      <member><valsi>ua</valsi></member>
-      <member><valsi>ue</valsi></member>
-      <member><valsi>ui</valsi></member>
-      <member><valsi>uo</valsi></member>
-      <member><valsi>uu</valsi></member>
-    </simplelist>
-    <para>In addition, cmavo can have the form 
+    <quote>Experimental use</quote> means that the language designers have not assigned any standard meaning or usage to these words. Experimental-use words provide an escape hatch for adding grammatical mechanisms (as opposed to semantic concepts) the need for which was not foreseen.</para>
+    <para> <indexterm type="general"><primary>cmavo</primary><secondary>diphthongs in</secondary></indexterm> 
+    <para>Cmavo of the form 
     <morphology>Cy</morphology>, a consonant followed by the letter 
-    <letteral>y</letteral>. These cmavo represent letters of the Lojban alphabet, and are discussed in detail in 
+    <letteral>y</letteral>, as well as <valsi>.ybu</valsi>, the only legal cmavo of its shape, represent letters of the Lojban alphabet, and are discussed in detail in 
     
     <xref linkend="chapter-letterals"/>.</para>
-    <para> <indexterm type="general"><primary>compound cmavo</primary><secondary>compared with sequence of simple cmavo</secondary></indexterm>  <indexterm type="general"><primary>compound cmavo</primary><secondary>definition</secondary></indexterm>  <indexterm type="general"><primary>cmavo</primary><secondary>compound</secondary></indexterm> Compound cmavo are sequences of cmavo attached together to form a single written word. A compound cmavo is always identical in meaning and in grammatical use to the separated sequence of simple cmavo from which it is composed. These words are written in compound form merely to save visual space, and to ease the reader's burden in identifying when the component cmavo are acting together.</para>
-    <para> <indexterm type="general"><primary>compound cmavo</primary><secondary>recognition of</secondary></indexterm> Compound cmavo, while not visually short like their components, can be readily identified by two characteristics:</para>
+    <para> <indexterm type="general"><primary>cmavo clusters</primary><secondary>compared with sequence of simple cmavo</secondary></indexterm>
+      <indexterm type="general"><primary>compound cmavo</primary><secondary>compared with sequence of simple cmavo</secondary></indexterm> 
+      <indexterm type="general"><primary>cmavo clusters</primary><secondary>definition</secondary></indexterm> 
+      <indexterm type="general"><primary>compound cmavo</primary><secondary>definition</secondary></indexterm>  
+      <indexterm type="general"><primary>cmavo</primary><secondary>compound</secondary></indexterm> 
+      Cmavo clusters are sequences of cmavo attached together to form a single written word. A compound cmavo is always identical in meaning and in grammatical use to the separated sequence of simple cmavo from which it is composed. These words are written in compound form merely to save visual space, and to ease the reader's burden in identifying when the component cmavo are acting together.</para>
+    <para> <indexterm type="general"><primary>cmavo clusters</primary><secondary>recognition of</secondary></indexterm>
+      <indexterm type="general"><primary>compound cmavo</primary><secondary>recognition of</secondary></indexterm> Cmavo clusters, while not visually short like their components, can be readily identified by two characteristics:</para>
     <orderedlist>
         <listitem>
           <para>They have no consonant pairs or clusters, and</para>
@@ -397,13 +485,13 @@
       </pronunciation>
     </example>
     <para role="indent">This convention results in a consistent rhythm to the language, since brivla are required to have penultimate stress; some find this esthetically pleasing.</para>
-    <para> <indexterm type="general"><primary>pause</primary><secondary>requirement between stressed syllables</secondary></indexterm> If the final syllable of one word is stressed, and the first syllable of the next word is stressed, you must insert a pause or glottal stop between the two stressed syllables. Thus</para>
+    <para> <indexterm type="general"><primary>pause</primary><secondary>requirement between stressed syllables</secondary></indexterm> If the final syllable of one word is stressed, and the word following it is a brivla, you must insert a pause or glottal stop between the two stressed syllables. Thus</para>
     
     <example role="interlinear-gloss-example" xml:id="example-random-id-uqDz">
       <title>
         <anchor xml:id="c4e2d7"/>
       </title>
-      <jbophrase>le re nanmu</jbophrase>
+      <jbophrase>lo re nanmu</jbophrase>
     </example>
     <para role="noindent">can be optionally pronounced</para>
     <example role="pronunciation-example" xml:id="example-random-id-dfzc">
@@ -411,7 +499,7 @@
         <anchor xml:id="c4e2d8"/>
       </title>
       <pronunciation>
-        <jbo role="pronunciation">le RE. NANmu</jbo>
+        <jbo role="pronunciation">lo RE. NANmu</jbo>
       </pronunciation>
     </example>
     <para role="noindent">since there are no rules forcing stress on either of the first two words; the stress on 
@@ -426,11 +514,11 @@
         <anchor xml:id="c4e2d9"/>
       </title>
       <pronunciation>
-        <jbo>LE re NANmu</jbo>
+        <jbo>LO re NANmu</jbo>
       </pronunciation>
     </example>
     <para role="noindent">is also valid; this would apply secondary stress (used for purposes of emphasis, contrast or sentence rhythm) to 
-    <valsi>le</valsi>, comparable in rhythmical effect to the English phrase 
+    <valsi>lo</valsi>, comparable in rhythmical effect to the English phrase 
     <quote>THE two men</quote>. In 
     <xref linkend="example-random-id-dfzc"/>, the secondary stress on 
     <valsi>re</valsi> would be similar to that in the English phrase 
@@ -441,7 +529,7 @@
         <anchor xml:id="c4e2d10"/>
       </title>
       <pronunciation>
-        <jbo role="pronunciation">le re NANmu</jbo>
+        <jbo role="pronunciation">lo re NANmu</jbo>
       </pronunciation>
     </example>
     <para role="indent">This would probably be the most common usage.</para>
@@ -465,37 +553,44 @@
         <para>always end in a vowel;</para>
       </listitem>
       <listitem>
-        <para>always contain a consonant pair in the first five letters, where 
-        <letteral>y</letteral> and apostrophe are not counted as letters for this purpose (see 
-        <xref linkend="section-rafsi"/>.);</para>
+<!-- TODO: .ei sai sampyzengau -->
+        <itemizedlist>
+          <listitem>
+            <para>
+              begin with a consonant cluster,
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              have a consonant cluster immediately after the first vowel or string of vowels separated by apostrophes, or
+            </para>
+          </listitem>
+          <listitem>
+            <para>
+              consist of a CVCy string followed by either a shorter valid brivla or a CCV, CVV, or CV'V string;
+            </para>
+          </listitem>
+        </itemizedlist>
       </listitem>
       <listitem>
-        <para>always are stressed on the next-to-the-last (penultimate) syllable; this implies that they have two or more syllables.</para>
+        <para>and are always stressed on the next-to-the-last (penultimate) syllable; this implies that they have two or more syllables.</para>
       </listitem>
     </orderedlist>
-    <para> <indexterm type="general"><primary>cmevla form</primary><secondary>contrasted with brivla form</secondary></indexterm>  <indexterm type="general"><primary>cmavo form</primary><secondary>contrasted with brivla form</secondary></indexterm>  <indexterm type="general"><primary>brivla form</primary><secondary>contrasted with cmevla form</secondary></indexterm>  <indexterm type="general"><primary>brivla form</primary><secondary>contrasted with cmavo form</secondary></indexterm>  <indexterm type="general"><primary>brivla</primary><secondary>recognition of</secondary></indexterm> The presence of a consonant pair distinguishes brivla from cmavo and their compounds. The final vowel distinguishes brivla from cmevla, which always end in a consonant. Thus 
-    <jbophrase>da'amei</jbophrase> must be a compound cmavo because it lacks a consonant pair; 
+    <para> <indexterm type="general"><primary>cmevla form</primary><secondary>contrasted with brivla form</secondary></indexterm>  <indexterm type="general"><primary>cmavo form</primary><secondary>contrasted with brivla form</secondary></indexterm>  <indexterm type="general"><primary>brivla form</primary><secondary>contrasted with cmevla form</secondary></indexterm>  <indexterm type="general"><primary>brivla form</primary><secondary>contrasted with cmavo form</secondary></indexterm>  <indexterm type="general"><primary>brivla</primary><secondary>recognition of</secondary></indexterm> The presence of a consonant pair distinguishes brivla from cmavo. The final vowel distinguishes brivla from cmevla, which always end in a consonant. Thus 
+    <jbophrase>da'amei</jbophrase> must be a string of cmavo because it lacks a consonant pair; 
     <valsi>.lojban.</valsi> must be a name because it lacks a final vowel.</para>
-    <para> <indexterm type="general"><primary>consonant pairs</primary><secondary>letter y within</secondary></indexterm>  <indexterm type="general"><primary>y</primary><secondary>letter</secondary><tertiary>between letters of consonant pair</tertiary></indexterm>  <indexterm type="general"><primary>consonant pairs</primary><secondary>in brivla</secondary></indexterm>  <indexterm type="general"><primary>brivla</primary><secondary>consonant pairs in</secondary></indexterm> Thus, 
-    <valsi valid='maybe'>bisycla</valsi> has the consonant pair 
-    <morphology>sc</morphology> in the first five non- 
-    <letteral>y</letteral> letters even though the 
-    <morphology>sc</morphology> actually appears in the form of 
-    <valsi>sy.</valsi>. Similarly, the word 
-    <valsi valid='maybe'>ro'inre'o</valsi> contains 
-    <morphology>nr</morphology> in the first five letters because the apostrophes are not counted for this purpose.</para>
     <para> <indexterm type="general"><primary>brivla</primary><secondary>subtypes of</secondary></indexterm> The three subtypes of brivla are:</para>
     <orderedlist>
       <listitem>
-        <para> <indexterm type="general"><primary>gismu</primary><secondary>as a subtype of brivla</secondary></indexterm>  <indexterm type="general"><primary>primitive roots</primary><secondary>gismu as</secondary></indexterm> gismu, the Lojban primitive roots from which all other brivla are built;</para>
+        <para> <indexterm type="general"><primary>gismu</primary><secondary>as a subtype of brivla</secondary></indexterm>  <indexterm type="general"><primary>primitive roots</primary><secondary>gismu as</secondary></indexterm> gismu, the Lojban primitive roots from which other brivla are built;</para>
         
       </listitem>
       <listitem>
         <para> <indexterm type="general"><primary>compound of gismu</primary><secondary>lujvo as</secondary></indexterm>  <indexterm type="general"><primary>lujvo</primary><secondary>as a subtype of brivla</secondary></indexterm> lujvo, the compounds of two or more gismu; and</para>
       </listitem>
       <listitem>
-        <para> <indexterm type="general"><primary>borrowing from other language</primary><secondary>fu'ivla as</secondary></indexterm>  <indexterm type="general"><primary>fu'ivla</primary><secondary>as a subtype of brivla</secondary></indexterm> fu'ivla (literally 
-        <quote>copy-word</quote>), the specialized words that are not Lojban primitives or natural compounds, and are therefore borrowed from other languages.</para>
+        <para>  <indexterm type="general"><primary>zi'evla</primary><secondary>as a subtype of brivla</secondary></indexterm> zi'evla (literally 
+        <quote>free-word</quote>), the words that are not Lojban primitives or natural compounds, and are often borrowed from other languages.</para>
       </listitem>
     </orderedlist>
   </section>
@@ -526,7 +621,7 @@
         <para>are always stressed on the first syllable (since that is penultimate).</para>
       </listitem>
     </orderedlist>
-    <para> <indexterm type="general"><primary>gismu</primary><secondary>length of</secondary></indexterm> The five letter length distinguishes gismu from lujvo and fu'ivla. In addition, no gismu contains 
+    <para> <indexterm type="general"><primary>gismu</primary><secondary>length of</secondary></indexterm> The five letter length distinguishes gismu from lujvo and zi'evla. In addition, no gismu contains 
     <letteral>'</letteral> .</para>
     <para> <indexterm type="general"><primary>gismu</primary><secondary>conflicts between</secondary></indexterm>  <indexterm type="general"><primary>gismu</primary><secondary>special</secondary></indexterm> With the exception of five special brivla variables, 
     <valsi>broda</valsi>, 
@@ -1027,7 +1122,7 @@
         <gloss><quote>letter list</quote> or a <quote>list of letters</quote></gloss>
       </lujvo-making>
     </example>
-    <para role="indent"> <indexterm type="general"><primary>lujvo</primary><secondary>recognizing</secondary></indexterm>  <indexterm type="general"><primary>lujvo form</primary><secondary>number of letters in</secondary></indexterm>  <indexterm type="general"><primary>lujvo form</primary><secondary>consonant cluster requirement in</secondary></indexterm>  <indexterm type="general"><primary>lujvo form</primary><secondary>final letter of</secondary></indexterm>  <indexterm type="general"><primary>lujvo</primary><secondary>summary of form characteristics</secondary></indexterm> As noted above, CVC-form rafsi cannot appear as the final rafsi in a lujvo, because all lujvo must end with one or two vowels. As a brivla, a lujvo must also contain a consonant cluster within the first five letters &ndash; this ensures that they cannot be mistaken for compound cmavo. Of course, all lujvo have at least six letters since they have two or more rafsi, each at least three letters long; hence they cannot be confused with gismu.</para>
+    <para role="indent"> <indexterm type="general"><primary>lujvo</primary><secondary>recognizing</secondary></indexterm>  <indexterm type="general"><primary>lujvo form</primary><secondary>number of letters in</secondary></indexterm>  <indexterm type="general"><primary>lujvo form</primary><secondary>consonant cluster requirement in</secondary></indexterm>  <indexterm type="general"><primary>lujvo form</primary><secondary>final letter of</secondary></indexterm>  <indexterm type="general"><primary>lujvo</primary><secondary>summary of form characteristics</secondary></indexterm> As noted above, CVC-form rafsi cannot appear as the final rafsi in a lujvo, because all lujvo must end with one or two vowels. As a brivla, a lujvo must also contain a consonant cluster within the first five letters &ndash; this ensures that they cannot be mistaken for cmavo. Of course, all lujvo have at least six letters since they have two or more rafsi, each at least three letters long; hence they cannot be confused with gismu.</para>
     <para> <indexterm type="general"><primary>lujvo form</primary><secondary>requirements for hyphen insertion in</secondary></indexterm>  <indexterm type="general"><primary>hyphen letter</primary><secondary>definition</secondary></indexterm>  <indexterm type="general"><primary>hyphens</primary><secondary>use of</secondary></indexterm> When attaching two rafsi together, it may be necessary to insert a hyphen letter. In Lojban, the term 
     
     <quote>hyphen</quote> always refers to a letter, either the vowel 
@@ -1088,7 +1183,7 @@ There is also a different way of building lujvo, or rather phrases which are gra
     <para role="noindent"> <indexterm type="general"><primary>cmavo without rafsi</primary><secondary>method of including in lujvo</secondary></indexterm>  <indexterm type="general"><primary>fu'ivla</primary><secondary>method of including in lujvo</secondary></indexterm>  <indexterm type="general"><primary>cmevla</primary><secondary>method of including in lujvo</secondary></indexterm>  <indexterm type="general"><primary>rafsi</primary><secondary>lack of</secondary><tertiary>effect on forming lujvo</tertiary></indexterm>  <indexterm type="general"><primary>lujvo</primary><secondary>from cmavo with no rafsi</secondary></indexterm> is the exact equivalent of 
     <valsi>brivla</valsi> (but not necessarily the same as the underlying tanru 
     <jbophrase>bridi valsi</jbophrase>, which could have other meanings.) Using 
-    <valsi>zei</valsi> is the only way to get a cmavo lacking a rafsi, a cmevla, or a fu'ivla into a lujvo:</para>
+    <valsi>zei</valsi> is the only way to get a cmavo lacking a rafsi, or a cmevla into a lujvo:</para>
     <example xml:id="example-random-id-qJe1" role="lujvo-example">
       <title>
         
@@ -1173,7 +1268,7 @@ There is also a different way of building lujvo, or rather phrases which are gra
     <xref linkend="example-random-id-Wnaz"/> may be preferable, because its place structure can be built from that of 
     <valsi>bilma</valsi>, whereas the place structure of a lujvo without a brivla must be constructed ad hoc.</para>
     <para> <indexterm type="general"><primary>cmavo</primary><secondary>contrasted with rafsi in usage</secondary></indexterm>  <indexterm type="general"><primary>rafsi</primary><secondary>contrasted with cmavo in usage</secondary></indexterm>  <indexterm type="general"><primary>rafsi</primary><secondary>contrasted with words</secondary></indexterm> Note that rafsi may not be used in 
-    <valsi>zei</valsi> phrases, because they are not words. CVV rafsi look like words (specifically cmavo) but there can be no confusion between the two uses of the same letters, because cmavo appear only as separate words or in compound cmavo (which are really just a notation for writing separate but closely related words as if they were one); rafsi appear only as parts of lujvo.</para>
+    <valsi>zei</valsi> phrases, because they are not words. CVV rafsi look like words (specifically cmavo) but there can be no confusion between the two uses of the same letters, because cmavo appear only as separate words; rafsi appear only as parts of lujvo.</para>
   </section>
   <section xml:id="section-fuhivla">
     <title><anchor xml:id="c4s7"/>fu'ivla</title>
