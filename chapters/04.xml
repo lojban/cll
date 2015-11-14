@@ -329,16 +329,20 @@
     <xref linkend="chapter-selbri"/> to 
     <xref linkend="chapter-structure"/> and summarized in 
     <xref linkend="chapter-catalogue"/>.</para>
-    <para> <indexterm type="general"><primary>cmavo</primary><secondary>structure of</secondary></indexterm> A cmavo is composed of a vowel, diphthong, or <letteral>y</letteral>, with optionally a consonant or glide before it and any number of 'V, 'VV, or 'y syllables after it.  Here are some cmavo of various shapes: 
-      <valsi>.a</valsi>,
-      <valsi>di</valsi>,
-      <valsi>.oi</valsi>,
-      <valsi>iu</valsi>,
-      <valsi>.u'u</valsi>,
-      <valsi>fau</valsi>,
-      <valsi>mi'o</valsi>,
-      <valsi>ja'ai</valsi>
-      <valsi>by.</valsi>. In addition, there is the cmavo <valsi>.ybu</valsi>, the only one of its shape.
+    <para> <indexterm type="general"><primary>cmavo</primary><secondary>structure of</secondary></indexterm> A cmavo is composed of a vowel, diphthong, or <letteral>y</letteral>, with optionally a consonant or glide before it and any number of 'V, 'VV, or 'y syllables after it.  Here are some cmavo of various shapes: </para>
+    <informaltable><tr>
+      <td><valsi>.a</valsi></td>
+      <td><valsi>di</valsi></td>
+      <td><valsi>.oi</valsi></td>
+      <td><valsi>iu</valsi></td>
+      <td><valsi>.u'u</valsi></td>
+      <td><valsi>fau</valsi></td>
+      <td><valsi>mi'o</valsi></td>
+      <td><valsi>ja'ai</valsi></td>
+      <td><valsi>by.</valsi></td>
+    </tr></informaltable>
+    <para>
+      In addition, there is the cmavo <valsi>.ybu</valsi>, the only one of its shape.
     </para>
     <para> <indexterm type="general"><primary>cmavo</primary><secondary>lack of relation of form to grammatical use</secondary></indexterm> There are some conventions by which a cmavo's shape can hint at its grammar or meaning: for example, cmavo beginning with vowel letters are usually attitudinals. In general, though, the form of a cmavo tells you little or nothing about how it is used.</para>
     
@@ -347,8 +351,7 @@
     <para>Cmavo of the form 
     <morphology>Cy</morphology>, a consonant followed by the letter 
     <letteral>y</letteral>, together with <valsi>bu</valsi> and <valsi>.ybu</valsi>, represent letters of the Lojban alphabet, and are discussed in detail in 
-    
-    <xref linkend="chapter-letterals"/>.</para>
+    <xref linkend="chapter-letterals"/>. Sequences of cmavo ending in <letteral>y</letteral> need to be separated from other words following them by a pause.</para>
     <para> <indexterm type="general"><primary>cmavo clusters</primary><secondary>compared with sequence of simple cmavo</secondary></indexterm>
       <indexterm type="general"><primary>compound cmavo</primary><secondary>compared with sequence of simple cmavo</secondary></indexterm> 
       <indexterm type="general"><primary>cmavo clusters</primary><secondary>definition</secondary></indexterm> 
@@ -371,8 +374,8 @@
         <anchor xml:id="c4e2d1"/>
       </title>
       <compound-cmavo>
-        <jbo>.iseci'i</jbo>
-        <jbo>.i se ci'i</jbo>
+        <jbo>.iseju</jbo>
+        <jbo>.i se ju</jbo>
       </compound-cmavo>
     </example>
     <example xml:id="example-random-id-qIYK" role="compound-cmavo-example">
@@ -489,13 +492,14 @@
     <para> <indexterm type="general"><primary>flexible vocabulary</primary></indexterm> The same principle allows you, when speaking or writing, to invent new brivla for new concepts 
     <quote>on the fly</quote>; yet it offers people that you are trying to communicate with a good chance to figure out your meaning. In this way, Lojban has a flexible vocabulary which can be expanded indefinitely.</para>
     
-    <para> <indexterm type="general"><primary>brivla</primary><secondary>properties of</secondary></indexterm> All brivla have the following properties:</para>
+    <para> <indexterm type="general"><primary>brivla</primary><secondary>properties of</secondary></indexterm> All brivla have the following properties: they</para>
     <orderedlist>
       <listitem>
         <para>always end in a vowel;</para>
       </listitem>
       <listitem>
 <!-- TODO: .ei sai sampyzengau -->
+<!--
         <itemizedlist>
           <listitem>
             <para>
@@ -513,6 +517,8 @@
             </para>
           </listitem>
         </itemizedlist>
+-->
+        <para>contain a consonant cluster, or start with a CVCy string;</para>
       </listitem>
       <listitem>
         <para>and are always stressed on the next-to-the-last (penultimate) syllable; this implies that they have two or more syllables.</para>
@@ -1472,7 +1478,7 @@ There is also a different way of building lujvo, or rather phrases which are gra
     <para> <indexterm type="general"><primary>fu'ivla categorizer</primary><secondary>for distinguishing fu'ivla form</secondary></indexterm>  <indexterm type="general"><primary>fu'ivla</primary><secondary>disambiguation of</secondary></indexterm> The use of the prefix helps distinguish among the many possible meanings of the borrowed word, depending on the field. As it happens, 
     <valsi>spageti</valsi> and 
     <valsi>ku'arka</valsi> are valid Stage 4 fu'ivla, but 
-    <valsi valid="false">xaceru</valsi> looks like a compound cmavo, and 
+    <valsi valid="false">xaceru</valsi> looks like a sequence of cmavo, and 
     <valsi valid="false">kobra</valsi> like a gismu.</para>
     <para> <indexterm type="general"><primary>fu'ivla categorizer</primary><secondary>for distinguishing specialized meanings</secondary></indexterm> For another example, 
     <quote>integral</quote> has a specific meaning to a mathematician. But the Lojban fu'ivla 
