@@ -1982,7 +1982,7 @@ the 900 series rules are found in the lexer.  */
    erase it.  */
 
 /* All rule terminator names with <quote>gap</quote> in them are potentially
-   elidable, where such elision does not cause an ambiguity.  This is
+   elidable, where such elision does not cause an unwanted parse.  This is
    implemented through use of the YACC <quote>error</quote> token, which effectively
    recovers from an elision.  */
 
@@ -7058,7 +7058,7 @@ the 900 series rules are found in the lexer.  */
         <para># is shorthand for <quote>[free ...]</quote>, a construct which appears in many places.</para>
       </listitem>
       <listitem>
-        <para>// encloses an elidable terminator, which may be omitted (without change of meaning) if no grammatical ambiguity results.</para>
+        <para>// encloses an elidable terminator, which may be omitted (without change of meaning) if the parse tree remains unchanged.</para>
       </listitem>
     </orderedlist>
     <variablelist>
