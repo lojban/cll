@@ -73,8 +73,8 @@
 <indexterm type="lojban-word"><primary>le</primary></indexterm>  <indexterm type="lojban-word"><primary>li'u</primary></indexterm>  <indexterm type="lojban-word"><primary>lu</primary></indexterm>  
       </title>
       <interlinear-gloss>
-        <jbo>mi cusku lu .e'o sai li'u lo tcidu</jbo>
-        <gloss>I express [quote] [request] [!] [unquote] to-the reader.</gloss>
+        <jbo>mi cusku lu .e'o sai li'u -- lo tcidu</jbo>
+        <gloss>I say [quote] [request] [!] [unquote] to the reader.</gloss>
         <natlang>I express 
         <quote>Please!</quote> to the reader.</natlang>
       </interlinear-gloss>
@@ -292,7 +292,7 @@
       <cmavo-entry>
         <cmavo>me</cmavo>
         <selmaho>ME</selmaho>
-        <description>x1 is among [sumti following <valsi>me</valsi>]</description>
+        <description>x1 is/are among [sumti following <valsi>me</valsi>]</description>
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>me'u</cmavo>
@@ -307,7 +307,7 @@
       <cmavo-entry>
         <cmavo>mei</cmavo>
         <selmaho>MOI</selmaho>
-        <description>x1 are [number before <valsi>mei</valsi>] in number; x1 are [number before <valsi>mei</valsi>] of x2</description>
+        <description>x1 is/are [number before <valsi>mei</valsi>] in number; x1 are [number before <valsi>mei</valsi>] of x2</description>
       </cmavo-entry>
     </cmavo-list>
     <para>
@@ -323,21 +323,15 @@
     <para>
       There are a few basic operators that can be used to examine sumti. 
       <valsi>me</valsi> (of selma'o ME) followed by a sumti and its elidible terminator 
-      <valsi>me'u</valsi> (of selma'o MEhU) form a predicate with the structure:
+      <valsi>me'u</valsi> (of selma'o MEhU) form a selbri<!--FIXME use "tanru unit" or whichever term we choose--> with the structure:
     </para>
     <informaltable>
       <tr><td>x1 is one of [sumti]; x1 are among [sumti]</td></tr>
     </informaltable>
     <example xml:id="mejohu-mimemiho" role="interlinear-gloss-example">
       <interlinear-gloss>
-        <jbo>mi me--mi'o--[me'u]</jbo>
-        <gloss>I am-among-us</gloss>
-      </interlinear-gloss>
-    </example>
-    <example xml:id="mejohu-domemiho" role="interlinear-gloss-example">
-      <interlinear-gloss>
-        <jbophrase>do me--mi'o</jbophrase>
-        <natlang>You are among us</natlang>
+        <jbo>mi me mi'o [me'u] .i do me mi'o [me'u]</jbo>
+        <gloss>I am-among-[ us ] . You are-among-[ us ]</gloss>
       </interlinear-gloss>
     </example>
     <para>
@@ -358,24 +352,21 @@
     <para role="noindent">
       is true because
       <jbophrase>mi me mi'o</jbophrase> and
-      <jbophrase>mi'o me mi'o jo'u ti</jbophrase> is true.
-    </para>
-    <para>
-      Any sumti is among itself: 
+      <jbophrase>mi'o me mi'o jo'u ti</jbophrase> is true. Any sumti is among itself: 
       <jbophrase>ko'a me ko'a</jbophrase> is true for any value of 
       <valsi>ko'a</valsi>.
     </para>
     <para>
       The individuals a sumti is composed of can be counted. A number followed by 
-      <valsi>mei</valsi> (of selma'o MEI) act as a predicate with the structure:
+      <valsi>mei</valsi> (of selma'o MEI) act as a selbri<!--FIXME use "tanru unit" or some less shitty term--> with the structure:
     </para>
     <informaltable>
       <tr><td>x_1 are [number] in number</td></tr>
     </informaltable>
     <example xml:id="mejohu-mihocimei" role="interlinear-gloss-example">
       <interlinear-gloss>
-        <jbo>mi'o ci--mei</jbo>
-        <gloss>We are--three--in--number</gloss>
+        <jbo>mi pa--mei .i do re--mei .i mi'o ci--mei</jbo>
+        <gloss>I am--an--individual . You are--two--in--number . We are--three--in--number</gloss>
       </interlinear-gloss>
     </example>
     <para role="noindent">
