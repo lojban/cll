@@ -361,7 +361,7 @@
       <valsi>mei</valsi> (of selma'o MEI) act as a selbri<!--FIXME use "tanru unit" or some less shitty term--> with the structure:
     </para>
     <informaltable>
-      <tr><td>x_1 are [number] in number</td></tr>
+      <tr><td>x1 are [number] in number</td></tr>
     </informaltable>
     <example xml:id="mejohu-mihocimei" role="interlinear-gloss-example">
       <interlinear-gloss>
@@ -388,7 +388,7 @@
       <cmavo-entry>
         <cmavo>ro</cmavo>
         <selmaho>PA</selmaho>
-        <description>all of/each of</description>
+        <description>each of</description>
       </cmavo-entry>
       <cmavo-entry>
         <cmavo>su'o</cmavo>
@@ -408,18 +408,16 @@
     <quote>two</quote>, 
     <quote>three</quote>, 
     <quote>four</quote>, 
-    <quote>five</quote> respectively, or else one of four special quantifiers, two of which are discussed in this section and listed above. These four quantifiers are important because every Lojban sumti has either one or two of them implicitly present in it &ndash; which one or two depends on the particular kind of sumti. There is more explanation of implicit quantifiers later in this section. (The other two quantifiers, 
-    <valsi>piro</valsi> and 
-    <valsi>pisu'o</valsi>, are explained in 
+    <quote>five</quote> respectively, or else one of two special quantifiers which are discussed in this section and listed above. (These two are more fundamental to Lojban semantics than numerical quantifiers.)
     
-    <xref linkend="section-quantified-descriptions"/>.)</para>
-    <para>Every Lojban sumti may optionally be preceded by an explicit quantifier. The purpose of this quantifier is to specify how many of the things referred to by the sumti are being talked about. Here are some simple examples contrasting sumti with and without explicit quantifiers:</para>
+    <xref linkend="chapter-quantifiers"/>.)</para>
+    <para>Every Lojban sumti may optionally be preceded by a quantifier. The purpose of this quantifier is to specify how many of the things referred to by the sumti satisfy the predicate. Here are some simple examples contrasting sumti with and without quantifiers:</para>
     <example xml:id="example-random-id-qL61" role="interlinear-gloss-example">
       <title>
         <anchor xml:id="c6e6d1"/>
       </title>
       <interlinear-gloss>
-        <jbo>do cadzu le bisli</jbo>
+        <jbo>do cadzu lo bisli</jbo>
         <gloss>You walk-on the ice.</gloss>
       </interlinear-gloss>
     </example>
@@ -428,19 +426,19 @@
         <anchor xml:id="c6e6d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>re do cadzu le bisli</jbo>
+        <jbo>re do cadzu lo bisli</jbo>
         <gloss>Two-of you walk-on the ice.</gloss>
       </interlinear-gloss>
     </example>
     <para role="indent">The difference between 
     <xref linkend="example-random-id-qL61"/> and 
-    <xref linkend="example-random-id-qLAH"/> is the presence of the explicit quantifier 
+    <xref linkend="example-random-id-qLAH"/> is the presence of the quantifier 
     <valsi>re</valsi> in the latter example. Although 
     <valsi>re</valsi> by itself means 
     <quote>two</quote>, when used as a quantifier it means 
-    <quote>two-of</quote>. Out of the group of listeners (the number of which isn't stated), two (we are not told which ones) are asserted to be 
-    <quote>walkers on the ice</quote>. Implicitly, the others (if any) are not walkers on the ice. In Lojban, you cannot say 
-    <quote>I own three shoes</quote> if in fact you own four shoes. Numbers need never be specified, but if they are specified they must be correct.</para>
+    <quote>two-of</quote>. Out of the group of listeners (the number of which isn't stated), it is asserted that two (we are not told which ones) of them 
+    <quote>walk on the ice</quote>. Implicitly, no more than two of them are walkers on the ice. In Lojban, you cannot say 
+    <quote>I own three shoes</quote> if in fact you own four shoes. Numbers need never be specified, but if they are specified they must be exact.</para>
     <para>(This rule does not mean that there is no way to specify a number which is vague. The sentence</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-gLpy">
       <title>
@@ -455,8 +453,8 @@
     
     
     <xref linkend="chapter-mekso"/>.)</para>
-    <para>Now consider 
-    <xref linkend="example-random-id-qL61"/> again. How many of the listeners are claimed to walk on the ice? The answer turns out to be: all of them, however many that is. So 
+    <para>Consider 
+    <xref linkend="example-random-id-qL61"/> again. How many of the listeners are claimed to walk on the ice? The answer here turns out to be: all of them, however many that is. So 
     <xref linkend="example-random-id-qL61"/> and 
     <xref linkend="example-random-id-0qr0"/>:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-0qr0">
@@ -464,81 +462,12 @@
         <anchor xml:id="c6e6d4"/>
       </title>
       <interlinear-gloss>
-        <jbo>ro do cadzu le bisli</jbo>
+        <jbo>ro do cadzu lo bisli</jbo>
         <gloss>All-of you walk-on the ice.</gloss>
       </interlinear-gloss>
     </example>
-    <para role="noindent"> <indexterm type="general"><primary>sumti</primary><secondary>as having implicit quantifiers</secondary></indexterm>  <indexterm type="general"><primary>quantifiers</primary><secondary>with sumti</secondary></indexterm> turn out to mean exactly the same thing. This is a safe strategy, because if one of my listeners doesn't turn out to be walking on the ice, I can safely claim that I didn't intend that person to be a listener! And in fact, all of the personal sumka'i such as 
-    
-    <valsi>mi</valsi> and 
-    <valsi>mi'o</valsi> and 
-    <valsi>ko</valsi> obey the same rule. We say that personal sumka'i have a so-called 
-    
-    <quote>implicit quantifier</quote> of 
-    <valsi>ro</valsi> (all). This just means that if no quantifier is given explicitly, the meaning is the same as if the implicit quantifier had been used.</para>
-    
-    <para> <indexterm type="general"><primary>implicit quantifier</primary><secondary>on quotations</secondary><tertiary>discussion of</tertiary></indexterm> Not all sumti have 
-    <valsi>ro</valsi> as the implicit quantifier, however. Consider the quotation in:</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-3eMo">
-      <title>
-        <anchor xml:id="c6e6d5"/>
-      </title>
-      <interlinear-gloss>
-        <jbo>mi cusku lu do cadzu le bisli li'u</jbo>
-        <gloss>I express [quote] you walk-on the ice [unquote].</gloss>
-        <natlang>I say, 
-        <quote>You walk on the ice.</quote></natlang>
-      </interlinear-gloss>
-    </example>
-    <para role="indent">What is the implicit quantifier of the quotation 
-    <jbophrase>lu do cadzu le bisli li'u</jbophrase>? Surely not 
-    <valsi>ro</valsi>. If 
-    <valsi>ro</valsi> were supplied explicitly, thus:</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-h4SJ">
-      <title>
-        <anchor xml:id="c6e6d6"/>
-      </title>
-      <interlinear-gloss>
-        <jbo>mi cusku ro lu do cadzu le bisli li'u</jbo>
-        <gloss>I express all-of [quote] you walk-on the ice [unquote].</gloss>
-      </interlinear-gloss>
-    </example>
-    <para role="noindent">the meaning would be something like 
-    <quote>I say every occurrence of the sentence 'You walk on the ice'</quote>. Of course I don't say every occurrence of it, only some occurrences. One might suppose that 
-    <xref linkend="example-random-id-3eMo"/> means that I express exactly one occurrence, but it is more Lojbanic to leave the number unspecified, as with other sumti. We can say definitely, however, that I say it at least once.</para>
-    <para>The Lojban cmavo meaning 
-    <quote>at least</quote> is 
-    <valsi>su'o</valsi>, and if no ordinary number follows, 
-    <valsi>su'o</valsi> means 
-    <quote>at least once</quote>. (See 
-    <xref linkend="example-random-id-gLpy"/> for the use of 
-    <valsi>su'o</valsi> with an ordinary number). Therefore, the explicitly quantified version of 
-    <xref linkend="example-random-id-3eMo"/> is<indexterm type="general"><primary>implicit quantifier</primary><secondary>for quotations</secondary></indexterm>  <indexterm type="general"><primary>quotations</primary><secondary>implicit quantifier for</secondary></indexterm>  <indexterm type="general"><primary>su'o</primary><secondary>as implicit quantifier for quotations</secondary></indexterm></para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-P558">
-      <title>
-        <anchor xml:id="c6e6d7"/>
-      </title>
-      <interlinear-gloss>
-        <jbo>mi cusku su'o lu do cadzu le bisli li'u</jbo>
-        <gloss>I express at-least-one-of [quote] you walk-on the ice [unquote].</gloss>
-        <natlang>I say one or more instances of 
-        <quote>You walk on the ice</quote>.</natlang>
-        <natlang>I say 
-        <quote>You walk on the ice</quote>.</natlang>
-      </interlinear-gloss>
-    </example>
-    <para role="indent">If an explicit ordinary number such as 
-    <valsi>re</valsi> were to appear, it would have to convey an exact expression, so</para>
-    <example role="interlinear-gloss-example" xml:id="example-random-id-59dF">
-      <title>
-        <anchor xml:id="c6e6d8"/>
-      </title>
-      <interlinear-gloss>
-        <jbo>mi cusku re lu do cadzu le bisli li'u</jbo>
-        <gloss>I express two-of [quote] you walk-on the ice [unquote].</gloss>
-      </interlinear-gloss>
-    </example>
-    <para role="noindent">means that I say the sentence exactly twice, neither more nor less.</para>
+    <para role="noindent"> <indexterm type="general"><primary>quantifiers</primary><secondary>with sumti</secondary></indexterm> turn out to mean exactly the same thing. This is a safe strategy, because if one of the referents doesn't turn out to be walking on the ice, I can safely claim that I didn't intend to include that person! 
+    </para>
   </section>
   <section xml:id="section-quantified-descriptions">
     <title><anchor xml:id="c6s7"/>Quantified descriptions</title>
