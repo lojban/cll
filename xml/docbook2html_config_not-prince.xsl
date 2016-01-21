@@ -6,5 +6,6 @@
 
   <xsl:template name="user.head.content">
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </xsl:template>
 </xsl:stylesheet>
