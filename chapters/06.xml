@@ -516,8 +516,8 @@
     <quote>outer quantifier</quote>, since it appears outside the description. But there is another possible location for a quantifier: between the descriptor and the selbri. This quantifier is called an 
     <quote>inner quantifier</quote>, and its meaning is quite different: it tells the listener how many individuals the description selbri characterizes.</para>
     <para>For example, the context of 
-    FIXME MISSING EXAMPLE supposedly told us that 
-    <jbophrase>le gerku</jbophrase> referred to some three specific dogs. This assumption can be made certain with the use of an explicit inner quantifier:</para>
+    <xref linkend="example-random-id-mwhq"/> supposedly told us that 
+    <jbophrase>le prenu</jbophrase> referred to some three specific people. This assumption can be made certain with the use of an explicit inner quantifier:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-X3iY">
       <title>
         <anchor xml:id="c6e7d2"/>
@@ -557,11 +557,37 @@
         <gloss>Each-of the three dogs - is-an-individual</gloss>
       </interlinear-gloss>
     </example>
-  <!-- FIXME section xml:id="section-masses" -->
-    <para><indexterm type="general"><primary>lai</primary><secondary>as mass counterpart of la</secondary></indexterm>  <indexterm type="general"><primary>loi</primary><secondary>as mass counterpart of lo</secondary></indexterm> The descriptors 
-    <valsi>loi</valsi> and 
-    <valsi>lai</valsi> are analogous to 
-    <valsi>lo</valsi> and 
+    <para>
+      Just as sumti can be torn apart using quantifiers, some situations can require encasing them in more durable shells. Consider another slightly contrived sentence.
+    </para>
+    <example role="interlinear-gloss-example" xml:id="lo-jvisihu-ku-noi-10mei">
+      <interlinear-gloss>
+        <jbo>lo mu jungypre jo'u lo mu frasypre cu jvisi'u</jbo>
+        <gloss>- Five Chinese--people along-with - five French--people - compete--with--each--other</gloss>
+        <natlang>Five Chinese and five French people compete with each other. Ten people compete with each other, five of them Chinese and five of them French.</natlang>
+      </interlinear-gloss>
+    </example>
+    <para role="noindent">
+      It might at first seem that the sentence could be about two teams of five people, but recall that at the level on which 
+      <valsi>lo</valsi> and <valsi>jo'u</valsi> operate, there is no structure apart from that of individuals, so connecting two sumti of five individuals with <valsi>jo'u</valsi> can't result in that meaning. To express concepts like groups of people competing against each other, Lojban uses masses, which wrap pluralities into single individuals. A rendering of <xref linkend="lo-jvisihu-ku-noi-10mei"/> that does fit the situation with two teams would be:
+    </para>
+    <example role="interlinear-gloss-example" xml:id="lo-jvisihu-ku-noi-10mei">
+      <interlinear-gloss>
+        <jbo>loi mu jungypre jo'u loi mu frasypre cu jvisi'u</jbo>
+        <gloss>A-mass-of five Chinese--people along-with a-mass-of five French--people - compete--with--each--other</gloss>
+        <natlang>Five Chinese and five French people compete with each other. Two masses compete with each other, one of them made of five Chinese and the other made of five French people.</natlang>
+      </interlinear-gloss>
+    </example>
+    <para>
+      The gadri <valsi>loi</valsi> (of selma'o LE) heads descriptions referring to masses. The selbri inside the description applies to the members of the mass, not necessarily the mass itself. The inner quantifier specifies the number of individuals in the mass, while the outer quantifier quantifies over whole masses (a <valsi>loi</valsi> description may refer to more than one mass; the number of masses can be specified using sumti-based descriptions, described in <xref linkend="section-sumti-based-descriptions"/>). Just as <valsi>le</valsi> descriptions can be derived from <valsi>lo</valsi> descriptions using absolute tenses, <valsi>loi</valsi> descriptions can be derived using the selbri <valsi>gunma</valsi>: x1 is a mass consisting of x2. The specifically referring counterpart to <valsi>loi</valsi> is <valsi>lei</valsi>.
+    </para>
+    <para>
+      Note that unlike mass-individuals, masses do not automatically inherit the properties of the individuals they represent: a mass of people doesn't usually satisfy <valsi>prenu</valsi>.
+    </para>
+  </section>
+  <section xml:id="section-generic-typical">
+    <title>Generic and typical reference</title>
+    <para>FIXME redo everything 
     <valsi>la</valsi> respectively, but refer to masses either by property (<valsi>loi</valsi>) or by name (<valsi>lai</valsi>). A classic example of 
     <valsi>loi</valsi> use is:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-T1pF">
