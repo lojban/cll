@@ -11,5 +11,5 @@ find . -type f | sed 's;^\./;;' | grep -v '\.appcache' >>cll.appcache
 
 find . -type f | xargs grep -l '<html xmlns=' | while read file
 do
-  sed -i 's;<html xmlns=;<html xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xmlns=;' "$file"
+  sed -i 's;<html xmlns=;<html xml:lang="en" lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xmlns=;' "$file"
 done
