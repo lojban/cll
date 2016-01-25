@@ -8,28 +8,7 @@ html {
   font-family: 'Linux Libertine', Libertine, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   font-size: 9pt;
   text-align: justify;
-} 
-
-/*********
-screen display
-{{{
-*********/
-@media screen {
-  body {
-    margin: 2em;
-    width: 600px;
-  }
-
-  a {
-    color: #0B486B;
-    text-decoration: none;
-    border-bottom-style: dashed;
-    border-bottom-width: 1px;
-  }
 }
-/****
-}}}
-****/
 
 /*********
 print display
@@ -46,11 +25,11 @@ print display
   div.toc a::after {
       content: leader('.') target-counter(attr(href), page);
   }
-  
+
   a.xref::after {
       content: " (p. " target-counter(attr(href), page) ")";
   }
-  
+
   /* Make links for printing look like normal text. */
   a {
     color: black !important;
@@ -65,14 +44,14 @@ print display
     border-bottom-width: 1px;
     */
   }
-  
+
   div.toc a {
     color: black;
     background: white;
     text-decoration: none;
     border-bottom-style: none;
   }
-  
+
   a.link, a.xref, a.glossterm {
     color: black;
     background: white;
@@ -88,19 +67,19 @@ print display
   print media: Page structure, title pages, etc
   {{{
   */
-  
+
   /* div.frontcover, div.halftitlepage, div.titlepage { page-break-before: right } */
   div.imprint { page-break-before: always }
-  div.dedication, div.foreword, div.toc, div.preface, div.chapter, div.reference, 
-  div.appendix, div.bibliography, div.glossary, div.whole-index, div.colophon { 
-    page-break-before: always 
+  div.dedication, div.foreword, div.toc, div.preface, div.chapter, div.reference,
+  div.appendix, div.bibliography, div.glossary, div.whole-index, div.colophon {
+    page-break-before: always
   }
   div.backcover { page-break-before: left }
-  
+
   div.chapter, div.glossary, div.whole-index {
     page: chapter;
   }
-  
+
   @page {
     margin: 13mm;
     margin-top: 17mm;
@@ -110,10 +89,10 @@ print display
      * border: 1px solid red;
      */
   }
-  
-  
+
+
   /* define default page and names pages: cover, blank, frontmatter */
-  
+
   @page chapter :left {
     @top-left {
       font-size: 9pt;
@@ -123,7 +102,7 @@ print display
       margin-top: 13mm;
       padding-bottom: 2mm;
     }
-  
+
     @bottom-left {
       font-size: 10pt;
       content: counter(page);
@@ -131,17 +110,17 @@ print display
       margin-bottom: 13mm;
     }
   }
-  
+
   @page chapter :right {
     @top-right {
       font-size: 9pt;
       text-align: center;
-      content: string(header, first); 
+      content: string(header, first);
       vertical-align: bottom;
       margin-top: 13mm;
       padding-bottom: 2mm;
     }
-  
+
     @bottom-right {
       font-size: 10pt;
       content: counter(page);
@@ -150,11 +129,11 @@ print display
       margin-bottom: 13mm;
     }
   }
-  
+
   @page chapter:first {
     @top-right { content: normal }
   }
-  
+
   /*
   print media: Page structure, title pages, etc
   }}}
@@ -356,10 +335,10 @@ ul, ol {
 }
 
 /* But tables and lists *inside examples* do not have *additional* indent */
-div.example-contents table, 
-div.example-contents div, 
-div.example-contents ul, 
-div.example-contents ol, 
+div.example-contents table,
+div.example-contents div,
+div.example-contents ul,
+div.example-contents ol,
 tr, li {
   border-spacing: 0;
   margin: 0;
@@ -574,3 +553,96 @@ p.twocolumn + div {
 br.table-break {
   display: none;
 }
+
+
+/*********
+screen display
+{{{
+*********/
+
+@media screen {
+  body {
+    max-width: 38em;
+    margin: auto;
+    padding: 1em;
+  }
+
+  .navheader table,
+  .navfooter table {
+    margin: 0;
+  }
+
+  hr {
+    width: 25%;
+    margin: 1em auto;
+  }
+
+  h1,
+  h1.title {
+    font-size: 150%;
+    margin: 2em auto;
+  }
+
+  h2,
+  h2.title {
+    font-size: 135%;
+    margin: 2em auto 1em auto;
+  }
+
+  h3,
+  h3.title,
+  p.title {
+    font-size: 110%;
+    margin: 1em auto 0.5em auto;
+  }
+
+  a {
+    color: #0B486B;
+    text-decoration: none;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+  }
+
+  p {
+    hyphens: auto;
+    /* remove vendor-prefixed styles once hyphenation is fully supported by Chrome and IE. */
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    margin: 1em auto;
+  }
+  div.section > p {
+    text-indent: 0;
+  }
+
+  table {
+    text-align: left;
+  }
+
+  table td {
+    padding: 0.2em 0.4em;
+  }
+}
+
+/* Styles specifically for small screens. */
+@media screen and (max-width: 1800px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Styles for medium to large screens. */
+@media screen and (min-width: 1800px) {
+  body {
+    font-size: 19px;
+  }
+}
+
+/* Styles for giant and ultra-high-resolution screens. */
+@media screen and (min-width: 3600px) {
+  body {
+    font-size: 22px;
+  }
+}
+/****
+}}}
+****/
