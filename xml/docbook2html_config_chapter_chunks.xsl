@@ -7,5 +7,7 @@
 
   <xsl:import href="docbook2html_config_common.xsl"/>
   <xsl:import href="docbook2html_config_not-prince.xsl"/>
+  <!-- This gives us chapters, despite the 0 -->
+  <xsl:param name="chunk.section.depth" select="0"></xsl:param>
 
 </xsl:stylesheet>

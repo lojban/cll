@@ -1,9 +1,17 @@
 #!/bin/bash
 
+# Find and go to where the script lives
+sdir="$(dirname "$(readlink -f $0)")"
+cd "$sdir"
+
 usage() {
   echo "
 
-Usage: $0 [-c] [-s] [-t] [-T target] [chapters]
+Usage: $0 [-c] [-a <archivedir>] [-A <coverage archivedir>] [-s] [-t] [-T target] [chapters]
+
+-a <archivedir>: Copy the resulting output into the specified directory after building it in $(pwd)/build/
+
+-A <coverage archivedir>: Same as -a but only used in coverage mode; this is to stop your coverage runs from overwriting your normal runs.
 
 -s: Replaces external xrefs in each chapter, so each chapter works standalone.
 
@@ -13,9 +21,13 @@ Usage: $0 [-c] [-s] [-t] [-T target] [chapters]
 
 $(ls $(pwd)/coverage/*.xml | xargs -n 1 basename | sed 's/^coverage_//' | sed 's/\.xml$//')
 
--T target: Specifies the make target.  Most of them are obvious.  The _web targets copy stuff into your ~/public_html/ web space.  Complete list:
+In coverage mode, -a is ignored; use -A instead.
 
-$(grep '^[a-z][a-z_]*:' scripts/Makefile | sed 's/:.*//' | sed 's/^/    /')
+In coverage mode, -T is ignored; it always produces a no-chunk XHTML and a PDF.
+
+-T target: Specifies the make target.  Most of them are obvious.  Complete list:
+
+$(grep '^[a-z][a-z_]*:' scripts/Makefile | sed 's/:.*//' | sed 's/^/    /' | uniq)
 
 [chapters]: defaults to all chapters; if you specify less than all chapters, you must use -s or -t
 "
@@ -25,10 +37,10 @@ $(grep '^[a-z][a-z_]*:' scripts/Makefile | sed 's/:.*//' | sed 's/^/    /')
 optlist=""
 run_chapters=""
 coverage=""
-builddir="$(pwd)/build" 
+builddir="build" 
 target="all"
 
-while getopts "csthT:" opt
+while getopts "cC:a:A:sthT:" opt
 do
   case "$opt" in
     c)    coverage="true"
@@ -41,6 +53,8 @@ do
           run_chapters="true"
           ;;
     T)    target="$OPTARG";;
+    a)    archivedir="$OPTARG";;
+    A)    covarchivedir="$OPTARG";;
     [?h]) usage;;
   esac
 done
@@ -97,7 +111,8 @@ then
     fi
   done
   chapters=$new_chapters
-  builddir="$(pwd)/coverage/build"
+  builddir="coverage/build"
+  archivedir=""
 fi
 
 echo "chapters: $chapters"
@@ -105,18 +120,18 @@ echo "optlist: $optlist"
 echo "target: $target"
 
 # See if we need to delete the cll.xml before we run make
-mkdir build
-echo "$optlist $chapters" >build/chapter-list.new
-if [ ! -f build/chapter-list ]
+mkdir -p $builddir
+echo "$optlist $chapters" >$builddir/chapter-list.new
+if [ ! -f $builddir/chapter-list ]
 then
-  touch build/chapter-list
+  touch $builddir/chapter-list
 fi
 
-if [ "$(diff -q build/chapter-list build/chapter-list.new)" ]
+if [ "$(diff -q $builddir/chapter-list $builddir/chapter-list.new)" ]
 then
-  cp build/chapter-list.new build/chapter-list
+  cp $builddir/chapter-list.new $builddir/chapter-list
   echo -e "\nChapter list differences found; forcing a re-merge.\n"
-  rm -f cll.xml
+  rm -f $builddir/cll.xml
 fi
 
-make -f scripts/Makefile builddir="$builddir" test="$optlist" chapters="$chapters" $target
+make -f scripts/Makefile builddir="$builddir" test="$optlist" chapters="$chapters" covcopydir="$covarchivedir" copydir="$archivedir" $target

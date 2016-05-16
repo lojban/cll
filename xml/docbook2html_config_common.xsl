@@ -5,7 +5,6 @@
   version="1.0">
 
   <xsl:param name="use.id.as.filename" select="'1'"/>
-  <xsl:param name="chunk.section.depth" select="0"></xsl:param>
   <xsl:param name="html.stylesheet" select="'final.css'"/>
   <xsl:param name="index.on.type" select="1"/>
   <xsl:param name="index.on.role" select="1"/>
