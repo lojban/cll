@@ -6,7 +6,10 @@ cd $1
 # structure, so making HTML5 app cache manifest files is actually
 # pretty trivial.
 
-echo 'CACHE MANIFEST' >cll.appcache
+rm cll.appcache
+touch cll.appcache
+echo 'CACHE MANIFEST' >>cll.appcache
+echo "# $(date)" >>cll.appcache
 find . -type f | sed 's;^\./;;' | grep -v '\.appcache' >>cll.appcache
 
 find . -type f | xargs grep -l '<html xmlns=' | while read file
