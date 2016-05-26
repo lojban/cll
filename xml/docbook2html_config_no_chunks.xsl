@@ -8,4 +8,14 @@
   <xsl:import href="docbook2html_config_common.xsl"/>
   <xsl:import href="docbook2html_config_not-prince.xsl"/>
 
+  <!-- Add in the back to book info link -->
+  <xsl:template name="user.header.content">
+    <xsl:call-template name="back-to-info-link"/>
+    <hr/>
+  </xsl:template>
+
+  <xsl:template name="user.footer.content">
+    <hr/>
+    <xsl:call-template name="back-to-info-link"/>
+  </xsl:template>
 </xsl:stylesheet>
