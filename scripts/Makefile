@@ -21,7 +21,7 @@ realclean: clean
 # Basic prep
 #*******
 
-$(builddir)/cll.xml: $(chapters)
+$(builddir)/cll.xml: $(chapters) xml/iso-pub.ent xml/identity.xsl xml/docbook2html_config_common.xsl
 	rm -f $(builddir)/xml $(builddir)/dtd
 	ln -sf $(PWD)/xml $(builddir)/xml
 	ln -sf $(PWD)/dtd $(builddir)/dtd
@@ -43,7 +43,7 @@ xhtml_nochunks: nochunks = -nochunks
 xhtml_nochunks: $(builddir)/xhtml_no_chunks.done
 
 # Do the actual chunking work
-$(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir)/cll_processed_xhtml.xml
+$(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_not-prince.xsl
 	rm -rf $(builddir)/xhtml_$*_chunks
 	mkdir -p $(builddir)/xhtml_$*_chunks
 	xmlto -m xml/docbook2html_config_$*_chunks.xsl -o $(builddir)/xhtml_$*_chunks/ xhtml$(nochunks) $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
