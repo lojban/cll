@@ -110,8 +110,7 @@ endif
 #*******
 # Testing
 #*******
-# coverage: clean builddir xhtml_no_chunks # pdf
-coverage: clean builddir xhtml pdf
+coverage: clean xhtml_nochunks pdf
 ifneq ($(covcopydir),)
 	mkdir -p $(covcopydir)
 	cp $(builddir)/cll.pdf $(covcopydir)/cll.pdf
