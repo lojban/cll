@@ -26,12 +26,6 @@
     section   title
   </xsl:param>
 
-  <!-- FIXME: do we even use admonitions? (see
-       http://newbiedoc.sourceforge.net/tutorials/docbook-guide/admon-docbook-guide.html.en for what those are).  Why are these set?
-       -->
-  <xsl:param name="admon.graphics" select="'1'"/>
-  <xsl:param name="admon.graphics.path"></xsl:param>
-
   <!-- deal with colspan=0, which doesn't actually work properly in
        the HTML output from docbook; we turn it into 12321, since
        that's an easy number to search for, "100%" doesn't work in
