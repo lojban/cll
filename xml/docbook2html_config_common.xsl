@@ -76,7 +76,7 @@
 
   <xsl:template name="back-to-info-link">
     <div class="back-to-info-link" align="center">
-      <a accesskey="b" href="https://mw.lojban.org/papri/CLL_v1.1_HTML">Book Info Page</a>
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
     </div>
   </xsl:template>
 
