@@ -6,7 +6,7 @@
   version="1.0">
 
   <xsl:import href="docbook2html_config_common.xsl"/>
-  <xsl:import href="docbook2html_config_not-prince.xsl"/>
+  <xsl:import href="docbook2html_config_xhtml.xsl"/>
   <!-- We only actually have 2 levels, but if we're going to chunk, let's chunk. -->
   <xsl:param name="chunk.section.depth" select="8"></xsl:param>
 

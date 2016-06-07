@@ -6,7 +6,7 @@
   version="1.0">
 
   <xsl:import href="docbook2html_config_common.xsl"/>
-  <xsl:import href="docbook2html_config_not-prince.xsl"/>
+  <xsl:import href="docbook2html_config_xhtml.xsl"/>
 
   <!-- Add in the back to book info link -->
   <xsl:template name="user.header.content">
