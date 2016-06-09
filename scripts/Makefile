@@ -21,7 +21,7 @@ realclean: clean
 # Basic prep
 #*******
 
-$(builddir)/cll.xml: $(chapters) xml/iso-pub.ent xml/identity.xsl xml/docbook2html_config_common.xsl
+$(builddir)/cll.xml: $(chapters) xml/iso-pub.ent xml/identity.xsl xml/docbook2html_config_common.xsl scripts/update_jbovlaste_xml.sh scripts/generate_glossary.rb scripts/merge.sh
 	rm -f $(builddir)/xml $(builddir)/dtd
 	ln -sf $(PWD)/xml $(builddir)/xml
 	ln -sf $(PWD)/dtd $(builddir)/dtd
