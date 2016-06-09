@@ -15,7 +15,7 @@ print display
 {{{
 *********/
 @media print {
-  // Avoid ligatures per http://www.princexml.com/forum/topic/1821/how-to-avoid-or-turn-off-ligatures
+  /* Avoid ligatures per http://www.princexml.com/forum/topic/1821/how-to-avoid-or-turn-off-ligatures */
   p { font-variant: prince-opentype(ccmp) }
 
   /*********
