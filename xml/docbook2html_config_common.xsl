@@ -26,6 +26,24 @@
     section   title
   </xsl:param>
 
+  <!-- Override generated text; see
+       http://www.sagehill.net/docbookxsl/CustomGentext.html for an intro to what's happening here.
+
+      The file we're modifying lives at /usr/share/sgml/docbook/xsl-ns-stylesheets-*/common/en.xml
+  -->
+  <xsl:param name="local.l10n.xml" select="document('')"/>
+
+  <l:i18n xmlns:l="http://docbook.sourceforge.net/xmlns/l10n/1.0">
+    <l:l10n language="en">
+      <l:context name="index">
+        <!-- In indexes do "foo: 1, 7" for "see foo on pages 1 and
+             7", instead of the default which is a comma (??)
+             -->
+        <l:template name="term-separator" text=": "/>
+      </l:context>
+    </l:l10n>
+  </l:i18n>
+
   <!-- deal with colspan=0, which doesn't actually work properly in
        the HTML output from docbook; we turn it into 12321, since
        that's an easy number to search for, "100%" doesn't work in
