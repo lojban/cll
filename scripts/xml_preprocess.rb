@@ -111,7 +111,9 @@ def glossify node, orignode
   if orignode['glossary'] == 'false' or orignode['valid'] == 'false' or orignode['valid'] == 'maybe'
     return node
   else
-    node.replace(%Q{<glossterm linkend="valsi-#{slugify(orignode.text)}">#{node}</glossterm>})
+    convert!( node: node, newname: 'glossterm' )
+    node['linkend'] = "valsi-#{slugify(orignode.text)}"
+    return node
   end
 end
 
@@ -323,15 +325,16 @@ end
 
 ## <valsi>risnyjelca</valsi> (heart burn) might have a place structure like:</para>
 $document.css('valsi').each do |node|
-  # We make a glossary entry unless it's marked valid=false
-  if node[:valid] == 'false' or node[:valid] == 'maybe'
-    convert!( node: node, newname: 'foreignphrase' )
+  # We make a glossary entry unless it's marked valid=false, but
+  # don't insert links in titles, please.
+  if node[:valid] == 'false' or node[:valid] == 'maybe' or [ 'title' ].include? node.parent.name
+    convert!( node: node, newname: 'foreignphrase', lang: 'jbo' )
   else
     orignode = node.dup
-    convert!( node: node, newname: 'foreignphrase', lang: 'jbo' )
-    indexify!( node: node, indextype: 'lojban-word', role: orignode.name )
     node = glossify node, orignode
-    $stderr.puts "valsi: #{node.to_xml}"
+    node = node.replace("<foreignphrase xml:lang='jbo'>#{node}</foreignphrase>")
+    indexify!( node: node, indextype: 'lojban-word', role: orignode.name )
+    # $stderr.puts "valsi: #{node.to_xml}"
   end
 end
 
@@ -376,8 +379,12 @@ $document.css('lojbanization').each do |node|
 end
 
 $document.css('jbophrase').each do |node|
-  # For now, jbophrase makes an *index* but not a *glossary*
-  indexify!( node: node, indextype: 'lojban-phrase' )
+  # Don't insert links in titles, please.
+  if ! [ 'title' ].include? node.parent.name
+    # For now, jbophrase makes an *index* but not a *glossary*
+    indexify!( node: node, indextype: 'lojban-phrase' )
+  end
+
   convert!( node: node, newname: 'foreignphrase', lang: 'jbo' )
 
   if node.parent.name == 'example'
