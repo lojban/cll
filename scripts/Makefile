@@ -47,6 +47,9 @@ $(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir
 	rm -rf $(builddir)/xhtml_$*_chunks
 	mkdir -p $(builddir)/xhtml_$*_chunks
 	xmlto -m xml/docbook2html_config_$*_chunks.xsl -o $(builddir)/xhtml_$*_chunks/ xhtml$(nochunks) $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
+	# We run tidy on the no-chunk version, because it's all in
+	# one place so it's easy
+	test -f $(builddir)/xhtml_$*_chunks/index.html || sed 's/mml:[^>]*/div/g' $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html | tidy -e - 2>&1 | grep -v '<table> lacks "summary" attribute'
 # Handle the no-chunk case; can't figure out how to set the
 # name of the output file, so move it to index.html
 	test -f $(builddir)/xhtml_$*_chunks/index.html || mv $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html $(builddir)/xhtml_$*_chunks/index.html
