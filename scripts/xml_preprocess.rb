@@ -326,8 +326,8 @@ end
 ## <valsi>risnyjelca</valsi> (heart burn) might have a place structure like:</para>
 $document.css('valsi').each do |node|
   # We make a glossary entry unless it's marked valid=false, but
-  # don't insert links in titles, please.
-  if node[:valid] == 'false' or node[:valid] == 'maybe' or [ 'title' ].include? node.parent.name
+  # don't insert links in titles, please.  Or index references.
+  if node[:valid] == 'false' or node[:valid] == 'maybe' or [ 'title', 'term', 'primary', 'secondary' ].include? node.parent.name
     convert!( node: node, newname: 'foreignphrase', lang: 'jbo' )
   else
     orignode = node.dup
@@ -379,8 +379,8 @@ $document.css('lojbanization').each do |node|
 end
 
 $document.css('jbophrase').each do |node|
-  # Don't insert links in titles, please.
-  if ! [ 'title' ].include? node.parent.name
+  # Don't insert links in titles, please.  Or index references.
+  if ! [ 'title', 'term', 'primary', 'secondary' ].include? node.parent.name
     # For now, jbophrase makes an *index* but not a *glossary*
     indexify!( node: node, indextype: 'lojban-phrase' )
   end
