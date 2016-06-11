@@ -86,31 +86,33 @@ endif
 #*******
 .PHONY: epub
 epub: $(builddir)/cll.epub
-# Note that the epub doesn't rely on the PDF, but rather on the HTML
-# that is used to build the PDF, but it amounts to the same thing
-# for requirements here.
-$(builddir)/cll.epub: $(builddir)/pdf.done
-	rm -rf $(builddir)/epub/
-	mkdir -p $(builddir)/epub/
-	cp $(builddir)/pdf/cll_processed_xhtml_pdf.html $(builddir)/epub/index.html
-	cp $(PWD)/scripts/master.css $(builddir)/epub/final.css
-	cp -pr $(PWD)/media $(builddir)/epub/
-	zip -r $(builddir)/epub.zip $(builddir)/epub/
-	ebook-convert $(builddir)/epub.zip $(builddir)/cll.epub
-	ebook-meta $(builddir)/cll.epub --authors 'John Woldemar Cowan' --title='The Complete Lojban Language' --comments='$(shell grep -A1 '<p class="releaseinfo">' build/pdf/cll_processed_xhtml_pdf.html | tail -n 1)'  --publisher="The Logical Language Group" --isbn=978-0966028324
+
+$(builddir)/cll.epub: $(builddir)/epub-xhtml/index.html scripts/build_epub.sh epub/content.opf* epub/mimetype epub/toc.xhtml* epub/META-INF/container.xml
+	scripts/build_epub.sh $(PWD)
 ifdef copydir
 	mkdir -p $(copydir)
 	cp $(builddir)/cll.epub $(copydir)/cll.epub
 endif
+
+# Note that the epub doesn't rely on the PDF, but rather on the HTML
+# that is used to build the PDF, but it amounts to the same thing
+# for requirements here.
+$(builddir)/epub-xhtml/index.html: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_common.xsl xml/docbook2html_config_epub.xsl scripts/xhtml_postprocess.sh $(PWD)/scripts/master.css $(PWD)/media/*
+# FIXME: add something like epub/* to the above line
+	rm -rf $(builddir)/epub-xhtml/
+	mkdir -p $(builddir)/epub-xhtml/
+	xmlto -m xml/docbook2html_config_epub.xsl -o $(builddir)/epub-xhtml/ xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
+	cp $(PWD)/scripts/master.css $(builddir)/epub-xhtml/final.css
+	cp -pr $(PWD)/media $(builddir)/epub-xhtml/
+	scripts/xhtml_postprocess.sh $(builddir)/epub-xhtml
 
 #*******
 # MOBI
 #*******
 .PHONY: mobi
 mobi: $(builddir)/cll.mobi
-$(builddir)/cll.mobi: $(builddir)/xhtml_no_chunks.done
-	zip -r $(builddir)/xhtml_no_chunks.zip $(builddir)/xhtml_no_chunks/
-	ebook-convert $(builddir)/xhtml_no_chunks.zip $(builddir)/cll.mobi
+$(builddir)/cll.mobi: $(builddir)/cll.epub
+	ebook-convert $(builddir)/cll.epub $(builddir)/cll.mobi
 ifdef copydir
 	mkdir -p $(copydir)
 	cp $(builddir)/cll.mobi $(copydir)/cll.mobi
