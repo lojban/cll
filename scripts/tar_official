@@ -11,6 +11,9 @@ filesfile=/tmp/official_tar.$$
 rm $filesfile
 touch $filesfile
 
+cp ../CHANGELOG .
+echo CHANGELOG >>$filesfile
+
 for file in *
 do
   if [ -L $file ]
