@@ -122,20 +122,31 @@ http://lojban.org/publications/cll/cll_v1.1_xhtml-section-chunks/
 Pushing official/ To Dead Tree Books
 ------------------------------------
 
-This is UNTESTED because we *just* switched to Ingram Spark.
-
 Go to https://myaccount.ingramspark.com/Titles/TitleInfo/CSS1956560
 using the LLG's account (Riley or Robin or Bob should have access).
 
-Click "Upload New Files".  Do the obvious.
+Click "Upload New Files".  Upload the files.
 
-Maybe update some of the metadata (such as publication date?) at the
-main book page.
+Errors about transparency and color profiles that say "The good news
+is that we can correct the file error(s) for you at no charge." can
+be ignored (i.e. you should ask Ingram to fix them) (although if you
+can figure out how to make the automation *not* cause those errors,
+you should totally do that).
 
-Step 3: Profit?
+When the fixes are done and the version is approved and so on, go
+back to the Title Details (same link as above) and update the
+Edition Description.
 
 Pushing official/ To E-Books
 ----------------------------
 
-Go to https://myaccount.ingramspark.com/Titles/TitleInfo/CSS1956560
+Go to https://myaccount.ingramspark.com/Titles/TitleInfo/CSS2977442
 using the LLG's account (Riley or Robin or Bob should have access).
+
+Click "Upload New Files".  Upload the files.
+
+Pay money.
+
+When the fixes are done and the version is approved and so on, go
+back to the Title Details (same link as above) and update the
+Edition Description.
