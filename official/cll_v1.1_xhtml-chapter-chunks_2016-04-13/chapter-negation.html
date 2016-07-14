@@ -1,0 +1,1766 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xml:lang="en" lang="en" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Chapter 15. “No” Problems: On Lojban Negation</title><link rel="stylesheet" type="text/css" href="final.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><link rel="home" href="index.html" title="The Complete Lojban Language" /><link rel="up" href="index.html" title="The Complete Lojban Language" /><link rel="prev" href="chapter-connectives.html" title="Chapter 14. If Wishes Were Horses: The Lojban Connective System" /><link rel="next" href="chapter-quantifiers.html" title="Chapter 16. “Who Did You Pass On The Road? Nobody”: Lojban And Logic" /><script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script><meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter 15. <span class="quote">“<span class="quote">No</span>”</span> Problems: On Lojban Negation</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="chapter-connectives.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="chapter-quantifiers.html">Next</a></td></tr></table><hr /></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="chapter-negation"></a>Chapter 15. <a id="c15"></a><span class="quote">“<span class="quote">No</span>”</span> Problems: On Lojban Negation</h1></div></div></div>
+  
+  <div class="mediaobject"><a id="chapter-negation-picture"></a><img src="media/chapter-negation.gif" /></div>
+  <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="section-negation-introduction"></a>15.1. <a id="c15s1"></a>Introductory</h2></div></div></div>
+    
+    <p>The grammatical expression of negation is a critical part of Lojban's claim to being logical. The problem of negation, simply put, is to come up with a complete definition of the word 
+    <span class="quote">“<span class="quote">not</span>”</span>. For Lojban's unambiguous grammar, this means further that meanings of 
+    <span class="quote">“<span class="quote">not</span>”</span> with different grammatical effect must be different words, and even different grammatical structures.</p>
+    <p>Logical assertions are implicitly required in a logical language; thus, an apparatus for expressing them is built into Lojban's logical connectives and other structures.</p>
+    
+    <p>In natural languages, especially those of Indo-European grammar, we have sentences composed of two parts which are typically called 
+    <span class="quote">“<span class="quote">subject</span>”</span> and 
+    <span class="quote">“<span class="quote">predicate</span>”</span>. In the statement</p>
+    <div class="example"><a id="example-random-id-vrXe"></a><p class="title"><strong>Example 15.1. 
+        <a id="c15e1d1"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>John goes to the store</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">
+      <span class="quote">“<span class="quote">John</span>”</span> is the subject, and 
+      <span class="quote">“<span class="quote">goes to the store</span>”</span> is the predicate. Negating 
+    <a class="xref" href="chapter-negation.html#example-random-id-vrXe" title="Example 15.1. ">Example 15.1</a> to produce</p>
+    <div class="example"><a id="example-random-id-gm3I"></a><p class="title"><strong>Example 15.2. 
+        <a id="c15e1d2"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>John doesn't go to the store.</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">has the effect of declaring that the predicate does not hold for the subject. 
+    <a class="xref" href="chapter-negation.html#example-random-id-gm3I" title="Example 15.2. ">Example 15.2</a> says nothing about whether John goes somewhere else, or whether someone else besides John goes to the store.</p>
+    <p>We will call this kind of negation 
+    <span class="quote">“<span class="quote">natural language negation</span>”</span>. This kind of negation is difficult to manipulate by the tools of logic, because it doesn't always follow the rules of logic. Logical negation is bi-polar: either a statement is true, or it is false. If a statement is false, then its negation must be true. Such negation is termed contradictory negation.</p>
+    <p>Let's look at some examples of how natural language negation can violate the rules of contradictory negation.</p>
+    <div class="example"><a id="example-random-id-qGWR"></a><p class="title"><strong>Example 15.3. 
+        <a id="c15e1d3"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>Some animals are not white.</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qgXI"></a><p class="title"><strong>Example 15.4. 
+        <a id="c15e1d4"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>Some animals are white.</p>
+    </div></div><br class="example-break" />
+    <p class="indent">Both of these statements are true; yet one is apparently the negation of the other. Another example:</p>
+    <div class="example"><a id="example-random-id-qgxL"></a><p class="title"><strong>Example 15.5. 
+        <a id="c15e1d5"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>I mustn't go to the dance.</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qGXL"></a><p class="title"><strong>Example 15.6. 
+        <a id="c15e1d6"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>I must go to the dance.</p>
+    </div></div><br class="example-break" />
+    <p class="indent">At first thought, 
+    <a class="xref" href="chapter-negation.html#example-random-id-qgxL" title="Example 15.5. ">Example 15.5</a> negates 
+    <a class="xref" href="chapter-negation.html#example-random-id-qGXL" title="Example 15.6. ">Example 15.6</a>. Thinking further, we realize that there is an intermediate state wherein I am permitted to go to the dance, but not obligated to do so. Thus, it is possible that both statements are false.</p>
+    <p>Sometimes order is significant:</p>
+    <div class="example"><a id="example-random-id-qgyb"></a><p class="title"><strong>Example 15.7. 
+        <a id="c15e1d7"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>The falling rock didn't kill Sam.</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qGYX"></a><p class="title"><strong>Example 15.8. 
+        <a id="c15e1d8"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>Sam wasn't killed by the falling rock.</p>
+    </div></div><br class="example-break" />
+    <p class="indent">Our minds play tricks on us with this one. Because 
+    <a class="xref" href="chapter-negation.html#example-random-id-qgyb" title="Example 15.7. ">Example 15.7</a> is written in what is called the 
+    <span class="quote">“<span class="quote">active voice</span>”</span>, we immediately get confused about whether 
+    <span class="quote">“<span class="quote">the falling rock</span>”</span> is a suitable subject for the predicate 
+    <span class="quote">“<span class="quote">did kill Sam</span>”</span>. 
+    <span class="quote">“<span class="quote">Kill</span>”</span> implies volition to us, and rocks do not have volition. This confusion is employed by opponents of gun control who use the argument 
+    <span class="quote">“<span class="quote">Guns don't kill people; people kill people.</span>”</span></p>
+    <p>Somehow, we don't have the same problem with 
+    <a class="xref" href="chapter-negation.html#example-random-id-qGYX" title="Example 15.8. ">Example 15.8</a>. The subject is Sam, and we determine the truth or falsity of the statement by whether he was or wasn't killed by the falling rock.</p>
+    <p>
+    <a class="xref" href="chapter-negation.html#example-random-id-qGYX" title="Example 15.8. ">Example 15.8</a> also helps us focus on the fact that there are at least two questionable facts implicit in this sentence: whether Sam was killed, and if so, whether the falling rock killed him. If Sam wasn't killed, the question of what killed him is moot.</p>
+    <p>This type of problem becomes more evident when the subject of the sentence turns out not to exist:</p>
+    <div class="example"><a id="example-random-id-qgzq"></a><p class="title"><strong>Example 15.9. 
+        <a id="c15e1d9"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>The King of Mexico didn't come to dinner.</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qgzv"></a><p class="title"><strong>Example 15.10. 
+        <a id="c15e1d10"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>The King of Mexico did come to dinner.</p>
+    </div></div><br class="example-break" />
+    <p class="indent">In the natural languages, we would be inclined to say that both of these statements are false, since there is no King of Mexico.</p>
+    <p>The rest of this chapter is designed to explain the Lojban model of negation.</p>
+  </div>
+  <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="section-bridi-negation"></a>15.2. <a id="c15s2"></a>bridi negation</h2></div></div></div>
+    
+    <p>In discussing Lojban negation, we will call the form of logical negation that simply denies the truth of a statement 
+    <span class="quote">“<span class="quote">bridi negation</span>”</span>. Using bridi negation, we can say the equivalent of 
+    <span class="quote">“<span class="quote">I haven't stopped beating my wife</span>”</span> without implying that I ever started, nor even that I have a wife, meaning simply 
+    <span class="quote">“<span class="quote">It isn't true that I have stopped beating my wife.</span>”</span> Since Lojban uses bridi as smaller components of complex sentences, bridi negation is permitted in these components as well at the sentence level.</p>
+    <p>For the bridi negation of a sentence to be true, the sentence being negated must be false. A major use of bridi negation is in making a negative response to a yes/no question; such responses are usually contradictory, denying the truth of the entire sentence. A negative answer to</p>
+    
+    <div class="example"><a id="example-random-id-sCNE"></a><p class="title"><strong>Example 15.11. 
+        <a id="c15e2d1"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>Did you go to the store?</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">is taken as a negation of the entire sentence, equivalent to</p>
+    <div class="example"><a id="example-random-id-vFYC"></a><p class="title"><strong>Example 15.12. 
+        <a id="c15e2d2"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>No, I didn't go to the store.</p>
+    </div></div><br class="example-break" />
+    <p class="indent">The most important rule about bridi negation is that if a bridi is true, its negation is false, and vice versa.</p>
+    <p>The simplest way to express a bridi negation is to use the cmavo 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003502320" class="indexterm"></a>na</em></span></em></a> of selma'o NA before the selbri of the affirmative form of the bridi (but after the 
+    <a class="glossterm" href="go01.html#valsi-cu"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003499808" class="indexterm"></a>cu</em></span></em></a>, if there is one):</p>
+    <div class="example"><a id="example-random-id-7nrv"></a><p class="title"><strong>Example 15.13. 
+        <a id="c15e2d3"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>go-to</td><td>the</td><td>store.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">when negated becomes:</p>
+    <div class="example"><a id="example-random-id-bV3b"></a><p class="title"><strong>Example 15.14. 
+        <a id="c15e2d4"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>[false]</td><td>go-to</td><td>the</td><td>store.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">Note that we have used a special convention to show in the English that a bridi negation is present. We would like to use the word 
+    <span class="quote">“<span class="quote">not</span>”</span>, because this highlights the naturalness of putting the negation marker just before the selbri, and makes the form easier to learn. But there is a major difference between Lojban's bridi negation with 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003481440" class="indexterm"></a>na</em></span></em></a> and natural language negation with 
+    <span class="quote">“<span class="quote">not</span>”</span>. In English, the word 
+    <span class="quote">“<span class="quote">not</span>”</span> can apply to a single word, to a phrase, to an English predicate, or to the entire sentence. In addition, 
+    <span class="quote">“<span class="quote">not</span>”</span> may indicate either contradictory negation or another form of negation, depending on the sentence. Lojban's internal bridi negation, on the other hand, always applies to an entire bridi, and is always a contradictory negation; that is, it contradicts the claim of the whole bridi.</p>
+    
+    <p>Because of the ambiguity of English 
+    <span class="quote">“<span class="quote">not</span>”</span>, we will use 
+    <span class="quote">“<span class="quote">[false]</span>”</span> in the translation of Lojban examples to remind the reader that we are expressing a contradictory negation. Here are more examples of bridi negation:</p>
+    <div class="example"><a id="example-random-id-qgzz"></a><p class="title"><strong>Example 15.15. 
+        <a id="c15e2d5"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>[cu]</td><td>na</td><td>ca</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td></td><td>[false]</td><td>now</td><td>am-a-go-er-to</td><td>the</td><td>market.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">I am not going to the market now.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qh10"></a><p class="title"><strong>Example 15.16. 
+        <a id="c15e2d6"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>lo</td><td>ca</td><td>nolraitru</td><td>be</td></tr>
+        <tr class="gloss"><td>The-actual</td><td>present</td><td>noblest-governor</td><td>of</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>le</td><td>fasygu'e</td><td>cu</td><td>na</td><td>krecau</td></tr>
+        <tr class="gloss"><td>the</td><td>French-country</td><td></td><td>[false]</td><td>is-hair-without.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">The current king of France isn't bald.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qh2i"></a><p class="title"><strong>Example 15.17. 
+        <a id="c15e2d7"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>ti</td><td>na</td><td>barda</td><td>prenu</td><td>co</td><td>melbi</td><td>mi</td></tr>
+        <tr class="gloss"><td>This</td><td>[false]</td><td>is-a-big</td><td>person</td><td>of-type</td><td>(beautiful-to</td><td>me).</td></tr>
+        
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">This isn't a big person who is beautiful to me.</p></td></tr>
+        
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">Although there is this fundamental difference between Lojban's internal bridi negation and English negation, we note that in many cases, especially when there are no existential or quantified variables (the cmavo 
+    
+    
+    <a class="glossterm" href="go01.html#valsi-da"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003439520" class="indexterm"></a>da</em></span></em></a>, 
+    <a class="glossterm" href="go01.html#valsi-de"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003437136" class="indexterm"></a>de</em></span></em></a>, and 
+    <a class="glossterm" href="go01.html#valsi-di"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003434752" class="indexterm"></a>di</em></span></em></a> of selma'o KOhA, explained in 
+    <a class="xref" href="chapter-quantifiers.html" title="Chapter 16. “Who Did You Pass On The Road? Nobody”: Lojban And Logic">Chapter 16</a>) in the bridi, you can indeed translate Lojban 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003431808" class="indexterm"></a>na</em></span></em></a> as 
+    <span class="quote">“<span class="quote">not</span>”</span> (or 
+    <span class="quote">“<span class="quote">isn't</span>”</span> or 
+    <span class="quote">“<span class="quote">doesn't</span>”</span>, as appropriate).</p>
+    <p>The most important rule about bridi negation is that if a bridi is true, its negation is false, and vice versa.</p>
+    <p>In Lojban, there are several structures that implicitly contain bridi, so that Lojban sentences may contain more than one occurrence of 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003427008" class="indexterm"></a>na</em></span></em></a>. For example:</p>
+    <div class="example"><a id="example-random-id-WU9u"></a><p class="title"><strong>Example 15.18. 
+        <a id="c15e2d8"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na</td><td>gleki</td><td>le</td><td>nu</td></tr>
+        <tr class="gloss"><td>I</td><td>[false]</td><td>am-happy-about</td><td>the</td><td>event-of</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>na</td><td>klama</td><td>le</td><td>nu</td><td>dansu</td></tr>
+        <tr class="gloss"><td>([false]</td><td>going-to</td><td>the</td><td>event-of</td><td>dancing).</td></tr>
+        
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">It is not the case that I am happy about it not being the case that I am going to the dance.</p></td></tr>
+        <tr class="para"><td colspan="12321"><p class="natlang">I am not happy about not going to the dance.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">In the previous example, we used internal negations in abstraction bridi; bridi negation may also be found in descriptions within sumti. For example:</p>
+    
+    <div class="example"><a id="example-random-id-N65f"></a><p class="title"><strong>Example 15.19. 
+        <a id="c15e2d9"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>nelci</td><td>le</td><td>na</td><td>melbi</td></tr>
+        <tr class="gloss"><td>I</td><td>am-fond-of</td><td>the-one-described-as</td><td>([false]</td><td>beautiful).</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">I am fond of the one who isn't beautiful.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">A more extreme (and more indefinite) example is:</p>
+    <div class="example"><a id="example-random-id-eQaI"></a><p class="title"><strong>Example 15.20. 
+        <a id="c15e2d10"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>nelci</td><td>lo</td><td>na</td></tr>
+        <tr class="gloss"><td>I</td><td>am-fond-of</td><td>one-who-is</td><td>([false]</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>ca</td><td>nolraitru</td><td>be</td><td>le</td><td>frasygu'e</td></tr>
+        <tr class="gloss"><td>the-current</td><td>king</td><td>of</td><td>the</td><td>French-country).</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">I am fond of one who isn't the current king of France.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">The claim of 
+    <a class="xref" href="chapter-negation.html#example-random-id-eQaI" title="Example 15.20. ">Example 15.20</a> could apply to anyone except a person who is fond of no one at all, since the relation within the description is false for everyone. You cannot readily express these situations in colloquial English.</p>
+    
+    <p>Negation with 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003380928" class="indexterm"></a>na</em></span></em></a> applies to an entire bridi, and not to just part of a selbri. Therefore, you won't likely have reason to put 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003378368" class="indexterm"></a>na</em></span></em></a> inside a tanru. In fact, the grammar currently does not allow you to do so (except in a lujvo and in elaborate constructs involving GUhA, the forethought connector for selbri). Any situation where you might want to do so can be expressed in a less-compressed non-tanru form. This grammatical restriction helps ensure that bridi negation is kept separate from other forms of negation.</p>
+    
+    <p>The grammar of 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003375488" class="indexterm"></a>na</em></span></em></a> allows multiple adjacent negations, which cancel out, as in normal logic:</p>
+    <div class="example"><a id="example-random-id-RJKu"></a><p class="title"><strong>Example 15.21. 
+        <a id="c15e2d11"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>ti</td><td>na</td><td>na</td><td>barda</td><td>prenu</td><td>co</td><td>melbi</td><td>mi</td></tr>
+        <tr class="gloss"><td>This</td><td>[false]</td><td>[false]</td><td>is-a-big</td><td>person</td><td>that</td><td>is-(beautiful-to</td><td>me).</td></tr>
+        
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">which is the same as:</p>
+    <div class="example"><a id="example-random-id-2UpW"></a><p class="title"><strong>Example 15.22. 
+        <a id="c15e2d12"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>ti</td><td>barda</td><td>prenu</td><td>co</td><td>melbi</td><td>mi</td></tr>
+        <tr class="gloss"><td>This</td><td>is-a-big</td><td>person</td><td>that</td><td>is-(beautiful-to</td><td>me).</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">When a selbri is tagged with a tense or a modal, negation with 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003354832" class="indexterm"></a>na</em></span></em></a> is permitted in two positions: before or after the tag. No semantic difference between these forms has yet been defined, but this is not finally determined, since the interactions between tenses/modals and bridi negation have not been fully explored. In particular, it remains to be seen whether sentences using less familiar tenses, such as:</p>
+    <div class="example"><a id="example-random-id-fgmv"></a><p class="title"><strong>Example 15.23. 
+        <a id="c15e2d13"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>[cu]</td><td>ta'e</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        
+        <tr class="gloss"><td>I</td><td></td><td>habitually</td><td>go-to</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">mean the same thing with 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003343872" class="indexterm"></a>na</em></span></em></a> before the 
+    <a class="glossterm" href="go01.html#valsi-tahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003341472" class="indexterm"></a>ta'e</em></span></em></a>, as when the negation occurs afterwards; we'll let future, Lojban-speaking, logicians decide on how they relate to each other.</p>
+    
+    <p>A final caution on translating English negations into Lojban: if you translate the English literally, you'll get the wrong one. With English causal statements, and other statements with auxiliary clauses, this problem is more likely.</p>
+    <p>Thus, if you translate the English:</p>
+    <div class="example"><a id="example-random-id-hEa7"></a><p class="title"><strong>Example 15.24. 
+        <a id="c15e2d14"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>I do not go to the market because the car is broken.</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">as:</p>
+    <div class="example"><a id="example-random-id-q8su"></a><p class="title"><strong>Example 15.25. 
+        <a id="c15e2d15"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na</td><td>klama</td><td>le</td><td>zarci</td><td>ki'u</td></tr>
+        <tr class="gloss"><td>I</td><td>[false]</td><td>go-to</td><td>the</td><td>market</td><td>because-of</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>lenu</td><td>le</td><td>karce</td><td>cu</td><td>spofu</td></tr>
+        <tr class="gloss"><td>the-event-of</td><td>the</td><td>car</td><td></td><td>is-broken.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">It is false that: I go to the market because the car is broken.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">you end up negating too much.</p>
+    <p>Such mistranslations result from the ambiguity of English compounded by the messiness of natural language negation. A correct translation of the normal interpretation of 
+    <a class="xref" href="chapter-negation.html#example-random-id-hEa7" title="Example 15.24. ">Example 15.24</a> is:</p>
+    <div class="example"><a id="example-random-id-R3GU"></a><p class="title"><strong>Example 15.26. 
+        <a id="c15e2d16"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>le</td><td>nu</td><td>mi</td><td>na</td><td>klama</td><td>le</td><td>zarci</td><td>cu</td><td>se</td><td>krinu</td></tr>
+        <tr class="gloss"><td>The</td><td>event-of</td><td>(my</td><td>[false]</td><td>going-to</td><td>the</td><td>market)</td><td></td><td></td><td>is-justified-by</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>le</td><td>nu</td><td>le</td><td>karce</td><td>cu</td><td>spofu</td></tr>
+        <tr class="gloss"><td>the</td><td>event-of</td><td>(the</td><td>car</td><td></td><td>being-broken).</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">My not going to the market is because the car is broken.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">In 
+    <a class="xref" href="chapter-negation.html#example-random-id-R3GU" title="Example 15.26. ">Example 15.26</a>, the negation is clearly confined to the event abstraction in the x1 sumti, and does not extend to the whole sentence. The English could also have been expressed by two separate sentences joined by a causal connective (which we'll not go into here).</p>
+    
+    <p>The problem is not confined to obvious causals. In the English:</p>
+    
+    <div class="example"><a id="example-random-id-MGvB"></a><p class="title"><strong>Example 15.27. 
+        <a id="c15e2d17"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>I was not conscripted into the Army with the help of my uncle the Senator.</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">we do not intend the uncle's help to be part of the negation. We must thus move the negation into an event clause or use two separate sentences. The event-clause version would look like:</p>
+    <div class="example"><a id="example-random-id-NILi"></a><p class="title"><strong>Example 15.28. 
+        <a id="c15e2d18"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>The event-of (my [false] being-conscripted-into the Army) was aided by my uncle the Senator.</p>
+    </div></div><br class="example-break" />
+    <p class="indent">It is possible that someone will want to incorporate bridi negations into lujvo. For this reason, the rafsi 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-nar-</em></span> has been reserved for 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003290480" class="indexterm"></a>na</em></span></em></a>. However, before using this rafsi, make sure that you intend the contradictory bridi negation, and not the scalar negation described in 
+    <a class="xref" href="chapter-negation.html#section-scalar-negation" title="15.3. Scalar Negation">Section 15.3</a>, which will be much more common in tanru and lujvo.</p>
+  </div>
+  <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="section-scalar-negation"></a>15.3. <a id="c15s3"></a>Scalar Negation</h2></div></div></div>
+    
+    <p>Let us now consider some other types of negation. For example, when we say:</p>
+    <div class="example"><a id="example-random-id-GJga"></a><p class="title"><strong>Example 15.29. 
+        <a id="c15e3d1"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>The chair is not brown.</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">we make a positive inference – that the chair is some other color. Thus, it is legitimate to respond:</p>
+    <div class="example"><a id="example-random-id-DDN8"></a><p class="title"><strong>Example 15.30. 
+        <a id="c15e3d2"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>It is green.</p>
+    </div></div><br class="example-break" />
+    <p class="indent">Whether we agree that the chair is brown or not, the fact that the statement refers to color has significant effect on how we interpret some responses. If we hear the following exchange:</p>
+    <div class="example"><a id="example-random-id-muQB"></a><p class="title"><strong>Example 15.31. 
+        <a id="c15e3d3"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>The chair is not brown.</p>
+      <p>Correct. The chair is wooden.</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">we immediately start to wonder about the unusual wood that isn't brown. If we hear the exchange:</p>
+    <div class="example"><a id="example-random-id-MxWM"></a><p class="title"><strong>Example 15.32. 
+        <a id="c15e3d4"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>Is the chair green?</p>
+      <p>No, it is in the kitchen.</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">we are unsettled because the response seems to be a non-sequitur. But since it might be true and it is a statement about the chair, one can't say it is entirely irrelevant!</p>
+    
+    <p>What is going on in these statements is something called 
+    <span class="quote">“<span class="quote">scalar negation</span>”</span>. As the name suggests, scalar negation presumes an implied scale. A negation of this type not only states that one scalar value is false, but implies that another value on the scale must be true. This can easily lead to complications. The following exchange seems reasonably natural (a little suspension of disbelief in such inane conversation will help):</p>
+    <div class="example"><a id="example-random-id-s5DJ"></a><p class="title"><strong>Example 15.33. 
+        <a id="c15e3d5"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>That isn't a blue house.</p>
+      <p>Right! That is a green house.</p>
+    </div></div><br class="example-break" />
+    <p class="indent">We have acknowledged a scalar negation by providing a correct value which is another color in the set of colors permissible for houses. While a little less likely, the following exchange is also natural:</p>
+    <div class="example"><a id="example-random-id-M472"></a><p class="title"><strong>Example 15.34. 
+        <a id="c15e3d6"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>That isn't a blue house.</p>
+      <p>Right! That is a blue car.</p>
+    </div></div><br class="example-break" />
+    <p class="indent">Again, we have acknowledged a scalar negation, and substituted a different object in the universe of discourse of things that can be blue.</p>
+    <p>Now, if the following exchange occurs:</p>
+    <div class="example"><a id="example-random-id-sq36"></a><p class="title"><strong>Example 15.35. 
+        <a id="c15e3d7"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>That isn't a blue house.</p>
+      <p>Right! That is a green car.</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">we find the result unsettling. This is because it seems that two corrections have been applied when there is only one negation. Yet out of context, 
+    <span class="quote">“<span class="quote">blue house</span>”</span> and 
+    <span class="quote">“<span class="quote">green car</span>”</span> seem to be reasonably equivalent units that should be mutually replaceable in a sentence. It's just that we don't have a clear way in English to say:</p>
+    <div class="example"><a id="example-random-id-hd0I"></a><p class="title"><strong>Example 15.36. 
+        <a id="c15e3d8"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>That isn't a 
+      <span class="quote">“<span class="quote">blue-house</span>”</span>.</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">aloud so as to clearly imply that the scalar negation is affecting the pair of words as a single unit.</p>
+    <p>Another even more confusing example of scalar negation is to the sentence:</p>
+    <div class="example"><a id="example-random-id-JTrd"></a><p class="title"><strong>Example 15.37. 
+        <a id="c15e3d9"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>John didn't go to Paris from Rome.</p>
+    </div></div><br class="example-break" />
+    <p class="indent">Might 
+    <a class="xref" href="chapter-negation.html#example-random-id-JTrd" title="Example 15.37. ">Example 15.37</a> imply that John went to Paris from somewhere else? Or did he go somewhere else from Rome? Or perhaps he didn't go anywhere at all: maybe someone else did, or maybe there was no event of going whatsoever. One can devise circumstances where any one, two or all three of these statements might be inferred by a listener.</p>
+    <p>In English, we have a clear way of distinguishing scalar negation from predicate negation that can be used in many situations. We can use the partial word 
+    <span class="quote">“<span class="quote">non-</span>”</span> as a prefix. But this is not always considered good usage, even though it would render many statements much clearer. For example, we can clearly distinguish</p>
+    <div class="example"><a id="example-random-id-gN3C"></a><p class="title"><strong>Example 15.38. 
+        <a id="c15e3d10"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>That is a non-blue house.</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">from the related sentence</p>
+    <div class="example"><a id="example-random-id-GtQC"></a><p class="title"><strong>Example 15.39. 
+        <a id="c15e3d11"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>That is a blue non-house.</p>
+    </div></div><br class="example-break" />
+    <p class="indent">
+      <a class="xref" href="chapter-negation.html#example-random-id-gN3C" title="Example 15.38. ">Example 15.38</a> and 
+    <a class="xref" href="chapter-negation.html#example-random-id-GtQC" title="Example 15.39. ">Example 15.39</a> have the advantage that, while they contain a negative indication, they are in fact positive assertions. They say what is true by excluding the false; they do not say what is false.</p>
+    <p>We can't always use 
+    <span class="quote">“<span class="quote">non-</span>”</span> though, because of the peculiarities of English's grammar. It would sound strange to say:</p>
+    <div class="example"><a id="example-random-id-A3yR"></a><p class="title"><strong>Example 15.40. 
+        <a id="c15e3d12"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>John went to non-Paris from Rome.</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">or</p>
+    <div class="example"><a id="example-random-id-sn2I"></a><p class="title"><strong>Example 15.41. 
+        <a id="c15e3d13"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>John went to Paris from non-Rome.</p>
+    </div></div><br class="example-break" />
+    <p class="noindent">although these would clarify the vague negation. Another circumlocution for English scalar negation is 
+    <span class="quote">“<span class="quote">other than</span>”</span>, which works where 
+    <span class="quote">“<span class="quote">non-</span>”</span> does not, but is wordier.</p>
+    <p>Finally, we have natural language negations that are called polar negations, or opposites:</p>
+    <div class="example"><a id="example-random-id-qh2s"></a><p class="title"><strong>Example 15.42. 
+        <a id="c15e3d14"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>John is moral</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qh3s"></a><p class="title"><strong>Example 15.43. 
+        <a id="c15e3d15"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>John is immoral</p>
+    </div></div><br class="example-break" />
+    <p class="indent">To be immoral is much more than to just be not moral: it implies the opposite condition. Statements like 
+    <a class="xref" href="chapter-negation.html#example-random-id-qh3s" title="Example 15.43. ">Example 15.43</a> are strong negations which not only deny the truth of a statement, but assert its opposite. Since, 
+    <span class="quote">“<span class="quote">opposite</span>”</span> implies a scale, polar negations are a special variety of scalar negations.</p>
+    <p>To examine this concept more closely, let us draw a linear scale, showing two examples of how the scale is used:</p>
+    <pre class="programlisting">
+      Affirmations (positive)      Negations (negative)
+      |-----------|-----------|-----------|-----------|
+      All       Most        Some         Few       None
+      Excellent Good        Fair         Poor     Awful
+    </pre>
+    <p>Some scales are more binary than the examples we diagrammed. Thus we have 
+    <span class="quote">“<span class="quote">not necessary</span>”</span> or 
+    <span class="quote">“<span class="quote">unnecessary</span>”</span> being the polar opposite of necessary. Another scale, especially relevant to Lojban, is interpreted based on situations modified by one's philosophy: 
+    <span class="quote">“<span class="quote">not true</span>”</span> may be equated with 
+    <span class="quote">“<span class="quote">false</span>”</span> in a bi-valued truth-functional logic, while in tri-valued logic an intermediate between 
+    <span class="quote">“<span class="quote">true</span>”</span> and 
+    <span class="quote">“<span class="quote">false</span>”</span> is permitted, and in fuzzy logic a continuous scale exists from true to false. The meaning of 
+    
+    <span class="quote">“<span class="quote">not true</span>”</span> requires a knowledge of which variety of truth scale is being considered.</p>
+    <p>We will define the most general form of scalar negation as indicating only that the particular point or value in the scale or range is not valid and that some other (unspecified) point on the scale is correct. This is the intent expressed in most contexts by 
+    <span class="quote">“<span class="quote">not mild</span>”</span>, for example.</p>
+    <p>Using this paradigm, contradictory negation is less restrictive than scalar negation – it says that the point or value stated is incorrect (false), and makes no statement about the truth of any other point or value, whether or not on the scale.</p>
+    <p>In English, scalar negation semantically includes phrases such as 
+    <span class="quote">“<span class="quote">other than</span>”</span>, 
+    <span class="quote">“<span class="quote">reverse of</span>”</span>, or 
+    <span class="quote">“<span class="quote">opposite from</span>”</span> expressions and their equivalents. More commonly, scalar negation is expressed in English by the prefixes 
+    <span class="quote">“<span class="quote">non-</span>”</span>, 
+    <span class="quote">“<span class="quote">un-</span>”</span>, 
+    <span class="quote">“<span class="quote">il-</span>”</span>, and 
+    <span class="quote">“<span class="quote">im-</span>”</span>. Just which form and permissible values are implied by a scalar negation is dependent on the semantics of the word or concept which is being negated, and on the context. Much confusion in English results from the uncontrolled variations in meaning of these phrases and prefixes.</p>
+    <p>In the examples of 
+    <a class="xref" href="chapter-negation.html#section-nahe" title="15.4. selbri and tanru negation">Section 15.4</a>, we will translate the general case of scalar negation using the general formula 
+    <span class="quote">“<span class="quote">other than</span>”</span> when a phrase is scalar-negated, and 
+    <span class="quote">“<span class="quote">non-</span>”</span> when a single word is scalar-negated.</p>
+  </div>
+  <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="section-nahe"></a>15.4. <a id="c15s4"></a>selbri and tanru negation</h2></div></div></div>
+    
+    <p>All the scalar negations illustrated in 
+    <a class="xref" href="chapter-negation.html#section-scalar-negation" title="15.3. Scalar Negation">Section 15.3</a> are expressed in Lojban using the cmavo 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003212288" class="indexterm"></a>na'e</em></span></em></a> (of selma'o NAhE). The most common use of 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003209696" class="indexterm"></a>na'e</em></span></em></a> is as a prefix to the selbri:</p>
+    <div class="example"><a id="example-random-id-qh42"></a><p class="title"><strong>Example 15.44. 
+        <a id="c15e4d1"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>go-to</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qH4n"></a><p class="title"><strong>Example 15.45. 
+        <a id="c15e4d2"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na'e</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>(other-than</td><td>go-to)</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">Comparing these two, we see that the negation operator being used in 
+    
+    
+    
+    
+    <a class="xref" href="chapter-negation.html#example-random-id-qH4n" title="Example 15.45. ">Example 15.45</a> is 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003192208" class="indexterm"></a>na'e</em></span></em></a>. But what exactly does 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003191712" class="indexterm"></a>na'e</em></span></em></a> negate? Does the negation include only the gismu 
+    <a class="glossterm" href="go01.html#valsi-klama"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003187488" class="indexterm"></a>klama</em></span></em></a>, which is the entire selbri in this case, or does it include the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003185440" class="indexterm"></a>le zarci</em></span> as well? In Lojban, the answer is unambiguously 
+    <span class="quote">“<span class="quote">only the gismu</span>”</span>. The cmavo 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003182784" class="indexterm"></a>na'e</em></span></em></a> always applies only to what follows it.</p>
+    <p>
+    <a class="xref" href="chapter-negation.html#example-random-id-qH4n" title="Example 15.45. ">Example 15.45</a> looks as if it were parallel to:</p>
+    <div class="example"><a id="example-random-id-tqX1"></a><p class="title"><strong>Example 15.46. 
+        <a id="c15e4d3"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>[false]</td><td>go-to</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">but in fact there is no real parallelism at all. A negation using 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003171280" class="indexterm"></a>na</em></span></em></a> denies the truth of a relationship, but a selbri negation with 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003168800" class="indexterm"></a>na'e</em></span></em></a> asserts that a relationship exists other than that stated, one which specifically involves the sumti identified in the statement. The grammar allotted to 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003166192" class="indexterm"></a>na'e</em></span></em></a> allows us to unambiguously express scalar negations in terms of scope, scale, and range within the scale. Before we explain the scalar aspects, let us show how the scope of 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003163728" class="indexterm"></a>na'e</em></span></em></a> is determined.</p>
+    <p>In tanru, we may wish to negate an individual element before combining it with another to form the tanru. We in effect need a shorter-than-selbri-scope negation, for which we can use 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003160688" class="indexterm"></a>na'e</em></span></em></a> as well. The positive sentence</p>
+    <div class="example"><a id="example-random-id-ETuV"></a><p class="title"><strong>Example 15.47. 
+        <a id="c15e4d4"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>cadzu</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>walking-ly</td><td>go-to</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">can be subjected to selbri negation in several ways. Two are:</p>
+    <div class="example"><a id="example-random-id-qh4w"></a><p class="title"><strong>Example 15.48. 
+        <a id="c15e4d5"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na'e</td><td>cadzu</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>(other-than</td><td>walkingly)</td><td>go-to</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qH6w"></a><p class="title"><strong>Example 15.49. 
+        <a id="c15e4d6"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>cadzu</td><td>na'e</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>walkingly</td><td>(other-than</td><td>go-to)</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">These negations show the default scope of 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003134048" class="indexterm"></a>na'e</em></span></em></a> is close-binding on an individual brivla in a tanru. 
+    
+    <a class="xref" href="chapter-negation.html#example-random-id-qh4w" title="Example 15.48. ">Example 15.48</a> says that I am going to the market, but in some kind of a non-walking manner. (As with most tanru, there are a few other possible interpretations, but we'll assume this one – see 
+    <a class="xref" href="chapter-selbri.html" title="Chapter 5. “Pretty Little Girls' School”: The Structure Of Lojban selbri">Chapter 5</a> for a discussion of tanru meaning).</p>
+    <p>In neither 
+    <a class="xref" href="chapter-negation.html#example-random-id-qh4w" title="Example 15.48. ">Example 15.48</a> nor 
+    <a class="xref" href="chapter-negation.html#example-random-id-qH6w" title="Example 15.49. ">Example 15.49</a> does the 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003128608" class="indexterm"></a>na'e</em></span></em></a> negate the entire selbri. While both sentences contain negations that deny a particular relationship between the sumti, they also have a component which makes a positive claim about such a relationship. This is clearer in 
+    <a class="xref" href="chapter-negation.html#example-random-id-qh4w" title="Example 15.48. ">Example 15.48</a>, which says that I am going, but in a non-walking manner. In 
+    <a class="xref" href="chapter-negation.html#example-random-id-qH6w" title="Example 15.49. ">Example 15.49</a>, we have claimed that the relationship between me and the market in some way involves walking, but is not one of 
+    <span class="quote">“<span class="quote">going to</span>”</span> (perhaps we are walking around the market, or walking-in-place while at the market).</p>
+    <p>The 
+    <span class="quote">“<span class="quote">scale</span>”</span>, or actually the 
+    <span class="quote">“<span class="quote">set</span>”</span>, implied in Lojban tanru negations is anything which plausibly can be substituted into the tanru. (Plausibility here is interpreted in the same way that answers to a 
+    <a class="glossterm" href="go01.html#valsi-mo"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003122992" class="indexterm"></a>mo</em></span></em></a> question must be plausible – the result must not only have the right number of places and have sumti values appropriate to the place structure, it must also be appropriate or relevant to the context.) This minimal condition allows a speaker to be intentionally vague, while still communicating meaningful information. The speaker who uses selbri negation is denying one relationship, while minimally asserting a different relationship.</p>
+    <p>We also need a scalar negation form that has a scope longer than a single brivla. There exists such a longer-scope selbri negation form, as exemplified by (each Lojban sentence in the next several examples is given twice, with parentheses in the second copy showing the scope of the 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003119264" class="indexterm"></a>na'e</em></span></em></a>):</p>
+    <div class="example"><a id="example-random-id-t20b"></a><p class="title"><strong>Example 15.50. 
+        <a id="c15e4d7"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na'e</td><td>ke</td><td>cadzu</td><td>klama</td><td>[ke'e]</td><td>le</td><td>zarci</td></tr>
+        <tr class="jbo"><td>mi</td><td>na'e</td><td>(ke</td><td>cadzu</td><td>klama</td><td>[ke'e])</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>other-than</td><td>(</td><td>walkingly</td><td>go-to</td><td>)</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">This negation uses the same 
+    <a class="glossterm" href="go01.html#valsi-ke"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003104640" class="indexterm"></a>ke</em></span></em></a> and 
+    <a class="glossterm" href="go01.html#valsi-kehe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003102448" class="indexterm"></a>ke'e</em></span></em></a> delimiters (the 
+    <a class="glossterm" href="go01.html#valsi-kehe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003099968" class="indexterm"></a>ke'e</em></span></em></a> is always elidable at the end of a selbri) that are used in tanru. The sentence clearly negates the entire selbri. The 
+    <a class="glossterm" href="go01.html#valsi-kehe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003097552" class="indexterm"></a>ke'e</em></span></em></a>, whether elided or not, reminds us that the negation does not include the trailing sumti. While the trailing-sumti place-structure is defined as that of the final brivla, the trailing sumti themselves are not part of the selbri and are thus not negated by 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003094912" class="indexterm"></a>na'e</em></span></em></a>.</p>
+    <p>Negations of just part of the selbri are also permitted:</p>
+    <div class="example"><a id="example-random-id-PVct"></a><p class="title"><strong>Example 15.51. 
+        <a id="c15e4d8"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na'e</td><td>ke</td><td>sutra</td><td>cadzu</td><td>ke'e</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="jbo"><td>mi</td><td>na'e</td><td>(ke</td><td>sutra</td><td>cadzu</td><td>ke'e)</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>other-than</td><td>(</td><td>quickly</td><td>walkingly</td><td>)</td><td>go-to</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">In 
+    <a class="xref" href="chapter-negation.html#example-random-id-PVct" title="Example 15.51. ">Example 15.51</a>, only the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003078640" class="indexterm"></a>sutra cadzu</em></span> tanru is negated, so the speaker is indeed going to the market, but not by walking quickly.</p>
+    <p>Negations made with 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003075744" class="indexterm"></a>na'e</em></span></em></a> or 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003073600" class="indexterm"></a>na'eke</em></span> also include within their scope any sumti attached to the brivla or tanru with 
+    <a class="glossterm" href="go01.html#valsi-be"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003071232" class="indexterm"></a>be</em></span></em></a> or 
+    <a class="glossterm" href="go01.html#valsi-bei"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003068928" class="indexterm"></a>bei</em></span></em></a>. Such attached sumti are considered part of the brivla or tanru:</p>
+    <div class="example"><a id="example-random-id-MYYa"></a><p class="title"><strong>Example 15.52. 
+        <a id="c15e4d9"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na'e</td><td>ke</td><td>sutra</td><td>cadzu</td><td>be</td><td>le</td><td>mi</td><td>birka</td></tr>
+        <tr class="gloss"><td>I</td><td>other-than</td><td>(</td><td>quickly</td><td>walking</td><td>on</td><td>the</td><td>of-me</td><td>arms-ly</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>ke'e</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>)</td><td>go-to</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">Note that 
+    <a class="xref" href="chapter-negation.html#example-random-id-qh7T" title="Example 15.53. ">Example 15.53</a> and 
+    <a class="xref" href="chapter-negation.html#example-random-id-qH8J" title="Example 15.54. ">Example 15.54</a> do not express the same thing:</p>
+    <div class="example"><a id="example-random-id-qh7T"></a><p class="title"><strong>Example 15.53. 
+        <a id="c15e4d10"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na'e</td><td>ke</td><td>sutra</td><td>cadzu</td><td>[ke'e]</td><td>lemi</td><td>birka</td></tr>
+        <tr class="jbo"><td>mi</td><td>na'e</td><td>(ke</td><td>sutra</td><td>cadzu</td><td>[ke'e])</td><td>lemi</td><td>birka</td></tr>
+        <tr class="gloss"><td>I</td><td>other-than</td><td>(</td><td>quickly</td><td>walk-on</td><td>)</td><td>my</td><td>arms.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qH8J"></a><p class="title"><strong>Example 15.54. 
+        <a id="c15e4d11"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na'e</td><td>ke</td><td>sutra</td><td>cadzu</td><td>be</td><td>lemi</td><td>birka</td><td>[ke'e]</td></tr>
+        <tr class="jbo"><td>mi</td><td>na'e</td><td>(ke</td><td>sutra</td><td>cadzu</td><td>be</td><td>lemi</td><td>birka</td><td>[ke'e])</td></tr>
+        <tr class="gloss"><td>I</td><td>other-than</td><td>(</td><td>quickly</td><td>walk</td><td>on</td><td>my</td><td>arms</td><td>).</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">The translations show that the negation in 
+    <a class="xref" href="chapter-negation.html#example-random-id-qh7T" title="Example 15.53. ">Example 15.53</a> is more restricted in scope; i.e. less of the sentence is negated with respect to x1 (<a class="glossterm" href="go01.html#valsi-mi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003024624" class="indexterm"></a>mi</em></span></em></a>).</p>
+    <p>Logical scope being an important factor in Lojban's claims to be unambiguous, let us indicate the relative precedence of 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003021376" class="indexterm"></a>na'e</em></span></em></a> as an operator. Grouping with 
+    <a class="glossterm" href="go01.html#valsi-ke"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003018944" class="indexterm"></a>ke</em></span></em></a> and 
+    <a class="glossterm" href="go01.html#valsi-kehe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003016576" class="indexterm"></a>ke'e</em></span></em></a>, of course, has an overt scope, which is its advantage. 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003014208" class="indexterm"></a>na'e</em></span></em></a> is very close binding to its brivla. Internal binding of tanru, with 
+    <a class="glossterm" href="go01.html#valsi-bo"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003011936" class="indexterm"></a>bo</em></span></em></a>, is not as tightly bound as 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003009504" class="indexterm"></a>na'e</em></span></em></a>. 
+    <a class="glossterm" href="go01.html#valsi-co"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003007136" class="indexterm"></a>co</em></span></em></a>, the tanru inversion operator has a scope that is longer than all other tanru constructs.</p>
+    
+    <p>In short, 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003004432" class="indexterm"></a>na'e</em></span></em></a> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087003002368" class="indexterm"></a>na'eke</em></span> define a type of negation, which is shorter in scope than bridi negation, and which affects all or part of a selbri. The result of 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002999824" class="indexterm"></a>na'e</em></span></em></a> negation remains an assertion of some specific truth and not merely a denial of another claim.</p>
+    <p>The similarity becomes striking when it is noticed that the rafsi 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-nal-</em></span>, representing 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002995856" class="indexterm"></a>na'e</em></span></em></a> when a tanru is condensed into a lujvo, forms an exact parallel to the English usage of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002993840" class="indexterm"></a>non-</em></span>. Turning a series of related negations into lujvo gives:</p>
+    <div class="example"><a id="example-random-id-2buq"></a><p class="title"><strong>Example 15.55. 
+        <a id="c15e4d12"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>na'e klama becomes nalkla</p></li><li class="listitem"><p>na'e cadzu klama becomes naldzukla</p></li><li class="listitem"><p>na'e sutra cadzu klama becomes nalsu'adzukla</p></li><li class="listitem"><p>nake sutra cadzu ke'e klama becomes nalsu'adzuke'ekla</p></li></ul></div>
+    </div></div><br class="example-break" />
+    <p class="indent">Note: 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-kem-</em></span> is the rafsi for 
+    <a class="glossterm" href="go01.html#valsi-ke"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002984688" class="indexterm"></a>ke</em></span></em></a>, but it is omitted in the final lujvo as superfluous – 
+    <a class="glossterm" href="go01.html#valsi-kehe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002982256" class="indexterm"></a>ke'e</em></span></em></a> is its own rafsi, and its inclusion in the lujvo implies a 
+    
+    <a class="glossterm" href="go01.html#valsi-ke"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002979856" class="indexterm"></a>ke</em></span></em></a> after the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-nal-</em></span>, since it needs to close something; only a 
+    <a class="glossterm" href="go01.html#valsi-ke"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002976512" class="indexterm"></a>ke</em></span></em></a> immediately after the negation would make the 
+    <a class="glossterm" href="go01.html#valsi-kehe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002974016" class="indexterm"></a>ke'e</em></span></em></a> meaningful in the tanru expressed in this lujvo.</p>
+    <p>In a lujvo, it is probably clearest to translate 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-nal-</em></span> as 
+    <span class="quote">“<span class="quote">non-</span>”</span>, to match the English combining forms, except when the 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002969936" class="indexterm"></a>na'e</em></span></em></a> has single word scope and English uses 
+    <span class="quote">“<span class="quote">un-</span>”</span> or 
+    <span class="quote">“<span class="quote">im-</span>”</span> to negate that single word. Translation style should determine the use of 
+    <span class="quote">“<span class="quote">other than</span>”</span>, 
+    <span class="quote">“<span class="quote">non-</span>”</span>, or another negator for 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002965728" class="indexterm"></a>na'e</em></span></em></a> in tanru; the translator must render the Lojban into English so it is clear in context. Let's go back to our simplest example:</p>
+    <div class="example"><a id="example-random-id-qh9c"></a><p class="title"><strong>Example 15.56. 
+        <a id="c15e4d13"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na'e</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>other-than</td><td>(go-to)</td><td>the</td><td>market.</td></tr>
+        <tr class="gloss"><td>I</td><td>not</td><td>go-to</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qH9e"></a><p class="title"><strong>Example 15.57. 
+        <a id="c15e4d14"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>nalkla</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>am-a-non-go-er-to</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">Note that to compare with the English translation form using 
+    <span class="quote">“<span class="quote">non-</span>”</span>, we've translated the Lojban as if the selbri were a noun. Since Lojban 
+    <a class="glossterm" href="go01.html#valsi-klama"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002946320" class="indexterm"></a>klama</em></span></em></a> is indifferently a noun, verb, or adjective, the difference is purely a translation change, not a true change in meaning. The English difference seems significant, though, due to the strongly different English grammatical forms and the ambiguity of English negation.</p>
+    <p>Consider the following highly problematic sentence:</p>
+    <div class="example"><a id="example-random-id-GFFo"></a><p class="title"><strong>Example 15.58. 
+        <a id="c15e4d15"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>lo</td><td>ca</td><td>nolraitru</td></tr>
+        <tr class="gloss"><td>An-actual</td><td>currently</td><td>noblest-governor</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>be</td><td>le</td><td>fasygu'e</td><td>cu</td><td>krecau</td></tr>
+        <tr class="gloss"><td>of</td><td>the</td><td>French-country</td><td></td><td>is-hair-without.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">The current King of France is bald.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">The selbri 
+    <a class="glossterm" href="go01.html#valsi-krecau"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002929264" class="indexterm"></a>krecau</em></span></em></a> negates with 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002926656" class="indexterm"></a>na'e</em></span></em></a> as:</p>
+    <div class="example"><a id="example-random-id-2maY"></a><p class="title"><strong>Example 15.59. 
+        <a id="c15e4d16"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>lo</td><td>ca</td><td>nolraitru</td></tr>
+        <tr class="gloss"><td>An-actual</td><td>currently</td><td>noblest-governor</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>be</td><td>le</td><td>fasygu'e</td><td>cu</td><td>na'e</td><td>krecau</td></tr>
+        <tr class="gloss"><td>of</td><td>the</td><td>French-country</td><td></td><td>is-other-than</td><td>hair-without.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">The current King of France is other-than-bald.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">or, as a lujvo:</p>
+    <div class="example"><a id="example-random-id-wGXL"></a><p class="title"><strong>Example 15.60. 
+        <a id="c15e4d17"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>lo</td><td>ca</td><td>nolraitru</td></tr>
+        <tr class="gloss"><td>An-actual</td><td>currently</td><td>noblest-governor</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>be</td><td>le</td><td>fasygu'e</td><td>cu</td><td>nalkrecau</td></tr>
+        <tr class="gloss"><td>of</td><td>the</td><td>French-country</td><td></td><td>is-non-hair-without.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">The current King of France is a non-bald-one.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">
+      <a class="xref" href="chapter-negation.html#example-random-id-2maY" title="Example 15.59. ">Example 15.59</a> and 
+      <a class="xref" href="chapter-negation.html#example-random-id-wGXL" title="Example 15.60. ">Example 15.60</a> express the predicate negation forms using a negation word (<a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002894032" class="indexterm"></a>na'e</em></span></em></a>) or rafsi (<span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-nal-</em></span>); yet they make positive assertions about the current King of France; ie., that he is other-than-bald or non-bald. This follows from the close binding of 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002890432" class="indexterm"></a>na'e</em></span></em></a> to the brivla. The lujvo form makes this overt by absorbing the negative marker into the word.</p>
+    
+    
+    
+    
+    
+    <p>Since there is no current King of France, it is false to say that he is bald, or non-bald, or to make any other affirmative claim about him. Any sentence about the current King of France containing only a selbri negation is as false as the sentence without the negation. No amount of selbri negations have any effect on the truth value of the sentence, which is invariably 
+    <span class="quote">“<span class="quote">false</span>”</span>, since no affirmative statement about the current King of France can be true. On the other hand, bridi negation does produce a truth:</p>
+    <div class="example"><a id="example-random-id-Bwdy"></a><p class="title"><strong>Example 15.61. 
+        <a id="c15e4d18"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>lo</td><td>ca</td><td>nolraitru</td></tr>
+        <tr class="gloss"><td>An-actual</td><td>current</td><td>noblest-governor</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>be</td><td>le</td><td>fasygu'e</td><td>cu</td><td>na</td><td>krecau</td></tr>
+        <tr class="gloss"><td>of</td><td>the</td><td>French-country</td><td></td><td>[false]</td><td>is-hair-without.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">It is false that the current King of France is bald.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">Note: 
+    <a class="glossterm" href="go01.html#valsi-lo"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002871936" class="indexterm"></a>lo</em></span></em></a> is used in these sentences because negation relates to truth conditions. To meaningfully talk about truth conditions in sentences carrying a description, it must be clear that the description actually applies to the referent. A sentence using 
+    <a class="glossterm" href="go01.html#valsi-le"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002869232" class="indexterm"></a>le</em></span></em></a> instead of 
+    <a class="glossterm" href="go01.html#valsi-lo"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002866864" class="indexterm"></a>lo</em></span></em></a> can be true even if there is no current king of France, as long as the speaker and the listener agree to describe something as the current king of France. (See the explanations of 
+    <a class="glossterm" href="go01.html#valsi-le"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002864288" class="indexterm"></a>le</em></span></em></a> in 
+    <a class="xref" href="chapter-sumti.html#section-basic-descriptors" title="6.2. The three basic description types">Section 6.2</a>.)</p>
+  </div>
+  <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="section-scales-negation"></a>15.5. <a id="c15s5"></a>Expressing scales in selbri negation</h2></div></div></div>
+    
+    <p>In expressing a scalar negation, we can provide some indication of the scale, range, frame-of-reference, or universe of discourse that is being dealt with in an assertion. As stated in 
+    <a class="xref" href="chapter-negation.html#section-nahe" title="15.4. selbri and tanru negation">Section 15.4</a>, the default is the set of plausible alternatives. Thus if we say:</p>
+    <div class="example"><a id="example-random-id-mw3B"></a><p class="title"><strong>Example 15.62. 
+        <a id="c15e5d1"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>le</td><td>stizu</td><td>cu</td><td>na'e</td><td>xunre</td></tr>
+        <tr class="gloss"><td>The</td><td>chair</td><td></td><td>is-a-non-</td><td>(red-thing).</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">the pragmatic interpretation is that we mean a different color and not</p>
+    <div class="example"><a id="example-random-id-7iMz"></a><p class="title"><strong>Example 15.63. 
+        <a id="c15e5d2"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>le</td><td>stizu</td><td>cu</td><td>dzukla</td><td>be</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>The</td><td>chair</td><td></td><td>walkingly-goes</td><td>to</td><td>the</td><td>market.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">However, if we have reason to be more explicit (an obtuse or contrary listener, or simply an overt logical analysis), we can clarify that we are referring to a color by saying:</p>
+    <div class="example"><a id="example-random-id-yWSC"></a><p class="title"><strong>Example 15.64. 
+        <a id="c15e5d3"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>le</td><td>stizu</td><td>cu</td><td>na'e</td><td>xunre</td><td>skari</td></tr>
+        <tr class="gloss"><td>The</td><td>chair</td><td></td><td>(is-of-a-non</td><td>red)</td><td>color.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">We might also have reduced the pragmatic ambiguity by making the two trailing sumti values explicit (the 
+    <span class="quote">“<span class="quote">as perceived by</span>”</span> and 
+    <span class="quote">“<span class="quote">under conditions</span>”</span> places have been added to the place structure of 
+    <a class="glossterm" href="go01.html#valsi-xunre"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002833632" class="indexterm"></a>xunre</em></span></em></a>). But assume we have a really stubborn listener (an artificially semi-intelligent computer?) who will find a way to misinterpret 
+    <a class="xref" href="chapter-negation.html#example-random-id-yWSC" title="Example 15.64. ">Example 15.64</a> even with three specific sumti provided.</p>
+    <p>In this case, we use a sumti tagged with the sumti tcita 
+    <a class="glossterm" href="go01.html#valsi-cihu"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002830000" class="indexterm"></a>ci'u</em></span></em></a>, which translates roughly as 
+    
+    <span class="quote">“<span class="quote">on a scale of X</span>”</span>, where 
+    <code class="varname">X</code> is the sumti. For maximal clarity, the tagged sumti can be bound into the negated selbri with 
+    <a class="glossterm" href="go01.html#valsi-be"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002826720" class="indexterm"></a>be</em></span></em></a>. To clarify 
+    <a class="xref" href="chapter-negation.html#example-random-id-yWSC" title="Example 15.64. ">Example 15.64</a>, we might say:</p>
+    <div class="example"><a id="example-random-id-a8S1"></a><p class="title"><strong>Example 15.65. 
+        <a id="c15e5d4"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>le</td><td>stizu</td><td>cu</td><td>na'e</td><td>xunre</td><td>be</td><td>ci'u</td><td>loka</td><td>skari</td></tr>
+        <tr class="gloss"><td>The</td><td>chair</td><td></td><td>is-non</td><td>(red</td><td>on</td><td>a-scale-of</td><td>a-property</td><td>color-ness).</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">We can alternately use the sumti tcita 
+    <a class="glossterm" href="go01.html#valsi-tecihe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002813632" class="indexterm"></a>teci'e</em></span></em></a>, based on 
+    <a class="glossterm" href="go01.html#valsi-ciste"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002811232" class="indexterm"></a>ciste</em></span></em></a>, which translates roughly as 
+    <span class="quote">“<span class="quote">of a system of components X</span>”</span>, for universes of discourse; in this case, we would express 
+    <a class="xref" href="chapter-negation.html#example-random-id-yWSC" title="Example 15.64. ">Example 15.64</a> as:</p>
+    <div class="example"><a id="example-random-id-I0eV"></a><p class="title"><strong>Example 15.66. 
+        <a id="c15e5d5"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>le</td><td>stizu</td><td>cu</td><td>na'e</td><td>xunre</td></tr>
+        <tr class="gloss"><td>The</td><td>chair</td><td></td><td>is-a-non</td><td>(red</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>be</td><td>teci'e</td><td>le</td><td>skari</td></tr>
+        <tr class="gloss"><td>of</td><td>a-system</td><td>with-components-the</td><td>colors)-thing.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">Other places of 
+    <a class="glossterm" href="go01.html#valsi-ciste"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002795504" class="indexterm"></a>ciste</em></span></em></a> can be brought out using the grammar of selma'o BAI modals, allowing slightly different forms of expression, thus:</p>
+    <div class="example"><a id="example-random-id-Rj71"></a><p class="title"><strong>Example 15.67. 
+        <a id="c15e5d6"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>le</td><td>stizu</td><td>cu</td><td>na'e</td><td>xunre</td></tr>
+        <tr class="gloss"><td>The</td><td>chair</td><td></td><td>is-a-non</td><td>(red</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>be</td><td>ci'e</td><td>lo'i</td><td>skari</td></tr>
+        <tr class="gloss"><td>of</td><td>a-system</td><td>which-is-the-set-of</td><td>colors)-thing.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">The cmavo 
+    <a class="glossterm" href="go01.html#valsi-leha"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002780800" class="indexterm"></a>le'a</em></span></em></a>, also in selma'o BAI, can be used to specify a category:</p>
+    <div class="example"><a id="example-random-id-5ibb"></a><p class="title"><strong>Example 15.68. 
+        <a id="c15e5d7"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>le</td><td>stizu</td><td>cu</td><td>na'e</td><td>xunre</td></tr>
+        <tr class="gloss"><td>The</td><td>chair</td><td></td><td>is-a-non</td><td>(red</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>be</td><td>le'a</td><td>lo'i</td><td>skari</td></tr>
+        <tr class="gloss"><td>of</td><td>a-category</td><td>which-is-the-set-of</td><td>colors)-thing.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">which is minimally different in meaning from 
+    <a class="xref" href="chapter-negation.html#example-random-id-Rj71" title="Example 15.67. ">Example 15.67</a>.</p>
+    <p>The cmavo 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002764752" class="indexterm"></a>na'e</em></span></em></a> is not the only member of selma'o NAhE. If we want to express a scalar negation which is a polar opposite, we use the cmavo 
+    <a class="glossterm" href="go01.html#valsi-tohe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002762144" class="indexterm"></a>to'e</em></span></em></a>, which is grammatically equivalent to 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002759712" class="indexterm"></a>na'e</em></span></em></a>:</p>
+    <div class="example"><a id="example-random-id-RuvP"></a><p class="title"><strong>Example 15.69. 
+        <a id="c15e5d8"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>le</td><td>stizu</td><td>cu</td><td>to'e</td><td>xunre</td><td>be</td><td>ci'u</td><td>loka</td><td>skari</td></tr>
+        
+        <tr class="gloss"><td>The</td><td>chair</td><td></td><td>is-a-(opposite-of</td><td>red)</td><td>on</td><td>scale</td><td>a-property-of</td><td>color-ness.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">Likewise, the midpoint of a scale can be expressed with the cmavo 
+    <a class="glossterm" href="go01.html#valsi-nohe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002747200" class="indexterm"></a>no'e</em></span></em></a>, also grammatically equivalent to 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002744704" class="indexterm"></a>na'e</em></span></em></a>. Here are some parallel examples of 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002742240" class="indexterm"></a>na'e</em></span></em></a>, 
+    <a class="glossterm" href="go01.html#valsi-nohe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002739872" class="indexterm"></a>no'e</em></span></em></a>, and 
+    <a class="glossterm" href="go01.html#valsi-tohe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002737552" class="indexterm"></a>to'e</em></span></em></a>:</p>
+    <div class="example"><a id="example-random-id-qH9T"></a><p class="title"><strong>Example 15.70. 
+        <a id="c15e5d9"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>ta</td><td>melbi</td></tr>
+        <tr class="gloss"><td>That</td><td>is-beautiful.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qh9U"></a><p class="title"><strong>Example 15.71. 
+        <a id="c15e5d10"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>ta</td><td>na'e</td><td>melbi</td></tr>
+        <tr class="gloss"><td>That</td><td>is-other-than</td><td>beautiful.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">That is ugly [in one sense].</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qhAI"></a><p class="title"><strong>Example 15.72. 
+        <a id="c15e5d11"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>ta</td><td>no'e</td><td>melbi</td></tr>
+        <tr class="gloss"><td>That</td><td>is-neutrally</td><td>beautiful.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">That is plain/ordinary-looking (neither ugly nor beautiful).</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qHAV"></a><p class="title"><strong>Example 15.73. 
+        <a id="c15e5d12"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>ta</td><td>to'e</td><td>melbi</td></tr>
+        <tr class="gloss"><td>That</td><td>is-opposite-of</td><td>beautiful.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">That is ugly/very ugly/repulsive.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">The cmavo 
+    <a class="glossterm" href="go01.html#valsi-tohe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002703904" class="indexterm"></a>to'e</em></span></em></a> has the assigned rafsi 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-tol-</em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002701136" class="indexterm"></a>-to'e-</em></span>; the cmavo 
+    <a class="glossterm" href="go01.html#valsi-nohe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002698928" class="indexterm"></a>no'e</em></span></em></a> has the assigned rafsi 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-nor-</em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-no'e-</em></span>. The selbri in 
+    <a class="xref" href="chapter-negation.html#example-random-id-qh9U" title="Example 15.71. ">Example 15.71</a> through 
+    <a class="xref" href="chapter-negation.html#example-random-id-qHAV" title="Example 15.73. ">Example 15.73</a> could be replaced by the lujvo 
+    <span class="foreignphrase"><em class="foreignphrase">nalmle</em></span>, 
+    <span class="foreignphrase"><em class="foreignphrase">normle</em></span>, and 
+    <a class="glossterm" href="go01.html#valsi-tolmle"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002691952" class="indexterm"></a>tolmle</em></span></em></a> respectively.</p>
+    <p>This large variety of scalar negations is provided because different scales have different properties. Some scales are open-ended in both directions: there is no 
+    <span class="quote">“<span class="quote">ultimately ugly</span>”</span> or 
+    <span class="quote">“<span class="quote">ultimately beautiful</span>”</span>. Other scales, like temperature, are open at one end and closed at the other: there is a minimum temperature (so-called 
+    <span class="quote">“<span class="quote">absolute zero</span>”</span>) but no maximum temperature. Still other scales are closed at both ends.</p>
+    <p>Correspondingly, some selbri have no obvious 
+    <a class="glossterm" href="go01.html#valsi-tohe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002687088" class="indexterm"></a>to'e</em></span></em></a>- what is the opposite of a dog? – while others have more than one, and need 
+    <a class="glossterm" href="go01.html#valsi-cihu"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002684688" class="indexterm"></a>ci'u</em></span></em></a> to specify which opposite is meant.</p>
+    
+  </div>
+  <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="section-sumti-negation"></a>15.6. <a id="c15s6"></a>sumti negation</h2></div></div></div>
+    
+    <p>There are two ways of negating sumti in Lojban. We have the choice of quantifying the sumti with zero, or of applying the sumti-negator 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002681024" class="indexterm"></a>na'ebo</em></span> before the sumti. It turns out that a zero quantification serves for contradictory negation. As the cmavo we use implies, 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002678880" class="indexterm"></a>na'ebo</em></span> forms a scalar negation.</p>
+    
+    <p>Let us show examples of each.</p>
+    <div class="example"><a id="example-random-id-PL1E"></a><p class="title"><strong>Example 15.74. 
+        <a id="c15e6d1"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>no</td><td>lo</td><td>ca</td><td>nolraitru</td><td>be</td></tr>
+        <tr class="gloss"><td>Zero</td><td>of-those-who-are</td><td>currently</td><td>noblest-governors</td><td>of</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>le</td><td>fasygu'e</td><td>cu</td><td>krecau</td></tr>
+        <tr class="gloss"><td>the</td><td>French-country</td><td></td><td>are-hair-without.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">No current king of France is bald.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">Is 
+    <a class="xref" href="chapter-negation.html#example-random-id-PL1E" title="Example 15.74. ">Example 15.74</a> true? Yes, because it merely claims that of the current Kings of France, however many there may be, none are bald, which is plainly true, since there are no such current Kings of France.</p>
+    <p>Now let us look at the same sentence using 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002660576" class="indexterm"></a>na'ebo</em></span> negation:</p>
+    
+    <div class="example"><a id="example-random-id-LebJ"></a><p class="title"><strong>Example 15.75. 
+        <a id="c15e6d2"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>na'ebo</td><td>lo</td><td>ca</td><td>nolraitru</td></tr>
+        <tr class="gloss"><td>Something-other-than</td><td>(the</td><td>current</td><td>noblest-governor</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>be</td><td>le</td><td>fasygu'e</td><td>cu</td><td>krecau</td></tr>
+        <tr class="gloss"><td>of</td><td>the</td><td>French-country)</td><td></td><td>is-hair-without.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">Something other than the current King of France is bald.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">
+      <a class="xref" href="chapter-negation.html#example-random-id-LebJ" title="Example 15.75. ">Example 15.75</a> is true provided that something reasonably describable as 
+    <span class="quote">“<span class="quote">other than a current King of France</span>”</span>, such as the King of Saudi Arabia, or a former King of France, is in fact bald.</p>
+    <p>In place of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002642352" class="indexterm"></a>na'ebo</em></span>, you may also use 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002640128" class="indexterm"></a>no'ebo</em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002638272" class="indexterm"></a>to'ebo</em></span>, to be more specific about the sumti which would be appropriate in place of the stated sumti. Good examples are hard to come by, but here's a valiant try:</p>
+    <div class="example"><a id="example-random-id-S4AU"></a><p class="title"><strong>Example 15.76. 
+        <a id="c15e6d3"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>klama</td><td>to'ebo</td><td>la</td><td>bastn.</td></tr>
+        <tr class="gloss"><td>I</td><td>go-to</td><td>the-opposite-of</td><td>that-named</td><td>Boston.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">I go to Perth.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">(Boston and Perth are nearly, but not quite, antipodal cities. In a purely United States context, San Francisco might be a better 
+    <span class="quote">“<span class="quote">opposite</span>”</span>.) Coming up with good examples is difficult, because attaching 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002625168" class="indexterm"></a>to'ebo</em></span> to a description sumti is usually the same as attaching 
+    <a class="glossterm" href="go01.html#valsi-tohe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002622704" class="indexterm"></a>to'e</em></span></em></a> to the selbri of the description.</p>
+    <p>It is not possible to transform sumti negations of either type into bridi negations or scalar selbri negations. Negations of sumti will be used in Lojban conversation. The inability to manipulate these negations logically will, it is hoped, prevent the logical errors that result when natural languages attempt corresponding manipulations.</p>
+  </div>
+  <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="section-other-negation"></a>15.7. <a id="c15s7"></a>Negation of minor grammatical constructs</h2></div></div></div>
+    
+    <p>We have a few other constructs that can be negated, all of them based on negating individual words. For such negation, we use the suffix-combining negator, which is 
+    <a class="glossterm" href="go01.html#valsi-nai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002617248" class="indexterm"></a>nai</em></span></em></a>. 
+    <a class="glossterm" href="go01.html#valsi-nai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002614864" class="indexterm"></a>nai</em></span></em></a>, by the way, is almost always written as a compound into the previous word that it is negating, although it is a regular separate-word cmavo and the sole member of selma'o NAI.</p>
+    <p>Most of these negation forms are straightforward, and should be discussed and interpreted in connection with an analysis of the particular construct being negated. Thus, we will not go into much detail here.</p>
+    <p>The following are places where 
+    <a class="glossterm" href="go01.html#valsi-nai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002611168" class="indexterm"></a>nai</em></span></em></a> is used:</p>
+    <p>When attached to tenses and modals (see 
+      <a class="xref" href="chapter-sumti-tcita.html#section-modal-negation" title="9.13. Modal negation">Section 9.13</a>, <a class="xref" href="chapter-tenses.html#section-interval-properties" title="10.9. Interval properties: TAhE and roi">Section 10.9</a>, <a class="xref" href="chapter-tenses.html#section-tense-negation" title="10.18. Tense negation">Section 10.18</a> and <a class="xref" href="chapter-tenses.html#section-connected-tenses" title="10.20. Logical and non-logical connections between tenses">Section 10.20</a>), the
+    <a class="glossterm" href="go01.html#valsi-nai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002605824" class="indexterm"></a>nai</em></span></em></a> suffix usually indicates a contradictory negation of the tagged bridi. Thus 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002603984" class="indexterm"></a>punai</em></span> as a tense inflection means 
+    <span class="quote">“<span class="quote">not-in-the-past</span>”</span>, or 
+    <span class="quote">“<span class="quote">not-previously</span>”</span>, without making any implication about any other time period unless explicitly stated. As a result,</p>
+    <div class="example"><a id="example-random-id-PprX"></a><p class="title"><strong>Example 15.77. 
+        <a id="c15e7d1"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>na</td><td>pu</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>[false]</td><td>[past]</td><td>go-to</td><td>the</td><td>store.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">I didn't go to the store.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">and</p>
+    <div class="example"><a id="example-random-id-0hv2"></a><p class="title"><strong>Example 15.78. 
+        <a id="c15e7d2"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>punai</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>[past-not]</td><td>go-to</td><td>the</td><td>store.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">I didn't go to the store.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">mean exactly the same thing, although there may be a difference of emphasis.</p>
+    <p>Tenses and modals can be logically connected, with the logical connectives containing contradictory negations; this allows negated tenses and modals to be expressed positively using logical connectives. Thus 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002579424" class="indexterm"></a>punai je ca</em></span> means the same thing as 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002577552" class="indexterm"></a>pu naje ca</em></span>.</p>
+    <p>As a special case, a 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002575120" class="indexterm"></a>-nai</em></span> attached to the interval modifiers of selma'o TAhE, ROI, or ZAhO (explained in 
+    <a class="xref" href="chapter-tenses.html" title="Chapter 10. Imaginary Journeys: The Lojban Space/Time Tense System">Chapter 10</a>) signals a scalar negation:</p>
+    <div class="example"><a id="example-random-id-4YYQ"></a><p class="title"><strong>Example 15.79. 
+        <a id="c15e7d3"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>paroinai</td><td>dansu</td><td>le</td><td>bisli</td></tr>
+        <tr class="gloss"><td>I</td><td>[once]-[not]</td><td>dance-on</td><td>the</td><td>ice</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">means that I dance on the ice either zero or else two or more times within the relevant time interval described by the bridi. 
+    <a class="xref" href="chapter-negation.html#example-random-id-4YYQ" title="Example 15.79. ">Example 15.79</a> is very different from the English use of 
+    <span class="quote">“<span class="quote">not once</span>”</span>, which is an emphatic way of saying 
+    <span class="quote">“<span class="quote">never</span>”</span> – that is, exactly zero times.</p>
+    <p>In indicators and attitudinals of selma'o UI or CAI, 
+    <a class="glossterm" href="go01.html#valsi-nai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002562032" class="indexterm"></a>nai</em></span></em></a> denotes a polar negation. As discussed in 
+    <a class="xref" href="chapter-attitudinals.html#section-intensity-scale" title="13.4. Attitudes as scales">Section 13.4</a>, most indicators have an implicit scale, and 
+    <a class="glossterm" href="go01.html#valsi-nai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002558896" class="indexterm"></a>nai</em></span></em></a> changes the indicator to refer to the opposite end of the scale. Thus 
+    <a class="glossterm" href="go01.html#valsi-uinai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002556592" class="indexterm"></a>.uinai</em></span></em></a> expresses unhappiness, and 
+    <a class="glossterm" href="go01.html#valsi-ienai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002554320" class="indexterm"></a>.ienai</em></span></em></a> expresses disagreement (not ambivalence, which is expressed with the neutral or undecided intensity as 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002552192" class="indexterm"></a>.iecu'i</em></span>).</p>
+    <p>Vocative cmavo of selma'o COI are considered a kind of indicator, but one which identifies the listener. Semantically, we could dispense with about half of the COI selma'o words based on the scalar paradigm. For example, 
+    
+    
+    <a class="glossterm" href="go01.html#valsi-coho"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002549264" class="indexterm"></a>co'o</em></span></em></a> could be expressed as 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002547232" class="indexterm"></a>coinai</em></span>. However, this is not generally done.</p>
+    <p>Most of the COI cmavo are used in what are commonly called protocol situations. These protocols are used, for example, in radio conversations, which often take place in a noisy environment. The negatives of protocol words tend to convey diametrically opposite communications situations (as might be expected). Therefore, only one protocol vocative is dependent on 
+    
+    <a class="glossterm" href="go01.html#valsi-nai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002544176" class="indexterm"></a>nai</em></span></em></a>: negative acknowledgement, which is 
+    <a class="glossterm" href="go01.html#valsi-jehenai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002541776" class="indexterm"></a>je'enai</em></span></em></a> (<span class="quote">“<span class="quote">I didn't get that</span>”</span>).</p>
+    <p>Unlike the attitudinal indicators, which tend to be unimportant in noisy situations, the protocol vocatives become more important. So if, in a noisy environment, a protocol listener makes out only 
+    
+    
+    <a class="glossterm" href="go01.html#valsi-nai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002538288" class="indexterm"></a>nai</em></span></em></a>, he or she can presume it is a negative acknowledgement and repeat transmission or otherwise respond accordingly. 
+    <a class="xref" href="chapter-attitudinals.html#section-vocative-scales" title="13.14. Vocative scales">Section 13.14</a> provides more detail on this topic.</p>
+    <p>The abstractors of selma'o NU follow the pattern of the tenses and modals. NU allows negative abstractions, especially in compound abstractions connected by logical connectives: 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002534864" class="indexterm"></a>su'ujeninai</em></span>, which corresponds to 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002532960" class="indexterm"></a>su'u jenai ni</em></span> just as 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002531024" class="indexterm"></a>punai je ca</em></span> corresponds to 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002529024" class="indexterm"></a>pu naje ca</em></span>. It is not clear how much use logically connected abstractors will be: see 
+    <a class="xref" href="chapter-abstractions.html#section-abstractor-connection" title="11.12. Abstractor connection">Section 11.12</a>.</p>
+    <p>A 
+    <a class="glossterm" href="go01.html#valsi-nai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002525552" class="indexterm"></a>nai</em></span></em></a> attached to a non-logical connective (of selma'o JOI or BIhI) is a scalar negation, and says that the bridi is false under the specified mixture, but that another connective is applicable. Non-logical connectives are discussed in 
+    <a class="xref" href="chapter-connectives.html#section-non-logical-connectives" title="14.14. Non-logical connectives">Section 14.14</a>.</p>
+  </div>
+  <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="section-truth-questions"></a>15.8. <a id="c15s8"></a>Truth questions</h2></div></div></div>
+    
+    <p>One application of negation is in answer to truth questions (those which expect the answers 
+    <span class="quote">“<span class="quote">Yes</span>”</span> or 
+    <span class="quote">“<span class="quote">No</span>”</span>). The truth question cmavo 
+    <a class="glossterm" href="go01.html#valsi-xu"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002519008" class="indexterm"></a>xu</em></span></em></a> is in selma'o UI; placed at the beginning of a sentence, it asks whether the sentence as a whole is true or false.</p>
+    <div class="example"><a id="example-random-id-5y84"></a><p class="title"><strong>Example 15.80. 
+        <a id="c15e8d1"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>xu</td><td>la</td><td>djan.</td><td>pu</td><td>klama</td></tr>
+        <tr class="gloss"><td>Is-it-true-that:</td><td>(that-named</td><td>John</td><td>previously</td><td>went-to</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>la</td><td>paris.</td><td>.e</td><td>la</td><td>rom.</td></tr>
+        <tr class="gloss"><td>that-named</td><td>Paris</td><td>and</td><td>that-named</td><td>Rome.)</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">You can now use each of the several kinds of negation we've discussed in answer to this (presuming the same question and context for each answer).</p>
+    <p>The straightforward negative answer is grammatically equivalent to the expanded sentence with the 
+    
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002502768" class="indexterm"></a>na</em></span></em></a> immediately after the 
+    <a class="glossterm" href="go01.html#valsi-cu"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002500416" class="indexterm"></a>cu</em></span></em></a> (and before any tense/modal):</p>
+    <div class="example"><a id="example-random-id-DMAd"></a><p class="title"><strong>Example 15.81. 
+        <a id="c15e8d2"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>na</td><td>go'i</td></tr>
+        <tr class="gloss"><td>[false]</td><td>[repeat-previous]</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">No.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">which means</p>
+    <div class="example"><a id="example-random-id-mQSJ"></a><p class="title"><strong>Example 15.82. 
+        <a id="c15e8d3"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>la</td><td>djan.</td><td>[cu]</td><td>na</td><td>pu</td><td>klama</td></tr>
+        <tr class="gloss"><td>That-named</td><td>John</td><td>[false]</td><td>previously</td><td>went-to</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>la</td><td>paris.</td><td>.e</td><td>la</td><td>rom.</td></tr>
+        <tr class="gloss"><td>that-named</td><td>Paris</td><td>and</td><td>that-named</td><td>Rome.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">It's not true that John went to Paris and Rome.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">The respondent can change the tense, putting the 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002473456" class="indexterm"></a>na</em></span></em></a> in either before or after the new tense:</p>
+    <div class="example"><a id="example-random-id-rii2"></a><p class="title"><strong>Example 15.83. 
+        <a id="c15e8d4"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>na</td><td>ba</td><td>go'i</td></tr>
+        <tr class="gloss"><td>[false]</td><td>[future]</td><td>[repeat-previous]</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">meaning</p>
+    <div class="example"><a id="example-random-id-Fn2c"></a><p class="title"><strong>Example 15.84. 
+        <a id="c15e8d5"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>la</td><td>djan.</td><td>[cu]</td><td>na</td><td>ba</td><td>klama</td></tr>
+        <tr class="gloss"><td>That-named</td><td>John</td><td></td><td>[false]</td><td>later</td><td>will-go-to</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>la</td><td>paris.</td><td>.e</td><td>la</td><td>rom.</td></tr>
+        <tr class="gloss"><td>that-named</td><td>Paris</td><td>and</td><td>that-named</td><td>Rome.</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">It is false that John will go to Paris and Rome.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">or alternatively</p>
+    <div class="example"><a id="example-random-id-acM9"></a><p class="title"><strong>Example 15.85. 
+        <a id="c15e8d6"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>ba</td><td>na</td><td>go'i</td></tr>
+        <tr class="gloss"><td>[future]</td><td>[false]</td><td>[repeat-previous]</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">meaning</p>
+    <div class="example"><a id="example-random-id-2SK0"></a><p class="title"><strong>Example 15.86. 
+        <a id="c15e8d7"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>la</td><td>djan.</td><td>[cu]</td><td>ba</td><td>na</td></tr>
+        <tr class="gloss"><td>that-named</td><td>John</td><td></td><td>later-will</td><td>[false]</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>klama</td><td>la</td><td>paris.</td><td>.e</td><td>la</td><td>rom.</td></tr>
+        <tr class="gloss"><td>go-to</td><td>that-named</td><td>Paris</td><td>and</td><td>that-named</td><td>Rome.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">We stated in 
+    <a class="xref" href="chapter-negation.html#section-scalar-negation" title="15.3. Scalar Negation">Section 15.3</a> that sentences like 
+    <a class="xref" href="chapter-negation.html#example-random-id-Fn2c" title="Example 15.84. ">Example 15.84</a> and 
+    <a class="xref" href="chapter-negation.html#example-random-id-2SK0" title="Example 15.86. ">Example 15.86</a> appear to be semantically identical, but that subtle semantic distinctions may eventually be found.</p>
+    <p>You can also use a scalar negation with 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002426368" class="indexterm"></a>na'e</em></span></em></a>, in which case, it is equivalent to putting a 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002424336" class="indexterm"></a>na'eke</em></span> immediately after any tense:</p>
+    <div class="example"><a id="example-random-id-q70h"></a><p class="title"><strong>Example 15.87. 
+        <a id="c15e8d8"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>na'e</td><td>go'i</td></tr>
+        <tr class="gloss"><td>other-than</td><td>[repeat-previous]</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">which means</p>
+    <div class="example"><a id="example-random-id-nQRQ"></a><p class="title"><strong>Example 15.88. 
+        <a id="c15e8d9"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>la</td><td>djan.</td><td>[cu]</td><td>pu</td><td>na'eke</td><td>klama</td><td>[ke'e]</td></tr>
+        <tr class="gloss"><td>that-named</td><td>John</td><td></td><td>previously</td><td>other-than(</td><td>went-to</td><td>)</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>la</td><td>paris.</td><td>.e</td><td>la</td><td>rom.</td></tr>
+        <tr class="gloss"><td>that-named</td><td>Paris</td><td>and</td><td>that-named</td><td>Rome.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">He might have telephoned the two cities instead of going there. The unnecessary 
+    <a class="glossterm" href="go01.html#valsi-ke"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002401696" class="indexterm"></a>ke</em></span></em></a> and 
+    <a class="glossterm" href="go01.html#valsi-kehe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002399280" class="indexterm"></a>ke'e</em></span></em></a> would have been essential if the selbri had been a tanru.</p>
+  </div>
+  <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="section-affirmations"></a>15.9. <a id="c15s9"></a>Affirmations</h2></div></div></div>
+    
+    <p>There is an explicit positive form for both selma'o NA (<a class="glossterm" href="go01.html#valsi-jaha"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002395168" class="indexterm"></a>ja'a</em></span></em></a>) and selma'o NAhE (<a class="glossterm" href="go01.html#valsi-jeha"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002392864" class="indexterm"></a>je'a</em></span></em></a>), each of which would supplant the corresponding negator in the grammatical position used, allowing one to assert the positive in response to a negative question or statement without confusion. Assuming the same context as in 
+    <a class="xref" href="chapter-negation.html#section-truth-questions" title="15.8. Truth questions">Section 15.8</a>:</p>
+    <div class="example"><a id="example-random-id-KhoH"></a><p class="title"><strong>Example 15.89. 
+        <a id="c15e9d1"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>xu</td><td>na</td><td>go'i</td></tr>
+        <tr class="gloss"><td>Is-it-true-that</td><td>[false]</td><td>[repeat-previous]?</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">or equivalently</p>
+    <div class="example"><a id="example-random-id-8VCt"></a><p class="title"><strong>Example 15.90. 
+        <a id="c15e9d2"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>xu</td><td>la</td><td>djan.</td><td>[cu]</td><td>na</td><td>pu</td></tr>
+        <tr class="gloss"><td>Is-it-true-that:</td><td>that-named</td><td>John</td><td></td><td>[false]</td><td>previously</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>klama</td><td>la</td><td>paris.</td><td>.e</td><td>la</td><td>rom.</td></tr>
+        <tr class="gloss"><td>went-to</td><td>that-name</td><td>Paris</td><td>and</td><td>that-named</td><td>Rome.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">The obvious, but incorrect, positive response to this negative question is:</p>
+    <div class="example"><a id="example-random-id-F3LE"></a><p class="title"><strong>Example 15.91. 
+        <a id="c15e9d3"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>go'i</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">[repeat-previous]</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">A plain 
+    <a class="glossterm" href="go01.html#valsi-gohi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002361744" class="indexterm"></a>go'i</em></span></em></a> does not mean 
+    <span class="quote">“<span class="quote">Yes it is</span>”</span>; it merely abbreviates repeating the previous statement unmodified, including any negators present; and 
+    <a class="xref" href="chapter-negation.html#example-random-id-F3LE" title="Example 15.91. ">Example 15.91</a> actually states that it is false that John went to both Paris and Rome.</p>
+    <p>When considering:</p>
+    <div class="example"><a id="example-random-id-Pgrw"></a><p class="title"><strong>Example 15.92. 
+        <a id="c15e9d4"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>na</td><td>go'i</td></tr>
+        <tr class="gloss"><td>[false]</td><td>[repeat-previous]</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">as a response to a negative question like 
+    <a class="xref" href="chapter-negation.html#example-random-id-8VCt" title="Example 15.90. ">Example 15.90</a>, Lojban designers had to choose between two equally plausible interpretations with opposite effects. Does 
+    <a class="xref" href="chapter-negation.html#example-random-id-Pgrw" title="Example 15.92. ">Example 15.92</a> create a double negative in the sentence by adding a new 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002350192" class="indexterm"></a>na</em></span></em></a> to the one already there (forming a double negative and hence a positive statement), or does the 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002347712" class="indexterm"></a>na</em></span></em></a> replace the previous one, leaving the sentence unchanged?</p>
+    <p>It was decided that substitution, the latter alternative, is the preferable choice, since it is then clear whether we intend a positive or a negative sentence without performing any manipulations. This is the way English usually works, but not all languages work this way – Russian, Japanese, and Navajo all interpret a negative reply to a negative question as positive.</p>
+    
+    <p>The positive assertion cmavo of selma'o NA, which is "ja'a", can also replace the 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002343968" class="indexterm"></a>na</em></span></em></a> in the context, giving:</p>
+    <div class="example"><a id="example-random-id-iUfV"></a><p class="title"><strong>Example 15.93. 
+        <a id="c15e9d5"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>ja'a</td><td>go'i</td></tr>
+        <tr class="gloss"><td>[true]</td><td>[repeat-previous]</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">John did go to Paris and Rome.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">
+      <a class="glossterm" href="go01.html#valsi-jaha"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002333040" class="indexterm"></a>ja'a</em></span></em></a> can replace 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002330656" class="indexterm"></a>na</em></span></em></a> in a similar manner wherever the latter is used:</p>
+    <div class="example"><a id="example-random-id-mrtu"></a><p class="title"><strong>Example 15.94. 
+        <a id="c15e9d6"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>mi</td><td>ja'a</td><td>klama</td><td>le</td><td>zarci</td></tr>
+        <tr class="gloss"><td>I</td><td>[true]</td><td>go-to</td><td>the</td><td>store</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">I indeed go to the store.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="noindent">
+      <a class="glossterm" href="go01.html#valsi-jeha"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002318080" class="indexterm"></a>je'a</em></span></em></a> can replace 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002315696" class="indexterm"></a>na'e</em></span></em></a> in exactly the same way, stating that scalar negation does not apply, and that the relation indeed holds as stated. In the absence of a negation context, it emphasizes the positive:</p>
+    <div class="example"><a id="example-random-id-toQK"></a><p class="title"><strong>Example 15.95. 
+        <a id="c15e9d7"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>ta</td><td>je'a</td><td>melbi</td></tr>
+        <tr class="gloss"><td>that</td><td>is-indeed</td><td>beautiful.</td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+  </div>
+  <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="section-metalinguistic-negation"></a>15.10. <a id="c15s10"></a>Metalinguistic negation forms</h2></div></div></div>
+    
+    <p>The question of truth or falsity is not entirely synonymous with negation. Consider the English sentence</p>
+    <div class="example"><a id="example-random-id-QsJ9"></a><p class="title"><strong>Example 15.96. 
+        <a id="c15e10d1"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>I have not stopped beating my wife.</p>
+    </div></div><br class="example-break" />
+    <p class="indent">If I never started such a heinous activity, then this sentence is neither true nor false. Such a negation simply says that something is wrong with the non-negated statement. Generally, we then use either tone of voice or else a correction to express a preferred true claim: 
+    
+    <span class="quote">“<span class="quote">I never have beaten my wife.</span>”</span></p>
+    <p>Negations which follow such a pattern are called 
+    <span class="quote">“<span class="quote">metalinguistic negations</span>”</span>. In natural languages, the mark of metalinguistic negation is that an indication of a correct statement always, or almost always, follows the negation. Tone of voice or emphasis may be further used to clarify the error.</p>
+    <p>Negations of every sort must be expressible in Lojban; errors are inherent to human thought, and are not excluded from the language. When such negations are metalinguistic, we must separate them from logical claims about the truth or falsity of the statement, as well as from scalar negations which may not easily express (or imply) the preferred claim. Because Lojban allows concepts to be so freely combined in tanru, limits on what is plausible or not plausible tend to be harder to determine.</p>
+    <p>Mimicking the muddled nature of natural language negation would destroy this separation. Since Lojban does not use tone of voice, we need other means to metalinguistically indicate what is wrong with a statement. When the statement is entirely inappropriate, we need to be able to express metalinguistic negation in a more non-specific fashion.</p>
+    
+    <p>Here is a list of some different kinds of metalinguistic negation with English-language examples:</p>
+    <div class="example"><a id="example-random-id-qhbg"></a><p class="title"><strong>Example 15.97. 
+        <a id="c15e10d2"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>I have not 
+      <span class="emphasis"><em>stopped</em></span> beating my wife</p>
+      <p>(I never started – failure of presupposition).</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qHcI"></a><p class="title"><strong>Example 15.98. 
+        <a id="c15e10d3"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>5 is not blue</p>
+      <p>(color does not apply to abstract concepts – failure of category).</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qHEQ"></a><p class="title"><strong>Example 15.99. 
+        <a id="c15e10d4"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>The current King of France is not bald.</p>
+      <p>(there is no current King of France – existential failure)</p>
+      
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qhet"></a><p class="title"><strong>Example 15.100. 
+        <a id="c15e10d5"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>I do not have THREE children.</p>
+      <p>(I have two – simple undue quantity)</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qhEU"></a><p class="title"><strong>Example 15.101. 
+        <a id="c15e10d6"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>I have not held THREE jobs previously, but four.</p>
+      <p>(inaccurate quantity; the difference from the previous
+        example is that someone who has held four jobs has also held
+        three jobs)</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qhf5"></a><p class="title"><strong>Example 15.102. 
+        <a id="c15e10d7"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>It is not good, but bad.</p>
+      <p>(undue quantity negation indicating that the value on a scale for measuring the predicate is incorrect)</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qHhA"></a><p class="title"><strong>Example 15.103. 
+        <a id="c15e10d8"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>She is not PRETTY; she is beautiful.</p>
+      <p>(undue quantity transferred to a non-numeric scale)</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qhHI"></a><p class="title"><strong>Example 15.104. 
+        <a id="c15e10d9"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>The house is not blue, but green.</p>
+      <p>(the scale/category being used is incorrect, but a related category applies)</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qHHw"></a><p class="title"><strong>Example 15.105. 
+        <a id="c15e10d10"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>The house is not blue, but is colored.</p>
+      <p>(the scale/category being used is incorrect, but a broader category applies)</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qHI4"></a><p class="title"><strong>Example 15.106. 
+        <a id="c15e10d11"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>The cat is not blue, but long-haired.</p>
+      <p>(the scale/category being used is incorrect, but an unrelated category applies)</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qHja"></a><p class="title"><strong>Example 15.107. 
+        <a id="c15e10d12"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>A: He ain't coming today.</p>
+      <p>B: 
+      <span class="quote">“<span class="quote">Ain't</span>”</span> ain't a word.</p>
+      <p>(solecism, or improper grammatical action)</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qHJi"></a><p class="title"><strong>Example 15.108. 
+        <a id="c15e10d13"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>I haven't STOOPED beating my wife; I've STOPPED.</p>
+      <p>(spelling or mispronunciation error)</p>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qhJj"></a><p class="title"><strong>Example 15.109. 
+        <a id="c15e10d14"></a>
+      </strong></p><div class="example-contents">
+      
+      <p>Not only was it a sheep, it was a black sheep.</p>
+      <p>(non-contradictory correction)</p>
+    </div></div><br class="example-break" />
+    <p class="indent">The set of possible metalinguistic errors is open-ended.</p>
+    <p>Many of these forms have a counterpart in the various examples that we've discussed under logical negation. Metalinguistic negation doesn't claim that the sentence is false or true, though. Rather, it claims that, due to some error in the statement, 
+    <span class="quote">“<span class="quote">true</span>”</span> and 
+    <span class="quote">“<span class="quote">false</span>”</span> don't really apply.</p>
+    <p>Because one can metalinguistically negate a true statement intending a non-contradictory correction (say, a spelling error); we need a way (or ways) to metalinguistically negate a statement which is independent of our logical negation schemes using 
+    <a class="glossterm" href="go01.html#valsi-na"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002257936" class="indexterm"></a>na</em></span></em></a>, 
+    <a class="glossterm" href="go01.html#valsi-nahe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002255616" class="indexterm"></a>na'e</em></span></em></a> and kin. The cmavo 
+    <a class="glossterm" href="go01.html#valsi-nahi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002253216" class="indexterm"></a>na'i</em></span></em></a> is assigned this function. If it is present in a statement, it indicates metalinguistically that something in the statement is incorrect. This metalinguistic negation must override any evaluation of the logic of the statement. It is equally allowed in both positive and negative statements.</p>
+    <p>Since 
+    <a class="glossterm" href="go01.html#valsi-nahi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002250016" class="indexterm"></a>na'i</em></span></em></a> is not a logical operator, multiple occurrences of 
+    <a class="glossterm" href="go01.html#valsi-nahi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002247568" class="indexterm"></a>na'i</em></span></em></a> need not be assumed to cancel each other. Indeed, we can use the position of 
+    <a class="glossterm" href="go01.html#valsi-nahi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002245232" class="indexterm"></a>na'i</em></span></em></a> to indicate metalinguistically what is incorrect, preparatory to correcting it in a later sentence; for this reason, we give 
+    <a class="glossterm" href="go01.html#valsi-nahi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002242672" class="indexterm"></a>na'i</em></span></em></a> the grammar of UI. The inclusion of 
+    
+    <a class="glossterm" href="go01.html#valsi-nahi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002240272" class="indexterm"></a>na'i</em></span></em></a> anywhere in a sentence makes it a non-assertion, and suggests one or more pitfalls in assigning a truth value.</p>
+    <p>Let us briefly indicate how the above-mentioned metalinguistic errors can be identified. Other metalinguistic problems can then be marked by devising analogies to these examples:</p>
+    <p>Existential failure can be marked by attaching 
+    <a class="glossterm" href="go01.html#valsi-nahi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002236736" class="indexterm"></a>na'i</em></span></em></a> to the descriptor 
+    <a class="glossterm" href="go01.html#valsi-lo"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002234336" class="indexterm"></a>lo</em></span></em></a> or the 
+    <a class="glossterm" href="go01.html#valsi-poi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002232064" class="indexterm"></a>poi</em></span></em></a> in a 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002229840" class="indexterm"></a>da poi</em></span>-form sumti. (See
+    <a class="xref" href="chapter-sumti.html#section-basic-descriptors" title="6.2. The three basic description types">Section 6.2</a> and 
+    <a class="xref" href="chapter-quantifiers.html#section-restricted-claims" title="16.4. Restricted claims: da poi">Section 16.4</a> for details on these constructions.) Remember that if a 
+    <a class="glossterm" href="go01.html#valsi-le"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002226496" class="indexterm"></a>le</em></span></em></a> sumti seems to refer to a non-existent referent, you may not understand what the speaker has in mind – the appropriate response is then 
+    <a class="glossterm" href="go01.html#valsi-kiha"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002223840" class="indexterm"></a>ki'a</em></span></em></a>, asking for clarification.</p>
+    <p>Presupposition failure can be marked directly if the presupposition is overt; if not, one can insert a 
+    <span class="quote">“<span class="quote">mock presupposition</span>”</span> to question with the sumti tcita (selma'o BAI) word 
+    <a class="glossterm" href="go01.html#valsi-jihu"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002220416" class="indexterm"></a>ji'u</em></span></em></a>; 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002218448" class="indexterm"></a>ji'uku</em></span> thus explicitly refers to an unexpressed assumption, and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002216448" class="indexterm"></a>ji'una'iku</em></span> metalinguistically says that something is wrong with that assumption. (See 
+    <a class="xref" href="chapter-sumti-tcita.html" title="Chapter 9. To Boston Via The Road Go I, With An Excursion Into The Land Of Modals">Chapter 9</a>.)</p>
+    <p>Scale errors and category errors can be similarly expressed with selma'o BAI. 
+    <a class="glossterm" href="go01.html#valsi-leha"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002213008" class="indexterm"></a>le'a</em></span></em></a> has meaning 
+    <span class="quote">“<span class="quote">of category/class/type X</span>”</span>, 
+    <a class="glossterm" href="go01.html#valsi-cihu"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002210080" class="indexterm"></a>ci'u</em></span></em></a> has meaning 
+    
+    <span class="quote">“<span class="quote">on scale X</span>”</span>, and 
+    <a class="glossterm" href="go01.html#valsi-cihe"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002207168" class="indexterm"></a>ci'e</em></span></em></a>, based on 
+    <a class="glossterm" href="go01.html#valsi-ciste"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002204800" class="indexterm"></a>ciste</em></span></em></a>, can be used to talk about universes of discourse defined either as systems or sets of components, as shown in 
+    <a class="xref" href="chapter-negation.html#section-truth-questions" title="15.8. Truth questions">Section 15.8</a>. 
+    <a class="glossterm" href="go01.html#valsi-kai"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002201824" class="indexterm"></a>kai</em></span></em></a> and 
+    <a class="glossterm" href="go01.html#valsi-lahu"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002199440" class="indexterm"></a>la'u</em></span></em></a> also exist in BAI for discussing other quality and quantity errors.</p>
+    
+    <p>We have to make particular note of potential problems in the areas of undue quantity and incorrect scale/category. Assertions about the relationships between gismu are among the basic substance of the language. It is thus invalid to logically require that if something is blue, that it is colored, or if it is not-blue, then it is some other color. In Lojban, 
+    <a class="glossterm" href="go01.html#valsi-blanu"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002196080" class="indexterm"></a>blanu</em></span></em></a> (<span class="quote">“<span class="quote">blue</span>”</span>) is not explicitly defined as a 
+    <a class="glossterm" href="go01.html#valsi-skari"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002193264" class="indexterm"></a>skari</em></span></em></a> (<span class="quote">“<span class="quote">color</span>”</span>). Similarly, it is not implicit that the opposite of 
+    <span class="quote">“<span class="quote">good</span>”</span> is 
+    <span class="quote">“<span class="quote">bad</span>”</span>.</p>
+    <p>This mutual independence of gismu is only an ideal. Pragmatically, people will categorize things based on their world-views. We will write dictionary definitions that will relate gismu, unfortunately including some of these world-view assumptions. Lojbanists should try to minimize these assumptions, but this seems a likely area where logical rules will break down (or where Sapir-Whorf effects will be made evident). In terms of negation, however, it is vital that we clearly preserve the capability of denying a presumably obvious scale or category assumption.</p>
+    
+    <p>Solecisms, grammatical and spelling errors will be marked by marking the offending word or phrase with 
+    <a class="glossterm" href="go01.html#valsi-nahi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002187904" class="indexterm"></a>na'i</em></span></em></a> (in the manner of any selma'o UI cmavo). In this sense, 
+    <a class="glossterm" href="go01.html#valsi-nahi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002185456" class="indexterm"></a>na'i</em></span></em></a> becomes equivalent to the English metalinguistic marker 
+    <span class="quote">“<span class="quote">[sic]</span>”</span>. Purists may choose to use ZOI or LOhU/LEhU quotes or 
+    <a class="glossterm" href="go01.html#valsi-saha"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002182592" class="indexterm"></a>sa'a</em></span></em></a>-marked corrections to avoid repeating a truly unparsable passage, especially if a computer is to analyze the speech/text. See 
+    
+    <a class="xref" href="chapter-structure.html#section-parentheses" title="19.12. Parenthesis and metalinguistic commentary: TO, TOI, SEI">Section 19.12</a> for explanations of these usages.</p>
+    <p>In summary, metalinguistic negation will typically take the form of referring to a previous statement and marking it with one or more 
+    <a class="glossterm" href="go01.html#valsi-nahi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002179168" class="indexterm"></a>na'i</em></span></em></a> to indicate what metalinguistic errors have been made, and then repeating the statement with corrections. References to previous statements may be full repetitions, or may use members of selma'o GOhA. 
+    <a class="glossterm" href="go01.html#valsi-nahi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002176416" class="indexterm"></a>na'i</em></span></em></a> at the beginning of a statement merely says that something is inappropriate about the statement, without specificity.</p>
+    
+    <p>In normal use, metalinguistic negation requires that a corrected statement follow the negated statement. In Lojban, however, it is possible to completely and unambiguously specify metalinguistic errors without correcting them. It will eventually be seen whether an uncorrected metalinguistic negation remains an acceptable form in Lojban. In such a statement, metalinguistic expression would involve an ellipsis not unlike that of tenseless expression.</p>
+    
+    <p>Note that metalinguistic negation gives us another kind of legitimate negative answer to a 
+    
+    <a class="glossterm" href="go01.html#valsi-xu"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002172496" class="indexterm"></a>xu</em></span></em></a> question (see 
+    <a class="xref" href="chapter-negation.html#section-truth-questions" title="15.8. Truth questions">Section 15.8</a>). 
+    <a class="glossterm" href="go01.html#valsi-nahi"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002169488" class="indexterm"></a>na'i</em></span></em></a> will be used when something about the questioned statement is inappropriate, such as in questions like 
+    <span class="quote">“<span class="quote">Have you stopped beating your wife?</span>”</span>:</p>
+    <div class="example"><a id="example-random-id-SfSU"></a><p class="title"><strong>Example 15.110. 
+        <a id="c15e10d15"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>xu</td><td>do</td><td>sisti</td><td>lezu'o</td></tr>
+        <tr class="gloss"><td>is-it-true-that:</td><td>you</td><td>cease</td><td>the-activity-of</td></tr>
+      </table></div>
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>do</td><td>rapydarxi</td><td>ledo</td><td>fetspe</td></tr>
+        <tr class="gloss"><td>you</td><td>repeat-hitting</td><td>your</td><td>female-spouse?</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">Have you stopped beating your wife?</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">Responses could include:</p>
+    <div class="example"><a id="example-random-id-qHJJ"></a><p class="title"><strong>Example 15.111. 
+        <a id="c15e10d16"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>na'i</td><td>go'i</td></tr>
+        <tr class="gloss"><td>[metalinguistic-negation]</td><td>[repeat-previous]</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">The bridi as a whole is inappropriate in some way.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <div class="example"><a id="example-random-id-qHKe"></a><p class="title"><strong>Example 15.112. 
+        <a id="c15e10d17"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>go'i</td><td>na'i</td></tr>
+        <tr class="gloss"><td>[repeat-previous]</td><td>[metalinguistic-negation]</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">The selbri (<a class="glossterm" href="go01.html#valsi-sisti"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002137008" class="indexterm"></a>sisti</em></span></em></a>) is inappropriate in some way.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">One can also specifically qualify the metalinguistic negation, by explicitly repeating the erroneous portion of the bridi to be metalinguistically negated, or adding on of the selma'o BAI qualifiers mentioned above:</p>
+    <div class="example"><a id="example-random-id-ANpd"></a><p class="title"><strong>Example 15.113. 
+        <a id="c15e10d18"></a>
+      </strong></p><div class="example-contents">
+      
+      <div class="informaltable"><table class="interlinear-gloss"><colgroup></colgroup>
+        <tr class="jbo"><td>go'i</td><td>ji'una'iku</td></tr>
+        <tr class="gloss"><td>[repeat-previous]</td><td>[presupposition-wrong]</td></tr>
+        
+      </table></div><div class="informaltable"><table class="interlinear-gloss">
+        
+        
+        <tr class="para"><td colspan="12321"><p class="natlang">Some presupposition is wrong with the previous bridi.</p></td></tr>
+      </table></div>
+    </div></div><br class="example-break" />
+    <p class="indent">Finally, one may metalinguistically affirm a bridi with 
+    <a class="glossterm" href="go01.html#valsi-joha"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002125296" class="indexterm"></a>jo'a</em></span></em></a>, another cmavo of selma'o UI. A common use for 
+    
+    <a class="glossterm" href="go01.html#valsi-joha"><em class="glossterm"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47087002122848" class="indexterm"></a>jo'a</em></span></em></a> might be to affirm that a particular construction, though unusual or counterintuitive, is in fact correct; another usage would be to disagree with – by overriding – a respondent's metalinguistic negation.</p>
+    
+  </div>
+  <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="section-are-all-questions-answered"></a>15.11. <a id="c15s11"></a>Summary – Are All Possible Questions About Negation Now Answered?</h2></div></div></div>
+    
+    <div class="example"><a id="example-random-id-MdRP"></a><p class="title"><strong>Example 15.114. 
+        <a id="c15e11d1"></a>
+      </strong></p><div class="example-contents">
+      
+      <p xml:lang="jbo" class="jbophrase" lang="jbo"><a id="idm47087002118336" class="indexterm"></a>na go'i .ije na'e go'i .ije na'i go'i</p>
+    </div></div><br class="example-break" />
+  </div>
+</div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="chapter-connectives.html">Prev</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="chapter-quantifiers.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 14. If Wishes Were Horses: The Lojban Connective System </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Chapter 16. <span class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</td></tr></table></div></body></html>

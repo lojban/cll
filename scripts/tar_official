@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ ! -d official/ ]
+then
+  echo "No official/ directory found."
+  exit 1
+fi
+
+cd official/
+filesfile=/tmp/official_tar.$$
+rm $filesfile
+touch $filesfile
+
+cp ../CHANGELOG .
+echo CHANGELOG >>$filesfile
+
+for file in *
+do
+  if [ -L $file ]
+  then
+    echo $file >>$filesfile
+    readlink $file  >>$filesfile
+  fi
+done
+
+cat $filesfile
+
+tar -zcvf ../official_cll.tar -T $filesfile
+
+rm $filesfile

@@ -1,0 +1,21 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="en" unique-identifier="isbn-id">
+  <metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title id="title">The Complete Lojban Language</dc:title>
+    <meta refines="#title" property="title-type">main</meta>
+    <meta refines="#title" property="file-as">Complete Lojban Language, The</meta>
+    <dc:creator id="creator">John Woldemar Cowan</dc:creator>
+    <meta refines="#creator" property="file-as">Woldemar, John Cowan</meta>
+    <meta refines="#creator" property="role" scheme="marc:relators">aut</meta>
+    <!-- Note that the EPUB and the hardcover have different ISBNs -->
+    <dc:identifier id="isbn-id">urn:isbn:978-0-9660283-3-1</dc:identifier>
+    <meta refines="#isbn-id" property="identifier-type" scheme="onix:codelist5">15</meta>
+    <dc:language>en-US</dc:language>
+    <meta property="dcterms:modified">REPLACEDATE</meta>
+    <dc:publisher>The Logical Language Group</dc:publisher>
+    <dc:description>REPLACEVERSION</dc:description>
+    <dc:language>en</dc:language>
+  </metadata>
+  <manifest>
+    <item id="toc" properties="nav" href="toc.xhtml" media-type="application/xhtml+xml"/>
+    <item href="final.css" id="css" media-type="text/css"/>

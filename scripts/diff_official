@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# -c to show all diffs
+continue=""
+if [ "$1" = "-c" ]
+then
+  continue="yes"
+  shift
+fi
+
+# Give directories as first two non-option arguments if you want to
+# make a special diff
+custom_dir_old=""
+custom_dir_new=""
+if [ "$1" -a "$2" ]
+then
+  custom_dir_old="$1"
+  custom_dir_new="$2"
+fi
+
+# Used to diff new content in build/ with the old official/ content;
+# it won't look the same unless you massage it because of the
+# automated index IDs.
+
+for type in 'xhtml?no?chunks' 'xhtml?chapter?chunks' 'xhtml?section?chunks'
+do
+  echo -e "**************\nDiffs for $type:\n**************\n\n"
+  rm -rf diff_new diff_old
+  if [ "$custom_dir_old" -a "$custom_dir_new" ]
+  then
+    dir_old=$custom_dir_old
+    dir_new=$custom_dir_new
+  else
+    dir_old=build/$type/
+    dir_new=official/cll_v1.1_$type/
+  fi
+  cp -pr $dir_old diff_new
+  cp -pr $dir_new diff_old
+  find diff_new diff_old -type f | xargs sed -r -i -e 's/<a id="idm[0-9]+"/<a id="idmXXX"/g' -e 's/#idm[0-9]+"/#idmXXX"/g' -e 's/</\n</g'
+  # Why this needs to be its own line is something I'm not 100%
+  # clear on, but it just deletes blank lines
+  find diff_new diff_old -type f | xargs sed -r -i -e '/^\s*$/d'
+  # Run any extra scripts that the user has diffen
+  if [ -x scripts/diff_official-special ]
+  then
+    for file in $(find diff_new diff_old -type f)
+    do
+      scripts/diff_official-special $file >$file.tmp
+      mv $file.tmp $file
+    done
+  fi
+  diff -Bw -r diff_old diff_new
+  if [ $? -ne 0 -a "$1" != "-c" ]
+  then
+    echo "Diffs found; stopping to let you examine them.  If you want to show all diffs instead, run with -c"
+    exit
+  fi
+done
+
+rm -rf diff_new diff_old

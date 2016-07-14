@@ -1,9 +1,12 @@
-test = 
+test =
+# Grab environment variables; not sure why this is necessary.
 chapters = $(if $(CHAPTERS), $(CHAPTERS), chapters/01.xml chapters/02.xml chapters/03.xml chapters/04.xml chapters/05.xml chapters/06.xml chapters/07.xml chapters/08.xml chapters/09.xml chapters/10.xml chapters/11.xml chapters/12.xml chapters/13.xml chapters/14.xml chapters/15.xml chapters/16.xml chapters/17.xml chapters/18.xml chapters/19.xml chapters/20.xml chapters/21.xml)
 builddir = $(if $(BUILDDIR), $(BUILDDIR), $(PWD)/build)
+copydir = $(COPYDIR)
+covcopydir = $(COVCOPYDIR)
 
 .PHONY: all
-all: xhtml_chapters_web xhtml_sections_web xhtml_nochunks_web prince_pdf_web epub_web mobi_web
+all: xhtml_chapters xhtml_sections xhtml_nochunks pdf epub mobi
 
 .PHONY: clean
 clean:
@@ -18,9 +21,7 @@ realclean: clean
 # Basic prep
 #*******
 
-builddir:
-	mkdir -p $(builddir)
-$(builddir)/cll.xml: $(chapters) builddir
+$(builddir)/cll.xml: $(chapters) xml/iso-pub.ent xml/identity.xsl xml/docbook2html_config_common.xsl scripts/update_jbovlaste_xml.sh scripts/generate_glossary.rb scripts/merge.sh
 	rm -f $(builddir)/xml $(builddir)/dtd
 	ln -sf $(PWD)/xml $(builddir)/xml
 	ln -sf $(PWD)/dtd $(builddir)/dtd
@@ -30,126 +31,103 @@ $(builddir)/cll_processed_xhtml.xml: $(builddir)/cll.xml scripts/xml_preprocess.
 	ruby scripts/xml_preprocess.rb $(builddir)/cll.xml >$(builddir)/cll_processed_xhtml.xml 2>$(builddir)/xml_preprocess.out || (tail $(builddir)/xml_preprocess.out && false)
 
 #*******
-# Chapter xhtml files
+# XHTML, with various chunk sizes
 #*******
-.PHONY: xhtml_chapters_web
-xhtml_chapters_web: $(builddir)/xhtml_chapters.done
-	mkdir -p ~/public_html/media/public/cll_build
-	rm -rf ~/public_html/media/public/cll_build/cll-xhtml_chapters
-	cp -pr $(builddir)/xhtml_chapters ~/public_html/media/public/cll_build/cll-xhtml_chapters
+# Name the various chunking targets
+.PHONY: xhtml_chapters xhtml_sections xhtml_nochunks
+xhtml_chapters: $(builddir)/xhtml_chapter_chunks.done
 
-.PHONY: xhtml_chapters
-xhtml_chapters: $(builddir)/xhtml_chapters.done
-$(builddir)/xhtml_chapters.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_chapter-chunks.xsl
-	rm -rf $(builddir)/xhtml_chapters
-	mkdir -p $(builddir)/xhtml_chapters
-	xmlto -m xml/docbook2html_config_chapter-chunks.xsl -o $(builddir)/xhtml_chapters/ xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
-	cp $(PWD)/scripts/master.css $(builddir)/xhtml_chapters/final.css
-	cp -pr $(PWD)/media $(builddir)/xhtml_chapters/
-	scripts/xhtml_postprocess.sh $(builddir)/xhtml_chapters
-	touch $(builddir)/xhtml_chapters.done
+xhtml_sections: $(builddir)/xhtml_section_chunks.done
 
-#*******
-# Section xhtml files
-#*******
-.PHONY: xhtml_sections_web
-xhtml_sections_web: $(builddir)/xhtml_sections.done
-	mkdir -p ~/public_html/media/public/cll_build
-	rm -rf ~/public_html/media/public/cll_build/cll-xhtml_sections
-	cp -pr $(builddir)/xhtml_sections ~/public_html/media/public/cll_build/cll-xhtml_sections
+xhtml_nochunks: nochunks = -nochunks
+xhtml_nochunks: $(builddir)/xhtml_no_chunks.done
 
-.PHONY: xhtml_sections
-xhtml_sections: $(builddir)/xhtml_sections.done
-$(builddir)/xhtml_sections.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_section-chunks.xsl
-	rm -rf $(builddir)/xhtml_sections
-	mkdir -p $(builddir)/xhtml_sections
-	xmlto -m xml/docbook2html_config_section-chunks.xsl -o $(builddir)/xhtml_sections/ --stringparam chunk.section.depth=1 --stringparam chunk.first.sections=1 xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
-	cp $(PWD)/scripts/master.css $(builddir)/xhtml_sections/final.css
-	cp -pr $(PWD)/media $(builddir)/xhtml_sections/
-	scripts/xhtml_postprocess.sh $(builddir)/xhtml_sections
-	touch $(builddir)/xhtml_sections.done
+# Do the actual chunking work
+$(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_xhtml.xsl
+	rm -rf $(builddir)/xhtml_$*_chunks
+	mkdir -p $(builddir)/xhtml_$*_chunks
+	xmlto -m xml/docbook2html_config_$*_chunks.xsl -o $(builddir)/xhtml_$*_chunks/ xhtml$(nochunks) $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
+	# We run tidy on the no-chunk version, because it's all in
+	# one place so it's easy
+	test -f $(builddir)/xhtml_$*_chunks/index.html || sed 's/mml:[^>]*/div/g' $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html | tidy -e - 2>&1 | grep -v '<table> lacks "summary" attribute'
+# Handle the no-chunk case; can't figure out how to set the
+# name of the output file, so move it to index.html
+	test -f $(builddir)/xhtml_$*_chunks/index.html || mv $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html $(builddir)/xhtml_$*_chunks/index.html
+	cp $(PWD)/scripts/master.css $(builddir)/xhtml_$*_chunks/final.css
+	cp -pr $(PWD)/media $(builddir)/xhtml_$*_chunks/
+	scripts/xhtml_postprocess.sh $(builddir)/xhtml_$*_chunks
+	touch $(builddir)/xhtml_$*_chunks.done
+ifdef copydir
+	mkdir -p $(copydir)
+	rm -rf $(copydir)/cll-xhtml_$*_chunks
+	cp -pr $(builddir)/xhtml_$*_chunks $(copydir)/cll-xhtml_$*_chunks
+endif
 
 #*******
-# One XHTML file
+# Prince PDF
 #*******
-.PHONY: xhtml_nochunks_web
-xhtml_nochunks_web: $(builddir)/xhtml_nochunks.done
-	rm -rf ~/public_html/media/public/cll_build/cll-xhtml_nochunks/
-	mkdir -p ~/public_html/media/public/cll_build/cll-xhtml_nochunks/
-	rsync -a $(builddir)/xhtml_nochunks/ ~/public_html/media/public/cll_build/cll-xhtml_nochunks/
-
-.PHONY: xhtml_nochunks
-xhtml_nochunks: $(builddir)/xhtml_nochunks.done
-$(builddir)/xhtml_nochunks.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_no-chunks.xsl
-	rm -rf $(builddir)/xhtml_nochunks
-	mkdir -p $(builddir)/xhtml_nochunks
-	xmlto -m xml/docbook2html_config_no-chunks.xsl -o $(builddir)/xhtml_nochunks/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
-	mv $(builddir)/xhtml_nochunks/cll_processed_xhtml.html $(builddir)/xhtml_nochunks/index.html
-	cp $(PWD)/scripts/master.css $(builddir)/xhtml_nochunks/final.css
-	cp -pr $(PWD)/media $(builddir)/xhtml_nochunks/
-	scripts/xhtml_postprocess.sh $(builddir)/xhtml_nochunks
-	touch $(builddir)/xhtml_nochunks.done
+.PHONY: pdf
+pdf: $(builddir)/pdf.done
+$(builddir)/pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_prince.xsl
+	rm -rf $(builddir)/pdf
+	mkdir -p $(builddir)/pdf
+	ln -sf $(PWD)/scripts/master.css $(builddir)/pdf/final.css
+	ln -sf $(PWD)/media $(builddir)/pdf/
+	
+	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/pdf/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
+	ruby scripts/xml_prince_postprocess.rb $(builddir)/pdf/cll_processed_xhtml.html >$(builddir)/pdf/cll_processed_xhtml_pdf.html 2>$(builddir)/xml_prince_postprocess.out
+	
+	prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $(builddir)/pdf/cll_processed_xhtml_pdf.html $(builddir)/cll.pdf
+	touch $(builddir)/pdf.done
+ifdef copydir
+	mkdir -p $(copydir)
+	cp $(builddir)/cll.pdf $(copydir)/cll.pdf
+endif
 
 #*******
 # EPUB
 #*******
 .PHONY: epub
 epub: $(builddir)/cll.epub
-$(builddir)/cll.epub: $(builddir)/xhtml_nochunks.done
-	zip -r $(builddir)/xhtml_nochunks.zip $(builddir)/xhtml_nochunks/
-	ebook-convert $(builddir)/xhtml_nochunks.zip $(builddir)/cll.epub
 
-.PHONY: epub_web
-epub_web: epub
-	mkdir -p ~/public_html/media/public/cll_build
-	rm -rf ~/public_html/media/public/cll_build/cll.epub
-	cp $(builddir)/cll.epub ~/public_html/media/public/cll_build/cll.epub
+$(builddir)/cll.epub: $(builddir)/epub-xhtml/index.html scripts/build_epub.sh epub/content.opf* epub/mimetype epub/toc.xhtml* epub/META-INF/container.xml
+	scripts/build_epub.sh $(PWD)
+ifdef copydir
+	mkdir -p $(copydir)
+	cp $(builddir)/cll.epub $(copydir)/cll.epub
+endif
+
+# Note that the epub doesn't rely on the PDF, but rather on the HTML
+# that is used to build the PDF, but it amounts to the same thing
+# for requirements here.
+$(builddir)/epub-xhtml/index.html: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_common.xsl xml/docbook2html_config_epub.xsl scripts/xhtml_postprocess.sh $(PWD)/scripts/master.css $(PWD)/media/*
+# FIXME: add something like epub/* to the above line
+	rm -rf $(builddir)/epub-xhtml/
+	mkdir -p $(builddir)/epub-xhtml/
+	xmlto -m xml/docbook2html_config_epub.xsl -o $(builddir)/epub-xhtml/ xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
+	cp $(PWD)/scripts/master.css $(builddir)/epub-xhtml/final.css
+	cp -pr $(PWD)/media $(builddir)/epub-xhtml/
+	scripts/xhtml_postprocess.sh $(builddir)/epub-xhtml
 
 #*******
 # MOBI
 #*******
 .PHONY: mobi
 mobi: $(builddir)/cll.mobi
-$(builddir)/cll.mobi: $(builddir)/xhtml_nochunks.done
-	zip -r $(builddir)/xhtml_nochunks.zip $(builddir)/xhtml_nochunks/
-	ebook-convert $(builddir)/xhtml_nochunks.zip $(builddir)/cll.mobi
-
-.PHONY: mobi_web
-mobi_web: mobi
-	mkdir -p ~/public_html/media/public/cll_build
-	rm -rf ~/public_html/media/public/cll_build/cll.mobi
-	cp $(builddir)/cll.mobi ~/public_html/media/public/cll_build/cll.mobi
-
-#*******
-# Prince PDF
-#*******
-.PHONY: prince_pdf
-prince_pdf: $(builddir)/prince_pdf.done
-$(builddir)/prince_pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_prince.xsl
-	rm -rf $(builddir)/prince_pdf
-	mkdir -p $(builddir)/prince_pdf
-	ln -sf $(PWD)/scripts/master.css $(builddir)/prince_pdf/final.css
-	ln -sf $(PWD)/media $(builddir)/prince_pdf/
-	
-	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/prince_pdf/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists for "jbo" or "". Using default "en".'
-	ruby scripts/xml_prince_postprocess.rb $(builddir)/prince_pdf/cll_processed_xhtml.html >$(builddir)/prince_pdf/cll_processed_xhtml_prince.html 2>$(builddir)/xml_prince_postprocess.out
-	
-	prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $(builddir)/prince_pdf/cll_processed_xhtml_prince.html $(builddir)/cll_prince.pdf
-	touch $(builddir)/prince_pdf.done
-
-.PHONY: prince_pdf_web
-prince_pdf_web: prince_pdf
-	mkdir -p ~/public_html/media/public/cll_build
-	rm -rf ~/public_html/media/public/cll_build/cll_prince.pdf
-	cp $(builddir)/cll_prince.pdf ~/public_html/media/public/cll_build/cll_prince.pdf
+$(builddir)/cll.mobi: $(builddir)/cll.epub
+	ebook-convert $(builddir)/cll.epub $(builddir)/cll.mobi
+ifdef copydir
+	mkdir -p $(copydir)
+	cp $(builddir)/cll.mobi $(copydir)/cll.mobi
+endif
 
 #*******
 # Testing
 #*******
-# coverage: clean builddir xhtml_nochunks # pdf
-coverage: clean builddir xhtml_nochunks prince_pdf
-	mkdir -p ~/public_html/media/public/cll_coverage/cll-xhtml_nochunks/
-	cp $(builddir)/cll_prince.pdf ~/public_html/media/public/cll_coverage/cll_prince.pdf
-	cp $(PWD)/scripts/master.css  ~/public_html/media/public/cll_coverage/cll-xhtml_nochunks/final.css
-	cp $(builddir)/xhtml_nochunks/cll_processed_xhtml.html ~/public_html/media/public/cll_coverage/cll-xhtml_nochunks/cll-xhtml_nochunks.html
-	cp -pr $(PWD)/media ~/public_html/media/public/cll_coverage/cll-xhtml_nochunks/
+coverage: clean xhtml_nochunks pdf
+ifneq ($(covcopydir),)
+	mkdir -p $(covcopydir)
+	cp $(builddir)/cll.pdf $(covcopydir)/cll.pdf
+	rm -rf $(covcopydir)/cll-xhtml_no_chunks
+	cp -pr $(builddir)/xhtml_no_chunks $(covcopydir)/cll-xhtml_no_chunks
+endif
