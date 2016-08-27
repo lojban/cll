@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Turn tidy warnings into a 0 exit so make won't fail
+/usr/bin/tidy "$@"
+code=$?
+if [ $code -eq 1 ]
+then
+  exit 0
+else
+  exit $code
+fi

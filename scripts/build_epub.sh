@@ -18,6 +18,9 @@ mkdir $epubbuilddir/
 # cp -pr epub/META-INF epub/content.opf epub/mimetype epub/toc.xhtml epub-temp
 cp -pr $srcdir/META-INF $srcdir/mimetype $epubbuilddir/
 cp -pr $builddir/epub-xhtml/* $epubbuilddir/
+rm -rf $epubbuilddir/dtd
+# Kindle doesn't like svg
+rm -f $basedir/build/epub/media/chapter-2-diagram.svg
 
 # Clean up HTML headers and crap to make epubchek happy
 for file in $(find $epubbuilddir/ -name '*.html')
@@ -26,17 +29,27 @@ do
     -e 's;^\s*<[?]xml .*;<?xml version="1.0" encoding="UTF-8"?>;' \
     -e 's;^\s*<html .*;<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">;' \
     -e 's;\s+summary="[^"]*";;' "$file"
+
+  # Kindle chokes badly on dl/dt/dd nesting, so we just replace it throughout and fake it with CSS
+  sed -i -r -e 's;<dl(( )class="([^"]*)")?>;<ul class="dl\2\3">;' -e 's;</dl>;</ul>;' \
+    -e 's;<d([dt])(( )class="([^"]*)")?>;<li class="d\1\3\4">;' -e 's;</d[dt]>;</li>;' \
+    "$file"
+
+  grep '<d[ltd]' "$file" && echo "BAD: $file still has dl/dt/dd elements!"
 done
 # More of the same, it really wants a dd for every dt
 cat build/epub/index.html | ruby -e 'puts STDIN.read.gsub(%r{</dt>\s*<dt>}m, "</dt><dd/><dt>").gsub(%r{</dt>\s*</dl>}m, "</dt><dd/></dl>")' > build/epub/index.html.new
 mv build/epub/index.html.new build/epub/index.html
 
-rm $epubbuilddir/cll.appcache
+rm -f $epubbuilddir/cll.appcache
 
 cp $srcdir/toc.xhtml.s1 $epubbuilddir/toc.xhtml
-grep '^\s*<a ' build/epub-xhtml/index.html | sed -r -e 's/^\s*//' -e 's;.*;<li class="toc-BookTitlePage-rw">&</li>;' >>$epubbuilddir/toc.xhtml
-#sed -r 's/href="(chapter-[^"]*).html"/href="\1.html#\1"/' >>$epubbuilddir/toc.xhtml
+grep -P '^\s*(<a |(</?dl>|</?dt>)\s*$)' build/epub-xhtml/index.html | \
+  sed -r -e 's/dt>\s*$/li>/g' -e 's/<dl>\s*$/<ol>/' -e 's;</dl>\s*$;</ol></li>;' | \
+  ruby -e 'puts STDIN.read.gsub(%r{</li>\s*<ol>}m, "<ol>")' >>$epubbuilddir/toc.xhtml
 cat $srcdir/toc.xhtml.s2 >>$epubbuilddir/toc.xhtml
+cat $epubbuilddir/toc.xhtml | ruby -e 'puts STDIN.read.gsub(%r{</ol>\s*</li>\s*</nav>}m, "</ol>\n</nav>")' >>$epubbuilddir/toc.xhtml.tmp
+mv $epubbuilddir/toc.xhtml.tmp $epubbuilddir/toc.xhtml
 
 for file in $(find build/epub-xhtml/ -type f -name '*.html' | xargs grep -l '<h1 class="title"><a')
 do
@@ -94,9 +107,9 @@ done
 
 cat $srcdir/content.opf.s3 >>$epubbuilddir/content.opf
 
-rm -f $basedir/build/cll.epub
+cp $srcdir/cover.jpg $epubbuilddir/media/cover.jpg
+cp $srcdir/cover.html $epubbuilddir/cover.html
+
+rm -f $basedir/build/cll.epub $basedir/build/cll.mobi
 
 zip -q -X -r $basedir/build/cll.epub mimetype *
-
-java -jar $basedir/epub/epubcheck-4.0.1/epubcheck.jar $basedir/build/cll.epub 2>&1 | grep -v "should have the extension '.xhtml'"
-

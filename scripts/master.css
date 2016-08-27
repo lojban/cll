@@ -3,6 +3,13 @@
  *
  * When running under Prince, everything that happens here happens *AFTER* /usr/lib/prince/style/xhtml.css
 ********************/
+
+/****
+ * General note on dl/dt/dd: Kindle can't handle nesting of them, so
+ * in build_epub.sh we replace them with ul/li and special classes;
+ * that's why there's all the duplication.
+ ****/
+
 html {
   /* Modern Georgia-based serif stack, from http://css-tricks.com/snippets/css/font-stacks/ */
   font-family: 'Linux Libertine', Libertine, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
@@ -226,46 +233,55 @@ div.whole-index {
   column-span: all;
 }
 
-.glossary dl {
+.glossary dl, .glossary ul.dl {
+  list-style-type: none;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.glossary dt {
+.glossary dt, .glossary li.dt {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.glossary dd {
+.glossary dd, .glossary li.dd {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 2em;
 }
 
-.whole-index dl {
+.whole-index dl, .whole-index ul.dl {
+  list-style-type: none;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.whole-index dt{
+.whole-index dt, .whole-index li.dt {
   font-weight: normal;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.whole-index dd {
+.whole-index dd, .whole-index li.dd {
   font-weight: normal;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 0.8em;
 }
 
-.whole-index h3, .glossary h3 {
+.whole-index h3 {
   display: none;
 }
 
+/*
+.glossary h3 {
+  display: none;
+}
+*/
+
 
 /* Allow flow of indexes; see http://www.princexml.com/forum/topic/2798/bad-page-breaks?p=1#13093 */
-dt { page-break-after: auto !important }
+dt, li.dt { page-break-after: auto !important }
 dt + dd { page-break-before: avoid }
+li.dt + li.dd { page-break-before: avoid }
 
 /*
 }}}
@@ -346,10 +362,11 @@ tr, li {
   padding: 0;
 }
 
-dl {
+dl, ul.dl {
+  list-style-type: none;
   margin: 0pt;
 }
-dd {
+dd, li.dd {
   margin-bottom: 0pt;
 }
 
@@ -475,7 +492,7 @@ img {
   margin-right: auto;
 }
 
-dl p, dl span {
+dl p, dl span, ul.dl p, ul.dl span {
   margin: 0px;
   padding: 0px;
   text-align: left;

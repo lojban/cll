@@ -5,6 +5,8 @@ builddir = $(if $(BUILDDIR), $(BUILDDIR), $(PWD)/build)
 copydir = $(COPYDIR)
 covcopydir = $(COVCOPYDIR)
 
+SHELL=/bin/bash -o pipefail
+
 .PHONY: all
 all: xhtml_chapters xhtml_sections xhtml_nochunks pdf epub mobi
 
@@ -23,8 +25,8 @@ realclean: clean
 
 $(builddir)/cll.xml: $(chapters) xml/iso-pub.ent xml/identity.xsl xml/docbook2html_config_common.xsl scripts/update_jbovlaste_xml.sh scripts/generate_glossary.rb scripts/merge.sh
 	rm -f $(builddir)/xml $(builddir)/dtd
-	ln -sf $(PWD)/xml $(builddir)/xml
-	ln -sf $(PWD)/dtd $(builddir)/dtd
+	ln -nsf $(PWD)/xml $(builddir)/xml
+	ln -nsf $(PWD)/dtd $(builddir)/dtd
 	scripts/merge.sh -b "$(builddir)" $(test) $(chapters)
 
 $(builddir)/cll_processed_xhtml.xml: $(builddir)/cll.xml scripts/xml_preprocess.rb
@@ -43,19 +45,21 @@ xhtml_nochunks: nochunks = -nochunks
 xhtml_nochunks: $(builddir)/xhtml_no_chunks.done
 
 # Do the actual chunking work
-$(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_xhtml.xsl scripts/master.css
+$(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_xhtml.xsl scripts/master.css scripts/xhtml_postprocess_appcache.sh scripts/xhtml_postprocess_cleanup.sh scripts/xhtml_postprocess_cleanup_file.rb
 	rm -rf $(builddir)/xhtml_$*_chunks
 	mkdir -p $(builddir)/xhtml_$*_chunks
+	ln -nsf $(PWD)/dtd $(builddir)/xhtml_$*_chunks/dtd
 	xmlto -m xml/docbook2html_config_$*_chunks.xsl -o $(builddir)/xhtml_$*_chunks/ xhtml$(nochunks) $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
 	# We run tidy on the no-chunk version, because it's all in
 	# one place so it's easy
-	test -f $(builddir)/xhtml_$*_chunks/index.html || sed 's/mml:[^>]*/div/g' $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html | tidy -e - 2>&1 | grep -v '<table> lacks "summary" attribute'
+	test -f $(builddir)/xhtml_$*_chunks/index.html || sed 's/mml:[^>]*/div/g' $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html | scripts/tidy -e - 2>&1 | grep -v '<table> lacks "summary" attribute'
 # Handle the no-chunk case; can't figure out how to set the
 # name of the output file, so move it to index.html
 	test -f $(builddir)/xhtml_$*_chunks/index.html || mv $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html $(builddir)/xhtml_$*_chunks/index.html
 	cp $(PWD)/scripts/master.css $(builddir)/xhtml_$*_chunks/final.css
 	cp -pr $(PWD)/media $(builddir)/xhtml_$*_chunks/
-	scripts/xhtml_postprocess.sh $(builddir)/xhtml_$*_chunks
+	scripts/xhtml_postprocess_cleanup.sh $(builddir)/xhtml_$*_chunks/
+	scripts/xhtml_postprocess_appcache.sh $(builddir)/xhtml_$*_chunks/
 	touch $(builddir)/xhtml_$*_chunks.done
 ifdef copydir
 	mkdir -p $(copydir)
@@ -68,13 +72,15 @@ endif
 #*******
 .PHONY: pdf
 pdf: $(builddir)/pdf.done
-$(builddir)/pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_prince.xsl scripts/master.css
+$(builddir)/pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_prince.xsl scripts/master.css scripts/xhtml_postprocess_cleanup.sh scripts/xhtml_postprocess_cleanup_file.rb
 	rm -rf $(builddir)/pdf
 	mkdir -p $(builddir)/pdf
 	ln -sf $(PWD)/scripts/master.css $(builddir)/pdf/final.css
-	ln -sf $(PWD)/media $(builddir)/pdf/
+	ln -nsf $(PWD)/media $(builddir)/pdf/media
+	ln -nsf $(PWD)/dtd $(builddir)/pdf/dtd
 	
 	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/pdf/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
+	scripts/xhtml_postprocess_cleanup.sh $(builddir)/pdf/
 	ruby scripts/xml_prince_postprocess.rb $(builddir)/pdf/cll_processed_xhtml.html >$(builddir)/pdf/cll_processed_xhtml_pdf.html 2>$(builddir)/xml_prince_postprocess.out
 	
 	prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $(builddir)/pdf/cll_processed_xhtml_pdf.html $(builddir)/cll.pdf
@@ -85,41 +91,38 @@ ifdef copydir
 endif
 
 #*******
-# EPUB
+# EPUB ; also generates .MOBI
 #*******
 .PHONY: epub
+.PHONY: mobi
+mobi: $(builddir)/cll.epub
 epub: $(builddir)/cll.epub
 
-$(builddir)/cll.epub: $(builddir)/epub-xhtml/index.html scripts/build_epub.sh epub/content.opf* epub/mimetype epub/toc.xhtml* epub/META-INF/container.xml
+$(builddir)/cll.epub: $(builddir)/epub-xhtml/index.html scripts/build_epub.sh epub/mimetype epub/* epub/META-INF/container.xml
 	scripts/build_epub.sh $(PWD)
+	mv $(builddir)/cll.epub $(builddir)/cll.tmp.epub
+	java -jar $(PWD)/epub/epubcheck-4.0.1/epubcheck.jar $(builddir)/cll.tmp.epub 2>&1 | grep -v "should have the extension '.xhtml'"
+# This both checks for Kindle support *and* generates the .mobi
+	$(PWD)/epub/kindlegen/kindlegen $(builddir)/cll.tmp.epub -o cll.mobi
+# It checks out; move it into place
+	mv $(builddir)/cll.tmp.epub $(builddir)/cll.epub
 ifdef copydir
 	mkdir -p $(copydir)
 	cp $(builddir)/cll.epub $(copydir)/cll.epub
+	cp $(builddir)/cll.mobi $(copydir)/cll.mobi
 endif
 
 # Note that the epub doesn't rely on the PDF, but rather on the HTML
 # that is used to build the PDF, but it amounts to the same thing
 # for requirements here.
-$(builddir)/epub-xhtml/index.html: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_common.xsl xml/docbook2html_config_epub.xsl scripts/xhtml_postprocess.sh $(PWD)/scripts/master.css $(PWD)/media/*
-# FIXME: add something like epub/* to the above line
+$(builddir)/epub-xhtml/index.html: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_common.xsl xml/docbook2html_config_epub.xsl $(PWD)/scripts/master.css $(PWD)/media/* scripts/xhtml_postprocess_cleanup.sh scripts/xhtml_postprocess_cleanup_file.rb
 	rm -rf $(builddir)/epub-xhtml/
 	mkdir -p $(builddir)/epub-xhtml/
+	ln -nsf $(PWD)/dtd $(builddir)/epub-xhtml/dtd
 	xmlto -m xml/docbook2html_config_epub.xsl -o $(builddir)/epub-xhtml/ xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
 	cp $(PWD)/scripts/master.css $(builddir)/epub-xhtml/final.css
 	cp -pr $(PWD)/media $(builddir)/epub-xhtml/
-	scripts/xhtml_postprocess.sh $(builddir)/epub-xhtml
-
-#*******
-# MOBI
-#*******
-.PHONY: mobi
-mobi: $(builddir)/cll.mobi
-$(builddir)/cll.mobi: $(builddir)/cll.epub
-	ebook-convert $(builddir)/cll.epub $(builddir)/cll.mobi
-ifdef copydir
-	mkdir -p $(copydir)
-	cp $(builddir)/cll.mobi $(copydir)/cll.mobi
-endif
+	scripts/xhtml_postprocess_cleanup.sh $(builddir)/epub-xhtml/
 
 #*******
 # Testing

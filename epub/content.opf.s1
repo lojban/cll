@@ -12,10 +12,13 @@
     <meta refines="#isbn-id" property="identifier-type" scheme="onix:codelist5">15</meta>
     <dc:language>en-US</dc:language>
     <meta property="dcterms:modified">REPLACEDATE</meta>
+    <meta name="cover" content="media/cover.jpg"/>
     <dc:publisher>The Logical Language Group</dc:publisher>
     <dc:description>REPLACEVERSION</dc:description>
     <dc:language>en</dc:language>
   </metadata>
   <manifest>
+    <item id="cover" href="cover.html" media-type="application/xhtml+xml" />
+    <item properties="cover-image" id="cover_image" href="media/cover.jpg" media-type="image/jpeg"/>
     <item id="toc" properties="nav" href="toc.xhtml" media-type="application/xhtml+xml"/>
     <item href="final.css" id="css" media-type="text/css"/>
