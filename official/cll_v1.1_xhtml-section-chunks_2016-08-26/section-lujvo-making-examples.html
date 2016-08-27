@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>4.13. lujvo-making examples</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-morphology.html" title="Chapter 4. The Shape Of Words To Come: Lojban Morphology" />
+    <link rel="prev" href="section-lujvo-scoring.html" title="4.12. The lujvo scoring algorithm" />
+    <link rel="next" href="section-gismu-making.html" title="4.14. The gismu creation algorithm" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 4. The Shape Of Words To Come: Lojban Morphology</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-lujvo-scoring.html">Prev: Section 4.12</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-gismu-making.html">Next: Section 4.14</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-lujvo-making-examples"></a>4.13. <a id="c4s13"></a>lujvo-making examples</h2>
+          </div>
+        </div>
+      </div>
+      <p><a id="idm47148575301456" class="indexterm"></a>
+This section contains examples of making and scoring lujvo. First, we will start with the tanru 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575299728" class="indexterm"></a>gerku zdani</em></span> (<span class="quote">“<span class="quote">dog house</span>”</span>) and construct a lujvo meaning 
+    
+    
+    <span class="quote">“<span class="quote">doghouse</span>”</span>, that is, a house where a dog lives. We will use a brute-force application of the algorithm in 
+    <a class="xref" href="section-lujvo-scoring.html" title="4.12. The lujvo scoring algorithm">Section 4.12</a>, using every possible rafsi.</p>
+      <p>The rafsi for 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575295968" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-gerku"><em class="glossterm">gerku</em></a></em></span> are:</p>
+      <table border="0" summary="Simple list" class="simplelist">
+        <tr>
+          <td><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-ger-</em></span>, </td>
+          <td><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-ge'u-</em></span>, </td>
+          <td><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-gerk-</em></span>, </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gerku</em>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <p>The rafsi for 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575286992" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-zdani"><em class="glossterm">zdani</em></a></em></span> are:</p>
+      <table border="0" summary="Simple list" class="simplelist">
+        <tr>
+          <td><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-zda-</em></span>, </td>
+          <td><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-zdan-</em></span>, </td>
+          <td><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-zdani</em></span>.</td>
+        </tr>
+      </table>
+      <p>Step 1 of the algorithm directs us to use 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-ger-</em></span>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-ge'u-</em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-gerk-</em></span> as possible rafsi for 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575276032" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-gerku"><em class="glossterm">gerku</em></a></em></span>; Step 2 directs us to use 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-zda-</em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-zdani</em></span> as possible rafsi for 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575271744" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-zdani"><em class="glossterm">zdani</em></a></em></span>. The six possible forms of the lujvo are then:</p>
+      <table border="0" summary="Simple list" class="simplelist">
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">ger</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-zda</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">ger</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-zdani</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">ge'u</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-zda</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">ge'u</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-zdani</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">gerk</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-zda</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">gerk</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-zdani</em>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <p>We must then insert appropriate hyphens in each case. The first two forms need no hyphenation: 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575256000" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ge"><em class="glossterm">ge</em></a></em></span> cannot fall off the front, because the following word would begin with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">rz</em></span>, which is not a permissible initial consonant pair. So the lujvo forms are 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575252528" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-gerzda"><em class="glossterm">gerzda</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">gerzdani</em></span>.</p>
+      <p>The third form, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">ge'u</em></span><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-zda</em></span>, needs no hyphen, because even though the first rafsi is CVV, the second one is CCV, so there is a consonant cluster in the first five letters. So 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">ge'uzda</em></span> is this form of the lujvo.</p>
+      <p>The fourth form, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">ge'u-zdani</em></span>, however, requires an 
+    r-hyphen; otherwise, the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">ge'u-</em></span> part would fall off as a cmavo. So this form of the lujvo is 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">ge'urzdani</em></span>.</p>
+      <p>The last two forms require 
+    y-hyphens, as all 4-letter rafsi do, and so are 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">gerkyzda</em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">gerkyzdani</em></span> respectively.</p>
+      <p><a id="idm47148575239264" class="indexterm"></a>
+
+ The scoring algorithm is heavily weighted in favor of short lujvo, so we might expect that 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575237632" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-gerzda"><em class="glossterm">gerzda</em></a></em></span> would win. Its <code class="varname">L</code> score is 6, its <code class="varname">A</code> score is 0, its <code class="varname">H</code> score is 0, its <code class="varname">R</code> score is 12, and its <code class="varname">V</code> score is 3, for a final score of 5878. The other forms have scores of 7917, 6367, 9506, 8008, and 10047 respectively. Consequently, this lujvo would probably appear in the dictionary in the form 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575232800" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-gerzda"><em class="glossterm">gerzda</em></a></em></span>.</p>
+      <p>For the next example, we will use the tanru 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575230096" class="indexterm"></a>bloti klesi</em></span> (<span class="quote">“<span class="quote">boat class</span>”</span>) presumably referring to the category (rowboat, motorboat, cruise liner) into which a boat falls. We will omit the long rafsi from the process, since lujvo containing long rafsi are almost never preferred by the scoring algorithm when there are short rafsi available.</p>
+      <p>The rafsi for 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575227136" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-bloti"><em class="glossterm">bloti</em></a></em></span> are 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-lot-</em></span>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-blo-</em></span>, and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-lo'i-</em></span>; for 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575221904" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-klesi"><em class="glossterm">klesi</em></a></em></span> they are 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-kle-</em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-lei-</em></span>. Both these gismu are among the handful which have both CVV-form and CCV-form rafsi, so there is an unusual number of possibilities available for a two-part tanru:</p>
+      <table border="0" summary="Simple list" class="simplelist">
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lotkle</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">blokle</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lo'ikle</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lotlei</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">
+                <a id="idm47148575211760" class="indexterm"></a>
+                <a class="glossterm" href="go01.html#valsi-blolei">
+                  <em class="glossterm">blolei</em>
+                </a>
+              </em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lo'irlei</em>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <p>Only 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">lo'irlei</em></span> requires hyphenation (to avoid confusion with the cmavo sequence 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575206672" class="indexterm"></a>lo'i lei</em></span>). All six forms are valid versions of the lujvo, as are the six further forms using long rafsi; however, the scoring algorithm produces the following results:</p>
+      <div class="informaltable">
+        <table>
+          <tr>
+            <td>
+              <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                <em xml:lang="jbo" class="foreignphrase" lang="jbo">lotkle</em>
+              </span>
+            </td>
+            <td>5878</td>
+          </tr>
+          <tr>
+            <td>
+              <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                <em xml:lang="jbo" class="foreignphrase" lang="jbo">blokle</em>
+              </span>
+            </td>
+            <td>5858</td>
+          </tr>
+          <tr>
+            <td>
+              <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                <em xml:lang="jbo" class="foreignphrase" lang="jbo">lo'ikle</em>
+              </span>
+            </td>
+            <td>6367</td>
+          </tr>
+          <tr>
+            <td>
+              <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                <em xml:lang="jbo" class="foreignphrase" lang="jbo">lotlei</em>
+              </span>
+            </td>
+            <td>5867</td>
+          </tr>
+          <tr>
+            <td>
+              <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                <em xml:lang="jbo" class="foreignphrase" lang="jbo">
+                  <a id="idm47148575195696" class="indexterm"></a>
+                  <a class="glossterm" href="go01.html#valsi-blolei">
+                    <em class="glossterm">blolei</em>
+                  </a>
+                </em>
+              </span>
+            </td>
+            <td>5847</td>
+          </tr>
+          <tr>
+            <td>
+              <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                <em xml:lang="jbo" class="foreignphrase" lang="jbo">lo'irlei</em>
+              </span>
+            </td>
+            <td>7456</td>
+          </tr>
+        </table>
+      </div>
+      <p><a id="idm47148575192832" class="indexterm"></a>
+
+ So the form 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575189280" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-blolei"><em class="glossterm">blolei</em></a></em></span> is preferred, but only by a tiny margin over 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">blokle</em></span>; "lotlei" and "lotkle" are only slightly worse; 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">lo'ikle</em></span> suffers because of its apostrophe, and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">lo'irlei</em></span> because of having both apostrophe and hyphen.</p>
+      <p>Our third example will result in forming both a lujvo and a name from the tanru 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575183040" class="indexterm"></a>logji bangu girzu</em></span>, or 
+    <span class="quote">“<span class="quote">logical-language group</span>”</span> in English. (<span class="quote">“<span class="quote">The Logical Language Group</span>”</span> is the name of the publisher of this book and the organization for the promotion of Lojban.)</p>
+      <p>The available rafsi are 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-loj-</em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-logj-</em></span>; 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-ban-</em></span>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-bau-</em></span>, and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-bang-</em></span>; and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-gri-</em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-girzu</em></span>, and (for name purposes only) 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-gir-</em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-girz-</em></span>. The resulting 12 lujvo possibilities are:</p>
+      <table border="0" summary="Simple list" class="simplelist">
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">loj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ban</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gri</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">loj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bau</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gri</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">loj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bang</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gri</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ban</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gri</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bau</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gri</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bang</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gri</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">loj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ban</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-girzu</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">loj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bau</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-girzu</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">loj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bang</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-girzu</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ban</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-girzu</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bau</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-girzu</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bang</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-girzu</em>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <p>and the 12 name possibilities are:</p>
+      <table border="0" summary="Simple list" class="simplelist">
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">loj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ban</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gir</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">loj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bau</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gir</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">loj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bang</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gir</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ban</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gir</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bau</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gir</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bang</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-gir</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">loj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ban</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-girz</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">loj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bau</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-girz</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">loj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bang</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-girz</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ban</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-girz</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bau</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-girz</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logj</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-bang</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-girz</em>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <p>After hyphenation, we have:</p>
+      <table border="0" summary="Simple list" class="simplelist">
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbangri</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbaugri</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbangygri</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logjybangri</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logjybaugri</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logjybangygri</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbangirzu</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbaugirzu</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbangygirzu</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logjybangirzu</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logjybaugirzu</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logjybangygirzu</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbangir</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbaugir</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbangygir</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logjybangir</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logjybaugir</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logjybangygir</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">
+                <a id="idm47148575078752" class="indexterm"></a>
+                <a class="glossterm" href="go01.html#valsi-lojbangirz">
+                  <em class="glossterm">lojbangirz</em>
+                </a>
+              </em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbaugirz</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbangygirz</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logjybangirz</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logjybaugirz</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">logjybangygirz</em>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <p><a id="idm47148575071184" class="indexterm"></a><a id="idm47148575069920" class="indexterm"></a>
+
+ The only fully reduced lujvo forms are 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbangri</em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575067408" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-lojbaugri"><em class="glossterm">lojbaugri</em></a></em></span>, of which the latter has a slightly lower score: 8827 versus 8796, respectively. However, for the name of the organization, we chose to make sure the name of the language was embedded in it, and to use the clearer long-form rafsi for 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575064640" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-girzu"><em class="glossterm">girzu</em></a></em></span>, producing 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">lojbangirz.</em></span></p>
+      <p>Finally, here is a four-part lujvo with a cmavo in it, based on the tanru 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575061024" class="indexterm"></a>nakni ke cinse ctuca</em></span> or 
+    <span class="quote">“<span class="quote">male (sexual teacher)</span>”</span>. The 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575058688" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ke"><em class="glossterm">ke</em></a></em></span> cmavo ensures the interpretation 
+    <span class="quote">“<span class="quote">teacher of sexuality who is male</span>”</span>, rather than 
+    <span class="quote">“<span class="quote">teacher of male sexuality</span>”</span>. Here are the possible forms of the lujvo, both before and after hyphenation:</p>
+      <table border="0" summary="Simple list" class="simplelist">
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">nak</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-kem</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-cin</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ctu</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">
+                <a id="idm47148575050304" class="indexterm"></a>
+                <a class="glossterm" href="go01.html#valsi-nakykemcinctu">
+                  <em class="glossterm">nakykemcinctu</em>
+                </a>
+              </em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">nak</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-kem</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-cin</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ctuca</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">nakykemcinctuca</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">nak</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-kem</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-cins</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ctu</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">nakykemcinsyctu</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">nak</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-kem</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-cins</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ctuca</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">nakykemcinsyctuca</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">nakn</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-kem</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-cin</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ctu</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">naknykemcinctu</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">nakn</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-kem</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-cin</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ctuca</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">naknykemcinctuca</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">nakn</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-kem</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-cins</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ctu</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">naknykemcinsyctu</em>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">nakn</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-kem</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-cins</em>
+            </span>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">-ctuca</em>
+            </span>
+          </td>
+          <td>
+            <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+              <em xml:lang="jbo" class="foreignphrase" lang="jbo">naknykemcinsyctuca</em>
+            </span>
+          </td>
+        </tr>
+      </table>
+      <p><a id="idm47148575014656" class="indexterm"></a> Of these forms, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575013120" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nakykemcinctu"><em class="glossterm">nakykemcinctu</em></a></em></span> is the shortest and is preferred by the scoring algorithm. On the whole, however, it might be better to just make a lujvo for 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575010224" class="indexterm"></a>cinse ctuca</em></span> (which would be 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">cinctu</em></span>) since the sex of the teacher is rarely important. If there was a reason to specify 
+    <span class="quote">“<span class="quote">male</span>”</span>, then the simpler tanru 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575006736" class="indexterm"></a>nakni cinctu</em></span> (<span class="quote">“<span class="quote">male sexual-teacher</span>”</span>) would be appropriate. This tanru is actually shorter than the four-part lujvo, since the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575004544" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ke"><em class="glossterm">ke</em></a></em></span> required for grouping need not be expressed.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 4. The Shape Of Words To Come: Lojban Morphology</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-lujvo-scoring.html">Prev: Section 4.12</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-gismu-making.html">Next: Section 4.14</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

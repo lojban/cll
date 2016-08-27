@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>18.16. Reverse Polish notation</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-mekso.html" title="Chapter 18. lojbau mekso: Mathematical Expressions in Lojban" />
+    <link rel="prev" href="section-vectors-matrices.html" title="18.15. Vectors and matrices" />
+    <link rel="next" href="section-connectives-within-mekso.html" title="18.17. Logical and non-logical connectives within mekso" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-vectors-matrices.html">Prev: Section 18.15</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-connectives-within-mekso.html">Next: Section 18.17</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-reverse-polish-notation"></a>18.16. <a id="c18s16"></a>Reverse Polish notation</h2>
+          </div>
+        </div>
+      </div>
+      <p>The following cmavo is discussed in this section:</p>
+      <div class="informaltable">
+        <table class="cmavo-list">
+          <colgroup></colgroup>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">fu'a</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">FUhA</p>
+            </td>
+            <td class="description">
+              <p class="description">reverse Polish flag</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p class="indent"><a id="idm47148537318368" class="indexterm"></a> So far, the Lojban notational conventions have mapped fairly familiar kinds of mathematical discourse. The use of forethought operators may have seemed odd when applied to 
+    <span class="quote">“<span class="quote">+</span>”</span>, but when applied to 
+    <span class="quote">“<span class="quote">f</span>”</span> they appear as the usual functional notation. Now comes a sharp break. Reverse Polish (RP) notation represents something completely different; even mathematicians don't use it much. (The only common uses of RP, in fact, are in some kinds of calculators and in the implementation of some programming languages.)</p>
+      <p><a id="idm47148537315408" class="indexterm"></a><a id="idm47148537314000" class="indexterm"></a><a id="idm47148537312864" class="indexterm"></a><a id="idm47148537311728" class="indexterm"></a> In RP notation, the operator follows the operands. (Polish notation, where the operator precedes its operands, is another name for forethought mekso of the kind explained in 
+    <a class="xref" href="section-forethought.html" title="18.6. Forethought operators (Polish notation, functions)">Section 18.6</a>.) The number of operands per operator is always fixed. No parentheses are required or permitted. In Lojban, RP notation is always explicitly marked by a 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537309360" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-fuha"><em class="glossterm">fu'a</em></a></em></span> at the beginning of the expression; there is no terminator. Here is a simple example:</p>
+      <div class="example">
+        <a id="example-random-id-V4xe"></a>
+        <p class="title">
+          <strong>Example 18.110. 
+        <a id="c18e16d1"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>fu'a</td>
+                <td>reboi</td>
+                <td>ci</td>
+                <td>su'i</td>
+                <td>du</td>
+                <td>li</td>
+                <td>mu</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-number</td>
+                <td>(RP!)</td>
+                <td>two,</td>
+                <td>three,</td>
+                <td>plus</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>five.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">The operands are 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537297152" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-re"><em class="glossterm">re</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537294768" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ci"><em class="glossterm">ci</em></a></em></span>; the operator is 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537292352" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-suhi"><em class="glossterm">su'i</em></a></em></span>.</p>
+      <p>Here is a more complex example:</p>
+      <div class="example">
+        <a id="example-random-id-PSpq"></a>
+        <p class="title">
+          <strong>Example 18.111. 
+        <a id="c18e16d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>fu'a</td>
+                <td>reboi</td>
+                <td>ci</td>
+                <td>pi'i</td>
+                <td>voboi</td>
+                <td>mu</td>
+                <td>pi'i</td>
+                <td>su'i</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-number</td>
+                <td>(RP!)</td>
+                <td>(two,</td>
+                <td>three,</td>
+                <td>times),</td>
+                <td>(four,</td>
+                <td>five,</td>
+                <td>times),</td>
+                <td>plus</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>du</td>
+                <td>li</td>
+                <td>rexa</td>
+              </tr>
+              <tr class="gloss">
+                <td>equals</td>
+                <td>the-number</td>
+                <td>two-six</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Here the operands of the first 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537275056" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pihi"><em class="glossterm">pi'i</em></a></em></span> are 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537272656" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-re"><em class="glossterm">re</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537270288" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ci"><em class="glossterm">ci</em></a></em></span>; the operands of the second 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537267920" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pihi"><em class="glossterm">pi'i</em></a></em></span> are 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537265584" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-vo"><em class="glossterm">vo</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537263216" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-mu"><em class="glossterm">mu</em></a></em></span> (with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537260848" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-boi"><em class="glossterm">boi</em></a></em></span> inserted where needed), and the operands of the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537258416" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-suhi"><em class="glossterm">su'i</em></a></em></span> are 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537255696" class="indexterm"></a>reboi ci pi'i</em></span>, or 6, and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537253792" class="indexterm"></a>voboi mu pi'i</em></span>, or 20. As you can see, it is easy to get lost in the world of reverse Polish notation; on the other hand, it is especially easy for a mechanical listener (who has a deep mental stack and doesn't get lost) to comprehend.</p>
+      <p><a id="idm47148537252128" class="indexterm"></a><a id="idm47148537250880" class="indexterm"></a> The operands of an RP operator can be any legal mekso operand, including parenthesized mekso that can contain any valid syntax, whether more RP or something more conventional.</p>
+      <p><a id="idm47148537248960" class="indexterm"></a><a id="idm47148537247952" class="indexterm"></a><a id="idm47148537246944" class="indexterm"></a> In Lojban, RP operators are always parsed with exactly two operands. What about operators which require only one operand, or more than two operands? The null operand 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537245248" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-tuho"><em class="glossterm">tu'o</em></a></em></span> and the null operator 
+    
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537242864" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-geha"><em class="glossterm">ge'a</em></a></em></span> provide a simple solution. A one-operand operator like 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537240704" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-vaha"><em class="glossterm">va'a</em></a></em></span> always appears in a reverse Polish context as 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537237840" class="indexterm"></a>tu'o va'a</em></span>. The 
+    
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537236112" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-tuho"><em class="glossterm">tu'o</em></a></em></span> provides the second operand, which is semantically ignored but grammatically necessary. Likewise, the three-operand version of 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537233792" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-gei"><em class="glossterm">gei</em></a></em></span> appears in reverse Polish as 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537231152" class="indexterm"></a>ge'a gei</em></span>, where the 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537229296" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-geha"><em class="glossterm">ge'a</em></a></em></span> effectively merges the 2nd and 3rd operands into a single operand. Here are some examples:</p>
+      <div class="example">
+        <a id="example-random-id-qiJp"></a>
+        <p class="title">
+          <strong>Example 18.112. 
+        <a id="c18e16d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>fu'a</td>
+                <td>ciboi</td>
+                <td>muboi</td>
+                <td>vu'u</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>(RP!)</td>
+                <td>(three,</td>
+                <td>five,</td>
+                <td>minus)</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>du</td>
+                <td>li</td>
+                <td>fu'a</td>
+                <td>reboi</td>
+                <td>tu'o</td>
+                <td>va'a</td>
+              </tr>
+              <tr class="gloss">
+                <td>equals</td>
+                <td>the-number</td>
+                <td>(RP!)</td>
+                <td>two,</td>
+                <td>null,</td>
+                <td>negative-of.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">3 − 5 = -2</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qijY"></a>
+        <p class="title">
+          <strong>Example 18.113. 
+        <a id="c18e16d4"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>cinoki'oki'o</td>
+                <td>du</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>30-comma-comma</td>
+                <td>equals</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>fu'a</td>
+                <td>biboi</td>
+                <td>ciboi</td>
+                <td>panoboi</td>
+                <td>ge'a</td>
+                <td>gei</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-number</td>
+                <td>(RP!)</td>
+                <td>8,</td>
+                <td>(3,</td>
+                <td>10,</td>
+                <td>null-op),</td>
+                <td>exponential-notation.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">30,000,000 = 3 × 10 ^ 8</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-vectors-matrices.html">Prev: Section 18.15</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-connectives-within-mekso.html">Next: Section 18.17</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

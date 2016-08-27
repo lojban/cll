@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Chapter 4. The Shape Of Words To Come: Lojban Morphology</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="index.html" title="The Complete Lojban Language" />
+    <link rel="prev" href="section-oddball-orthographies.html" title="3.12. Oddball Orthographies" />
+    <link rel="next" href="section-cmavo.html" title="4.2. cmavo" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">The Complete Lojban Language</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-oddball-orthographies.html">Prev: Section 3.12</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-cmavo.html">Next: Section 4.2</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="chapter">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h1 class="title"><a id="chapter-morphology"></a>Chapter 4. <a id="c4"></a>The Shape Of Words To Come: Lojban Morphology</h1>
+          </div>
+        </div>
+      </div>
+      <div class="mediaobject">
+        <a id="chapter-morphology-picture"></a>
+        <img src="media/chapter-morphology.gif" alt="The picture for chapter 4" />
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a id="section-morphology-introduction"></a>4.1. <a id="c4s1"></a>Introductory</h2>
+            </div>
+          </div>
+        </div>
+        <p><a id="idm47148577249712" class="indexterm"></a><a id="idm47148577248608" class="indexterm"></a><a id="idm47148577247600" class="indexterm"></a> Morphology is the part of grammar that deals with the form of words. Lojban's morphology is fairly simple compared to that of many languages, because Lojban words don't change form depending on how they are used. English has only a small number of such changes compared to languages like Russian, but it does have changes like 
+    <span class="quote">“<span class="quote">boys</span>”</span> as the plural of 
+    
+    <span class="quote">“<span class="quote">boy</span>”</span>, or 
+    <span class="quote">“<span class="quote">walked</span>”</span> as the past-tense form of 
+    <span class="quote">“<span class="quote">walk</span>”</span>. To make plurals or past tenses in Lojban, you add separate words to the sentence that express the number of boys, or the time when the walking was going on.</p>
+        <p><a id="idm47148577244112" class="indexterm"></a><a id="idm47148577243984" class="indexterm"></a><a id="idm47148577241664" class="indexterm"></a> However, Lojban does have what is called 
+    <span class="quote">“<span class="quote">derivational morphology</span>”</span>: the capability of building new words from old words. In addition, the form of words tells us something about their grammatical uses, and sometimes about the means by which they entered the language. Lojban has very orderly rules for the formation of words of various types, both the words that already exist and new words yet to be created by speakers and writers.</p>
+        <p><a id="idm47148577239424" class="indexterm"></a> A stream of Lojban sounds can be uniquely broken up into its component words according to specific rules. These so-called 
+    <span class="quote">“<span class="quote">morphology rules</span>”</span> are summarized in this chapter. (However, a detailed algorithm for breaking sounds into words has not yet been fully debugged, and so is not presented in this book.) First, here are some conventions used to talk about groups of Lojban letters, including vowels and consonants.</p>
+        <div class="orderedlist">
+          <ol class="orderedlist" type="1">
+            <li class="listitem">
+              <p><a id="idm47148577235984" class="indexterm"></a><a id="idm47148577234816" class="indexterm"></a><a id="idm47148577234688" class="indexterm"></a> V represents any single Lojban vowel except 
+        <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">y</em></span>; that is, it represents 
+        <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">a</em></span>, 
+        <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">e</em></span>, 
+        <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">i</em></span>, 
+        <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">o</em></span>, or 
+        <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">u</em></span>.</p>
+            </li>
+            <li class="listitem">
+              <p><a id="idm47148577225616" class="indexterm"></a> VV represents either a diphthong, one of the following:
+        </p>
+              <table border="0" summary="Simple list" class="simplelist">
+                <tr>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">ai</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">ei</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">oi</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">au</em>
+                    </span>
+                  </td>
+                </tr>
+              </table>
+              <p>
+        or a two-syllable vowel pair with an apostrophe separating the vowels, one of the following:
+        </p>
+              <table border="0" summary="Simple list" class="simplelist">
+                <tr>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">a'a</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">a'e</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">a'i</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">a'o</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">a'u</em>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">e'a</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">e'e</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">e'i</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">e'o</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">e'u</em>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">i'a</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">i'e</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">i'i</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">i'o</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">i'u</em>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">o'a</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">o'e</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">o'i</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">o'o</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">o'u</em>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">u'a</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">u'e</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">u'i</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">u'o</em>
+                    </span>
+                  </td>
+                  <td>
+                    <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                      <em xml:lang="jbo" class="foreignphrase" lang="jbo">u'u</em>
+                    </span>
+                  </td>
+                </tr>
+              </table>
+              <p>
+        </p>
+            </li>
+            <li class="listitem">
+              <p><a id="idm47148577187760" class="indexterm"></a><a id="idm47148577186640" class="indexterm"></a><a id="idm47148577185408" class="indexterm"></a><a id="idm47148577184240" class="indexterm"></a><a id="idm47148577183072" class="indexterm"></a><a id="idm47148577181904" class="indexterm"></a> C represents a single Lojban consonant, not including the apostrophe, one of
+        <span class="simplelist"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">b</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">c</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">d</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">f</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">g</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">j</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">k</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">l</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">m</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">n</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">p</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">r</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">s</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">t</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">v</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">x</em></span>,  or <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">z</em></span></span>
+        . Syllabic <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">l</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">m</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">n</em></span>, and <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">r</em></span> always count as consonants for the purposes of this chapter.
+        </p>
+            </li>
+            <li class="listitem">
+              <p><a id="idm47148577155488" class="indexterm"></a> CC represents two adjacent consonants of type C which constitute one of the 48 permissible initial consonant pairs: </p>
+              <div class="informaltable">
+                <table class="noborder">
+                  <tr>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">pl</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">pr</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">fl</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">fr</em>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">bl</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">br</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">vl</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">vr</em>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">cp</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">cf</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">ct</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">ck</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">cm</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">cn</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">cl</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">cr</em>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">jb</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">jv</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">jd</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">jg</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">jm</em>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">sp</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">sf</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">st</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">sk</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">sm</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">sn</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">sl</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">sr</em>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">zb</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">zv</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">zd</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">zg</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">zm</em>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">tc</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">tr</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">ts</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">kl</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">kr</em>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">dj</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">dr</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">dz</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">gl</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">gr</em>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">ml</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">mr</em>
+                      </span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">xl</em>
+                      </span>
+                    </td>
+                    <td>
+                      <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                        <em xml:lang="jbo" class="foreignphrase" lang="jbo">xr</em>
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </li>
+            <li class="listitem">
+              <p><a id="idm47148577078928" class="indexterm"></a> C/C represents two adjacent consonants which constitute one of the permissible consonant pairs (not necessarily a permissible initial consonant pair). The permissible consonant pairs are explained in <a class="xref" href="section-clusters.html" title="3.6. Consonant Clusters">Section 3.6</a>. In brief, any consonant pair is permissible unless it: contains two identical letters, contains both a voiced (excluding <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">r</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">l</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">m</em></span>, <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">n</em></span>) and an unvoiced consonant, or is one of certain specified forbidden pairs.
+        </p>
+            </li>
+            <li class="listitem">
+              <p><a id="idm47148577072272" class="indexterm"></a> C/CC represents a consonant triple. The first two consonants must constitute a permissible consonant pair; the last two consonants must constitute a permissible initial consonant pair.</p>
+            </li>
+          </ol>
+        </div>
+        <p><a id="idm47148577070192" class="indexterm"></a><a id="idm47148577069184" class="indexterm"></a><a id="idm47148577067856" class="indexterm"></a><a id="idm47148577066848" class="indexterm"></a><a id="idm47148577066096" class="indexterm"></a> Lojban has three basic word classes – parts of speech – in contrast to the eight that are traditional in English. These three classes are called cmavo, brivla, and cmene. Each of these classes has uniquely identifying properties – an arrangement of letters that allows the word to be uniquely and unambiguously recognized as a separate word in a string of Lojban, upon either reading or hearing, and as belonging to a specific word-class.</p>
+        <p>They are also functionally different: cmavo are the structure words, corresponding to English words like 
+    
+    <span class="quote">“<span class="quote">and</span>”</span>, 
+    <span class="quote">“<span class="quote">if</span>”</span>, 
+    <span class="quote">“<span class="quote">the</span>”</span> and 
+    <span class="quote">“<span class="quote">to</span>”</span>; brivla are the content words, corresponding to English words like 
+    <span class="quote">“<span class="quote">come</span>”</span>, 
+    <span class="quote">“<span class="quote">red</span>”</span>, 
+    <span class="quote">“<span class="quote">doctor</span>”</span>, and 
+    <span class="quote">“<span class="quote">freely</span>”</span>; cmene are proper names, corresponding to English 
+    <span class="quote">“<span class="quote">James</span>”</span>, 
+    <span class="quote">“<span class="quote">Afghanistan</span>”</span>, and 
+    <span class="quote">“<span class="quote">Pope John Paul II</span>”</span>.</p>
+      </div>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">The Complete Lojban Language</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-oddball-orthographies.html">Prev: Section 3.12</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-cmavo.html">Next: Section 4.2</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

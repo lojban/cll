@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>18.17. Logical and non-logical connectives within mekso</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-mekso.html" title="Chapter 18. lojbau mekso: Mathematical Expressions in Lojban" />
+    <link rel="prev" href="section-reverse-polish-notation.html" title="18.16. Reverse Polish notation" />
+    <link rel="next" href="section-lojban-within-mekso.html" title="18.18. Using Lojban resources within mekso" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-reverse-polish-notation.html">Prev: Section 18.16</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-lojban-within-mekso.html">Next: Section 18.18</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-connectives-within-mekso"></a>18.17. <a id="c18s17"></a>Logical and non-logical connectives within mekso</h2>
+          </div>
+        </div>
+      </div>
+      <p>The following cmavo are discussed in this section:</p>
+      <div class="informaltable">
+        <table class="cmavo-list">
+          <colgroup></colgroup>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">.abu</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">BY</p>
+            </td>
+            <td class="description">
+              <p class="description">letter <span class="quote">“<span class="quote">a</span>”</span></p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">by</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">BY</p>
+            </td>
+            <td class="description">
+              <p class="description">letter <span class="quote">“<span class="quote">b</span>”</span></p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">cy</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">BY</p>
+            </td>
+            <td class="description">
+              <p class="description">letter <span class="quote">“<span class="quote">c</span>”</span></p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">fe'a</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">VUhU</p>
+            </td>
+            <td class="description">
+              <p class="description">nth root of (default square root)</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">lo'o</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">LOhO</p>
+            </td>
+            <td class="description">
+              <p class="description">terminator for LI</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p class="indent"><a id="idm47148537172240" class="indexterm"></a><a id="idm47148537171312" class="indexterm"></a><a id="idm47148537170448" class="indexterm"></a><a id="idm47148537169296" class="indexterm"></a><a id="idm47148537168128" class="indexterm"></a><a id="idm47148537166992" class="indexterm"></a><a id="idm47148537165856" class="indexterm"></a><a id="idm47148537164720" class="indexterm"></a><a id="idm47148537163584" class="indexterm"></a><a id="idm47148537162448" class="indexterm"></a> As befits a logical language, Lojban has extensive provision for logical connectives within both operators and operands. Full details on logical and non-logical connectives are provided in 
+    
+    <a class="xref" href="chapter-connectives.html" title="Chapter 14. If Wishes Were Horses: The Lojban Connective System">Chapter 14</a>. Operands are connected in afterthought with selma'o A and in forethought with selma'o GA, just like sumti. Operators are connected in afterthought with selma'o JA and in forethought with selma'o GUhA, just like tanru components. This parallelism is no accident.</p>
+      <p><a id="idm47148537160016" class="indexterm"></a><a id="idm47148537159232" class="indexterm"></a><a id="idm47148537158000" class="indexterm"></a> In addition, A+BO and A+KE constructs are allowed for grouping logically connected operands, and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537156384" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ke"><em class="glossterm">ke</em></a></em></span>…<span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537154048" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-kehe"><em class="glossterm">ke'e</em></a></em></span> is allowed for grouping logically connected operators, although there are no analogues of tanru among the operators.</p>
+      <p>Despite the large number of rules required to support this feature, it is of relatively minor importance in the mekso scheme of things. 
+    <a class="xref" href="section-connectives-within-mekso.html#example-random-id-e9Xi" title="Example 18.114. ">Example 18.114</a> exhibits afterthought logical connection between operands:</p>
+      <div class="example">
+        <a id="example-random-id-e9Xi"></a>
+        <p class="title">
+          <strong>Example 18.114. 
+        <a id="c18e17d1"></a>
+        <a id="idm47148537149040" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>vei</td>
+                <td>ci</td>
+                <td>.a</td>
+                <td>vo</td>
+                <td>ve'o</td>
+                <td>prenu</td>
+                <td>cu</td>
+                <td>klama</td>
+                <td>le</td>
+                <td>zarci</td>
+              </tr>
+              <tr class="gloss">
+                <td>(</td>
+                <td>Three</td>
+                <td>or</td>
+                <td>four</td>
+                <td>)</td>
+                <td>people</td>
+                <td></td>
+                <td>go</td>
+                <td>to-the</td>
+                <td>market.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a class="xref" href="section-connectives-within-mekso.html#example-random-id-eiTM" title="Example 18.115. ">Example 18.115</a> is equivalent in meaning, but uses forethought connection:</p>
+      <div class="example">
+        <a id="example-random-id-eiTM"></a>
+        <p class="title">
+          <strong>Example 18.115. 
+        <a id="c18e17d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>vei</td>
+                <td>ga</td>
+                <td>ci</td>
+                <td>gi</td>
+                <td>vo</td>
+                <td>ve'o</td>
+                <td>prenu</td>
+                <td>cu</td>
+                <td>klama</td>
+                <td>le</td>
+                <td>zarci</td>
+              </tr>
+              <tr class="gloss">
+                <td>(</td>
+                <td>Either</td>
+                <td>3</td>
+                <td>or</td>
+                <td>4</td>
+                <td>)</td>
+                <td>people</td>
+                <td></td>
+                <td>go</td>
+                <td>to-the</td>
+                <td>market.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148537127632" class="indexterm"></a><a id="idm47148537126448" class="indexterm"></a> Note that the mekso here are being used as quantifiers. Lojban requires that any mekso other than a simple number be enclosed in parentheses when used as a quantifier. This rule prevents ambiguities that do not exist when using 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537124624" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-li"><em class="glossterm">li</em></a></em></span>.</p>
+      <p><a id="idm47148537121984" class="indexterm"></a><a id="idm47148537120912" class="indexterm"></a><a id="idm47148537119712" class="indexterm"></a> By the way, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537118240" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-li"><em class="glossterm">li</em></a></em></span> has an elidable terminator, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537115872" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-loho"><em class="glossterm">lo'o</em></a></em></span>, which is needed when a 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537113776" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-li"><em class="glossterm">li</em></a></em></span> sumti is followed by a logical connective that could seem to be within the mekso. For example:</p>
+      <div class="example">
+        <a id="example-random-id-LXtp"></a>
+        <p class="title">
+          <strong>Example 18.116. 
+        <a id="c18e17d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>re</td>
+                <td>su'i</td>
+                <td>re</td>
+                <td>du</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>two</td>
+                <td>plus</td>
+                <td>two</td>
+                <td>equals</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>vo</td>
+                <td>lo'o</td>
+                <td>.onai</td>
+                <td>lo</td>
+                <td>nalseldjuno</td>
+                <td>namcu</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-number</td>
+                <td>four</td>
+                <td></td>
+                <td>or-else</td>
+                <td>a</td>
+                <td>non-known</td>
+                <td>number.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Omitting the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537097392" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-loho"><em class="glossterm">lo'o</em></a></em></span> would cause the parser to assume that another operand followed the 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537095104" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-onai"><em class="glossterm">.onai</em></a></em></span> and reject 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537092800" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-lo"><em class="glossterm">lo</em></a></em></span> as an invalid operand.</p>
+      <p>Simple examples of logical connection between operators are hard to come by. A contrived example is:</p>
+      <div class="example">
+        <a id="example-random-id-YoFg"></a>
+        <p class="title">
+          <strong>Example 18.117. 
+        <a id="c18e17d4"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>re</td>
+                <td>su'i</td>
+                <td>je</td>
+                <td>pi'i</td>
+                <td>re</td>
+                <td>du</td>
+                <td>li</td>
+                <td>vo</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>two</td>
+                <td>plus</td>
+                <td>and</td>
+                <td>times</td>
+                <td>two</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>four.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">2 + 2 = 4 and 2 × 2 = 4.</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">The forethought-connection form of 
+    <a class="xref" href="section-connectives-within-mekso.html#example-random-id-YoFg" title="Example 18.117. ">Example 18.117</a> is:</p>
+      <div class="example">
+        <a id="example-random-id-ccNn"></a>
+        <p class="title">
+          <strong>Example 18.118. 
+        <a id="c18e17d5"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>re</td>
+                <td>ge</td>
+                <td>su'i</td>
+                <td>gi</td>
+                <td>pi'i</td>
+                <td>re</td>
+                <td>du</td>
+                <td>li</td>
+                <td>vo</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-number</td>
+                <td>two</td>
+                <td>both</td>
+                <td>plus</td>
+                <td>and</td>
+                <td>times</td>
+                <td>two</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>four.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">Both 2 + 2 = 4 and 2 × 2 = 4.</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Here is a classic example of operand logical connection:</p>
+      <div class="example">
+        <a id="example-random-id-k36J"></a>
+        <p class="title">
+          <strong>Example 18.119. 
+        <a id="c18e17d6"></a>
+        <a id="idm47148537062752" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>go</td>
+                <td>li</td>
+                <td>.abu</td>
+                <td>bi'epi'i</td>
+                <td>vei</td>
+                <td>xy.</td>
+                <td>te'a</td>
+                <td>re</td>
+                <td>ve'o</td>
+                <td>su'i</td>
+              </tr>
+              <tr class="gloss">
+                <td>If-and-only-if</td>
+                <td>the-number</td>
+                <td>
+                  <span class="quote">“<span class="quote">a</span>”</span>
+                </td>
+                <td>times</td>
+                <td>(</td>
+                <td>
+                  <span class="quote">“<span class="quote">x</span>”</span>
+                </td>
+                <td>power</td>
+                <td>two</td>
+                <td>)</td>
+                <td>plus</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>by.</td>
+                <td>bi'epi'i</td>
+                <td>xy.</td>
+                <td>su'i</td>
+                <td>cy.</td>
+                <td>du</td>
+                <td>li</td>
+                <td>no</td>
+              </tr>
+              <tr class="gloss">
+                <td>
+                  <span class="quote">“<span class="quote">b</span>”</span>
+                </td>
+                <td>times</td>
+                <td>
+                  <span class="quote">“<span class="quote">x</span>”</span>
+                </td>
+                <td>plus</td>
+                <td>
+                  <span class="quote">“<span class="quote">c</span>”</span>
+                </td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>zero</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>gi</td>
+                <td>li</td>
+                <td>xy.</td>
+                <td>du</td>
+                <td>li</td>
+                <td>vei</td>
+                <td>va'a</td>
+                <td>by.</td>
+                <td>ku'e</td>
+              </tr>
+              <tr class="gloss">
+                <td>then</td>
+                <td>the-number</td>
+                <td>x</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>[</td>
+                <td>the-negation-of(</td>
+                <td>b</td>
+                <td>)</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'i</td>
+                <td>ja</td>
+                <td>vu'u</td>
+                <td>fe'a</td>
+              </tr>
+              <tr class="gloss">
+                <td>plus</td>
+                <td>or</td>
+                <td>minus</td>
+                <td>the-root-of</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>vei</td>
+                <td>by.</td>
+                <td>bi'ete'a</td>
+                <td>re</td>
+                <td>vu'u</td>
+                <td>vo</td>
+                <td>bi'epi'i</td>
+                <td>.abu</td>
+                <td>bi'epi'i</td>
+                <td>cy.</td>
+              </tr>
+              <tr class="gloss">
+                <td>(</td>
+                <td>
+                  <span class="quote">“<span class="quote">b</span>”</span>
+                </td>
+                <td>power</td>
+                <td>2</td>
+                <td>minus</td>
+                <td>four</td>
+                <td>times</td>
+                <td>
+                  <span class="quote">“<span class="quote">a</span>”</span>
+                </td>
+                <td>times</td>
+                <td>
+                  <span class="quote">“<span class="quote">c</span>”</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ve'o</td>
+                <td>[ku'e]</td>
+                <td>ve'o</td>
+                <td>fe'i</td>
+                <td>re</td>
+                <td>bi'epi'i</td>
+                <td>.abu</td>
+              </tr>
+              <tr class="gloss">
+                <td>)</td>
+                <td></td>
+                <td>]</td>
+                <td>divided-by</td>
+                <td>two</td>
+                <td>times</td>
+                <td>
+                  <span class="quote">“<span class="quote">a</span>”</span>
+                </td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">
+                      <mml:mrow>
+                        <mml:mo>Iff </mml:mo>
+                        <mml:mi>a</mml:mi>
+                        <mml:mo></mml:mo>
+                        <mml:msup>
+                          <mml:mi>x</mml:mi>
+                          <mml:mn>2</mml:mn>
+                        </mml:msup>
+                        <mml:mo>+</mml:mo>
+                        <mml:mi>b</mml:mi>
+                        <mml:mo></mml:mo>
+                        <mml:mi>x</mml:mi>
+                        <mml:mo>+</mml:mo>
+                        <mml:mi>c</mml:mi>
+                        <mml:mo>=</mml:mo>
+                        <mml:mn>0</mml:mn>
+                        <mml:mo>, then </mml:mo>
+                        <mml:mi>x</mml:mi>
+                        <mml:mo>=</mml:mo>
+                        <mml:mfrac>
+                          <mml:mrow>
+                            <mml:mrow>
+                              <mml:mo>-</mml:mo>
+                              <mml:mi>b</mml:mi>
+                            </mml:mrow>
+                            <mml:mo>±</mml:mo>
+                            <mml:msqrt>
+                              <mml:mrow>
+                                <mml:msup>
+                                  <mml:mi>b</mml:mi>
+                                  <mml:mn>2</mml:mn>
+                                </mml:msup>
+                                <mml:mo>-</mml:mo>
+                                <mml:mrow>
+                                  <mml:mn>4</mml:mn>
+                                  <mml:mo></mml:mo>
+                                  <mml:mi>a</mml:mi>
+                                  <mml:mo></mml:mo>
+                                  <mml:mi>c</mml:mi>
+                                </mml:mrow>
+                              </mml:mrow>
+                            </mml:msqrt>
+                          </mml:mrow>
+                          <mml:mrow>
+                            <mml:mn>2</mml:mn>
+                            <mml:mo></mml:mo>
+                            <mml:mi>a</mml:mi>
+                          </mml:mrow>
+                        </mml:mfrac>
+                      </mml:mrow>
+                    </mml:math>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148536998896" class="indexterm"></a><a id="idm47148536997712" class="indexterm"></a><a id="idm47148536996592" class="indexterm"></a><a id="idm47148536995728" class="indexterm"></a> Note the mixture of styles in 
+    <a class="xref" href="section-connectives-within-mekso.html#example-random-id-k36J" title="Example 18.119. ">Example 18.119</a>: the negation of b and the square root are represented by forethought and most of the operator precedence by prefixed 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536993840" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-bihe"><em class="glossterm">bi'e</em></a></em></span>, but explicit parentheses had to be added to group the numerator properly. In addition, the square root parentheses cannot be removed here in favor of simple 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536991168" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-feha"><em class="glossterm">fe'a</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536988976" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-kuhe"><em class="glossterm">ku'e</em></a></em></span> bracketing, because infix operators are present in the operand. Getting 
+    <a class="xref" href="section-connectives-within-mekso.html#example-random-id-k36J" title="Example 18.119. ">Example 18.119</a> to parse perfectly using the current parser took several tries: a more relaxed style would dispense with most of the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536985872" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-bihe"><em class="glossterm">bi'e</em></a></em></span> cmavo and just let the standard precedence rules be understood.</p>
+      <p><a id="idm47148536983712" class="indexterm"></a><a id="idm47148536982896" class="indexterm"></a><a id="idm47148536981728" class="indexterm"></a> Non-logical connection with JOI and BIhI is also permitted between operands and between operators. One use for this construct is to connect operands with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536980048" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-biho"><em class="glossterm">bi'o</em></a></em></span> to create intervals:</p>
+      <div class="example">
+        <a id="example-random-id-Bzf6"></a>
+        <p class="title">
+          <strong>Example 18.120. 
+        <a id="c18e17d7"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>no</td>
+                <td>ga'o</td>
+                <td>bi'o</td>
+                <td>ke'i</td>
+                <td>pa</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-number</td>
+                <td>zero</td>
+                <td>(inclusive)</td>
+                <td>from-to</td>
+                <td>(exclusive)</td>
+                <td>one</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">[0,1)</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">the numbers from zero to one, including zero but not including one</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"> Intervals defined by a midpoint and range rather than beginning and end points can be expressed by 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536965344" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-mihi"><em class="glossterm">mi'i</em></a></em></span>:</p>
+      <div class="example">
+        <a id="example-random-id-LvBT"></a>
+        <p class="title">
+          <strong>Example 18.121. 
+        <a id="c18e17d8"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>pimu</td>
+                <td>ga'o</td>
+                <td>mi'i</td>
+                <td>ke'i</td>
+                <td>pimu</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-number</td>
+                <td>0.5</td>
+                <td>(inclusive)</td>
+                <td>centered-with-range</td>
+                <td>(exclusive)</td>
+                <td>0.5</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"><a id="idm47148536954912" class="indexterm"></a><a id="idm47148536953728" class="indexterm"></a> which expresses the same interval as 
+    <a class="xref" href="section-connectives-within-mekso.html#example-random-id-Bzf6" title="Example 18.120. ">Example 18.120</a>. Note that the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536951616" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-gaho"><em class="glossterm">ga'o</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536949232" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-kehi"><em class="glossterm">ke'i</em></a></em></span> still refer to the endpoints, although these are now implied rather than expressed. Another way of expressing the same thing:</p>
+      <div class="example">
+        <a id="example-random-id-CEvD"></a>
+        <p class="title">
+          <strong>Example 18.122. 
+        <a id="c18e17d9"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>pimu</td>
+                <td>su'i</td>
+                <td>ni'upimu</td>
+                <td>bi'o</td>
+                <td>ke'i</td>
+                <td>ma'upimu</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-number</td>
+                <td>0.5</td>
+                <td>plus</td>
+                <td>[-0.5</td>
+                <td>from-to</td>
+                <td>(exclusive)</td>
+                <td>+0.5]</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148536938272" class="indexterm"></a> Here we have the sum of a number and an interval, which produces another interval centered on the number. As 
+    <a class="xref" href="section-connectives-within-mekso.html#example-random-id-CEvD" title="Example 18.122. ">Example 18.122</a> shows, non-logical (or logical) connection of operands has higher precedence than any mekso operator.</p>
+      <p><a id="idm47148536935792" class="indexterm"></a><a id="idm47148536934560" class="indexterm"></a> You can also combine two operands with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536933440" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ceho"><em class="glossterm">ce'o</em></a></em></span>, the sequence connective of selma'o JOI, to make a compound subscript:</p>
+      <div class="example">
+        <a id="example-random-id-eMsd"></a>
+        <p class="title">
+          <strong>Example 18.123. 
+        <a id="c18e17d10"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>xy.</td>
+                <td>xi</td>
+                <td>vei</td>
+                <td>by.</td>
+                <td>ce'o</td>
+                <td>dy.</td>
+                <td>[ve'o]</td>
+              </tr>
+              <tr class="gloss">
+                <td>
+                  <span class="quote">“<span class="quote">x</span>”</span>
+                </td>
+                <td>sub</td>
+                <td>(</td>
+                <td>
+                  <span class="quote">“<span class="quote">b</span>”</span>
+                </td>
+                <td>sequence</td>
+                <td>
+                  <span class="quote">“<span class="quote">d</span>”</span>
+                </td>
+                <td>)</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">x<sub>b,d</sub></span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-reverse-polish-notation.html">Prev: Section 18.16</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-lojban-within-mekso.html">Next: Section 18.18</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

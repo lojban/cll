@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>18.18. Using Lojban resources within mekso</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-mekso.html" title="Chapter 18. lojbau mekso: Mathematical Expressions in Lojban" />
+    <link rel="prev" href="section-connectives-within-mekso.html" title="18.17. Logical and non-logical connectives within mekso" />
+    <link rel="next" href="section-other-mekso-uses.html" title="18.19. Other uses of mekso" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-connectives-within-mekso.html">Prev: Section 18.17</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-other-mekso-uses.html">Next: Section 18.19</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-lojban-within-mekso"></a>18.18. <a id="c18s18"></a>Using Lojban resources within mekso</h2>
+          </div>
+        </div>
+      </div>
+      <p>The following cmavo are discussed in this section:</p>
+      <div class="informaltable">
+        <table class="cmavo-list">
+          <colgroup></colgroup>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">na'u</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">NAhU</p>
+            </td>
+            <td class="description">
+              <p class="description">selbri to operator</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">ni'e</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">NIhE</p>
+            </td>
+            <td class="description">
+              <p class="description">selbri to operand</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">mo'e</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">MOhE</p>
+            </td>
+            <td class="description">
+              <p class="description">sumti to operand</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">te'u</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">TEhU</p>
+            </td>
+            <td class="description">
+              <p class="description">terminator for all three</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p class="indent"><a id="idm47148536899968" class="indexterm"></a><a id="idm47148536898784" class="indexterm"></a><a id="idm47148536897616" class="indexterm"></a> One of the mekso design goals requires the ability to make use of Lojban's vocabulary resources within mekso to extend the built-in cmavo for operands and operators. There are three relevant constructs: all three share the elidable terminator 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536895840" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-tehu"><em class="glossterm">te'u</em></a></em></span> (which is also used to terminate vectors marked with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536893440" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-johi"><em class="glossterm">jo'i</em></a></em></span>)</p>
+      <p><a id="idm47148536890848" class="indexterm"></a><a id="idm47148536889744" class="indexterm"></a><a id="idm47148536888640" class="indexterm"></a><a id="idm47148536887888" class="indexterm"></a><a id="idm47148536886752" class="indexterm"></a> The cmavo 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536885216" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nahu"><em class="glossterm">na'u</em></a></em></span> makes a selbri into an operator. In general, the first place of the selbri specifies the result of the operator, and the other unfilled places specify the operands:</p>
+      <div class="example">
+        <a id="example-random-id-k38f"></a>
+        <p class="title">
+          <strong>Example 18.124. 
+        <a id="c18e18d1"></a>
+        <a id="idm47148536881376" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>na'u</td>
+                <td>tanjo</td>
+                <td>te'u</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>the-operator</td>
+                <td>tangent</td>
+                <td>[end-operator]</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>vei</td>
+                <td>pai</td>
+                <td>fe'i</td>
+                <td>re</td>
+                <td>[ve'o]</td>
+                <td>du</td>
+                <td>li</td>
+                <td>ci'i</td>
+              </tr>
+              <tr class="gloss">
+                <td>(</td>
+                <td>π</td>
+                <td>/</td>
+                <td>2</td>
+                <td>)</td>
+                <td>=</td>
+                <td>the-number</td>
+                <td>infinity.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">tan(π/2) = ∞</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536865616" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-tanjo"><em class="glossterm">tanjo</em></a></em></span> is the gismu for 
+    <span class="quote">“<span class="quote">x1 is the tangent of x2</span>”</span>, and the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536862720" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nahu"><em class="glossterm">na'u</em></a></em></span> here makes it into an operator which is then used in forethought</p>
+      <p><a id="idm47148536860160" class="indexterm"></a><a id="idm47148536859040" class="indexterm"></a><a id="idm47148536858192" class="indexterm"></a><a id="idm47148536857056" class="indexterm"></a> The cmavo 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536855552" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nihe"><em class="glossterm">ni'e</em></a></em></span> makes a selbri into an operand. The x1 place of the selbri generally represents a number, and therefore is often a 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536853072" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ni"><em class="glossterm">ni</em></a></em></span> abstraction, since 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536850736" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ni"><em class="glossterm">ni</em></a></em></span> abstractions represent numbers. The 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536848336" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nihe"><em class="glossterm">ni'e</em></a></em></span> makes that number available as a mekso operand. A common application is to make equations relating pure dimensions:</p>
+      <div class="example">
+        <a id="example-random-id-wCJQ"></a>
+        <p class="title">
+          <strong>Example 18.125. 
+        <a id="c18e18d2"></a>
+        <a id="idm47148536844320" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>ni'e</td>
+                <td>ni</td>
+                <td>clani</td>
+                <td>[te'u]</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td></td>
+                <td>quantity-of</td>
+                <td>length</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>pi'i</td>
+                <td>ni'e</td>
+                <td>ni</td>
+                <td>ganra</td>
+                <td>[te'u]</td>
+              </tr>
+              <tr class="gloss">
+                <td>times</td>
+                <td></td>
+                <td>quantity-of</td>
+                <td>width</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>pi'i</td>
+                <td>ni'e</td>
+                <td>ni</td>
+                <td>condi</td>
+                <td>te'u</td>
+              </tr>
+              <tr class="gloss">
+                <td>times</td>
+                <td></td>
+                <td>quantity-of</td>
+                <td>depth</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>du</td>
+                <td>li</td>
+                <td>ni'e</td>
+                <td>ni</td>
+                <td>canlu</td>
+              </tr>
+              <tr class="gloss">
+                <td>equals</td>
+                <td>the-number</td>
+                <td></td>
+                <td>quantity-of</td>
+                <td>volume.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">Length × Width × Depth = Volume</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148536821616" class="indexterm"></a><a id="idm47148536820608" class="indexterm"></a><a id="idm47148536819824" class="indexterm"></a><a id="idm47148536818720" class="indexterm"></a> The cmavo 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536817072" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-mohe"><em class="glossterm">mo'e</em></a></em></span> operates similarly to 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536814736" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nihe"><em class="glossterm">ni'e</em></a></em></span>, but makes a sumti (rather than a selbri) into an operand. This construction is useful in stating equations involving dimensioned numbers:</p>
+      <div class="example">
+        <a id="example-random-id-ETmX"></a>
+        <p class="title">
+          <strong>Example 18.126. 
+        <a id="c18e18d3"></a>
+        <a id="idm47148536810752" class="indexterm"></a>  
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>mo'e</td>
+                <td>re</td>
+                <td>ratcu</td>
+                <td>su'i</td>
+                <td>mo'e</td>
+                <td>re</td>
+                <td>ractu</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td></td>
+                <td>two</td>
+                <td>rats</td>
+                <td>plus</td>
+                <td></td>
+                <td>two</td>
+                <td>rabbits</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>du</td>
+                <td>li</td>
+                <td>mo'e</td>
+                <td>vo</td>
+                <td>danlu</td>
+              </tr>
+              <tr class="gloss">
+                <td>equals</td>
+                <td>the-number</td>
+                <td></td>
+                <td>four</td>
+                <td>animals.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">2 rats + 2 rabbits = 4 animals.</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148536795424" class="indexterm"></a> Another use is in constructing Lojbanic versions of so-called 
+    <span class="quote">“<span class="quote">folk quantifiers</span>”</span>, such as 
+    
+    <span class="quote">“<span class="quote">a pride of lions</span>”</span>:</p>
+      <div class="example">
+        <a id="example-random-id-D4y4"></a>
+        <p class="title">
+          <strong>Example 18.127. 
+        <a id="c18e18d4"></a>
+        <a id="idm47148536791536" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>mi</td>
+                <td>viska</td>
+                <td>vei</td>
+                <td>mo'e</td>
+                <td>lo'e</td>
+                <td>lanzu</td>
+                <td>ve'o</td>
+                <td>cinfo</td>
+              </tr>
+              <tr class="gloss">
+                <td>I</td>
+                <td>see</td>
+                <td>(</td>
+                <td></td>
+                <td>the-typical</td>
+                <td>family</td>
+                <td>)-number-of</td>
+                <td>lions.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">I see a pride of lions.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-connectives-within-mekso.html">Prev: Section 18.17</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-other-mekso-uses.html">Next: Section 18.19</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

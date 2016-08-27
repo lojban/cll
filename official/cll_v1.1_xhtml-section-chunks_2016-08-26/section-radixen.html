@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>18.10. Non-decimal and compound bases</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-mekso.html" title="Chapter 18. lojbau mekso: Mathematical Expressions in Lojban" />
+    <link rel="prev" href="section-approximation.html" title="18.9. Approximation and inexact numbers" />
+    <link rel="next" href="section-mekso-selbri.html" title="18.11. Special mekso selbri" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-approximation.html">Prev: Section 18.9</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-mekso-selbri.html">Next: Section 18.11</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-radixen"></a>18.10. <a id="c18s10"></a>Non-decimal and compound bases</h2>
+          </div>
+        </div>
+      </div>
+      <p>The following cmavo are discussed in this section:</p>
+      <div class="informaltable">
+        <table class="cmavo-list">
+          <colgroup></colgroup>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">ju'u</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">VUhU</p>
+            </td>
+            <td class="description">
+              <p class="description">to the base</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">dau</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">PA</p>
+            </td>
+            <td class="description">
+              <p class="description">hex digit A = 10</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">fei</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">PA</p>
+            </td>
+            <td class="description">
+              <p class="description">hex digit B = 11</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">gai</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">PA</p>
+            </td>
+            <td class="description">
+              <p class="description">hex digit C = 12</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">jau</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">PA</p>
+            </td>
+            <td class="description">
+              <p class="description">hex digit D = 13</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">rei</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">PA</p>
+            </td>
+            <td class="description">
+              <p class="description">hex digit E = 14</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">vai</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">PA</p>
+            </td>
+            <td class="description">
+              <p class="description">hex digit F = 15</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">pi'e</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">PA</p>
+            </td>
+            <td class="description">
+              <p class="description">compound base point</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p class="indent"><a id="idm47148538260176" class="indexterm"></a> In normal contexts, Lojban assumes that all numbers are expressed in the decimal (base 10) system. However, other bases are possible, and may be appropriate in particular circumstances.</p>
+      <p><a id="idm47148538258336" class="indexterm"></a><a id="idm47148538257168" class="indexterm"></a><a id="idm47148538256064" class="indexterm"></a> To specify a number in a particular base, the VUhU operator 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538254512" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-juhu"><em class="glossterm">ju'u</em></a></em></span> is suitable:</p>
+      <div class="example">
+        <a id="example-random-id-Iw8u"></a>
+        <p class="title">
+          <strong>Example 18.70. 
+        <a id="c18e10d1"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>panopano</td>
+                <td>ju'u</td>
+                <td>re</td>
+                <td>du</td>
+                <td>li</td>
+                <td>pano</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>1010</td>
+                <td>base</td>
+                <td>2</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>1</td>
+                <td>0.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148538243120" class="indexterm"></a><a id="idm47148538241936" class="indexterm"></a> Here, the final 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538240160" class="indexterm"></a>pa no</em></span> is assumed to be base 10, as usual; so is the base specification. (The base may also be changed permanently by a metalinguistic specification; no standard way of doing so has as yet been worked out.)</p>
+      <p><a id="idm47148538238192" class="indexterm"></a><a id="idm47148538237008" class="indexterm"></a> Lojban has digits for representing bases up to 16, because 16 is a base often used in computer applications. In English, it is customary to use the letters A-F as the base 16 digits equivalent to the numbers ten through fifteen. In Lojban, this ambiguity is avoided:</p>
+      <div class="example">
+        <a id="example-random-id-qIgb"></a>
+        <p class="title">
+          <strong>Example 18.71. 
+        <a id="c18e10d2"></a>
+        <a id="idm47148538233872" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>daufeigai</td>
+                <td>ju'u</td>
+                <td>paxa</td>
+                <td>du</td>
+                <td>li</td>
+                <td>rezevobi</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>ABC</td>
+                <td>base</td>
+                <td>16</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>2748.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qIha"></a>
+        <p class="title">
+          <strong>Example 18.72. 
+        <a id="c18e10d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>jaureivai</td>
+                <td>ju'u</td>
+                <td>paxa</td>
+                <td>du</td>
+                <td>li</td>
+                <td>cimuxaze</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>DEF</td>
+                <td>base</td>
+                <td>16</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>3567.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148538217520" class="indexterm"></a> Note the pattern in the cmavo: the diphthongs 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538215904" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-au"><em class="glossterm">au</em></a></em></span>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538213536" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ei"><em class="glossterm">ei</em></a></em></span>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538211168" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ai"><em class="glossterm">ai</em></a></em></span> are used twice in the same order. The digits for A to D use consonants different from those used in the decimal digit cmavo; E and F unfortunately overlap 2 and 4 – there was simply not enough available cmavo space to make a full differentiation possible. The cmavo are also in alphabetical order.</p>
+      <p><a id="idm47148538208464" class="indexterm"></a><a id="idm47148538207312" class="indexterm"></a> The base point 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538205776" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pi"><em class="glossterm">pi</em></a></em></span> is used in non-decimal bases just as in base 10:</p>
+      <div class="example">
+        <a id="example-random-id-gCo4"></a>
+        <p class="title">
+          <strong>Example 18.73. 
+        <a id="c18e10d4"></a>
+        <a id="idm47148538201856" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>vai</td>
+                <td>pi</td>
+                <td>bi</td>
+                <td>ju'u</td>
+                <td>paxa</td>
+                <td>du</td>
+                <td>li</td>
+                <td>pamu</td>
+                <td>pi</td>
+                <td>mu</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>F</td>
+                <td>.</td>
+                <td>8</td>
+                <td>base</td>
+                <td>16</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>15</td>
+                <td>.</td>
+                <td>5.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148538191808" class="indexterm"></a><a id="idm47148538190624" class="indexterm"></a> Since 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538188992" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-juhu"><em class="glossterm">ju'u</em></a></em></span> is an operator of selma'o VUhU, it is grammatical to use any operand as the left argument. Semantically, however, it is undefined to use anything but a numeral string on the left. The reason for making 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538186320" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-juhu"><em class="glossterm">ju'u</em></a></em></span> an operator is to allow reference to a base which is not a constant.</p>
+      <p><a id="idm47148538183792" class="indexterm"></a><a id="idm47148538182896" class="indexterm"></a><a id="idm47148538181648" class="indexterm"></a> There are some numerical values that require a 
+    <span class="quote">“<span class="quote">base</span>”</span> that varies from digit to digit. For example, times represented in hours, minutes, and seconds have, in effect, three 
+    
+    <span class="quote">“<span class="quote">digits</span>”</span>: the first is base 24, the second and third are base 60. To express such numbers, the compound base separator 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538179040" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pihe"><em class="glossterm">pi'e</em></a></em></span> is used:</p>
+      <div class="example">
+        <a id="example-random-id-17HR"></a>
+        <p class="title">
+          <strong>Example 18.74. 
+        <a id="c18e10d5"></a>
+        <a id="idm47148538175136" class="indexterm"></a>  
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ci</td>
+                <td>pi'e</td>
+                <td>rere</td>
+                <td>pi'e</td>
+                <td>vono</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">3:22:40</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148538167536" class="indexterm"></a> Each digit sequence separated by instances of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538166208" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pihe"><em class="glossterm">pi'e</em></a></em></span> is expressed in decimal notation, but the number as a whole is not decimal and can only be added and subtracted by special rules:</p>
+      <div class="example">
+        <a id="example-random-id-iUYu"></a>
+        <p class="title">
+          <strong>Example 18.75. 
+        <a id="c18e10d6"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>ci</td>
+                <td>pi'e</td>
+                <td>rere</td>
+                <td>pi'e</td>
+                <td>vono</td>
+                <td>su'i</td>
+                <td>pi'e</td>
+                <td>ci</td>
+                <td>pi'e</td>
+                <td>cici</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>3</td>
+                <td>:</td>
+                <td>22</td>
+                <td>:</td>
+                <td>40</td>
+                <td>plus</td>
+                <td>:</td>
+                <td>3</td>
+                <td>:</td>
+                <td>33</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>du</td>
+                <td>li</td>
+                <td>ci</td>
+                <td>pi'e</td>
+                <td>rexa</td>
+                <td>pi'e</td>
+                <td>paci</td>
+              </tr>
+              <tr class="gloss">
+                <td>equals</td>
+                <td>the-number</td>
+                <td>3</td>
+                <td>:</td>
+                <td>26</td>
+                <td>:</td>
+                <td>13.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">3:22:40 + 0:3:33 = 3:26:13</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Of course, only context tells you that the first part of the numbers in 
+    <a class="xref" href="section-radixen.html#example-random-id-17HR" title="Example 18.74. ">Example 18.74</a> and 
+    <a class="xref" href="section-radixen.html#example-random-id-iUYu" title="Example 18.75. ">Example 18.75</a> is hours, the second minutes, and the third seconds.</p>
+      <p><a id="idm47148538142720" class="indexterm"></a><a id="idm47148538141712" class="indexterm"></a> The same mechanism using 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538140096" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pihe"><em class="glossterm">pi'e</em></a></em></span> can be used to express numbers which have a base larger than 16. For example, base-20 Mayan mathematics might use digits from 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538137360" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-no"><em class="glossterm">no</em></a></em></span> to 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538135264" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-paso"><em class="glossterm">paso</em></a></em></span>, each separated by 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538132784" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pihe"><em class="glossterm">pi'e</em></a></em></span>:</p>
+      <div class="example">
+        <a id="example-random-id-Nx5T"></a>
+        <p class="title">
+          <strong>Example 18.76. 
+        <a id="c18e10d7"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>pa</td>
+                <td>pi'e</td>
+                <td>re</td>
+                <td>pi'e</td>
+                <td>ci</td>
+                <td>ju'u</td>
+                <td>reno</td>
+                <td>du</td>
+                <td>li</td>
+                <td>vovoci</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-number</td>
+                <td>1</td>
+                <td>;</td>
+                <td>2</td>
+                <td>;</td>
+                <td>3</td>
+                <td>base</td>
+                <td>20</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>443</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148538119552" class="indexterm"></a><a id="idm47148538118304" class="indexterm"></a> Carefully note the difference between:</p>
+      <div class="example">
+        <a id="example-random-id-ydwP"></a>
+        <p class="title">
+          <strong>Example 18.77. 
+        <a id="c18e10d8"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>pano</td>
+                <td>ju'u</td>
+                <td>reno</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-digit-10</td>
+                <td>base</td>
+                <td>20</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">which is equal to ten, and:</p>
+      <div class="example">
+        <a id="example-random-id-QBQx"></a>
+        <p class="title">
+          <strong>Example 18.78. 
+        <a id="c18e10d9"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>pa</td>
+                <td>pi'e</td>
+                <td>no</td>
+                <td>ju'u</td>
+                <td>reno</td>
+              </tr>
+              <tr class="gloss">
+                <td>1;0</td>
+                <td>base</td>
+                <td>20</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">which is equal to twenty.</p>
+      <p><a id="idm47148538102624" class="indexterm"></a> Both 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538101008" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pi"><em class="glossterm">pi</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538098656" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pihe"><em class="glossterm">pi'e</em></a></em></span> can be used to express large-base fractions:</p>
+      <div class="example">
+        <a id="example-random-id-26Li"></a>
+        <p class="title">
+          <strong>Example 18.79. 
+        <a id="c18e10d10"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>pa</td>
+                <td>pi'e</td>
+                <td>vo</td>
+                <td>pi</td>
+                <td>ze</td>
+                <td>ju'u</td>
+                <td>reno</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>1</td>
+                <td>;</td>
+                <td>4</td>
+                <td>.</td>
+                <td>7</td>
+                <td>base</td>
+                <td>20</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>du</td>
+                <td>li</td>
+                <td>revo</td>
+                <td>pi</td>
+                <td>cimu</td>
+              </tr>
+              <tr class="gloss">
+                <td>equals</td>
+                <td>the-number</td>
+                <td>24</td>
+                <td>.</td>
+                <td>35</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"><a id="idm47148538081824" class="indexterm"></a><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538080208" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pihe"><em class="glossterm">pi'e</em></a></em></span> is also used where the base of each digit is vague, as in the numbering of the examples in this chapter:</p>
+      <div class="example">
+        <a id="example-random-id-U161"></a>
+        <p class="title">
+          <strong>Example 18.80. 
+        <a id="c18e10d11"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>dei</td>
+                <td>jufra</td>
+                <td>panopi'epapamoi</td>
+              </tr>
+              <tr class="gloss">
+                <td>This-utterance</td>
+                <td>is-a-sentence-type-of</td>
+                <td>10;11th-thing.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">This is Sentence 10.11.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-approximation.html">Prev: Section 18.9</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-mekso-selbri.html">Next: Section 18.11</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

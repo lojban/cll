@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>4.11. The lujvo-making algorithm</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-morphology.html" title="Chapter 4. The Shape Of Words To Come: Lojban Morphology" />
+    <link rel="prev" href="section-lujvo-considerations.html" title="4.10. Considerations for making lujvo" />
+    <link rel="next" href="section-lujvo-scoring.html" title="4.12. The lujvo scoring algorithm" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 4. The Shape Of Words To Come: Lojban Morphology</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-lujvo-considerations.html">Prev: Section 4.10</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-lujvo-scoring.html">Next: Section 4.12</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-lujvo-making"></a>4.11. <a id="c4s11"></a>The lujvo-making algorithm</h2>
+          </div>
+        </div>
+      </div>
+      <p><a id="idm47148575404288" class="indexterm"></a> The following is the current algorithm for generating Lojban lujvo given a known tanru and a complete list of gismu and their assigned rafsi. The algorithm was designed by Bob LeChevalier and Dr. James Cooke Brown for computer program implementation. It was modified in 1989 with the assistance of Nora LeChevalier, who detected a flaw in the original 
+    
+    <span class="quote">“<span class="quote">tosmabru test</span>”</span>.</p>
+      <p>Given a tanru that is to be made into a lujvo:</p>
+      <div class="orderedlist">
+        <ol class="orderedlist" type="1">
+          <li class="listitem">
+            <p>Choose a 3-letter or 4-letter rafsi for each of the gismu and cmavo in the tanru except the last.</p>
+          </li>
+          <li class="listitem">
+            <p>Choose a 3-letter (CVV-form or CCV-form) or 5-letter rafsi for the final gismu in the tanru.</p>
+          </li>
+          <li class="listitem">
+            <p>Join the resulting string of rafsi, initially without hyphens.</p>
+          </li>
+          <li class="listitem">
+            <p><a id="idm47148575397600" class="indexterm"></a> Add hyphen letters where necessary. It is illegal to add a hyphen at a place that is not required by this algorithm. Right-to-left tests are recommended, for reasons discussed below.</p>
+            <div class="orderedlist">
+              <ol class="orderedlist" type="a">
+                <li class="listitem">
+                  <p>If there are more than two words in the tanru, put an 
+        r-hyphen (or an 
+        n-hyphen) after the first rafsi if it is CVV-form. If there are exactly two words, then put an 
+        r-hyphen (or an 
+        n-hyphen) between the two rafsi if the first rafsi is CVV-form, unless the second rafsi is CCV-form (for example, 
+        <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148575393920" class="indexterm"></a>saicli</em></span> requires no hyphen). Use an 
+        r-hyphen unless the letter after the hyphen is 
+        <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">r</em></span>, in which case use an 
+        n-hyphen. Never use an 
+        n-hyphen unless it is required.</p>
+                </li>
+                <li class="listitem">
+                  <p>Put a 
+        y-hyphen between the consonants of any impermissible consonant pair. This will always appear between rafsi.</p>
+                </li>
+                <li class="listitem">
+                  <p><a id="idm47148575389440" class="indexterm"></a> Put a 
+        y-hyphen after any 4-letter rafsi form.</p>
+                </li>
+              </ol>
+            </div>
+          </li>
+          <li class="listitem">
+            <p>Test all forms with one or more initial CVC-form rafsi – with the pattern 
+    <span class="quote">“<span class="quote">CVC ... CVC + X</span>”</span> – for 
+    <span class="quote">“<span class="quote">tosmabru failure</span>”</span>. X must either be a CVCCV long rafsi that happens to have a permissible initial pair as the consonant cluster, or is something which has caused a 
+    y-hyphen to be installed between the previous CVC and itself by one of the above rules.</p>
+            <p>The test is as follows:</p>
+            <div class="orderedlist">
+              <ol class="orderedlist" type="a">
+                <li class="listitem">
+                  <p>Examine all the C/C consonant pairs up to the first y-hyphen, or up to the end of the word in case there are no y-hyphens.</p>
+                  <p>These consonant pairs are called "joints”.</p>
+                </li>
+                <li class="listitem">
+                  <p>If all of those joints are permissible initials, then the trial word will break up into a cmavo and a shorter brivla. If not, the word will not break up, and no further hyphens are needed.</p>
+                </li>
+                <li class="listitem">
+                  <p>Install a y-hyphen at the first such joint.</p>
+                </li>
+              </ol>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <p><a id="idm47148575381328" class="indexterm"></a><a id="idm47148575380144" class="indexterm"></a> Note that the 
+    <span class="quote">“<span class="quote">tosmabru test</span>”</span> implies that the algorithm will be more efficient if rafsi junctures are tested for required hyphens from right to left, instead of from left to right; when the test is required, it cannot be completed until hyphenation to the right has been determined.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 4. The Shape Of Words To Come: Lojban Morphology</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-lujvo-considerations.html">Prev: Section 4.10</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-lujvo-scoring.html">Next: Section 4.12</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

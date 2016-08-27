@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>18.15. Vectors and matrices</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-mekso.html" title="Chapter 18. lojbau mekso: Mathematical Expressions in Lojban" />
+    <link rel="prev" href="section-infix-again.html" title="18.14. Infix operators revisited" />
+    <link rel="next" href="section-reverse-polish-notation.html" title="18.16. Reverse Polish notation" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-infix-again.html">Prev: Section 18.14</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-reverse-polish-notation.html">Next: Section 18.16</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-vectors-matrices"></a>18.15. <a id="c18s15"></a>Vectors and matrices</h2>
+          </div>
+        </div>
+      </div>
+      <p>The following cmavo are discussed in this section:</p>
+      <div class="informaltable">
+        <table class="cmavo-list">
+          <colgroup></colgroup>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">jo'i</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">JOhI</p>
+            </td>
+            <td class="description">
+              <p class="description">start vector</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">te'u</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">TEhU</p>
+            </td>
+            <td class="description">
+              <p class="description">end vector</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">pi'a</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">VUhU</p>
+            </td>
+            <td class="description">
+              <p class="description">matrix row combiner</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">sa'i</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">VUhU</p>
+            </td>
+            <td class="description">
+              <p class="description">matrix column combiner</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p class="indent"><a id="idm47148537425664" class="indexterm"></a><a id="idm47148537424416" class="indexterm"></a> A mathematical vector is a list of numbers, and a mathematical matrix is a table of numbers. Lojban considers matrices to be built up out of vectors, which are in turn built up out of operands.</p>
+      <p><a id="idm47148537422544" class="indexterm"></a><a id="idm47148537421360" class="indexterm"></a><a id="idm47148537420192" class="indexterm"></a><a id="idm47148537419056" class="indexterm"></a><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537417808" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-johi"><em class="glossterm">jo'i</em></a></em></span>, the only cmavo of selma'o JOhI, is the vector indicator: it has a syntax reminiscent of a forethought operator, but has very high precedence. The components must be simple operands rather than full expressions (unless parenthesized). A vector can have any number of components; 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537415168" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-tehu"><em class="glossterm">te'u</em></a></em></span> is the elidable terminator. An example:</p>
+      <div class="example">
+        <a id="example-random-id-IVDJ"></a>
+        <p class="title">
+          <strong>Example 18.107. 
+        <a id="c18e15d1"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>jo'i</td>
+                <td>paboi</td>
+                <td>reboi</td>
+                <td>te'u</td>
+                <td>su'i</td>
+                <td>jo'i</td>
+                <td>ciboi</td>
+                <td>voboi</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>array</td>
+                <td>(one,</td>
+                <td>two</td>
+                <td>)</td>
+                <td>plus</td>
+                <td>array</td>
+                <td>(three,</td>
+                <td>four)</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>du</td>
+                <td>li</td>
+                <td>jo'i</td>
+                <td>voboi</td>
+                <td>xaboi</td>
+              </tr>
+              <tr class="gloss">
+                <td>equals</td>
+                <td>the-number</td>
+                <td>array</td>
+                <td>(four,</td>
+                <td>six).</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">(1,2) + (3,4) = (4,6)</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148537395936" class="indexterm"></a><a id="idm47148537394688" class="indexterm"></a><a id="idm47148537393680" class="indexterm"></a><a id="idm47148537392800" class="indexterm"></a> Vectors can be combined into matrices using either 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537391568" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-piha"><em class="glossterm">pi'a</em></a></em></span>, the matrix row operator, or 
+    
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537389136" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-sahi"><em class="glossterm">sa'i</em></a></em></span>, the matrix column operator. The first combines vectors representing rows of the matrix, and the second combines vectors representing columns of the matrix. Both of them allow any number of arguments: additional arguments are tacked on with the null operator 
+    
+    
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537386304" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-geha"><em class="glossterm">ge'a</em></a></em></span>.</p>
+      <p> 
+
+
+ Therefore, the 
+    <span class="quote">“<span class="quote">magic square</span>”</span> matrix</p>
+      <div class="informaltable">
+        <table>
+          <tr>
+            <td>8</td>
+            <td>1</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>5</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>9</td>
+            <td>2</td>
+          </tr>
+        </table>
+      </div>
+      <p>can be represented either as:</p>
+      <div class="example">
+        <a id="example-random-id-zbJP"></a>
+        <p class="title">
+          <strong>Example 18.108. 
+        <a id="idm47148537377968" class="indexterm"></a>
+        <a id="c18e15d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>jo'i</td>
+                <td>biboi</td>
+                <td>paboi</td>
+                <td>xa</td>
+                <td>pi'a</td>
+                <td>jo'i</td>
+                <td>ciboi</td>
+                <td>muboi</td>
+                <td>ze</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-vector</td>
+                <td>(8</td>
+                <td>1</td>
+                <td>6)</td>
+                <td>matrix-row</td>
+                <td>the-vector</td>
+                <td>(3</td>
+                <td>5</td>
+                <td>7),</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ge'a</td>
+                <td>jo'i</td>
+                <td>voboi</td>
+                <td>soboi</td>
+                <td>re</td>
+              </tr>
+              <tr class="gloss">
+                <td></td>
+                <td>the-vector</td>
+                <td>(4</td>
+                <td>9</td>
+                <td>2)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">or as</p>
+      <div class="example">
+        <a id="example-random-id-06dx"></a>
+        <p class="title">
+          <strong>Example 18.109. 
+        <a id="c18e15d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>jo'i</td>
+                <td>biboi</td>
+                <td>ciboi</td>
+                <td>vo</td>
+                <td>sa'i</td>
+                <td>jo'i</td>
+                <td>paboi</td>
+                <td>muboi</td>
+                <td>so</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-vector</td>
+                <td>(8</td>
+                <td>3</td>
+                <td>4)</td>
+                <td>matrix-column</td>
+                <td>the-vector</td>
+                <td>(1</td>
+                <td>5</td>
+                <td>9),</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ge'a</td>
+                <td>jo'i</td>
+                <td>xaboi</td>
+                <td>zeboi</td>
+                <td>re</td>
+              </tr>
+              <tr class="gloss">
+                <td></td>
+                <td>the-vector</td>
+                <td>(6</td>
+                <td>7</td>
+                <td>2)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148537347728" class="indexterm"></a><a id="idm47148537346400" class="indexterm"></a><a id="idm47148537345504" class="indexterm"></a><a id="idm47148537344272" class="indexterm"></a><a id="idm47148537343264" class="indexterm"></a><a id="idm47148537342448" class="indexterm"></a> The regular mekso operators can be applied to vectors and to matrices, since grammatically both of these are expressions. It is usually necessary to parenthesize matrices when used with operators in order to avoid incorrect groupings. There are no VUhU operators for the matrix operators of inner or outer products, but appropriate operators can be created using a suitable symbolic lerfu word or string prefixed by 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537340800" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-maho"><em class="glossterm">ma'o</em></a></em></span>.</p>
+      <p><a id="idm47148537337856" class="indexterm"></a><a id="idm47148537336960" class="indexterm"></a> Matrices of more than two dimensions can be built up using either 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537335584" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-piha"><em class="glossterm">pi'a</em></a></em></span> or 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537333072" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-sahi"><em class="glossterm">sa'i</em></a></em></span> with an appropriate subscript numbering the dimension. When subscripted, there is no difference between 
+    
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537330560" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-piha"><em class="glossterm">pi'a</em></a></em></span> and 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148537328160" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-sahi"><em class="glossterm">sa'i</em></a></em></span>.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-infix-again.html">Prev: Section 18.14</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-reverse-polish-notation.html">Next: Section 18.16</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

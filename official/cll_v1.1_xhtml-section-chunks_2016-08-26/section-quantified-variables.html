@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>16.6. Variables with generalized quantifiers</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-quantifiers.html" title="Chapter 16. “Who Did You Pass On The Road? Nobody”: Lojban And Logic" />
+    <link rel="prev" href="section-prenex-elision.html" title="16.5. Dropping the prenex" />
+    <link rel="next" href="section-quantifier-grouping.html" title="16.7. Grouping of quantifiers" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-prenex-elision.html">Prev: Section 16.5</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-quantifier-grouping.html">Next: Section 16.7</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-quantified-variables"></a>16.6. <a id="c16s6"></a>Variables with generalized quantifiers</h2>
+          </div>
+        </div>
+      </div>
+      <p><a id="idm47148543553216" class="indexterm"></a> So far, we have seen variables with either nothing in front, or with the cmavo 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543551840" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ro"><em class="glossterm">ro</em></a></em></span> in front. Now 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543549440" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ro"><em class="glossterm">ro</em></a></em></span> is a Lojban number, and means 
+    <span class="quote">“<span class="quote">all</span>”</span>; thus 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543546448" class="indexterm"></a>ro prenu</em></span> means 
+    
+    <span class="quote">“<span class="quote">all persons</span>”</span>, just as 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543543728" class="indexterm"></a>re prenu</em></span> means 
+    <span class="quote">“<span class="quote">two persons</span>”</span>. In fact, unadorned 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543541824" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-da"><em class="glossterm">da</em></a></em></span> is also taken to have an implicit number in front of it, namely 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543539328" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-suho"><em class="glossterm">su'o</em></a></em></span>, which means 
+    <span class="quote">“<span class="quote">at least one</span>”</span>. Why is this? Consider 
+    <a class="xref" href="section-da-and-zohu.html#example-random-id-jjLd" title="Example 16.9. ">Example 16.9</a> again, this time with an explicit 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543536048" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-suho"><em class="glossterm">su'o</em></a></em></span>:</p>
+      <div class="example">
+        <a id="example-random-id-TI8K"></a>
+        <p class="title">
+          <strong>Example 16.33. 
+        <a id="c16e6d1"></a>
+        <a id="idm47148543532336" class="indexterm"></a>
+  <a id="idm47148543531440" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'o</td>
+                <td>da</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>viska</td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-at-least-one</td>
+                <td>X</td>
+                <td>:</td>
+                <td>X</td>
+                <td>sees</td>
+                <td>me.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Something sees me.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">From this version of 
+    <a class="xref" href="section-da-and-zohu.html#example-random-id-jjLd" title="Example 16.9. ">Example 16.9</a>, we understand the speaker's claim to be that of all the things that there are, at least one of them sees him or her. The corresponding universal claim, 
+    <a class="xref" href="section-universal-claims.html#example-random-id-nraD" title="Example 16.16. ">Example 16.16</a>, says that of all the things that exist, every one of them can see the speaker.</p>
+      <p><a id="idm47148543519552" class="indexterm"></a> Any other number can be used instead of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543517904" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ro"><em class="glossterm">ro</em></a></em></span> or 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543515568" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-suho"><em class="glossterm">su'o</em></a></em></span> to precede a variable. Then we get claims like:</p>
+      <div class="example">
+        <a id="example-random-id-3C69"></a>
+        <p class="title">
+          <strong>Example 16.34. 
+        <a id="c16e6d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>re</td>
+                <td>da</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>viska</td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-two</td>
+                <td>Xes</td>
+                <td>:</td>
+                <td>X</td>
+                <td>sees</td>
+                <td>me.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Two things see me.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148543502672" class="indexterm"></a><a id="idm47148543501424" class="indexterm"></a> This means that exactly two things, no more or less, saw the speaker on the relevant occasion. In English, we might take 
+    <span class="quote">“<span class="quote">Two things see me</span>”</span> to mean that at least two things see the speaker, but there might be more; in Lojban, though, that claim would have to be made as:</p>
+      <div class="example">
+        <a id="example-random-id-mSzo"></a>
+        <p class="title">
+          <strong>Example 16.35. 
+        <a id="c16e6d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'ore</td>
+                <td>da</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>viska</td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-at-least-two</td>
+                <td>Xes</td>
+                <td>:</td>
+                <td>X</td>
+                <td>sees</td>
+                <td>me.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">which would be false if nothing, or only one thing, saw the speaker, but not otherwise. We note the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543490480" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-suho"><em class="glossterm">su'o</em></a></em></span> here meaning 
+    <span class="quote">“<span class="quote">at least</span>”</span>; 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543487648" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-suho"><em class="glossterm">su'o</em></a></em></span> by itself is short for 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543485040" class="indexterm"></a>su'opa</em></span> where 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543483344" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pa"><em class="glossterm">pa</em></a></em></span> means 
+    <span class="quote">“<span class="quote">one</span>”</span>, as is explained in 
+    <a class="xref" href="section-approximation.html" title="18.9. Approximation and inexact numbers">Section 18.9</a>.</p>
+      <p><a id="idm47148543480096" class="indexterm"></a> The prenex may be removed from 
+    <a class="xref" href="section-quantified-variables.html#example-random-id-3C69" title="Example 16.34. ">Example 16.34</a> and 
+    <a class="xref" href="section-quantified-variables.html#example-random-id-mSzo" title="Example 16.35. ">Example 16.35</a> as from the others, leading to:</p>
+      <div class="example">
+        <a id="example-random-id-2r5v"></a>
+        <p class="title">
+          <strong>Example 16.36. 
+        <a id="c16e6d4"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>re</td>
+                <td>da</td>
+                <td>viska</td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>Two</td>
+                <td>Xes</td>
+                <td>see</td>
+                <td>me.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">and</p>
+      <div class="example">
+        <a id="example-random-id-GWoD"></a>
+        <p class="title">
+          <strong>Example 16.37. 
+        <a id="c16e6d5"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'ore</td>
+                <td>da</td>
+                <td>viska</td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>At-least-two</td>
+                <td>Xes</td>
+                <td>see</td>
+                <td>me.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">respectively, subject to the rules prescribed in 
+    <a class="xref" href="section-prenex-elision.html" title="16.5. Dropping the prenex">Section 16.5</a>.</p>
+      <p><a id="idm47148543461904" class="indexterm"></a><a id="idm47148543461776" class="indexterm"></a><a id="idm47148543459712" class="indexterm"></a> Now we can explain the constructions 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543458016" class="indexterm"></a>ro prenu</em></span> for 
+    
+    <span class="quote">“<span class="quote">all persons</span>”</span> and 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543455376" class="indexterm"></a>re prenu</em></span> for 
+    <span class="quote">“<span class="quote">two persons</span>”</span> which were casually mentioned at the beginning of this Section. In fact, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543453056" class="indexterm"></a>ro prenu</em></span>, a so-called 
+    
+    <span class="quote">“<span class="quote">indefinite description</span>”</span>, is shorthand for 
+    
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543450608" class="indexterm"></a>ro DA poi prenu</em></span>, where 
+    <span class="quote">“<span class="quote">DA</span>”</span> represents a fictitious variable that hasn't been used yet and will not be used in future. (Even if all three of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543448272" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-da"><em class="glossterm">da</em></a></em></span>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543445840" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-de"><em class="glossterm">de</em></a></em></span>, and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543443504" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-di"><em class="glossterm">di</em></a></em></span> have been used up, it does not matter, for there are ways of getting more variables, discussed in 
+    <a class="xref" href="section-notes-on-variables.html" title="16.14. A few notes on variables">Section 16.14</a>.) So in fact</p>
+      <div class="example">
+        <a id="example-random-id-Kr4S"></a>
+        <p class="title">
+          <strong>Example 16.38. 
+        <a id="c16e6d6"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>re</td>
+                <td>prenu</td>
+                <td>cu</td>
+                <td>viska</td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>Two</td>
+                <td>persons</td>
+                <td></td>
+                <td>see</td>
+                <td>me.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">is short for</p>
+      <div class="example">
+        <a id="example-random-id-E6wI"></a>
+        <p class="title">
+          <strong>Example 16.39. 
+        <a id="c16e6d7"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>re</td>
+                <td>da</td>
+                <td>poi</td>
+                <td>prenu</td>
+                <td>cu</td>
+                <td>viska</td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>Two</td>
+                <td>Xes</td>
+                <td>which</td>
+                <td>are-persons</td>
+                <td></td>
+                <td>see</td>
+                <td>me.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">which in turn is short for:</p>
+      <div class="example">
+        <a id="example-random-id-u1sb"></a>
+        <p class="title">
+          <strong>Example 16.40. 
+        <a id="c16e6d8"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>re</td>
+                <td>da</td>
+                <td>poi</td>
+                <td>prenu</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>viska</td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-two</td>
+                <td>Xes</td>
+                <td>which</td>
+                <td>are-persons</td>
+                <td>:</td>
+                <td>X</td>
+                <td>sees</td>
+                <td>me.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148543415104" class="indexterm"></a> Note that when we move more than one variable to the prenex (along with its attached relative clause), we must make sure that the variables are in the same order in the prenex as in the bridi proper.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-prenex-elision.html">Prev: Section 16.5</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-quantifier-grouping.html">Next: Section 16.7</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

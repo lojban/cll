@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Chapter 21. Formal Grammars</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="index.html" title="The Complete Lojban Language" />
+    <link rel="prev" href="chapter-catalogue.html" title="Chapter 20. A Catalogue of selma'o" />
+    <link rel="next" href="section-cross-reference.html" title="21.2. EBNF Cross-Reference" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">The Complete Lojban Language</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="chapter-catalogue.html">Prev: Chapter 20</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-cross-reference.html">Next: Section 21.2</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="chapter">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h1 class="title"><a id="chapter-grammars"></a>Chapter 21. <a id="c21"></a>Formal Grammars</h1>
+          </div>
+        </div>
+      </div>
+      <div class="mediaobject">
+        <a id="chapter-grammars-picture"></a>
+        <img src="media/chapter-grammars.gif" alt="The picture for chapter 21" />
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a id="section-EBNF"></a>21.1. <a id="c21s2"></a>EBNF Grammar of Lojban</h2>
+            </div>
+          </div>
+        </div>
+        <p>Lojban Machine Grammar, EBNF Version, Final Baseline</p>
+        <p>This EBNF document is explicitly dedicated to the public domain by its author, The Logical Language Group, Inc. Contact that organization at: 2904 Beau Lane, Fairfax VA 22031 USA 703-385-0273 (intl: +1 703 385 0273)</p>
+        <p>Explanation of notation: All rules have the form:</p>
+        <p>name 
+    <sub>number</sub>= bnf-expression</p>
+        <p>which means that the grammatical construct <span class="quote">“<span class="quote">name</span>”</span> is defined by <span class="quote">“<span class="quote">bnf-expression</span>”</span>. The number cross-references this grammar with the rule numbers in the YACC grammar. The names are the same as those in the YACC grammar, except that subrules are labeled with A, B, C, ... in the YACC grammar and with 1, 2, 3, ... in this grammar. In addition, rule 971 is <span class="quote">“<span class="quote">simple_tag</span>”</span> in the YACC grammar but <span class="quote">“<span class="quote">stag</span>”</span> in this grammar, because of its frequent appearance.</p>
+        <div class="orderedlist">
+          <ol class="orderedlist" type="1">
+            <li class="listitem">
+              <p>Names in lower case are grammatical constructs.</p>
+            </li>
+            <li class="listitem">
+              <p>Names in UPPER CASE are selma'o (lexeme) names, and are terminals.</p>
+            </li>
+            <li class="listitem">
+              <p>Concatenation is expressed by juxtaposition with no operator symbol.</p>
+            </li>
+            <li class="listitem">
+              <p>| represents alternation (choice).</p>
+            </li>
+            <li class="listitem">
+              <p>[] represents an optional element.</p>
+            </li>
+            <li class="listitem">
+              <p>&amp; represents and/or (<span class="quote">“<span class="quote">A &amp; B</span>”</span> is the same as <span class="quote">“<span class="quote">A | B | A B</span>”</span>).</p>
+            </li>
+            <li class="listitem">
+              <p>... represents optional repetition of the construct to the left. Left-grouping is implied; right-grouping is shown by explicit self-referential recursion with no <span class="quote">“<span class="quote">...</span>”</span></p>
+            </li>
+            <li class="listitem">
+              <p>() serves to indicate the grouping of the other operators. Otherwise, <span class="quote">“<span class="quote">...</span>”</span> binds closer than &amp;, which binds closer than |.</p>
+            </li>
+            <li class="listitem">
+              <p># is shorthand for <span class="quote">“<span class="quote">[free ...]</span>”</span>, a construct which appears in many places.</p>
+            </li>
+            <li class="listitem">
+              <p>// encloses an elidable terminator, which may be omitted (without change of meaning) if no grammatical ambiguity results.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="variablelist">
+          <dl class="variablelist">
+            <dt>
+              <span class="term"><a id="b0"></a><a id="cll_bnf-0"></a>
+         text 
+        <sub>0</sub>=</span>
+            </dt>
+            <dd>
+              <p>[NAI ...] [CMENE ... # | (indicators &amp; free ...)] [joik-jek] text-1 
+          <a id="b2"></a>
+          <a id="cll_bnf-2"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">text-1 
+        <sub>2</sub>=</span>
+            </dt>
+            <dd>
+              <p>[(I [jek | joik] [[stag] BO] #) ... | NIhO ... #] [paragraphs] 
+          <a id="b4"></a>
+          <a id="cll_bnf-4"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">paragraphs 
+        <sub>4</sub>=</span>
+            </dt>
+            <dd>
+              <p>paragraph [NIhO ... # paragraphs] 
+          <a id="b10"></a>
+          <a id="cll_bnf-10"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">paragraph 
+        <sub>10</sub>=</span>
+            </dt>
+            <dd>
+              <p>(statement | fragment) [I # [statement | fragment]] ... 
+          <a id="b11"></a>
+          <a id="cll_bnf-11"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">statement 
+        <sub>11</sub>=</span>
+            </dt>
+            <dd>
+              <p>statement-1 | prenex statement 
+          <a id="b12"></a>
+          <a id="cll_bnf-12"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">statement-1 
+        <sub>12</sub>=</span>
+            </dt>
+            <dd>
+              <p>statement-2 [I joik-jek [statement-2]] ... 
+          <a id="b13"></a>
+          <a id="cll_bnf-13"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">statement-2 
+        <sub>13</sub>=</span>
+            </dt>
+            <dd>
+              <p>statement-3 [I [jek | joik] [stag] BO # [statement-2]] 
+          <a id="b14"></a>
+          <a id="cll_bnf-14"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">statement-3 
+        <sub>14</sub>=</span>
+            </dt>
+            <dd>
+              <p>sentence | [tag] TUhE # text-1 /TUhU#/ 
+          <a id="b20"></a>
+          <a id="cll_bnf-20"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">fragment 
+        <sub>20</sub>=</span>
+            </dt>
+            <dd>
+              <p>ek # | gihek # | quantifier | NA # | terms /VAU#/ | prenex | relative-clauses | links | linkargs 
+          <a id="b30"></a>
+          <a id="cll_bnf-30"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">prenex 
+        <sub>30</sub>=</span>
+            </dt>
+            <dd>
+              <p>terms ZOhU # 
+          <a id="b40"></a>
+          <a id="cll_bnf-40"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">sentence 
+        <sub>40</sub>=</span>
+            </dt>
+            <dd>
+              <p>[terms [CU #]] bridi-tail 
+          <a id="b41"></a>
+          <a id="cll_bnf-41"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">subsentence 
+        <sub>41</sub>=</span>
+            </dt>
+            <dd>
+              <p>sentence | prenex subsentence 
+          <a id="b50"></a>
+          <a id="cll_bnf-50"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">bridi-tail 
+        <sub>50</sub>=</span>
+            </dt>
+            <dd>
+              <p>bridi-tail-1 [gihek [stag] KE # bridi-tail /KEhE#/ tail-terms] 
+          <a id="b51"></a>
+          <a id="cll_bnf-51"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">bridi-tail-1 
+        <sub>51</sub>=</span>
+            </dt>
+            <dd>
+              <p>bridi-tail-2 [gihek # bridi-tail-2 tail-terms] ... 
+          <a id="b52"></a>
+          <a id="cll_bnf-52"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">bridi-tail-2 
+        <sub>52</sub>=</span>
+            </dt>
+            <dd>
+              <p>bridi-tail-3 [gihek [stag] BO # bridi-tail-2 tail-terms] 
+          <a id="b53"></a>
+          <a id="cll_bnf-53"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">bridi-tail-3 
+        <sub>53</sub>=</span>
+            </dt>
+            <dd>
+              <p>selbri tail-terms | gek-sentence 
+          <a id="b54"></a>
+          <a id="cll_bnf-54"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">gek-sentence 
+        <sub>54</sub>=</span>
+            </dt>
+            <dd>
+              <p>gek subsentence gik subsentence tail-terms | [tag] KE # gek-sentence /KEhE#/ | NA # gek-sentence 
+          <a id="b71"></a>
+          <a id="cll_bnf-71"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">tail-terms 
+        <sub>71</sub>=</span>
+            </dt>
+            <dd>
+              <p>[terms] /VAU#/ 
+          <a id="b80"></a>
+          <a id="cll_bnf-80"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">terms 
+        <sub>80</sub>=</span>
+            </dt>
+            <dd>
+              <p>terms-1 ... 
+          <a id="b81"></a>
+          <a id="cll_bnf-81"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">terms-1 
+        <sub>81</sub>=</span>
+            </dt>
+            <dd>
+              <p>terms-2 [PEhE # joik-jek terms-2] ... 
+          <a id="b82"></a>
+          <a id="cll_bnf-82"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">terms-2 
+        <sub>82</sub>=</span>
+            </dt>
+            <dd>
+              <p>term [CEhE # term] ... 
+          <a id="b83"></a>
+          <a id="cll_bnf-83"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">term 
+        <sub>83</sub>=</span>
+            </dt>
+            <dd>
+              <p>sumti | (tag | FA #) (sumti | /KU#/) | termset | NA KU # 
+          <a id="b85"></a>
+          <a id="cll_bnf-85"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">termset 
+        <sub>85</sub>=</span>
+            </dt>
+            <dd>
+              <p>NUhI # gek terms /NUhU#/ gik terms /NUhU#/ | NUhI # terms /NUhU#/ 
+          <a id="b90"></a>
+          <a id="cll_bnf-90"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">sumti 
+        <sub>90</sub>=</span>
+            </dt>
+            <dd>
+              <p>sumti-1 [VUhO # relative-clauses] 
+          <a id="b91"></a>
+          <a id="cll_bnf-91"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">sumti-1 
+        <sub>91</sub>=</span>
+            </dt>
+            <dd>
+              <p>sumti-2 [(ek | joik) [stag] KE # sumti /KEhE#/] 
+          <a id="b92"></a>
+          <a id="cll_bnf-92"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">sumti-2 
+        <sub>92</sub>=</span>
+            </dt>
+            <dd>
+              <p>sumti-3 [joik-ek sumti-3] ... 
+          <a id="b93"></a>
+          <a id="cll_bnf-93"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">sumti-3 
+        <sub>93</sub>=</span>
+            </dt>
+            <dd>
+              <p>sumti-4 [(ek | joik) [stag] BO # sumti-3] 
+          <a id="b94"></a>
+          <a id="cll_bnf-94"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">sumti-4 
+        <sub>94</sub>=</span>
+            </dt>
+            <dd>
+              <p>sumti-5 | gek sumti gik sumti-4 
+          <a id="b95"></a>
+          <a id="cll_bnf-95"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">sumti-5 
+        <sub>95</sub>=</span>
+            </dt>
+            <dd>
+              <p>[quantifier] sumti-6 [relative-clauses] | quantifier selbri /KU#/ [relative-clauses] 
+          <a id="b97"></a>
+          <a id="cll_bnf-97"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">sumti-6 
+        <sub>97</sub>=</span>
+            </dt>
+            <dd>
+              <p>(LAhE # | NAhE BO #) [relative-clauses] sumti /LUhU#/ | KOhA # | lerfu-string /BOI#/ | LA # [relative-clauses] CMENE ... # | (LA | LE) # sumti-tail /KU#/ | LI # mex /LOhO#/ | ZO any-word # | LU text /LIhU#/ | LOhU any-word ... LEhU # | ZOI any-word anything any-word # 
+          <a id="b111"></a>
+          <a id="cll_bnf-111"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">sumti-tail 
+        <sub>111</sub>=</span>
+            </dt>
+            <dd>
+              <p>[sumti-6 [relative-clauses]] sumti-tail-1 | relative-clauses sumti-tail-1 
+          <a id="b112"></a>
+          <a id="cll_bnf-112"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">sumti-tail-1 
+        <sub>112</sub>=</span>
+            </dt>
+            <dd>
+              <p>[quantifier] selbri [relative-clauses] | quantifier sumti 
+          <a id="b121"></a>
+          <a id="cll_bnf-121"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">relative-clauses 
+        <sub>121</sub>=</span>
+            </dt>
+            <dd>
+              <p>relative-clause [ZIhE # relative-clause] ... 
+          <a id="b122"></a>
+          <a id="cll_bnf-122"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">relative-clause 
+        <sub>122</sub>=</span>
+            </dt>
+            <dd>
+              <p>GOI # term /GEhU#/ | NOI # subsentence /KUhO#/ 
+          <a id="b130"></a>
+          <a id="cll_bnf-130"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">selbri 
+        <sub>130</sub>=</span>
+            </dt>
+            <dd>
+              <p>[tag] selbri-1 
+          <a id="b131"></a>
+          <a id="cll_bnf-131"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">selbri-1 
+        <sub>131</sub>=</span>
+            </dt>
+            <dd>
+              <p>selbri-2 | NA # selbri 
+          <a id="b132"></a>
+          <a id="cll_bnf-132"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">selbri-2 
+        <sub>132</sub>=</span>
+            </dt>
+            <dd>
+              <p>selbri-3 [CO # selbri-2] 
+          <a id="b133"></a>
+          <a id="cll_bnf-133"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">selbri-3 
+        <sub>133</sub>=</span>
+            </dt>
+            <dd>
+              <p>selbri-4 ... 
+          <a id="b134"></a>
+          <a id="cll_bnf-134"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">selbri-4 
+        <sub>134</sub>=</span>
+            </dt>
+            <dd>
+              <p>selbri-5 [joik-jek selbri-5 | joik [stag] KE # selbri-3 /KEhE#/] ... 
+          <a id="b135"></a>
+          <a id="cll_bnf-135"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">selbri-5 
+        <sub>135</sub>=</span>
+            </dt>
+            <dd>
+              <p>selbri-6 [(jek | joik) [stag] BO # selbri-5] 
+          <a id="b136"></a>
+          <a id="cll_bnf-136"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">selbri-6 
+        <sub>136</sub>=</span>
+            </dt>
+            <dd>
+              <p>tanru-unit [BO # selbri-6] | [NAhE #] guhek selbri gik selbri-6 
+          
+          <a id="b150"></a>
+          <a id="cll_bnf-150"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">tanru-unit 
+        <sub>150</sub>=</span>
+            </dt>
+            <dd>
+              <p>tanru-unit-1 [CEI # tanru-unit-1] ... 
+          <a id="b151"></a>
+          <a id="cll_bnf-151"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">tanru-unit-1 
+        <sub>151</sub>=</span>
+            </dt>
+            <dd>
+              <p>tanru-unit-2 [linkargs] 
+          <a id="b152"></a>
+          <a id="cll_bnf-152"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">tanru-unit-2 
+        <sub>152</sub>=</span>
+            </dt>
+            <dd>
+              <p>BRIVLA # | GOhA [RAhO] # | KE # selbri-3 /KEhE#/ | ME # sumti /MEhU#/ [MOI #] | (number | lerfu-string) MOI # | NUhA # mex-operator | SE # tanru-unit-2 | JAI # [tag] tanru-unit-2 | any-word (ZEI any-word) ... | NAhE # tanru-unit-2 | NU [NAI] # [joik-jek NU [NAI] #] ... subsentence /KEI#/ 
+          <a id="b160"></a>
+          <a id="cll_bnf-160"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">linkargs 
+        <sub>160</sub>=</span>
+            </dt>
+            <dd>
+              <p>BE # term [links] /BEhO#/ 
+          <a id="b161"></a>
+          <a id="cll_bnf-161"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">links 
+        <sub>161</sub>=</span>
+            </dt>
+            <dd>
+              <p>BEI # term [links] 
+          <a id="b300"></a>
+          <a id="cll_bnf-300"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">quantifier 
+        <sub>300</sub>=</span>
+            </dt>
+            <dd>
+              <p>number /BOI#/ | VEI # mex /VEhO#/ 
+          <a id="b310"></a>
+          <a id="cll_bnf-310"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">mex 
+        <sub>310</sub>=</span>
+            </dt>
+            <dd>
+              <p>mex-1 [operator mex-1] ... | FUhA # rp-expression 
+          <a id="b311"></a>
+          <a id="cll_bnf-311"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">mex-1 
+        <sub>311</sub>=</span>
+            </dt>
+            <dd>
+              <p>mex-2 [BIhE # operator mex-1] 
+          <a id="b312"></a>
+          <a id="cll_bnf-312"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">mex-2 
+        <sub>312</sub>=</span>
+            </dt>
+            <dd>
+              <p>operand | [PEhO #] operator mex-2 ... /KUhE#/ 
+          <a id="b330"></a>
+          <a id="cll_bnf-330"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">rp-expression 
+        <sub>330</sub>=</span>
+            </dt>
+            <dd>
+              <p>rp-operand rp-operand operator 
+          <a id="b332"></a>
+          <a id="cll_bnf-332"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">rp-operand 
+        <sub>332</sub>=</span>
+            </dt>
+            <dd>
+              <p>operand | rp-expression 
+          <a id="b370"></a>
+          <a id="cll_bnf-370"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">operator 
+        <sub>370</sub>=</span>
+            </dt>
+            <dd>
+              <p>operator-1 [joik-jek operator-1 | joik [stag] KE # operator /KEhE#/] ... 
+          <a id="b371"></a>
+          <a id="cll_bnf-371"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">operator-1 
+        <sub>371</sub>=</span>
+            </dt>
+            <dd>
+              <p>operator-2 | guhek operator-1 gik operator-2 | operator-2 (jek | joik) [stag] BO # operator-1 
+          
+          <a id="b372"></a>
+          <a id="cll_bnf-372"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">operator-2 
+        <sub>372</sub>=</span>
+            </dt>
+            <dd>
+              <p>mex-operator | KE # operator /KEhE#/ 
+          <a id="b374"></a>
+          <a id="cll_bnf-374"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">mex-operator 
+        <sub>374</sub>=</span>
+            </dt>
+            <dd>
+              <p>SE # mex-operator | NAhE # mex-operator | MAhO # mex /TEhU#/ | NAhU # selbri /TEhU#/ | VUhU # 
+          <a id="b381"></a>
+          <a id="cll_bnf-381"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">operand 
+        <sub>381</sub>=</span>
+            </dt>
+            <dd>
+              <p>operand-1 [(ek | joik) [stag] KE # operand /KEhE#/] 
+          <a id="b382"></a>
+          <a id="cll_bnf-382"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">operand-1 
+        <sub>382</sub>=</span>
+            </dt>
+            <dd>
+              <p>operand-2 [joik-ek operand-2] ... 
+          <a id="b383"></a>
+          <a id="cll_bnf-383"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">operand-2 
+        <sub>383</sub>=</span>
+            </dt>
+            <dd>
+              <p>operand-3 [(ek | joik) [stag] BO # operand-2] 
+          <a id="b385"></a>
+          <a id="cll_bnf-385"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">operand-3 
+        <sub>385</sub>=</span>
+            </dt>
+            <dd>
+              <p>quantifier | lerfu-string /BOI#/ | NIhE # selbri /TEhU#/ | MOhE # sumti /TEhU#/ | JOhI # mex-2 ... /TEhU#/ | gek operand gik operand-3 | (LAhE # | NAhE BO #) operand /LUhU#/ 
+          <a id="b812"></a>
+          <a id="cll_bnf-812"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">number 
+        <sub>812</sub>=</span>
+            </dt>
+            <dd>
+              <p>PA [PA | lerfu-word] ... 
+          <a id="b817"></a>
+          <a id="cll_bnf-817"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">lerfu-string 
+        <sub>817</sub>=</span>
+            </dt>
+            <dd>
+              <p>lerfu-word [PA | lerfu-word] ... 
+          <a id="b987"></a>
+          <a id="cll_bnf-987"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">lerfu-word 
+        <sub>987</sub>=</span>
+            </dt>
+            <dd>
+              <p>BY | any-word BU | LAU lerfu-word | TEI lerfu-string FOI 
+          <a id="b802"></a>
+          <a id="cll_bnf-802"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">ek 
+        <sub>802</sub>=</span>
+            </dt>
+            <dd>
+              <p>[NA] [SE] A [NAI] 
+          <a id="b818"></a>
+          <a id="cll_bnf-818"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">gihek 
+        <sub>818</sub>=</span>
+            </dt>
+            <dd>
+              <p>[NA] [SE] GIhA [NAI] 
+          <a id="b805"></a>
+          <a id="cll_bnf-805"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">jek 
+        <sub>805</sub>=</span>
+            </dt>
+            <dd>
+              <p>[NA] [SE] JA [NAI] 
+          <a id="b806"></a>
+          <a id="cll_bnf-806"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">joik 
+        <sub>806</sub>=</span>
+            </dt>
+            <dd>
+              <p>[SE] JOI [NAI] | interval | GAhO interval GAhO 
+          <a id="b932"></a>
+          <a id="cll_bnf-932"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">interval 
+        <sub>932</sub>=</span>
+            </dt>
+            <dd>
+              <p>[SE] BIhI [NAI] 
+          <a id="b421"></a>
+          <a id="cll_bnf-421"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">joik-ek 
+        <sub>421</sub>=</span>
+            </dt>
+            <dd>
+              <p>joik # | ek # 
+          <a id="b422"></a>
+          <a id="cll_bnf-422"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">joik-jek 
+        <sub>422</sub>=</span>
+            </dt>
+            <dd>
+              <p>joik # | jek # 
+          <a id="b807"></a>
+          <a id="cll_bnf-807"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">gek 
+        <sub>807</sub>=</span>
+            </dt>
+            <dd>
+              <p>[SE] GA [NAI] # | joik GI # | stag gik 
+          <a id="b808"></a>
+          <a id="cll_bnf-808"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">guhek 
+        
+        <sub>808</sub>=</span>
+            </dt>
+            <dd>
+              <p>[SE] GUhA [NAI] # 
+          <a id="b816"></a>
+          <a id="cll_bnf-816"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">gik 
+        <sub>816</sub>=</span>
+            </dt>
+            <dd>
+              <p>GI [NAI] # 
+          <a id="b491"></a>
+          <a id="cll_bnf-491"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">tag 
+        <sub>491</sub>=</span>
+            </dt>
+            <dd>
+              <p>tense-modal [joik-jek tense-modal] ... 
+          <a id="b971"></a>
+          <a id="cll_bnf-971"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">stag 
+        <sub>971</sub>=</span>
+            </dt>
+            <dd>
+              <p>simple-tense-modal [(jek | joik) simple-tense-modal] ... 
+          <a id="b815"></a>
+          <a id="cll_bnf-815"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">tense-modal 
+        <sub>815</sub>=</span>
+            </dt>
+            <dd>
+              <p>simple-tense-modal # | FIhO # selbri /FEhU#/ 
+          <a id="b972"></a>
+          <a id="cll_bnf-972"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">simple-tense-modal 
+        <sub>972</sub>=</span>
+            </dt>
+            <dd>
+              <p>[NAhE] [SE] BAI [NAI] [KI] | [NAhE] (time [space] | space [time]) &amp; CAhA [KI] | KI | CUhE 
+          <a id="b1030"></a>
+          <a id="cll_bnf-1030"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">time 
+        <sub>1030</sub>=</span>
+            </dt>
+            <dd>
+              <p>ZI &amp; time-offset ... &amp; ZEhA [PU [NAI]] &amp; interval-property ... 
+          <a id="b1033"></a>
+          <a id="cll_bnf-1033"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">time-offset 
+        <sub>1033</sub>=</span>
+            </dt>
+            <dd>
+              <p>PU [NAI] [ZI] 
+          <a id="b1040"></a>
+          <a id="cll_bnf-1040"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">space 
+        <sub>1040</sub>=</span>
+            </dt>
+            <dd>
+              <p>VA &amp; space-offset ... &amp; space-interval &amp; (MOhI space-offset) 
+          <a id="b1045"></a>
+          <a id="cll_bnf-1045"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">space-offset 
+        <sub>1045</sub>=</span>
+            </dt>
+            <dd>
+              <p>FAhA [NAI] [VA] 
+          <a id="b1046"></a>
+          <a id="cll_bnf-1046"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">space-interval 
+        <sub>1046</sub>=</span>
+            </dt>
+            <dd>
+              <p>((VEhA &amp; VIhA) [FAhA [NAI]]) &amp; space-int-props 
+          <a id="b1049"></a>
+          <a id="cll_bnf-1049"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">space-int-props 
+        <sub>1049</sub>=</span>
+            </dt>
+            <dd>
+              <p>(FEhE interval-property) ... 
+          <a id="b1051"></a>
+          <a id="cll_bnf-1051"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">interval-property 
+        <sub>1051</sub>=</span>
+            </dt>
+            <dd>
+              <p>number ROI [NAI] | TAhE [NAI] | ZAhO [NAI] 
+          <a id="b32"></a>
+          <a id="cll_bnf-32"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">free 
+        <sub>32</sub>=</span>
+            </dt>
+            <dd>
+              <p>SEI # [terms [CU #]] selbri /SEhU/ | SOI # sumti [sumti] /SEhU/ | vocative [relative-clauses] selbri [relative-clauses] /DOhU/ | vocative [relative-clauses] CMENE ... # [relative-clauses] /DOhU/ | vocative [sumti] /DOhU/ | (number | lerfu-string) MAI | TO text /TOI/ | XI # (number | lerfu-string) /BOI/ | XI # VEI # mex /VEhO/ 
+          <a id="b415"></a>
+          <a id="cll_bnf-415"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">vocative 
+        <sub>415</sub>=</span>
+            </dt>
+            <dd>
+              <p>(COI [NAI]) ... &amp; DOI 
+          <a id="b411"></a>
+          <a id="cll_bnf-411"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">indicators 
+        <sub>411</sub>=</span>
+            </dt>
+            <dd>
+              <p>[FUhE] indicator ... 
+          <a id="b413"></a>
+          <a id="cll_bnf-413"></a>
+          </p>
+            </dd>
+            <dt>
+              <span class="term">indicator 
+        <sub>413</sub>=</span>
+            </dt>
+            <dd>
+              <p>(UI | CAI) [NAI] | Y | DAhO | FUhO</p>
+            </dd>
+          </dl>
+        </div>
+        <p>The following rules are non-formal:</p>
+        <div class="variablelist">
+          <dl class="variablelist">
+            <dt>
+              <span class="term"><a id="b1100"></a><a id="cll_bnf-1100"></a>
+         word 
+        <sub>1100</sub>=</span>
+            </dt>
+            <dd>
+              <p>[BAhE] any-word [indicators]</p>
+            </dd>
+            <dt>
+              <span class="term">any-word =</span>
+            </dt>
+            <dd>
+              <p>
+                <span class="quote">“<span class="quote">any single word (no compound cmavo)</span>”</span>
+              </p>
+            </dd>
+            <dt>
+              <span class="term">anything =</span>
+            </dt>
+            <dd>
+              <p>
+                <span class="quote">“<span class="quote">any text at all, whether Lojban or not</span>”</span>
+                <a id="b1101"></a>
+                <a id="cll_bnf-1101"></a>
+              </p>
+            </dd>
+            <dt>
+              <span class="term">null 
+        <sub>1101</sub>=</span>
+            </dt>
+            <dd>
+              <p>any-word SI | utterance SA | text SU</p>
+            </dd>
+          </dl>
+        </div>
+        <p>FAhO is a universal terminator and signals the end of parsable input.</p>
+      </div>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">The Complete Lojban Language</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="chapter-catalogue.html">Prev: Chapter 20</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-cross-reference.html">Next: Section 21.2</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

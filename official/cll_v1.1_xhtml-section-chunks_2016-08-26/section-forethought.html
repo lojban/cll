@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>18.6. Forethought operators (Polish notation, functions)</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-mekso.html" title="Chapter 18. lojbau mekso: Mathematical Expressions in Lojban" />
+    <link rel="prev" href="section-simple-infix.html" title="18.5. Simple infix expressions and equations" />
+    <link rel="next" href="section-useful-selbri.html" title="18.7. Other useful selbri for mekso bridi" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-simple-infix.html">Prev: Section 18.5</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-useful-selbri.html">Next: Section 18.7</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-forethought"></a>18.6. <a id="c18s6"></a>Forethought operators (Polish notation, functions)</h2>
+          </div>
+        </div>
+      </div>
+      <p>The following cmavo are discussed in this section:</p>
+      <div class="informaltable">
+        <table class="cmavo-list">
+          <colgroup></colgroup>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">boi</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">BOI</p>
+            </td>
+            <td class="description">
+              <p class="description">numeral/lerfu string terminator</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">va'a</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">VUhU</p>
+            </td>
+            <td class="description">
+              <p class="description">negation/additive inverse</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">pe'o</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">PEhO</p>
+            </td>
+            <td class="description">
+              <p class="description">forethought flag</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">ku'e</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">KUhE</p>
+            </td>
+            <td class="description">
+              <p class="description">forethought terminator</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">ma'o</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">MAhO</p>
+            </td>
+            <td class="description">
+              <p class="description">convert operand to operator</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">py.</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">BY</p>
+            </td>
+            <td class="description">
+              <p class="description">letter <span class="quote">“<span class="quote">p</span>”</span></p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">xy.</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">BY</p>
+            </td>
+            <td class="description">
+              <p class="description">letter <span class="quote">“<span class="quote">x</span>”</span></p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">zy.</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">BY</p>
+            </td>
+            <td class="description">
+              <p class="description">letter <span class="quote">“<span class="quote">z</span>”</span></p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">fy.</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">BY</p>
+            </td>
+            <td class="description">
+              <p class="description">letter <span class="quote">“<span class="quote">f</span>”</span></p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p class="indent">The infix form explained so far is reasonable for many purposes, but it is limited and rigid. It works smoothly only where all operators have exactly two operands, and where precedences can either be assumed from context or are limited to just two levels, with some help from parentheses.</p>
+      <p>But there are many operators which do not have two operands, or which have a variable number of operands. The preferred form of expression in such cases is the use of 
+    <span class="quote">“<span class="quote">forethought operators</span>”</span>, also known as Polish notation. In this style of writing mathematics, the operator comes first and the operands afterwards:</p>
+      <div class="example">
+        <a id="example-random-id-I0Bm"></a>
+        <p class="title">
+          <strong>Example 18.32. 
+        <a id="c18e6d1"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>su'i</td>
+                <td>paboi</td>
+                <td>reboi</td>
+                <td>ci[boi]</td>
+                <td>du</td>
+                <td>li</td>
+                <td>xa</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>the-sum-of</td>
+                <td>one</td>
+                <td>two</td>
+                <td>three</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>six.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">sum(1,2,3) = 6</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Note that the normally elidable number terminator 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539119024" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-boi"><em class="glossterm">boi</em></a></em></span> is required after 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539116928" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pa"><em class="glossterm">pa</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539114528" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-re"><em class="glossterm">re</em></a></em></span> because otherwise the reading would be 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539111888" class="indexterm"></a>pareci</em></span>= 123. It is not required after 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539110256" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ci"><em class="glossterm">ci</em></a></em></span> but is inserted here in brackets for the sake of symmetry. The only time 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539107744" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-boi"><em class="glossterm">boi</em></a></em></span> is required is, as in 
+    <a class="xref" href="section-forethought.html#example-random-id-I0Bm" title="Example 18.32. ">Example 18.32</a>, when there are two consecutive numbers or lerfu strings.</p>
+      <p>Forethought mekso can use any number of operands, in 
+    <a class="xref" href="section-forethought.html#example-random-id-I0Bm" title="Example 18.32. ">Example 18.32</a>, three. How do we know how many operands there are in ambiguous circumstances? The usual Lojban solution is employed: an elidable terminator, namely 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539103392" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-kuhe"><em class="glossterm">ku'e</em></a></em></span>. Here is an example:</p>
+      <div class="example">
+        <a id="example-random-id-IxMG"></a>
+        <p class="title">
+          <strong>Example 18.33. 
+        <a id="c18e6d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>py.</td>
+                <td>su'i</td>
+                <td>va'a</td>
+                <td>ny.</td>
+                <td>ku'e</td>
+                <td>su'i</td>
+                <td>zy</td>
+                <td>du</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>
+                  <span class="quote">“<span class="quote">p</span>”</span>
+                </td>
+                <td>plus</td>
+                <td>negative-of(</td>
+                <td>
+                  <span class="quote">“<span class="quote">n</span>”</span>
+                </td>
+                <td>)</td>
+                <td>plus</td>
+                <td>
+                  <span class="quote">“<span class="quote">z</span>”</span>
+                </td>
+                <td>equals</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>xy.</td>
+              </tr>
+              <tr class="gloss">
+                <td>the-number</td>
+                <td>
+                  <span class="quote">“<span class="quote">x</span>”</span>
+                </td>
+                <td>.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">p + -n + z = x</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">where we know that 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539086400" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-vaha"><em class="glossterm">va'a</em></a></em></span> is a forethought operator because there is no operand preceding it.</p>
+      <p><span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539081536" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-vaha"><em class="glossterm">va'a</em></a></em></span> is the numerical negation operator, of selma'o VUhU. In contrast, 
+      
+      
+      
+      
+      <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539079328" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-vuhu"><em class="glossterm">vu'u</em></a></em></span> is not used for numerical negation, but only for subtraction, as it always has two or more operands. Do not confuse 
+      <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539076816" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-vaha"><em class="glossterm">va'a</em></a></em></span> and 
+      <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539074544" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-vuhu"><em class="glossterm">vu'u</em></a></em></span>, which are operators, with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539072096" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nihu"><em class="glossterm">ni'u</em></a></em></span>, which is part of a number.</p>
+      <p>In 
+    <a class="xref" href="section-forethought.html#example-random-id-IxMG" title="Example 18.33. ">Example 18.33</a>, the operator 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539068544" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-vaha"><em class="glossterm">va'a</em></a></em></span> and the terminator 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539066144" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-kuhe"><em class="glossterm">ku'e</em></a></em></span> serve in effect as parentheses. (The regular parentheses 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539063744" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-vei"><em class="glossterm">vei</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539061360" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-veho"><em class="glossterm">ve'o</em></a></em></span> are NOT used for this purpose.) If the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539058704" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-kuhe"><em class="glossterm">ku'e</em></a></em></span> were omitted, the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539056208" class="indexterm"></a>su'i zy</em></span> would be swallowed up by the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539054544" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-vaha"><em class="glossterm">va'a</em></a></em></span> forethought operator, which would then appear to have two operands, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539052016" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ny"><em class="glossterm">ny</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539049360" class="indexterm"></a>su'i zy.</em></span>, where the latter is also a forethought expression.</p>
+      <p>Forethought mekso is also useful for matching standard functional notation. How do we represent 
+    
+    <span class="quote">“<span class="quote">z = f(x)</span>”</span>? The answer is:</p>
+      <div class="example">
+        <a id="example-random-id-VybU"></a>
+        <p class="title">
+          <strong>Example 18.34. 
+        <a id="c18e6d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>zy</td>
+                <td>du</td>
+                <td>li</td>
+                <td>ma'o</td>
+                <td>fy.boi</td>
+                <td>xy.</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>z</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>the-operator</td>
+                <td>f</td>
+                <td>x.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">z = f(x)</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Again, no parentheses are used. The construct 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539034928" class="indexterm"></a>ma'o fy.boi</em></span> is the equivalent of an operator, and appears in forethought here (although it could also be used as a regular infix operator). In mathematics, letters sometimes mean functions and sometimes mean variables, with only the context to tell which. Lojban chooses to accept the variable interpretation as the default, and uses the special flag 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539032896" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-maho"><em class="glossterm">ma'o</em></a></em></span> to mark a lerfu string as an operator. The cmavo 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539030304" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-xy"><em class="glossterm">xy.</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539028112" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-zy"><em class="glossterm">zy.</em></a></em></span> are variables, but 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539025520" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-fy"><em class="glossterm">fy.</em></a></em></span> is an operator (a function) because 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539023088" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-maho"><em class="glossterm">ma'o</em></a></em></span> marks it as such. The 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539020720" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-boi"><em class="glossterm">boi</em></a></em></span> is required because otherwise the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539018288" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-xy"><em class="glossterm">xy.</em></a></em></span> would look like part of the operator name. (The use of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539015920" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-maho"><em class="glossterm">ma'o</em></a></em></span> can be generalized from lerfu strings to any mekso operand: see 
+    <a class="xref" href="section-miscellany.html" title="18.21. Miscellany">Section 18.21</a>.)</p>
+      <p>When using forethought mekso, the optional marker 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539012496" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-peho"><em class="glossterm">pe'o</em></a></em></span> may be placed in front of the operator. This usage can help avoid confusion by providing clearly marked 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539010000" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-peho"><em class="glossterm">pe'o</em></a></em></span> and 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539007872" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-kuhe"><em class="glossterm">ku'e</em></a></em></span> pairs to delimit the operand list. 
+    <a class="xref" href="section-forethought.html#example-random-id-I0Bm" title="Example 18.32. ">Example 18.32</a> to 
+    <a class="xref" href="section-forethought.html#example-random-id-VybU" title="Example 18.34. ">Example 18.34</a>, respectively, with explicit 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539004608" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-peho"><em class="glossterm">pe'o</em></a></em></span> and 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539002512" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-kuhe"><em class="glossterm">ku'e</em></a></em></span>:</p>
+      <div class="example">
+        <a id="example-random-id-qhz5"></a>
+        <p class="title">
+          <strong>Example 18.35. 
+        <a id="c18e6d4"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <p xml:lang="jbo" class="jbophrase" lang="jbo"><a id="idm47148538998048" class="indexterm"></a>li pe'o su'i paboi reboi ciboi ku'e du li xa</p>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qhzu"></a>
+        <p class="title">
+          <strong>Example 18.36. 
+        <a id="c18e6d5"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <p xml:lang="jbo" class="jbophrase" lang="jbo"><a id="idm47148538993856" class="indexterm"></a>li py. su'i pe'o va'a ny. ku'e su'i zy du li xy.</p>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qi0g"></a>
+        <p class="title">
+          <strong>Example 18.37. 
+        <a id="c18e6d6"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <p xml:lang="jbo" class="jbophrase" lang="jbo"><a id="idm47148538989952" class="indexterm"></a>li zy du li pe'o ma'o fy.boi xy. ku'e</p>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Note: When using forethought mekso, be sure that the operands really are operands: they cannot contain regular infix expressions unless parenthesized with 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538987360" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-vei"><em class="glossterm">vei</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148538984976" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-veho"><em class="glossterm">ve'o</em></a></em></span>. An earlier version of the complex 
+    <a class="xref" href="section-connectives-within-mekso.html#example-random-id-k36J" title="Example 18.119. ">Example 18.119</a> came to grief because I forgot this rule.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-simple-infix.html">Prev: Section 18.5</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-useful-selbri.html">Next: Section 18.7</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

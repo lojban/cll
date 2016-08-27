@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>11.2. Event abstraction</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-abstractions.html" title="Chapter 11. Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction" />
+    <link rel="prev" href="chapter-abstractions.html" title="Chapter 11. Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction" />
+    <link rel="next" href="section-event-types.html" title="11.3. Types of event abstractions" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 11. Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="chapter-abstractions.html">Prev: Chapter 11</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-event-types.html">Next: Section 11.3</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-events"></a>11.2. <a id="c11s2"></a>Event abstraction</h2>
+          </div>
+        </div>
+      </div>
+      <p><a id="idm47148556293776" class="indexterm"></a><a id="idm47148556292448" class="indexterm"></a> The following cmavo is discussed in this section:</p>
+      <div class="informaltable">
+        <table class="cmavo-list">
+          <colgroup></colgroup>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">nu</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">NU</p>
+            </td>
+            <td class="description">
+              <p class="description">event abstractor</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p class="indent"><a id="idm47148556285472" class="indexterm"></a><a id="idm47148556284464" class="indexterm"></a><a id="idm47148556283216" class="indexterm"></a> The examples in 
+    <a class="xref" href="chapter-abstractions.html#section-syntax" title="11.1. The syntax of abstraction">Section 11.1</a> made use of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148556281600" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nu"><em class="glossterm">nu</em></a></em></span> as the abstractor, and it is certainly the most common abstractor in Lojban text. Its purpose is to capture the event or state of the bridi considered as a whole. Do not confuse the 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148556278928" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-le"><em class="glossterm">le</em></a></em></span> description built on a 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148556276544" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nu"><em class="glossterm">nu</em></a></em></span> abstraction with ordinary descriptions based on 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148556274272" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-le"><em class="glossterm">le</em></a></em></span> alone. The following sumti are quite distinct:</p>
+      <div class="example">
+        <a id="example-random-id-qF0u"></a>
+        <p class="title">
+          <strong>Example 11.5. 
+        <a id="c11e2d1"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>le</td>
+                <td>klama</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">the comer, that which comes</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qF0U"></a>
+        <p class="title">
+          <strong>Example 11.6. 
+        <a id="c11e2d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>le</td>
+                <td>se</td>
+                <td>klama</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">the destination</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qf11"></a>
+        <p class="title">
+          <strong>Example 11.7. 
+        <a id="c11e2d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>le</td>
+                <td>te</td>
+                <td>klama</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">the origin</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qf22"></a>
+        <p class="title">
+          <strong>Example 11.8. 
+        <a id="c11e2d4"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>le</td>
+                <td>ve</td>
+                <td>klama</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">the route</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qf4x"></a>
+        <p class="title">
+          <strong>Example 11.9. 
+        <a id="c11e2d5"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>le</td>
+                <td>xe</td>
+                <td>klama</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">the means of transportation</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qf97"></a>
+        <p class="title">
+          <strong>Example 11.10. 
+        <a id="c11e2d6"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>le</td>
+                <td>nu</td>
+                <td>klama</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">the event of someone coming to somewhere from somewhere by some route using some means</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a class="xref" href="section-events.html#example-random-id-qF0u" title="Example 11.5. ">Example 11.5</a> through 
+      <a class="xref" href="section-events.html#example-random-id-qf4x" title="Example 11.9. ">Example 11.9</a> are descriptions that isolate the five individual sumti places of the selbri 
+      <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148556228320" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-klama"><em class="glossterm">klama</em></a></em></span>. 
+    <a class="xref" href="section-events.html#example-random-id-qf97" title="Example 11.10. ">Example 11.10</a> describes something associated with the bridi as a whole: the event of it.</p>
+      <p><a id="idm47148556225200" class="indexterm"></a> In Lojban, the term 
+    <span class="quote">“<span class="quote">event</span>”</span> is divorced from its ordinary English sense of something that happens over a short period of time. The description:</p>
+      <div class="example">
+        <a id="example-random-id-mxAt"></a>
+        <p class="title">
+          <strong>Example 11.11. 
+        <a id="c11e2d7"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>le</td>
+                <td>nu</td>
+                <td>mi</td>
+                <td>vasxu</td>
+              </tr>
+              <tr class="gloss">
+                <td>the</td>
+                <td>event-of</td>
+                <td>my</td>
+                <td>breathing</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">is an event which lasts for the whole of my life (under normal circumstances). On the other hand,</p>
+      <div class="example">
+        <a id="example-random-id-BPcI"></a>
+        <p class="title">
+          <strong>Example 11.12. 
+        <a id="c11e2d8"></a>
+        <a id="idm47148556214064" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>le</td>
+                <td>nu</td>
+                <td>la</td>
+                <td>djan.</td>
+                <td>cinba</td>
+                <td>la</td>
+                <td>djein.</td>
+              </tr>
+              <tr class="gloss">
+                <td>the</td>
+                <td>event-of</td>
+                <td>that-named</td>
+                <td>John</td>
+                <td>kissing</td>
+                <td>that-named</td>
+                <td>Jane</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"><a id="idm47148556206144" class="indexterm"></a> is relatively brief by comparison (again, under normal circumstances).</p>
+      <p><a id="idm47148556204864" class="indexterm"></a> We can see from 
+    <a class="xref" href="section-events.html#example-random-id-qf97" title="Example 11.10. ">Example 11.10</a> through 
+    <a class="xref" href="section-events.html#example-random-id-BPcI" title="Example 11.12. ">Example 11.12</a> that ellipsis of sumti is valid in the bridi of abstraction selbri, just as in the main bridi of a sentence. Any sumti may be ellipsized if the listener will be able to figure out from context what the proper value of it is, or else to recognize that the proper value is unimportant. It is extremely common for 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148556201808" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nu"><em class="glossterm">nu</em></a></em></span> abstractions in descriptions to have the x1 place ellipsized:</p>
+      <div class="example">
+        <a id="example-random-id-FRoP"></a>
+        <p class="title">
+          <strong>Example 11.13. 
+        <a id="c11e2d9"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>mi</td>
+                <td>nelci</td>
+                <td>le</td>
+                <td>nu</td>
+                <td>limna</td>
+              </tr>
+              <tr class="gloss">
+                <td>I</td>
+                <td>like</td>
+                <td>the</td>
+                <td>event-of</td>
+                <td>swimming.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">I like swimming.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">is elliptical, and most probably means:</p>
+      <div class="example">
+        <a id="example-random-id-Ys8w"></a>
+        <p class="title">
+          <strong>Example 11.14. 
+        <a id="c11e2d10"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>mi</td>
+                <td>nelci</td>
+                <td>le</td>
+                <td>nu</td>
+                <td>mi</td>
+                <td>limna</td>
+              </tr>
+              <tr class="gloss">
+                <td>I</td>
+                <td>like</td>
+                <td>the</td>
+                <td>event-of</td>
+                <td>I</td>
+                <td>swim.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">In the proper context, of course, 
+    <a class="xref" href="section-events.html#example-random-id-FRoP" title="Example 11.13. ">Example 11.13</a> could refer to the event of somebody else swimming. Its English equivalent, 
+    <span class="quote">“<span class="quote">I like swimming</span>”</span>, can't be interpreted as 
+    <span class="quote">“<span class="quote">I like Frank's swimming</span>”</span>; this is a fundamental distinction between English and Lojban. In Lojban, an omitted sumti can mean whatever the context indicates that it should mean.</p>
+      <p><a id="idm47148556179024" class="indexterm"></a> Note that the lack of an explicit NU cmavo in a sumti can sometimes hide an implicit abstraction. In the context of 
+    <a class="xref" href="section-events.html#example-random-id-Ys8w" title="Example 11.14. ">Example 11.14</a>, the appearance of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148556176512" class="indexterm"></a>le se nelci</em></span> (<span class="quote">“<span class="quote">that which is liked</span>”</span>) is in effect an abstraction:</p>
+      <div class="example">
+        <a id="example-random-id-sMsx"></a>
+        <p class="title">
+          <strong>Example 11.15. 
+        <a id="c11e2d11"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>le</td>
+                <td>se nelci</td>
+                <td>cu</td>
+                <td>cafne</td>
+              </tr>
+              <tr class="gloss">
+                <td>The</td>
+                <td>liked-thing</td>
+                <td> </td>
+                <td>is-frequent.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">The thing which I like happens often.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">which in this context means</p>
+      <div class="blockquote">
+        <blockquote class="blockquote">
+          <p>My swimming happens often.</p>
+        </blockquote>
+      </div>
+      <p>Event descriptions with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148556163440" class="indexterm"></a>le nu</em></span> are commonly used to fill the 
+    <span class="quote">“<span class="quote">under conditions...</span>”</span> places, among others, of gismu and lujvo place structures:</p>
+      <div class="example">
+        <a id="example-random-id-Ia6f"></a>
+        <p class="title">
+          <strong>Example 11.16. 
+        <a id="c11e2d12"></a>
+        <a id="idm47148556159504" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>la</td>
+                <td>lojban.</td>
+                <td>cu</td>
+                <td>frili</td>
+                <td> </td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>That-named</td>
+                <td>Lojban</td>
+                <td> </td>
+                <td>is-easy-for</td>
+                <td>me</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td> </td>
+                <td>le</td>
+                <td>nu</td>
+                <td>mi</td>
+                <td>tadni</td>
+                <td>[kei]</td>
+              </tr>
+              <tr class="gloss">
+                <td>under-conditions</td>
+                <td>the</td>
+                <td>event-of</td>
+                <td>I</td>
+                <td>study</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Lojban is easy for me when I study.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"> (The 
+    <span class="quote">“<span class="quote">when</span>”</span> of the English would also be appropriate for a construction involving a Lojban tense, but the Lojban sentence says more than that the studying is concurrent with the ease.)</p>
+      <p><a id="idm47148556143584" class="indexterm"></a><a id="idm47148556142576" class="indexterm"></a> The place structure of a 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148556140976" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nu"><em class="glossterm">nu</em></a></em></span> abstraction selbri is simply:</p>
+      <div class="blockquote">
+        <blockquote class="blockquote">
+          <p class="definition">
+            <span class="definition-content">x1 is an event of (the bridi)</span>
+          </p>
+        </blockquote>
+      </div>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 11. Events, Qualities, Quantities, And Other Vague Words: On Lojban Abstraction</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="chapter-abstractions.html">Prev: Chapter 11</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-event-types.html">Next: Section 11.3</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

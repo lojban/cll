@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>16.11. Using naku outside a prenex</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-quantifiers.html" title="Chapter 16. “Who Did You Pass On The Road? Nobody”: Lojban And Logic" />
+    <link rel="prev" href="section-connectives.html" title="16.10. bridi negation and logical connectives" />
+    <link rel="next" href="section-demorgans-law.html" title="16.12. Logical Connectives and DeMorgan's Law" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-connectives.html">Prev: Section 16.10</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-demorgans-law.html">Next: Section 16.12</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-na-outside-prenex"></a>16.11. <a id="c16s11"></a>Using <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">naku</em></span> outside a prenex</h2>
+          </div>
+        </div>
+      </div>
+      <p>Let us consider the English sentence</p>
+      <div class="example">
+        <a id="example-random-id-hp0j"></a>
+        <p class="title">
+          <strong>Example 16.79. 
+        <a id="c16e11d1"></a>
+        <a id="idm47148542686672" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <p xml:lang="jbo" class="jbophrase" lang="jbo"><a id="idm47148542685040" class="indexterm"></a>Some children do not go to school.</p>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">We cannot express this directly with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542682624" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span>; the apparently obvious translation</p>
+      <div class="example">
+        <a id="example-random-id-6mHh"></a>
+        <p class="title">
+          <strong>Example 16.80. 
+        <a id="c16e11d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'oda</td>
+                <td>poi</td>
+                <td>verba</td>
+              </tr>
+              <tr class="gloss">
+                <td>At-least-one-X</td>
+                <td>which-are</td>
+                <td>child(ren)</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>na</td>
+                <td>klama</td>
+                <td>su'ode</td>
+                <td>poi</td>
+                <td>ckule</td>
+              </tr>
+              <tr class="gloss">
+                <td>[false]</td>
+                <td>go-to</td>
+                <td>at-least-one-Y</td>
+                <td>which-are</td>
+                <td>school(s).</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">when converted to the external negation form produces:</p>
+      <div class="example">
+        <a id="example-random-id-nGTc"></a>
+        <p class="title">
+          <strong>Example 16.81. 
+        <a id="c16e11d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>zo'u</td>
+                <td>su'oda</td>
+                <td>poi</td>
+                <td>verba</td>
+                <td>cu</td>
+              </tr>
+              <tr class="gloss">
+                <td>It-is-false</td>
+                <td>that</td>
+                <td>some-which</td>
+                <td>are</td>
+                <td>children</td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>klama</td>
+                <td>su'ode</td>
+                <td>poi</td>
+                <td>ckule</td>
+              </tr>
+              <tr class="gloss">
+                <td>go-to</td>
+                <td>some-which</td>
+                <td>are</td>
+                <td>schools.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">All children don't go to some school (not just some children).</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148542653520" class="indexterm"></a><a id="idm47148542652512" class="indexterm"></a><a id="idm47148542651408" class="indexterm"></a> Lojban provides a negation form which more closely emulates natural language negation. This involves putting 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542649520" class="indexterm"></a>naku</em></span> before the selbri, instead of a 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542647760" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span>. 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542645040" class="indexterm"></a>naku</em></span> is clearly a contradictory negation, given its parallel with prenex bridi negation. Using 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542643040" class="indexterm"></a>naku</em></span>, 
+    <a class="xref" href="section-na-outside-prenex.html#example-random-id-hp0j" title="Example 16.79. ">Example 16.79</a> can be expressed as:</p>
+      <div class="example">
+        <a id="example-random-id-nvtf"></a>
+        <p class="title">
+          <strong>Example 16.82. 
+        <a id="c16e11d4"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'oda</td>
+                <td>poi</td>
+                <td>verba</td>
+                <td>naku</td>
+                <td>klama</td>
+                <td>su'ode</td>
+                <td>poi</td>
+                <td>ckule</td>
+              </tr>
+              <tr class="gloss">
+                <td>Some</td>
+                <td>which-are</td>
+                <td>children</td>
+                <td>don't</td>
+                <td>go-to</td>
+                <td>some</td>
+                <td>which-are</td>
+                <td>schools.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Some children don't go to a school.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148542629120" class="indexterm"></a> Although it is not technically a sumti, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542627504" class="indexterm"></a>naku</em></span> can be used in most of the places where a sumti may appear. We'll see what this means in a moment.</p>
+      <p><a id="idm47148542625344" class="indexterm"></a><a id="idm47148542624336" class="indexterm"></a><a id="idm47148542623072" class="indexterm"></a><a id="idm47148542622064" class="indexterm"></a> When you use 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542620320" class="indexterm"></a>naku</em></span> within a bridi, you are explicitly creating a negation boundary. As explained in 
+    <a class="xref" href="section-negation-boundaries.html" title="16.9. Negation boundaries">Section 16.9</a>, when a prenex negation boundary expressed by 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542617520" class="indexterm"></a>naku</em></span> moves past a quantifier, the quantifier has to be inverted. The same is true for 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542615600" class="indexterm"></a>naku</em></span> in the bridi proper. We can move 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542613584" class="indexterm"></a>naku</em></span> to any place in the sentence where a sumti can go, inverting any quantifiers that the negation boundary crosses. Thus, the following are equivalent to 
+    <a class="xref" href="section-na-outside-prenex.html#example-random-id-nvtf" title="Example 16.82. ">Example 16.82</a> (no good English translations exist):</p>
+      <div class="example">
+        <a id="example-random-id-qhLG"></a>
+        <p class="title">
+          <strong>Example 16.83. 
+        <a id="c16e11d5"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'oda</td>
+                <td>poi</td>
+                <td>verba</td>
+                <td>cu</td>
+                <td>klama</td>
+                <td>rode</td>
+                <td>poi</td>
+                <td>ckule</td>
+                <td>naku</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">For some children, for every school, they don't go to it.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qhnP"></a>
+        <p class="title">
+          <strong>Example 16.84. 
+        <a id="c16e11d6"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'oda</td>
+                <td>poi</td>
+                <td>verba</td>
+                <td>cu</td>
+                <td>klama</td>
+                <td>naku</td>
+                <td>su'ode</td>
+                <td>poi</td>
+                <td>ckule</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Some children don't go to (some) school(s).</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qhoH"></a>
+        <p class="title">
+          <strong>Example 16.85. 
+        <a id="c16e11d7"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>roda</td>
+                <td>poi</td>
+                <td>verba</td>
+                <td>cu</td>
+                <td>klama</td>
+                <td>su'ode</td>
+                <td>poi</td>
+                <td>ckule</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">It is false that all children go to some school(s).</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">In 
+    <a class="xref" href="section-na-outside-prenex.html#example-random-id-qhLG" title="Example 16.83. ">Example 16.83</a>, we moved the negation boundary rightward across the quantifier of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542583392" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-de"><em class="glossterm">de</em></a></em></span>, forcing us to invert it. In 
+    <a class="xref" href="section-na-outside-prenex.html#example-random-id-qhoH" title="Example 16.85. ">Example 16.85</a> we moved the negation boundary across the quantifier of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542580464" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-da"><em class="glossterm">da</em></a></em></span>, forcing us to invert it instead. 
+    <a class="xref" href="section-na-outside-prenex.html#example-random-id-qhnP" title="Example 16.84. ">Example 16.84</a> merely switched the selbri and the negation boundary, with no effect on the quantifiers.</p>
+      <p><a id="idm47148542577488" class="indexterm"></a> The same rules apply if you rearrange the sentence so that the quantifier crosses an otherwise fixed negation. You can't just convert the selbri of 
+    <a class="xref" href="section-na-outside-prenex.html#example-random-id-nvtf" title="Example 16.82. ">Example 16.82</a> and rearrange the sumti to produce</p>
+      <div class="example">
+        <a id="example-random-id-rHwu"></a>
+        <p class="title">
+          <strong>Example 16.86. 
+        <a id="c16e11d8"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'ode</td>
+                <td>poi</td>
+                <td>ckule</td>
+                <td>ku'o</td>
+                <td>naku</td>
+                <td>se</td>
+                <td>klama</td>
+                <td>roda</td>
+                <td>poi</td>
+                <td>verba</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Some schools aren't gone-to-by every child.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"><a id="idm47148542565680" class="indexterm"></a><a id="idm47148542564432" class="indexterm"></a><a id="idm47148542563264" class="indexterm"></a> or rather, 
+    <a class="xref" href="section-na-outside-prenex.html#example-random-id-rHwu" title="Example 16.86. ">Example 16.86</a> means something completely different from 
+    <a class="xref" href="section-na-outside-prenex.html#example-random-id-nvtf" title="Example 16.82. ">Example 16.82</a>. Conversion with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542560672" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-se"><em class="glossterm">se</em></a></em></span> under 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542557920" class="indexterm"></a>naku</em></span> negation is not symmetric; not all sumti are treated identically, and some sumti are not invariant under conversion. Thus, internal negation with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542555872" class="indexterm"></a>naku</em></span> is considered an advanced technique, used to achieve stylistic compatibility with natural languages.</p>
+      <p>It isn't always easy to see which quantifiers have to be inverted in a sentence. 
+    <a class="xref" href="section-na-outside-prenex.html#example-random-id-nvtf" title="Example 16.82. ">Example 16.82</a> is identical in meaning to:</p>
+      <div class="example">
+        <a id="example-random-id-S6y4"></a>
+        <p class="title">
+          <strong>Example 16.87. 
+        <a id="c16e11d9"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'o</td>
+                <td>verba</td>
+                <td>naku</td>
+                <td>klama</td>
+                <td>su'o</td>
+                <td>ckule</td>
+              </tr>
+              <tr class="gloss">
+                <td>Some</td>
+                <td>children</td>
+                <td>don't</td>
+                <td>go-to</td>
+                <td>some</td>
+                <td>school.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"><a id="idm47148542545184" class="indexterm"></a> but in 
+    <a class="xref" href="section-na-outside-prenex.html#example-random-id-S6y4" title="Example 16.87. ">Example 16.87</a>, the bound variables 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542543072" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-da"><em class="glossterm">da</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542540720" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-de"><em class="glossterm">de</em></a></em></span> have been hidden.</p>
+      <p><a id="idm47148542538160" class="indexterm"></a><a id="idm47148542536944" class="indexterm"></a> It is trivial to export an internal bridi negation expressed with 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542535440" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span> to the prenex, as we saw in 
+    <a class="xref" href="section-negation-boundaries.html" title="16.9. Negation boundaries">Section 16.9</a>; you just move it to the left end of the prenex. In comparison, it is non-trivial to export a 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542532240" class="indexterm"></a>naku</em></span> to the prenex because of the quantifiers. The rules for exporting 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542530240" class="indexterm"></a>naku</em></span> require that you export all of the quantified variables (implicit or explicit) along with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542528160" class="indexterm"></a>naku</em></span>, and you must export them from left to right, in the same order that they appear in the sentence. Thus 
+    <a class="xref" href="section-na-outside-prenex.html#example-random-id-nvtf" title="Example 16.82. ">Example 16.82</a> goes into prenex form as:</p>
+      <div class="example">
+        <a id="example-random-id-3f22"></a>
+        <p class="title">
+          <strong>Example 16.88. 
+        <a id="c16e11d10"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'oda</td>
+                <td>poi</td>
+                <td>verba</td>
+                <td>ku'o</td>
+                <td>naku</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-some-X</td>
+                <td>which</td>
+                <td>is-a-child,</td>
+                <td></td>
+                <td>it-is-not-the-case-that</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'ode</td>
+                <td>poi</td>
+                <td>ckule</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>klama</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>there-is-a-Y</td>
+                <td>which</td>
+                <td>is-a-school</td>
+                <td>such-that:</td>
+                <td>X</td>
+                <td>goes</td>
+                <td>to</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">We can now move the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542511200" class="indexterm"></a>naku</em></span> to the left end of the prenex, getting a contradictory negation that can be expressed with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542509488" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span>:</p>
+      <div class="example">
+        <a id="example-random-id-gPvc"></a>
+        <p class="title">
+          <strong>Example 16.89. 
+        <a id="c16e11d11"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>roda</td>
+                <td>poi</td>
+                <td>verba</td>
+              </tr>
+              <tr class="gloss">
+                <td>It-is-not-the-case-that</td>
+                <td>for-all-X's</td>
+                <td>which-are</td>
+                <td>children,</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'ode</td>
+                <td>poi</td>
+                <td>ckule</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>klama</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>there-is-a-Y</td>
+                <td>which-is</td>
+                <td>a-school</td>
+                <td>such-that:</td>
+                <td>X</td>
+                <td>goes-to</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">from which we can restore the quantified variables to the sentence, giving:</p>
+      <div class="example">
+        <a id="example-random-id-Awc0"></a>
+        <p class="title">
+          <strong>Example 16.90. 
+        <a id="c16e11d12"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>zo'u</td>
+                <td>roda</td>
+                <td>poi</td>
+                <td>verba</td>
+                <td>cu</td>
+                <td>klama</td>
+                <td>su'ode</td>
+                <td>poi</td>
+                <td>ckule</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">It is not the case that all children go to some school.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">or more briefly</p>
+      <div class="example">
+        <a id="example-random-id-msIC"></a>
+        <p class="title">
+          <strong>Example 16.91. 
+        <a id="c16e11d13"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ro</td>
+                <td>verba</td>
+                <td>cu</td>
+                <td>na</td>
+                <td>klama</td>
+                <td>su'o</td>
+                <td>ckule</td>
+              </tr>
+              <tr class="gloss">
+                <td>All</td>
+                <td>children</td>
+                <td></td>
+                <td>[false]</td>
+                <td>go-to</td>
+                <td>some</td>
+                <td>school(s).</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148542475488" class="indexterm"></a> As noted in 
+    <a class="xref" href="section-prenex-elision.html" title="16.5. Dropping the prenex">Section 16.5</a>, a sentence with two different quantified variables, such as 
+    <a class="xref" href="section-na-outside-prenex.html#example-random-id-msIC" title="Example 16.91. ">Example 16.91</a>, cannot always be converted with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542472688" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-se"><em class="glossterm">se</em></a></em></span> without first exporting the quantified variables. When the variables have been exported, the sentence proper can be converted, but the quantifier order in the prenex must remain unchanged:</p>
+      <div class="example">
+        <a id="example-random-id-d8h3"></a>
+        <p class="title">
+          <strong>Example 16.92. 
+        <a id="c16e11d14"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>roda</td>
+                <td>poi</td>
+                <td>verba</td>
+                <td>su'ode</td>
+              </tr>
+              <tr class="gloss">
+                <td>for-all-X's</td>
+                <td>which-are</td>
+                <td>children,</td>
+                <td>there-is-a-Y</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>poi</td>
+                <td>ckule</td>
+                <td>zo'u</td>
+                <td>de</td>
+                <td>na</td>
+                <td>se</td>
+                <td>klama</td>
+                <td>da</td>
+              </tr>
+              <tr class="gloss">
+                <td>which</td>
+                <td>is-a-school</td>
+                <td>such-that:</td>
+                <td>Y</td>
+                <td></td>
+                <td></td>
+                <td>is-gone-to-by</td>
+                <td>X.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148542456592" class="indexterm"></a><a id="idm47148542455280" class="indexterm"></a> While you can't freely convert with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542453840" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-se"><em class="glossterm">se</em></a></em></span> when you have two quantified variables in a sentence, you can still freely move sumti to either side of the selbri, as long as the order isn't changed. If you use 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542451216" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span> negation in such a sentence, nothing special need be done. If you use 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542448496" class="indexterm"></a>naku</em></span> negation, then quantified variables that cross the negation boundary must be inverted.</p>
+      <p><a id="idm47148542446800" class="indexterm"></a><a id="idm47148542445552" class="indexterm"></a> Clearly, if all of Lojban negation was built on 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542443648" class="indexterm"></a>naku</em></span> negation instead of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542441920" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span> negation, logical manipulation in Lojban would be as difficult as in natural languages. In 
+    <a class="xref" href="section-demorgans-law.html" title="16.12. Logical Connectives and DeMorgan's Law">Section 16.12</a>, for example, we'll discuss DeMorgan's Law, which must be used whenever a sumti with a logical connection is moved across a negation boundary.</p>
+      <p><a id="idm47148542438864" class="indexterm"></a> Since 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542437008" class="indexterm"></a>naku</em></span> has the grammar of a sumti, it can be placed almost anywhere a sumti can go, including 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542435104" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-be"><em class="glossterm">be</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542432704" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-bei"><em class="glossterm">bei</em></a></em></span> clauses; it isn't clear what these mean, and we recommend avoiding such constructs.</p>
+      <p><a id="idm47148542430320" class="indexterm"></a><a id="idm47148542429168" class="indexterm"></a> You can put multiple 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542427392" class="indexterm"></a>naku</em></span> compounds in a sentence, each forming a separate negation boundary. Two adjacent 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542425360" class="indexterm"></a>naku</em></span> compounds in a bridi are a double negative and cancel out:</p>
+      <div class="example">
+        <a id="example-random-id-u784"></a>
+        <p class="title">
+          <strong>Example 16.93. 
+        <a id="c16e11d15"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <p xml:lang="jbo" class="jbophrase" lang="jbo"><a id="idm47148542421072" class="indexterm"></a>mi naku naku le zarci cu klama</p>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Other expressions using two 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542418544" class="indexterm"></a>naku</em></span> compounds may or may not cancel out. If there is no quantified variable between them, then the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542416400" class="indexterm"></a>naku</em></span> compounds cancel.</p>
+      <p>Negation with internal 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542413984" class="indexterm"></a>naku</em></span> is clumsy and non-intuitive for logical manipulations, but then, so are the natural language features it is emulating.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-connectives.html">Prev: Section 16.10</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-demorgans-law.html">Next: Section 16.12</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

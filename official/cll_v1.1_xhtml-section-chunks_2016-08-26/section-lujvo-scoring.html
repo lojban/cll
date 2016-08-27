@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>4.12. The lujvo scoring algorithm</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-morphology.html" title="Chapter 4. The Shape Of Words To Come: Lojban Morphology" />
+    <link rel="prev" href="section-lujvo-making.html" title="4.11. The lujvo-making algorithm" />
+    <link rel="next" href="section-lujvo-making-examples.html" title="4.13. lujvo-making examples" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 4. The Shape Of Words To Come: Lojban Morphology</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-lujvo-making.html">Prev: Section 4.11</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-lujvo-making-examples.html">Next: Section 4.13</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-lujvo-scoring"></a>4.12. <a id="c4s12"></a>The lujvo scoring algorithm</h2>
+          </div>
+        </div>
+      </div>
+      <p>This algorithm was devised by Bob and Nora LeChevalier in 1989. It is not the only possible algorithm, but it usually gives a choice that people find preferable. The algorithm may be changed in the future. The lowest-scoring variant will usually be the dictionary form of the lujvo. (In previous versions, it was the highest-scoring variant.)</p>
+      <div class="orderedlist">
+        <ol class="orderedlist" type="1">
+          <li class="listitem">
+            <p>Count the total number of letters, including hyphens and apostrophes; call it 
+          <code class="varname">L</code>.</p>
+          </li>
+          <li class="listitem">
+            <p>Count the number of apostrophes; call it 
+          <code class="varname">A</code>.</p>
+          </li>
+          <li class="listitem">
+            <p>Count the number of 
+          <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">y-</em></span>, 
+          <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">r-</em></span>, and 
+          n-hyphens; call it 
+          
+          <code class="varname">H</code>.</p>
+          </li>
+          <li class="listitem">
+            <p>For each rafsi, find the value in the following table. Sum this value over all rafsi; call it 
+          <code class="varname">R</code>: 
+          </p>
+            <div class="informaltable">
+              <table>
+                <tr>
+                  <td>CVC/CV (final)</td>
+                  <td>(<span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-sarji</em></span>)</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>CVC/C</td>
+                  <td>(<span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-sarj-</em></span>)</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>CCVCV (final)</td>
+                  <td>(<span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-zbasu</em></span>)</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>CCVC</td>
+                  <td>(<span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-zbas-</em></span>)</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>CVC</td>
+                  <td>(<span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-nun-</em></span>)</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>CVV with an apostrophe</td>
+                  <td>(<span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-ta'u-</em></span>)</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>CCV</td>
+                  <td>(<span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-zba-</em></span>)</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td>CVV with no apostrophe</td>
+                  <td>(<span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">-sai-</em></span>)</td>
+                  <td>8</td>
+                </tr>
+              </table>
+            </div>
+            <p>
+          </p>
+          </li>
+          <li class="listitem">
+            <p>Count the number of vowels, not including 
+          <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo">y</em></span>; call it 
+          <code class="varname">V</code>.</p>
+          </li>
+        </ol>
+      </div>
+      <p><a id="idm47148575342064" class="indexterm"></a><a id="idm47148575341056" class="indexterm"></a> The score is then:
+    </p>
+      <div class="informalequation">
+        <span class="mathphrase">(1000 * L) - (500 * A) + (100 * H) - (10 * R) - V</span>
+      </div>
+      <p><a id="idm47148575339088" class="indexterm"></a> In case of ties, there is no preference. This should be rare. Note that the algorithm essentially encodes a hierarchy of priorities: short words are preferred (counting apostrophes as half a letter), then words with fewer hyphens, words with more pleasing rafsi (this judgment is subjective), and finally words with more vowels are chosen. Each decision principle is applied in turn if the ones before it have failed to choose; it is possible that a lower-ranked principle might dominate a higher-ranked one if it is ten times better than the alternative.</p>
+      <p><a id="idm47148575336944" class="indexterm"></a> Here are some lujvo with their scores (not necessarily the lowest scoring forms for these lujvo, nor even necessarily sensible lujvo):</p>
+      <div class="example">
+        <a id="example-random-id-qJKu"></a>
+        <p class="title">
+          <strong>Example 4.71. 
+        <a id="c4e12d1"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="lujvo-making">
+              <colgroup></colgroup>
+              <tr>
+                <td>
+                  <p class="jbo">zbasai</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                    <em xml:lang="jbo" class="foreignphrase" lang="jbo">zba + sai</em>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="lujvo-score">
+                    <span class="mathphrase">(1000 * 6) - (500 * 0) + (100 * 0) - (10 * 15) - 3 = 5847</span>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qjLd"></a>
+        <p class="title">
+          <strong>Example 4.72. 
+        <a id="c4e12d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="lujvo-making">
+              <colgroup></colgroup>
+              <tr>
+                <td>
+                  <p class="jbo">nunynau</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                    <em xml:lang="jbo" class="foreignphrase" lang="jbo">nun + y + nau</em>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="lujvo-score">
+                    <span class="mathphrase">(1000 * 7) - (500 * 0) + (100 * 1) - (10 * 13) - 3 = 6967</span>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qJLQ"></a>
+        <p class="title">
+          <strong>Example 4.73. 
+        <a id="c4e12d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="lujvo-making">
+              <colgroup></colgroup>
+              <tr>
+                <td>
+                  <p class="jbo">sairzbata'u</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                    <em xml:lang="jbo" class="foreignphrase" lang="jbo">sai + r + zba + ta'u</em>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="lujvo-score">
+                    <span class="mathphrase">(1000 * 11) - (500 * 1) + (100 * 1) - (10 * 21) - 5 = 10385</span>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qJmn"></a>
+        <p class="title">
+          <strong>Example 4.74. 
+        <a id="c4e12d4"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="lujvo-making">
+              <colgroup></colgroup>
+              <tr>
+                <td>
+                  <p class="jbo">zbazbasysarji</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span xml:lang="jbo" class="foreignphrase" lang="jbo">
+                    <em xml:lang="jbo" class="foreignphrase" lang="jbo">zba + zbas + y + sarji</em>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="lujvo-score">
+                    <span class="mathphrase">(1000 * 13) - (500 * 0) + (100 * 1) - (10 * 12) - 4 = 12976</span>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 4. The Shape Of Words To Come: Lojban Morphology</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-lujvo-making.html">Prev: Section 4.11</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-lujvo-making-examples.html">Next: Section 4.13</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

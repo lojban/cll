@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>16.2. Existential claims, prenexes, and variables</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-quantifiers.html" title="Chapter 16. “Who Did You Pass On The Road? Nobody”: Lojban And Logic" />
+    <link rel="prev" href="chapter-quantifiers.html" title="Chapter 16. “Who Did You Pass On The Road? Nobody”: Lojban And Logic" />
+    <link rel="next" href="section-universal-claims.html" title="16.3. Universal claims" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="chapter-quantifiers.html">Prev: Chapter 16</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-universal-claims.html">Next: Section 16.3</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-da-and-zohu"></a>16.2. <a id="c16s2"></a>Existential claims, prenexes, and variables</h2>
+          </div>
+        </div>
+      </div>
+      <p>Let us consider, to begin with, a sentence that is not in the dialogue:</p>
+      <div class="example">
+        <a id="example-random-id-Mxj3"></a>
+        <p class="title">
+          <strong>Example 16.7. 
+        <a id="c16e2d1"></a>
+        <a id="idm47148544034368" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <p>Something sees me.</p>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">There are two plausible Lojban translations of 
+    <a class="xref" href="section-da-and-zohu.html#example-random-id-Mxj3" title="Example 16.7. ">Example 16.7</a>. The simpler one is:</p>
+      <div class="example">
+        <a id="example-random-id-b9pV"></a>
+        <p class="title">
+          <strong>Example 16.8. 
+        <a id="c16e2d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>[zo'e]</td>
+                <td>viska</td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>Something-unspecified</td>
+                <td>sees</td>
+                <td>me.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148544024720" class="indexterm"></a><a id="idm47148544023568" class="indexterm"></a> The cmavo 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148544022000" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-zohe"><em class="glossterm">zo'e</em></a></em></span> indicates that a sumti has been omitted (indeed, even 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148544019520" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-zohe"><em class="glossterm">zo'e</em></a></em></span> itself can be omitted in this case, as explained in 
+    <a class="xref" href="section-zohe-cohe-series.html" title="7.7. Indefinite pro-sumti and pro-bridi: the zo'e-series and the co'e-series">Section 7.7</a>) and the listener must fill in the correct value from context. In other words, 
+    <a class="xref" href="section-da-and-zohu.html#example-random-id-b9pV" title="Example 16.8. ">Example 16.8</a> means 
+    <span class="quote">“<span class="quote"><span class="quote">‘<span class="quote">You-know-what</span>’</span> sees me.</span>”</span></p>
+      <p>However, 
+    <a class="xref" href="section-da-and-zohu.html#example-random-id-Mxj3" title="Example 16.7. ">Example 16.7</a> is just as likely to assert simply that there is someone who sees me, in which case a correct translation is:</p>
+      <div class="example">
+        <a id="example-random-id-jjLd"></a>
+        <p class="title">
+          <strong>Example 16.9. 
+        <a id="c16e2d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>da</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>viska</td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>There-is-an-X</td>
+                <td>such-that</td>
+                <td>X</td>
+                <td>sees</td>
+                <td>me.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148544007024" class="indexterm"></a><a id="idm47148544006016" class="indexterm"></a><a id="idm47148544004704" class="indexterm"></a><a id="idm47148544003696" class="indexterm"></a><a class="xref" href="section-da-and-zohu.html#example-random-id-jjLd" title="Example 16.9. ">Example 16.9</a> does not presuppose that the listener knows who sees the speaker, but simply tells the listener that there is someone who sees the speaker. Statements of this kind are called 
+    <span class="quote">“<span class="quote">existential claims</span>”</span>. (Formally, the one doing the seeing is not restricted to being a person; it could be an animal or – in principle – an inanimate object. We will see in 
+    
+    
+    <a class="xref" href="section-restricted-claims.html" title="16.4. Restricted claims: da poi">Section 16.4</a> how to represent such restrictions.)</p>
+      <p><a id="idm47148544000144" class="indexterm"></a><a id="idm47148543999056" class="indexterm"></a><a id="idm47148543998896" class="indexterm"></a><a id="idm47148543996608" class="indexterm"></a><a class="xref" href="section-da-and-zohu.html#example-random-id-jjLd" title="Example 16.9. ">Example 16.9</a> has a two-part structure: there is the part 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543994080" class="indexterm"></a>da zo'u</em></span>, called the prenex, and the part 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543992096" class="indexterm"></a>da viska mi</em></span>, the main bridi. Almost any Lojban bridi can be preceded by a prenex, which syntactically is any number of sumti followed by the cmavo 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543990336" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-zohu"><em class="glossterm">zo'u</em></a></em></span> (of selma'o ZOhU). For the moment, the sumti will consist of one or more of the cmavo 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543987840" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-da"><em class="glossterm">da</em></a></em></span>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543985600" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-de"><em class="glossterm">de</em></a></em></span>, and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543983152" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-di"><em class="glossterm">di</em></a></em></span> (of selma'o KOhA), glossed in the literal translations as 
+    <span class="quote">“<span class="quote">X</span>”</span>, 
+    <span class="quote">“<span class="quote">Y</span>”</span>, and 
+    <span class="quote">“<span class="quote">Z</span>”</span> respectively. By analogy to the terminology of symbolic logic, these cmavo are called 
+    <span class="quote">“<span class="quote">variables</span>”</span>.</p>
+      <p>Here is an example of a prenex with two variables:</p>
+      <div class="example">
+        <a id="example-random-id-t4qI"></a>
+        <p class="title">
+          <strong>Example 16.10. 
+        <a id="c16e2d4"></a>
+        <a id="idm47148543976976" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>da</td>
+                <td>de</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>There-is-an-X</td>
+                <td>there-is-a-Y</td>
+                <td>such</td>
+                <td>that</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Somebody loves somebody.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148543966528" class="indexterm"></a><a id="idm47148543965280" class="indexterm"></a> In 
+    <a class="xref" href="section-da-and-zohu.html#example-random-id-t4qI" title="Example 16.10. ">Example 16.10</a>, the literal interpretation of the two variables 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543963520" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-da"><em class="glossterm">da</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543961136" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-de"><em class="glossterm">de</em></a></em></span> as 
+    <span class="quote">“<span class="quote">there-is-an-X</span>”</span> and 
+    <span class="quote">“<span class="quote">there-is-a-Y</span>”</span> tells us that there are two things which stand in the relationship that one loves the other. It might be the case that the supposed two things are really just a single thing that loves itself; nothing in the Lojban version of 
+    <a class="xref" href="section-da-and-zohu.html#example-random-id-t4qI" title="Example 16.10. ">Example 16.10</a> rules out that interpretation, which is why the colloquial translation does not say 
+    <span class="quote">“<span class="quote">Somebody loves somebody else.</span>”</span> The things referred to by different variables may be different or the same. (We use 
+    <span class="quote">“<span class="quote">somebody</span>”</span> here rather than 
+    <span class="quote">“<span class="quote">something</span>”</span> for naturalness; lovers and beloveds are usually persons, though the Lojban does not say so.)</p>
+      <p><a id="idm47148543955872" class="indexterm"></a> It is perfectly all right for the variables to appear more than once in the main bridi:</p>
+      <div class="example">
+        <a id="example-random-id-wBYE"></a>
+        <p class="title">
+          <strong>Example 16.11. 
+        <a id="c16e2d5"></a>
+        <a id="idm47148543952464" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>da</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>da</td>
+              </tr>
+              <tr class="gloss">
+                <td>There-is-an-X</td>
+                <td>such-that</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>X</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Somebody loves himself/herself.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148543942960" class="indexterm"></a><a id="idm47148543941952" class="indexterm"></a> What 
+    <a class="xref" href="section-da-and-zohu.html#example-random-id-wBYE" title="Example 16.11. ">Example 16.11</a> claims is fundamentally different from what 
+    <a class="xref" href="section-da-and-zohu.html#example-random-id-t4qI" title="Example 16.10. ">Example 16.10</a> claims, because 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543939248" class="indexterm"></a>da prami da</em></span> is not structurally the same as 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543937024" class="indexterm"></a>da prami de</em></span>. However,</p>
+      <div class="example">
+        <a id="example-random-id-3QV5"></a>
+        <p class="title">
+          <strong>Example 16.12. 
+        <a id="c16e2d6"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>de</td>
+                <td>zo'u</td>
+                <td>de</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>There-is-a-Y</td>
+                <td>such-that</td>
+                <td>Y</td>
+                <td>loves</td>
+                <td>Y</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"><a id="idm47148543927872" class="indexterm"></a> means exactly the same thing as 
+    <a class="xref" href="section-da-and-zohu.html#example-random-id-wBYE" title="Example 16.11. ">Example 16.11</a>; it does not matter which variable is used as long as they are used consistently.</p>
+      <p>It is not necessary for a variable to be a sumti of the main bridi directly:</p>
+      <div class="example">
+        <a id="example-random-id-ArXX"></a>
+        <p class="title">
+          <strong>Example 16.13. 
+        <a id="c16e2d7"></a>
+        <a id="idm47148543923872" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>da</td>
+                <td>zo'u</td>
+                <td>le</td>
+                <td>da</td>
+                <td>gerku</td>
+                <td>cu</td>
+                <td>viska</td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>There-is-an-X</td>
+                <td>such-that</td>
+                <td>the</td>
+                <td>of-X</td>
+                <td>dog</td>
+                <td></td>
+                <td>sees</td>
+                <td>me</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Somebody's dog sees me</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"> 
+
+
+ is perfectly correct even though the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543912192" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-da"><em class="glossterm">da</em></a></em></span> is used only in a possessive construction. (Possessives are explained in 
+    <a class="xref" href="section-possessive-sumti.html" title="8.7. Possessive sumti">Section 8.7</a>.)</p>
+      <p><a id="idm47148543909440" class="indexterm"></a> It is very peculiar, however, even if technically grammatical, for the variable not to appear in the main bridi at all:</p>
+      <div class="example">
+        <a id="example-random-id-mE4m"></a>
+        <p class="title">
+          <strong>Example 16.14. 
+        <a id="c16e2d8"></a>
+        <a id="idm47148543906256" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>da</td>
+                <td>zo'u</td>
+                <td>la</td>
+                <td>ralf.</td>
+                <td>gerku</td>
+              </tr>
+              <tr class="gloss">
+                <td>There-is-an-X</td>
+                <td>such-that</td>
+                <td>that-named</td>
+                <td>Ralph</td>
+                <td>is-a-dog</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">There is something such that Ralph is a dog.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"> 
+
+
+ has a variable bound in a prenex whose relevance to the claim of the following bridi is completely unspecified.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="chapter-quantifiers.html">Prev: Chapter 16</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-universal-claims.html">Next: Section 16.3</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

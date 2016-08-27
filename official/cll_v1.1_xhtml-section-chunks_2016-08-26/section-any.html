@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>16.8. The problem of “any”</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-quantifiers.html" title="Chapter 16. “Who Did You Pass On The Road? Nobody”: Lojban And Logic" />
+    <link rel="prev" href="section-quantifier-grouping.html" title="16.7. Grouping of quantifiers" />
+    <link rel="next" href="section-negation-boundaries.html" title="16.9. Negation boundaries" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-quantifier-grouping.html">Prev: Section 16.7</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-negation-boundaries.html">Next: Section 16.9</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-any"></a>16.8. <a id="c16s8"></a>The problem of <span class="quote">“<span class="quote">any</span>”</span></h2>
+          </div>
+        </div>
+      </div>
+      <p>Consider the English sentence
+      <a id="idm47148543271584" class="indexterm"></a> 
+  </p>
+      <div class="example">
+        <a id="example-random-id-R4mX"></a>
+        <p class="title">
+          <strong>Example 16.47. 
+        <a id="c16e8d1"></a>
+        <a id="idm47148543267840" class="indexterm"></a> 
+      </strong>
+        </p>
+        <div class="example-contents">
+          <p>Anyone who goes to the store, walks across the field.</p>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Using the facilities already discussed, a plausible translation might be</p>
+      <div class="example">
+        <a id="example-random-id-7Kn8"></a>
+        <p class="title">
+          <strong>Example 16.48. 
+        <a id="c16e8d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ro</td>
+                <td>da</td>
+                <td>poi</td>
+                <td>klama</td>
+                <td>le</td>
+                <td>zarci</td>
+                <td>cu</td>
+                <td>cadzu</td>
+                <td>le</td>
+                <td>foldi</td>
+              </tr>
+              <tr class="gloss">
+                <td>All</td>
+                <td>X</td>
+                <td>such-that-it</td>
+                <td>goes-to</td>
+                <td>the</td>
+                <td>store</td>
+                <td></td>
+                <td>walks-on</td>
+                <td>the</td>
+                <td>field.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Everyone who goes to the store walks across the field.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148543251696" class="indexterm"></a><a id="idm47148543250448" class="indexterm"></a><a id="idm47148543249216" class="indexterm"></a> But there is a subtle difference between 
+    <a class="xref" href="section-any.html#example-random-id-R4mX" title="Example 16.47. ">Example 16.47</a> and 
+    <a class="xref" href="section-any.html#example-random-id-7Kn8" title="Example 16.48. ">Example 16.48</a>. 
+    <a class="xref" href="section-any.html#example-random-id-7Kn8" title="Example 16.48. ">Example 16.48</a> tells us that, in fact, there are people who go to the store, and that they walk across the field. A sumti of the type 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543245664" class="indexterm"></a>ro da poi klama</em></span> requires that there are things which 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543243872" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-klama"><em class="glossterm">klama</em></a></em></span>: Lojban universal claims always imply the corresponding existential claims as well. 
+    
+    
+    
+    <a class="xref" href="section-any.html#example-random-id-R4mX" title="Example 16.47. ">Example 16.47</a>, on the other hand, does not require that there are any people who go to the store: it simply states, conditionally, that if there is anyone who goes to the store, he or she walks across the field as well. This conditional form mirrors the true Lojban translation of 
+    
+    
+    <a class="xref" href="section-any.html#example-random-id-R4mX" title="Example 16.47. ">Example 16.47</a>:</p>
+      <div class="example">
+        <a id="example-random-id-BwU7"></a>
+        <p class="title">
+          <strong>Example 16.49. 
+        <a id="c16e8d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ro</td>
+                <td>da</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>go</td>
+                <td>klama</td>
+                <td>le</td>
+                <td>zarci</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-every</td>
+                <td>X</td>
+                <td>:</td>
+                <td>X</td>
+                <td>if-and-only-if</td>
+                <td>it-is-a-goer-to</td>
+                <td>the</td>
+                <td>store</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>gi</td>
+                <td>cadzu</td>
+                <td>le</td>
+                <td>foldi</td>
+              </tr>
+              <tr class="gloss">
+                <td></td>
+                <td>is-a-walker-on</td>
+                <td>the</td>
+                <td>field.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148543226688" class="indexterm"></a> Although 
+    <a class="xref" href="section-any.html#example-random-id-BwU7" title="Example 16.49. ">Example 16.49</a> is a universal claim as well, its universality only implies that there are objects of some sort or another in the universe of discourse. Because the claim is conditional, nothing is implied about the existence of goers-to-the-store or of walkers-on-the-field, merely that any entity which is one is also the other.</p>
+      <p><a id="idm47148543223904" class="indexterm"></a> There is another use of 
+    <span class="quote">“<span class="quote">any</span>”</span> in English that is not universal but existential. Consider</p>
+      <div class="example">
+        <a id="example-random-id-7Eu9"></a>
+        <p class="title">
+          <strong>Example 16.50. 
+        <a id="c16e8d4"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <p>I need any box that is bigger than this one.</p>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148543219392" class="indexterm"></a><a id="idm47148543218400" class="indexterm"></a><a class="xref" href="section-any.html#example-random-id-7Eu9" title="Example 16.50. ">Example 16.50</a> does not at all mean that I need every box bigger than this one, for indeed I do not; I require only one box. But the naive translation</p>
+      <div class="example">
+        <a id="example-random-id-KHya"></a>
+        <p class="title">
+          <strong>Example 16.51. 
+        <a id="c16e8d5"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>mi</td>
+                <td>nitcu</td>
+                <td>da</td>
+                <td>poi</td>
+                <td>tanxe</td>
+                <td>gi'e</td>
+                <td>bramau</td>
+                <td>ti</td>
+              </tr>
+              <tr class="gloss">
+                <td>I</td>
+                <td>need</td>
+                <td>some-X</td>
+                <td>which</td>
+                <td>is-a-box</td>
+                <td>and</td>
+                <td>is-bigger-than</td>
+                <td>this-one</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">does not work either, because it asserts that there really is such a box, as the prenex paraphrase demonstrates:</p>
+      <div class="example">
+        <a id="example-random-id-fAo5"></a>
+        <p class="title">
+          <strong>Example 16.52. 
+        <a id="c16e8d6"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>da</td>
+                <td>poi</td>
+                <td>tanxe</td>
+                <td>gi'e</td>
+                <td>bramau</td>
+                <td>ti</td>
+                <td>zo'u</td>
+                <td>mi</td>
+                <td>nitcu</td>
+                <td>da</td>
+              </tr>
+              <tr class="gloss">
+                <td>There-is-an-X</td>
+                <td>which</td>
+                <td>is-a-box</td>
+                <td>and</td>
+                <td>is-bigger-than</td>
+                <td>this</td>
+                <td>:</td>
+                <td>I</td>
+                <td>need</td>
+                <td>X.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">What to do? Well, the x2 place of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543196336" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nitcu"><em class="glossterm">nitcu</em></a></em></span> can be filled with an event as well as an object, and in fact 
+    <a class="xref" href="section-any.html#example-random-id-KHya" title="Example 16.51. ">Example 16.51</a> can also be paraphrased as:</p>
+      <div class="example">
+        <a id="example-random-id-e7ta"></a>
+        <p class="title">
+          <strong>Example 16.53. 
+        <a id="c16e8d7"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>mi</td>
+                <td>nitcu</td>
+                <td>lo</td>
+                <td>nu</td>
+                <td>mi</td>
+                <td>ponse</td>
+                <td>lo</td>
+                <td>tanxe</td>
+              </tr>
+              <tr class="gloss">
+                <td>I</td>
+                <td>need</td>
+                <td>an</td>
+                <td>event-of</td>
+                <td>I</td>
+                <td>possess</td>
+                <td>some</td>
+                <td>box(es)</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>poi</td>
+                <td>bramau</td>
+                <td>ti</td>
+              </tr>
+              <tr class="gloss">
+                <td>which-are</td>
+                <td>bigger-than</td>
+                <td>this-one.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Rewritten using variables, 
+    <a class="xref" href="section-any.html#example-random-id-e7ta" title="Example 16.53. ">Example 16.53</a> becomes</p>
+      <div class="example">
+        <a id="example-random-id-4Pz8"></a>
+        <p class="title">
+          <strong>Example 16.54. 
+        <a id="c16e8d8"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>mi</td>
+                <td>nitcu</td>
+                <td>lo</td>
+                <td>nu</td>
+                <td>da</td>
+                <td>zo'u</td>
+              </tr>
+              <tr class="gloss">
+                <td>I</td>
+                <td>need</td>
+                <td>an</td>
+                <td>event-of</td>
+                <td>there-being-an-X</td>
+                <td>such-that:</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>da</td>
+                <td>se</td>
+                <td>ponse</td>
+                <td>mi</td>
+              </tr>
+              <tr class="gloss">
+                <td>X</td>
+                <td></td>
+                <td>is-possessed-by</td>
+                <td>me</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>gi'e</td>
+                <td>tanxe</td>
+                <td>gi'e</td>
+                <td>bramau</td>
+                <td>ti</td>
+              </tr>
+              <tr class="gloss">
+                <td>and</td>
+                <td>is-a-box</td>
+                <td>and</td>
+                <td>is-bigger-than</td>
+                <td>this-thing.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148543161872" class="indexterm"></a><a id="idm47148543160720" class="indexterm"></a><a id="idm47148543159408" class="indexterm"></a> So we see that a prenex can be attached to a bridi that is within a sentence. By default, a variable always behaves as if it is bound in the prenex which (notionally) is attached to the smallest enclosing bridi, and its scope does not extend beyond that bridi. However, the variable may be placed in an outer prenex explicitly:</p>
+      <div class="example">
+        <a id="example-random-id-7KKM"></a>
+        <p class="title">
+          <strong>Example 16.55. 
+        <a id="c16e8d9"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>da</td>
+                <td>poi</td>
+                <td>tanxe</td>
+                <td>gi'e</td>
+                <td>bramau</td>
+                <td>ti</td>
+                <td>zo'u</td>
+              </tr>
+              <tr class="gloss">
+                <td>There-is-an-X</td>
+                <td>which</td>
+                <td>is-a-box</td>
+                <td>and</td>
+                <td>is-bigger-than</td>
+                <td>this-one</td>
+                <td>such-that:</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>mi</td>
+                <td>nitcu</td>
+                <td>le</td>
+                <td>nu</td>
+                <td>mi</td>
+                <td>ponse</td>
+                <td>da</td>
+              </tr>
+              <tr class="gloss">
+                <td>I</td>
+                <td>need</td>
+                <td>the</td>
+                <td>event-of</td>
+                <td>my</td>
+                <td>possessing</td>
+                <td>X.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148543142608" class="indexterm"></a><a id="idm47148543141296" class="indexterm"></a> But what are the implications of 
+    <a class="xref" href="section-any.html#example-random-id-e7ta" title="Example 16.53. ">Example 16.53</a> and 
+    <a class="xref" href="section-any.html#example-random-id-7KKM" title="Example 16.55. ">Example 16.55</a>? The main difference is that in 
+    <a class="xref" href="section-any.html#example-random-id-7KKM" title="Example 16.55. ">Example 16.55</a>, the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543138048" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-da"><em class="glossterm">da</em></a></em></span> is said to exist in the real world of the outer bridi; but in 
+    
+    <a class="xref" href="section-any.html#example-random-id-e7ta" title="Example 16.53. ">Example 16.53</a>, the existence is only within the inner bridi, which is a mere event that need not necessarily come to pass. So 
+    <a class="xref" href="section-any.html#example-random-id-7KKM" title="Example 16.55. ">Example 16.55</a> means</p>
+      <div class="example">
+        <a id="example-random-id-xC32"></a>
+        <p class="title">
+          <strong>Example 16.56. 
+        <a id="c16e8d10"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <p>There's a box, bigger than this one, that I need</p>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"><a id="idm47148543131712" class="indexterm"></a> which is what 
+    <a class="xref" href="section-any.html#example-random-id-fAo5" title="Example 16.52. ">Example 16.52</a> says, whereas 
+    <a class="xref" href="section-any.html#example-random-id-e7ta" title="Example 16.53. ">Example 16.53</a> turns out to be an effective translation of our original 
+    <a class="xref" href="section-any.html#example-random-id-R4mX" title="Example 16.47. ">Example 16.47</a>. So uses of 
+    <span class="quote">“<span class="quote">any</span>”</span> that aren't universal end up being reflected by variables bound in the prenex of a subordinate bridi.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-quantifier-grouping.html">Prev: Section 16.7</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-negation-boundaries.html">Next: Section 16.9</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

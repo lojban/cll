@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>16.12. Logical Connectives and DeMorgan's Law</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-quantifiers.html" title="Chapter 16. “Who Did You Pass On The Road? Nobody”: Lojban And Logic" />
+    <link rel="prev" href="section-na-outside-prenex.html" title="16.11. Using naku outside a prenex" />
+    <link rel="next" href="section-selbri-variables.html" title="16.13. selbri variables" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-na-outside-prenex.html">Prev: Section 16.11</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-selbri-variables.html">Next: Section 16.13</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-demorgans-law"></a>16.12. <a id="c16s12"></a>Logical Connectives and DeMorgan's Law</h2>
+          </div>
+        </div>
+      </div>
+      <p><a id="idm47148542410224" class="indexterm"></a><a id="idm47148542409200" class="indexterm"></a> DeMorgan's Law states that when a logical connective between terms falls within a negation, then expanding the negation requires a change in the connective. Thus (where 
+    <span class="quote">“<span class="quote">p</span>”</span> and 
+    <span class="quote">“<span class="quote">q</span>”</span> stand for terms or sentences) 
+    <span class="quote">“<span class="quote">not (p or q)</span>”</span> is identical to 
+    <span class="quote">“<span class="quote">not p and not q</span>”</span>, and 
+    <span class="quote">“<span class="quote">not (p and q)</span>”</span> is identical to 
+    <span class="quote">“<span class="quote">not p or not q</span>”</span>. The corresponding changes for the other two basic Lojban connectives are: 
+    <span class="quote">“<span class="quote">not (p equivalent to q)</span>”</span> is identical to 
+    <span class="quote">“<span class="quote">not p exclusive-or not q</span>”</span>, and 
+    <span class="quote">“<span class="quote">not (p whether-or-not q)</span>”</span> is identical to both 
+    <span class="quote">“<span class="quote">not p whether-or-not q</span>”</span> and 
+    <span class="quote">“<span class="quote">not p whether-or-not not q</span>”</span>. In any Lojban sentence having one of the basic connectives, you can substitute in either direction from these identities. (These basic connectives are explained in 
+    <a class="xref" href="chapter-connectives.html" title="Chapter 14. If Wishes Were Horses: The Lojban Connective System">Chapter 14</a>.)</p>
+      <p>The effects of DeMorgan's Law on the logical connectives made by modifying the basic connectives with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542401632" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nai"><em class="glossterm">nai</em></a></em></span>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542399280" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542396864" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-se"><em class="glossterm">se</em></a></em></span> can be derived directly from these rules; modify the basic connective for DeMorgan's Law by substituting from the above identities, and then, apply each 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542394096" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nai"><em class="glossterm">nai</em></a></em></span>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542391904" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542389488" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-se"><em class="glossterm">se</em></a></em></span> modifier of the original connectives. Cancel any double negatives that result.</p>
+      <p><a id="idm47148542387040" class="indexterm"></a><a id="idm47148542385856" class="indexterm"></a><a id="idm47148542384640" class="indexterm"></a> When do we apply DeMorgan's Law? Whenever we wish to 
+    <span class="quote">“<span class="quote">distribute</span>”</span> a negation over a logical connective; and, for internal 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542382720" class="indexterm"></a>naku</em></span> negation, whenever a logical connective moves in to, or out of, the scope of a negation – when it crosses a negation boundary.</p>
+      <p><a id="idm47148542380688" class="indexterm"></a> Let us apply DeMorgan's Law to some sample sentences. These sentences make use of forethought logical connectives, which are explained in 
+    
+    <a class="xref" href="section-forethought-bridi-connection.html" title="14.5. Forethought bridi connection">Section 14.5</a>. It suffices to know that 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542378480" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ga"><em class="glossterm">ga</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542375952" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-gi"><em class="glossterm">gi</em></a></em></span>, used before each of a pair of sumti or bridi, mean 
+    <span class="quote">“<span class="quote">either</span>”</span> and 
+    <span class="quote">“<span class="quote">or</span>”</span> respectively, and that 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542372832" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ge"><em class="glossterm">ge</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542370432" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-gi"><em class="glossterm">gi</em></a></em></span> used similarly mean 
+    <span class="quote">“<span class="quote">both</span>”</span> and 
+    <span class="quote">“<span class="quote">and</span>”</span>. Furthermore, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542367232" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ga"><em class="glossterm">ga</em></a></em></span>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542364736" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ge"><em class="glossterm">ge</em></a></em></span>, and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542362336" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-gi"><em class="glossterm">gi</em></a></em></span> can all be suffixed with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542360032" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nai"><em class="glossterm">nai</em></a></em></span> to negate the bridi or sumti that follows.</p>
+      <p><a id="idm47148542357824" class="indexterm"></a><a id="idm47148542356560" class="indexterm"></a><a id="idm47148542355552" class="indexterm"></a><a id="idm47148542354384" class="indexterm"></a> We have defined 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542352784" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542350064" class="indexterm"></a>naku zo'u</em></span> as, respectively, internal and external bridi negation. These forms being identical, the negation boundary always remains at the left end of the prenex. Thus, exporting or importing negation between external and internal bridi negation forms never requires DeMorgan's Law to be applied. 
+    
+    
+    
+    <a class="xref" href="section-demorgans-law.html#example-random-id-qHPi" title="Example 16.94. ">Example 16.94</a> and 
+    <a class="xref" href="section-demorgans-law.html#example-random-id-qHPI" title="Example 16.95. ">Example 16.95</a> are exactly equivalent:</p>
+      <div class="example">
+        <a id="example-random-id-qHPi"></a>
+        <p class="title">
+          <strong>Example 16.94. 
+        <a id="c16e12d1"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>la</td>
+                <td>djan.</td>
+                <td>na</td>
+                <td>klama</td>
+                <td>ga</td>
+              </tr>
+              <tr class="gloss">
+                <td>that-named</td>
+                <td>John</td>
+                <td>[false]</td>
+                <td>goes-to</td>
+                <td>either</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>la</td>
+                <td>paris.</td>
+                <td>gi</td>
+                <td>la</td>
+                <td>rom.</td>
+              </tr>
+              <tr class="gloss">
+                <td>that-named</td>
+                <td>Paris</td>
+                <td>or</td>
+                <td>that-named</td>
+                <td>Rome.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qHPI"></a>
+        <p class="title">
+          <strong>Example 16.95. 
+        <a id="c16e12d2"></a>
+        <a id="idm47148542333152" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>zo'u</td>
+                <td>la</td>
+                <td>djan.</td>
+                <td>klama</td>
+              </tr>
+              <tr class="gloss">
+                <td>It-is-false</td>
+                <td>that:</td>
+                <td>that-named</td>
+                <td>John</td>
+                <td>goes-to</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ga</td>
+                <td>la</td>
+                <td>paris.</td>
+                <td>gi</td>
+                <td>la</td>
+                <td>rom.</td>
+              </tr>
+              <tr class="gloss">
+                <td>either</td>
+                <td>that-named</td>
+                <td>Paris</td>
+                <td>or</td>
+                <td>that-named</td>
+                <td>Rome.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148542320528" class="indexterm"></a><a id="idm47148542319408" class="indexterm"></a><a id="idm47148542318400" class="indexterm"></a> It is not an acceptable logical manipulation to move a negator from the bridi level to one or more sumti. However, 
+    <a class="xref" href="section-demorgans-law.html#example-random-id-qHPi" title="Example 16.94. ">Example 16.94</a> and related examples are not sumti negations, but rather expand to form two logically connected sentences. In such a situation, DeMorgan's Law must be applied. For instance, 
+    
+    <a class="xref" href="section-demorgans-law.html#example-random-id-qHPI" title="Example 16.95. ">Example 16.95</a> expands to:</p>
+      <div class="example">
+        <a id="example-random-id-KMct"></a>
+        <p class="title">
+          <strong>Example 16.96. 
+        <a id="c16e12d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td></td>
+                <td>ge</td>
+                <td>la</td>
+                <td>djan.</td>
+                <td>la</td>
+                <td>paris.</td>
+                <td>na</td>
+                <td>klama</td>
+              </tr>
+              <tr class="gloss">
+                <td>[It-is-true-that]</td>
+                <td>both</td>
+                <td>that-named</td>
+                <td>John,</td>
+                <td>to-that-named</td>
+                <td>Paris,</td>
+                <td>[false]</td>
+                <td>goes,</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>gi</td>
+                <td>la</td>
+                <td>djan.</td>
+                <td>la</td>
+                <td>rom.</td>
+                <td>na</td>
+                <td>klama</td>
+              </tr>
+              <tr class="gloss">
+                <td>and</td>
+                <td>that-named</td>
+                <td>John,</td>
+                <td>to-that-named</td>
+                <td>Rome,</td>
+                <td>[false]</td>
+                <td>goes.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">The 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542299344" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ga"><em class="glossterm">ga</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542296960" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-gi"><em class="glossterm">gi</em></a></em></span>, meaning 
+    <span class="quote">“<span class="quote">either-or</span>”</span>, have become 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542294064" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ge"><em class="glossterm">ge</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542291696" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-gi"><em class="glossterm">gi</em></a></em></span>, meaning 
+    <span class="quote">“<span class="quote">both-and</span>”</span>, as a consequence of moving the negators into the individual bridi.</p>
+      <p><a id="idm47148542289056" class="indexterm"></a><a id="idm47148542287872" class="indexterm"></a> Here is another example of DeMorgan's Law in action, involving bridi-tail logical connection (explained in 
+    
+    <a class="xref" href="section-compound-bridi.html" title="14.9. Compound bridi">Section 14.9</a>):</p>
+      <div class="example">
+        <a id="example-random-id-qHpR"></a>
+        <p class="title">
+          <strong>Example 16.97. 
+        <a id="c16e12d4"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>la</td>
+                <td>djein.</td>
+                <td>le</td>
+                <td>zarci</td>
+                <td>na</td>
+                <td>ge</td>
+                <td>dzukla</td>
+                <td>gi</td>
+                <td>bajrykla</td>
+              </tr>
+              <tr class="gloss">
+                <td>that-named</td>
+                <td>Jane</td>
+                <td>to-the</td>
+                <td>market</td>
+                <td>[false]</td>
+                <td>both</td>
+                <td>walks</td>
+                <td>and</td>
+                <td>runs.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qHQ2"></a>
+        <p class="title">
+          <strong>Example 16.98. 
+        <a id="c16e12d5"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>la</td>
+                <td>djein.</td>
+                <td>le</td>
+                <td>zarci</td>
+                <td>ganai</td>
+                <td>dzukla</td>
+                <td>ginai</td>
+                <td>bajrykla</td>
+              </tr>
+              <tr class="gloss">
+                <td>that-named</td>
+                <td>Jane</td>
+                <td>to-the</td>
+                <td>market</td>
+                <td>either-([false]</td>
+                <td>walks)</td>
+                <td>or-([false]</td>
+                <td>runs.</td>
+              </tr>
+              <tr class="gloss">
+                <td>that-named</td>
+                <td>Jane</td>
+                <td>to-the</td>
+                <td>market</td>
+                <td>if</td>
+                <td>walks</td>
+                <td>then-([false]</td>
+                <td>runs).</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">(Placing 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542263376" class="indexterm"></a>le zarci</em></span> before the selbri makes sure that it is properly associated with both parts of the logical connection. Otherwise, it is easy to erroneously leave it off one of the two sentences.)</p>
+      <p><a id="idm47148542261360" class="indexterm"></a> It is wise, before freely doing transformations such as the one from 
+    <a class="xref" href="section-demorgans-law.html#example-random-id-qHpR" title="Example 16.97. ">Example 16.97</a> to 
+    <a class="xref" href="section-demorgans-law.html#example-random-id-qHQ2" title="Example 16.98. ">Example 16.98</a>, that you become familiar with expanding logical connectives to separate sentences, transforming the sentences, and then recondensing. Thus, you would prove the transformation correct by the following steps. By moving its 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542258400" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span> to the beginning of the prenex as a 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542255632" class="indexterm"></a>naku</em></span>, 
+    <a class="xref" href="section-demorgans-law.html#example-random-id-qHpR" title="Example 16.97. ">Example 16.97</a> becomes:</p>
+      <div class="example">
+        <a id="example-random-id-g5PI"></a>
+        <p class="title">
+          <strong>Example 16.99. 
+        <a id="c16e12d6"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>zo'u</td>
+                <td>la</td>
+                <td>djein.</td>
+                <td>le</td>
+                <td>zarci</td>
+              </tr>
+              <tr class="gloss">
+                <td>It-is-false-that</td>
+                <td>:</td>
+                <td>that-named</td>
+                <td>Jane</td>
+                <td>to-the</td>
+                <td>market</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ge</td>
+                <td>dzukla</td>
+                <td>gi</td>
+                <td>bajrykla</td>
+              </tr>
+              <tr class="gloss">
+                <td>(both</td>
+                <td>walks</td>
+                <td>and</td>
+                <td>runs).</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">And by dividing the bridi with logically connected selbri into two bridi,</p>
+      <div class="example">
+        <a id="example-random-id-axCE"></a>
+        <p class="title">
+          <strong>Example 16.100. 
+        <a id="c16e12d7"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>zo'u</td>
+                <td>ge</td>
+                <td>la</td>
+                <td>djein.</td>
+                <td>le</td>
+                <td>zarci</td>
+                <td>cu</td>
+                <td>dzukla</td>
+              </tr>
+              <tr class="gloss">
+                <td>It-is-false</td>
+                <td>that:</td>
+                <td>both</td>
+                <td>(that-named</td>
+                <td>Jane</td>
+                <td>to-the</td>
+                <td>market</td>
+                <td></td>
+                <td>walks)</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>gi</td>
+                <td>la</td>
+                <td>djein.</td>
+                <td>le</td>
+                <td>zarci</td>
+                <td>cu</td>
+                <td>bajrykla</td>
+              </tr>
+              <tr class="gloss">
+                <td>and</td>
+                <td>(that-named</td>
+                <td>Jane</td>
+                <td>to-the</td>
+                <td>market</td>
+                <td></td>
+                <td>runs).</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">is the result.</p>
+      <p>At this expanded level, we apply DeMorgan's Law to distribute the negation in the prenex across both sentences, to get</p>
+      <div class="example">
+        <a id="example-random-id-bsu7"></a>
+        <p class="title">
+          <strong>Example 16.101. 
+        <a id="c16e12d8"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ga</td>
+                <td>la</td>
+                <td>djein.</td>
+                <td>le</td>
+                <td>zarci</td>
+                <td>na</td>
+                <td>dzukla</td>
+              </tr>
+              <tr class="gloss">
+                <td>Either</td>
+                <td>that-named</td>
+                <td>Jane</td>
+                <td>to-the</td>
+                <td>market</td>
+                <td>[false]</td>
+                <td>walks,</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>gi</td>
+                <td>la</td>
+                <td>djein.</td>
+                <td>le</td>
+                <td>zarci</td>
+                <td>na</td>
+                <td>bajrykla</td>
+              </tr>
+              <tr class="gloss">
+                <td>or</td>
+                <td>that-named</td>
+                <td>Jane</td>
+                <td>to-the</td>
+                <td>market</td>
+                <td>[false]</td>
+                <td>runs.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">which is the same as</p>
+      <div class="example">
+        <a id="example-random-id-jYWu"></a>
+        <p class="title">
+          <strong>Example 16.102. 
+        <a id="c16e12d9"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ganai</td>
+                <td>la</td>
+                <td>djein.</td>
+                <td>le</td>
+                <td>zarci</td>
+                <td>cu</td>
+                <td>dzukla</td>
+              </tr>
+              <tr class="gloss">
+                <td>If</td>
+                <td>that-named</td>
+                <td>Jane</td>
+                <td>to-the</td>
+                <td>market</td>
+                <td></td>
+                <td>walks,</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ginai</td>
+                <td>la</td>
+                <td>djein.</td>
+                <td>le</td>
+                <td>zarci</td>
+                <td>cu</td>
+                <td>bajrykla</td>
+              </tr>
+              <tr class="gloss">
+                <td>then-([false]</td>
+                <td>that-named</td>
+                <td>Jane</td>
+                <td>to-the</td>
+                <td>market</td>
+                <td></td>
+                <td>runs).</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">If Jane walks to the market, then she doesn't run.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">which then condenses down to 
+    <a class="xref" href="section-demorgans-law.html#example-random-id-qHQ2" title="Example 16.98. ">Example 16.98</a>.</p>
+      <p><a id="idm47148542190496" class="indexterm"></a><a id="idm47148542189392" class="indexterm"></a> DeMorgan's Law must also be applied to internal 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542187632" class="indexterm"></a>naku</em></span> negations:</p>
+      <div class="example">
+        <a id="example-random-id-qhQP"></a>
+        <p class="title">
+          <strong>Example 16.103. 
+        <a id="c16e12d10"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ga</td>
+                <td>la</td>
+                <td>paris.</td>
+                <td>gi</td>
+                <td>la</td>
+                <td>rom.</td>
+              </tr>
+              <tr class="gloss">
+                <td>(Either</td>
+                <td>that-named</td>
+                <td>Paris</td>
+                <td>or</td>
+                <td>that-named</td>
+                <td>Rome)</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>se</td>
+                <td>klama</td>
+                <td>la</td>
+                <td>djan.</td>
+              </tr>
+              <tr class="gloss">
+                <td>is-not</td>
+                <td>gone-to-by</td>
+                <td>that-named</td>
+                <td>John.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <div class="example">
+        <a id="example-random-id-qhQw"></a>
+        <p class="title">
+          <strong>Example 16.104. 
+        <a id="c16e12d11"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>la</td>
+                <td>djan.</td>
+                <td>naku</td>
+                <td>klama</td>
+                <td>ge</td>
+              </tr>
+              <tr class="gloss">
+                <td>that-named</td>
+                <td>John</td>
+                <td>doesn't</td>
+                <td>go-to</td>
+                <td>both</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>la</td>
+                <td>paris.</td>
+                <td>gi</td>
+                <td>la</td>
+                <td>rom.</td>
+              </tr>
+              <tr class="gloss">
+                <td>that-named</td>
+                <td>Paris</td>
+                <td>and</td>
+                <td>that-named</td>
+                <td>Rome.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">That 
+    <a class="xref" href="section-demorgans-law.html#example-random-id-qhQP" title="Example 16.103. ">Example 16.103</a> and 
+    <a class="xref" href="section-demorgans-law.html#example-random-id-qhQw" title="Example 16.104. ">Example 16.104</a> mean the same should become evident by studying the English. It is a good exercise to work through the Lojban and prove that they are the same.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-na-outside-prenex.html">Prev: Section 16.11</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-selbri-variables.html">Next: Section 16.13</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>18.20. Explicit operator precedence</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-mekso.html" title="Chapter 18. lojbau mekso: Mathematical Expressions in Lojban" />
+    <link rel="prev" href="section-other-mekso-uses.html" title="18.19. Other uses of mekso" />
+    <link rel="next" href="section-miscellany.html" title="18.21. Miscellany" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-other-mekso-uses.html">Prev: Section 18.19</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-miscellany.html">Next: Section 18.21</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-explicit-operator-precedence"></a>18.20. <a id="c18s20"></a>Explicit operator precedence</h2>
+          </div>
+        </div>
+      </div>
+      <p>As mentioned earlier, Lojban does provide a way for the precedences of operators to be explicitly declared, although current parsers do not understand these declarations.</p>
+      <p> The declaration is made in the form of a metalinguistic comment using 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536542512" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-tiho"><em class="glossterm">ti'o</em></a></em></span>, a member of selma'o SEI. 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536540016" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-sei"><em class="glossterm">sei</em></a></em></span>, the other member of SEI, is used to insert metalinguistic comments on a bridi which give information about the discourse which the bridi comprises. The format of a 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536542928" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-tiho"><em class="glossterm">ti'o</em></a></em></span> declaration has not been formally established, but presumably would take the form of mentioning a mekso operator and then giving it either an absolute numerical precedence on some pre-established scale, or else specifying relative precedences between new operators and existing operators.</p>
+      <p><a id="idm47148536534448" class="indexterm"></a> In future, we hope to create an improved machine parser that can understand declarations of the precedences of simple operators belonging to selma'o VUhU. Originally, all operators would have the same precedence. Declarations would have the effect of raising the specified cmavo of VUhU to higher precedence levels. Complex operators formed with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536532704" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nahu"><em class="glossterm">na'u</em></a></em></span>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536530304" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nihe"><em class="glossterm">ni'e</em></a></em></span>, or 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536527936" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-maho"><em class="glossterm">ma'o</em></a></em></span> would remain at the standard low precedence; declarations with respect to them are for future implementation efforts. It is probable that such a parser would have a set of 
+    <span class="quote">“<span class="quote">commonly assumed precedences</span>”</span> built into it (selectable by a special 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148536524992" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-tiho"><em class="glossterm">ti'o</em></a></em></span> declaration) that would match mathematical intuition: times higher than plus, and so on.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-other-mekso-uses.html">Prev: Section 18.19</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-miscellany.html">Next: Section 18.21</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

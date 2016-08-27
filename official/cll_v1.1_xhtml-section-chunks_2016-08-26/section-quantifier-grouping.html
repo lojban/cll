@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>16.7. Grouping of quantifiers</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-quantifiers.html" title="Chapter 16. “Who Did You Pass On The Road? Nobody”: Lojban And Logic" />
+    <link rel="prev" href="section-quantified-variables.html" title="16.6. Variables with generalized quantifiers" />
+    <link rel="next" href="section-any.html" title="16.8. The problem of “any”" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-quantified-variables.html">Prev: Section 16.6</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-any.html">Next: Section 16.8</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-quantifier-grouping"></a>16.7. <a id="c16s7"></a>Grouping of quantifiers</h2>
+          </div>
+        </div>
+      </div>
+      <p><a id="idm47148543411808" class="indexterm"></a><a id="idm47148543410944" class="indexterm"></a> Let us consider a sentence containing two quantifier expressions neither of which is 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543409376" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ro"><em class="glossterm">ro</em></a></em></span> or 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543406944" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-suho"><em class="glossterm">su'o</em></a></em></span> (remembering that 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543404480" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-suho"><em class="glossterm">su'o</em></a></em></span> is implicit where no explicit quantifier is given):</p>
+      <div class="example">
+        <a id="example-random-id-Uovr"></a>
+        <p class="title">
+          <strong>Example 16.41. 
+        <a id="c16e7d1"></a>
+        <a id="idm47148543400688" class="indexterm"></a>
+        <a id="idm47148543399936" class="indexterm"></a>  
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ci</td>
+                <td>gerku</td>
+                <td>cu</td>
+                <td>batci</td>
+                <td>re</td>
+                <td>nanmu</td>
+              </tr>
+              <tr class="gloss">
+                <td>Three</td>
+                <td>dogs</td>
+                <td></td>
+                <td>bite</td>
+                <td>two</td>
+                <td>men.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148543392288" class="indexterm"></a><a id="idm47148543391136" class="indexterm"></a> The question raised by 
+    <a class="xref" href="section-quantifier-grouping.html#example-random-id-Uovr" title="Example 16.41. ">Example 16.41</a> is, does each of the dogs bite the same two men, or is it possible that there are two different men per dog, for six men altogether? If the former interpretation is taken, the number of men involved is fixed at two; but if the latter, then the speaker has to be taken as saying that there might be any number of men between two and six inclusive. Let us transform 
+    <a class="xref" href="section-quantifier-grouping.html#example-random-id-Uovr" title="Example 16.41. ">Example 16.41</a> step by step as we did with 
+    <a class="xref" href="section-quantified-variables.html#example-random-id-Kr4S" title="Example 16.38. ">Example 16.38</a>:</p>
+      <div class="example">
+        <a id="example-random-id-neNT"></a>
+        <p class="title">
+          <strong>Example 16.42. 
+        <a id="c16e7d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ci</td>
+                <td>da</td>
+                <td>poi</td>
+                <td>gerku</td>
+                <td>cu</td>
+                <td>batci</td>
+                <td>re</td>
+                <td>de</td>
+                <td>poi</td>
+                <td>nanmu</td>
+              </tr>
+              <tr class="gloss">
+                <td>Three</td>
+                <td>Xes</td>
+                <td>which</td>
+                <td>are-dogs</td>
+                <td></td>
+                <td>bite</td>
+                <td>two</td>
+                <td>Ys</td>
+                <td>which</td>
+                <td>are-men.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">(Note that we need separate variables 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543377104" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-da"><em class="glossterm">da</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543374720" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-de"><em class="glossterm">de</em></a></em></span>, because of the rule that says each indefinite description gets a variable never used before or since.)</p>
+      <div class="example">
+        <a id="example-random-id-Iuj2"></a>
+        <p class="title">
+          <strong>Example 16.43. 
+        <a id="c16e7d3"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ci</td>
+                <td>da</td>
+                <td>poi</td>
+                <td>gerku</td>
+                <td>ku'o</td>
+                <td>re</td>
+                <td>de</td>
+                <td>poi</td>
+                <td>nanmu</td>
+                <td>zo'u</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-three</td>
+                <td>Xes</td>
+                <td>which</td>
+                <td>are-dogs</td>
+                <td>-,</td>
+                <td>for-two</td>
+                <td>Ys</td>
+                <td>which</td>
+                <td>are-men</td>
+                <td>:</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>da</td>
+                <td>batci</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>X</td>
+                <td>bites</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Here we see that indeed each of the dogs is said to bite two men, and it might be different men each time; a total of six biting events altogether.</p>
+      <p><a id="idm47148543357264" class="indexterm"></a> How then are we to express the other interpretation, in which just two men are involved? We cannot just reverse the order of variables in the prenex to</p>
+      <div class="example">
+        <a id="example-random-id-4Qxe"></a>
+        <p class="title">
+          <strong>Example 16.44. 
+        <a id="c16e7d4"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>re</td>
+                <td>de</td>
+                <td>poi</td>
+                <td>nanmu</td>
+                <td>ku'o</td>
+                <td>ci</td>
+                <td>da</td>
+                <td>poi</td>
+                <td>gerku</td>
+                <td>zo'u</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-two</td>
+                <td>Ys</td>
+                <td>which</td>
+                <td>are-men</td>
+                <td>-,</td>
+                <td>for-three</td>
+                <td>Xes</td>
+                <td>which</td>
+                <td>are-dogs,</td>
+                <td>:</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>da</td>
+                <td>batci</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>X</td>
+                <td>bites</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">for although we have now limited the number of men to exactly two, we end up with an indeterminate number of dogs, from three to six. The distinction is called a 
+    <span class="quote">“<span class="quote">scope distinction</span>”</span>: in 
+    <a class="xref" href="section-quantifier-grouping.html#example-random-id-neNT" title="Example 16.42. ">Example 16.42</a>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543339200" class="indexterm"></a>ci gerku</em></span> is said to have wider scope than 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543337328" class="indexterm"></a>re nanmu</em></span>, and therefore precedes it in the prenex. In 
+    <a class="xref" href="section-quantifier-grouping.html#example-random-id-4Qxe" title="Example 16.44. ">Example 16.44</a> the reverse is true.</p>
+      <p><a id="idm47148543334928" class="indexterm"></a><a id="idm47148543333680" class="indexterm"></a><a id="idm47148543332640" class="indexterm"></a> The solution is to use a termset, which is a group of terms either joined by 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543331184" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-cehe"><em class="glossterm">ce'e</em></a></em></span> (of selma'o CEhE) between each term, or else surrounded by 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543328848" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nuhi"><em class="glossterm">nu'i</em></a></em></span> (of selma'o NUhI) on the front and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543326304" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nuhu"><em class="glossterm">nu'u</em></a></em></span> (of selma'o NUhU) on the rear. Terms (which are either sumti or sumti prefixed by tense or modal tags) that are grouped into a termset are understood to have equal scope:</p>
+      <div class="example">
+        <a id="example-random-id-JbVH"></a>
+        <p class="title">
+          <strong>Example 16.45. 
+        <a id="c16e7d5"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td></td>
+                <td>ci</td>
+                <td>gerku</td>
+                <td>ce'e</td>
+                <td>re</td>
+                <td>nanmu</td>
+                <td></td>
+                <td>cu</td>
+                <td>batci</td>
+              </tr>
+              <tr class="jbo">
+                <td>nu'i</td>
+                <td>ci</td>
+                <td>gerku</td>
+                <td></td>
+                <td>re</td>
+                <td>nanmu</td>
+                <td>[nu'u]</td>
+                <td>cu</td>
+                <td>batci</td>
+              </tr>
+              <tr class="gloss">
+                <td></td>
+                <td>Three</td>
+                <td>dogs</td>
+                <td>[plus]</td>
+                <td>two</td>
+                <td>men,</td>
+                <td></td>
+                <td></td>
+                <td>bite.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">which picks out two groups, one of three dogs and the other of two men, and says that every one of the dogs bites each of the men. The second Lojban version uses forethought; note that 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543311136" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-nuhu"><em class="glossterm">nu'u</em></a></em></span> is an elidable terminator, and in this case can be freely elided.</p>
+      <p><a id="idm47148543308240" class="indexterm"></a><a id="idm47148543307216" class="indexterm"></a><a id="idm47148543306208" class="indexterm"></a><a id="idm47148543305200" class="indexterm"></a> What about descriptors, like 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543303520" class="indexterm"></a>ci lo gerku</em></span>, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543301328" class="indexterm"></a>le nanmu</em></span> or 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543299488" class="indexterm"></a>re le ci mlatu</em></span>? They too can be grouped in termsets, but usually need not be, except for the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543297792" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-lo"><em class="glossterm">lo</em></a></em></span> case which functions like the case without a descriptor. Unless an actual quantifier precedes it, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543294800" class="indexterm"></a>le nanmu</em></span> means 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543292880" class="indexterm"></a>ro le nanmu</em></span>, as is explained in 
+    <a class="xref" href="section-quantified-descriptions.html" title="6.7. Quantified descriptions">Section 6.7</a>. Two sumti with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543290784" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ro"><em class="glossterm">ro</em></a></em></span> quantifiers are independent of order, so:</p>
+      <div class="example">
+        <a id="example-random-id-MADY"></a>
+        <p class="title">
+          <strong>Example 16.46. 
+        <a id="c16e7d6"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>[ro]</td>
+                <td>le</td>
+                <td>ci</td>
+                <td>gerku</td>
+                <td>cu</td>
+                <td>batci</td>
+                <td>[ro]</td>
+                <td>le</td>
+                <td>re</td>
+                <td>nanmu</td>
+              </tr>
+              <tr class="gloss">
+                <td>[All-of]</td>
+                <td>the</td>
+                <td>three</td>
+                <td>dogs</td>
+                <td></td>
+                <td>bite</td>
+                <td>[all-of]</td>
+                <td>the</td>
+                <td>two</td>
+                <td>men.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">means that each of the dogs specified bites each of the men specified, for six acts of biting altogether. However, if there is an explicit quantifier before 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543277968" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-le"><em class="glossterm">le</em></a></em></span> other than 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543275280" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ro"><em class="glossterm">ro</em></a></em></span>, the problems of this section reappear.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-quantified-variables.html">Prev: Section 16.6</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-any.html">Next: Section 16.8</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

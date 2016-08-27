@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Chapter 14. If Wishes Were Horses: The Lojban Connective System</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="index.html" title="The Complete Lojban Language" />
+    <link rel="prev" href="section-attitudinals-conclusion.html" title="13.16. Tentative conclusion" />
+    <link rel="next" href="section-four-basics.html" title="14.2. The Four basic vowels" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">The Complete Lojban Language</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-attitudinals-conclusion.html">Prev: Section 13.16</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-four-basics.html">Next: Section 14.2</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="chapter">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h1 class="title"><a id="chapter-connectives"></a>Chapter 14. <a id="c14"></a>If Wishes Were Horses: The Lojban Connective System</h1>
+          </div>
+        </div>
+      </div>
+      <div class="mediaobject">
+        <a id="chapter-connectives-picture"></a>
+        <img src="media/chapter-connectives.gif" alt="The picture for chapter 14" />
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a id="section-connectives-introduction"></a>14.1. <a id="c14s1"></a>Logical connection and truth tables</h2>
+            </div>
+          </div>
+        </div>
+        <p><a id="idm47148549629424" class="indexterm"></a><a id="idm47148549628672" class="indexterm"></a> Lojban is a logical language: the name of the language itself means 
+    
+    <span class="quote">“<span class="quote">logical language</span>”</span>. The fundamentals of ordinary logic (there are variant logics, which aren't addressed in this book) include the notions of a 
+    
+    <span class="quote">“<span class="quote">sentence</span>”</span> (sometimes called a 
+    <span class="quote">“<span class="quote">statement</span>”</span> or 
+    <span class="quote">“<span class="quote">proposition</span>”</span>), which asserts a truth or falsehood, and a small set of 
+    <span class="quote">“<span class="quote">truth functions</span>”</span>, which combine two sentences to create a new sentence. The truth functions have the special characteristic that the truth value (that is, the truth or falsehood) of the results depends only on the truth value of the component sentences. For example,</p>
+        <div class="example">
+          <a id="example-random-id-mJ6y"></a>
+          <p class="title">
+            <strong>Example 14.1. 
+        <a id="c14e1d1"></a>
+        <a id="idm47148549623024" class="indexterm"></a>
+      </strong>
+          </p>
+          <div class="example-contents">
+            <p>John is a man or James is a woman.</p>
+          </div>
+        </div>
+        <br class="example-break" />
+        <p class="noindent"> 
+
+
+ is true if 
+    <span class="quote">“<span class="quote">John is a man</span>”</span> is true, or if 
+    <span class="quote">“<span class="quote">James is a woman</span>”</span> is true. If we know whether John is a man, and we know whether James is a woman, we know whether 
+    <span class="quote">“<span class="quote">John is a man or James is a woman</span>”</span> is true, provided we know the meaning of 
+    <span class="quote">“<span class="quote">or</span>”</span>. Here 
+    <span class="quote">“<span class="quote">John is a man</span>”</span> and 
+    <span class="quote">“<span class="quote">James is a woman</span>”</span> are the component sentences.</p>
+        <p><a id="idm47148549617776" class="indexterm"></a> We will use the phrase 
+    <span class="quote">“<span class="quote">negating a sentence</span>”</span> to mean changing its truth value. An English sentence may always be negated by prefixing 
+    
+    <span class="quote">“<span class="quote">It is false that ...</span>”</span>, or more idiomatically by inserting 
+    <span class="quote">“<span class="quote">not</span>”</span> at the right point, generally before the verb. 
+    <span class="quote">“<span class="quote">James is not a woman</span>”</span> is the negation of 
+    <span class="quote">“<span class="quote">James is a woman</span>”</span>, and vice versa. Recent slang can also negate a sentence by following it with the exclamation 
+    <span class="quote">“<span class="quote">Not!</span>”</span></p>
+        <p><a id="idm47148549613376" class="indexterm"></a> Words like 
+    <span class="quote">“<span class="quote">or</span>”</span> are called 
+    <span class="quote">“<span class="quote">logical connectives</span>”</span>, and Lojban has many of them, as befits a logical language. This chapter is mostly concerned with explaining the forms and uses of the Lojban logical connectives. There are a number of other logical connectives in English such as 
+    
+    <span class="quote">“<span class="quote">and</span>”</span>, 
+    <span class="quote">“<span class="quote">and/or</span>”</span>, 
+    <span class="quote">“<span class="quote">if</span>”</span>, 
+    <span class="quote">“<span class="quote">only if</span>”</span>, 
+    <span class="quote">“<span class="quote">whether or not</span>”</span>, and others; however, not every use of these English words corresponds to a logical connective. This point will be made clear in particular cases as needed. The other English meanings are supported by different Lojban connective constructs.</p>
+        <p>The Lojban connectives form a system (as the title of this chapter suggests), regular and predictable, whereas natural-language connectives are rather less systematic and therefore less predictable.</p>
+        <p><a id="idm47148549607824" class="indexterm"></a><a id="idm47148549606512" class="indexterm"></a> There exist 16 possible different truth functions. A truth table is a graphical device for specifying a truth function, making it clear what the value of the truth function is for every possible value of the component sentences. Here is a truth table for 
+    
+    <span class="quote">“<span class="quote">or</span>”</span>:</p>
+        <div class="informaltable">
+          <table>
+            <thead>
+              <tr>
+                <td>first</td>
+                <td>second</td>
+                <td>result</td>
+              </tr>
+            </thead>
+            <tr>
+              <td>True</td>
+              <td>True</td>
+              <td>True</td>
+            </tr>
+            <tr>
+              <td>True</td>
+              <td>False</td>
+              <td>True</td>
+            </tr>
+            <tr>
+              <td>False</td>
+              <td>True</td>
+              <td>True</td>
+            </tr>
+            <tr>
+              <td>False</td>
+              <td>False</td>
+              <td>False</td>
+            </tr>
+          </table>
+        </div>
+        <p>This table means that if the first sentence stated is true, and the second sentence stated is true, then the result of the truth function is also true. The same is true for every other possible combination of truth values except the one where both the first and the second sentences are false, in which case the truth value of the result is also false.</p>
+        <p>Suppose that 
+    <span class="quote">“<span class="quote">John is a man</span>”</span> is true (and 
+    <span class="quote">“<span class="quote">John is not a man</span>”</span> is false), and that 
+    <span class="quote">“<span class="quote">James is a woman</span>”</span> is false (and 
+    <span class="quote">“<span class="quote">James is not a woman</span>”</span> is true). Then the truth table tells us that</p>
+        <table border="0" summary="Simple list" class="simplelist">
+          <tr>
+            <td><span class="quote">“<span class="quote">John is a man, or James is not a woman</span>”</span>             (true   true )  is true</td>
+          </tr>
+          <tr>
+            <td><span class="quote">“<span class="quote">John is a man, or James is a woman</span>”</span>                 (true , false)  is true</td>
+          </tr>
+          <tr>
+            <td><span class="quote">“<span class="quote">John is not a man, or James is not a woman</span>”</span>         (false, true )  is true</td>
+          </tr>
+          <tr>
+            <td><span class="quote">“<span class="quote">John is not a man, or James is a woman</span>”</span>             (false, false)  is false</td>
+          </tr>
+        </table>
+        <p><a id="idm47148549587488" class="indexterm"></a> Note that the kind of 
+    <span class="quote">“<span class="quote">or</span>”</span> used in this example can also be expressed (in formal English) with 
+    <span class="quote">“<span class="quote">and/or</span>”</span>. There is a different truth table for the kind of 
+    
+    <span class="quote">“<span class="quote">or</span>”</span> that means 
+    <span class="quote">“<span class="quote">either ... or ... but not both</span>”</span>.</p>
+        <p><a id="idm47148549584256" class="indexterm"></a><a id="idm47148549582912" class="indexterm"></a> To save space, we will write truth tables in a shorter format henceforth. Let the letters T and F stand for True and False. The rows will always be given in the order shown above: TT, TF, FT, FF for the two sentences. Then it is only necessary to give the four letters from the result column, which can be written TTTF, as can be seen by reading down the third column of the table above. So TTTF is the abbreviated truth table for the 
+    
+    
+    <span class="quote">“<span class="quote">or</span>”</span> truth function. Here are the 16 possible truth functions, with an English version of what it means to assert that each function is, in fact, true (<span class="quote">“<span class="quote">first</span>”</span> refers to the first sentence, and 
+    <span class="quote">“<span class="quote">second</span>”</span> to the second sentence):<a id="idm47148549579856" class="indexterm"></a></p>
+        <div class="informaltable">
+          <table>
+            <tr>
+              <td>TTTT</td>
+              <td>(always true)</td>
+            </tr>
+            <tr>
+              <td>TTTF</td>
+              <td>first is true and/or second is true.</td>
+            </tr>
+            <tr>
+              <td>TTFT</td>
+              <td>first is true if second is true.</td>
+            </tr>
+            <tr>
+              <td>TTFF</td>
+              <td>first is true whether or not second is true.</td>
+            </tr>
+            <tr>
+              <td>TFTT</td>
+              <td>first is true only if second is true.</td>
+            </tr>
+            <tr>
+              <td>TFTF</td>
+              <td>whether or not first is true, second is true.</td>
+            </tr>
+            <tr>
+              <td>TFFT</td>
+              <td>first is true if and only if second is true.</td>
+            </tr>
+            <tr>
+              <td>TFFF</td>
+              <td>first is true and second is true</td>
+            </tr>
+            <tr>
+              <td>FTTT</td>
+              <td>first and second are not both true.</td>
+            </tr>
+            <tr>
+              <td>FTTF</td>
+              <td>first or second is true, but not both.</td>
+            </tr>
+            <tr>
+              <td>FTFT</td>
+              <td>whether or not first is true, second is false.</td>
+            </tr>
+            <tr>
+              <td>FTFF</td>
+              <td>first is true, but second is false.</td>
+            </tr>
+            <tr>
+              <td>FFTT</td>
+              <td>first is false whether or not second is true.</td>
+            </tr>
+            <tr>
+              <td>FFTF</td>
+              <td>first is false, but second is true.</td>
+            </tr>
+            <tr>
+              <td>FFFT</td>
+              <td>neither first nor second is true.</td>
+            </tr>
+            <tr>
+              <td>FFFF</td>
+              <td>(always false)</td>
+            </tr>
+          </table>
+        </div>
+        <p>Skeptics may work out the detailed truth tables for themselves.</p>
+      </div>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">The Complete Lojban Language</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-attitudinals-conclusion.html">Prev: Section 13.16</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-four-basics.html">Next: Section 14.2</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

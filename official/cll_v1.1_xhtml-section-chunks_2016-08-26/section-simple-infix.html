@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>18.5. Simple infix expressions and equations</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-mekso.html" title="Chapter 18. lojbau mekso: Mathematical Expressions in Lojban" />
+    <link rel="prev" href="section-constants.html" title="18.4. Special numbers" />
+    <link rel="next" href="section-forethought.html" title="18.6. Forethought operators (Polish notation, functions)" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-constants.html">Prev: Section 18.4</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-forethought.html">Next: Section 18.6</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-simple-infix"></a>18.5. <a id="c18s5"></a>Simple infix expressions and equations</h2>
+          </div>
+        </div>
+      </div>
+      <p>The following cmavo are discussed in this section:</p>
+      <div class="informaltable">
+        <table class="cmavo-list">
+          <colgroup></colgroup>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">du</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">GOhA</p>
+            </td>
+            <td class="description">
+              <p class="description">equals</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">su'i</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">VUhU</p>
+            </td>
+            <td class="description">
+              <p class="description">plus</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">vu'u</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">VUhU</p>
+            </td>
+            <td class="description">
+              <p class="description">minus</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">pi'i</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">VUhU</p>
+            </td>
+            <td class="description">
+              <p class="description">times</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">te'a</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">VUhU</p>
+            </td>
+            <td class="description">
+              <p class="description">raised to the power</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">ny.</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">BY</p>
+            </td>
+            <td class="description">
+              <p class="description">letter <span class="quote">“<span class="quote">n</span>”</span></p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">vei</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">VEI</p>
+            </td>
+            <td class="description">
+              <p class="description">left parenthesis</p>
+            </td>
+          </tr>
+          <tr class="cmavo-entry">
+            <td class="cmavo">
+              <p class="cmavo">ve'o</p>
+            </td>
+            <td class="selmaho">
+              <p class="selmaho">VEhO</p>
+            </td>
+            <td class="description">
+              <p class="description">right parenthesis</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <p class="indent"><a id="idm47148539433952" class="indexterm"></a> Let us begin at the beginning: one plus one equals two. In Lojban, that sentence translates to:</p>
+      <div class="example">
+        <a id="example-random-id-CUeK"></a>
+        <p class="title">
+          <strong>Example 18.22. 
+        <a id="c18e5d1"></a>
+        <a id="idm47148539430704" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>pa</td>
+                <td>su'i</td>
+                <td>pa</td>
+                <td>du</td>
+                <td>li</td>
+                <td>re</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>one</td>
+                <td>plus</td>
+                <td>one</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>two.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">1 + 1 = 2</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148539420432" class="indexterm"></a><a id="idm47148539419216" class="indexterm"></a><a class="xref" href="section-simple-infix.html#example-random-id-CUeK" title="Example 18.22. ">Example 18.22</a>, a mekso sentence, is a regular Lojban bridi that exploits mekso features. 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539417120" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-du"><em class="glossterm">du</em></a></em></span> is the predicate meaning 
+    <span class="quote">“<span class="quote">x1 is mathematically equal to x2</span>”</span>. It is a cmavo for conciseness, but it has the same grammatical uses as any brivla. Outside mathematical contexts, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539414224" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-du"><em class="glossterm">du</em></a></em></span> means 
+    <span class="quote">“<span class="quote">x1 is identical with x2</span>”</span> or 
+    <span class="quote">“<span class="quote">x1 is the same object as x2</span>”</span>.</p>
+      <p><a id="idm47148539411120" class="indexterm"></a><a id="idm47148539410112" class="indexterm"></a><a id="idm47148539408880" class="indexterm"></a><a id="idm47148539407792" class="indexterm"></a><a id="idm47148539406784" class="indexterm"></a> The cmavo 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539405168" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-li"><em class="glossterm">li</em></a></em></span> is the number article. It is required whenever a sentence talks about numbers as numbers, as opposed to using numbers to quantify things. For example:</p>
+      <div class="example">
+        <a id="example-random-id-nSU9"></a>
+        <p class="title">
+          <strong>Example 18.23. 
+        <a id="c18e5d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>le</td>
+                <td>ci</td>
+                <td>prenu</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">the three persons</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">requires no 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539395088" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-li"><em class="glossterm">li</em></a></em></span> article, because the 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539392784" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ci"><em class="glossterm">ci</em></a></em></span> is being used to specify the number of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539390336" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-prenu"><em class="glossterm">prenu</em></a></em></span>. However, the sentence</p>
+      <div class="example">
+        <a id="example-random-id-BNFi"></a>
+        <p class="title">
+          <strong>Example 18.24. 
+        <a id="c18e5d3"></a>
+        <a id="idm47148539386512" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>levi</td>
+                <td>sfani</td>
+                <td>cu</td>
+                <td>grake</td>
+                <td>li</td>
+                <td>ci</td>
+              </tr>
+              <tr class="gloss">
+                <td>This</td>
+                <td>fly</td>
+                <td></td>
+                <td>masses-in-grams</td>
+                <td>the-number</td>
+                <td>three.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">This fly has a mass of 3 grams.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"><a id="idm47148539376528" class="indexterm"></a><a id="idm47148539375520" class="indexterm"></a> requires 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539374144" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-li"><em class="glossterm">li</em></a></em></span> because 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539371584" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ci"><em class="glossterm">ci</em></a></em></span> is being used as a sumti. Note that this is the way in which measurements are stated in Lojban: all the predicates for units of length, mass, temperature, and so on have the measured object as the first place and a number as the second place. Using 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539369104" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-li"><em class="glossterm">li</em></a></em></span> for 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539366768" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-le"><em class="glossterm">le</em></a></em></span> in 
+    <a class="xref" href="section-simple-infix.html#example-random-id-nSU9" title="Example 18.23. ">Example 18.23</a> would produce</p>
+      <div class="example">
+        <a id="example-random-id-gJe1"></a>
+        <p class="title">
+          <strong>Example 18.25. 
+        <a id="c18e5d4"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>ci</td>
+                <td>prenu</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>3</td>
+                <td>is-a-person.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">which is grammatical but nonsensical: numbers are not persons.</p>
+      <p><a id="idm47148539356928" class="indexterm"></a><a id="idm47148539355696" class="indexterm"></a><a id="idm47148539354688" class="indexterm"></a><a id="idm47148539353456" class="indexterm"></a> The cmavo 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539352304" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-suhi"><em class="glossterm">su'i</em></a></em></span> belongs to selma'o VUhU, which is composed of mathematical operators, and means 
+    
+    <span class="quote">“<span class="quote">addition</span>”</span>. As mentioned before, it is distinct from 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539349328" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-mahu"><em class="glossterm">ma'u</em></a></em></span> which means the positive sign as an indication of a positive number:</p>
+      <div class="example">
+        <a id="example-random-id-4gsp"></a>
+        <p class="title">
+          <strong>Example 18.26. 
+        <a id="c18e5d5"></a>
+        <a id="idm47148539345408" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>ma'u</td>
+                <td>pa</td>
+                <td>su'i</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>positive-sign</td>
+                <td>one</td>
+                <td>plus</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>ni'u</td>
+                <td>pa</td>
+                <td>du</td>
+                <td>li</td>
+                <td>no</td>
+              </tr>
+              <tr class="gloss">
+                <td>negative-sign</td>
+                <td>one</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>zero.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">+1 + -1 = 0</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Of course, it is legal to have complex mekso on both sides of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539331056" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-du"><em class="glossterm">du</em></a></em></span>:</p>
+      <div class="example">
+        <a id="example-random-id-d6bM"></a>
+        <p class="title">
+          <strong>Example 18.27. 
+        <a id="c18e5d6"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>mu</td>
+                <td>su'i</td>
+                <td>pa</td>
+                <td>du</td>
+                <td>li</td>
+                <td>ci</td>
+                <td>su'i</td>
+                <td>ci</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>five</td>
+                <td>plus</td>
+                <td>one</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>three</td>
+                <td>plus</td>
+                <td>three.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">5 + 1 = 3 + 3</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148539316800" class="indexterm"></a><a id="idm47148539315872" class="indexterm"></a><a id="idm47148539315120" class="indexterm"></a><a id="idm47148539313984" class="indexterm"></a><a id="idm47148539312880" class="indexterm"></a><a id="idm47148539311776" class="indexterm"></a><a id="idm47148539310928" class="indexterm"></a><a id="idm47148539309776" class="indexterm"></a> Why don't we say 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539308000" class="indexterm"></a>li mu su'i li pa</em></span> rather than just 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539305968" class="indexterm"></a>li mu su'i pa</em></span>? The answer is that VUhU operators connect mekso operands (numbers, in 
+    <a class="xref" href="section-simple-infix.html#example-random-id-d6bM" title="Example 18.27. ">Example 18.27</a>), not general sumti. 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539303840" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-li"><em class="glossterm">li</em></a></em></span> is used to make the entire mekso into a sumti, which then plays the roles applicable to other sumti: in 
+    <a class="xref" href="section-simple-infix.html#example-random-id-d6bM" title="Example 18.27. ">Example 18.27</a>, filling the places of a bridi</p>
+      <p><a id="idm47148539300880" class="indexterm"></a><a id="idm47148539299712" class="indexterm"></a><a id="idm47148539298576" class="indexterm"></a><a id="idm47148539297472" class="indexterm"></a> By default, Lojban mathematics is like simple calculator mathematics: there is no notion of 
+    
+    <span class="quote">“<span class="quote">operator precedence</span>”</span>. Consider the following example, where 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539295408" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pihi"><em class="glossterm">pi'i</em></a></em></span> means 
+    <span class="quote">“<span class="quote">times</span>”</span>, the multiplication operator:</p>
+      <div class="example">
+        <a id="example-random-id-7a2Q"></a>
+        <p class="title">
+          <strong>Example 18.28. 
+        <a id="c18e5d7"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>ci</td>
+                <td>su'i</td>
+                <td>vo</td>
+                <td>pi'i</td>
+                <td>mu</td>
+                <td>du</td>
+                <td>li</td>
+                <td>reci</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>three</td>
+                <td>plus</td>
+                <td>four</td>
+                <td>times</td>
+                <td>five</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>two-three.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">3 + 4 × 5 = 23</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Is the Lojban version of 
+    <a class="xref" href="section-simple-infix.html#example-random-id-7a2Q" title="Example 18.28. ">Example 18.28</a> true? No! 
+    <span class="quote">“<span class="quote">3 + 4 × 5</span>”</span> is indeed 23, because the usual conventions of mathematics state that multiplication takes precedence over addition; that is, the multiplication 
+    
+    <span class="quote">“<span class="quote">4 × 5</span>”</span> is done first, giving 20, and only then the addition 
+    <span class="quote">“<span class="quote">3 + 20</span>”</span>. But VUhU operators by default are done left to right, like other Lojban grouping, and so a truthful bridi would be:</p>
+      <div class="example">
+        <a id="example-random-id-XUQh"></a>
+        <p class="title">
+          <strong>Example 18.29. 
+        <a id="c18e5d8"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>ci</td>
+                <td>su'i</td>
+                <td>vo</td>
+                <td>pi'i</td>
+                <td>mu</td>
+                <td>du</td>
+                <td>li</td>
+                <td>cimu</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>three</td>
+                <td>plus</td>
+                <td>four</td>
+                <td>times</td>
+                <td>five</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>three-five.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">3 + 4 × 5 = 35</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148539266832" class="indexterm"></a> Here we calculate 3 + 4 first, giving 7, and then calculate 7 × 5 second, leading to the result 35. While possessing the advantage of simplicity, this result violates the design goal of matching the standards of mathematics. What can be done?</p>
+      <p><a id="idm47148539265312" class="indexterm"></a><a id="idm47148539264000" class="indexterm"></a><a id="idm47148539262992" class="indexterm"></a> There are three solutions, all of which will probably be used to some degree. The first solution is to ignore the problem. People will say 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539261040" class="indexterm"></a>li ci su'i vo pi'i mu</em></span> and mean 23 by it, because the notion that multiplication takes precedence over addition is too deeply ingrained to be eradicated by Lojban parsing, which totally ignores semantics. This convention essentially allows semantics to dominate syntax in this one area.</p>
+      <p><a id="idm47148539259072" class="indexterm"></a><a id="idm47148539258112" class="indexterm"></a> (Why not hard-wire the precedences into the grammar, as is done in computer programming languages? Essentially because there are too many operators, known and unknown, with levels of precedence that vary according to usage. The programming language 'C' has 13 levels of precedence, and its list of operators is not even extensible. For Lojban this approach is just not practical. In addition, hard-wired precedence could not be overridden in mathematical systems such as spreadsheets where the conventions are different.)</p>
+      <p><a id="idm47148539256048" class="indexterm"></a> The second solution is to use explicit means to specify the precedence of operators. This approach is fully general, but clumsy, and will be explained in 
+    <a class="xref" href="section-explicit-operator-precedence.html" title="18.20. Explicit operator precedence">Section 18.20</a>.</p>
+      <p><a id="idm47148539253824" class="indexterm"></a><a id="idm47148539252560" class="indexterm"></a> The third solution is simple but not very general. When an operator is prefixed with the cmavo 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539250896" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-bihe"><em class="glossterm">bi'e</em></a></em></span> (of selma'o BIhE), it becomes automatically of higher precedence than other operators not so prefixed. Thus,</p>
+      <div class="example">
+        <a id="example-random-id-LIUa"></a>
+        <p class="title">
+          <strong>Example 18.30. 
+        <a id="c18e5d9"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>ci</td>
+                <td>su'i</td>
+                <td>vo</td>
+                <td>bi'e</td>
+                <td>pi'i</td>
+                <td>mu</td>
+                <td>du</td>
+                <td>li</td>
+                <td>reci</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>three</td>
+                <td>plus</td>
+                <td>four</td>
+                <td>times</td>
+                <td>five</td>
+                <td>equals</td>
+                <td>the-number</td>
+                <td>two-three.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">3 + 4 × 5 = 23</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">is a truthful Lojban bridi. If more than one operator has a 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539235776" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-bihe"><em class="glossterm">bi'e</em></a></em></span> prefix, grouping is from the right; multiple 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539233360" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-bihe"><em class="glossterm">bi'e</em></a></em></span> prefixes on a single operator are not allowed.</p>
+      <p><a id="idm47148539230656" class="indexterm"></a><a id="idm47148539229648" class="indexterm"></a> In addition, of course, Lojban has the mathematical parentheses 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539228192" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-vei"><em class="glossterm">vei</em></a></em></span> and 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539225792" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-veho"><em class="glossterm">ve'o</em></a></em></span>, which can be used just like their written equivalents 
+    <span class="quote">“<span class="quote">(</span>”</span> and 
+    <span class="quote">“<span class="quote">)</span>”</span> to group expressions in any way desired:</p>
+      <div class="example">
+        <a id="example-random-id-wfFV"></a>
+        <p class="title">
+          <strong>Example 18.31. 
+        <a id="c18e5d10"></a>
+        <a id="idm47148539220928" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>li</td>
+                <td>vei</td>
+                <td>ny.</td>
+                <td>su'i</td>
+                <td>pa</td>
+                <td>ve'o</td>
+                <td>pi'i</td>
+                <td>vei</td>
+                <td>ny.</td>
+                <td>su'i</td>
+                <td>pa</td>
+                <td>[ve'o]</td>
+              </tr>
+              <tr class="gloss">
+                <td>The-number</td>
+                <td>(</td>
+                <td>
+                  <code class="varname">n</code>
+                </td>
+                <td>plus</td>
+                <td>one</td>
+                <td>)</td>
+                <td>times</td>
+                <td>(</td>
+                <td>
+                  <code class="varname">n</code>
+                </td>
+                <td>plus</td>
+                <td>one</td>
+                <td>)</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>du</td>
+                <td>li</td>
+                <td>ny.</td>
+                <td>[bi'e]</td>
+                <td>te'a</td>
+                <td>re</td>
+              </tr>
+              <tr class="gloss">
+                <td>equals</td>
+                <td>the-number</td>
+                <td>n</td>
+                <td></td>
+                <td>to-the-power</td>
+                <td>two</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'i</td>
+                <td>re</td>
+                <td>bi'e</td>
+                <td>pi'i</td>
+                <td>ny.</td>
+                <td>su'i</td>
+                <td>pa</td>
+              </tr>
+              <tr class="gloss">
+                <td>plus</td>
+                <td>two</td>
+                <td></td>
+                <td>times</td>
+                <td>
+                  <code class="varname">n</code>
+                </td>
+                <td>plus</td>
+                <td>1.</td>
+              </tr>
+              <tr class="informalequation">
+                <td colspan="12321">
+                  <div class="informalequation">
+                    <span class="mathphrase">(n+1)(n+1) = n<sup>2</sup> + 2n + 1</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148539194704" class="indexterm"></a><a id="idm47148539193584" class="indexterm"></a> There are several new usages in 
+    <a class="xref" href="section-simple-infix.html#example-random-id-wfFV" title="Example 18.31. ">Example 18.31</a>: 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539191440" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-teha"><em class="glossterm">te'a</em></a></em></span> means 
+    
+    <span class="quote">“<span class="quote">raised to the power</span>”</span>, and we also see the use of the lerfu word 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539188592" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ny"><em class="glossterm">ny</em></a></em></span>, representing the letter 
+    <span class="quote">“<span class="quote">n</span>”</span>. In mekso, letters stand for just what they do in ordinary mathematics: variables. The parser will accept a string of lerfu words (called a 
+    <span class="quote">“<span class="quote">lerfu string</span>”</span>) as the equivalent of a single lerfu word, in agreement with computer-science conventions; 
+    <span class="quote">“<span class="quote">abc</span>”</span> is a single variable, not the equivalent of 
+    <span class="quote">“<span class="quote">a × b × c</span>”</span>. (Of course, a local convention could state that the value of a variable like 
+    <span class="quote">“<span class="quote">abc</span>”</span>, with a multi-lerfu name, was equal to the values of the variables 
+    <span class="quote">“<span class="quote">a</span>”</span>, 
+    <span class="quote">“<span class="quote">b</span>”</span>, and 
+    <span class="quote">“<span class="quote">c</span>”</span> multiplied together.)</p>
+      <p>The explicit operator 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539182304" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-pihi"><em class="glossterm">pi'i</em></a></em></span> is required in the Lojban verbal form whereas multiplication is implicit in the symbolic form. Note that 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539179648" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-veho"><em class="glossterm">ve'o</em></a></em></span> (the right parenthesis) is an elidable terminator: the first use of it in 
+    <a class="xref" href="section-simple-infix.html#example-random-id-wfFV" title="Example 18.31. ">Example 18.31</a> is required, but the second use (marked by square brackets) could be elided. Additionally, the first 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148539176784" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-bihe"><em class="glossterm">bi'e</em></a></em></span> (also marked by square brackets) is not necessary to get the proper grouping, but it is included here for symmetry with the other one.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 18. lojbau mekso: Mathematical Expressions in Lojban</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-constants.html">Prev: Section 18.4</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-forethought.html">Next: Section 18.6</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

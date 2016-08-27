@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>16.9. Negation boundaries</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="chapter-quantifiers.html" title="Chapter 16. “Who Did You Pass On The Road? Nobody”: Lojban And Logic" />
+    <link rel="prev" href="section-any.html" title="16.8. The problem of “any”" />
+    <link rel="next" href="section-connectives.html" title="16.10. bridi negation and logical connectives" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-any.html">Prev: Section 16.8</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-connectives.html">Next: Section 16.10</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="section">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="section-negation-boundaries"></a>16.9. <a id="c16s9"></a>Negation boundaries</h2>
+          </div>
+        </div>
+      </div>
+      <p><a id="idm47148543126112" class="indexterm"></a> This section, as well as 
+    <a class="xref" href="section-connectives.html" title="16.10. bridi negation and logical connectives">Section 16.10</a> through 
+    <a class="xref" href="section-demorgans-law.html" title="16.12. Logical Connectives and DeMorgan's Law">Section 16.12</a>, are in effect a continuation of 
+    <a class="xref" href="chapter-negation.html" title="Chapter 15. “No” Problems: On Lojban Negation">Chapter 15</a>, introducing features of Lojban negation that require an understanding of prenexes and variables. In the examples below, 
+    <span class="quote">“<span class="quote">there is a Y</span>”</span> and the like must be understood as 
+    
+    <span class="quote">“<span class="quote">there is at least one Y, possibly more</span>”</span>.</p>
+      <p><a id="idm47148543121760" class="indexterm"></a> As explained in 
+    <a class="xref" href="section-bridi-negation.html" title="15.2. bridi negation">Section 15.2</a>, the negation of a bridi is usually accomplished by inserting 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543119504" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span> at the beginning of the selbri:</p>
+      <div class="example">
+        <a id="example-random-id-hBRH"></a>
+        <p class="title">
+          <strong>Example 16.57. 
+        <a id="c16e9d1"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>mi</td>
+                <td>na</td>
+                <td>klama</td>
+                <td>le</td>
+                <td>zarci</td>
+              </tr>
+              <tr class="gloss">
+                <td>I</td>
+                <td>[false]</td>
+                <td>go-to</td>
+                <td>the</td>
+                <td>store.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">It is false that I go to the store.</p>
+                </td>
+              </tr>
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">I don't go to the store.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"> The other form of bridi negation is expressed by using the compound cmavo 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543104800" class="indexterm"></a>naku</em></span> in the prenex, which is identified and compounded by the lexer before looking at the sentence grammar. In Lojban grammar, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543102624" class="indexterm"></a>naku</em></span> is then treated like a sumti. In a prenex, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543100624" class="indexterm"></a>naku</em></span> means precisely the same thing as the logician's 
+    <span class="quote">“<span class="quote">it is not the case that</span>”</span> in a similar English context. (Outside of a prenex, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543098208" class="indexterm"></a>naku</em></span> is also grammatically treated as a single entity – the equivalent of a sumti – but does not have this exact meaning; we'll discuss these other situations in 
+    <a class="xref" href="section-na-outside-prenex.html" title="16.11. Using naku outside a prenex">Section 16.11</a>.)</p>
+      <p><a id="idm47148543095568" class="indexterm"></a><a id="idm47148543094320" class="indexterm"></a><a id="idm47148543093312" class="indexterm"></a><a id="idm47148543092144" class="indexterm"></a><a id="idm47148543090976" class="indexterm"></a><a id="idm47148543089776" class="indexterm"></a> To represent a bridi negation using a prenex, remove the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543088240" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span> from before the selbri and place 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543085632" class="indexterm"></a>naku</em></span> at the left end of the prenex. This form is called 
+    <span class="quote">“<span class="quote">external bridi negation</span>”</span>, as opposed to 
+    
+    
+    <span class="quote">“<span class="quote">internal bridi negation</span>”</span> using 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543083024" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-na"><em class="glossterm">na</em></a></em></span>. The prenex version of 
+    <a class="xref" href="section-negation-boundaries.html#example-random-id-hBRH" title="Example 16.57. ">Example 16.57</a> is</p>
+      <div class="example">
+        <a id="example-random-id-IH8J"></a>
+        <p class="title">
+          <strong>Example 16.58. 
+        <a id="c16e9d2"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>zo'u</td>
+                <td>la</td>
+                <td>djan.</td>
+                <td>klama</td>
+              </tr>
+              <tr class="gloss">
+                <td>It-is-not-the-case-that</td>
+                <td>:</td>
+                <td>that-named</td>
+                <td>John</td>
+                <td>comes.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">It is false that: John comes.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148543070384" class="indexterm"></a> However, 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148543068528" class="indexterm"></a>naku</em></span> can appear at other points in the prenex as well. Compare</p>
+      <div class="example">
+        <a id="example-random-id-cy6j"></a>
+        <p class="title">
+          <strong>Example 16.59. 
+        <a id="c16e9d3"></a>
+        <a id="idm47148543065344" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>de</td>
+                <td>zo'u</td>
+                <td>de</td>
+                <td>zutse</td>
+              </tr>
+              <tr class="gloss">
+                <td>It-is-not-the-case-that:</td>
+                <td>for-some-Y</td>
+                <td>:</td>
+                <td>Y</td>
+                <td>sits.</td>
+              </tr>
+              <tr class="gloss">
+                <td>It-is-false-that:</td>
+                <td>for-at-least-one-Y</td>
+                <td>:</td>
+                <td>Y</td>
+                <td>sits.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">It is false that something sits.</p>
+                </td>
+              </tr>
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Nothing sits.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"> with</p>
+      <div class="example">
+        <a id="example-random-id-2Fw3"></a>
+        <p class="title">
+          <strong>Example 16.60. 
+        <a id="c16e9d4"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'ode</td>
+                <td>naku</td>
+                <td>zo'u</td>
+                <td>de</td>
+                <td>zutse</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-at-least-one-Y,</td>
+                <td>it-is-false-that</td>
+                <td>:</td>
+                <td>Y</td>
+                <td>sits.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">There is something that doesn't sit.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">The relative position of negation and quantification terms within a prenex has a drastic effect on meaning. Starting without a negation, we can have:</p>
+      <div class="example">
+        <a id="example-random-id-21Y5"></a>
+        <p class="title">
+          <strong>Example 16.61. 
+        <a id="c16e9d5"></a>
+        <a id="idm47148543040480" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>roda</td>
+                <td>su'ode</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-every-X,</td>
+                <td>there-is-a-Y,</td>
+                <td>such-that</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Everybody loves at least one thing (each, not necessarily the same thing).</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent"> or:</p>
+      <div class="example">
+        <a id="example-random-id-Tj99"></a>
+        <p class="title">
+          <strong>Example 16.62. 
+        <a id="c16e9d6"></a>
+        <a id="idm47148543028800" class="indexterm"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'ode</td>
+                <td>roda</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>There-is-a-Y,</td>
+                <td>such-that-for-each-X</td>
+                <td>:</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">There is at least one particular thing that is loved by everybody.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">The simplest form of bridi negation to interpret is one where the negation term is at the beginning of the prenex:</p>
+      <div class="example">
+        <a id="example-random-id-1LqV"></a>
+        <p class="title">
+          <strong>Example 16.63. 
+        <a id="c16e9d7"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>roda</td>
+                <td>su'ode</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>It-is-false-that:</td>
+                <td>for-every-X,</td>
+                <td>there-is-a-Y,</td>
+                <td>such-that:</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">It is false that: everybody loves at least one thing.</p>
+                </td>
+              </tr>
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">(At least) someone doesn't love anything.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">the negation of 
+    <a class="xref" href="section-negation-boundaries.html#example-random-id-21Y5" title="Example 16.61. ">Example 16.61</a>, and</p>
+      <div class="example">
+        <a id="example-random-id-u1jY"></a>
+        <p class="title">
+          <strong>Example 16.64. 
+        <a id="c16e9d8"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>su'ode</td>
+                <td>roda</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>It-is-false-that:</td>
+                <td>there-is-a-Y</td>
+                <td>such-that</td>
+                <td>for-each-X</td>
+                <td>:</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">It is false that: there is at least one thing that is loved by everybody.</p>
+                </td>
+              </tr>
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">There isn't any one thing that everybody loves.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">the negation of 
+    <a class="xref" href="section-negation-boundaries.html#example-random-id-Tj99" title="Example 16.62. ">Example 16.62</a>.</p>
+      <p><a id="idm47148542990128" class="indexterm"></a><a id="idm47148542988960" class="indexterm"></a><a id="idm47148542987856" class="indexterm"></a> The rules of formal logic require that, to move a negation boundary within a prenex, you must 
+    <span class="quote">“<span class="quote">invert any quantifier</span>”</span> that the negation boundary passes across. Inverting a quantifier means that any 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542985872" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-ro"><em class="glossterm">ro</em></a></em></span> (all) is changed to 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542983520" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-suho"><em class="glossterm">su'o</em></a></em></span> (at least one) and vice versa. Thus, 
+    <a class="xref" href="section-negation-boundaries.html#example-random-id-1LqV" title="Example 16.63. ">Example 16.63</a> and 
+    <a class="xref" href="section-negation-boundaries.html#example-random-id-u1jY" title="Example 16.64. ">Example 16.64</a> can be restated as, respectively:</p>
+      <div class="example">
+        <a id="example-random-id-cJLQ"></a>
+        <p class="title">
+          <strong>Example 16.65. 
+        <a id="c16e9d9"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'oda</td>
+                <td>naku</td>
+                <td>su'ode</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-some-X,</td>
+                <td>it-is-false-that:</td>
+                <td>there-is-a-Y</td>
+                <td>such-that:</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">There is somebody who doesn't love anything.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">and:</p>
+      <div class="example">
+        <a id="example-random-id-hBXT"></a>
+        <p class="title">
+          <strong>Example 16.66. 
+        <a id="c16e9d10"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>rode</td>
+                <td>naku</td>
+                <td>roda</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-every-Y,</td>
+                <td>it-is-false-that:</td>
+                <td>for-every-X</td>
+                <td>:</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">For each thing, it is not true that everybody loves it.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Another movement of the negation boundary produces:</p>
+      <div class="example">
+        <a id="example-random-id-w6XF"></a>
+        <p class="title">
+          <strong>Example 16.67. 
+        <a id="c16e9d11"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'oda</td>
+                <td>rode</td>
+                <td>naku</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>There-is-an-X</td>
+                <td>such-that-for-every-Y,</td>
+                <td>it-is-false-that</td>
+                <td>:</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">There is someone who, for each thing, doesn't love that thing.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">and</p>
+      <div class="example">
+        <a id="example-random-id-JY08"></a>
+        <p class="title">
+          <strong>Example 16.68. 
+        <a id="c16e9d12"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>rode</td>
+                <td>su'oda</td>
+                <td>naku</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>For-every-Y,</td>
+                <td>there-is-an-X,</td>
+                <td>such-that-it-is-false-that</td>
+                <td>:</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">For each thing there is someone who doesn't love it.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148542934624" class="indexterm"></a> Investigation will show that, indeed, each transformation preserves the meanings of 
+    <a class="xref" href="section-negation-boundaries.html#example-random-id-1LqV" title="Example 16.63. ">Example 16.63</a> and 
+    <a class="xref" href="section-negation-boundaries.html#example-random-id-u1jY" title="Example 16.64. ">Example 16.64</a>.</p>
+      <p><a id="idm47148542931568" class="indexterm"></a><a id="idm47148542930352" class="indexterm"></a> The quantifier 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542928816" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-no"><em class="glossterm">no</em></a></em></span> (meaning 
+    <span class="quote">“<span class="quote">zero of</span>”</span>) also involves a negation boundary. To transform a bridi containing a variable quantified with 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542925984" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-no"><em class="glossterm">no</em></a></em></span>, we must first expand it. Consider</p>
+      <div class="example">
+        <a id="example-random-id-qCph"></a>
+        <p class="title">
+          <strong>Example 16.69. 
+        <a id="c16e9d13"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>noda</td>
+                <td>rode</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>There-is-no-X,</td>
+                <td>for-every-Y,</td>
+                <td>such-that</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">Nobody loves everything.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">which is negated by:</p>
+      <div class="example">
+        <a id="example-random-id-fpeW"></a>
+        <p class="title">
+          <strong>Example 16.70. 
+        <a id="c16e9d14"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>noda</td>
+                <td>rode</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>It-is-false-that:</td>
+                <td>there-is-no-X-that,</td>
+                <td>for-every-Y</td>
+                <td>:</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">It is false that there is nobody who loves everything.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent"><a id="idm47148542901744" class="indexterm"></a><a id="idm47148542900496" class="indexterm"></a><a id="idm47148542899600" class="indexterm"></a><a id="idm47148542898592" class="indexterm"></a> We can simplify 
+    <a class="xref" href="section-negation-boundaries.html#example-random-id-fpeW" title="Example 16.70. ">Example 16.70</a> by transforming the prenex. To move the negation phrase within the prenex, we must first expand the 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542896752" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-no"><em class="glossterm">no</em></a></em></span> quantifier. Thus 
+    <span class="quote">“<span class="quote">for no x</span>”</span> means the same thing as 
+    <span class="quote">“<span class="quote">it is false for some x</span>”</span>, and the corresponding Lojban 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542893360" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-noda"><em class="glossterm">noda</em></a></em></span> can be replaced by 
+    
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148542890848" class="indexterm"></a>naku su'oda</em></span>. Making this substitution, we get:</p>
+      <div class="example">
+        <a id="example-random-id-xTie"></a>
+        <p class="title">
+          <strong>Example 16.71. 
+        <a id="c16e9d15"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>naku</td>
+                <td>naku</td>
+                <td>su'oda</td>
+              </tr>
+              <tr class="gloss">
+                <td>It-is-false-that</td>
+                <td>it-is-false-that</td>
+                <td>there-is-some-X-such-that</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>…rode</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>for-every-X</td>
+                <td>:</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">It is false that it is false that: for an X, for every Y: X loves Y.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="indent">Adjacent pairs of negation boundaries in the prenex can be dropped, so this means the same as:</p>
+      <div class="example">
+        <a id="example-random-id-y7NU"></a>
+        <p class="title">
+          <strong>Example 16.72. 
+        <a id="c16e9d16"></a>
+      </strong>
+        </p>
+        <div class="example-contents">
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <colgroup></colgroup>
+              <tr class="jbo">
+                <td>su'oda</td>
+                <td>rode</td>
+                <td>zo'u</td>
+                <td>da</td>
+                <td>prami</td>
+                <td>de</td>
+              </tr>
+              <tr class="gloss">
+                <td>There-is-an-X-such-that,</td>
+                <td>for-every-Y</td>
+                <td>:</td>
+                <td>X</td>
+                <td>loves</td>
+                <td>Y.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="informaltable">
+            <table class="interlinear-gloss">
+              <tr class="para">
+                <td colspan="12321">
+                  <p class="natlang">At least one person loves everything.</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br class="example-break" />
+      <p class="noindent">which is clearly the desired contradiction of 
+    <a class="xref" href="section-negation-boundaries.html#example-random-id-qCph" title="Example 16.69. ">Example 16.69</a>.</p>
+      <p><a id="idm47148542863488" class="indexterm"></a><a id="idm47148542862304" class="indexterm"></a> The interactions between quantifiers and negation mean that you cannot eliminate double negatives that are not adjacent. You must first move the negation phrases so that they are adjacent, inverting any quantifiers they cross, and then the double negative can be eliminated.</p>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">Chapter 16. <span xmlns="http://www.w3.org/1999/xhtml" class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-any.html">Prev: Section 16.8</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-connectives.html">Next: Section 16.10</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>

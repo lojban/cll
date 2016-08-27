@@ -28,7 +28,7 @@ navgiation header and removes any newlines inside it; I used this
 when I changed all the nav headers so that each file had ~5 lines of
 changes (easy to review) vs. ~30 lines (not so much).
 
-  ruby -e 'puts ARGF.read.encode("UTF-8", "binary", invalid: :replace, undef: :replace, replace: "").gsub(%r{<div[^>]*(navheader|navfooter|toc-link|back-to-info-link).*?</div>}m) { |x| x.gsub(%r{\s+}," ") }' "$@" 
+  ruby -e 'puts ARGF.read.encode("UTF-8", "binary", invalid: :replace, undef: :replace, replace: "").gsub(%r{<div[^>]*(navheader|navfooter|toc-link|back-to-info-link).*?</div>}m) { |x| x.gsub(%r{\s+}," ") }' "$@"
 
 When you're satisfied that the changes you made are the changes you
 want, put the changes you want is official/ with something like
@@ -48,21 +48,25 @@ only changes when we change CLL versions.
 NOTE: The - and _ in the build/ dir do not match what's in the
 official/ dir.  Sorry about that.
 
+Updating EPUB & MOBI official/
+------------------------------
+
+We check the EPUB's format with both epubchecker and kindlegen.
+Since it's generated from the same xhtml as everything else (more or
+less), if it passes all those tests it's probably fine.
+
+However, it's now part of diff_official, too, since it's just a zip.
+
+When done, copy and update symlinks as with XHTML.
+
+Copy and update the MOBI as well; it's generated directly from the
+EPUB via kindlegen.
+
 Updating PDF official/
 ----------------------
 
 Get a PDF diff viewer for your OS and compare them visually.  I'm
 using https://github.com/vslavik/diff-pdf on Windows.
-
-When done, copy and update symlinks as with XHTML.
-
-Updating EPUB official/
------------------------
-
-Uh.
-
-I guess if the PDF and XHTML are correct, the EPUB probably is too?
-Review it for obvious errors maybe?
 
 When done, copy and update symlinks as with XHTML.
 
@@ -88,22 +92,27 @@ Then on the webserver (currently (Jun 2016) this is jukni):
 $ sudo -u apache mv /srv/lojban/static/publications/cll /srv/lojban/static/publications/cll.before-$(date +%Y%m%d)
 $ sudo -u apache mkdir /srv/lojban/static/publications/cll
 $ sudo -u apache tar -xvf /tmp/official_cll.tar -C /srv/lojban/static/publications/cll/
-$ ls -lZd /srv/lojban/static/publications/cll
-drwxr-xr-x. 5 apache apache staff_u:object_r:httpd_user_content_t:s0 4096 Jun  2 17:06 /srv/lojban/static/publications/cll/
-$ ls -lZ /srv/lojban/static/publications/cll
-total 7972
-lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      24 May 19 23:51 cll_v1.1.epub -> cll_v1.1_2016-04-13.epub
--rw-r--r--. 1 apache apache staff_u:object_r:httpd_user_content_t:s0 1356591 Apr 13 00:10 cll_v1.1_2016-04-13.epub
--rw-r--r--. 1 apache apache staff_u:object_r:httpd_user_content_t:s0 6276968 Apr 12 23:47 cll_v1.1_2016-04-13_book.pdf
+rlpowell@jukni> ls -lZd /srv/lojban/static/publications/cll
+drwxr-xr-x. 5 apache apache staff_u:object_r:httpd_user_content_t:s0 4096 Aug 27 01:09 /srv/lojban/static/publications/cll/
+rlpowell@jukni> ls -lZ /srv/lojban/static/publications/cll
+total 16444
+-rw-r--r--. 1 apache apache staff_u:object_r:httpd_user_content_t:s0    3173 Aug 27 01:08 CHANGELOG
+lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      24 Aug 27 00:47 cll_v1.1.epub -> cll_v1.1_2016-08-26.epub
+lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      24 Aug 27 00:54 cll_v1.1.mobi -> cll_v1.1_2016-08-26.mobi
 -rw-r--r--. 1 apache apache staff_u:object_r:httpd_user_content_t:s0  491834 Apr 19 01:12 cll_v1.1_2016-04-13_cover.pdf
-lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      28 May 19 23:52 cll_v1.1_book.pdf -> cll_v1.1_2016-04-13_book.pdf
+-rw-r--r--. 1 apache apache staff_u:object_r:httpd_user_content_t:s0  369822 Jun 14 01:48 cll_v1.1_2016-06-12_epub-cover.jpg
+-rw-r--r--. 1 apache apache staff_u:object_r:httpd_user_content_t:s0 1661232 Aug 26 19:37 cll_v1.1_2016-08-26.epub
+-rw-r--r--. 1 apache apache staff_u:object_r:httpd_user_content_t:s0 7990646 Aug 26 19:37 cll_v1.1_2016-08-26.mobi
+-rw-r--r--. 1 apache apache staff_u:object_r:httpd_user_content_t:s0 6282332 Aug 26 19:23 cll_v1.1_2016-08-26.pdf
+lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      23 Aug 27 00:53 cll_v1.1_book.pdf -> cll_v1.1_2016-08-26.pdf
 lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      29 May 19 23:52 cll_v1.1_cover.pdf -> cll_v1.1_2016-04-13_cover.pdf
-lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      40 May 28 22:28 cll_v1.1_xhtml-chapter-chunks -> cll_v1.1_xhtml-chapter-chunks_2016-05-25/
-drwxr-xr-x. 3 apache apache staff_u:object_r:httpd_user_content_t:s0    4096 May 25 23:47 cll_v1.1_xhtml-chapter-chunks_2016-05-25/
-lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      35 May 28 16:27 cll_v1.1_xhtml-no-chunks -> cll_v1.1_xhtml-no-chunks_2016-05-25/
-drwxr-xr-x. 3 apache apache staff_u:object_r:httpd_user_content_t:s0    4096 May 26 00:04 cll_v1.1_xhtml-no-chunks_2016-05-25/
-lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      40 May 31 18:52 cll_v1.1_xhtml-section-chunks -> cll_v1.1_xhtml-section-chunks_2016-05-25/
-drwxr-xr-x. 3 apache apache staff_u:object_r:httpd_user_content_t:s0   20480 May 31 16:13 cll_v1.1_xhtml-section-chunks_2016-05-25/
+lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      34 Jun 14 06:12 cll_v1.1_epub-cover.jpg -> cll_v1.1_2016-06-12_epub-cover.jpg
+lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      40 Aug 27 00:49 cll_v1.1_xhtml-chapter-chunks -> cll_v1.1_xhtml-chapter-chunks_2016-08-26/
+drwxr-xr-x. 3 apache apache staff_u:object_r:httpd_user_content_t:s0    4096 Aug 26 18:53 cll_v1.1_xhtml-chapter-chunks_2016-08-26/
+lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      35 Aug 27 00:25 cll_v1.1_xhtml-no-chunks -> cll_v1.1_xhtml-no-chunks_2016-08-26/
+drwxr-xr-x. 3 apache apache staff_u:object_r:httpd_user_content_t:s0    4096 Aug 26 19:11 cll_v1.1_xhtml-no-chunks_2016-08-26/
+lrwxrwxrwx. 1 apache apache staff_u:object_r:httpd_user_content_t:s0      40 Aug 27 00:52 cll_v1.1_xhtml-section-chunks -> cll_v1.1_xhtml-section-chunks_2016-08-26/
+drwxr-xr-x. 3 apache apache staff_u:object_r:httpd_user_content_t:s0   20480 Aug 26 19:04 cll_v1.1_xhtml-section-chunks_2016-08-26/
 
 Note that the selinux stuff there is important.
 
@@ -111,6 +120,7 @@ Then confirm that all of the following addresses work:
 
 http://lojban.org/publications/cll/cll_v1.1.epub
 http://lojban.org/publications/cll/cll_v1.1_epub-cover.jpg
+http://lojban.org/publications/cll/cll_v1.1.mobi
 http://lojban.org/publications/cll/cll_v1.1_book.pdf
 http://lojban.org/publications/cll/cll_v1.1_cover.pdf
 http://lojban.org/publications/cll/cll_v1.1_xhtml-chapter-chunks/

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" manifest="cll.appcache" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Chapter 16. “Who Did You Pass On The Road? Nobody”: Lojban And Logic</title>
+    <link rel="stylesheet" type="text/css" href="final.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="The Complete Lojban Language" />
+    <link rel="up" href="index.html" title="The Complete Lojban Language" />
+    <link rel="prev" href="section-are-all-questions-answered.html" title="15.11. Summary – Are All Possible Questions About Negation Now Answered?" />
+    <link rel="next" href="section-da-and-zohu.html" title="16.2. Existential claims, prenexes, and variables" />
+    <script xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+    <meta xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">The Complete Lojban Language</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-are-all-questions-answered.html">Prev: Section 15.11</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-da-and-zohu.html">Next: Section 16.2</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div class="chapter">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h1 class="title"><a id="chapter-quantifiers"></a>Chapter 16. <a id="c16"></a><span class="quote">“<span class="quote">Who Did You Pass On The Road? Nobody</span>”</span>: Lojban And Logic</h1>
+          </div>
+        </div>
+      </div>
+      <div class="mediaobject">
+        <a id="chapter-quantifiers-picture"></a>
+        <img src="media/chapter-quantifiers.gif" alt="The picture for chapter 16" />
+      </div>
+      <div class="section">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a id="section-quantifiers-introduction"></a>16.1. <a id="c16s1"></a>What's wrong with this picture?</h2>
+            </div>
+          </div>
+        </div>
+        <p><a id="idm47148544089728" class="indexterm"></a> The following brief dialogue is from <em class="citetitle">Chapter 7</em> of 
+    <em class="citetitle">Through The Looking Glass</em> by Lewis Carroll.</p>
+        <div class="example">
+          <a id="example-random-id-KB90"></a>
+          <p class="title">
+            <strong>Example 16.1. 
+        <a id="c16e1d1"></a>
+      </strong>
+          </p>
+          <div class="example-contents">
+            <p><span class="quote">“<span class="quote">Who did you pass on the road?</span>”</span> the King went on, holding out his hand to the Messenger for some more hay.</p>
+          </div>
+        </div>
+        <br class="example-break" />
+        <div class="example">
+          <a id="example-random-id-1UVT"></a>
+          <p class="title">
+            <strong>Example 16.2. 
+        <a id="c16e1d2"></a>
+      </strong>
+          </p>
+          <div class="example-contents">
+            <p><span class="quote">“<span class="quote">Nobody,</span>”</span> said the Messenger.</p>
+          </div>
+        </div>
+        <br class="example-break" />
+        <div class="example">
+          <a id="example-random-id-x9fC"></a>
+          <p class="title">
+            <strong>Example 16.3. 
+        <a id="c16e1d3"></a>
+      </strong>
+          </p>
+          <div class="example-contents">
+            <p><span class="quote">“<span class="quote">Quite right,</span>”</span> said the King: 
+      <span class="quote">“<span class="quote">this young lady saw him too. So of course Nobody walks slower than you.</span>”</span></p>
+          </div>
+        </div>
+        <br class="example-break" />
+        <div class="example">
+          <a id="example-random-id-105i"></a>
+          <p class="title">
+            <strong>Example 16.4. 
+        <a id="c16e1d4"></a>
+      </strong>
+          </p>
+          <div class="example-contents">
+            <p><span class="quote">“<span class="quote">I do my best,</span>”</span> the Messenger said in a sulky tone. 
+      <span class="quote">“<span class="quote">I'm sure nobody walks much faster than I do!</span>”</span></p>
+          </div>
+        </div>
+        <br class="example-break" />
+        <div class="example">
+          <a id="example-random-id-ANLu"></a>
+          <p class="title">
+            <strong>Example 16.5. 
+        <a id="c16e1d5"></a>
+      </strong>
+          </p>
+          <div class="example-contents">
+            <p><span class="quote">“<span class="quote">He can't do that,</span>”</span> said the King, 
+      <span class="quote">“<span class="quote">or else he'd have been here first.</span>”</span></p>
+          </div>
+        </div>
+        <br class="example-break" />
+        <p class="indent">This nonsensical conversation results because the King insists on treating the word 
+    <span class="quote">“<span class="quote">nobody</span>”</span> as a name, a name of somebody. However, the essential nature of the English word 
+    <span class="quote">“<span class="quote">nobody</span>”</span> is that it doesn't refer to somebody; or to put the matter another way, there isn't anybody to which it refers.</p>
+        <p><a id="idm47148544069856" class="indexterm"></a> The central point of contradiction in the dialogue arises in 
+    <a class="xref" href="chapter-quantifiers.html#example-random-id-x9fC" title="Example 16.3. ">Example 16.3</a>, when the King says 
+    <span class="quote">“<span class="quote">... Nobody walks slower than you</span>”</span>. This claim would be plausible if 
+    <span class="quote">“<span class="quote">Nobody</span>”</span> were really a name, since the Messenger could only pass someone who does walk more slowly than he. But the Messenger interprets the word 
+    <span class="quote">“<span class="quote">nobody</span>”</span> in the ordinary English way, and says (in 
+    <a class="xref" href="chapter-quantifiers.html#example-random-id-105i" title="Example 16.4. ">Example 16.4</a>) 
+    <span class="quote">“<span class="quote">... nobody walks much faster than I do</span>”</span> (i.e., I walk faster, or as fast as, almost everyone), which the King then again misunderstands. Both the King and the Messenger are correct according to their respective understandings of the ambiguous word 
+    <span class="quote">“<span class="quote">nobody/Nobody</span>”</span>.</p>
+        <p><a id="idm47148544064528" class="indexterm"></a> There are Lojban words or phrases corresponding to the problematic English words 
+    <span class="quote">“<span class="quote">somebody</span>”</span>, 
+    <span class="quote">“<span class="quote">nobody</span>”</span>, 
+    <span class="quote">“<span class="quote">anybody</span>”</span>, 
+    <span class="quote">“<span class="quote">everybody</span>”</span> (and their counterparts 
+    <span class="quote">“<span class="quote">some/no/any/everyone</span>”</span> and 
+    <span class="quote">“<span class="quote">some/no/any/everything</span>”</span>), but they obey rules which can often be surprising to English-speakers. The dialogue above simply cannot be translated into Lojban without distortion: the name 
+    <span class="quote">“<span class="quote">Nobody</span>”</span> would have to be represented by a Lojban name, which would spoil the perfection of the wordplay. As a matter of fact, this is the desired result: a logical language should not allow two conversationalists to affirm 
+    
+    <span class="quote">“<span class="quote">Nobody walks slower than the Messenger</span>”</span> and 
+    <span class="quote">“<span class="quote">Nobody walks faster than the Messenger</span>”</span> and both be telling the truth. (Unless, of course, nobody but the Messenger walks at all, or everyone walks at exactly the same speed.)</p>
+        <p><a id="idm47148544058560" class="indexterm"></a> This chapter will explore the Lojban mechanisms that allow the correct and consistent construction of sentences like those in the dialogue. There are no new grammatical constructs explained in this chapter; instead, it discusses the way in which existing facilities that allow Lojban-speakers to resolve problems like the above, using the concepts of modern logic. However, we will not approach the matter from the viewpoint of logicians, although readers who know something of logic will discover familiar notions in Lojban guise.</p>
+        <p><a id="idm47148544056368" class="indexterm"></a> Although Lojban is called a logical language, not every feature of it is 
+    
+    <span class="quote">“<span class="quote">logical</span>”</span>. In particular, the use of 
+    <span xml:lang="jbo" class="foreignphrase" lang="jbo"><em xml:lang="jbo" class="foreignphrase" lang="jbo"><a id="idm47148544054336" class="indexterm"></a><a class="glossterm" href="go01.html#valsi-le"><em class="glossterm">le</em></a></em></span> is incompatible with logical reasoning based on the description selbri, because that selbri may not truthfully apply: you cannot conclude from my statement that</p>
+        <div class="example">
+          <a id="example-random-id-4J5Y"></a>
+          <p class="title">
+            <strong>Example 16.6. 
+        <a id="c16e1d6"></a>
+      </strong>
+          </p>
+          <div class="example-contents">
+            <div class="informaltable">
+              <table class="interlinear-gloss">
+                <colgroup></colgroup>
+                <tr class="jbo">
+                  <td>mi</td>
+                  <td>viska</td>
+                  <td>le</td>
+                  <td>nanmu</td>
+                </tr>
+                <tr class="gloss">
+                  <td>I</td>
+                  <td>see</td>
+                  <td>the-one-I-refer-to-as-the</td>
+                  <td>man.</td>
+                </tr>
+              </table>
+            </div>
+            <div class="informaltable">
+              <table class="interlinear-gloss">
+                <tr class="para">
+                  <td colspan="12321">
+                    <p class="natlang">I see the man/men.</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <br class="example-break" />
+        <p class="noindent">that there really is a man; the only thing you can conclude is that there is one thing (or more) that I choose to refer to as a man. You cannot even tell which man is meant for sure without asking me (although communication is served if you already know from the context).</p>
+        <p><a id="idm47148544041504" class="indexterm"></a><a id="idm47148544040368" class="indexterm"></a> In addition, the use of attitudinals (see 
+    <a class="xref" href="chapter-attitudinals.html" title="Chapter 13. Oooh! Arrgh! Ugh! Yecch! Attitudinal and Emotional Indicators">Chapter 13</a>) often reduces or removes the ability to make deductions about the bridi to which those attitudinals are applied. From the fact that I hope George will win the election, you can conclude nothing about George's actual victory or defeat.</p>
+      </div>
+    </div>
+    <hr xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" />
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="navheader">
+      <table width="100%" summary="Chapter Header">
+        <tr>
+          <th colspan="3" align="center">The Complete Lojban Language</th>
+        </tr>
+      </table>
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <td width="50%" align="right">
+            <a accesskey="p" href="section-are-all-questions-answered.html">Prev: Section 15.11</a>
+          </td>
+          <td width="50%" align="left">
+            <a accesskey="n" href="section-da-and-zohu.html">Next: Section 16.2</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="toc-link" align="center">
+      <a accesskey="h" href="index.html">Table of Contents</a>
+    </div>
+    <div xmlns="" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:docbook="http://docbook.org/ns/docbook" class="back-to-info-link" align="center">
+      <a accesskey="b" href="http://www.lojban.org/cll">Book Info Page</a>
+    </div>
+  </body>
+</html>
