@@ -17,6 +17,11 @@
   <xsl:param name="section.autolabel.max.depth">8</xsl:param>
   <xsl:param name="section.label.includes.component.label" select="1"></xsl:param>
 
+  <!-- Allow non-trivial classes on examples -->
+  <xsl:template match="example[@role]" mode="class.value">
+    <xsl:value-of select="concat(@role,' example')"/>
+  </xsl:template>
+
   <!-- default is at
        http://docbook.sourceforge.net/release/xsl/1.76.1/doc/html/generate.toc.html
        -->
