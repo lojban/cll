@@ -27,9 +27,8 @@ else
   if diff -q "$builddir/jbovlaste.xml.new" "$builddir/jbovlaste.xml" >/dev/null 2>&1
   then
     echo "jbovlaste file has not changed."
-    # rm "$builddir/jbovlaste.xml.new"
   else
     echo "New jbovlaste file found; putting in place."
-    # mv "$builddir/jbovlaste.xml.new" "$builddir/jbovlaste.xml"
+    cp "$builddir/jbovlaste.xml.new" "$builddir/jbovlaste.xml"
   fi
 fi
