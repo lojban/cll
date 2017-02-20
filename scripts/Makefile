@@ -4,6 +4,7 @@ chapters = $(if $(CHAPTERS), $(CHAPTERS), chapters/01.xml chapters/02.xml chapte
 builddir = $(if $(BUILDDIR), $(BUILDDIR), $(PWD)/build)
 copydir = $(COPYDIR)
 covcopydir = $(COVCOPYDIR)
+xsl_base = xml/docbook-xsl-1.78.1
 
 SHELL=/bin/bash -o pipefail
 
@@ -38,10 +39,13 @@ $(builddir)/cll_processed_xhtml.xml: $(builddir)/cll.xml scripts/xml_preprocess.
 # Name the various chunking targets
 .PHONY: xhtml_chapters xhtml_sections xhtml_nochunks
 xhtml_chapters: $(builddir)/xhtml_chapter_chunks.done
+xhtml_chapters: xsl_file = $(xsl_base)/xhtml/chunk.xsl
 
 xhtml_sections: $(builddir)/xhtml_section_chunks.done
+xhtml_sections: xsl_file = $(xsl_base)/xhtml/chunk.xsl
 
 xhtml_nochunks: nochunks = -nochunks
+xhtml_nochunks: xsl_file = $(xsl_base)/xhtml/docbook.xsl
 xhtml_nochunks: $(builddir)/xhtml_no_chunks.done
 
 # Do the actual chunking work
@@ -49,7 +53,7 @@ $(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir
 	rm -rf $(builddir)/xhtml_$*_chunks
 	mkdir -p $(builddir)/xhtml_$*_chunks
 	ln -nsf $(PWD)/dtd $(builddir)/xhtml_$*_chunks/dtd
-	xmlto -m xml/docbook2html_config_$*_chunks.xsl -o $(builddir)/xhtml_$*_chunks/ xhtml$(nochunks) $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
+	xmlto -m xml/docbook2html_config_$*_chunks.xsl -x $(xsl_file) -o $(builddir)/xhtml_$*_chunks/ xhtml$(nochunks) $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
 	# We run tidy on the no-chunk version, because it's all in
 	# one place so it's easy
 	test -f $(builddir)/xhtml_$*_chunks/index.html || sed 's/mml:[^>]*/div/g' $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html | scripts/tidy -e - 2>&1 | grep -v '<table> lacks "summary" attribute'
@@ -79,7 +83,7 @@ $(builddir)/pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_confi
 	ln -nsf $(PWD)/media $(builddir)/pdf/media
 	ln -nsf $(PWD)/dtd $(builddir)/pdf/dtd
 	
-	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/pdf/ xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
+	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/pdf/ -x $(xsl_base)/xhtml/docbook.xsl xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
 	scripts/xhtml_postprocess_cleanup.sh $(builddir)/pdf/
 	ruby scripts/xml_prince_postprocess.rb $(builddir)/pdf/cll_processed_xhtml.html >$(builddir)/pdf/cll_processed_xhtml_pdf.html 2>$(builddir)/xml_prince_postprocess.out
 	
@@ -119,7 +123,7 @@ $(builddir)/epub-xhtml/index.html: $(builddir)/cll_processed_xhtml.xml xml/docbo
 	rm -rf $(builddir)/epub-xhtml/
 	mkdir -p $(builddir)/epub-xhtml/
 	ln -nsf $(PWD)/dtd $(builddir)/epub-xhtml/dtd
-	xmlto -m xml/docbook2html_config_epub.xsl -o $(builddir)/epub-xhtml/ xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
+	xmlto -m xml/docbook2html_config_epub.xsl -o $(builddir)/epub-xhtml/ -x $(xsl_base)/xhtml/chunk.xsl xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
 	cp $(PWD)/scripts/master.css $(builddir)/epub-xhtml/final.css
 	cp -pr $(PWD)/media $(builddir)/epub-xhtml/
 	scripts/xhtml_postprocess_cleanup.sh $(builddir)/epub-xhtml/
