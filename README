@@ -11,10 +11,13 @@ version.
 
 - ---
 
-To make all the versions (which it will try to install into
-~/public_html/media/public/cll_build/ ) do:
+To make all the versions do:
 
   ./cll_build
+
+If you want to also copy it into your personal webspace, do something like:
+
+  ./cll_build -a ~/public_html/cll_build/
 
 This takes quite a while.  To do it for just one chapter for faster
 testing:
