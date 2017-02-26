@@ -19,12 +19,20 @@ To make all the versions do:
 
   ./cll_build
 
-If you want to also copy it into your personal webspace, do something like:
+The final results will end up under the build/ directory, scattered
+about in various places.  If you would like the final outputs only
+to be copied to another directory, you can use the -a option, so for example:
+
+  ./cll_build -a output/
+
+would put all the outputs in the output/ directory, whereas
 
   ./cll_build -a ~/public_html/cll_build/
 
-This takes quite a while.  To do it for just one chapter for faster
-testing:
+would put them in your personal webspace.
+
+Running a complete build takes quite a while (like probably at least
+an hour).  To do it for just one chapter for faster testing:
 
   ./cll_build -t chapters/05.xml 
 
