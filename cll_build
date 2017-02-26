@@ -126,6 +126,29 @@ then
   archivedir=""
 fi
 
+#**********
+# Get the correct xsl version, which we'll need pretty much no
+# matter what.
+#**********
+if [ -f xml/docbook-xsl-1.78.1.zip \
+  -a "$(md5sum xml/docbook-xsl-1.78.1.zip 2>&1)" = '51ed42fe67ed513763c5bd9f1abd680b  xml/docbook-xsl-1.78.1.zip' ]
+then
+  echo "xsl already downloaded; if you think this is in error, delete xml/docbook-xsl-1.78.1.zip"
+else
+  rm -rf xml/docbook-xsl-1.78.1*
+  # it would be best not to go to a specific mirror like this, but
+  # it's not obivous how to fix that
+  wget https://superb-sea2.dl.sourceforge.net/project/docbook/docbook-xsl/1.78.1/docbook-xsl-1.78.1.zip -O xml/docbook-xsl-1.78.1.zip
+fi
+
+if [ -d xml/docbook-xsl-1.78.1 -a "$(find xml/docbook-xsl-1.78.1 | sort | wc -l 2>&1)" = '1945' ]
+then
+  echo "xsl already unpacked; if you think this is in error, delete xml/docbook-xsl-1.78.1/ and/or xml/docbook-xsl-1.78.1.zip"
+else
+  rm -rf xml/docbook-xsl-1.78.1/
+  bash -c "cd xml/ ; unzip docbook-xsl-1.78.1.zip"
+fi
+
 echo "chapters: $chapters"
 echo "optlist: $optlist"
 echo "target: $target"
