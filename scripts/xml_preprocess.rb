@@ -302,7 +302,7 @@ $document.css('mmlinlinemath').each { |e| mml_wrapper( e, "<inlineequation role=
 
 ## <dbmath>3:22:40 + 0:3:33 = 3:26:13</dbmath>
 $document.css('dbmath').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<informalequation role='dbmath'>#{e}</informalequation>" ) }
-$document.css('mmlmath').each { |e| mml_wrapper( e, "<informalequation role='mmlmath'><mml:math>#{e.children.to_xml}</mml:math></informalequation>" ) }
+$document.css('mmlmath').each { |e| mml_wrapper( e, "<informalequation role='mmlmath'><mml:math display='block'>#{e.children.to_xml}</mml:math></informalequation>" ) }
 
 ##       <pronunciation>
 ##         <jbo>.e'o ko ko kurji</jbo>

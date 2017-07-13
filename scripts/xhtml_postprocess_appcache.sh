@@ -10,7 +10,12 @@ rm cll.appcache
 touch cll.appcache
 echo 'CACHE MANIFEST' >>cll.appcache
 echo "# $(date)" >>cll.appcache
+echo "" >>cll.appcache
+echo "CACHE:" >>cll.appcache
 find . -type f | sed 's;^\./;;' | grep -v '\.appcache' >>cll.appcache
+echo "" >>cll.appcache
+echo "NETWORK:" >>cll.appcache
+echo "*" >>cll.appcache
 
 find . -type f | xargs grep -l '<html xmlns=' | while read file
 do
