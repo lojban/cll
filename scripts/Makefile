@@ -69,6 +69,8 @@ ifdef copydir
 	mkdir -p $(copydir)
 	rm -rf $(copydir)/cll-xhtml_$*_chunks
 	cp -pr $(builddir)/xhtml_$*_chunks $(copydir)/cll-xhtml_$*_chunks
+	# The appcache is supremely unhelpful when testing
+	find $(copydir) -name cll.appcache | xargs rm
 endif
 
 #*******
@@ -137,4 +139,6 @@ ifneq ($(covcopydir),)
 	cp $(builddir)/cll.pdf $(covcopydir)/cll.pdf
 	rm -rf $(covcopydir)/cll-xhtml_no_chunks
 	cp -pr $(builddir)/xhtml_no_chunks $(covcopydir)/cll-xhtml_no_chunks
+	# The appcache is supremely unhelpful when testing
+	find $(covcopydir) -name cll.appcache | xargs rm
 endif
