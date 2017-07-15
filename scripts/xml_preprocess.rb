@@ -451,7 +451,7 @@ $document.css('cmavo-list').each do |node|
       #           <quote>Attention/Lo/Hark/Behold/Hey!/Listen, X</quote>; indicates an important communication that the listener should listen to.
       #         </description>
 
-      handle_children( node: child, allowed_children_names: [ 'gismu', 'cmavo', 'selmaho', 'series', 'rafsi', 'compound', 'modal-place', 'attitudinal-scale', 'pseudo-cmavo', 'description' ] ) do |grandchild|
+      handle_children( node: child, allowed_children_names: [ 'gismu', 'cmavo', 'selmaho', 'series', 'rafsi-group', 'rafsi', 'compound', 'modal-place', 'attitudinal-scale', 'pseudo-cmavo', 'description' ] ) do |grandchild|
         role=grandchild.name
         if grandchild[:role]
           role=grandchild[:role]
@@ -477,6 +477,10 @@ $document.css('cmavo-list').each do |node|
   end
 
   tableify node
+end
+
+$document.css('.rafsi-group rafsi').each do |node|
+  convert!( node: node, newname: 'phrase', lang: 'jbo' )
 end
 
 $document.css('letteral,diphthong,cmevla,morphology,rafsi').each do |node|
