@@ -378,7 +378,7 @@
           <description>long time distance</description>
         </cmavo-entry>
       </cmavo-list>
-      <para role="indent"> <indexterm type="general"><primary>temporal tense</primary><secondary>order relative to spatial</secondary></indexterm>  <indexterm type="general"><primary>spatial tense</primary><secondary>order relative to temporal</secondary></indexterm>  <indexterm type="general"><primary>tense</primary><secondary>rationale for relative order of temporal and spatial in</secondary></indexterm>  <indexterm type="general"><primary>tense</primary><secondary>order of temporal and spatial in</secondary></indexterm>  <indexterm type="general"><primary>ZI selma'o</primary><secondary>compared with VA</secondary></indexterm>  <indexterm type="general"><primary>PU selma'o</primary><secondary>compared with FAhA</secondary></indexterm>  <indexterm type="general"><primary>temporal tenses</primary><secondary>compared with spatial tenses</secondary></indexterm> Now that the reader understands spatial tenses, there are only two main facts to understand about temporal tenses: they work exactly like the spatial tenses, with selma'o PU and ZI standing in for FAhA and VA; and when both spatial and temporal tense cmavo are given in a single tense construct, the temporal tense is expressed first. (If space could be expressed before or after time at will, then certain constructions would be ambiguous.)</para>
+      <para role="indent"> <indexterm type="general"><primary>temporal tense</primary><secondary>order relative to spatial</secondary></indexterm>  <indexterm type="general"><primary>spatial tense</primary><secondary>order relative to temporal</secondary></indexterm>  <indexterm type="general"><primary>tense</primary><secondary>rationale for relative order of temporal and spatial in</secondary></indexterm>  <indexterm type="general"><primary>tense</primary><secondary>order of temporal and spatial in</secondary></indexterm>  <indexterm type="general"><primary>ZI selma'o</primary><secondary>compared with VA</secondary></indexterm>  <indexterm type="general"><primary>PU selma'o</primary><secondary>compared with FAhA</secondary></indexterm>  <indexterm type="general"><primary>temporal tenses</primary><secondary>compared with spatial tenses</secondary></indexterm> Now that the reader understands spatial tenses, there are only two main facts to understand about temporal tenses: they work exactly like the spatial tenses, with selma'o PU and ZI standing in for FAhA and VA.</para>
       
       
       <example role="interlinear-gloss-example" xml:id="example-random-id-ameb">
@@ -3082,7 +3082,7 @@
         <indexterm type="example"><primary>on two occasions</primary></indexterm>
       </title>
       <interlinear-gloss>
-        <jbo>mi reroi pi'u xaroi cecla</jbo>
+        <jbo>mi reroi pi'u xaroi celgau</jbo>
         <gloss>I [twice] [cross-product] [six-times] shoot</gloss>
       </interlinear-gloss>
       <interlinear-gloss>
@@ -3544,31 +3544,37 @@
     <para>It is a limitation of the VA and ZI system of specifying magnitudes that they can only prescribe vague magnitudes: small, medium, or large. In order to express both an origin point and an exact distance, the Lojban construction called a 
     <quote>termset</quote> is employed. (Termsets are explained further in 
     <xref linkend="section-termsets"/> and 
-    <xref linkend="section-quantifier-grouping"/>.) It is grammatical for a termset to be placed after a tense or modal tag rather than a sumti, which allows both the origin of the imaginary journey and its distance to be specified. Here is an example:</para>
+    <xref linkend="section-quantifier-grouping"/>.) Termsets let multiple series of terms apply to a bridi conjunctively, which allows both the origin of the imaginary journey and its distance to be specified. Here is an example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7Lys">
       <title>
         <anchor xml:id="c10e25d1"/>
       </title>
       <interlinear-gloss>
-        <jbo>la frank. sanli zu'a nu'i la djordj.</jbo>
-        <gloss>That-named Frank stands [left] [start-termset] - George</gloss>
+        <jbo>la .frank. cu sanli nu'i fau gi zu'a la .djordj.</jbo>
+        <gloss>That-named Frank - stands [termset] same-event [forethought] left-of - George</gloss>
       </interlinear-gloss>
       <interlinear-gloss>
-        <jbo>… la'u lo mitre be li mu [nu'u]</jbo>
-        <gloss>… [quantity] a thing-measuring-in-meters - the-number 5 [end-termset].</gloss>
+        <jbo>… [nu'u] gi ki ri</jbo>
+        <gloss>… [end-termset] [forethought-medial] from-reference-point last-sumti</gloss>
+      </interlinear-gloss>
+      <interlinear-gloss>
+        <jbo>… va lo mitre be li mu [nu'u]</jbo>
+        <gloss>… at-distance a thing-measuring-in-meters - the-number 5 [end-termset].</gloss>
         <natlang>Frank is standing five meters to the left of George.</natlang>
       </interlinear-gloss>
     </example>
-    <para role="indent">Here the termset extends from the 
-    <valsi>nu'i</valsi> to the implicit 
-    <valsi>nu'u</valsi> at the end of the sentence, and includes the terms 
-    <jbophrase>la djordj.</jbophrase>, which is the unmarked origin point, and the tagged sumti 
-    <jbophrase>lo mitre be li mu</jbophrase>, which the cmavo 
-    <valsi>la'u</valsi> (of selma'o BAI, and meaning 
-    <quote>with quantity</quote>; see 
-    <xref linkend="section-BAI"/>) marks as a quantity. Both terms are governed by the tag 
-    <valsi>zu'a</valsi></para>
-    <para>It is not necessary to have both an origin point and an explicit magnitude: a termset may have only a single term in it. A less precise version of 
+    <para role="indent">
+      Here we have two termsets connected in forethought, signalled by 
+      <valsi>nu'i</valsi> followed by the gek 
+      <jbophrase>fau gi</jbophrase>. Each connectand termset extends from the gek or gik to the terminator
+      <valsi>nu'u</valsi>, here elided in both cases. The 
+      <valsi>fau</valsi> connective is used to indicate that both termsets, 
+      <quote>to the left of George</quote> and 
+      <quote>five metres from him</quote>, apply to the same instance of the event, and the 
+      <valsi>ki</valsi> term is included only in the right termset so that the reference point for leftness is left vague.
+      Termset connectives are further explained in <xref linkend="section-termsets"/>.
+    </para>
+    <para>It is not necessary to have both an origin point and an explicit magnitude. When only one needs to be specified, the tense can be expressed without a termset. A less precise version of 
     
     
     
@@ -3579,8 +3585,8 @@
         <anchor xml:id="c10e25d2"/>
       </title>
       <interlinear-gloss>
-        <jbo>la frank. sanli zu'a nu'i la'u</jbo>
-        <gloss>That-named Frank stands [left] [termset] [quantity]</gloss>
+        <jbo>la .frank. cu sanli zu'a va</jbo>
+        <gloss>That-named Frank - stands to-the-left at-distance</gloss>
       </interlinear-gloss>
       <interlinear-gloss>
         <jbo>… lo mitre be li mu</jbo>
