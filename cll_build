@@ -138,7 +138,7 @@ else
   rm -rf xml/docbook-xsl-1.78.1*
   # it would be best not to go to a specific mirror like this, but
   # it's not obivous how to fix that
-  wget https://superb-sea2.dl.sourceforge.net/project/docbook/docbook-xsl/1.78.1/docbook-xsl-1.78.1.zip -O xml/docbook-xsl-1.78.1.zip
+  wget https://astuteinternet.dl.sourceforge.net/project/docbook/docbook-xsl/1.78.1/docbook-xsl-1.78.1.zip -O xml/docbook-xsl-1.78.1.zip
 fi
 
 if [ -d xml/docbook-xsl-1.78.1 -a "$(find xml/docbook-xsl-1.78.1 | sort | wc -l 2>&1)" = '1945' ]
@@ -147,6 +147,12 @@ then
 else
   rm -rf xml/docbook-xsl-1.78.1/
   bash -c "cd xml/ ; unzip docbook-xsl-1.78.1.zip"
+fi
+
+if [ "$(find xml/docbook-xsl-1.78.1 | sort | wc -l 2>&1)" != '1945' ]
+then
+  echo -e "\n\nI don't see valid unpacked xsl in xml/docbook-xsl-1.78.1; bailing.\n\n"
+  exit 1
 fi
 
 echo "chapters: $chapters"
