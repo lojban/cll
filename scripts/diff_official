@@ -55,7 +55,7 @@ do
       mv $file.tmp $file
     done
   fi
-  diff -Bw -r diff_old diff_new
+  diff -u -Bw -r diff_old diff_new
   if [ $? -ne 0 -a ! "$continue" ]
   then
     echo "Diffs found; stopping to let you examine them.  If you want to show all diffs instead, run with -c"
