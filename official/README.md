@@ -52,15 +52,24 @@ changes (easy to review) vs. ~30 lines (not so much).
     ruby -e 'puts ARGF.read.encode("UTF-8", "binary", invalid: :replace, undef: :replace, replace: "").gsub(%r{<div[^>]*(navheader|navfooter|toc-link|back-to-info-link).*?</div>}m) { |x| x.gsub(%r{\s+}," ") }' "$@"
 
 When you're satisfied that the changes you made are the changes you
-want, put the changes you want is official/ with something like
+want, put the changes you want in official/ with something like
 this:
 
     $ cp -r build/xhtml_section_chunks official/cll_v1.1_xhtml-section-chunks_2016-05-25
     $ cd official
+
+Now you need to fix the links; you can get a list of all the links like so:
+
+    $ find . -type l \! -name dtd
+
+Fixing looks like this:
+
     $ rm cll_v1.1_xhtml-section-chunks
     $ ln -s cll_v1.1_xhtml-section-chunks_2016-05-25 cll_v1.1_xhtml-section-chunks
 
 (Obviously, update that if we're not on version 1.1 anymore!)
+
+(Repeat for the other 2 chunk types.)
 
 The goal here is to make it so that every currently-relevant
 file/directory has a symlink to it, and that that symlink's name
