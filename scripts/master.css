@@ -4,6 +4,58 @@
  * When running under Prince, everything that happens here happens *AFTER* /usr/lib/prince/style/xhtml.css
 ********************/
 
+/* Web fonts */
+@font-face {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: normal;
+  src: url("media/NotoSerif-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Serif";
+  font-style: normal;
+  font-weight: bold;
+  src: url("media/NotoSerif-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Serif";
+  font-style: italic;
+  font-weight: normal;
+  src: url("media/NotoSerif-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Serif";
+  font-style: italic;
+  font-weight: bold;
+  src: url("media/NotoSerif-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("media/NotoSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: bold;
+  src: url("media/NotoSans-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: normal;
+  src: url("media/NotoSans-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: bold;
+  src: url("media/NotoSans-BoldItalic.ttf") format("truetype");
+}
+
+
 /****
  * General note on dl/dt/dd: Kindle can't handle nesting of them, so
  * in build_epub.sh we replace them with ul/li and special classes;
@@ -16,6 +68,14 @@ html {
   font-size: 9pt;
   text-align: justify;
 }
+@media screen {
+  html {
+    font-family: "Noto serif", serif;
+    font-size: 18px;
+    text-align: left;
+  }
+}
+
 
 /*********
 print display
@@ -161,9 +221,19 @@ special glyphs
 p[lang="ko"] {
   font-family: Unifont;
 }
+@media screen {
+  p[lang="ko"] {
+    font-family: "Noto Serif", serif;
+  }
+}
 
 p[lang="math"] {
   font-family: 'Linux Biolinum', 'Biolinum', 'DejaVu Sans';
+}
+@media screen {
+  p[lang="math"] {
+    font-family: "Noto Serif", serif;
+  }
 }
 
 /* Make sure that comments *inside* the special glyph natlang look normal */
@@ -171,6 +241,13 @@ span.comment {
   font-family: 'Linux Libertine', Libertine, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   font-size: 9pt;
   font-style: normal;
+}
+@media screen {
+  span.comment {
+    font-family: "Noto Serif", serif;
+    font-size: inherit;
+    font-style: 1rem;
+  }
 }
 /****
 }}}
@@ -185,6 +262,11 @@ div.example {
   font-family: 'Linux Biolinum', 'Biolinum', 'DejaVu Sans';
   margin-top: 0pt;
   margin-bottom: 0pt;
+}
+@media screen {
+  div.example {
+    font-family: "Noto Sans", sans-serif;
+  }
 }
 
 br.example-break {
@@ -321,6 +403,14 @@ h2 {
   font-size: 11pt;
   margin: 0pt;
   margin-top: 10pt;
+}
+@media screen {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
 }
 /*
 }}}
@@ -566,6 +656,11 @@ p.twocolumn + div {
   font-size: 8pt;
   font-weight: bold;
 }
+@media screen {
+  .varname {
+    font-size: 0.9rem;
+  }
+}
 
 br.table-break {
   display: none;
@@ -642,14 +737,14 @@ screen display
 
 /* Styles specifically for small screens. */
 @media screen and (max-width: 1800px) {
-  body {
+  html {
     font-size: 16px;
   }
 }
 
 /* Styles for medium to large screens. */
 @media screen and (min-width: 1800px) {
-  body {
+  html {
     font-size: 19px;
   }
 }
