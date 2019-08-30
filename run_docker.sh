@@ -22,7 +22,7 @@ dir=$(readlink -f $(dirname $0))
 chcon -R -t container_home_t  .
 
 # FOR TESTING; forces complete podman rebuild
-# sudo podman build --no-cache -t lojban/cll_build -f podmanfile .
+# sudo podman build --no-cache -t lojban/cll_build -f Dockerfile .
 # sudo podman rmi lojban/cll_build
 sudo podman build -t lojban/cll_build -f Dockerfile . || {
   echo "Docker build failed."
