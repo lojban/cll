@@ -9,7 +9,7 @@ then
 fi
 
 builddir=$1
-cp jbovlaste.xml.new "$builddir/jbovlaste.xml.new"
+cp "../dictionary.xml" "$builddir/jbovlaste.xml.new"
 
 sizenew="$(stat -c %s $builddir/jbovlaste.xml.new || echo 0)"
 if [ ! -f "$builddir/jbovlaste.xml.new" -o ! "$sizenew" -o "$sizenew" -lt 100 ]
