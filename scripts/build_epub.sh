@@ -82,7 +82,7 @@ do
   fi
 
   properties=""
-  if grep -q mml: $file
+  if grep -q '<math' $file
   then
     properties="properties=\"mathml\""
   fi

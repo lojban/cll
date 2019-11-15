@@ -1,99 +1,44 @@
-TO USE DOCKER:
-
-Instead of ./cll_build below, use the same commands with:
-
-  ./run_docker.sh
-
-Note that it expects to need sudo to run docker commands; if that
-causes a problem for you let me (rlpowell) know and we'll figure out
-a fix, but needing sudo for docker is pretty common.
-
-You don't *need* to use docker, but if you don't you'll have to put
-together all the requirements yourself, and they'll need to match
-versions, and so on.  I really strongly suggest using the Docker
-version.
-
-- ---
-
 To make all the versions do:
 
-  ./cll_build
+  ./run_container.sh
 
 The final results will end up under the build/ directory, scattered
 about in various places.  If you would like the final outputs only
-to be copied to another directory, you can use the -a option, so for example:
+to be copied to another directory, i.e. for web display, you can use
+the -a option, so for example:
 
-  ./cll_build -a output/
+  ./run_container.sh -a output/
 
 would put all the outputs in the output/ directory, whereas
 
-  ./cll_build -a ~/public_html/cll_build/
+  ./run_container.sh -a ~/public_html/cll_build/
 
 would put them in your personal webspace.
 
 Running a complete build takes quite a while (like probably at least
 an hour).  To do it for just one chapter for faster testing:
 
-  ./cll_build -t chapters/05.xml 
+  ./run_container.sh -t chapters/05.xml 
 
 This does the whole book but is also much faster:
 
-  ./cll_build -t
+  ./run_container.sh -t
 
 There are many possible sub-targets as well, which are specified
 with -T, such as:
 
-  ./cll_build -t -T pdf
+  ./run_container.sh -t -T pdf
 
 You can get a complete list of targets via:
 
-  ./cll_build -h
+  ./run_container.sh -h
 
-Requirements
-------------
+Container/sudo Notes
+--------------------
 
-Getting this all working is actually a pretty huge undertaking;
-you're almost certainly better off asking Robin Lee Powell for an
-account on the appropriate server.
+The builds will run in a podman (preferred) or docker container,
+depending on what you have available.
 
-  General/HTML
-  ------------
-
-    xsltproc
-
-    xmlto
-
-    Normal linux tools probably like tar.  You definitely need wget,
-    in particular.
-
-    The actual docbook packages (i.e. the docbook 5.0 XSLT stuff)
-
-    Ruby
-
-    All the Ruby gems mentioned in Gemfile; in fact the normal way to
-    do this sort of thing is:
-
-      $ gem install bundler
-      $ bundle install
-
-    and that should get all the dependencies for you (although I
-    (rlpowell) don't do it that way myself, so this is untested by me
-    and you might have to do "bundle exec ..." with your build
-    commands or something; regardless, there's only like 3 gem
-    dependencies).
-
-  PDF Generation
-  --------------
-
-    prince ( http://www.princexml.com/ )
-
-
-  MOBI / EPUB
-  -----------
-
-    ebook-convert (from calibre, but the yum package doesn't really
-    work; use the binary install at
-    https://calibre-ebook.com/download_linux )
-
-    Xvfb and xvfb-run (fake X for calibre) or a running X server
-    session -- MAYBE NOT ACTUALLY NEEDED
+All container commands are run with sudo.  This is a pretty standard
+requirement for container use; if it causes you problems let me
+(rlpowell) know and we'll try to figure something out.

@@ -1,11 +1,24 @@
-FROM rlpowell/fedora_base
+FROM fedora:30
+
+# Initial Setup, Basic Package Installs
+RUN dnf -y update
+RUN dnf -y remove vim-minimal
+RUN dnf -y reinstall shadow-utils  # needed for man pages, dunno why
+RUN dnf -y install vim sudo tmux zsh moreutils make moreutils sudo \
+      dos2unix strace git the_silver_searcher procps-ng openssh-server \
+      initscripts openssh man-db ncurses-compat-libs wget curl \
+      libcurl-devel pcre-devel bzip2-devel rsync zlib-devel \
+      pkgconfig w3m openssl-devel gcc rubygem-rake fpaste \
+      zip unzip psmisc lsof python yum-plugin-ovl
 
 # Specifically needed packages, with versions where the package is
 # important.
-RUN dnf -y install xmlto-0.0.28 ruby-devel libxml2-devel libxslt-devel redhat-rpm-config tidy \
-dejavu-fonts-common-2.35 dejavu-serif-fonts-2.35 linux-libertine-biolinum-fonts-5.3.0 \
-linux-libertine-fonts-5.3.0 linux-libertine-fonts-common-5.3.0 unifont-9.0.06 \
-unifont-fonts-9.0.06 dejavu-sans-mono-fonts.noarch java-1.8.0-openjdk-headless.x86_64
+RUN dnf -y install xmlto-0.0.28 ruby-devel libxml2-devel \
+libxslt-devel redhat-rpm-config tidy dejavu-fonts-common \
+dejavu-serif-fonts linux-libertine-biolinum-fonts \
+linux-libertine-fonts linux-libertine-fonts-common unifont \
+unifont-fonts dejavu-sans-mono-fonts.noarch \
+java-1.8.0-openjdk-headless.x86_64
 
 # Language issues
 RUN /bin/echo 'LANG=en_US.UTF-8' >/etc/locale.conf
@@ -24,10 +37,10 @@ RUN bundle config build.nokogiri --use-system-libraries
 RUN bundle install
 
 # Prince XML Setup
-RUN cd /usr/src ; wget https://www.princexml.com/download/prince-10r7-1.centos7.x86_64.rpm
-RUN dnf -y install /usr/src/prince-10r7-1.centos7.x86_64.rpm
+RUN cd /usr/src ; wget https://www.princexml.com/download/prince-12.5-1.centos7.x86_64.rpm
+RUN dnf -y install /usr/src/prince-12.5-1.centos7.x86_64.rpm
 
 # Stuff to do on "boot"
-COPY docker_init.sh /tmp/docker_init.sh
-RUN sudo dos2unix /tmp/docker_init.sh
-RUN sudo chmod 755 /tmp/docker_init.sh
+COPY container_init.sh /tmp/container_init.sh
+RUN sudo dos2unix /tmp/container_init.sh
+RUN sudo chmod 755 /tmp/container_init.sh

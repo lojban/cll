@@ -295,6 +295,11 @@ p {
     display: block;
     margin-top: .1em;
     margin-bottom: .1em;
+    /* see https://www.princexml.com/doc/11/paged/#widows-and-orphans --
+     * this is to match the behaviour of previous versions, and also
+     * I (Robin) think it looks nicer */
+    orphans: 2;
+    widows: 2;
 }
 div.section > p {
     text-indent: 1em;
@@ -443,12 +448,12 @@ table td, table th {
   padding-left: 0.4em;
   vertical-align: top;
 }
-table.vertsep > tr {
+table.vertsep > tbody > tr {
   margin-bottom: 0.4em;
   border-bottom: 1px dotted grey;
   page-break-inside: avoid;
 }
-table.vertsep > tr:last-child {
+table.vertsep > tbody > tr:last-child {
   border-bottom: 0;
   page-break-inside: avoid;
 }

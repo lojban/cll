@@ -135,6 +135,22 @@ Example: <math>(1000 * L) - (500 * A) + (100 * H) - (10 * R) - V</math>
 Used to wrap math that appears as its own paragrah; just shorthand
 for docbook's <informalequation><mathphrase>
 
+  mmlmath / mmlinlinemath
+  -----------------------
+  
+Example:
+
+<mmlinlinemath>
+  <mrow>
+    <mn>3</mn>
+    <mo>&InvisibleTimes;</mo>
+    <mi>x</mi>
+  </mrow>
+</mmlinlinemath>
+
+Gets turned (eventually) into MathML <math> tags, with
+<inlineequation> or <informalequation> as appropriate.
+
   grammar-template
   ----------------
 

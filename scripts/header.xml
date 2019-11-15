@@ -6,11 +6,9 @@
   %allent;
 
   <!-- Handle MathML in <mathphrase> -->
-  <!ENTITY % MATHML.prefixed "INCLUDE">
-  <!ENTITY % MATHML.prefix "mml">
-  <!ELEMENT mathphrase (#PCDATA|inlinemediaobject|remark|superscript|subscript|xref|link|olink|anchor|biblioref|alt|annotation|indexterm|phrase|replaceable|emphasis|mml:math)*>
-  <!ELEMENT informalequation ((info)?, (alt)?, ((mediaobject)+|(mathphrase)+|(mml:math)+), (caption)?)>
-  <!ELEMENT inlineequation ((alt)?, ((inlinemediaobject)+|(mathphrase)+|(mml:math)+))>
+  <!ELEMENT mathphrase (#PCDATA|inlinemediaobject|remark|superscript|subscript|xref|link|olink|anchor|biblioref|alt|annotation|indexterm|phrase|replaceable|emphasis|math)*>
+  <!ELEMENT informalequation ((info)?, (alt)?, ((mediaobject)+|(mathphrase)+|(math)+), (caption)?)>
+  <!ELEMENT inlineequation ((alt)?, ((inlinemediaobject)+|(mathphrase)+|(math)+))>
 
   <!ENTITY % mathml PUBLIC "-//W3C//DTD MathML 2.0//EN" "dtd/mathml3.dtd">
   %mathml;
