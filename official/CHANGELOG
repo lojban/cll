@@ -5,6 +5,29 @@ This version is the same as the original Red Book (the one with the
 gold lettering), with only errata fixes and the like; no
 substantial content changes.
 
+2019-10-08
+==========
+
+Updated everything, which led to various knock-on changes.  Most are
+quite minor.  No significant content changes (a few word definitions
+got updated from jbovlaste).
+
+- updated Prince version
+- build supports podman as well as docker
+- non-container builds no longer officially supported
+- jbovlaste.xml is now stored in the github tree so we don't get
+  surprise word definition changes we didn't want
+- diffs now support vimdiff mode
+- much easier addition of new versions to official/ using
+  scripts/update_official
+- fixed an issue where "table > tr" was working in the CSS only
+  because of a Prince bug; it turns out that HTML inserts an
+  invisble "tbody" in between the two
+- fixed an issue where the namespace for MathML was no longer
+  correct for the new Prince version
+- updated gems, including dealing with the rename of Trollop to
+  Optimist
+
 2018-05-21
 ==========
 

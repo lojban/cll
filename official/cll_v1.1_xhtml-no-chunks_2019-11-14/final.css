@@ -1,0 +1,670 @@
+/********************
+ * NB:
+ *
+ * When running under Prince, everything that happens here happens *AFTER* /usr/lib/prince/style/xhtml.css
+********************/
+
+/****
+ * General note on dl/dt/dd: Kindle can't handle nesting of them, so
+ * in build_epub.sh we replace them with ul/li and special classes;
+ * that's why there's all the duplication.
+ ****/
+
+html {
+  /* Modern Georgia-based serif stack, from http://css-tricks.com/snippets/css/font-stacks/ */
+  font-family: 'Linux Libertine', Libertine, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-size: 9pt;
+  text-align: justify;
+}
+
+/*********
+print display
+{{{
+*********/
+@media print {
+  /* Avoid ligatures per http://www.princexml.com/forum/topic/1821/how-to-avoid-or-turn-off-ligatures */
+  p { font-variant: prince-opentype(ccmp) }
+
+  /*********
+  print media: anchors/xrefs
+  {{{
+  *********/
+  div.toc a::after {
+      content: leader('.') target-counter(attr(href), page);
+  }
+
+  a.xref::after {
+      content: " (p. " target-counter(attr(href), page) ")";
+  }
+
+  /* Make links for printing look like normal text. */
+  a {
+    color: black !important;
+    text-decoration: none !important;
+    /*
+    TESTING: show non-handled a links in PURPLE
+    background: #FF00FF;
+    */
+    /*
+    text-decoration: none;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    */
+  }
+
+  div.toc a {
+    color: black;
+    background: white;
+    text-decoration: none;
+    border-bottom-style: none;
+  }
+
+  a.link, a.xref, a.glossterm {
+    color: black;
+    background: white;
+    text-decoration: none;
+    border-bottom-style: none;
+  }
+  /****
+  print media: anchors/xrefs
+  }}}
+  ****/
+
+  /*********
+  print media: Page structure, title pages, etc
+  {{{
+  */
+
+  /* div.frontcover, div.halftitlepage, div.titlepage { page-break-before: right } */
+  div.imprint { page-break-before: always }
+  div.dedication, div.foreword, div.toc, div.preface, div.chapter, div.reference,
+  div.appendix, div.bibliography, div.glossary, div.whole-index, div.colophon {
+    page-break-before: always
+  }
+  div.backcover { page-break-before: left }
+
+  div.chapter, div.glossary, div.whole-index {
+    page: chapter;
+  }
+
+  @page {
+    margin: 13mm;
+    margin-top: 17mm;
+    margin-bottom: 17mm;
+    size: 159mm 240mm;
+    /* For overflow testing
+     * border: 1px solid red;
+     */
+  }
+
+
+  /* define default page and names pages: cover, blank, frontmatter */
+
+  @page chapter :left {
+    @top-left {
+      font-size: 9pt;
+      text-align: center;
+      content: "The Complete Lojban Language";
+      vertical-align: bottom;
+      margin-top: 13mm;
+      padding-bottom: 2mm;
+    }
+
+    @bottom-left {
+      font-size: 10pt;
+      content: counter(page);
+      vertical-align: top;
+      margin-bottom: 13mm;
+    }
+  }
+
+  @page chapter :right {
+    @top-right {
+      font-size: 9pt;
+      text-align: center;
+      content: string(header, first);
+      vertical-align: bottom;
+      margin-top: 13mm;
+      padding-bottom: 2mm;
+    }
+
+    @bottom-right {
+      font-size: 10pt;
+      content: counter(page);
+      text-align: right;
+      vertical-align: top;
+      margin-bottom: 13mm;
+    }
+  }
+
+  @page chapter:first {
+    @top-right { content: normal }
+  }
+
+  /*
+  print media: Page structure, title pages, etc
+  }}}
+  */
+
+  /* Yes, absolute padding.  If you can think of something better to
+   * put this stuff at the bottom of the page... */
+  h3.othercredit { padding-top: 180pt; }
+}
+/****
+}}}
+****/
+
+/*********
+special glyphs
+{{{
+*********/
+p[lang="ko"] {
+  font-family: Unifont;
+}
+
+p[lang="math"] {
+  font-family: 'Linux Biolinum', 'Biolinum', 'DejaVu Sans';
+}
+
+/* Make sure that comments *inside* the special glyph natlang look normal */
+span.comment {
+  font-family: 'Linux Libertine', Libertine, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-size: 9pt;
+  font-style: normal;
+}
+/****
+}}}
+****/
+
+/*********
+examples
+{{{
+*/
+div.example {
+  page-break-inside: avoid;
+  font-family: 'Linux Biolinum', 'Biolinum', 'DejaVu Sans';
+  margin-top: 0pt;
+  margin-bottom: 0pt;
+}
+
+br.example-break {
+  display: none;
+}
+/*
+}}}
+*/
+
+
+/*********
+glossaries / indices
+{{{
+*/
+div.glossary {
+  column-count: 2;
+  font-size: 0.9em;
+}
+
+div.whole-index {
+  column-count: 2;
+  font-size: 0.9em;
+}
+
+.whole-index a.indexterm {
+  content: target-counter(attr(href), page);
+  color: black;
+  background: white;
+  text-decoration: none;
+  border-bottom-style: none;
+}
+
+
+/* The index/glossary title spans the whole page, as does any preliminary verbiage */
+.whole-index .titlepage * {
+  column-span: all;
+}
+.whole-index > p {
+  column-span: all;
+}
+
+.glossary .titlepage * {
+  column-span: all;
+}
+.glossary > p {
+  column-span: all;
+}
+
+.glossary dl, .glossary ul.dl {
+  list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.glossary dt, .glossary li.dt {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.glossary dd, .glossary li.dd {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 2em;
+}
+
+.whole-index dl, .whole-index ul.dl {
+  list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.whole-index dt, .whole-index li.dt {
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.whole-index dd, .whole-index li.dd {
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0.8em;
+}
+
+.whole-index h3 {
+  display: none;
+}
+
+/*
+.glossary h3 {
+  display: none;
+}
+*/
+
+
+/* Allow flow of indexes; see http://www.princexml.com/forum/topic/2798/bad-page-breaks?p=1#13093 */
+dt, li.dt { page-break-after: auto !important }
+dt + dd { page-break-before: avoid }
+li.dt + li.dd { page-break-before: avoid }
+
+/*
+}}}
+*/
+
+/*********
+basic paragraph
+{{{
+*/
+p {
+    display: block;
+    margin-top: .1em;
+    margin-bottom: .1em;
+    /* see https://www.princexml.com/doc/11/paged/#widows-and-orphans --
+     * this is to match the behaviour of previous versions, and also
+     * I (Robin) think it looks nicer */
+    orphans: 2;
+    widows: 2;
+}
+div.section > p {
+    text-indent: 1em;
+}
+/*
+}}}
+*/
+
+/*********
+h[12345] elements
+{{{
+*/
+h1 {
+  page-break-before: right;
+  page-break-after: avoid;
+  string-set: header content();
+  prince-page-group: start;
+  font-size: 14pt;
+  margin: 10pt   0;
+  text-align: center;
+}
+h2 {
+  string-set: header content();
+  font-size: 11pt;
+  margin: 0pt;
+  margin-top: 10pt;
+}
+/*
+}}}
+*/
+
+/*********
+Whitespace managament, mostly reductions.
+{{{
+ */
+div.example, table.cmavo-list {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+/* Tables, examples, and lists have in indent */
+.example-contents, table, ul, ol {
+  margin-top: 0pt;
+  margin-right: 0pt;
+  margin-left: 2em;
+  margin-bottom: 0.4em;
+  border-spacing: 0pt;
+  border: 0pt;
+  padding: 0pt;
+}
+
+ul, ol {
+  padding-left: 1.75em;
+}
+
+/* But tables and lists *inside examples* do not have *additional* indent */
+div.example-contents table,
+div.example-contents div,
+div.example-contents ul,
+div.example-contents ol,
+tr, li {
+  border-spacing: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+dl, ul.dl {
+  list-style-type: none;
+  margin: 0pt;
+}
+dd, li.dd {
+  margin-bottom: 0pt;
+}
+
+pre, blockquote {
+  border-spacing: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  page-break-inside: avoid;
+}
+
+div.titlepage + p, p.noindent {
+  text-indent: 0pt !important;
+}
+/*
+}}}
+ */
+
+/*********
+Tables, non-whitespace
+{{{
+ */
+table {
+  empty-cells: hide;
+  border: none;
+  border-collapse: collapse;
+}
+/* Keep tables with their titles */
+div.table, div.informaltable {
+  page-break-inside: avoid;
+}
+
+/* So the issue here is:
+ *
+ * docbook allows you to specify styling info in the source, like
+ * <table role="nobreaks"> or whatever.
+ *
+ * But.
+ *
+ * THe HTML is <div class="table"><table class="nobreaks">, which is
+ * fine, except that the tables *title* is inside the div, not the
+ * table.
+ *
+ * So if you watn to do things to a table *and* its title, well,
+ * sucks to be you.  I'm handlign it by <para
+ * role="nobreaks"><table>... and then in the css it's .nobreaks +
+ * div.table {...
+ *
+ * WHich is freaking lame, but seems to work fine.
+ *
+ */
+.allowbreaks, div.allowbreaks, .allowbreaks + div.table, .allowbreaks + div.informaltable, .allowbreaks + div.example {
+  page-break-inside: auto;
+}
+
+/* Spacing between adjacent tables */
+.informaltable + .informaltable,
+.table + .informaltable,
+.informaltable + .table,
+.table + .table {
+  margin-top: 0.4em;
+}
+
+table p, table span {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+
+table td, table th {
+  border-left: 1px dotted grey;
+  border-right: 1px dotted grey;
+  padding-right: 0.4em;
+  padding-left: 0.4em;
+  vertical-align: top;
+}
+table.vertsep > tbody > tr {
+  margin-bottom: 0.4em;
+  border-bottom: 1px dotted grey;
+  page-break-inside: avoid;
+}
+table.vertsep > tbody > tr:last-child {
+  border-bottom: 0;
+  page-break-inside: avoid;
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0;
+}
+table.noborder td,
+table.noborder th {
+  border-left: 0;
+  border-right: 0;
+}
+
+table.rotated table {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.selbri {
+  font-weight: bold;
+}
+
+.jbo, .jbophrase {
+  font-style: italic;
+}
+tr.gloss {
+  font-weight: bold;
+}
+/*
+}}}
+ */
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+dl p, dl span, ul.dl p, ul.dl span {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+
+/* Very bare lists except in special cases */
+ul.bullets {
+  list-style-type: disc;
+  padding: 0em;
+  margin: 1em 0em 1em 3em;
+}
+ul.bullets li {
+  padding: 0em;
+  margin: 0em 0em 0em 0em;
+}
+ul.itemizedlist {
+  list-style-type: none;
+  padding: 0em;
+  margin: 1em 0em 1em 1em;
+}
+ul.itemizedlist li {
+  list-style-type: none;
+  padding: 0em;
+  margin: 0em 0em 0em 0em;
+}
+
+hr {
+  width: 30%;
+  border: none;
+  border-bottom: 5px dotted #222;
+}
+
+.book > .titlepage div {
+  width: 100%;
+}
+
+.book > .titlepage .title {
+  font-size: 52pt;
+  text-align: center;
+  width: 100%;
+}
+
+.book > .titlepage .author {
+  font-size: 16pt;
+  text-align: center;
+  width: 100%;
+  margin-top: 5em;
+}
+
+.book > .titlepage hr {
+  display: none;
+}
+
+/* See https://sourceforge.net/p/docbook/bugs/1366/ for why the + is
+ * there
+ */
+p.twocolumn + div {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.logical-vowel {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.varname {
+  font-size: 8pt;
+  font-weight: bold;
+}
+
+br.table-break {
+  display: none;
+}
+
+
+/*********
+screen display
+{{{
+*********/
+
+@media screen {
+  body {
+    max-width: 38em;
+    margin: auto;
+    padding: 1em;
+  }
+
+  .navheader table,
+  .navfooter table {
+    margin: 0;
+  }
+
+  hr {
+    width: 25%;
+    margin: 1em auto;
+  }
+
+  h1,
+  h1.title {
+    font-size: 150%;
+    margin: 1em auto;
+  }
+
+  h2,
+  h2.title {
+    font-size: 135%;
+    margin: 1em auto 1em auto;
+  }
+
+  h3,
+  h3.title,
+  p.title {
+    font-size: 110%;
+    margin: 1em auto 0.5em auto;
+  }
+
+  a {
+    color: #0B486B;
+    text-decoration: none;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+  }
+
+  p {
+    hyphens: auto;
+    /* remove vendor-prefixed styles once hyphenation is fully supported by Chrome and IE. */
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    margin: 1em auto;
+  }
+  div.section > p {
+    text-indent: 0;
+  }
+
+  table {
+    text-align: left;
+  }
+
+  table td {
+    padding: 0.2em 0.4em;
+  }
+}
+
+/* Styles specifically for small screens. */
+@media screen and (max-width: 1800px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Styles for medium to large screens. */
+@media screen and (min-width: 1800px) {
+  body {
+    font-size: 19px;
+  }
+}
+
+/* Styles for giant and ultra-high-resolution screens. */
+@media screen and (min-width: 3600px) {
+  body {
+    font-size: 22px;
+  }
+}
+/****
+}}}
+****/
