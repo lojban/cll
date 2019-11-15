@@ -12,7 +12,7 @@ echo 'CACHE MANIFEST' >>cll.appcache
 echo "# $(date)" >>cll.appcache
 echo "" >>cll.appcache
 echo "CACHE:" >>cll.appcache
-find . -type f | sed 's;^\./;;' | grep -v '\.appcache' >>cll.appcache
+find . -type f | sed 's;^\./;;' | grep -v '\.appcache' | sort >>cll.appcache
 echo "" >>cll.appcache
 echo "NETWORK:" >>cll.appcache
 echo "*" >>cll.appcache

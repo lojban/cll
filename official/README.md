@@ -30,7 +30,7 @@ confirm that nothing has changed except what you want to change.
 (Note that when the build asks "Would you like to diff the new
 output against the last official/ build?", it is running
 scripts/diff_official; so if you've already done that, you've done
-this step.
+this step.)
 
 scripts/diff_official makes copies of both the relevant build/ dir
 and the relevant official/ dir, and massages them to make the output
@@ -47,36 +47,14 @@ diff.
 As an example, this mini-script finds anything that looks like a
 navgiation header and removes any newlines inside it; I used this
 when I changed all the nav headers so that each file had ~5 lines of
-changes (easy to review) vs. ~30 lines (not so much).
+changes (easy to review) vs. ~3000 lines (not so much).
 
     ruby -e 'puts ARGF.read.encode("UTF-8", "binary", invalid: :replace, undef: :replace, replace: "").gsub(%r{<div[^>]*(navheader|navfooter|toc-link|back-to-info-link).*?</div>}m) { |x| x.gsub(%r{\s+}," ") }' "$@"
 
 When you're satisfied that the changes you made are the changes you
-want, put the changes you want in official/ with something like
-this:
+want, run:
 
-    $ cp -r build/xhtml_section_chunks official/cll_v1.1_xhtml-section-chunks_2016-05-25
-    $ cd official
-
-Now you need to fix the links; you can get a list of all the links like so:
-
-    $ find . -type l \! -name dtd
-
-Fixing looks like this:
-
-    $ rm cll_v1.1_xhtml-section-chunks
-    $ ln -s cll_v1.1_xhtml-section-chunks_2016-05-25 cll_v1.1_xhtml-section-chunks
-
-(Obviously, update that if we're not on version 1.1 anymore!)
-
-(Repeat for the other 2 chunk types.)
-
-The goal here is to make it so that every currently-relevant
-file/directory has a symlink to it, and that that symlink's name
-only changes when we change CLL versions.
-
-NOTE: The - and _ in the build/ dir do not match what's in the
-official/ dir.  Sorry about that.
+    $ scripts/update_official -x -v 1.1 [assuming the version is still 1.1]
 
 Updating EPUB & MOBI official/
 ------------------------------
@@ -87,10 +65,13 @@ less), if it passes all those tests it's probably fine.
 
 However, it's now part of diff_official, too, since it's just a zip.
 
-When done, copy and update symlinks as with XHTML.
+The MOBI is generated directly from the EPUB via kindlegen, but you can
+check it if you want.
 
-Copy and update the MOBI as well; it's generated directly from the
-EPUB via kindlegen.
+When done, run:
+
+    $ scripts/update_official -e -v 1.1 [assuming the version is still 1.1]
+    $ scripts/update_official -m -v 1.1 [assuming the version is still 1.1]
 
 Updating PDF official/
 ----------------------
@@ -98,7 +79,9 @@ Updating PDF official/
 Get a PDF diff viewer for your OS and compare them visually.  I'm
 using https://github.com/vslavik/diff-pdf on Windows.
 
-When done, copy and update symlinks as with XHTML.
+When done, run:
+
+    $ scripts/update_official -p -v 1.1 [assuming the version is still 1.1]
 
 Step 2: Updating github
 =======================
@@ -106,6 +89,9 @@ Step 2: Updating github
 The forever home of this data is the docbook-prince branch of https://github.com/lojban/cll/
 
 Before you push, though, there are some things to do.
+
+Please keep your actual *changes* in a separate commit from your *official/*
+changes checkin, so people can see the real changes more easily.
 
 Make *certain* that everything is done completely (all the work
 above, the CHANGELOG, etc).  Commit your changes (ideally in a very

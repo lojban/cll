@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'trollop'
+require 'optimist'
 #require 'yaml'
 #require 'highline'
 require 'nokogiri'
@@ -19,7 +19,7 @@ indiv=false
 
 require "#{mydir}/util.rb"
 
-parser = Trollop::Parser.new do
+parser = Optimist::Parser.new do
   text "\n\nblah blah blah\n\n---"
 
   opt :testing, %q{testing mode: will replace all external xrefs in each chapter and turn off the glossary}, :short => 't'
@@ -28,8 +28,8 @@ parser = Trollop::Parser.new do
   stop_on_unknown
 end
 
-opts = Trollop::with_standard_exception_handling parser do
-  # raise Trollop::HelpNeeded if ARGV.empty? # show help screen
+opts = Optimist::with_standard_exception_handling parser do
+  # raise Optimist::HelpNeeded if ARGV.empty? # show help screen
   parser.parse ARGV
 end
 

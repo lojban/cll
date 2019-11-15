@@ -1,11 +1,33 @@
 #!/bin/bash
 
-# -c to show all diffs
+tempdir=/tmp/cll_diffs
+
+rm -rf $tempdir
+mkdir -p $tempdir
+
+usage() {
+  echo "-c to show all diffs ; by default stops if any diffs are found"
+  echo "-V to run vimdiff instead of regular diff"
+  exit
+}
+
 continue=""
-if [ "$1" = "-c" ]
+vimdiff=""
+
+while getopts "hcV" opt
+do
+  case "$opt" in
+    c)    continue="yes"
+          ;;
+    V)    vimdiff="yes"
+          ;;
+    [?h]) usage;;
+  esac
+done
+
+if [ $OPTIND -gt 1 ]
 then
-  continue="yes"
-  shift
+  shift $(expr $OPTIND - 1)
 fi
 
 # Give directories as first two non-option arguments if you want to
@@ -22,10 +44,15 @@ fi
 # it won't look the same unless you massage it because of the
 # automated index IDs.
 
+# Update update_official if you change this list, as it's c&p
 for type in 'xhtml?no?chunks' 'xhtml?chapter?chunks' 'xhtml?section?chunks' 'epub'
 do
-  echo -e "**************\nDiffs for $type:\n**************\n\n"
-  rm -rf diff_new diff_old
+  prettytype=$(ls -d build/$type | sed 's;.*/;;')
+
+  echo -e "**************\nDiffs for $prettytype:\n**************\n\n"
+  new_diff_dir=$tempdir/diff_new_$prettytype
+  old_diff_dir=$tempdir/diff_old_$prettytype
+  rm -rf $new_diff_dir $old_diff_dir
   if [ "$custom_dir_old" -a "$custom_dir_new" ]
   then
     dir_old=$custom_dir_old
@@ -36,31 +63,70 @@ do
   fi
   if [[ $type == 'epub' ]]
   then
-    unzip -q build/cll.epub -d diff_new
-    unzip -q official/cll_v1.1.epub -d diff_old
+    unzip -q build/cll.epub -d $new_diff_dir
+    unzip -q official/cll_v1.1.epub -d $old_diff_dir
   else
-    cp -pr $dir_new diff_new
-    cp -pr $dir_old diff_old
+    cp -pr $dir_new $new_diff_dir
+    cp -pr $dir_old $old_diff_dir
   fi
-  find diff_new diff_old -type f | xargs sed -r -i -e 's/<a id="idm[0-9]+"/<a id="idmXXX"/g' -e 's/#idm[0-9]+"/#idmXXX"/g' -e 's/</\n</g'
+  find $new_diff_dir $old_diff_dir -type f | xargs sed -r -i -e 's/<a id="idm[0-9]+"/<a id="idmXXX"/g' -e 's/#idm[0-9]+"/#idmXXX"/g' -e 's/</\n</g'
   # Why this needs to be its own line is something I'm not 100%
   # clear on, but it just deletes blank lines
-  find diff_new diff_old -type f | xargs sed -r -i -e '/^\s*$/d'
+  find $new_diff_dir $old_diff_dir -type f | xargs sed -r -i -e '/^\s*$/d'
   # Run any extra scripts that the user has diffen
   if [ -x scripts/diff_official-special ]
   then
-    for file in $(find diff_new diff_old -type f)
+    for file in $(find $new_diff_dir $old_diff_dir -type f)
     do
       scripts/diff_official-special $file >$file.tmp
       mv $file.tmp $file
     done
   fi
-  diff -u -Bw -r diff_old diff_new
-  if [ $? -ne 0 -a ! "$continue" ]
+
+  diffs_found=""
+
+  if [ "$vimdiff" ]
+  then
+    # There's no such thing as recursive vimdiff, so in an epitome
+    # of brute force we run a regular recursive diff in -q mode, and
+    # use those filenames for  vimdiff, after we parse them.
+    diff -q -u -Bw -r $old_diff_dir $new_diff_dir >$tempdir/vimdiffs 2>&1
+    if [ "$(wc -l $tempdir/vimdiffs | sed 's/\s.*//')" -gt 0 ]
+    then
+      diffs_found="yes"
+    fi
+    IFS_BAK="$IFS"
+    IFS='
+'
+    for line in $(cat $tempdir/vimdiffs)
+    do
+      if [ "$(echo "$line" | grep "^Files .* and .* differ$")" ]
+      then
+        f1="$(echo "$line" | sed "s;^Files \(.*\) and .* differ$;\1;")"
+        f2="$(echo "$line" | sed "s;^Files .* and \(.*\) differ$;\1;")"
+        vimdiff "$f1" "$f2"
+      else
+        echo "$line" | less
+      fi
+    done
+    IFS="$IFS_BAK"
+    rm $tempdir/vimdiffs
+  else
+    diff -u -Bw -r $old_diff_dir $new_diff_dir
+    if [ $? -ne 0 ]
+    then
+      diffs_found="yes"
+    fi
+  fi
+  if [ "$diffs_found" -a ! "$continue" ]
   then
     echo "Diffs found; stopping to let you examine them.  If you want to show all diffs instead, run with -c"
     exit
   fi
 done
 
-rm -rf diff_new diff_old
+echo
+echo
+echo "Diffs done.  All files used for diffing can be found in $tempdir if you want to investigate anything yourself."
+echo
+echo

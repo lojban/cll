@@ -1,9 +1,5 @@
-test =
-# Grab environment variables; not sure why this is necessary.
-chapters = $(if $(CHAPTERS), $(CHAPTERS), chapters/01.xml chapters/02.xml chapters/03.xml chapters/04.xml chapters/05.xml chapters/06.xml chapters/07.xml chapters/08.xml chapters/09.xml chapters/10.xml chapters/11.xml chapters/12.xml chapters/13.xml chapters/14.xml chapters/15.xml chapters/16.xml chapters/17.xml chapters/18.xml chapters/19.xml chapters/20.xml chapters/21.xml)
-builddir = $(if $(BUILDDIR), $(BUILDDIR), $(PWD)/build)
-copydir = $(COPYDIR)
-covcopydir = $(COVCOPYDIR)
+chapters = $(if $(chapters), $(chapters), chapters/01.xml chapters/02.xml chapters/03.xml chapters/04.xml chapters/05.xml chapters/06.xml chapters/07.xml chapters/08.xml chapters/09.xml chapters/10.xml chapters/11.xml chapters/12.xml chapters/13.xml chapters/14.xml chapters/15.xml chapters/16.xml chapters/17.xml chapters/18.xml chapters/19.xml chapters/20.xml chapters/21.xml)
+builddir = $(if $(builddir), $(builddir), $(PWD)/build)
 xsl_base = xml/docbook-xsl-1.78.1
 
 SHELL=/bin/bash -o pipefail
@@ -25,9 +21,9 @@ realclean: clean
 #*******
 
 $(builddir)/cll.xml: $(chapters) xml/iso-pub.ent xml/identity.xsl xml/docbook2html_config_common.xsl scripts/update_jbovlaste_xml.sh scripts/generate_glossary.rb scripts/merge.sh
-	rm -f $(builddir)/xml $(builddir)/dtd
-	ln -nsf $(PWD)/xml $(builddir)/xml
-	ln -nsf $(PWD)/dtd $(builddir)/dtd
+	rm -rf $(builddir)/xml $(builddir)/dtd
+	cp -pr $(PWD)/xml $(builddir)/
+	cp -pr $(PWD)/dtd $(builddir)/
 	scripts/merge.sh -b "$(builddir)" $(test) $(chapters)
 
 $(builddir)/cll_processed_xhtml.xml: $(builddir)/cll.xml scripts/xml_preprocess.rb
@@ -52,11 +48,11 @@ xhtml_nochunks: $(builddir)/xhtml_no_chunks.done
 $(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_xhtml.xsl scripts/master.css scripts/xhtml_postprocess_appcache.sh scripts/xhtml_postprocess_cleanup.sh scripts/xhtml_postprocess_cleanup_file.rb
 	rm -rf $(builddir)/xhtml_$*_chunks
 	mkdir -p $(builddir)/xhtml_$*_chunks
-	ln -nsf $(PWD)/dtd $(builddir)/xhtml_$*_chunks/dtd
+	cp -pr $(PWD)/dtd $(builddir)/xhtml_$*_chunks/
 	xmlto -m xml/docbook2html_config_$*_chunks.xsl -x $(xsl_file) -o $(builddir)/xhtml_$*_chunks/ xhtml$(nochunks) $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
 	# We run tidy on the no-chunk version, because it's all in
 	# one place so it's easy
-	test -f $(builddir)/xhtml_$*_chunks/index.html || sed 's/mml:[^>]*/div/g' $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html | scripts/tidy -e - 2>&1 | grep -v '<table> lacks "summary" attribute'
+	test -f $(builddir)/xhtml_$*_chunks/index.html || cat $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html | scripts/tidy -e - 2>&1 | grep -v '<table> lacks "summary" attribute'
 # Handle the no-chunk case; can't figure out how to set the
 # name of the output file, so move it to index.html
 	test -f $(builddir)/xhtml_$*_chunks/index.html || mv $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html $(builddir)/xhtml_$*_chunks/index.html
@@ -81,15 +77,15 @@ pdf: $(builddir)/pdf.done
 $(builddir)/pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_prince.xsl scripts/master.css scripts/xhtml_postprocess_cleanup.sh scripts/xhtml_postprocess_cleanup_file.rb
 	rm -rf $(builddir)/pdf
 	mkdir -p $(builddir)/pdf
-	ln -sf $(PWD)/scripts/master.css $(builddir)/pdf/final.css
-	ln -nsf $(PWD)/media $(builddir)/pdf/media
-	ln -nsf $(PWD)/dtd $(builddir)/pdf/dtd
+	cp -pr $(PWD)/scripts/master.css $(builddir)/pdf/final.css
+	cp -pr $(PWD)/media $(builddir)/pdf/
+	cp -pr $(PWD)/dtd $(builddir)/pdf/
 	
 	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/pdf/ -x $(xsl_base)/xhtml/docbook.xsl xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
 	scripts/xhtml_postprocess_cleanup.sh $(builddir)/pdf/
 	ruby scripts/xml_prince_postprocess.rb $(builddir)/pdf/cll_processed_xhtml.html >$(builddir)/pdf/cll_processed_xhtml_pdf.html 2>$(builddir)/xml_prince_postprocess.out
 	
-	prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $(builddir)/pdf/cll_processed_xhtml_pdf.html $(builddir)/cll.pdf
+	prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $(builddir)/pdf/cll_processed_xhtml_pdf.html -o $(builddir)/cll.pdf
 	touch $(builddir)/pdf.done
 ifdef copydir
 	mkdir -p $(copydir)
@@ -124,7 +120,7 @@ endif
 $(builddir)/epub-xhtml/index.html: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_common.xsl xml/docbook2html_config_epub.xsl $(PWD)/scripts/master.css $(PWD)/media/* scripts/xhtml_postprocess_cleanup.sh scripts/xhtml_postprocess_cleanup_file.rb
 	rm -rf $(builddir)/epub-xhtml/
 	mkdir -p $(builddir)/epub-xhtml/
-	ln -nsf $(PWD)/dtd $(builddir)/epub-xhtml/dtd
+	cp -pr $(PWD)/dtd $(builddir)/epub-xhtml/
 	xmlto -m xml/docbook2html_config_epub.xsl -o $(builddir)/epub-xhtml/ -x $(xsl_base)/xhtml/chunk.xsl xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
 	cp $(PWD)/scripts/master.css $(builddir)/epub-xhtml/final.css
 	cp -pr $(PWD)/media $(builddir)/epub-xhtml/

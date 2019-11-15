@@ -207,16 +207,6 @@ $document.css('lujvo-making').each do |node|
   tableify node
 end
 
-def mml_wrapper( node, xml )
-  # This is a special case to handle our MathML ("mml:math" and
-  # so on) namespaced items; without this, the prefix is lost.
-  # This code was copied from
-  # https://github.com/sparklemotion/nokogiri/blob/master/lib/nokogiri/xml/document_fragment.rb
-  # , and is the same process as node.replace("somestring")
-  # except that a different root is used
-  node.replace(Nokogiri::XML::Document.parse("<root xmlns:mml='http://www.w3.org/1998/Math/MathML'>#{xml}</root>").xpath("/root/node()"))
-end
-
 # Handle interlinear-gloss, making word-by-word tables.
 #
 #     <interlinear-gloss>
@@ -237,10 +227,10 @@ $document.css('interlinear-gloss').each do |node|
     elsif child.name == 'dbmath'
       child.replace("<tr class='informalequation'><td colspan='0'>#{child}</td></tr>")
     elsif child.name == 'mmlmath'
-      mml_wrapper( child, "<tr class='informalequation'><td colspan='0'>#{child}</td></tr>" )
+      child.replace("<tr class='informalequation'><td colspan='0'>#{child}</td></tr>" )
     else
       convert!( node: child, newname: 'para' )
-      mml_wrapper( child, "<tr class='para'><td colspan='0'>#{child}</td></tr>" )
+      child.replace("<tr class='para'><td colspan='0'>#{child}</td></tr>" )
     end
   end
 
@@ -298,11 +288,11 @@ end
 # Math
 ## <natlang>Both <dbinlinemath>2 + 2 = 4</dbinlinemath> and <dbinlinemath>2 x 2 = 4</dbinlinemath>.</natlang>
 $document.css('dbinlinemath').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<inlineequation role='dbinlinemath'>#{e}</inlineequation>" ) }
-$document.css('mmlinlinemath').each { |e| mml_wrapper( e, "<inlineequation role='mmlinlinemath'><mml:math>#{e.children.to_xml}</mml:math></inlineequation>" ) }
+$document.css('mmlinlinemath').each { |e| e.replace( "<inlineequation role='mmlinlinemath'><math>#{e.children.to_xml}</math></inlineequation>" ) }
 
 ## <dbmath>3:22:40 + 0:3:33 = 3:26:13</dbmath>
 $document.css('dbmath').each { |e| convert!( node: e, newname: 'mathphrase' ) ; e.replace("<informalequation role='dbmath'>#{e}</informalequation>" ) }
-$document.css('mmlmath').each { |e| mml_wrapper( e, "<informalequation role='mmlmath'><mml:math display='block'>#{e.children.to_xml}</mml:math></informalequation>" ) }
+$document.css('mmlmath').each { |e| e.replace( "<informalequation role='mmlmath'><math display='block'>#{e.children.to_xml}</math></informalequation>" ) }
 
 ##       <pronunciation>
 ##         <jbo>.e'o ko ko kurji</jbo>
