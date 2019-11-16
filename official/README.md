@@ -99,22 +99,12 @@ few, very semantically distinct commits).  Rebase from the
 docbook-prince branch of https://github.com/lojban/cll/ .  In other
 words, get all the usual git ducks in a row.
 
-Then you *MUST* tag your release!
+Once your changes are committed and pushed,
+you *MUST* tag your release!
 
-The following is the complete list of tags to make, assuming you
-have updated everything and intend to push the result everywhere;
-modify as appropriate:
+    $ scripts/update_official -t -v 1.1 [assuming the version is still 1.1]
 
-    $ git tag v1.1-[date]-mobi
-    $ git tag v1.1-[date]-pdf
-    $ git tag v1.1-[date]-html
-    $ git tag v1.1-[date]-epub
-    $ git tag v1.1-[date]-print
-
-where "date" is the release date, i.e. something like "2017-07-13".
-Obviously you can increment the release number too if appropriate.
-
-You will then need to run:
+If nothing goes wrong, you will then need to run:
 
     $ git push --all
     $ git push --tags
