@@ -13,6 +13,7 @@ usage() {
   echo "-x -- builds xhtml"
   echo "-e -- builds epub"
   echo "-m -- builds mobi"
+  echo "-t -- makes tags"
   exit
 }
 
@@ -20,9 +21,10 @@ xhtml=""
 pdf=""
 epub=""
 mobi=""
+tags=""
 version=""
 
-while getopts "v:hpxem" opt
+while getopts "v:hpxemt" opt
 do
   case "$opt" in
     p)    pdf="yes"
@@ -32,6 +34,8 @@ do
     e)    epub="yes"
           ;;
     m)    mobi="yes"
+          ;;
+    t)    tags="yes"
           ;;
     v)    version="$OPTARG";;
     [?h]) usage;;
@@ -51,7 +55,7 @@ then
   exit 1
 fi
 
-if [ ! "$pdf" -a ! "$xhtml" -a ! "$epub" -a ! "$mobi" ]
+if [ ! "$pdf" -a ! "$xhtml" -a ! "$epub" -a ! "$mobi" -a ! "$tags" ]
 then
   echo "At least one build type is required."
   echo
@@ -105,4 +109,13 @@ then
   cp build/cll.pdf official/cll_v${version}_${dateish}.pdf
   rm official/cll_v${version}_book.pdf
   ln -s cll_v${version}_${dateish}.pdf official/cll_v${version}_book.pdf
+fi
+
+if [ "$tags" ]
+then
+    git tag v${version}-${dateish}-mobi
+    git tag v${version}-${dateish}-pdf
+    git tag v${version}-${dateish}-html
+    git tag v${version}-${dateish}-epub
+    git tag v${version}-${dateish}-print
 fi
