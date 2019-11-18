@@ -3,14 +3,16 @@
 CONTAINER_BIN=${CONTAINER_BIN:-$(which podman 2>/dev/null)}
 CONTAINER_BIN=${CONTAINER_BIN:-$(which docker 2>/dev/null)}
 
-if $CONTAINER_BIN info >/dev/null 2>&1
+# Try sudo first because systems where everything is working without
+# sudo are less likely
+if sudo $CONTAINER_BIN info >/dev/null 2>&1
 then
-  # Everything is working; no-op
-  CONTAINER_BIN="$CONTAINER_BIN"
+  CONTAINER_BIN="sudo $CONTAINER_BIN"
 else
-  if sudo $CONTAINER_BIN info >/dev/null 2>&1
+  if $CONTAINER_BIN info >/dev/null 2>&1
   then
-    CONTAINER_BIN="sudo $CONTAINER_BIN"
+    # Everything is working; no-op
+    CONTAINER_BIN="$CONTAINER_BIN"
   else
     echo "I can't get a working container system.  You need to either have podman (preferred) or docker installed and running for this build system to work.  I have tried both \"podman info\" and \"docker info\", with and without sudo."
     exit 1
@@ -42,7 +44,7 @@ $CONTAINER_BIN rm cll_build >/dev/null 2>&1
 dir=$(readlink -f $(dirname $0))
 
 # If SELinux is on
-if getenforce | grep -q Enforcing
+if which getenforce >/dev/null 2>&1 && getenforce | grep -q Enforcing
 then
   # Make it accessible to both the user and the container
   chcon -R -t container_home_t  . "${extra_dirs[@]}"
@@ -68,6 +70,6 @@ $CONTAINER_BIN build -t lojban/cll_build -f Dockerfile . >/tmp/rc.$$ 2>&1 || {
 
 rm -f /tmp/rc.$$
 
-$CONTAINER_BIN run --name cll_build --log-driver syslog --log-opt tag=cll_build \
+$CONTAINER_BIN run --name cll_build \
   -v $dir:/srv/cll "${extra_vols[@]}" -it lojban/cll_build \
   /tmp/container_init.sh "$(id -u)" "$(id -g)" "${args[@]}"
