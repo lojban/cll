@@ -1,6 +1,32 @@
+Requirements
+------------
+
+All you need is Docker (
+https://docs.docker.com/install/#supported-platforms ) or podman (
+https://podman.io/getting-started/installation ) and some means of
+running bash scripts.  This means you can run this on a MacOS box,
+even though it's very much a Linux build process.  Windows should
+also be possible, albeit with some difficulty (because you have to
+get bash).
+
+You really need at least 2GiB of free RAM; Prince will swap like
+crazy otherwise.
+
+The builds will run in a podman (preferred) or docker container,
+depending on what you have available.
+
+Usage
+-----
+
 To make all the versions do:
 
   ./run_container.sh
+
+Note that this takes a while, proportionate to available CPU; on an
+AWS t2.micro I gave up after over 2 hours due to it running out of
+RAM.  On an AWS t2.medium it took about an hour.  RAM is a
+significant consideration; it needs at least 2GiB free (and possibly
+more).
 
 The final results will end up under the build/ directory, scattered
 about in various places.  If you would like the final outputs only
@@ -32,13 +58,3 @@ with -T, such as:
 You can get a complete list of targets via:
 
   ./run_container.sh -h
-
-Container/sudo Notes
---------------------
-
-The builds will run in a podman (preferred) or docker container,
-depending on what you have available.
-
-All container commands are run with sudo.  This is a pretty standard
-requirement for container use; if it causes you problems let me
-(rlpowell) know and we'll try to figure something out.
