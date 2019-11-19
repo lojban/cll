@@ -99,6 +99,7 @@ definitions.  These definitions are here simply as a quick reference.
       end
 
       definition=nil
+      examples=[]
       if opts[:testing]
         definition="placeholder definition"
       else
@@ -131,14 +132,23 @@ definitions.  These definitions are here simply as a quick reference.
           definition=nil
           $stderr.puts %Q{NO JBOVLASTE DEFINITION FOR "#{word}" FOUND!}
         end
+        jbovlaste_tree.xpath(%Q{//valsi[@word="#{word}"]}).xpath(".//examples/example").each do |example|
+          source = Nokogiri::XML.parse(example.to_s).xpath("//source").text.strip
+          translation = Nokogiri::XML.parse(example.to_s).xpath(%Q{//target[@language="English"]/translation}).text.strip
+          examples.push("<para>#{source} — #{translation}</para>")
+        end
       end
-
+      if examples.length() > 0
+        examples = "\n  #{examples.join("\n  ")}"
+      else
+        examples=""
+      end
       if definition
         gfh.puts %Q{
 <glossentry xml:id="valsi-#{slug}">
 <glossterm>#{word}</glossterm>
 <glossdef>
-  <para>#{definition}</para>
+  <para>#{definition}</para>#{examples}
 </glossdef>
 </glossentry>
         }
