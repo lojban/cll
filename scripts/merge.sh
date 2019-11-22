@@ -34,13 +34,21 @@ ofile="$BUILDDIR/cll.xml"
 
 cp scripts/header.xml "$ofile"
 
-version=$(cat VERSION)
+read_var() {
+    VAR=$(grep $1 $2 | xargs)
+    IFS="=" read -ra VAR <<< "$VAR"
+    echo ${VAR[1]}
+}
+
+version=$(read_var VERSION .env)
+publisher=$(read_var PUBLISHER .env)
+title=$(read_var TITLE .env)
 datestamp=$(date +%Y-%m-%d)
 
 echo "
 
 <info>
-<title>The Complete Lojban Language</title>
+<title>$title</title>
 <author>
 <personname>
 <firstname>John</firstname>
@@ -53,7 +61,7 @@ Version $version, Generated $datestamp
 </releaseinfo>
 <othercredit>
 <orgname>
-A Logical Language Group Publication
+$publisher
 </orgname>
 </othercredit>
 </info>
