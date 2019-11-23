@@ -9,7 +9,7 @@ RUN dnf -y install vim sudo tmux zsh moreutils make moreutils sudo \
       initscripts openssh man-db ncurses-compat-libs wget curl \
       libcurl-devel pcre-devel bzip2-devel rsync zlib-devel \
       pkgconfig w3m openssl-devel gcc rubygem-rake fpaste \
-      zip unzip psmisc lsof python yum-plugin-ovl glibc-all-langpacks
+      zip unzip psmisc lsof python yum-plugin-ovl glibc-all-langpacks nodejs
 
 # Specifically needed packages, with versions where the package is
 # important.

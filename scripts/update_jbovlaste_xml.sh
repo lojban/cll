@@ -42,7 +42,7 @@ size="$(stat -c %s $builddir/jbovlaste.xml || echo 0)"
 if [ ! -f "$builddir/jbovlaste.xml" -o ! "$size" -o "$size" -lt 100 ]
 then
   echo
-  echo "old jbovlaste build file is bad; replacing"
+  echo "old jbovlaste build file is bad or doesn't exist; replacing"
   echo
   mv "$builddir/jbovlaste.xml.new" "$builddir/jbovlaste.xml"
 else

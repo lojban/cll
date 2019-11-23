@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tempdir=/tmp/cll_diffs
+tempdir=./build/cll_diffs
 
 rm -rf $tempdir
 mkdir -p $tempdir
@@ -122,6 +122,12 @@ do
   then
     echo "Diffs found; stopping to let you examine them.  If you want to show all diffs instead, run with -c"
     exit
+  fi
+  if [[ $type == 'xhtml?no?chunks' ]]
+  then
+    echo "Preparing a visual HTML diff file ..."
+    node $PWD/scripts/diff
+    echo "A visual HTML diff is placed in $tempdir/diff_new_xhtml_no_chunks/difference.html and $tempdir/diff_new_xhtml_no_chunks/difference_prefixed.html files."
   fi
 done
 
