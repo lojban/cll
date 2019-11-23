@@ -9,7 +9,7 @@ RUN dnf -y install vim sudo tmux zsh moreutils make moreutils sudo \
       initscripts openssh man-db ncurses-compat-libs wget curl \
       libcurl-devel pcre-devel bzip2-devel rsync zlib-devel \
       pkgconfig w3m openssl-devel gcc rubygem-rake fpaste \
-      zip unzip psmisc lsof python yum-plugin-ovl glibc-all-langpacks
+      zip unzip psmisc lsof python yum-plugin-ovl glibc-all-langpacks nodejs
 
 # Specifically needed packages, with versions where the package is
 # important.
@@ -39,6 +39,9 @@ RUN bundle install
 # Prince XML Setup
 RUN cd /usr/src ; wget https://www.princexml.com/download/prince-12.5-1.centos7.x86_64.rpm
 RUN dnf -y install /usr/src/prince-12.5-1.centos7.x86_64.rpm
+
+# Install Nodejs scripts
+RUN cd /srv/cll ; npm i
 
 # Stuff to do on "boot"
 COPY container_init.sh /tmp/container_init.sh
