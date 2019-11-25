@@ -1,0 +1,121 @@
+#!/bin/bash
+
+usage() {
+  echo
+  echo
+  echo "Copies new builds to official/.  Args:"
+  echo
+  echo "-v [version] -- Required; example: 1.1"
+  echo
+  echo "And at least one of:"
+  echo
+  echo "-p -- builds PDF"
+  echo "-x -- builds xhtml"
+  echo "-e -- builds epub"
+  echo "-m -- builds mobi"
+  echo "-t -- makes tags"
+  exit
+}
+
+xhtml=""
+pdf=""
+epub=""
+mobi=""
+tags=""
+version=""
+
+while getopts "v:hpxemt" opt
+do
+  case "$opt" in
+    p)    pdf="yes"
+          ;;
+    x)    xhtml="yes"
+          ;;
+    e)    epub="yes"
+          ;;
+    m)    mobi="yes"
+          ;;
+    t)    tags="yes"
+          ;;
+    v)    version="$OPTARG";;
+    [?h]) usage;;
+  esac
+done
+
+if [ $OPTIND -gt 1 ]
+then
+  shift $(expr $OPTIND - 1)
+fi
+
+if [ ! "$version" ]
+then
+  echo "Version is required."
+  echo
+  usage
+  exit 1
+fi
+
+if [ ! "$pdf" -a ! "$xhtml" -a ! "$epub" -a ! "$mobi" -a ! "$tags" ]
+then
+  echo "At least one build type is required."
+  echo
+  usage
+  exit 1
+fi
+
+dateish="$(date +%Y-%m-%d)"
+
+# The goal here is to make it so that every currently-relevant
+# file/directory has a symlink to it, and that that symlink's name
+# only changes when we change CLL versions.
+#
+# NOTE: The - and _ in the build/ dir do not match what's in the
+# official/ dir.  Sorry about that.
+
+if [ "$xhtml" ]
+then
+  # Update diff_official if you change this list, as it's c&p
+  for type in 'xhtml?no?chunks' 'xhtml?chapter?chunks' 'xhtml?section?chunks'
+  do
+    prettytype=$(ls -d build/$type | sed 's;.*/;;')
+    echo "Copying and linking $prettytype"
+    offtype=$(echo "$prettytype" | tr '_' '-')
+
+    cp -r build/$prettytype official/cll_v${version}_${offtype}_${dateish}
+    rm official/cll_v${version}_${offtype}
+    ln -s cll_v${version}_${offtype}_${dateish} official/cll_v${version}_${offtype}
+  done
+fi
+
+if [ "$epub" ]
+then
+  echo "Copying and linking epub"
+  cp build/cll.epub official/cll_v${version}_${dateish}.epub
+  rm official/cll_v${version}.epub
+  ln -s cll_v${version}_${dateish}.epub official/cll_v${version}.epub
+fi
+
+if [ "$mobi" ]
+then
+  echo "Copying and linking mobi"
+  cp build/cll.mobi official/cll_v${version}_${dateish}.mobi
+  rm official/cll_v${version}.mobi
+  ln -s cll_v${version}_${dateish}.mobi official/cll_v${version}.mobi
+fi
+
+if [ "$pdf" ]
+then
+  echo "Copying and linking pdf"
+  cp build/cll.pdf official/cll_v${version}_${dateish}.pdf
+  rm official/cll_v${version}_book.pdf
+  ln -s cll_v${version}_${dateish}.pdf official/cll_v${version}_book.pdf
+fi
+
+if [ "$tags" ]
+then
+    git tag v${version}-${dateish}-mobi
+    git tag v${version}-${dateish}-pdf
+    git tag v${version}-${dateish}-html
+    git tag v${version}-${dateish}-epub
+    git tag v${version}-${dateish}-print
+fi

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN" "dtd/docbook-5.0.dtd"
+[
+  <!ENTITY % allent SYSTEM "xml/iso-pub.ent">
+  %allent;
+
+  <!-- Handle MathML in <mathphrase> -->
+  <!ELEMENT mathphrase (#PCDATA|inlinemediaobject|remark|superscript|subscript|xref|link|olink|anchor|biblioref|alt|annotation|indexterm|phrase|replaceable|emphasis|math)*>
+  <!ELEMENT informalequation ((info)?, (alt)?, ((mediaobject)+|(mathphrase)+|(math)+), (caption)?)>
+  <!ELEMENT inlineequation ((alt)?, ((inlinemediaobject)+|(mathphrase)+|(math)+))>
+
+  <!ENTITY % mathml PUBLIC "-//W3C//DTD MathML 2.0//EN" "dtd/mathml3.dtd">
+  %mathml;
+]>
+
+<book xmlns:xlink="http://www.w3.org/1999/xlink">
+
