@@ -104,7 +104,7 @@ do
       then
         f1="$(echo "$line" | sed "s;^Files \(.*\) and .* differ$;\1;")"
         f2="$(echo "$line" | sed "s;^Files .* and \(.*\) differ$;\1;")"
-        vimdiff "$f1" "$f2"
+        vimdiff -c 'set diffopt+=iwhite' "$f1" "$f2"
       else
         echo "$line" | less
       fi
