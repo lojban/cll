@@ -1,6 +1,7 @@
-const HtmlDiff = require("htmldiff-js").default;
 const fs = require("fs"),
   path = require("path");
+const HtmlDiff = require(path.join(__dirname, "./htmldiff.js"))
+  .default;
 
 const oldFileName = "../build/cll_diffs/diff_old_xhtml_no_chunks/index.html";
 const newFileName = "../build/cll_diffs/diff_new_xhtml_no_chunks/index.html";
@@ -32,26 +33,29 @@ try {
     font-size:50%;
   }
   </style>
-  `);
-  let result_with_prefixes = result.replace("</body>",`<script>
+  `
+  ).replace("<body>",`
+  <body>
+    <div>Only a visual difference file: not for publication, hyperlinks might not work, images and complex formatting might not be displayed!<br/>
+    <del class="cll_diff diffmod">Red blocks</del> denote deletions, <ins class="diffmod">green blocks</ins> denote insertions.
+    </div>
   
-  document.querySelectorAll('ins').forEach(function(ins) {
-    var span = document.createElement('span');
-    span.innerHTML = 'ins\`';
-    span.className = 'diff_pre';
-    ins.parentNode.insertBefore(span, ins);
-  });
-  document.querySelectorAll('del').forEach(function(del) {
-    var span = document.createElement('span');
-    span.innerHTML = 'del\`';
-    span.className = 'diff_pre';
-    del.parentNode.insertBefore(span, del);
-  });
-  </script></body>`);
+  `);
+  let result_with_prefixes = result.replace(
+    /<ins /g,
+    `<span class="diff_pre">ins\`</span><ins `)
+    .replace(
+    /<del /g,
+    `<span class="diff_pre">del\`</span><del `).replace(`<del class="cll_diff diffmod">Red blocks</del> denote deletions, <ins class="diffmod">green blocks</ins> denote insertions.`,`
+    <del class="cll_diff diffmod">Red blocks</del> with the prefix del\` denote deletions, <ins class="diffmod">green blocks</ins> with the prefix ins\` denote insertions.`);
   fs.writeFileSync(path.resolve(__dirname, diffFileName), result, {
     encoding: "utf8"
   });
-  fs.writeFileSync(path.resolve(__dirname, diffPrefixedFileName), result_with_prefixes, {
-    encoding: "utf8"
-  });
+  fs.writeFileSync(
+    path.resolve(__dirname, diffPrefixedFileName),
+    result_with_prefixes,
+    {
+      encoding: "utf8"
+    }
+  );
 } catch (error) {}
