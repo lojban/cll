@@ -1,6 +1,7 @@
 const fs = require("fs"),
   path = require("path");
-const HtmlDiff = require("./nodejs_module/htmldiff.js").default;
+const HtmlDiff = require(path.join(__dirname, "./htmldiff.js"))
+  .default;
 
 const oldFileName = "../build/cll_diffs/diff_old_xhtml_no_chunks/index.html";
 const newFileName = "../build/cll_diffs/diff_new_xhtml_no_chunks/index.html";
