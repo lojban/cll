@@ -41,7 +41,7 @@ RUN cd /usr/src ; wget https://www.princexml.com/download/prince-12.5-1.centos7.
 RUN dnf -y install /usr/src/prince-12.5-1.centos7.x86_64.rpm
 
 # Install Nodejs scripts
-RUN cd /srv/cll ; npm i
+RUN cd /srv/cll
 
 # Stuff to do on "boot"
 COPY container_init.sh /tmp/container_init.sh
