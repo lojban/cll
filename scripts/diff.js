@@ -37,7 +37,7 @@ try {
   ).replace("<body>",`
   <body>
     <div>Only a visual difference file: not for publication, hyperlinks might not work, images and complex formatting might not be displayed!<br/>
-    Red blocks denote deletions, green blocks denote insertions.
+    <del class="cll_diff diffmod">Red blocks</del> denote deletions, <ins class="diffmod">green blocks</ins> denote insertions.
     </div>
   
   `);
@@ -46,10 +46,8 @@ try {
     `<span class="diff_pre">ins\`</span><ins `)
     .replace(
     /<del /g,
-    `<span class="diff_pre">del\`</span><del `).replace("Red blocks denote deletions, green blocks denote insertions.",`
-  Red blocks with the prefix del\` denote deletions, green blocks with the prefix ins\` denote insertions.
-  
-  `);
+    `<span class="diff_pre">del\`</span><del `).replace(`<del class="cll_diff diffmod">Red blocks</del> denote deletions, <ins class="diffmod">green blocks</ins> denote insertions.`,`
+    <del class="cll_diff diffmod">Red blocks</del> with the prefix del\` denote deletions, <ins class="diffmod">green blocks</ins> with the prefix ins\` denote insertions.`);
   fs.writeFileSync(path.resolve(__dirname, diffFileName), result, {
     encoding: "utf8"
   });
