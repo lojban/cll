@@ -36,7 +36,9 @@ try {
   `
   ).replace("<body>",`
   <body>
-    <div>Only a visual difference file: not for publication, hyperlinks might not work, images and complex formatting might not be displayed!</div>
+    <div>Only a visual difference file: not for publication, hyperlinks might not work, images and complex formatting might not be displayed!<br/>
+    Red blocks denote deletions, green blocks denote insertions.
+    </div>
   
   `);
   let result_with_prefixes = result.replace(
@@ -44,7 +46,10 @@ try {
     `<span class="diff_pre">ins\`</span><ins `)
     .replace(
     "<del ",
-    `<span class="diff_pre">del\`</span><del `);
+    `<span class="diff_pre">del\`</span><del `).replace("Red blocks denote deletions, green blocks denote insertions.",`
+  Red blocks with the prefix del\` denote deletions, green blocks with the prefix ins\` denote insertions.
+  
+  `);
   fs.writeFileSync(path.resolve(__dirname, diffFileName), result, {
     encoding: "utf8"
   });
