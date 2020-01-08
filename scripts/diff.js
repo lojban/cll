@@ -40,15 +40,11 @@ try {
   
   `);
   let result_with_prefixes = result.replace(
-    "<ins>",
-    `<span class="diff_pre">ins\`</span><ins>`)
+    "<ins ",
+    `<span class="diff_pre">ins\`</span><ins `)
     .replace(
-    "<del>",
-    `<span class="diff_pre">del\`</span><del>`).replace("<body>",`
-  <body>
-    <div>Only a visual difference file: not for publication, hyperlinks might not work!</div>
-  
-  `);
+    "<del ",
+    `<span class="diff_pre">del\`</span><del `);
   fs.writeFileSync(path.resolve(__dirname, diffFileName), result, {
     encoding: "utf8"
   });
