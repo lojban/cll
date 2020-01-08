@@ -34,25 +34,21 @@ try {
   }
   </style>
   `
-  );
-  let result_with_prefixes = result.replace(
-    "</body>",
-    `<script>
+  ).replace("<body>",`
+  <body>
+    <div>Only a visual difference file: not for publication, hyperlinks might not work!</div>
   
-  document.querySelectorAll('ins').forEach(function(ins) {
-    var span = document.createElement('span');
-    span.innerHTML = 'ins\`';
-    span.className = 'diff_pre';
-    ins.parentNode.insertBefore(span, ins);
-  });
-  document.querySelectorAll('del').forEach(function(del) {
-    var span = document.createElement('span');
-    span.innerHTML = 'del\`';
-    span.className = 'diff_pre';
-    del.parentNode.insertBefore(span, del);
-  });
-  </script></body>`
-  );
+  `);
+  let result_with_prefixes = result.replace(
+    "<ins>",
+    `<span class="diff_pre">ins\`</span><ins>`)
+    .replace(
+    "<del>",
+    `<span class="diff_pre">del\`</span><del>`).replace("<body>",`
+  <body>
+    <div>Only a visual difference file: not for publication, hyperlinks might not work!</div>
+  
+  `);
   fs.writeFileSync(path.resolve(__dirname, diffFileName), result, {
     encoding: "utf8"
   });

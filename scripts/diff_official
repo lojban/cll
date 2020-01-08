@@ -127,6 +127,8 @@ do
   then
     echo "Preparing a visual HTML diff file ..."
     node $PWD/scripts/diff
+  	prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $tempdir/diff_new_xhtml_no_chunks/difference.html -o $tempdir/cll_diffference.pdf
+  	prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $tempdir/diff_new_xhtml_no_chunks/difference_prefixed.html -o $tempdir/cll_difference_prefixed.pdf
     echo "A visual HTML diff is placed in $tempdir/diff_new_xhtml_no_chunks/difference.html and $tempdir/diff_new_xhtml_no_chunks/difference_prefixed.html files."
   fi
 done
