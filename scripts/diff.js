@@ -36,7 +36,7 @@ try {
   `
   ).replace("<body>",`
   <body>
-    <div>Only a visual difference file: not for publication, hyperlinks might not work!</div>
+    <div>Only a visual difference file: not for publication, hyperlinks might not work, images and complex formatting might not be displayed!</div>
   
   `);
   let result_with_prefixes = result.replace(
