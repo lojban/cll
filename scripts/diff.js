@@ -42,10 +42,10 @@ try {
   
   `);
   let result_with_prefixes = result.replace(
-    "<ins ",
+    /<ins /g,
     `<span class="diff_pre">ins\`</span><ins `)
     .replace(
-    "<del ",
+    /<del /g,
     `<span class="diff_pre">del\`</span><del `).replace("Red blocks denote deletions, green blocks denote insertions.",`
   Red blocks with the prefix del\` denote deletions, green blocks with the prefix ins\` denote insertions.
   
