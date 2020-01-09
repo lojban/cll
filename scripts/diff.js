@@ -1,7 +1,6 @@
 const fs = require("fs"),
   path = require("path");
-const HtmlDiff = require(path.join(__dirname, "./htmldiff.js"))
-  .default;
+const HtmlDiff = require(path.join(__dirname, "./htmldiff.js")).default;
 
 const oldFileName = "../build/cll_diffs/diff_old_xhtml_no_chunks/index.html";
 const newFileName = "../build/cll_diffs/diff_new_xhtml_no_chunks/index.html";
@@ -16,7 +15,7 @@ function getFileContent(pathTo) {
   });
 }
 try {
-  let result = HtmlDiff.execute(
+  let result0 = HtmlDiff.execute(
     getFileContent(oldFileName),
     getFileContent(newFileName)
   ).replace(
@@ -34,20 +33,27 @@ try {
   }
   </style>
   `
-  ).replace("<body>",`
-  <body>
+  );
+  let result = result0.replace(
+    "<body>",
+    `<body>
     <div>Only a visual difference file: not for publication, hyperlinks might not work, images and complex formatting might not be displayed!<br/>
     <del class="cll_diff diffmod">Red blocks</del> denote deletions, <ins class="diffmod">green blocks</ins> denote insertions.
     </div>
-  
-  `);
-  let result_with_prefixes = result.replace(
-    /<ins /g,
-    `<span class="diff_pre">ins\`</span><ins `)
+  `
+  );
+  let result_with_prefixes = result0
     .replace(
-    /<del /g,
-    `<span class="diff_pre">del\`</span><del `).replace(`<del class="cll_diff diffmod">Red blocks</del> denote deletions, <ins class="diffmod">green blocks</ins> denote insertions.`,`
-    <del class="cll_diff diffmod">Red blocks</del> with the prefix del\` denote deletions, <ins class="diffmod">green blocks</ins> with the prefix ins\` denote insertions.`);
+      "<body>",
+      `
+      <body>
+    <div>Only a visual difference file: not for publication, hyperlinks might not work, images and complex formatting might not be displayed!<br/>
+    <del class="cll_diff diffmod">Red blocks</del> with the prefix del\` denote deletions, <ins class="diffmod">green blocks</ins> with the prefix ins\` denote insertions.
+    </div>`
+    )
+    .replace(/<ins /g, `<span class="diff_pre">ins\`</span><ins `)
+    .replace(/<del /g, `<span class="diff_pre">del\`</span><del `);
+
   fs.writeFileSync(path.resolve(__dirname, diffFileName), result, {
     encoding: "utf8"
   });
