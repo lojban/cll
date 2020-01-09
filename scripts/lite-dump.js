@@ -77,10 +77,8 @@ valsi.forEach(v => {
 a.unshift(`<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="jbovlaste.xsl"?>
 <dictionary>
-<direction from="lojban" to="English"><valsi word="a" type="cmavo">`);
-a.push(`
-</direction>
-</dictionary>`);
+<direction from="lojban" to="English">`);
+a.push(`</direction></dictionary>`);
 
 a = a.join("\n");
 a = new dom().parseFromString(a);
