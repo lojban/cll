@@ -41,13 +41,6 @@ $CONTAINER_BIN rm cll_build >/dev/null 2>&1
 
 dir=$(readlink -f $(dirname $0))
 
-# If SELinux is on
-if which getenforce >/dev/null 2>&1 && getenforce | grep -q Enforcing
-then
-  # Make it accessible to both the user and the container
-  chcon -R -t container_home_t  . "${extra_dirs[@]}"
-fi
-
 # FOR TESTING; forces complete container rebuild
 # $CONTAINER_BIN build --no-cache -t lojban/cll_build -f Dockerfile .
 # $CONTAINER_BIN rmi lojban/cll_build
@@ -69,5 +62,5 @@ $CONTAINER_BIN build -t lojban/cll_build -f Dockerfile . >/tmp/rc.$$ 2>&1 || {
 rm -f /tmp/rc.$$
 
 $CONTAINER_BIN run --name cll_build \
-  -v $dir:/srv/cll "${extra_vols[@]}" -it lojban/cll_build \
-  /tmp/container_init.sh "$(id -u)" "$(id -g)" "${args[@]}"
+  --userns=keep-id -v $dir:/srv/cll "${extra_vols[@]}" -it lojban/cll_build \
+  /bin/bash -c "cd /srv/cll ; ./cll_build ${args[*]}"
