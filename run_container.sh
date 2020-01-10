@@ -1,22 +1,20 @@
 #!/bin/bash
 
+# Try podman, and then docker.  If sudo or something is required,
+# the user should make a script named either "podman" or "docker"
+# that is in their path first and has whatever they need; we're
+# going to stop trying to do it for them.
+# 
 CONTAINER_BIN=${CONTAINER_BIN:-$(which podman 2>/dev/null)}
 CONTAINER_BIN=${CONTAINER_BIN:-$(which docker 2>/dev/null)}
 
-# Try sudo first because systems where everything is working without
-# sudo are less likely
-if sudo $CONTAINER_BIN info >/dev/null 2>&1
+if $CONTAINER_BIN info >/dev/null 2>&1
 then
-  CONTAINER_BIN="sudo $CONTAINER_BIN"
+  # Everything is working; no-op
+  CONTAINER_BIN="$CONTAINER_BIN"
 else
-  if $CONTAINER_BIN info >/dev/null 2>&1
-  then
-    # Everything is working; no-op
-    CONTAINER_BIN="$CONTAINER_BIN"
-  else
-    echo "I can't get a working container system.  You need to either have podman (preferred) or docker installed and running for this build system to work.  I have tried both \"podman info\" and \"docker info\", with and without sudo."
-    exit 1
-  fi
+  echo "I can't get a working container system.  You need to either have podman (preferred) or docker installed and running for this build system to work.  I have tried both \"podman info\" and \"docker info\", with and without sudo."
+  exit 1
 fi
 
 # Manually pull any -a or -A arguments so we can use them to build
