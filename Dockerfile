@@ -44,7 +44,3 @@ RUN dnf -y install /usr/src/prince-12.5-1.centos7.x86_64.rpm
 
 RUN npm i -g fast-xml-parser jsonpath xpath.js xmldom --allow-root --unsafe-perm=true
 
-# Stuff to do on "boot"
-COPY container_init.sh /tmp/container_init.sh
-RUN sudo dos2unix /tmp/container_init.sh
-RUN sudo chmod 755 /tmp/container_init.sh
