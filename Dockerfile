@@ -2,7 +2,6 @@ FROM fedora:30
 
 # Initial Setup, Basic Package Installs
 RUN dnf -y update
-RUN dnf -y install google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts
 RUN dnf -y remove vim-minimal
 RUN dnf -y reinstall shadow-utils  # needed for man pages, dunno why
 RUN dnf -y install vim sudo tmux zsh moreutils make moreutils sudo \
