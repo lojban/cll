@@ -12,7 +12,7 @@
 
 html {
   /* Modern Georgia-based serif stack, from http://css-tricks.com/snippets/css/font-stacks/ */
-  font-family: 'Linux Libertine', Libertine, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Noto Sans", "Noto Sans CJK", Unifont;
+  font-family: 'Linux Libertine', Libertine, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   font-size: 9pt;
   text-align: justify;
 }
@@ -161,6 +161,14 @@ special glyphs
 
 p[lang="math"] {
   font-family: 'Linux Biolinum', 'Biolinum', 'DejaVu Sans';
+}
+
+p[lang="ko"] {
+  font-family: "Noto Sans", "Noto Sans CJK", Unifont;
+}
+
+p[lang="zh"] {
+  font-family: "Noto Sans", "Noto Sans CJK", Unifont;
 }
 
 /* Make sure that comments *inside* the special glyph natlang look normal */
