@@ -34,6 +34,20 @@ fi
 # make a special diff
 custom_dir_old=""
 custom_dir_new=""
+
+read_var() {
+    VAR=$(grep $1 $2 | xargs)
+    IFS="=" read -ra VAR <<< "$VAR"
+    echo ${VAR[1]}
+}
+
+compare_with=$(read_var COMPARE_WITH .env)
+config_dir_old="official/cll_v1.1_"
+if [[compare_with ]]
+then
+  config_dir_old=official/$compare_with"_"
+fi
+
 if [ "$1" -a "$2" ]
 then
   custom_dir_old="$1"
@@ -58,7 +72,7 @@ do
     dir_old=$custom_dir_old
     dir_new=$custom_dir_new
   else
-    dir_old=official/cll_v1.1_$type/
+    dir_old=$config_dir_old$type/
     dir_new=build/$type/
   fi
   if [[ $type == 'epub' ]]
