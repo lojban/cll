@@ -158,6 +158,17 @@ print display
 special glyphs
 {{{
 *********/
+@font-face { 
+  font-family: "crisa-regular";
+  src: url('./crisa-regular.otf');
+}
+
+.p[lang="zlm"], em[lang="zlm"], span[lang="zlm"] {
+  font-family: "crisa-regular";
+  font-style: normal;
+  font-size: 110%;
+  font-weight: 100;
+}
 
 p[lang="math"] {
   font-family: 'Linux Biolinum', 'Biolinum', 'DejaVu Sans';
