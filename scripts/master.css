@@ -12,7 +12,9 @@
 
 html {
   /* Modern Georgia-based serif stack, from http://css-tricks.com/snippets/css/font-stacks/ */
-  font-family: 'Linux Libertine', Libertine, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-family: "Linux Libertine", Libertine, Constantia, "Lucida Bright",
+    Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
+    "Liberation Serif", Georgia, serif;
   font-size: 9pt;
   text-align: justify;
 }
@@ -23,18 +25,20 @@ print display
 *********/
 @media print {
   /* Avoid ligatures per http://www.princexml.com/forum/topic/1821/how-to-avoid-or-turn-off-ligatures */
-  p { font-variant: prince-opentype(ccmp) }
+  p {
+    font-variant: prince-opentype(ccmp);
+  }
 
   /*********
   print media: anchors/xrefs
   {{{
   *********/
   div.toc a::after {
-      content: leader('.') target-counter(attr(href), page);
+    content: leader(".") target-counter(attr(href), page);
   }
 
   a.xref::after {
-      content: " (p. " target-counter(attr(href), page) ")";
+    content: " (p. " target-counter(attr(href), page) ")";
   }
 
   /* Make links for printing look like normal text. */
@@ -59,7 +63,9 @@ print display
     border-bottom-style: none;
   }
 
-  a.link, a.xref, a.glossterm {
+  a.link,
+  a.xref,
+  a.glossterm {
     color: black;
     background: white;
     text-decoration: none;
@@ -76,14 +82,29 @@ print display
   */
 
   /* div.frontcover, div.halftitlepage, div.titlepage { page-break-before: right } */
-  div.imprint { page-break-before: always }
-  div.dedication, div.foreword, div.toc, div.preface, div.chapter, div.reference,
-  div.appendix, div.bibliography, div.glossary, div.whole-index, div.colophon {
-    page-break-before: always
+  div.imprint {
+    page-break-before: always;
   }
-  div.backcover { page-break-before: left }
+  div.dedication,
+  div.foreword,
+  div.toc,
+  div.preface,
+  div.chapter,
+  div.reference,
+  div.appendix,
+  div.bibliography,
+  div.glossary,
+  div.whole-index,
+  div.colophon {
+    page-break-before: always;
+  }
+  div.backcover {
+    page-break-before: left;
+  }
 
-  div.chapter, div.glossary, div.whole-index {
+  div.chapter,
+  div.glossary,
+  div.whole-index {
     page: chapter;
   }
 
@@ -96,7 +117,6 @@ print display
      * border: 1px solid red;
      */
   }
-
 
   /* define default page and names pages: cover, blank, frontmatter */
 
@@ -138,7 +158,9 @@ print display
   }
 
   @page chapter:first {
-    @top-right { content: normal }
+    @top-right {
+      content: normal;
+    }
   }
 
   /*
@@ -148,7 +170,9 @@ print display
 
   /* Yes, absolute padding.  If you can think of something better to
    * put this stuff at the bottom of the page... */
-  h3.othercredit { padding-top: 180pt; }
+  h3.othercredit {
+    padding-top: 180pt;
+  }
 }
 /****
 }}}
@@ -158,12 +182,14 @@ print display
 special glyphs
 {{{
 *********/
-@font-face { 
+@font-face {
   font-family: "crisa-regular";
-  src: url('./crisa-regular.otf');
+  src: url("./crisa-regular.otf");
 }
 
-.p[lang="zlm"], em[lang="zlm"], span[lang="zlm"] {
+.p[lang="zlm"],
+em[lang="zlm"],
+span[lang="zlm"] {
   font-family: "crisa-regular";
   font-style: normal;
   font-size: 110%;
@@ -171,20 +197,24 @@ special glyphs
 }
 
 p[lang="math"] {
-  font-family: 'Linux Biolinum', 'Biolinum', 'DejaVu Sans';
+  font-family: "Linux Biolinum", "Biolinum", "DejaVu Sans";
 }
 
 p[lang="ko"] {
   font-family: Unifont;
 }
 
-p[lang="zh"], em[lang="zh"], span[lang="zh"] {
+p[lang="zh"],
+em[lang="zh"],
+span[lang="zh"] {
   font-family: Unifont;
 }
 
 /* Make sure that comments *inside* the special glyph natlang look normal */
 span.comment {
-  font-family: 'Linux Libertine', Libertine, Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-family: "Linux Libertine", Libertine, Constantia, "Lucida Bright",
+    Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
+    "Liberation Serif", Georgia, serif;
   font-size: 9pt;
   font-style: normal;
 }
@@ -198,7 +228,7 @@ examples
 */
 div.example {
   page-break-inside: avoid;
-  font-family: 'Linux Biolinum', 'Biolinum', 'DejaVu Sans';
+  font-family: "Linux Biolinum", "Biolinum", "DejaVu Sans";
   margin-top: 0pt;
   margin-bottom: 0pt;
 }
@@ -209,7 +239,6 @@ br.example-break {
 /*
 }}}
 */
-
 
 /*********
 glossaries / indices
@@ -233,7 +262,6 @@ div.whole-index {
   border-bottom-style: none;
 }
 
-
 /* The index/glossary title spans the whole page, as does any preliminary verbiage */
 .whole-index .titlepage * {
   column-span: all;
@@ -249,34 +277,40 @@ div.whole-index {
   column-span: all;
 }
 
-.glossary dl, .glossary ul.dl {
+.glossary dl,
+.glossary ul.dl {
   list-style-type: none;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.glossary dt, .glossary li.dt {
+.glossary dt,
+.glossary li.dt {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.glossary dd, .glossary li.dd {
+.glossary dd,
+.glossary li.dd {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 2em;
 }
 
-.whole-index dl, .whole-index ul.dl {
+.whole-index dl,
+.whole-index ul.dl {
   list-style-type: none;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.whole-index dt, .whole-index li.dt {
+.whole-index dt,
+.whole-index li.dt {
   font-weight: normal;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.whole-index dd, .whole-index li.dd {
+.whole-index dd,
+.whole-index li.dd {
   font-weight: normal;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -293,11 +327,17 @@ div.whole-index {
 }
 */
 
-
 /* Allow flow of indexes; see http://www.princexml.com/forum/topic/2798/bad-page-breaks?p=1#13093 */
-dt, li.dt { page-break-after: auto !important }
-dt + dd { page-break-before: avoid }
-li.dt + li.dd { page-break-before: avoid }
+dt,
+li.dt {
+  page-break-after: auto !important;
+}
+dt + dd {
+  page-break-before: avoid;
+}
+li.dt + li.dd {
+  page-break-before: avoid;
+}
 
 /*
 }}}
@@ -308,17 +348,17 @@ basic paragraph
 {{{
 */
 p {
-    display: block;
-    margin-top: .1em;
-    margin-bottom: .1em;
-    /* see https://www.princexml.com/doc/11/paged/#widows-and-orphans --
+  display: block;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  /* see https://www.princexml.com/doc/11/paged/#widows-and-orphans --
      * this is to match the behaviour of previous versions, and also
      * I (Robin) think it looks nicer */
-    orphans: 2;
-    widows: 2;
+  orphans: 2;
+  widows: 2;
 }
 div.section > p {
-    text-indent: 1em;
+  text-indent: 1em;
 }
 /*
 }}}
@@ -334,7 +374,7 @@ h1 {
   string-set: header content();
   prince-page-group: start;
   font-size: 14pt;
-  margin: 10pt   0;
+  margin: 10pt 0;
   text-align: center;
 }
 h2 {
@@ -351,23 +391,40 @@ h2 {
 Whitespace managament, mostly reductions.
 {{{
  */
-div.example, table.cmavo-list {
-  margin-top: .5em;
-  margin-bottom: .5em;
+div.example,
+table.cmavo-list,
+.definition {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-right: 0;
+  margin-left: 2em;
+}
+
+@media screen and (max-width: 800px) {
+  div.example,
+  table.cmavo-list,
+  .definition {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /* Tables, examples, and lists have in indent */
-.example-contents, table, ul, ol {
+.example-contents,
+table,
+ul,
+ol {
   margin-top: 0pt;
-  margin-right: 0pt;
-  margin-left: 2em;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 0.4em;
   border-spacing: 0pt;
   border: 0pt;
   padding: 0pt;
 }
 
-ul, ol {
+ul,
+ol {
   padding-left: 1.75em;
 }
 
@@ -376,22 +433,26 @@ div.example-contents table,
 div.example-contents div,
 div.example-contents ul,
 div.example-contents ol,
-tr, li {
+tr,
+li {
   border-spacing: 0;
   margin: 0;
   border: 0;
   padding: 0;
 }
 
-dl, ul.dl {
+dl,
+ul.dl {
   list-style-type: none;
   margin: 0pt;
 }
-dd, li.dd {
+dd,
+li.dd {
   margin-bottom: 0pt;
 }
 
-pre, blockquote {
+pre,
+blockquote {
   border-spacing: 0;
   margin: 0;
   border: 0;
@@ -399,7 +460,8 @@ pre, blockquote {
   page-break-inside: avoid;
 }
 
-div.titlepage + p, p.noindent {
+div.titlepage + p,
+p.noindent {
   text-indent: 0pt !important;
 }
 /*
@@ -416,7 +478,8 @@ table {
   border-collapse: collapse;
 }
 /* Keep tables with their titles */
-div.table, div.informaltable {
+div.table,
+div.informaltable {
   page-break-inside: avoid;
 }
 
@@ -439,7 +502,11 @@ div.table, div.informaltable {
  * WHich is freaking lame, but seems to work fine.
  *
  */
-.allowbreaks, div.allowbreaks, .allowbreaks + div.table, .allowbreaks + div.informaltable, .allowbreaks + div.example {
+.allowbreaks,
+div.allowbreaks,
+.allowbreaks + div.table,
+.allowbreaks + div.informaltable,
+.allowbreaks + div.example {
   page-break-inside: auto;
 }
 
@@ -451,13 +518,15 @@ div.table, div.informaltable {
   margin-top: 0.4em;
 }
 
-table p, table span {
+table p,
+table span {
   margin: 0px;
   padding: 0px;
   text-align: left;
 }
 
-table td, table th {
+table td,
+table th {
   border-left: 1px dotted grey;
   border-right: 1px dotted grey;
   padding-right: 0.4em;
@@ -493,11 +562,16 @@ table.rotated table {
   margin: 0;
 }
 
+table.simplelist tr td {
+  text-align:center;
+}
+
 .selbri {
   font-weight: bold;
 }
 
-.jbo, .jbophrase {
+.jbo,
+.jbophrase {
   font-style: italic;
 }
 tr.gloss {
@@ -513,7 +587,10 @@ img {
   margin-right: auto;
 }
 
-dl p, dl span, ul.dl p, ul.dl span {
+dl p,
+dl span,
+ul.dl p,
+ul.dl span {
   margin: 0px;
   padding: 0px;
   text-align: left;
@@ -574,8 +651,8 @@ p.twocolumn + div {
   -webkit-column-count: 2; /* Chrome, Safari, Opera */
   -moz-column-count: 2; /* Firefox */
   column-count: 2;
-  margin-top: .5em;
-  margin-bottom: .5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .logical-vowel {
@@ -591,7 +668,6 @@ p.twocolumn + div {
 br.table-break {
   display: none;
 }
-
 
 /*********
 screen display
@@ -635,7 +711,7 @@ screen display
   }
 
   a {
-    color: #0B486B;
+    color: #0b486b;
     text-decoration: none;
     border-bottom-style: dashed;
     border-bottom-width: 1px;
