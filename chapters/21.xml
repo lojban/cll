@@ -1,9 +1,14 @@
 <chapter xml:id="chapter-grammars">
-  <title><anchor xml:id="c21"/>Formal Grammars</title>
+  <title>
+    <anchor xml:id="c21" />
+    Formal Grammars
+  </title>
   <mediaobject xml:id="chapter-grammars-picture">
-    <textobject><phrase>The picture for chapter 21</phrase></textobject>
+    <textobject>
+      <phrase>The picture for chapter 21</phrase>
+    </textobject>
     <imageobject>
-      <imagedata fileref="media/chapter-grammars.svg.png"/>
+      <imagedata fileref="media/chapter-grammars.svg.png" />
     </imageobject>
   </mediaobject>
   <!--
@@ -7020,13 +7025,25 @@ the 900 series rules are found in the lexer.  */
   </section>
   -->
   <section xml:id="section-EBNF">
-    <title><anchor xml:id="c21s2"/>EBNF Grammar of Lojban</title>
+    <title>
+      <anchor xml:id="c21s2" />
+      EBNF Grammar of Lojban
+    </title>
     <para>Lojban Machine Grammar, EBNF Version, Final Baseline</para>
     <para>This EBNF document is explicitly dedicated to the public domain by its author, The Logical Language Group, Inc. Contact that organization at: 2904 Beau Lane, Fairfax VA 22031 USA 703-385-0273 (intl: +1 703 385 0273)</para>
     <para>Explanation of notation: All rules have the form:</para>
-    <para>name
-    <subscript>number</subscript>= bnf-expression</para>
-    <para>which means that the grammatical construct <quote>name</quote> is defined by <quote>bnf-expression</quote>.</para>
+    <para>
+      name
+      <subscript>number</subscript>
+      = bnf-expression
+    </para>
+    <para>
+      which means that the grammatical construct
+      <quote>name</quote>
+      is defined by
+      <quote>bnf-expression</quote>
+      .
+    </para>
 
     <orderedlist>
       <listitem>
@@ -7045,16 +7062,37 @@ the 900 series rules are found in the lexer.  */
         <para>[] represents an optional element.</para>
       </listitem>
       <listitem>
-        <para>&amp; represents and/or. <quote>A &amp; B</quote> is the same as <quote>A | B | A B</quote> but not <quote>B A</quote>. Furthermore, <quote>A &amp; B &amp; C &amp; D</quote> permits one or more of A, B, C, and/or D, but only in that order.</para>
+        <para>
+          &amp; represents and/or.
+          <quote>A &amp; B</quote>
+          is the same as
+          <quote>A | B | A B</quote>
+          but not
+          <quote>B A</quote>
+          . Furthermore,
+          <quote>A &amp; B &amp; C &amp; D</quote>
+          permits one or more of A, B, C, and/or D, but only in that order.
+        </para>
       </listitem>
       <listitem>
-        <para>... represents optional repetition of the construct to the left. Left-grouping is implied; right-grouping is shown by explicit self-referential recursion with no <quote>...</quote></para>
+        <para>
+          ... represents optional repetition of the construct to the left. Left-grouping is implied; right-grouping is shown by explicit self-referential recursion with no
+          <quote>...</quote>
+        </para>
       </listitem>
       <listitem>
-        <para>() serves to indicate the grouping of the other operators. Otherwise, <quote>...</quote> binds closer than &amp;, which binds closer than |.</para>
+        <para>
+          () serves to indicate the grouping of the other operators. Otherwise,
+          <quote>...</quote>
+          binds closer than &amp;, which binds closer than |.
+        </para>
       </listitem>
       <listitem>
-        <para># is shorthand for <quote>[free ...]</quote>, a construct which appears in many places.</para>
+        <para>
+          # is shorthand for
+          <quote>[free ...]</quote>
+          , a construct which appears in many places.
+        </para>
       </listitem>
       <listitem>
         <para>// encloses an elidable terminator, which may be omitted (without change of meaning) if no grammatical ambiguity results.</para>
@@ -7063,883 +7101,1318 @@ the 900 series rules are found in the lexer.  */
     <variablelist>
       <varlistentry>
         <term>
-        <anchor xml:id="b0"/>
-        <anchor xreflabel="BNF rule #0" xml:id="cll_bnf-0"/>
-        <!-- <xref linkend="cll_yacc-0"/> --> text
-        <subscript>0</subscript>=</term>
+          <anchor xml:id="b0" />
+          <anchor xreflabel="BNF rule #0" xml:id="cll_bnf-0" />
+          <!-- <xref linkend="cll_yacc-0"/> -->
+          text
+          <subscript>0</subscript>
+          =
+        </term>
         <listitem>
-          <para>[NAI ...] [CMEVLA ... # | (indicators &amp; free ...)] [joik-jek] text-1
-          <anchor xml:id="b2"/>
-          <anchor xreflabel="BNF rule #2" xml:id="cll_bnf-2"/>
-          <!-- <xref linkend="cll_yacc-2"/> --></para>
+          <para>
+            [NAI ...] [CMEVLA ... # | (indicators &amp; free ...)] [joik-jek] text-1
+            <anchor xml:id="b2" />
+            <anchor xreflabel="BNF rule #2" xml:id="cll_bnf-2" />
+            <!-- <xref linkend="cll_yacc-2"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>text-1
-        <subscript>2</subscript>=</term>
+        <term>
+          text-1
+          <subscript>2</subscript>
+          =
+        </term>
         <listitem>
-          <para>[(I [jek | joik] [[stag] BO] #) ... | NIhO ... #] [paragraphs]
-          <anchor xml:id="b4"/>
-          <anchor xreflabel="BNF rule #4" xml:id="cll_bnf-4"/>
-          <!-- <xref linkend="cll_yacc-4"/> --></para>
+          <para>
+            [(I [jek | joik] [[stag] BO] #) ... | NIhO ... #] [paragraphs]
+            <anchor xml:id="b4" />
+            <anchor xreflabel="BNF rule #4" xml:id="cll_bnf-4" />
+            <!-- <xref linkend="cll_yacc-4"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>paragraphs
-        <subscript>4</subscript>=</term>
+        <term>
+          paragraphs
+          <subscript>4</subscript>
+          =
+        </term>
         <listitem>
-          <para>paragraph [NIhO ... # paragraphs]
-          <anchor xml:id="b10"/>
-          <anchor xreflabel="BNF rule #10" xml:id="cll_bnf-10"/>
-          <!-- <xref linkend="cll_yacc-10"/> --></para>
+          <para>
+            paragraph [NIhO ... # paragraphs]
+            <anchor xml:id="b10" />
+            <anchor xreflabel="BNF rule #10" xml:id="cll_bnf-10" />
+            <!-- <xref linkend="cll_yacc-10"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>paragraph
-        <subscript>10</subscript>=</term>
+        <term>
+          paragraph
+          <subscript>10</subscript>
+          =
+        </term>
         <listitem>
-          <para>(statement | fragment) [I # [statement | fragment]] ...
-          <anchor xml:id="b11"/>
-          <anchor xreflabel="BNF rule #11" xml:id="cll_bnf-11"/>
-          <!-- <xref linkend="cll_yacc-11"/> --></para>
+          <para>
+            (statement | fragment) [I # [statement | fragment]] ...
+            <anchor xml:id="b11" />
+            <anchor xreflabel="BNF rule #11" xml:id="cll_bnf-11" />
+            <!-- <xref linkend="cll_yacc-11"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>statement
-        <subscript>11</subscript>=</term>
+        <term>
+          statement
+          <subscript>11</subscript>
+          =
+        </term>
         <listitem>
-          <para>statement-1 | prenex statement
-          <anchor xml:id="b12"/>
-          <anchor xreflabel="BNF rule #12" xml:id="cll_bnf-12"/>
-          <!-- <xref linkend="cll_yacc-12"/> --></para>
+          <para>
+            statement-1 | prenex statement
+            <anchor xml:id="b12" />
+            <anchor xreflabel="BNF rule #12" xml:id="cll_bnf-12" />
+            <!-- <xref linkend="cll_yacc-12"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>statement-1
-        <subscript>12</subscript>=</term>
+        <term>
+          statement-1
+          <subscript>12</subscript>
+          =
+        </term>
         <listitem>
-          <para>statement-2 [I joik-jek [statement-2]] ...
-          <anchor xml:id="b13"/>
-          <anchor xreflabel="BNF rule #13" xml:id="cll_bnf-13"/>
-          <!-- <xref linkend="cll_yacc-13"/> --></para>
+          <para>
+            statement-2 [I joik-jek [statement-2]] ...
+            <anchor xml:id="b13" />
+            <anchor xreflabel="BNF rule #13" xml:id="cll_bnf-13" />
+            <!-- <xref linkend="cll_yacc-13"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>statement-2
-        <subscript>13</subscript>=</term>
+        <term>
+          statement-2
+          <subscript>13</subscript>
+          =
+        </term>
         <listitem>
-          <para>statement-3 [I [jek | joik] [stag] BO # [statement-2]]
-          <anchor xml:id="b14"/>
-          <anchor xreflabel="BNF rule #14" xml:id="cll_bnf-14"/>
-          <!-- <xref linkend="cll_yacc-14"/> --></para>
+          <para>
+            statement-3 [I [jek | joik] [stag] BO # [statement-2]]
+            <anchor xml:id="b14" />
+            <anchor xreflabel="BNF rule #14" xml:id="cll_bnf-14" />
+            <!-- <xref linkend="cll_yacc-14"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>statement-3
-        <subscript>14</subscript>=</term>
+        <term>
+          statement-3
+          <subscript>14</subscript>
+          =
+        </term>
         <listitem>
-          <para>sentence | [tag] TUhE # text-1 /TUhU#/
-          <anchor xml:id="b20"/>
-          <anchor xreflabel="BNF rule #20" xml:id="cll_bnf-20"/>
-          <!-- <xref linkend="cll_yacc-20"/> --></para>
+          <para>
+            sentence | [tag] TUhE # text-1 /TUhU#/
+            <anchor xml:id="b20" />
+            <anchor xreflabel="BNF rule #20" xml:id="cll_bnf-20" />
+            <!-- <xref linkend="cll_yacc-20"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>fragment
-        <subscript>20</subscript>=</term>
+        <term>
+          fragment
+          <subscript>20</subscript>
+          =
+        </term>
         <listitem>
-          <para>ek # | gihek # | quantifier | NA # | terms /VAU#/ | prenex | relative-clauses | links | linkargs
-          <anchor xml:id="b30"/>
-          <anchor xreflabel="BNF rule #30" xml:id="cll_bnf-30"/>
-          <!-- <xref linkend="cll_yacc-30"/> --></para>
+          <para>
+            ek # | gihek # | quantifier | NA # | terms /VAU#/ | prenex | relative-clauses | links | linkargs
+            <anchor xml:id="b30" />
+            <anchor xreflabel="BNF rule #30" xml:id="cll_bnf-30" />
+            <!-- <xref linkend="cll_yacc-30"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>prenex
-        <subscript>30</subscript>=</term>
+        <term>
+          prenex
+          <subscript>30</subscript>
+          =
+        </term>
         <listitem>
-          <para>terms ZOhU #
-          <anchor xml:id="b40"/>
-          <anchor xreflabel="BNF rule #40" xml:id="cll_bnf-40"/>
-          <!-- <xref linkend="cll_yacc-40"/> --></para>
+          <para>
+            terms ZOhU #
+            <anchor xml:id="b40" />
+            <anchor xreflabel="BNF rule #40" xml:id="cll_bnf-40" />
+            <!-- <xref linkend="cll_yacc-40"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sentence
-        <subscript>40</subscript>=</term>
+        <term>
+          sentence
+          <subscript>40</subscript>
+          =
+        </term>
         <listitem>
-          <para>[terms [CU #]] bridi-tail
-          <anchor xml:id="b41"/>
-          <anchor xreflabel="BNF rule #41" xml:id="cll_bnf-41"/>
-          <!-- <xref linkend="cll_yacc-41"/> --></para>
+          <para>
+            [terms [CU #]] bridi-tail
+            <anchor xml:id="b41" />
+            <anchor xreflabel="BNF rule #41" xml:id="cll_bnf-41" />
+            <!-- <xref linkend="cll_yacc-41"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>subsentence
-        <subscript>41</subscript>=</term>
+        <term>
+          subsentence
+          <subscript>41</subscript>
+          =
+        </term>
         <listitem>
-          <para>sentence | prenex subsentence
-          <anchor xml:id="b50"/>
-          <anchor xreflabel="BNF rule #50" xml:id="cll_bnf-50"/>
-          <!-- <xref linkend="cll_yacc-50"/> --></para>
+          <para>
+            sentence | prenex subsentence
+            <anchor xml:id="b50" />
+            <anchor xreflabel="BNF rule #50" xml:id="cll_bnf-50" />
+            <!-- <xref linkend="cll_yacc-50"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>bridi-tail
-        <subscript>50</subscript>=</term>
+        <term>
+          bridi-tail
+          <subscript>50</subscript>
+          =
+        </term>
         <listitem>
-          <para>bridi-tail-1 [gihek [stag] KE # bridi-tail /KEhE#/ tail-terms]
-          <anchor xml:id="b51"/>
-          <anchor xreflabel="BNF rule #51" xml:id="cll_bnf-51"/>
-          <!-- <xref linkend="cll_yacc-51"/> --></para>
+          <para>
+            bridi-tail-1 [gihek [stag] KE # bridi-tail /KEhE#/ tail-terms]
+            <anchor xml:id="b51" />
+            <anchor xreflabel="BNF rule #51" xml:id="cll_bnf-51" />
+            <!-- <xref linkend="cll_yacc-51"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>bridi-tail-1
-        <subscript>51</subscript>=</term>
+        <term>
+          bridi-tail-1
+          <subscript>51</subscript>
+          =
+        </term>
         <listitem>
-          <para>bridi-tail-2 [gihek # bridi-tail-2 tail-terms] ...
-          <anchor xml:id="b52"/>
-          <anchor xreflabel="BNF rule #52" xml:id="cll_bnf-52"/>
-          <!-- <xref linkend="cll_yacc-52"/> --></para>
+          <para>
+            bridi-tail-2 [gihek # bridi-tail-2 tail-terms] ...
+            <anchor xml:id="b52" />
+            <anchor xreflabel="BNF rule #52" xml:id="cll_bnf-52" />
+            <!-- <xref linkend="cll_yacc-52"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>bridi-tail-2
-        <subscript>52</subscript>=</term>
+        <term>
+          bridi-tail-2
+          <subscript>52</subscript>
+          =
+        </term>
         <listitem>
-          <para>bridi-tail-3 [gihek [stag] BO # bridi-tail-2 tail-terms]
-          <anchor xml:id="b53"/>
-          <anchor xreflabel="BNF rule #53" xml:id="cll_bnf-53"/>
-          <!-- <xref linkend="cll_yacc-53"/> --></para>
+          <para>
+            bridi-tail-3 [gihek [stag] BO # bridi-tail-2 tail-terms]
+            <anchor xml:id="b53" />
+            <anchor xreflabel="BNF rule #53" xml:id="cll_bnf-53" />
+            <!-- <xref linkend="cll_yacc-53"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>bridi-tail-3
-        <subscript>53</subscript>=</term>
+        <term>
+          bridi-tail-3
+          <subscript>53</subscript>
+          =
+        </term>
         <listitem>
-          <para>selbri tail-terms | gek-sentence
-          <anchor xml:id="b54"/>
-          <anchor xreflabel="BNF rule #54" xml:id="cll_bnf-54"/>
-          <!-- <xref linkend="cll_yacc-54"/> --></para>
+          <para>
+            selbri tail-terms | gek-sentence
+            <anchor xml:id="b54" />
+            <anchor xreflabel="BNF rule #54" xml:id="cll_bnf-54" />
+            <!-- <xref linkend="cll_yacc-54"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>gek-sentence
-        <subscript>54</subscript>=</term>
+        <term>
+          gek-sentence
+          <subscript>54</subscript>
+          =
+        </term>
         <listitem>
-          <para>gek subsentence gik subsentence tail-terms | [tag] KE # gek-sentence /KEhE#/ | NA # gek-sentence
-          <anchor xml:id="b71"/>
-          <anchor xreflabel="BNF rule #71" xml:id="cll_bnf-71"/>
-          <!-- <xref linkend="cll_yacc-71"/> --></para>
+          <para>
+            gek subsentence gik subsentence tail-terms | [tag] KE # gek-sentence /KEhE#/ | NA # gek-sentence
+            <anchor xml:id="b71" />
+            <anchor xreflabel="BNF rule #71" xml:id="cll_bnf-71" />
+            <!-- <xref linkend="cll_yacc-71"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>tail-terms
-        <subscript>71</subscript>=</term>
+        <term>
+          tail-terms
+          <subscript>71</subscript>
+          =
+        </term>
         <listitem>
-          <para>[terms] /VAU#/
-          <anchor xml:id="b80"/>
-          <anchor xreflabel="BNF rule #80" xml:id="cll_bnf-80"/>
-          <!-- <xref linkend="cll_yacc-80"/> --></para>
+          <para>
+            [terms] /VAU#/
+            <anchor xml:id="b80" />
+            <anchor xreflabel="BNF rule #80" xml:id="cll_bnf-80" />
+            <!-- <xref linkend="cll_yacc-80"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>terms
-        <subscript>80</subscript>=</term>
+        <term>
+          terms
+          <subscript>80</subscript>
+          =
+        </term>
         <listitem>
-          <para>terms-1 ...
-          <anchor xml:id="b81"/>
-          <anchor xreflabel="BNF rule #81" xml:id="cll_bnf-81"/>
-          <!-- <xref linkend="cll_yacc-81"/> --></para>
+          <para>
+            terms-1 ...
+            <anchor xml:id="b81" />
+            <anchor xreflabel="BNF rule #81" xml:id="cll_bnf-81" />
+            <!-- <xref linkend="cll_yacc-81"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>terms-1
-        <subscript>81</subscript>=</term>
+        <term>
+          terms-1
+          <subscript>81</subscript>
+          =
+        </term>
         <listitem>
-          <para>terms-2 [PEhE # joik-jek terms-2] ...
-          <anchor xml:id="b82"/>
-          <anchor xreflabel="BNF rule #82" xml:id="cll_bnf-82"/>
-          <!-- <xref linkend="cll_yacc-82"/> --></para>
+          <para>
+            terms-2 [PEhE # joik-jek terms-2] ...
+            <anchor xml:id="b82" />
+            <anchor xreflabel="BNF rule #82" xml:id="cll_bnf-82" />
+            <!-- <xref linkend="cll_yacc-82"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>terms-2
-        <subscript>82</subscript>=</term>
+        <term>
+          terms-2
+          <subscript>82</subscript>
+          =
+        </term>
         <listitem>
-          <para>term [CEhE # term] ...
-          <anchor xml:id="b83"/>
-          <anchor xreflabel="BNF rule #83" xml:id="cll_bnf-83"/>
-          <!-- <xref linkend="cll_yacc-83"/> --></para>
+          <para>
+            term [CEhE # term] ...
+            <anchor xml:id="b83" />
+            <anchor xreflabel="BNF rule #83" xml:id="cll_bnf-83" />
+            <!-- <xref linkend="cll_yacc-83"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>term
-        <subscript>83</subscript>=</term>
+        <term>
+          term
+          <subscript>83</subscript>
+          =
+        </term>
         <listitem>
-          <para>sumti | (tag | FA #) (sumti | /KU#/) | termset | NA KU #
-          <anchor xml:id="b85"/>
-          <anchor xreflabel="BNF rule #85" xml:id="cll_bnf-85"/>
-          <!-- <xref linkend="cll_yacc-85"/> --></para>
+          <para>
+            sumti | (tag | FA #) (sumti | /KU#/) | termset | NA KU #
+            <anchor xml:id="b85" />
+            <anchor xreflabel="BNF rule #85" xml:id="cll_bnf-85" />
+            <!-- <xref linkend="cll_yacc-85"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>termset
-        <subscript>85</subscript>=</term>
+        <term>
+          termset
+          <subscript>85</subscript>
+          =
+        </term>
         <listitem>
-          <para>NUhI # gek terms /NUhU#/ gik terms /NUhU#/ | NUhI # terms /NUhU#/
-          <anchor xml:id="b90"/>
-          <anchor xreflabel="BNF rule #90" xml:id="cll_bnf-90"/>
-          <!-- <xref linkend="cll_yacc-90"/> --></para>
+          <para>
+            NUhI # gek terms /NUhU#/ gik terms /NUhU#/ | NUhI # terms /NUhU#/
+            <anchor xml:id="b90" />
+            <anchor xreflabel="BNF rule #90" xml:id="cll_bnf-90" />
+            <!-- <xref linkend="cll_yacc-90"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti
-        <subscript>90</subscript>=</term>
+        <term>
+          sumti
+          <subscript>90</subscript>
+          =
+        </term>
         <listitem>
-          <para>sumti-1 [VUhO # relative-clauses]
-          <anchor xml:id="b91"/>
-          <anchor xreflabel="BNF rule #91" xml:id="cll_bnf-91"/>
-          <!-- <xref linkend="cll_yacc-91"/> --></para>
+          <para>
+            sumti-1 [VUhO # relative-clauses]
+            <anchor xml:id="b91" />
+            <anchor xreflabel="BNF rule #91" xml:id="cll_bnf-91" />
+            <!-- <xref linkend="cll_yacc-91"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-1
-        <subscript>91</subscript>=</term>
+        <term>
+          sumti-1
+          <subscript>91</subscript>
+          =
+        </term>
         <listitem>
-          <para>sumti-2 [(ek | joik) [stag] KE # sumti /KEhE#/]
-          <anchor xml:id="b92"/>
-          <anchor xreflabel="BNF rule #92" xml:id="cll_bnf-92"/>
-          <!-- <xref linkend="cll_yacc-92"/> --></para>
+          <para>
+            sumti-2 [(ek | joik) [stag] KE # sumti /KEhE#/]
+            <anchor xml:id="b92" />
+            <anchor xreflabel="BNF rule #92" xml:id="cll_bnf-92" />
+            <!-- <xref linkend="cll_yacc-92"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-2
-        <subscript>92</subscript>=</term>
+        <term>
+          sumti-2
+          <subscript>92</subscript>
+          =
+        </term>
         <listitem>
-          <para>sumti-3 [joik-ek sumti-3] ...
-          <anchor xml:id="b93"/>
-          <anchor xreflabel="BNF rule #93" xml:id="cll_bnf-93"/>
-          <!-- <xref linkend="cll_yacc-93"/> --></para>
+          <para>
+            sumti-3 [joik-ek sumti-3] ...
+            <anchor xml:id="b93" />
+            <anchor xreflabel="BNF rule #93" xml:id="cll_bnf-93" />
+            <!-- <xref linkend="cll_yacc-93"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-3
-        <subscript>93</subscript>=</term>
+        <term>
+          sumti-3
+          <subscript>93</subscript>
+          =
+        </term>
         <listitem>
-          <para>sumti-4 [(ek | joik) [stag] BO # sumti-3]
-          <anchor xml:id="b94"/>
-          <anchor xreflabel="BNF rule #94" xml:id="cll_bnf-94"/>
-          <!-- <xref linkend="cll_yacc-94"/> --></para>
+          <para>
+            sumti-4 [(ek | joik) [stag] BO # sumti-3]
+            <anchor xml:id="b94" />
+            <anchor xreflabel="BNF rule #94" xml:id="cll_bnf-94" />
+            <!-- <xref linkend="cll_yacc-94"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-4
-        <subscript>94</subscript>=</term>
+        <term>
+          sumti-4
+          <subscript>94</subscript>
+          =
+        </term>
         <listitem>
-          <para>sumti-5 | gek sumti gik sumti-4
-          <anchor xml:id="b95"/>
-          <anchor xreflabel="BNF rule #95" xml:id="cll_bnf-95"/>
-          <!-- <xref linkend="cll_yacc-95"/> --></para>
+          <para>
+            sumti-5 | gek sumti gik sumti-4
+            <anchor xml:id="b95" />
+            <anchor xreflabel="BNF rule #95" xml:id="cll_bnf-95" />
+            <!-- <xref linkend="cll_yacc-95"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-5
-        <subscript>95</subscript>=</term>
+        <term>
+          sumti-5
+          <subscript>95</subscript>
+          =
+        </term>
         <listitem>
-          <para>[quantifier] sumti-6 [relative-clauses] | quantifier selbri /KU#/ [relative-clauses]
-          <anchor xml:id="b97"/>
-          <anchor xreflabel="BNF rule #97" xml:id="cll_bnf-97"/>
-          <!-- <xref linkend="cll_yacc-97"/> --></para>
+          <para>
+            [quantifier] sumti-6 [relative-clauses] | quantifier selbri /KU#/ [relative-clauses]
+            <anchor xml:id="b97" />
+            <anchor xreflabel="BNF rule #97" xml:id="cll_bnf-97" />
+            <!-- <xref linkend="cll_yacc-97"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-6
-        <subscript>97</subscript>=</term>
+        <term>
+          sumti-6
+          <subscript>97</subscript>
+          =
+        </term>
         <listitem>
-          <para>(LAhE # | NAhE BO #) [relative-clauses] sumti /LUhU#/ | KOhA # | lerfu-string /BOI#/ | LA # [relative-clauses] CMEVLA ... # | (LA | LE) # sumti-tail /KU#/ | LI # mex /LOhO#/ | ZO any-word # | LU text /LIhU#/ | LOhU any-word ... LEhU # | ZOI any-word anything any-word #
-          <anchor xml:id="b111"/>
-          <anchor xreflabel="BNF rule #111" xml:id="cll_bnf-111"/>
-          <!-- <xref linkend="cll_yacc-111"/> --></para>
+          <para>
+            (LAhE # | NAhE BO #) [relative-clauses] sumti /LUhU#/ | KOhA # | lerfu-string /BOI#/ | LA # [relative-clauses] CMEVLA ... # | (LA | LE) # sumti-tail /KU#/ | LI # mex /LOhO#/ | ZO any-word # | LU text /LIhU#/ | LOhU any-word ... LEhU # | ZOI any-word anything any-word #
+            <anchor xml:id="b111" />
+            <anchor xreflabel="BNF rule #111" xml:id="cll_bnf-111" />
+            <!-- <xref linkend="cll_yacc-111"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-tail
-        <subscript>111</subscript>=</term>
+        <term>
+          sumti-tail
+          <subscript>111</subscript>
+          =
+        </term>
         <listitem>
-          <para>[sumti-6 [relative-clauses]] sumti-tail-1 | relative-clauses sumti-tail-1
-          <anchor xml:id="b112"/>
-          <anchor xreflabel="BNF rule #112" xml:id="cll_bnf-112"/>
-          <!-- <xref linkend="cll_yacc-112"/> --></para>
+          <para>
+            [sumti-6 [relative-clauses]] sumti-tail-1 | relative-clauses sumti-tail-1
+            <anchor xml:id="b112" />
+            <anchor xreflabel="BNF rule #112" xml:id="cll_bnf-112" />
+            <!-- <xref linkend="cll_yacc-112"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>sumti-tail-1
-        <subscript>112</subscript>=</term>
+        <term>
+          sumti-tail-1
+          <subscript>112</subscript>
+          =
+        </term>
         <listitem>
-          <para>[quantifier] selbri [relative-clauses] | quantifier sumti
-          <anchor xml:id="b121"/>
-          <anchor xreflabel="BNF rule #121" xml:id="cll_bnf-121"/>
-          <!-- <xref linkend="cll_yacc-121"/> --></para>
+          <para>
+            [quantifier] selbri [relative-clauses] | quantifier sumti
+            <anchor xml:id="b121" />
+            <anchor xreflabel="BNF rule #121" xml:id="cll_bnf-121" />
+            <!-- <xref linkend="cll_yacc-121"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>relative-clauses
-        <subscript>121</subscript>=</term>
+        <term>
+          relative-clauses
+          <subscript>121</subscript>
+          =
+        </term>
         <listitem>
-          <para>relative-clause [ZIhE # relative-clause] ...
-          <anchor xml:id="b122"/>
-          <anchor xreflabel="BNF rule #122" xml:id="cll_bnf-122"/>
-          <!-- <xref linkend="cll_yacc-122"/> --></para>
+          <para>
+            relative-clause [ZIhE # relative-clause] ...
+            <anchor xml:id="b122" />
+            <anchor xreflabel="BNF rule #122" xml:id="cll_bnf-122" />
+            <!-- <xref linkend="cll_yacc-122"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>relative-clause
-        <subscript>122</subscript>=</term>
+        <term>
+          relative-clause
+          <subscript>122</subscript>
+          =
+        </term>
         <listitem>
-          <para>GOI # term /GEhU#/ | NOI # subsentence /KUhO#/
-          <anchor xml:id="b130"/>
-          <anchor xreflabel="BNF rule #130" xml:id="cll_bnf-130"/>
-          <!-- <xref linkend="cll_yacc-130"/> --></para>
+          <para>
+            GOI # term /GEhU#/ | NOI # subsentence /KUhO#/
+            <anchor xml:id="b130" />
+            <anchor xreflabel="BNF rule #130" xml:id="cll_bnf-130" />
+            <!-- <xref linkend="cll_yacc-130"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri
-        <subscript>130</subscript>=</term>
+        <term>
+          selbri
+          <subscript>130</subscript>
+          =
+        </term>
         <listitem>
-          <para>[tag] selbri-1
-          <anchor xml:id="b131"/>
-          <anchor xreflabel="BNF rule #131" xml:id="cll_bnf-131"/>
-          <!-- <xref linkend="cll_yacc-131"/> --></para>
+          <para>
+            [tag] selbri-1
+            <anchor xml:id="b131" />
+            <anchor xreflabel="BNF rule #131" xml:id="cll_bnf-131" />
+            <!-- <xref linkend="cll_yacc-131"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri-1
-        <subscript>131</subscript>=</term>
+        <term>
+          selbri-1
+          <subscript>131</subscript>
+          =
+        </term>
         <listitem>
-          <para>selbri-2 | NA # selbri
-          <anchor xml:id="b132"/>
-          <anchor xreflabel="BNF rule #132" xml:id="cll_bnf-132"/>
-          <!-- <xref linkend="cll_yacc-132"/> --></para>
+          <para>
+            selbri-2 | NA # selbri
+            <anchor xml:id="b132" />
+            <anchor xreflabel="BNF rule #132" xml:id="cll_bnf-132" />
+            <!-- <xref linkend="cll_yacc-132"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri-2
-        <subscript>132</subscript>=</term>
+        <term>
+          selbri-2
+          <subscript>132</subscript>
+          =
+        </term>
         <listitem>
-          <para>selbri-3 [CO # selbri-2]
-          <anchor xml:id="b133"/>
-          <anchor xreflabel="BNF rule #133" xml:id="cll_bnf-133"/>
-          <!-- <xref linkend="cll_yacc-133"/> --></para>
+          <para>
+            selbri-3 [CO # selbri-2]
+            <anchor xml:id="b133" />
+            <anchor xreflabel="BNF rule #133" xml:id="cll_bnf-133" />
+            <!-- <xref linkend="cll_yacc-133"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri-3
-        <subscript>133</subscript>=</term>
+        <term>
+          selbri-3
+          <subscript>133</subscript>
+          =
+        </term>
         <listitem>
-          <para>selbri-4 ...
-          <anchor xml:id="b134"/>
-          <anchor xreflabel="BNF rule #134" xml:id="cll_bnf-134"/>
-          <!-- <xref linkend="cll_yacc-134"/> --></para>
+          <para>
+            selbri-4 ...
+            <anchor xml:id="b134" />
+            <anchor xreflabel="BNF rule #134" xml:id="cll_bnf-134" />
+            <!-- <xref linkend="cll_yacc-134"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri-4
-        <subscript>134</subscript>=</term>
+        <term>
+          selbri-4
+          <subscript>134</subscript>
+          =
+        </term>
         <listitem>
-          <para>selbri-5 [joik-jek selbri-5 | joik [stag] KE # selbri-3 /KEhE#/] ...
-          <anchor xml:id="b135"/>
-          <anchor xreflabel="BNF rule #135" xml:id="cll_bnf-135"/>
-          <!-- <xref linkend="cll_yacc-135"/> --></para>
+          <para>
+            selbri-5 [joik-jek selbri-5 | joik [stag] KE # selbri-3 /KEhE#/] ...
+            <anchor xml:id="b135" />
+            <anchor xreflabel="BNF rule #135" xml:id="cll_bnf-135" />
+            <!-- <xref linkend="cll_yacc-135"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri-5
-        <subscript>135</subscript>=</term>
+        <term>
+          selbri-5
+          <subscript>135</subscript>
+          =
+        </term>
         <listitem>
-          <para>selbri-6 [(jek | joik) [stag] BO # selbri-5]
-          <anchor xml:id="b136"/>
-          <anchor xreflabel="BNF rule #136" xml:id="cll_bnf-136"/>
-          <!-- <xref linkend="cll_yacc-136"/> --></para>
+          <para>
+            selbri-6 [(jek | joik) [stag] BO # selbri-5]
+            <anchor xml:id="b136" />
+            <anchor xreflabel="BNF rule #136" xml:id="cll_bnf-136" />
+            <!-- <xref linkend="cll_yacc-136"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>selbri-6
-        <subscript>136</subscript>=</term>
+        <term>
+          selbri-6
+          <subscript>136</subscript>
+          =
+        </term>
         <listitem>
-          <para>tanru-unit [BO # selbri-6] | [NAhE #] guhek selbri gik selbri-6
-
-          <anchor xml:id="b150"/>
-          <anchor xreflabel="BNF rule #150" xml:id="cll_bnf-150"/>
-          <!-- <xref linkend="cll_yacc-150"/> --></para>
+          <para>
+            tanru-unit [BO # selbri-6] | [NAhE #] guhek selbri gik selbri-6
+            <anchor xml:id="b150" />
+            <anchor xreflabel="BNF rule #150" xml:id="cll_bnf-150" />
+            <!-- <xref linkend="cll_yacc-150"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>tanru-unit
-        <subscript>150</subscript>=</term>
+        <term>
+          tanru-unit
+          <subscript>150</subscript>
+          =
+        </term>
         <listitem>
-          <para>tanru-unit-1 [CEI # tanru-unit-1] ...
-          <anchor xml:id="b151"/>
-          <anchor xreflabel="BNF rule #151" xml:id="cll_bnf-151"/>
-          <!-- <xref linkend="cll_yacc-151"/> --></para>
+          <para>
+            tanru-unit-1 [CEI # tanru-unit-1] ...
+            <anchor xml:id="b151" />
+            <anchor xreflabel="BNF rule #151" xml:id="cll_bnf-151" />
+            <!-- <xref linkend="cll_yacc-151"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>tanru-unit-1
-        <subscript>151</subscript>=</term>
+        <term>
+          tanru-unit-1
+          <subscript>151</subscript>
+          =
+        </term>
         <listitem>
-          <para>tanru-unit-2 [linkargs]
-          <anchor xml:id="b152"/>
-          <anchor xreflabel="BNF rule #152" xml:id="cll_bnf-152"/>
-          <!-- <xref linkend="cll_yacc-152"/> --></para>
+          <para>
+            tanru-unit-2 [linkargs]
+            <anchor xml:id="b152" />
+            <anchor xreflabel="BNF rule #152" xml:id="cll_bnf-152" />
+            <!-- <xref linkend="cll_yacc-152"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>tanru-unit-2
-        <subscript>152</subscript>=</term>
+        <term>
+          tanru-unit-2
+          <subscript>152</subscript>
+          =
+        </term>
         <listitem>
-          <para>BRIVLA # | GOhA [RAhO] # | KE # selbri-3 /KEhE#/ | ME # sumti /MEhU#/ [MOI #] | (number | lerfu-string) MOI # | NUhA # mex-operator | SE # tanru-unit-2 | JAI # [tag] tanru-unit-2 | any-word (ZEI any-word) ... | NAhE # tanru-unit-2 | NU [NAI] # [joik-jek NU [NAI] #] ... subsentence /KEI#/
-          <anchor xml:id="b160"/>
-          <anchor xreflabel="BNF rule #160" xml:id="cll_bnf-160"/>
-          <!-- <xref linkend="cll_yacc-160"/> --></para>
+          <para>
+            BRIVLA # | GOhA [RAhO] # | KE # selbri-3 /KEhE#/ | ME # sumti /MEhU#/ [MOI #] | (number | lerfu-string) MOI # | NUhA # mex-operator | SE # tanru-unit-2 | JAI # [tag] tanru-unit-2 | any-word (ZEI any-word) ... | NAhE # tanru-unit-2 | NU [NAI] # [joik-jek NU [NAI] #] ... subsentence /KEI#/
+            <anchor xml:id="b160" />
+            <anchor xreflabel="BNF rule #160" xml:id="cll_bnf-160" />
+            <!-- <xref linkend="cll_yacc-160"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>linkargs
-        <subscript>160</subscript>=</term>
+        <term>
+          linkargs
+          <subscript>160</subscript>
+          =
+        </term>
         <listitem>
-          <para>BE # term [links] /BEhO#/
-          <anchor xml:id="b161"/>
-          <anchor xreflabel="BNF rule #161" xml:id="cll_bnf-161"/>
-          <!-- <xref linkend="cll_yacc-161"/> --></para>
+          <para>
+            BE # term [links] /BEhO#/
+            <anchor xml:id="b161" />
+            <anchor xreflabel="BNF rule #161" xml:id="cll_bnf-161" />
+            <!-- <xref linkend="cll_yacc-161"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>links
-        <subscript>161</subscript>=</term>
+        <term>
+          links
+          <subscript>161</subscript>
+          =
+        </term>
         <listitem>
-          <para>BEI # term [links]
-          <anchor xml:id="b300"/>
-          <anchor xreflabel="BNF rule #300" xml:id="cll_bnf-300"/>
-          <!-- <xref linkend="cll_yacc-300"/> --></para>
+          <para>
+            BEI # term [links]
+            <anchor xml:id="b300" />
+            <anchor xreflabel="BNF rule #300" xml:id="cll_bnf-300" />
+            <!-- <xref linkend="cll_yacc-300"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>quantifier
-        <subscript>300</subscript>=</term>
+        <term>
+          quantifier
+          <subscript>300</subscript>
+          =
+        </term>
         <listitem>
-          <para>number /BOI#/ | VEI # mex /VEhO#/
-          <anchor xml:id="b310"/>
-          <anchor xreflabel="BNF rule #310" xml:id="cll_bnf-310"/>
-          <!-- <xref linkend="cll_yacc-310"/> --></para>
+          <para>
+            number /BOI#/ | VEI # mex /VEhO#/
+            <anchor xml:id="b310" />
+            <anchor xreflabel="BNF rule #310" xml:id="cll_bnf-310" />
+            <!-- <xref linkend="cll_yacc-310"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>mex
-        <subscript>310</subscript>=</term>
+        <term>
+          mex
+          <subscript>310</subscript>
+          =
+        </term>
         <listitem>
-          <para>mex-1 [operator mex-1] ... | FUhA # rp-expression
-          <anchor xml:id="b311"/>
-          <anchor xreflabel="BNF rule #311" xml:id="cll_bnf-311"/>
-          <!-- <xref linkend="cll_yacc-311"/> --></para>
+          <para>
+            mex-1 [operator mex-1] ... | FUhA # rp-expression
+            <anchor xml:id="b311" />
+            <anchor xreflabel="BNF rule #311" xml:id="cll_bnf-311" />
+            <!-- <xref linkend="cll_yacc-311"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>mex-1
-        <subscript>311</subscript>=</term>
+        <term>
+          mex-1
+          <subscript>311</subscript>
+          =
+        </term>
         <listitem>
-          <para>mex-2 [BIhE # operator mex-1]
-          <anchor xml:id="b312"/>
-          <anchor xreflabel="BNF rule #312" xml:id="cll_bnf-312"/>
-          <!-- <xref linkend="cll_yacc-312"/> --></para>
+          <para>
+            mex-2 [BIhE # operator mex-1]
+            <anchor xml:id="b312" />
+            <anchor xreflabel="BNF rule #312" xml:id="cll_bnf-312" />
+            <!-- <xref linkend="cll_yacc-312"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>mex-2
-        <subscript>312</subscript>=</term>
+        <term>
+          mex-2
+          <subscript>312</subscript>
+          =
+        </term>
         <listitem>
-          <para>operand | [PEhO #] operator mex-2 ... /KUhE#/
-          <anchor xml:id="b330"/>
-          <anchor xreflabel="BNF rule #330" xml:id="cll_bnf-330"/>
-          <!-- <xref linkend="cll_yacc-330"/> --></para>
+          <para>
+            operand | [PEhO #] operator mex-2 ... /KUhE#/
+            <anchor xml:id="b330" />
+            <anchor xreflabel="BNF rule #330" xml:id="cll_bnf-330" />
+            <!-- <xref linkend="cll_yacc-330"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>rp-expression
-        <subscript>330</subscript>=</term>
+        <term>
+          rp-expression
+          <subscript>330</subscript>
+          =
+        </term>
         <listitem>
-          <para>rp-operand rp-operand operator
-          <anchor xml:id="b332"/>
-          <anchor xreflabel="BNF rule #332" xml:id="cll_bnf-332"/>
-          <!-- <xref linkend="cll_yacc-332"/> --></para>
+          <para>
+            rp-operand rp-operand operator
+            <anchor xml:id="b332" />
+            <anchor xreflabel="BNF rule #332" xml:id="cll_bnf-332" />
+            <!-- <xref linkend="cll_yacc-332"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>rp-operand
-        <subscript>332</subscript>=</term>
+        <term>
+          rp-operand
+          <subscript>332</subscript>
+          =
+        </term>
         <listitem>
-          <para>operand | rp-expression
-          <anchor xml:id="b370"/>
-          <anchor xreflabel="BNF rule #370" xml:id="cll_bnf-370"/>
-          <!-- <xref linkend="cll_yacc-370"/> --></para>
+          <para>
+            operand | rp-expression
+            <anchor xml:id="b370" />
+            <anchor xreflabel="BNF rule #370" xml:id="cll_bnf-370" />
+            <!-- <xref linkend="cll_yacc-370"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operator
-        <subscript>370</subscript>=</term>
+        <term>
+          operator
+          <subscript>370</subscript>
+          =
+        </term>
         <listitem>
-          <para>operator-1 [joik-jek operator-1 | joik [stag] KE # operator /KEhE#/] ...
-          <anchor xml:id="b371"/>
-          <anchor xreflabel="BNF rule #371" xml:id="cll_bnf-371"/>
-          <!-- <xref linkend="cll_yacc-371"/> --></para>
+          <para>
+            operator-1 [joik-jek operator-1 | joik [stag] KE # operator /KEhE#/] ...
+            <anchor xml:id="b371" />
+            <anchor xreflabel="BNF rule #371" xml:id="cll_bnf-371" />
+            <!-- <xref linkend="cll_yacc-371"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operator-1
-        <subscript>371</subscript>=</term>
+        <term>
+          operator-1
+          <subscript>371</subscript>
+          =
+        </term>
         <listitem>
-          <para>operator-2 | guhek operator-1 gik operator-2 | operator-2 (jek | joik) [stag] BO # operator-1
-
-          <anchor xml:id="b372"/>
-          <anchor xreflabel="BNF rule #372" xml:id="cll_bnf-372"/>
-          <!-- <xref linkend="cll_yacc-372"/> --></para>
+          <para>
+            operator-2 | guhek operator-1 gik operator-2 | operator-2 (jek | joik) [stag] BO # operator-1
+            <anchor xml:id="b372" />
+            <anchor xreflabel="BNF rule #372" xml:id="cll_bnf-372" />
+            <!-- <xref linkend="cll_yacc-372"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operator-2
-        <subscript>372</subscript>=</term>
+        <term>
+          operator-2
+          <subscript>372</subscript>
+          =
+        </term>
         <listitem>
-          <para>mex-operator | KE # operator /KEhE#/
-          <anchor xml:id="b374"/>
-          <anchor xreflabel="BNF rule #374" xml:id="cll_bnf-374"/>
-          <!-- <xref linkend="cll_yacc-374"/> --></para>
+          <para>
+            mex-operator | KE # operator /KEhE#/
+            <anchor xml:id="b374" />
+            <anchor xreflabel="BNF rule #374" xml:id="cll_bnf-374" />
+            <!-- <xref linkend="cll_yacc-374"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>mex-operator
-        <subscript>374</subscript>=</term>
+        <term>
+          mex-operator
+          <subscript>374</subscript>
+          =
+        </term>
         <listitem>
-          <para>SE # mex-operator | NAhE # mex-operator | MAhO # mex /TEhU#/ | NAhU # selbri /TEhU#/ | VUhU #
-          <anchor xml:id="b381"/>
-          <anchor xreflabel="BNF rule #381" xml:id="cll_bnf-381"/>
-          <!-- <xref linkend="cll_yacc-381"/> --></para>
+          <para>
+            SE # mex-operator | NAhE # mex-operator | MAhO # mex /TEhU#/ | NAhU # selbri /TEhU#/ | VUhU #
+            <anchor xml:id="b381" />
+            <anchor xreflabel="BNF rule #381" xml:id="cll_bnf-381" />
+            <!-- <xref linkend="cll_yacc-381"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operand
-        <subscript>381</subscript>=</term>
+        <term>
+          operand
+          <subscript>381</subscript>
+          =
+        </term>
         <listitem>
-          <para>operand-1 [(ek | joik) [stag] KE # operand /KEhE#/]
-          <anchor xml:id="b382"/>
-          <anchor xreflabel="BNF rule #382" xml:id="cll_bnf-382"/>
-          <!-- <xref linkend="cll_yacc-382"/> --></para>
+          <para>
+            operand-1 [(ek | joik) [stag] KE # operand /KEhE#/]
+            <anchor xml:id="b382" />
+            <anchor xreflabel="BNF rule #382" xml:id="cll_bnf-382" />
+            <!-- <xref linkend="cll_yacc-382"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operand-1
-        <subscript>382</subscript>=</term>
+        <term>
+          operand-1
+          <subscript>382</subscript>
+          =
+        </term>
         <listitem>
-          <para>operand-2 [joik-ek operand-2] ...
-          <anchor xml:id="b383"/>
-          <anchor xreflabel="BNF rule #383" xml:id="cll_bnf-383"/>
-          <!-- <xref linkend="cll_yacc-383"/> --></para>
+          <para>
+            operand-2 [joik-ek operand-2] ...
+            <anchor xml:id="b383" />
+            <anchor xreflabel="BNF rule #383" xml:id="cll_bnf-383" />
+            <!-- <xref linkend="cll_yacc-383"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operand-2
-        <subscript>383</subscript>=</term>
+        <term>
+          operand-2
+          <subscript>383</subscript>
+          =
+        </term>
         <listitem>
-          <para>operand-3 [(ek | joik) [stag] BO # operand-2]
-          <anchor xml:id="b385"/>
-          <anchor xreflabel="BNF rule #385" xml:id="cll_bnf-385"/>
-          <!-- <xref linkend="cll_yacc-385"/> --></para>
+          <para>
+            operand-3 [(ek | joik) [stag] BO # operand-2]
+            <anchor xml:id="b385" />
+            <anchor xreflabel="BNF rule #385" xml:id="cll_bnf-385" />
+            <!-- <xref linkend="cll_yacc-385"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>operand-3
-        <subscript>385</subscript>=</term>
+        <term>
+          operand-3
+          <subscript>385</subscript>
+          =
+        </term>
         <listitem>
-          <para>quantifier | lerfu-string /BOI#/ | NIhE # selbri /TEhU#/ | MOhE # sumti /TEhU#/ | JOhI # mex-2 ... /TEhU#/ | gek operand gik operand-3 | (LAhE # | NAhE BO #) operand /LUhU#/
-          <anchor xml:id="b812"/>
-          <anchor xreflabel="BNF rule #812" xml:id="cll_bnf-812"/>
-          <!-- <xref linkend="cll_yacc-812"/> --></para>
+          <para>
+            quantifier | lerfu-string /BOI#/ | NIhE # selbri /TEhU#/ | MOhE # sumti /TEhU#/ | JOhI # mex-2 ... /TEhU#/ | gek operand gik operand-3 | (LAhE # | NAhE BO #) operand /LUhU#/
+            <anchor xml:id="b812" />
+            <anchor xreflabel="BNF rule #812" xml:id="cll_bnf-812" />
+            <!-- <xref linkend="cll_yacc-812"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>number
-        <subscript>812</subscript>=</term>
+        <term>
+          number
+          <subscript>812</subscript>
+          =
+        </term>
         <listitem>
-          <para>PA [PA | lerfu-word] ...
-          <anchor xml:id="b817"/>
-          <anchor xreflabel="BNF rule #817" xml:id="cll_bnf-817"/>
-          <!-- <xref linkend="cll_yacc-817"/> --></para>
+          <para>
+            PA [PA | lerfu-word] ...
+            <anchor xml:id="b817" />
+            <anchor xreflabel="BNF rule #817" xml:id="cll_bnf-817" />
+            <!-- <xref linkend="cll_yacc-817"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>lerfu-string
-        <subscript>817</subscript>=</term>
+        <term>
+          lerfu-string
+          <subscript>817</subscript>
+          =
+        </term>
         <listitem>
-          <para>lerfu-word [PA | lerfu-word] ...
-          <anchor xml:id="b987"/>
-          <anchor xreflabel="BNF rule #987" xml:id="cll_bnf-987"/>
-          <!-- <xref linkend="cll_yacc-987"/> --></para>
+          <para>
+            lerfu-word [PA | lerfu-word] ...
+            <anchor xml:id="b987" />
+            <anchor xreflabel="BNF rule #987" xml:id="cll_bnf-987" />
+            <!-- <xref linkend="cll_yacc-987"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>lerfu-word
-        <subscript>987</subscript>=</term>
+        <term>
+          lerfu-word
+          <subscript>987</subscript>
+          =
+        </term>
         <listitem>
-          <para>BY | any-word BU | LAU lerfu-word | TEI lerfu-string FOI
-          <anchor xml:id="b802"/>
-          <anchor xreflabel="BNF rule #802" xml:id="cll_bnf-802"/>
-          <!-- <xref linkend="cll_yacc-802"/> --></para>
+          <para>
+            BY | any-word BU | LAU lerfu-word | TEI lerfu-string FOI
+            <anchor xml:id="b802" />
+            <anchor xreflabel="BNF rule #802" xml:id="cll_bnf-802" />
+            <!-- <xref linkend="cll_yacc-802"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>ek
-        <subscript>802</subscript>=</term>
+        <term>
+          ek
+          <subscript>802</subscript>
+          =
+        </term>
         <listitem>
-          <para>[NA] [SE] A [NAI]
-          <anchor xml:id="b818"/>
-          <anchor xreflabel="BNF rule #818" xml:id="cll_bnf-818"/>
-          <!-- <xref linkend="cll_yacc-818"/> --></para>
+          <para>
+            [NA] [SE] A [NAI]
+            <anchor xml:id="b818" />
+            <anchor xreflabel="BNF rule #818" xml:id="cll_bnf-818" />
+            <!-- <xref linkend="cll_yacc-818"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>gihek
-        <subscript>818</subscript>=</term>
+        <term>
+          gihek
+          <subscript>818</subscript>
+          =
+        </term>
         <listitem>
-          <para>[NA] [SE] GIhA [NAI]
-          <anchor xml:id="b805"/>
-          <anchor xreflabel="BNF rule #805" xml:id="cll_bnf-805"/>
-          <!-- <xref linkend="cll_yacc-805"/> --></para>
+          <para>
+            [NA] [SE] GIhA [NAI]
+            <anchor xml:id="b805" />
+            <anchor xreflabel="BNF rule #805" xml:id="cll_bnf-805" />
+            <!-- <xref linkend="cll_yacc-805"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>jek
-        <subscript>805</subscript>=</term>
+        <term>
+          jek
+          <subscript>805</subscript>
+          =
+        </term>
         <listitem>
-          <para>[NA] [SE] JA [NAI]
-          <anchor xml:id="b806"/>
-          <anchor xreflabel="BNF rule #806" xml:id="cll_bnf-806"/>
-          <!-- <xref linkend="cll_yacc-806"/> --></para>
+          <para>
+            [NA] [SE] JA [NAI]
+            <anchor xml:id="b806" />
+            <anchor xreflabel="BNF rule #806" xml:id="cll_bnf-806" />
+            <!-- <xref linkend="cll_yacc-806"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>joik
-        <subscript>806</subscript>=</term>
+        <term>
+          joik
+          <subscript>806</subscript>
+          =
+        </term>
         <listitem>
-          <para>[SE] JOI [NAI] | interval | GAhO interval GAhO
-          <anchor xml:id="b932"/>
-          <anchor xreflabel="BNF rule #932" xml:id="cll_bnf-932"/>
-          <!-- <xref linkend="cll_yacc-932"/> --></para>
+          <para>
+            [SE] JOI [NAI] | interval | GAhO interval GAhO
+            <anchor xml:id="b932" />
+            <anchor xreflabel="BNF rule #932" xml:id="cll_bnf-932" />
+            <!-- <xref linkend="cll_yacc-932"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>interval
-        <subscript>932</subscript>=</term>
+        <term>
+          interval
+          <subscript>932</subscript>
+          =
+        </term>
         <listitem>
-          <para>[SE] BIhI [NAI]
-          <anchor xml:id="b421"/>
-          <anchor xreflabel="BNF rule #421" xml:id="cll_bnf-421"/>
-          <!-- <xref linkend="cll_yacc-421"/> --></para>
+          <para>
+            [SE] BIhI [NAI]
+            <anchor xml:id="b421" />
+            <anchor xreflabel="BNF rule #421" xml:id="cll_bnf-421" />
+            <!-- <xref linkend="cll_yacc-421"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>joik-ek
-        <subscript>421</subscript>=</term>
+        <term>
+          joik-ek
+          <subscript>421</subscript>
+          =
+        </term>
         <listitem>
-          <para>joik # | ek #
-          <anchor xml:id="b422"/>
-          <anchor xreflabel="BNF rule #422" xml:id="cll_bnf-422"/>
-          <!-- <xref linkend="cll_yacc-422"/> --></para>
+          <para>
+            joik # | ek #
+            <anchor xml:id="b422" />
+            <anchor xreflabel="BNF rule #422" xml:id="cll_bnf-422" />
+            <!-- <xref linkend="cll_yacc-422"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>joik-jek
-        <subscript>422</subscript>=</term>
+        <term>
+          joik-jek
+          <subscript>422</subscript>
+          =
+        </term>
         <listitem>
-          <para>joik # | jek #
-          <anchor xml:id="b807"/>
-          <anchor xreflabel="BNF rule #807" xml:id="cll_bnf-807"/>
-          <!-- <xref linkend="cll_yacc-807"/> --></para>
+          <para>
+            joik # | jek #
+            <anchor xml:id="b807" />
+            <anchor xreflabel="BNF rule #807" xml:id="cll_bnf-807" />
+            <!-- <xref linkend="cll_yacc-807"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>gek
-        <subscript>807</subscript>=</term>
+        <term>
+          gek
+          <subscript>807</subscript>
+          =
+        </term>
         <listitem>
-          <para>[SE] GA [NAI] # | joik GI # | stag gik
-          <anchor xml:id="b808"/>
-          <anchor xreflabel="BNF rule #808" xml:id="cll_bnf-808"/>
-          <!-- <xref linkend="cll_yacc-808"/> --></para>
+          <para>
+            [SE] GA [NAI] # | joik GI # | stag gik
+            <anchor xml:id="b808" />
+            <anchor xreflabel="BNF rule #808" xml:id="cll_bnf-808" />
+            <!-- <xref linkend="cll_yacc-808"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>guhek
-
-        <subscript>808</subscript>=</term>
+        <term>
+          guhek
+          <subscript>808</subscript>
+          =
+        </term>
         <listitem>
-          <para>[SE] GUhA [NAI] #
-          <anchor xml:id="b816"/>
-          <anchor xreflabel="BNF rule #816" xml:id="cll_bnf-816"/>
-          <!-- <xref linkend="cll_yacc-816"/> --></para>
+          <para>
+            [SE] GUhA [NAI] #
+            <anchor xml:id="b816" />
+            <anchor xreflabel="BNF rule #816" xml:id="cll_bnf-816" />
+            <!-- <xref linkend="cll_yacc-816"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>gik
-        <subscript>816</subscript>=</term>
+        <term>
+          gik
+          <subscript>816</subscript>
+          =
+        </term>
         <listitem>
-          <para>GI [NAI] #
-          <anchor xml:id="b491"/>
-          <anchor xreflabel="BNF rule #491" xml:id="cll_bnf-491"/>
-          <!-- <xref linkend="cll_yacc-491"/> --></para>
+          <para>
+            GI [NAI] #
+            <anchor xml:id="b491" />
+            <anchor xreflabel="BNF rule #491" xml:id="cll_bnf-491" />
+            <!-- <xref linkend="cll_yacc-491"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>tag
-        <subscript>491</subscript>=</term>
+        <term>
+          tag
+          <subscript>491</subscript>
+          =
+        </term>
         <listitem>
-          <para>tense-modal [joik-jek tense-modal] ...
-          <anchor xml:id="b971"/>
-          <anchor xreflabel="BNF rule #971" xml:id="cll_bnf-971"/>
-          <!-- <xref linkend="cll_yacc-971"/> --></para>
+          <para>
+            tense-modal [joik-jek tense-modal] ...
+            <anchor xml:id="b971" />
+            <anchor xreflabel="BNF rule #971" xml:id="cll_bnf-971" />
+            <!-- <xref linkend="cll_yacc-971"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>stag
-        <subscript>971</subscript>=</term>
+        <term>
+          stag
+          <subscript>971</subscript>
+          =
+        </term>
         <listitem>
-          <para>simple-tense-modal [(jek | joik) simple-tense-modal] ...
-          <anchor xml:id="b815"/>
-          <anchor xreflabel="BNF rule #815" xml:id="cll_bnf-815"/>
-          <!-- <xref linkend="cll_yacc-815"/> --></para>
+          <para>
+            simple-tense-modal [(jek | joik) simple-tense-modal] ...
+            <anchor xml:id="b815" />
+            <anchor xreflabel="BNF rule #815" xml:id="cll_bnf-815" />
+            <!-- <xref linkend="cll_yacc-815"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>tense-modal
-        <subscript>815</subscript>=</term>
+        <term>
+          tense-modal
+          <subscript>815</subscript>
+          =
+        </term>
         <listitem>
-          <para>simple-tense-modal # | FIhO # selbri /FEhU#/
-          <anchor xml:id="b972"/>
-          <anchor xreflabel="BNF rule #972" xml:id="cll_bnf-972"/>
-          <!-- <xref linkend="cll_yacc-972"/> --></para>
+          <para>
+            simple-tense-modal # | FIhO # selbri /FEhU#/
+            <anchor xml:id="b972" />
+            <anchor xreflabel="BNF rule #972" xml:id="cll_bnf-972" />
+            <!-- <xref linkend="cll_yacc-972"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>simple-tense-modal
-        <subscript>972</subscript>=</term>
+        <term>
+          simple-tense-modal
+          <subscript>972</subscript>
+          =
+        </term>
         <listitem>
-          <para>[NAhE] [SE] BAI [NAI] [KI] | [NAhE] (time [space] | space [time]) &amp; CAhA [KI] | KI | CUhE
-          <anchor xml:id="b1030"/>
-          <anchor xreflabel="BNF rule #1030" xml:id="cll_bnf-1030"/>
-          <!-- <xref linkend="cll_yacc-1030"/> --></para>
+          <para>
+            [NAhE] [SE] BAI [NAI] [KI] | [NAhE] (time [space] | space [time]) &amp; CAhA [KI] | KI | CUhE
+            <anchor xml:id="b1030" />
+            <anchor xreflabel="BNF rule #1030" xml:id="cll_bnf-1030" />
+            <!-- <xref linkend="cll_yacc-1030"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>time
-        <subscript>1030</subscript>=</term>
+        <term>
+          time
+          <subscript>1030</subscript>
+          =
+        </term>
         <listitem>
-          <para>ZI &amp; time-offset ... &amp; (ZEhA [PU [NAI]]) &amp; interval-property ... 
-          <anchor xml:id="b1033"/>
-          <anchor xreflabel="BNF rule #1033" xml:id="cll_bnf-1033"/>
-          <!-- <xref linkend="cll_yacc-1033"/> --></para>
+          <para>
+            ZI &amp; time-offset ... &amp; (ZEhA [PU [NAI]]) &amp; interval-property ...
+            <anchor xml:id="b1033" />
+            <anchor xreflabel="BNF rule #1033" xml:id="cll_bnf-1033" />
+            <!-- <xref linkend="cll_yacc-1033"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>time-offset
-        <subscript>1033</subscript>=</term>
+        <term>
+          time-offset
+          <subscript>1033</subscript>
+          =
+        </term>
         <listitem>
-          <para>PU [NAI] [ZI]
-          <anchor xml:id="b1040"/>
-          <anchor xreflabel="BNF rule #1040" xml:id="cll_bnf-1040"/>
-          <!-- <xref linkend="cll_yacc-1040"/> --></para>
+          <para>
+            PU [NAI] [ZI]
+            <anchor xml:id="b1040" />
+            <anchor xreflabel="BNF rule #1040" xml:id="cll_bnf-1040" />
+            <!-- <xref linkend="cll_yacc-1040"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>space
-        <subscript>1040</subscript>=</term>
+        <term>
+          space
+          <subscript>1040</subscript>
+          =
+        </term>
         <listitem>
-          <para>VA &amp; space-offset ... &amp; space-interval &amp; (MOhI space-offset)
-          <anchor xml:id="b1045"/>
-          <anchor xreflabel="BNF rule #1045" xml:id="cll_bnf-1045"/>
-          <!-- <xref linkend="cll_yacc-1045"/> --></para>
+          <para>
+            VA &amp; space-offset ... &amp; space-interval &amp; (MOhI space-offset)
+            <anchor xml:id="b1045" />
+            <anchor xreflabel="BNF rule #1045" xml:id="cll_bnf-1045" />
+            <!-- <xref linkend="cll_yacc-1045"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>space-offset
-        <subscript>1045</subscript>=</term>
+        <term>
+          space-offset
+          <subscript>1045</subscript>
+          =
+        </term>
         <listitem>
-          <para>FAhA [NAI] [VA]
-          <anchor xml:id="b1046"/>
-          <anchor xreflabel="BNF rule #1046" xml:id="cll_bnf-1046"/>
-          <!-- <xref linkend="cll_yacc-1046"/> --></para>
+          <para>
+            FAhA [NAI] [VA]
+            <anchor xml:id="b1046" />
+            <anchor xreflabel="BNF rule #1046" xml:id="cll_bnf-1046" />
+            <!-- <xref linkend="cll_yacc-1046"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>space-interval
-        <subscript>1046</subscript>=</term>
+        <term>
+          space-interval
+          <subscript>1046</subscript>
+          =
+        </term>
         <listitem>
-          <para>((VEhA &amp; VIhA) [FAhA [NAI]]) &amp; space-int-props
-          <anchor xml:id="b1049"/>
-          <anchor xreflabel="BNF rule #1049" xml:id="cll_bnf-1049"/>
-          <!-- <xref linkend="cll_yacc-1049"/> --></para>
+          <para>
+            ((VEhA &amp; VIhA) [FAhA [NAI]]) &amp; space-int-props
+            <anchor xml:id="b1049" />
+            <anchor xreflabel="BNF rule #1049" xml:id="cll_bnf-1049" />
+            <!-- <xref linkend="cll_yacc-1049"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>space-int-props
-        <subscript>1049</subscript>=</term>
+        <term>
+          space-int-props
+          <subscript>1049</subscript>
+          =
+        </term>
         <listitem>
-          <para>(FEhE interval-property) ...
-          <anchor xml:id="b1051"/>
-          <anchor xreflabel="BNF rule #1051" xml:id="cll_bnf-1051"/>
-          <!-- <xref linkend="cll_yacc-1051"/> --></para>
+          <para>
+            (FEhE interval-property) ...
+            <anchor xml:id="b1051" />
+            <anchor xreflabel="BNF rule #1051" xml:id="cll_bnf-1051" />
+            <!-- <xref linkend="cll_yacc-1051"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>interval-property
-        <subscript>1051</subscript>=</term>
+        <term>
+          interval-property
+          <subscript>1051</subscript>
+          =
+        </term>
         <listitem>
-          <para>number ROI [NAI] | TAhE [NAI] | ZAhO [NAI]
-          <anchor xml:id="b32"/>
-          <anchor xreflabel="BNF rule #32" xml:id="cll_bnf-32"/>
-          <!-- <xref linkend="cll_yacc-32"/> --></para>
+          <para>
+            number ROI [NAI] | TAhE [NAI] | ZAhO [NAI]
+            <anchor xml:id="b32" />
+            <anchor xreflabel="BNF rule #32" xml:id="cll_bnf-32" />
+            <!-- <xref linkend="cll_yacc-32"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>free
-        <subscript>32</subscript>=</term>
+        <term>
+          free
+          <subscript>32</subscript>
+          =
+        </term>
         <listitem>
-          <para>SEI # [terms [CU #]] selbri /SEhU/ | SOI # sumti [sumti] /SEhU/ | vocative [relative-clauses] selbri [relative-clauses] /DOhU/ | vocative [relative-clauses] CMEVLA ... # [relative-clauses] /DOhU/ | vocative [sumti] /DOhU/ | (number | lerfu-string) MAI | TO text /TOI/ | XI # (number | lerfu-string) /BOI/ | XI # VEI # mex /VEhO/
-          <anchor xml:id="b415"/>
-          <anchor xreflabel="BNF rule #415" xml:id="cll_bnf-415"/>
-          <!-- <xref linkend="cll_yacc-415"/> --></para>
+          <para>
+            SEI # [terms [CU #]] selbri /SEhU/ | SOI # sumti [sumti] /SEhU/ | vocative [relative-clauses] selbri [relative-clauses] /DOhU/ | vocative [relative-clauses] CMEVLA ... # [relative-clauses] /DOhU/ | vocative [sumti] /DOhU/ | (number | lerfu-string) MAI | TO text /TOI/ | XI # (number | lerfu-string) /BOI/ | XI # VEI # mex /VEhO/
+            <anchor xml:id="b415" />
+            <anchor xreflabel="BNF rule #415" xml:id="cll_bnf-415" />
+            <!-- <xref linkend="cll_yacc-415"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>vocative
-        <subscript>415</subscript>=</term>
+        <term>
+          vocative
+          <subscript>415</subscript>
+          =
+        </term>
         <listitem>
-          <para>(COI [NAI]) ... &amp; DOI
-          <anchor xml:id="b411"/>
-          <anchor xreflabel="BNF rule #411" xml:id="cll_bnf-411"/>
-          <!-- <xref linkend="cll_yacc-411"/> --></para>
+          <para>
+            (COI [NAI]) ... &amp; DOI
+            <anchor xml:id="b411" />
+            <anchor xreflabel="BNF rule #411" xml:id="cll_bnf-411" />
+            <!-- <xref linkend="cll_yacc-411"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>indicators
-        <subscript>411</subscript>=</term>
+        <term>
+          indicators
+          <subscript>411</subscript>
+          =
+        </term>
         <listitem>
-          <para>[FUhE] indicator ...
-          <anchor xml:id="b413"/>
-          <anchor xreflabel="BNF rule #413" xml:id="cll_bnf-413"/>
-          <!-- <xref linkend="cll_yacc-413"/> --></para>
+          <para>
+            [FUhE] indicator ...
+            <anchor xml:id="b413" />
+            <anchor xreflabel="BNF rule #413" xml:id="cll_bnf-413" />
+            <!-- <xref linkend="cll_yacc-413"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>indicator
-        <subscript>413</subscript>=</term>
+        <term>
+          indicator
+          <subscript>413</subscript>
+          =
+        </term>
         <listitem>
           <para>(UI | CAI) [NAI] | Y | DAhO | FUhO</para>
         </listitem>
@@ -7949,10 +8422,13 @@ the 900 series rules are found in the lexer.  */
     <variablelist>
       <varlistentry>
         <term>
-        <anchor xml:id="b1100"/>
-        <anchor xreflabel="BNF rule #1100" xml:id="cll_bnf-1100"/>
-        <!-- <xref linkend="cll_yacc-1100"/> --> word
-        <subscript>1100</subscript>=</term>
+          <anchor xml:id="b1100" />
+          <anchor xreflabel="BNF rule #1100" xml:id="cll_bnf-1100" />
+          <!-- <xref linkend="cll_yacc-1100"/> -->
+          word
+          <subscript>1100</subscript>
+          =
+        </term>
         <listitem>
           <para>[BAhE] any-word [indicators]</para>
         </listitem>
@@ -7960,21 +8436,28 @@ the 900 series rules are found in the lexer.  */
       <varlistentry>
         <term>any-word =</term>
         <listitem>
-          <para><quote>any single word (no compound cmavo)</quote></para>
+          <para>
+            <quote>any single word (no compound cmavo)</quote>
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
         <term>anything =</term>
         <listitem>
-          <para><quote>any text at all, whether Lojban or not</quote>
-          <anchor xml:id="b1101"/>
-          <anchor xreflabel="BNF rule #1101" xml:id="cll_bnf-1101"/>
-          <!-- <xref linkend="cll_yacc-1101"/> --></para>
+          <para>
+            <quote>any text at all, whether Lojban or not</quote>
+            <anchor xml:id="b1101" />
+            <anchor xreflabel="BNF rule #1101" xml:id="cll_bnf-1101" />
+            <!-- <xref linkend="cll_yacc-1101"/> -->
+          </para>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>null
-        <subscript>1101</subscript>=</term>
+        <term>
+          null
+          <subscript>1101</subscript>
+          =
+        </term>
         <listitem>
           <para>any-word SI | utterance SA | text SU</para>
         </listitem>
