@@ -117,16 +117,12 @@ fi
 
 echo '
 
-<index type="general">
-<title>General Index</title>
-</index>
-
 <index type="lojban-word">
 <title>Lojban Words Index</title>
 </index>
 
-<index type="example">
-<title>Examples Index</title>
+<index type="general">
+<title>General Index</title>
 </index>
 
 </book>' >>"$ofile"
