@@ -563,7 +563,7 @@ table.rotated table {
 }
 
 table.simplelist tr td {
-  text-align:center;
+  text-align: center;
 }
 
 .selbri {
@@ -631,6 +631,14 @@ hr {
   font-size: 52pt;
   text-align: center;
   width: 100%;
+}
+
+@media screen and (max-width: 512px) {
+  .book > .titlepage .title {
+    font-size: 32pt;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .book > .titlepage .author {
