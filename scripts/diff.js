@@ -1,6 +1,6 @@
 const fs = require("fs"),
   path = require("path");
-const HtmlDiff = require(path.join(__dirname, "./htmldiff.js")).default;
+const HtmlDiff = require(path.join(__dirname, "./htmldiff-js/dist/htmldiff.min.js")).default;
 
 const oldFileName = "../build/cll_diffs/diff_old_xhtml_no_chunks/index.html";
 const newFileName = "../build/cll_diffs/diff_new_xhtml_no_chunks/index.html";
@@ -41,7 +41,9 @@ try {
     <del class="cll_diff diffmod">Red blocks</del> denote deletions, <ins class="diffmod">green blocks</ins> denote insertions.
     </div>
   `
-  );
+  )
+  .replace(/<del class="diffmod">&nbsp;<\/del><ins class="diffmod">[ \n\r]*<\/ins>/g,' ')
+  .replace(/<del class="diffmod">[ \n\r]*<\/del><ins class="diffmod">[ \n\r]*<\/ins>/g,'');
   let result_with_prefixes = result0
     .replace(
       "<body>",
@@ -52,7 +54,10 @@ try {
     </div>`
     )
     .replace(/<ins /g, `<span class="diff_pre">ins\`</span><ins `)
-    .replace(/<del /g, `<span class="diff_pre">del\`</span><del `);
+    .replace(/<del /g, `<span class="diff_pre">del\`</span><del `)
+  .replace(/<span class="diff_pre">del`<\/span><del class="diffmod">&nbsp;<\/del><span class="diff_pre">ins`<\/span><ins class="diffmod">[ \n\r]*<\/ins>/g,' ')
+  .replace(/<span class="diff_pre">del`<\/span><del class="diffmod">[ \n\r]*<\/del><span class="diff_pre">ins`<\/span><ins class="diffmod">[ \n\r]*<\/ins>/g,'');
+
 
   fs.writeFileSync(path.resolve(__dirname, diffFileName), result, {
     encoding: "utf8"
