@@ -70,6 +70,9 @@ do
   if [[ $file =~ \.png$ ]]
   then
     type="image/png"
+  elif [[ $file =~ \.otf$ ]]
+  then
+    type="application/x-font-opentype"
   elif [[ $file =~ \.gif$ ]]
   then
     type="image/gif"
