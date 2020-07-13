@@ -57,7 +57,7 @@ $(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir
 # name of the output file, so move it to index.html
 	test -f $(builddir)/xhtml_$*_chunks/index.html || mv $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html $(builddir)/xhtml_$*_chunks/index.html
 	cp $(PWD)/scripts/master.css $(builddir)/xhtml_$*_chunks/final.css
-	cp $(PWD)/scripts/crisa-regular.otf $(builddir)/xhtml_$*_chunks/crisa-regular.otf
+	cp $(PWD)/fonts/crisa-regular.otf $(builddir)/xhtml_$*_chunks/crisa-regular.otf
 	cp $(PWD)/fonts/linux-libertine/LinLibertine_R.otf $(builddir)/xhtml_$*_chunks/LinLibertine_R.otf
 	cp $(PWD)/fonts/linux-libertine/LinLibertine_RI.otf $(builddir)/xhtml_$*_chunks/LinLibertine_RI.otf
 	cp $(PWD)/fonts/linux-libertine/LinLibertine_RB.otf $(builddir)/xhtml_$*_chunks/LinLibertine_RB.otf
@@ -83,7 +83,7 @@ $(builddir)/pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_confi
 	rm -rf $(builddir)/pdf
 	mkdir -p $(builddir)/pdf
 	cp -pr $(PWD)/scripts/master.css $(builddir)/pdf/final.css
-	cp -pr $(PWD)/scripts/crisa-regular.otf $(builddir)/pdf/crisa-regular.otf
+	cp -pr $(PWD)/fonts/crisa-regular.otf $(builddir)/pdf/crisa-regular.otf
 	cp -pr $(PWD)/fonts/linux-libertine/LinLibertine_R.otf $(builddir)/pdf/LinLibertine_R.otf
 	cp -pr $(PWD)/fonts/linux-libertine/LinLibertine_RI.otf $(builddir)/pdf/LinLibertine_RI.otf
 	cp -pr $(PWD)/fonts/linux-libertine/LinLibertine_RB.otf $(builddir)/pdf/LinLibertine_RB.otf
@@ -133,7 +133,7 @@ $(builddir)/epub-xhtml/index.html: $(builddir)/cll_processed_xhtml.xml xml/docbo
 	cp -pr $(PWD)/dtd $(builddir)/epub-xhtml/
 	xmlto -m xml/docbook2html_config_epub.xsl -o $(builddir)/epub-xhtml/ -x $(xsl_base)/xhtml/chunk.xsl xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
 	cp $(PWD)/scripts/master.css $(builddir)/epub-xhtml/final.css
-	cp $(PWD)/scripts/crisa-regular.otf $(builddir)/epub-xhtml/crisa-regular.otf
+	cp $(PWD)/fonts/crisa-regular.otf $(builddir)/epub-xhtml/crisa-regular.otf
 	cp $(PWD)/fonts/linux-libertine/LinLibertine_R.otf $(builddir)/epub-xhtml/LinLibertine_R.otf
 	cp $(PWD)/fonts/linux-libertine/LinLibertine_RI.otf $(builddir)/epub-xhtml/LinLibertine_RI.otf
 	cp $(PWD)/fonts/linux-libertine/LinLibertine_RB.otf $(builddir)/epub-xhtml/LinLibertine_RB.otf
