@@ -91,7 +91,7 @@ $(builddir)/pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_confi
 	cp -pr $(PWD)/fonts/linux-libertine/LinLibertine_R.otf $(builddir)/pdf/LinLibertine_R.otf
 	cp -pr $(PWD)/fonts/linux-libertine/LinLibertine_RI.otf $(builddir)/pdf/LinLibertine_RI.otf
 	cp -pr $(PWD)/fonts/linux-libertine/LinLibertine_RB.otf $(builddir)/pdf/LinLibertine_RB.otf
-	cp -pr $(PWD)/fonts/linux-libertine/LinLibertine_RBI.otf $(builddir)/pdf/LinLibertine_RI.otf
+	cp -pr $(PWD)/fonts/linux-libertine/LinLibertine_RBI.otf $(builddir)/pdf/LinLibertine_RBI.otf
 	cp -pr $(PWD)/media $(builddir)/pdf/
 	cp -pr $(PWD)/dtd $(builddir)/pdf/
 	
