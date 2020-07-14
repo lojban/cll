@@ -115,7 +115,7 @@ $(builddir)/cll.epub: $(builddir)/epub-xhtml/index.html scripts/build_epub.sh ep
 	mv $(builddir)/cll.epub $(builddir)/cll.tmp.epub
 	java -jar $(PWD)/epub/epubcheck-4.0.1/epubcheck.jar $(builddir)/cll.tmp.epub 2>&1 | grep -v "should have the extension '.xhtml'"
 # This both checks for Kindle support *and* generates the .mobi
-	$(PWD)/epub/kindlegen/kindlegen $(builddir)/cll.tmp.epub -o cll.mobi
+	# $(PWD)/epub/kindlegen/kindlegen $(builddir)/cll.tmp.epub -o cll.mobi
 # It checks out; move it into place
 	mv $(builddir)/cll.tmp.epub $(builddir)/cll.epub
 ifdef copydir
