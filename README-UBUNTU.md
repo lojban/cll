@@ -1,7 +1,7 @@
 # Install prequisites
 
 ```
-sudo apt-get install wget xsltproc xmlto fonts-dejavu fonts-linuxlibertine unifont ruby-full zip unzip default-jdk`
+sudo apt-get install wget xsltproc xmlto fonts-dejavu fonts-linuxlibertine ruby-full zip unzip default-jdk`
 gem install bundler
 bundle install
 

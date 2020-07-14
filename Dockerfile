@@ -16,8 +16,8 @@ RUN dnf -y install vim sudo tmux zsh moreutils make moreutils sudo \
 RUN dnf -y install xmlto-0.0.28 ruby-devel libxml2-devel \
 libxslt-devel redhat-rpm-config tidy dejavu-fonts-common \
 dejavu-serif-fonts linux-libertine-biolinum-fonts \
-linux-libertine-fonts linux-libertine-fonts-common unifont \
-unifont-fonts dejavu-sans-mono-fonts.noarch \
+linux-libertine-fonts linux-libertine-fonts-common \
+dejavu-sans-mono-fonts.noarch \
 java-1.8.0-openjdk-headless.x86_64
 
 # Language issues
@@ -43,4 +43,3 @@ RUN dnf -y install /usr/src/prince-12.5-1.centos7.x86_64.rpm
 # Node.js libs
 
 RUN npm i -g fast-xml-parser jsonpath xpath.js xmldom --allow-root --unsafe-perm=true
-

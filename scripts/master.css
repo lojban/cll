@@ -183,6 +183,14 @@ special glyphs
 {{{
 *********/
 @font-face {
+  font-family: "noto-cjk-korean-serif";
+  src: url("./noto-cjk-korean-serif.otf");
+}
+@font-face {
+  font-family: "noto-cjk-simplified-chinese-serif";
+  src: url("./noto-cjk-simplified-chinese-serif.otf");
+}
+@font-face {
   font-family: "crisa-regular1";
   src: url("./crisa-regular.otf");
 }
@@ -216,25 +224,25 @@ span[lang="zlm"] {
   font-weight: 100;
 }
 
-p[lang="math"] {
+/* p[lang="math"] {
   font-family: "Linux Biolinum", "Biolinum", "DejaVu Sans";
-}
+} */
 
 p[lang="ko"] {
-  font-family: Unifont;
+  font-family: 'noto-cjk-korean-serif';
 }
 
 p[lang="zh"],
 em[lang="zh"],
 span[lang="zh"] {
-  font-family: Unifont;
+  font-family: 'noto-cjk-simplified-chinese-serif';
 }
 
 /* Make sure that comments *inside* the special glyph natlang look normal */
 span.comment {
-  font-family: "Linux Libertine", Libertine, Constantia, "Lucida Bright",
+  /* font-family: "Linux Libertine", Libertine, Constantia, "Lucida Bright",
     Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif",
-    "Liberation Serif", Georgia, serif;
+    "Liberation Serif", Georgia, serif; */
   font-size: 9pt;
   font-style: normal;
 }
@@ -252,7 +260,7 @@ div.example,div.table {
 
 div.example {
   page-break-inside: avoid;
-  font-family: "Linux Biolinum", "Biolinum", "DejaVu Sans";
+  /* font-family: "Linux Biolinum", "Biolinum", "DejaVu Sans"; */
   margin-top: 0pt;
   margin-bottom: 0pt;
 }

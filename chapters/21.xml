@@ -104,8 +104,7 @@
       <member>Y</member>
       <member>L</member>
       <member>Q</member>
-    </simplelist>
-    . This ensures that the longest rules will be processed first; a PA+MAI will not be seen as a PA with a dangling MAI at the end, for example. </para>
+    </simplelist>. This ensures that the longest rules will be processed first; a PA+MAI will not be seen as a PA with a dangling MAI at the end, for example. </para>
     <bridgehead>Step 6 &ndash; YACC Parsing</bridgehead>
     <para>YACC should now be able to parse the Lojban text in accordance with the rule terminals labelled from 1 to 899 under option 5a, or 1 to 1099 under option 5b. Comment out the rules beyond 900 if option 5a is used, and comment out the 700-series of lexer-tokens, while restoring the series of lexer tokens numbered from 900 up.</para>
     <para>*/</para>
@@ -1443,7 +1442,7 @@ the 900 series rules are found in the lexer.  */
 
 /*  Entry point for MEX used after LI; no parens needed, but LI now has an
     elidable terminator. (This allows us to express the difference between
-    <quote>the expression a + b</quote> and <quote>the expression (a + b)</quote> )   */
+    <quote>the expression a + b</quote> and <quote>the expression (a + b)</quote>)   */
 
 /*  This rule supports left-grouping infix expressions and reverse Polish
 
@@ -7028,8 +7027,7 @@ the 900 series rules are found in the lexer.  */
       which means that the grammatical construct
       <quote>name</quote>
       is defined by
-      <quote>bnf-expression</quote>
-      .
+      <quote>bnf-expression</quote>.
     </para>
 
     <orderedlist>
@@ -7055,15 +7053,13 @@ the 900 series rules are found in the lexer.  */
           is the same as
           <quote>A | B | A B</quote>
           but not
-          <quote>B A</quote>
-          . Furthermore,
+          <quote>B A</quote>. Furthermore,
           <quote>A &amp; B &amp; C &amp; D</quote>
           permits one or more of A, B, C, and/or D, but only in that order.
         </para>
       </listitem>
       <listitem>
-        <para>
-          ... represents optional repetition of the construct to the left. Left-grouping is implied; right-grouping is shown by explicit self-referential recursion with no
+        <para>... represents optional repetition of the construct to the left. Left-grouping is implied; right-grouping is shown by explicit self-referential recursion with no
           <quote>...</quote>
         </para>
       </listitem>
