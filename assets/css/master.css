@@ -184,33 +184,33 @@ special glyphs
 *********/
 @font-face {
   font-family: "noto-cjk-korean-serif";
-  src: url("./noto-cjk-korean-serif.otf");
+  src: url("./assets/fonts/noto-cjk-korean-serif.otf");
 }
 @font-face {
   font-family: "noto-cjk-simplified-chinese-serif";
-  src: url("./noto-cjk-simplified-chinese-serif.otf");
+  src: url("./assets/fonts/noto-cjk-simplified-chinese-serif.otf");
 }
 @font-face {
   font-family: "crisa-regular1";
-  src: url("./crisa-regular.otf");
+  src: url("./assets/fonts/crisa-regular.otf");
 }
 @font-face {
   font-family: "Linux Libertine";
-  src: url("./LinLibertine_R.otf");
+  src: url("./assets/fonts/linux-libertine/LinLibertine_R.otf");
 }
 @font-face {
   font-family: "Linux Libertine";
-  src: url("./LinLibertine_RI.otf");
+  src: url("./assets/fonts/linux-libertine/LinLibertine_RI.otf");
   font-style: italic;
 }
 @font-face {
   font-family: "Linux Libertine";
-  src: url("./LinLibertine_RB.otf");
+  src: url("./assets/fonts/linux-libertine/LinLibertine_RB.otf");
   font-weight: bold;
 }
 @font-face {
   font-family: "Linux Libertine";
-  src: url("./LinLibertine_RBI.otf");
+  src: url("./assets/fonts/linux-libertine/LinLibertine_RBI.otf");
   font-style: italic;
   font-weight: bold;
 }
@@ -229,13 +229,13 @@ span[lang="zlm"] {
 } */
 
 p[lang="ko"] {
-  font-family: 'noto-cjk-korean-serif';
+  font-family: "noto-cjk-korean-serif";
 }
 
 p[lang="zh"],
 em[lang="zh"],
 span[lang="zh"] {
-  font-family: 'noto-cjk-simplified-chinese-serif';
+  font-family: "noto-cjk-simplified-chinese-serif";
 }
 
 /* Make sure that comments *inside* the special glyph natlang look normal */
@@ -254,7 +254,8 @@ span.comment {
 examples
 {{{
 */
-div.example,div.table {
+div.example,
+div.table {
   overflow-x: auto;
 }
 

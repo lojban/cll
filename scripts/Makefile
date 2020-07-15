@@ -45,7 +45,7 @@ xhtml_nochunks: xsl_file = $(xsl_base)/xhtml/docbook.xsl
 xhtml_nochunks: $(builddir)/xhtml_no_chunks.done
 
 # Do the actual chunking work
-$(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_xhtml.xsl scripts/master.css scripts/xhtml_postprocess_appcache.sh scripts/xhtml_postprocess_cleanup.sh scripts/xhtml_postprocess_cleanup_file.rb
+$(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_xhtml.xsl assets/css/master.css scripts/xhtml_postprocess_appcache.sh scripts/xhtml_postprocess_cleanup.sh scripts/xhtml_postprocess_cleanup_file.rb
 	rm -rf $(builddir)/xhtml_$*_chunks
 	mkdir -p $(builddir)/xhtml_$*_chunks
 	cp -pr $(PWD)/dtd $(builddir)/xhtml_$*_chunks/
@@ -56,15 +56,8 @@ $(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir
 # Handle the no-chunk case; can't figure out how to set the
 # name of the output file, so move it to index.html
 	test -f $(builddir)/xhtml_$*_chunks/index.html || mv $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html $(builddir)/xhtml_$*_chunks/index.html
-	cp $(PWD)/scripts/master.css $(builddir)/xhtml_$*_chunks/final.css
-	cp $(PWD)/fonts/crisa-regular.otf $(builddir)/xhtml_$*_chunks/crisa-regular.otf
-	cp $(PWD)/fonts/noto-cjk-simplified-chinese-serif.otf $(builddir)/xhtml_$*_chunks/noto-cjk-simplified-chinese-serif.otf
-	cp $(PWD)/fonts/noto-cjk-korean-serif.otf $(builddir)/xhtml_$*_chunks/noto-cjk-korean-serif.otf
-	cp $(PWD)/fonts/linux-libertine/LinLibertine_R.otf $(builddir)/xhtml_$*_chunks/LinLibertine_R.otf
-	cp $(PWD)/fonts/linux-libertine/LinLibertine_RI.otf $(builddir)/xhtml_$*_chunks/LinLibertine_RI.otf
-	cp $(PWD)/fonts/linux-libertine/LinLibertine_RB.otf $(builddir)/xhtml_$*_chunks/LinLibertine_RB.otf
-	cp $(PWD)/fonts/linux-libertine/LinLibertine_RBI.otf $(builddir)/xhtml_$*_chunks/LinLibertine_RBI.otf
-	cp -pr $(PWD)/media $(builddir)/xhtml_$*_chunks/
+	cp $(PWD)/assets/css/master.css $(builddir)/xhtml_$*_chunks/final.css
+	cp -pr $(PWD)/assets $(builddir)/xhtml_$*_chunks/
 	scripts/xhtml_postprocess_cleanup.sh $(builddir)/xhtml_$*_chunks/
 	scripts/xhtml_postprocess_appcache.sh $(builddir)/xhtml_$*_chunks/
 	touch $(builddir)/xhtml_$*_chunks.done
@@ -81,18 +74,12 @@ endif
 #*******
 .PHONY: pdf
 pdf: $(builddir)/pdf.done
-$(builddir)/pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_prince.xsl scripts/master.css scripts/xhtml_postprocess_cleanup.sh scripts/xhtml_postprocess_cleanup_file.rb
+$(builddir)/pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_prince.xsl assets/css/master.css scripts/xhtml_postprocess_cleanup.sh scripts/xhtml_postprocess_cleanup_file.rb
 	rm -rf $(builddir)/pdf
 	mkdir -p $(builddir)/pdf
-	cp -pr $(PWD)/scripts/master.css $(builddir)/pdf/final.css
-	cp -pr $(PWD)/fonts/crisa-regular.otf $(builddir)/pdf/crisa-regular.otf
-	cp $(PWD)/fonts/noto-cjk-simplified-chinese-serif.otf $(builddir)/pdf/noto-cjk-simplified-chinese-serif.otf
-	cp $(PWD)/fonts/noto-cjk-korean-serif.otf $(builddir)/pdf/noto-cjk-korean-serif.otf
-	cp -pr $(PWD)/fonts/linux-libertine/LinLibertine_R.otf $(builddir)/pdf/LinLibertine_R.otf
-	cp -pr $(PWD)/fonts/linux-libertine/LinLibertine_RI.otf $(builddir)/pdf/LinLibertine_RI.otf
-	cp -pr $(PWD)/fonts/linux-libertine/LinLibertine_RB.otf $(builddir)/pdf/LinLibertine_RB.otf
-	cp -pr $(PWD)/fonts/linux-libertine/LinLibertine_RBI.otf $(builddir)/pdf/LinLibertine_RBI.otf
-	cp -pr $(PWD)/media $(builddir)/pdf/
+	cp -pr $(PWD)/assets/css/master.css $(builddir)/pdf/final.css
+	
+	cp -pr $(PWD)/assets $(builddir)/pdf/
 	cp -pr $(PWD)/dtd $(builddir)/pdf/
 	
 	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/pdf/ -x $(xsl_base)/xhtml/docbook.xsl xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
@@ -131,20 +118,13 @@ endif
 # Note that the epub doesn't rely on the PDF, but rather on the HTML
 # that is used to build the PDF, but it amounts to the same thing
 # for requirements here.
-$(builddir)/epub-xhtml/index.html: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_common.xsl xml/docbook2html_config_epub.xsl $(PWD)/scripts/master.css $(PWD)/media/* scripts/xhtml_postprocess_cleanup.sh scripts/xhtml_postprocess_cleanup_file.rb
+$(builddir)/epub-xhtml/index.html: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_config_common.xsl xml/docbook2html_config_epub.xsl $(PWD)/assets/css/master.css $(PWD)/assets/media/* scripts/xhtml_postprocess_cleanup.sh scripts/xhtml_postprocess_cleanup_file.rb
 	rm -rf $(builddir)/epub-xhtml/
 	mkdir -p $(builddir)/epub-xhtml/
 	cp -pr $(PWD)/dtd $(builddir)/epub-xhtml/
 	xmlto -m xml/docbook2html_config_epub.xsl -o $(builddir)/epub-xhtml/ -x $(xsl_base)/xhtml/chunk.xsl xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
-	cp $(PWD)/scripts/master.css $(builddir)/epub-xhtml/final.css
-	cp $(PWD)/fonts/crisa-regular.otf $(builddir)/epub-xhtml/crisa-regular.otf
-	cp $(PWD)/fonts/noto-cjk-simplified-chinese-serif.otf $(builddir)/epub-xhtml/noto-cjk-simplified-chinese-serif.otf
-	cp $(PWD)/fonts/noto-cjk-korean-serif.otf $(builddir)/epub-xhtml/noto-cjk-korean-serif.otf
-	cp $(PWD)/fonts/linux-libertine/LinLibertine_R.otf $(builddir)/epub-xhtml/LinLibertine_R.otf
-	cp $(PWD)/fonts/linux-libertine/LinLibertine_RI.otf $(builddir)/epub-xhtml/LinLibertine_RI.otf
-	cp $(PWD)/fonts/linux-libertine/LinLibertine_RB.otf $(builddir)/epub-xhtml/LinLibertine_RB.otf
-	cp $(PWD)/fonts/linux-libertine/LinLibertine_RBI.otf $(builddir)/epub-xhtml/LinLibertine_RBI.otf
-	cp -pr $(PWD)/media $(builddir)/epub-xhtml/
+	cp $(PWD)/assets/css/master.css $(builddir)/epub-xhtml/final.css	
+	cp -pr $(PWD)/assets $(builddir)/epub-xhtml/
 	scripts/xhtml_postprocess_cleanup.sh $(builddir)/epub-xhtml/
 
 #*******
