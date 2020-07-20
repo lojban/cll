@@ -15,19 +15,19 @@ then
 fi
 
 builddir=$1
-if [ -s 'xml/jbovlaste.xml' ]
+if [ -s 'dictionary/all_words.xml' ]
 then
   echo
-  echo "Using the extant xml/jbovlaste.xml for the jbovlaste dictionary file.  If you think this is in error, run the build with -j."
+  echo "Using the extant dictionary/all_words for the jbovlaste dictionary file.  If you think this is in error, run the build with -j."
   echo
 else
   echo
-  echo "Pulling a new xml/jbovlaste.xml from the web.  If you end up using it you should check it in so we have consistent builds."
+  echo "Pulling a new dictionary/all_words from the web.  If you end up using it you should check it in so we have consistent builds."
   echo
-  wget 'http://jbovlaste.lojban.org/export/xml-export.html?lang=en&bot_key=z2BsnKYJhAB0VNsl' -O 'xml/jbovlaste.xml'
+  wget 'http://jbovlaste.lojban.org/export/xml-export.html?lang=en&bot_key=z2BsnKYJhAB0VNsl' -O 'dictionary/all_words.xml'
 fi
 
-cp xml/jbovlaste.xml "$builddir/jbovlaste.xml.new"
+cp dictionary/all_words.xml "$builddir/jbovlaste.xml.new"
 
 sizenew="$(stat -c %s $builddir/jbovlaste.xml.new || echo 0)"
 if [ ! -f "$builddir/jbovlaste.xml.new" -o ! "$sizenew" -o "$sizenew" -lt 100 ]

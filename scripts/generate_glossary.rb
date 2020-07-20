@@ -40,7 +40,7 @@ end
 # $opts_where=((opts[:where].is_a? String) ? opts[:where].chomp : false)
 # $opts_search=((opts[:search].is_a? String) ? opts[:search].chomp : false)
 
-$stderr.puts "Generating glossary entries; this might take a while."
+$stderr.puts "\nGenerating glossary entries; this might take a while."
 
 unless opts[:testing]
     $stderr.puts %x{#{mydir}/update_jbovlaste_xml.sh #{builddir}}
@@ -69,7 +69,7 @@ else
   $stderr.puts "Generating new glossary file."
   File.open(glossfile, 'w') do |gfh|
     tree=Nokogiri::XML(open "#{builddir}/cll_preglossary.xml")
-    find_lojban_words( tree ).select { |x| x.attributes['valid'].to_s != 'maybe' }.sort { |a,b| slugify(a.text.to_s).downcase <=> slugify(b.text.to_s).downcase }.map { |x| x.text.to_s.gsub( %r{\.}, '' ) }.uniq.each do |word|
+    find_lojban_words( tree ).select { |x| x.attributes['valid'].to_s != 'maybe' }.sort { |a,b| slugify(a.text.to_s).downcase <=> slugify(b.text.to_s).downcase }.map { |x| x.text.to_s }.uniq.each do |word|
       $stderr.print "#{word} "
       if ! initial_letter
         gfh.puts %q{
@@ -125,12 +125,12 @@ definitions.  These definitions are here simply as a quick reference.
         # puts "#{word}, #{definition}"
 
         if definition =~ %r{\$|\\}
-          echo "UNHANDLED LATEX in definiton for $word: $definition"
+          echo "UNHANDLED LATEX in definition for $word: $definition"
         end
 
         if definition =~ %r{^\s*$}
           definition=nil
-          $stderr.puts %Q{NO JBOVLASTE DEFINITION FOR "#{word}" FOUND!}
+          $stderr.puts %Q{\n"NO JBOVLASTE DEFINITION FOUND FOR WORD "#{word}"}
         end
         jbovlaste_tree.xpath(%Q{//valsi[@word="#{word}"]}).xpath(".//examples/example").each do |example|
           source = Nokogiri::XML.parse(example.to_s).xpath("//source").text.strip
@@ -156,8 +156,8 @@ definitions.  These definitions are here simply as a quick reference.
     end
     $stderr.puts
 
-    find_lojban_words( tree ).select { |x| x.attributes['valid'].to_s == 'maybe' }.sort { |a,b| slugify(a.text.to_s).downcase <=> slugify(b.text.to_s).downcase }.map { |x| x.text.to_s.gsub( %r{\.}, '' ) }.uniq.each do |word|
-      $stderr.puts "valid='maybe' found for word #{word}"
+    find_lojban_words( tree ).select { |x| x.attributes['valid'].to_s == 'maybe' }.sort { |a,b| slugify(a.text.to_s).downcase <=> slugify(b.text.to_s).downcase }.map { |x| x.text.to_s }.uniq.each do |word|
+      $stderr.puts "\nvalid='maybe' found for word #{word}"
     end
 
     if initial_letter

@@ -552,6 +552,10 @@ div.allowbreaks,
   margin-top: 0.4em;
 }
 
+div.informaltable > table > thead > tr > td {
+  font-weight: bold;
+}
+
 table p,
 table span {
   margin: 0px;
@@ -630,6 +634,7 @@ ul.dl span {
   margin: 0px;
   padding: 0px;
   text-align: left;
+  word-wrap: break-word;
 }
 
 /* Very bare lists except in special cases */
@@ -659,6 +664,10 @@ hr {
   border-bottom: 5px dotted #222;
 }
 
+.subtitle {
+  text-align: center;
+}
+
 .book > .titlepage div {
   width: 100%;
 }
@@ -667,6 +676,10 @@ hr {
   font-size: 52pt;
   text-align: center;
   width: 100%;
+}
+
+.display-none, .article > .titlepage hr {
+  display: none;
 }
 
 @media screen and (max-width: 512px) {

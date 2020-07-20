@@ -3,5 +3,5 @@ def find_lojban_words( tree )
 end
 
 def slugify( text )
-  text.gsub( %r{'}, 'h' ).gsub( %r{\.}, '' ).gsub( %r{[^a-zA-Z0-9]}, '_' ).gsub( %r{_+$}, '' ).gsub( %r{^_+}, '' )
+  text.gsub( %r{'}, 'h' ).gsub( %r{[^a-zA-Z0-9]}, '_' ).gsub( %r{_+$}, '' ).gsub( %r{^_+}, '' )
 end

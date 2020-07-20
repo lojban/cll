@@ -52,7 +52,7 @@ valsi = [...new Set(valsi)];
 const select = require("xpath.js"),
   dom = require("xmldom").DOMParser,
   se = require("xmldom").XMLSerializer;
-const xml = getFileContent("../xml/jbovlaste.xml");
+const xml = getFileContent("../dictionary/all_words.xml");
 const doc = new dom().parseFromString(xml);
 
 let a = [];

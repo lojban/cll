@@ -43,12 +43,14 @@ read_var() {
 version=$(read_var VERSION .env)
 publisher=$(read_var PUBLISHER .env)
 title=$(read_var TITLE .env)
+subtitle=$(read_var SUBTITL .env)
 datestamp=$(date +%Y-%m-%d)
 
 echo "
 
 <info>
 <title>$title</title>
+<subtitle>$subtitle</subtitle>
 <author>
 <personname>
 <firstname>John</firstname>
