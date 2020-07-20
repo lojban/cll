@@ -74,7 +74,7 @@ else
       if ! initial_letter
         gfh.puts %q{
 <glossary>
-<title>Lojban Word Glossary</title>
+<title>Lojban Words Glossary</title>
 <para>All definitions in this glossary are brief and unofficial.
 Only the published dictionary is a truly official reference for word
 definitions.  These definitions are here simply as a quick reference.
