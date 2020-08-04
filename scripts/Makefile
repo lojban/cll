@@ -81,6 +81,9 @@ $(builddir)/pdf.done: $(builddir)/cll_processed_xhtml.xml xml/docbook2html_confi
 	
 	cp -pr $(PWD)/assets $(builddir)/pdf/
 	cp -pr $(PWD)/dtd $(builddir)/pdf/
+	rm -rf $(builddir)/pdf/assets/scripts
+	rm -rf $(builddir)/pdf/assets/media/examples
+	rm -rf $(builddir)/pdf/assets/media/vreji
 	
 	xmlto -m xml/docbook2html_config_prince.xsl -o $(builddir)/pdf/ -x $(xsl_base)/xhtml/docbook.xsl xhtml-nochunks $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
 	scripts/xhtml_postprocess_cleanup.sh $(builddir)/pdf/
@@ -125,6 +128,9 @@ $(builddir)/epub-xhtml/index.html: $(builddir)/cll_processed_xhtml.xml xml/docbo
 	xmlto -m xml/docbook2html_config_epub.xsl -o $(builddir)/epub-xhtml/ -x $(xsl_base)/xhtml/chunk.xsl xhtml $(builddir)/cll_processed_xhtml.xml 2>&1 | grep -v 'No localization exists'
 	cp $(PWD)/assets/css/master.css $(builddir)/epub-xhtml/final.css	
 	cp -pr $(PWD)/assets $(builddir)/epub-xhtml/
+	rm -rf $(builddir)/epub-xhtml/assets/scripts
+	rm -rf $(builddir)/epub-xhtml/assets/media/examples/
+	rm -rf $(builddir)/epub-xhtml/assets/media/vreji/
 	scripts/xhtml_postprocess_cleanup.sh $(builddir)/epub-xhtml/
 
 #*******

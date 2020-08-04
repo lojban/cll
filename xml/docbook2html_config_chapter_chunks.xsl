@@ -7,6 +7,10 @@
 
   <xsl:import href="docbook2html_config_common.xsl"/>
   <xsl:import href="docbook2html_config_xhtml.xsl"/>
+  <xsl:template name="user.footer.content">
+    <hr />
+    <script type="text/javascript" src="./assets/scripts/sance.js"></script>
+  </xsl:template>
   <!-- This gives us chapters, despite the 0 -->
   <xsl:param name="chunk.section.depth" select="0"></xsl:param>
 

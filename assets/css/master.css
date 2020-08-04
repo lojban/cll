@@ -678,7 +678,7 @@ hr {
   width: 100%;
 }
 
-.display-none, .article > .titlepage hr {
+.guibutton, .display-none, .article > .titlepage hr {
   display: none;
 }
 
@@ -817,3 +817,43 @@ screen display
 /****
 }}}
 ****/
+
+.tutci {
+  line-height: 150%;
+  background: #eee;
+  border-radius: 3px;
+  border: 1px solid #333;
+  cursor: pointer;
+  color: #000;
+  padding: 1px 6px;
+  margin: 0 4px 0 4px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #666;
+  max-height: 24px;
+  font-size: 50%;
+  top: -2px;
+  display: inline-block;
+  position: relative;
+}
+
+.tutci:focus {
+  outline: 0;
+}
+
+.tutci-hover {
+  border-style: dashed;
+}
+.tutci:active {
+  top: -1px;
+}
+
+.tutci-mupli{
+  top: -4px;
+}
+.tutci-mupli:active {
+  top: -3px;
+}
+
+.foreignphrase {
+  white-space: nowrap;
+}

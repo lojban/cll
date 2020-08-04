@@ -76,6 +76,9 @@ do
   elif [[ $file =~ \.gif$ ]]
   then
     type="image/gif"
+  elif [[ $file =~ \.css$ ]]
+  then
+    type="text/css"
   elif [[ $file =~ \.svg$ ]]
   then
     type="image/svg"

@@ -13,7 +13,7 @@
     <xsl:call-template name="back-to-info-link"/>
     <hr/>
   </xsl:template>
-
+  
   <xsl:template name="user.footer.content">
     <hr/>
     <xsl:call-template name="back-to-info-link"/>

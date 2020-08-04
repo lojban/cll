@@ -36,7 +36,6 @@ end
 if opts[:build_dir]
   builddir=opts[:build_dir]
 end
-
 # $opts_where=((opts[:where].is_a? String) ? opts[:where].chomp : false)
 # $opts_search=((opts[:search].is_a? String) ? opts[:search].chomp : false)
 
@@ -143,10 +142,15 @@ definitions.  These definitions are here simply as a quick reference.
       else
         examples=""
       end
+      mp3file = File.expand_path(File.dirname(__FILE__)+"/../assets/media/vreji/#{slug}.mp3")
+      sance_button=""
+      if File.file?(mp3file)
+        sance_button="<guibutton>#{slug}</guibutton>"
+      end
       if definition
         gfh.puts %Q{
 <glossentry xml:id="valsi-#{slug}">
-<glossterm>#{word}</glossterm>
+<glossterm>#{word}#{sance_button}</glossterm>
 <glossdef>
   <para>#{definition}</para>#{examples}
 </glossdef>
