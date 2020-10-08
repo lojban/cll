@@ -1,0 +1,35 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+          "useBuiltIns": "usage",
+          "targets": {
+              "node": 10,
+              "browsers": [ ">0.25%", "not op_mini all" ]
+          },
+          "corejs": 3.6,
+          "modules": false,
+          "debug": true
+      }
+    ]
+  ],
+  "env": {
+      "test": {
+          "presets": [
+              [
+                  "@babel/preset-env",
+                  {
+                    "useBuiltIns": "usage",
+                    "targets": {
+                        "node": 10,
+                        "browsers": [">0.25%", "not op_mini all"]
+                    },
+                    "corejs": 3.6
+                  }
+              ]
+          ]
+      }
+  },
+  "comments" : false
+}

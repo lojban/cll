@@ -21,6 +21,7 @@ realclean: clean
 #*******
 
 $(builddir)/cll.xml: $(chapters) xml/iso-pub.ent xml/identity.xsl xml/docbook2html_config_common.xsl scripts/update_jbovlaste_xml.sh scripts/generate_glossary.rb scripts/merge.sh
+	regenerator --include-runtime $(PWD)/assets/scripts/sance-next.js > $(builddir)/sance.js
 	rm -rf $(builddir)/xml $(builddir)/dtd
 	cp -pr $(PWD)/xml $(builddir)/
 	cp -pr $(PWD)/dtd $(builddir)/
@@ -58,9 +59,13 @@ $(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir
 	test -f $(builddir)/xhtml_$*_chunks/index.html || mv $(builddir)/xhtml_$*_chunks/cll_processed_xhtml.html $(builddir)/xhtml_$*_chunks/index.html
 	cp $(PWD)/assets/css/master.css $(builddir)/xhtml_$*_chunks/final.css
 	cp -pr $(PWD)/assets $(builddir)/xhtml_$*_chunks/
+	cp -avr $(builddir)/sance.js $(builddir)/xhtml_$*_chunks/assets/scripts/sance.js
 	scripts/xhtml_postprocess_cleanup.sh $(builddir)/xhtml_$*_chunks/
 	scripts/xhtml_postprocess_appcache.sh $(builddir)/xhtml_$*_chunks/
 	touch $(builddir)/xhtml_$*_chunks.done
+
+rm $(builddir)/sance.js
+
 ifdef copydir
 	mkdir -p $(copydir)
 	rm -rf $(copydir)/cll-xhtml_$*_chunks

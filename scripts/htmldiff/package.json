@@ -1,0 +1,46 @@
+{
+  "name": "htmldiff-js",
+  "version": "1.0.5",
+  "description": "JavaScript port of HtmlDiff.Net which is itself a C# port of HtmlDiff",
+  "main": "./dist/htmldiff.min.js",
+  "author": "Jordan Hitch",
+  "license": "ISC",
+  "scripts": {
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfoverdx/htmldiff-js.git"
+  },
+  "keywords": [
+    "HtmlDiff",
+    "Html",
+    "Diff",
+    "Diff Algorithm",
+    "Diff Structured File"
+  ],
+  "bugs": {
+    "url": "https://github.com/dfoverdx/htmldiff-js/issues"
+  },
+  "homepage": "https://github.com/dfoverdx/htmldiff-js#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.10.2",
+    "babel-jest": "^26.0.1",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "^3.6.5",
+    "jest": "^26.0.1",
+    "regenerator-runtime": "^0.13.5",
+    "unminified-webpack-plugin": "^2.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "npm-check-updates": "^6.0.1"
+  }
+}

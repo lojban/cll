@@ -2,19 +2,21 @@ function encodeValsiForWeb(v) {
 	return encodeURIComponent(v).replace(/'/g, 'h')
 }
 
-function processNode(urli, Node, text, func) {
-	try {
-		var http = new XMLHttpRequest()
-		http.open('HEAD', urli, false)
-		http.send()
-		if (http.status == 200) {
-			var sance = new Audio(urli)
-			sance.id = "sance_" + encodeValsiForWeb(text)
-			sance.addEventListener('canplaythrough', function (event) {
-				Node = func(Node, sance, text)
-			})
-		}
-	} catch (error) { console.log(error) }
+async function processNode(urli, Node, text, func) {
+	await new Promise(resolve => {
+		fetch(urli, { method: 'HEAD' }).then(res => {
+			if (res.status == 200) {
+				var sance = new Audio(urli)
+				sance.id = "sance_" + encodeValsiForWeb(text)
+				sance.addEventListener('canplaythrough', function (event) {
+					Node = func(Node, sance, text)
+					resolve()
+				})
+			} else {
+				resolve()
+			}
+		}).catch(() => { resolve() })
+	})
 }
 
 function funcContentGloss(Node, sance, text) {
@@ -36,20 +38,20 @@ function funcExample(Node, sance, text) {
 	return Node
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
 	var words = document.querySelectorAll("em.glossterm");
 	words = Array.from(words)
 	for (var i = 0; i < words.length; i++) {
 		var Node = words[i]
 		var text = Node.innerText;
-		processNode(document.location.href.replace(/\/[^\/]+$/, '/') + "assets/media/vreji/" + encodeValsiForWeb(text) + ".mp3", Node, text, funcContentGloss)
+		await processNode(document.location.href.replace(/\/[^\/]+$/, '/') + "assets/media/vreji/" + encodeValsiForWeb(text) + ".mp3", Node, text, funcContentGloss)
 	}
 
 	var examples = Array.from(document.querySelectorAll(".example > .title > strong"));
 	for (var i = 0; i < examples.length; i++) {
 		var Node = examples[i]
 		var text = Node.innerText.trim().replace(/ *Example (.*?)\. *$/, '$1');
-		processNode(document.location.href.replace(/\/[^\/]+$/, '/') + "assets/media/examples/" + text + ".ogg", Node, text, funcExample)
+		await processNode(document.location.href.replace(/\/[^\/]+$/, '/') + "assets/media/examples/" + text + ".ogg", Node, text, funcExample)
 	}
 
 	var terms = Array.from(document.querySelectorAll(".guibutton"));
