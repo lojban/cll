@@ -611,7 +611,7 @@
     <para role="indent">At the beginning of a text, the following non-bridi are also permitted:</para>
     <itemizedlist role="bullets">
       <listitem>
-        <para>one or more names (to indicate direct address without 
+        <para>one or more cmevla (to indicate direct address without 
         
         <valsi>doi</valsi>, see 
         <xref linkend="chapter-sumti"/>)</para>
@@ -1059,7 +1059,7 @@
     <valsi>lo'u</valsi> (of selma'o LOhU) and 
     <valsi>le'u</valsi> (of selma'o LEhU) are used to surround a quotation that is not necessarily grammatical Lojban. However, the text must consist of morphologically correct Lojban words (as defined in 
     <xref linkend="chapter-morphology"/>), so that the 
-    <valsi>le'u</valsi> can be picked out reliably. The words need not be meaningful, but they must be recognizable as cmavo, brivla, or cmene. Quotation with 
+    <valsi>le'u</valsi> can be picked out reliably. The words need not be meaningful, but they must be recognizable as cmavo, brivla, or cmevla. Quotation with 
     <valsi>lo'u</valsi> is essential to quoting ungrammatical Lojban for teaching in the language, the equivalent of the * that is used in English to mark such errors:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-IUz8">
       <title>
@@ -1217,7 +1217,7 @@
     <para role="noindent">where 
     <valsi>gy</valsi> stands for 
     <valsi>glico</valsi>. Other popular choices of delimiting words are 
-    <cmevla>.kuot.</cmevla>, a Lojban name which sounds like the English word 
+    <cmevla>.kuot.</cmevla>, a cmevla which sounds like the English word 
     <quote>quote</quote>, and the word 
     <valsi>zoi</valsi> itself. Another possibility is a Lojban word suggesting the topic of the quotation.</para>
     <para>Within written text, the Lojban written word used as a delimiting word may not appear, whereas within spoken text, the sound of the delimiting word may not be uttered. This leads to occasional breakdowns of audio-visual isomorphism: 
@@ -1254,7 +1254,7 @@
     <quote>gyrations</quote>. Such borderline cases should be avoided as a matter of good style.</para>
     <para>It should be noted particularly that 
     <valsi>zoi</valsi> quotation is the only way to quote rafsi, specifically CCV rafsi, because they are not Lojban words, and 
-    <valsi>zoi</valsi> quotation is the only way to quote things which are not Lojban words. (CVC and CVV rafsi look like names and cmavo respectively, and so can be quoted using other methods.) For example:</para>
+    <valsi>zoi</valsi> quotation is the only way to quote things which are not Lojban words. (CVC and CVV rafsi look like cmevla and cmavo respectively, and so can be quoted using other methods.) For example:</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-Eeya">
       <title>
         <anchor xml:id="c19e10d5"/>
@@ -1330,14 +1330,14 @@
     <para role="noindent">and says that Bob is both the name and the thing named, an unlikely situation. People are not names.</para>
     <para>(In 
     <xref linkend="example-random-id-56m5"/> through 
-    <xref linkend="example-random-id-qITB"/>, the name 
+    <xref linkend="example-random-id-qITB"/>, the cmevla 
     <cmevla>bab.</cmevla> was separated from a preceding 
     <valsi>zo</valsi> by a pause, thus: 
-    <jbophrase>zo .bab.</jbophrase>. The reason for this extra pause is that all Lojban names must be separated by pause from any preceding word other than 
+    <jbophrase>zo .bab.</jbophrase>. The reason for this extra pause is that all cmevla must be separated by pause from any preceding word other than 
     <valsi>la</valsi>, 
     <valsi>lai</valsi>, 
     <valsi>la'i</valsi> (all of selma'o LA) and 
-    <valsi>doi</valsi> (of selma'o DOI). There are numerous other cmavo that may precede a name: of these, 
+    <valsi>doi</valsi> (of selma'o DOI). There are numerous other cmavo that may precede a cmevla: of these, 
     <valsi>zo</valsi> is one of the most common.)</para>
     <para>The cmavo 
     <valsi>la'o</valsi> also belongs to selma'o ZOI, and is mentioned here for completeness, although it does not signal the beginning of a quotation. Instead, 
@@ -1419,7 +1419,7 @@
         <natlang>I saw <emphasis>George</emphasis>.</natlang>
       </interlinear-gloss>
     </example>
-    <para role="indent">Note the pause before the name 
+    <para role="indent">Note the pause before the cmevla 
     <cmevla>djordj.</cmevla>, which serves to separate it unambiguously from the 
     <valsi>ba'e</valsi>. Alternatively, the 
     <valsi>ba'e</valsi> can be moved to a position before the 
@@ -1809,7 +1809,7 @@
     </example>
     <para role="indent">The parser will reject 
     <jbophrase valid="false">zo .djan. si .djordj.</jbophrase>, because in that context 
-    <cmevla>djordj.</cmevla> is a name (of selma'o CMENE) rather than a quoted word.</para>
+    <cmevla>djordj.</cmevla> is a bare cmevla rather than a quoted word.</para>
     <para>Note: The current machine parser does not implement 
     <valsi>si</valsi> erasure.</para>
     
@@ -1855,7 +1855,7 @@
     <xref linkend="example-random-id-SszI"/>, 
     <jbophrase>le blanu .zdan.</jbophrase> is ungrammatical, but clearly reflects the speaker's original intention to say 
     <jbophrase>le blanu zdani</jbophrase>. However, the 
-    <valsi>zdani</valsi> was cut off before the end and changed into a name. The entire ungrammatical 
+    <valsi>zdani</valsi> was cut off before the end and changed into a cmevla. The entire ungrammatical 
     <valsi>le</valsi> construct is erased and replaced by 
     <jbophrase>le xekri zdani</jbophrase>.</para>
     <para>Note: The current machine parser does not implement 
