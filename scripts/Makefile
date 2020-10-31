@@ -64,8 +64,6 @@ $(builddir)/xhtml_%_chunks.done: xml/docbook2html_config_%_chunks.xsl $(builddir
 	scripts/xhtml_postprocess_appcache.sh $(builddir)/xhtml_$*_chunks/
 	touch $(builddir)/xhtml_$*_chunks.done
 
-rm $(builddir)/sance.js
-
 ifdef copydir
 	mkdir -p $(copydir)
 	rm -rf $(copydir)/cll-xhtml_$*_chunks
