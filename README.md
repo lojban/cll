@@ -1,0 +1,1 @@
+./run_container.sh -d -T xhtml_sections && cp -avr build ~/public_html/cll
