@@ -12,6 +12,8 @@
   <xsl:param name="emphasis.propagates.style" select="1"/>
   
   <xsl:param name="xref.with.number.and.title" select="0"/>
+  <xsl:param name="generate.consistent.ids" select="1"/>
+  <xsl:param name="autolink.index.see" select="0"/>
 
   <xsl:param name="section.autolabel" select="1"></xsl:param>
   <xsl:param name="section.autolabel.max.depth">8</xsl:param>
