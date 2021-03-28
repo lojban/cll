@@ -48,13 +48,11 @@ Copy output to your web directory:
 
 Diff-related options:
 
-  By default, we offer to diff the new output to the latest official/ version.  The unpacked diffables are left in /build/cll_diffs/ for your use.
+  By default, we diff the new output to the latest official/ version.  The unpacked diffables are left in /build/cll_diffs/ for your use.
 
 -n: Skip the diff
 
 -d: Run the diff without asking
-
--V: run vimdiff on each file
 
 Special and Unusual options:
 
@@ -80,8 +78,7 @@ coverage=""
 update_jbovlaste=""
 builddir="build"
 target="all"
-diff='maybe'
-vimdiff=""
+diff='yes'
 
 while getopts "jndcC:a:A:sSthVT:" opt
 do
@@ -101,7 +98,6 @@ do
     n)    diff='no';;
     d)    diff='yes';;
     S)    shell='yes';;
-    V)    vimdiff='-V';;
     j)    update_jbovlaste='yes';;
     [?h]) usage;;
   esac
@@ -222,18 +218,7 @@ make -f scripts/Makefile builddir="$builddir" test="$optlist" chapters="$chapter
 
 if [ $diff = 'yes' ]
 then
-  ./scripts/diff_official -c "$vimdiff"
-fi
-if [ $diff = 'maybe' ]
-then
-  echo
-  echo
-  echo "Would you like to diff the new output against the last official/ build?  Ctrl-C or 'no' for no, anything else for yes."
-  read answer
-  if [ "$answer" != 'no' ]
-  then
-    ./scripts/diff_official -c "$vimdiff"
-  fi
+  ./scripts/diff_official
 fi
 
 if [ "$shell" = 'yes' ]

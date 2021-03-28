@@ -5,9 +5,9 @@ const HtmlDiff = require(path.join(__dirname, "./htmldiff/dist/htmldiff.min.js")
 const oldFileName = "../build/cll_diffs/diff_old_xhtml_no_chunks/index.html";
 const newFileName = "../build/cll_diffs/diff_new_xhtml_no_chunks/index.html";
 const diffFileName =
-  "../build/cll_diffs/diff_new_xhtml_no_chunks/difference.html";
+  "../build/cll_diffs/difference.html";
 const diffPrefixedFileName =
-  "../build/cll_diffs/diff_new_xhtml_no_chunks/difference_prefixed.html";
+  "../build/cll_diffs/difference_prefixed.html";
 
 function getFileContent(pathTo) {
   return fs.readFileSync(path.resolve(__dirname, pathTo), {
