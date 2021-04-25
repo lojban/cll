@@ -38,25 +38,29 @@ try {
     "<body>",
     `<body>
     <div>Only a visual difference file: not for publication, hyperlinks might not work, images and complex formatting might not be displayed!<br/>
-    <del class="cll_diff diffmod">Red blocks</del> denote deletions, <ins class="diffmod">green blocks</ins> denote insertions.
+    <del>Red blocks</del> denote deletions, <ins>green blocks</ins> denote insertions.
     </div>
   `
   )
-  .replace(/<del class="diffmod">&nbsp;<\/del><ins class="diffmod">[ \n\r]*<\/ins>/g,' ')
-  .replace(/<del class="diffmod">[ \n\r]*<\/del><ins class="diffmod">[ \n\r]*<\/ins>/g,'');
+  .replace(/<del>&nbsp;<\/del><ins>[ \n\r]*<\/ins>/g,' ')
+  .replace(/<del>[ \n\r]*<\/del><ins>[ \n\r]*<\/ins>/g,'')
+  .replace(/<ins> * (.*?) *<\/ins><del> *\1 *<\/del>/g,'')
+  ;
   let result_with_prefixes = result0
     .replace(
       "<body>",
       `
       <body>
     <div>Only a visual difference file: not for publication, hyperlinks might not work, images and complex formatting might not be displayed!<br/>
-    <del class="cll_diff diffmod">Red blocks</del> with the prefix del\` denote deletions, <ins class="diffmod">green blocks</ins> with the prefix ins\` denote insertions.
+    <del>Red blocks</del> with the prefix del\` denote deletions, <ins>green blocks</ins> with the prefix ins\` denote insertions.
     </div>`
     )
     .replace(/<ins /g, `<span class="diff_pre">ins\`</span><ins `)
     .replace(/<del /g, `<span class="diff_pre">del\`</span><del `)
-  .replace(/<span class="diff_pre">del`<\/span><del class="diffmod">&nbsp;<\/del><span class="diff_pre">ins`<\/span><ins class="diffmod">[ \n\r]*<\/ins>/g,' ')
-  .replace(/<span class="diff_pre">del`<\/span><del class="diffmod">[ \n\r]*<\/del><span class="diff_pre">ins`<\/span><ins class="diffmod">[ \n\r]*<\/ins>/g,'');
+  .replace(/<span class="diff_pre">del`<\/span><del>&nbsp;<\/del><span class="diff_pre">ins`<\/span><ins>[ \n\r]*<\/ins>/g,' ')
+  .replace(/<span class="diff_pre">del`<\/span><del>[ \n\r]*<\/del><span class="diff_pre">ins`<\/span><ins>[ \n\r]*<\/ins>/g,'')
+  .replace(/<span class="diff_pre">ins`<\/span><ins> *(.*?) *<\/ins>[ \n\r]*<span class="diff_pre">del`<\/span><del> *\1 *<\/del>/g,'')
+  ;
 
 
   fs.writeFileSync(path.resolve(__dirname, diffFileName), result, {
