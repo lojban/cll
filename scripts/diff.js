@@ -42,10 +42,14 @@ try {
     </div>
   `
   )
-  .replace(/<del>&nbsp;<\/del><ins>[ \n\r]*<\/ins>/g,' ')
-  .replace(/<del>[ \n\r]*<\/del><ins>[ \n\r]*<\/ins>/g,'')
-  .replace(/<ins> * (.*?) *<\/ins><del> *\1 *<\/del>/g,'')
-  ;
+    .replace(/<ins class="diffins">/g, `<ins>`)
+    .replace(/<del class="diffdel">/g, `<del>`)
+    .replace(/<del>&nbsp;<\/del><ins>[ \n\r]*<\/ins>/g, ' ')
+    .replace(/<del>[ \n\r]*<\/del><ins>[ \n\r]*<\/ins>/g, '')
+    .replace(/<ins> *(.*?) *<\/ins><del> *\1 *<\/del>/gis, '')
+    .replace(/<ins>[ \n\r]*<\/ins>/gis, '')
+    .replace(/<del>[ \n\r]*<\/del>/gis, '')
+    ;
   let result_with_prefixes = result0
     .replace(
       "<body>",
@@ -57,11 +61,14 @@ try {
     )
     .replace(/<ins /g, `<span class="diff_pre">ins\`</span><ins `)
     .replace(/<del /g, `<span class="diff_pre">del\`</span><del `)
-  .replace(/<span class="diff_pre">del`<\/span><del>&nbsp;<\/del><span class="diff_pre">ins`<\/span><ins>[ \n\r]*<\/ins>/g,' ')
-  .replace(/<span class="diff_pre">del`<\/span><del>[ \n\r]*<\/del><span class="diff_pre">ins`<\/span><ins>[ \n\r]*<\/ins>/g,'')
-  .replace(/<span class="diff_pre">ins`<\/span><ins> *(.*?) *<\/ins>[ \n\r]*<span class="diff_pre">del`<\/span><del> *\1 *<\/del>/g,'')
-  ;
-
+    .replace(/<ins class="diffins">/g, `<ins>`)
+    .replace(/<del class="diffdel">/g, `<del>`)
+    .replace(/<span class="diff_pre">del`<\/span><del>&nbsp;<\/del><span class="diff_pre">ins`<\/span><ins>[ \n\r]*<\/ins>/g, ' ')
+    .replace(/<span class="diff_pre">del`<\/span><del>[ \n\r]*<\/del><span class="diff_pre">ins`<\/span><ins>[ \n\r]*<\/ins>/g, '')
+    .replace(/<span class="diff_pre">ins`<\/span><ins> *(.*?) *<\/ins>[ \n\r]*<span class="diff_pre">del`<\/span><del> *\1 *<\/del>/gis, '')
+    .replace(/<span class="diff_pre">ins`<\/span><ins>[ \n\r]*<\/ins>/gis, '')
+    .replace(/<span class="diff_pre">del`<\/span><del>[ \n\r]*<\/del>/gis, '')
+    ;
 
   fs.writeFileSync(path.resolve(__dirname, diffFileName), result, {
     encoding: "utf8"
@@ -73,4 +80,4 @@ try {
       encoding: "utf8"
     }
   );
-} catch (error) {}
+} catch (error) { }
