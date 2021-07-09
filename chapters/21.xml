@@ -7047,7 +7047,7 @@ the 900 series rules are found in the lexer.  */
         <para>[] represents an optional element.</para>
       </listitem>
       <listitem>
-        <para>&amp; represents and/or (<quote>A &amp; B</quote> is the same as <quote>A | B | A B</quote>).</para>
+        <para>&amp; represents and/or. <quote>A &amp; B</quote> is the same as <quote>A | B | A B</quote> but not <quote>B A</quote>. Furthermore, <quote>A &amp; B &amp; C &amp; D</quote> permits one or more of A, B, C, and/or D, but only in that order.</para>
       </listitem>
       <listitem>
         <para>... represents optional repetition of the construct to the left. Left-grouping is implied; right-grouping is shown by explicit self-referential recursion with no <quote>...</quote></para>
