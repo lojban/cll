@@ -1170,24 +1170,26 @@
   </section>
   <section xml:id="section-any">
     <title><anchor xml:id="c16s8" />The problem of <quote>any</quote></title>
-    <para>      Consider the English sentence      <indexterm type="general"><primary>any</primary><secondary>as a translation problem</secondary>      </indexterm>
+    <para>      Consider the sentences      <indexterm type="general"><primary>any</primary><secondary>as a translation problem</secondary>      </indexterm>
     </para>
     <example xml:id="example-random-id-R4mX">
       <title>
         <anchor xml:id="c16e8d1" />
         <indexterm type="general"><primary>anyone who goes</primary><secondary>walks</secondary>
         </indexterm></title>
-
-      <para>Anyone who goes to the store, walks across the field.</para>
+      <interlinear-gloss>
+        <jbo>ro da poi klama le zarci cu cadzu le foldi</jbo>
+        <gloss>All X such-that-it goes-to the store - walks-on the field.</gloss>
+        <natlang>Anyone who goes to the store walks across the field.</natlang>
+      </interlinear-gloss>
     </example>
-    <para role="indent">Using the facilities already discussed, a plausible translation might be</para>
     <example role="interlinear-gloss-example" xml:id="example-random-id-7Kn8">
       <title><anchor xml:id="c16e8d2" /></title>
 
       <interlinear-gloss>
-        <jbo valid="iffy">ro da poi klama le zarci cu cadzu le foldi</jbo>
-        <gloss>All X such-that-it goes-to the store - walks-on the field.</gloss>
-        <natlang>Everyone who goes to the store walks across the field.</natlang>
+        <jbo valid="iffy">ro su'o da poi klama le zarci cu cadzu le foldi</jbo>
+        <gloss>All For-at-least-one X such-that-it goes-to the store - walks-on the field.</gloss>
+        <natlang>Someone and everyone who goes to the store walks across the field.</natlang>
       </interlinear-gloss>
     </example>
     <para role="indent">
@@ -1197,18 +1199,17 @@
       </indexterm>
       <indexterm type="general"><primary>any</primary><secondary>as a restricted universal claim</secondary>
       </indexterm>
-      But there is a subtle difference between
+      (Combining definite and indefinite numbers into a single number is discussed in <xref linkend="section-notes-on-variables" />.) There is a subtle difference between
       <xref linkend="example-random-id-R4mX" />
       and
       <xref linkend="example-random-id-7Kn8" />.
       <xref linkend="example-random-id-7Kn8" />
       tells us that, in fact, there are people who go to the store, and that they walk across the field. A sumti of the type
-      <jbophrase>ro da poi klama</jbophrase>
+      <jbophrase>su'o da poi klama</jbophrase> or <jbophrase>ro su'o da poi klama</jbophrase>
       requires that there are things which
-      <valsi>klama</valsi>
-      : Lojban universal claims always imply the corresponding existential claims as well.
+      <valsi>klama</valsi>.
       <xref linkend="example-random-id-R4mX" />
-      , on the other hand, does not require that there are any people who go to the store: it simply states, conditionally, that if there is anyone who goes to the store, he or she walks across the field as well. This conditional form mirrors the true Lojban translation of
+      , on the other hand, does not require that there are any people who go to the store: it simply states, conditionally, that if there is anyone who goes to the store, he or she walks across the field as well. Lojban universal claims alone don't imply the corresponding existential claims. This conditional form mirrors another Lojban translation of
       <xref linkend="example-random-id-R4mX" />
       :
     </para>
@@ -1216,8 +1217,8 @@
       <title><anchor xml:id="c16e8d3" /></title>
 
       <interlinear-gloss>
-        <jbo>ro da zo'u da go klama le zarci</jbo>
-        <gloss>For-every X : X if-and-only-if it-is-a-goer-to the store</gloss>
+        <jbo>ro su'o da zo'u da ganai klama le zarci</jbo>
+        <gloss>For-every X : X if it-is-a-goer-to the store</gloss>
       </interlinear-gloss>
       <interlinear-gloss>
         <jbo>… gi cadzu le foldi</jbo>
@@ -1230,7 +1231,7 @@
       </indexterm>
       Although
       <xref linkend="example-random-id-BwU7" />
-      is a universal claim as well, its universality only implies that there are objects of some sort or another in the universe of discourse. Because the claim is conditional, nothing is implied about the existence of goers-to-the-store or of walkers-on-the-field, merely that any entity which is one is also the other.
+      is an existential claim as well, its existentiality only implies that there are objects of some sort or another in the universe of discourse. Because the claim is conditional, nothing is implied about the existence of goers-to-the-store or of walkers-on-the-field, merely that any entity which is one is also the other.
     </para>
     <para>
       <indexterm type="general"><primary>any</primary><secondary>as an existential claim</secondary>
