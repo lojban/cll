@@ -3868,8 +3868,8 @@
           Test all forms with one or more initial CVC-form rafsi &ndash; with the pattern
           <quote>CVC ... CVC + X</quote>
           &ndash; for
-          <quote>tosmabru failure</quote>. X must either be a CVCCV long rafsi that happens to have a permissible initial pair as the consonant cluster, or is something which has caused a 
-    y-hyphen to be installed between the previous CVC and itself by one of the above rules.
+          <quote>tosmabru failure</quote>. In order to fail, X must either be a CVCCV long rafsi that happens to have a permissible initial pair as the consonant cluster, or is something which has caused a 
+    y-hyphen to be inserted between the preceding CVC and X in step 4.b.
         </para>
         <para>The test is as follows:</para>
         <orderedlist>
@@ -3878,7 +3878,7 @@
             <para>These consonant pairs are called "joints”.</para>
           </listitem>
           <listitem>
-            <para>If all of those joints are permissible initials, then the trial word will break up into a cmavo and a shorter brivla. If not, the word will not break up, and no further hyphens are needed.</para>
+            <para>If all of those joints are permissible initials, then the trial word will break up into a cmavo and a shorter brivla, so we need to add a “y”-hyphen at the first joint. If not, the word will not break up, and no further hyphens are needed.</para>
           </listitem>
           <listitem>
             <para>Install a y-hyphen at the first such joint.</para>
@@ -3892,8 +3892,8 @@
       <indexterm type="general"><primary>lujvo</primary><secondary>scoring of</secondary>
       </indexterm>
       Note that the
-      <quote>tosmabru test</quote>
-      implies that the algorithm will be more efficient if rafsi junctures are tested for required hyphens from right to left, instead of from left to right; when the test is required, it cannot be completed until hyphenation to the right has been determined.
+      <quote>tosmabru test</quote>, 
+      which affects hyphenation after the first rafsi, cannot be performed until after hyphenation to the right under step 4 has already been determined.
     </para>
 
 
