@@ -1,7 +1,7 @@
 #!/bin/bash
 
 type=xhtml_no_chunks
-tempdir=./build/cll_diffs
+tempdir=./build/cll_diffs1
 
 rm -rf $tempdir
 mkdir -p $tempdir
@@ -13,6 +13,35 @@ read_var() {
 }
 
 compare_with=$(read_var COMPARE_WITH .env)
+source_dir_old="official/cll_v1.1_"
+if [[ compare_with ]]
+then
+  source_dir_old=official/$compare_with"_"$type
+fi
+
+source_dir_new=./build/$type
+
+target_dir_old=$tempdir/diff_old_$type
+target_dir_new=$tempdir/diff_new_$type
+rm -rf $target_dir_old $target_dir_new
+
+cp -pr $source_dir_old $target_dir_old
+cp -pr $source_dir_new $target_dir_new
+find $target_dir_old $target_dir_new -name "*.html" -type f | xargs sed -r -i -e 's/<a id="idm[0-9]+"/<a id="idmXXX"/g' -e 's/#idm[0-9]+"/#idmXXX"/g' -e 's/</\n</g'
+# Why this needs to be its own line is something I'm not 100%
+# clear on, but it just deletes blank lines
+find $target_dir_old $target_dir_new -name "*.html" -type f | xargs sed -r -i -e '/^\s*$/d'
+
+echo "Preparing a visual HTML diff file ..."
+node $PWD/scripts/diff
+prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $tempdir/difference.html -o $tempdir/cll_difference.pdf
+prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $tempdir/difference_prefixed.html -o $tempdir/cll_difference_prefixed.pdf
+echo "A visual HTML diff is placed in $tempdir/difference.html $tempdir/difference_prefixed.html $tempdir/cll_difference.pdf $tempdir/cll_difference_prefixed.pdf files."
+
+# diff with a previous cll release
+tempdir=./build/cll_diffs2
+
+compare_with=$(read_var COMPARE_WITH2 .env)
 source_dir_old="official/cll_v1.1_"
 if [[ compare_with ]]
 then
