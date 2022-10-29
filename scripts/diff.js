@@ -2,12 +2,14 @@ const fs = require("fs"),
   path = require("path");
 const HtmlDiff = require(path.join(__dirname, "./htmldiff/dist/htmldiff.min.js")).default;
 
-const oldFileName = "../build/cll_diffs/diff_old_xhtml_no_chunks/index.html";
-const newFileName = "../build/cll_diffs/diff_new_xhtml_no_chunks/index.html";
+const folderName = process.argv[2] || './build/cll_diffs1'
+
+const oldFileName = `../${folderName}/diff_old_xhtml_no_chunks/index.html`;
+const newFileName = `../${folderName}/diff_new_xhtml_no_chunks/index.html`;
 const diffFileName =
-  "../build/cll_diffs/difference.html";
+  `../${folderName}/difference.html`;
 const diffPrefixedFileName =
-  "../build/cll_diffs/difference_prefixed.html";
+  `../${folderName}/difference_prefixed.html`;
 
 function getFileContent(pathTo) {
   return fs.readFileSync(path.resolve(__dirname, pathTo), {

@@ -1,10 +1,6 @@
 #!/bin/bash
 
 type=xhtml_no_chunks
-tempdir=./build/cll_diffs1
-
-rm -rf $tempdir
-mkdir -p $tempdir
 
 read_var() {
     VAR=$(grep $1 $2 | xargs)
@@ -12,11 +8,20 @@ read_var() {
     echo ${VAR[1]}
 }
 
-compare_with=$(read_var COMPARE_WITH .env)
+
+# compare with the official release
+
+tempdir=./build/diff_from_official
+
+rm -rf $tempdir
+mkdir -p $tempdir
+
+compare_with=$(read_var COMPARE_OFFICIAL .env)
 source_dir_old="official/cll_v1.1_"
 if [[ compare_with ]]
 then
-  source_dir_old=official/$compare_with"_"$type
+  type_="${type//_/-}"
+  source_dir_old=official/$compare_with"_"$type_
 fi
 
 source_dir_new=./build/$type
@@ -24,6 +29,10 @@ source_dir_new=./build/$type
 target_dir_old=$tempdir/diff_old_$type
 target_dir_new=$tempdir/diff_new_$type
 rm -rf $target_dir_old $target_dir_new
+
+echo $source_dir_old
+echo $target_dir_old
+echo $target_dir_new
 
 cp -pr $source_dir_old $target_dir_old
 cp -pr $source_dir_new $target_dir_new
@@ -33,19 +42,25 @@ find $target_dir_old $target_dir_new -name "*.html" -type f | xargs sed -r -i -e
 find $target_dir_old $target_dir_new -name "*.html" -type f | xargs sed -r -i -e '/^\s*$/d'
 
 echo "Preparing a visual HTML diff file ..."
-node $PWD/scripts/diff
+node $PWD/scripts/diff $tempdir
 prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $tempdir/difference.html -o $tempdir/cll_difference.pdf
 prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $tempdir/difference_prefixed.html -o $tempdir/cll_difference_prefixed.pdf
 echo "A visual HTML diff is placed in $tempdir/difference.html $tempdir/difference_prefixed.html $tempdir/cll_difference.pdf $tempdir/cll_difference_prefixed.pdf files."
 
-# diff with a previous cll release
-tempdir=./build/cll_diffs2
 
-compare_with=$(read_var COMPARE_WITH2 .env)
+# compare with the previous release
+
+tempdir=./build/diff_from_previous
+
+rm -rf $tempdir
+mkdir -p $tempdir
+
+compare_with=$(read_var COMPARE_PREVIOUS .env)
 source_dir_old="official/cll_v1.1_"
 if [[ compare_with ]]
 then
-  source_dir_old=official/$compare_with"_"$type
+  type_="${type//_/-}"
+  source_dir_old=official/$compare_with"_"$type_
 fi
 
 source_dir_new=./build/$type
@@ -53,6 +68,10 @@ source_dir_new=./build/$type
 target_dir_old=$tempdir/diff_old_$type
 target_dir_new=$tempdir/diff_new_$type
 rm -rf $target_dir_old $target_dir_new
+
+echo $source_dir_old
+echo $target_dir_old
+echo $target_dir_new
 
 cp -pr $source_dir_old $target_dir_old
 cp -pr $source_dir_new $target_dir_new
@@ -62,7 +81,7 @@ find $target_dir_old $target_dir_new -name "*.html" -type f | xargs sed -r -i -e
 find $target_dir_old $target_dir_new -name "*.html" -type f | xargs sed -r -i -e '/^\s*$/d'
 
 echo "Preparing a visual HTML diff file ..."
-node $PWD/scripts/diff
+node $PWD/scripts/diff $tempdir
 prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $tempdir/difference.html -o $tempdir/cll_difference.pdf
 prince -vvv --script=scripts/prince_check_margins.js --script=scripts/prince_shave_index.js $tempdir/difference_prefixed.html -o $tempdir/cll_difference_prefixed.pdf
 echo "A visual HTML diff is placed in $tempdir/difference.html $tempdir/difference_prefixed.html $tempdir/cll_difference.pdf $tempdir/cll_difference_prefixed.pdf files."
