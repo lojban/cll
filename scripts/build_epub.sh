@@ -113,7 +113,7 @@ done
 
 cat $srcdir/content.opf.s3 >>$epubbuilddir/content.opf
 
-cp $srcdir/cover.jpg $epubbuilddir/media/cover.jpg
+cp $srcdir/cover.jpg $epubbuilddir/assets/media/cover.jpg
 cp $srcdir/cover.html $epubbuilddir/cover.html
 
 rm -f $basedir/build/cll.epub $basedir/build/cll.mobi
