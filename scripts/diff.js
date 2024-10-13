@@ -72,6 +72,7 @@ try {
     .replace(/<span class="diff_pre">del`<\/span><del>[ \n\r]*<\/del>/gis, '')
     ;
 
+  console.log(`writing ${path.resolve(__dirname, diffFileName)} and ${path.resolve(__dirname, diffPrefixedFileName)}`);
   fs.writeFileSync(path.resolve(__dirname, diffFileName), result, {
     encoding: "utf8"
   });
@@ -82,4 +83,6 @@ try {
       encoding: "utf8"
     }
   );
-} catch (error) { }
+} catch (error) { 
+  console.error(`diff.js error`, error);
+}
